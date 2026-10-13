@@ -384,7 +384,9 @@ function renderOilTimeline(model){
  el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Historique des niveaux de mazout et livraison">'+
   '<text x="'+margins.l+'" y="11" class="oil-axis-label">L</text>'+grid+paths+spots+fill+ticks+'</svg>';
  const lastMeasured=oilReadings().at(-1),lastFill=oilDeliveries().at(-1);
- $('#oil-timeline-detail').textContent=lastMeasured&&lastFill?'21/09 : 50 L avant livraison · +500 L · environ 550 L après':'Points pleins : relevés enregistrés. Les niveaux intermédiaires sont calculés.';
+ $('#oil-timeline-detail').textContent=lastMeasured&&lastFill&&lastMeasured.date===lastFill.date?
+  label(lastFill.date)+' : '+fmt(lastMeasured.liters)+' L avant livraison · +'+fmt(lastFill.liters)+' L · environ '+fmt(lastMeasured.liters+lastFill.liters)+' L après':
+  'Points pleins : relevés enregistrés. Les niveaux intermédiaires sont calculés.';
 }
 function renderOil(){
  const model=oilModel(),last=oilLastKnown(model),forecast=oilForecast(model),period=oilInitialPeriod(model);
@@ -392,10 +394,11 @@ function renderOil(){
  output('oil-home-level',last?'≈ '+fmt(last.liters)+' L':'—');
  output('oil-level-after',last?'≈ '+fmt(last.liters)+' L':'—');
  output('oil-last-date',last?label(last.date)+' · '+(last.derived?'après livraison · niveau actuel non mesuré':'dernier relevé de cuve'):'Niveau inconnu');
+ output('oil-level-label',last?.derived?'Niveau après livraison (non remesuré)':'Dernier niveau mesuré');
  output('oil-used',fmt(model.consumed)+' L');
  output('oil-delivered','+'+fmt(model.delivered)+' L');
- output('oil-heat-used',period?'≈ '+fmt(period.heated.liters)+' L':'—');
- output('oil-hotwater-used',period?'≈ '+fmt(period.off.liters)+' L':'—');
+ output('oil-heat-used',period?'≈ '+fmt(Math.round(period.heated.liters/10)*10)+' L':'—');
+ output('oil-hotwater-used',period?'≈ '+fmt(Math.round(period.off.liters/10)*10)+' L':'—');
  output('oil-heat-range',period?'12 déc. → '+label(db.oilStopDate||'2026-03-01')+' · chauffage + eau chaude':'Pas assez de données');
  output('oil-hotwater-range',period?label(db.oilStopDate||'2026-03-01')+' → 21 sept. · eau chaude':'Pas assez de données');
  output('oil-heat-rate',period?fmt(period.heated.perDay,1)+' L/jour':'');
@@ -405,9 +408,9 @@ function renderOil(){
   $('#oil-heat-fill').style.width=(100*period.heated.liters/all).toFixed(2)+'%';
   $('#oil-hotwater-fill').style.width=(100*period.off.liters/all).toFixed(2)+'%';
  }
- output('oil-estimated-remaining',forecast?'≈ '+fmt(forecast.liters)+' L':'—');
+ output('oil-estimated-remaining',forecast?'≈ '+fmt(Math.round(forecast.liters/10)*10)+' L':'—');
  output('oil-estimated-date',forecast?'Estimation au '+label(forecast.date):'Pas d’estimation après le dernier relevé');
- const oilDate=$('#oil-home-date');if(oilDate)oilDate.textContent=last?'Niveau connu au '+label(last.date)+(last.derived?' après livraison':''):'Aucun relevé';
+ const oilDate=$('#oil-home-date');if(oilDate)oilDate.textContent=last?'Au '+label(last.date)+(last.derived?' · après livraison':' · relevé de cuve'):'Aucun relevé';
  const stop=$('#oil-stop-date');if(stop)stop.value=db.oilStopDate||'2026-03-01';
  renderOilTimeline(model);
  const allEntries=[...oilReadings().map(r=>({...r,kind:'reading'})),...oilDeliveries().map(r=>({...r,kind:'delivery'}))]
