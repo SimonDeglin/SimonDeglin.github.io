@@ -3,31 +3,28 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>À la folie</title><meta name="description" content="Un petit calcul, un immense amour."><meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#210e19"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="À la folie">
-<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#f9e8ed"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="À la folie">
+<link rel="manifest" href="manifest.webmanifest?v=2"><link rel="apple-touch-icon" href="icon-180.png?v=2"><link rel="icon" href="icon.svg?v=2" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 <div class="ambient" aria-hidden="true"></div><div id="confetti" aria-hidden="true"></div>
-<header><span class="tiny-heart">♡</span> À LA FOLIE <span class="tiny-heart">♡</span></header>
+
 <main>
 <section id="home" class="screen">
-<p class="eyebrow">UNE QUESTION TRÈS SÉRIEUSE…</p><h1>Il t’aime.<br>Mais <em>à quel point ?</em></h1>
-<p class="intro">Il paraît que l’amour ne se mesure pas.<br>On va quand même essayer.</p>
-<button id="calculate" class="love-button"><span class="button-heart" aria-hidden="true">♥</span><span>Calculateur de combien<br>mon amoureux m’aime</span><span class="button-hint">TOUCHE POUR DÉCOUVRIR</span></button>
-<p class="small-note">Un petit calcul. Un immense amour.</p>
+<h1>Sarah,<br><em>tu sais à quel point<br>je t’aime ?</em></h1>
+<button id="calculate" class="love-button"><span class="button-heart" aria-hidden="true">♥</span><span>Appuie ici ❤️</span></button>
 </section>
 <section id="loading" class="screen" hidden aria-label="Calcul en cours">
-<p class="eyebrow">LE CŒUR FAIT SES CALCULS</p><h1>Un instant,<br><em>mon amour…</em></h1>
 <div class="orb" aria-hidden="true"><span>♥</span><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="92"/><circle id="ring" cx="100" cy="100" r="92"/></svg></div>
-<p id="status" role="status">Analyse de tous mes sourires quand je te vois…</p>
+<p id="status" role="status">Attends, je compte…</p>
 <div class="progress" role="progressbar" aria-label="Calcul de mon amour" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="bar"></div></div><p id="percent" class="percent">0 %</p>
 </section>
 <section id="result" class="screen" hidden aria-labelledby="result-title">
-<p class="eyebrow">LE VERDICT DU CŒUR</p><div class="result-heart" aria-hidden="true">♥</div>
-<h1 id="result-title" class="score"></h1><p id="subtitle" class="subtitle"></p>
-<div class="message"><p id="message"></p><span class="signature">Ton amoureux ♡</span></div>
-<button id="again" class="again">Refaire le calcul <span aria-hidden="true">↻</span></button>
-<p class="small-note">Le résultat change. Mon amour, jamais.</p>
+<div class="result-heart" aria-hidden="true">♥</div>
+<h1 id="result-title" class="score"></h1><p id="subtitle" hidden></p>
+<div class="message"><p id="message"></p><span class="signature">Ton Simon ♡</span></div>
+<button id="again" class="again">Encore ❤️</button>
+
 </section>
-</main><footer>FAIT AVEC TOUT MON CŒUR</footer><script src="app.js"></script>
+</main><script src="app.js?v=2"></script>
 </body></html>
