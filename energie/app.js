@@ -547,6 +547,66 @@ $$('[data-elec-view]').forEach(button=>button.addEventListener('click',()=>{
  if(mode==='bilan')renderChart('balance-chart','network',REFERENCE);
  else drawMonthlyBars('monthly-electricity-chart',electricBarMode);
 }));
+
+/* A mazout reading is occasional: keep it separate from the monthly four-meter form. */
+function openOilEntry(kind='reading',entry=null){
+ const form=$('#oil-form');form.reset();
+ $('#oil-entry-id').value=entry?.id||'';
+ $('#oil-entry-kind').value=kind;
+ $('#oil-entry-date').value=entry?.date||today();
+ $('#oil-entry-amount').value=entry?.liters??'';
+ $('#oil-entry-phase').value=entry?.phase==='after'?'after':'before';
+ $('#oil-entry-title').textContent=entry?'Modifier '+(kind==='delivery'?'une livraison':'un relevé'):'Ajouter '+(kind==='delivery'?'une livraison':'un relevé');
+ syncOilForm();modal('oil-overlay');
+}
+function syncOilForm(){
+ const reading=$('#oil-entry-kind').value==='reading';
+ $('#oil-entry-phase-wrap').classList.toggle('hidden',!reading);
+ $('#oil-entry-amount-label').textContent=reading?'Niveau de cuve (L)':'Quantité livrée (L)';
+}
+$('#add-oil-entry').onclick=()=>openOilEntry();
+$('#oil-entry-kind').onchange=syncOilForm;
+$('#oil-form').onsubmit=e=>{
+ e.preventDefault();
+ const id=$('#oil-entry-id').value,kind=$('#oil-entry-kind').value,date=$('#oil-entry-date').value,liters=Number($('#oil-entry-amount').value);
+ if(!date||!Number.isFinite(liters)||liters<0||kind==='delivery'&&liters===0)return toast('Renseigne la date et une quantité valide.');
+ const collection=kind==='delivery'?'oilDeliveries':'oilReadings';
+ const original=id?db[collection].find(x=>x.id===id):null;
+ const entry={id:id||'oil-entry-'+Date.now(),date,liters};
+ if(kind==='reading')entry.phase=$('#oil-entry-phase').value;
+ if(id){
+  // The entry kind cannot be changed implicitly when editing. Explicitly move it instead.
+  db.oilReadings=db.oilReadings.filter(x=>x.id!==id);
+  db.oilDeliveries=db.oilDeliveries.filter(x=>x.id!==id);
+ }
+ db[collection].push(entry);
+ if(save()){modal('oil-overlay',false);render();toast(kind==='reading'?'Niveau de cuve enregistré':'Livraison enregistrée')}
+ else{
+  db[collection]=db[collection].filter(x=>x.id!==entry.id);
+  if(original)db[collection].push(original);
+ }
+};
+$('#oil-history').addEventListener('click',e=>{
+ const edit=e.target.closest('[data-oil-edit]'),del=e.target.closest('[data-oil-remove]');
+ if(edit){
+  const type=edit.dataset.oilKind,list=type==='delivery'?db.oilDeliveries:db.oilReadings;
+  const entry=list.find(x=>x.id===edit.dataset.oilEdit);
+  if(entry)openOilEntry(type,entry);
+ }
+ if(del){
+  const type=del.dataset.oilKind,list=type==='delivery'?'oilDeliveries':'oilReadings';
+  if(confirm('Supprimer '+(type==='delivery'?'cette livraison':'ce niveau de cuve')+' ?')){
+   db[list]=db[list].filter(x=>x.id!==del.dataset.oilRemove);
+   save();render();toast('Élément supprimé');
+  }
+ }
+});
+$('#oil-stop-date').onchange=value=>{
+ const date=typeof value==='string'?value:$('#oil-stop-date').value;
+ db.oilStopDate=date;
+ save();render();
+};
+
 function renderEvents(){$('#special-events').innerHTML=db.events.map(e=>'<div class="event-row"><div><strong>'+esc(e.label)+'</strong><p>'+ (e.approx?'Juillet 2026 · date indicative':label(e.date))+'</p></div><div><b>'+fmt(e.amount,2)+' m³</b><button class="mini-btn danger" title="Supprimer" data-remove-event="'+esc(e.id)+'">×</button></div></div>').join('')}
 $$('.analysis-tab').forEach(b=>b.addEventListener('click',()=>{chartMode=b.dataset.chart;renderAnalysis()}));
 function modal(id,on=true){$('#'+id).classList.toggle('hidden',!on)}
