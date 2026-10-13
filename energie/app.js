@@ -31,11 +31,33 @@ const net=()=>sorted().filter(r=>Number.isFinite(r.day)&&Number.isFinite(r.night
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(db));return true}catch(e){toast('Stockage insuffisant. Exporte tes données.');return false}};
 const meterList={network:net,pv:()=>vals('pv'),water:()=>vals('water')};
 function at(series,date,kind='linear'){if(!series.length)return null;const exact=series.find(r=>r.date===date);if(exact)return exact.value;if(date<series[0].date||date>series.at(-1).date)return null;let i=series.findIndex(r=>r.date>date);if(i<1)return null;const a=series[i-1],b=series[i];const useKind=kind==='network'&&b.value<a.value?'pv':kind;const den=integral(a.date,b.date,useKind);const numer=integral(a.date,date,useKind);return a.value+(b.value-a.value)*(den?numer/den:days(a.date,date)/days(a.date,b.date))}
-function seasonWeight(date,kind){const m=parseDate(date).getMonth();if(kind==='pv')return [0.40,.53,.90,1.14,1.41,1.55,1.57,1.40,1.12,.76,.45,.32][m];if(kind==='network')return [1.6,1.48,1.25,.85,.58,.42,.44,.56,.81,1.15,1.52,1.66][m];if(kind==='water')return [0.82,.82,.88,.95,1.03,1.15,1.35,1.3,1.03,.95,.85,.82][m];return 1}
+function seasonWeight(date,kind){const m=parseDate(date).getMonth();if(kind==='pv')return [0.40,.53,.90,1.14,1.41,1.55,1.57,1.40,1.12,.76,.45,.32][m];
+ if(kind==='home')return [1.42,1.34,1.32,1.13,.85,.73,.72,.77,.93,1.15,1.39,1.48][m];if(kind==='network')return [1.6,1.48,1.25,.85,.58,.42,.44,.56,.81,1.15,1.52,1.66][m];if(kind==='water')return [0.82,.82,.88,.95,1.03,1.15,1.35,1.3,1.03,.95,.85,.82][m];return 1}
 function integral(a,b,kind){let sum=0,d=parseDate(a),end=parseDate(b);while(d<end){sum+=seasonWeight(dateISO(d),kind);d.setDate(d.getDate()+1)}return sum}
 function poolEventsBetween(a,b){return db.events.filter(e=>e.amount>0&&e.date>a&&e.date<=b)}
 function waterAt(date){const data=vals('water');if(!data.length)return null;const exact=data.find(r=>r.date===date);if(exact)return exact.value;if(date<data[0].date||date>data.at(-1).date)return null;const i=data.findIndex(r=>r.date>date),a=data[i-1],b=data[i],special=poolEventsBetween(a.date,b.date),added=special.reduce((t,e)=>t+e.amount,0);const normal=Math.max(0,b.value-a.value-added);const share=integral(a.date,date,'water')/integral(a.date,b.date,'water');const pool=special.filter(e=>e.date<=date).reduce((t,e)=>t+e.amount,0);return a.value+normal*share+pool}
-function readingAt(kind,date){return kind==='water'?waterAt(date):at(meterList[kind](),date,kind)}
+function pvAt(date){
+ const production=vals('pv');if(!production.length)return null;
+ const exact=production.find(p=>p.date===date);if(exact)return exact.value;
+ if(date<production[0].date||date>production.at(-1).date)return null;
+ const i=production.findIndex(p=>p.date>date),a=production[i-1],b=production[i];
+ const grid=net(),n0=at(grid,a.date,'network'),n1=at(grid,b.date,'network'),nt=at(grid,date,'network');
+ if(n0==null||n1==null||nt==null)return at(production,date,'pv');
+ const totalHouse=(b.value-a.value)+(n1-n0);
+ if(totalHouse<0)return at(production,date,'pv');
+ const den=integral(a.date,b.date,'home');
+ if(!den)return at(production,date,'pv');
+ const fraction=integral(a.date,date,'home')/den;
+ const pv=a.value+totalHouse*fraction-(nt-n0);
+ // Preserve genuine production readings; never fabricate a falling production index.
+ if(pv<a.value-0.01||pv>b.value+0.01)return at(production,date,'pv');
+ return pv;
+}
+function readingAt(kind,date){
+ if(kind==='water')return waterAt(date);
+ if(kind==='pv')return pvAt(date);
+ return at(meterList[kind](),date,kind);
+}
 function netSince(a,b){const x=readingAt('network',a),y=readingAt('network',b);return x==null||y==null?null:y-x}
 function latest(){return sorted().at(-1)}
 function monthEnds(){const last=latest()?.date;if(!last)return[];let d=new Date('2025-12-31T12:00:00');const end=parseDate(last);let arr=[];while(d<end){arr.push(dateISO(d));d=new Date(d.getFullYear(),d.getMonth()+2,0,12)}arr.push(last);return arr}
