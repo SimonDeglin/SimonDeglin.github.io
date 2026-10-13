@@ -23,7 +23,8 @@ const monthLabel=s=>parseDate(s).toLocaleDateString('fr-BE',{month:'short',year:
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function init(){try{const d=JSON.parse(localStorage.getItem(KEY));if(d&&Array.isArray(d.readings))return {readings:d.readings,events:Array.isArray(d.events)?d.events:DEFAULT_EVENTS}}catch{}return {readings:SEED.map(r=>({...r})),events:DEFAULT_EVENTS.map(e=>({...e}))}}
 let db=init(),chartMode='network',electricBarMode='net',pendingPhotos={},pendingImage=null;
-let granularity='year',periodPreset='rolling',calendarYear=2026,selectedMonth='2026-10';
+const newestSavedDate=db.readings.map(r=>r.date).filter(Boolean).sort().at(-1)||'2026-10-07';
+let granularity='month',periodPreset='rolling',calendarYear=Number(newestSavedDate.slice(0,4));
 const sorted=()=>[...db.readings].sort((a,b)=>a.date.localeCompare(b.date));
 const vals=k=>sorted().filter(r=>Number.isFinite(r[k])).map(r=>({date:r.date,value:r[k]}));
 const net=()=>sorted().filter(r=>Number.isFinite(r.day)&&Number.isFinite(r.night)).map(r=>({date:r.date,value:r.day+r.night}));
@@ -64,30 +65,32 @@ function addMonths(ym,step){
 function monthEnd(ym){const [y,m]=ym.split('-').map(Number);return dateISO(new Date(y,m,0,12))}
 function latestMeterDate(){return sorted().at(-1)?.date||'2026-10-07'}
 function periodRange(){
- if(granularity==='month')return {start:selectedMonth+'-01',end:monthEnd(selectedMonth),heading:parseDate(selectedMonth+'-01').toLocaleDateString('fr-BE',{month:'long',year:'numeric'})};
  if(periodPreset==='calendar')return {start:calendarYear+'-01-01',end:calendarYear+'-12-31',heading:String(calendarYear)};
  const latest=latestMeterDate();
  const from=addMonths(latest.slice(0,7),-11);
  return {start:from+'-01',end:latest,heading:'Dernière année'};
 }
 function periodWindows(){
- const r=periodRange(),windows=[];
- if(granularity==='month'){
-  const [y,m]=selectedMonth.split('-').map(Number);
-  const max=new Date(y,m,0,12).getDate();
-  for(let d=1;d<=max;d+=7){
-   const e=Math.min(max,d+6),from=dateISO(new Date(y,m-1,d-1,12)),to=dateISO(new Date(y,m-1,e,12));
-   windows.push({start:from,end:to,label:String(d).padStart(2,'0')+'–'+String(e).padStart(2,'0')});
-  }
- }else{
-  for(let ym=r.start.slice(0,7);ym<=r.end.slice(0,7);ym=addMonths(ym,1)){
-   const [y,m]=ym.split('-').map(Number);
-   const start=dateISO(new Date(y,m-1,0,12)),end=monthEnd(ym);
-   windows.push({start,end,label:parseDate(ym+'-01').toLocaleDateString('fr-BE',{month:'short'})});
-  }
+ const r=periodRange(),months=[];
+ for(let ym=r.start.slice(0,7);ym<=r.end.slice(0,7);ym=addMonths(ym,1)){
+  const [y,m]=ym.split('-').map(Number);
+  months.push({start:dateISO(new Date(y,m-1,0,12)),end:monthEnd(ym),
+   label:parseDate(ym+'-01').toLocaleDateString('fr-BE',{month:'short'}),
+   shortDate:parseDate(ym+'-01').toLocaleDateString('fr-BE',{month:'short',year:'2-digit'})});
  }
- return windows;
+ if(granularity==='month')return months;
+ if(granularity==='half'){
+  const result=[];
+  for(let k=0;k<months.length;k+=6){
+   const first=months[k],last=months[Math.min(k+5,months.length-1)];
+   result.push({start:first.start,end:last.end,label:first.shortDate+' – '+last.shortDate});
+  }
+  return result;
+ }
+ const first=months[0],last=months.at(-1);
+ return first&&last?[{start:first.start,end:last.end,label:periodPreset==='calendar'?String(calendarYear):'12 mois'}]:[];
 }
+
 function seriesDomain(kind){
  if(kind==='house'){
   const n=net(),pv=vals('pv');
@@ -144,13 +147,17 @@ function syncPeriodControls(){
  const r=periodRange();
  $$('[data-granularity]').forEach(b=>b.classList.toggle('active',b.dataset.granularity===granularity));
  $$('[data-period]').forEach(b=>b.classList.toggle('active',b.dataset.period===periodPreset));
- $$('.period-switch').forEach(group=>group.classList.toggle('hidden',granularity==='month'));
- $$('.period-navigation').forEach(group=>group.classList.toggle('hidden',granularity==='year'&&periodPreset==='rolling'));
+ $$('.period-switch').forEach(group=>group.classList.remove('hidden'));
+ $$('.period-navigation').forEach(group=>group.classList.toggle('hidden',periodPreset!=='calendar'));
  $$('.period-navigation-label').forEach(el=>el.textContent=r.heading);
  $$('[data-period-nav="next"]').forEach(btn=>{
-  btn.disabled=granularity==='month'?selectedMonth>=latestMeterDate().slice(0,7):calendarYear>=Number(latestMeterDate().slice(0,4));
+  btn.disabled=periodPreset==='calendar'&&calendarYear>=Number(latestMeterDate().slice(0,4));
+ });
+ $$('[data-period-nav="prev"]').forEach(btn=>{
+  btn.disabled=periodPreset==='calendar'&&calendarYear<=Number(sorted()[0]?.date?.slice(0,4)||2025);
  });
 }
+
 // Prevent a rapid double tap on the app controls from triggering zoom in mobile browsers.
 document.addEventListener('dblclick',e=>{
  if(e.target.closest('button, a, .monthly-bars, .chart-space, .shortcut, .mobile-nav')) e.preventDefault();
@@ -163,8 +170,7 @@ $$('[data-period]').forEach(button=>button.addEventListener('click',()=>{
 }));
 $$('[data-period-nav]').forEach(button=>button.addEventListener('click',()=>{
  const change=button.dataset.periodNav==='prev'?-1:1;
- if(granularity==='month')selectedMonth=addMonths(selectedMonth,change);
- else calendarYear+=change;
+ calendarYear+=change;
  render();
 }));
 
@@ -178,7 +184,7 @@ const d='M'+points.map(v=>X(v.date)+','+Y(v.value)).join(' L');const area='<path
 const circles=points.filter(r=>r.exact).map(v=>'<circle class="chart-point" cx="'+X(v.date)+'" cy="'+Y(v.value)+'" r="4" data-tip="'+esc(label(v.date)+' : '+fmt(v.value,kind==='water'?2:0)+' '+(kind==='water'?'m³':'kWh'))+'"/>').join('');
 el.innerHTML='<div class="chart-wrapper"><svg viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Évolution '+esc(kind)+'"><defs><clipPath id="clip-'+id+'"><rect x="'+p.left+'" y="'+p.top+'" width="'+(w-p.left-p.right)+'" height="'+(h-p.top-p.bottom)+'"/></clipPath></defs>'+axis+'<line class="chart-zero" x1="'+p.left+'" x2="'+(w-p.right)+'" y1="'+Y(0)+'" y2="'+Y(0)+'"/><g clip-path="url(#clip-'+id+')">'+area+segs+circles+'</g>'+xlabels+'</svg><div class="chart-tooltip hidden"></div></div>';el.querySelectorAll('[data-tip]').forEach(dot=>{dot.addEventListener('pointerenter',()=>{const t=el.querySelector('.chart-tooltip');t.textContent=dot.dataset.tip;t.classList.remove('hidden');t.style.left=Math.min(75,100*Number(dot.getAttribute('cx'))/w)+'%';t.style.top=Math.max(0,100*Number(dot.getAttribute('cy'))/h-16)+'%'});dot.addEventListener('pointerleave',()=>el.querySelector('.chart-tooltip').classList.add('hidden'))})}
 function renderAnalysis(){
- const scale=granularity==='month'?'hebdomadaire':'mensuelle';
+ const scale=granularity==='month'?'mensuelle':granularity==='half'?'semestrielle':'annuelle';
  const titles={
   network:['RÉSEAU','Solde cumulé du réseau','Index jour + nuit, référencé au 24/03/2026'],
   pv:['PHOTOVOLTAÏQUE','Production cumulée','Production des panneaux depuis le 12/12/2025'],
@@ -186,9 +192,9 @@ function renderAnalysis(){
   house:['ESTIMATION','Énergie du foyer cumulée','Production photovoltaïque + bilan réseau, estimation']
  };
  const [over,title,sub]=titles[chartMode];
- $('#analysis-overline').textContent=over+' · VUE '+(granularity==='month'?'MENSUELLE':'ANNUELLE');
+ $('#analysis-overline').textContent=over+' · VUE '+(granularity==='month'?'MENSUELLE':granularity==='half'?'6 MOIS':'ANNUELLE');
  $('#analysis-title').textContent=title;
- $('#analysis-detail-title').textContent=granularity==='month'?'Détail des semaines':'Détail des mois';
+ $('#analysis-detail-title').textContent=granularity==='month'?'Détail des mois':granularity==='half'?'Détail par semestre':'Bilan annuel';
  $('#analysis-subtitle').textContent=sub;
  renderChart('analysis-chart',chartMode,chartMode==='network'?REFERENCE:'2025-12-12');
  $$('.analysis-tab').forEach(x=>x.classList.toggle('active',x.dataset.chart===chartMode));
@@ -223,7 +229,7 @@ function renderCategoryPages(){
  set('water-metric-normal',wdelta==null?'—':fmt(Math.max(0,wdelta-pool),2)+' m³');
  set('water-metric-pool',fmt(pool,2)+' m³');
 
- const weekly=granularity==='month',scale=weekly?'hebdomadaire':'mensuelle';
+ const scale=granularity==='month'?'mensuelle':granularity==='half'?'sur 6 mois':'annuelle';
  $('#electric-bar-title').textContent=electricBarMode==='net'?'Variation '+scale+' du compteur':'Consommation '+scale+' du foyer';
  $('#electric-bar-overline').textContent=electricBarMode==='net'?'BILAN RÉSEAU · KWH':'CONSOMMATION ESTIMÉE · KWH';
  $('#electric-bar-description').textContent=electricBarMode==='net'?'Vert : compteur en recul · Corail : compteur qui remonte.':'Estimation : production PV + variation du réseau.';
@@ -307,7 +313,7 @@ $$('[data-electric-bar]').forEach(button=>button.addEventListener('click',()=>{
  $('#electric-bar-overline').textContent=electricBarMode==='net'?'BILAN RÉSEAU · KWH':'CONSOMMATION DU FOYER · KWH';
  $('#electric-bar-title').textContent=electricBarMode==='net'?'Variation mensuelle':'Consommation mensuelle';
  $('#electric-bar-description').textContent=electricBarMode==='net'?'Vert : compteur en recul · Corail : compteur qui remonte.':'Production PV + variation du réseau, reconstituée par mois.';
- const scale=granularity==='month'?'hebdomadaire':'mensuelle';
+ const scale=granularity==='month'?'mensuelle':granularity==='half'?'sur 6 mois':'annuelle';
  $('#electric-bar-title').textContent=electricBarMode==='net'?'Variation '+scale+' du compteur':'Consommation '+scale+' du foyer';
  drawMonthlyBars('monthly-electricity-chart',electricBarMode);
 }));
@@ -326,7 +332,7 @@ const today=()=>dateISO(new Date());
 function openReading(r){$('#reading-form').reset();$('#reading-id').value=r?.date||'';$('#reading-date').value=r?.date||today();for(const k of ['day','night','pv','water'])$('#reading-'+k).value=r?.[k]??'';pendingPhotos=r?.photos?{...r.photos}:{};photoFlags();$('#reading-heading').textContent=r?'Modifier le relevé':'Nouveau relevé';modal('reading-overlay')}
 function photoFlags(){$('#photo-flags').innerHTML=Object.keys(pendingPhotos).map(k=>'<span class="photo-flag">Photo '+esc(({day:'jour',night:'nuit',pv:'PV',water:'eau'})[k])+'</span>').join('')}
 $('#new-reading').onclick=()=>openReading();
-$('#reading-form').onsubmit=e=>{e.preventDefault();const date=$('#reading-date').value,id=$('#reading-id').value,r={date};let count=0;for(const k of ['day','night','pv','water']){const value=$('#reading-'+k).value;if(value.trim()!==''){r[k]=Number(value);count++}}if(!count)return toast('Renseigne au moins un index.');if((r.day==null)!==(r.night==null))return toast('Pour le bilan réseau, renseigne jour et nuit ensemble.');if(Object.keys(pendingPhotos).length)r.photos=pendingPhotos;if(db.readings.some(v=>v.date===date&&v.date!==id))return toast('Un relevé existe déjà à cette date.');db.readings=db.readings.filter(v=>v.date!==id);db.readings.push(r);if(!id){selectedMonth=date.slice(0,7);calendarYear=Number(date.slice(0,4));}if(!save()){db.readings=db.readings.filter(v=>v.date!==date);if(id)db.readings.push(sorted().find(v=>v.date===id));return}modal('reading-overlay',false);render();toast('Relevé enregistré')};
+$('#reading-form').onsubmit=e=>{e.preventDefault();const date=$('#reading-date').value,id=$('#reading-id').value,r={date};let count=0;for(const k of ['day','night','pv','water']){const value=$('#reading-'+k).value;if(value.trim()!==''){r[k]=Number(value);count++}}if(!count)return toast('Renseigne au moins un index.');if((r.day==null)!==(r.night==null))return toast('Pour le bilan réseau, renseigne jour et nuit ensemble.');if(Object.keys(pendingPhotos).length)r.photos=pendingPhotos;if(db.readings.some(v=>v.date===date&&v.date!==id))return toast('Un relevé existe déjà à cette date.');db.readings=db.readings.filter(v=>v.date!==id);db.readings.push(r);if(!id){calendarYear=Number(date.slice(0,4));}if(!save()){db.readings=db.readings.filter(v=>v.date!==date);if(id)db.readings.push(sorted().find(v=>v.date===id));return}modal('reading-overlay',false);render();toast('Relevé enregistré')};
 $('#history-table').addEventListener('click',e=>{const edit=e.target.closest('[data-edit]'),del=e.target.closest('[data-delete]');if(edit)openReading(db.readings.find(r=>r.date===edit.dataset.edit));if(del&&confirm('Supprimer ce relevé du '+label(del.dataset.delete)+' ?')){db.readings=db.readings.filter(r=>r.date!==del.dataset.delete);save();render()}});
 const exportBlob=(content,type,name)=>{const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000)};
 $('#export-data').onclick=()=>exportBlob(JSON.stringify({version:1,exportedAt:new Date().toISOString(),...db},null,2),'application/json','flux-sauvegarde-'+today()+'.json');
