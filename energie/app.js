@@ -200,66 +200,69 @@ function renderCategoryPages(){
 }
 function drawMonthlyBars(id,kind){
  const el=$('#'+id);if(!el)return;
- const raw=monthly().map(r=>({...r,house:r.net!=null&&r.pv!=null?r.net+r.pv:null}));
- const entries=raw.filter(r=>r[kind]!=null&&Number.isFinite(r[kind]));
- if(!entries.length){el.innerHTML='<div class="empty-state">Deux relevés nécessaires pour établir les mois.</div>';return}
- const W=800,H=313,L=62,R=20,T=26,B=47,plotH=H-T-B,slot=(W-L-R)/entries.length,barWidth=Math.min(49,slot*.59);
- let bottom=0,top=0;
- for(const r of entries){let v=r[kind];if(kind==='water')v=Math.max(0,r.water);bottom=Math.min(bottom,v);top=Math.max(top,v)}
- if(top===0&&bottom===0)top=1;
- top=top>0?top*1.17:0;bottom=bottom<0?bottom*1.17:0;
- const Y=v=>T+(top-v)/Math.max(1e-9,top-bottom)*plotH;
- const zero=Y(0);
- const axis=Array.from({length:5},(_,i)=>{
-    const v=bottom+(top-bottom)*i/4,y=Y(v);
-    return '<line class="monthly-grid" x1="'+L+'" y1="'+y.toFixed(2)+'" x2="'+(W-R)+'" y2="'+y.toFixed(2)+'"/><text x="'+(L-11)+'" y="'+(y+4).toFixed(2)+'" text-anchor="end">'+fmt(v,kind==='water'?1:0)+'</text>'
+ const entries=periodBuckets(),known=entries.filter(e=>Number.isFinite(e[kind]));
+ if(!known.length){el.innerHTML='<div class="no-chart-data">Pas de mesures disponibles pour cette période.</div>';return}
+ const W=820,H=326,L=60,R=18,T=23,B=46;
+ const zeroHeight=H-T-B,step=(W-L-R)/entries.length;
+ const barW=Math.min(granularity==='month'?94:46,step*(granularity==='month'?.47:.58));
+ const vals=known.map(e=>e[kind]),bottom=Math.min(0,...vals),top=Math.max(0,...vals);
+ const max=Math.max(1,top>0?top*1.2:0),min=bottom<0?bottom*1.2:0;
+ const Y=v=>T+(max-v)/(max-min)*zeroHeight,Y0=Y(0);
+ const ticks=Array.from({length:5},(_,i)=>min+(max-min)*i/4).map(v=>{
+  const y=Y(v);
+  return '<line class="monthly-grid" x1="'+L+'" x2="'+(W-R)+'" y1="'+y.toFixed(1)+'" y2="'+y.toFixed(1)+'"/>'+
+   '<text text-anchor="end" x="'+(L-9)+'" y="'+(y+4).toFixed(1)+'">'+fmt(v,kind==='water'?1:0)+'</text>';
  }).join('');
- const color={net:'#d98e7a',pv:'#32a184',water:'#6199c7',house:'#687db7'};
- const decimals=kind==='water'?2:0;
- const monthTexts=[];
- const bars=entries.map((r,i)=>{
-   const xc=L+slot*(i+.5),x=xc-barWidth/2,v=r[kind],d=parseDate(r.date);
-   const isPart=r.a==='2025-12-12'||(r.date===sorted().at(-1)?.date&&d.getDate()<28);
-   let shapes='',hint='';
+ const barGroups=entries.map((r,i)=>{
+   const x=L+(i+.5)*step-barW/2,center=x+barW/2,v=r[kind],labelText=esc(r.label);
+   const prefix='<g tabindex="0" role="button" data-bar="'+i+'" aria-label="'+esc(r.label)+'">';
+   if(v==null)return prefix+'<line x1="'+(center-7).toFixed(1)+'" x2="'+(center+7).toFixed(1)+'" y1="'+(Y0+3).toFixed(1)+'" y2="'+(Y0+3).toFixed(1)+'" stroke="#d4dee3" stroke-width="2.3" stroke-linecap="round"/>'+
+    '<text text-anchor="middle" x="'+center.toFixed(1)+'" y="'+(H-18)+'" class="bar-x-label">'+labelText+'</text></g>';
+   const measured=r.measured?.[kind];
+   const border=measured?'none':'#ffffffa0';
+   let rects='';
    if(kind==='water'){
-     const pool=Math.max(0,Math.min(v,r.pool));
-     const house=Math.max(0,v-pool);
-     const y1=Y(house),h1=Math.max(0,zero-y1),y2=Y(house+pool),h2=Math.max(0,y1-y2);
-     shapes='<rect class="monthly-bar" x="'+x.toFixed(1)+'" y="'+y1.toFixed(1)+'" width="'+barWidth.toFixed(1)+'" height="'+Math.max(1,h1).toFixed(1)+'" rx="4" fill="'+color.water+'"/>';
-     if(pool>0)shapes+='<rect class="monthly-bar" x="'+x.toFixed(1)+'" y="'+y2.toFixed(1)+'" width="'+barWidth.toFixed(1)+'" height="'+Math.max(1,h2).toFixed(1)+'" rx="4" fill="#e8b56f"/>';
-     hint=fmt(house,2)+' m³ maison'+(pool>0?' · '+fmt(pool,2)+' m³ piscine':'');
-   } else {
-     const y=Y(v),upper=Math.min(y,zero),height=Math.max(1,Math.abs(zero-y));
-     const fill=kind==='net'?(v>=0?color.net:'#2ca287'):kind==='house'?color.house:color.pv;
-     shapes='<rect class="monthly-bar" x="'+x.toFixed(1)+'" y="'+upper.toFixed(1)+'" width="'+barWidth.toFixed(1)+'" height="'+height.toFixed(1)+'" rx="5" fill="'+fill+'"/>';
-     hint=(kind==='house'?'':v>0?'+':'')+fmt(v,decimals)+' kWh';
+      const pool=Math.max(0,Math.min(v,r.pool)),domestic=Math.max(0,v-pool);
+      const topDomestic=Y(domestic),poolTop=Y(v);
+      if(domestic>0)rects+='<rect class="monthly-bar" x="'+x.toFixed(1)+'" y="'+topDomestic.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+Math.max(1,Y0-topDomestic).toFixed(1)+'" rx="4" fill="#5b95be" stroke="'+border+'" stroke-width="0.6"/>';
+      if(pool>0)rects+='<rect class="monthly-bar" x="'+x.toFixed(1)+'" y="'+poolTop.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+Math.max(1,topDomestic-poolTop).toFixed(1)+'" rx="4" fill="#e6b166" stroke="'+border+'" stroke-width="0.6"/>';
+   }else{
+      const fill=kind==='net'?(v<=0?'#269a80':'#d68c79'):kind==='pv'?'#299d82':'#7387b7';
+      const y=Math.min(Y0,Y(v)),height=Math.max(1,Math.abs(Y(v)-Y0));
+      rects='<rect class="monthly-bar" x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+height.toFixed(1)+'" rx="5" fill="'+fill+'" stroke="'+border+'" stroke-width="0.6"/>';
    }
-   const name=monthLabel(r.date)+(isPart?'*':'');
-   monthTexts.push('<text x="'+xc.toFixed(1)+'" y="'+(H-14)+'" text-anchor="middle">'+esc(name)+'</text>');
-   const tooltip=esc(monthLabel(r.date)+' : '+hint+' (répartition indicative)');
-   return '<g data-bar="'+i+'" tabindex="0" role="button" aria-label="'+tooltip+'">'+shapes+'<rect class="monthly-tap" x="'+(L+slot*i).toFixed(1)+'" y="'+T+'" width="'+slot.toFixed(1)+'" height="'+plotH.toFixed(1)+'"><title>'+tooltip+'</title></rect></g>';
+   const aster=r.partial?' *':'';
+   const marker=measured?'':'<circle cx="'+center.toFixed(1)+'" cy="'+(H-7)+'" r="2" fill="#bac8d1"/>';
+   return prefix+rects+'<rect class="monthly-tap" x="'+(L+i*step).toFixed(1)+'" y="'+T+'" width="'+step.toFixed(1)+'" height="'+(H-T-B)+'"/>'+
+    '<text text-anchor="middle" x="'+center.toFixed(1)+'" y="'+(H-18)+'" class="bar-x-label">'+labelText+aster+'</text>'+marker+'</g>';
  }).join('');
- const desc=kind==='net'?'Évolution du compteur réseau':kind==='house'?'Consommation électrique estimée du foyer':kind==='pv'?'Production mensuelle photovoltaïque':'Consommation d’eau mensuelle';
- el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" role="group" aria-label="'+desc+'"><text x="'+L+'" y="14">'+(kind==='water'?'m³':'kWh')+'</text>'+axis+'<line class="monthly-zero" x1="'+L+'" y1="'+zero.toFixed(2)+'" x2="'+(W-R)+'" y2="'+zero.toFixed(2)+'"/>'+bars+monthTexts.join('')+'</svg><div class="bar-selection" aria-live="polite"></div>';
- const summary=el.querySelector('.bar-selection');
- const select=(index)=>{
-   const r=entries[index],v=r[kind],n=monthLabel(r.date),unit=kind==='water'?'m³':'kWh';
-   const content=kind==='water'
-      ?'<strong>'+esc(n)+'</strong> : ≈ '+fmt(v,2)+' m³ (dont '+fmt(r.pool,2)+' m³ piscine)'
-      :'<strong>'+esc(n)+'</strong> : ≈ '+(kind==='house'?'':v>0?'+':'')+fmt(v,0)+' '+unit+(kind==='net'?(v<0?' · avance créée':v>0?' · avance consommée':' · stable'):kind==='house'?' · consommation estimée':'');
-   summary.innerHTML=content;
-   el.querySelectorAll('[data-bar]').forEach((g,i)=>g.querySelectorAll('.monthly-bar').forEach(rect=>rect.classList.toggle('monthly-selected',i===index)));
+ const unit=kind==='water'?'m³':'kWh',period=periodRange().heading;
+ el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" role="group" aria-label="'+esc(period)+', histogramme de '+esc(kind)+'">'+
+  '<text x="'+L+'" y="12">'+unit+'</text>'+ticks+
+  '<line class="monthly-zero" x1="'+L+'" x2="'+(W-R)+'" y1="'+Y0.toFixed(1)+'" y2="'+Y0.toFixed(1)+'"/>'+
+  barGroups+'</svg><div class="bar-selection" aria-live="polite"></div>';
+ const out=el.querySelector('.bar-selection');
+ const select=index=>{
+  const r=entries[index],v=r[kind];
+  if(v==null)out.innerHTML='<strong>'+esc(r.label)+'</strong> : aucun relevé couvrant cette période';
+  else if(kind==='water'){
+   out.innerHTML='<strong>'+esc(r.label)+'</strong> : ≈ '+fmt(v,2)+' m³ · dont '+fmt(r.pool,2)+' m³ piscine';
+  }else{
+   out.innerHTML='<strong>'+esc(r.label)+'</strong> : ≈ '+(kind==='house'?'':v>0?'+':'')+fmt(v)+' '+unit+
+    (kind==='net'?(v<0?' · avance gagnée':v>0?' · avance consommée':' · stable'):'');
+  }
+  el.querySelectorAll('[data-bar]').forEach((bar,i)=>bar.querySelectorAll('.monthly-bar').forEach(rect=>rect.classList.toggle('monthly-selected',i===index)));
  };
- el.querySelectorAll('[data-bar]').forEach((g,i)=>{
-   g.addEventListener('click',()=>select(i));
-   g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(i)}});
+ el.querySelectorAll('[data-bar]').forEach((bar,i)=>{
+  bar.addEventListener('click',()=>select(i));
+  bar.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(i)}});
  });
- select(kind==='water'&&entries.some(r=>r.pool>0)?entries.findIndex(r=>r.pool>0):entries.length-1);
+ select(entries.findLastIndex(e=>e[kind]!=null));
  if(window.matchMedia&&window.matchMedia('(max-width:750px)').matches){
-   // Present the most recent months first on phones; older months remain scrollable.
-   el.scrollLeft=Math.max(0,el.scrollWidth-el.clientWidth);
+  el.scrollLeft=periodPreset==='rolling'&&granularity==='year'?Math.max(0,el.scrollWidth-el.clientWidth):0;
  }
 }
+
 $$('[data-electric-bar]').forEach(button=>button.addEventListener('click',()=>{
  electricBarMode=button.dataset.electricBar;
  $$('[data-electric-bar]').forEach(b=>b.classList.toggle('active',b.dataset.electricBar===electricBarMode));
