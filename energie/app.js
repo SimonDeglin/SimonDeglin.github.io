@@ -347,8 +347,14 @@ function oilPlot(model){
    for(let day=previous.date;day<a.date;day=oilAddDays(day,1)){
     const current=model.daily.get(day);if(current)level-=current.total;
     const newDate=oilAddDays(day,1);
-    if(newDate<a.date&&(newDate.endsWith('-01')||newDate.endsWith('-15')))
+    const refill=oilDeliveries().filter(d=>d.date===newDate&&(newDate<a.date||a.phase==='after')).reduce((sum,d)=>sum+d.liters,0);
+    if(refill>0){
      points.push({date:newDate,liters:level,kind:'model'});
+     level+=refill;
+     points.push({date:newDate,liters:level,kind:'derived'});
+    }else if(newDate<a.date&&(newDate.endsWith('-01')||newDate.endsWith('-15'))){
+     points.push({date:newDate,liters:level,kind:'model'});
+    }
    }
   }
   points.push({date:a.date,liters:a.liters,kind:a.derived?'derived':'measured',phase:a.phase});
@@ -378,7 +384,7 @@ function renderOilTimeline(model){
  const ticks=[{date:data[0].date,label:'Déc. 25'},{date:'2026-02-15',label:'Fév. 26'},{date:'2026-09-21',label:'Sept. 26'}]
  .filter(t=>t.date>=first&&t.date<=last).map(t=>'<text text-anchor="middle" x="'+X(t.date).toFixed(1)+'" y="'+(H-14)+'" class="oil-date-label">'+t.label+'</text>').join('');
  const fill=oilDeliveries().filter(d=>d.date>=first&&d.date<=last).map(d=>{
-  const x=X(d.date),anchor=model.anchors.find(a=>a.date===d.date&&a.phase==='after');
+  const x=X(d.date),anchor=data.findLast(a=>a.date===d.date&&(a.kind==='derived'||a.phase==='after'));
   return anchor?'<text text-anchor="end" x="'+(x-2).toFixed(1)+'" y="'+(Y(anchor.liters)-13).toFixed(1)+'" class="oil-fill-label">+'+fmt(d.liters)+' L</text>':'';
  }).join('');
  el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Historique des niveaux de mazout et livraison">'+
