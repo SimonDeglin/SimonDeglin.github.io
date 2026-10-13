@@ -723,3 +723,68 @@ body[data-section="mazout"] .category-secondary strong{font-size:19px}
  .oil-entry{grid-template-columns:58px 10px 1fr auto}
  .oil-entry-actions .mini-btn{width:22px;min-width:22px}
 }
+
+
+/* V16 — shared oil history and two clear oil-usage curves */
+#page-releves .history-oil-cell{min-width:145px;vertical-align:middle}
+#page-releves .history-oil-row td{background:#fcfaf7}
+#page-releves .history-oil-row:hover td{background:#f6ede1}
+.history-oil-button{
+ display:flex;align-items:center;gap:5px;flex-wrap:wrap;justify-content:flex-start;
+ text-align:left;border:0;background:transparent;padding:2px 1px;color:#7d614c;
+ cursor:pointer;font-weight:800;font-size:11px
+}
+.history-oil-button:hover{color:#68432f}
+.history-oil-index{
+ display:inline-flex;gap:4px;align-items:center;
+ border-radius:6px;padding:4px 6px;
+ background:#f3ebdf;color:#7b5e43;white-space:nowrap
+}
+.history-oil-index small{font-size:9px;color:#9d8875;font-weight:600}
+.history-oil-fill{
+ display:inline-flex;gap:4px;align-items:center;
+ padding:4px 6px;border-radius:6px;background:#dff3e9;color:#287c59;white-space:nowrap
+}
+.history-oil-fill small{font-size:9px;color:#6e9982;font-weight:600}
+.oil-history-open{color:#87664b}
+.oil-chart-panel{min-width:0}
+.oil-chart-tabs{
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+ padding:4px;gap:4px;background:#f4eee5;border:1px solid #e8dccb;
+ border-radius:12px;margin:17px 0 8px;max-width:440px
+}
+.oil-chart-btn{
+ border:1px solid transparent;border-radius:9px;background:transparent;
+ font-size:11px;min-height:36px;padding:8px 12px;font-weight:800;color:#93795f
+}
+.oil-chart-btn.active{background:white;border-color:#e4d6c4;color:#78593c;box-shadow:0 3px 9px #775b3c13}
+.oil-chart-btn:focus-visible{outline:2px solid #bb9872;outline-offset:2px}
+.oil-timeline svg .oil-usage-line{
+ stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none
+}
+.oil-usage-line.heat{stroke:#ae7950}
+.oil-usage-line.hotwater{stroke:#538db4}
+.oil-usage-end{stroke-width:2;fill:white}
+.oil-usage-end.heat{stroke:#ae7950}
+.oil-usage-end.hotwater{stroke:#538db4}
+.oil-stop-label{font:700 9px "DM Sans",Arial,sans-serif;fill:#b7a38c}
+.oil-chart-legend{display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap;margin:4px 0 10px}
+.oil-chart-legend span{display:flex;gap:7px;align-items:center;font-size:11px;color:#7b8d97;font-weight:750}
+.oil-line-key{display:inline-block;width:20px;border-top:3px solid #ae7950;border-radius:5px}
+.oil-line-key.hotwater{border-color:#538db4}
+#oil-usage-detail{font-size:11px;line-height:1.55;padding-top:11px}
+#oil-usage-detail strong{font-weight:850;color:#765b44}
+#oil-usage-detail b{font-weight:800;color:#536c7b}
+.oil-timeline{width:100%;overflow:hidden}
+@media(max-width:750px){
+ #page-releves .history-oil-cell{min-width:139px}
+ .history-oil-button{font-size:10px;gap:4px}
+ .history-oil-index,.history-oil-fill{padding:4px 5px}
+ .history-oil-index small,.history-oil-fill small{font-size:8px}
+ .oil-chart-tabs{max-width:none;margin:13px 0 7px}
+ .oil-chart-btn{font-size:11px;min-height:35px}
+ .oil-chart-legend{gap:11px;margin:0 0 8px}
+ .oil-chart-legend span{font-size:10px}
+ #oil-usage-detail{font-size:10px}
+ .oil-timeline svg .oil-usage-line{stroke-width:2.6}
+}
