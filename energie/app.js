@@ -42,7 +42,7 @@ function monthly(){const dates=['2025-12-12',...monthEnds()],out=[];for(let i=1;
 function show(page){$$('.page').forEach(el=>el.classList.toggle('active',el.id==='page-'+page));$$('[data-go]').forEach(el=>el.classList.toggle('active',el.dataset.go===page));const names={accueil:"Vue d'ensemble",electricite:'Électricité',solaire:'Panneaux solaires',eau:'Consommation d’eau',releves:'Mes relevés',analyses:'Analyses détaillées',reglages:'Réglages'};$('#page-title').textContent=names[page];history.replaceState(null,'','#'+page);window.scrollTo(0,0);render()}
 $$('[data-go]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.go)));
 function nextMonthEnd(){const now=new Date();return new Date(now.getFullYear(),now.getMonth()+1,0)}
-function render(){const n=net(),pv=vals('pv'),w=vals('water'),reference=n.find(r=>r.date===REFERENCE),lastNet=n.at(-1),balance=reference&&lastNet?lastNet.value-reference.value:null,prior=n.at(-2),delta=prior&&lastNet?lastNet.value-prior.value:null;
+function render(){syncPeriodControls();const n=net(),pv=vals('pv'),w=vals('water'),reference=n.find(r=>r.date===REFERENCE),lastNet=n.at(-1),balance=reference&&lastNet?lastNet.value-reference.value:null,prior=n.at(-2),delta=prior&&lastNet?lastNet.value-prior.value:null;
 $('#balance-value').textContent=balance==null?'—':fmt(Math.abs(balance))+' kWh';$('#balance-value').classList.toggle('negative',balance>0);$('#balance-status').textContent=balance==null?'Sans référence':balance<0?'d’avance sur le bilan annuel':balance>0?'au-dessus de la référence':'à l’équilibre';$('#balance-details').textContent=balance==null?'Ajoute tes index pour commencer.':balance<0?'Le total jour + nuit est inférieur au relevé de référence.':balance>0?'Le total jour + nuit est supérieur au relevé de référence.':'Le total jour + nuit correspond à la référence.';$('#balance-date').textContent='Dernier relevé : '+(lastNet?label(lastNet.date):'—');
 $('#recent-trend').textContent=delta==null?'—':(delta>0?'+':'')+fmt(delta)+' kWh';$('#trend-label').textContent=delta==null?'Aucune comparaison':delta>0?'Le compteur remonte':delta<0?'Le compteur recule':'Compteur stable';$('#trend-duration').textContent=prior?'Du '+label(prior.date)+' au '+label(lastNet.date):'—';$('#footer-variation').textContent=delta==null?'—':(delta>0?'+':'')+fmt(delta)+' kWh';
 const pvDelta=pv.length>1?pv.at(-1).value-pv[0].value:null;const netDelta=n.length>1?n.at(-1).value-n[0].value:null;const house=pvDelta!=null&&netDelta!=null?pvDelta+netDelta:null;const waterDelta=w.length>1?w.at(-1).value-w[0].value:null;
@@ -54,6 +54,116 @@ renderChart('balance-chart','network',REFERENCE);renderHistory();renderRecent();
 function renderHistory(){const data=sorted().reverse();$('#history-table').innerHTML=data.map(r=>'<tr><td>'+label(r.date)+'</td>'+['day','night'].map(k=>'<td>'+(r[k]==null?'<span class="muted">—</span>':fmt(r[k]))+'</td>').join('')+'<td>'+(r.day!=null&&r.night!=null?fmt(r.day+r.night):'—')+'</td><td>'+(r.pv==null?'—':fmt(r.pv))+'</td><td>'+(r.water==null?'—':fmt(r.water,2))+'</td><td><div class="row-actions"><button class="mini-btn" title="Modifier" data-edit="'+r.date+'">✎</button><button class="mini-btn danger" title="Supprimer" data-delete="'+r.date+'">×</button></div></td></tr>').join('')}
 function renderRecent(){const data=sorted().reverse().slice(0,4);$('#home-recent').innerHTML='<div class="recent-list">'+data.map(r=>'<div class="recent-row"><span class="recent-date">'+label(r.date)+'</span><span class="recent-meter">'+(r.day!=null&&r.night!=null?'Élec. '+fmt(r.day+r.night)+' kWh':'Relevé d’eau')+'<small>'+[r.pv!=null?'PV':'',r.water!=null?'Eau':''].filter(Boolean).join(' · ')+'</small></span><span class="recent-status">Mesuré</span></div>').join('')+'</div>'}
 function chartSeries(kind,start){const data=meterList[kind]();if(!data.length)return[];const from=start||data[0].date,base=readingAt(kind,from);if(base==null)return[];const dates=[from,...monthEnds().filter(d=>d>from&&d<=data.at(-1).date),data.at(-1).date,...data.filter(r=>r.date>=from).map(r=>r.date)];return [...new Set(dates)].sort().map(d=>({date:d,value:readingAt(kind,d)-base,exact:data.some(r=>r.date===d)})).filter(p=>p.value!=null)}
+
+/* A single time frame is shared by electricity, solar production, water and detailed analyses. */
+function addMonths(ym,step){
+ const [year,month]=ym.split('-').map(Number);
+ const d=new Date(year,month-1+step,1,12);
+ return dateISO(d).slice(0,7);
+}
+function monthEnd(ym){const [y,m]=ym.split('-').map(Number);return dateISO(new Date(y,m,0,12))}
+function latestMeterDate(){return sorted().at(-1)?.date||'2026-10-07'}
+function periodRange(){
+ if(granularity==='month')return {start:selectedMonth+'-01',end:monthEnd(selectedMonth),heading:parseDate(selectedMonth+'-01').toLocaleDateString('fr-BE',{month:'long',year:'numeric'})};
+ if(periodPreset==='calendar')return {start:calendarYear+'-01-01',end:calendarYear+'-12-31',heading:String(calendarYear)};
+ const latest=latestMeterDate();
+ const from=addMonths(latest.slice(0,7),-11);
+ return {start:from+'-01',end:latest,heading:'12 derniers mois'};
+}
+function periodWindows(){
+ const r=periodRange(),windows=[];
+ if(granularity==='month'){
+  const [y,m]=selectedMonth.split('-').map(Number);
+  const max=new Date(y,m,0,12).getDate();
+  for(let d=1;d<=max;d+=7){
+   const e=Math.min(max,d+6),from=dateISO(new Date(y,m-1,d-1,12)),to=dateISO(new Date(y,m-1,e,12));
+   windows.push({start:from,end:to,label:String(d).padStart(2,'0')+'–'+String(e).padStart(2,'0')});
+  }
+ }else{
+  for(let ym=r.start.slice(0,7);ym<=r.end.slice(0,7);ym=addMonths(ym,1)){
+   const [y,m]=ym.split('-').map(Number);
+   const start=dateISO(new Date(y,m-1,0,12)),end=monthEnd(ym);
+   windows.push({start,end,label:parseDate(ym+'-01').toLocaleDateString('fr-BE',{month:'short'})});
+  }
+ }
+ return windows;
+}
+function seriesDomain(kind){
+ if(kind==='house'){
+  const n=net(),pv=vals('pv');
+  return n.length&&pv.length?{start: n[0].date>pv[0].date?n[0].date:pv[0].date,
+   end:n.at(-1).date<pv.at(-1).date?n.at(-1).date:pv.at(-1).date}:null;
+ }
+ const data=meterList[kind]?.();
+ return data?.length?{start:data[0].date,end:data.at(-1).date}:null;
+}
+function readKind(kind,date){
+ if(kind==='house'){
+  const n=readingAt('network',date),pv=readingAt('pv',date);
+  return n==null||pv==null?null:n+pv;
+ }
+ return readingAt(kind,date);
+}
+function exactKind(kind,date){
+ if(kind==='house')return net().some(r=>r.date===date)&&vals('pv').some(r=>r.date===date);
+ return meterList[kind]().some(r=>r.date===date);
+}
+function deltaWindow(kind,win){
+ const domain=seriesDomain(kind);if(!domain)return {value:null,measured:false,start:null,end:null};
+ const start=win.start>domain.start?win.start:domain.start;
+ const end=win.end<domain.end?win.end:domain.end;
+ if(start>=end)return {value:null,measured:false,start,end};
+ const v0=readKind(kind,start),v1=readKind(kind,end);
+ return {value:v0==null||v1==null?null:v1-v0,measured:exactKind(kind,start)&&exactKind(kind,end),start,end};
+}
+function periodBuckets(){
+ return periodWindows().map(win=>{
+  const n=deltaWindow('network',win),p=deltaWindow('pv',win),w=deltaWindow('water',win),house=deltaWindow('house',win);
+  const pool=w.value!=null?poolEventsBetween(w.start,w.end).reduce((total,e)=>total+e.amount,0):0;
+  return {...win,date:win.end,net:n.value,pv:p.value,water:w.value,house:house.value,pool,
+   measured:{net:n.measured,pv:p.measured,water:w.measured,house:house.measured},
+   partial:Object.values({net:n,pv:p,water:w}).some(v=>v.start>win.start||v.end<win.end)};
+ });
+}
+function cumulativePoints(kind,start){
+ const domain=seriesDomain(kind);if(!domain)return[];
+ const range=periodRange(),earliest=[range.start,domain.start,start].sort().at(-1),latest=[range.end,domain.end].sort()[0];
+ const base=readKind(kind,start);
+ if(earliest>=latest||base==null)return[];
+ const dates=new Set([earliest,latest]);
+ for(const win of periodWindows()){
+  if(win.end>=earliest&&win.end<=latest)dates.add(win.end);
+  if(win.start>=earliest&&win.start<=latest)dates.add(win.start);
+ }
+ const originals=kind==='house'?[...net(),...vals('pv')]:meterList[kind]();
+ for(const r of originals)if(r.date>=earliest&&r.date<=latest)dates.add(r.date);
+ return [...dates].sort().map(date=>({date,value:readKind(kind,date)-base,exact:exactKind(kind,date)}))
+  .filter(p=>Number.isFinite(p.value));
+}
+function syncPeriodControls(){
+ const r=periodRange();
+ $$('[data-granularity]').forEach(b=>b.classList.toggle('active',b.dataset.granularity===granularity));
+ $$('[data-period]').forEach(b=>b.classList.toggle('active',b.dataset.period===periodPreset));
+ $$('.period-switch').forEach(group=>group.classList.toggle('hidden',granularity==='month'));
+ $$('.period-navigation').forEach(group=>group.classList.toggle('hidden',granularity==='year'&&periodPreset==='rolling'));
+ $$('.period-navigation-label').forEach(el=>el.textContent=r.heading);
+ $$('[data-period-nav="next"]').forEach(btn=>{
+  btn.disabled=granularity==='month'?selectedMonth>=latestMeterDate().slice(0,7):calendarYear>=Number(latestMeterDate().slice(0,4));
+ });
+}
+$$('[data-granularity]').forEach(button=>button.addEventListener('click',()=>{
+ granularity=button.dataset.granularity;render();
+}));
+$$('[data-period]').forEach(button=>button.addEventListener('click',()=>{
+ periodPreset=button.dataset.period;render();
+}));
+$$('[data-period-nav]').forEach(button=>button.addEventListener('click',()=>{
+ const change=button.dataset.periodNav==='prev'?-1:1;
+ if(granularity==='month')selectedMonth=addMonths(selectedMonth,change);
+ else calendarYear+=change;
+ render();
+}));
+
 function renderChart(id,kind,start){const el=$('#'+id);if(!el)return;let points=cumulativePoints(kind,start);
 if(points.length<2){el.innerHTML='<div class="empty-state">Données insuffisantes pour ce graphique.</div>';return}
 const w=800,h=313,p={left:60,right:14,top:24,bottom:38},ys=points.map(a=>a.value),min=Math.min(0,...ys),max=Math.max(0,...ys),spread=Math.max(1,max-min),low=min-spread*.09,high=max+spread*.12;const x0=parseDate(points[0].date).getTime(),x1=parseDate(points.at(-1).date).getTime(),X=d=>p.left+(parseDate(d).getTime()-x0)/Math.max(1,x1-x0)*(w-p.left-p.right),Y=v=>p.top+(high-v)/(high-low)*(h-p.top-p.bottom);
