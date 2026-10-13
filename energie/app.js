@@ -489,14 +489,14 @@ function renderOilTimeline(model){
  .filter(t=>t.date>=first&&t.date<=last).map(t=>'<text text-anchor="middle" x="'+X(t.date).toFixed(1)+'" y="'+(H-14)+'" class="oil-date-label">'+t.label+'</text>').join('');
  const fill=oilDeliveries().filter(d=>d.date>=first&&d.date<=last).map(d=>{
   const x=X(d.date),anchor=data.findLast(a=>a.date===d.date&&(a.kind==='derived'||a.phase==='after'));
-  return anchor?'<text text-anchor="end" x="'+(x-2).toFixed(1)+'" y="'+(Y(anchor.liters)-13).toFixed(1)+'" class="oil-fill-label">+'+fmt(d.liters)+' L</text>':'';
+  return anchor?'<text text-anchor="'+(d.date===first?'start':'end')+'" x="'+(d.date===first?x+7:x-3).toFixed(1)+'" y="'+(Y(anchor.liters)-13).toFixed(1)+'" class="oil-fill-label">+'+fmt(d.liters)+' L</text>':'';
  }).join('');
  el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Historique des niveaux de mazout et livraison">'+
   '<text x="'+margins.l+'" y="11" class="oil-axis-label">L</text>'+grid+paths+spots+fill+ticks+'</svg>';
  const lastMeasured=oilReadings().at(-1),lastFill=oilDeliveries().at(-1);
- $('#oil-timeline-detail').textContent=lastMeasured&&lastFill&&lastMeasured.date===lastFill.date?
-  label(lastFill.date)+' : '+fmt(lastMeasured.liters)+' L avant livraison · +'+fmt(lastFill.liters)+' L · environ '+fmt(lastMeasured.liters+lastFill.liters)+' L après':
-  'Points pleins : relevés enregistrés. Les niveaux intermédiaires sont calculés.';
+ $('#oil-timeline-detail').textContent=oilDeliveries().length?
+  oilDeliveries().map(d=>label(d.date)+' : +'+fmt(d.liters)+' L').join(' · ')+' · niveaux intermédiaires calculés':
+  'Points pleins : relevés enregistrés. Niveaux intermédiaires calculés.';
 }
 function renderOil(){
  const model=oilModel(),last=oilLastKnown(model),forecast=oilForecast(model),period=oilInitialPeriod(model);
@@ -734,8 +734,17 @@ $('#reading-form').onsubmit=e=>{e.preventDefault();const date=$('#reading-date')
 $('#history-table').addEventListener('click',e=>{const oil=e.target.closest('[data-history-oil]'),edit=e.target.closest('[data-edit]'),del=e.target.closest('[data-delete]');if(oil){show('mazout');return}if(edit)openReading(db.readings.find(r=>r.date===edit.dataset.edit));if(del&&confirm('Supprimer les index du '+label(del.dataset.delete)+' ?')){db.readings=db.readings.filter(r=>r.date!==del.dataset.delete);save();render()}});
 const exportBlob=(content,type,name)=>{const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000)};
 $('#export-data').onclick=()=>exportBlob(JSON.stringify({version:1,exportedAt:new Date().toISOString(),...db},null,2),'application/json','flux-sauvegarde-'+today()+'.json');
-$('#export-csv').onclick=()=>exportBlob('\ufeffdate;jour_kwh;nuit_kwh;production_kwh;eau_m3\n'+sorted().map(r=>[r.date,r.day??'',r.night??'',r.pv??'',r.water??''].join(';')).join('\n'),'text/csv','flux-releves-'+today()+'.csv');
-$('#import-data').onclick=()=>$('#import-file').click();$('#import-file').onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{const d=JSON.parse(await f.text());if(!Array.isArray(d.readings)||!d.readings.every(r=>/^\d{4}-\d{2}-\d{2}$/.test(r.date)))throw Error('Fichier incorrect');if(confirm('Remplacer tous les relevés de cet appareil par ceux du fichier ?')){db={readings:d.readings,events:Array.isArray(d.events)?d.events:[],oilReadings:Array.isArray(d.oilReadings)?d.oilReadings:DEFAULT_OIL_READINGS.map(r=>({...r})),oilDeliveries:Array.isArray(d.oilDeliveries)?d.oilDeliveries:DEFAULT_OIL_DELIVERIES.map(r=>({...r})),oilStopDate:d.oilStopDate||'2026-03-01'};save();render();toast('Import terminé')}}catch(err){toast('Fichier JSON invalide')}e.target.value=''};
+$('#export-csv').onclick=()=>{
+ const originals=sorted(),oil=oilReadings(),fills=oilDeliveries(),byDay=new Map(originals.map(r=>[r.date,r]));
+ const allDates=[...new Set([...originals.map(r=>r.date),...oil.map(r=>r.date),...fills.map(r=>r.date)])].sort();
+ const rows=allDates.map(date=>{
+  const other=byDay.get(date),tank=oil.filter(r=>r.date===date).sort((a,b)=>a.phase==='before'?-1:1);
+  const delivery=fills.filter(r=>r.date===date).reduce((sum,r)=>sum+r.liters,0);
+  return [date,other?.day??'',other?.night??'',other?.pv??'',other?.water??'',tank.map(x=>x.liters).join('/'),delivery||''].join(';');
+ });
+ exportBlob('\ufeffdate;jour_kwh;nuit_kwh;production_kwh;eau_m3;mazout_niveau_L;livraison_mazout_L\n'+rows.join('\n'),'text/csv','flux-releves-'+today()+'.csv');
+};
+$('#import-data').onclick=()=>$('#import-file').click();$('#import-file').onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{const d=JSON.parse(await f.text());if(!Array.isArray(d.readings)||!d.readings.every(r=>/^\d{4}-\d{2}-\d{2}$/.test(r.date)))throw Error('Fichier incorrect');if(confirm('Remplacer tous les relevés de cet appareil par ceux du fichier ?')){db={readings:d.readings,events:Array.isArray(d.events)?d.events:[],oilReadings:Array.isArray(d.oilReadings)?d.oilReadings.map(r=>({...r})):DEFAULT_OIL_READINGS.map(r=>({...r})),oilDeliveries:Array.isArray(d.oilDeliveries)?d.oilDeliveries.map(r=>({...r})):DEFAULT_OIL_DELIVERIES.map(r=>({...r})),oilStopDate:d.oilStopDate||'2026-03-01'};const initial=db.oilReadings.find(r=>r.id==='oil-2025-12-12'&&r.date==='2025-12-12');if(initial&&Number(initial.liters)===1000)initial.liters=0;if(initial&&Number(initial.liters)===0&&!db.oilDeliveries.some(x=>x.date==='2025-12-12'&&Number(x.liters)===1000))db.oilDeliveries.push({...DEFAULT_OIL_DELIVERIES[0]});save();render();toast('Import terminé')}}catch(err){toast('Fichier JSON invalide')}e.target.value=''};
 $('#new-event').onclick=()=>{$('#event-form').reset();$('#event-date').value=today();modal('event-overlay')};
 $('#event-form').onsubmit=e=>{e.preventDefault();db.events.push({id:String(Date.now()),date:$('#event-date').value,label:$('#event-label').value,amount:Number($('#event-amount').value)});save();modal('event-overlay',false);render()};
 $('#special-events').addEventListener('click',e=>{const b=e.target.closest('[data-remove-event]');if(b&&confirm('Supprimer cet événement ?')){db.events=db.events.filter(v=>v.id!==b.dataset.removeEvent);save();render()}});
