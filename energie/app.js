@@ -155,7 +155,7 @@ function syncPeriodControls(){
 document.addEventListener('dblclick',e=>{
  if(e.target.closest('button, a, .monthly-bars, .chart-space, .shortcut, .mobile-nav')) e.preventDefault();
 },{passive:false});
-$('[data-granularity]').forEach(button=>button.addEventListener('click',()=>{
+$$('[data-granularity]').forEach(button=>button.addEventListener('click',()=>{
  granularity=button.dataset.granularity;render();
 }));
 $$('[data-period]').forEach(button=>button.addEventListener('click',()=>{
