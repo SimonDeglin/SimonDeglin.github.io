@@ -500,3 +500,85 @@ body[data-section="eau"] .topbar .subtitle{display:none}
  body[data-section="solaire"] .category-hero,
  body[data-section="eau"] .category-hero{margin-top:0}
 }
+
+
+/* V11 — clear electricity choice, precise readings, restrained home colors */
+body[data-section="electricite"] .topbar:before,
+body[data-section="solaire"] .topbar:before,
+body[data-section="eau"] .topbar:before{content:none!important;display:none!important}
+body[data-section="electricite"] .topbar .header-actions,
+body[data-section="solaire"] .topbar .header-actions,
+body[data-section="eau"] .topbar .header-actions{margin-left:auto}
+.electric-mode{
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+ border:1px solid #eedbc8;background:#f8ecdf;
+ border-radius:15px;padding:5px;gap:5px;margin:9px 0 11px;
+ box-shadow:0 6px 17px rgba(111,78,45,.035)
+}
+.electric-mode-btn{
+ display:flex;flex-direction:column;justify-content:center;align-items:center;
+ border:1px solid transparent;border-radius:11px;padding:11px 13px;
+ background:transparent;color:#806f61;min-height:61px;
+ transition:background .16s,color .16s,border-color .16s
+}
+.electric-mode-btn strong{font-size:14px;font-weight:800;letter-spacing:-.1px}
+.electric-mode-btn small{font-size:10px;margin-top:3px;opacity:.78}
+.electric-mode-btn.active{background:#fff;color:#96562b;border-color:#ead2b7;box-shadow:0 5px 13px #8a583815}
+.electric-mode-btn.active:focus-visible{outline:2px solid #d89d69;outline-offset:2px}
+.electric-method-note{
+ padding:10px 12px;margin:0 1px 8px;
+ font-size:11px;line-height:1.55;color:#8f7969;
+ background:#fef7ef;border:1px solid #f1dfcc;border-radius:10px
+}
+#electric-net-chart-toggle{margin:0 0 11px;min-height:34px}
+#electric-net-chart-toggle .view-toggle-btn{min-height:28px}
+#page-electricite .bar-legend .legend-dot.house{background:#d58c4e}
+#page-electricite.view-house .bar-panel .overline{color:#a66637}
+#page-accueil .quick-electric{
+ background:linear-gradient(150deg,#fff2e4 0%,#fae3cb 100%);
+ border-color:#f2dac0
+}
+#page-accueil .quick-solar{
+ background:linear-gradient(150deg,#eefaf2 0%,#dcf2e4 100%);
+ border-color:#d2eadd
+}
+#page-accueil .quick-water{
+ background:linear-gradient(150deg,#edf7ff 0%,#daecfb 100%);
+ border-color:#cfe3f2
+}
+#page-accueil .quick-electric .stat-kicker,
+#page-accueil .quick-electric .stat-number{color:#935b30}
+#page-accueil .quick-solar .stat-kicker,
+#page-accueil .quick-solar .stat-number{color:#23785a}
+#page-accueil .quick-water .stat-kicker,
+#page-accueil .quick-water .stat-number{color:#286b9b}
+#page-accueil .quick-stat .stat-caption{color:#778995}
+#page-accueil .quick-electric .stat-icon{background:#f7ddc0;color:#af7547}
+#page-accueil .quick-solar .stat-icon{background:#cfebd8;color:#368f65}
+#page-accueil .quick-water .stat-icon{background:#cee4f6;color:#457dac}
+#page-solaire .category-primary,
+#page-eau .category-primary{margin-bottom:1px}
+#page-solaire .category-hero,
+#page-eau .category-hero{padding-bottom:28px}
+#page-electricite .category-secondary strong{font-variant-numeric:tabular-nums;font-size:clamp(14px,1.6vw,19px)}
+#page-electricite .category-secondary span{font-size:10px}
+#page-electricite .category-hero .category-primary-label{font-weight:700}
+#page-electricite .bar-panel .panel-top h2{margin-bottom:3px}
+#page-eau .bar-legend{justify-content:flex-start}
+#page-eau .bar-legend .legend-dot.water{background:#5b95be}
+@media(max-width:750px){
+ .electric-mode{margin:5px 0 8px;padding:4px;gap:4px;border-radius:12px}
+ .electric-mode-btn{min-height:51px;padding:8px 9px;border-radius:9px}
+ .electric-mode-btn strong{font-size:13px}
+ .electric-mode-btn small{font-size:9px;margin-top:2px;line-height:1.2}
+ .electric-method-note{font-size:10px;padding:9px 11px}
+ #electric-net-chart-toggle{margin-bottom:8px;min-height:32px}
+ #page-solaire .category-hero,
+ #page-eau .category-hero{padding-bottom:21px}
+ #page-electricite .category-secondary strong{font-size:clamp(12px,3.5vw,16px)}
+ #page-electricite .category-secondary span{font-size:9px}
+ #page-accueil .stat-card{min-height:134px}
+ #page-accueil .quick-stat .stat-number{font-size:clamp(18px,5vw,25px)}
+ #page-accueil .quick-stat .stat-kicker{font-size:10px}
+ #page-accueil .quick-stat .stat-caption{font-size:9px}
+}
