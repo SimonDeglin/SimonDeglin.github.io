@@ -68,7 +68,7 @@ function periodRange(){
  if(periodPreset==='calendar')return {start:calendarYear+'-01-01',end:calendarYear+'-12-31',heading:String(calendarYear)};
  const latest=latestMeterDate();
  const from=addMonths(latest.slice(0,7),-11);
- return {start:from+'-01',end:latest,heading:'12 derniers mois'};
+ return {start:from+'-01',end:latest,heading:'Dernière année'};
 }
 function periodWindows(){
  const r=periodRange(),windows=[];
@@ -188,6 +188,7 @@ function renderAnalysis(){
  const [over,title,sub]=titles[chartMode];
  $('#analysis-overline').textContent=over+' · VUE '+(granularity==='month'?'MENSUELLE':'ANNUELLE');
  $('#analysis-title').textContent=title;
+ $('#analysis-detail-title').textContent=granularity==='month'?'Détail des semaines':'Détail des mois';
  $('#analysis-subtitle').textContent=sub;
  renderChart('analysis-chart',chartMode,chartMode==='network'?REFERENCE:'2025-12-12');
  $$('.analysis-tab').forEach(x=>x.classList.toggle('active',x.dataset.chart===chartMode));
