@@ -149,3 +149,67 @@
 .chart-space .chart-wrapper{min-width:580px}
 .chart-space .chart-wrapper svg{min-width:580px}
 }
+
+
+/* V4: Unified time controls and consistent chart proportions */
+html,body{touch-action:manipulation;-webkit-text-size-adjust:100%}
+button,a,.mobile-nav,.sidebar,.monthly-bars,.chart-space{touch-action:manipulation}
+button,a{-webkit-tap-highlight-color:transparent}
+.time-controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:12px 0 18px}
+.time-switch,.period-switch,.period-navigation{
+ display:flex;align-items:center;gap:4px;border-radius:13px;
+ background:#e9eff2;border:1px solid #dce6eb;padding:5px;min-height:45px
+}
+.time-switch{background:#dae9e5;border-color:#cce0d9}
+.time-btn,.period-btn{
+ border:0;border-radius:9px;background:transparent;
+ padding:9px 16px;color:#657f8f;font-size:12px;font-weight:800;
+ min-height:34px;white-space:nowrap
+}
+.time-btn.active,.period-btn.active{background:#fff;color:#1b8370;box-shadow:0 3px 10px #1e435017}
+.period-navigation{margin-left:auto;gap:7px;padding:4px 6px;background:#fff}
+.period-arrow{background:#edf2f4;border:0;border-radius:8px;color:#284958;width:35px;height:35px;font-size:24px;line-height:1;display:grid;place-items:center;padding:0}
+.period-navigation-label{min-width:85px;text-align:center;font-weight:800;color:#2b4859;font-size:12px;white-space:nowrap}
+.period-arrow:disabled{opacity:.35;cursor:not-allowed}
+#page-electricite>.view-toggle{margin-bottom:14px}
+#page-electricite .bar-panel{min-height:452px}
+#page-electricite .stable-chart-panel{width:100%}
+.monthly-bars,.unified-chart{min-height:319px;height:319px;width:100%;margin-top:13px;overflow-x:auto}
+.monthly-bars svg,.unified-chart .chart-wrapper svg{
+ display:block;width:100%;height:auto;max-height:none;min-height:0;
+}
+.unified-chart .chart-wrapper{min-width:0;width:100%;position:relative}
+.monthly-bars .bar-selection{margin-top:0;min-height:32px}
+.no-chart-data{display:grid;place-items:center;height:268px;color:#96a5af;font-size:12px;text-align:center}
+.electric-insights{margin-top:18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 22px}
+.electric-insights>.panel-top,.electric-insights>.insights-bottom{grid-column:1/-1}
+.electric-insights .insight{border-bottom:0;border-right:1px solid #edf1f3;padding:18px 10px 18px 0}
+.electric-insights .insight:nth-of-type(3){border-right:0}
+#page-analyses .time-controls{margin-top:0}
+#page-analyses .analysis-space{min-height:319px}
+#page-electricite .metric-strip>div:first-child strong{color:#177e6c}
+.monthly-bars:focus-within,.unified-chart:focus-within{outline:0}
+@media(max-width:950px){
+ .electric-insights{grid-template-columns:1fr}
+ .electric-insights>.panel-top,.electric-insights>.insights-bottom{grid-column:1}
+ .electric-insights .insight{border-right:0;border-bottom:1px solid #edf1f3;padding:16px 0}
+}
+@media(max-width:750px){
+ .time-controls{gap:8px;margin:7px 0 14px}
+ .time-switch{flex:1 1 100%;display:grid;grid-template-columns:repeat(2,1fr)}
+ .period-switch{flex:1 1 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .period-btn,.time-btn{font-size:11px;padding:9px 9px}
+ .period-navigation{margin-left:0;flex:1 1 100%;justify-content:center}
+ .period-navigation-label{min-width:130px}
+ #page-electricite .bar-panel{min-height:417px}
+ #page-electricite .bar-panel .panel-top{min-height:86px}
+ .monthly-bars,.unified-chart{height:284px;min-height:284px;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+ .monthly-bars svg,.unified-chart .chart-wrapper svg{width:100%;min-width:610px;height:auto;max-height:none;min-height:0}
+ .unified-chart .chart-wrapper{min-width:610px}
+ .bar-mode-switch{margin-top:2px}
+ .electric-insights{margin-top:12px;display:block}
+ .electric-insights .insight{padding:14px 0}
+ #page-analyses .analysis-space{height:284px;min-height:284px}
+ #page-analyses .analysis-space .chart-wrapper{min-width:610px}
+ .monthly-bars .bar-selection{min-height:28px;margin-top:0;justify-content:flex-start;padding-left:5px}
+}
