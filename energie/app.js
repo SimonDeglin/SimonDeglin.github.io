@@ -286,13 +286,13 @@ function drawMonthlyBars(id,kind){
   barGroups+'</svg><div class="bar-selection" aria-live="polite"></div>';
  const out=el.querySelector('.bar-selection');
  const select=index=>{
-  const r=entries[index],v=r[kind];
+  const r=entries[index],v=r[kind],partialNote=r.partial?' · période partielle':'';
   if(v==null)out.innerHTML='<strong>'+esc(r.label)+'</strong> : aucun relevé couvrant cette période';
   else if(kind==='water'){
-   out.innerHTML='<strong>'+esc(r.label)+'</strong> : ≈ '+fmt(v,2)+' m³ · dont '+fmt(r.pool,2)+' m³ piscine';
+   out.innerHTML='<strong>'+esc(r.label)+'</strong> : ≈ '+fmt(v,2)+' m³ · dont '+fmt(r.pool,2)+' m³ piscine'+partialNote;
   }else{
    out.innerHTML='<strong>'+esc(r.label)+'</strong> : ≈ '+(kind==='house'?'':v>0?'+':'')+fmt(v)+' '+unit+
-    (kind==='net'?(v<0?' · avance gagnée':v>0?' · avance consommée':' · stable'):'');
+    (kind==='net'?(v<0?' · avance gagnée':v>0?' · avance consommée':' · stable'):'')+partialNote;
   }
   el.querySelectorAll('[data-bar]').forEach((bar,i)=>bar.querySelectorAll('.monthly-bar').forEach(rect=>rect.classList.toggle('monthly-selected',i===index)));
  };
