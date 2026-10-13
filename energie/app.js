@@ -172,6 +172,18 @@ document.addEventListener('touchend',e=>{
 },{passive:false});
 document.addEventListener('dblclick',stopZoom,{passive:false});
 window.addEventListener('wheel',e=>{if(e.ctrlKey)stopZoom(e)},{passive:false});
+window.addEventListener('keydown',e=>{
+ const zoomKey=['+','=','-','_','0','Add','Subtract'].includes(e.key)||['NumpadAdd','NumpadSubtract','Numpad0'].includes(e.code);
+ if((e.ctrlKey||e.metaKey)&&zoomKey)stopZoom(e);
+},{capture:true});
+let latestLayoutWidth=window.innerWidth||0;
+window.addEventListener('resize',()=>{
+ const width=window.innerWidth||0;
+ if(Math.abs(width-latestLayoutWidth)<3)return;
+ latestLayoutWidth=width;
+ if(typeof window.requestAnimationFrame==='function')window.requestAnimationFrame(()=>render());
+ else render();
+});
 $$('[data-granularity]').forEach(button=>button.addEventListener('click',()=>{
  granularity=button.dataset.granularity;render();
 }));
