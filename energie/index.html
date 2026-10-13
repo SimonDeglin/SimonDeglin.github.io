@@ -11,7 +11,7 @@
   <button type="button" class="time-btn active" data-granularity="year">Annuel</button>
  </div>
  <div class="period-switch" role="group" aria-label="Période annuelle">
-  <button type="button" class="period-btn active" data-period="rolling">12 derniers mois</button>
+  <button type="button" class="period-btn active" data-period="rolling">Dernière année</button>
   <button type="button" class="period-btn" data-period="calendar">Année civile</button>
  </div>
  <div class="period-navigation hidden" aria-label="Changer de période">
@@ -38,14 +38,14 @@
 </section>
 </section>
 <section class="page" id="page-solaire"><div class="section-intro"><div><div class="overline">PANNEAUX PHOTOVOLTAÏQUES</div><h2>Production solaire</h2><p>Rythme de production, mois par mois.</p></div></div>
-<div class="metric-strip"><div><span>Production depuis l'entrée</span><strong id="pv-metric-total">—</strong></div><div><span>Production du dernier mois</span><strong id="pv-metric-last">—</strong></div><div><span>Dernier index</span><strong id="pv-metric-index">—</strong></div></div>
+<div class="metric-strip"><div><span>Production depuis l'entrée</span><strong id="pv-metric-total">—</strong></div><div><span>Production récente</span><strong id="pv-metric-last">—</strong></div><div><span>Dernier index</span><strong id="pv-metric-index">—</strong></div></div>
 <div class="time-controls" aria-label="Période du graphique">
  <div class="time-switch" role="group" aria-label="Échelle de temps">
   <button type="button" class="time-btn" data-granularity="month">Mensuel</button>
   <button type="button" class="time-btn active" data-granularity="year">Annuel</button>
  </div>
  <div class="period-switch" role="group" aria-label="Période annuelle">
-  <button type="button" class="period-btn active" data-period="rolling">12 derniers mois</button>
+  <button type="button" class="period-btn active" data-period="rolling">Dernière année</button>
   <button type="button" class="period-btn" data-period="calendar">Année civile</button>
  </div>
  <div class="period-navigation hidden" aria-label="Changer de période">
@@ -63,7 +63,7 @@
   <button type="button" class="time-btn active" data-granularity="year">Annuel</button>
  </div>
  <div class="period-switch" role="group" aria-label="Période annuelle">
-  <button type="button" class="period-btn active" data-period="rolling">12 derniers mois</button>
+  <button type="button" class="period-btn active" data-period="rolling">Dernière année</button>
   <button type="button" class="period-btn" data-period="calendar">Année civile</button>
  </div>
  <div class="period-navigation hidden" aria-label="Changer de période">
@@ -79,7 +79,7 @@
   <button type="button" class="time-btn active" data-granularity="year">Annuel</button>
  </div>
  <div class="period-switch" role="group" aria-label="Période annuelle">
-  <button type="button" class="period-btn active" data-period="rolling">12 derniers mois</button>
+  <button type="button" class="period-btn active" data-period="rolling">Dernière année</button>
   <button type="button" class="period-btn" data-period="calendar">Année civile</button>
  </div>
  <div class="period-navigation hidden" aria-label="Changer de période">
@@ -88,7 +88,7 @@
   <button type="button" class="period-arrow" data-period-nav="next" aria-label="Période suivante">›</button>
  </div>
 </div>
-<section class="panel analysis-panel"><div class="panel-top"><div><div class="overline" id="analysis-overline"></div><h2 id="analysis-title"></h2><p class="panel-description" id="analysis-subtitle"></p></div><span class="badge estimated">Reconstitué</span></div><div id="analysis-chart" class="chart-space analysis-space"></div><div id="analysis-summary" class="analysis-summary"></div></section><section class="panel detail-panel"><div class="panel-top"><div><div class="overline">MENSUEL</div><h2>Détail des mois</h2></div></div><div class="table-scroll"><table class="data-table"><thead><tr><th>Mois</th><th>Réseau kWh</th><th>PV kWh</th><th>Eau m³</th><th>Piscine m³</th><th>Modèle</th></tr></thead><tbody id="monthly-body"></tbody></table></div></section><p class="analysis-disclaimer">Les estimations servent à visualiser la répartition probable, pas à créer de faux relevés. Le bilan officiel dépend des dates et règles de compensation du gestionnaire.</p></section>
+<section class="panel analysis-panel"><div class="panel-top"><div><div class="overline" id="analysis-overline"></div><h2 id="analysis-title"></h2><p class="panel-description" id="analysis-subtitle"></p></div><span class="badge estimated">Reconstitué</span></div><div id="analysis-chart" class="chart-space analysis-space"></div><div id="analysis-summary" class="analysis-summary"></div></section><section class="panel detail-panel"><div class="panel-top"><div><div class="overline">MENSUEL</div><h2 id="analysis-detail-title">Détail des mois</h2></div></div><div class="table-scroll"><table class="data-table"><thead><tr><th>Mois</th><th>Réseau kWh</th><th>PV kWh</th><th>Eau m³</th><th>Piscine m³</th><th>Modèle</th></tr></thead><tbody id="monthly-body"></tbody></table></div></section><p class="analysis-disclaimer">Les estimations servent à visualiser la répartition probable, pas à créer de faux relevés. Le bilan officiel dépend des dates et règles de compensation du gestionnaire.</p></section>
 <section class="page" id="page-reglages"><div class="settings-grid"><section class="panel settings-panel"><div class="overline">INSTALLATION</div><h2>Mes compteurs</h2><div class="setting-row"><span>Fournisseur</span><strong>Luminus</strong></div><div class="setting-row"><span>Électricité</span><strong>RESA</strong></div><div class="setting-row"><span>Contrat</span><strong>Monohoraire · jour + nuit</strong></div><div class="setting-row"><span>Eau</span><strong>SWDE</strong></div><div class="setting-row"><span>Décompte</span><strong>Avril</strong></div><div class="setting-row"><span>Référence confirmée</span><strong>24/03/2026</strong></div><p class="fine-note">Référence électrique fixée au relevé du 24/03/2026. Décompte administratif prévu en avril.</p></section><section class="panel settings-panel"><div class="overline">MES DONNÉES</div><h2>Sauvegarde</h2><p class="panel-description">Relevés enregistrés localement dans ton navigateur.</p><div class="button-stack"><button class="btn btn-dark" id="export-data">↓ Sauvegarde JSON</button><button class="btn" id="import-data">↑ Importer JSON</button><button class="btn" id="export-csv">↓ Export CSV</button></div><p class="fine-note">L'export inclut les éventuelles photos. Fais une sauvegarde régulière pour éviter toute perte en cas de changement de téléphone.</p></section><section class="panel settings-panel"><div class="overline">RAPPEL</div><h2>Relevé mensuel</h2><p class="panel-description">Chaque dernier jour du mois.</p><div class="button-stack"><button class="btn btn-dark" id="calendar-reminder">Ajouter à mon calendrier</button></div><p class="fine-note">Un rappel calendrier fonctionne même lorsque le site est fermé. Les notifications push automatiques demandent un service serveur supplémentaire.</p></section><section class="panel settings-panel"><div class="overline">EAU</div><h2>Événements particuliers</h2><div id="special-events"></div><button class="btn" id="new-event">+ Ajouter un événement</button></section></div></section></main></div>
 <nav class="mobile-nav" aria-label="Navigation principale"><button class="mobile-link active" data-go="accueil" aria-label="Accueil"><svg class="icon"><use href="#i-home"/></svg><span>Accueil</span></button><button class="mobile-link" data-go="electricite" aria-label="Élec"><svg class="icon"><use href="#i-bolt"/></svg><span>Élec</span></button><button class="mobile-link" data-go="solaire" aria-label="Solaire"><svg class="icon"><use href="#i-sun"/></svg><span>Solaire</span></button><button class="mobile-link" data-go="eau" aria-label="Eau"><svg class="icon"><use href="#i-drop"/></svg><span>Eau</span></button><button class="mobile-link" data-go="releves" aria-label="Relevés"><svg class="icon"><use href="#i-list"/></svg><span>Relevés</span></button></nav>
 <div class="modal-overlay hidden" id="reading-overlay"><div class="modal" role="dialog" aria-modal="true"><div class="modal-top"><div><div class="overline">COMPTEURS</div><h2 id="reading-heading">Nouveau relevé</h2></div><button class="icon-button" data-close="reading-overlay">×</button></div><form id="reading-form"><input type="hidden" id="reading-id"><label class="field wide"><span>Date</span><input id="reading-date" type="date" required></label><div class="form-grid"><label class="field"><span>Jour · kWh</span><input type="number" min="0" step="1" id="reading-day"></label><label class="field"><span>Nuit · kWh</span><input type="number" min="0" step="1" id="reading-night"></label><label class="field"><span>Panneaux · kWh</span><input type="number" min="0" step="1" id="reading-pv"></label><label class="field"><span>Eau · m³</span><input type="number" min="0" step=".001" id="reading-water"></label></div><div class="scan-row"><div><strong>Photos de mes compteurs</strong><p>La lecture du chiffre reste à valider manuellement.</p><div id="photo-flags"></div></div><button class="btn" id="scan-in-form" type="button">📷 Photographier</button></div><div class="modal-actions"><button type="button" class="btn" data-close="reading-overlay">Annuler</button><button type="submit" class="btn btn-dark">Enregistrer</button></div></form></div></div>
