@@ -122,7 +122,7 @@ function periodBuckets(){
   const pool=w.value!=null?poolEventsBetween(w.start,w.end).reduce((total,e)=>total+e.amount,0):0;
   return {...win,date:win.end,net:n.value,pv:p.value,water:w.value,house:house.value,pool,
    measured:{net:n.measured,pv:p.measured,water:w.measured,house:house.measured},
-   partial:Object.values({net:n,pv:p,water:w}).some(v=>v.start>win.start||v.end<win.end)};
+   partial:[n,p,w].some(v=>v.value!=null&&(v.start>win.start||v.end<win.end))};
  });
 }
 function cumulativePoints(kind,start){
@@ -151,7 +151,11 @@ function syncPeriodControls(){
   btn.disabled=granularity==='month'?selectedMonth>=latestMeterDate().slice(0,7):calendarYear>=Number(latestMeterDate().slice(0,4));
  });
 }
-$$('[data-granularity]').forEach(button=>button.addEventListener('click',()=>{
+// Prevent a rapid double tap on the app controls from triggering zoom in mobile browsers.
+document.addEventListener('dblclick',e=>{
+ if(e.target.closest('button, a, .monthly-bars, .chart-space, .shortcut, .mobile-nav')) e.preventDefault();
+},{passive:false});
+$('[data-granularity]').forEach(button=>button.addEventListener('click',()=>{
  granularity=button.dataset.granularity;render();
 }));
 $$('[data-period]').forEach(button=>button.addEventListener('click',()=>{
@@ -321,7 +325,7 @@ const today=()=>dateISO(new Date());
 function openReading(r){$('#reading-form').reset();$('#reading-id').value=r?.date||'';$('#reading-date').value=r?.date||today();for(const k of ['day','night','pv','water'])$('#reading-'+k).value=r?.[k]??'';pendingPhotos=r?.photos?{...r.photos}:{};photoFlags();$('#reading-heading').textContent=r?'Modifier le relevé':'Nouveau relevé';modal('reading-overlay')}
 function photoFlags(){$('#photo-flags').innerHTML=Object.keys(pendingPhotos).map(k=>'<span class="photo-flag">Photo '+esc(({day:'jour',night:'nuit',pv:'PV',water:'eau'})[k])+'</span>').join('')}
 $('#new-reading').onclick=()=>openReading();
-$('#reading-form').onsubmit=e=>{e.preventDefault();const date=$('#reading-date').value,id=$('#reading-id').value,r={date};let count=0;for(const k of ['day','night','pv','water']){const value=$('#reading-'+k).value;if(value.trim()!==''){r[k]=Number(value);count++}}if(!count)return toast('Renseigne au moins un index.');if((r.day==null)!==(r.night==null))return toast('Pour le bilan réseau, renseigne jour et nuit ensemble.');if(Object.keys(pendingPhotos).length)r.photos=pendingPhotos;if(db.readings.some(v=>v.date===date&&v.date!==id))return toast('Un relevé existe déjà à cette date.');db.readings=db.readings.filter(v=>v.date!==id);db.readings.push(r);if(!save()){db.readings=db.readings.filter(v=>v.date!==date);if(id)db.readings.push(sorted().find(v=>v.date===id));return}modal('reading-overlay',false);render();toast('Relevé enregistré')};
+$('#reading-form').onsubmit=e=>{e.preventDefault();const date=$('#reading-date').value,id=$('#reading-id').value,r={date};let count=0;for(const k of ['day','night','pv','water']){const value=$('#reading-'+k).value;if(value.trim()!==''){r[k]=Number(value);count++}}if(!count)return toast('Renseigne au moins un index.');if((r.day==null)!==(r.night==null))return toast('Pour le bilan réseau, renseigne jour et nuit ensemble.');if(Object.keys(pendingPhotos).length)r.photos=pendingPhotos;if(db.readings.some(v=>v.date===date&&v.date!==id))return toast('Un relevé existe déjà à cette date.');db.readings=db.readings.filter(v=>v.date!==id);db.readings.push(r);if(!id){selectedMonth=date.slice(0,7);calendarYear=Number(date.slice(0,4));}if(!save()){db.readings=db.readings.filter(v=>v.date!==date);if(id)db.readings.push(sorted().find(v=>v.date===id));return}modal('reading-overlay',false);render();toast('Relevé enregistré')};
 $('#history-table').addEventListener('click',e=>{const edit=e.target.closest('[data-edit]'),del=e.target.closest('[data-delete]');if(edit)openReading(db.readings.find(r=>r.date===edit.dataset.edit));if(del&&confirm('Supprimer ce relevé du '+label(del.dataset.delete)+' ?')){db.readings=db.readings.filter(r=>r.date!==del.dataset.delete);save();render()}});
 const exportBlob=(content,type,name)=>{const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000)};
 $('#export-data').onclick=()=>exportBlob(JSON.stringify({version:1,exportedAt:new Date().toISOString(),...db},null,2),'application/json','flux-sauvegarde-'+today()+'.json');
