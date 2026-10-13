@@ -101,7 +101,30 @@ const pvDelta=pv.length>1?pv.at(-1).value-pv[0].value:null;const netDelta=n.leng
 $('#pv-produced').innerHTML=fmt(pvDelta)+' <span class="unit">kWh</span>';$('#home-consumption').innerHTML=fmt(house)+' <span class="unit">kWh</span>';$('#water-consumed').innerHTML=fmt(waterDelta,2)+' <span class="unit">m³</span>';
 const waterCaption=$('#home-water-caption');if(waterCaption)waterCaption.textContent='Depuis l’entrée';
 renderChart('balance-chart','network',REFERENCE);renderHistory();renderAnalysis();renderEvents();renderCategoryPages();renderOil()}
-function renderHistory(){const data=sorted().reverse();$('#history-table').innerHTML=data.map(r=>'<tr><td>'+label(r.date)+'</td>'+['day','night'].map(k=>'<td>'+(r[k]==null?'<span class="muted">—</span>':fmt(r[k]))+'</td>').join('')+'<td>'+(r.day!=null&&r.night!=null?fmt(r.day+r.night):'—')+'</td><td>'+(r.pv==null?'—':fmt(r.pv))+'</td><td>'+(r.water==null?'—':fmt(r.water,2))+'</td><td><div class="row-actions"><button class="mini-btn" title="Modifier" data-edit="'+r.date+'">✎</button><button class="mini-btn danger" title="Supprimer" data-delete="'+r.date+'">×</button></div></td></tr>').join('')}
+function renderHistory(){
+ const base=sorted(),oilLevels=oilReadings(),oilFills=oilDeliveries();
+ const byDay=new Map(base.map(r=>[r.date,r]));
+ const dates=[...new Set([...base.map(r=>r.date),...oilLevels.map(r=>r.date),...oilFills.map(r=>r.date)])].sort().reverse();
+ const number=k=>k==null?'<span class="muted">—</span>':fmt(k);
+ $('#history-table').innerHTML=dates.map(date=>{
+  const r=byDay.get(date),levels=oilLevels.filter(x=>x.date===date),fills=oilFills.filter(x=>x.date===date);
+  const oilBits=[
+   ...levels.map(x=>'<span class="history-oil-index">'+fmt(x.liters)+' L'+(fills.length?'<small>'+(x.phase==='after'?'après':'avant')+'</small>':'')+'</span>'),
+   ...fills.map(x=>'<span class="history-oil-fill">+'+fmt(x.liters)+' L<small>livraison</small></span>')
+  ];
+  const oilHtml=oilBits.length?'<button type="button" class="history-oil-button" data-history-oil="'+date+'" aria-label="Voir les détails du mazout du '+label(date)+'">'+oilBits.join('')+'</button>':'<span class="muted">—</span>';
+  const actions=(r?'<button class="mini-btn" title="Modifier les index" data-edit="'+date+'">✎</button><button class="mini-btn danger" title="Supprimer les index" data-delete="'+date+'">×</button>':'')+
+   (oilBits.length?'<button class="mini-btn oil-history-open" title="Voir le mazout" data-history-oil="'+date+'">↗</button>':'');
+  return '<tr'+(!r&&oilBits.length?' class="history-oil-row"':'')+'><td>'+label(date)+'</td>'+
+   '<td>'+number(r?.day)+'</td><td>'+number(r?.night)+'</td>'+
+   '<td>'+(r?.day!=null&&r?.night!=null?fmt(r.day+r.night):'<span class="muted">—</span>')+'</td>'+
+   '<td>'+number(r?.pv)+'</td>'+
+   '<td>'+(r?.water==null?'<span class="muted">—</span>':fmt(r.water,2))+'</td>'+
+   '<td class="history-oil-cell">'+oilHtml+'</td>'+
+   '<td><div class="row-actions">'+actions+'</div></td></tr>';
+ }).join('');
+}
+
 function chartSeries(kind,start){const data=meterList[kind]();if(!data.length)return[];const from=start||data[0].date,base=readingAt(kind,from);if(base==null)return[];const dates=[from,...monthEnds().filter(d=>d>from&&d<=data.at(-1).date),data.at(-1).date,...data.filter(r=>r.date>=from).map(r=>r.date)];return [...new Set(dates)].sort().map(d=>({date:d,value:readingAt(kind,d)-base,exact:data.some(r=>r.date===d)})).filter(p=>p.value!=null)}
 
 /* A single time frame is shared by electricity, solar production, water and detailed analyses. */
@@ -643,7 +666,7 @@ function openReading(r){$('#reading-form').reset();$('#reading-id').value=r?.dat
 function photoFlags(){$('#photo-flags').innerHTML=Object.keys(pendingPhotos).map(k=>'<span class="photo-flag">Photo '+esc(({day:'jour',night:'nuit',pv:'PV',water:'eau'})[k])+'</span>').join('')}
 $('#new-reading').onclick=()=>openReading();
 $('#reading-form').onsubmit=e=>{e.preventDefault();const date=$('#reading-date').value,id=$('#reading-id').value,r={date};let count=0;for(const k of ['day','night','pv','water']){const value=$('#reading-'+k).value;if(value.trim()!==''){r[k]=Number(value);count++}}if(!count)return toast('Renseigne au moins un index.');if((r.day==null)!==(r.night==null))return toast('Pour le bilan réseau, renseigne jour et nuit ensemble.');if(Object.keys(pendingPhotos).length)r.photos=pendingPhotos;if(db.readings.some(v=>v.date===date&&v.date!==id))return toast('Un relevé existe déjà à cette date.');db.readings=db.readings.filter(v=>v.date!==id);db.readings.push(r);if(!id){calendarYear=Number(date.slice(0,4));}if(!save()){db.readings=db.readings.filter(v=>v.date!==date);if(id)db.readings.push(sorted().find(v=>v.date===id));return}modal('reading-overlay',false);render();toast('Relevé enregistré')};
-$('#history-table').addEventListener('click',e=>{const edit=e.target.closest('[data-edit]'),del=e.target.closest('[data-delete]');if(edit)openReading(db.readings.find(r=>r.date===edit.dataset.edit));if(del&&confirm('Supprimer ce relevé du '+label(del.dataset.delete)+' ?')){db.readings=db.readings.filter(r=>r.date!==del.dataset.delete);save();render()}});
+$('#history-table').addEventListener('click',e=>{const oil=e.target.closest('[data-history-oil]'),edit=e.target.closest('[data-edit]'),del=e.target.closest('[data-delete]');if(oil){show('mazout');return}if(edit)openReading(db.readings.find(r=>r.date===edit.dataset.edit));if(del&&confirm('Supprimer les index du '+label(del.dataset.delete)+' ?')){db.readings=db.readings.filter(r=>r.date!==del.dataset.delete);save();render()}});
 const exportBlob=(content,type,name)=>{const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000)};
 $('#export-data').onclick=()=>exportBlob(JSON.stringify({version:1,exportedAt:new Date().toISOString(),...db},null,2),'application/json','flux-sauvegarde-'+today()+'.json');
 $('#export-csv').onclick=()=>exportBlob('\ufeffdate;jour_kwh;nuit_kwh;production_kwh;eau_m3\n'+sorted().map(r=>[r.date,r.day??'',r.night??'',r.pv??'',r.water??''].join(';')).join('\n'),'text/csv','flux-releves-'+today()+'.csv');
