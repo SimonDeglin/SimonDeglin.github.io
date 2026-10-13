@@ -305,3 +305,165 @@ html,body{max-width:100%;overflow-x:hidden;touch-action:manipulation;-webkit-tex
  .main{padding-left:10px!important;padding-right:10px!important}
  .monthly-bars svg .bar-x-short{font-size:8px!important}
 }
+
+
+/* V8 — clarity-first visual system: identify each utility instantly. */
+body{transition:background-color .22s ease}
+body[data-section="electricite"]{
+ --utility-accent:#a7602b;--utility-accent-strong:#804216;
+ --utility-border:#ecd8c4;--utility-active:#fbdfbe;
+ background:#fff9f2
+}
+body[data-section="solaire"]{
+ --utility-accent:#22795a;--utility-accent-strong:#145a43;
+ --utility-border:#cce5d7;--utility-active:#d5f0df;
+ background:#f4fbf6
+}
+body[data-section="eau"]{
+ --utility-accent:#286d9d;--utility-accent-strong:#1c567e;
+ --utility-border:#cddfec;--utility-active:#d9ecfb;
+ background:#f3f9fd
+}
+body[data-section="electricite"] .main{background:linear-gradient(180deg,#fff1e3 0,#fff9f2 240px,#fff9f2 100%)}
+body[data-section="solaire"] .main{background:linear-gradient(180deg,#e8f7ed 0,#f4fbf6 240px,#f4fbf6 100%)}
+body[data-section="eau"] .main{background:linear-gradient(180deg,#e7f3fd 0,#f3f9fd 240px,#f3f9fd 100%)}
+.category-page{--utility-shadow:rgba(25,55,71,.05);max-width:1120px}
+.category-page .category-hero{
+ position:relative;isolation:isolate;overflow:hidden;
+ border-radius:23px;padding:26px 29px 24px;
+ box-shadow:0 18px 42px var(--utility-shadow);
+ color:#234557;border:1px solid #ffffff9c;
+ margin:0 0 18px
+}
+.category-electric .category-hero,.category-page>.category-electric{
+ background:linear-gradient(123deg,#f8e6d5 0%,#f5c99c 61%,#edb17c 100%);color:#683d22
+}
+.category-page>.category-solar{
+ background:linear-gradient(123deg,#e1f5e9 0%,#bfebd2 60%,#9bd9b9 100%);color:#1c5a43
+}
+.category-page>.category-water{
+ background:linear-gradient(123deg,#e6f3fd 0%,#cbe5f9 59%,#a9d0f0 100%);color:#254d6c
+}
+.category-hero::after{
+ content:"";position:absolute;right:-54px;top:-94px;width:300px;height:300px;
+ border-radius:50%;border:46px solid #ffffff3c;opacity:.54;z-index:-1;pointer-events:none
+}
+.category-hero::before{
+ content:"";position:absolute;right:74px;bottom:-190px;width:280px;height:280px;
+ border-radius:50%;background:#ffffff1e;z-index:-1;pointer-events:none
+}
+.category-heading{display:flex;justify-content:space-between;align-items:center;gap:14px}
+.category-heading-title{display:flex;align-items:center;gap:9px}
+.category-mark{width:35px;height:35px;display:grid;place-items:center;border-radius:12px;background:#ffffff94;color:inherit}
+.category-mark .icon{width:20px;height:20px}
+.category-kicker{letter-spacing:1.45px;font-weight:800;font-size:10px}
+.category-recent{font-size:11px;font-weight:700;letter-spacing:.05px;color:inherit;opacity:.76;text-align:right;white-space:nowrap}
+.category-primary{display:flex;flex-direction:column;gap:3px;margin:20px 0 21px}
+.category-primary-label{font-size:13px;font-weight:700;opacity:.82}
+.category-primary strong{font:800 clamp(36px,4.7vw,59px)/1.14 Manrope,sans-serif;letter-spacing:-2px;font-variant-numeric:tabular-nums}
+.category-primary-caption{font-size:12px;font-weight:700;opacity:.89}
+.category-secondary{
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;
+ border-top:1px solid #ffffff96;padding-top:15px;max-width:700px
+}
+.category-secondary>div{display:flex;flex-direction:column;gap:5px}
+.category-secondary>div+div{border-left:1px solid #ffffff96;padding-left:22px}
+.category-secondary span{font-size:10px;opacity:.8;font-weight:750}
+.category-secondary strong{font-family:Manrope,sans-serif;font-size:17px;font-weight:800;letter-spacing:-.4px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.category-page .time-controls{margin:4px 0 10px;gap:7px}
+.category-page .time-switch,.category-page .period-switch{
+ border:1px solid var(--utility-border);background:#ffffffaa;box-shadow:none;
+ min-height:39px;padding:4px;border-radius:13px
+}
+.category-page .time-btn,.category-page .period-btn{min-height:31px;padding:7px 15px;color:#71818c;font-size:11px}
+.category-page .time-btn.active,.category-page .period-btn.active{
+ background:var(--utility-active);color:var(--utility-accent-strong);box-shadow:none
+}
+.category-page .period-navigation{
+ border:1px solid var(--utility-border);background:#ffffffcc;
+ min-height:39px;padding:4px
+}
+.category-page .view-toggle{
+ border:1px solid var(--utility-border);background:#ffffffab;margin-bottom:11px;
+ min-height:38px
+}
+.category-page .view-toggle-btn{font-size:11px;min-height:31px;padding:7px 14px}
+.category-page .view-toggle-btn.active{background:var(--utility-active);color:var(--utility-accent-strong);box-shadow:none}
+.category-page .bar-panel{
+ background:#fff;border-color:var(--utility-border);
+ border-radius:18px;box-shadow:0 14px 35px var(--utility-shadow)
+}
+.category-page .bar-panel .overline{color:var(--utility-accent);font-size:9px;letter-spacing:1.1px}
+.category-page .bar-panel h2{margin:3px 0;font-size:18px;letter-spacing:-.5px}
+.category-page .panel-description{font-size:11px;line-height:1.45}
+.category-page .bar-legend{padding-top:10px;margin-top:6px}
+.category-page .bar-legend>span{color:#80909c}
+.category-page .bar-mode-switch{border:1px solid var(--utility-border);background:#f5f7f7}
+.category-page .bar-mode-btn.active{color:var(--utility-accent-strong);background:var(--utility-active);box-shadow:none}
+.category-chart-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:8px 2px 0}
+.category-chart-foot span{font-size:10px;color:#8698a1;line-height:1.45}
+.category-chart-foot button{background:transparent;border:0;color:var(--utility-accent-strong);font-size:11px;font-weight:800;white-space:nowrap;display:flex;align-items:center;gap:6px}
+.category-chart-foot button .icon{height:15px;width:15px}
+body[data-section="electricite"] .topbar .title,
+body[data-section="solaire"] .topbar .title,
+body[data-section="eau"] .topbar .title{color:var(--utility-accent-strong)}
+body[data-section="electricite"] .sidebar .nav-link.active,
+body[data-section="solaire"] .sidebar .nav-link.active,
+body[data-section="eau"] .sidebar .nav-link.active{background:#304e60;color:#fff}
+body[data-section="electricite"] .sidebar .nav-link.active .icon{color:#f9c493}
+body[data-section="solaire"] .sidebar .nav-link.active .icon{color:#87ddb1}
+body[data-section="eau"] .sidebar .nav-link.active .icon{color:#9ac9f4}
+body[data-section="electricite"] .mobile-link.active{background:#fbe4ca;color:#89501d}
+body[data-section="solaire"] .mobile-link.active{background:#ddf3e5;color:#1b7559}
+body[data-section="eau"] .mobile-link.active{background:#dcefff;color:#1c679a}
+/* Home: every numerical card is an immediate navigation target. */
+.quick-stat{display:block;width:100%;text-align:left;cursor:pointer;position:relative;transition:transform .14s,border-color .14s,box-shadow .14s}
+.quick-stat:hover{transform:translateY(-2px);border-color:#cbdce0;box-shadow:0 12px 30px #1b445014}
+.quick-stat:active{transform:scale(.98)}
+.quick-stat::after{content:"↗";position:absolute;top:17px;right:16px;font-size:17px;color:#b1bfc8;font-weight:600}
+.quick-stat:focus-visible{outline:3px solid #80c0ae;outline-offset:3px}
+#page-accueil .stat-grid{margin:15px 0 0}
+#page-accueil .stat-card{min-height:145px}
+#page-accueil .stat-kicker{padding-right:13px}
+#page-releves .section-intro{margin-bottom:17px}
+#page-releves .table-panel{border-radius:17px}
+#page-releves .data-table tr:hover td{background:#f5faf9}
+@media(max-width:750px){
+ .category-page .category-hero{padding:19px 18px 17px;border-radius:19px;margin-bottom:12px}
+ .category-heading-title{gap:8px}
+ .category-mark{width:30px;height:30px;border-radius:10px}
+ .category-mark .icon{width:17px;height:17px}
+ .category-kicker{font-size:9px;letter-spacing:.8px}
+ .category-recent{font-size:9px;opacity:.73}
+ .category-primary{margin:14px 0 14px;gap:2px}
+ .category-primary-label{font-size:11px}
+ .category-primary strong{font-size:clamp(33px,9.3vw,45px);letter-spacing:-1.4px}
+ .category-primary-caption{font-size:10px}
+ .category-secondary{gap:8px;padding-top:11px}
+ .category-secondary span{font-size:9px}
+ .category-secondary strong{font-size:clamp(12px,3.4vw,16px)}
+ .category-secondary>div+div{padding-left:14px}
+ .category-page .time-controls{margin:0 0 8px;gap:6px}
+ .category-page .time-switch,.category-page .period-switch{min-height:38px}
+ .category-page .time-btn,.category-page .period-btn{padding:6px 7px;font-size:10px}
+ .category-page .bar-panel{padding:16px 10px 14px!important}
+ .category-page .bar-panel h2{font-size:16px}
+ .category-page .bar-panel .panel-top{gap:6px}
+ .category-page .bar-legend{font-size:9px;gap:9px}
+ .category-page .bar-panel .panel-description{font-size:10px}
+ .category-page .view-toggle{width:100%;min-height:36px}
+ .category-page .view-toggle-btn{font-size:11px;min-height:29px}
+ .category-chart-foot{align-items:flex-start}
+ .category-chart-foot span{font-size:9px;max-width:66%}
+ .category-chart-foot button{font-size:10px}
+ #page-accueil .stat-grid{margin-top:12px}
+ #page-accueil .stat-card{min-height:132px}
+ #page-accueil .quick-stat::after{top:11px;right:10px;font-size:13px}
+ #page-accueil .stat-caption{font-size:9px;line-height:1.35}
+}
+@media(max-width:370px){
+ .category-heading{align-items:flex-start;flex-wrap:wrap;gap:5px}
+ .category-recent{padding-left:37px;text-align:left}
+ .category-page .category-hero{padding:17px 15px}
+ .category-secondary strong{font-size:12px}
+}
