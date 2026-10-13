@@ -158,10 +158,20 @@ function syncPeriodControls(){
  });
 }
 
-// Prevent a rapid double tap on the app controls from triggering zoom in mobile browsers.
-document.addEventListener('dblclick',e=>{
- if(e.target.closest('button, a, .monthly-bars, .chart-space, .shortcut, .mobile-nav')) e.preventDefault();
+// Lock viewport scale (pinch, Safari gesture events and rapid double tap)
+// while keeping ordinary single-finger scrolling and all form interactions.
+const stopZoom=e=>{if(e.cancelable)e.preventDefault()};
+for(const event of ['gesturestart','gesturechange','gestureend'])document.addEventListener(event,stopZoom,{passive:false});
+document.addEventListener('touchmove',e=>{if(e.touches?.length>1)stopZoom(e)},{passive:false});
+let lastTouchTime=0,lastTouchX=0,lastTouchY=0;
+document.addEventListener('touchend',e=>{
+ if(e.touches?.length||e.changedTouches?.length!==1)return;
+ const t=e.changedTouches[0],now=Date.now();
+ if(now-lastTouchTime<340&&Math.hypot(t.clientX-lastTouchX,t.clientY-lastTouchY)<30)stopZoom(e);
+ lastTouchTime=now;lastTouchX=t.clientX;lastTouchY=t.clientY;
 },{passive:false});
+document.addEventListener('dblclick',stopZoom,{passive:false});
+window.addEventListener('wheel',e=>{if(e.ctrlKey)stopZoom(e)},{passive:false});
 $$('[data-granularity]').forEach(button=>button.addEventListener('click',()=>{
  granularity=button.dataset.granularity;render();
 }));
@@ -243,45 +253,57 @@ function renderCategoryPages(){
 function drawMonthlyBars(id,kind){
  const el=$('#'+id);if(!el)return;
  const entries=periodBuckets(),known=entries.filter(e=>Number.isFinite(e[kind]));
- if(!known.length){el.innerHTML='<div class="no-chart-data">Pas de mesures disponibles pour cette période.</div>';return}
  el.classList.toggle('compact-period',granularity!=='month');
- const W=granularity==='month'?Math.max(820,el.clientWidth||820):Math.max(320,el.clientWidth||460),H=326,L=60,R=18,T=23,B=46;
- const zeroHeight=H-T-B,step=(W-L-R)/entries.length;
- const barW=granularity==='month'?Math.min(52,step*.58):granularity==='half'?Math.min(116,step*.43):Math.min(160,step*.56);
- const vals=known.map(e=>e[kind]),bottom=Math.min(0,...vals),top=Math.max(0,...vals);
- const max=Math.max(1,top>0?top*1.2:0),min=bottom<0?bottom*1.2:0;
- const Y=v=>T+(max-v)/(max-min)*zeroHeight,Y0=Y(0);
- const ticks=Array.from({length:5},(_,i)=>min+(max-min)*i/4).map(v=>{
+ if(!known.length){el.innerHTML='<div class="no-chart-data">Pas de mesures disponibles pour cette période.</div>';return}
+ // A compact but true-to-scale SVG: all 12 calendar slots must fit on the phone.
+ const measuredWidth=el.clientWidth||el.getBoundingClientRect?.().width||0;
+ const viewport=window.innerWidth||390;
+ const W=Math.max(230,Math.round(measuredWidth||(viewport<=750?viewport-63:viewport-375)));
+ const narrow=W<475,H=316,L=narrow?37:58,R=narrow?7:17,T=24,B=45;
+ const plotH=H-T-B,step=(W-L-R)/entries.length;
+ const barW=granularity==='month'?Math.max(9,Math.min(narrow?20:42,step*.67)):
+   granularity==='half'?Math.min(116,step*.39):Math.min(155,step*.46);
+ const vals=known.map(r=>r[kind]),bottom=Math.min(0,...vals),top=Math.max(0,...vals);
+ const hi=Math.max(1,top>0?top*1.15:0),lo=bottom<0?bottom*1.15:0;
+ const Y=v=>T+(hi-v)/(hi-lo)*plotH,Y0=Y(0);
+ const monthAbbr=['Ja','Fé','Mr','Av','Ma','Jn','Jl','Ao','Se','Oc','No','Dé'];
+ const labelMarkup=(r,center)=>{
+  const y=H-19,full=esc(r.label);
+  if(granularity!=='month')return '<text class="bar-x-label" text-anchor="middle" x="'+center.toFixed(1)+'" y="'+y+'">'+full+'</text>';
+  const month=Number(r.date.slice(5,7)),short=esc(monthAbbr[month-1]||r.label);
+  return '<text class="bar-x-label bar-x-full" text-anchor="middle" x="'+center.toFixed(1)+'" y="'+y+'">'+full+'</text>'+
+   '<text class="bar-x-label bar-x-short" text-anchor="middle" x="'+center.toFixed(1)+'" y="'+y+'">'+short+'</text>';
+ };
+ const formatTick=v=>narrow&&Math.abs(v)>=1000?fmt(v/1000,1)+'k':fmt(v,kind==='water'&&Math.abs(v)<100?1:0);
+ const ticks=Array.from({length:5},(_,i)=>lo+(hi-lo)*i/4).map(v=>{
   const y=Y(v);
   return '<line class="monthly-grid" x1="'+L+'" x2="'+(W-R)+'" y1="'+y.toFixed(1)+'" y2="'+y.toFixed(1)+'"/>'+
-   '<text text-anchor="end" x="'+(L-9)+'" y="'+(y+4).toFixed(1)+'">'+fmt(v,kind==='water'?1:0)+'</text>';
+   '<text class="bar-y-label" text-anchor="end" x="'+(L-(narrow?4:9))+'" y="'+(y+3.5).toFixed(1)+'">'+formatTick(v)+'</text>';
  }).join('');
  const barGroups=entries.map((r,i)=>{
-   const x=L+(i+.5)*step-barW/2,center=x+barW/2,v=r[kind],labelText=esc(r.label);
-   const prefix='<g tabindex="0" role="button" data-bar="'+i+'" aria-label="'+esc(r.detail||r.label)+'">';
-   if(v==null)return prefix+'<line x1="'+(center-7).toFixed(1)+'" x2="'+(center+7).toFixed(1)+'" y1="'+(Y0+3).toFixed(1)+'" y2="'+(Y0+3).toFixed(1)+'" stroke="#d4dee3" stroke-width="2.3" stroke-linecap="round"/>'+
-    '<text text-anchor="middle" x="'+center.toFixed(1)+'" y="'+(H-18)+'" class="bar-x-label">'+labelText+'</text></g>';
-   const measured=r.measured?.[kind];
-   const border=measured?'none':'#ffffffa0';
-   let rects='';
-   if(kind==='water'){
-      const pool=Math.max(0,Math.min(v,r.pool)),domestic=Math.max(0,v-pool);
-      const topDomestic=Y(domestic),poolTop=Y(v);
-      if(domestic>0)rects+='<rect class="monthly-bar" x="'+x.toFixed(1)+'" y="'+topDomestic.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+Math.max(1,Y0-topDomestic).toFixed(1)+'" rx="4" fill="#5b95be" stroke="'+border+'" stroke-width="0.6"/>';
-      if(pool>0)rects+='<rect class="monthly-bar" x="'+x.toFixed(1)+'" y="'+poolTop.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+Math.max(1,topDomestic-poolTop).toFixed(1)+'" rx="4" fill="#e6b166" stroke="'+border+'" stroke-width="0.6"/>';
-   }else{
-      const fill=kind==='net'?(v<=0?'#269a80':'#d68c79'):kind==='pv'?'#299d82':'#7387b7';
-      const y=Math.min(Y0,Y(v)),height=Math.max(1,Math.abs(Y(v)-Y0));
-      rects='<rect class="monthly-bar" x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+height.toFixed(1)+'" rx="5" fill="'+fill+'" stroke="'+border+'" stroke-width="0.6"/>';
-   }
-   const aster=r.partial?' *':'';
-   const marker=measured?'':'<circle cx="'+center.toFixed(1)+'" cy="'+(H-7)+'" r="2" fill="#bac8d1"/>';
-   return prefix+rects+'<rect class="monthly-tap" x="'+(L+i*step).toFixed(1)+'" y="'+T+'" width="'+step.toFixed(1)+'" height="'+(H-T-B)+'"/>'+
-    '<text text-anchor="middle" x="'+center.toFixed(1)+'" y="'+(H-18)+'" class="bar-x-label">'+labelText+aster+'</text>'+marker+'</g>';
+  const x=L+(i+.5)*step-barW/2,center=x+barW/2,v=r[kind];
+  const readable=(r.detail||r.label)+(v==null?' : aucune donnée':' : '+fmt(v,kind==='water'?2:0)+' '+(kind==='water'?'m³':'kWh'));
+  const prefix='<g tabindex="0" role="button" data-bar="'+i+'" aria-label="'+esc(readable)+'">';
+  if(v==null)return prefix+'<line x1="'+(center-4).toFixed(1)+'" x2="'+(center+4).toFixed(1)+'" y1="'+(Y0+2).toFixed(1)+'" y2="'+(Y0+2).toFixed(1)+'" stroke="#c8d5dc" stroke-width="2" stroke-linecap="round"/>'+labelMarkup(r,center)+'</g>';
+  const measured=r.measured?.[kind],border=measured?'none':'#ffffff8a';
+  let rects='';
+  if(kind==='water'){
+    const pool=Math.max(0,Math.min(v,r.pool)),domestic=Math.max(0,v-pool);
+    const yHome=Y(domestic),yTotal=Y(v);
+    if(domestic>0)rects+='<rect class="monthly-bar" x="'+x.toFixed(1)+'" y="'+yHome.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+Math.max(1,Y0-yHome).toFixed(1)+'" rx="'+Math.min(4,barW/4).toFixed(1)+'" fill="#5b95be" stroke="'+border+'" stroke-width="0.4"/>';
+    if(pool>0)rects+='<rect class="monthly-bar" x="'+x.toFixed(1)+'" y="'+yTotal.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+Math.max(1,yHome-yTotal).toFixed(1)+'" rx="'+Math.min(4,barW/4).toFixed(1)+'" fill="#e6b166" stroke="'+border+'" stroke-width="0.4"/>';
+  }else{
+    const fill=kind==='net'?(v<=0?'#269a80':'#d68c79'):kind==='pv'?'#299d82':'#7387b7';
+    const y=Math.min(Y0,Y(v)),height=Math.max(1,Math.abs(Y(v)-Y0));
+    rects='<rect class="monthly-bar" x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+height.toFixed(1)+'" rx="'+Math.min(4,barW/4).toFixed(1)+'" fill="'+fill+'" stroke="'+border+'" stroke-width="0.4"/>';
+  }
+  const marker=measured?'':'<circle cx="'+center.toFixed(1)+'" cy="'+(H-5)+'" r="'+(narrow?'1.3':'2')+'" fill="#bdcbd2"/>';
+  return prefix+rects+'<rect class="monthly-tap" x="'+(L+i*step).toFixed(1)+'" y="'+T+'" width="'+step.toFixed(1)+'" height="'+plotH.toFixed(1)+'"/>'+
+   labelMarkup(r,center)+marker+'</g>';
  }).join('');
  const unit=kind==='water'?'m³':'kWh',period=periodRange().heading;
- el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" width="100%" height="326" role="group" aria-label="'+esc(period)+', histogramme de '+esc(kind)+'">'+
-  '<text x="'+L+'" y="12">'+unit+'</text>'+ticks+
+ el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" width="100%" height="'+H+'" role="group" aria-label="'+esc(period)+', histogramme de '+esc(kind)+'">'+
+  '<text class="bar-axis-unit" x="'+L+'" y="12">'+unit+'</text>'+ticks+
   '<line class="monthly-zero" x1="'+L+'" x2="'+(W-R)+'" y1="'+Y0.toFixed(1)+'" y2="'+Y0.toFixed(1)+'"/>'+
   barGroups+'</svg><div class="bar-selection" aria-live="polite"></div>';
  const out=el.querySelector('.bar-selection');
@@ -300,10 +322,7 @@ function drawMonthlyBars(id,kind){
   bar.addEventListener('click',()=>select(i));
   bar.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(i)}});
  });
- select(entries.findLastIndex(e=>e[kind]!=null));
- if(window.matchMedia&&window.matchMedia('(max-width:750px)').matches){
-  el.scrollLeft=granularity==='month'&&periodPreset==='rolling'?Math.max(0,el.scrollWidth-el.clientWidth):0;
- }
+ select(entries.findLastIndex(r=>r[kind]!=null));
 }
 
 $$('[data-electric-bar]').forEach(button=>button.addEventListener('click',()=>{
