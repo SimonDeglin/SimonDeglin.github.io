@@ -445,7 +445,7 @@ function renderOilUsage(model){
  const ticks=tickDates.map(t=>'<text class="oil-date-label" text-anchor="'+(t.date===first?'start':t.date===end?'end':'middle')+'" x="'+X(t.date).toFixed(1)+'" y="'+(H-15)+'">'+t.label+'</text>').join('');
  const markers='<circle class="oil-usage-end heat" cx="'+X(end).toFixed(1)+'" cy="'+Y(heating).toFixed(1)+'" r="4"/><circle class="oil-usage-end hotwater" cx="'+X(end).toFixed(1)+'" cy="'+Y(hotwater).toFixed(1)+'" r="4"/>';
  target.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Consommations cumulées en litres : chauffage central et eau chaude du 12 décembre 2025 au 21 septembre 2026">'+
-  '<text class="oil-axis-label" x="'+p.l+'" y="12">L</text>'+grids.join('')+stopMarker+
+  '<text class="oil-axis-label" x="'+p.l+'" y="12">L</text>'+grids+stopMarker+
   series('heat','heat')+series('water','hotwater')+markers+ticks+'</svg>';
  const cumulative=heating+hotwater;
  $('#oil-usage-detail').innerHTML='<strong>≈ '+fmt(Math.round(heating/10)*10)+' L</strong> chauffage + '+
