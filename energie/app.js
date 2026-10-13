@@ -173,7 +173,30 @@ const segs=points.slice(1).map((v,i)=>'<path class="'+((v.exact&&points[i].exact
 const d='M'+points.map(v=>X(v.date)+','+Y(v.value)).join(' L');const area='<path class="chart-area" d="'+d+' L'+X(points.at(-1).date)+','+Y(0)+' L'+X(points[0].date)+','+Y(0)+' Z"/>';
 const circles=points.filter(r=>r.exact).map(v=>'<circle class="chart-point" cx="'+X(v.date)+'" cy="'+Y(v.value)+'" r="4" data-tip="'+esc(label(v.date)+' : '+fmt(v.value,kind==='water'?2:0)+' '+(kind==='water'?'m³':'kWh'))+'"/>').join('');
 el.innerHTML='<div class="chart-wrapper"><svg viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Évolution '+esc(kind)+'"><defs><clipPath id="clip-'+id+'"><rect x="'+p.left+'" y="'+p.top+'" width="'+(w-p.left-p.right)+'" height="'+(h-p.top-p.bottom)+'"/></clipPath></defs>'+axis+'<line class="chart-zero" x1="'+p.left+'" x2="'+(w-p.right)+'" y1="'+Y(0)+'" y2="'+Y(0)+'"/><g clip-path="url(#clip-'+id+')">'+area+segs+circles+'</g>'+xlabels+'</svg><div class="chart-tooltip hidden"></div></div>';el.querySelectorAll('[data-tip]').forEach(dot=>{dot.addEventListener('pointerenter',()=>{const t=el.querySelector('.chart-tooltip');t.textContent=dot.dataset.tip;t.classList.remove('hidden');t.style.left=Math.min(75,100*Number(dot.getAttribute('cx'))/w)+'%';t.style.top=Math.max(0,100*Number(dot.getAttribute('cy'))/h-16)+'%'});dot.addEventListener('pointerleave',()=>el.querySelector('.chart-tooltip').classList.add('hidden'))})}
-function renderAnalysis(){const titles={network:['RÉSEAU','Solde électrique cumulatif','Jour + nuit : recul et rattrapage'],pv:['PHOTOVOLTAÏQUE','Production cumulée','Index de production des panneaux'],water:['SWDE','Eau cumulée','Remplissage piscine identifiable en juillet'],house:['ESTIMATION','Énergie du foyer','Production PV + variation nette du réseau, sous réserve de compatibilité des compteurs']};const [over,title,sub]=titles[chartMode];$('#analysis-overline').textContent=over;$('#analysis-title').textContent=title;$('#analysis-subtitle').textContent=sub;renderChart('analysis-chart',chartMode,chartMode==='network'?REFERENCE:'2025-12-12');$$('.analysis-tab').forEach(x=>x.classList.toggle('active',x.dataset.chart===chartMode));const data=monthly();$('#monthly-body').innerHTML=data.map(r=>'<tr><td>'+monthLabel(r.date)+'</td><td>'+(r.net==null?'—':(r.net>0?'+':'')+fmt(r.net))+'</td><td>'+fmt(r.pv)+'</td><td>'+fmt(r.water,2)+'</td><td>'+fmt(r.pool,1)+'</td><td><span class="badge '+(r.exact?'':'estimated')+'">'+(r.exact?'Relevé':'Estimé / partiel')+'</span></td></tr>').join('');const matching=chartMode==='network'?net():chartMode==='house'?net():vals(chartMode);$('#analysis-summary').innerHTML='<div class="summary-item"><span>Premier index mesuré</span><strong>'+label(matching[0]?.date||'2025-12-12')+'</strong></div><div class="summary-item"><span>Dernier index mesuré</span><strong>'+label(matching.at(-1)?.date||'2025-12-12')+'</strong></div><div class="summary-item"><span>Points de mesure</span><strong>'+matching.length+'</strong></div>'}
+function renderAnalysis(){
+ const scale=granularity==='month'?'hebdomadaire':'mensuelle';
+ const titles={
+  network:['RÉSEAU','Solde cumulé du réseau','Index jour + nuit, référencé au 24/03/2026'],
+  pv:['PHOTOVOLTAÏQUE','Production cumulée','Production des panneaux depuis le 12/12/2025'],
+  water:['SWDE','Eau cumulée','Lecture du compteur d’eau depuis le 12/12/2025'],
+  house:['ESTIMATION','Énergie du foyer cumulée','Production photovoltaïque + bilan réseau, estimation']
+ };
+ const [over,title,sub]=titles[chartMode];
+ $('#analysis-overline').textContent=over+' · VUE '+(granularity==='month'?'MENSUELLE':'ANNUELLE');
+ $('#analysis-title').textContent=title;
+ $('#analysis-subtitle').textContent=sub;
+ renderChart('analysis-chart',chartMode,chartMode==='network'?REFERENCE:'2025-12-12');
+ $$('.analysis-tab').forEach(x=>x.classList.toggle('active',x.dataset.chart===chartMode));
+ const data=periodBuckets(),kind=chartMode==='network'?'net':chartMode;
+ $('#monthly-body').innerHTML=data.map(r=>'<tr><td>'+esc(r.label)+(r.partial?' *':'')+'</td>'+
+  '<td>'+(r.net==null?'—':(r.net>0?'+':'')+fmt(r.net))+'</td>'+
+  '<td>'+fmt(r.pv)+'</td><td>'+fmt(r.water,2)+'</td><td>'+(r.water==null?'—':fmt(r.pool,2))+'</td>'+
+  '<td><span class="badge '+(r.measured?.[kind]?'':'estimated')+'">'+(r[kind]==null?'Sans donnée':r.measured?.[kind]?'Mesuré':'Estimé')+'</span></td></tr>').join('');
+ const matching=chartMode==='network'?net():chartMode==='house'?net():vals(chartMode);
+ $('#analysis-summary').innerHTML='<div class="summary-item"><span>Échelle</span><strong>'+esc(scale)+'</strong></div>'+
+ '<div class="summary-item"><span>Premier index mesuré</span><strong>'+label(matching[0]?.date||'2025-12-12')+'</strong></div>'+
+ '<div class="summary-item"><span>Dernier index mesuré</span><strong>'+label(matching.at(-1)?.date||'2025-12-12')+'</strong></div>';
+}
 
 function renderCategoryPages(){
  const n=net(),p=vals('pv'),water=vals('water'),reference=n.find(r=>r.date===REFERENCE),last=n.at(-1),prior=n.at(-2);
@@ -194,6 +217,14 @@ function renderCategoryPages(){
  set('water-metric-total',wdelta==null?'—':fmt(wdelta,2)+' m³');
  set('water-metric-normal',wdelta==null?'—':fmt(Math.max(0,wdelta-pool),2)+' m³');
  set('water-metric-pool',fmt(pool,2)+' m³');
+
+ const weekly=granularity==='month',scale=weekly?'hebdomadaire':'mensuelle';
+ $('#electric-bar-title').textContent=electricBarMode==='net'?'Variation '+scale+' du compteur':'Consommation '+scale+' du foyer';
+ $('#electric-bar-overline').textContent=electricBarMode==='net'?'BILAN RÉSEAU · KWH':'CONSOMMATION ESTIMÉE · KWH';
+ $('#electric-bar-description').textContent=electricBarMode==='net'?'Vert : compteur en recul · Corail : compteur qui remonte.':'Estimation : production PV + variation du réseau.';
+ $('#page-solaire .bar-panel h2').textContent='Production '+scale;
+ $('#page-eau .bar-panel h2').textContent='Consommation '+scale;
+
  drawMonthlyBars('monthly-electricity-chart',electricBarMode);
  drawMonthlyBars('monthly-pv-chart','pv');
  drawMonthlyBars('monthly-water-chart','water');
@@ -271,6 +302,8 @@ $$('[data-electric-bar]').forEach(button=>button.addEventListener('click',()=>{
  $('#electric-bar-overline').textContent=electricBarMode==='net'?'BILAN RÉSEAU · KWH':'CONSOMMATION DU FOYER · KWH';
  $('#electric-bar-title').textContent=electricBarMode==='net'?'Variation mensuelle':'Consommation mensuelle';
  $('#electric-bar-description').textContent=electricBarMode==='net'?'Vert : compteur en recul · Corail : compteur qui remonte.':'Production PV + variation du réseau, reconstituée par mois.';
+ const scale=granularity==='month'?'hebdomadaire':'mensuelle';
+ $('#electric-bar-title').textContent=electricBarMode==='net'?'Variation '+scale+' du compteur':'Consommation '+scale+' du foyer';
  drawMonthlyBars('monthly-electricity-chart',electricBarMode);
 }));
 $$('[data-elec-view]').forEach(button=>button.addEventListener('click',()=>{
