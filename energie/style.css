@@ -133,3 +133,19 @@
 .mobile-nav{inset-inline:8px;width:calc(100% - 16px);padding:7px 6px}
 .mobile-link{min-height:53px}
 }
+
+/* Monthly comparison between the signed network balance and estimated household usage */
+.bar-mode-switch{display:flex;align-items:center;gap:3px;padding:4px;border-radius:11px;background:#eff3f5;border:1px solid #e6ecef;flex-shrink:0}
+.bar-mode-btn{color:#758a98;border:0;background:transparent;padding:8px 11px;border-radius:8px;font-size:10px;font-weight:800;white-space:nowrap}
+.bar-mode-btn.active{background:white;color:#1d8171;box-shadow:0 2px 8px #1a435015}
+.legend-dot.house{background:#687db7}
+@media(max-width:750px){
+.bar-panel .panel-top{gap:12px}
+.bar-mode-switch{width:100%;display:grid;grid-template-columns:1fr 1fr}
+.bar-mode-btn{text-align:center}
+.monthly-bars{overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:#c7d4da transparent}
+.monthly-bars svg{width:100%;min-width:610px;max-height:none}
+.chart-space{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.chart-space .chart-wrapper{min-width:580px}
+.chart-space .chart-wrapper svg{min-width:580px}
+}
