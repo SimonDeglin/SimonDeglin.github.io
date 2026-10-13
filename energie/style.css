@@ -467,3 +467,36 @@ body[data-section="eau"] .mobile-link.active{background:#dcefff;color:#1c679a}
  .category-page .category-hero{padding:17px 15px}
  .category-secondary strong{font-size:12px}
 }
+
+
+/* V9: instant orientation and less mobile chrome */
+.hero-link{cursor:pointer;transition:transform .17s,box-shadow .17s}
+.hero-link:hover{box-shadow:0 17px 43px #183c5630;transform:translateY(-1px)}
+.hero-link:active{transform:scale(.997)}
+.hero-link:focus-visible{outline:3px solid #70c4ad;outline-offset:3px}
+body[data-section="electricite"] .topbar,
+body[data-section="solaire"] .topbar,
+body[data-section="eau"] .topbar{margin-bottom:16px}
+body[data-section="electricite"] .topbar .subtitle,
+body[data-section="solaire"] .topbar .subtitle,
+body[data-section="eau"] .topbar .subtitle{display:none}
+@media(max-width:750px){
+ body[data-section="electricite"] .topbar,
+ body[data-section="solaire"] .topbar,
+ body[data-section="eau"] .topbar{
+  margin:0 0 13px;min-height:41px;display:flex;
+  align-items:center;justify-content:space-between
+ }
+ body[data-section="electricite"] .topbar:before,
+ body[data-section="solaire"] .topbar:before,
+ body[data-section="eau"] .topbar:before{
+  content:"flux.";font:800 22px/1 Manrope,system-ui,sans-serif;
+  color:#233e4e;letter-spacing:-1.2px
+ }
+ body[data-section="electricite"] .topbar>div:first-child,
+ body[data-section="solaire"] .topbar>div:first-child,
+ body[data-section="eau"] .topbar>div:first-child{display:none}
+ body[data-section="electricite"] .category-hero,
+ body[data-section="solaire"] .category-hero,
+ body[data-section="eau"] .category-hero{margin-top:0}
+}
