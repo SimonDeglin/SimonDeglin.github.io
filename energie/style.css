@@ -213,3 +213,29 @@ button,a{-webkit-tap-highlight-color:transparent}
  #page-analyses .analysis-space .chart-wrapper{min-width:610px}
  .monthly-bars .bar-selection{min-height:28px;margin-top:0;justify-content:flex-start;padding-left:5px}
 }
+
+/* V5: Month, half-year, annual controls; predictable chart dimensions. */
+.time-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.time-btn{padding:9px 13px}
+.monthly-bars{height:385px;min-height:385px;overflow-x:auto;overflow-y:hidden}
+.monthly-bars svg{display:block;width:100%;height:326px!important;max-height:none!important}
+.monthly-bars .bar-selection{margin-top:5px;height:auto;min-height:34px;align-items:center}
+.monthly-bars.compact-period{overflow-x:hidden}
+.monthly-bars.compact-period svg{min-width:0!important;width:100%!important;height:326px!important}
+#page-electricite .bar-panel{min-height:0}
+#page-electricite .stable-chart-panel{min-height:0;width:100%}
+.unified-chart,#page-analyses .analysis-space{width:100%;height:352px!important;min-height:352px!important;overflow:hidden}
+.unified-chart .chart-wrapper,#page-analyses .analysis-space .chart-wrapper{width:100%!important;min-width:0!important}
+.unified-chart svg,#page-analyses .analysis-space svg{width:100%!important;min-width:0!important;height:326px!important;max-height:none!important}
+.no-chart-data{height:326px;display:grid;place-items:center}
+@media(max-width:750px){
+ .time-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+ .time-btn{padding:9px 6px;font-size:11px}
+ .monthly-bars{height:385px;min-height:385px;overflow-x:auto}
+ .monthly-bars:not(.compact-period) svg{min-width:820px!important;width:820px!important;height:326px!important}
+ .monthly-bars.compact-period{overflow-x:hidden}
+ .monthly-bars.compact-period svg{min-width:0!important;width:100%!important;height:326px!important}
+ .unified-chart,#page-analyses .analysis-space{width:100%;height:352px!important;min-height:352px!important;overflow:hidden}
+ .unified-chart .chart-wrapper,#page-analyses .analysis-space .chart-wrapper{min-width:0!important}
+ .unified-chart svg,#page-analyses .analysis-space svg{min-width:0!important;width:100%!important;height:326px!important}
+}
