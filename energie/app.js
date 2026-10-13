@@ -143,6 +143,10 @@ function drawMonthlyBars(id,kind){
    g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(i)}});
  });
  select(kind==='water'&&entries.some(r=>r.pool>0)?entries.findIndex(r=>r.pool>0):entries.length-1);
+ if(window.matchMedia&&window.matchMedia('(max-width:750px)').matches){
+   // Present the most recent months first on phones; older months remain scrollable.
+   el.scrollLeft=Math.max(0,el.scrollWidth-el.clientWidth);
+ }
 }
 $$('[data-electric-bar]').forEach(button=>button.addEventListener('click',()=>{
  electricBarMode=button.dataset.electricBar;
