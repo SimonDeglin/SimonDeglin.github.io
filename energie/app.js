@@ -239,7 +239,7 @@ function renderCategoryPages(){
  const pool=db.events.reduce((s,e)=>s+(Number(e.amount)||0),0);
  const pvMonth=[...monthly()].reverse().find(x=>x.pv!=null);
  const set=(id,value)=>{const el=$('#'+id);if(el)el.textContent=value};
- set('elec-metric-balance',difference==null?'—':(difference>0?'+':'')+fmt(difference)+' kWh');
+ set('elec-metric-balance',difference==null?'—':fmt(Math.abs(difference))+' kWh');
  set('elec-metric-last',recent==null?'—':(recent>0?'+':'')+fmt(recent)+' kWh');
  set('elec-metric-pace',perday==null?'—':(perday>0?'+':'')+fmt(perday,1)+' kWh/j');
  set('pv-metric-total',pdelta==null?'—':fmt(pdelta)+' kWh');
@@ -251,7 +251,7 @@ function renderCategoryPages(){
  set('elec-last-date',last?'Index du '+label(last.date):'Aucun index');
  set('pv-last-date',p.length?'Index du '+label(p.at(-1).date):'Aucun index');
  set('water-last-date',water.length?'Index du '+label(water.at(-1).date):'Aucun index');
- set('elec-credit-explain',difference==null?'Relevé de référence absent':difference<0?'Avance accumulée sur le compteur':difference>0?'Consommation nette depuis la référence':'Compteur à l’équilibre depuis la référence');
+ set('elec-credit-explain',difference==null?'Relevé de référence absent':difference<0?'d’avance photovoltaïque sur le réseau':difference>0?'de consommation nette depuis le 24/03/2026':'Compteur à l’équilibre');
 
 
  const scale=granularity==='month'?'mensuelle':granularity==='half'?'sur 6 mois':'annuelle';
