@@ -231,7 +231,7 @@ function renderAnalysis(){
  const scale=granularity==='month'?'mensuelle':granularity==='half'?'semestrielle':'annuelle';
  const titles={
   network:['AVEC PV','Solde cumulé du réseau','Index jour + nuit, référence 24/03/2026'],
-  pv:['PHOTOVOLTAÏQUE','Production cumulée','Production des panneaux depuis le 12/12/2025'],
+  pv:['PHOTOVOLTAÏQUE','Production cumulée','Production photovoltaïque depuis le 12/12/2025'],
   water:['SWDE','Eau cumulée','Lecture du compteur d’eau depuis le 12/12/2025'],
   house:['CONSOMMATION','Électricité du logement','Production photovoltaïque + bilan du réseau']
  };
@@ -242,11 +242,10 @@ function renderAnalysis(){
  $('#analysis-subtitle').textContent=sub;
  renderChart('analysis-chart',chartMode,chartMode==='network'?REFERENCE:'2025-12-12');
  $$('.analysis-tab').forEach(x=>x.classList.toggle('active',x.dataset.chart===chartMode));
- const data=periodBuckets(),kind=chartMode==='network'?'net':chartMode;
+ const data=periodBuckets();
  $('#monthly-body').innerHTML=data.map(r=>'<tr><td>'+esc(r.label)+(r.partial?' *':'')+'</td>'+
   '<td>'+(r.net==null?'—':(r.net>0?'+':'')+fmt(r.net))+'</td>'+
-  '<td>'+fmt(r.pv)+'</td><td>'+fmt(r.water,2)+'</td>'+
-  '<td><span class="badge '+(r.measured?.[kind]?'':'estimated')+'">'+(r[kind]==null?'Sans donnée':r.measured?.[kind]?'Mesuré':'Estimé')+'</span></td></tr>').join('');
+  '<td>'+fmt(r.pv)+'</td><td>'+fmt(r.water,2)+'</td></tr>').join('');
  const matching=chartMode==='network'?net():chartMode==='house'?net():vals(chartMode);
  $('#analysis-summary').innerHTML='<div class="summary-item"><span>Échelle</span><strong>'+esc(scale)+'</strong></div>'+
  '<div class="summary-item"><span>Premier index mesuré</span><strong>'+label(matching[0]?.date||'2025-12-12')+'</strong></div>'+
@@ -362,6 +361,7 @@ $$('[data-electric-bar]').forEach(button=>button.addEventListener('click',()=>{
  $('#electric-net-legend').classList.toggle('hidden',!withPV);
  $('#electric-house-legend').classList.toggle('hidden',withPV);
  $('#electric-house-note').classList.toggle('hidden',withPV);
+ $('#page-electricite').classList.toggle('view-house',!withPV);
  $('#electric-net-chart-toggle').classList.toggle('hidden',!withPV);
  if(!withPV){
   $('#elec-view-mensuel').classList.remove('hidden');
