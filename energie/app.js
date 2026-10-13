@@ -83,12 +83,12 @@ function periodWindows(){
   const result=[];
   for(let k=0;k<months.length;k+=6){
    const first=months[k],last=months[Math.min(k+5,months.length-1)];
-   result.push({start:first.start,end:last.end,label:first.shortDate+' – '+last.shortDate});
+   result.push({start:first.start,end:last.end,label:first.label+'–'+last.label,detail:first.shortDate+' – '+last.shortDate});
   }
   return result;
  }
  const first=months[0],last=months.at(-1);
- return first&&last?[{start:first.start,end:last.end,label:periodPreset==='calendar'?String(calendarYear):'12 mois'}]:[];
+ return first&&last?[{start:first.start,end:last.end,label:periodPreset==='calendar'?String(calendarYear):'12 mois',detail:periodRange().heading}]:[];
 }
 
 function seriesDomain(kind){
@@ -244,9 +244,10 @@ function drawMonthlyBars(id,kind){
  const el=$('#'+id);if(!el)return;
  const entries=periodBuckets(),known=entries.filter(e=>Number.isFinite(e[kind]));
  if(!known.length){el.innerHTML='<div class="no-chart-data">Pas de mesures disponibles pour cette période.</div>';return}
- const W=820,H=326,L=60,R=18,T=23,B=46;
+ el.classList.toggle('compact-period',granularity!=='month');
+ const W=granularity==='month'?Math.max(820,el.clientWidth||820):Math.max(320,el.clientWidth||460),H=326,L=60,R=18,T=23,B=46;
  const zeroHeight=H-T-B,step=(W-L-R)/entries.length;
- const barW=Math.min(granularity==='month'?94:46,step*(granularity==='month'?.47:.58));
+ const barW=granularity==='month'?Math.min(52,step*.58):granularity==='half'?Math.min(116,step*.43):Math.min(160,step*.56);
  const vals=known.map(e=>e[kind]),bottom=Math.min(0,...vals),top=Math.max(0,...vals);
  const max=Math.max(1,top>0?top*1.2:0),min=bottom<0?bottom*1.2:0;
  const Y=v=>T+(max-v)/(max-min)*zeroHeight,Y0=Y(0);
@@ -257,7 +258,7 @@ function drawMonthlyBars(id,kind){
  }).join('');
  const barGroups=entries.map((r,i)=>{
    const x=L+(i+.5)*step-barW/2,center=x+barW/2,v=r[kind],labelText=esc(r.label);
-   const prefix='<g tabindex="0" role="button" data-bar="'+i+'" aria-label="'+esc(r.label)+'">';
+   const prefix='<g tabindex="0" role="button" data-bar="'+i+'" aria-label="'+esc(r.detail||r.label)+'">';
    if(v==null)return prefix+'<line x1="'+(center-7).toFixed(1)+'" x2="'+(center+7).toFixed(1)+'" y1="'+(Y0+3).toFixed(1)+'" y2="'+(Y0+3).toFixed(1)+'" stroke="#d4dee3" stroke-width="2.3" stroke-linecap="round"/>'+
     '<text text-anchor="middle" x="'+center.toFixed(1)+'" y="'+(H-18)+'" class="bar-x-label">'+labelText+'</text></g>';
    const measured=r.measured?.[kind];
@@ -279,7 +280,7 @@ function drawMonthlyBars(id,kind){
     '<text text-anchor="middle" x="'+center.toFixed(1)+'" y="'+(H-18)+'" class="bar-x-label">'+labelText+aster+'</text>'+marker+'</g>';
  }).join('');
  const unit=kind==='water'?'m³':'kWh',period=periodRange().heading;
- el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" role="group" aria-label="'+esc(period)+', histogramme de '+esc(kind)+'">'+
+ el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" width="100%" height="326" role="group" aria-label="'+esc(period)+', histogramme de '+esc(kind)+'">'+
   '<text x="'+L+'" y="12">'+unit+'</text>'+ticks+
   '<line class="monthly-zero" x1="'+L+'" x2="'+(W-R)+'" y1="'+Y0.toFixed(1)+'" y2="'+Y0.toFixed(1)+'"/>'+
   barGroups+'</svg><div class="bar-selection" aria-live="polite"></div>';
@@ -301,7 +302,7 @@ function drawMonthlyBars(id,kind){
  });
  select(entries.findLastIndex(e=>e[kind]!=null));
  if(window.matchMedia&&window.matchMedia('(max-width:750px)').matches){
-  el.scrollLeft=periodPreset==='rolling'&&granularity==='year'?Math.max(0,el.scrollWidth-el.clientWidth):0;
+  el.scrollLeft=granularity==='month'&&periodPreset==='rolling'?Math.max(0,el.scrollWidth-el.clientWidth):0;
  }
 }
 
