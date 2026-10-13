@@ -239,3 +239,69 @@ button,a{-webkit-tap-highlight-color:transparent}
  .unified-chart .chart-wrapper,#page-analyses .analysis-space .chart-wrapper{min-width:0!important}
  .unified-chart svg,#page-analyses .analysis-space svg{min-width:0!important;width:100%!important;height:326px!important}
 }
+
+
+/* V7: all 12 months visible together; mobile first, no zoomed charts */
+html,body{max-width:100%;overflow-x:hidden;touch-action:manipulation;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.app,.main,.page,.panel,.bar-panel{min-width:0}
+.monthly-bars,.monthly-bars.compact-period{
+ display:block;width:100%;max-width:100%;
+ min-width:0!important;min-height:355px!important;height:355px!important;
+ padding:0!important;margin-top:12px;
+ overflow-x:hidden!important;overflow-y:hidden!important;
+ overscroll-behavior-x:none;touch-action:pan-y
+}
+#page-electricite .monthly-bars svg,
+#page-solaire .monthly-bars svg,
+#page-eau .monthly-bars svg,
+.monthly-bars.compact-period svg{
+ display:block;width:100%!important;max-width:100%!important;min-width:0!important;
+ height:316px!important;max-height:316px!important;
+ overflow:visible;touch-action:pan-y
+}
+.monthly-bars svg text{font-size:10px;font-weight:600;letter-spacing:-.05px;fill:#879aa7}
+.monthly-bars svg .bar-x-label{font-size:10px;font-weight:700;fill:#697e8e}
+.monthly-bars svg .bar-y-label{font-size:10px;fill:#8498a5}
+.monthly-bars svg .bar-x-short{display:none}
+.monthly-bars svg .bar-x-full{display:block}
+.monthly-bars .bar-selection{
+ display:flex;align-items:center;justify-content:center;
+ margin:2px 0 0!important;padding:0 2px;min-height:30px!important;
+ font-size:11px;line-height:1.35;text-align:center;white-space:normal
+}
+.monthly-bars .bar-selection strong{font-weight:800}
+.monthly-bars svg .monthly-selected{stroke:#294c61;stroke-width:1.2}
+.monthly-bars svg .monthly-tap{cursor:pointer}
+.bar-panel{width:100%}
+@media(max-width:750px){
+ .main{padding-left:12px!important;padding-right:12px!important}
+ .bar-panel{padding:17px 10px!important}
+ .bar-panel .panel-top{gap:7px;min-height:0!important}
+ .bar-panel .panel-top h2{font-size:17px}
+ .bar-panel .panel-description{font-size:10px;line-height:1.4}
+ .bar-panel .overline{font-size:9px;letter-spacing:1.3px}
+ .monthly-bars,.monthly-bars.compact-period{width:100%;margin-top:10px;min-height:355px!important;height:355px!important;overflow:hidden!important}
+ #page-electricite .monthly-bars svg,
+ #page-solaire .monthly-bars svg,
+ #page-eau .monthly-bars svg,
+ .monthly-bars.compact-period svg{width:100%!important;min-width:0!important;max-width:100%!important;height:316px!important}
+ .monthly-bars svg text{font-size:9px!important}
+ .monthly-bars svg .bar-y-label{font-size:9px!important}
+ .monthly-bars:not(.compact-period) svg .bar-x-full{display:none!important}
+ .monthly-bars:not(.compact-period) svg .bar-x-short{display:block!important;font-size:9px!important;letter-spacing:0}
+ .monthly-bars.compact-period svg .bar-x-short{display:none!important}
+ .monthly-bars.compact-period svg .bar-x-full{display:block!important}
+ .monthly-bars .bar-selection{font-size:10px;padding:0 2px;margin-top:3px!important;min-height:30px!important}
+ .section-intro{margin-bottom:12px}
+ .section-intro p,.micro-note{font-size:10px;line-height:1.4}
+ .micro-note{margin:7px 3px}
+ .bar-legend{gap:9px;font-size:9px;line-height:1.3;flex-wrap:wrap}
+ .time-switch,.period-switch{min-height:40px;padding:4px}
+ .time-btn,.period-btn{min-height:32px;font-size:10px;padding:7px 6px}
+ input,select,textarea{font-size:16px!important}
+}
+@media(max-width:360px){
+ .bar-panel{padding:15px 7px!important}
+ .main{padding-left:10px!important;padding-right:10px!important}
+ .monthly-bars svg .bar-x-short{font-size:8px!important}
+}
