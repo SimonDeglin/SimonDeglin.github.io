@@ -15,11 +15,11 @@ const DEFAULT_EVENTS=[{id:'pool-2026',date:'2026-07-15',label:'Remplissage pisci
 const KEY='flux-hannut-v1';
 const REFERENCE='2026-03-24';
 const DEFAULT_OIL_READINGS=[
- {id:'oil-2025-12-12',date:'2025-12-12',liters:1000,phase:'before'},
+ {id:'oil-2025-12-12',date:'2025-12-12',liters:0,phase:'before'},
  {id:'oil-2026-02-15',date:'2026-02-15',liters:650,phase:'before'},
  {id:'oil-2026-09-21-pre',date:'2026-09-21',liters:50,phase:'before'}
 ];
-const DEFAULT_OIL_DELIVERIES=[{id:'oil-fill-2026-09-21',date:'2026-09-21',liters:500}];
+const DEFAULT_OIL_DELIVERIES=[{id:'oil-fill-2025-12-12',date:'2025-12-12',liters:1000},{id:'oil-fill-2026-09-21',date:'2026-09-21',liters:500}];
 const OIL_HOTWATER_ASSUMPTION=2.55;
 const OIL_NOT_REHEATED_THROUGH='2026-10-13';
 
@@ -30,7 +30,24 @@ const days=(a,b)=>(parseDate(b)-parseDate(a))/86400000;
 const label=s=>parseDate(s).toLocaleDateString('fr-BE',{day:'2-digit',month:'short',year:'numeric'});
 const monthLabel=s=>parseDate(s).toLocaleDateString('fr-BE',{month:'short',year:'2-digit'});
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function init(){try{const d=JSON.parse(localStorage.getItem(KEY));if(d&&Array.isArray(d.readings))return {readings:d.readings,events:Array.isArray(d.events)?d.events:DEFAULT_EVENTS.map(e=>({...e})),oilReadings:Array.isArray(d.oilReadings)?d.oilReadings:DEFAULT_OIL_READINGS.map(r=>({...r})),oilDeliveries:Array.isArray(d.oilDeliveries)?d.oilDeliveries:DEFAULT_OIL_DELIVERIES.map(r=>({...r})),oilStopDate:d.oilStopDate||'2026-03-01'}}catch{}return {readings:SEED.map(r=>({...r})),events:DEFAULT_EVENTS.map(e=>({...e})),oilReadings:DEFAULT_OIL_READINGS.map(r=>({...r})),oilDeliveries:DEFAULT_OIL_DELIVERIES.map(r=>({...r})),oilStopDate:'2026-03-01'}}
+function init(){
+ let saved=null;
+ try{saved=JSON.parse(localStorage.getItem(KEY))}catch{}
+ const hasData=saved&&Array.isArray(saved.readings);
+ const readings=hasData?saved.readings:SEED.map(r=>({...r}));
+ const events=hasData&&Array.isArray(saved.events)?saved.events:DEFAULT_EVENTS.map(r=>({...r}));
+ let oilReadings=hasData&&Array.isArray(saved.oilReadings)?saved.oilReadings.map(r=>({...r})):DEFAULT_OIL_READINGS.map(r=>({...r}));
+ let oilDeliveries=hasData&&Array.isArray(saved.oilDeliveries)?saved.oilDeliveries.map(r=>({...r})):DEFAULT_OIL_DELIVERIES.map(r=>({...r}));
+ let changed=false;
+ const entry=oilReadings.find(r=>r.id==='oil-2025-12-12'&&r.date==='2025-12-12');
+ if(entry&&Number(entry.liters)===1000){entry.liters=0;changed=true}
+ if(entry&&Number(entry.liters)===0&&!oilDeliveries.some(d=>d.date==='2025-12-12'&&Number(d.liters)===1000)){
+  oilDeliveries.push({...DEFAULT_OIL_DELIVERIES[0]});changed=true;
+ }
+ const value={readings,events,oilReadings,oilDeliveries,oilStopDate:hasData&&saved.oilStopDate||'2026-03-01'};
+ if(changed){try{localStorage.setItem(KEY,JSON.stringify({...saved,...value}))}catch{}}
+ return value;
+}
 let db=init(),chartMode='network',electricBarMode='net',pendingPhotos={},pendingImage=null;
 const newestSavedDate=db.readings.map(r=>r.date).filter(Boolean).sort().at(-1)||'2026-10-07';
 let granularity='month',periodPreset='rolling',calendarYear=Number(newestSavedDate.slice(0,4));
