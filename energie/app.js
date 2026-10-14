@@ -1096,17 +1096,22 @@ async function detectIndexFromImage(){
  $('#scan-message').textContent=scanCrop?'Lecture de la zone encadrée…':'Lecture de la photo…';
  try{
   const engine=await ocrLibrary(),worker=await ocrWorker();
-  const mode=scanCrop?(engine.PSM?.SINGLE_LINE||'7'):(engine.PSM?.SPARSE_TEXT||'11');
+  const mode=scanKind==='electric'?(engine.PSM?.SPARSE_TEXT||'11'):scanCrop?(engine.PSM?.SINGLE_LINE||'7'):(engine.PSM?.SPARSE_TEXT||'11');
   await worker.setParameters({tessedit_char_whitelist:'0123456789,.',tessedit_pageseg_mode:mode});
   const result=await worker.recognize(scanSourceImage());
   if(id!==scanRequest)return;
-  scanLastText=result?.data?.text||'';
-  const guess=proposeScanIndex(scanLastText,scanKind);
-  if(guess!=null){
-   $('#scan-value').value=guess;
-   $('#scan-message').textContent='Index proposé : vérifie les chiffres avant validation.';
+  scanLastData=result?.data||null;
+  scanLastText=scanLastData?.text||'';
+  if(scanKind==='electric'){
+   fillElectricFromOcr(scanLastData);
   }else{
-   $('#scan-message').textContent='Index non reconnu : encadre les chiffres sur la photo ou saisis la valeur.';
+   const guess=proposeScanIndex(scanLastText,scanKind);
+   if(guess!=null){
+    $('#scan-value').value=guess;
+    $('#scan-message').textContent='Index proposé : vérifie les chiffres avant validation.';
+   }else{
+    $('#scan-message').textContent='Index non reconnu : encadre les chiffres sur la photo ou saisis la valeur.';
+   }
   }
  }catch(err){
   if(id===scanRequest)$('#scan-message').textContent='Lecture automatique indisponible : saisis l’index manuellement. La photo est conservée.';
@@ -1118,13 +1123,14 @@ $('#scan-file').onchange=async e=>{
  const file=e.target.files?.[0];if(!file)return;
  try{
   pendingImage=await capturePhotoData(file);
-  scanCrop=null;scanLastText='';
+  scanCrop=null;scanLastText='';scanLastData=null;
   $('#scan-preview').src=pendingImage;
   $('#scan-crop-box').classList.add('hidden');
   $('#scan-meter').value=scanKind;
   $('#scan-value').value='';
-  $('#scan-value').step=scanKind==='water'?'0.1':'1';
-  updateScanHint();
+  $('#scan-day').value='';
+  $('#scan-night').value='';
+  showScanKind();
   $('#scan-message').textContent='Préparation de la lecture…';
   modal('scan-overlay');
   const image=$('#scan-preview');if(!image.complete)await new Promise(ok=>{image.onload=ok;image.onerror=ok});
@@ -1175,12 +1181,22 @@ $('#scan-preview-wrap').addEventListener('pointerup',ev=>{
 });
 $('#scan-preview-wrap').addEventListener('pointercancel',()=>{scanPointer=null});
 $('#confirm-scan').onclick=()=>{
- const k=$('#scan-meter').value,v=$('#scan-value').value;
- if(v.trim()===''||!Number.isFinite(Number(v))||Number(v)<0)return toast('Vérifie l’index avant de confirmer.');
- $('#reading-'+k).value=k==='water'?roundWater(v).toFixed(1):String(Math.round(Number(v)));
- pendingPhotos[k]=pendingImage;photoFlags();
+ const k=$('#scan-meter').value;
+ if(k==='electric'){
+  const values=electricInputs();
+  if(!values)return toast('Vérifie les index Nuit et Jour avant de confirmer.');
+  $('#reading-total').value=values.total;
+  // For new readings we retain the official monohourly sum, not the two registers.
+  pendingPhotos.electric=pendingImage;
+ }else{
+  const v=$('#scan-value').value;
+  if(v.trim()===''||!Number.isFinite(Number(v))||Number(v)<0)return toast('Vérifie l’index avant de confirmer.');
+  $('#reading-'+k).value=k==='water'?roundWater(v).toFixed(1):String(Math.round(Number(v)));
+  pendingPhotos[k]=pendingImage;
+ }
+ photoFlags();
  modal('scan-overlay',false);modal('reading-overlay',true);
- toast('Index ajouté au formulaire. Confirme ensuite le relevé.');
+ toast(k==='electric'?'Total monohoraire prêt à enregistrer.':'Index ajouté au formulaire.');
 };
 window.addEventListener('hashchange',()=>{const p=location.hash.slice(1);if(['accueil','electricite','solaire','eau','mazout','releves','analyses','reglages'].includes(p))show(p)});
 const firstPage=['accueil','electricite','solaire','eau','mazout','releves','analyses','reglages'].includes(location.hash.slice(1))?location.hash.slice(1):'accueil';show(firstPage);
