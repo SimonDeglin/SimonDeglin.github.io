@@ -810,3 +810,8 @@ body[data-section="mazout"] .category-secondary strong{font-size:19px}
  .scan-hint{font-size:10px}
  .scan-action-row button{font-size:10px;flex:1}
 }
+
+/* Keep the four camera choices fitting inside the reading dialog on desktop. */
+.scan-row{flex-wrap:wrap}
+.scan-row>div:first-child{flex:1;min-width:155px}
+.scan-kind-buttons{flex:1;min-width:min(205px,100%)}
