@@ -1,0 +1,602 @@
+/*
+ * OWATT / SUIVI – visual refinement, October 2026
+ * Presentation-only layer. No metering, OCR, storage or navigation logic.
+ * Palette: electricity / terracotta, PV / sage, water / blue, oil / bronze.
+ */
+:root{
+ --ink:#202729;--muted:#7d898c;--line:#e9e8e3;--bg:#f8f8f5;
+ --navy:#212a2b;--navy2:#34403e;--mint:#5a9a6c;--darkgreen:#337750;
+ --blue:#4e8db7;--amber:#be8147;
+ --ui-shadow:0 5px 19px rgba(43,48,45,.045);
+ --ui-shadow-lg:0 12px 32px rgba(43,48,45,.078);
+ --orange:#c87536;--green:#367b4b;--water:#377ba8;--oil:#916541;
+}
+html{background:var(--bg)}
+body{
+ background:#f8f8f5!important;
+ color:#202729;
+ font-feature-settings:"tnum" 1;
+ -webkit-font-smoothing:antialiased;
+}
+body[data-section="electricite"],body[data-section="solaire"],
+body[data-section="eau"],body[data-section="mazout"]{background:#f8f8f5!important}
+body[data-section="electricite"]{--section-accent:#bb6a31;--section-wash:#f7e7d7}
+body[data-section="solaire"]{--section-accent:#387d4e;--section-wash:#e2efe2}
+body[data-section="eau"]{--section-accent:#347da9;--section-wash:#e1eff8}
+body[data-section="mazout"]{--section-accent:#926740;--section-wash:#efe4d7}
+body[data-section="accueil"]{--section-accent:#c17840;--section-wash:#f8e7d8}
+.app{background:transparent}
+.main,body[data-section="electricite"] .main,
+body[data-section="solaire"] .main,
+body[data-section="eau"] .main,
+body[data-section="mazout"] .main{
+ background:transparent;
+}
+.main{padding-top:37px}
+.sidebar{
+ background:#242c2d;
+ color:#d4dcda;
+ border-right:1px solid rgba(255,255,255,.06);
+}
+.logo{font-size:27px;letter-spacing:-1.25px}
+.logo-shape{background:#3e4a46;color:#e1f3e3;border-radius:13px}
+.logo-dot{color:#b9d2b6}
+.side-group{color:#879896;letter-spacing:1.55px}
+.nav-link{color:#b6c3bf;border:1px solid transparent;border-radius:13px}
+.nav-link:hover{background:#384440;color:#fff}
+.nav-link.active{background:#414c46;color:white;border-color:#536159}
+.nav-link.active .icon{color:#d5e8cf}
+.sidebar-bottom{border-top:1px solid #46514e}
+.sidebar-bottom p{color:#a8b6b1}
+.topbar{margin-bottom:25px}
+.eyebrow,.overline{color:#8c9691;letter-spacing:1.45px;font-size:10px;font-weight:800}
+.title{color:#202729;font-size:31px;letter-spacing:-1.05px;line-height:1.18}
+.subtitle{color:#87918f;font-size:12px;line-height:1.4}
+.header-settings{
+ background:white!important;color:#4d5e5d!important;
+ border:1px solid #e8ebe7!important;
+ box-shadow:var(--ui-shadow);
+ border-radius:13px!important;
+}
+.btn{
+ border-radius:12px;border-color:#e3e8e4;
+ color:#26302d;
+ font-weight:750;
+ box-shadow:0 2px 7px #1e2a2810;
+}
+.btn:hover{box-shadow:0 7px 18px #29302b16}
+.btn-dark{
+ background:#293433!important;
+ border-color:#293433!important;
+ color:white!important;
+ box-shadow:0 5px 14px #25343118;
+}
+.btn-dark:hover{background:#394744!important}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{
+ outline:2px solid #789b8f;outline-offset:3px;
+}
+.stat-card,.panel,.settings-panel{
+ border-color:#e9eae5;
+ border-radius:19px;
+ box-shadow:var(--ui-shadow);
+}
+.panel{background:#fff}
+.panel h2,.section-intro h2{letter-spacing:-.5px;color:#252d2c}
+.panel-description{color:#7e8b8a;line-height:1.45}
+.section-intro{margin-bottom:14px}
+.hero,.stat-card,.oil-home-link,.category-hero{transition:box-shadow .16s ease,transform .16s ease}
+.hero-link:hover,.quick-stat:hover,.oil-home-link:hover{transform:translateY(-1px);box-shadow:var(--ui-shadow-lg)}
+
+/* Home: welcoming electricity statement and four distinct material colors. */
+#page-accueil .hero{
+ min-height:0;
+ border-radius:23px;
+ color:#754521;
+ background:#f8e6d2;
+ border:1px solid #efddc7;
+ box-shadow:0 10px 27px rgba(137,95,55,.07);
+}
+#page-accueil .hero-main{padding:31px clamp(20px,3vw,36px)}
+#page-accueil .hero-eyebrow{color:#926942;letter-spacing:1.2px;line-height:1.5}
+#page-accueil .hero-value{
+ margin:18px 0 3px;
+ font-size:clamp(39px,4.6vw,57px);
+ letter-spacing:-1.9px;
+ color:#7b4925;
+}
+#page-accueil .hero-value.negative{color:#a76538}
+#page-accueil .hero-unit{font-size:15px;color:#905e36}
+#page-accueil .hero-text{color:#8c6e53}
+#page-accueil .hero-pills{gap:6px;margin-top:13px}
+#page-accueil .hero-pill{
+ background:rgba(255,255,255,.63);
+ border:1px solid rgba(193,146,102,.23);
+ color:#805e40;
+ border-radius:9px;
+ padding:6px 10px;
+ font-size:10px;
+}
+#page-accueil .hero-side{
+ background:#f3dcc1;
+ border-left:1px solid #e9ceac;
+ padding:22px 28px;
+}
+#page-accueil .orb{display:none}
+#page-accueil .hero-side-label{color:#987451}
+#page-accueil .hero-side-number{
+ color:#69452e;font-size:clamp(26px,2.7vw,38px);
+ margin:12px 0 1px;letter-spacing:-1.2px;
+}
+#page-accueil .hero-side-description{color:#805f44}
+#page-accueil .hero-side-small{color:#977958}
+#page-accueil .stat-grid{gap:13px;margin:14px 0 0}
+#page-accueil .stat-card{
+ position:relative;
+ border:1px solid transparent;
+ border-radius:21px;
+ min-height:150px;
+ padding:20px 19px 18px;
+ box-shadow:0 5px 16px #4d554c0a;
+ overflow:hidden;
+}
+#page-accueil .quick-electric{
+ background:#faeadb;
+ border-color:#efddca;
+ color:#7e4d2a;
+}
+#page-accueil .quick-solar{
+ background:#e4f0e2;
+ border-color:#d6e6d4;
+ color:#356f47;
+}
+#page-accueil .quick-water{
+ background:#e2f0fa;
+ border-color:#d2e5f3;
+ color:#366e99;
+}
+#page-accueil .quick-stat .stat-head{gap:9px}
+#page-accueil .quick-stat .stat-icon{
+ background:rgba(255,255,255,.62);
+ width:37px;height:37px;
+ border-radius:12px;
+ color:inherit;
+}
+#page-accueil .stat-kicker{
+ color:inherit;
+ font-weight:800;
+ font-size:12px;
+ line-height:1.35;
+ padding-right:18px;
+}
+#page-accueil .stat-number{
+ color:#29302c;
+ font-size:clamp(25px,2.7vw,34px);
+ letter-spacing:-.9px;
+ margin:16px 0 4px;
+}
+#page-accueil .stat-number .unit{color:inherit;opacity:.7;font-weight:650}
+#page-accueil .stat-caption{font-size:10px;color:inherit;opacity:.76}
+#page-accueil .quick-stat::after{
+ content:"›";font:500 24px/1 Manrope,Arial,sans-serif;
+ position:absolute;top:19px;right:18px;color:inherit;opacity:.65;
+}
+#page-accueil .oil-home-link{
+ background:#eee2d4;border:1px solid #e3d3c2;
+ color:#795b40;border-radius:20px;
+ padding:16px 19px;margin-top:13px;min-height:78px;
+ box-shadow:0 5px 15px #4d554c0a;
+}
+#page-accueil .oil-home-link:hover{background:#eadbcc}
+#page-accueil .oil-home-icon{
+ width:39px;height:39px;border-radius:12px;
+ color:#896442;background:rgba(255,255,255,.58);
+}
+#page-accueil .oil-home-copy strong{font-size:12px;color:#695039}
+#page-accueil .oil-home-copy small{color:#967e68;line-height:1.4}
+#page-accueil .oil-home-qty{font-family:Manrope,sans-serif;color:#4e3f30;font-weight:850;letter-spacing:-.5px}
+#page-accueil .oil-home-link>.icon{opacity:.6}
+
+/* Individual utility sections: matte colored planes, not bright gradients. */
+.category-page .category-hero{
+ border:1px solid transparent;
+ box-shadow:0 7px 23px rgba(65,75,69,.065);
+ border-radius:22px;
+ padding:25px 26px 23px;
+ margin-bottom:15px;
+}
+.category-page>.category-electric{
+ background:#f9e7d6;color:#7c4a27;border-color:#eed8c0;
+}
+.category-page>.category-solar{
+ background:#e2f0e2;color:#336d45;border-color:#d0e4d0;
+}
+.category-page>.category-water{
+ background:#e2eff9;color:#326e95;border-color:#d0e4f2;
+}
+.category-page>.category-oil{
+ background:#f0e4d6;color:#715438;border-color:#e7d8c7;
+}
+.category-hero::before,.category-hero::after{display:none!important}
+.category-heading{align-items:center}
+.category-kicker{letter-spacing:1.2px;font-size:10px}
+.category-mark{
+ background:rgba(255,255,255,.62);
+ border:1px solid rgba(255,255,255,.3);
+ border-radius:12px;
+ width:37px;height:37px;
+}
+.category-recent{
+ color:inherit;
+ background:rgba(255,255,255,.45);
+ border-radius:999px;
+ padding:6px 10px;
+ font-size:9px;
+ font-weight:750;
+ letter-spacing:.15px;
+ opacity:.85;
+}
+.category-primary{margin:20px 0 16px;gap:3px}
+.category-primary-label{font-size:12px;font-weight:700;opacity:.82}
+.category-primary strong{
+ font-size:clamp(37px,4.5vw,56px);
+ line-height:1.13;
+ font-weight:800;
+ letter-spacing:-1.5px;
+}
+.category-primary-caption{font-size:11px;font-weight:700;opacity:.78}
+.category-secondary{
+ border-top:1px solid rgba(128,107,82,.16);
+ padding-top:15px;
+ gap:12px;
+}
+.category-secondary>div+div{border-left:1px solid rgba(128,107,82,.17)}
+.category-secondary span{font-size:10px;opacity:.72}
+.category-secondary strong{font-size:18px;letter-spacing:-.5px}
+body[data-section="electricite"] .topbar .title{color:#5f442e}
+body[data-section="solaire"] .topbar .title{color:#355b42}
+body[data-section="eau"] .topbar .title{color:#356582}
+body[data-section="mazout"] .topbar .title{color:#68513a}
+
+/* Period controls: restrained segmented buttons. Keep existing SVG dimensions
+   so all twelve monthly bars remain visible and the chart is not scrolled. */
+.time-controls{gap:9px;margin:11px 0 14px}
+.time-switch,.period-switch,.period-navigation,
+.category-page .time-switch,.category-page .period-switch{
+ background:#edeee9;
+ border:1px solid #e8eae4;
+ padding:4px;
+ border-radius:13px;
+ box-shadow:none;
+}
+.time-btn,.period-btn{
+ border-radius:10px;
+ color:#747f7d;
+ font-size:11px;
+ font-weight:750;
+}
+.time-btn.active,.period-btn.active,
+.category-page .time-btn.active,.category-page .period-btn.active{
+ background:white;
+ color:var(--section-accent,#456c5e);
+ border:1px solid #e8eae6;
+ box-shadow:0 3px 10px rgba(35,40,35,.055);
+}
+.period-arrow{background:white;border-radius:9px}
+.period-navigation-label{font-weight:850;color:#3c4743}
+.view-toggle,.bar-mode-switch,.electric-mode,.oil-chart-tabs{
+ background:#edeee9!important;
+ border:1px solid #e6eae4!important;
+ border-radius:13px!important;
+ padding:4px!important;
+ box-shadow:none;
+}
+.view-toggle-btn,.bar-mode-btn,.electric-mode-btn,.oil-chart-btn{
+ border-radius:10px!important;color:#72807a;
+ font-weight:750;
+}
+.view-toggle-btn.active,.bar-mode-btn.active,
+.electric-mode-btn.active,.oil-chart-btn.active{
+ background:#fff!important;
+ color:var(--section-accent,#46695d)!important;
+ border:1px solid #e7e9e3!important;
+ box-shadow:0 2px 9px #2331290c!important;
+}
+.category-page .bar-panel{
+ background:#fff;
+ border:1px solid #e8eae5;
+ border-radius:20px;
+ box-shadow:var(--ui-shadow);
+}
+.category-page .bar-panel h2{color:#28302e;letter-spacing:-.6px}
+.category-page .bar-panel .overline{color:var(--section-accent,#7d8b82)}
+.monthly-bars svg .monthly-grid{stroke:#eef0ec}
+.monthly-bars svg .monthly-zero{stroke:#bac5be}
+.monthly-bars svg text{fill:#8f9b97}
+.monthly-bars svg .monthly-bar{rx:4px}
+.bar-selection{
+ background:#f7f8f4;
+ border:1px solid #edf0eb;
+ border-radius:11px;
+ color:#5f6e67;
+}
+.bar-legend{color:#82918b}
+.category-chart-foot{color:#84918c}
+.category-chart-foot button{border-radius:10px;background:#f2f4ee}
+.electric-method-note,.electric-insights,
+.insight,.oil-after,.oil-assumptions,.settings-panel{
+ border-radius:18px;
+}
+.electric-method-note{background:#f2f4ef;color:#6b7671}
+.oil-season-card{
+ border-radius:19px;
+ border-color:#e9e7e0;
+ box-shadow:var(--ui-shadow);
+}
+.oil-season-card.heat{background:#f7eee5}
+.oil-season-card.hotwater{background:#eaf2f7}
+.oil-season-meter{background:rgba(255,255,255,.72);border-radius:999px;overflow:hidden}
+.oil-after{background:#f2e8dc;border:1px solid #e5d8c9}
+.oil-chart-panel{background:white}
+.oil-history-block{border-radius:19px}
+
+/* Reading editor: strong hierarchy, clear control affordances. */
+.modal-overlay{
+ background:rgba(21,31,30,.52);
+ backdrop-filter:blur(7px);
+ -webkit-backdrop-filter:blur(7px);
+}
+.modal{
+ border-radius:23px;
+ background:#fefefd;
+ border:1px solid #e5e8e2;
+ box-shadow:0 24px 90px rgba(13,27,25,.22);
+}
+.modal-top{margin-bottom:17px}
+.modal h2{font-size:22px;color:#24302c;letter-spacing:-.7px}
+.icon-button{
+ border-radius:12px;background:#f1f3ef;color:#4d5e56;
+}
+.field{gap:7px}
+.field span{font-size:11px;color:#41524b}
+.field input,.field select{
+ border-radius:12px;
+ border-color:#e1e7e0;
+ background:#fcfdfb;
+ color:#24302d;
+ padding:12px;
+ min-height:45px;
+ box-shadow:none;
+}
+.field input:focus,.field select:focus{
+ border-color:#86a796;
+ box-shadow:0 0 0 3px rgba(108,156,127,.12);
+}
+.field small{color:#8a9991}
+.network-total-field>input{
+ background:#fff8ee;
+ border-color:#e8d6c0;
+ color:#704c2c;
+ font-size:21px;
+}
+.scan-row{
+ background:#f5f7f2;
+ border:1px solid #e6eae2;
+ border-radius:17px;
+}
+.scan-kind-buttons button{
+ border:1px solid #e0e7dc;
+ border-radius:11px;
+ background:#fff;
+ color:#4c6056;
+ font-weight:750;
+}
+.scan-kind-buttons button[data-scan-kind="electric"]{color:#b76a36}
+.scan-kind-buttons button[data-scan-kind="pv"]{color:#418157}
+.scan-kind-buttons button[data-scan-kind="water"]{color:#397ca7}
+.scan-preview-wrap{border-radius:14px;background:#eef2ed}
+.scan-hint{color:#86958f;line-height:1.45}
+.scan-message{color:#465e52;font-weight:750}
+.scan-electric-night input,.scan-electric-day input{background:#fff}
+.scan-electric-night input{border-color:#d7dfed}
+.scan-electric-day input{border-color:#ead9c7}
+.scan-electric-sum{
+ background:#f9ead7;
+ border:1px solid #ebd7bb;
+ border-radius:14px;
+ padding:15px;
+}
+.scan-electric-sum output{color:#905a2e}
+#confirm-scan{background:#b96f3d!important;border-color:#b96f3d!important}
+#confirm-scan:disabled{opacity:.45}
+.modal-actions{border-color:#ebeee8}
+.photo-flag{background:#e5f0e5;border-color:#d0e4d0;color:#4e8061}
+.data-table th{
+ color:#6e8077;
+ background:#f8faf6;
+ font-weight:800;
+ letter-spacing:.15px;
+}
+.data-table td{color:#34423b}
+.table-panel{overflow:hidden}
+.mini-btn{border-radius:9px}
+.history-network-cell{color:#ab703b}
+.settings-grid .panel{background:white}
+.setting-row{border-color:#edf0ec}
+.fine-note{color:#89958e}
+
+/* Floating bottom navigation: six real pages, no swipe/zoom behavior changed. */
+@media(max-width:750px){
+ body{font-size:13px}
+ .sidebar{display:none}
+ .main,body[data-section="electricite"] .main,
+ body[data-section="solaire"] .main,
+ body[data-section="eau"] .main,
+ body[data-section="mazout"] .main{
+  margin-left:0;width:100%;
+  padding:21px 15px calc(104px + env(safe-area-inset-bottom));
+ }
+ .topbar{margin-bottom:14px;gap:10px}
+ .eyebrow{font-size:9px;letter-spacing:1.2px}
+ .title{font-size:25px;letter-spacing:-.85px;margin:5px 0 3px}
+ .subtitle{font-size:11px}
+ .header-actions{gap:7px}
+ #new-reading{
+  border-radius:12px!important;
+  padding:8px 10px;
+  min-height:39px;
+  font-size:10px;
+  letter-spacing:-.1px;
+ }
+ #new-reading .icon{width:15px;height:15px}
+ .header-settings{width:38px;height:38px}
+ #page-accueil .hero{
+  display:block;
+  border-radius:20px;
+ }
+ #page-accueil .hero-main{padding:20px 18px 17px}
+ #page-accueil .hero-eyebrow{font-size:9px;line-height:1.4}
+ #page-accueil .hero-value{font-size:clamp(34px,9vw,43px);margin:11px 0 2px}
+ #page-accueil .hero-unit{font-size:12px}
+ #page-accueil .hero-pills{margin-top:9px}
+ #page-accueil .hero-pill{font-size:9px;padding:4px 8px}
+ #page-accueil .hero-side{
+  min-height:0;
+  border-left:0;
+  border-top:1px solid #e9d3b7;
+  background:#f3dec5;
+  padding:10px 18px;
+ }
+ #page-accueil .hero-side-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:5px 12px;width:100%;
+ }
+ #page-accueil .hero-side-label{font-size:9px;line-height:1.2;letter-spacing:.65px}
+ #page-accueil .hero-side-number{font-size:18px;margin:0;letter-spacing:-.6px;line-height:1.25}
+ #page-accueil .hero-side-description{font-size:10px}
+ #page-accueil .hero-side-small{font-size:9px;margin-top:0}
+ #page-accueil .stat-grid{
+  display:grid;grid-template-columns:1fr;gap:9px;
+  margin:10px 0 0;
+ }
+ #page-accueil .stat-card{
+  min-height:0;
+  padding:13px 16px 12px;
+  border-radius:18px;
+ }
+ #page-accueil .stat-head{gap:9px}
+ #page-accueil .stat-icon{height:31px;width:31px;border-radius:10px}
+ #page-accueil .stat-icon .icon{width:17px;height:17px}
+ #page-accueil .stat-kicker{font-size:11px;letter-spacing:-.15px}
+ #page-accueil .stat-number{font-size:24px;margin:8px 0 1px;line-height:1.12}
+ #page-accueil .stat-number .unit{font-size:13px}
+ #page-accueil .stat-caption{font-size:9px}
+ #page-accueil .quick-stat::after{top:13px;right:14px;font-size:20px}
+ #page-accueil .oil-home-link{
+  margin-top:9px;
+  min-height:70px;
+  padding:12px 15px;
+  border-radius:18px;
+ }
+ #page-accueil .oil-home-icon{height:34px;width:34px}
+ #page-accueil .oil-home-copy strong{font-size:11px}
+ #page-accueil .oil-home-copy small{font-size:9px}
+ #page-accueil .oil-home-qty{font-size:17px}
+ .category-page .category-hero,
+ body[data-section="mazout"] .category-hero{
+  padding:19px 17px 17px;
+  border-radius:19px;
+  margin-bottom:11px;
+ }
+ .category-primary,body[data-section="mazout"] .category-primary{
+  margin:15px 0 14px;
+ }
+ .category-primary strong,body[data-section="mazout"] .category-primary strong{
+  font-size:clamp(32px,8.5vw,43px);
+  letter-spacing:-1.35px;
+ }
+ .category-kicker{font-size:10px;letter-spacing:.6px}
+ .category-recent{font-size:8px;letter-spacing:0;padding:5px 7px}
+ .category-secondary{padding-top:11px}
+ .category-secondary>div+div{padding-left:13px}
+ .category-secondary strong,body[data-section="mazout"] .category-secondary strong{font-size:15px}
+ .time-controls{margin:0 0 10px;gap:7px}
+ .time-switch,.period-switch{width:100%}
+ .category-page .time-btn,.category-page .period-btn{
+  font-size:10px;padding:8px 5px;
+ }
+ .category-page .bar-panel{
+  border-radius:18px;
+  padding:17px 11px 15px!important;
+ }
+ .category-page .bar-panel h2{font-size:17px}
+ .category-page .bar-panel .panel-description{font-size:10px}
+ .monthly-bars svg .monthly-bar{rx:3.5px}
+ .oil-season-card{border-radius:17px}
+ .oil-chart-tabs{border-radius:12px!important}
+ .modal-overlay{padding:9px}
+ .modal{border-radius:22px;padding:18px;max-height:calc(100dvh - 18px)}
+ .modal h2{font-size:20px}
+ .modal-actions{gap:8px}
+ .modal-actions .btn{min-height:42px;padding:9px 12px}
+ #scan-overlay.electric-scan .modal{padding:15px}
+ #scan-overlay.electric-scan .scan-electric-sum{padding:11px 12px}
+ .mobile-nav{
+  position:fixed;
+  left:11px;right:11px;
+  top:auto;
+  bottom:calc(11px + env(safe-area-inset-bottom));
+  width:auto;max-width:510px;
+  margin-inline:auto;
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  align-items:stretch;gap:2px;
+  padding:6px;
+  border-radius:22px;
+  border:1px solid rgba(212,218,210,.88);
+  background:rgba(255,255,254,.96);
+  -webkit-backdrop-filter:blur(17px);
+  backdrop-filter:blur(17px);
+  box-shadow:0 9px 36px rgba(37,49,44,.16),0 2px 6px rgba(37,49,44,.045);
+  z-index:8;
+ }
+ .mobile-link{
+  color:#8c9992;
+  min-width:0;
+  border-radius:15px;
+  border:0;
+  padding:8px 1px 7px;
+  background:transparent;
+  gap:3px;
+  font-weight:800;
+  transition:background .16s,color .16s;
+ }
+ .mobile-link .icon,.mobile-nav .mobile-link .icon{
+  width:20px;height:20px;
+  stroke-width:1.75;
+ }
+ .mobile-link span,.mobile-nav .mobile-link span{font-size:9px;white-space:nowrap}
+ .mobile-link.active{background:#eeeae4;color:#544e44}
+ .mobile-link.active[data-go="electricite"]{background:#f9e7d7;color:#bb6f37}
+ .mobile-link.active[data-go="solaire"]{background:#e5f0e3;color:#367b4c}
+ .mobile-link.active[data-go="eau"]{background:#e3eff7;color:#397eaa}
+ .mobile-link.active[data-go="mazout"]{background:#f1e6d8;color:#8d6643}
+ .mobile-link.active[data-go="accueil"]{background:#f5e9db;color:#bc7b46}
+ .mobile-link.active[data-go="releves"]{background:#e8ede8;color:#4c7865}
+ .mobile-link:active{transform:scale(.96)}
+}
+@media(max-width:395px){
+ .main{padding-inline:12px}
+ .mobile-nav{left:7px;right:7px;padding:5px;gap:1px;border-radius:20px}
+ .mobile-link{padding:7px 1px 6px}
+ .mobile-link span,.mobile-nav .mobile-link span{font-size:8px}
+ .mobile-link .icon{width:19px;height:19px}
+ #page-accueil .hero-main{padding:17px 15px}
+ #page-accueil .hero-side{padding:9px 15px}
+ #page-accueil .hero-pill{font-size:8px}
+ #page-accueil .stat-number{font-size:22px}
+ .category-secondary strong{font-size:14px}
+ .category-recent{max-width:48%;text-align:right}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero,.stat-card,.oil-home-link,.category-hero,.mobile-link{transition:none}
+}
