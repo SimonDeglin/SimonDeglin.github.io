@@ -61,17 +61,24 @@ async function main(){
   }
   }catch(e){result.errors.push({url,error:String(e.message||e)})}
  }
- const testUrl='https://www.publicprocurement.be/api/sea/search/publications?page=1&pageSize=5';
- try{
-  const ctl=new AbortController();const timer=setTimeout(()=>ctl.abort(),15000);
+ const endpoint='https://www.publicprocurement.be/api/sea/search/publications';
+ const checks=[
+  {name:'with noticeSubtypes and pagination',body:{noticeSubtypes:[],page:1,pageSize:5}},
+  {name:'terms and pagination',body:{terms:'topograph',noticeSubtypes:[],page:1,pageSize:5}},
+  {name:'filters empty typed',body:{terms:'topograph',procurementProcedureTypes:[],publicationLanguages:[],cpvCodes:[],nutsCodes:[],natures:[],noticeSubtypes:[],page:0,pageSize:5}},
+  {name:'typed filters plus date',body:{terms:'topograph',noticeSubtypes:[],publicationDateFrom:'2026-10-01',publicationDateTo:'2026-10-14',page:1,pageSize:5}}
+ ];
+ for(const check of checks){
   try{
-   const res=await fetch(testUrl,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:'{}',signal:ctl.signal});
-   const body=await res.text();
-   let info;
-   try{info=JSON.parse(body)}catch(e){info=null}
-   result.public_search_test.push({url:testUrl,status:res.status,length:body.length,preview:info?JSON.stringify(info).slice(0,3500):body.slice(0,850)});
-  }finally{clearTimeout(timer)}
- }catch(e){result.public_search_test.push({url:testUrl,error:String(e.message||e)})}
+   const ctl=new AbortController();const timer=setTimeout(()=>ctl.abort(),15000);
+   try{
+    const res=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(check.body),signal:ctl.signal});
+    const body=await res.text();let info;
+    try{info=JSON.parse(body)}catch(e){info=null}
+    result.public_search_test.push({name:check.name,status:res.status,headers:{'content-type':res.headers.get('content-type'),'access-control-allow-origin':res.headers.get('access-control-allow-origin')},length:body.length,preview:info?JSON.stringify(info).slice(0,7000):body.slice(0,1200)});
+   }finally{clearTimeout(timer)}
+  }catch(e){result.public_search_test.push({name:check.name,error:String(e.message||e)})}
+ }
  fs.writeFileSync(out,JSON.stringify(result,null,2)+'\n');
  console.log('BOSA public probe:',JSON.stringify({pages:origins.length,files:result.html_script_files.length,strings:result.api_strings.length,errors:result.errors}));
 }
