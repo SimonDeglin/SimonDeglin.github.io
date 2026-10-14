@@ -147,6 +147,9 @@ body{background:#f7f7f7;color:#303339}
 .family-main.selected .family-count{color:#f0b699}
 .family-children{margin-bottom:5px;padding-top:3px;padding-bottom:4px}
 .family-child{width:100%}
+.important-conditions{border:1px solid #f1d6c5;background:#fff7f1;border-radius:11px;padding:14px 17px;margin:-5px 0 20px;font-size:11px;line-height:1.7;color:#936347}
+.important-conditions strong{display:block;color:#a9572c;margin-bottom:7px;font-size:11px}
+.important-conditions div{padding:4px 0}
 </style>
 </head>
 <body>
@@ -238,7 +241,7 @@ var SECTORS=[
  {id:'all',label:'Tous les métiers'},
  {id:'Topo',label:'Topographie'},
  {id:'Hydro',label:'Hydrographie'},
- {id:'VRD',label:'Voiries & VRD'},
+ {id:'VRD',label:'Études / auteur de projet VRD'},
  {id:'Carto',label:'Cartographie'},
  {id:'Scan',label:'Scan 3D & drone'},
  {id:'Foncier',label:'Expertises & foncier'},
@@ -499,7 +502,7 @@ function renderCategories(){
  var pool=allMarkets().filter(function(m){return !isStage(state.view)||stageOf(m.id)===state.view});
  function count(ids){return pool.filter(function(m){return (m.sectors||tagsOf(m)).some(function(s){return ids.includes(s)})}).length}
  var names={'Topo':'Relevés topo','Scan':'Scanner 3D','Drone':'Drone & photogrammétrie','Hydro':'Bathymétrie',
- 'VRD':'Voiries & VRD','Reseaux':'Réseaux & impétrants','Hydraulique':'Hydraulique & jaugeages',
+ 'VRD':'Études / projets de voirie','Reseaux':'Réseaux & impétrants','Hydraulique':'Hydraulique & jaugeages',
  'PetitsTravaux':'Petits travaux techniques',
  'Foncier':'Division & bornage','Implant':'Implantations','Expert':'Expertises','PEB':'PEB','Carto':'Cartographie & SIG'};
  box.innerHTML=FAMILIES.map(function(f){
@@ -611,6 +614,7 @@ function openTender(id){
  el('drawerBody').innerHTML='<div class="tender-top">'+tags+'<span class="micro-tag">'+esc(m.source==='Démo'?'FICTIF':'TED')+'</span></div>'+
  '<h3 class="drawer-title">'+esc(m.title)+'</h3><p style="color:#8c9bad;font-size:11px;margin:0">Échéance : '+(d===null?'non précisée':d>=0?'dans '+d+' jour(s)':'dépassée')+'</p>'+
  '<div class="detail-grid">'+fields.map(function(f){return '<div class="detail-field"><label>'+esc(f[0])+'</label><div>'+esc(f[1])+'</div></div>'}).join('')+'</div>'+
+ (Array.isArray(m.constraints)&&m.constraints.length?'<div class="important-conditions"><strong>Points à vérifier avant de répondre</strong>'+m.constraints.map(function(x){return '<div>• '+esc(x)+'</div>'}).join('')+'</div>':'')+
  '<div class="drawer-label">Objet du marché</div><div class="drawer-desc">'+esc(m.description||'Résumé non disponible. Consulter l’avis officiel.')+'</div>'+
  '<div class="drawer-label" style="margin-top:26px">Dossier de suivi</div><select class="control-select" id="statusSelect">'+WORKFLOW.map(function(s){return '<option value="'+esc(s.id)+'"'+(s.id===stageOf(id)?' selected':'')+'>'+esc(s.label)+'</option>'}).join('')+'</select>'+
  '<div class="drawer-label">Notes personnelles</div><textarea id="marketNotes" placeholder="Points à vérifier, références, questions...">'+esc(saved.notes[id]||'')+'</textarea>'+
