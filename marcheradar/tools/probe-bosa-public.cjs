@@ -19,6 +19,7 @@ async function probe(name,url,options){
 async function run(){
  const base={method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json','Accept-Language':'fr-BE'}};
  const variants=[
+  ['browser_verified',{includeOrganisationChildren:true,page:1,pageSize:25}],
   ['existing_json', {terms:null,procurementProcedureTypes:null,dispatchDateFrom:null,dispatchDateTo:null,
      publicationDateFrom:todayMinus(2),publicationDateTo:todayMinus(0),
      publicationLanguages:null,specialPurchasingTechniques:null,tenderSubmissionDeadlineFrom:null,
