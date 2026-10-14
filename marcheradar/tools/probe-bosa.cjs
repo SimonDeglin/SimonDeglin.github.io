@@ -46,12 +46,32 @@ async function main(){
    result.route_hints.push({url,html_excerpt:raw.slice(0,500),script_count:paths.length});
   }catch(e){result.errors.push({url,error:String(e.message||e)})}
  }
+ result.methods=[];
+ result.public_search_test=[];
  for(const url of result.html_script_files.slice(0,16)){
   try{
    const response=await fetchBody(url);
-   if(response.record.status===200 && response.raw.length<=12_000_000)scanJS(response.raw,url);
+   if(response.record.status===200 && response.raw.length<=12_000_000){
+   scanJS(response.raw,url);
+   const start=response.raw.indexOf('static getPublications(){');
+   const stop=response.raw.indexOf('static getPublicationsUsingShortLink',start+20);
+   if(start>0&&stop>start)result.methods.push({source:url,name:'getPublications',body:response.raw.slice(start,Math.min(stop,start+19000))});
+   const map=response.raw.indexOf('mapApiPublicationToPublication');
+   if(map>0)result.methods.push({source:url,name:'publicationMapping',body:response.raw.slice(Math.max(0,map-1000),map+2000)});
+  }
   }catch(e){result.errors.push({url,error:String(e.message||e)})}
  }
+ const testUrl='https://www.publicprocurement.be/api/sea/search/publications?page=1&pageSize=5';
+ try{
+  const ctl=new AbortController();const timer=setTimeout(()=>ctl.abort(),15000);
+  try{
+   const res=await fetch(testUrl,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:'{}',signal:ctl.signal});
+   const body=await res.text();
+   let info;
+   try{info=JSON.parse(body)}catch(e){info=null}
+   result.public_search_test.push({url:testUrl,status:res.status,length:body.length,preview:info?JSON.stringify(info).slice(0,3500):body.slice(0,850)});
+  }finally{clearTimeout(timer)}
+ }catch(e){result.public_search_test.push({url:testUrl,error:String(e.message||e)})}
  fs.writeFileSync(out,JSON.stringify(result,null,2)+'\n');
  console.log('BOSA public probe:',JSON.stringify({pages:origins.length,files:result.html_script_files.length,strings:result.api_strings.length,errors:result.errors}));
 }
