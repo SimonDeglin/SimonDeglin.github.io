@@ -664,6 +664,9 @@ function awardsMarkup(m){
   var winners=Array.isArray(a.winners)?a.winners:[];
   var tenderers=Array.isArray(a.mentionedTenderers)?a.mentionedTenderers:[];
   var lots=Array.isArray(a.lotIdentifiers)?a.lotIdentifiers:[];
+  var registeredIds=Array.isArray(a.winnerIdentifiers)?a.winnerIdentifiers:[];
+  var lowest=(a.lowestTenderValues||[]).length===1?a.lowestTenderValues[0]:null;
+  var highest=(a.highestTenderValues||[]).length===1?a.highestTenderValues[0]:null;
   var singleValue=(a.totalAwardValues||[]).length===1?a.totalAwardValues[0]:null;
   var tenderValue=(a.tenderValues||[]).length===1?a.tenderValues[0]:null;
   var count=typeof a.offerCount==='number'?String(a.offerCount):'Non publié (ou ventilé par lot)';
@@ -674,6 +677,8 @@ function awardsMarkup(m){
    '<div class="award-detail"><strong>Attributaire(s) mentionné(s)</strong>'+(winners.length?winners.map(function(name){return '<div>'+esc(name)+'</div>'}).join(''):'<div>Non publié</div>')+'</div>'+
    '<div class="award-summary"><div><small>Offres reçues</small><b>'+esc(count)+'</b></div><div><small>Valeur totale du résultat</small><b>'+(singleValue?formatMoney(singleValue):'Non publiée')+'</b></div></div>'+
    (tenderValue?'<div class="award-detail"><strong>Valeur d’offre publiée</strong><div>'+formatMoney(tenderValue)+'</div><small>Ne pas assimiler ce montant au prix d’un soumissionnaire précis sans consulter la source.</small></div>':'')+
+   (registeredIds.length?'<div class="award-detail"><strong>Identifiant(s) déclaré(s) par les attributaires</strong>'+registeredIds.map(function(id){return '<div>'+esc(id)+'</div>'}).join('')+'<small>Identifiants publiés ; leur association individuelle aux noms doit être vérifiée dans l’avis.</small></div>':'')+
+   (lowest||highest?'<div class="award-detail"><strong>Fourchette d’offres éventuellement publiée</strong><div>'+(lowest?'Minimum : '+formatMoney(lowest):'Minimum : non publié')+'</div><div>'+(highest?'Maximum : '+formatMoney(highest):'Maximum : non publié')+'</div><small>Les valeurs peuvent être ventilées par lot ; ne pas les attribuer automatiquement à un concurrent.</small></div>':'')+
    list+(lots.length?'<div class="award-detail"><strong>Lot(s) concernés</strong><div>'+esc(lots.join(' · '))+'</div><small>Les noms et prix ne sont pas automatiquement affectés à chaque lot.</small></div>':'')+
    '<div class="award-bottom">'+(a.decisionDate?'Décision : '+fmtDate(a.decisionDate)+' · ':'')+(a.conclusionDate?'Contrat : '+fmtDate(a.conclusionDate):'')+'</div>'+evidence+'</section>';
  }).join('');
