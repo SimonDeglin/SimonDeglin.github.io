@@ -75,6 +75,61 @@
 .tender .tender-top .micro-tag{font-size:8px}
 }
 @media(max-width:400px){.tender-end{min-width:100px}.move-select{min-width:95px;max-width:102px;font-size:9px;padding:4px}}
+
+/* KDRIX : identité visuelle sobre, anthracite et orange */
+:root{--ink:#303236;--ink2:#50545a;--muted:#82888e;--line:#e7e7e8;--bg:#f7f7f7;
+--orange:#f46228;--orange-soft:#fff0e9;--shadow:0 9px 25px rgba(35,35,35,.03)}
+body{background:#f7f7f7;color:#303339}
+.sidebar{background:#2d2e30;color:#f6f6f6}
+.brand-icon{color:white;background:#f36529;border-color:#f36529}
+.brand-word em{color:#ff7339}.brand-sub{color:#c3aca0}
+.sidebar .section-label{color:#92989e}
+.nav-item{color:#bfc3c6}.nav-item:hover{color:white;background:#404143}
+.nav-item.active{color:white;background:#474648}.nav-item.active:before{background:#f36529}
+.nav-item .count{background:#424345;color:#d6d8da}
+.nav-item.active .count{background:#765243;color:#fff}
+.sidebar .side-help{color:#a0a3a7;font-size:10px;padding-bottom:6px}
+.side-source{display:none}.side-foot{color:#83888d}
+.topbar{background:#fff;border-bottom:1px solid #e8e8e8}
+.eyebrow{color:#ea632c}.welcome h1{color:#303236}
+.search-wrap input:focus{border-color:#f58d60;box-shadow:0 0 0 3px #fff1e9}
+.tender h3:hover{color:#df602b}
+.micro-tag.sector{background:#f4f4f4;color:#767a7f}
+.star.on,.star:hover{color:#e76c35;border-color:#f5d3c3;background:#fff1e9}
+.primary{background:#f2682e}.primary:hover{background:#da5722}
+.results,.filter-panel{box-shadow:0 9px 27px rgba(35,35,35,.025)}
+.kpi:nth-child(2) .num{color:#ec6731}
+.category-groups{display:grid;gap:2px}
+.family-row{display:flex;align-items:center;gap:2px;border-radius:9px;min-height:40px}
+.family-row:hover{background:#3d3e40}.family-row.selected{background:#4c3e37}
+.family-row.selected:before{content:'';width:3px;height:23px;flex:none;background:#f36529;border-radius:2px;margin-left:2px}
+.family-button{display:flex;flex:1;min-width:0;align-items:center;gap:7px;text-align:left;color:#c8cbce;background:transparent;border:0;padding:10px 7px 10px 13px;font-size:12px;font-weight:750}
+.family-row.selected .family-button{padding-left:8px;color:#fff}
+.family-label{flex:1}.family-count,.subcat-count{font-size:10px;color:#a9b0b4}
+.family-row.selected .family-count{color:#ebc2ac}
+.family-expand{width:33px;height:34px;border:0;background:transparent;color:#adb2b5;border-radius:8px;display:grid;place-items:center;font-size:17px}
+.family-expand:hover{color:#fff;background:#505153}
+.family-children{display:grid;margin:0 0 5px 14px;padding:3px 0 3px 9px;border-left:1px solid #57595b;gap:1px}
+.family-child{display:flex;align-items:center;gap:9px;color:#a1a7ab;background:transparent;border:0;border-radius:7px;text-align:left;padding:9px 10px;font-size:11px;font-weight:600}
+.family-child:hover{color:white;background:#444547}
+.family-child.active{color:#fff;background:#604538}
+.family-child.active:before{content:'';width:5px;height:5px;background:#ff824b;border-radius:100%}
+.family-child>span:first-child{flex:1}.family-child.active .subcat-count{color:#ffd5c1}
+.sector-clear[hidden]{display:none}.sector-clear{padding:7px 10px 2px}
+.sector-clear button{background:transparent;border:0;padding:5px 0;color:#ffae86;font-size:11px;text-align:left}
+.sector-clear button:hover{color:#fff}
+@media(min-width:741px){
+.sidebar{width:268px;min-width:268px;padding-top:21px}
+.brand{padding-bottom:20px}
+.sidebar .section-label{margin-top:4px}
+.kpis{display:none}.eyebrow{display:none}
+.welcome{margin-bottom:14px}.welcome h1{font-size:25px}
+.content{padding-top:22px}.notice-banner{margin:0 0 20px}
+.section-head{margin-top:0}
+.filter-panel{padding:14px}
+}
+@media(max-width:740px){.kpis,.eyebrow{display:none}.hero{display:none}
+.welcome h1{font-size:24px}.notice-banner{margin:0 0 17px}}
 </style>
 </head>
 <body>
@@ -108,7 +163,7 @@
 <aside class="sidebar" id="sidebar">
 <div class="brand"><div class="brand-icon"><svg class="ico"><use href="#i-radar"/></svg></div><div><div class="brand-word">Marché<em>Radar</em></div><div class="brand-sub">GROUPE KDRIX</div></div></div>
 <div class="section-label">DOSSIERS DE SUIVI</div>
-<div class="side-help">Glissez un marché dans le dossier souhaité.</div>
+<div class="side-help">Glisser-déposer pour classer</div>
 <nav aria-label="Dossiers de suivi" id="foldersNav" class="folders">
 <button class="nav-item active" data-view="inbox" data-folder="inbox"><svg class="ico"><use href="#i-list"/></svg><span class="nav-name">Listing complet</span><span class="count" data-count="inbox">0</span></button>
 <button class="nav-item" data-view="maybe" data-folder="maybe"><i class="folder-dot maybe"></i><span class="nav-name">À définir</span><span class="count" data-count="maybe">0</span></button>
@@ -118,15 +173,9 @@
 <button class="nav-item" data-view="lost" data-folder="lost"><i class="folder-dot lost"></i><span class="nav-name">Perdu</span><span class="count" data-count="lost">0</span></button>
 <button class="nav-item" data-view="discarded" data-folder="discarded"><i class="folder-dot discarded"></i><span class="nav-name">Sans suite</span><span class="count" data-count="discarded">0</span></button>
 </nav>
-<div class="section-label">AUTRES VUES</div>
-<nav aria-label="Catalogue et favoris">
-<button class="nav-item" data-view="catalogue"><svg class="ico"><use href="#i-grid"/></svg><span class="nav-name">Tous les marchés</span><span class="count" id="allCount">0</span></button>
-<button class="nav-item" data-view="favorites"><svg class="ico"><use href="#i-star"/></svg><span class="nav-name">Favoris</span><span class="count" id="favCount">0</span></button>
-<button class="nav-item" data-view="urgent"><svg class="ico"><use href="#i-clock"/></svg><span class="nav-name">Échéances proches</span><span class="count" id="dueCount">0</span></button>
-</nav>
-<div class="section-label">CLASSEMENT PAR MÉTIER</div>
-<button class="category-toggle" id="categoryToggle" aria-expanded="false"> <svg class="ico s"><use href="#i-list"/></svg> Catégories métier <span>⌄</span></button>
-<div class="sidebar-categories" id="sidebarCategories" hidden></div>
+<div class="section-label">DOMAINES</div>
+<div class="category-groups" id="sidebarCategories" aria-label="Domaines et sous-catégories"></div>
+<div class="sector-clear" id="sectorClear" hidden><button id="resetSector" type="button">× Effacer le filtre métier</button></div>
 <div class="section-label">MON ESPACE</div>
 <nav><button class="nav-item" id="settingsBtn"><svg class="ico"><use href="#i-settings"/></svg><span class="nav-name">Préférences</span></button>
 <button class="nav-item" id="exportBtn"><svg class="ico"><use href="#i-download"/></svg><span class="nav-name">Exporter en CSV</span></button></nav>
@@ -139,7 +188,7 @@
     <div class="top-actions"><span class="today" id="today"></span><div class="top-divider"></div><a class="refresh-btn" href="https://www.kdrix.be/fr/" target="_blank" rel="noopener" title="Site KDRIX">KDRIX <svg class="ico s"><use href="#i-external"/></svg></a><div class="initials">KD</div></div>
   </header>
   <main class="content">
-    <section class="welcome"><div><div class="eyebrow">VEILLE STRATÉGIQUE · MARCHÉS PUBLICS</div><h1>Bonjour, KDRIX <span style="color:#e6a17a">✳</span></h1><p>Repérez les opportunités adaptées à vos métiers. Décidez vite, suivez l'essentiel.</p></div><button class="refresh-btn" id="refreshBtn"><svg class="ico s"><use href="#i-refresh"/></svg><span class="refresh-text">Vérifier les données</span></button></section>
+    <section class="welcome"><div><div class="eyebrow">VEILLE KDRIX</div><h1>Marchés publics <span style="color:#f45f25">✳</span></h1><p>Les opportunités KDRIX, classées et suivies.</p></div><button class="refresh-btn" id="refreshBtn"><svg class="ico s"><use href="#i-refresh"/></svg><span class="refresh-text">Vérifier les données</span></button></section>
     <section class="hero"><div class="hero-main"><div class="hero-tag"><svg class="ico s"><use href="#i-radar"/></svg> VOTRE RADAR EST PRÊT</div><h2>Les bons marchés.<br>Au bon moment.</h2><p>Topographie, hydrographie, VRD, cartographie, expertise immobilière et PEB : une veille construite autour des compétences du groupe.</p></div><div class="hero-side"><div class="hero-number" id="heroCount">—</div><span>opportunités affichées</span></div></section>
     <div class="notice-banner" id="noticeBanner"><svg class="ico l"><use href="#i-info"/></svg><div><b>Chargement en cours.</b> Vérification des publications disponibles.</div></div>
     <section class="kpis" aria-label="Indicateurs"><div class="kpi"><div><div class="num" id="kpiTotal">—</div><div class="label">Dans le listing</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-radar"/></svg></div></div><div class="kpi"><div><div class="num" id="kpiTop">—</div><div class="label">À répondre</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-target"/></svg></div></div><div class="kpi"><div><div class="num" id="kpiTracked">—</div><div class="label">En attente d’attribution</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-bookmark"/></svg></div></div><div class="kpi"><div><div class="num" id="kpiUrgent">—</div><div class="label">Marchés obtenus</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-calendar"/></svg></div></div></section>
@@ -147,11 +196,11 @@
     <div id="listDescription" class="list-description">Marchés à trier, non encore classés. Glissez une ligne vers un dossier à gauche.</div>
     <section class="filter-panel">
       <div class="search-row">
-        <div class="search-wrap"><svg class="ico"><use href="#i-search"/></svg><input id="search" type="search" aria-label="Rechercher un marché" placeholder="Rechercher un métier, un acheteur, un lieu, un mot-clé..."></div>
+        <div class="search-wrap"><svg class="ico"><use href="#i-search"/></svg><input id="search" type="search" aria-label="Rechercher un marché" placeholder="Rechercher un marché, un acheteur ou un lieu..."></div>
         <select class="filter-select" id="region" aria-label="Filtrer par région"><option value="all">Toutes les zones</option><option value="Wallonie">Wallonie</option><option value="Bruxelles">Bruxelles</option><option value="Flandre">Flandre</option><option value="Belgique">Lieu non précisé</option></select>
         <select class="filter-select" id="sort" aria-label="Trier les marchés"><option value="score">Plus pertinents</option><option value="recent">Plus récents</option><option value="deadline">Échéance proche</option></select>
       </div>
-      <div class="chips" id="chips" aria-label="Filtrer par métier"></div>
+      
     </section>
     <div class="workspace">
       <section class="results" aria-label="Liste des marchés"><div class="result-head"><div class="result-title" id="resultTitle">Listing complet <span class="result-count" id="resultCount">0</span></div><div class="table-meta" id="listMeta">Classés pour KDRIX</div></div><div id="resultsList"></div></section>
@@ -225,13 +274,10 @@ function filtered(){
  list.sort(function(a,b){if(state.sort==='recent')return (b.publication||'').localeCompare(a.publication||'');if(state.sort==='deadline'){var da=daysLeft(a.deadline),db=daysLeft(b.deadline);return (da===null?9999:da<0?9999:da)-(db===null?9999:db<0?9999:db)}return (b.score||0)-(a.score||0)});
  return list;
 }
-function renderChips(){
- el('chips').innerHTML=SECTORS.filter(function(s){return s.id==='all'||!saved.hiddenSectors[s.id]}).map(function(s){return '<button class="chip'+(state.sector===s.id?' selected':'')+'" data-sector="'+s.id+'">'+esc(s.label)+'</button>'}).join('');
- el('chips').querySelectorAll('[data-sector]').forEach(function(b){b.addEventListener('click',function(){state.sector=b.dataset.sector;render()})});
-}
+function renderChips(){}
 function renderStats(){
  var src=allMarkets(),high=src.filter(function(m){return m.score>=85}).length,urg=src.filter(function(m){var n=daysLeft(m.deadline);return n!==null&&n>=0&&n<=14}).length;
- el('kpiTotal').textContent=src.length;el('kpiTop').textContent=high;el('kpiTracked').textContent=trackCount();el('kpiUrgent').textContent=urg;el('heroCount').textContent=src.length;el('favCount').textContent=favoriteCount();el('trackCount').textContent=trackCount();
+ el('kpiTotal').textContent=src.length;el('kpiTop').textContent=high;el('kpiTracked').textContent=trackCount();el('kpiUrgent').textContent=urg;el('heroCount').textContent=src.length;el('trackCount').textContent=trackCount();
 }
 function renderBanner(){
  var live=state.mode==='ted',b=el('noticeBanner');b.classList.toggle('live',live);el('sideDot').classList.toggle('live',live);
@@ -405,7 +451,7 @@ function filtered(){
  var list=allMarkets().filter(function(m){
   var tags=m.sectors||tagsOf(m);
   if(!tags.some(function(s){return !saved.hiddenSectors[s]}))return false;
-  if(state.sector!=='all'&&!tags.includes(state.sector))return false;
+  if(!matchesSectorFilter(tags))return false;
   if(state.region!=='all'&&m.region!==state.region)return false;
   if(isStage(state.view)&&stageOf(m.id)!==state.view)return false;
   if(state.view==='favorites'&&!saved.favorites[m.id])return false;
@@ -423,17 +469,50 @@ function filtered(){
  });
  return list;
 }
+var FAMILIES=[
+ {id:'mesurage',label:'Mesurage',items:['Topo','Scan','Drone','Hydro']},
+ {id:'voirie',label:'Projet voirie',items:['VRD','Reseaux','Hydraulique']},
+ {id:'geometre',label:'Géomètre',items:['Foncier','Implant']},
+ {id:'expertise',label:'Expertise',items:['Expert','PEB']},
+ {id:'autres',label:'Autres',items:['Carto']}
+];
+var expandedFamily=null;
+function matchesSectorFilter(tags){
+ if(state.sector==='all')return true;
+ var family=FAMILIES.find(function(f){return state.sector==='group:'+f.id});
+ return family?family.items.some(function(id){return tags.includes(id)}):tags.includes(state.sector);
+}
 function renderCategories(){
  var box=el('sidebarCategories');
  var pool=allMarkets().filter(function(m){return !isStage(state.view)||stageOf(m.id)===state.view});
- box.innerHTML=SECTORS.filter(function(s){return s.id!=='all'&&!saved.hiddenSectors[s.id]}).map(function(s){
-  var n=pool.filter(function(m){return (m.sectors||[m.sector]).includes(s.id)}).length;
-  return '<button class="sidebar-cat'+(state.sector===s.id?' active':'')+'" data-category="'+esc(s.id)+'"><span class="cat-label">'+esc(s.label)+'</span><span class="cat-count">'+n+'</span></button>';
+ function count(ids){return pool.filter(function(m){return (m.sectors||tagsOf(m)).some(function(s){return ids.includes(s)})}).length}
+ var names={'Topo':'Relevés topo','Scan':'Scanner 3D','Drone':'Drone & photogrammétrie','Hydro':'Bathymétrie',
+ 'VRD':'Voiries & VRD','Reseaux':'Réseaux & impétrants','Hydraulique':'Hydraulique & jaugeages',
+ 'Foncier':'Division & bornage','Implant':'Implantations','Expert':'Expertises','PEB':'PEB','Carto':'Cartographie & SIG'};
+ box.innerHTML=FAMILIES.map(function(f){
+  var activeItems=f.items.filter(function(id){return !saved.hiddenSectors[id]});
+  if(!activeItems.length)return '';
+  var active=state.sector==='group:'+f.id||activeItems.includes(state.sector);
+  var expanded=expandedFamily===f.id;
+  return '<div class="family-row'+(active?' selected':'')+'"><button type="button" class="family-button" data-family="'+esc(f.id)+'" aria-pressed="'+(state.sector==='group:'+f.id)+'">'+
+    '<span class="family-label">'+esc(f.label)+'</span><span class="family-count">'+count(activeItems)+'</span></button>'+
+    '<button type="button" class="family-expand" data-expand-family="'+esc(f.id)+'" aria-label="'+(expanded?'Masquer':'Afficher')+' les sous-catégories '+esc(f.label)+'" aria-expanded="'+expanded+'">'+(expanded?'−':'⌄')+'</button></div>'+
+    (expanded?'<div class="family-children">'+activeItems.map(function(id){
+      var on=state.sector===id;
+      return '<button type="button" class="family-child'+(on?' active':'')+'" data-subcat="'+esc(id)+'" aria-pressed="'+on+'"><span>'+esc(names[id]||id)+'</span><span class="subcat-count">'+count([id])+'</span></button>';
+    }).join('')+'</div>':'');
  }).join('');
- box.querySelectorAll('[data-category]').forEach(function(b){b.addEventListener('click',function(){
-  state.sector=state.sector===b.dataset.category?'all':b.dataset.category;
-  render();if(window.innerWidth<741)el('sidebar').classList.remove('open');
+ box.querySelectorAll('[data-family]').forEach(function(btn){btn.addEventListener('click',function(){
+  expandedFamily=btn.dataset.family;state.sector='group:'+expandedFamily;render();
  })});
+ box.querySelectorAll('[data-expand-family]').forEach(function(btn){btn.addEventListener('click',function(){
+  expandedFamily=expandedFamily===btn.dataset.expandFamily?null:btn.dataset.expandFamily;
+  renderCategories();
+ })});
+ box.querySelectorAll('[data-subcat]').forEach(function(btn){btn.addEventListener('click',function(){
+  state.sector=state.sector===btn.dataset.subcat?'all':btn.dataset.subcat;render();
+ })});
+ el('sectorClear').hidden=state.sector==='all';
 }
 function renderStats(){
  el('kpiTotal').textContent=stageNumber('inbox');
@@ -441,9 +520,9 @@ function renderStats(){
  el('kpiTracked').textContent=stageNumber('await');
  el('kpiUrgent').textContent=stageNumber('won');
  el('heroCount').textContent=allMarkets().length;
- el('allCount').textContent=allMarkets().length;
- el('favCount').textContent=favoriteCount();
- el('dueCount').textContent=allMarkets().filter(function(m){var d=daysLeft(m.deadline);return d!==null&&d>=0&&d<=14}).length;
+ 
+ 
+ 
  document.querySelectorAll('[data-count]').forEach(function(b){b.textContent=stageNumber(b.dataset.count)});
 }
 function renderNav(){
@@ -570,10 +649,7 @@ document.querySelectorAll('[data-folder]').forEach(function(button){
   moveMarket(id,button.dataset.folder);
  });
 });
-el('categoryToggle').addEventListener('click',function(){
- var next=el('sidebarCategories').hidden;el('sidebarCategories').hidden=!next;
- this.setAttribute('aria-expanded',String(next));
-});
+el('resetSector').addEventListener('click',function(){state.sector='all';render()});
 render();load();
 })();
 </script>
