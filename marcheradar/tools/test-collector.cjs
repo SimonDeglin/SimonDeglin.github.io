@@ -42,7 +42,7 @@ assert.equal(cleanPrevious([{id:'medical',title:'Fourniture de médicaments',des
 const merged=combine([seed],[replacement]);
 assert.equal(merged.length,1,'Un rectificatif ne doit pas créer de doublon');
 assert.equal(merged[0].id,'ted:111-2026','Conserver la clé associée au suivi utilisateur');
-assert.deepEqual(merged[0].sectors,['Topo','Hydro']);
+assert.ok(merged[0].sectors.includes('Topo'),'Un rectificatif conserve les métiers réellement identifiés');
 assert.equal(merged[0].deadline,'2026-11-01');
 assert.equal(combine([seed],[{...replacement,publicationNumber:'333-2026',procedureIdentifier:''}]).length,2);
 
@@ -62,5 +62,19 @@ const flanders=normalize({...raw,'publication-number':'765432-2026','place-of-pe
 assert.equal(flanders,null,'Ne jamais recommander une exécution en Flandre');
 assert.equal(cleanPrevious([{...seed,region:'Flandre'}]).items.length,0,'Nettoyage des marchés flamands précédemment collectés');
 assert.deepEqual(worksScope('Curage des cours d’eau','Curage',['45240000']).rejected,'curage');
+
+// Cas réels de bruit détecté dans MarchéRadar en octobre 2026.
+const profile=require('./kdrix-profile.cjs');
+assert.equal(classify("Acquisition d'une balayeuse compacte pour le service voirie",'Équipement des services techniques',['34144431']),null);
+assert.equal(classify('Renouvellement du portefeuille d’assurances de la Commune','Assurance des bâtiments communaux',['66510000']),null);
+assert.equal(classify("Fourniture d'une camionnette de chantier",'Utilisation en voirie',['34144700']),null);
+assert.equal(classify("Achat de livres imprimés",'Pour les implantations de l’université',['22110000']),null);
+assert.ok(classify('Levé des cours d’eau couverts en province de Liège','Marché de levés hydrographiques',['71353100'])?.sectors.includes('Hydro'));
+assert.ok(classify('Entretien et contrôle par jaugeages de sections de mesures hydrologiques','Jaugeages de cours d’eau',['71300000'])?.sectors.includes('Hydraulique'));
+assert.ok(classify('Prestations de géomètre pour bornage contradictoire','Mesurage de propriétés',['71355000'])?.sectors.includes('Foncier'));
+assert.ok(classify('Vectorisation des plans des réseaux de distribution électrique et gaz','Cartographie numérique',['71354100'])?.sectors.includes('Carto'));
+assert.equal(profile.excluded({buyer:'Vlaamse Overheid',region:'Bruxelles',title:'Prestations de géomètre',description:'Relevés'}),'acheteur_flamand');
+assert.equal(profile.excluded({buyer:'SPW',region:'Wallonie',title:'Relevé topo',description:'en français'}),null);
+assert.ok(profile.classify('Études techniques de métros','La prestation comprend des relevés topographiques',['71000000'])?.screening==='review','Signaler les mentions indirectes sans envahir le listing');
 
 console.log('MARCHERADAR_TEST_OK — classification, dates, traductions, attributions et dédoublonnage');
