@@ -6,6 +6,7 @@
 'use strict';
 const fs=require('node:fs');
 const path=require('node:path');
+const profile=require('./kdrix-profile.cjs');
 const OUTPUT=path.join(__dirname,'..','data.json');
 const API='https://api.ted.europa.eu/v3/notices/search';
 const PAGE=200;
@@ -101,32 +102,7 @@ function worksScope(title,description,cpvs){
  }
  return {smallWorks:false};
 }
-function classify(title,description,cpvs){
- const top=simplify(title),rest=simplify(description);
- const scope=worksScope(title,description,cpvs);
- if(scope.rejected)return null;
- const points=new Map();
- const add=(id,n)=>points.set(id,(points.get(id)||0)+n);
- for(const [id,regex] of Object.entries(KEYWORDS)){
-  if(id==='PetitsTravaux'&&!scope.smallWorks)continue;
-  // Les intitulés métier ont davantage de poids que les mentions secondaires.
-  if(regex.test(top))add(id,57);else if(regex.test(rest))add(id,33);
- }
- if(scope.smallWorks)add('PetitsTravaux',95);
- for(const code of cpvs){
-  const tags=CPV[code]||[];
-  tags.forEach(id=>add(id,44));
-  if(!tags.length&&/^7135/.test(code))add('Topo',20);
-  if(!tags.length&&/^7132/.test(code))add('VRD',17);
-  if(!tags.length&&/^7131/.test(code))add('VRD',11);
- }
- if(!points.size)return null;
- const tags=[...points.entries()].filter(row=>row[1]>=17).sort((a,b)=>b[1]-a[1]).map(x=>x[0]);
- if(!tags.length)return null;
- const max=Math.max(...points.values());
- const score=Math.max(28,Math.min(99,Math.round(24+max*0.7)));
- return {sector:tags[0],sectors:tags,score};
-}
+function classify(title,description,cpvs){return profile.classify(title,description,cpvs)}
 function detectRegion(place){
  const s=simplify(place||'');
  const matches=[
@@ -154,15 +130,18 @@ function normalize(n){
  // Results of already awarded procedures are not upcoming calls for tenders.
  if(/^(can-|result-|can-|can\b|award-|res-)/.test(kind))return null;
  const desc=[txt(get(n,'description-proc')),txt(get(n,'description-lot'))].filter(Boolean).join('\n\n').slice(0,2600);
- const cpvs=codes(get(n,'classification-cpv'));const sector=classify(title,desc,cpvs);
+ const cpvs=codes(get(n,'classification-cpv'));
+ const buyer=txt(get(n,'buyer-name')).slice(0,500)||'Acheteur non précisé';
+ const place=region(n);
+ if(profile.excluded({buyer,region:place,title,description:desc}))return null;
+ const sector=classify(title,desc,cpvs);
  if(!sector)return null;
- if(region(n)==='Flandre')return null; // KDRIX ne soumissionne pas en Flandre.
  const dates=flatten(['deadline-receipt-tender-date-lot','deadline-receipt-request-date-lot','deadline-receipt-expressions-date-lot'].map(f=>get(n,f)));
  const due=earliestDate(dates)||earliestDate(get(n,'deadline'));
  return {
   id:'ted:'+num,publicationNumber:num,procedureIdentifier:txt(get(n,'procedure-identifier')),
-  title,buyer:txt(get(n,'buyer-name')).slice(0,500)||'Acheteur non précisé',
-  region:region(n),sector:sector.sector,sectors:sector.sectors,score:sector.score,
+  title,buyer,
+  region:place,sector:sector.sector,sectors:sector.sectors,score:sector.score,screening:sector.screening,
   publication:iso(get(n,'publication-date')),deadline:due,cpv:cpvs,
   description:desc||'Le détail de cette prestation est à consulter dans l’avis officiel.',
   source:'TED',source_status:'api',noticeType:kind,
@@ -173,15 +152,18 @@ function normalize(n){
    découverts à mesure que le dictionnaire métier est affiné. Les identifiants
    des dossiers conservés restent stables. */
 function cleanPrevious(items){
- const output=[],removed=[];
+ const output=[],removed=[],reasons={};
  for(const m of items||[]){
   if(!m||!m.title||m.source==='Démo')continue;
-  if(m.region==='Flandre'){removed.push(m.publicationNumber||m.id);continue}
-  const rating=classify(m.title,m.description,m.cpv||[]);
-  if(!rating){removed.push(m.publicationNumber||m.id);continue}
-  output.push({...m,sector:rating.sector,sectors:rating.sectors,score:rating.score});
+  const result=profile.screen(m);
+  if(!result.classification){
+   removed.push(m.publicationNumber||m.id);
+   reasons[result.reason]=(reasons[result.reason]||0)+1;
+   continue;
+  }
+  output.push({...m,...result.classification});
  }
- return {items:output,removed};
+ return {items:output,removed,reasons};
 }
 function combine(old,newItems){
  const byId=new Map(),byPub=new Map(),byProcedure=new Map();
@@ -211,6 +193,8 @@ function combine(old,newItems){
   merged.deadline=latest?(n.deadline||prior.deadline):(prior.deadline||n.deadline);
   merged.description=merged.description||prior.description||n.description;
   merged.source_status=n.source_status;
+  const rating=classify(merged.title,merged.description,merged.cpv||[]);
+  if(rating)Object.assign(merged,rating);
   byId.set(prevId,merged);index(merged);
  }
  return [...byId.values()].sort((a,b)=>(b.publication||'').localeCompare(a.publication||'')||(b.score||0)-(a.score||0));
@@ -295,15 +279,17 @@ async function run(){
  }
  const cleaned=cleanPrevious(previous.items||[]);
  const markets=combine(cleaned.items,[...unique.values()]);
+ const reviewCount=markets.filter(x=>x.screening==='review').length;
+ const bosaCount=markets.filter(x=>x.source==='BOSA').length;
  if(cleaned.removed.length)console.log('Annonces hors périmètre nettoyées:',cleaned.removed.length);
  if(!markets.length)throw Error('Aucun marché exploitable : données existantes conservées');
  const timestamp=new Date().toISOString();
  const data={
   schema_version:2,generated_at:timestamp,data_origin:'ted_api',
   collector_status:warnings.length?'partial':'ok',
-  note:'TED interrogé le '+timestamp.slice(0,10)+' : '+notices.length+' avis examinés ; '+unique.size+' notices liées aux métiers KDRIX détectées sur la période. BOSA et conseils communaux encore non raccordés.',
-  coverage:{TED:warnings.length?'partiel : exécution en Belgique incomplète':'collecte automatique active',BOSA:'non connecté',communal:'non connecté'},
-  metrics:{scanned:notices.length,matched_current_run:unique.size,records:markets.length,excluded_after_dictionary_update:cleaned.removed.length,days_queried:lookback,queries:stats,warnings},
+  note:'TED interrogé le '+timestamp.slice(0,10)+' : '+notices.length+' avis lus. '+(markets.length-reviewCount)+' annonces présélectionnées et '+reviewCount+' sujets à vérifier. BOSA national et conseils communaux encore à raccorder.',
+  coverage:{TED:warnings.length?'partiel : exécution en Belgique incomplète':'collecte automatique active',BOSA:bosaCount+' annonce(s) BOSA repérée(s) manuellement ; veille nationale non connectée',communal:'non connecté'},
+  metrics:{scanned:notices.length,matched_current_run:unique.size,records:markets.length,review_count:reviewCount,excluded_after_dictionary_update:cleaned.removed.length,excluded_reasons:cleaned.reasons,days_queried:lookback,queries:stats,warnings},
   items:markets
  };
  fs.writeFileSync(OUTPUT,JSON.stringify(data,null,2)+'\n','utf8');
