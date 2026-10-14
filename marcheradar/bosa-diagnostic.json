@@ -1,7 +1,15 @@
 {
-  "checkedAt": "2026-10-14T15:09:43.329Z",
+  "checkedAt": "2026-10-14T15:16:59.802Z",
   "endpoint": "https://www.publicprocurement.be/api/sea/search/publications",
   "checks": [
+    {
+      "name": "browser_verified",
+      "status": "unavailable",
+      "httpStatus": 400,
+      "contentType": "",
+      "bodyKeys": [],
+      "bodyExcerpt": ""
+    },
     {
       "name": "existing_json",
       "status": "unavailable",
