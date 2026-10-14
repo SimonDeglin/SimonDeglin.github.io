@@ -137,6 +137,16 @@ body{background:#f7f7f7;color:#303339}
 .result-count{background:#fff0e8;color:#cc6635}
 .filter-select:focus{border-color:#f36529;outline:0;box-shadow:0 0 0 3px #fff1e9}
 .notice-banner{background:#fcfcfc}
+
+.all-category-btn,.family-main{width:100%;min-height:39px;border-radius:8px;background:transparent;border:1px solid transparent;color:#c9ced2;display:flex;align-items:center;gap:9px;text-align:left;padding:9px 14px;font-size:12px;font-weight:750;cursor:pointer;margin-bottom:2px}
+.all-category-btn:hover,.family-main:hover{background:#3e4043;color:#fff}
+.all-category-btn.active,.family-main.selected{background:#474346;border-left:3px solid #f36529;color:#fff;padding-left:12px}
+.family-main.selected{background:#51433e}
+.family-main .family-label{flex:1}
+.family-main .family-count{margin-left:auto;color:#afb5b9;font-size:10px}
+.family-main.selected .family-count{color:#f0b699}
+.family-children{margin-bottom:5px;padding-top:3px;padding-bottom:4px}
+.family-child{width:100%}
 </style>
 </head>
 <body>
@@ -181,8 +191,8 @@ body{background:#f7f7f7;color:#303339}
 <button class="nav-item" data-view="discarded" data-folder="discarded"><i class="folder-dot discarded"></i><span class="nav-name">Sans suite</span><span class="count" data-count="discarded">0</span></button>
 </nav>
 <div class="section-label">DOMAINES</div>
+<button class="all-category-btn" id="allCategories" type="button" aria-pressed="true">Toutes les catégories</button>
 <div class="category-groups" id="sidebarCategories" aria-label="Domaines et sous-catégories"></div>
-<div class="sector-clear" id="sectorClear" hidden><button id="resetSector" type="button">× Effacer le filtre métier</button></div>
 <div class="section-label">MON ESPACE</div>
 <nav><button class="nav-item" id="settingsBtn"><svg class="ico"><use href="#i-settings"/></svg><span class="nav-name">Préférences</span></button>
 <button class="nav-item" id="exportBtn"><svg class="ico"><use href="#i-download"/></svg><span class="nav-name">Exporter en CSV</span></button></nav>
@@ -252,7 +262,7 @@ var STORAGE='kdrix.marcheRadar.v1';
 var saved={};
 try{saved=JSON.parse(localStorage.getItem(STORAGE)||'{}')||{}}catch(e){saved={}}
 saved.favorites=saved.favorites||{};saved.statuses=saved.statuses||{};saved.notes=saved.notes||{};saved.hiddenSectors=saved.hiddenSectors||{};
-var state={mode:'demo',view:'all',sector:'all',region:'all',sort:'score',query:'',markets:DEMO.slice(),real:[],generated:null,sourceNote:'',selected:null};
+var state={mode:'demo',sourceOrigin:'demo',view:'all',sector:'all',region:'all',sort:'score',query:'',markets:DEMO.slice(),real:[],generated:null,sourceNote:'',selected:null};
 function el(id){return document.getElementById(id)}
 function svg(id,small){return '<svg class="ico'+(small?' s':'')+'"><use href="#i-'+id+'"/></svg>'}
 function esc(v){return String(v===null||v===undefined?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
@@ -287,10 +297,10 @@ function renderStats(){
  el('kpiTotal').textContent=src.length;el('kpiTop').textContent=high;el('kpiTracked').textContent=trackCount();el('kpiUrgent').textContent=urg;el('heroCount').textContent=src.length;el('trackCount').textContent=trackCount();
 }
 function renderBanner(){
- var live=state.mode==='ted',b=el('noticeBanner');b.classList.toggle('live',live);el('sideDot').classList.toggle('live',live);
+ var live=state.mode==='ted',seed=state.sourceOrigin==='manual_seed',b=el('noticeBanner');b.classList.toggle('live',live);el('sideDot').classList.toggle('live',live);
  if(live){
-  b.innerHTML=svg('check')+'<div><b>Publications officielles TED.</b> '+esc(state.sourceNote||'Les avis affichés proviennent de TED.')+' <button id="demoSwitch">Voir le mode démo</button></div>';
-  el('sideTitle').textContent='TED · données publiques';
+  b.innerHTML=svg(seed?'info':'check')+'<div><b>'+(seed?'Premiers marchés réels · collecte automatique en préparation.':'Données TED · collecte automatique.')+'</b> '+esc(state.sourceNote||'Vérifiez les échéances sur l’avis officiel.')+(seed?'':' <button id="demoSwitch">Voir le mode démo</button>')+'</div>';
+  el('sideTitle').textContent=seed?'Sélection initiale réelle':'TED · données publiques';
   el('sideText').textContent='Dernier relevé : '+(state.generated?fmtDate(state.generated):'date inconnue')+'. La couverture belge nationale reste à compléter.';
  }else{
   b.innerHTML=svg('info')+'<div><b>MODE DÉMONSTRATION — marchés fictifs.</b> Les annonces affichées sont fictives. '+(state.real.length?'<button id="liveSwitch">Afficher les avis TED ('+state.real.length+')</button>':'<button id="sourceHelp">Pourquoi aucune annonce réelle ?</button>')+'</div>';
@@ -300,7 +310,7 @@ function renderBanner(){
  var button=el('liveSwitch');if(button)button.addEventListener('click',function(){state.mode='ted';state.markets=state.real;state.view='inbox';render()});
  button=el('demoSwitch');if(button)button.addEventListener('click',function(){state.mode='demo';state.markets=DEMO;state.view='inbox';render()});
  button=el('sourceHelp');if(button)button.addEventListener('click',function(){toast('L’import quotidien TED doit être exécuté sur GitHub Actions. Les marchés belges BOSA sont une intégration distincte.')});
- el('lastSync').textContent=live?'Mise à jour : '+(state.generated?fmtDate(state.generated):'inconnue'):'Mode aperçu · données fictives';
+ el('lastSync').textContent=live?(seed?'Sélection initiale : ':'Collecte TED : ')+(state.generated?fmtDate(state.generated):'inconnue'):'Mode aperçu · données fictives';
  el('listMeta').textContent=live?'Source TED · score indicatif':'Exemples fictifs uniquement';
 }
 function renderNav(){
@@ -362,7 +372,7 @@ function validMarket(m){return m&&typeof m.id==='string'&&typeof m.title==='stri
 async function load(){
  var btn=el('refreshBtn');btn.disabled=true;
  try{var resp=await fetch('data.json?v='+Date.now(),{cache:'no-store'});if(!resp.ok)throw new Error('Pas de fichier de données');var obj=await resp.json();if(Array.isArray(obj.items)&&obj.items.length){
- state.real=obj.items.filter(validMarket);state.generated=obj.generated_at||null;state.sourceNote=obj.note||'';if(state.real.length){state.mode='ted';state.markets=state.real;toast('Avis officiels TED disponibles : '+state.real.length)}}else{if(state.mode!=='ted')state.markets=DEMO;state.real=[]}
+ state.real=obj.items.filter(validMarket);state.generated=obj.generated_at||null;state.sourceNote=obj.note||'';state.sourceOrigin=obj.data_origin||'unspecified';if(state.real.length){state.mode='ted';state.markets=state.real;toast('Avis officiels TED disponibles : '+state.real.length)}}else{if(state.mode!=='ted')state.markets=DEMO;state.real=[]}
  }catch(e){if(state.mode!=='ted')state.markets=DEMO;state.real=[];console.warn('MarchéRadar: données officielles indisponibles',e)}
  btn.disabled=false;render();
 }
@@ -497,29 +507,29 @@ function renderCategories(){
  'VRD':'Voiries & VRD','Reseaux':'Réseaux & impétrants','Hydraulique':'Hydraulique & jaugeages',
  'Foncier':'Division & bornage','Implant':'Implantations','Expert':'Expertises','PEB':'PEB','Carto':'Cartographie & SIG'};
  box.innerHTML=FAMILIES.map(function(f){
-  var activeItems=f.items.filter(function(id){return !saved.hiddenSectors[id]});
-  if(!activeItems.length)return '';
-  var active=state.sector==='group:'+f.id||activeItems.includes(state.sector);
+  var items=f.items.filter(function(id){return !saved.hiddenSectors[id]});
+  if(!items.length)return '';
   var expanded=expandedFamily===f.id;
-  return '<div class="family-row'+(active?' selected':'')+'"><button type="button" class="family-button" data-family="'+esc(f.id)+'" aria-pressed="'+(state.sector==='group:'+f.id)+'">'+
-    '<span class="family-label">'+esc(f.label)+'</span><span class="family-count">'+count(activeItems)+'</span></button>'+
-    '<button type="button" class="family-expand" data-expand-family="'+esc(f.id)+'" aria-label="'+(expanded?'Masquer':'Afficher')+' les sous-catégories '+esc(f.label)+'" aria-expanded="'+expanded+'">'+(expanded?'−':'⌄')+'</button></div>'+
-    (expanded?'<div class="family-children">'+activeItems.map(function(id){
-      var on=state.sector===id;
-      return '<button type="button" class="family-child'+(on?' active':'')+'" data-subcat="'+esc(id)+'" aria-pressed="'+on+'"><span>'+esc(names[id]||id)+'</span><span class="subcat-count">'+count([id])+'</span></button>';
-    }).join('')+'</div>':'');
+  var selected=state.sector==='group:'+f.id||items.includes(state.sector);
+  return '<button class="family-main'+(selected?' selected':'')+'" type="button" data-family="'+esc(f.id)+'" aria-expanded="'+expanded+'" aria-pressed="'+selected+'"><span class="family-label">'+esc(f.label)+'</span><span class="family-count">'+count(items)+'</span></button>'+
+   (expanded?'<div class="family-children">'+items.map(function(id){
+    var on=state.sector===id;
+    return '<button type="button" class="family-child'+(on?' active':'')+'" data-subcat="'+esc(id)+'" aria-pressed="'+on+'"><span>'+esc(names[id]||id)+'</span><span class="subcat-count">'+count([id])+'</span></button>';
+   }).join('')+'</div>':'');
  }).join('');
- box.querySelectorAll('[data-family]').forEach(function(btn){btn.addEventListener('click',function(){
-  expandedFamily=btn.dataset.family;state.sector='group:'+expandedFamily;render();
- })});
- box.querySelectorAll('[data-expand-family]').forEach(function(btn){btn.addEventListener('click',function(){
-  expandedFamily=expandedFamily===btn.dataset.expandFamily?null:btn.dataset.expandFamily;
-  renderCategories();
- })});
- box.querySelectorAll('[data-subcat]').forEach(function(btn){btn.addEventListener('click',function(){
-  state.sector=state.sector===btn.dataset.subcat?'all':btn.dataset.subcat;render();
- })});
- el('sectorClear').hidden=state.sector==='all';
+ box.querySelectorAll('[data-family]').forEach(function(btn){
+  btn.addEventListener('click',function(){
+   var id=btn.dataset.family;
+   if(expandedFamily===id){expandedFamily=null;state.sector='all';}
+   else{expandedFamily=id;state.sector='group:'+id;}
+   render();
+  });
+ });
+ box.querySelectorAll('[data-subcat]').forEach(function(btn){
+  btn.addEventListener('click',function(){state.sector=state.sector===btn.dataset.subcat?'group:'+expandedFamily:btn.dataset.subcat;render()});
+ });
+ el('allCategories').classList.toggle('active',state.sector==='all');
+ el('allCategories').setAttribute('aria-pressed',String(state.sector==='all'));
 }
 function renderStats(){
  el('kpiTotal').textContent=stageNumber('inbox');
@@ -639,7 +649,7 @@ async function load(){
   if(!response.ok)throw new Error('Aucun fichier de données');
   var obj=await response.json();
   if(Array.isArray(obj.items)&&obj.items.length){
-   state.real=uniqueMarkets(obj.items.filter(validMarket));state.generated=obj.generated_at||null;state.sourceNote=obj.note||'';
+   state.real=uniqueMarkets(obj.items.filter(validMarket));state.generated=obj.generated_at||null;state.sourceNote=obj.note||'';state.sourceOrigin=obj.data_origin||'unspecified';
    if(state.real.length){state.mode='ted';state.markets=state.real;toast('Marchés TED disponibles : '+state.real.length)}
   }else{state.real=[];if(state.mode!=='ted')state.markets=uniqueMarkets(DEMO)}
  }catch(e){if(state.mode!=='ted')state.markets=uniqueMarkets(DEMO);state.real=[];console.warn('MarchéRadar: flux officiel indisponible',e)}
@@ -656,7 +666,7 @@ document.querySelectorAll('[data-folder]').forEach(function(button){
   moveMarket(id,button.dataset.folder);
  });
 });
-el('resetSector').addEventListener('click',function(){state.sector='all';render()});
+el('allCategories').addEventListener('click',function(){expandedFamily=null;state.sector='all';render()});
 render();load();
 })();
 </script>
