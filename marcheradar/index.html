@@ -290,9 +290,11 @@ function renderStats(){
 }
 function renderBanner(){
  var ready=state.mode==='ted',seed=state.sourceOrigin==='manual_seed',partial=state.collectorStatus==='partial';
+ var age=state.generated?Date.now()-new Date(state.generated).getTime():Infinity;
+ var stale=ready&&!seed&&(!Number.isFinite(age)||age>48*60*60*1000);
  var b=el('noticeBanner');
- b.classList.toggle('live',ready&&!seed&&!partial);
- el('sideDot').classList.toggle('live',ready&&!seed&&!partial);
+ b.classList.toggle('live',ready&&!seed&&!partial&&!stale);
+ el('sideDot').classList.toggle('live',ready&&!seed&&!partial&&!stale);
  if(!ready){
   b.innerHTML=svg('info')+'<div><b>'+(state.mode==='loading'?'Chargement des avis officiels...':'Marchés officiels indisponibles.')+'</b> '+(state.mode==='loading'?'Lecture de la dernière sélection TED.':'La liste reste vide tant que les données ne sont pas accessibles.')+'</div>';
   el('sideTitle').textContent='Données non chargées';
@@ -304,9 +306,9 @@ function renderBanner(){
   el('sideText').textContent='Premières annonces officielles ; collecte en cours de mise en service.';
   el('lastSync').textContent='Sélection : '+(state.generated?fmtDate(state.generated):'date inconnue');
  }else{
-  b.innerHTML=svg(partial?'info':'check')+'<div><b>'+(partial?'Collecte TED partielle.':'Collecte TED.')+'</b> '+allMarkets().length+' marchés enregistrés · mise à jour du '+fmtDate(state.generated)+'. '+(partial?'Une recherche complémentaire a échoué. ':'')+'La collecte BOSA nationale complète reste à raccorder.</div>';
-  el('sideTitle').textContent=partial?'TED · collecte partielle':'TED · collecte active';
-  el('sideText').textContent='Dernière collecte : '+fmtDate(state.generated);
+  b.innerHTML=svg(stale||partial?'info':'check')+'<div><b>'+(stale?'Collecte TED non actualisée.':partial?'Collecte TED partielle.':'Collecte TED.')+'</b> '+allMarkets().length+' marchés enregistrés · dernière mise à jour le '+fmtDate(state.generated)+'. '+(stale?'Les dernières tentatives ont peut-être échoué : vérifier la date avant de considérer la veille comme à jour. ':partial?'Une recherche complémentaire a échoué. ':'')+'La collecte BOSA nationale complète reste à raccorder.</div>';
+  el('sideTitle').textContent=stale?'TED · mise à jour ancienne':partial?'TED · collecte partielle':'TED · collecte active';
+  el('sideText').textContent='Dernière collecte réussie : '+fmtDate(state.generated);
   el('lastSync').textContent='TED : '+fmtDate(state.generated);
  }
  el('listMeta').textContent=ready?'Sources TED et annonces BOSA repérées · score indicatif':'Aucune donnée officielle';
