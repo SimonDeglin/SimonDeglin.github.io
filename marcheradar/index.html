@@ -286,7 +286,7 @@ function parseDate(v){if(!v)return null;var d=new Date(String(v).slice(0,10)+'T1
 function daysLeft(v){var d=parseDate(v);if(!d)return null;var t=new Date();t.setHours(12,0,0,0);return Math.round((d-t)/86400000)}
 function fmtDate(v){var d=parseDate(v);return d?d.toLocaleDateString('fr-BE',{day:'2-digit',month:'short',year:'numeric'}):'Non précisé'}
 function fmtShort(v){var d=parseDate(v);return d?d.toLocaleDateString('fr-BE',{day:'2-digit',month:'short'}):'Non précisé'}
-function link(m){if(!m||m.source==='Démo')return '';if(m.url&&/^https:\/\/(ted\.europa\.eu|www\.publicprocurement\.be)\//.test(m.url))return m.url;var pub=String(m.publicationNumber||'').match(/^\d{1,8}-\d{4}$/);return pub?'https://ted.europa.eu/fr/notice/-/detail/'+pub[0]:''}
+function link(m){if(!m||m.source==='Démo')return '';if(m.url&&/^https:\/\/(ted\.europa\.eu|www\.publicprocurement\.be|www\.province\.namur\.be)\//.test(m.url))return m.url;var pub=String(m.publicationNumber||'').match(/^\d{1,8}-\d{4}$/);return pub?'https://ted.europa.eu/fr/notice/-/detail/'+pub[0]:''}
 function save(){try{localStorage.setItem(STORAGE,JSON.stringify(saved))}catch(e){toast('Stockage local indisponible')}}
 var timeout=null;function toast(t){el('toast').textContent=t;el('toast').classList.add('show');clearTimeout(timeout);timeout=setTimeout(function(){el('toast').classList.remove('show')},2500)}
 function allMarkets(){return state.markets.filter(function(m){return m.region!=='Flandre'})}
@@ -670,7 +670,7 @@ function awardsMarkup(m){
 }
 function openTender(id){
  var m=allMarkets().find(function(a){return a.id===id});if(!m)return;
- state.selected=id;el('drawerEyebrow').textContent=m.source==='Démo'?'FICHE FICTIVE DE DÉMONSTRATION':'PUBLICATION OFFICIELLE · TED';el('drawerHeader').textContent='Détail du marché';
+ state.selected=id;el('drawerEyebrow').textContent=m.source==='LOCALE'?'OPPORTUNITÉ DE PROSPECTION · SOURCE LOCALE':'PUBLICATION · '+(m.source||'TED');el('drawerHeader').textContent='Détail du marché';
  var url=link(m),d=daysLeft(m.deadline);
  var fields=[['Pouvoir adjudicateur',m.buyer||'Non communiqué'],['Zone',m.region||'Belgique'],['Publié le',fmtDate(m.publication)],['Date limite',fmtDate(m.deadline)],['Code(s) CPV',(m.cpv||[]).join(', ')||'Non précisé'],['Pertinence',String(m.score||0)+'/100 (indicative)']];
  var tags=(m.sectors||[m.sector]).map(function(s){var f=SECTORS.find(function(a){return a.id===s});return '<span class="micro-tag sector">'+esc(f?f.label:s)+'</span>'}).join('');
@@ -684,7 +684,7 @@ function openTender(id){
  '<div class="drawer-label">Notes personnelles</div><textarea id="marketNotes" placeholder="Points à vérifier, références, questions...">'+esc(saved.notes[id]||'')+'</textarea>'+
  '<p class="legal-note">Un seul dossier pour ce marché, indépendamment des catégories métier. Statuts et notes conservés sur ce PC et ce navigateur uniquement.</p>';
  el('drawerFooter').innerHTML='<button class="outline" id="drawerStar">'+svg('star',true)+(saved.favorites[id]?' Retirer':' Favori')+'</button>'+
- (url?'<a class="primary" href="'+esc(url)+'" target="_blank" rel="noopener">'+svg('external',true)+' Avis officiel</a>':'<button class="primary" disabled>Fiche fictive</button>')+
+ (url?'<a class="primary" href="'+esc(url)+'" target="_blank" rel="noopener">'+svg('external',true)+(m.source==='LOCALE'?' Document source':' Avis officiel')+'</a>':'<button class="primary" disabled>Document non disponible</button>')+
  '<button class="outline" id="saveTender">'+svg('check',true)+' Enregistrer</button>';
  el('drawerStar').addEventListener('click',function(){
   var code=el('statusSelect').value;saved.notes[id]=el('marketNotes').value;
