@@ -5,7 +5,7 @@ const fold=v=>String(v||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u03
 function subjectOf(title){const p=String(title||'').split(/\s+[–—]\s+/);return p.length>=3?p.slice(2).join(' – ').trim():String(title||'').trim()}
 function flemishBuyer(buyer){
  const s=fold(buyer);
- return /\bvlaams(?:e)?\b|\bvlaanderen\b|\bflanders\b|\baquafin\b|\bfluvius\b|openbare vlaamse|eigen vermogen digitaal|digitaal vlaanderen|vlaamse waterweg|vlaamse landmaatschappij|agentschap wegen en verkeer|agentschap natuur en bos|\bde lijn\b|stad (?:gent|leuven|antwerpen|brugge|hasselt|oostende|kortrijk|roeselare|sint-niklaas)|provincie (?:limburg|antwerpen|oost-vlaanderen|west-vlaanderen|vlaams-brabant)/.test(s);
+ return /\bvlaams(?:e)?\b|\bvlaanderen\b|\bflanders\b|\baquafin\b|\bfluvius\b|openbare vlaamse|eigen vermogen digitaal|digitaal vlaanderen|vlaamse waterweg|vlaamse landmaatschappij|agentschap voor innoveren en ondernemen|agentschap wegen en verkeer|agentschap natuur en bos|\bde lijn\b|stad (?:gent|leuven|antwerpen|brugge|hasselt|oostende|kortrijk|roeselare|sint-niklaas)|provincie (?:limburg|antwerpen|oost-vlaanderen|west-vlaanderen|vlaams-brabant)/.test(s);
 }
 function dutchOnly(title,desc){
  const head=fold(subjectOf(title)),body=fold(String(desc||'').slice(0,1700));
