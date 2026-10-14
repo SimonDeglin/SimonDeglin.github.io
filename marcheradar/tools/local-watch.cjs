@@ -10,14 +10,18 @@ const fs=require('node:fs'),os=require('node:os'),path=require('node:path'),
 const profile=require('./kdrix-profile.cjs');
 const DATA=path.resolve(__dirname,'../data.json');
 const SOURCES=[
- {name:'Province de Namur — projets de délibérations',
+ {name:'Province de Namur — projets de délibérations',buyer:'Province de Namur',
  url:'https://www.province.namur.be/conseil-provincial/projets-de-deliberations/'},
- {name:'Province de Namur — procès-verbaux',
- url:'https://www.province.namur.be/conseil-provincial/05-pv-des-seances/'}
+ {name:'Province de Namur — procès-verbaux',buyer:'Province de Namur',
+ url:'https://www.province.namur.be/conseil-provincial/05-pv-des-seances/'},
+ {name:'Province de Liège — ordres du jour',buyer:'Province de Liège',
+ url:'https://www.provincedeliege.be/fr/conseil/ordresdujour'},
+ {name:'Province de Liège — PV et comptes rendus',buyer:'Province de Liège',
+ url:'https://www.provincedeliege.be/fr/conseil/pvcra'}
 ];
 const signals=/(topograph|geom[eè]tr|g[eé]om[eè]tr|bathym[eé]tr|hydrograph|jaugeag|division parcellaire|bornage|scanner laser|photogramm[eé]tr|relev[eé] (?:de |des )?r[eé]seaux|auteur de projet|[eé]tude hydraulique|certificat de performance [eé]nerg[eé]tique)/i;
 const intent=/(march[eé] public|bureau d.[eé]tudes|prestataire|appel [aà] (?:un |des )?(?:bureau|g[eé]om[eè]tre)|mise en concurrence|lancer (?:un )?march[eé]|passation|d[eé]signation|d[eé]cide|approuv|attribution|consultation)/i;
-const strictHost=new Set(['www.province.namur.be']);
+const strictHost=new Set(['www.province.namur.be','www.provincedeliege.be','provincedeliege.be']);
 function textOnly(s){return String(s||'').replace(/<[^>]+>/g,' ').replace(/&(?:nbsp|amp|quot|#39);/gi,' ').replace(/\s+/g,' ').trim()}
 function links(html,base){
  const found=[];
@@ -51,7 +55,7 @@ function makeOpportunity(source,document,passage){
  return {
   id:'local:'+digest,
   title:'Prospection à vérifier — '+title,
-  buyer:'Province de Namur',
+  buyer:source.buyer,
   region:'Wallonie',
   source:'LOCALE',
   opportunityType:'prospection',
