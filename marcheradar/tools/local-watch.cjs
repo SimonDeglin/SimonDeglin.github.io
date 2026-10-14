@@ -37,6 +37,7 @@ function snippets(text){
   if(!signals.test(line))continue;
   const chunk=lines.slice(Math.max(0,i-3),Math.min(lines.length,i+5)).join(' ').slice(0,1250);
   if(!intent.test(chunk))continue;
+  if(/sans nouvelle (?:consultation|mission|passation)|aucun nouveau march[eé]|pas de nouvelle consultation/i.test(chunk)&&!/(?:d[eé]cide (?:de |d.)?|approuve? (?:la |le )?(?:passation|consultation)|mise en concurrence|lancer un march[eé])/i.test(chunk))continue;
   const compact=textOnly(chunk);
   if(!out.some(x=>x.slice(0,110)===compact.slice(0,110)))out.push(compact);
   if(out.length>=12)break;
