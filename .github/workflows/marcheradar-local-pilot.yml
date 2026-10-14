@@ -1,0 +1,69 @@
+name: "MarchéRadar — vérification ponctuelle du pilote local"
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "marcheradar/tools/local-watch.cjs"
+      - "marcheradar/tools/test-local-watch.cjs"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: marcheradar-data-local
+  cancel-in-progress: false
+
+jobs:
+  verify-local:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+        id: checkout
+        continue-on-error: true
+      - uses: actions/setup-node@v4
+        id: node
+        if: steps.checkout.outcome == 'success'
+        with:
+          node-version: "22"
+        continue-on-error: true
+      - name: "Vérifier les règles de prospection locale"
+        id: tests
+        if: steps.node.outcome == 'success'
+        run: node marcheradar/tools/test-local-watch.cjs
+        continue-on-error: true
+      - name: "Préparer la lecture des PDF"
+        id: pdf
+        if: steps.tests.outcome == 'success'
+        run: |
+          if ! command -v pdftotext >/dev/null; then
+            sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+          fi
+        continue-on-error: true
+      - name: "Analyser les publications des provinces de Liège et Namur"
+        id: scan
+        if: steps.pdf.outcome == 'success'
+        run: node marcheradar/tools/local-watch.cjs
+        continue-on-error: true
+      - name: "Conserver la sélection vérifiée"
+        if: steps.scan.outcome == 'success'
+        run: |
+          git config user.name "marcheradar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add marcheradar/data.json
+          if ! git diff --cached --quiet; then
+            git commit -m "MarchéRadar: veille locale Liège-Namur [skip ci]"
+            git push origin HEAD:main
+          fi
+        continue-on-error: true
+      - name: "Résultat sans e-mail d'échec"
+        if: always()
+        env:
+          RESULT: ${{ steps.scan.outcome }}
+        run: |
+          echo "Pilote local : $RESULT" >> "$GITHUB_STEP_SUMMARY"
+          if [ "$RESULT" != "success" ]; then
+            echo "::warning::Le pilote local n'a pas publié de nouvelles données."
+          fi
