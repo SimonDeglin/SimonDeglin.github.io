@@ -492,54 +492,70 @@ function oilUsageTotals(model){
  }
  return totals;
 }
+/* Monthly stacked bars: water heating forfait and central heating attributed seasonally.
+   Based on oilModel daily reconstructions, NOT additional measurements. */
 function renderOilUsage(model){
  const target=$('#oil-usage-chart');if(!target)return;
- const daily=model.daily,anchors=model.anchors;
- if(!daily.size||anchors.length<2){
-  target.innerHTML='<div class="empty-state">Ajoute au moins deux relevés de cuve pour comparer les consommations.</div>';
-  $('#oil-usage-detail').textContent='Relevés insuffisants pour séparer les usages.';
-  return;
+ const first=model.anchors[0]?.date,lastKnown=model.anchors.at(-1)?.date;
+ const forecast=oilForecast(model),end=forecast?.date||lastKnown;
+ if(!first||!end||first>=end||!model.daily.size){
+  target.innerHTML='<div class="empty-state">Ajoute des relevés pour voir la consommation mensuelle.</div>';return;
  }
- const first=anchors[0].date,last=[...daily.keys()].sort().at(-1);
- const end=oilAddDays(last,1),points=[{date:first,heat:0,water:0}];
- let heating=0,hotwater=0,date=first;
- while(date<end){
-  const dailyUse=daily.get(date);
-  if(dailyUse){heating+=dailyUse.heating||0;hotwater+=dailyUse.hotwater||0}
-  date=oilAddDays(date,1);
-  points.push({date,heat:heating,water:hotwater});
+ const map=new Map();
+ for(let date=first;date<end;date=oilAddDays(date,1)){
+  const real=model.daily.get(date),projected=Boolean(forecast&&date>=lastKnown&&date<forecast.date);
+  if(!real&&!projected)continue;
+  const ym=date.slice(0,7),v=map.get(ym)||{ym,hotwater:0,heating:0,projected:false,days:0};
+  v.hotwater+=real?real.hotwater:OIL_HOTWATER_ASSUMPTION;
+  v.heating+=real?real.heating:0;
+  v.projected=v.projected||projected;v.days++;
+  map.set(ym,v);
  }
- const measuredWidth=target.clientWidth||window.innerWidth-60,W=Math.max(260,Math.round(measuredWidth)),H=272;
- const p={l:W<390?35:50,r:W<390?9:15,t:21,b:49},max=Math.ceil(Math.max(1,heating,hotwater)*1.15/200)*200;
- const X=day=>p.l+(oilMillis(day)-oilMillis(first))/Math.max(1,oilMillis(end)-oilMillis(first))*(W-p.l-p.r);
- const Y=l=>p.t+(max-l)/max*(H-p.t-p.b);
- const grids=[0,1,2,3,4].map(i=>{
-  const value=max*i/4,y=Y(value);
-  return '<line x1="'+p.l+'" x2="'+(W-p.r)+'" y1="'+y.toFixed(1)+'" y2="'+y.toFixed(1)+'" stroke="#ecf0f0"/>'+
-   '<text class="oil-axis-label" text-anchor="end" x="'+(p.l-6)+'" y="'+(y+3).toFixed(1)+'">'+fmt(value)+'</text>';
+ const bars=[...map.values()].sort((a,b)=>a.ym.localeCompare(b.ym)).slice(-12);
+ if(!bars.length){target.innerHTML='<div class="empty-state">Aucune période disponible.</div>';return}
+ const W=Math.max(255,Math.round(target.clientWidth||window.innerWidth-50)),H=266,narrow=W<460;
+ const p={l:narrow?37:54,r:narrow?6:15,t:18,b:35},plot=H-p.t-p.b,step=(W-p.l-p.r)/bars.length;
+ const bw=Math.min(narrow?20:33,step*.7),peak=Math.max(1,...bars.map(b=>b.hotwater+b.heating));
+ const scale=niceAxis(0,peak*1.07);
+ const Y=v=>p.t+(scale.hi-v)/(scale.hi-scale.lo)*plot,Y0=Y(0);
+ const grid=scale.ticks.map(v=>'<line x1="'+p.l+'" x2="'+(W-p.r)+'" y1="'+Y(v).toFixed(1)+'" y2="'+Y(v).toFixed(1)+'" stroke="#eceee8"/>'+
+  '<text class="oil-axis-label" x="'+(p.l-5)+'" y="'+(Y(v)+3).toFixed(1)+'" text-anchor="end">'+axisLabel(v,narrow)+'</text>').join('');
+ const names=['Jan','Fév','Mar','Avr','Mai','Juin','Juil','Août','Sep','Oct','Nov','Déc'];
+ const initials=['J','F','M','A','M','J','J','A','S','O','N','D'];
+ const shapes=bars.map((r,i)=>{
+  const x=p.l+(i+.5)*step-bw/2,cx=x+bw/2,topWater=Y(r.hotwater),topTotal=Y(r.hotwater+r.heating);
+  const month=Number(r.ym.slice(5,7))-1;
+  const title=names[month]+' '+r.ym.slice(0,4)+' : '+fmt(r.hotwater+r.heating)+' L dont '+fmt(r.hotwater)+' L eau chaude, '+fmt(r.heating)+' L chauffage';
+  return '<g data-oil-month="'+i+'" role="button" tabindex="0" aria-label="'+esc(title)+'">'+
+   (r.hotwater>0?'<rect class="oil-month-water" x="'+x+'" y="'+topWater+'" width="'+bw+'" height="'+Math.max(1,Y0-topWater)+'" rx="3" fill="#659bb7"/>':'')+
+   (r.heating>0?'<rect class="oil-month-heat" x="'+x+'" y="'+topTotal+'" width="'+bw+'" height="'+Math.max(1,topWater-topTotal)+'" rx="3" fill="#b98659"/>':'')+
+   '<rect x="'+(p.l+i*step)+'" y="'+p.t+'" width="'+step+'" height="'+plot+'" fill="transparent"/>'+
+   '<text class="oil-date-label" x="'+cx+'" y="'+(H-14)+'" text-anchor="middle">'+initials[month]+'</text>'+
+   (r.projected?'<circle cx="'+cx+'" cy="'+(H-5)+'" r="1.7" fill="#b89d7e"/>':'')+'</g>';
  }).join('');
- const series=(key,color)=>'<path class="oil-usage-line '+color+'" d="'+points.map((r,i)=>(i?'L':'M')+X(r.date).toFixed(1)+' '+Y(r[key]).toFixed(1)).join(' ')+'"/>';
- const stop=db.oilStopDate||'2026-03-01',stopX=X(stop);
- const stopMarker=stop>first&&stop<end?'<line x1="'+stopX.toFixed(1)+'" y1="'+p.t+'" x2="'+stopX.toFixed(1)+'" y2="'+(H-p.b)+'" stroke="#d7c6b2" stroke-dasharray="3 5"/><text class="oil-stop-label" text-anchor="middle" x="'+stopX.toFixed(1)+'" y="'+(p.t+11)+'">Arrêt chauffe ≈</text>':'';
- const tickDates=[{date:first,label:'Déc. 25'},{date:'2026-02-15',label:'Fév. 26'},{date:'2026-04-01',label:'Avr.'},{date:'2026-06-01',label:'Juin'},{date:end,label:'Sept. 26'}]
-  .filter((r,i,a)=>r.date>=first&&r.date<=end);
- const ticks=tickDates.map(t=>'<text class="oil-date-label" text-anchor="'+(t.date===first?'start':t.date===end?'end':'middle')+'" x="'+X(t.date).toFixed(1)+'" y="'+(H-15)+'">'+t.label+'</text>').join('');
- const markers='<circle class="oil-usage-end heat" cx="'+X(end).toFixed(1)+'" cy="'+Y(heating).toFixed(1)+'" r="4"/><circle class="oil-usage-end hotwater" cx="'+X(end).toFixed(1)+'" cy="'+Y(hotwater).toFixed(1)+'" r="4"/>';
- target.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Consommations cumulées en litres : chauffage central et eau chaude du 12 décembre 2025 au 21 septembre 2026">'+
-  '<text class="oil-axis-label" x="'+p.l+'" y="12">L</text>'+grids+stopMarker+
-  series('heat','heat')+series('water','hotwater')+markers+ticks+'</svg>';
- const cumulative=heating+hotwater;
- $('#oil-usage-detail').innerHTML='<strong>≈ '+fmt(Math.round(heating/10)*10)+' L</strong> chauffage + '+
-  '<strong>≈ '+fmt(Math.round(hotwater/10)*10)+' L</strong> eau chaude · <b>'+fmt(model.consumed)+' L consommés</b> d’après les relevés';
+ target.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" role="group" aria-label="Consommation de mazout : chauffage brun et eau chaude bleue, par mois">'+
+  '<text class="oil-axis-label" x="'+p.l+'" y="11">L</text>'+grid+shapes+'</svg>';
+ const detail=$('#oil-usage-detail');
+ const select=i=>{
+  const r=bars[i],month=parseDate(r.ym+'-01').toLocaleDateString('fr-BE',{month:'long',year:'numeric'});
+  detail.innerHTML='<strong>'+esc(month)+'</strong> · '+fmt(r.hotwater+r.heating)+' L : '+
+   '<span class="oil-detail-hotwater">'+fmt(r.hotwater)+' L eau chaude</span> + '+
+   '<span class="oil-detail-heating">'+fmt(r.heating)+' L chauffage</span>'+
+   (r.projected?' · partie estimée':'')+(r.days<27?' · mois partiel':'');
+  target.querySelectorAll('[data-oil-month]').forEach((el,j)=>el.classList.toggle('oil-month-selected',i===j));
+ };
+ target.querySelectorAll('[data-oil-month]').forEach((el,i)=>{
+  el.addEventListener('click',()=>select(i));
+  el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(i)}});
+ });
+ select(bars.length-1);
 }
 function syncOilChartView(){
- const byUse=oilChartMode==='usage';
- $('#oil-usage-view').classList.toggle('hidden',!byUse);
- $('#oil-level-view').classList.toggle('hidden',byUse);
- $$('[data-oil-chart]').forEach(btn=>btn.classList.toggle('active',btn.dataset.oilChart===oilChartMode));
- $('#oil-chart-overline').textContent=byUse?'CONSOMMATION · LITRES':'NIVEAU DE CUVE · LITRES';
- $('#oil-chart-title').textContent=byUse?'Chauffage & eau chaude':'Évolution de la réserve';
- $('#oil-chart-description').textContent=byUse?'Deux courbes cumulées, réparties entre tes relevés.':'Points pleins : relevés · Sauts verts : livraisons.';
+ $('#oil-level-view').classList.remove('hidden');
+ $('#oil-usage-view').classList.remove('hidden');
+ $('#oil-chart-overline').textContent='CITERNE · LITRES';
+ $('#oil-chart-title').textContent='Évolution du niveau';
+ $('#oil-chart-description').textContent='Points de mesure, livraisons et évolution reconstituée.';
 }
 $$('[data-oil-chart]').forEach(btn=>btn.addEventListener('click',()=>{
  oilChartMode=btn.dataset.oilChart;
@@ -552,10 +568,10 @@ function renderOilTimeline(model){
  const data=oilPlot(model);if(data.length<2){el.innerHTML='<div class="empty-state">Ajoute au moins deux niveaux de cuve.</div>';return}
  const actualWidth=el.clientWidth||window.innerWidth-65,W=Math.max(265,Math.round(actualWidth)),H=263;
  const margins={l:W<400?37:52,r:W<400?10:18,t:19,b:46};
- const first=data[0].date,last=data.at(-1).date,lo=0,hi=Math.ceil(Math.max(1050,...data.map(d=>d.liters))*1.08/250)*250;
+ const first=data[0].date,last=data.at(-1).date,scale=niceAxis(0,Math.max(100,...data.map(d=>d.liters))),lo=scale.lo,hi=scale.hi;
  const X=date=>margins.l+(oilMillis(date)-oilMillis(first))/Math.max(1,oilMillis(last)-oilMillis(first))*(W-margins.l-margins.r);
  const Y=volume=>margins.t+(hi-volume)/hi*(H-margins.t-margins.b);
- const grid=[0,250,500,750,1000].filter(v=>v<=hi).map(v=>'<line x1="'+margins.l+'" x2="'+(W-margins.r)+'" y1="'+Y(v).toFixed(1)+'" y2="'+Y(v).toFixed(1)+'" stroke="#e7edf0"/><text x="'+(margins.l-7)+'" y="'+(Y(v)+3).toFixed(1)+'" text-anchor="end" class="oil-axis-label">'+fmt(v)+'</text>').join('');
+ const grid=scale.ticks.map(v=>'<line x1="'+margins.l+'" x2="'+(W-margins.r)+'" y1="'+Y(v).toFixed(1)+'" y2="'+Y(v).toFixed(1)+'" stroke="#e7edf0"/><text x="'+(margins.l-7)+'" y="'+(Y(v)+3).toFixed(1)+'" text-anchor="end" class="oil-axis-label">'+fmt(v)+'</text>').join('');
  let paths='';
  for(let i=1;i<data.length;i++){
   const before=data[i-1],current=data[i],sameDay=before.date===current.date;
