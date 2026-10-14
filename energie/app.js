@@ -1017,12 +1017,7 @@ $('#scan-meter').onchange=()=>{
  $('#scan-day').value='';
  $('#scan-night').value='';
  showScanKind();
- if(!scanLastText)return;
- if(scanKind==='electric')fillElectricFromOcr(scanLastData);
- else{
-  const chosen=proposeScanIndex(scanLastText,scanKind);
-  if(chosen!=null)$('#scan-value').value=chosen;
- }
+ if(pendingImage&&$('#scan-preview').complete){scanCrop=null;findMeterDisplay();detectIndexFromImage();}
 };
 function capturePhotoData(file){
  return new Promise((resolve,reject)=>{
@@ -1261,53 +1256,189 @@ function fillElectricFromOcr(data){
  return false;
 }
 
-function scanSourceImage(){
+
+/* Image-space auto detection. The red fractional wheels locate the mechanical
+   index; old meter values are NOT used to synthesize or replace OCR readings. */
+let scanAutoZones=null,scanAutoConfidence='none',scanLastMethod='manual';
+function scanUnion(zones){
+ if(!zones?.length)return null;
+ const x0=Math.min(...zones.map(z=>z.left)),y0=Math.min(...zones.map(z=>z.top));
+ const x1=Math.max(...zones.map(z=>z.left+z.width)),y1=Math.max(...zones.map(z=>z.top+z.height));
+ return {left:x0,top:y0,width:x1-x0,height:y1-y0};
+}
+function displayImageSpaceCrop(rect){
+ const img=$('#scan-preview');if(!rect||!img?.naturalWidth)return;
+ const wrap=$('#scan-preview-wrap'),imageRect=img.getBoundingClientRect(),wrapRect=wrap.getBoundingClientRect();
+ const scale=Math.min(imageRect.width/img.naturalWidth,imageRect.height/img.naturalHeight);
+ const dx=imageRect.left-wrapRect.left+(imageRect.width-img.naturalWidth*scale)/2;
+ const dy=imageRect.top-wrapRect.top+(imageRect.height-img.naturalHeight*scale)/2;
+ displayScanCrop({x:dx+rect.left*scale,y:dy+rect.top*scale},
+  {x:dx+(rect.left+rect.width)*scale,y:dy+(rect.top+rect.height)*scale});
+}
+function findMeterDisplay(){
+ scanAutoZones=null;scanAutoConfidence='none';scanLastMethod='manual';
  const img=$('#scan-preview');
- if(!scanCrop||!img.complete||!img.naturalWidth)return pendingImage;
- const x=Math.round(scanCrop.left),y=Math.round(scanCrop.top),w=Math.max(1,Math.round(scanCrop.width)),h=Math.max(1,Math.round(scanCrop.height));
- const factor=Math.min(3,Math.max(1,1500/Math.max(w,h)));
- const canvas=document.createElement('canvas');
- canvas.width=Math.round(w*factor);canvas.height=Math.round(h*factor);
- const ctx=canvas.getContext('2d');
+ if(!pendingImage||!img?.complete||!img.naturalWidth||!window.OwattScan?.locate)return false;
+ try{
+  const can=document.createElement('canvas'),width=384,height=Math.round(img.naturalHeight*width/img.naturalWidth);
+  can.width=width;can.height=height;
+  const ctx=can.getContext('2d',{willReadFrequently:true});
+  ctx.drawImage(img,0,0,width,height);
+  const out=window.OwattScan.locate(ctx.getImageData(0,0,width,height),scanKind);
+  if(!out?.zones?.length)return false;
+  scanAutoZones=out.zones.map(z=>({
+   left:z.left*img.naturalWidth,top:z.top*img.naturalHeight,
+   width:z.width*img.naturalWidth,height:z.height*img.naturalHeight
+  })).filter(z=>z.width>25&&z.height>15);
+  if(!scanAutoZones.length){scanAutoZones=null;return false}
+  scanCrop=scanUnion(scanAutoZones);scanAutoConfidence=out.confidence||'low';
+  scanLastMethod=out.method||'automatic';
+  displayImageSpaceCrop(scanCrop);
+  return true;
+ }catch(error){scanAutoZones=null;scanAutoConfidence='none';return false;}
+}
+function scanSourceImage(rect=scanCrop,negative=false){
+ const img=$('#scan-preview');
+ if(!rect||!img.complete||!img.naturalWidth)return pendingImage;
+ const x=Math.max(0,Math.round(rect.left)),y=Math.max(0,Math.round(rect.top));
+ const w=Math.min(img.naturalWidth-x,Math.max(1,Math.round(rect.width)));
+ const h=Math.min(img.naturalHeight-y,Math.max(1,Math.round(rect.height)));
+ const factor=Math.min(3,Math.max(1,1200/Math.max(w,h)));
+ const can=document.createElement('canvas');can.width=Math.max(1,Math.round(w*factor));can.height=Math.max(1,Math.round(h*factor));
+ const ctx=can.getContext('2d',{willReadFrequently:negative});
  ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
- ctx.drawImage(img,x,y,w,h,0,0,canvas.width,canvas.height);
- return canvas.toDataURL('image/png');
+ ctx.drawImage(img,x,y,w,h,0,0,can.width,can.height);
+ if(negative){
+  const data=ctx.getImageData(0,0,can.width,can.height),pixels=data.data;
+  // White rolling numbers on dark wheels become dark text on a pale field.
+  for(let i=0;i<pixels.length;i+=4){
+   const v=Math.round(.299*pixels[i]+.587*pixels[i+1]+.114*pixels[i+2]);
+   const negativeValue=255-v;
+   pixels[i]=negativeValue;pixels[i+1]=negativeValue;pixels[i+2]=negativeValue;
+  }
+  ctx.putImageData(data,0,0);
+ }
+ return can.toDataURL('image/png');
+}
+function scanManualZones(){
+ if(!scanCrop)return null;
+ if(scanKind!=='electric')return [scanCrop];
+ const half=scanCrop.height/2;
+ return [
+  {left:scanCrop.left,top:scanCrop.top,width:scanCrop.width,height:half},
+  {left:scanCrop.left,top:scanCrop.top+half,width:scanCrop.width,height:half}
+ ];
+}
+function scanAcceptedSingle(raw,kind){
+ const clean=String(raw||'').replace(/[Oo]/g,'0').replace(/[Il|]/g,'1');
+ // Require the full digit-window pattern. A short serial-number fragment
+ // must never become an index just because it is near a historic reading.
+ if(kind==='pv'&&!/(?:^|[^\d])\d{7}(?!\d)|\d{6}[.,]\d(?!\d)/m.test(clean.replace(/\s+(?=\d)/g,'')))return null;
+ if(kind==='water'&&!/\d{6,9}(?!\d)|\d{2,6}[.,]\d{1,3}/.test(clean.replace(/\s+(?=\d)/g,'')))return null;
+ return proposeScanIndex(clean,kind);
+}
+function scanRecordDiagnostics(details,preview){
+ const raw=details.map((v,i)=>'Essai '+(i+1)+' · '+v.description+'\n'+(v.text||'(aucun chiffre détecté)')).join('\n\n');
+ $('#scan-raw-text').textContent=raw||'Aucune lecture.';
+ const img=$('#scan-analysis');if(preview)img.src=preview;
+}
+async function withScanDeadline(work,ms=18000){
+ let timer;
+ try{
+  return await Promise.race([
+   work,
+   new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('OCR_TIMEOUT')),ms)})
+  ]);
+ }finally{clearTimeout(timer)}
+}
+async function recognizeScanZone(worker,engine,rect,negative,kind){
+ const mode=kind==='electric'||rect?engine.PSM?.SINGLE_LINE||'7':engine.PSM?.SPARSE_TEXT||'11';
+ await worker.setParameters({tessedit_char_whitelist:'0123456789,.',tessedit_pageseg_mode:mode});
+ const source=scanSourceImage(rect,negative);
+ const result=await withScanDeadline(worker.recognize(source,{}, {text:true}),18000);
+ return {text:result?.data?.text||'',confidence:result?.data?.confidence??null,source};
 }
 async function detectIndexFromImage(){
  if(scanBusy||!pendingImage)return;
  scanBusy=true;const id=++scanRequest;
- $('#scan-retry').disabled=true;
- $('#scan-message').textContent=scanCrop?'Lecture de la zone encadrée…':'Lecture de la photo…';
+ const retry=$('#scan-retry');retry.disabled=true;
+ const diagnostics=[];const preview=scanSourceImage();
+ $('#scan-analysis').src=preview||pendingImage;
+ $('#scan-raw-text').textContent='Analyse en cours…';
+ $('#scan-message').textContent=scanCrop?'Analyse des chiffres détectés ou encadrés…':'Recherche des chiffres sur la photo…';
  try{
-  const engine=await ocrLibrary(),worker=await ocrWorker();
-  const mode=scanKind==='electric'?(engine.PSM?.SPARSE_TEXT||'11'):scanCrop?(engine.PSM?.SINGLE_LINE||'7'):(engine.PSM?.SPARSE_TEXT||'11');
-  await worker.setParameters({tessedit_char_whitelist:'0123456789,.',tessedit_pageseg_mode:mode});
-  const result=await worker.recognize(scanSourceImage(),{},scanKind==='electric'?{text:true,blocks:true}:{text:true});
+  const engine=await withScanDeadline(ocrLibrary(),18000);
+  const worker=await withScanDeadline(ocrWorker(),22000);
   if(id!==scanRequest)return;
-  scanLastData=result?.data||null;
-  scanLastText=scanLastData?.text||'';
-  if(scanKind==='electric'){
-   fillElectricFromOcr(scanLastData);
-  }else{
-   const guess=proposeScanIndex(scanLastText,scanKind);
-   if(guess!=null){
-    $('#scan-value').value=guess;
-    $('#scan-message').textContent='Index proposé : vérifie les chiffres avant validation.';
+  const zones=scanAutoZones||scanManualZones();
+  let result=null;
+  if(scanKind==='electric'&&zones?.length===2){
+   const values=[];
+   for(let i=0;i<2;i++){
+    const kind=i===0?'night':'day',zone=zones[i];
+    const first=await recognizeScanZone(worker,engine,zone,false,'electric');
+    diagnostics.push({description:kind==='night'?'Nuit / brut':'Jour / brut',text:first.text});
+    let guess=parseElectricWheel(first.text,kind);
+    if(!guess){
+     const alternate=await recognizeScanZone(worker,engine,zone,true,'electric');
+     diagnostics.push({description:kind==='night'?'Nuit / contraste':'Jour / contraste',text:alternate.text});
+     guess=parseElectricWheel(alternate.text,kind);
+    }
+    values.push(guess?.value??null);
+   }
+   if(id!==scanRequest)return;
+   $('#scan-night').value=values[0]??'';
+   $('#scan-day').value=values[1]??'';
+   refreshElectricSum();
+   if(values.every(v=>v!==null)){
+    $('#scan-message').textContent='Lecture proposée, à vérifier sur la photo : Nuit en haut, Jour en bas.';
    }else{
-    $('#scan-message').textContent='Index non reconnu : encadre les chiffres sur la photo ou saisis la valeur.';
+    $('#scan-message').textContent='Lecture incertaine : vérifie et complète les chiffres affichés. La zone peut être redessinée au doigt.';
+   }
+  }else if(scanKind!=='electric'){
+   const zone=zones?.[0]||null;
+   const first=await recognizeScanZone(worker,engine,zone,false,scanKind);
+   diagnostics.push({description:'Index / brut',text:first.text});
+   let chosen=scanAcceptedSingle(first.text,scanKind);
+   if(chosen===null){
+    const alternate=await recognizeScanZone(worker,engine,zone,true,scanKind);
+    diagnostics.push({description:'Index / contraste',text:alternate.text});
+    chosen=scanAcceptedSingle(alternate.text,scanKind);
+   }
+   if(id!==scanRequest)return;
+   $('#scan-value').value=chosen??'';
+   $('#scan-message').textContent=chosen===null?
+    'Index non reconnu de façon fiable : recadre la fenêtre des chiffres ou saisis l’index manuellement.':
+    'Index proposé : contrôle tous les chiffres avant de confirmer.';
+  }else{
+   // No suitable auto-detected index. Preserve the existing manual workflow.
+   const all=await recognizeScanZone(worker,engine,scanCrop||null,false,'full');
+   diagnostics.push({description:'Image complète (aucun cadrage fiable)',text:all.text});
+   if(id!==scanRequest)return;
+   fillElectricFromOcr({text:all.text});
+   $('#scan-message').textContent='Zone non repérée : recadre les deux lignes Jour/Nuit, ou saisis les index manuellement.';
+  }
+  scanLastText=diagnostics.map(v=>v.text).join('\n');
+  scanLastData={text:scanLastText};
+  scanRecordDiagnostics(diagnostics,preview);
+ }catch(err){
+  if(id===scanRequest){
+   scanRecordDiagnostics([...diagnostics,{description:'Erreur technique',text:String(err?.message||err)}],preview);
+   $('#scan-message').textContent=String(err?.message)==='OCR_TIMEOUT'?
+    'Délai de lecture dépassé. Encadre les chiffres ou saisis-les manuellement.':
+    'Lecture automatique indisponible : saisis l’index manuellement. La photo reste disponible.';
+   if(String(err?.message)==='OCR_TIMEOUT'){
+    const old=ocrWorkerPromise;ocrWorkerPromise=null;
+    old?.then(w=>w.terminate?.()).catch(()=>{});
    }
   }
- }catch(err){
-  if(id===scanRequest)$('#scan-message').textContent='Lecture automatique indisponible : saisis l’index manuellement. La photo est conservée.';
- }finally{
-  scanBusy=false;$('#scan-retry').disabled=false;
- }
+ }finally{scanBusy=false;retry.disabled=false;}
 }
 $('#scan-file').onchange=async e=>{
  const file=e.target.files?.[0];if(!file)return;
  try{
   pendingImage=await capturePhotoData(file);
-  scanCrop=null;scanLastText='';scanLastData=null;
+  scanCrop=null;scanAutoZones=null;scanAutoConfidence='none';scanLastText='';scanLastData=null;
   $('#scan-preview').src=pendingImage;
   $('#scan-crop-box').classList.add('hidden');
   $('#scan-meter').value=scanKind;
@@ -1318,13 +1449,14 @@ $('#scan-file').onchange=async e=>{
   $('#scan-message').textContent='Préparation de la lecture…';
   modal('scan-overlay');
   const image=$('#scan-preview');if(!image.complete)await new Promise(ok=>{image.onload=ok;image.onerror=ok});
+  findMeterDisplay();
   await detectIndexFromImage();
  }catch(err){toast('Impossible de lire cette photo.')}
  e.target.value='';
 };
 $('#scan-retry').onclick=()=>detectIndexFromImage();
 $('#scan-reset-crop').onclick=()=>{
- scanCrop=null;$('#scan-crop-box').classList.add('hidden');detectIndexFromImage();
+ scanCrop=null;scanAutoZones=null;$('#scan-crop-box').classList.add('hidden');detectIndexFromImage();
 };
 let scanPointer=null;
 function scanPoint(ev){
@@ -1361,6 +1493,7 @@ $('#scan-preview-wrap').addEventListener('pointerup',ev=>{
  const toY=Math.max(0,Math.min(img.naturalHeight,(Math.max(a.y,b.y)-insetY)/scale));
  if(toX-fromX<15||toY-fromY<8)return;
  scanCrop={left:fromX,top:fromY,width:toX-fromX,height:toY-fromY};
+ scanAutoZones=null;scanAutoConfidence='manual';
  displayScanCrop(a,b);detectIndexFromImage();
 });
 $('#scan-preview-wrap').addEventListener('pointercancel',()=>{scanPointer=null});
