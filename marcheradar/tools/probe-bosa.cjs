@@ -3,7 +3,7 @@
 const fs=require('node:fs');
 const out='marcheradar/tools/bosa-discovery.json';
 const origins=['https://www.publicprocurement.be/bda/v2--irldz3','https://www.publicprocurement.be/bda','https://www.publicprocurement.be/'];
-const result={generated_at:new Date().toISOString(),requests:[],html_script_files:[],api_strings:[],route_hints:[],errors:[],status:'diagnostic'};
+const result={generated_at:new Date().toISOString(),requests:[],html_script_files:[],api_strings:[],search_focus:[],route_hints:[],errors:[],status:'diagnostic'};
 async function fetchBody(url,timeout=18000){
  const ctl=new AbortController();
  const timer=setTimeout(()=>ctl.abort(),timeout);
@@ -20,6 +20,14 @@ function scanJS(s,url){
   /.{0,130}(?:\/api\/|https?:\/\/[a-z0-9_.-]*publicprocurement\.be\/|\/v[0-9]+\/(?:publications|notices|search)|(?:search|publication|contractAward|bda)Endpoint).{0,145}/gi,
   /.{0,75}(?:publications\/search|notice\/search|bda\/search|tender\/search|advancedSearch|publication-workspaces).{0,100}/gi
  ];
+ const focused=[
+  /.{0,145}(?:\/api\/sea\/|\/search\/publications|\/search\/notices|\/bda\/|\/publications\/search|\/notices\/search).{0,160}/gi,
+  /.{0,130}(?:static\s+(?:get|search|find|load)[A-Za-z0-9_$]*(?:Notices|Publications|Bulletin|Search|Bda)|(?:get|post)\(\s*[\`"']\/[^'"\`]{0,100}(?:search|notices|publications)).{0,170}/gi
+ ];
+ focused.forEach(re=>{for(const hit of s.matchAll(re)){
+  const v=hit[0].replace(/\s+/g,' ').slice(0,310);
+  if(result.search_focus.length<320&&!result.search_focus.some(x=>x.context===v))result.search_focus.push({source:url,context:v});
+ }});
  const unique=new Set();
  regexes.forEach(re=>{for(const hit of s.matchAll(re)){
    const item=hit[0].slice(0,240).replace(/\s+/g,' ').replace(/["'][a-zA-Z0-9-_]{60,}["']/g,'<redacted>');
