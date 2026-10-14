@@ -841,7 +841,7 @@ function proposeScanIndex(text,kind){
    }else if(/^\d{6,9}$/.test(part)){
     const base=part.slice(0,-3),fraction=part.slice(-3);
     if(base.length<=6)add(Number(base)+Number(fraction)/1000,90);
-   }else if(/^\d{3,5}$/.test(part))add(Number(part),45);
+   } // Black-only digits are not enough to confirm the tenths on an analog water meter.
   }
   for(let i=0;i+1<tokens.length;i++){
    const first=tokens[i],second=tokens[i+1];
