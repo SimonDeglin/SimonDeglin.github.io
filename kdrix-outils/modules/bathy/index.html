@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="Dossier interne KDRIX : dix prospects privés pour des missions de bathymétrie, intérêts documentés, cartes et fiches détaillées.">
+<title>KDRIX — Prospection bathymétrique · Carte et emprises</title>
+<link rel="preconnect" href="https://geoservices.wallonie.be">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" referrerpolicy="no-referrer">
+<style>
+:root{--ink:#17303b;--text:#2e4852;--muted:#71818a;--line:#dfe7e8;--bg:#edf2f2;--paper:#fff;--orange:#ed6a36;--orangetint:#fff0e8;--navy:#193a43;--green:#217257;--cyan:#147ea2;--teal:#17778a;--soft:#f6f8f8;--shadow:0 3px 15px rgba(24,47,54,.055);--radius:14px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.48 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,input,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.48;cursor:not-allowed}a{color:#136380;text-decoration:none}a:hover{text-decoration:underline}button:focus-visible,summary:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #f3a985;outline-offset:2px}.container{width:min(1290px,calc(100% - 40px));margin:auto}
+header{height:67px;background:#fff;border-bottom:1px solid #dce5e5}.head{height:100%;display:flex;align-items:center;justify-content:space-between;gap:18px}.identity-brand{display:flex;gap:10px;align-items:center}.logomark{width:35px;height:35px;border-radius:9px 3px 9px 3px;background:var(--orange);color:white;display:grid;place-items:center;font-weight:950;font-size:20px;box-shadow:0 2px 9px #eb6b3425}.brand-main{font-size:21px;line-height:1;font-weight:930;letter-spacing:.055em}.brand-caption{font-size:10px;letter-spacing:.13em;font-weight:800;text-transform:uppercase;color:#72818a;margin-top:5px}.headnav{display:flex;align-items:center;gap:16px;color:var(--muted);font-size:11px;font-weight:650}
+.hero{margin:18px 0 12px;border-radius:16px;padding:19px 22px 17px;background:#203d46;position:relative;overflow:hidden;color:#fff;display:flex;justify-content:space-between;gap:16px;align-items:center;isolation:isolate}.hero:after{content:'';position:absolute;right:-50px;top:-180px;width:560px;height:470px;opacity:.15;background:repeating-radial-gradient(ellipse at center,transparent 0 15px,#8bd5db 17px 18px,transparent 20px 37px);transform:rotate(-25deg);pointer-events:none;z-index:-1}.hero .eyebrow{color:#ffd4bd;font-size:10px;font-weight:850;letter-spacing:.14em;text-transform:uppercase}.hero h1{font-size:clamp(22px,3vw,32px);line-height:1.13;margin:5px 0 6px;letter-spacing:-.038em;font-weight:850}.hero p{max-width:680px;margin:0;font-size:12px;color:#d9e6e7}.hero-stats{display:flex;gap:7px;align-items:center;justify-content:flex-end;flex-wrap:wrap}.hero-stat{border:1px solid #ffffff35;background:#ffffff10;padding:9px 11px;border-radius:8px;font-size:10px;color:#d9e7e8;white-space:nowrap}.hero-stat strong{font-size:18px;color:white;display:block;line-height:1.18;letter-spacing:-.02em}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:1px 0 11px;flex-wrap:wrap}.leftbar,.rightbar{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.tabs{display:flex;gap:3px;background:#e4ebeb;border:1px solid #dbe4e4;padding:3px;border-radius:9px}.tab{padding:7px 10px;background:transparent;color:#60717a;border:0;border-radius:7px;font-size:11px;font-weight:790}.tab.active{background:white;color:#193941;box-shadow:0 1px 5px #20304018}.search{padding:9px 12px;border:1px solid #d6e1e2;border-radius:9px;background:#fff;min-width:180px;font-size:12px}.btn{border:1px solid #d6e1e2;border-radius:8px;background:#fff;color:#38535d;font-weight:750;font-size:11px;padding:9px 11px;display:inline-flex;gap:6px;align-items:center;justify-content:center;line-height:1.25}.btn:hover{background:#f5f9f8;border-color:#acc6cb;text-decoration:none}.btn.primary{background:var(--orange);border-color:var(--orange);color:#fff}.btn.primary:hover{background:#d85521}.btn.dark{background:var(--navy);border-color:var(--navy);color:#fff}.btn.red{color:#a73d38;border-color:#efc5be}.btn.ghost{background:#edf3f3}.resultline{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:8px;margin:2px 0 8px}.resultline b{color:#29414a}.resultline .line{height:1px;background:#d6e1e1;flex:1}
+.cards{display:flex;flex-direction:column;gap:8px;padding-bottom:14px}.pcard{border:1px solid #dce5e5;background:#fff;border-radius:12px;box-shadow:var(--shadow);overflow:hidden;position:relative}.pcard::before{content:'';position:absolute;inset:0 auto 0 0;width:4px;background:#8eafb6}.pcard[data-type="Golf privé"]::before{background:#278879}.pcard[data-type="Carrière"]::before{background:#da8761}.pcard[data-type="Étangs privés"]::before{background:#1f91bd}.pcard:hover{border-color:#aebfbe;box-shadow:0 5px 20px rgba(21,43,50,.08)}.pcard[open]{border-color:#cae0e0;box-shadow:0 8px 25px rgba(21,43,50,.11)}.cardhead{list-style:none;cursor:pointer;display:block;padding:14px 15px 13px 18px}.cardhead::-webkit-details-marker{display:none}.compact{display:grid;grid-template-columns:46px minmax(165px,1.26fr) minmax(106px,.7fr) minmax(115px,.7fr) minmax(116px,.78fr) minmax(250px,2.1fr) 126px;gap:13px;align-items:center}.rankicon{display:flex;flex-direction:column;align-items:center;gap:5px}.rank{font-size:10px;color:#7c8c91;font-weight:900;border:1px solid #e1ebeb;background:#f4f7f7;border-radius:7px;padding:3px 7px}.kind-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#e4f2f3;color:#287385}.kind-icon svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.pname{font-size:14px;font-weight:850;letter-spacing:-.01em;line-height:1.25;display:block}.ptown{font-size:10px;color:var(--muted);margin-top:5px}.colname{font-size:9px;color:#8b999d;text-transform:uppercase;letter-spacing:.07em;font-weight:900;display:block;margin-bottom:5px}.bigval{font-weight:840;font-size:17px;line-height:1.1;letter-spacing:-.028em;white-space:nowrap}.bigval.pending{color:#7a8c92;font-size:13px;letter-spacing:0}.subval{display:block;color:#829197;font-size:10px;margin-top:5px;line-height:1.28}.col-interest{min-width:0;overflow:hidden}.interest{font-size:12px;line-height:1.45;font-weight:670;color:#29434c;overflow-wrap:anywhere}.micro{display:flex;gap:5px;align-items:center;flex-wrap:wrap;margin-top:7px}.flag{font-size:9px;font-weight:780;border-radius:5px;padding:3px 6px;background:#e5f3eb;color:#2b7258;white-space:nowrap}.flag.plausible{background:#f4f1e7;color:#846b38}.flag.to-check{background:#edf1f2;color:#677f89}.chance{display:inline-block;border-radius:5px;padding:5px 7px;background:#fff1e9;color:#aa552b;font-size:10px;font-weight:850;white-space:nowrap}.chance.mid{background:#eaf0f1;color:#486b78}.chance.low{background:#eef0f0;color:#6d7e84}.actionstack{display:flex;align-items:center;gap:7px;justify-content:flex-end}.open-cta{font-size:11px;font-weight:850;color:#fff;background:#245361;border-radius:8px;padding:11px 9px;display:flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap}.open-cta svg{height:15px;width:15px;stroke:currentColor;fill:none;stroke-width:2.5;transition:transform .2s}.pcard[open] .open-cta{background:#eaf4f4;color:#285a67}.pcard[open] .open-cta svg{transform:rotate(180deg)}.cardhead:hover .open-cta{background:var(--orange);color:white}.starbtn{border:1px solid #e0e6e6;background:#fff;color:#a7b6b9;font-size:21px;line-height:1;border-radius:7px;width:31px;height:35px;display:grid;place-items:center}.starbtn.selected{color:#d36a2e;background:#fff5eb}.starbtn:hover{border-color:#dfb496}.open-hint{font-size:10px;color:#6d8287;display:none}
+.more{border-top:1px solid #dce7e7;background:#f8fafa;padding:18px 20px 22px}.detailrow{display:grid;grid-template-columns:minmax(275px,.9fr) minmax(390px,1.45fr);gap:20px}.details-title{font-size:12px;letter-spacing:.01em;font-weight:875;margin:0 0 9px;display:flex;gap:8px;align-items:center}.panel{background:#fff;border:1px solid #e0e8e8;border-radius:11px;padding:16px;min-width:0}.detail-copy{margin:0 0 13px;font-size:12px;color:#526b72;line-height:1.6}.factbox{display:grid;gap:9px;margin-top:11px}.fact{padding-left:9px;border-left:3px solid #c9deda;color:#3d5b65;font-size:12px;line-height:1.47}.fact b{color:#203e47}.caution{font-size:11px;color:#785b3a;background:#fbf5e9;border:1px solid #eee1c5;padding:10px 11px;border-radius:8px;margin:14px 0 0}.section-divider{border:0;border-top:1px solid #e9eeee;margin:16px 0}.contact-name{font-weight:860;font-size:12px}.contact-role{font-size:11px;color:var(--muted);margin:3px 0 8px}.contact-links,.source-list{display:flex;gap:8px 13px;flex-wrap:wrap;font-size:11px}.source-list{flex-direction:column;align-items:start;gap:5px}.map-panel{padding:12px}.map-toolbar{display:flex;gap:7px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:9px}.mode-tabs{display:flex;gap:3px;background:#eaf0f0;border-radius:8px;padding:3px}.mapmode{font-size:11px;font-weight:770;border:0;background:transparent;padding:7px 11px;border-radius:6px;color:#516e78}.mapmode.active{background:#254b58;color:#fff}.map-shell{height:343px;border-radius:9px;overflow:hidden;position:relative;border:1px solid #dce5e5;background:#e3eff0}.map-inner{width:100%;height:100%;z-index:0}.map-fallback{position:absolute;z-index:500;inset:0;display:none;align-items:center;justify-content:center;text-align:center;background:linear-gradient(145deg,#dfecee,#edf4f3);color:#47636b;padding:26px;font-size:12px}.map-fallback strong{display:block;font-size:15px;margin-bottom:6px}.map-fallback p{margin:8px auto;max-width:350px}.map-shell.no-library .map-fallback{display:flex}.map-attribution{font-size:10px;color:#73888c;margin:5px 1px 9px}.map-controls{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.map-controls .btn{padding:8px 10px}.map-links{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}.tool-info{margin:9px 0 0;border:1px solid #dbe8e8;background:#f2f7f7;border-radius:8px;font-size:11px;color:#496672;padding:9px 10px;line-height:1.45}.tool-info.busy{color:#9a512d;background:#fff5ed;border-color:#efd8c8}.drawtoolbar{background:#edf8f6;padding:9px;display:flex;flex-wrap:wrap;gap:7px;align-items:center;border:1px dashed #7cbbad;border-radius:9px;margin-top:7px}.drawtoolbar[hidden]{display:none}.measure-line{padding-top:11px;margin-top:10px;border-top:1px solid #e0e9e9;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}.measure-left{font-size:11px;color:#627780}.measure-left b{display:block;font-size:19px;color:#174958;margin-top:2px}.measure-list{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}.measurechip{display:flex;align-items:center;gap:4px;border:1px solid #d4e5e5;background:#ecf6f6;color:#315d65;border-radius:6px;padding:4px 6px;font-size:10px}.measurechip.active{border-color:var(--orange);background:#fff5e9}.measurechip button{background:none;border:0;font-size:13px;line-height:1;color:#9c5750;padding:1px 3px}.footnote{font-size:10px;line-height:1.5;color:#768c91;margin:8px 0 0}.mailbox{margin-top:13px;padding:16px;background:white;border:1px solid #e0e8e8;border-radius:11px}.mailheader{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}.mailheader span{color:#789097;font-size:10px}.mailinput,.mailtextarea{width:100%;display:block;background:#fff;border:1px solid #d9e4e4;border-radius:7px;padding:10px 12px;font-size:12px;color:#304c56}.mailinput{margin-top:9px;font-weight:740}.mailtextarea{height:164px;min-height:120px;resize:vertical;margin-top:7px;line-height:1.5}.mailbuttons{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+.method{margin:6px 0 35px;border-top:1px solid #d7e2e2;padding-top:13px;display:flex;justify-content:space-between;align-items:start;gap:15px;font-size:11px;color:#607781}.method p{max-width:980px;margin:0;line-height:1.65}.method a{white-space:nowrap;font-weight:800}#toast{position:fixed;z-index:10000;left:50%;bottom:18px;transform:translate(-50%,20px);padding:10px 15px;border-radius:9px;background:#213e49;color:white;font-size:12px;box-shadow:0 8px 26px #101e2440;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}#toast.show{opacity:1;transform:translate(-50%,0)}
+.leaflet-container{font:11px/1.5 system-ui,sans-serif}.leaflet-container .leaflet-control-attribution{background:#ffffffc4;font-size:9px!important}.leaflet-container a{color:#286077}.leaflet-pane .custom-vertex{background:#fff;border:3px solid #f07739;border-radius:50%;box-shadow:0 1px 6px #0005;cursor:grab}.leaflet-container.draw-active,.leaflet-container.draw-active .leaflet-interactive{cursor:crosshair!important}.leaflet-pane .leaflet-interactive:focus{outline:1px solid #f39a6d}
+@media(max-width:1200px){.compact{grid-template-columns:43px minmax(155px,1.2fr) minmax(100px,.72fr) minmax(115px,.76fr) minmax(240px,1.7fr) 112px;gap:10px}.col-potential{display:none}.detailrow{grid-template-columns:minmax(250px,.9fr) minmax(360px,1.4fr)}}
+@media(max-width:920px){.hero{align-items:start}.hero-stats{max-width:180px}.compact{grid-template-columns:42px minmax(185px,1.2fr) minmax(120px,.65fr) minmax(120px,.65fr) 120px;gap:8px}.col-interest{grid-column:2/5;padding-top:3px}.actionstack{grid-column:5;grid-row:1/3}.detailrow{grid-template-columns:1fr}.map-shell{height:390px}.open-hint{display:none}}
+@media(max-width:600px){.container{width:calc(100% - 22px)}header{height:61px}.brand-main{font-size:19px}.headnav .origin{display:none}.hero{margin:11px 0;padding:17px 16px 15px;border-radius:12px;display:block}.hero h1{font-size:24px}.hero-stats{max-width:none;justify-content:start;margin-top:13px}.hero-stat{padding:6px 9px}.hero-stat strong{display:inline;font-size:14px;margin-right:4px}.toolbar{gap:7px}.leftbar{width:100%;flex-wrap:wrap}.search{flex:1;min-width:120px}.rightbar{width:100%;justify-content:space-between}.rightbar .btn{font-size:10px;padding:8px}.cardhead{padding:12px 12px 12px 14px}.compact{grid-template-columns:39px 1fr auto;gap:9px 10px;align-items:start}.rankicon{grid-row:1/3}.name-col{grid-column:2}.col-area{grid-column:2;grid-row:2}.col-distance{grid-column:3;grid-row:2;max-width:126px}.col-potential{display:none}.col-interest{grid-column:2/4;grid-row:3}.actionstack{grid-column:3;grid-row:1}.open-cta{font-size:10px;padding:9px 7px;gap:3px}.open-cta span{display:inline}.starbtn{height:32px;width:30px;font-size:18px}.pname{font-size:13px}.bigval{font-size:15px}.bigval.pending{font-size:12px}.subval{font-size:9px}.interest{font-size:11px}.col-interest .flag{display:inline-block!important}.micro{margin-top:6px}.more{padding:11px 10px 15px}.panel,.mailbox{padding:12px}.detailrow{gap:10px}.map-panel{padding:9px}.map-shell{height:315px}.mode-tabs{width:100%;display:grid;grid-template-columns:repeat(3,1fr)}.mapmode{font-size:10px;padding:7px 6px}.map-controls .btn{font-size:10px}.map-links{margin-left:0}.measure-line{display:block}.measure-list{margin-top:10px}.method{display:block}.method a{display:inline-block;margin-top:10px}}
+@media print{body{background:#fff}header,.toolbar,.more,.method,#toast{display:none!important}.hero{background:#eff3f3;color:#163d49;margin:0 0 12px;padding:10px 15px}.hero *{color:#163d49!important}.hero-stats{display:none}.pcard{break-inside:avoid;box-shadow:none}.cards{gap:6px}.compact{grid-template-columns:36px 180px 110px 110px 1fr 90px}.actionstack{display:none}.col-potential{display:none}.cardhead{padding:10px 12px}.interest{font-size:10px}}
+
+/* V4 — Interaction cartographique, outils de mesure et lisibilité */
+.map-shell{height:400px;overflow:hidden;background:#e9f1f2}
+.map-shell .leaflet-container{cursor:grab}
+.map-shell .leaflet-container.draw-active{cursor:crosshair!important}
+.map-shell .leaflet-container.picc-active{cursor:pointer!important}
+.map-shell .leaflet-container.draw-active .leaflet-interactive{cursor:crosshair}
+.map-shell .leaflet-container.picc-active .leaflet-interactive{cursor:pointer}
+.map-controls{gap:8px;margin-top:11px;align-items:stretch}
+.map-controls .methods{display:flex;gap:8px;flex:1 1 345px;min-width:0}
+.map-controls .methods .btn{padding:10px 13px;display:flex;flex:1;flex-direction:column;align-items:flex-start;justify-content:center;gap:3px;text-align:left;border-width:1.5px}
+.map-controls .methods .btn b{font-size:12px;font-weight:870}
+.map-controls .methods .btn small{display:block;font-size:10px;opacity:.85;font-weight:550;line-height:1.2}
+.map-controls .action-picc{background:#e9f7fa;color:#146783;border-color:#a8d8e5}
+.map-controls .action-draw{background:#245565;color:#fff;border-color:#245565}
+.map-controls .action-picc:hover{background:#d8f2f7}
+.map-controls .action-draw:hover{background:#173e4a}
+.map-controls .methods .btn.mode-on{box-shadow:0 0 0 3px #eebd9b;background:#e96834;color:#fff;border-color:#e96834}
+.map-controls .layer-btn{font-size:10px;align-self:center;background:#fff}
+.map-links{align-items:center}
+.map-hint{position:absolute;top:15px;left:50px}
+.mapexpand{z-index:1000;position:absolute;right:12px;top:12px;background:white;color:#214551;border:1px solid #bdcfd2;border-radius:8px;padding:7px 9px;cursor:pointer;font-size:11px;font-weight:850;box-shadow:0 2px 8px #142b3833}
+.drawtoolbar,.picc-hint,.vertexbar{position:absolute;z-index:1100;left:50%;transform:translateX(-50%);background:#fff;border:1px solid #a7d0db;box-shadow:0 6px 26px #122f4040;color:#22444e;border-radius:12px;pointer-events:auto}
+.drawtoolbar{bottom:15px;width:min(460px,calc(100% - 24px));padding:12px 13px;margin:0;display:block}
+.drawtoolbar[hidden],.picc-hint[hidden],.vertexbar[hidden]{display:none!important}
+.drawbar-head{display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:12px}
+.drawbar-head strong{font-weight:900}
+.drawbar-head span{color:#758b93;font-weight:700;font-size:10px}
+.drawbar-instruction{font-size:11px;line-height:1.4;margin-top:4px;color:#4d6a74}
+.livearea{display:block;font-size:12px;color:#0b6e92;margin-top:7px}
+.draw-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.draw-actions .btn{flex:1 1 auto;font-size:11px;padding:9px 8px}
+.picc-hint{top:11px;width:min(500px,calc(100% - 115px));padding:10px 13px;left:13px;transform:none;font-size:11px;display:flex;flex-direction:column;gap:3px;background:#e8f8feeb;border:1px solid #81cae0}
+.picc-hint b{color:#0a6885;font-size:12px}
+.vertexbar{top:54px;right:11px;left:auto;transform:none;padding:7px;display:flex;align-items:center;gap:9px;font-size:11px;font-weight:770}
+.vertexbar .btn{padding:6px 8px;font-size:10px}
+.custom-vertex{width:24px;height:24px;display:grid;place-items:center;line-height:1;border-radius:50%;background:#fff;color:#c95628;border:3px solid #f07739;box-shadow:0 1px 8px #0005;cursor:grab;font-size:9px;font-weight:900}
+.custom-vertex.vertex-selected{background:#f07434;color:white;border-color:white;box-shadow:0 0 0 2px #f07434}
+.mid-vertex{height:22px;width:22px;border-radius:50%;background:#dff6fd;border:2px solid #1a94bd;color:#106b8d;box-shadow:0 1px 5px #0004;display:grid;place-items:center;cursor:copy;font-weight:950;font-size:14px;line-height:1}
+.mid-vertex:hover{background:#1c95bf;color:white}
+.measure-list{display:grid;gap:6px;margin-top:11px}
+.water-row{display:grid;grid-template-columns:95px minmax(110px,1fr) 160px 35px;gap:8px;align-items:center;background:#fff;border:1px solid #d8e7e9;border-radius:8px;padding:5px 7px}
+.water-row.is-selected{background:#fff8f2;border-color:#eeaf88}
+.water-select{font-size:11px;border:0;background:#f0f8fb;border-radius:5px;padding:6px 5px;cursor:pointer;color:#17607a;font-weight:850}
+.source-pill{font-size:9px;color:#41849b;margin-left:4px}
+.water-name{width:100%;border:1px solid transparent;background:transparent;border-radius:5px;padding:6px 7px;font-size:11px;font-weight:750;color:#285260}
+.water-name:hover,.water-name:focus{border-color:#92c3cc;background:#fff}
+.water-area{text-align:right;font-size:12px;font-weight:890;white-space:nowrap}
+.water-area span{display:inline;font-weight:500;color:#708c93;font-size:10px;margin-left:5px}
+.water-delete{border:1px solid #efc7ba;border-radius:6px;background:#fff5f1;color:#a94032;font-weight:800;font-size:17px;padding:3px 5px;cursor:pointer}
+.water-delete:hover{background:#ffddd0}
+.fullscreen-map{position:fixed!important;inset:14px!important;width:auto!important;height:auto!important;z-index:6000!important;border:3px solid #fff!important;border-radius:12px!important;box-shadow:0 0 0 300vmax #132d35bc!important}
+.pcard:has(.fullscreen-map){z-index:3000;overflow:visible}
+.fullscreen-map .mapexpand{right:12px}
+@media(max-width:900px){.map-controls .methods{flex:1 1 100%}.map-controls .map-links{margin-left:0}.map-shell{height:380px}}
+@media(max-width:600px){.map-shell{height:380px}.map-controls .methods{gap:6px}.map-controls .methods .btn{padding:8px 9px}.map-controls .methods .btn b{font-size:10.5px}.map-controls .methods .btn small{font-size:9px}.water-row{grid-template-columns:76px 1fr 90px 28px;gap:4px;padding:4px}.water-area span{display:block}.water-name{font-size:10px;padding:5px}.water-select{font-size:10px}.source-pill{display:block;font-size:9px}.picc-hint{width:calc(100% - 85px);font-size:10px;left:8px}.vertexbar{top:47px;right:5px}.fullscreen-map{inset:3px!important}.drawtoolbar{bottom:8px;padding:9px 10px}.draw-actions .btn{font-size:10px}}
+
+
+/* V5 : parcellaire et routes. La liste direction demeure compacte. */
+.cad-section,.route-section{border:1px solid #d3e3e6;border-radius:12px;background:#f6fafb;padding:12px 14px;margin-top:11px}
+.cad-section{background:linear-gradient(180deg,#f7fbfc,#ffffff)}
+.gis-title{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:9px}
+.gis-title strong{font-size:13px;color:#184452;font-weight:890}
+.gis-title span{font-size:10px;color:#718b93}
+.cad-actions,.route-btns{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.cad-actions .btn,.route-btns .btn{font-size:11px;padding:8px 10px}
+.mini-switch{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #c7dadd;border-radius:8px;padding:8px 10px;font-size:11px;font-weight:770;color:#294e5a;cursor:pointer;white-space:nowrap}
+.mini-switch input{accent-color:#127d9d;width:16px;height:16px;cursor:pointer}
+.cad-legend{font-size:10px;color:#47636c;display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin:10px 0 3px}
+.cad-dot{width:10px;height:10px;display:inline-block;border:2px solid #69747a;border-radius:3px}
+.cad-dot.verified{border-color:#238369;background:#d9f5e8}
+.cad-dot.likely{border-color:#d78028;background:#fff1d9}
+.cad-dot.plain{border-color:#7d7880;background:transparent}
+.cad-small-note{font-size:10px;line-height:1.48;color:#607a83;margin-top:6px}
+.cad-count{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding-top:10px;font-size:11px;color:#4a6770}
+.cad-count b{font-size:11px;color:#315767}
+.cad-count span{font-size:10px;color:#6d858b}
+.cad-list{display:flex;gap:5px;flex-wrap:wrap;padding-top:7px}
+.cad-item{display:inline-flex;gap:6px;align-items:center;max-width:100%;padding:6px 9px;border-radius:8px;border:1px solid #d5e2e6;background:#fff;color:#2b5363;cursor:pointer;font-size:10px}
+.cad-item:hover{background:#eff9fc;border-color:#96c8d9}
+.cad-item b{white-space:normal;word-break:break-all}
+.cad-status{border-radius:12px;background:#fff5e7;color:#b06512;padding:3px 6px;font-weight:800;white-space:nowrap;font-size:9px}
+.cad-status.verifie{background:#e0f4e9;color:#137253}.cad-status.ecarte{background:#f1f1f1;color:#747474}
+.parcel-editor{border:1px solid #8fbfca;border-radius:10px;background:#fff;padding:11px;margin-top:11px;display:grid;gap:8px}
+.parcel-editor[hidden]{display:none!important}
+.parcel-editor strong{font-size:12px;color:#27525e}
+.parcel-fields{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.parcel-fields label{font-size:10px;color:#52717d;display:grid;gap:5px}
+.parcel-fields select,.parcel-editor input{width:100%;min-width:0;border:1px solid #c2d4d9;border-radius:7px;background:#fff;padding:8px 9px;font-size:11px;color:#28525e}
+.parcel-buttons{display:flex;gap:7px;flex-wrap:wrap}
+.route-info{font-size:11px;color:#54727b;margin-top:8px}.route-info.bold{font-weight:790;color:#244c59}
+.route-link{display:inline-block;font-size:11px;margin-top:7px;color:#107d9e;font-weight:850;text-decoration:underline;text-underline-offset:2px}
+.history-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:9px 0 0}
+.history-row button{padding:7px 10px;font-size:11px}
+.history-row span{font-size:10px;color:#73858d;margin-left:auto}
+.water-row.v5-row{grid-template-columns:88px minmax(85px,1fr) 140px minmax(180px,auto);}
+.shape-actions{display:flex;gap:4px;justify-content:flex-end;align-items:center;flex-wrap:wrap}
+.shape-actions .compact-btn{font-size:10px;padding:6px 7px;border:1px solid #cce0e5;background:#fff;color:#1b6179;border-radius:6px;white-space:nowrap}
+.shape-actions .compact-btn[disabled]{opacity:.4;cursor:not-allowed}
+@media(max-width:1020px){.water-row.v5-row{grid-template-columns:85px minmax(90px,1fr) 100px minmax(110px,auto)}.shape-actions .compact-btn{font-size:9px}}
+@media(max-width:700px){.parcel-fields{grid-template-columns:1fr}.cad-section,.route-section{padding:11px}.water-row.v5-row{grid-template-columns:85px 1fr auto;gap:6px}.water-row.v5-row .shape-actions{grid-column:1/-1;justify-content:flex-end;border-top:1px solid #e7eff0;padding-top:6px}.gis-title span{width:100%}.cad-actions .btn{flex:1 1 auto}}
+
+</style>
+</head>
+<body>
+<header><div class="container head"><div class="identity-brand"><div class="logomark">K</div><div><div class="brand-main">KDRIX</div><div class="brand-caption">Prospection · Bathymétrie</div></div></div><div class="headnav"><span class="origin">Départ : rue de l’Avouerie 5 · Liège</span><a href="https://www.kdrix.be/fr/nos-rfrences/" target="_blank" rel="noopener">Nos références ↗</a></div></div></header>
+<main class="container">
+<section class="hero"><div><div class="eyebrow">Usage interne · direction et analyse SIG</div><h1>Prospects bathymétrie</h1><p>Qui contacter, quelle surface relever et quelle décision la bathymétrie permettrait au client de prendre ?</p></div><div class="hero-stats"><div class="hero-stat"><strong>10</strong> prospects privés</div><div class="hero-stat"><strong>1</strong> surface publiée</div><div class="hero-stat"><strong>PICC</strong> + dessin</div></div></section>
+<div class="toolbar"><div class="leftbar"><div class="tabs" role="group" aria-label="Filtrer les prospects"><button type="button" data-filter="all" class="tab active">Tous</button><button type="button" data-filter="high" class="tab">Potentiel fort</button><button type="button" data-filter="selected" class="tab">Présélection ★</button></div><input class="search" id="search" type="search" autocomplete="off" placeholder="Rechercher un prospect…" aria-label="Rechercher un prospect"></div><div class="rightbar"><button class="btn" id="routes" type="button">↗ Distances routières</button><button class="btn" id="copylist" type="button">Copier ma sélection</button><button class="btn" id="share" type="button" title="Télécharger une copie de cette page avec les zones que vous avez mesurées">⇩ Partager mes mesures</button><button class="btn" id="print" type="button">Imprimer</button></div></div>
+<div class="resultline"><span><b id="visible-count">10</b> prospects · Cliquez sur <b>Voir la fiche ↓</b> pour ouvrir la carte, le contact et le courriel.</span><span class="line"></span></div>
+<section id="cards" class="cards" aria-label="Liste des prospects"></section>
+<div class="method"><p><b>Lecture :</b> « Enjeu documenté » signifie qu’un usage de l’eau ou une installation sont mentionnés dans des sources publiques, <b>pas</b> que le client a demandé un devis ou connaît un problème de sédimentation. Surfaces : seules celles publiées par une source ou sélectionnées / tracées et calculées sur la carte sont affichées. Une superficie PICC est une emprise hydrographique cartographique, à comparer à l’orthophoto 2026. Le LiDAR décrit le relief terrestre, pas la profondeur sous l’eau. Les itinéraires routiers, s’ils sont calculables, visent des points indicatifs de site et non les accès précis aux bassins. Relevés Carmeuse Moha et lac de l’UCLouvain : références existantes, pas des prospects.</p><a href="https://www.kdrix.be/fr/kapta-survey/" target="_blank" rel="noopener">Prestations KDRIX ↗</a></div>
+</main>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>if(typeof L==='undefined'){document.write('<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"><\/script>')}</script>
+<script>
+'use strict';
+const DATA=[{"id":"naxhelet","name":"Golf de Naxhelet","town":"Wanze","category":"Golf privé","confidence":"Enjeu documenté","potential":"Fort","point":[50.54096,5.20104],"pointNote":"Point du golf (position indicative, pas le centre des bassins)","access":"Rue Naxhelet 1, 4520 Wanze","why":"Connaître le volume d’eau effectivement mobilisable pour l’arrosage et estimer l’autonomie lors d’une période sèche.","fact":"Le golf indique récupérer les eaux pluviales dans ses étangs pour l’arrosage et certains sanitaires, sans utiliser d’eau de ville pour arroser.","factDate":"Rapport RSE 2022","what":"Bathymétrie des bassins d’irrigation, courbes hauteur-volume et capacité utile en fonction des niveaux de pompage.","decision":"Comparer la réserve disponible aux besoins du parcours, évaluer les risques de manque d’eau et hiérarchiser d’éventuels entretiens.","reservation":"Aucune baisse de capacité ni demande de bathymétrie n’est publiquement établie. Localiser et mesurer les bassins avant chiffrage.","grounds":"Besoin de stockage vérifié + décideur technique identifié + proximité de Liège.","contact":{"name":"Marc Thiebaut","role":"Head Greenkeeper","email":"marc@naxhelet.be","phone":"085 82 64 08","alt":"Caroline Springuel · caroline@naxhelet.be"},"sources":[["Gestion de l’eau — rapport RSE 2022","https://www.terresduval.be/download/124573"],["Contacts de l’équipe du golf","https://www.terresduval.be/fr/golf.html"]],"site":"https://www.terresduval.be/fr/golf.html","subject":"KDRIX — relevé bathymétrique de vos étangs","emailBody":"Madame, Monsieur,\n\nVotre gestion de l’irrigation repose notamment sur des eaux pluviales conservées dans vos étangs. Un modèle des profondeurs permettrait de relier leurs niveaux d’eau aux volumes encore mobilisables pour les greens et départs.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"documente"},{"id":"freux","name":"Pêches de Freux — Robaiwez SRL","town":"Freux / Libramont","category":"Étangs privés","confidence":"Enjeu documenté","potential":"Fort","point":[49.97032,5.45164],"pointNote":"Localisation indicative du domaine : centrer manuellement les trois plans d’eau","access":"Freux-la-Rue 23, 6800 Libramont-Chevigny","area":15.71,"areaEvidence":"Superficie annoncée par l’exploitant (8,40 + 5,38 + 1,93 ha)","why":"Cartographier trois étangs exploités pour cibler l’entretien et disposer d’une base utile à la gestion piscicole.","fact":"Trois étangs de pêche totalisant 15,71 ha. Le site évoque une difficulté liée à la température et à l’oxygénation du Grand Étang.","factDate":"Site officiel consulté en octobre 2026","what":"Cartes de profondeur, volumes, zones profondes, profils des berges et, si pertinent, sondeur de sédiments.","decision":"Localiser les secteurs à approfondir ou surveiller et préparer, si nécessaire, un entretien ciblé ; compléter par des mesures d’oxygène/temperature fournies par spécialistes.","reservation":"Les profondeurs existent déjà partiellement sur le site web. La bathymétrie ne mesure ni l’oxygène ni la température. Vérifier l’intérêt d’une actualisation et le budget.","grounds":"La seule superficie totale de plans d’eau vérifiée à ce stade ; exploitant privé joignable.","contact":{"name":"Robaiwez SRL","role":"Gestionnaire des Pêches de Freux","email":"pechesdefreux@gmail.com","phone":"0485 80 97 38","alt":"Contact général de l’exploitation"},"sources":[["Superficies et contact — Pêches de Freux","https://www.pechesdefreux.be/"],["Grand Étang — indications de fonctionnement","https://www.pechesdefreux.be/grand-etang-peche-de-la-truite-a-la-mouche/"]],"site":"https://www.pechesdefreux.be/","subject":"KDRIX — relevé bathymétrique de vos étangs","emailBody":"Madame, Monsieur,\n\nVos trois étangs représentent plus de 15 hectares de plans d’eau. Une cartographie actualisée des profondeurs pourrait servir de référence pour l’entretien des zones de pêche et l’identification des secteurs sensibles.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"documente"},{"id":"holcim","name":"Holcim — Carrière de Leffe","town":"Dinant","category":"Carrière","confidence":"Enjeu documenté","potential":"Fort","point":[50.27448,4.91283],"pointNote":"Point indicatif de la carrière ; les bassins doivent être identifiés sur l’orthophoto","access":"Carrière de Leffe, Dinant — accès exact à vérifier","why":"Mesurer la capacité restante du bassin de décantation et préparer des interventions sur les dépôts.","fact":"Un acte wallon mentionne un bassin de décantation de 8 000 m³ et un bassin d’eau claire de 300 m³ dans le système de gestion des eaux.","factDate":"Arrêté ministériel du 23 décembre 2024","what":"Levés du fond des bassins accessibles, cubatures disponibles et comparaison avec plans d’origine ou campagnes précédentes.","decision":"Chiffrer les quantités pour un entretien, suivre la disponibilité hydraulique et documenter les contrôles avant/après intervention.","reservation":"Les valeurs 8 000 et 300 m³ sont des volumes de référence, jamais des superficies. Bassins en eau, dimensions et contrats existants à vérifier.","grounds":"Ouvrages et gestion de l’eau documentés ; contact identifié mais direction technique à obtenir.","contact":{"name":"Sébastien Houtrelle","role":"Contact public du projet de carrière","email":"bel-carriere-leffe@holcim.com","phone":"","alt":"Demander le service exploitation / environnement"},"sources":[["Arrêté officiel — description et volumes","https://environnement.wallonie.be/files/eDocs%20Environnement/legis/codeenvironnement/incidences036.html?v=2026012316"],["Holcim Leffe — projet et contact","https://www.holcim.be/fr/leffe"]],"site":"https://www.holcim.be/fr/leffe","subject":"KDRIX — relevé bathymétrique de vos bassins","emailBody":"Madame, Monsieur,\n\nLa documentation relative à la carrière de Leffe décrit un bassin de décantation intégré au circuit de gestion des eaux. Un relevé de fond pourrait aider à quantifier sa capacité disponible et à préparer d’éventuels entretiens.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"documente"},{"id":"lhoist","name":"Lhoist — Marche-les-Dames","town":"Andenne","category":"Carrière","confidence":"Enjeu documenté","potential":"Fort","point":[50.48333,4.98806],"pointNote":"Site industriel approximatif ; emplacement précis du bassin non validé","access":"Carrière des Dolomies de Marche-les-Dames, Andenne","why":"Disposer d’un état du fond après les aménagements du bassin de décantation et surveiller sa capacité utile.","fact":"Des bassins de clarification sont décrits ; la Ville d’Andenne rapporte la fin, en 2025, des travaux de digue d’un bassin.","factDate":"Présentation Lhoist 2024 ; rapport communal publié en 2026","what":"État bathymétrique de référence, capacité en eau et contrôle ultérieur des dépôts si les ouvrages sont bathymétrables.","decision":"Documenter l’état après travaux et organiser les opérations d’entretien en fonction de volumes mesurés.","reservation":"On ne sait pas si le bassin est actuellement rempli d’eau ni si la bathymétrie est prévue dans le suivi des travaux.","grounds":"Aménagement précis et récent + enjeu industriel documenté ; accès commercial moins direct.","contact":{"name":"Laurence Indri","role":"Relations extérieures Belgique — contact d’orientation","email":"laurence.indri@lhoist.com","phone":"","alt":"Demander le responsable technique du site"},"sources":[["Présentation Lhoist — gestion de l’eau 2024","https://www.andenne.be/new22/wp-content/uploads/2024/06/Lhoist-Dolomies-Marche-les-Dames-etude-dincidence_compressed.pdf"],["Rapport communal 2025 — digue","https://www.andenne.be/new22/wp-content/uploads/2026/05/RAPPORT-ANNUEL-AFFAIRES-COMMUNALES-5-DECEMBRE-2025_compressed.pdf"]],"site":"https://www.lhoist.com/fr-BX/contact","subject":"KDRIX — relevé bathymétrique de vos bassins","emailBody":"Madame, Monsieur,\n\nLes aménagements du bassin de décantation de Marche-les-Dames pourraient constituer une bonne occasion d’établir un état de référence du fond, puis de suivre la capacité disponible.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"documente"},{"id":"rigenee","name":"Golf de Rigenée","town":"Villers-la-Ville","category":"Golf privé","confidence":"Enjeu documenté","potential":"Moyen","point":[50.56653,4.52793],"pointNote":"Point indicatif du golf ; eau à repérer visuellement","access":"Rue du Châtelet 62, 1495 Villers-la-Ville","why":"Quantifier les réserves d’étangs utilisées pour arroser le terrain et relier les niveaux d’eau à l’autonomie d’irrigation.","fact":"Le club déclare que 100 % de l’eau utilisée sur le terrain provient de ses étangs ; il documente aussi des améliorations de l’irrigation.","factDate":"Communication 2024-2026","what":"Bathymétrie des étangs d’alimentation et table de correspondance niveau / volume réellement pompable.","decision":"Planifier les prélèvements en période sèche et évaluer l’intérêt d’une hausse de capacité, si nécessaire.","reservation":"L’établissement semble déjà très avancé dans son suivi de l’eau ; vérification préalable de relevés existants indispensable.","grounds":"Usage des étangs vérifié, mais le site peut être déjà équipé de données suffisantes.","contact":{"name":"Secrétariat du golf","role":"Premier point de contact","email":"","phone":"071 87 77 65","alt":"Demander le responsable de l’entretien / des étangs"},"sources":[["Rigenée — 100 % de l’eau du terrain","https://www.rigenee.be/nouvelles/49-nouvelles-club/992-rigenee-proche-de-la-neutralite-carbone"],["Rigenée — contact et accès","https://www.rigenee.be/index.php?id=1&option=com_contact&view=contact"]],"site":"https://www.rigenee.be/","subject":"KDRIX — relevé bathymétrique de vos étangs","emailBody":"Madame, Monsieur,\n\nVous indiquez que l’eau utilisée sur le parcours provient de vos étangs. Une bathymétrie permettrait, si ces données ne sont pas déjà disponibles, de relier le niveau d’eau à la capacité utile des réserves.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"documente"},{"id":"bercuit","name":"Royal Bercuit Golf Club","town":"Grez-Doiceau","category":"Golf privé","confidence":"Enjeu documenté","potential":"Moyen","point":[50.71877,4.67485],"pointNote":"Point indicatif du golf ; bassins à identifier","access":"Les Gottes 1, 1390 Grez-Doiceau","why":"Vérifier combien d’eau les bassins peuvent fournir à ses installations de pompage et anticiper les périodes de restriction.","fact":"Un reportage technique décrit des bassins recevant les eaux de ruissellement et des installations de pompage ; données anciennes.","factDate":"Reportage professionnel antérieur à 2026","what":"Relevé des bassins d’arrosage, capacités utiles aux différents niveaux d’eau, zones de dépôt potentielles.","decision":"Mieux dimensionner l’exploitation de ses réserves, en complément des données de pompage du golf.","reservation":"Nombre/surface des bassins et fonctionnement actuel non vérifiés ; il faut aussi savoir si la direction souhaite investir.","grounds":"Usage de l’eau documenté et manager facilement joignable, mais source technique à actualiser.","contact":{"name":"Daniel Glineur","role":"Manager (site francophone)","email":"manager@rbgc.be","phone":"010 84 15 01","alt":"Greenkeeper : Jean-Marc Dokier (via le golf)"},"sources":[["Greenkeepers Belgium — alimentation en eau","https://greenkeepersbelgium.be/de-bercuit-golfclub-in-grez-doiceau/?lang=FR"],["Équipe Royal Bercuit — contact","https://royalbercuitgolfclub.be/club/notre-equipe/"]],"site":"https://royalbercuitgolfclub.be/","subject":"KDRIX — relevé bathymétrique de vos étangs","emailBody":"Madame, Monsieur,\n\nLes bassins associés à votre gestion de l’arrosage pourraient, selon leurs caractéristiques, faire l’objet d’un relevé permettant de connaître leurs volumes réellement mobilisables.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"documente"},{"id":"bawette","name":"Golf du Château de la Bawette","town":"Wavre","category":"Golf privé","confidence":"Opportunité plausible","potential":"Moyen","point":[50.7294741,4.5961841],"pointNote":"Coordonnées du club ; étangs à retrouver dans le domaine","access":"Chaussée du Château de la Bawette 5, 1300 Wavre","why":"Connaître la capacité réellement stockée dans les étangs alimentés par des sources pour organiser l’arrosage.","fact":"Le propriétaire expliquait en 2015 récupérer l’eau de plusieurs sources dans des étangs pour irriguer le parcours.","factDate":"Interview publiée en 2015","what":"Carte des étangs d’irrigation et courbes hauteur-volume permettant d’évaluer la réserve réellement disponible.","decision":"Comparer stockage et besoins d’arrosage, justifier éventuellement l’entretien d’un bassin.","reservation":"Source datant de 2015 ; confirmer que les étangs servent toujours à l’irrigation et si une mesure présente un intérêt.","grounds":"Usage historique concret et contact actuel, mais aucune actualisation du fonctionnement hydraulique.","contact":{"name":"Accueil du golf","role":"GOLFINGER SA — exploitation privée","email":"info@labawette.com","phone":"010 22 33 32","alt":"Demander la direction ou l’entretien du parcours"},"sources":[["Interview du propriétaire — sources et étangs (2015)","https://www.wawmagazine.be/fr/node/1002"],["Contact actuel du golf","https://www.golflabawette.green/contactus"]],"site":"https://www.golflabawette.green/","subject":"KDRIX — relevé bathymétrique de vos étangs","emailBody":"Madame, Monsieur,\n\nUn reportage décrivait la récupération des eaux de sources dans vos étangs d’arrosage. Si ce fonctionnement est toujours d’actualité, un relevé des fonds pourrait préciser la capacité disponible de ces réserves.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"plausible"},{"id":"prayon","name":"Prayon — Engis","town":"Engis","category":"Industrie","confidence":"Opportunité plausible","potential":"Moyen","point":[50.57499,5.38766],"pointNote":"Complexe industriel ; bassins non localisés","access":"Rue Joseph Wauters 144, 4480 Engis","why":"Évaluer les volumes de boues ou les capacités résiduelles avant un entretien de bassins, si des ouvrages en eau sont adaptés.","fact":"La déclaration environnementale mentionne les boues de curage des bassins de décantation parmi les déchets admis.","factDate":"Déclaration environnementale 2022","what":"Levé de fond et contrôle de volumes sur un bassin ouvert adapté ; analyse technique préalable HSE obligatoire.","decision":"Préparer un curage ou vérifier les quantités évacuées lorsque la configuration le permet.","reservation":"La mention de boues ne prouve pas qu’un bassin accessible au sonar existe, ni qu’un curage est prévu. Régime d’achat à confirmer.","grounds":"Document environnemental concret mais pertinence technique d’une bathymétrie non démontrée.","contact":{"name":"Service technique / environnement","role":"Contact général Prayon","email":"contact@prayon.com","phone":"04 273 92 11","alt":"Demander le responsable maintenance ou environnement"},"sources":[["EMAS Prayon — boues de curage","https://website-v1.s3.fr-par.scw.cloud/uploads/2023/07/EMAS-PRAYON-declaration-de-validation-rapport-final-CET.pdf"],["Coordonnées officielles de Prayon","https://www.prayon.com/en/legal-notice/"]],"site":"https://www.prayon.com/","subject":"KDRIX — relevé bathymétrique de vos bassins","emailBody":"Madame, Monsieur,\n\nLes documents environnementaux du site évoquent des boues issues de bassins de décantation. Si certains de ces ouvrages sont en eau et accessibles, un relevé pourrait contribuer à dimensionner un entretien.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"plausible"},{"id":"ineos","name":"INEOS Inovyn — Jemeppe","town":"Jemeppe-sur-Sambre","category":"Industrie","confidence":"Intérêt à confirmer","potential":"Faible","point":[50.44861,4.66345],"pointNote":"Complexe chimique ; emplacement et existence d’un bassin bathymétrable non confirmés","access":"Rue Solvay 39, 5190 Jemeppe-sur-Sambre","why":"Si des bassins de décantation en eau sont accessibles, contrôler leur volume disponible pour prévoir des entretiens.","fact":"INEOS exploite le site chimique de Jemeppe. Des installations liées à la décantation sont mentionnées dans des registres publics.","factDate":"Installations et autorisations publiques","what":"Sous réserve de faisabilité : bathymétrie de bassin ouvert, cubatures et relevés comparatifs.","decision":"Disposer de quantités fiables pour planifier et réceptionner un entretien, uniquement si les bassins le justifient.","reservation":"Aucun plan d’eau d’une dimension adaptée au sonar n’a été localisé et aucun besoin de mesure n’est établi.","grounds":"Cible très conditionnelle ; ne pas démarcher avant qualification des ouvrages.","contact":{"name":"Contact général du site","role":"INEOS Inovyn Jemeppe","email":"info.jemeppe@ineos.com","phone":"071 26 81 11","alt":"Confirmer d’abord le bon service technique et la présence d’un bassin"},"sources":[["INEOS — établissement de Jemeppe","https://www.ineos.com/fr/sites/jemeppe/"]],"site":"https://www.ineos.com/fr/sites/jemeppe/","subject":"KDRIX — relevé bathymétrique de vos bassins","emailBody":"Madame, Monsieur,\n\nJe souhaiterais savoir si votre site exploite des bassins ouverts pour lesquels un contrôle de la géométrie du fond ou des volumes en eau serait utile et techniquement possible.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"confirmer"},{"id":"coo","name":"ENGIE — Centrale de Coo","town":"Trois-Ponts","category":"Énergie","confidence":"Opportunité plausible","potential":"Faible","point":[50.38484,5.86158],"pointNote":"Site de pompage-turbinage ; localisation indicative du bassin inférieur","access":"Centrale de Coo, 4980 Trois-Ponts — accès d’exploitation à vérifier","why":"Effectuer des contrôles bathymétriques ciblés avant/après travaux ou près d’ouvrages hydrauliques.","fact":"ENGIE a annoncé un projet d’accroissement de capacité des bassins et des aménagements du bassin inférieur.","factDate":"Projet ENGIE publié","what":"Relevés localisés, bathymétrie de contrôle et comparaison des états de fond sur zones désignées par l’exploitant.","decision":"Documenter l’état d’un ouvrage immergé et faciliter une réception de travaux ou une maintenance ponctuelle.","reservation":"Grand exploitant vraisemblablement déjà suivi, avec achats structurés ; intérêt pour un nouveau prestataire particulièrement incertain.","grounds":"Installation et projets réels, mais accès commercial et disponibilité d’un besoin faible.","contact":{"name":"Équipe projet / informations","role":"Contact public ENGIE Coo (pas nécessairement achats)","email":"centralecoo@engie.com","phone":"0800 20 210","alt":"Demander exploitation ou maintenance hydraulique"},"sources":[["ENGIE — extension de la centrale","https://corporate.engie.be/nl/energy/hydraulique/centrale-daccumulation-par-pompage-de-coo/le-projet-dextension"]],"site":"https://corporate.engie.be/fr","subject":"KDRIX — relevé bathymétrique de vos installations hydrauliques","emailBody":"Madame, Monsieur,\n\nLes aménagements hydrauliques de la centrale peuvent nécessiter des contrôles ponctuels des fonds, notamment avant ou après travaux. Je souhaiterais savoir si vous disposez d’un besoin complémentaire dans ce domaine.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"plausible"}];
+const ORIGIN='Rue de l’Avouerie 5, 4000 Liège, Belgique';
+const MAPS={
+ ortho:'https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2026_PRINTEMPS/MapServer/WMSServer',
+ lidar:'https://geoservices.wallonie.be/arcgis/services/RELIEF/WALLONIE_MNT_2021_2022_HILLSHADE/MapServer/WMSServer',
+ piccWMS:'https://geoservices.wallonie.be/arcgis/services/TOPOGRAPHIE/PICC_VDIFF/MapServer/WMSServer',
+ piccQuery:'https://geoservices.wallonie.be/arcgis/rest/services/TOPOGRAPHIE/PICC_VDIFF/MapServer/30/query'
+};
+const STORE='kdrix_bathy_2026_v3_';
+function readStore(k,fallback){try{return JSON.parse(localStorage.getItem(STORE+k)||'null')??fallback}catch{return fallback}}
+function storedSave(k,v){try{localStorage.setItem(STORE+k,JSON.stringify(v));return true}catch{return false}}
+let shared={};try{const tag=document.querySelector('#kdrix-shared-data');if(tag)shared=JSON.parse(tag.textContent||'{}')}catch{}
+const STATE={filter:'all',q:'',stars:new Set(shared.stars||readStore('stars',[])),sizes:shared.sizes||readStore('sizes',{}),routes:shared.routes||readStore('routes',{}),drafts:readStore('drafts',{}), maps:{}, open:new Set(), sessions:{}};
+const $=(s,root=document)=>root.querySelector(s), $$=(s,root=document)=>Array.from(root.querySelectorAll(s));
+const safe=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const enc=encodeURIComponent, fmt=(v,dp=1)=>Number(v).toLocaleString('fr-BE',{minimumFractionDigits:dp,maximumFractionDigits:dp});
+function saved(){storedSave('stars',[...STATE.stars]);storedSave('sizes',STATE.sizes);storedSave('routes',STATE.routes);storedSave('drafts',STATE.drafts)}
+function toast(message){const n=$('#toast');n.textContent=message;n.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>n.classList.remove('show'),2900)}
+function areaShapes(p){let old=STATE.sizes[p.id];if(!old)return [];return Array.isArray(old.shapes)?old.shapes:[]}
+function areaResult(p){
+ let shapes=areaShapes(p);
+ if(shapes.length){const u=unionArea(shapes),a=u.m2;
+  return {label:(u.approx?'≈ ':'')+(a>=10000?`${fmt(a/10000,2)} ha`:`${fmt(a,0)} m²`),detail:`${shapes.length} emprise${shapes.length>1?'s':''} · ${u.overlap?'union estimée sans double comptage':'mesure cartographique'}`,numeric:a,kind:'mesure'};
+ }
+ if(typeof p.area==='number')return{label:`${fmt(p.area,2)} ha`,detail:'Publié par l’exploitant',numeric:p.area*10000,kind:'publie'};
+ return{label:'À mesurer',detail:'Zone d’eau à identifier',numeric:null,kind:'pending'};
+}
+function getRoute(p){const r=STATE.routes[p.id];return r&&Number.isFinite(r.km)?{label:`≈ ${Math.round(r.km)} km`,detail:`≈ ${Math.round(r.min)} min · route jusqu’au site`}:{label:'À calculer',detail:'Route depuis KDRIX'} }
+function areaCenter(p){
+ const shapes=areaShapes(p);if(!shapes.length)return p.point;
+ const box=[Infinity,Infinity,-Infinity,-Infinity];
+ const visit=(arr)=>{if(!Array.isArray(arr))return;if(arr.length>=2&&typeof arr[0]==='number'&&typeof arr[1]==='number'){box[0]=Math.min(box[0],arr[0]);box[1]=Math.min(box[1],arr[1]);box[2]=Math.max(box[2],arr[0]);box[3]=Math.max(box[3],arr[1]);}else arr.forEach(visit)};
+ shapes.forEach(s=>{if(s.kind==='manual')visit(s.points.map(pt=>[pt[1],pt[0]]));else if(s.geometry)visit(s.geometry.coordinates)});
+ return box[0]!==Infinity?[(box[1]+box[3])/2,(box[0]+box[2])/2]:p.point;
+}
+function walon(p){const center=areaCenter(p);return `https://geoportail.wallonie.be/carte#COOR=${center[1]},${center[0]},4326`}
+function directions(p){return 'https://www.google.com/maps/dir/?api=1&origin='+enc(ORIGIN)+'&destination='+enc(p.access)+'&travelmode=driving'}
+function classBadge(p){return p.confidence==='Enjeu documenté'?'':'plausible'}
+function evidenceName(p){return p.confidence==='Enjeu documenté'?'Enjeu documenté':p.confidence==='Opportunité plausible'?'Opportunité plausible':'À confirmer'}
+function iconSVG(cat){if(cat.includes('Golf'))return `<svg viewBox="0 0 24 24"><path d="M5 21V4m0 2 13-3v9L5 15m-2 6h13"/></svg>`;if(cat.includes('Carrière'))return `<svg viewBox="0 0 24 24"><path d="M3 20 9 6l3 8 3-6 6 12H3Zm7-3 3-5"/></svg>`;if(cat.includes('Étangs'))return `<svg viewBox="0 0 24 24"><path d="M2 13c3-3 5 3 8 0s5 3 8 0 3 0 4 0M2 18c3-3 5 3 8 0s5 3 8 0 3 0 4 0M7 5h.01M14 3h.01"/></svg>`;return `<svg viewBox="0 0 24 24"><path d="M3 21V9l7 4V8l7 4V4h4v17H3ZM6 18h.01M11 18h.01M16 18h.01"/></svg>`}
+function visible(){return DATA.filter(p=>(STATE.filter==='all'||STATE.filter==='high'&&p.potential==='Fort'||STATE.filter==='selected'&&STATE.stars.has(p.id))&&(!STATE.q||[p.name,p.town,p.category,p.why].join(' ').toLocaleLowerCase('fr').includes(STATE.q)))}
+function card(p,i){let a=areaResult(p),r=getRoute(p),on=STATE.stars.has(p.id);return `<details class="pcard" data-id="${p.id}" data-type="${safe(p.category)}" ${STATE.open.has(p.id)?'open':''}>
+<summary class="cardhead" aria-label="Voir la fiche détaillée de ${safe(p.name)}"><div class="compact">
+<div class="rankicon"><div class="rank">${String(DATA.indexOf(p)+1).padStart(2,'0')}</div><div class="kind-icon">${iconSVG(p.category)}</div></div>
+<div class="name-col"><b class="pname">${safe(p.name)}</b><div class="ptown">${safe(p.town)} · ${safe(p.category)}</div><div class="micro"><span class="chance ${p.potential==='Fort'?'':p.potential==='Moyen'?'mid':'low'}">Potentiel ${safe(p.potential.toLowerCase())}</span></div></div>
+<div class="col-area"><span class="colname">Surface d’eau</span><strong data-area="${p.id}" class="bigval ${a.kind==='pending'?'pending':''}">${a.label}</strong><span data-area-note="${p.id}" class="subval">${safe(a.detail)}</span></div>
+<div class="col-distance"><span class="colname">Depuis KDRIX</span><strong data-route="${p.id}" class="bigval ${r.label==='À calculer'?'pending':''}">${r.label}</strong><span data-route-note="${p.id}" class="subval">${safe(r.detail)}</span></div>
+<div class="col-potential"><span class="colname">Solidité</span><span class="flag ${classBadge(p)}">${safe(evidenceName(p))}</span><span class="subval">${safe(p.factDate)}</span></div>
+<div class="col-interest"><span class="colname">Pourquoi une bathymétrie ?</span><div class="interest">${safe(p.why)}</div><div class="micro"><span class="flag ${classBadge(p)}" style="display:none">${safe(evidenceName(p))}</span></div></div>
+<div class="actionstack"><span class="open-cta"><span class="open-label">Voir la fiche</span><svg viewBox="0 0 24 24"><path d="m5 9 7 7 7-7"/></svg></span><button class="starbtn ${on?'selected':''}" aria-label="${on?'Retirer de':'Ajouter à'} la présélection" title="${on?'Retirer de':'Ajouter à'} la présélection" type="button" data-act="star" data-id="${p.id}">${on?'★':'☆'}</button></div>
+</div></summary><div class="more" data-detail="${p.id}"></div></details>`}
+function teardown(){for(const inst of Object.values(STATE.maps))try{inst.map.remove()}catch{}STATE.maps={};STATE.sessions={}}
+function render(){teardown();const arr=visible();$('#visible-count').textContent=arr.length;$('#cards').innerHTML=arr.length?arr.map(card).join(''):'<div class="panel" style="color:#6a8288">Aucun prospect pour ce filtre.</div>';$$('details.pcard').forEach(n=>{
+  n.addEventListener('toggle',()=>{const id=n.dataset.id;if(n.open){STATE.open.add(id);const box=n.querySelector('.more');if(!box.dataset.ready){drawDetail(DATA.find(p=>p.id===id),box)}else{setTimeout(()=>{STATE.maps[id]?.map.invalidateSize()},90)}}else{STATE.open.delete(id)}});
+  if(n.open){drawDetail(DATA.find(p=>p.id===n.dataset.id),n.querySelector('.more'))}
+});$$('.tab').forEach(b=>b.classList.toggle('active',b.dataset.filter===STATE.filter))}
+function detailSources(p){return p.sources.map(([name,url])=>`<a href="${safe(url)}" target="_blank" rel="noopener">↗ ${safe(name)}</a>`).join('')}
+function drawDetail(p,node){if(!p||!node)return;node.dataset.ready='yes';const c=p.contact,mail=STATE.drafts[p.id]||{subject:p.subject,body:p.emailBody};node.innerHTML=`<div class="detailrow">
+<div class="panel"><h3 class="details-title">◉ Pourquoi ce prospect ?</h3><p class="detail-copy">${safe(p.fact)} <span style="color:#87969b;font-size:11px">(${safe(p.factDate)})</span></p><div class="factbox"><div class="fact"><b>Prestation :</b> ${safe(p.what)}</div><div class="fact"><b>Décision rendue possible :</b> ${safe(p.decision)}</div><div class="fact"><b>Pourquoi ce rang :</b> ${safe(p.grounds)}</div></div><div class="caution"><b>Avant de contacter :</b> ${safe(p.reservation)}</div><hr class="section-divider"><h3 class="details-title">✉ Interlocuteur professionnel</h3><div class="contact-name">${safe(c.name)}</div><div class="contact-role">${safe(c.role)} · ${safe(c.alt)}</div><div class="contact-links">${c.email?`<a href="mailto:${safe(c.email)}">${safe(c.email)} ↗</a>`:'Courriel à confirmer'}${c.phone?`<a href="tel:${safe(c.phone.replace(/[^\d+]/g,''))}">${safe(c.phone)}</a>`:''}</div><hr class="section-divider"><h3 class="details-title">↗ Sources vérifiables</h3><div class="source-list">${detailSources(p)}</div></div>
+<div class="panel map-panel"><div class="map-toolbar"><h3 class="details-title" style="margin:0">◎ Étendue d’eau — carte interactive</h3><div class="mode-tabs" role="group" aria-label="Fond de carte"><button class="mapmode active" data-act="basemap" data-id="${p.id}" data-layer="ortho">Ortho 2026</button><button class="mapmode" data-act="basemap" data-id="${p.id}" data-layer="lidar">LiDAR</button><button class="mapmode" data-act="basemap" data-id="${p.id}" data-layer="osm">Plan</button></div></div>
+<div class="map-shell" data-shell="${p.id}"><div class="map-inner" id="map-${p.id}" aria-label="Carte interactive du site ${safe(p.name)}"></div><div class="map-fallback"><div><strong>Carte non disponible</strong><p>La cartographie interactive nécessite une connexion Internet et l’accès à la bibliothèque Leaflet. Les liens WalOnMap restent disponibles.</p><a class="btn dark" href="${walon(p)}" target="_blank" rel="noopener">Ouvrir WalOnMap ↗</a></div></div><button type="button" class="mapexpand" data-act="fullscreen" data-id="${p.id}" aria-pressed="false">⛶ Agrandir</button><div class="picc-hint" data-picc-hint="${p.id}" hidden><b>◎ Sélection PICC activée</b><span>Cliquez sur les <strong>contours bleus</strong> pour ajouter les plans d’eau. Cliquez à nouveau pour retirer.</span></div><div class="drawtoolbar" data-drawbar="${p.id}" hidden><div class="drawbar-head"><strong>✎ Dessin en cours</strong><span data-pointcount="${p.id}">0 point</span></div><div class="drawbar-instruction">Cliquez sur les berges ; pour fermer, cliquez sur le <b>premier point orange</b>.</div><b class="livearea" data-livearea="${p.id}">Commencez le contour</b><div class="draw-actions"><button class="btn" data-act="undo" data-id="${p.id}" type="button">↶ Dernier point</button><button class="btn primary" data-act="finishdraw" data-id="${p.id}" type="button" disabled>✓ Terminer</button><button class="btn red" data-act="canceldraw" data-id="${p.id}" type="button">Annuler</button></div></div><div class="vertexbar" data-vertex-controls="${p.id}" hidden><span>● Sommet sélectionné</span><button type="button" class="btn red" data-act="removevertex" data-id="${p.id}">Supprimer ce point</button></div></div>
+<div class="map-attribution">© SPW — orthophotos 2026 / MNT 2021–2022 / PICC · © SPW / IGN pour le fond Plan, secours cartographique SPW. Pointeur : localisation indicative.</div>
+<div class="map-controls"><div class="methods"><button class="btn action-picc" data-act="loadpicc" data-id="${p.id}" data-mode-btn="${p.id}" data-mode="picc" aria-pressed="false"><b>◎ Sélectionner au PICC</b><small>Cliquer sur les zones bleues pour les ajouter</small></button><button class="btn action-draw" data-act="startdraw" data-id="${p.id}" data-mode-btn="${p.id}" data-mode="draw" aria-pressed="false"><b>✎ Tracer une étendue d’eau</b><small>Délimiter manuellement sur la carte</small></button></div><button class="btn layer-btn" data-act="picc" data-id="${p.id}">Afficher la couche PICC</button><div class="map-links"><a class="btn" href="${walon(p)}" data-walon="${p.id}" target="_blank" rel="noopener">WalOnMap ↗</a><a class="btn" href="${directions(p)}" target="_blank" rel="noopener">Itinéraire ↗</a><a class="btn" href="${safe(p.site)}" target="_blank" rel="noopener">Site ↗</a></div></div>
+<section class="cad-section" aria-label="Cadastre et sélection des parcelles">
+ <div class="gis-title"><strong>▦ Cadastre et parcelles du prospect</strong><span>AGDP / SPW · références et limites, sans information de propriétaire</span></div>
+ <div class="cad-actions">
+  <label class="mini-switch"><input type="checkbox" data-cad-layer data-id="${p.id}"><span>Afficher le cadastre</span></label>
+  <label class="mini-switch"><input type="checkbox" data-cad-highlight data-id="${p.id}"><span>Surligner les parcelles associées</span></label>
+  <button type="button" class="btn" data-act="cad-refresh" data-id="${p.id}">↻ Actualiser</button>
+  <button type="button" class="btn" data-act="cad-suggest" data-id="${p.id}" title="Proposer les parcelles intersectant les emprises d’eau sélectionnées, sans présumer de la propriété">Proposer selon les bassins</button>
+ </div>
+ <p class="cad-legend"><span class="cad-dot verified"></span> Lien vérifié avec source · <span class="cad-dot likely"></span> Lien supposé, à vérifier · <span class="cad-dot plain"></span> Limite cadastrale</p>
+ <div class="cad-small-note">Cliquez sur une parcelle de la carte pour l'associer au site. Les suggestions basées sur les bassins ne prouvent ni la propriété ni l'exploitation.</div>
+ <div class="parcel-editor" data-parcel-editor="${p.id}" hidden>
+  <strong>Parcelle <span data-cad-key></span></strong>
+  <div class="parcel-fields"><label>Statut<select data-cad-status><option value="suppose">Lien supposé — à vérifier</option><option value="verifie">Lien vérifié — source requise</option><option value="ecarte">Parcelle écartée</option></select></label>
+   <label>Type de lien<select data-cad-relation><option value="exploitation">Exploitation</option><option value="occupation">Occupation</option><option value="propriete">Propriété</option></select></label></div>
+  <input data-cad-source placeholder="Source du lien (obligatoire si vérifié)">
+  <input data-cad-note placeholder="Note facultative / élément à vérifier">
+  <div class="parcel-buttons"><button type="button" class="btn primary" data-act="saveparcel" data-id="${p.id}">Enregistrer la parcelle</button><button type="button" class="btn red" data-act="removeparcel" data-id="${p.id}">Retirer du dossier</button></div>
+ </div>
+ <div class="cad-count"><b data-cadcount="${p.id}">0 vérifiée · 0 à vérifier</b><span>Statuts conservés dans le partage HTML</span></div>
+ <div class="cad-list" data-parcel-list="${p.id}"></div>
+</section>
+<section class="route-section"><div class="gis-title"><strong>↗ Déplacement depuis KDRIX</strong><span>Rue de l’Avouerie 5, 4000 Liège</span></div>
+ <div class="route-btns"><button class="btn" data-act="access" data-id="${p.id}">📍 Placer l’accès sur la carte</button><button class="btn" data-act="access-geocode" data-id="${p.id}">Géocoder l’adresse</button><button class="btn" data-act="access-confirm" data-id="${p.id}">Enregistrer le point</button><button class="btn primary" data-act="calcsingle" data-id="${p.id}">Calculer ce trajet</button></div>
+ <div class="route-info" data-arrival="${p.id}">Accès routier à identifier.</div>
+ <div class="route-info bold" data-route-detail="${p.id}">Aucun trajet vérifié.</div>
+ <a class="route-link" data-route-link="${p.id}" href="${directions(p)}" target="_blank" rel="noopener">Vérifier l'itinéraire sur Google Maps ↗</a>
+ <div class="cad-small-note">Le calcul utilise un moteur routier externe et ne tient pas compte du trafic réel. Une adresse géocodée peut se trouver sur le bâtiment plutôt qu'au portail : vérifier le point d'arrivée.</div>
+</section>
+<div class="tool-info" data-mapinfo="${p.id}" role="status" aria-live="polite">Choisissez une méthode ci-dessus : <b>cliquer sur les emprises PICC</b> ou <b>dessiner le contour</b>. Vous pouvez mesurer plusieurs bassins sur la même carte.</div>
+<div class="measure-line"><div class="measure-left">Surface des étendues d’eau <b data-measuretotal="${p.id}">—</b><span data-measureorigin="${p.id}">Aucune emprise validée</span></div><div><button class="btn" data-act="exportgeo" data-id="${p.id}" type="button">⇩ GeoJSON</button><button class="btn red" data-act="clearareas" data-id="${p.id}" type="button">Effacer les zones</button></div></div><div class="measure-list" data-measurelist="${p.id}"></div><div class="history-row" data-edit-history="${p.id}"><button class="btn" data-act="undoedit" data-id="${p.id}" type="button">↶ Annuler correction</button><button class="btn" data-act="redoedit" data-id="${p.id}" type="button">↷ Rétablir</button><span>PICC modifiable et réinitialisable individuellement</span></div>
+<p class="footnote">PICC : limites cartographiques, pas une certification de la surface actuelle en eau. Les contours PICC sont cliquables uniquement après activation de « Sélectionner au PICC ». Dessin manuel : estimation géodésique dépendant du contour tracé. Le relief LiDAR ne mesure pas les profondeurs sous l’eau. Les mesures personnelles sont enregistrées localement ; utilisez « Partager mes mesures » pour transmettre une copie HTML contenant les tracés. <a href="https://geoportail.wallonie.be/catalogue/0757bc5d-d918-47f4-8e70-8600c9286be5.html" target="_blank" rel="noopener">Source orthophotos SPW ↗</a> · <a href="https://geoportail.wallonie.be/catalogue/a2ce9632-0e70-4e3f-b66e-9ff848e391f0.html" target="_blank" rel="noopener">Source LiDAR ↗</a> · <a href="https://geoservices.wallonie.be/arcgis/rest/services/TOPOGRAPHIE/PICC_VDIFF/MapServer/30" target="_blank" rel="noopener">Couche PICC ↗</a></p></div></div>
+<div class="mailbox"><div class="mailheader"><h3 class="details-title" style="margin:0">✉ Courriel commercial personnalisé</h3><span>Ajouter en pièce jointe les références KDRIX autorisées</span></div><input class="mailinput" data-subject="${p.id}" aria-label="Objet du courriel" value="${safe(mail.subject)}"><textarea class="mailtextarea" data-body="${p.id}" aria-label="Courriel prêt à adapter" spellcheck="true">${safe(mail.body)}</textarea><div class="mailbuttons"><button class="btn primary" data-act="copyemail" data-id="${p.id}">Copier le courriel</button><button class="btn" data-act="mail" data-id="${p.id}">Ouvrir la messagerie</button><button class="btn" data-act="resetmail" data-id="${p.id}">Réinitialiser</button><a class="btn" href="https://www.kdrix.be/fr/nos-rfrences/" target="_blank" rel="noopener">Références KDRIX ↗</a></div><p class="footnote">Références déjà réalisées : carrière de Moha (Carmeuse) et lac de Louvain-la-Neuve. À joindre uniquement si les documents sont autorisés à être diffusés ; aucun envoi automatique.</p></div>`;
+setTimeout(()=>initMap(p),75)}
+function info(id,message,busy=false){const n=$(`[data-mapinfo="${id}"]`);if(n){n.textContent=message;n.classList.toggle('busy',busy)}}
+// Carte et dessin V4 : les géométries enregistrées restent indépendantes des fonds cartographiques.
+function leafletOk(){return typeof window.L!=='undefined'&&typeof L.map==='function'}
+function stopMapEvent(ev){try{if(ev?.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent)}catch{}}
+function initMap(p){
+ if(STATE.maps[p.id]){STATE.maps[p.id].map.invalidateSize();return}
+ const shell=$(`[data-shell="${p.id}"]`);if(!shell)return;
+ if(!leafletOk()){shell.classList.add('no-library');info(p.id,'Leaflet non disponible : vérifiez la connexion ou ouvrez WalOnMap.');return}
+ const map=L.map('map-'+p.id,{
+  zoomControl:true,scrollWheelZoom:true,wheelDebounceTime:35,wheelPxPerZoomLevel:95,
+  zoomSnap:.25,attributionControl:true,preferCanvas:false
+ }).setView(p.point,16);
+ map.scrollWheelZoom?.enable?.();
+ const ortho=L.tileLayer.wms(MAPS.ortho,{layers:'0',format:'image/jpeg',transparent:false,version:'1.3.0',maxZoom:21,attribution:'© SPW — orthophotos 2026'});
+ const relief=L.tileLayer.wms(MAPS.lidar,{layers:'0',format:'image/png',transparent:false,version:'1.3.0',maxZoom:21,attribution:'© SPW — relief MNT 2021–2022'});
+ const osm=L.tileLayer.wms('https://geoservices.wallonie.be/arcgis/services/IGN/FOND_IGN_NB/MapServer/WMSServer',{layers:'2',format:'image/png',transparent:false,version:'1.3.0',maxZoom:21,attribution:'© SPW / IGN — Plan topographique'});
+ const picc=L.tileLayer.wms(MAPS.piccWMS,{layers:'30',format:'image/png',transparent:true,opacity:.53,version:'1.3.0',maxZoom:21,attribution:'© SPW — PICC hydrographie'});
+ const savedLayers=L.layerGroup().addTo(map),candidates=L.layerGroup().addTo(map),drawLayer=L.layerGroup().addTo(map),vertexLayer=L.layerGroup().addTo(map),midLayer=L.layerGroup().addTo(map);
+ const inst={map,views:{ortho,lidar:relief,osm},base:'ortho',picc,hasPicc:false,savedLayers,candidates,drawLayer,vertexLayer,midLayer,mode:'none',draft:[],cursor:null,selectedUid:null,selectedVertex:null,p,requestToken:0,candidateLayers:new Map(),pendingFrame:0};
+ STATE.maps[p.id]=inst;ortho.addTo(map);
+ let errCount=0;
+ ortho.on('tileerror',()=>{errCount++;if(errCount===5&&inst.base==='ortho'){swapLayer(p.id,'osm');info(p.id,'L’orthophoto SPW est momentanément indisponible. Le fond Plan a été activé.')}});
+ relief.on('tileerror',()=>{if(inst.base==='lidar')info(p.id,'Le service de relief SPW ne répond pas. Essayez Plan ou Orthophoto.');});
+ L.marker(p.point,{opacity:.83,title:'Emplacement indicatif du site, pas un contour de bassin'}).bindTooltip('Site indicatif · bassin à identifier',{direction:'top'}).addTo(map);
+ map.on('click',ev=>{if(inst.mode!=='draw')return;inst.draft.push([ev.latlng.lat,ev.latlng.lng]);inst.cursor=null;renderDraft(inst)});
+ map.on('mousemove',ev=>{if(inst.mode!=='draw'||!inst.draft.length)return;inst.cursor=[ev.latlng.lat,ev.latlng.lng];if(!inst.pendingFrame){inst.pendingFrame=requestAnimationFrame(()=>{inst.pendingFrame=0;if(inst.mode==='draw')renderDraft(inst)})}});
+ map.on('mouseout',()=>{if(inst.mode==='draw'){inst.cursor=null;renderDraft(inst)}});
+ paintAreas(p.id);
+ if(areaShapes(p).length){try{const layers=savedLayers.getLayers?.()||[];const box=(typeof L.featureGroup==='function'&&layers.length)?L.featureGroup(layers).getBounds():savedLayers.getBounds?.();if(box?.isValid?.())map.fitBounds(box.pad(.32),{maxZoom:18})}catch{}}
+ setTimeout(()=>map.invalidateSize(),170);
+}
+function swapLayer(id,layer){
+ const x=STATE.maps[id];if(!x||!x.views[layer])return;
+ for(const l of Object.values(x.views))if(x.map.hasLayer(l))x.map.removeLayer(l);
+ x.views[layer].addTo(x.map);x.base=layer;
+ $$(`[data-act="basemap"][data-id="${id}"]`).forEach(b=>b.classList.toggle('active',b.dataset.layer===layer));
+ if(x.hasPicc)x.picc.bringToFront?.();
+ x.savedLayers.bringToFront?.();x.candidates.bringToFront?.();x.drawLayer.bringToFront?.();x.vertexLayer.bringToFront?.();x.midLayer.bringToFront?.();
+ setTimeout(()=>x.map.invalidateSize(),80);
+}
+function latLonToRing(coordinates){return coordinates.map(pos=>[pos[1],pos[0]])}
+function signedRingM2(ring){
+ const R=6378137;let sum=0;
+ for(let i=0;i<ring.length;i++){
+  const a=ring[i],b=ring[(i+1)%ring.length];let dl=(b[0]-a[0])*Math.PI/180;
+  while(dl>Math.PI)dl-=2*Math.PI;while(dl<-Math.PI)dl+=2*Math.PI;
+  sum+=dl*(2+Math.sin(a[1]*Math.PI/180)+Math.sin(b[1]*Math.PI/180));
+ }
+ return Math.abs(sum*R*R/2);
+}
+function polygonAreaM2(rings){if(!rings||!rings.length)return 0;return Math.max(0,signedRingM2(rings[0])-rings.slice(1).reduce((a,r)=>a+signedRingM2(r),0))}
+function geometryArea(geom){if(!geom)return 0;switch(geom.type){case 'Polygon':return polygonAreaM2(geom.coordinates);case 'MultiPolygon':return geom.coordinates.reduce((n,r)=>n+polygonAreaM2(r),0);default:return 0}}
+function drawnArea(latlng){return polygonAreaM2([latlng.map(c=>[c[1],c[0]])])}
+function getAreaCollection(id){if(!STATE.sizes[id]||!Array.isArray(STATE.sizes[id].shapes))STATE.sizes[id]={shapes:[]};return STATE.sizes[id].shapes}
+function shapeParts(s){if(s.kind==='manual')return [[s.points.map(p=>[p[1],p[0]])]];if(!s.geometry)return [];if(s.geometry.type==='Polygon')return [s.geometry.coordinates];if(s.geometry.type==='MultiPolygon')return s.geometry.coordinates;return []}
+// Intersection des lignes horizontales et des contours. Le total est l'union des surfaces,
+// y compris avec des étangs superposés ou des trous intérieurs. Tolérance cartographique.
+function unionArea(shapes){
+ if(!shapes.length)return {m2:0,approx:false,overlap:false};
+ const exact=shapes.reduce((v,s)=>v+(Number(s.m2)||0),0);
+ if(shapes.length===1)return {m2:exact,approx:false,overlap:false};
+ const all=shapes.flatMap(shapeParts);if(!all.length)return {m2:exact,approx:false,overlap:false};
+ const lat0=all.flat(2).reduce((a,p)=>a+p[1],0)/Math.max(1,all.flat(2).length);
+ const mx=6378137*Math.PI/180*Math.cos(lat0*Math.PI/180),my=6378137*Math.PI/180;
+ let ymin=Infinity,ymax=-Infinity;const bounds=[];
+ const parts=shapes.map(s=>shapeParts(s).map(rings=>rings.map(r=>r.map(p=>[p[0]*mx,p[1]*my]))));
+ for(const sh of parts){let a=Infinity,b=-Infinity,c=Infinity,d=-Infinity;
+  for(const ring of sh.flat()){for(const [x,y] of ring){a=Math.min(a,x);b=Math.max(b,x);c=Math.min(c,y);d=Math.max(d,y)}}
+  bounds.push([a,b,c,d]);ymin=Math.min(ymin,c);ymax=Math.max(ymax,d);
+ }
+ if(!Number.isFinite(ymin)||!(ymax>ymin))return {m2:exact,approx:false,overlap:false};
+ let possibleOverlap=false;
+ for(let i=0;i<bounds.length;i++)for(let j=i+1;j<bounds.length;j++){
+  const a=bounds[i],b=bounds[j];if(a[0]<b[1]&&b[0]<a[1]&&a[2]<b[3]&&b[2]<a[3]){possibleOverlap=true;break}
+ }
+ if(!possibleOverlap)return {m2:exact,approx:false,overlap:false};
+ // Pour rester réactif avec des contours PICC détaillés : 1000 bandes au maximum.
+ const steps=Math.min(1200,Math.max(450,Math.ceil((ymax-ymin)/.45))),dy=(ymax-ymin)/steps;
+ let sum=0;
+ for(let k=0;k<steps;k++){
+  const y=ymin+(k+.5)*dy,intervals=[];
+  for(const polys of parts){for(const poly of polys){const crossings=[];
+   for(const ring of poly){for(let i=0;i<ring.length;i++){
+    const [x1,y1]=ring[i], [x2,y2]=ring[(i+1)%ring.length];
+    if((y1<=y&&y<y2)||(y2<=y&&y<y1))crossings.push(x1+(y-y1)*(x2-x1)/(y2-y1));
+   }}
+   crossings.sort((a,b)=>a-b);
+   for(let i=0;i+1<crossings.length;i+=2)if(crossings[i+1]>crossings[i])intervals.push([crossings[i],crossings[i+1]]);
+  }}
+  intervals.sort((a,b)=>a[0]-b[0]);let left=NaN,right=NaN,len=0;
+  for(const [a,b] of intervals){if(!Number.isFinite(left)){left=a;right=b}else if(a<=right){right=Math.max(right,b)}else{len+=right-left;left=a;right=b}}
+  if(Number.isFinite(left))len+=right-left;sum+=len*dy;
+ }
+ const planarPartsArea=(rings)=>{const shoelace=ring=>{let s=0;for(let i=0;i<ring.length;i++){const a=ring[i],b=ring[(i+1)%ring.length];s+=a[0]*b[1]-b[0]*a[1]}return Math.abs(s)/2};return Math.max(0,shoelace(rings[0])-rings.slice(1).reduce((a,r)=>a+shoelace(r),0))};
+ // Coordonnées de la zone importantes: centrage numérique avant le calcul d'aire plane.
+ const pcArea=poly=>{const origin=poly[0]?.[0]||[0,0];const sr=r=>r.map(p=>[p[0]-origin[0],p[1]-origin[1]]);return planarPartsArea(poly.map(sr))};
+ const planar=parts.reduce((a,polys)=>a+polys.reduce((v,poly)=>v+pcArea(poly),0),0);
+ const adjusted=Math.max(0,Math.min(exact,sum*(planar>0?exact/planar:1)));
+ const realOverlap=adjusted<exact-Math.max(3,exact*.0004);
+ return {m2:realOverlap?adjusted:exact,approx:realOverlap,overlap:realOverlap};
+}
+function areaCalculation(id){return unionArea(getAreaCollection(id))}
+function addShape(id,shape){
+ const coll=getAreaCollection(id);if(shape.key&&coll.some(s=>s.key===shape.key)){toast('Cette emprise PICC est déjà ajoutée');return false}
+ if(coll.length>=30){toast('Maximum de 30 emprises par fiche');return false}
+ shape.name=shape.name||`Étang ${coll.length+1}`;coll.push(shape);saved();paintAreas(id);refreshMetrics();toast('Emprise ajoutée au calcul');return true;
+}
+function paintAreas(id){
+ const inst=STATE.maps[id],coll=getAreaCollection(id);if(!inst)return;
+ inst.savedLayers.clearLayers();inst.vertexLayer.clearLayers();inst.midLayer.clearLayers();
+ coll.forEach((shape,i)=>{
+  let path;
+  if(shape.kind==='manual')path=L.polygon(shape.points,{color:'#168cbb',weight:3,fillColor:'#24a5cd',fillOpacity:.22});
+  else if(shape.geometry)path=L.geoJSON({type:'Feature',properties:{},geometry:shape.geometry},{style:{color:'#167fa4',weight:3,fillColor:'#28a3be',fillOpacity:.21}});
+  else return;
+  path.addTo(inst.savedLayers);
+  path.bindTooltip(`${shape.name||'Étang '+(i+1)} — ${fmt(shape.m2,0)} m²`,{sticky:true});
+  path.on('click',ev=>{
+   stopMapEvent(ev);if(inst.mode==='draw')return;
+   if(inst.mode==='picc'&&shape.kind==='picc'){deleteShape(id,shape.uid);updateCandidates(id);info(id,'Emprise PICC retirée. Cliquez sur une zone bleue pour l’ajouter à nouveau.');return}
+   inst.selectedUid=shape.uid;inst.selectedVertex=null;paintAreas(id);info(id,'Emprise sélectionnée : glissez les points pour corriger le contour, ou cliquez sur un + pour ajouter un sommet.');
+  });
+  if(inst.selectedUid===shape.uid){
+   const pieces=path.eachLayer?path.getLayers():[path];
+   pieces.forEach(piece=>piece.setStyle?.({weight:4,color:'#ee703c',fillOpacity:.27}));
+   if(shape.kind==='manual'&&inst.mode==='none'){
+    shape.points.forEach((point,j)=>{
+     const ico=L.divIcon({className:'vertex-host',html:`<div class="custom-vertex ${inst.selectedVertex?.uid===shape.uid&&inst.selectedVertex.index===j?'vertex-selected':''}" aria-label="Sommet ${j+1}" title="Glisser pour déplacer · cliquer pour supprimer">${j+1}</div>`,iconSize:[24,24],iconAnchor:[12,12]});
+     const marker=L.marker(point,{icon:ico,draggable:true,title:'Glisser pour déplacer ce sommet, cliquer pour le sélectionner'}).addTo(inst.vertexLayer);
+     marker.on('click',ev=>{stopMapEvent(ev);inst.selectedVertex={uid:shape.uid,index:j};paintAreas(id);info(id,`Sommet ${j+1} sélectionné : glissez-le, ou utilisez « Supprimer le sommet ».`,false)});
+     marker.on('drag',ev=>{const ll=ev.target.getLatLng();shape.points[j]=[ll.lat,ll.lng];path.setLatLngs(shape.points);setLiveArea(id,drawnArea(shape.points),false)});
+     marker.on('dragend',ev=>{const ll=ev.target.getLatLng();shape.points[j]=[ll.lat,ll.lng];shape.m2=drawnArea(shape.points);saved();paintAreas(id);refreshMetrics();info(id,'Sommet déplacé. La superficie est recalculée.')});
+    });
+    shape.points.forEach((pt,j)=>{
+     const next=shape.points[(j+1)%shape.points.length];
+     const midpoint=[(pt[0]+next[0])/2,(pt[1]+next[1])/2];
+     const ico=L.divIcon({className:'mid-host',html:'<div class="mid-vertex" title="Ajouter un sommet ici">+</div>',iconSize:[22,22],iconAnchor:[11,11]});
+     L.marker(midpoint,{icon:ico,keyboard:true,title:'Ajouter un sommet sur ce segment'}).on('click',ev=>{
+      stopMapEvent(ev);shape.points.splice(j+1,0,midpoint);shape.m2=drawnArea(shape.points);inst.selectedVertex={uid:shape.uid,index:j+1};saved();paintAreas(id);refreshMetrics();info(id,'Sommet ajouté ; déplacez-le pour ajuster le contour.');
+     }).addTo(inst.midLayer);
+    });
+   }
+  }
+ });
+ const vb=$(`[data-vertex-controls="${id}"]`);
+ if(vb){const s=coll.find(v=>v.uid===inst.selectedVertex?.uid);vb.hidden=!(s?.kind==='manual'&&s.points.length>3&&inst.mode==='none');}
+ refreshShapeUI(id);updateCandidates(id);
+ const walonLink=$(`[data-walon="${id}"]`);if(walonLink)walonLink.href=walon(inst.p);
+}
+function refreshShapeUI(id){
+ const s=getAreaCollection(id),total=areaCalculation(id);const n=$(`[data-measuretotal="${id}"]`),o=$(`[data-measureorigin="${id}"]`),list=$(`[data-measurelist="${id}"]`);
+ if(n)n.textContent=s.length?`${total.approx?'≈ ':''}${fmt(total.m2,0)} m² · ${fmt(total.m2/10000,3)} ha`:'—';
+ if(o)o.textContent=s.length?`${s.length} étendue${s.length>1?'s':''} · ${total.overlap?'chevauchements déduits (calcul approché)':'surfaces additionnées sans chevauchement détecté'}`:'Aucune emprise sélectionnée';
+ if(list){const sel=STATE.maps[id]?.selectedUid;list.innerHTML=s.map((v,i)=>`<div class="water-row ${sel===v.uid?'is-selected':''}"><button type="button" class="water-select" data-act="selectshape" data-id="${id}" data-uid="${safe(v.uid)}" title="Sélectionner sur la carte">${String(i+1).padStart(2,'0')} <span class="source-pill">${v.kind==='picc'?'PICC':'Manuel'}</span></button><input class="water-name" data-rename="${id}" data-uid="${safe(v.uid)}" aria-label="Nom du plan d’eau ${i+1}" maxlength="80" value="${safe(v.name||'Étang '+(i+1))}"><strong class="water-area">${fmt(v.m2,0)} m² <span>${fmt(v.m2/10000,3)} ha</span></strong><button class="water-delete" type="button" data-act="deleteshape" data-id="${id}" data-uid="${safe(v.uid)}" title="Supprimer cette emprise" aria-label="Supprimer l’emprise ${i+1}">×</button></div>`).join('')}
+}
+function refreshMetrics(){DATA.forEach(p=>{const a=areaResult(p),r=getRoute(p),v=$(`[data-area="${p.id}"]`),n=$(`[data-area-note="${p.id}"]`),d=$(`[data-route="${p.id}"]`),dn=$(`[data-route-note="${p.id}"]`);if(v){v.textContent=a.label;v.classList.toggle('pending',a.kind==='pending')}if(n)n.textContent=a.detail;if(d){d.textContent=r.label;d.classList.toggle('pending',r.label==='À calculer')}if(dn)dn.textContent=r.detail;if(STATE.maps[p.id])refreshShapeUI(p.id)})}
+function setLiveArea(id,m2,ready=true){const n=$(`[data-livearea="${id}"]`);if(!n)return;n.textContent=ready?`Surface provisoire : ${fmt(m2,0)} m² · ${fmt(m2/10000,3)} ha`:'Placez au moins trois sommets pour afficher la surface';}
+function modeUI(id){
+ const x=STATE.maps[id];if(!x)return;
+ $$(`[data-mode-btn="${id}"]`).forEach(b=>{const on=b.dataset.mode===x.mode;b.classList.toggle('mode-on',on);b.setAttribute('aria-pressed',String(on))});
+ x.map.getContainer().classList.toggle('draw-active',x.mode==='draw');x.map.getContainer().classList.toggle('picc-active',x.mode==='picc');
+ const float=$(`[data-drawbar="${id}"]`);if(float)float.hidden=x.mode!=='draw';
+ const picc=$(`[data-picc-hint="${id}"]`);if(picc)picc.hidden=x.mode!=='picc';
+ const vb=$(`[data-vertex-controls="${id}"]`);if(vb)vb.hidden=x.mode!=='none'||!x.selectedVertex;
+}
+function startDraw(id){
+ const x=STATE.maps[id];if(!x){toast('Carte indisponible');return}
+ if(x.mode==='draw'){clearDraw(id);info(id,'Tracé annulé. Sélectionnez un mode pour continuer.');return}
+ if(x.mode==='picc')closePicc(id);
+ x.mode='draw';x.draft=[];x.cursor=null;x.selectedUid=null;x.selectedVertex=null;
+ x.candidates.clearLayers();x.candidateLayers.clear();x.map.doubleClickZoom?.disable?.();
+ modeUI(id);paintAreas(id);renderDraft(x);
+ info(id,'Mode dessin activé : cliquez sur les berges, puis sur le premier point pour fermer le contour.',true);
+}
+function renderDraft(x){
+ if(x.mode!=='draw')return;
+ x.drawLayer.clearLayers();
+ const pts=x.draft,preview=x.cursor&&pts.length?[...pts,x.cursor]:pts;
+ if(pts.length>1)L.polyline(pts,{color:'#ffffff',weight:6,interactive:false}).addTo(x.drawLayer);
+ if(pts.length>1)L.polyline(pts,{color:'#168ec0',weight:3.6,interactive:false}).addTo(x.drawLayer);
+ if(x.cursor&&pts.length)L.polyline([pts.at(-1),x.cursor],{color:'#125f90',weight:3,dashArray:'7 5',interactive:false}).addTo(x.drawLayer);
+ if(preview.length>=3)L.polygon(preview,{color:'#147ca8',weight:1.5,fillColor:'#2aaad4',fillOpacity:.23,interactive:false}).addTo(x.drawLayer);
+ pts.forEach((pt,j)=>{
+  const first=j===0,marker=L.circleMarker(pt,{radius:first?9:5.5,color:'#fff',weight:first?3:2,fillColor:first?'#ed6a36':'#166f9d',fillOpacity:1,interactive:first,bubblingMouseEvents:false}).addTo(x.drawLayer);
+  if(first){marker.bindTooltip(pts.length>=3?'Cliquer ici pour fermer le contour':'Premier point du tracé',{direction:'top'});marker.on('click',ev=>{stopMapEvent(ev);if(x.draft.length>=3)finishDraw(x.p.id)})}
+ });
+ const a=preview.length>=3?drawnArea(preview):0;setLiveArea(x.p.id,a,preview.length>=3);
+ const points=$(`[data-pointcount="${x.p.id}"]`);if(points)points.textContent=pts.length+' point'+(pts.length>1?'s':'');
+ const finish=$(`[data-act="finishdraw"][data-id="${x.p.id}"]`);if(finish)finish.disabled=pts.length<3;
+ const undo=$(`[data-act="undo"][data-id="${x.p.id}"]`);if(undo)undo.disabled=pts.length===0;
+}
+function clearDraw(id){
+ const x=STATE.maps[id];if(!x)return;
+ if(x.pendingFrame){cancelAnimationFrame(x.pendingFrame);x.pendingFrame=0}
+ x.mode='none';x.draft=[];x.cursor=null;x.drawLayer.clearLayers();x.map.doubleClickZoom?.enable?.();
+ modeUI(id);paintAreas(id);
+}
+function undoPoint(id){const x=STATE.maps[id];if(x?.mode==='draw'&&x.draft.length){x.draft.pop();renderDraft(x);info(id,x.draft.length?'Dernier sommet retiré. Continuez le contour.':'Premier point retiré. Cliquez sur la berge pour commencer.',true)}}
+function finishDraw(id){
+ const x=STATE.maps[id];if(!x||x.mode!=='draw')return;
+ if(x.draft.length<3){toast('Placez au moins trois sommets');return}
+ const points=x.draft.map(p=>[+p[0].toFixed(7),+p[1].toFixed(7)]),m2=drawnArea(points);
+ if(m2<2){toast('Surface trop petite ou contour invalide');return}
+ clearDraw(id);
+ const uid='draw-'+Date.now()+'-'+Math.floor(Math.random()*1e6);
+ x.selectedUid=uid;x.selectedVertex=null;
+ makeSnapshot(id);addShape(id,{kind:'manual',uid,points,m2,created:new Date().toISOString()});
+ info(id,`Étendue d’eau ajoutée (${fmt(m2,0)} m²). Cliquez sur sa surface pour déplacer ou ajouter des sommets. Vous pouvez tracer d’autres étangs.`);
+}
+function removeVertex(id){
+ const x=STATE.maps[id],s=getAreaCollection(id).find(z=>z.uid===x?.selectedVertex?.uid);if(!s||s.kind!=='manual')return;
+ if(s.points.length<=3){toast('Un polygone doit conserver au moins trois sommets');return}
+ s.points.splice(x.selectedVertex.index,1);s.m2=drawnArea(s.points);x.selectedVertex=null;saved();paintAreas(id);refreshMetrics();info(id,'Sommet supprimé et superficie recalculée.');
+}
+function updateCandidates(id){
+ const x=STATE.maps[id];if(!x)return;
+ for(const [key,v] of x.candidateLayers){const selected=getAreaCollection(id).some(s=>s.key===key);
+  v.layer.setStyle?.({color:selected?'#ea713c':'#0b97be',weight:selected?4:3,fillColor:selected?'#f2a270':'#1baed1',fillOpacity:selected?.28:.25});
+  v.layer.bindTooltip?.(`${selected?'✓ Sélectionnée · cliquer pour retirer':'Cliquer pour ajouter au calcul'} · ${fmt(v.m2,0)} m²`,{sticky:true});
+ }
+}
+function closePicc(id){const x=STATE.maps[id];if(!x)return;x.requestToken++;x.mode='none';x.candidates.clearLayers();x.candidateLayers.clear();modeUI(id);paintAreas(id)}
+async function queryPicc(id){
+ const x=STATE.maps[id];if(!x)return;
+ if(x.mode==='picc'){closePicc(id);info(id,'Mode PICC désactivé.');return}
+ if(x.mode==='draw')clearDraw(id);
+ x.mode='picc';x.selectedUid=null;x.selectedVertex=null;x.candidates.clearLayers();x.candidateLayers.clear();modeUI(id);paintAreas(id);
+ info(id,'Recherche des emprises PICC… Les polygones bleus qui apparaîtront seront cliquables.',true);
+ const b=x.map.getBounds(),box=[b.getWest(),b.getSouth(),b.getEast(),b.getNorth()];
+ const params=new URLSearchParams({geometry:box.join(','),geometryType:'esriGeometryEnvelope',inSR:'4326',outSR:'4326',spatialRel:'esriSpatialRelIntersects',outFields:'OBJECTID,GEOREF_ID,NATUR_DESC',returnGeometry:'true',geometryPrecision:'7',resultRecordCount:'200',f:'geojson'});
+ const token=++x.requestToken;
+ try{
+  const ctrl=new AbortController(),time=setTimeout(()=>ctrl.abort(),16000);
+  let res;try{res=await fetch(MAPS.piccQuery+'?'+params.toString(),{signal:ctrl.signal})}finally{clearTimeout(time)}
+  if(!res.ok)throw Error(`HTTP ${res.status}`);
+  const js=await res.json();if(js.error)throw Error(js.error.message||'Service indisponible');
+  if(x.mode!=='picc'||token!==x.requestToken)return;
+  const candidates=(js.features||[]).filter(f=>geometryArea(f.geometry)>=30).sort((a,b)=>geometryArea(b.geometry)-geometryArea(a.geometry)).slice(0,100);
+  if(!candidates.length){info(id,'Aucune emprise trouvée ici. Zoomez et recentrez sur le bassin, puis réactivez « Sélectionner PICC », ou dessinez à la main.');return}
+  for(let k=0;k<candidates.length;k++){
+   const f=candidates[k],m2=geometryArea(f.geometry),key='picc-'+String(f.properties?.GEOREF_ID||f.properties?.OBJECTID||('region-'+k+'-'+Math.round(m2)));
+   const layer=L.geoJSON(f,{style:{color:'#0b97be',weight:3,fillColor:'#20b8dc',fillOpacity:.26}}).addTo(x.candidates);
+   x.candidateLayers.set(key,{layer,m2});
+   layer.on('mouseover',()=>layer.setStyle?.({color:'#f27c3f',weight:4,fillOpacity:.38}));
+   layer.on('mouseout',()=>updateCandidates(id));
+   layer.on('click',ev=>{stopMapEvent(ev);if(x.mode!=='picc')return;
+    const existing=getAreaCollection(id).find(v=>v.key===key);
+    if(existing){deleteShape(id,existing.uid);info(id,'Emprise retirée du calcul. Cliquez à nouveau pour la réajouter.');}
+    else {addShape(id,{kind:'picc',uid:key,key,geometry:f.geometry,m2,created:new Date().toISOString()});info(id,`✓ Emprise PICC ajoutée : ${fmt(m2,0)} m². Cliquez sur d’autres zones bleues pour les cumuler.`)}
+    updateCandidates(id);
+   });
+  }
+  updateCandidates(id);
+  info(id,`${candidates.length} emprise(s) PICC sélectionnable(s). Cliquez sur les polygones bleus pour les ajouter au calcul ; un second clic les retire. Si une zone est absente, dessinez-la à la main.`);
+ }catch(err){if(x.mode==='picc'&&token===x.requestToken)info(id,'Sélection PICC indisponible (service SPW ou réseau). La mesure manuelle reste utilisable. Aucun contour fictif n’a été créé.');}
+}
+function deleteShape(id,uid){const c=getAreaCollection(id),index=c.findIndex(x=>x.uid===uid);if(index<0)return;
+ c.splice(index,1);if(STATE.maps[id]?.selectedUid===uid){STATE.maps[id].selectedUid=null;STATE.maps[id].selectedVertex=null}
+ saved();paintAreas(id);refreshMetrics();toast('Emprise retirée');
+}
+function togglePicc(id,button){const x=STATE.maps[id];if(!x)return;x.hasPicc=!x.hasPicc;if(x.hasPicc){x.picc.addTo(x.map);button.textContent='✓ Masquer la couche PICC';button.classList.add('primary')}else{x.map.removeLayer(x.picc);button.textContent='Afficher la couche PICC';button.classList.remove('primary')}}
+
+function emailData(id){const p=DATA.find(x=>x.id===id);return{p,subject:$(`[data-subject="${id}"]`)?.value||p.subject,body:$(`[data-body="${id}"]`)?.value||p.emailBody}}
+function copyText(value){if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(value).then(()=>toast('Texte copié'),()=>legacyCopy(value));return}legacyCopy(value)}
+function legacyCopy(text){const el=document.createElement('textarea');el.value=text;el.style.position='fixed';el.style.opacity='0';document.body.appendChild(el);el.select();let result=false;try{result=document.execCommand('copy')}catch{}el.remove();toast(result?'Copié dans le presse-papiers':'Copie indisponible : sélectionner le texte manuellement')}
+function saveEmail(id){const v=emailData(id);STATE.drafts[id]={subject:v.subject,body:v.body};saved()}
+function downloadBlob(filename,content,mime){const b=new Blob([content],{type:mime});const url=URL.createObjectURL(b);const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function exportGeo(id){const p=DATA.find(x=>x.id===id),shapes=areaShapes(p);if(!shapes.length){toast('Dessinez ou sélectionnez une zone avant export');return}const features=shapes.map((s,i)=>({type:'Feature',properties:{site:p.name,source:s.kind,contour_modifie:!!s.edited,area_m2:s.m2,date:s.created||null},geometry:s.kind==='manual'?{type:'Polygon',coordinates:[s.points.map(c=>[c[1],c[0]])]}:s.geometry}));downloadBlob('KDRIX_bathymetrie_'+id+'.geojson',JSON.stringify({type:'FeatureCollection',features},null,2),'application/geo+json')}
+function exportShared(){const data={sizes:STATE.sizes,routes:STATE.routes,stars:[...STATE.stars]};const clean=JSON.stringify(data).replace(/</g,'\\u003c');let page=document.documentElement.cloneNode(true);const current=page.querySelector('#kdrix-shared-data');if(current)current.remove();const tag=document.createElement('script');tag.setAttribute('id','kdrix-shared-data');tag.setAttribute('type','application/json');tag.textContent=clean;page.querySelector('head').appendChild(tag);const cards=page.querySelector('#cards');if(cards)cards.innerHTML='';downloadBlob('KDRIX_Bathymetrie_Direction_Mesures.html','<!DOCTYPE html>\n'+page.outerHTML,'text/html;charset=utf-8');toast('Copie HTML enregistrée avec vos surfaces et votre présélection')}
+async function routing(){const b=$('#routes');if(b.disabled)return;b.disabled=true;b.textContent='Calcul des trajets…';try{
+const ctrl=new AbortController(),t=setTimeout(()=>ctrl.abort(),14000);let geoc=await fetch('https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&q='+enc(ORIGIN),{signal:ctrl.signal});clearTimeout(t);const results=await geoc.json();if(!results.length)throw Error('Origine introuvable');const origin=[Number(results[0].lon),Number(results[0].lat)];let points=[origin,...DATA.map(p=>[p.point[1],p.point[0]])];const url='https://router.project-osrm.org/table/v1/driving/'+points.map(p=>p.join(',')).join(';')+'?annotations=distance,duration&sources=0';const c=new AbortController(),tt=setTimeout(()=>c.abort(),18000);const response=await fetch(url,{signal:c.signal});clearTimeout(tt);const v=await response.json();if(v.code!=='Ok'||!v.distances?.[0])throw Error('Service de routes indisponible');let count=0;DATA.forEach((p,i)=>{const dist=v.distances[0][i+1],min=v.durations[0][i+1];if(Number.isFinite(dist)&&Number.isFinite(min)){STATE.routes[p.id]={km:dist/1000,min:min/60,source:'OSRM depuis adresse KDRIX vers le point de site',date:new Date().toISOString()};count++}});saved();refreshMetrics();toast(`${count} trajets calculés · accès au bassin à confirmer`);
+}catch(e){toast('Calcul routier indisponible : aucune distance fictive ajoutée')}finally{b.disabled=false;b.textContent='↗ Distances routières'}}
+function handleActions(){document.addEventListener('click',ev=>{const b=ev.target.closest('[data-act]');if(!b)return;const act=b.dataset.act,id=b.dataset.id,inst=STATE.maps[id],p=DATA.find(x=>x.id===id);if(!p)return;
+if(act==='star'){ev.preventDefault();ev.stopPropagation();STATE.stars.has(id)?STATE.stars.delete(id):STATE.stars.add(id);saved();b.classList.toggle('selected',STATE.stars.has(id));b.textContent=STATE.stars.has(id)?'★':'☆';b.title=STATE.stars.has(id)?'Retirer de la présélection':'Ajouter à la présélection';if(STATE.filter==='selected')render();else toast(STATE.stars.has(id)?'Prospect présélectionné':'Prospect retiré')}
+else if(act==='basemap')swapLayer(id,b.dataset.layer);
+else if(act==='picc')togglePicc(id,b);
+else if(act==='loadpicc')queryPicc(id);
+else if(act==='startdraw')startDraw(id);
+else if(act==='finishdraw')finishDraw(id);
+else if(act==='undo')undoPoint(id)
+else if(act==='canceldraw'){clearDraw(id);info(id,'Dessin annulé. Vous pouvez sélectionner au PICC ou recommencer.');}
+else if(act==='selectshape'){if(inst){if(inst.mode==='draw')clearDraw(id);if(inst.mode==='picc')closePicc(id);inst.selectedUid=b.dataset.uid;inst.editingUid=null;inst.selectedVertex=null;paintAreas(id);info(id,'Contour sélectionné. Glissez un sommet pour le déplacer, ou cliquez sur + pour en insérer un.')}}
+else if(act==='removevertex')removeVertex(id)
+else if(act==='fullscreen'){let shell=$(`[data-shell="${id}"]`);let active=shell.classList.toggle('fullscreen-map');b.textContent=active?'✕ Réduire':'⛶ Agrandir';b.setAttribute('aria-pressed',String(active));setTimeout(()=>inst?.map.invalidateSize(),160)}
+else if(act==='deleteshape')deleteShape(id,b.dataset.uid);
+else if(act==='clearareas'){if(areaShapes(p).length&&!confirm('Effacer toutes les zones mesurées pour ce prospect ?'))return;STATE.sizes[id]={shapes:[]};saved();if(inst){inst.selectedUid=null;inst.candidates.clearLayers();paintAreas(id)}refreshMetrics();info(id,'Zones effacées.');}
+else if(act==='exportgeo')exportGeo(id);
+else if(act==='copyemail'){saveEmail(id);let m=emailData(id);copyText('Objet : '+m.subject+'\n\n'+m.body)}
+else if(act==='resetmail'){delete STATE.drafts[id];saved();$(`[data-subject="${id}"]`).value=p.subject;$(`[data-body="${id}"]`).value=p.emailBody;toast('Courriel d’origine rétabli')}
+else if(act==='mail'){saveEmail(id);if(!p.contact.email){toast('Adresse e-mail à confirmer');return}let m=emailData(id);location.href='mailto:'+p.contact.email+'?subject='+enc(m.subject)+'&body='+enc(m.body)}
+});
+$$('.tab').forEach(b=>b.addEventListener('click',()=>{STATE.filter=b.dataset.filter;STATE.open.clear();render()}));$('#search').addEventListener('input',e=>{STATE.q=e.target.value.toLocaleLowerCase('fr').trim();STATE.open.clear();render()});$('#print').addEventListener('click',()=>print());$('#routes').addEventListener('click',routing);$('#share').addEventListener('click',exportShared);$('#copylist').addEventListener('click',()=>{const chosen=DATA.filter(p=>STATE.stars.has(p.id));if(!chosen.length){toast('Présélectionnez des prospects avec ☆');return}copyText(chosen.map((p,i)=>`${i+1}. ${p.name} — ${p.town}\nSurface : ${areaResult(p).label} · Trajet : ${getRoute(p).label}\n${p.why}\n${walon(p)}`).join('\n\n'))});
+document.addEventListener('input',e=>{const id=e.target.dataset.subject||e.target.dataset.body;if(id)saveEmail(id)});
+document.addEventListener('change',e=>{const id=e.target.dataset.rename,uid=e.target.dataset.uid;if(!id||!uid)return;const x=getAreaCollection(id).find(s=>s.uid===uid);if(x){x.name=e.target.value.trim()||'Étang';e.target.value=x.name;saved();paintAreas(id)}});
+document.addEventListener('keydown',e=>{
+ if(e.target.closest('input,textarea,[contenteditable]'))return;
+ const x=Object.values(STATE.maps).find(v=>v.mode==='draw');
+ if(x){if(e.key==='Escape'){e.preventDefault();clearDraw(x.p.id);info(x.p.id,'Dessin annulé.')}else if(e.key==='Enter'){e.preventDefault();finishDraw(x.p.id)}else if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='z'){e.preventDefault();undoPoint(x.p.id)}}
+ else if(e.key==='Escape')$$('.fullscreen-map').forEach(s=>{s.classList.remove('fullscreen-map');const id=s.dataset.shell;const b=s.querySelector('[data-act="fullscreen"]');if(b){b.textContent='⛶ Agrandir';b.setAttribute('aria-pressed','false')}STATE.maps[id]?.map.invalidateSize()});
+});}
+// V5 : parcellaire CADMAP, emprises PICC éditables, trajets routiers et partage.
+// Droits AGDP : le fichier exporté ne contient que les références et notes cadastrales.
+const CAD_ENDPOINT='https://geoservices.wallonie.be/arcgis/rest/services/PLAN_REGLEMENT/CADMAP_PARCELLES/MapServer/0/query';
+STATE.parcels=shared.parcels||readStore('parcels',{});
+STATE.arrivals=shared.arrivals||readStore('arrivals',{});
+STATE.origin=shared.origin||readStore('origin',null);
+if(shared.drafts)STATE.drafts=shared.drafts;
+for(const p of DATA){if(STATE.routes[p.id]&&!STATE.arrivals[p.id])delete STATE.routes[p.id];}
+
+// Le stockage initial V4 est conservé, auquel s'ajoutent les états V5.
+function saved(){
+ storedSave('stars',[...STATE.stars]);storedSave('sizes',STATE.sizes);storedSave('routes',STATE.routes);
+ storedSave('drafts',STATE.drafts);storedSave('parcels',STATE.parcels);storedSave('arrivals',STATE.arrivals);storedSave('origin',STATE.origin);
+}
+function getRoute(p){
+ const r=STATE.routes[p.id];
+ return r&&Number.isFinite(r.km)&&Number.isFinite(r.min)?{
+  label:`≈ ${fmt(r.km,0)} km`,detail:`≈ ${Math.round(r.min)} min · ${r.accessVerified?'accès placé':'accès à confirmer'}`
+ }:{label:'À calculer',detail:STATE.arrivals[p.id]?'Point d’arrivée défini':'Accès routier à déterminer'};
+}
+function directions(p){
+ const dest=STATE.arrivals[p.id]?.point;
+ return 'https://www.google.com/maps/dir/?api=1&origin='+enc(ORIGIN)+'&destination='+enc(dest?dest.join(','):p.access)+'&travelmode=driving';
+}
+// Chaque emprise PICC conserve son original et sa copie de travail.
+const v4addShape=addShape;
+addShape=function(id,shape){
+ if(shape.kind==='picc'&&shape.geometry){shape.originalGeometry=shape.originalGeometry||JSON.parse(JSON.stringify(shape.geometry));shape.edited=Boolean(shape.edited)}
+ return v4addShape(id,shape);
+};
+function deepCopy(v){return JSON.parse(JSON.stringify(v))}
+function makeSnapshot(id){const inst=STATE.maps[id];if(!inst)return;inst.history=inst.history||[];inst.redo=inst.redo||[];inst.history.push(deepCopy(getAreaCollection(id)));if(inst.history.length>20)inst.history.shift();inst.redo=[];}
+function restoreHistory(id,redo=false){
+ const inst=STATE.maps[id];if(!inst)return;
+ const from=redo?inst.redo:inst.history,to=redo?inst.history:inst.redo;
+ if(!from?.length)return toast('Aucune modification à '+(redo?'rétablir':'annuler'));
+ to.push(deepCopy(getAreaCollection(id)));
+ STATE.sizes[id]={shapes:from.pop()};inst.selectedVertex=null;inst.editingUid=null;
+ saved();paintAreas(id);refreshMetrics();info(id,'Modification '+(redo?'rétablie':'annulée')+'.');
+}
+function beginPiccEdit(id,uid){
+ const inst=STATE.maps[id],s=getAreaCollection(id).find(x=>x.uid===uid);
+ if(!inst||s?.kind!=='picc')return;
+ if(inst.mode==='picc')closePicc(id);
+ if(inst.mode==='draw')clearDraw(id);
+ if(!s.originalGeometry)s.originalGeometry=deepCopy(s.geometry);
+ inst.selectedUid=uid;inst.editingUid=uid;inst.selectedVertex=null;
+ paintAreas(id);info(id,'Contour PICC en mode édition : déplacez les points orange, ou ajoutez un sommet avec les boutons +. L’original peut être restauré.');
+}
+function endPiccEdit(id){const inst=STATE.maps[id];if(!inst)return;inst.editingUid=null;inst.selectedVertex=null;paintAreas(id);info(id,'Contour PICC enregistré.');}
+function resetPicc(id,uid){
+ const x=getAreaCollection(id).find(s=>s.uid===uid);if(x?.kind!=='picc')return;
+ if(!x.originalGeometry){toast('Contour PICC initial non disponible');return}
+ makeSnapshot(id);x.geometry=deepCopy(x.originalGeometry);x.edited=false;x.m2=geometryArea(x.geometry);
+ const inst=STATE.maps[id];if(inst){inst.selectedUid=uid;inst.editingUid=null;inst.selectedVertex=null;}
+ saved();paintAreas(id);refreshMetrics();info(id,'Seule cette emprise a retrouvé sa géométrie PICC d’origine.');
+}
+// Géométries GeoJSON : les trous et multipolygones sont conservés.
+function ringsOf(s){
+ if(s.kind==='manual')return [{kind:'manual',coords:s.points,poly:0,ring:0}];
+ if(s.kind!=='picc'||!s.geometry)return [];
+ const polys=s.geometry.type==='MultiPolygon'?s.geometry.coordinates:[s.geometry.coordinates];
+ const out=[];polys.forEach((poly,pi)=>poly.forEach((ring,ri)=>out.push({kind:'picc',coords:ring,poly:pi,ring:ri})));
+ return out;
+}
+function ringCount(r){
+ if(r.kind==='manual')return r.coords.length;
+ if(!r.coords.length)return 0;
+ const a=r.coords[0],b=r.coords.at(-1);
+ return Math.abs(a[0]-b[0])<1e-10&&Math.abs(a[1]-b[1])<1e-10?r.coords.length-1:r.coords.length;
+}
+function latlngAt(r,j){return r.kind==='manual'?r.coords[j]:[r.coords[j][1],r.coords[j][0]]}
+function updateRingPoint(s,r,j,ll){
+ const value=r.kind==='manual'?[ll.lat,ll.lng]:[ll.lng,ll.lat];r.coords[j]=value;
+ if(r.kind==='picc'&&j===0&&r.coords.length>=4)r.coords[r.coords.length-1]=[...value];
+ if(r.kind==='picc')s.edited=true;
+ s.m2=r.kind==='manual'?drawnArea(s.points):geometryArea(s.geometry);
+}
+function insertRingPoint(s,r,j,latlng){
+ const value=r.kind==='manual'?[latlng[0],latlng[1]]:[latlng[1],latlng[0]];
+ r.coords.splice(j+1,0,value);if(r.kind==='picc')s.edited=true;
+ s.m2=s.kind==='manual'?drawnArea(s.points):geometryArea(s.geometry);
+}
+function removeVertex(id){
+ const inst=STATE.maps[id],hit=inst?.selectedVertex;
+ const s=getAreaCollection(id).find(a=>a.uid===hit?.uid);if(!s||!hit)return;
+ const ring=ringsOf(s).find(r=>r.poly===hit.poly&&r.ring===hit.ring);
+ if(!ring||ringCount(ring)<=3){toast('Il faut conserver au moins trois sommets');return}
+ makeSnapshot(id);ring.coords.splice(hit.index,1);
+ if(ring.kind==='picc'){
+  if(hit.index===0&&ring.coords.length>=4)ring.coords[ring.coords.length-1]=[...ring.coords[0]];
+  s.edited=true;s.m2=geometryArea(s.geometry);
+ }else s.m2=drawnArea(s.points);
+ inst.selectedVertex=null;saved();paintAreas(id);refreshMetrics();info(id,'Sommet supprimé, surface recalculée.');
+}
+function updateVisibleGeometry(layer,s){
+ try{
+  if(s.kind==='manual')layer.setLatLngs(s.points);
+  else if(layer.eachLayer){
+   const depth=s.geometry.type==='MultiPolygon'?2:1;
+   const ll=L.GeoJSON.coordsToLatLngs(s.geometry.coordinates,depth);
+   layer.eachLayer(p=>p.setLatLngs(ll));
+  }
+ }catch{}
+}
+function paintAreas(id){
+ const inst=STATE.maps[id],coll=getAreaCollection(id);if(!inst)return;
+ inst.savedLayers.clearLayers();inst.vertexLayer.clearLayers();inst.midLayer.clearLayers();
+ coll.forEach((s,i)=>{
+  let layer;
+  if(s.kind==='manual')layer=L.polygon(s.points,{color:'#168cbb',weight:3,fillColor:'#24a5cd',fillOpacity:.22});
+  else if(s.geometry)layer=L.geoJSON({type:'Feature',properties:{},geometry:s.geometry},{style:{color:'#167fa4',weight:3,fillColor:'#28a3be',fillOpacity:.21}});
+  else return;
+  layer.addTo(inst.savedLayers);
+  layer.bindTooltip(`${s.name||'Étang '+(i+1)} · ${fmt(s.m2,0)} m²${s.edited?' · PICC ajusté':''}`,{sticky:true});
+  layer.on('click',ev=>{
+   stopMapEvent(ev);if(inst.mode==='draw'||inst.mode==='parcel')return;
+   if(inst.mode==='picc'&&s.kind==='picc'){deleteShape(id,s.uid);updateCandidates(id);info(id,'Emprise PICC retirée.');return}
+   inst.selectedUid=s.uid;inst.selectedVertex=null;inst.editingUid=null;paintAreas(id);
+   info(id,s.kind==='picc'?'Emprise PICC sélectionnée. Cliquez sur « Modifier le contour » ou sur « Reset PICC » sous la carte.':'Contour sélectionné : déplacez les points orange ou ajoutez-en avec +.');
+  });
+  const active=inst.selectedUid===s.uid;
+  if(active){
+   (layer.eachLayer?layer.getLayers():[layer]).forEach(el=>el.setStyle?.({weight:4,color:'#ee703c',fillOpacity:.26}));
+   if((s.kind==='manual'||inst.editingUid===s.uid)&&inst.mode==='none'){
+    const rings=ringsOf(s);
+    rings.forEach(r=>{
+     const n=ringCount(r);const stride=n>350?Math.ceil(n/350):1;
+     for(let j=0;j<n;j+=stride){
+      const pt=latlngAt(r,j);
+      const chosen=inst.selectedVertex?.uid===s.uid&&inst.selectedVertex.poly===r.poly&&inst.selectedVertex.ring===r.ring&&inst.selectedVertex.index===j;
+      const ico=L.divIcon({className:'vertex-host',html:`<div class="custom-vertex ${chosen?'vertex-selected':''}" title="Déplacer ce sommet">●</div>`,iconSize:[24,24],iconAnchor:[12,12]});
+      const handle=L.marker(pt,{icon:ico,draggable:true,title:'Déplacer ce sommet'}).addTo(inst.vertexLayer);
+      handle.on('click',ev=>{stopMapEvent(ev);inst.selectedVertex={uid:s.uid,poly:r.poly,ring:r.ring,index:j};paintAreas(id);info(id,'Sommet sélectionné. Vous pouvez le glisser ou le supprimer.');});
+      handle.on('dragstart',()=>makeSnapshot(id));
+      handle.on('drag',ev=>{updateRingPoint(s,r,j,ev.target.getLatLng());updateVisibleGeometry(layer,s);setLiveArea(id,s.m2,true)});
+      handle.on('dragend',ev=>{updateRingPoint(s,r,j,ev.target.getLatLng());saved();paintAreas(id);refreshMetrics();info(id,'Contour ajusté, superficie actualisée.');});
+      const nextIndex=(j+stride)%n;
+      if(nextIndex===j)continue;
+      const a=pt,b=latlngAt(r,nextIndex),mid=[(a[0]+b[0])/2,(a[1]+b[1])/2];
+      const middle=L.divIcon({className:'mid-host',html:'<div class="mid-vertex" title="Ajouter un sommet">+</div>',iconSize:[22,22],iconAnchor:[11,11]});
+      L.marker(mid,{icon:middle,keyboard:true,title:'Ajouter un sommet'}).on('click',ev=>{
+       stopMapEvent(ev);makeSnapshot(id);
+       // Insertion entre deux points consécutifs (avec grands anneaux, après le sommet visible).
+       insertRingPoint(s,r,j,mid);
+       inst.selectedVertex={uid:s.uid,poly:r.poly,ring:r.ring,index:j+1};
+       saved();paintAreas(id);refreshMetrics();info(id,'Sommet ajouté. Glissez-le pour corriger la berge.');
+      }).addTo(inst.midLayer);
+     }
+    });
+   }
+  }
+ });
+ const bar=$(`[data-vertex-controls="${id}"]`);
+ if(bar){const s=coll.find(v=>v.uid===inst.selectedVertex?.uid);bar.hidden=!(s&&inst.mode==='none');}
+ refreshShapeUI(id);updateCandidates(id);
+ const wl=$(`[data-walon="${id}"]`);if(wl)wl.href=walon(inst.p);
+}
+function refreshShapeUI(id){
+ const shapes=getAreaCollection(id),total=areaCalculation(id),inst=STATE.maps[id];
+ const n=$(`[data-measuretotal="${id}"]`),o=$(`[data-measureorigin="${id}"]`),list=$(`[data-measurelist="${id}"]`);
+ if(n)n.textContent=shapes.length?`${total.approx?'≈ ':''}${fmt(total.m2,0)} m² · ${fmt(total.m2/10000,3)} ha`:'—';
+ if(o)o.textContent=shapes.length?`${shapes.length} plan(s) d’eau · ${total.overlap?'chevauchements déduits (estimation)':'surfaces cumulées'}`:'Aucune emprise sélectionnée';
+ if(!list)return;
+ list.innerHTML=shapes.map((s,i)=>{
+  const selected=inst?.selectedUid===s.uid,editable=s.kind==='picc';
+  return `<div class="water-row v5-row ${selected?'is-selected':''}">
+    <button class="water-select" data-act="selectshape" data-id="${id}" data-uid="${safe(s.uid)}">${i+1}. <span class="source-pill">${s.kind==='picc'?(s.edited?'PICC ajusté':'PICC'):'Tracé'}</span></button>
+    <input class="water-name" data-rename="${id}" data-uid="${safe(s.uid)}" aria-label="Nom du plan d’eau" value="${safe(s.name||'Étang')}" maxlength="80">
+    <strong class="water-area">${fmt(s.m2,0)} m² <span>${fmt(s.m2/10000,3)} ha</span></strong>
+    <div class="shape-actions">
+      ${editable?`<button class="btn compact-btn" data-act="editpicc" data-id="${id}" data-uid="${safe(s.uid)}" title="Modifier ce contour">${inst?.editingUid===s.uid?'✓ Terminer édition':'✎ Modifier'}</button><button class="btn compact-btn" data-act="resetpicc" data-id="${id}" data-uid="${safe(s.uid)}" title="Restaurer seulement le contour original" ${s.edited?'':'disabled'}>↶ Reset PICC</button>`:''}
+      <button class="water-delete" data-act="deleteshape" data-id="${id}" data-uid="${safe(s.uid)}" title="Retirer du calcul" aria-label="Retirer cette emprise">×</button>
+    </div>
+  </div>`;
+ }).join('');
+ const hist=$(`[data-edit-history="${id}"]`);
+ if(hist){hist.querySelector('[data-act="undoedit"]').disabled=!(inst?.history?.length);hist.querySelector('[data-act="redoedit"]').disabled=!(inst?.redo?.length)}
+}
+
+// Parcelles : uniquement les références CAPAKEY et la qualification sont sauvegardées.
+function cadRecords(id){return STATE.parcels[id]||(STATE.parcels[id]={})}
+function cadStatusLabel(st){return st==='verifie'?'Lien vérifié':st==='suppose'?'À vérifier':'Écartée'}
+function cadLayerStyle(status,highlightOnly=false){
+ const basic={color:'#645b65',weight:1,opacity:.72,fillOpacity:0};
+ if(!status||!highlightOnly)return basic;
+ if(status==='verifie')return {color:'#238369',weight:3,fillColor:'#41bf9c',fillOpacity:.12};
+ if(status==='suppose')return {color:'#d78028',weight:2.8,dashArray:'5 5',fillColor:'#eeb267',fillOpacity:.10};
+ return {color:'#8b9299',weight:1.4,dashArray:'3 6',fillOpacity:0};
+}
+function parcelFeatureKey(f){return String(f?.properties?.CAPAKEY||'').trim()}
+function parcelBbox(geom){
+ const flat=geom?.type==='MultiPolygon'?geom.coordinates.flat(2):geom?.type==='Polygon'?geom.coordinates.flat(1):[];
+ if(!flat.length)return null;
+ return [Math.min(...flat.map(p=>p[0])),Math.min(...flat.map(p=>p[1])),Math.max(...flat.map(p=>p[0])),Math.max(...flat.map(p=>p[1]))];
+}
+function boxesOverlap(a,b){return a&&b&&a[0]<=b[2]&&b[0]<=a[2]&&a[1]<=b[3]&&b[1]<=a[3]}
+function ptInside(pt,ring){let yes=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){
+ const a=ring[i],b=ring[j];if(((a[1]>pt[1])!==(b[1]>pt[1]))&&pt[0]<(b[0]-a[0])*(pt[1]-a[1])/(b[1]-a[1])+a[0])yes=!yes;
+}return yes;}
+function lineCross(a,b,c,d){const cross=(p,q,r)=>(q[0]-p[0])*(r[1]-p[1])-(q[1]-p[1])*(r[0]-p[0]);const x=cross(a,b,c),y=cross(a,b,d),u=cross(c,d,a),v=cross(c,d,b);return x*y<0&&u*v<0}
+function geomIntersects(a,b){
+ if(!boxesOverlap(parcelBbox(a),parcelBbox(b)))return false;
+ const polygons=g=>g.type==='Polygon'?[g.coordinates]:g.type==='MultiPolygon'?g.coordinates:[];
+ for(const p of polygons(a))for(const q of polygons(b)){
+  const u=p[0],v=q[0];if(u?.some(pt=>ptInside(pt,v))||v?.some(pt=>ptInside(pt,u)))return true;
+  for(let i=0;i<u.length-1;i++)for(let j=0;j<v.length-1;j++)if(lineCross(u[i],u[i+1],v[j],v[j+1]))return true;
+ }
+ return false;
+}
+function shapeGeo(s){return s.kind==='manual'?{type:'Polygon',coordinates:[[...s.points.map(c=>[c[1],c[0]]),[s.points[0][1],s.points[0][0]]]]}:s.geometry}
+function renderParcels(id){
+ const x=STATE.maps[id];if(!x?.parcelVisual)return;
+ x.parcelVisual.clearLayers();x.parcelHighlights.clearLayers();
+ const marked=cadRecords(id);
+ for(const f of x.parcelData||[]){
+  const key=parcelFeatureKey(f),status=marked[key]?.status;
+  if(x.cadVisible){
+   const l=L.geoJSON(f,{style:cadLayerStyle(null,false)}).addTo(x.parcelVisual);
+   l.on('click',ev=>{stopMapEvent(ev);onParcelClick(id,key)});
+   l.bindTooltip(`Parcelle ${key} · cliquez pour examiner`,{sticky:true});
+  }
+  if(x.cadHighlight&&status&&status!=='ecarte'){
+   const l=L.geoJSON(f,{style:cadLayerStyle(status,true)}).addTo(x.parcelHighlights);
+   l.on('click',ev=>{stopMapEvent(ev);onParcelClick(id,key)});
+   l.bindTooltip(`Parcelle ${key} · ${cadStatusLabel(status)}`,{sticky:true});
+  }
+ }
+ x.parcelVisual.bringToFront?.();x.parcelHighlights.bringToFront?.();
+ x.savedLayers.bringToFront?.();x.vertexLayer.bringToFront?.();x.midLayer.bringToFront?.();
+ refreshParcelUI(id);
+}
+function refreshParcelUI(id){
+ const marked=cadRecords(id),items=Object.entries(marked),active=items.filter(([,v])=>v.status!=='ecarte');
+ const verified=active.filter(([,v])=>v.status==='verifie').length,unknown=active.filter(([,v])=>v.status==='suppose').length;
+ const counter=$(`[data-cadcount="${id}"]`);
+ if(counter)counter.textContent=`${verified} vérifiée(s) · ${unknown} à vérifier`;
+ const list=$(`[data-parcel-list="${id}"]`);
+ if(list)list.innerHTML=items.length?items.map(([key,v])=>`<button type="button" class="cad-item" data-act="openparcel" data-id="${id}" data-key="${safe(key)}"><b>${safe(key)}</b><span class="cad-status ${v.status}">${cadStatusLabel(v.status)}</span></button>`).join(''):'<span class="muted-small">Aucune parcelle associée. Activez le cadastre et cliquez sur une parcelle.</span>';
+}
+function onParcelClick(id,key){
+ const x=STATE.maps[id];if(!x||x.mode==='draw'||x.mode==='picc')return;
+ x.focusParcel=key;
+ const box=$(`[data-parcel-editor="${id}"]`);if(!box)return;
+ const entry=cadRecords(id)[key]||{status:'suppose',relation:'exploitation',source:'',note:''};
+ box.hidden=false;box.querySelector('[data-cad-key]').textContent=key;
+ box.querySelector('[data-cad-status]').value=entry.status;
+ box.querySelector('[data-cad-relation]').value=entry.relation||'exploitation';
+ box.querySelector('[data-cad-source]').value=entry.source||'';
+ box.querySelector('[data-cad-note]').value=entry.note||'';
+ box.scrollIntoView?.({block:'nearest',behavior:'smooth'});
+ info(id,'Parcelle '+key+' : choisissez un statut. « Vérifiée » nécessite une source documentée et une relation identifiée.');
+}
+function saveParcel(id){
+ const x=STATE.maps[id],key=x?.focusParcel,box=$(`[data-parcel-editor="${id}"]`);if(!key||!box)return;
+ const status=box.querySelector('[data-cad-status]').value,relation=box.querySelector('[data-cad-relation]').value;
+ const source=box.querySelector('[data-cad-source]').value.trim(),note=box.querySelector('[data-cad-note]').value.trim();
+ if(status==='verifie'&&source.length<8){toast('Lien vérifié : renseignez la source précise du lien');return}
+ cadRecords(id)[key]={status,relation,source,note,updated:new Date().toISOString()};saved();renderParcels(id);
+ toast('Parcelle '+key+' : '+cadStatusLabel(status));
+}
+function removeParcel(id){const x=STATE.maps[id],key=x?.focusParcel;if(!key)return;delete cadRecords(id)[key];saved();x.focusParcel=null;const box=$(`[data-parcel-editor="${id}"]`);if(box)box.hidden=true;renderParcels(id);}
+function suggestParcels(id){
+ const x=STATE.maps[id],waters=getAreaCollection(id);
+ if(!x)return;
+ if(!waters.length){info(id,'Sélectionnez ou dessinez d’abord un bassin, puis réessayez.');return}
+ if(!x.parcelData?.length){info(id,'Activez la couche cadastrale et chargez les parcelles avant de proposer les candidates.');return}
+ let count=0;for(const f of x.parcelData){const key=parcelFeatureKey(f);if(!key||cadRecords(id)[key])continue;
+  if(waters.some(s=>geomIntersects(f.geometry,shapeGeo(s)))){
+   cadRecords(id)[key]={status:'suppose',relation:'exploitation',source:'',note:'Suggestion cartographique : cette parcelle recoupe une emprise d’eau sélectionnée. Propriété et exploitation à vérifier.',updated:new Date().toISOString()};count++;
+  }
+ }
+ saved();renderParcels(id);info(id,`${count} parcelle(s) ajoutée(s) comme candidates à vérifier. Une intersection géographique ne prouve pas la propriété ni l'exploitation.`);
+}
+async function fetchCadastre(id){
+ const x=STATE.maps[id];if(!x||( !x.cadVisible&&!x.cadHighlight))return;
+ if(x.map.getZoom?.()<14){info(id,'Cadastre : zoomez davantage (niveau 14 minimum) pour charger les limites et leurs références.');return}
+ const bb=x.map.getBounds();if(!bb)return;
+ const west=bb.getWest(),east=bb.getEast(),south=bb.getSouth(),north=bb.getNorth();
+ if((east-west)*(north-south)>.00035){info(id,'Cadastre : zone trop étendue. Zoomez pour limiter la recherche.');return}
+ const signature=[west,south,east,north].map(c=>c.toFixed(5)).join(',');
+ if(signature===x.lastCadBBox&&x.parcelData?.length){renderParcels(id);return}
+ const current=++x.cadToken;
+ const params=new URLSearchParams({geometry:[west,south,east,north].join(','),geometryType:'esriGeometryEnvelope',inSR:'4326',outSR:'4326',spatialRel:'esriSpatialRelIntersects',outFields:'OBJECTID,CAPAKEY,NOM_COMMUNE,DIV_NOM,SECT,RADICAL',returnGeometry:'true',geometryPrecision:'7',resultRecordCount:'600',f:'geojson'});
+ const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),17000);
+ try{
+  const res=await fetch(CAD_ENDPOINT+'?'+params.toString(),{signal:ctrl.signal});if(!res.ok)throw new Error('HTTP '+res.status);
+  const dat=await res.json();if(dat.error)throw new Error(dat.error.message||'Erreur ArcGIS');
+  if(!STATE.maps[id]||current!==x.cadToken)return;
+  x.parcelData=(dat.features||[]).filter(f=>parcelFeatureKey(f));x.lastCadBBox=signature;
+  renderParcels(id);info(id,`${x.parcelData.length} parcelles chargées (AGDP/SPW). Cliquez sur un contour pour qualifier le lien avec le prospect.`);
+  if(dat.exceededTransferLimit)info(id,'Limite du service cadastral atteinte. Zoomez davantage pour consulter toutes les parcelles de cette zone.');
+ }catch(e){if(current===x.cadToken)info(id,'Cadastre temporairement inaccessible : '+String(e.message).slice(0,110)+'. Les statuts sauvegardés restent disponibles.');}
+ finally{clearTimeout(timer)}
+}
+function cadToggle(id,kind,value){
+ const x=STATE.maps[id];if(!x)return;
+ if(kind==='cad')x.cadVisible=value;else x.cadHighlight=value;
+ if(!x.cadVisible&&!x.cadHighlight){x.cadToken++;x.parcelVisual.clearLayers();x.parcelHighlights.clearLayers();return}
+ if(x.parcelData?.length){renderParcels(id)}
+ fetchCadastre(id);
+}
+// Accès routier : impossible de présumer que le point central d’un site correspond à son portail.
+const v4InitMap=initMap;
+initMap=function(p){
+ v4InitMap(p);const x=STATE.maps[p.id];if(!x||x.v5ready)return;x.v5ready=true;
+ x.cadVisible=false;x.cadHighlight=false;x.parcelData=[];x.lastCadBBox='';x.cadToken=0;x.focusParcel=null;
+ x.parcelVisual=L.layerGroup().addTo(x.map);x.parcelHighlights=L.layerGroup().addTo(x.map);
+ x.map.on('moveend',()=>{if(!x.cadVisible&&!x.cadHighlight)return;clearTimeout(x.cadTimer);x.cadTimer=setTimeout(()=>fetchCadastre(p.id),350)});
+ // L'emplacement initial est un simple repère : l'utilisateur le déplace au portail si nécessaire.
+ const arrival=STATE.arrivals[p.id];
+ const start=arrival?.point||p.point;
+ x.accessMarker=L.marker(start,{draggable:true,opacity:arrival?1:.65,title:'Déplacez ce repère vers l’accès routier du site'});
+ x.accessMarker.on('dragend',ev=>{
+  const ll=ev.target.getLatLng();STATE.arrivals[p.id]={point:[ll.lat,ll.lng],method:'placé manuellement',verified:false,date:new Date().toISOString()};
+  x.accessMarkerMoved=true;delete STATE.routes[p.id];saved();refreshMetrics();refreshArrivalUI(p.id);
+  info(p.id,'Nouveau point d’accès enregistré. Cliquez sur « Calculer ce trajet » pour obtenir la distance routière.');
+ });
+ const plan=x.views.osm;let planErrors=0;
+ plan?.on('tileerror',()=>{
+  if(x.base!=='osm'||++planErrors<4||x.planFallback)return;x.planFallback=true;
+  x.map.removeLayer(plan);
+  const alt=L.tileLayer.wms('https://geoservices.wallonie.be/arcgis/services/FDC/FDC_SPW_LEGER/MapServer/WMSServer',{layers:'0,4,5,6,7,10,11,12,13,15,16',format:'image/png',transparent:false,version:'1.3.0',maxZoom:21,attribution:'© SPW / IGN — fond de carte léger'});
+  x.views.osm=alt;alt.addTo(x.map);
+  info(p.id,'Le fond topographique IGN ne répond pas. Essai du fond de carte léger du SPW.');
+ });
+ refreshParcelUI(p.id);refreshArrivalUI(p.id);
+};
+function placeAccess(id){
+ const x=STATE.maps[id];if(!x)return;
+ if(!x.map.hasLayer(x.accessMarker))x.accessMarker.addTo(x.map);
+ x.accessMarker.bindTooltip('Accès routier : glissez ce repère vers l’entrée accessible en voiture',{direction:'top',permanent:false}).openTooltip?.();
+ info(id,'Faites glisser le repère vers l’entrée du site accessible en voiture. La distance sera ensuite calculée jusqu’à ce point.');
+}
+function confirmAccess(id){
+ const x=STATE.maps[id];if(!x)return;
+ placeAccess(id);if(!x.accessMarkerMoved&&!STATE.arrivals[id]){info(id,'Déplacez d’abord le repère jusqu’au véritable portail du site. Le point initial n’est qu’une localisation indicative.');return;}const ll=x.accessMarker.getLatLng();
+ STATE.arrivals[id]={point:[ll.lat,ll.lng],method:'choisi sur la carte',verified:false,date:new Date().toISOString()};
+ delete STATE.routes[id];saved();refreshMetrics();refreshArrivalUI(id);toast('Point d’arrivée enregistré : à confirmer sur le terrain.');
+}
+function refreshArrivalUI(id){
+ const arr=STATE.arrivals[id],r=STATE.routes[id],span=$(`[data-arrival="${id}"]`);
+ if(span)span.textContent=arr?`${arr.method} · ${arr.point.map(v=>v.toFixed(5)).join(', ')} · accès à vérifier`:'Accès routier non positionné. Le point cartographique est seulement indicatif.';
+ const det=$(`[data-route-detail="${id}"]`);
+ if(det)det.textContent=r?`${fmt(r.km,1)} km · ${Math.round(r.min)} min en voiture · ${r.source} · ${new Date(r.date).toLocaleDateString('fr-BE')} · ${r.accessVerified?'accès validé':'accès à confirmer'}`:'Aucune distance routière vérifiée enregistrée.';
+ const link=$(`[data-route-link="${id}"]`);if(link)link.href=directions(DATA.find(p=>p.id===id));
+}
+async function fetchJson(url,timeout=16000){
+ const controller=new AbortController(),time=setTimeout(()=>controller.abort(),timeout);
+ try{const res=await fetch(url,{signal:controller.signal,headers:{'Accept':'application/json'}});if(!res.ok)throw new Error('HTTP '+res.status);return await res.json()}
+ finally{clearTimeout(time)}
+}
+async function geocodeAddress(address){
+ const result=await fetchJson('https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=be&q='+enc(address));
+ if(!result?.length)return null;
+ const y=Number(result[0].lat),x=Number(result[0].lon);
+ return Number.isFinite(y)&&Number.isFinite(x)?{point:[y,x],label:result[0].display_name}:null;
+}
+async function routeOrigin(){
+ if(STATE.origin?.point?.length===2)return STATE.origin.point;
+ const result=await geocodeAddress(ORIGIN);if(!result)throw new Error('Adresse du bureau introuvable');
+ STATE.origin={point:result.point,label:result.label,method:'géocodage Nominatim',date:new Date().toISOString()};saved();return result.point;
+}
+async function geocodeSite(id){
+ const p=DATA.find(v=>v.id===id);if(!p)return false;
+ if(p.access.includes('à vérifier')||p.access.includes('Carrière des Dolomies')||p.access.includes('Centrale de Coo')){
+  info(id,'Accès incertain : déplacez le repère jusqu’au portail plutôt que d’utiliser le centre de la carrière ou du réservoir.');return false;
+ }
+ try{
+  const result=await geocodeAddress(p.access+', Belgique');if(!result)throw new Error('adresse non trouvée');
+  STATE.arrivals[id]={point:result.point,method:'adresse géocodée (accès à vérifier)',verified:false,date:new Date().toISOString()};
+  delete STATE.routes[id];saved();refreshMetrics();refreshArrivalUI(id);
+  const x=STATE.maps[id];if(x){x.accessMarker.setLatLng(result.point);if(!x.map.hasLayer(x.accessMarker))x.accessMarker.addTo(x.map)}
+  info(id,'Adresse géocodée. Vérifiez le point d’arrivée sur l’orthophoto avant de considérer le trajet comme confirmé.');return true;
+ }catch(e){info(id,'Géocodage indisponible ('+e.message+'). Placez l’accès manuellement.');return false}
+}
+async function routeFor(id){
+ const p=DATA.find(v=>v.id===id);if(!p)return;
+ const button=$(`[data-act="calcsingle"][data-id="${id}"]`);if(button){button.disabled=true;button.textContent='Calcul…'}
+ try{
+  const dest=STATE.arrivals[id]?.point;
+  if(!dest)throw new Error('Placez l’accès routier sur la carte ou géocodez son adresse.');
+  const origin=await routeOrigin();const coords=[[origin[1],origin[0]],[dest[1],dest[0]]];
+  const url='https://router.project-osrm.org/route/v1/driving/'+coords.map(x=>x.join(',')).join(';')+'?overview=false&steps=false';
+  const result=await fetchJson(url,19000);if(result.code!=='Ok'||!result.routes?.length)throw new Error('Itinéraire routier introuvable');
+  const r=result.routes[0];STATE.routes[id]={km:r.distance/1000,min:r.duration/60,source:'OSRM / OSM (démo, sans trafic)',date:new Date().toISOString(),accessVerified:false};
+  saved();refreshMetrics();refreshArrivalUI(id);info(id,'Distance calculée sur le réseau routier. Vérifiez l’accès retenu avant une offre.');
+ }catch(e){info(id,'Trajet non vérifié : '+e.message)}
+ finally{if(button){button.disabled=false;button.textContent='Calculer ce trajet'}}
+}
+async function routing(){
+ const button=$('#routes');if(button.disabled)return;button.disabled=true;button.textContent='Calcul routier en cours…';
+ let count=0,fail=[];
+ try{
+  const origin=await routeOrigin();
+  if(!STATE.arrivals[DATA[0].id])await new Promise(r=>setTimeout(r,1150));
+  // Nominatim impose un usage modéré : une seule requête par seconde, sans rafale.
+  for(const p of DATA){
+   if(!STATE.arrivals[p.id]){
+    if(p.access.includes('à vérifier')||p.access.includes('Carrière des Dolomies')||p.access.includes('Centrale de Coo'))continue;
+    await geocodeSite(p.id);await new Promise(r=>setTimeout(r,1150));
+   }
+  }
+  const ids=DATA.filter(p=>STATE.arrivals[p.id]?.point).map(p=>p.id);
+  if(!ids.length)throw new Error('Aucun accès identifié');
+  const pts=[origin,...ids.map(id=>STATE.arrivals[id].point)].map(pt=>[pt[1],pt[0]].join(','));
+  const url='https://router.project-osrm.org/table/v1/driving/'+pts.join(';')+'?annotations=distance,duration&sources=0';
+  const data=await fetchJson(url,23000);
+  if(data.code!=='Ok'||!data.distances?.[0]||!data.durations?.[0])throw new Error('Service routier indisponible');
+  ids.forEach((id,i)=>{
+   const metres=data.distances[0][i+1],secs=data.durations[0][i+1];
+   if(Number.isFinite(metres)&&Number.isFinite(secs)){
+    STATE.routes[id]={km:metres/1000,min:secs/60,source:'OSRM / OSM (démo, sans trafic)',date:new Date().toISOString(),accessVerified:false};count++;
+   }else fail.push(id);
+  });
+  saved();refreshMetrics();Object.keys(STATE.maps).forEach(refreshArrivalUI);
+  toast(`${count} itinéraire(s) routier(s) calculé(s) · accès à confirmer`);
+ }catch(e){toast('Calcul routier impossible : '+e.message)}
+ finally{button.disabled=false;button.textContent='↗ Distances routières';}
+}
+function exportShared(){
+ // Les contours d'eau restent exportés. Pour le cadastre : références CAPAKEY uniquement,
+ // sans copier les géométries CADMAP protégées par les droits de redistribution.
+ const payload={sizes:STATE.sizes,routes:STATE.routes,arrivals:STATE.arrivals,origin:STATE.origin,
+  parcels:STATE.parcels,drafts:STATE.drafts,stars:[...STATE.stars]};
+ const cleaned=JSON.stringify(payload).replace(/</g,'\\u003c');
+ const doc=document.documentElement.cloneNode(true);const old=doc.querySelector('#kdrix-shared-data');if(old)old.remove();
+ const tag=document.createElement('script');tag.id='kdrix-shared-data';tag.type='application/json';tag.textContent=cleaned;doc.querySelector('head').append(tag);
+ const cards=doc.querySelector('#cards');if(cards)cards.innerHTML='';
+ downloadBlob('KDRIX_Bathymetrie_Prospection_et_Mesures.html','<!DOCTYPE html>\n'+doc.outerHTML,'text/html;charset=utf-8');
+ toast('Export préparé : contours d’eau, références cadastrales et trajets conservés.');
+}
+// Compléments aux actions V4, sans modifier les boutons déjà fonctionnels.
+function handleV5(){
+ document.addEventListener('click',ev=>{
+  const b=ev.target.closest('[data-act]');if(!b)return;
+  const id=b.dataset.id,uid=b.dataset.uid;
+  if(!id)return;
+  switch(b.dataset.act){
+   case 'editpicc':{const x=STATE.maps[id];if(!x)return;
+    if(x.editingUid===uid)endPiccEdit(id);else beginPiccEdit(id,uid);break}
+   case 'resetpicc':resetPicc(id,uid);break;
+   case 'undoedit':restoreHistory(id,false);break;
+   case 'redoedit':restoreHistory(id,true);break;
+   case 'cad-refresh':fetchCadastre(id);break;
+   case 'cad-suggest':suggestParcels(id);break;
+   case 'openparcel':onParcelClick(id,b.dataset.key);break;
+   case 'saveparcel':saveParcel(id);break;
+   case 'removeparcel':removeParcel(id);break;
+   case 'access':placeAccess(id);break;
+   case 'access-confirm':confirmAccess(id);break;
+   case 'access-geocode':geocodeSite(id);break;
+   case 'calcsingle':routeFor(id);break;
+  }
+ });
+ document.addEventListener('change',ev=>{
+  const b=ev.target,id=b.dataset.id;
+  if(!id)return;
+  if(b.dataset.cadLayer!==undefined)cadToggle(id,'cad',b.checked);
+  else if(b.dataset.cadHighlight!==undefined)cadToggle(id,'highlight',b.checked);
+ });
+}
+
+render();handleActions();handleV5();
+
+</script>
+</body>
+</html>
