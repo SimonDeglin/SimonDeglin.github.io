@@ -94,7 +94,7 @@ function normalize(raw){
  const tedRef=String(raw.publicationReferenceNumbersTED?.[0]||'');
  return {
   id:'bosa:'+stable,publicationWorkspaceId,noticeId:noticeIdActual,
-  procedureIdentifier,internalReference,title,buyer,region,
+  procedureIdentifier,internalReference,title,buyer,region,languages,
   sector:classification.classification.sector,sectors:classification.classification.sectors,
   score:classification.classification.score,screening:classification.classification.screening,
   publication:pubDate,deadline,cpv,description:description||title,
