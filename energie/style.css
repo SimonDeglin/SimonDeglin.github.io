@@ -815,3 +815,53 @@ body[data-section="mazout"] .category-secondary strong{font-size:19px}
 .scan-row{flex-wrap:wrap}
 .scan-row>div:first-child{flex:1;min-width:155px}
 .scan-kind-buttons{flex:1;min-width:min(205px,100%)}
+
+
+/* V19 – one-photo electricity: moon/night, sun/day, single monohourly total */
+.scan-kind-buttons{grid-template-columns:repeat(3,minmax(0,1fr));min-width:210px}
+.scan-kind-buttons button{font-size:11px}
+.network-total-field{grid-column:1 / -1}
+.network-total-field>span{color:#a56627}
+.network-total-field>input{border-color:#e9d8c3;background:#fffcf8;font-size:19px;font-weight:800;font-variant-numeric:tabular-nums}
+.network-total-field>small{line-height:1.4;color:#987f65}
+.history-network-cell{font-weight:800;color:#a46c37;font-variant-numeric:tabular-nums}
+.scan-electric{margin:4px 0 13px}
+.scan-electric-inputs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.scan-electric-inputs .field{margin:0 0 12px}
+.scan-electric-inputs .field>span{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2px;font-size:12px}
+.scan-electric-inputs .field>span small{font-size:9px;font-weight:650;color:#a1a9ac}
+.scan-electric-inputs input{font:800 21px Manrope,sans-serif;letter-spacing:.2px;font-variant-numeric:tabular-nums;min-width:0;padding:10px 11px}
+.scan-electric-night>span{color:#49688a}
+.scan-electric-night input{border-color:#ced9ea;background:#f7faff}
+.scan-electric-day>span{color:#ab6c27}
+.scan-electric-day input{border-color:#ebdac3;background:#fffaf5}
+.scan-electric-sum{border:1px solid #ecd5b3;background:linear-gradient(105deg,#fff8ed,#f7e8d1);border-radius:12px;padding:13px 14px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.scan-electric-sum>div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.scan-electric-sum strong{font-size:12px;color:#926034;font-weight:850}
+.scan-electric-sum small{font-size:9px;color:#9f8568;line-height:1.35}
+.scan-electric-sum output{white-space:nowrap;color:#8a5627;font:850 20px Manrope,sans-serif;letter-spacing:-.6px;font-variant-numeric:tabular-nums}
+#confirm-scan:disabled{cursor:not-allowed;opacity:.45}
+#scan-overlay.electric-scan .scan-preview-wrap .scan-preview{max-height:195px}
+#scan-overlay.electric-scan .scan-preview-wrap{min-height:120px}
+#scan-overlay.electric-scan .modal-top{margin-bottom:12px}
+#scan-overlay.electric-scan .scan-hint{margin-bottom:9px}
+#scan-overlay.electric-scan .scan-message{margin:8px 0 3px}
+#scan-overlay.electric-scan .scan-action-row{margin:0 0 12px}
+@media(max-width:750px){
+ .scan-kind-buttons{min-width:0}
+ .scan-kind-buttons button{font-size:11px}
+ .scan-electric-inputs{gap:8px}
+ .scan-electric-inputs .field>span{font-size:11px}
+ .scan-electric-inputs .field>span small{font-size:9px}
+ .scan-electric-inputs input{font-size:19px;min-height:41px}
+ .scan-electric-sum{padding:11px 12px}
+ .scan-electric-sum output{font-size:18px}
+ #scan-overlay.electric-scan .scan-preview-wrap .scan-preview{max-height:174px}
+ #scan-overlay.electric-scan .modal{padding:16px}
+ #scan-overlay.electric-scan .scan-action-row button{padding:8px 7px}
+}
+@media(max-width:365px){
+ .scan-electric-sum output{font-size:16px}
+ .scan-electric-sum strong{font-size:11px}
+ .scan-electric-inputs .field>span small{display:block}
+}
