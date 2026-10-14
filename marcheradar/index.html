@@ -442,8 +442,11 @@ function uniqueMarkets(items){
  items.forEach(function(m){
   if(!m||!m.title||!m.id)return;
   var pub=String(m.publicationNumber||'');
-  var key=/^\d{1,8}-\d{4}$/.test(pub)?'ted:'+pub:String(m.id);
+  // L'ID du dossier est stable, y compris si un rectificatif TED change de numéro.
+  var key=String(m.id||(/^\d{1,8}-\d{4}$/.test(pub)?'ted:'+pub:'')).trim();
   var copy=Object.assign({},m,{id:key,sectors:tagsOf(m),source:m.source||'TED'});
+  // Empêche les doublons exacts tout en respectant l'ID unique du dossier.
+  if(!copy.publicationNumber&&/^ted:\d{1,8}-\d{4}$/.test(copy.id))copy.publicationNumber=copy.id.slice(4);
   if(!copy.sector)copy.sector=copy.sectors[0];
   var previous=map.get(key);
   if(previous){
