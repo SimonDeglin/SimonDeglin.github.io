@@ -205,7 +205,7 @@ body{background:#f7f7f7;color:#303339}
     <div class="top-actions"><span class="today" id="today"></span><div class="top-divider"></div><a class="refresh-btn" href="https://www.kdrix.be/fr/" target="_blank" rel="noopener" title="Site KDRIX">KDRIX <svg class="ico s"><use href="#i-external"/></svg></a><div class="initials">KD</div></div>
   </header>
   <main class="content">
-    <section class="welcome"><div><div class="eyebrow">VEILLE KDRIX</div><h1>Marchés publics <span style="color:#f45f25">✳</span></h1><p>Les opportunités KDRIX, classées et suivies.</p></div><button class="refresh-btn" id="refreshBtn"><svg class="ico s"><use href="#i-refresh"/></svg><span class="refresh-text">Vérifier les données</span></button></section>
+    <section class="welcome"><div><div class="eyebrow">VEILLE KDRIX</div><h1>Marchés publics <span style="color:#f45f25">✳</span></h1><p>Les opportunités KDRIX, classées et suivies.</p></div><button class="refresh-btn" id="refreshBtn"><svg class="ico s"><use href="#i-refresh"/></svg><span class="refresh-text">Rafraîchir la liste</span></button></section>
     <section class="hero"><div class="hero-main"><div class="hero-tag"><svg class="ico s"><use href="#i-radar"/></svg> VOTRE RADAR EST PRÊT</div><h2>Les bons marchés.<br>Au bon moment.</h2><p>Topographie, hydrographie, VRD, cartographie, expertise immobilière et PEB : une veille construite autour des compétences du groupe.</p></div><div class="hero-side"><div class="hero-number" id="heroCount">—</div><span>opportunités affichées</span></div></section>
     <div class="notice-banner" id="noticeBanner"><svg class="ico l"><use href="#i-info"/></svg><div><b>Chargement en cours.</b> Vérification des publications disponibles.</div></div>
     <section class="kpis" aria-label="Indicateurs"><div class="kpi"><div><div class="num" id="kpiTotal">—</div><div class="label">Dans le listing</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-radar"/></svg></div></div><div class="kpi"><div><div class="num" id="kpiTop">—</div><div class="label">À répondre</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-target"/></svg></div></div><div class="kpi"><div><div class="num" id="kpiTracked">—</div><div class="label">En attente d’attribution</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-bookmark"/></svg></div></div><div class="kpi"><div><div class="num" id="kpiUrgent">—</div><div class="label">Marchés obtenus</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-calendar"/></svg></div></div></section>
@@ -224,7 +224,7 @@ body{background:#f7f7f7;color:#303339}
       <aside class="aside-panel"><div class="aside-card"><h3>Comment fonctionne le radar ?</h3><div class="insight"><div class="badge-icon"><svg class="ico s"><use href="#i-target"/></svg></div><div><div class="a">Pertinence métier</div><div class="b">Score indicatif fondé sur les mots-clés et les codes CPV.</div></div></div><div class="insight"><div class="badge-icon"><svg class="ico s"><use href="#i-star"/></svg></div><div><div class="a">Sélection personnelle</div><div class="b">Favoris et décisions enregistrés sur cet appareil.</div></div></div><div class="insight"><div class="badge-icon"><svg class="ico s"><use href="#i-bell"/></svg></div><div><div class="a">Échéances visibles</div><div class="b">Repérage des dates proches, à vérifier sur l'avis officiel.</div></div></div></div>
       <div class="resource"><h3>Source officielle belge</h3><p>La plateforme fédérale e-Procurement couvre des avis belges non repris sur TED. Son intégration reste à réaliser pour une veille complète.</p><a href="https://www.publicprocurement.be/" target="_blank" rel="noopener">Consulter e-Procurement <svg class="ico s"><use href="#i-external"/></svg></a></div><div class="aside-bottom">Un outil de présélection, pas une garantie d'exhaustivité.<br>Toujours vérifier le cahier des charges.</div></aside>
     </div>
-    <p class="legal-note">MarchéRadar est un prototype indépendant pour KDRIX. Les annonces officielles, lorsqu'elles sont disponibles, proviennent de TED. Les scores ne constituent pas une analyse juridique ni une vérification des conditions de participation.</p>
+    <p class="legal-note">MarchéRadar · Préqualification de publications TED. Vérifiez les documents officiels et les rectificatifs ; bulletin national belge et communes encore à intégrer.</p>
   </main>
 </div>
 </div>
@@ -246,23 +246,12 @@ var SECTORS=[
 ];
 var DATE=new Date();
 function dateOffset(n){var d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()+n);return d.toISOString().slice(0,10)}
-var DEMO=[
- {id:'demo-01',title:'EXEMPLE FICTIF — Levés topographiques et profils de cours d’eau',buyer:'Acheteur fictif · Wallonie',region:'Wallonie',sector:'Topo',score:98,publication:dateOffset(-3),deadline:dateOffset(24),cpv:['71355000'],description:'Marché fictif destiné à illustrer le suivi de profils en travers, ouvrages hydrauliques et tronçons canalisés. Aucun avis réel ne correspond à cette fiche.',source:'Démo'},
- {id:'demo-02',title:'EXEMPLE FICTIF — Bathymétrie de plans d’eau et inspection subaquatique',buyer:'Acheteur fictif · Province de Liège',region:'Wallonie',sector:'Hydro',score:96,publication:dateOffset(-1),deadline:dateOffset(32),cpv:['71354500'],description:'Exemple de mission de relevés bathymétriques, géoréférencement et fourniture de modèles numériques. Fiche de démonstration, pas un avis publié.',source:'Démo'},
- {id:'demo-03',title:'EXEMPLE FICTIF — Marché de prestations de géomètre-expert',buyer:'Acheteur fictif · Brabant wallon',region:'Wallonie',sector:'Foncier',score:93,publication:dateOffset(-4),deadline:dateOffset(12),cpv:['71355000'],description:'Illustration de missions de bornage, divisions parcellaires et mesurages contradictoires. Marché entièrement fictif.',source:'Démo'},
- {id:'demo-04',title:'EXEMPLE FICTIF — Relevés laser 3D et maquettes de bâtiments publics',buyer:'Acheteur fictif · Bruxelles',region:'Bruxelles',sector:'Scan',score:92,publication:dateOffset(-2),deadline:dateOffset(19),cpv:['71353000'],description:'Exemple de levés au scanner laser 3D et modèles BIM. Fiche fictive à des fins de prévisualisation.',source:'Démo'},
- {id:'demo-05',title:'EXEMPLE FICTIF — Études et plans de réaménagement de voiries',buyer:'Acheteur fictif · Province de Namur',region:'Wallonie',sector:'VRD',score:88,publication:dateOffset(-7),deadline:dateOffset(40),cpv:['71311210'],description:'Illustration d’un dossier comprenant levés, profils en long, plans techniques et réseaux divers. Aucun marché réel à ce lien.',source:'Démo'},
- {id:'demo-06',title:'EXEMPLE FICTIF — Inventaire SIG du patrimoine communal',buyer:'Acheteur fictif · Province du Hainaut',region:'Wallonie',sector:'Carto',score:85,publication:dateOffset(-5),deadline:dateOffset(21),cpv:['71354100'],description:'Illustration de numérisation et structuration de couches cartographiques. Données fictives.',source:'Démo'},
- {id:'demo-07',title:'EXEMPLE FICTIF — Certification énergétique de logements publics',buyer:'Acheteur fictif · Wallonie',region:'Wallonie',sector:'PEB',score:81,publication:dateOffset(-8),deadline:dateOffset(45),cpv:['71314300'],description:'Illustration de prestations de certification énergétique résidentielle. Aucune procédure réelle.',source:'Démo'},
- {id:'demo-08',title:'EXEMPLE FICTIF — Relevés topographiques d’infrastructures ferroviaires',buyer:'Acheteur fictif · Belgique',region:'Flandre',sector:'Topo',score:74,publication:dateOffset(-11),deadline:dateOffset(9),cpv:['71353000'],description:'Exemple d’une mission de levés de corridor et plans topographiques. Données de démonstration.',source:'Démo'},
- {id:'demo-09',title:'EXEMPLE FICTIF — Diagnostic hydraulique et mesures de débits',buyer:'Acheteur fictif · Wallonie',region:'Wallonie',sector:'Hydro',score:90,publication:dateOffset(-3),deadline:dateOffset(7),cpv:['71351920'],description:'Exemple de mission de jaugeages et analyse de capacité hydraulique. Marché fictif.',source:'Démo'},
- {id:'demo-10',title:'EXEMPLE FICTIF — Acquisition photogrammétrique par drone',buyer:'Acheteur fictif · Bruxelles',region:'Bruxelles',sector:'Scan',score:87,publication:dateOffset(-6),deadline:dateOffset(38),cpv:['71354100'],description:'Exemple de prise de vues aériennes et production d’orthophotos. Fiche fictive.',source:'Démo'}
-];
+var DEMO=[]; // Aucune donnée fictive en production.
 var STORAGE='kdrix.marcheRadar.v1';
 var saved={};
 try{saved=JSON.parse(localStorage.getItem(STORAGE)||'{}')||{}}catch(e){saved={}}
 saved.favorites=saved.favorites||{};saved.statuses=saved.statuses||{};saved.notes=saved.notes||{};saved.hiddenSectors=saved.hiddenSectors||{};
-var state={mode:'demo',sourceOrigin:'demo',view:'all',sector:'all',region:'all',sort:'score',query:'',markets:DEMO.slice(),real:[],generated:null,sourceNote:'',selected:null};
+var state={mode:'loading',sourceOrigin:'none',collectorStatus:'pending',view:'all',sector:'all',region:'all',sort:'score',query:'',markets:[],real:[],generated:null,sourceNote:'',selected:null,loadError:false};
 function el(id){return document.getElementById(id)}
 function svg(id,small){return '<svg class="ico'+(small?' s':'')+'"><use href="#i-'+id+'"/></svg>'}
 function esc(v){return String(v===null||v===undefined?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
@@ -297,21 +286,27 @@ function renderStats(){
  el('kpiTotal').textContent=src.length;el('kpiTop').textContent=high;el('kpiTracked').textContent=trackCount();el('kpiUrgent').textContent=urg;el('heroCount').textContent=src.length;el('trackCount').textContent=trackCount();
 }
 function renderBanner(){
- var live=state.mode==='ted',seed=state.sourceOrigin==='manual_seed',b=el('noticeBanner');b.classList.toggle('live',live);el('sideDot').classList.toggle('live',live);
- if(live){
-  b.innerHTML=svg(seed?'info':'check')+'<div><b>'+(seed?'Premiers marchés réels · collecte automatique en préparation.':'Données TED · collecte automatique.')+'</b> '+esc(state.sourceNote||'Vérifiez les échéances sur l’avis officiel.')+(seed?'':' <button id="demoSwitch">Voir le mode démo</button>')+'</div>';
-  el('sideTitle').textContent=seed?'Sélection initiale réelle':'TED · données publiques';
-  el('sideText').textContent='Dernier relevé : '+(state.generated?fmtDate(state.generated):'date inconnue')+'. La couverture belge nationale reste à compléter.';
+ var ready=state.mode==='ted',seed=state.sourceOrigin==='manual_seed',partial=state.collectorStatus==='partial';
+ var b=el('noticeBanner');
+ b.classList.toggle('live',ready&&!seed&&!partial);
+ el('sideDot').classList.toggle('live',ready&&!seed&&!partial);
+ if(!ready){
+  b.innerHTML=svg('info')+'<div><b>'+(state.mode==='loading'?'Chargement des avis officiels...':'Marchés officiels indisponibles.')+'</b> '+(state.mode==='loading'?'Lecture de la dernière sélection TED.':'La liste reste vide tant que les données ne sont pas accessibles.')+'</div>';
+  el('sideTitle').textContent='Données non chargées';
+  el('sideText').textContent='Relancer depuis Rafraîchir la liste.';
+  el('lastSync').textContent='En attente de données';
+ }else if(seed){
+  b.innerHTML=svg('info')+'<div><b>Premières annonces réelles.</b> '+allMarkets().length+' avis identifiés. Veille TED programmée ; première synchronisation non encore confirmée.</div>';
+  el('sideTitle').textContent='Sélection initiale · TED';
+  el('sideText').textContent='Premières annonces officielles ; collecte en cours de mise en service.';
+  el('lastSync').textContent='Sélection : '+(state.generated?fmtDate(state.generated):'date inconnue');
  }else{
-  b.innerHTML=svg('info')+'<div><b>MODE DÉMONSTRATION — marchés fictifs.</b> Les annonces affichées sont fictives. '+(state.real.length?'<button id="liveSwitch">Afficher les avis TED ('+state.real.length+')</button>':'<button id="sourceHelp">Pourquoi aucune annonce réelle ?</button>')+'</div>';
-  el('sideTitle').textContent='Démonstration active';
-  el('sideText').textContent='Les marchés affichés sont fictifs. En attente d’une synchronisation officielle TED.';
+  b.innerHTML=svg(partial?'info':'check')+'<div><b>'+(partial?'Collecte TED partielle.':'Collecte TED.')+'</b> '+allMarkets().length+' marchés enregistrés · mise à jour du '+fmtDate(state.generated)+'. '+(partial?'Une recherche complémentaire a échoué. ':'')+'Les marchés nationaux belges restent à raccorder.</div>';
+  el('sideTitle').textContent=partial?'TED · collecte partielle':'TED · collecte active';
+  el('sideText').textContent='Dernière collecte : '+fmtDate(state.generated);
+  el('lastSync').textContent='TED : '+fmtDate(state.generated);
  }
- var button=el('liveSwitch');if(button)button.addEventListener('click',function(){state.mode='ted';state.markets=state.real;state.view='inbox';render()});
- button=el('demoSwitch');if(button)button.addEventListener('click',function(){state.mode='demo';state.markets=DEMO;state.view='inbox';render()});
- button=el('sourceHelp');if(button)button.addEventListener('click',function(){toast('L’import quotidien TED doit être exécuté sur GitHub Actions. Les marchés belges BOSA sont une intégration distincte.')});
- el('lastSync').textContent=live?(seed?'Sélection initiale : ':'Collecte TED : ')+(state.generated?fmtDate(state.generated):'inconnue'):'Mode aperçu · données fictives';
- el('listMeta').textContent=live?'Source TED · score indicatif':'Exemples fictifs uniquement';
+ el('listMeta').textContent=ready?'Source TED · score indicatif':'Aucune donnée officielle';
 }
 function renderNav(){
  var names={all:"Vue d'ensemble",tenders:'Tous les marchés',favorites:'Favoris',tracked:'Dossiers suivis',urgent:'Échéances proches'};
@@ -406,11 +401,6 @@ SECTORS=[
  {id:'Carto',label:'Cartographie & SIG'},{id:'Implant',label:'Implantations & chantier'},
  {id:'Reseaux',label:'Réseaux & impétrants'},{id:'PEB',label:'Énergie & PEB'}
 ];
-var DEMO_TAGS=[
- ['Topo','Hydro','Hydraulique'],['Hydro','Topo'],['Foncier','Topo','Expert'],['Scan','Implant'],
- ['VRD','Topo','Reseaux'],['Carto','Drone'],['PEB'],['Topo','VRD'],['Hydraulique','Hydro'],['Drone','Carto','Scan']
-];
-DEMO.forEach(function(m,i){m.sectors=DEMO_TAGS[i]||[m.sector]});
 state.view='inbox';
 var draggingId=null;
 function stageName(code){return (WORKFLOW.find(function(s){return s.id===code})||WORKFLOW[0]).label}
@@ -649,16 +639,26 @@ async function load(){
  var btn=el('refreshBtn');btn.disabled=true;
  try{
   var response=await fetch('data.json?v='+Date.now(),{cache:'no-store'});
-  if(!response.ok)throw new Error('Aucun fichier de données');
+  if(!response.ok)throw new Error('Données officielles indisponibles');
   var obj=await response.json();
-  if(Array.isArray(obj.items)&&obj.items.length){
-   state.real=uniqueMarkets(obj.items.filter(validMarket));state.generated=obj.generated_at||null;state.sourceNote=obj.note||'';state.sourceOrigin=obj.data_origin||'unspecified';
-   if(state.real.length){state.mode='ted';state.markets=state.real;toast('Marchés TED disponibles : '+state.real.length)}
-  }else{state.real=[];if(state.mode!=='ted')state.markets=uniqueMarkets(DEMO)}
- }catch(e){if(state.mode!=='ted')state.markets=uniqueMarkets(DEMO);state.real=[];console.warn('MarchéRadar: flux officiel indisponible',e)}
+  if(!Array.isArray(obj.items))throw new Error('Format du fichier de données invalide');
+  state.real=uniqueMarkets(obj.items.filter(validMarket));
+  state.generated=obj.generated_at||null;
+  state.sourceNote=obj.note||'';
+  state.sourceOrigin=obj.data_origin||'unspecified';
+  state.collectorStatus=obj.collector_status||'unknown';
+  state.mode='ted';
+  state.markets=state.real;
+  state.loadError=false;
+ }catch(e){
+  state.loadError=true;
+  if(state.mode!=='ted'){state.mode='unavailable';state.markets=[];}
+  console.warn('MarchéRadar : annonces officielles non chargées',e);
+  toast('Impossible de charger les dernières données TED');
+ }
  btn.disabled=false;render();
 }
-state.markets=uniqueMarkets(DEMO);
+state.markets=[];
 document.querySelectorAll('[data-folder]').forEach(function(button){
  button.addEventListener('dragenter',function(e){if(!draggingId)return;e.preventDefault();button.classList.add('drag-over')});
  button.addEventListener('dragover',function(e){if(!draggingId)return;e.preventDefault();e.dataTransfer.dropEffect='move';button.classList.add('drag-over')});
