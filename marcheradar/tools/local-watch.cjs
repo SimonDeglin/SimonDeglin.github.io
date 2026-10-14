@@ -51,7 +51,8 @@ function snippets(text){
 function makeOpportunity(source,document,passage){
  const digest=crypto.createHash('sha256').update(document.url+'|'+passage.slice(0,210)).digest('hex').slice(0,19);
  const title=(passage.length>130?passage.slice(0,127)+'…':passage);
- const métier=profile.classify(title,passage,[])||{sector:'Topo',sectors:['Topo'],score:52};
+ const métier=profile.classify(title,passage,[]);
+ if(!métier)return null; // Aucune catégorie fictive attribuée à défaut de preuve.
  return {
   id:'local:'+digest,
   title:'Prospection à vérifier — '+title,
@@ -107,7 +108,8 @@ async function run(){
      }finally{try{fs.unlinkSync(tmp)}catch(e){}}
      scanned++;
      for(const passage of snippets(extracted)){
-      all.push(makeOpportunity(source,file,passage));found++;
+      const opportunity=makeOpportunity(source,file,passage);
+      if(opportunity){all.push(opportunity);found++}
      }
     }catch(e){errors.push({url:file.url,error:String(e.message||e).slice(0,220)})}
    }
@@ -119,7 +121,7 @@ async function run(){
  const fresh=all.filter(m=>!ids.has(m.id));
  previous.items=[...(previous.items||[]),...fresh];
  previous.sources={...(previous.sources||{}),LOCALE:{status:errors.length?'partial':'pilot',last_success:new Date().toISOString(),sources:sourceStats,errors_count:errors.length,added: fresh.length}};
- previous.coverage={...(previous.coverage||{}),communal:'Pilote Province de Namur : '+sourceStats.length+' page(s) officielle(s), '+sourceStats.reduce((n,a)=>n+a.documents_read,0)+' document(s) PDF analysé(s). Couverture communale non exhaustive.'};
+ previous.coverage={...(previous.coverage||{}),communal:'Pilote de sources provinciales Liège/Namur : '+sourceStats.length+' page(s) officielle(s), '+sourceStats.reduce((n,a)=>n+a.documents_read,0)+' PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive.'};
  previous.metrics={...(previous.metrics||{}),local_documents:sourceStats.reduce((n,a)=>n+a.documents_read,0),local_opportunities:fresh.length,records:previous.items.length};
  fs.writeFileSync(DATA,JSON.stringify(previous,null,2)+'\n');
  console.log('LOCAL_SOURCE_OK',JSON.stringify({pages:sourceStats.length,documents:previous.metrics.local_documents,found:all.length,added:fresh.length,errors:errors.length}));
