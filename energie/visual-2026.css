@@ -1060,3 +1060,43 @@ body[data-section="mazout"] .topbar .title{color:#68513a}
  #page-electricite .category-primary strong{font-size:28px}
  #page-electricite .category-primary-caption{font-size:9px}
 }
+
+
+/* Ôwatt post-audit: quiet official source link and legible reminder */
+#page-mazout .oil-controls{
+ display:flex;flex-wrap:wrap;
+ align-items:center;justify-content:space-between;
+ gap:8px 12px;
+}
+#page-mazout .oil-price-link{
+ display:inline-flex;align-items:center;gap:4px;
+ text-decoration:none;
+ font:750 11px/1.2 "DM Sans",system-ui,sans-serif;
+ color:#865b39;
+ border:1px solid #e7d9c7;
+ background:#f7f0e7;
+ padding:10px 12px;
+ border-radius:11px;
+ min-height:37px;
+ transition:background .16s,border-color .16s;
+}
+#page-mazout .oil-price-link:hover{
+ background:#f0e2d2;border-color:#d9bea0;
+}
+#page-mazout .oil-price-link:focus-visible{
+ outline:2px solid #a67b55;outline-offset:2px;
+}
+#next-reading-date{
+ color:#315d4c;
+ font-weight:850;
+ white-space:nowrap;
+}
+@media(max-width:750px){
+ #page-mazout .oil-controls{justify-content:space-between;gap:5px}
+ #page-mazout .oil-price-link{
+  min-height:33px;
+  padding:7px 9px;
+  font-size:10px;
+  border-radius:10px;
+ }
+}
