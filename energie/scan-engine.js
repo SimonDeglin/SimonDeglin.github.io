@@ -77,10 +77,15 @@ function locate(imageData,kind){
   const r=pick(regions.filter(r=>r.x>.20&&r.x<.75&&r.y>.20&&r.y<.62&&r.w>.022&&r.w<.09&&r.h>.023&&r.h<.095));
   if(!r)return null;
   const pitch=Math.max(.026,Math.min(.05,r.w*.85));
-  return {method:'red-decimal-wheel',confidence:'medium',zones:[box(r.x-6.2*pitch-.01,r.y-r.h*.32,6.2*pitch+r.w+.02,r.h*1.65)]};
+  // Include the leading zero of the six black PV wheels, which was often
+  // cut by the previous 6.2-pitch estimate on the actual Itron photos.
+  const left=r.x-7.25*pitch-.02;
+  return {method:'red-decimal-wheel-wide',confidence:'medium',zones:[box(left,r.y-r.h*.32,7.25*pitch+r.w+.03,r.h*1.65)]};
  }
  if(kind==='water'){
-  const r=pick(regions.filter(r=>r.x>.20&&r.x<.75&&r.y>.20&&r.y<.62&&r.w>.04&&r.w<.14&&r.h>.022&&r.h<.095));
+  // Red water-wheel digits form a horizontal band. Do not mistake a
+  // round dial, a pipe, or a tilted wall reflection for the register.
+  const r=pick(regions.filter(r=>r.x>.20&&r.x<.75&&r.y>.20&&r.y<.75&&r.w>.04&&r.w<.14&&r.h>.022&&r.h<.095&&r.w/r.h>2.1));
   if(!r)return null;
   return {method:'red-water-wheels',confidence:'low',zones:[box(r.x-2.6*r.w,r.y-r.h*.75,3.7*r.w,r.h*2.6)]};
  }
