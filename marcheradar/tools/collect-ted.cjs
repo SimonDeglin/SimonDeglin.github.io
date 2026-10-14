@@ -33,7 +33,8 @@ const KEYWORDS={
  Implant:/(implantation|piquetage|staking out|uitzet|replante|as.built|r[eé]colement|werfinmeting)/,
  Expert:/(expertise immobili[eè]re|expertise judiciaire|schattingsverslag|onroerend.{0,8}waard|[eé]valuation immobili[eè]re|expropri|onteigening|land valuation|real estate appraisal|estimation immobili[eè]re|vastgoedexpert)/,
  PEB:/(certificat(?:ion)? .{0,22}[eé]nerg[eé]t|prestatiecertific|energieprestatie|energy performance certificate|epc.{0,8}woning|certificaat energet|audit [eé]nerg[eé]t|rapport peb|peb.{0,12}gebouw)/,
- Carto:/(cartograph|geografisch informatiesysteem|geographic information|mapping service|geodata|\bsig\b|\bgis\b|digital terrain model)/
+ Carto:/(cartograph|geografisch informatiesysteem|geographic information|mapping service|geodata|\bsig\b|\bgis\b|digital terrain model)/,
+ PetitsTravaux:/(station.{0,25}limnim[eé]tr|limnim[eé]tr|stations?.{0,30}(?:de mesure|hydrom[eé]tr|jaugeage)|acc[eè]s s[eé]curis[eé].{0,35}cours d.eau|am[eé]nagement.{0,25}acc[eè]s.{0,25}cours d.eau|passerelle.{0,25}jaugeage|[eé]chelle.{0,25}limnim[eé]tr)/
 };
 const CPV={
  '71351810':['Topo'],'71351800':['Topo'],'71353000':['Topo','Scan'],
@@ -76,13 +77,36 @@ function iso(raw){return dateList(raw)[0]||''}
 function earliestDate(raw){return dateList(raw)[0]||''}
 function codes(raw){return [...new Set((flatten(raw).join(' ').match(/\b\d{8}\b/g)||[]))]}
 function simplify(raw){return String(raw||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
+function worksScope(title,description,cpvs){
+ const top=simplify(title),body=simplify(description);
+ const smallRelevant=/(limnimetr|station.{0,25}(?:mesure|hydrometr|jaugeage)|acces securis.{0,35}cours d.eau|amenagement.{0,25}acces.{0,25}cours d.eau|passerelle.{0,25}jaugeage|echelle.{0,25}limnimetr)/;
+ const smallDescription=/(petit.{0,12}amenagement|petit.{0,12}reparat|petit.{0,12}ouvrag|plans? d.execution|amenagements? ponctuels?)/;
+ const isSmallWorks=smallRelevant.test(top)||smallRelevant.test(body)&&smallDescription.test(body);
+ // Le curage, le dragage et le désenvasement ne sont pas des prestations KDRIX.
+ const curageTitle=/(curage|desenvas|dragage|dredging|baggerwerk|baggeren|riolen reinigen|rioolrein|rioolruim|reiniging.{0,15}rioler)/;
+ if(curageTitle.test(top)&&!/^(etude|studie|conception)/.test(top))return {rejected:'curage'};
+ const publicWorks=cpvs.some(code=>/^(45|452|453)/.test(code));
+ const titleAsWorks=/(travaux de construction|travaux? (?:de |d.)(?:voirie|route|chauss[eé]e|construction|terrassement)|wegen(?:is)?werken|wegenbouw|road construction|aanleg.{0,20}(?:wegen|wegdek)|construction.{0,10}(?:route|road|canalis)|r[eé]habilitation.{0,20}(?:voirie|route))/;
+ const servicesRole=/(missions? d.auteur de projet|bureau d.etudes|ma[iî]trise d.[oœ]uvre|ontwerpopdracht|studieopdracht|services? d.ing[eé]nierie|[eé]tudes? (?:de |des )?(?:voirie|v\.?r\.?d|r[eé]seau|hydraul)|conception|ontwerp)/;
+ if(isSmallWorks)return {smallWorks:true};
+ if((publicWorks||titleAsWorks.test(top))&&
+    (titleAsWorks.test(top)||/(travaux de construction|aanleg van|wegeniswerken|uitvoering van werken)/.test(top))&&
+    !servicesRole.test(top)){
+  return {rejected:'travaux_routiers_ou_generaux'};
+ }
+ return {smallWorks:false};
+}
 function classify(title,description,cpvs){
- const top=simplify(title),rest=simplify(description);const points=new Map();
+ const top=simplify(title),rest=simplify(description);
+ const scope=worksScope(title,description,cpvs);
+ if(scope.rejected)return null;
+ const points=new Map();
  const add=(id,n)=>points.set(id,(points.get(id)||0)+n);
  for(const [id,regex] of Object.entries(KEYWORDS)){
-  // accent normalization and multilingual matching; title is weighted more
+  // Les intitulés métier ont davantage de poids que les mentions secondaires.
   if(regex.test(top))add(id,57);else if(regex.test(rest))add(id,33);
  }
+ if(scope.smallWorks)add('PetitsTravaux',95);
  for(const code of cpvs){
   const tags=CPV[code]||[];
   tags.forEach(id=>add(id,44));
@@ -96,12 +120,24 @@ function classify(title,description,cpvs){
  const score=Math.max(28,Math.min(99,Math.round(24+max*0.7)));
  return {sector:tags[0],sectors:tags,score};
 }
+function detectRegion(place){
+ const s=simplify(place||'');
+ const matches=[
+  /\bbe1\d{2}\b|bruxelles|brussel|brussels|schaerbeek|anderlecht|etterbeek/,
+  /\bbe3\d{2}\b|wallon|liege|namur|charleroi|mons|tournai|verviers|huy|wavre|arlon|dinant|jambes|luxembourg belgique/,
+  /\bbe2\d{2}\b|vlaander|antwerpen|gent\b|brugge|leuven|hasselt|oostende|kortrijk/
+ ].map(pattern=>pattern.test(s));
+ const found=matches.map((yes,i)=>yes?['Bruxelles','Wallonie','Flandre'][i]:null).filter(Boolean);
+ return found.length===1?found[0]:null;
+}
 function region(n){
- const s=simplify(flatten([get(n,'place-of-performance-subdiv-lot'),get(n,'place-of-performance-subdiv-proc'),get(n,'buyer-city')]).join(' '));
- if(/\bbe1\d{2}\b|bruxelles|brussel|brussels|schaerbeek/.test(s))return 'Bruxelles';
- if(/\bbe3\d{2}\b|wallon|liege|namur|charleroi|mons|tournai|verviers|huy|wavre|arlon|dinant/.test(s))return 'Wallonie';
- if(/\bbe2\d{2}\b|vlaander|antwerpen|gent\b|brugge|leuven|hasselt/.test(s))return 'Flandre';
- return 'Belgique';
+ // La commune du pouvoir adjudicateur n'est PAS nécessairement le lieu d'exécution.
+ const perf=flatten([get(n,'place-of-performance-subdiv-lot'),get(n,'place-of-performance-subdiv-proc')]).join(' ');
+ const place=detectRegion(perf);
+ if(place)return place;
+ // BEZZZ et les marchés multi-régionaux restent visibles "Belgique" pour contrôle.
+ if(/\bBEZZZ\b/i.test(perf)||detectRegion(perf)===null&&/\bBE\d{3}\b/.test(perf))return 'Belgique';
+ return detectRegion(flatten([get(n,'buyer-city')]).join(' '))||'Belgique';
 }
 function normalize(n){
  const num=(txt(get(n,'publication-number')).match(/\d{1,8}-\d{4}/)||[])[0];
@@ -113,6 +149,7 @@ function normalize(n){
  const desc=[txt(get(n,'description-proc')),txt(get(n,'description-lot'))].filter(Boolean).join('\n\n').slice(0,2600);
  const cpvs=codes(get(n,'classification-cpv'));const sector=classify(title,desc,cpvs);
  if(!sector)return null;
+ if(region(n)==='Flandre')return null; // KDRIX ne soumissionne pas en Flandre.
  const dates=flatten(['deadline-receipt-tender-date-lot','deadline-receipt-request-date-lot','deadline-receipt-expressions-date-lot'].map(f=>get(n,f)));
  const due=earliestDate(dates)||earliestDate(get(n,'deadline'));
  return {
@@ -132,6 +169,7 @@ function cleanPrevious(items){
  const output=[],removed=[];
  for(const m of items||[]){
   if(!m||!m.title||m.source==='Démo')continue;
+  if(m.region==='Flandre'){removed.push(m.publicationNumber||m.id);continue}
   const rating=classify(m.title,m.description,m.cpv||[]);
   if(!rating){removed.push(m.publicationNumber||m.id);continue}
   output.push({...m,sector:rating.sector,sectors:rating.sectors,score:rating.score});
@@ -264,5 +302,5 @@ async function run(){
  fs.writeFileSync(OUTPUT,JSON.stringify(data,null,2)+'\n','utf8');
  console.log('MARCHERADAR_OK',JSON.stringify({matched:unique.size,records:markets.length,scanned:notices.length}));
 }
-module.exports={txt,flatten,iso,earliestDate,codes,classify,region,normalize,cleanPrevious,combine,retrieve,run};
+module.exports={txt,flatten,iso,earliestDate,codes,classify,worksScope,detectRegion,region,normalize,cleanPrevious,combine,retrieve,run};
 if(require.main===module){run().catch(e=>{console.error('MARCHERADAR_ERROR',e.message);process.exitCode=1})}
