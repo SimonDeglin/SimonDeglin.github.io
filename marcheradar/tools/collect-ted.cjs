@@ -7,6 +7,7 @@
 const fs=require('node:fs');
 const path=require('node:path');
 const profile=require('./kdrix-profile.cjs');
+const awards=require('./awards-ted.cjs');
 const OUTPUT=path.join(__dirname,'..','data.json');
 const API='https://api.ted.europa.eu/v3/notices/search';
 const PAGE=200;
@@ -17,7 +18,8 @@ const FIELDS=[
  'description-proc','description-lot',
  'deadline-receipt-tender-date-lot','deadline-receipt-request-date-lot',
  'deadline-receipt-expressions-date-lot',
- 'place-of-performance-subdiv-lot','place-of-performance-subdiv-proc'
+ 'place-of-performance-subdiv-lot','place-of-performance-subdiv-proc',
+ ...awards.FIELDS
 ];
 const FIELD_FALLBACK=['publication-number','notice-title','buyer-name','buyer-country',
  'publication-date','notice-type','classification-cpv','procedure-identifier',
@@ -279,21 +281,23 @@ async function run(){
  }
  const cleaned=cleanPrevious(previous.items||[]);
  const markets=combine(cleaned.items,[...unique.values()]);
- const reviewCount=markets.filter(x=>x.screening==='review').length;
- const bosaCount=markets.filter(x=>x.source==='BOSA').length;
+ const enriched=awards.attach(markets,notices);
+ const finalMarkets=enriched.items;
+ const reviewCount=finalMarkets.filter(x=>x.screening==='review').length;
+ const bosaCount=finalMarkets.filter(x=>x.source==='BOSA').length;
  if(cleaned.removed.length)console.log('Annonces hors périmètre nettoyées:',cleaned.removed.length);
- if(!markets.length)throw Error('Aucun marché exploitable : données existantes conservées');
+ if(!finalMarkets.length)throw Error('Aucun marché exploitable : données existantes conservées');
  const timestamp=new Date().toISOString();
  const data={
   schema_version:2,generated_at:timestamp,data_origin:'ted_api',
   collector_status:warnings.length?'partial':'ok',
-  note:'TED interrogé le '+timestamp.slice(0,10)+' : '+notices.length+' avis lus. '+(markets.length-reviewCount)+' annonces présélectionnées et '+reviewCount+' sujets à vérifier. BOSA national et conseils communaux encore à raccorder.',
+  note:'TED interrogé le '+timestamp.slice(0,10)+' : '+notices.length+' avis lus, '+enriched.marketMatches+' procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.',
   coverage:{TED:warnings.length?'partiel : exécution en Belgique incomplète':'collecte automatique active',BOSA:bosaCount+' annonce(s) BOSA repérée(s) manuellement ; veille nationale non connectée',communal:'non connecté'},
-  metrics:{scanned:notices.length,matched_current_run:unique.size,records:markets.length,review_count:reviewCount,excluded_after_dictionary_update:cleaned.removed.length,excluded_reasons:cleaned.reasons,days_queried:lookback,queries:stats,warnings},
-  items:markets
+  metrics:{scanned:notices.length,matched_current_run:unique.size,records:finalMarkets.length,review_count:reviewCount,award_notice_count:enriched.awardNotices,awarded_market_matches:enriched.marketMatches,award_fields_requested:stats.every(s=>s.fields?.includes('winner-name')),excluded_after_dictionary_update:cleaned.removed.length,excluded_reasons:cleaned.reasons,days_queried:lookback,queries:stats,warnings},
+  items:finalMarkets
  };
  fs.writeFileSync(OUTPUT,JSON.stringify(data,null,2)+'\n','utf8');
- console.log('MARCHERADAR_OK',JSON.stringify({matched:unique.size,records:markets.length,scanned:notices.length}));
+ console.log('MARCHERADAR_OK',JSON.stringify({matched:unique.size,records:finalMarkets.length,awardNotices:enriched.awardNotices,awardMatches:enriched.marketMatches,scanned:notices.length}));
 }
 module.exports={txt,flatten,iso,earliestDate,codes,classify,worksScope,detectRegion,region,normalize,cleanPrevious,combine,retrieve,run};
 if(require.main===module){run().catch(e=>{console.error('MARCHERADAR_ERROR',e.message);process.exitCode=1})}
