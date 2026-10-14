@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-14T15:07:25.667Z",
+  "endpoint": "https://www.publicprocurement.be/api/sea/search/publications",
+  "checks": [
+    {
+      "name": "bosa_public_search",
+      "status": "unavailable",
+      "reason": "BOSA HTTP 400 : accès à la recherche publique non validé"
+    },
+    {
+      "name": "public_bulletin_web",
+      "status": "success",
+      "httpStatus": 200
+    }
+  ],
+  "authorizedPublicSearch": false,
+  "note": "Diagnostic technique. Un refus HTTP ne prouve pas absence de données BOSA ; il signifie que cette méthode non authentifiée est indisponible."
+}
