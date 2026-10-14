@@ -7,6 +7,7 @@
 'use strict';
 const fs=require('node:fs'),os=require('node:os'),path=require('node:path'),
  child=require('node:child_process'),crypto=require('node:crypto');
+const profile=require('./kdrix-profile.cjs');
 const DATA=path.resolve(__dirname,'../data.json');
 const SOURCES=[
  {name:'Province de Namur — projets de délibérations',
@@ -45,6 +46,7 @@ function snippets(text){
 function makeOpportunity(source,document,passage){
  const digest=crypto.createHash('sha256').update(document.url+'|'+passage.slice(0,210)).digest('hex').slice(0,19);
  const title=(passage.length>130?passage.slice(0,127)+'…':passage);
+ const métier=profile.classify(title,passage,[])||{sector:'Topo',sectors:['Topo'],score:52};
  return {
   id:'local:'+digest,
   title:'Prospection à vérifier — '+title,
@@ -59,8 +61,8 @@ function makeOpportunity(source,document,passage){
   publication:'',
   deadline:'',
   cpv:[],
-  sector:'Topo',sectors:['Topo'],
-  score:60,screening:'review',
+  sector:métier.sector,sectors:métier.sectors,
+  score:Math.min(69,métier.score),screening:'review',
   description:'Extrait du document public « '+source.name+' » : '+passage+
    '\nVérifier le texte complet et l’état du projet avant toute démarche commerciale.',
   officialSources:[{source:'Conseil provincial',url:document.url}],
