@@ -969,6 +969,114 @@ function proposeScanIndex(text,kind){
  if(candidates[0].score<15)return null;
  return kind==='water'?candidates[0].number.toFixed(1):String(candidates[0].number);
 }
+
+/* Schlumberger S16XDs: upper ☾ row = night, lower ☀ row = day.
+   Each row has six black whole-kWh wheels plus one red fractional wheel.
+   We never add that last red wheel to the whole-kWh value. */
+function parseElectricWheel(raw,kind){
+ const expected=scanPreviousIndex(kind);
+ const cleaned=String(raw||'').replace(/[Oo]/g,'0').replace(/[Il|]/g,'1');
+ const tokens=cleaned.match(/\d+(?:[.,]\d+)?/g)||[],candidates=[];
+ const add=(digits,quality)=>{
+  const number=Number(digits);
+  if(!Number.isSafeInteger(number)||number<1000||number>999999)return;
+  const target=expected??(kind==='night'?25336:30215);
+  const distance=Math.abs(number-target);
+  if(distance>Math.max(18000,target*.55))return;
+  const score=quality-Math.min(125,Math.log1p(distance)*11);
+  candidates.push({value:number,score});
+ };
+ for(let i=0;i<tokens.length;i++){
+  const token=tokens[i].replace(',','.');
+  if(/^\d{5,6}\.\d$/.test(token))add(token.split('.')[0],125);
+  else if(/^\d{7}$/.test(token))add(token.slice(0,6),123);
+  else if(/^\d{6}$/.test(token)){
+   add(token,109);
+   // A missing leading zero can leave five whole wheels + the red one.
+   add(token.slice(0,5),96);
+   if(tokens[i+1]&&/^\d$/.test(tokens[i+1]))add(token,119);
+  }else if(/^\d{5}$/.test(token)){
+   add(token,96);
+   if(tokens[i+1]&&/^\d$/.test(tokens[i+1]))add(token,105);
+  }
+ }
+ // OCR may deliver "0 2 5 3 3 6 3" as individual words.
+ if(tokens.length>=5&&tokens.length<=7&&tokens.every(t=>/^\d$/.test(t))){
+  const combined=tokens.join('');
+  if(combined.length===7)add(combined.slice(0,6),115);
+  if(combined.length===6){add(combined,104);add(combined.slice(0,5),88)}
+  if(combined.length===5)add(combined,84);
+ }
+ if(!candidates.length)return null;
+ candidates.sort((a,b)=>b.score-a.score);
+ return candidates[0].score>0?candidates[0]:null;
+}
+function electricRowsFromWords(words){
+ const grouped=[];
+ for(const word of (words||[])){
+  const bbox=word.bbox;if(!bbox||!/\d/.test(word.text||''))continue;
+  const cy=(bbox.y0+bbox.y1)/2,ht=Math.max(8,bbox.y1-bbox.y0);
+  let row=grouped.find(r=>Math.abs(r.cy-cy)<Math.max(13,Math.min(30,.57*Math.max(r.height,ht))));
+  if(!row){row={cy,height:ht,parts:[]};grouped.push(row)}
+  row.parts.push({x:bbox.x0,text:word.text});
+  row.cy=(row.cy*(row.parts.length-1)+cy)/row.parts.length;
+  row.height=Math.max(row.height,ht);
+ }
+ return grouped.map(r=>({y:r.cy,text:r.parts.sort((a,b)=>a.x-b.x).map(p=>p.text).join(' ')})).sort((a,b)=>a.y-b.y);
+}
+function recognizeElectricPair(ocr){
+ if(!ocr)return null;
+ const lineRows=(ocr.lines||[]).filter(r=>r?.text).map(r=>({
+  text:r.text,y:r.bbox?.y0??null,x:r.bbox?.x0??null
+ })).filter(r=>/\d/.test(r.text));
+ const wordRows=electricRowsFromWords(ocr.words||[]);
+ const textRows=String(ocr.text||'').split(/\r?\n/).filter(t=>/\d/.test(t)).map((text,i)=>({text,y:i*100,x:null}));
+ const collections=[lineRows,wordRows,textRows];
+ let best=null;
+ const lastNetwork=net().at(-1)?.value??null;
+ for(let source=0;source<collections.length;source++){
+  const rows=collections[source].flatMap((row,i)=>{
+   const candidates=[];
+   // Recognizers may put both counters on one line separated by whitespace.
+   const chunks=(row.text||'').match(/\d{5,7}(?:[.,]\d)?/g)||[];
+   if(chunks.length>=2){
+    chunks.forEach((chunk,k)=>candidates.push({...row,text:chunk,y:(row.y??i*100)+k*3,ordinal:i+k/10}));
+   }else candidates.push({...row,ordinal:i});
+   return candidates;
+  }).filter(r=>r.text);
+  if(rows.length<2)continue;
+  rows.sort((a,b)=>(a.y??a.ordinal)-(b.y??b.ordinal));
+  for(let i=0;i<rows.length;i++)for(let j=i+1;j<rows.length;j++){
+   const night=parseElectricWheel(rows[i].text,'night');
+   const day=parseElectricWheel(rows[j].text,'day');
+   if(!night||!day)continue;
+   const total=night.value+day.value;
+   const networkPenalty=lastNetwork==null?0:Math.min(90,Math.log1p(Math.abs(total-lastNetwork))*5);
+   const sequentialBonus=j===i+1?16:0;
+   const positionalBonus=rows[i].x!=null&&rows[j].x!=null?
+    Math.max(-15,12-Math.abs(rows[i].x-rows[j].x)/20):0;
+   const geometryPenalty=source!==2&&rows[i].y===rows[j].y?40:0;
+   const score=night.score+day.score+sequentialBonus+positionalBonus
+    -networkPenalty-geometryPenalty+(night.value<=day.value?8:-15);
+   if(!best||score>best.score)best={night:night.value,day:day.value,total,score,source};
+  }
+ }
+ return best&&best.score>10?best:null;
+}
+function fillElectricFromOcr(data){
+ const match=recognizeElectricPair(data);
+ if(match){
+  $('#scan-night').value=match.night;
+  $('#scan-day').value=match.day;
+  refreshElectricSum();
+  $('#scan-message').textContent='Lecture proposée : vérifie Nuit (haut), Jour (bas) et leur somme.';
+  return true;
+ }
+ refreshElectricSum();
+ $('#scan-message').textContent='Deux index non reconnus avec certitude. Encadre les deux lignes, ou remplis Nuit et Jour manuellement.';
+ return false;
+}
+
 function scanSourceImage(){
  const img=$('#scan-preview');
  if(!scanCrop||!img.complete||!img.naturalWidth)return pendingImage;
