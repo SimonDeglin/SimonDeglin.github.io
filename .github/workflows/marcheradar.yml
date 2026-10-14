@@ -49,7 +49,9 @@ jobs:
       - name: "Vérifier le programme"
         id: tests
         if: steps.node.outcome == 'success'
-        run: node marcheradar/tools/test-collector.cjs
+        run: |
+          node marcheradar/tools/test-collector.cjs
+          node marcheradar/tools/test-bosa.cjs
         continue-on-error: true
 
       - name: "Collecter les avis TED"
