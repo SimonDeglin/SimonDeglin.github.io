@@ -1415,7 +1415,7 @@ async function detectIndexFromImage(){
    const all=await recognizeScanZone(worker,engine,scanCrop||null,false,'full');
    diagnostics.push({description:'Image complète (aucun cadrage fiable)',text:all.text});
    if(id!==scanRequest)return;
-   fillElectricFromOcr({text:all.text});
+   $('#scan-night').value='';$('#scan-day').value='';refreshElectricSum();
    $('#scan-message').textContent='Zone non repérée : recadre les deux lignes Jour/Nuit, ou saisis les index manuellement.';
   }
   scanLastText=diagnostics.map(v=>v.text).join('\n');
