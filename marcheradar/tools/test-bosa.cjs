@@ -26,6 +26,33 @@ assert.equal(merged.length,1,'Un même marché TED et BOSA ne doit pas apparaît
 assert.equal(merged[0].id,old.id,'Conserver le suivi associé à la fiche TED');
 assert.equal(merged[0].officialSources.length,2);
 assert.equal(p.merge(merged,[normalized]).length,1,'Idempotence des mises à jour BOSA');
+
+/* Vérifications sur le format réel du moteur BOSA découvert en octobre 2026. */
+const nested={
+ publicationWorkspaceId:'f941985d-0c3a-45e1-a1e1-8a43afcbac20',
+ procedureId:'00000000-0000-4000-8000-000000000001',
+ dossier:{titles:[{language:'NL',text:'Topografische opmeting'},{language:'FR',text:'Relevé topographique'}],
+   descriptions:[{language:'FR',text:'Prestation de relevé topographique et profils en travers'}],
+   referenceNumber:'TEST-TOPO-26'},
+ organisation:{organisationNames:[{language:'NL',text:'Stad Luik'},{language:'FR',text:'Commune de Liège'}]},
+ cpvMainCode:{code:'71351810-5'},nutsCodes:['BE332'],publicationDate:'2026-10-14',noticeSubType:'E3'
+};
+const nestedParsed=p.normalize(nested);
+assert.ok(nestedParsed,'BOSA doit reconnaître le contenu imbriqué réellement retourné');
+assert.equal(nestedParsed.title,'Relevé topographique');
+assert.equal(nestedParsed.buyer,'Commune de Liège');
+assert.ok(nestedParsed.cpv.includes('71351810'));
+assert.equal(nestedParsed.procedureIdentifier,nested.procedureId);
+assert.equal(nestedParsed.noticeKind,'competition');
+const secondPublication={...nested,
+ publicationWorkspaceId:'f941985d-0c3a-45e1-a1e1-8a43afcbac21',
+ noticeSubType:'E4',publicationDate:'2026-10-16'};
+const firstRef=p.merge([],[nestedParsed]);
+const mergedNotice=p.merge(firstRef,[p.normalize(secondPublication)]);
+assert.equal(mergedNotice.length,1,'Même procédure, plusieurs avis : un dossier unique');
+assert.equal(mergedNotice[0].bosaResults?.length,1,'Avis d’attribution public associé au dossier initial');
+assert.equal(mergedNotice[0].id,nestedParsed.id,'Identifiant et statut stable');
+
 (async()=>{
  const request=[];
  const fake=async(url,options)=>{
