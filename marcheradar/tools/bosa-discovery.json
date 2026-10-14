@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T14:06:46.319Z",
+  "generated_at": "2026-10-14T14:09:24.325Z",
   "requests": [
     {
       "url": "https://www.publicprocurement.be/bda/v2--irldz3",
@@ -386,8 +386,42 @@
   ],
   "public_search_test": [
     {
-      "url": "https://www.publicprocurement.be/api/sea/search/publications?page=1&pageSize=5",
+      "name": "with noticeSubtypes and pagination",
       "status": 400,
+      "headers": {
+        "content-type": null,
+        "access-control-allow-origin": null
+      },
+      "length": 0,
+      "preview": ""
+    },
+    {
+      "name": "terms and pagination",
+      "status": 400,
+      "headers": {
+        "content-type": null,
+        "access-control-allow-origin": null
+      },
+      "length": 0,
+      "preview": ""
+    },
+    {
+      "name": "filters empty typed",
+      "status": 400,
+      "headers": {
+        "content-type": null,
+        "access-control-allow-origin": null
+      },
+      "length": 0,
+      "preview": ""
+    },
+    {
+      "name": "typed filters plus date",
+      "status": 400,
+      "headers": {
+        "content-type": null,
+        "access-control-allow-origin": null
+      },
       "length": 0,
       "preview": ""
     }
