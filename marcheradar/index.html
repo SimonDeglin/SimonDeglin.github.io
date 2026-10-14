@@ -150,6 +150,23 @@ body{background:#f7f7f7;color:#303339}
 .important-conditions{border:1px solid #f1d6c5;background:#fff7f1;border-radius:11px;padding:14px 17px;margin:-5px 0 20px;font-size:11px;line-height:1.7;color:#936347}
 .important-conditions strong{display:block;color:#a9572c;margin-bottom:7px;font-size:11px}
 .important-conditions div{padding:4px 0}
+
+/* Résultats publics : discrets, compréhensibles et non spéculatifs */
+.micro-tag.result-published{color:#297b5c;background:#edf7f1;border:1px solid #dcefe4}
+.award-panel{background:#fcfdfd;border:1px solid #e6eaed;border-radius:12px;margin-top:11px;padding:16px}
+.award-heading{display:flex;justify-content:space-between;gap:10px;align-items:start;border-bottom:1px solid #eff1f2;padding-bottom:11px;margin-bottom:12px}
+.award-heading strong{color:#2d5749;font-size:12px}
+.award-heading small{font-size:10px;color:#93a0ad}
+.award-detail{font-size:12px;color:#45566a;line-height:1.8;margin-bottom:14px}
+.award-detail strong{display:block;color:#8a96a3;text-transform:uppercase;letter-spacing:.35px;font-size:10px;margin-bottom:3px}
+.award-detail small{display:block;color:#91a0ae;font-size:10px;line-height:1.6;margin-top:3px}
+.award-summary{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:11px 0 14px;border-top:1px solid #f0f2f4;margin-top:6px}
+.award-summary div{display:flex;flex-direction:column;gap:5px}
+.award-summary small{font-size:10px;color:#98a4af}
+.award-summary b{font-size:12px;color:#334255;font-weight:800;line-height:1.4}
+.award-bottom{font-size:11px;color:#8f9baa;margin-bottom:6px}
+.award-panel a{display:inline-flex;align-items:center;gap:6px;color:#bf673d;font-size:11px;font-weight:800;text-decoration:none;padding:6px 0}
+.public-result-empty{background:#f7f9fa;border-radius:9px;padding:13px;font-size:11px;color:#8997a5;line-height:1.8}
 </style>
 </head>
 <body>
@@ -580,7 +597,7 @@ function renderList(){
    '<div class="grip" aria-hidden="true">⠿</div>'+
    '<div class="score-ring" style="--score:'+Math.min(100,Math.max(0,m.score||0))+';--ring:'+color+'"><strong>'+esc(m.score||0)+'</strong></div>'+
    '<div class="tender-body"><div class="tender-top"><div class="tag-group">'+tags+'</div><span class="micro-tag">'+esc(m.source==='Démo'?'FICTIF':(m.source||'TED'))+'</span>'+
-   (current!=='inbox'?'<span class="status-tag '+current+'">'+esc(stageName(current))+'</span>':'')+'</div>'+
+   (current!=='inbox'?'<span class="status-tag '+current+'">'+esc(stageName(current))+'</span>':'')+(m.awards&&m.awards.length?'<span class="micro-tag result-published">Résultat publié</span>':'')+'</div>'+
    '<h3 class="open-tender" role="button" tabindex="0">'+esc(m.title)+'</h3>'+
    '<div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+'Publié le '+fmtShort(m.publication)+'</span></div></div>'+
    '<div class="tender-end"><div class="end-meta"><button class="star'+(saved.favorites[m.id]?' on':'')+'" title="Favori" aria-label="Favori" data-star="'+esc(m.id)+'">'+svg('star',true)+'</button><span class="end-date">'+(m.deadline?'Éch. '+fmtShort(m.deadline):'Échéance —')+'</span><span class="days'+dc+'">'+esc(label)+'</span></div>'+
@@ -607,17 +624,47 @@ function renderList(){
  });
 }
 function render(){if(state.sector!=='all'&&saved.hiddenSectors[state.sector])state.sector='all';renderChips();renderBanner();renderStats();renderNav();renderList()}
+
+function formatMoney(value){
+ if(!value||typeof value.amount!=='number')return 'Non publié';
+ return new Intl.NumberFormat('fr-BE',{maximumFractionDigits:2,minimumFractionDigits:0}).format(value.amount)+' '+esc(value.currency||'(devise non précisée)');
+}
+function awardsMarkup(m){
+ var results=Array.isArray(m.awards)?m.awards:[];
+ var heading='<div class="drawer-label" style="margin-top:26px">Soumissionnaires & attribution</div>';
+ if(!results.length)return heading+'<div class="public-result-empty">Aucun avis de résultat public lié à cette procédure dans les données recueillies. Les offres déposées et le futur attributaire ne sont pas connus.</div>';
+ return heading+results.map(function(a){
+  var link=String(a.sourceUrl||'');
+  var safe=/^https:\/\/ted\.europa\.eu\/fr\/notice\/-\/detail\/\d{1,8}-\d{4}$/.test(link);
+  var winners=Array.isArray(a.winners)?a.winners:[];
+  var tenderers=Array.isArray(a.mentionedTenderers)?a.mentionedTenderers:[];
+  var lots=Array.isArray(a.lotIdentifiers)?a.lotIdentifiers:[];
+  var singleValue=(a.totalAwardValues||[]).length===1?a.totalAwardValues[0]:null;
+  var tenderValue=(a.tenderValues||[]).length===1?a.tenderValues[0]:null;
+  var count=typeof a.offerCount==='number'?String(a.offerCount):'Non publié (ou ventilé par lot)';
+  var headline=a.selectedWinner?'Attribution publiée':'Résultat de procédure publié';
+  var evidence=(safe?'<a href="'+esc(link)+'" rel="noopener" target="_blank">'+svg('external',true)+' Avis de résultat TED</a>':'');
+  var list=tenderers.length?'<div class="award-detail"><strong>Soumissionnaires explicitement cités</strong>'+tenderers.map(function(name){return '<div>'+esc(name)+'</div>'}).join('')+'<small>Cette liste n’est pas nécessairement exhaustive.</small></div>':'';
+  return '<section class="award-panel"><div class="award-heading"><strong>'+esc(headline)+'</strong><small>'+esc(a.publicationNumber||'')+' · '+fmtDate(a.publicationDate)+'</small></div>'+
+   '<div class="award-detail"><strong>Attributaire(s) mentionné(s)</strong>'+(winners.length?winners.map(function(name){return '<div>'+esc(name)+'</div>'}).join(''):'<div>Non publié</div>')+'</div>'+
+   '<div class="award-summary"><div><small>Offres reçues</small><b>'+esc(count)+'</b></div><div><small>Valeur totale du résultat</small><b>'+(singleValue?formatMoney(singleValue):'Non publiée')+'</b></div></div>'+
+   (tenderValue?'<div class="award-detail"><strong>Valeur d’offre publiée</strong><div>'+formatMoney(tenderValue)+'</div><small>Ne pas assimiler ce montant au prix d’un soumissionnaire précis sans consulter la source.</small></div>':'')+
+   list+(lots.length?'<div class="award-detail"><strong>Lot(s) concernés</strong><div>'+esc(lots.join(' · '))+'</div><small>Les noms et prix ne sont pas automatiquement affectés à chaque lot.</small></div>':'')+
+   '<div class="award-bottom">'+(a.decisionDate?'Décision : '+fmtDate(a.decisionDate)+' · ':'')+(a.conclusionDate?'Contrat : '+fmtDate(a.conclusionDate):'')+'</div>'+evidence+'</section>';
+ }).join('');
+}
 function openTender(id){
  var m=allMarkets().find(function(a){return a.id===id});if(!m)return;
  state.selected=id;el('drawerEyebrow').textContent=m.source==='Démo'?'FICHE FICTIVE DE DÉMONSTRATION':'PUBLICATION OFFICIELLE · TED';el('drawerHeader').textContent='Détail du marché';
  var url=link(m),d=daysLeft(m.deadline);
  var fields=[['Pouvoir adjudicateur',m.buyer||'Non communiqué'],['Zone',m.region||'Belgique'],['Publié le',fmtDate(m.publication)],['Date limite',fmtDate(m.deadline)],['Code(s) CPV',(m.cpv||[]).join(', ')||'Non précisé'],['Pertinence',String(m.score||0)+'/100 (indicative)']];
  var tags=(m.sectors||[m.sector]).map(function(s){var f=SECTORS.find(function(a){return a.id===s});return '<span class="micro-tag sector">'+esc(f?f.label:s)+'</span>'}).join('');
- el('drawerBody').innerHTML='<div class="tender-top">'+tags+'<span class="micro-tag">'+esc(m.source==='Démo'?'FICTIF':'TED')+'</span></div>'+
+ el('drawerBody').innerHTML='<div class="tender-top">'+tags+'<span class="micro-tag">'+esc(m.source||'TED')+'</span></div>'+
  '<h3 class="drawer-title">'+esc(m.title)+'</h3><p style="color:#8c9bad;font-size:11px;margin:0">Échéance : '+(d===null?'non précisée':d>=0?'dans '+d+' jour(s)':'dépassée')+'</p>'+
  '<div class="detail-grid">'+fields.map(function(f){return '<div class="detail-field"><label>'+esc(f[0])+'</label><div>'+esc(f[1])+'</div></div>'}).join('')+'</div>'+
  (Array.isArray(m.constraints)&&m.constraints.length?'<div class="important-conditions"><strong>Points à vérifier avant de répondre</strong>'+m.constraints.map(function(x){return '<div>• '+esc(x)+'</div>'}).join('')+'</div>':'')+
  '<div class="drawer-label">Objet du marché</div><div class="drawer-desc">'+esc(m.description||'Résumé non disponible. Consulter l’avis officiel.')+'</div>'+
+ awardsMarkup(m)+
  '<div class="drawer-label" style="margin-top:26px">Dossier de suivi</div><select class="control-select" id="statusSelect">'+WORKFLOW.map(function(s){return '<option value="'+esc(s.id)+'"'+(s.id===stageOf(id)?' selected':'')+'>'+esc(s.label)+'</option>'}).join('')+'</select>'+
  '<div class="drawer-label">Notes personnelles</div><textarea id="marketNotes" placeholder="Points à vérifier, références, questions...">'+esc(saved.notes[id]||'')+'</textarea>'+
  '<p class="legal-note">Un seul dossier pour ce marché, indépendamment des catégories métier. Statuts et notes conservés sur ce PC et ce navigateur uniquement.</p>';
