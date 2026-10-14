@@ -1,0 +1,77 @@
+name: "MarchéRadar — premier import BOSA"
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/marcheradar-bosa-live.yml"
+permissions:
+  contents: write
+concurrency:
+  group: marcheradar-ted-data
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+        id: checkout
+        continue-on-error: true
+      - uses: actions/setup-node@v4
+        id: node
+        with:
+          node-version: "22"
+        continue-on-error: true
+      - name: "Vérifier les champs BOSA réels et le dédoublonnage"
+        id: tests
+        continue-on-error: true
+        run: node marcheradar/tools/test-bosa.cjs
+      - name: "Préparer un navigateur public"
+        id: browser
+        if: steps.tests.outcome == 'success'
+        continue-on-error: true
+        run: npm install --no-save --no-package-lock --ignore-scripts playwright-core@1.56.1
+      - name: "Collecter le bulletin officiel BOSA"
+        id: bosa
+        if: steps.browser.outcome == 'success'
+        continue-on-error: true
+        env:
+          BOSA_DAYS: "14"
+          BOSA_MAX_PAGES: "80"
+        run: node marcheradar/tools/bosa-browser.cjs
+      - name: "Publier uniquement en cas de données réellement recueillies"
+        id: publish
+        if: steps.bosa.outcome == 'success'
+        continue-on-error: true
+        shell: bash
+        run: |
+          if git diff --quiet -- marcheradar/data.json; then
+            echo "Aucune nouvelle donnée."
+            exit 0
+          fi
+          git config user.name "marcheradar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add marcheradar/data.json
+          git commit -m "MarchéRadar: premier import BOSA officiel [skip ci]"
+          git push origin HEAD:main
+      - name: "Rapport sans notification d'échec"
+        if: always()
+        shell: bash
+        env:
+          TESTS: ${{ steps.tests.outcome }}
+          BROWSER: ${{ steps.browser.outcome }}
+          COLLECT: ${{ steps.bosa.outcome }}
+          PUBLISH: ${{ steps.publish.outcome }}
+        run: |
+          {
+            echo "### État du test BOSA"
+            echo "Tests : $TESTS"
+            echo "Navigateur : $BROWSER"
+            echo "Collecte : $COLLECT"
+            echo "Publication : $PUBLISH"
+            if [ "$COLLECT" != "success" ]; then
+              echo "La collecte n'a pas pu aboutir. Les dernières données valides sont conservées."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
