@@ -30,6 +30,7 @@ const report={at:new Date().toISOString(),method:'Public navigateur sans authent
       item.arrays=arrays.map(([name,v])=>({name,count:v.length,firstKeys:v[0]?Object.keys(v[0]).slice(0,50):[]}));
       const first=arrays.map(([k,v])=>v[0]).find(Boolean);
       if(first)item.firstPublication=Object.fromEntries(Object.entries(first).filter(([k,v])=>typeof v==='string'||typeof v==='number').slice(0,40));
+      if(first)item.firstNested=Object.fromEntries(Object.entries(first).filter(([k,v])=>v&&typeof v==='object').map(([k,v])=>[k,{type:Array.isArray(v)?'array':'object',keys:Array.isArray(v)?Object.keys(v[0]||{}):Object.keys(v),sample:JSON.stringify(v).slice(0,1900)}]).slice(0,12));
      }catch(e){item.parseError=String(e.message||e).slice(0,150)}
     }
     report.events.push(item);
