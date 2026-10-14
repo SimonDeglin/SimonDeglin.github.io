@@ -3,16 +3,16 @@
   "generated_at": "2026-10-14T13:12:37.163Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-10-14 : 1350 avis examinés ; 24 notices liées aux métiers KDRIX détectées sur la période. BOSA et conseils communaux encore non raccordés.",
+  "note": "TED : collecte automatique active. Profil KDRIX ajusté : auteurs de projet voirie, pas de curage ni grands travaux routiers ; petits travaux techniques ciblés. Dossier BOSA 03.06.04-26-2843 ajouté manuellement. La couverture nationale BOSA et les conseils communaux ne sont pas encore automatisés.",
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "non connecté",
+    "BOSA": "1 marché BOSA ajouté manuellement, collecte nationale non encore raccordée",
     "communal": "non connecté"
   },
   "metrics": {
     "scanned": 1350,
     "matched_current_run": 24,
-    "records": 123,
+    "records": 124,
     "excluded_after_dictionary_update": 0,
     "days_queried": 12,
     "queries": [
@@ -45,7 +45,9 @@
         "reported": 236
       }
     ],
-    "warnings": []
+    "warnings": [],
+    "removed_during_profile_adjustment": 0,
+    "manual_bosa_records": 1
   },
   "items": [
     {
@@ -3396,6 +3398,37 @@
       "source_status": "api",
       "noticeType": "cn-standard",
       "url": "https://ted.europa.eu/fr/notice/-/detail/471773-2026"
+    },
+    {
+      "id": "bosa:03.06.04-26-2843",
+      "procedureIdentifier": "15c701d6-b5af-42c7-aebf-8258c6ee0a02",
+      "internalReference": "03.06.04-26-2843",
+      "title": "Aménagement d’accès sécurisés aux stations limnimétriques — 3 lots (03.06.04-26-2843)",
+      "buyer": "Service public de Wallonie — Direction des cours d’eau non navigables",
+      "region": "Wallonie",
+      "sector": "PetitsTravaux",
+      "sectors": [
+        "PetitsTravaux",
+        "Hydraulique"
+      ],
+      "score": 99,
+      "publication": "",
+      "deadline": "2026-10-30",
+      "deadlineTime": "09:30",
+      "cpv": [
+        "45000000"
+      ],
+      "description": "Marché de travaux pour aménager et sécuriser les accès aux stations de mesures limnimétriques en Wallonie. Lot 1 : trois aménagements de moyenne à grande ampleur en province de Luxembourg (Martelange, Herbeumont, Harnoncourt), avec vérification de stabilité et plans d’exécution. Lot 2 : petits et moyens aménagements et réparations, principalement en provinces de Liège, Namur et Luxembourg. Lot 3 : petits et moyens aménagements et réparations, principalement en Hainaut et Brabant wallon. CONDITIONS IMPORTANTES : la publication indique une visite des lieux OBLIGATOIRE le 6 octobre 2026 à 9 h à Marchin (déjà passée au 14 octobre), ainsi qu'une obligation de remettre une offre pour l'ensemble des trois lots. Vérifier dans les documents officiels si une candidature reste possible et si une autre visite peut être organisée. Date limite publiée : 30 octobre 2026 à 09 h 30, fuseau +01:00.",
+      "source": "BOSA",
+      "source_status": "ajout manuel sur la base d'un avis public, lien vers les documents officiels e-Procurement",
+      "noticeType": "cn-standard",
+      "url": "https://www.publicprocurement.be/publication-workspaces/b3502299-990e-444e-8a06-8a220c86c426/documents",
+      "constraints": [
+        "Visite obligatoire annoncée le 06/10/2026 — date passée, admissibilité à vérifier",
+        "Offre obligatoire pour les 3 lots",
+        "Échéance 30/10/2026 à 09:30 (+01:00)"
+      ]
     }
-  ]
+  ],
+  "notes_profile_updated_at": "2026-10-14"
 }
