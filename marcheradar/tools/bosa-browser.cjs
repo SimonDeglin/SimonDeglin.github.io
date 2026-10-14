@@ -47,6 +47,9 @@ async function collectBrowser(options={}){
   if(!firstResponse.ok())throw Error('Bulletin BOSA indisponible : HTTP '+firstResponse.status());
   let body=await firstResponse.json();
   let completed=false,oldest='';
+  // Le bandeau de cookies ne doit pas masquer le bouton de page suivante.
+  const cookies=page.getByRole('button',{name:'Accepter les cookies'});
+  if(await cookies.count()&&await cookies.isVisible())await cookies.click().catch(()=>{});
   for(let index=1;index<=maxPages;index++){
    const current=parseItems(body);
    if(!current.length){completed=true;break}
@@ -90,7 +93,7 @@ function importPublic(data,results){
    // nouveau marché à répondre : les placer en file de vérification.
    record.screening='review';
   }
-  const key=record.procedureIdentifier||record.id;
+  const key=record.id; // Chaque avis conserve sa source ; fusion par procédure à l'étape merge.
   if(seen.has(key))continue;
   seen.add(key);
   matched++;
