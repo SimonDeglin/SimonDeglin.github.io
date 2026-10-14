@@ -39,7 +39,7 @@ jobs:
         continue-on-error: true
         env:
           BOSA_DAYS: "14"
-          BOSA_MAX_PAGES: "80"
+          BOSA_MAX_PAGES: "115"
         run: node marcheradar/tools/bosa-browser.cjs
       - name: "Publier uniquement en cas de données réellement recueillies"
         id: publish
