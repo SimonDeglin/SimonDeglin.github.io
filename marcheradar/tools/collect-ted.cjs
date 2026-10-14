@@ -29,7 +29,7 @@ const KEYWORDS={
  VRD:/(voiries?|wegenis|wegenbouw|am[eé]nagement.{0,15}(?:voirie|route)|infrastructure routi[eè]re|road engineering|wegenontwerp|\bvrd\b)/,
  Reseaux:/(imp[eé]trant|nutsleiding|kabel.{0,10}leid|ri[oô]l|[eé]gout|riool|canalisat|leidingennet|ondergronds.{0,10}net|r[eé]seau enterr[eé]|geodetect)/,
  Hydraulique:/(hydrauli|waterbouw|jaugeag|debietmeting|waterstand|cours d.eau|waterloop|overstrom|inondation)/,
- Foncier:/(parcellaire|verkavel|kadastr|cadastr|bornage|grensbepaling|perceel|division.{0,16}terrain|property boundary|land division|foncier)/,
+ Foncier:/(parcellaire|verkavel|kadastr|cadastr|bornage|grensbepaling|perceelsgrens|division.{0,16}terrain|property boundary|land division|foncier)/,
  Implant:/(implantation|piquetage|staking out|uitzet|replante|as.built|r[eé]colement|werfinmeting)/,
  Expert:/(expertise immobili[eè]re|expertise judiciaire|schattingsverslag|onroerend.{0,8}waard|[eé]valuation immobili[eè]re|expropri|onteigening|land valuation|real estate appraisal|estimation immobili[eè]re|vastgoedexpert)/,
  PEB:/(certificat(?:ion)? .{0,22}[eé]nerg[eé]t|prestatiecertific|energieprestatie|energy performance certificate|epc.{0,8}woning|certificaat energet|audit [eé]nerg[eé]t|rapport peb|peb.{0,12}gebouw)/,
@@ -124,6 +124,19 @@ function normalize(n){
   source:'TED',source_status:'api',noticeType:kind,
   url:'https://ted.europa.eu/fr/notice/-/detail/'+num
  };
+}
+/* Revalider les données existantes avant fusion pour écarter les faux positifs
+   découverts à mesure que le dictionnaire métier est affiné. Les identifiants
+   des dossiers conservés restent stables. */
+function cleanPrevious(items){
+ const output=[],removed=[];
+ for(const m of items||[]){
+  if(!m||!m.title||m.source==='Démo')continue;
+  const rating=classify(m.title,m.description,m.cpv||[]);
+  if(!rating){removed.push(m.publicationNumber||m.id);continue}
+  output.push({...m,sector:rating.sector,sectors:rating.sectors,score:rating.score});
+ }
+ return {items:output,removed};
 }
 function combine(old,newItems){
  const byId=new Map(),byPub=new Map(),byProcedure=new Map();
@@ -235,7 +248,9 @@ async function run(){
   const n=normalize(raw);
   if(n)unique.set(n.publicationNumber,n);
  }
- const markets=combine(previous.items||[],[...unique.values()]);
+ const cleaned=cleanPrevious(previous.items||[]);
+ const markets=combine(cleaned.items,[...unique.values()]);
+ if(cleaned.removed.length)console.log('Annonces hors périmètre nettoyées:',cleaned.removed.length);
  if(!markets.length)throw Error('Aucun marché exploitable : données existantes conservées');
  const timestamp=new Date().toISOString();
  const data={
@@ -243,11 +258,11 @@ async function run(){
   collector_status:warnings.length?'partial':'ok',
   note:'TED interrogé le '+timestamp.slice(0,10)+' : '+notices.length+' avis examinés ; '+unique.size+' notices liées aux métiers KDRIX détectées sur la période. BOSA et conseils communaux encore non raccordés.',
   coverage:{TED:warnings.length?'partiel : exécution en Belgique incomplète':'collecte automatique active',BOSA:'non connecté',communal:'non connecté'},
-  metrics:{scanned:notices.length,matched_current_run:unique.size,records:markets.length,days_queried:lookback,queries:stats,warnings},
+  metrics:{scanned:notices.length,matched_current_run:unique.size,records:markets.length,excluded_after_dictionary_update:cleaned.removed.length,days_queried:lookback,queries:stats,warnings},
   items:markets
  };
  fs.writeFileSync(OUTPUT,JSON.stringify(data,null,2)+'\n','utf8');
  console.log('MARCHERADAR_OK',JSON.stringify({matched:unique.size,records:markets.length,scanned:notices.length}));
 }
-module.exports={txt,flatten,iso,earliestDate,codes,classify,region,normalize,combine,retrieve,run};
+module.exports={txt,flatten,iso,earliestDate,codes,classify,region,normalize,cleanPrevious,combine,retrieve,run};
 if(require.main===module){run().catch(e=>{console.error('MARCHERADAR_ERROR',e.message);process.exitCode=1})}
