@@ -734,7 +734,7 @@ $('#reading-water').addEventListener('change',()=>{
 function openReading(r){$('#reading-form').reset();$('#reading-id').value=r?.date||'';$('#reading-date').value=r?.date||today();for(const k of ['day','night','pv','water'])$('#reading-'+k).value=r?.[k]==null?'':(k==='water'?roundWater(r[k]).toFixed(1):r[k]);pendingPhotos=r?.photos?{...r.photos}:{};photoFlags();$('#reading-heading').textContent=r?'Modifier le relevé':'Nouveau relevé';modal('reading-overlay')}
 function photoFlags(){$('#photo-flags').innerHTML=Object.keys(pendingPhotos).map(k=>'<span class="photo-flag">Photo '+esc(({day:'jour',night:'nuit',pv:'PV',water:'eau'})[k])+'</span>').join('')}
 $('#new-reading').onclick=()=>openReading();
-$('#reading-form').onsubmit=e=>{e.preventDefault();const date=$('#reading-date').value,id=$('#reading-id').value,r={date};let count=0;for(const k of ['day','night','pv','water']){const value=$('#reading-'+k).value;if(value.trim()!==''){r[k]=k==='water'?roundWater(value):Number(value);count++}}if(!count)return toast('Renseigne au moins un index.');if((r.day==null)!==(r.night==null))return toast('Pour le bilan réseau, renseigne jour et nuit ensemble.');if(Object.keys(pendingPhotos).length)r.photos=pendingPhotos;if(db.readings.some(v=>v.date===date&&v.date!==id))return toast('Un relevé existe déjà à cette date.');db.readings=db.readings.filter(v=>v.date!==id);db.readings.push(r);if(!id){calendarYear=Number(date.slice(0,4));}if(!save()){db.readings=db.readings.filter(v=>v.date!==date);if(id)db.readings.push(sorted().find(v=>v.date===id));return}modal('reading-overlay',false);render();toast('Relevé enregistré')};
+$('#reading-form').onsubmit=e=>{e.preventDefault();const date=$('#reading-date').value,id=$('#reading-id').value,r={date};let count=0;for(const k of ['day','night','pv','water']){const value=$('#reading-'+k).value;if(value.trim()!==''){r[k]=k==='water'?roundWater(value):k==='pv'?Math.round(Number(value)):Number(value);count++}}if(!count)return toast('Renseigne au moins un index.');if((r.day==null)!==(r.night==null))return toast('Pour le bilan réseau, renseigne jour et nuit ensemble.');if(Object.keys(pendingPhotos).length)r.photos=pendingPhotos;if(db.readings.some(v=>v.date===date&&v.date!==id))return toast('Un relevé existe déjà à cette date.');db.readings=db.readings.filter(v=>v.date!==id);db.readings.push(r);if(!id){calendarYear=Number(date.slice(0,4));}if(!save()){db.readings=db.readings.filter(v=>v.date!==date);if(id)db.readings.push(sorted().find(v=>v.date===id));return}modal('reading-overlay',false);render();toast('Relevé enregistré')};
 $('#history-table').addEventListener('click',e=>{const oil=e.target.closest('[data-history-oil]'),edit=e.target.closest('[data-edit]'),del=e.target.closest('[data-delete]');if(oil){show('mazout');return}if(edit)openReading(db.readings.find(r=>r.date===edit.dataset.edit));if(del&&confirm('Supprimer les index du '+label(del.dataset.delete)+' ?')){db.readings=db.readings.filter(r=>r.date!==del.dataset.delete);save();render()}});
 const exportBlob=(content,type,name)=>{const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000)};
 $('#export-data').onclick=()=>exportBlob(JSON.stringify({version:1,exportedAt:new Date().toISOString(),...db},null,2),'application/json','flux-sauvegarde-'+today()+'.json');
@@ -764,9 +764,19 @@ $$('[data-scan-kind]').forEach(button=>button.addEventListener('click',()=>{
 $('#scan-meter').onchange=()=>{
  scanKind=$('#scan-meter').value;
  $('#scan-value').step=scanKind==='water'?'0.1':'1';
+ updateScanHint();
  const chosen=proposeScanIndex(scanLastText,scanKind);
  if(chosen!=null)$('#scan-value').value=chosen;
 };
+function updateScanHint(){
+ const hints={
+  pv:'Itron : 6 chiffres noirs + 1 rouge (dixième). Arrondi au kWh. Encadre les chiffres si besoin.',
+  water:'Compteur d’eau : chiffres noirs et rouges. Arrondi au dixième de m³.',
+  day:'Électricité jour : vérifie les chiffres entiers de l’index.',
+  night:'Électricité nuit : vérifie les chiffres entiers de l’index.'
+ };
+ const hint=$('#scan-hint');if(hint)hint.textContent=hints[scanKind]||'';
+}
 function capturePhotoData(file){
  return new Promise((resolve,reject)=>{
   const reader=new FileReader();reader.onerror=()=>reject(new Error('lecture du fichier impossible'));
@@ -850,6 +860,29 @@ function proposeScanIndex(text,kind){
     add(combined,77);
    }
   }
+ }else if(kind==='pv'){
+  // Itron photovoltaic meter: six BLACK whole-kWh wheels followed by one RED tenth.
+  // Never concatenate all seven digits into a whole-kWh index.
+  for(let i=0;i<tokens.length;i++){
+   const token=tokens[i].replace(',','.');
+   if(/^\d{6}\.\d$/.test(token)){
+    add(Number(token),126);
+   }else if(/^\d{7}$/.test(token)){
+    add(Number(token.slice(0,6))+Number(token.slice(6))/10,125);
+   }else if(/^\d{6}$/.test(token)){
+    const red=tokens[i+1];
+    if(red&&/^\d$/.test(red))add(Number(token)+Number(red)/10,120);
+    add(Number(token),95);
+    // A photo may drop the initial leading 0, joining five black digits + one red.
+    if(expected!=null&&Number(token)>expected*3&&Math.abs(Number(token)/10-expected)<Math.abs(Number(token)-expected))
+     add(Number(token)/10,111);
+   }else if(/^\d{5}\.\d$/.test(token)){
+    add(Number(token),109);
+   }else if(/^\d{5}$/.test(token)){
+    const red=tokens[i+1];
+    if(red&&/^\d$/.test(red))add(Number(token)+Number(red)/10,100);
+   }
+  }
  }else{
   for(const token of tokens){
    const digits=token.replace(/[,.].*$/,'');
@@ -908,6 +941,7 @@ $('#scan-file').onchange=async e=>{
   $('#scan-meter').value=scanKind;
   $('#scan-value').value='';
   $('#scan-value').step=scanKind==='water'?'0.1':'1';
+  updateScanHint();
   $('#scan-message').textContent='Préparation de la lecture…';
   modal('scan-overlay');
   const image=$('#scan-preview');if(!image.complete)await new Promise(ok=>{image.onload=ok;image.onerror=ok});
