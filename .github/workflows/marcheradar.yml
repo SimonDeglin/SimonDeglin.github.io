@@ -60,6 +60,12 @@ jobs:
         run: node marcheradar/tools/collect-ted.cjs
         continue-on-error: true
 
+      - name: "Tenter la recherche publique BOSA (sans altérer TED en cas de refus)"
+        id: bosa
+        if: steps.collect.outcome == 'success'
+        run: node marcheradar/tools/bosa-public.cjs
+        continue-on-error: true
+
       - name: "Publier uniquement les données valides"
         id: publish
         if: steps.collect.outcome == 'success'
@@ -84,6 +90,7 @@ jobs:
           NODE_RESULT: ${{ steps.node.outcome }}
           TESTS_RESULT: ${{ steps.tests.outcome }}
           COLLECT_RESULT: ${{ steps.collect.outcome }}
+          BOSA_RESULT: ${{ steps.bosa.outcome }}
           PUBLISH_RESULT: ${{ steps.publish.outcome }}
         run: |
           {
@@ -95,6 +102,7 @@ jobs:
             echo "| Node.js | $NODE_RESULT |"
             echo "| Tests | $TESTS_RESULT |"
             echo "| Collecte TED | $COLLECT_RESULT |"
+            echo "| Tentative BOSA | $BOSA_RESULT |"
             echo "| Publication | $PUBLISH_RESULT |"
             echo ""
             if [ "$COLLECT_RESULT" != "success" ] || [ "$PUBLISH_RESULT" = "failure" ]; then
