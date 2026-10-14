@@ -1026,10 +1026,14 @@ function electricRowsFromWords(words){
 }
 function recognizeElectricPair(ocr){
  if(!ocr)return null;
- const lineRows=(ocr.lines||[]).filter(r=>r?.text).map(r=>({
-  text:r.text,y:r.bbox?.y0??null,x:r.bbox?.x0??null
- })).filter(r=>/\d/.test(r.text));
- const wordRows=electricRowsFromWords(ocr.words||[]);
+ // Tesseract.js 5 reports bounding boxes via nested blocks > paragraphs > lines > words.
+ const blocks=Array.isArray(ocr.blocks)?ocr.blocks:[];
+ const nestedLines=blocks.flatMap(b=>(b.paragraphs||[]).flatMap(p=>p.lines||[]));
+ const nestedWords=nestedLines.flatMap(line=>line.words||[]);
+ const lineRows=(Array.isArray(ocr.lines)&&ocr.lines.length?ocr.lines:nestedLines)
+  .filter(r=>r?.text).map(r=>({text:r.text,y:r.bbox?.y0??null,x:r.bbox?.x0??null}))
+  .filter(r=>/\d/.test(r.text));
+ const wordRows=electricRowsFromWords(Array.isArray(ocr.words)&&ocr.words.length?ocr.words:nestedWords);
  const textRows=String(ocr.text||'').split(/\r?\n/).filter(t=>/\d/.test(t)).map((text,i)=>({text,y:i*100,x:null}));
  const collections=[lineRows,wordRows,textRows];
  let best=null;
@@ -1098,7 +1102,7 @@ async function detectIndexFromImage(){
   const engine=await ocrLibrary(),worker=await ocrWorker();
   const mode=scanKind==='electric'?(engine.PSM?.SPARSE_TEXT||'11'):scanCrop?(engine.PSM?.SINGLE_LINE||'7'):(engine.PSM?.SPARSE_TEXT||'11');
   await worker.setParameters({tessedit_char_whitelist:'0123456789,.',tessedit_pageseg_mode:mode});
-  const result=await worker.recognize(scanSourceImage());
+  const result=await worker.recognize(scanSourceImage(),{},scanKind==='electric'?{text:true,blocks:true}:{text:true});
   if(id!==scanRequest)return;
   scanLastData=result?.data||null;
   scanLastText=scanLastData?.text||'';
