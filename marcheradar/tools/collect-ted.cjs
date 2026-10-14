@@ -81,7 +81,9 @@ function worksScope(title,description,cpvs){
  const top=simplify(title),body=simplify(description);
  const smallRelevant=/(limnimetr|station.{0,25}(?:mesure|hydrometr|jaugeage)|acces securis.{0,35}cours d.eau|amenagement.{0,25}acces.{0,25}cours d.eau|passerelle.{0,25}jaugeage|echelle.{0,25}limnimetr)/;
  const smallDescription=/(petit.{0,12}amenagement|petit.{0,12}reparat|petit.{0,12}ouvrag|plans? d.execution|amenagements? ponctuels?)/;
- const isSmallWorks=smallRelevant.test(top)||smallRelevant.test(body)&&smallDescription.test(body);
+ const designOnly=/(^|[–:])\s*(etude|étude|conception|services|mission d.auteur de projet|diagnostic|studie|ontwerp)/.test(top)&&!/(travaux|reparation|maintenance|construction)/.test(top);
+ const workContext=cpvs.some(code=>/^45/.test(code))||/(travaux|amenagement|reparation|maintenance|petit ouvrage|small works)/.test(top);
+ const isSmallWorks=!designOnly&&workContext&&(smallRelevant.test(top)||smallRelevant.test(body)&&smallDescription.test(body));
  // Le curage, le dragage et le désenvasement ne sont pas des prestations KDRIX.
  const curageTitle=/(curage|desenvas|dragage|dredging|baggerwerk|baggeren|riolen reinigen|rioolrein|rioolruim|reiniging.{0,15}rioler)/;
  if(curageTitle.test(top)&&!/^(etude|studie|conception)/.test(top))return {rejected:'curage'};
@@ -89,6 +91,9 @@ function worksScope(title,description,cpvs){
  const titleAsWorks=/(travaux de construction|travaux? (?:de |d.)(?:voirie|route|chauss[eé]e|construction|terrassement)|wegen(?:is)?werken|wegenbouw|road construction|aanleg.{0,20}(?:wegen|wegdek)|construction.{0,10}(?:route|road|canalis)|r[eé]habilitation.{0,20}(?:voirie|route))/;
  const servicesRole=/(missions? d.auteur de projet|bureau d.etudes|ma[iî]trise d.[oœ]uvre|ontwerpopdracht|studieopdracht|services? d.ing[eé]nierie|[eé]tudes? (?:de |des )?(?:voirie|v\.?r\.?d|r[eé]seau|hydraul)|conception|ontwerp)/;
  if(isSmallWorks)return {smallWorks:true};
+ const mainWork=publicWorks&&/(travaux|construction|renovation|rehabilitation|equipement|installat|aanleg|bouw|werken|uitvoering)/.test(top);
+ const directServiceTitle=/(topograph|topograf|landmeet|landmet|releves? |bathym|scan|drone|photogrammetr|geometre|expertise|peb\b|etude|conception|bureau d.etudes|auteur de projet)/.test(top);
+ if(mainWork&&!directServiceTitle)return {rejected:'travaux_hors_champ'};
  if((publicWorks||titleAsWorks.test(top))&&
     (titleAsWorks.test(top)||/(travaux de construction|aanleg van|wegeniswerken|uitvoering van werken)/.test(top))&&
     !servicesRole.test(top)){
@@ -103,6 +108,7 @@ function classify(title,description,cpvs){
  const points=new Map();
  const add=(id,n)=>points.set(id,(points.get(id)||0)+n);
  for(const [id,regex] of Object.entries(KEYWORDS)){
+  if(id==='PetitsTravaux'&&!scope.smallWorks)continue;
   // Les intitulés métier ont davantage de poids que les mentions secondaires.
   if(regex.test(top))add(id,57);else if(regex.test(rest))add(id,33);
  }
@@ -116,6 +122,7 @@ function classify(title,description,cpvs){
  }
  if(!points.size)return null;
  const tags=[...points.entries()].filter(row=>row[1]>=17).sort((a,b)=>b[1]-a[1]).map(x=>x[0]);
+ if(!tags.length)return null;
  const max=Math.max(...points.values());
  const score=Math.max(28,Math.min(99,Math.round(24+max*0.7)));
  return {sector:tags[0],sectors:tags,score};
