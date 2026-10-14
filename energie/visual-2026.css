@@ -888,3 +888,175 @@ body[data-section="mazout"] .topbar .title{color:#68513a}
  #page-accueil .stat-grid .stat-kicker{font-size:10px}
  .compact-filters select{font-size:14px}
 }
+
+
+/* Ôwatt v22 — fine layout refinements requested 14 October 2026 */
+/* Summary is intentionally indigo, not a duplicate of the electricity-orange card. */
+#page-accueil .hero{
+ background:#e5e6f5!important;
+ border:1px solid #d7daf0!important;
+ color:#3f477c!important;
+ box-shadow:0 9px 27px rgba(62,67,127,.07)!important;
+}
+#page-accueil .hero-main{background:transparent}
+#page-accueil .hero-eyebrow{
+ color:#565f96!important;
+}
+#page-accueil .hero-value,
+#page-accueil .hero-value.negative{
+ color:#383f79!important;
+}
+#page-accueil .hero-unit{
+ color:#515e91!important;
+}
+#page-accueil .hero-pill{
+ background:rgba(255,255,255,.62)!important;
+ color:#5a6092!important;
+ border-color:rgba(93,103,165,.17)!important;
+}
+#page-accueil .stat-grid .stat-number{
+ display:flex;
+ align-items:baseline;
+ justify-content:flex-start;
+ gap:3px;
+ width:100%;
+ white-space:nowrap;
+ font-variant-numeric:tabular-nums;
+}
+#page-accueil .stat-grid .stat-number .monthly-inline{
+ color:inherit!important;
+ font:750 10px/1.15 "DM Sans",system-ui,sans-serif;
+ letter-spacing:-.1px;
+ flex:0 0 auto;
+ white-space:nowrap;
+ margin-left:3px;
+ opacity:1;
+}
+#page-accueil .stat-grid .stat-caption{
+ color:inherit;
+ opacity:.66;
+}
+
+/* Electricity: put the annual balance status directly beside its value. */
+#page-electricite .category-primary{
+ display:grid!important;
+ grid-template-columns:max-content minmax(0,1fr);
+ align-items:center;
+ column-gap:10px;
+ row-gap:4px;
+ margin:9px 0 4px!important;
+}
+#page-electricite .category-primary-label{
+ grid-column:1/-1;
+ font-size:11px;
+}
+#page-electricite .category-primary strong{
+ grid-column:1;
+ font-size:clamp(29px,4.3vw,43px);
+ white-space:nowrap;
+}
+#page-electricite .category-primary-caption{
+ grid-column:2;
+ align-self:center;
+ min-width:0;
+ max-width:210px;
+ color:inherit;
+ font-size:11px;
+ line-height:1.25;
+ font-weight:750;
+ opacity:.89;
+}
+#electric-bar-description{display:none!important}
+#page-electricite #elec-view-mensuel .bar-panel,
+#page-electricite #elec-view-mensuel .panel-top{
+ min-height:0!important;
+}
+#page-electricite #elec-view-mensuel .bar-panel .panel-top{
+ padding:0;
+ margin-bottom:2px!important;
+ gap:0;
+}
+#page-electricite #elec-view-mensuel .bar-panel h2{
+ margin-bottom:0;
+}
+#page-electricite #elec-view-mensuel .monthly-bars{
+ margin-top:0;
+}
+/* Over 30 m³, keep the real reading explicitly visible; don't silently clip it. */
+#page-eau .water-overflow-value{
+ fill:#a06b3e;
+ font-family:"DM Sans",sans-serif;
+ font-size:10px;
+ font-weight:850;
+}
+#page-eau .water-overflow-marker{
+ fill:none;
+ stroke:#b57c41;
+ stroke-width:1.7;
+ stroke-linecap:round;
+ stroke-linejoin:round;
+}
+#page-eau .water-overflow-note{
+ display:block;
+ border-radius:8px;
+ padding:5px 8px;
+ margin:0 0 2px;
+ font-size:10px;
+ font-weight:700;
+ color:#8c6542;
+ background:#fff5e9;
+ line-height:1.3;
+}
+
+/* Oil fill-up labels have enough space above the 1000-L starting reading. */
+#page-mazout #oil-level-view .oil-timeline{
+ overflow:visible!important;
+}
+#page-mazout #oil-timeline svg{
+ overflow:visible!important;
+}
+#page-mazout #oil-timeline .oil-fill-label{
+ font-weight:850;
+}
+@media(max-width:750px){
+ #page-accueil .stat-grid .stat-number{
+  font-size:clamp(18px,5.4vw,23px)!important;
+  gap:2px;
+  letter-spacing:-.6px;
+ }
+ #page-accueil .stat-grid .stat-number .unit{
+  font-size:10px!important;
+ }
+ #page-accueil .stat-grid .stat-number .monthly-inline{
+  font-size:9px;
+  margin-left:2px;
+  letter-spacing:-.3px;
+ }
+ #page-electricite .category-primary{
+  grid-template-columns:max-content minmax(0,1fr);
+  column-gap:7px;
+  row-gap:2px;
+  margin:6px 0 3px!important;
+ }
+ #page-electricite .category-primary strong{
+  font-size:clamp(28px,7.3vw,37px);
+  letter-spacing:-1.1px;
+ }
+ #page-electricite .category-primary-caption{
+  font-size:10px;
+  line-height:1.2;
+ }
+ #page-electricite #elec-view-mensuel .bar-panel .panel-top{min-height:0!important}
+}
+@media(max-width:365px){
+ #page-accueil .stat-grid .stat-number{
+  font-size:19px!important;
+  gap:2px;
+ }
+ #page-accueil .stat-grid .stat-number .monthly-inline{
+  font-size:8px;
+  margin-left:0;
+ }
+ #page-electricite .category-primary strong{font-size:28px}
+ #page-electricite .category-primary-caption{font-size:9px}
+}
