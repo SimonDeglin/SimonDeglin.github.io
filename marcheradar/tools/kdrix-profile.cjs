@@ -46,7 +46,8 @@ const CPV={
 function classify(title,description,cpvs){
  const subject=fold(subjectOf(title)),desc=fold(String(description||'').slice(0,2500)),cpv=Array.isArray(cpvs)?cpvs:[];
  if(!subject)return null;
- const isSmallWorks=SIGNALS.PetitsTravaux.test(subject)&&
+ const designOnly=/^(?:etude|conception|mission d.auteur de projet|diagnostic|dimensionnement)\b/.test(subject)&&!/(travaux|reparation|pose d.|installation de)/.test(subject);
+ const isSmallWorks=!designOnly&&SIGNALS.PetitsTravaux.test(subject)&&
    (/(travaux|amenagement|acces securise|reparation|construction)/.test(subject)||cpv.some(c=>/^45/.test(c)));
  const forbidden=/(?:achat|acquisition|fourniture|livraison|leasing|location|approvisionnement|assuranc|vehicules?|balayeuses?|camion(?:nettes?)?|tracteurs?|pelles? mecaniques?|nettoyage|debouchage|curage|dragage|desenvas|transport|evacuation|enlevement|entretien|depannage|maintenance|reparations? (?:de machines|des installations)|services? bancaires?|credit|financement|pharmac|recrutement|assessment center|cybersecurite|developpement (?:de )?logiciel|fouille archeologique|desamiantage|exploitation de parkings?)/;
  const gauge=/jaugeag|mesure (?:de |des )?debits?/.test(subject)&&!/curage|dragage|desenvas/.test(subject);
