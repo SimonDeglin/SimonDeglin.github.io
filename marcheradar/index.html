@@ -167,6 +167,12 @@ body{background:#f7f7f7;color:#303339}
 .award-bottom{font-size:11px;color:#8f9baa;margin-bottom:6px}
 .award-panel a{display:inline-flex;align-items:center;gap:6px;color:#bf673d;font-size:11px;font-weight:800;text-decoration:none;padding:6px 0}
 .public-result-empty{background:#f7f9fa;border-radius:9px;padding:13px;font-size:11px;color:#8997a5;line-height:1.8}
+.section-right{display:flex;align-items:center;gap:14px}
+.review-btn{background:#f7f7f7;color:#78848f;border:1px solid #e1e6eb;border-radius:8px;font-size:11px;font-weight:800;padding:8px 10px;white-space:nowrap}
+.review-btn:hover,.review-btn.active{border-color:#d8a387;color:#ad653f;background:#fff2e9}
+.review-btn span{padding:1px 6px;border-radius:5px;background:#e9edf0;color:#6e7e8e;margin-left:3px}
+.review-btn[hidden]{display:none}
+@media(max-width:740px){.section-right{gap:6px}.review-btn{font-size:10px;padding:7px}}
 </style>
 </head>
 <body>
@@ -229,7 +235,7 @@ body{background:#f7f7f7;color:#303339}
     <section class="hero"><div class="hero-main"><div class="hero-tag"><svg class="ico s"><use href="#i-radar"/></svg> VOTRE RADAR EST PRÊT</div><h2>Les bons marchés.<br>Au bon moment.</h2><p>Topographie, hydrographie, VRD, cartographie, expertise immobilière et PEB : une veille construite autour des compétences du groupe.</p></div><div class="hero-side"><div class="hero-number" id="heroCount">—</div><span>opportunités affichées</span></div></section>
     <div class="notice-banner" id="noticeBanner"><svg class="ico l"><use href="#i-info"/></svg><div><b>Chargement en cours.</b> Vérification des publications disponibles.</div></div>
     <section class="kpis" aria-label="Indicateurs"><div class="kpi"><div><div class="num" id="kpiTotal">—</div><div class="label">Dans le listing</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-radar"/></svg></div></div><div class="kpi"><div><div class="num" id="kpiTop">—</div><div class="label">À répondre</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-target"/></svg></div></div><div class="kpi"><div><div class="num" id="kpiTracked">—</div><div class="label">En attente d’attribution</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-bookmark"/></svg></div></div><div class="kpi"><div><div class="num" id="kpiUrgent">—</div><div class="label">Marchés obtenus</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-calendar"/></svg></div></div></section>
-    <div class="section-head"><h2 id="sectionTitle">Listing complet</h2><small id="lastSync"></small></div>
+    <div class="section-head"><h2 id="sectionTitle">Listing complet</h2><div class="section-right"><button id="reviewBtn" class="review-btn" type="button">À vérifier <span id="reviewCount">0</span></button><small id="lastSync"></small></div></div>
     <div id="listDescription" class="list-description">Marchés à trier, non encore classés. Glissez une ligne vers un dossier à gauche.</div>
     <section class="filter-panel">
       <div class="search-row">
@@ -394,6 +400,7 @@ async function load(){
  btn.disabled=false;render();
 }
 document.querySelectorAll('[data-view]').forEach(function(b){b.addEventListener('click',function(){setView(b.dataset.view)})});
+el('reviewBtn').addEventListener('click',function(){setView(state.view==='review'?'inbox':'review')});
 el('search').addEventListener('input',function(e){state.query=e.target.value;renderList()});
 el('region').addEventListener('change',function(e){state.region=e.target.value;renderList()});
 el('sort').addEventListener('change',function(e){state.sort=e.target.value;renderList()});
@@ -488,6 +495,9 @@ function filtered(){
   if(!matchesSectorFilter(tags))return false;
   if(state.region!=='all'&&m.region!==state.region)return false;
   if(isStage(state.view)&&stageOf(m.id)!==state.view)return false;
+  if(state.view==='inbox'&&(m.screening==='review'||m.screening==='excluded'))return false;
+  if(state.view==='review'&&!(m.screening==='review'&&stageOf(m.id)==='inbox'))return false;
+  if(m.screening==='excluded'&&stageOf(m.id)==='inbox')return false;
   if(state.view==='favorites'&&!saved.favorites[m.id])return false;
   if(state.view==='urgent'){var d=daysLeft(m.deadline);if(d===null||d<0||d>14)return false}
   var q=norm(state.query).trim();
@@ -550,7 +560,7 @@ function renderCategories(){
  el('allCategories').setAttribute('aria-pressed',String(state.sector==='all'));
 }
 function renderStats(){
- el('kpiTotal').textContent=stageNumber('inbox');
+ el('kpiTotal').textContent=allMarkets().filter(function(m){return stageOf(m.id)==='inbox'&&m.screening!=='review'&&m.screening!=='excluded'}).length;
  el('kpiTop').textContent=stageNumber('answer');
  el('kpiTracked').textContent=stageNumber('await');
  el('kpiUrgent').textContent=stageNumber('won');
@@ -558,10 +568,10 @@ function renderStats(){
  
  
  
- document.querySelectorAll('[data-count]').forEach(function(b){b.textContent=stageNumber(b.dataset.count)});
+ document.querySelectorAll('[data-count]').forEach(function(b){b.textContent=b.dataset.count==='inbox'?allMarkets().filter(function(m){return stageOf(m.id)==='inbox'&&m.screening!=='review'&&m.screening!=='excluded'}).length:stageNumber(b.dataset.count)});
 }
 function renderNav(){
- var labels={inbox:'Listing complet',maybe:'À définir',answer:'À répondre',await:"En attente d'attribution",won:'Obtenu',lost:'Perdu',discarded:'Sans suite',catalogue:'Tous les marchés',favorites:'Favoris',urgent:'Échéances proches'};
+ var labels={inbox:'Listing complet',maybe:'À définir',answer:'À répondre',await:"En attente d'attribution",won:'Obtenu',lost:'Perdu',discarded:'Sans suite',catalogue:'Tous les marchés',review:'À vérifier',favorites:'Favoris',urgent:'Échéances proches'};
  var descriptions={
  inbox:'Marchés non classés. Glissez une ligne vers un dossier à gauche : elle disparaîtra d’ici.',
  maybe:'Opportunités à examiner avant de décider si KDRIX présente une offre.',
@@ -570,6 +580,7 @@ function renderNav(){
  won:'Marchés attribués à KDRIX.',
  lost:'Marchés attribués à un autre soumissionnaire.',
  discarded:'Opportunités classées sans suite.',
+ review:'Correspondances indirectes à analyser avant de les classer.',
  catalogue:'Historique complet. Tous les marchés apparaissent une seule fois, même avec plusieurs catégories métier.',
  favorites:'Vos favoris, indépendamment de leur dossier de suivi.',
  urgent:'Échéances dans les 14 prochains jours, tous dossiers confondus.'
@@ -578,6 +589,10 @@ function renderNav(){
  el('crumb').textContent=title;el('sectionTitle').textContent=title;
  el('resultTitle').innerHTML=esc(title)+' <span class="result-count" id="resultCount">0</span>';
  el('listDescription').textContent=descriptions[state.view]||'';
+ var needReview=allMarkets().filter(function(m){return stageOf(m.id)==='inbox'&&m.screening==='review'}).length;
+ el('reviewCount').textContent=needReview;
+ el('reviewBtn').hidden=!(needReview||state.view==='review');
+ el('reviewBtn').classList.toggle('active',state.view==='review');
  document.querySelectorAll('[data-view]').forEach(function(b){b.classList.toggle('active',b.dataset.view===state.view)});
  renderCategories();
 }
