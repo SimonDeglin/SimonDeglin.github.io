@@ -70,6 +70,22 @@ const report={at:new Date().toISOString(),method:'Public navigateur sans authent
       sample:parsed?.publications?.[0]&&Object.fromEntries(Object.entries(parsed.publications[0]).filter(([k,v])=>typeof v==='string').slice(0,8))};
    });
   }catch(e){report.pageTwoViaFetch={error:String(e.message||e).slice(0,170)}}
+  report.detailChecks=[];
+  for(const target of [
+    {kind:'BATHY',id:'0765b50e-85f5-4aae-b2ca-2ed66c14e354'},
+    {kind:'CHERTAL',id:'834b6f23-3906-4589-a0e7-afae9c91d26a'}
+  ]){
+    try{
+      const detail='https://www.publicprocurement.be/publication-workspaces/'+target.id+'/general';
+      const response=await page.goto(detail,{waitUntil:'domcontentloaded',timeout:25000});
+      await page.waitForTimeout(1200);
+      const txt=await page.locator('body').innerText({timeout:10000});
+      const idxs=[...txt.matchAll(/(?:date limite de soumission|date limite|submission deadline|remise des offres|date limite de remise)/gi)].map(x=>x.index);
+      report.detailChecks.push({kind:target.kind,http:response?.status(),bodyLength:txt.length,
+        excerpts:idxs.slice(0,7).map(n=>txt.slice(Math.max(0,n-110),n+310)),
+        header:txt.slice(0,850)});
+    }catch(e){report.detailChecks.push({kind:target.kind,error:String(e.message||e).slice(0,220)})}
+  }
   report.status=data.bodyLength>350&&/Bulletin|adjudications|Tender|Publication|search|Rechercher/i.test(data.bodyExcerpt)?'public-bulletin-visible':'frontend-not-loaded';
  }catch(e){report.status='browser-failed';report.errors.push(String(e.message||e).slice(0,400))}
  finally{try{await browser?.close()}catch(e){}}
