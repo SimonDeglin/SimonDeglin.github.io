@@ -1364,6 +1364,8 @@ async function detectIndexFromImage(){
  const retry=$('#scan-retry');retry.disabled=true;
  const diagnostics=[];const preview=scanSourceImage();
  $('#scan-analysis').src=preview||pendingImage;
+ $('#scan-index-zoom').classList.toggle('hidden',!scanCrop);
+ if(scanCrop)$('#scan-zoom').src=preview;
  $('#scan-raw-text').textContent='Analyse en cours…';
  $('#scan-message').textContent=scanCrop?'Analyse des chiffres détectés ou encadrés…':'Recherche des chiffres sur la photo…';
  try{
