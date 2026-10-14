@@ -1259,7 +1259,7 @@ function fillElectricFromOcr(data){
 
 /* Image-space auto detection. The red fractional wheels locate the mechanical
    index; old meter values are NOT used to synthesize or replace OCR readings. */
-let scanAutoZones=null,scanAutoConfidence='none',scanLastMethod='manual';
+let scanAutoZones=null,scanAutoConfidence='none',scanLastMethod='manual',scanDeadline=0;
 function scanUnion(zones){
  if(!zones?.length)return null;
  const x0=Math.min(...zones.map(z=>z.left)),y0=Math.min(...zones.map(z=>z.top));
@@ -1347,20 +1347,20 @@ async function withScanDeadline(work,ms=18000){
  try{
   return await Promise.race([
    work,
-   new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('OCR_TIMEOUT')),ms)})
+   new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('OCR_TIMEOUT')),scanDeadline?Math.max(250,Math.min(ms,scanDeadline-Date.now())):ms)})
   ]);
  }finally{clearTimeout(timer)}
 }
 async function recognizeScanZone(worker,engine,rect,negative,kind){
  const mode=kind==='electric'||rect?engine.PSM?.SINGLE_LINE||'7':engine.PSM?.SPARSE_TEXT||'11';
- await worker.setParameters({tessedit_char_whitelist:'0123456789,.',tessedit_pageseg_mode:mode});
+ await withScanDeadline(worker.setParameters({tessedit_char_whitelist:'0123456789,.',tessedit_pageseg_mode:mode}),6000);
  const source=scanSourceImage(rect,negative);
  const result=await withScanDeadline(worker.recognize(source,{}, {text:true}),18000);
  return {text:result?.data?.text||'',confidence:result?.data?.confidence??null,source};
 }
 async function detectIndexFromImage(){
  if(scanBusy||!pendingImage)return;
- scanBusy=true;const id=++scanRequest;
+ scanBusy=true;scanDeadline=Date.now()+30000;const id=++scanRequest;
  const retry=$('#scan-retry');retry.disabled=true;
  const diagnostics=[];const preview=scanSourceImage();
  $('#scan-analysis').src=preview||pendingImage;
@@ -1434,7 +1434,7 @@ async function detectIndexFromImage(){
     old?.then(w=>w.terminate?.()).catch(()=>{});
    }
   }
- }finally{scanBusy=false;retry.disabled=false;}
+ }finally{scanBusy=false;scanDeadline=0;retry.disabled=false;}
 }
 $('#scan-file').onchange=async e=>{
  const file=e.target.files?.[0];if(!file)return;
