@@ -214,7 +214,7 @@ body{background:#f7f7f7;color:#303339}
     <section class="filter-panel">
       <div class="search-row">
         <div class="search-wrap"><svg class="ico"><use href="#i-search"/></svg><input id="search" type="search" aria-label="Rechercher un marché" placeholder="Rechercher un marché, un acheteur ou un lieu..."></div>
-        <select class="filter-select" id="region" aria-label="Filtrer par région"><option value="all">Toutes les zones</option><option value="Wallonie">Wallonie</option><option value="Bruxelles">Bruxelles</option><option value="Flandre">Flandre</option><option value="Belgique">Lieu non précisé</option></select>
+        <select class="filter-select" id="region" aria-label="Filtrer par région"><option value="all">Wallonie, Bruxelles et à vérifier</option><option value="Wallonie">Wallonie</option><option value="Bruxelles">Bruxelles</option><option value="Belgique">Lieu à vérifier</option></select>
         <select class="filter-select" id="sort" aria-label="Trier les marchés"><option value="deadline">Échéances à venir</option><option value="score">Plus pertinents</option><option value="recent">Plus récents</option></select>
       </div>
       
@@ -263,7 +263,7 @@ function fmtShort(v){var d=parseDate(v);return d?d.toLocaleDateString('fr-BE',{d
 function link(m){if(!m||m.source==='Démo')return '';if(m.url&&/^https:\/\/(ted\.europa\.eu|www\.publicprocurement\.be)\//.test(m.url))return m.url;var pub=String(m.publicationNumber||'').match(/^\d{1,8}-\d{4}$/);return pub?'https://ted.europa.eu/fr/notice/-/detail/'+pub[0]:''}
 function save(){try{localStorage.setItem(STORAGE,JSON.stringify(saved))}catch(e){toast('Stockage local indisponible')}}
 var timeout=null;function toast(t){el('toast').textContent=t;el('toast').classList.add('show');clearTimeout(timeout);timeout=setTimeout(function(){el('toast').classList.remove('show')},2500)}
-function allMarkets(){return state.markets}
+function allMarkets(){return state.markets.filter(function(m){return m.region!=='Flandre'})}
 function trackCount(){return state.markets.filter(function(m){return !!saved.statuses[m.id]&&saved.statuses[m.id]!=='Écarté'}).length}
 function favoriteCount(){return state.markets.filter(function(m){return !!saved.favorites[m.id]}).length}
 function active(m){var d=daysLeft(m.deadline);return d===null||d>=0}
@@ -301,12 +301,12 @@ function renderBanner(){
   el('sideText').textContent='Premières annonces officielles ; collecte en cours de mise en service.';
   el('lastSync').textContent='Sélection : '+(state.generated?fmtDate(state.generated):'date inconnue');
  }else{
-  b.innerHTML=svg(partial?'info':'check')+'<div><b>'+(partial?'Collecte TED partielle.':'Collecte TED.')+'</b> '+allMarkets().length+' marchés enregistrés · mise à jour du '+fmtDate(state.generated)+'. '+(partial?'Une recherche complémentaire a échoué. ':'')+'Les marchés nationaux belges restent à raccorder.</div>';
+  b.innerHTML=svg(partial?'info':'check')+'<div><b>'+(partial?'Collecte TED partielle.':'Collecte TED.')+'</b> '+allMarkets().length+' marchés enregistrés · mise à jour du '+fmtDate(state.generated)+'. '+(partial?'Une recherche complémentaire a échoué. ':'')+'La collecte BOSA nationale complète reste à raccorder.</div>';
   el('sideTitle').textContent=partial?'TED · collecte partielle':'TED · collecte active';
   el('sideText').textContent='Dernière collecte : '+fmtDate(state.generated);
   el('lastSync').textContent='TED : '+fmtDate(state.generated);
  }
- el('listMeta').textContent=ready?'Source TED · score indicatif':'Aucune donnée officielle';
+ el('listMeta').textContent=ready?'Sources TED et annonces BOSA repérées · score indicatif':'Aucune donnée officielle';
 }
 function renderNav(){
  var names={all:"Vue d'ensemble",tenders:'Tous les marchés',favorites:'Favoris',tracked:'Dossiers suivis',urgent:'Échéances proches'};
@@ -321,7 +321,7 @@ function renderList(){
   var daysCls=d!==null&&d<0?' over':d!==null&&d<=14?' urgent':'';
   var col=m.score>=85?'#4fa786':m.score>=65?'#d6a65f':'#9ab1c6';
   return '<article class="tender" data-id="'+esc(m.id)+'"><div class="score-ring" style="--score:'+Math.max(0,Math.min(100,Number(m.score)||0))+';--ring:'+col+'" title="Score de pertinence indicatif"><strong>'+esc(m.score||0)+'</strong></div>'+
-  '<div class="tender-body"><div class="tender-top"><span class="micro-tag sector">'+esc(SECTORS.find(function(s){return s.id===m.sector})?.label||m.sector||'Autre')+'</span><span class="micro-tag">'+esc(m.source==='Démo'?'FICTIF':'TED')+'</span>'+(saved.statuses[m.id]?'<span class="micro-tag danger">'+esc(saved.statuses[m.id])+'</span>':'')+'</div>'+
+  '<div class="tender-body"><div class="tender-top"><span class="micro-tag sector">'+esc(SECTORS.find(function(s){return s.id===m.sector})?.label||m.sector||'Autre')+'</span><span class="micro-tag">'+esc(m.source==='Démo'?'FICTIF':(m.source||'TED'))+'</span>'+(saved.statuses[m.id]?'<span class="micro-tag danger">'+esc(saved.statuses[m.id])+'</span>':'')+'</div>'+
   '<h3 class="open-tender" role="button" tabindex="0">'+esc(m.title)+'</h3><div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+'Publié le '+fmtShort(m.publication)+'</span></div></div>'+
   '<div class="tender-end"><button class="star'+(saved.favorites[m.id]?' on':'')+'" aria-label="Ajouter aux favoris" title="Favori" data-star="'+esc(m.id)+'">'+svg('star',true)+'</button><div class="end-date">'+(m.deadline?'Éch. '+fmtShort(m.deadline):'Échéance —')+'</div><span class="days'+daysCls+'">'+esc(label)+'</span></div></article>';
  }).join('');
@@ -332,7 +332,7 @@ function render(){if(state.sector!=='all'&&saved.hiddenSectors[state.sector])sta
 function openDrawer(){el('overlay').classList.add('on');el('drawer').classList.add('on');document.body.style.overflow='hidden'}
 function closeDrawer(){el('overlay').classList.remove('on');el('drawer').classList.remove('on');document.body.style.overflow='';state.selected=null}
 function openTender(id){
- var m=allMarkets().find(function(a){return a.id===id});if(!m)return;state.selected=id;el('drawerEyebrow').textContent=m.source==='Démo'?'FICHE FICTIVE DE DÉMONSTRATION':'PUBLICATION OFFICIELLE · TED';el('drawerHeader').textContent='Détail du marché';
+ var m=allMarkets().find(function(a){return a.id===id});if(!m)return;state.selected=id;el('drawerEyebrow').textContent='PUBLICATION · '+(m.source||'TED');el('drawerHeader').textContent='Détail du marché';
  var url=link(m),d=daysLeft(m.deadline);
  var fields=[['Pouvoir adjudicateur',m.buyer||'Non communiqué'],['Zone',m.region||'Belgique'],['Publié le',fmtDate(m.publication)],['Date limite',fmtDate(m.deadline)],['Code(s) CPV',(m.cpv||[]).join(', ')||'Non précisé'],['Pertinence',String(m.score||0)+'/100 (indicative)']];
  el('drawerBody').innerHTML='<div class="tender-top"><span class="micro-tag sector">'+esc(SECTORS.find(function(s){return s.id===m.sector})?.label||m.sector)+'</span><span class="micro-tag'+(m.source==='Démo'?' demo':'')+'">'+(m.source==='Démo'?'EXEMPLE FICTIF':'TED · OFFICIEL')+'</span></div>'+
@@ -399,7 +399,8 @@ SECTORS=[
  {id:'Scan',label:'Scanner laser 3D'},{id:'Drone',label:'Drone & photogrammétrie'},
  {id:'Hydro',label:'Bathymétrie & hydrographie'},{id:'Hydraulique',label:'Hydraulique & jaugeages'},
  {id:'Carto',label:'Cartographie & SIG'},{id:'Implant',label:'Implantations & chantier'},
- {id:'Reseaux',label:'Réseaux & impétrants'},{id:'PEB',label:'Énergie & PEB'}
+ {id:'Reseaux',label:'Réseaux & impétrants'},{id:'PEB',label:'Énergie & PEB'},
+ {id:'PetitsTravaux',label:'Petits travaux techniques'}
 ];
 state.view='inbox';
 var draggingId=null;
@@ -422,7 +423,8 @@ function tagsOf(m){
  ['Carto',/(cartograph|systeme d'information geographique|\bsig\b)/],
  ['Implant',/(implantation|piquetage|recolement)/],
  ['Reseaux',/(impetrant|reseau enterre|canalisation)/],
- ['PEB',/(certificateur peb|\bpeb\b|certification energetique)/]
+ ['PEB',/(certificateur peb|\bpeb\b|certification energetique)/],
+ ['PetitsTravaux',/(station.{0,28}limnimetr|limnimetr|petits? travaux.{0,38}(cours d'eau|hydrauli|mesure)|acces securise.{0,35}cours d'eau)/]
  ];
  patterns.forEach(function(p){if(p[1].test(txt)&&!list.includes(p[0]))list.push(p[0])});
  return list.length?list:['Topo'];
@@ -481,7 +483,7 @@ function filtered(){
 }
 var FAMILIES=[
  {id:'mesurage',label:'Mesurage',items:['Topo','Scan','Drone','Hydro']},
- {id:'voirie',label:'Projet voirie',items:['VRD','Reseaux','Hydraulique']},
+ {id:'voirie',label:'Projet voirie',items:['VRD','Reseaux','Hydraulique','PetitsTravaux']},
  {id:'geometre',label:'Géomètre',items:['Foncier','Implant']},
  {id:'expertise',label:'Expertise',items:['Expert','PEB']},
  {id:'autres',label:'Autres',items:['Carto']}
@@ -498,6 +500,7 @@ function renderCategories(){
  function count(ids){return pool.filter(function(m){return (m.sectors||tagsOf(m)).some(function(s){return ids.includes(s)})}).length}
  var names={'Topo':'Relevés topo','Scan':'Scanner 3D','Drone':'Drone & photogrammétrie','Hydro':'Bathymétrie',
  'VRD':'Voiries & VRD','Reseaux':'Réseaux & impétrants','Hydraulique':'Hydraulique & jaugeages',
+ 'PetitsTravaux':'Petits travaux techniques',
  'Foncier':'Division & bornage','Implant':'Implantations','Expert':'Expertises','PEB':'PEB','Carto':'Cartographie & SIG'};
  box.innerHTML=FAMILIES.map(function(f){
   var items=f.items.filter(function(id){return !saved.hiddenSectors[id]});
@@ -571,7 +574,7 @@ function renderList(){
   return '<article class="tender" draggable="true" data-id="'+esc(m.id)+'" title="Glisser cette ligne vers un dossier de suivi">'+
    '<div class="grip" aria-hidden="true">⠿</div>'+
    '<div class="score-ring" style="--score:'+Math.min(100,Math.max(0,m.score||0))+';--ring:'+color+'"><strong>'+esc(m.score||0)+'</strong></div>'+
-   '<div class="tender-body"><div class="tender-top"><div class="tag-group">'+tags+'</div><span class="micro-tag">'+esc(m.source==='Démo'?'FICTIF':'TED')+'</span>'+
+   '<div class="tender-body"><div class="tender-top"><div class="tag-group">'+tags+'</div><span class="micro-tag">'+esc(m.source==='Démo'?'FICTIF':(m.source||'TED'))+'</span>'+
    (current!=='inbox'?'<span class="status-tag '+current+'">'+esc(stageName(current))+'</span>':'')+'</div>'+
    '<h3 class="open-tender" role="button" tabindex="0">'+esc(m.title)+'</h3>'+
    '<div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+'Publié le '+fmtShort(m.publication)+'</span></div></div>'+
