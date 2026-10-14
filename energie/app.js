@@ -125,11 +125,11 @@ function niceAxis(minimum,maximum,includeZero=true){
  if(min>max)[min,max]=[max,min];
  if(includeZero){min=Math.min(0,min);max=Math.max(0,max)}
  if(max-min<1e-9){const pad=Math.max(1,Math.abs(max)*.25);min-=includeZero&&min>=0?0:pad;max+=pad;}
- const family=[1,2,2.5,5,10],powers=[];
- let magnitude=Math.floor(Math.log10(Math.max(1e-8,(max-min)/4)));
+ const family=[1,2.5,5,10];
+ let magnitude=Math.floor(Math.log10(Math.max(1e-8,(max-min)/5)));
  let axis=null;
  for(let pass=0;pass<20;pass++){
-  const candidate=family[pass%5]*Math.pow(10,magnitude+Math.floor(pass/5));
+  const candidate=family[pass%4]*Math.pow(10,magnitude+Math.floor(pass/4));
   if(candidate<=0)continue;
   let lo=Math.floor((min+candidate*1e-10)/candidate)*candidate;
   let hi=Math.ceil((max-candidate*1e-10)/candidate)*candidate;
@@ -142,7 +142,7 @@ function niceAxis(minimum,maximum,includeZero=true){
  return {...axis,ticks};
 }
 const axisLabel=(v,compact=false)=>compact&&Math.abs(v)>=1000?
- fmt(v/1000,Math.abs(v)%1000===0?0:1)+'k':fmt(v,Number.isInteger(v)?0:1);
+ fmt(v/1000,Math.abs(v)%1000===0?0:Math.abs(v)%500===0?1:2)+'k':fmt(v,Number.isInteger(v)?0:1);
 
 function render(){syncPeriodControls();syncCompactControls();const n=net(),pv=vals('pv'),w=vals('water'),reference=n.find(r=>r.date===REFERENCE),lastNet=n.at(-1),balance=reference&&lastNet?lastNet.value-reference.value:null;
 $('#balance-value').textContent=balance==null?'—':fmt(Math.abs(balance))+' kWh';$('#balance-value').classList.toggle('negative',balance>0);$('#balance-status').textContent=balance==null?'Sans référence':balance<0?'d’avance sur le bilan annuel':balance>0?'au-dessus de la référence':'à l’équilibre';$('#balance-date').textContent='Dernier relevé : '+(lastNet?label(lastNet.date):'—');
