@@ -136,29 +136,64 @@ async function searchPublications(from,to,fetchFn=fetch){
 }
 function merge(existing,newItems){
  const byId=new Map((existing||[]).filter(x=>x&&x.id).map(x=>[x.id,{...x}]));
- const byProcedure=new Map();
- const byRef=new Map();
- for(const m of byId.values()){
-  if(m.procedureIdentifier)byProcedure.set(m.procedureIdentifier,m.id);
-  if(m.internalReference&&m.buyer)byRef.set(m.internalReference+'|'+m.buyer.toLocaleLowerCase(),m.id);
- }
- for(const m of newItems){
-  const found=(m.procedureIdentifier&&byProcedure.get(m.procedureIdentifier))||(m.internalReference&&byRef.get(m.internalReference+'|'+m.buyer.toLocaleLowerCase()))||m.id;
-  const before=byId.get(found);
-  if(!before){byId.set(found,m);continue}
-  const srcs=[...(before.officialSources||[])];
-  for(const item of [{source:before.source,url:before.url,publicationNumber:before.publicationNumber},{source:m.source,url:m.url,noticeId:m.noticeId}]){
-   if(item.url&&!srcs.some(e=>e.url===item.url))srcs.push(item);
+ const byProcedure=new Map(),byRef=new Map(),byUniqueRef=new Map(),refCollisions=new Set();
+ const normalizeRef=x=>String(x||'').trim().toUpperCase().replace(/\s+/g,'');
+ function index(item){
+  if(item.procedureIdentifier)byProcedure.set(item.procedureIdentifier,item.id);
+  const ref=normalizeRef(item.internalReference);
+  if(ref){
+   if(byUniqueRef.has(ref)&&byUniqueRef.get(ref)!==item.id)refCollisions.add(ref);
+   else byUniqueRef.set(ref,item.id);
+   if(item.buyer)byRef.set(ref+'|'+item.buyer.toLocaleLowerCase('fr-BE'),item.id);
   }
-  const incomingDate=m.publication||'',oldDate=before.publication||'';
-  byId.set(found,{
-   ...before,
-   ...(incomingDate>oldDate?{publication:incomingDate,deadline:m.deadline||before.deadline}:{}),
-   sectors:[...new Set([...(before.sectors||[]),...(m.sectors||[])])],
-   score:Math.max(before.score||0,m.score||0),
-   publicationWorkspaceId:m.publicationWorkspaceId||before.publicationWorkspaceId,
-   officialSources:srcs
-  });
+ }
+ for(const item of byId.values())index(item);
+ for(const record of newItems){
+  const ref=normalizeRef(record.internalReference);
+  const existingId=
+    (record.procedureIdentifier&&byProcedure.get(record.procedureIdentifier))||
+    (ref&&record.buyer&&byRef.get(ref+'|'+record.buyer.toLocaleLowerCase('fr-BE')))||
+    (ref&&!refCollisions.has(ref)&&byUniqueRef.get(ref))||
+    record.id;
+  const before=byId.get(existingId);
+  if(!before){
+   const fresh={...record};
+   if(record.noticeKind==='award')fresh.bosaResults=[{
+    reference:record.bdaReference||record.internalReference||'',url:record.url,
+    publicationDate:record.publication||'',kind:'award'
+   }];
+   byId.set(fresh.id,fresh);
+   index(fresh);
+   continue;
+  }
+  const sources=[...(before.officialSources||[])];
+  for(const source of [{source:before.source,url:before.url,publicationNumber:before.publicationNumber},
+     {source:record.source,url:record.url,bdaReference:record.bdaReference,noticeKind:record.noticeKind}]){
+   if(source.url&&!sources.some(x=>x.url===source.url))sources.push(source);
+  }
+  const result={
+   ...before,id:existingId,
+   sector:before.sector||record.sector,
+   sectors:[...new Set([...(before.sectors||[]),...(record.sectors||[])])],
+   score:Math.max(before.score||0,record.score||0),
+   procedureIdentifier:before.procedureIdentifier||record.procedureIdentifier||'',
+   publicationWorkspaceId:record.publicationWorkspaceId||before.publicationWorkspaceId,
+   officialSources:sources
+  };
+  if(record.publication>(before.publication||'')){
+   result.publication=record.publication;
+   if(record.deadline)result.deadline=record.deadline;
+  }else if(!result.deadline&&record.deadline)result.deadline=record.deadline;
+  if(record.noticeKind==='award'){
+   const notices=Array.isArray(before.bosaResults)?before.bosaResults.slice():[];
+   if(!notices.some(x=>x.url===record.url)){
+    notices.push({reference:record.bdaReference||record.internalReference||'',
+      url:record.url,publicationDate:record.publication||'',kind:'award'});
+   }
+   result.bosaResults=notices;
+  }
+  byId.set(existingId,result);
+  index(result);
  }
  return [...byId.values()];
 }
