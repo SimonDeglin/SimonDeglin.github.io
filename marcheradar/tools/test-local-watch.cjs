@@ -17,12 +17,13 @@ const text=[
 ].join('\n');
 const passages=watch.snippets(text);
 assert.ok(passages.length>=1);
-const op=watch.makeOpportunity({name:'Séance publique'},links[0],passages[0]);
+const op=watch.makeOpportunity({name:'Séance publique',buyer:'Province de Namur'},links[0],passages[0]);
 assert.equal(op.source,'LOCALE');
 assert.equal(op.screening,'review');
 assert.equal(op.region,'Wallonie');
+assert.equal(op.buyer,'Province de Namur');
 assert.ok(op.sectors.includes('Topo')||op.sectors.includes('Hydro'));
 assert.ok(op.sourceDocument.endsWith('pv.pdf'));
-assert.equal(watch.makeOpportunity({name:'Séance publique'},links[0],passages[0]).id,op.id);
+assert.equal(watch.makeOpportunity({name:'Séance publique',buyer:'Province de Namur'},links[0],passages[0]).id,op.id);
 assert.equal(watch.snippets('Un relevé topographique avait été utilisé en 2017 sans nouvelle consultation.').length,0);
 console.log('MARCHERADAR_LOCAL_TEST_OK');
