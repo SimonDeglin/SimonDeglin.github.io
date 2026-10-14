@@ -906,7 +906,65 @@ $('#export-csv').onclick=()=>{
  });
  exportBlob('\ufeffdate;electricite_monohoraire_kwh;production_kwh;eau_m3;mazout_niveau_L;livraison_mazout_L\n'+rows.join('\n'),'text/csv','owatt-releves-'+today()+'.csv');
 };
-$('#import-data').onclick=()=>$('#import-file').click();$('#import-file').onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{const d=JSON.parse(await f.text());if(!Array.isArray(d.readings)||!d.readings.every(r=>/^\d{4}-\d{2}-\d{2}$/.test(r.date)))throw Error('Fichier incorrect');if(confirm('Remplacer tous les relevés de cet appareil par ceux du fichier ?')){db={readings:d.readings,events:Array.isArray(d.events)?d.events:[],oilReadings:Array.isArray(d.oilReadings)?d.oilReadings.map(r=>({...r})):DEFAULT_OIL_READINGS.map(r=>({...r})),oilDeliveries:Array.isArray(d.oilDeliveries)?d.oilDeliveries.map(r=>({...r})):DEFAULT_OIL_DELIVERIES.map(r=>({...r})),oilStopDate:d.oilStopDate||'2026-03-01'};const initial=db.oilReadings.find(r=>r.id==='oil-2025-12-12'&&r.date==='2025-12-12');if(initial&&Number(initial.liters)===1000)initial.liters=0;if(initial&&Number(initial.liters)===0&&!db.oilDeliveries.some(x=>x.date==='2025-12-12'&&Number(x.liters)===1000))db.oilDeliveries.push({...DEFAULT_OIL_DELIVERIES[0]});save();render();toast('Import terminé')}}catch(err){toast('Fichier JSON invalide')}e.target.value=''};
+/* JSON backups are local to one device. Check structural integrity before replacing
+   memory; never report success if persisting the restored backup fails. */
+function validBackupDate(value){
+ return typeof value==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(value)&&
+  Number.isFinite(parseDate(value).getTime())&&dateISO(parseDate(value))===value;
+}
+function validBackupNumber(value){
+ return value==null||(typeof value==='number'&&Number.isFinite(value)&&value>=0);
+}
+function checkBackup(data){
+ if(!data||!Array.isArray(data.readings))return false;
+ const dates=new Set();
+ for(const r of data.readings){
+  if(!r||!validBackupDate(r.date)||dates.has(r.date)||
+    !['total','day','night','pv','water'].every(k=>validBackupNumber(r[k])))return false;
+  dates.add(r.date);
+  if(r.photos!=null&&(!r.photos||typeof r.photos!=='object'||Array.isArray(r.photos)||
+    Object.values(r.photos).some(v=>typeof v!=='string')))return false;
+ }
+ for(const k of ['oilReadings','oilDeliveries']){
+  if(data[k]!==undefined&&!Array.isArray(data[k]))return false;
+  if(Array.isArray(data[k])&&!data[k].every(r=>r&&validBackupDate(r.date)&&
+     validBackupNumber(r.liters)&&r.liters!=null&&
+     (k!=='oilReadings'||r.phase==null||r.phase==='before'||r.phase==='after')))return false;
+ }
+ if(data.events!==undefined&&(!Array.isArray(data.events)||
+   !data.events.every(e=>e&&validBackupDate(e.date)&&typeof e.label==='string'&&
+    validBackupNumber(e.amount)&&e.amount!=null)))return false;
+ if(data.oilStopDate!=null&&!validBackupDate(data.oilStopDate))return false;
+ return true;
+}
+$('#import-data').onclick=()=>$('#import-file').click();
+$('#import-file').onchange=async e=>{
+ const file=e.target.files?.[0];if(!file)return;
+ try{
+  const d=JSON.parse(await file.text());
+  if(!checkBackup(d))throw new Error('Fichier incorrect');
+  if(confirm('Remplacer les relevés de cet appareil par ceux de ce fichier ? Pense à exporter une sauvegarde avant.')){
+   const previous=db;
+   const imported={
+    readings:d.readings.map(r=>({...r})),
+    events:Array.isArray(d.events)?d.events.map(r=>({...r})):[],
+    oilReadings:Array.isArray(d.oilReadings)?d.oilReadings.map(r=>({...r})):DEFAULT_OIL_READINGS.map(r=>({...r})),
+    oilDeliveries:Array.isArray(d.oilDeliveries)?d.oilDeliveries.map(r=>({...r})):DEFAULT_OIL_DELIVERIES.map(r=>({...r})),
+    oilStopDate:d.oilStopDate||'2026-03-01'
+   };
+   const first=imported.oilReadings.find(r=>r.id==='oil-2025-12-12'&&r.date==='2025-12-12');
+   if(first&&Number(first.liters)===1000)first.liters=0;
+   if(first&&Number(first.liters)===0&&!imported.oilDeliveries.some(x=>x.date==='2025-12-12'&&Number(x.liters)===1000))
+    imported.oilDeliveries.push({...DEFAULT_OIL_DELIVERIES[0]});
+   db=imported;
+   if(save()){
+    calendarYear=Number(sorted().at(-1)?.date.slice(0,4)||new Date().getFullYear());
+    render();toast('Sauvegarde restaurée');
+   }else db=previous;
+  }
+ }catch(err){toast('Fichier JSON invalide ou incomplet')}
+ e.target.value='';
+};
 $('#new-event').onclick=()=>{$('#event-form').reset();$('#event-date').value=today();modal('event-overlay')};
 $('#event-form').onsubmit=e=>{e.preventDefault();const entry={id:String(Date.now()),date:$('#event-date').value,label:$('#event-label').value,amount:Number($('#event-amount').value)};if(!entry.date||!entry.label.trim()||!Number.isFinite(entry.amount)||entry.amount<=0)return toast('Vérifie la date et le volume.');const previous=db.events;db.events=[...db.events,entry];if(save()){modal('event-overlay',false);render()}else db.events=previous;};
 $('#special-events').addEventListener('click',e=>{const b=e.target.closest('[data-remove-event]');if(b&&confirm('Supprimer cet événement ?')){const previous=db.events;db.events=db.events.filter(v=>v.id!==b.dataset.removeEvent);if(save())render();else db.events=previous}});
