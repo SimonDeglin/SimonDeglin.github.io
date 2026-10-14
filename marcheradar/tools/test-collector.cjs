@@ -77,4 +77,34 @@ assert.equal(profile.excluded({buyer:'Vlaamse Overheid',region:'Bruxelles',title
 assert.equal(profile.excluded({buyer:'SPW',region:'Wallonie',title:'Relevé topo',description:'en français'}),null);
 assert.ok(profile.classify('Études techniques de métros','La prestation comprend des relevés topographiques',['71000000'])?.screening==='review','Signaler les mentions indirectes sans envahir le listing');
 
+// Attributions : aucune identité ou prix inventé lorsqu'une source ne l'indique pas.
+const awards=require('./awards-ted.cjs');
+const awardRaw={
+ 'notice-type':'can-standard',
+ 'procedure-identifier':'procedure-identifiant-stable',
+ 'publication-number':'987654-2026',
+ 'publication-date':'2026-10-14',
+ 'winner-name':{fra:['Bureau GEOSONDE']},
+ 'winner-identifier':['BE0777000000'],
+ 'tendering-party-name':['Bureau GEOSONDE'],
+ 'winner-decision-date':'2026-10-13',
+ 'received-submissions-type-code':['tenders'],
+ 'received-submissions-type-val':['4'],
+ 'tender-value':['95000.50'],
+ 'tender-value-cur':['EUR'],
+ 'result-lot-identifier':['LOT-0001','LOT-0002']
+};
+const award=awards.parse(awardRaw);
+assert.equal(award.winners[0],'Bureau GEOSONDE');
+assert.equal(award.offerCount,4);
+assert.equal(award.tenderValues[0].amount,95000.50);
+assert.equal(award.totalAwardValues.length,0,'Le montant de l’offre ne doit pas devenir un montant contractuel fictif');
+assert.equal(award.lotIdentifiers.length,2);
+assert.equal(awards.parse({...awardRaw,'notice-type':'cn-standard'}),null);
+const awarded=awards.attach([{id:'ted:123456-2026',procedureIdentifier:'procedure-identifiant-stable',title:'Topographie'}],[awardRaw]);
+assert.equal(awarded.marketMatches,1);
+assert.equal(awarded.items[0].id,'ted:123456-2026','Le suivi utilisateur reste lié au même dossier');
+assert.equal(awards.attach(awarded.items,[awardRaw]).items[0].awards.length,1,'Pas de doublons d’avis d’attribution');
+assert.equal(awards.attach([{id:'x',procedureIdentifier:'autre-procedure'}],[awardRaw]).marketMatches,0,'Pas de fausse correspondance entre des marchés différents');
+
 console.log('MARCHERADAR_TEST_OK — classification, dates, traductions, attributions et dédoublonnage');
