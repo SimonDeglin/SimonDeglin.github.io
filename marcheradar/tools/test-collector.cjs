@@ -38,7 +38,7 @@ const replacement={id:'ted:222-2026',publicationNumber:'222-2026',procedureIdent
  title:'Relevé topographique — rectificatif',sector:'Hydro',sectors:['Hydro'],
  score:89,publication:'2026-09-20',deadline:'2026-11-01',source:'TED'};
 const {cleanPrevious}=require('./collect-ted.cjs');
-assert.equal(cleanPrevious([{id:'medical',title:'Fourniture de médicaments',description:'Perceel 1: denosumab',cpv:['33690000'],source:'TED'}]).items.length,0,'Purger les faux positifs anciens');
+assert.equal(cleanPrevious([{id:'medical',title:'Fourniture de médicaments',description:'Perceel 1: denosumab',cpv:['33690000'],source:'TED'}]).items[0].screening,'excluded','Préserver la fiche historique mais masquer le faux positif');
 const merged=combine([seed],[replacement]);
 assert.equal(merged.length,1,'Un rectificatif ne doit pas créer de doublon');
 assert.equal(merged[0].id,'ted:111-2026','Conserver la clé associée au suivi utilisateur');
@@ -60,7 +60,7 @@ assert.equal(regionOf({'place-of-performance-subdiv-lot':['BE211'],'buyer-city':
 assert.equal(regionOf({'place-of-performance-subdiv-lot':['BEZZZ'],'buyer-city':'Gent'}),'Belgique','Les marchés sans région précise restent à vérifier');
 const flanders=normalize({...raw,'publication-number':'765432-2026','place-of-performance-subdiv-lot':['BE211']});
 assert.equal(flanders,null,'Ne jamais recommander une exécution en Flandre');
-assert.equal(cleanPrevious([{...seed,region:'Flandre'}]).items.length,0,'Nettoyage des marchés flamands précédemment collectés');
+assert.equal(cleanPrevious([{...seed,region:'Flandre'}]).items[0].screening,'excluded','Préserver les ID historiques flamands en dehors du listing');
 assert.deepEqual(worksScope('Curage des cours d’eau','Curage',['45240000']).rejected,'curage');
 
 // Cas réels de bruit détecté dans MarchéRadar en octobre 2026.
