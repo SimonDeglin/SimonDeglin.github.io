@@ -265,7 +265,7 @@ function cumulativePoints(kind,start){
 }
 
 function syncCompactControls(){
- $('select[data-compact]').forEach(el=>{
+ $$('select[data-compact]').forEach(el=>{
   const which=el.dataset.compact;
   const value=which==='granularity'?granularity:which==='period'?periodPreset:
    which==='electric-mode'?electricBarMode:
@@ -273,14 +273,14 @@ function syncCompactControls(){
   if(el.value!==value)el.value=value;
   if(which==='electric-view')el.disabled=electricBarMode==='house';
  });
- $('.compact-year-controls').forEach(el=>el.classList.toggle('hidden',periodPreset!=='calendar'));
- $('[data-compact-year]').forEach(el=>el.textContent=String(calendarYear));
+ $$('.compact-year-controls').forEach(el=>el.classList.toggle('hidden',periodPreset!=='calendar'));
+ $$('[data-compact-year]').forEach(el=>el.textContent=String(calendarYear));
  const maxYear=Number(latestMeterDate().slice(0,4));
  const minYear=Number(sorted()[0]?.date?.slice(0,4)||2025);
- $('[data-compact-nav="next"]').forEach(b=>b.disabled=calendarYear>=maxYear);
- $('[data-compact-nav="prev"]').forEach(b=>b.disabled=calendarYear<=minYear);
+ $$('[data-compact-nav="next"]').forEach(b=>b.disabled=calendarYear>=maxYear);
+ $$('[data-compact-nav="prev"]').forEach(b=>b.disabled=calendarYear<=minYear);
 }
-$('select[data-compact]').forEach(el=>el.addEventListener('change',()=>{
+$$('select[data-compact]').forEach(el=>el.addEventListener('change',()=>{
  const attr={
   granularity:'data-granularity',period:'data-period',
   'electric-mode':'data-electric-bar','electric-view':'data-elec-view'
@@ -289,7 +289,7 @@ $('select[data-compact]').forEach(el=>el.addEventListener('change',()=>{
  if(button)button.click();
  syncCompactControls();
 }));
-$('[data-compact-nav]').forEach(el=>el.addEventListener('click',()=>{
+$$('[data-compact-nav]').forEach(el=>el.addEventListener('click',()=>{
  const btn=$('[data-period-nav="'+el.dataset.compactNav+'"]');
  if(btn&&!btn.disabled)btn.click();
  syncCompactControls();
