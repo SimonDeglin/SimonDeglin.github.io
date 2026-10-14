@@ -1454,6 +1454,27 @@ $('#scan-file').onchange=async e=>{
  }catch(err){toast('Impossible de lire cette photo.')}
  e.target.value='';
 };
+$('#scan-rotate').onclick=async()=>{
+ if(scanBusy||!pendingImage)return;
+ const button=$('#scan-rotate');button.disabled=true;
+ try{
+  const original=await new Promise((resolve,reject)=>{
+   const image=new Image();image.onload=()=>resolve(image);image.onerror=()=>reject(new Error('image illisible'));image.src=pendingImage;
+  });
+  const can=document.createElement('canvas');can.width=original.naturalHeight;can.height=original.naturalWidth;
+  const ctx=can.getContext('2d');ctx.translate(can.width,0);ctx.rotate(Math.PI/2);
+  ctx.drawImage(original,0,0);
+  pendingImage=can.toDataURL('image/jpeg',.88);
+  scanCrop=null;scanAutoZones=null;scanLastText='';scanLastData=null;
+  $('#scan-preview').src=pendingImage;
+  $('#scan-crop-box').classList.add('hidden');
+  const photo=$('#scan-preview');
+  if(!photo.complete)await new Promise(ok=>{photo.onload=ok;photo.onerror=ok});
+  findMeterDisplay();
+  await detectIndexFromImage();
+ }catch(err){toast('Impossible de tourner la photo.')}
+ finally{button.disabled=false}
+};
 $('#scan-retry').onclick=()=>detectIndexFromImage();
 $('#scan-reset-crop').onclick=()=>{
  scanCrop=null;scanAutoZones=null;$('#scan-crop-box').classList.add('hidden');detectIndexFromImage();
