@@ -173,6 +173,13 @@ body{background:#f7f7f7;color:#303339}
 .review-btn span{padding:1px 6px;border-radius:5px;background:#e9edf0;color:#6e7e8e;margin-left:3px}
 .review-btn[hidden]{display:none}
 @media(max-width:740px){.section-right{gap:6px}.review-btn{font-size:10px;padding:7px}}
+
+.source-coverage-strip{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin:0 0 15px}
+.source-coverage-entry{display:inline-flex;gap:7px;align-items:center;padding:8px 10px;background:#fff;border:1px solid #ededed;border-radius:8px;font-size:10px;color:#81868c;line-height:1.35}
+.source-coverage-entry b{color:#41474e;font-size:10px}
+.source-coverage-entry .source-led{display:inline-block;flex:none;width:6px;height:6px;border-radius:100%;background:#c9aa74}
+.source-coverage-entry.connected .source-led{background:#42966e}
+@media(max-width:740px){.source-coverage-strip{gap:5px}.source-coverage-entry{font-size:9px;padding:6px 8px}}
 </style>
 </head>
 <body>
@@ -235,6 +242,7 @@ body{background:#f7f7f7;color:#303339}
     <section class="hero"><div class="hero-main"><div class="hero-tag"><svg class="ico s"><use href="#i-radar"/></svg> VOTRE RADAR EST PRÊT</div><h2>Les bons marchés.<br>Au bon moment.</h2><p>Topographie, hydrographie, VRD, cartographie, expertise immobilière et PEB : une veille construite autour des compétences du groupe.</p></div><div class="hero-side"><div class="hero-number" id="heroCount">—</div><span>opportunités affichées</span></div></section>
     <div class="notice-banner" id="noticeBanner"><svg class="ico l"><use href="#i-info"/></svg><div><b>Chargement en cours.</b> Vérification des publications disponibles.</div></div>
     <section class="kpis" aria-label="Indicateurs"><div class="kpi"><div><div class="num" id="kpiTotal">—</div><div class="label">Dans le listing</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-radar"/></svg></div></div><div class="kpi"><div><div class="num" id="kpiTop">—</div><div class="label">À répondre</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-target"/></svg></div></div><div class="kpi"><div><div class="num" id="kpiTracked">—</div><div class="label">En attente d’attribution</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-bookmark"/></svg></div></div><div class="kpi"><div><div class="num" id="kpiUrgent">—</div><div class="label">Marchés obtenus</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-calendar"/></svg></div></div></section>
+    <div class="source-coverage-strip" id="coverageStrip" aria-label="État des sources"></div>
     <div class="section-head"><h2 id="sectionTitle">Listing complet</h2><div class="section-right"><button id="reviewBtn" class="review-btn" type="button">À vérifier <span id="reviewCount">0</span></button><small id="lastSync"></small></div></div>
     <div id="listDescription" class="list-description">Marchés à trier, non encore classés. Glissez une ligne vers un dossier à gauche.</div>
     <section class="filter-panel">
@@ -336,6 +344,23 @@ function renderBanner(){
  }
  el('listMeta').textContent=ready?'Sources TED et annonces BOSA repérées · score indicatif':'Aucune donnée officielle';
 }
+function renderCoverageStrip(){
+ var box=el('coverageStrip');if(!box)return;
+ if(state.mode!=='ted'){box.innerHTML='';return}
+ var all=allMarkets();
+ var countBySource=function(source){return all.filter(function(m){return m.source===source||(m.officialSources||[]).some(function(s){return s.source===source})}).length};
+ var sources=state.sources||{};
+ var bosa=sources.BOSA||{},local=sources.LOCALE||{};
+ var bosaConnected=bosa.status==='accessible'&&!!bosa.last_success;
+ var localConnected=(local.status==='pilot'||local.status==='partial')&&!!local.last_success;
+ var tedDate=state.generated?fmtDate(state.generated):'non disponible';
+ var span=function(label,value,ok){
+  return '<span class="source-coverage-entry'+(ok?' connected':'')+'"><i class="source-led"></i><b>'+esc(label)+'</b><span>'+esc(value)+'</span></span>';
+ };
+ box.innerHTML=span('TED',countBySource('TED')+' fiches · '+tedDate,true)+
+  span('BOSA',bosaConnected?countBySource('BOSA')+' fiches · collecte testée':countBySource('BOSA')+' fiche(s) · collecte nationale non confirmée',bosaConnected)+
+  span('Sources locales',localConnected?countBySource('LOCALE')+' pistes · pilote':countBySource('LOCALE')+' piste(s) · veille pilote à vérifier',localConnected);
+}
 function renderNav(){
  var names={all:"Vue d'ensemble",tenders:'Tous les marchés',favorites:'Favoris',tracked:'Dossiers suivis',urgent:'Échéances proches'};
  el('crumb').textContent=names[state.view];el('sectionTitle').textContent=state.view==='all'?'Opportunités sélectionnées':names[state.view];
@@ -356,7 +381,7 @@ function renderList(){
  el('resultsList').querySelectorAll('.open-tender').forEach(function(node){node.addEventListener('click',function(){openTender(node.closest('[data-id]').dataset.id)});node.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openTender(node.closest('[data-id]').dataset.id)}})});
  el('resultsList').querySelectorAll('[data-star]').forEach(function(b){b.addEventListener('click',function(){var id=b.dataset.star;saved.favorites[id]=!saved.favorites[id];save();render();toast(saved.favorites[id]?'Ajouté aux favoris':'Retiré des favoris')})});
 }
-function render(){if(state.sector!=='all'&&saved.hiddenSectors[state.sector])state.sector='all';renderChips();renderBanner();renderStats();renderNav();renderList()}
+function render(){if(state.sector!=='all'&&saved.hiddenSectors[state.sector])state.sector='all';renderChips();renderBanner();renderCoverageStrip();renderStats();renderNav();renderList()}
 function openDrawer(){el('overlay').classList.add('on');el('drawer').classList.add('on');document.body.style.overflow='hidden'}
 function closeDrawer(){el('overlay').classList.remove('on');el('drawer').classList.remove('on');document.body.style.overflow='';state.selected=null}
 function openTender(id){
