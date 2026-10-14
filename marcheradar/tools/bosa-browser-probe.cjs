@@ -48,6 +48,15 @@ const report={at:new Date().toISOString(),method:'Public navigateur sans authent
    return {bodyLength:body.length,bodyExcerpt:body.slice(0,3900),links,inputs};
   });
   report.page=data;
+  report.paginator=await page.evaluate(()=>{
+   const buttons=[...document.querySelectorAll('button,[role=button]')].map(b=>({
+    text:(b.innerText||'').trim().slice(0,70),label:b.getAttribute('aria-label')||'',title:b.getAttribute('title')||'',
+    classes:typeof b.className==='string'?b.className.slice(0,110):'',disabled:!!b.disabled
+   }));
+   return {tail:(document.body?.innerText||'').slice(-1600),buttons:buttons.slice(-65)};
+  });
+  const firstApiRequest=report.events.find(e=>e.route==='/api/sea/search/publications');
+  report.apiRequestHeaderNames=firstApiRequest?await page.evaluate(()=>({ready:true})):null;
   try{
    report.pageTwoViaFetch=await page.evaluate(async()=>{
     const response=await fetch('/api/sea/search/publications',{
