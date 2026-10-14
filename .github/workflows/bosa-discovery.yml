@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - "marcheradar/tools/probe-bosa.cjs"
+      - "marcheradar/tools/probe-bosa-browser.cjs"
   workflow_dispatch:
 
 permissions:
@@ -25,10 +26,23 @@ jobs:
         id: probe
         run: node marcheradar/tools/probe-bosa.cjs
         continue-on-error: true
+      - name: "Installer Chromium pour observer l'interface publique"
+        id: chrome
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+        continue-on-error: true
+      - name: "Examiner les requêtes publiques du navigateur"
+        if: steps.chrome.outcome == 'success'
+        run: node marcheradar/tools/probe-bosa-browser.cjs
+        continue-on-error: true
       - name: "Enregistrer le rapport"
         if: always()
         run: |
-          if [ -f marcheradar/tools/bosa-discovery.json ]; then
+          if [ -f marcheradar/tools/bosa-browser-report.json ]; then
+            git add marcheradar/tools/bosa-browser-report.json
+          fi
+          if [ -f marcheradar/tools/bosa-discovery.json ] || [ -f marcheradar/tools/bosa-browser-report.json ]; then
             git config user.name "marcheradar-bot"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add marcheradar/tools/bosa-discovery.json
