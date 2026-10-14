@@ -754,10 +754,217 @@ $('#event-form').onsubmit=e=>{e.preventDefault();db.events.push({id:String(Date.
 $('#special-events').addEventListener('click',e=>{const b=e.target.closest('[data-remove-event]');if(b&&confirm('Supprimer cet événement ?')){db.events=db.events.filter(v=>v.id!==b.dataset.removeEvent);save();render()}});
 $('#calendar-reminder').onclick=()=>{const now=new Date(),first=new Date(now.getFullYear(),now.getMonth()+1,0);let lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Flux Energie//FR','CALSCALE:GREGORIAN','METHOD:PUBLISH'];for(let m=0;m<24;m++){const d=new Date(first.getFullYear(),first.getMonth()+m+1,0),ds=dateISO(d).replace(/-/g,'');lines.push('BEGIN:VEVENT','UID:flux-'+ds+'@energie','DTSTART;VALUE=DATE:'+ds,'DTEND;VALUE=DATE:'+dateISO(new Date(d.getFullYear(),d.getMonth(),d.getDate()+1)).replace(/-/g,''),'SUMMARY:Relever les compteurs - Flux','DESCRIPTION:Electricite jour et nuit, panneaux photovoltaïques et eau.','BEGIN:VALARM','ACTION:DISPLAY','DESCRIPTION:Releve des compteurs','TRIGGER:-PT9H','END:VALARM','END:VEVENT')}lines.push('END:VCALENDAR');exportBlob(lines.join('\r\n'),'text/calendar','flux-rappels-mensuels.ics');toast('Calendrier des 24 prochains mois créé')};
 let to=null;function toast(message){const el=$('#toast');el.textContent=message;el.classList.add('show');clearTimeout(to);to=setTimeout(()=>el.classList.remove('show'),3000)}
-$('#scan-in-form').onclick=()=>$('#scan-file').click();
-$('#scan-file').onchange=async e=>{const f=e.target.files?.[0];if(!f)return;pendingImage=await imageData(f);$('#scan-preview').src=pendingImage;$('#scan-value').value='';$('#scan-meter').value='day';$('#scan-message').textContent='Analyse de l’image…';modal('scan-overlay');if('TextDetector' in window){try{const detector=new TextDetector(),bitmap=await createImageBitmap(f),parts=await detector.detect(bitmap),text=parts.map(p=>p.rawValue).join(' '),numbers=text.match(/\d{3,}(?:[.,]\d{1,3})?/g)||[];if(numbers.length){$('#scan-value').value=Number(numbers.sort((a,b)=>b.length-a.length)[0].replace(',','.'));$('#scan-message').textContent='Lecture proposée. Vérifie le type et tous les chiffres avant validation.'}else $('#scan-message').textContent='Chiffres non détectés : saisis l’index visible sur la photo.'}catch{$('#scan-message').textContent='Lecture indisponible sur ce navigateur : saisis manuellement l’index.'}}else{$('#scan-message').textContent='OCR non pris en charge sur ce navigateur. Photo conservée : vérifie et saisis l’index.'}e.target.value=''};
-function imageData(f){return new Promise((res,rej)=>{const reader=new FileReader();reader.onload=()=>res(reader.result);reader.onerror=rej;reader.readAsDataURL(f)})}
-$('#confirm-scan').onclick=()=>{const k=$('#scan-meter').value,v=$('#scan-value').value;if(v.trim()===''||!Number.isFinite(Number(v)))return toast('Valide un index numérique.');$('#reading-'+k).value=v;pendingPhotos[k]=pendingImage;photoFlags();modal('scan-overlay',false);modal('reading-overlay',true);toast('Photo et index prêts pour validation')};
+
+/* On-device photo reading. Type is selected BEFORE capture; OCR is never saved without confirmation. */
+let scanKind='day',scanCrop=null,scanBusy=false,scanLastText='',scanRequest=0;
+let ocrScriptPromise=null,ocrWorkerPromise=null;
+$$('[data-scan-kind]').forEach(button=>button.addEventListener('click',()=>{
+ scanKind=button.dataset.scanKind;$('#scan-file').value='';$('#scan-file').click();
+}));
+$('#scan-meter').onchange=()=>{
+ scanKind=$('#scan-meter').value;
+ $('#scan-value').step=scanKind==='water'?'0.1':'1';
+ const chosen=proposeScanIndex(scanLastText,scanKind);
+ if(chosen!=null)$('#scan-value').value=chosen;
+};
+function capturePhotoData(file){
+ return new Promise((resolve,reject)=>{
+  const reader=new FileReader();reader.onerror=()=>reject(new Error('lecture du fichier impossible'));
+  reader.onload=()=>{
+   const img=new Image();
+   img.onerror=()=>reject(new Error('image non prise en charge'));
+   img.onload=()=>{
+    const ratio=Math.min(1,1800/Math.max(img.naturalWidth,img.naturalHeight)),canvas=document.createElement('canvas');
+    canvas.width=Math.max(1,Math.round(img.naturalWidth*ratio));
+    canvas.height=Math.max(1,Math.round(img.naturalHeight*ratio));
+    canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);
+    resolve(canvas.toDataURL('image/jpeg',.82));
+   };
+   img.src=reader.result;
+  };
+  reader.readAsDataURL(file);
+ });
+}
+function ocrLibrary(){
+ if(window.Tesseract?.createWorker)return Promise.resolve(window.Tesseract);
+ if(ocrScriptPromise)return ocrScriptPromise;
+ ocrScriptPromise=new Promise((resolve,reject)=>{
+  const script=document.createElement('script');
+  script.src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js';
+  script.async=true;
+  script.onload=()=>window.Tesseract?.createWorker?resolve(window.Tesseract):reject(new Error('Module OCR absent'));
+  script.onerror=()=>reject(new Error('Module OCR non téléchargé'));
+  document.head.appendChild(script);
+ }).catch(err=>{ocrScriptPromise=null;throw err});
+ return ocrScriptPromise;
+}
+async function ocrWorker(){
+ const engine=await ocrLibrary();
+ if(!ocrWorkerPromise)ocrWorkerPromise=engine.createWorker('eng',1,{
+  logger:m=>{
+   if(scanBusy&&m?.status==='recognizing text'){
+    const pct=Math.round((m.progress||0)*100);
+    $('#scan-message').textContent='Lecture des chiffres… '+pct+' %';
+   }
+  }
+ }).catch(err=>{ocrWorkerPromise=null;throw err});
+ return ocrWorkerPromise;
+}
+function scanPreviousIndex(kind){
+ const desiredDate=$('#reading-date').value||today();
+ const list=sorted().filter(r=>r[kind]!=null);
+ const eligible=list.filter(r=>r.date<=desiredDate);
+ return (eligible.at(-1)||list.at(-1))?.[kind]??null;
+}
+function proposeScanIndex(text,kind){
+ if(!text||!kind)return null;
+ const tokens=text.replace(/[Oo]/g,'0').replace(/[Il|]/g,'1').match(/\d+(?:[.,]\d+)?/g)||[];
+ const expected=scanPreviousIndex(kind),candidates=[];
+ const add=(raw,quality)=>{
+  if(!Number.isFinite(raw)||raw<0)return;
+  const number=kind==='water'?roundWater(raw):Math.round(raw);
+  if(kind==='water'&&number>99999||kind!=='water'&&number>9999999)return;
+  const diff=expected==null?0:Math.abs(number-expected);
+  let score=quality-(expected==null?0:Math.min(75,Math.log1p(diff)*9));
+  if(kind==='water'&&expected!=null&&number<expected-.5)score-=12;
+  if(kind!=='water'&&number<1000)score-=25;
+  candidates.push({number,score});
+ };
+ if(kind==='water'){
+  // Mechanical water meter: black digits = m3, three red digits = thousandths.
+  // For 00220675, the reading is 220.675, rounded to 220.7 for display.
+  for(const token of tokens){
+   const part=token.replace(',','.');
+   if(part.includes('.')){
+    const match=part.match(/^(\d{1,6})\.(\d{1,3})$/);
+    if(match)add(Number(part),96);
+   }else if(/^\d{6,9}$/.test(part)){
+    const base=part.slice(0,-3),fraction=part.slice(-3);
+    if(base.length<=6)add(Number(base)+Number(fraction)/1000,90);
+   }else if(/^\d{3,5}$/.test(part))add(Number(part),45);
+  }
+  for(let i=0;i+1<tokens.length;i++){
+   const first=tokens[i],second=tokens[i+1];
+   if(/^\d{2,6}$/.test(first)&&/^\d{1,3}$/.test(second)){
+    const combined=Number(first)+Number(second.padEnd(3,'0'))/1000;
+    add(combined,77);
+   }
+  }
+ }else{
+  for(const token of tokens){
+   const digits=token.replace(/[,.].*$/,'');
+   if(/^\d{4,7}$/.test(digits))add(Number(digits),70);
+  }
+ }
+ if(!candidates.length)return null;
+ candidates.sort((a,b)=>b.score-a.score);
+ if(candidates[0].score<15)return null;
+ return kind==='water'?candidates[0].number.toFixed(1):String(candidates[0].number);
+}
+function scanSourceImage(){
+ const img=$('#scan-preview');
+ if(!scanCrop||!img.complete||!img.naturalWidth)return pendingImage;
+ const x=Math.round(scanCrop.left),y=Math.round(scanCrop.top),w=Math.max(1,Math.round(scanCrop.width)),h=Math.max(1,Math.round(scanCrop.height));
+ const factor=Math.min(3,Math.max(1,1500/Math.max(w,h)));
+ const canvas=document.createElement('canvas');
+ canvas.width=Math.round(w*factor);canvas.height=Math.round(h*factor);
+ const ctx=canvas.getContext('2d');
+ ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
+ ctx.drawImage(img,x,y,w,h,0,0,canvas.width,canvas.height);
+ return canvas.toDataURL('image/png');
+}
+async function detectIndexFromImage(){
+ if(scanBusy||!pendingImage)return;
+ scanBusy=true;const id=++scanRequest;
+ $('#scan-retry').disabled=true;
+ $('#scan-message').textContent=scanCrop?'Lecture de la zone encadrée…':'Lecture de la photo…';
+ try{
+  const engine=await ocrLibrary(),worker=await ocrWorker();
+  const mode=scanCrop?(engine.PSM?.SINGLE_LINE||'7'):(engine.PSM?.SPARSE_TEXT||'11');
+  await worker.setParameters({tessedit_char_whitelist:'0123456789,.',tessedit_pageseg_mode:mode});
+  const result=await worker.recognize(scanSourceImage());
+  if(id!==scanRequest)return;
+  scanLastText=result?.data?.text||'';
+  const guess=proposeScanIndex(scanLastText,scanKind);
+  if(guess!=null){
+   $('#scan-value').value=guess;
+   $('#scan-message').textContent='Index proposé : vérifie les chiffres avant validation.';
+  }else{
+   $('#scan-message').textContent='Index non reconnu : encadre les chiffres sur la photo ou saisis la valeur.';
+  }
+ }catch(err){
+  if(id===scanRequest)$('#scan-message').textContent='Lecture automatique indisponible : saisis l’index manuellement. La photo est conservée.';
+ }finally{
+  scanBusy=false;$('#scan-retry').disabled=false;
+ }
+}
+$('#scan-file').onchange=async e=>{
+ const file=e.target.files?.[0];if(!file)return;
+ try{
+  pendingImage=await capturePhotoData(file);
+  scanCrop=null;scanLastText='';
+  $('#scan-preview').src=pendingImage;
+  $('#scan-crop-box').classList.add('hidden');
+  $('#scan-meter').value=scanKind;
+  $('#scan-value').value='';
+  $('#scan-value').step=scanKind==='water'?'0.1':'1';
+  $('#scan-message').textContent='Préparation de la lecture…';
+  modal('scan-overlay');
+  const image=$('#scan-preview');if(!image.complete)await new Promise(ok=>{image.onload=ok;image.onerror=ok});
+  await detectIndexFromImage();
+ }catch(err){toast('Impossible de lire cette photo.')}
+ e.target.value='';
+};
+$('#scan-retry').onclick=()=>detectIndexFromImage();
+$('#scan-reset-crop').onclick=()=>{
+ scanCrop=null;$('#scan-crop-box').classList.add('hidden');detectIndexFromImage();
+};
+let scanPointer=null;
+function scanPoint(ev){
+ const wrap=$('#scan-preview-wrap'),rect=wrap.getBoundingClientRect();
+ return {x:Math.max(0,Math.min(rect.width,ev.clientX-rect.left)),y:Math.max(0,Math.min(rect.height,ev.clientY-rect.top))};
+}
+function displayScanCrop(start,end){
+ const box=$('#scan-crop-box'),x=Math.min(start.x,end.x),y=Math.min(start.y,end.y);
+ box.style.left=x+'px';box.style.top=y+'px';box.style.width=Math.abs(start.x-end.x)+'px';box.style.height=Math.abs(start.y-end.y)+'px';box.classList.remove('hidden');
+}
+$('#scan-preview-wrap').addEventListener('pointerdown',ev=>{
+ if(scanBusy)return;const p=scanPoint(ev);scanPointer={id:ev.pointerId,start:p,end:p};
+ ev.currentTarget.setPointerCapture?.(ev.pointerId);ev.preventDefault();
+});
+$('#scan-preview-wrap').addEventListener('pointermove',ev=>{
+ if(!scanPointer||ev.pointerId!==scanPointer.id)return;
+ scanPointer.end=scanPoint(ev);displayScanCrop(scanPointer.start,scanPointer.end);ev.preventDefault();
+});
+$('#scan-preview-wrap').addEventListener('pointerup',ev=>{
+ if(!scanPointer||ev.pointerId!==scanPointer.id)return;
+ const selection=scanPointer;scanPointer=null;selection.end=scanPoint(ev);
+ const a=selection.start,b=selection.end;
+ if(Math.abs(a.x-b.x)<14||Math.abs(a.y-b.y)<8){$('#scan-crop-box').classList.add('hidden');return}
+ const img=$('#scan-preview'),rect=img.getBoundingClientRect();
+ if(!img.naturalWidth||!img.naturalHeight)return;
+ // Respect the letterbox introduced by object-fit: contain.
+ const scale=Math.min(rect.width/img.naturalWidth,rect.height/img.naturalHeight);
+ const shownW=img.naturalWidth*scale,shownH=img.naturalHeight*scale;
+ const insetX=(rect.width-shownW)/2+(rect.left-$('#scan-preview-wrap').getBoundingClientRect().left);
+ const insetY=(rect.height-shownH)/2+(rect.top-$('#scan-preview-wrap').getBoundingClientRect().top);
+ const fromX=Math.max(0,Math.min(img.naturalWidth,(Math.min(a.x,b.x)-insetX)/scale));
+ const fromY=Math.max(0,Math.min(img.naturalHeight,(Math.min(a.y,b.y)-insetY)/scale));
+ const toX=Math.max(0,Math.min(img.naturalWidth,(Math.max(a.x,b.x)-insetX)/scale));
+ const toY=Math.max(0,Math.min(img.naturalHeight,(Math.max(a.y,b.y)-insetY)/scale));
+ if(toX-fromX<15||toY-fromY<8)return;
+ scanCrop={left:fromX,top:fromY,width:toX-fromX,height:toY-fromY};
+ displayScanCrop(a,b);detectIndexFromImage();
+});
+$('#scan-preview-wrap').addEventListener('pointercancel',()=>{scanPointer=null});
+$('#confirm-scan').onclick=()=>{
+ const k=$('#scan-meter').value,v=$('#scan-value').value;
+ if(v.trim()===''||!Number.isFinite(Number(v))||Number(v)<0)return toast('Vérifie l’index avant de confirmer.');
+ $('#reading-'+k).value=k==='water'?roundWater(v).toFixed(1):String(Math.round(Number(v)));
+ pendingPhotos[k]=pendingImage;photoFlags();
+ modal('scan-overlay',false);modal('reading-overlay',true);
+ toast('Index ajouté au formulaire. Confirme ensuite le relevé.');
+};
 window.addEventListener('hashchange',()=>{const p=location.hash.slice(1);if(['accueil','electricite','solaire','eau','mazout','releves','analyses','reglages'].includes(p))show(p)});
 const firstPage=['accueil','electricite','solaire','eau','mazout','releves','analyses','reglages'].includes(location.hash.slice(1))?location.hash.slice(1):'accueil';show(firstPage);
 })();
