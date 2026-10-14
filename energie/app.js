@@ -156,7 +156,7 @@ function electricAxis(min,max){
 const axisLabel=(v,compact=false)=>compact&&Math.abs(v)>=1000?
  fmt(v/1000,Math.abs(v)%1000===0?0:Math.abs(v)%500===0?1:2)+'k':fmt(v,Number.isInteger(v)?0:1);
 
-function render(){syncPeriodControls();syncCompactControls();const n=net(),pv=vals('pv'),w=vals('water'),reference=n.find(r=>r.date===REFERENCE),lastNet=n.at(-1),balance=reference&&lastNet?lastNet.value-reference.value:null;
+function render(){syncPeriodControls();syncCompactControls();const nextDate=$('#next-reading-date');if(nextDate)nextDate.textContent=label(dateISO(nextMonthEnd()));const n=net(),pv=vals('pv'),w=vals('water'),reference=n.find(r=>r.date===REFERENCE),lastNet=n.at(-1),balance=reference&&lastNet?lastNet.value-reference.value:null;
 $('#balance-value').textContent=balance==null?'—':fmt(Math.abs(balance))+' kWh';$('#balance-value').classList.toggle('negative',balance>0);$('#balance-status').textContent=balance==null?'Sans référence':balance<0?'d’avance sur le bilan annuel':balance>0?'au-dessus de la référence':'à l’équilibre';$('#balance-date').textContent='Dernier relevé : '+(lastNet?label(lastNet.date):'—');
 $('#recent-trend').textContent=lastNet?fmt(lastNet.value)+' kWh':'—';$('#trend-label').textContent='Total jour + nuit';$('#trend-duration').textContent=lastNet?'Relevé du '+label(lastNet.date):'Aucun relevé';
 showMonthlyAverage('home-consumption','home-electric-caption','house','kWh');
@@ -807,7 +807,7 @@ $('#oil-form').onsubmit=e=>{
  const id=$('#oil-entry-id').value,kind=$('#oil-entry-kind').value,date=$('#oil-entry-date').value,liters=Number($('#oil-entry-amount').value);
  if(!date||!Number.isFinite(liters)||liters<0||kind==='delivery'&&liters===0)return toast('Renseigne la date et une quantité valide.');
  const collection=kind==='delivery'?'oilDeliveries':'oilReadings';
- const original=id?db[collection].find(x=>x.id===id):null;
+ const previousOilReadings=[...db.oilReadings],previousOilDeliveries=[...db.oilDeliveries];
  const entry={id:id||'oil-entry-'+Date.now(),date,liters};
  if(kind==='reading')entry.phase=$('#oil-entry-phase').value;
  if(id){
@@ -818,8 +818,8 @@ $('#oil-form').onsubmit=e=>{
  db[collection].push(entry);
  if(save()){modal('oil-overlay',false);render();toast(kind==='reading'?'Niveau de cuve enregistré':'Livraison enregistrée')}
  else{
-  db[collection]=db[collection].filter(x=>x.id!==entry.id);
-  if(original)db[collection].push(original);
+  db.oilReadings=previousOilReadings;
+  db.oilDeliveries=previousOilDeliveries;
  }
 };
 $('#oil-history').addEventListener('click',e=>{
@@ -832,15 +832,16 @@ $('#oil-history').addEventListener('click',e=>{
  if(del){
   const type=del.dataset.oilKind,list=type==='delivery'?'oilDeliveries':'oilReadings';
   if(confirm('Supprimer '+(type==='delivery'?'cette livraison':'ce niveau de cuve')+' ?')){
+   const previous=db[list];
    db[list]=db[list].filter(x=>x.id!==del.dataset.oilRemove);
-   save();render();toast('Élément supprimé');
+   if(save()){render();toast('Élément supprimé')}else db[list]=previous;
   }
  }
 });
 $('#oil-stop-date').onchange=value=>{
  const date=typeof value==='string'?value:$('#oil-stop-date').value;
- db.oilStopDate=date;
- save();render();
+ const previous=db.oilStopDate;db.oilStopDate=date;
+ if(save())render();else db.oilStopDate=previous;
 };
 
 function renderEvents(){$('#special-events').innerHTML=db.events.map(e=>'<div class="event-row"><div><strong>'+esc(e.label)+'</strong><p>'+ (e.approx?'Juillet 2026 · date indicative':label(e.date))+'</p></div><div><b>'+fmt(e.amount,2)+' m³</b><button class="mini-btn danger" title="Supprimer" data-remove-event="'+esc(e.id)+'">×</button></div></div>').join('')}
@@ -892,9 +893,9 @@ $('#reading-form').onsubmit=e=>{
  if(!id)calendarYear=Number(date.slice(0,4));
  modal('reading-overlay',false);render();toast('Relevé enregistré');
 };
-$('#history-table').addEventListener('click',e=>{const oil=e.target.closest('[data-history-oil]'),edit=e.target.closest('[data-edit]'),del=e.target.closest('[data-delete]');if(oil){show('mazout');return}if(edit)openReading(db.readings.find(r=>r.date===edit.dataset.edit));if(del&&confirm('Supprimer les index du '+label(del.dataset.delete)+' ?')){db.readings=db.readings.filter(r=>r.date!==del.dataset.delete);save();render()}});
+$('#history-table').addEventListener('click',e=>{const oil=e.target.closest('[data-history-oil]'),edit=e.target.closest('[data-edit]'),del=e.target.closest('[data-delete]');if(oil){show('mazout');return}if(edit)openReading(db.readings.find(r=>r.date===edit.dataset.edit));if(del&&confirm('Supprimer les index du '+label(del.dataset.delete)+' ?')){const previous=db.readings;db.readings=db.readings.filter(r=>r.date!==del.dataset.delete);if(save())render();else db.readings=previous}});
 const exportBlob=(content,type,name)=>{const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000)};
-$('#export-data').onclick=()=>exportBlob(JSON.stringify({version:1,exportedAt:new Date().toISOString(),...db},null,2),'application/json','flux-sauvegarde-'+today()+'.json');
+$('#export-data').onclick=()=>exportBlob(JSON.stringify({version:1,exportedAt:new Date().toISOString(),...db},null,2),'application/json','owatt-sauvegarde-'+today()+'.json');
 $('#export-csv').onclick=()=>{
  const originals=sorted(),oil=oilReadings(),fills=oilDeliveries(),byDay=new Map(originals.map(r=>[r.date,r]));
  const allDates=[...new Set([...originals.map(r=>r.date),...oil.map(r=>r.date),...fills.map(r=>r.date)])].sort();
@@ -903,13 +904,13 @@ $('#export-csv').onclick=()=>{
   const delivery=fills.filter(r=>r.date===date).reduce((sum,r)=>sum+r.liters,0);
   return [date,networkTotal(other)??'',other?.pv??'',other?.water??'',tank.map(x=>x.liters).join('/'),delivery||''].join(';');
  });
- exportBlob('\ufeffdate;electricite_monohoraire_kwh;production_kwh;eau_m3;mazout_niveau_L;livraison_mazout_L\n'+rows.join('\n'),'text/csv','flux-releves-'+today()+'.csv');
+ exportBlob('\ufeffdate;electricite_monohoraire_kwh;production_kwh;eau_m3;mazout_niveau_L;livraison_mazout_L\n'+rows.join('\n'),'text/csv','owatt-releves-'+today()+'.csv');
 };
 $('#import-data').onclick=()=>$('#import-file').click();$('#import-file').onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{const d=JSON.parse(await f.text());if(!Array.isArray(d.readings)||!d.readings.every(r=>/^\d{4}-\d{2}-\d{2}$/.test(r.date)))throw Error('Fichier incorrect');if(confirm('Remplacer tous les relevés de cet appareil par ceux du fichier ?')){db={readings:d.readings,events:Array.isArray(d.events)?d.events:[],oilReadings:Array.isArray(d.oilReadings)?d.oilReadings.map(r=>({...r})):DEFAULT_OIL_READINGS.map(r=>({...r})),oilDeliveries:Array.isArray(d.oilDeliveries)?d.oilDeliveries.map(r=>({...r})):DEFAULT_OIL_DELIVERIES.map(r=>({...r})),oilStopDate:d.oilStopDate||'2026-03-01'};const initial=db.oilReadings.find(r=>r.id==='oil-2025-12-12'&&r.date==='2025-12-12');if(initial&&Number(initial.liters)===1000)initial.liters=0;if(initial&&Number(initial.liters)===0&&!db.oilDeliveries.some(x=>x.date==='2025-12-12'&&Number(x.liters)===1000))db.oilDeliveries.push({...DEFAULT_OIL_DELIVERIES[0]});save();render();toast('Import terminé')}}catch(err){toast('Fichier JSON invalide')}e.target.value=''};
 $('#new-event').onclick=()=>{$('#event-form').reset();$('#event-date').value=today();modal('event-overlay')};
-$('#event-form').onsubmit=e=>{e.preventDefault();db.events.push({id:String(Date.now()),date:$('#event-date').value,label:$('#event-label').value,amount:Number($('#event-amount').value)});save();modal('event-overlay',false);render()};
-$('#special-events').addEventListener('click',e=>{const b=e.target.closest('[data-remove-event]');if(b&&confirm('Supprimer cet événement ?')){db.events=db.events.filter(v=>v.id!==b.dataset.removeEvent);save();render()}});
-$('#calendar-reminder').onclick=()=>{const now=new Date(),first=new Date(now.getFullYear(),now.getMonth()+1,0);let lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Flux Energie//FR','CALSCALE:GREGORIAN','METHOD:PUBLISH'];for(let m=0;m<24;m++){const d=new Date(first.getFullYear(),first.getMonth()+m+1,0),ds=dateISO(d).replace(/-/g,'');lines.push('BEGIN:VEVENT','UID:flux-'+ds+'@energie','DTSTART;VALUE=DATE:'+ds,'DTEND;VALUE=DATE:'+dateISO(new Date(d.getFullYear(),d.getMonth(),d.getDate()+1)).replace(/-/g,''),'SUMMARY:Relever les compteurs - Flux','DESCRIPTION:Electricite jour et nuit, panneaux photovoltaïques et eau.','BEGIN:VALARM','ACTION:DISPLAY','DESCRIPTION:Releve des compteurs','TRIGGER:-PT9H','END:VALARM','END:VEVENT')}lines.push('END:VCALENDAR');exportBlob(lines.join('\r\n'),'text/calendar','flux-rappels-mensuels.ics');toast('Calendrier des 24 prochains mois créé')};
+$('#event-form').onsubmit=e=>{e.preventDefault();const entry={id:String(Date.now()),date:$('#event-date').value,label:$('#event-label').value,amount:Number($('#event-amount').value)};if(!entry.date||!entry.label.trim()||!Number.isFinite(entry.amount)||entry.amount<=0)return toast('Vérifie la date et le volume.');const previous=db.events;db.events=[...db.events,entry];if(save()){modal('event-overlay',false);render()}else db.events=previous;};
+$('#special-events').addEventListener('click',e=>{const b=e.target.closest('[data-remove-event]');if(b&&confirm('Supprimer cet événement ?')){const previous=db.events;db.events=db.events.filter(v=>v.id!==b.dataset.removeEvent);if(save())render();else db.events=previous}});
+$('#calendar-reminder').onclick=()=>{const now=new Date(),first=new Date(now.getFullYear(),now.getMonth()+1,0);let lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Owatt Energie//FR','CALSCALE:GREGORIAN','METHOD:PUBLISH'];for(let m=0;m<24;m++){const d=new Date(first.getFullYear(),first.getMonth()+m+1,0),ds=dateISO(d).replace(/-/g,'');lines.push('BEGIN:VEVENT','UID:owatt-'+ds+'@energie','DTSTART;VALUE=DATE:'+ds,'DTEND;VALUE=DATE:'+dateISO(new Date(d.getFullYear(),d.getMonth(),d.getDate()+1)).replace(/-/g,''),'SUMMARY:Relever les compteurs - Ôwatt','DESCRIPTION:Electricite jour et nuit, panneaux photovoltaïques et eau.','BEGIN:VALARM','ACTION:DISPLAY','DESCRIPTION:Releve des compteurs','TRIGGER:-PT9H','END:VALARM','END:VEVENT')}lines.push('END:VCALENDAR');exportBlob(lines.join('\r\n'),'text/calendar','owatt-rappels-mensuels.ics');toast('Calendrier des 24 prochains mois créé')};
 let to=null;function toast(message){const el=$('#toast');el.textContent=message;el.classList.add('show');clearTimeout(to);to=setTimeout(()=>el.classList.remove('show'),3000)}
 
 /* On-device photo reading. Type is selected BEFORE capture; OCR is never saved without confirmation. */
