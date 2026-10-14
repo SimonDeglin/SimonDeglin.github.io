@@ -12,34 +12,58 @@ const DATA=path.resolve(__dirname,'../data.json');
 const ENDPOINT='https://www.publicprocurement.be/api/sea/search/publications';
 const MAX_PAGE=25;
 const LIMIT=80;
-function compactDate(v){
- if(!v)return '';
- return String(v).match(/20\d{2}-\d{2}-\d{2}/)?.[0]||'';
-}
-function stringField(obj,names){
- for(const name of names){
-  const v=obj?.[name];
-  if(typeof v==='string'&&v.trim())return v.trim();
-  if(typeof v==='number')return String(v);
-  if(Array.isArray(v)){const first=v.find(a=>typeof a==='string'&&a.trim());if(first)return first.trim()}
-  if(v&&typeof v==='object'){
-   for(const key of ['fr','fra','french','FR','nl','en']){
-    if(typeof v[key]==='string'&&v[key].trim())return v[key].trim();
-   }
+function localized(value){
+ if(value==null)return '';
+ if(typeof value==='string'||typeof value==='number')return String(value).trim();
+ if(Array.isArray(value)){
+  const french=value.find(x=>x&&typeof x==='object'&&/^(fr|fra)$/i.test(x.language||x.lang||''));
+  if(french){const text=localized(french.text||french.value);if(text)return text}
+  const english=value.find(x=>x&&typeof x==='object'&&/^(en|eng)$/i.test(x.language||x.lang||''));
+  const candidate=french||english||value[0];
+  return localized(candidate);
+ }
+ if(typeof value==='object'){
+  for(const lang of ['fr','FR','fra','FRA','french','en','EN','nl','NL']){
+   if(value[lang]){const text=localized(value[lang]);if(text)return text}
+  }
+  for(const key of ['text','value','name','officialName','denomination','title','description']){
+   if(value[key]){const text=localized(value[key]);if(text)return text}
   }
  }
  return '';
 }
-function codeList(obj){
- const data=[obj.cpvCodes,obj.mainCpvCode,obj.cpvCode,obj.mainClassificationCode].flat(Infinity).filter(Boolean);
- return [...new Set(data.flatMap(x=>String(typeof x==='object'?x.code||x.value||'':x).match(/\b\d{8}\b/g)||[]))];
+function stringField(obj,keys){
+ for(const key of keys){
+  const value=key.split('.').reduce((v,part)=>v?.[part],obj);
+  const text=localized(value);
+  if(text)return text;
+ }
+ return '';
+}
+function compactDate(v){
+ return String(v||'').match(/\b20\d{2}-\d{2}-\d{2}\b/)?.[0]||'';
+}
+function codeList(raw){
+ const inputs=[raw.cpvMainCode,raw.cpvAdditionalCodes,raw.cpvCodes,raw.mainCpvCode,
+   raw.cpvCode,raw.mainClassificationCode].flat(Infinity).filter(Boolean);
+ return [...new Set(inputs.flatMap(x=>{
+  const text=typeof x==='string'?x:typeof x==='object'?(x.code||x.value||''):String(x);
+  return String(text).match(/\b\d{8}\b/g)||[];
+ }))];
 }
 function regionFromNuts(raw){
- const places=[raw.nutsCodes,raw.nutsCode,raw.placeOfPerformanceNutsCode,raw.executionNutsCodes].flat(Infinity).filter(Boolean).map(String);
- if(places.some(s=>/^BE3/.test(s)))return 'Wallonie';
- if(places.some(s=>/^BE1/.test(s)))return 'Bruxelles';
- if(places.length&&places.every(s=>/^BE2/.test(s)))return 'Flandre';
+ const codes=[raw.nutsCodes,raw.nutsCode,raw.placeOfPerformanceNutsCode,raw.executionNutsCodes].flat(Infinity).filter(Boolean).map(String);
+ if(codes.some(x=>/^BE3/.test(x)))return 'Wallonie';
+ if(codes.some(x=>/^BE1/.test(x)))return 'Bruxelles';
+ if(codes.length&&codes.every(x=>/^BE2/.test(x)))return 'Flandre';
  return 'Belgique';
+}
+function noticeKind(code){
+ const c=String(code||'').toUpperCase();
+ if(c==='E4'||/^([2][5-9]|3[0-7])$/.test(c))return 'award';
+ if(c==='E3'||/^1[0-9]$|^2[0-4]$/.test(c))return 'competition';
+ if(c==='E2'||/^[1-9]$/.test(c))return 'planning';
+ return 'unknown';
 }
 function normalize(raw){
  if(!raw||typeof raw!=='object')return null;
@@ -47,27 +71,33 @@ function normalize(raw){
  const noticeId=stringField(raw,['noticeId','id','publicationId','publicationUuid']);
  const stable=publicationWorkspaceId||noticeId;
  if(!/^[a-f0-9]{8}-[a-f0-9-]{27,36}$/i.test(stable))return null;
- const title=stringField(raw,['title','noticeTitle','publicationTitle','subject','description']).slice(0,1500);
- const description=stringField(raw,['description','noticeDescription','shortDescription','subject']).slice(0,3000);
- const buyer=stringField(raw,['organisationName','organizationName','buyerName','contractingAuthorityName','authorityName','organisation']);
+ const dossier=raw.dossier||{},organisation=raw.organisation||{};
+ const title=stringField(raw,['dossier.titles','title','noticeTitle','publicationTitle','subject','lots.0.titles']).slice(0,1500);
+ const description=stringField(raw,['dossier.descriptions','description','noticeDescription','shortDescription','lots.0.descriptions']).slice(0,3000);
+ const buyer=stringField(raw,['organisation.organisationNames','organisationName','organizationName','buyerName','contractingAuthorityName','authorityName']);
  const cpv=codeList(raw);
  if(!title||!buyer)return null;
  const region=regionFromNuts(raw);
- const notice={title,description,buyer,region,cpv};
- const screened=profile.screen(notice);
- if(!screened.classification)return null;
- const procedureIdentifier=stringField(raw,['procedureIdentifier','procedureId','procurementProcedureId']);
- const internalReference=stringField(raw,['referenceNumber','internalReference','procurementReference']);
+ const classification=profile.screen({title,description,buyer,region,cpv});
+ if(!classification.classification)return null;
+ const procedureIdentifier=stringField(raw,['procedureId','procedureIdentifier','procurementProcedureId']);
+ const internalReference=stringField(raw,['referenceNumber','dossier.referenceNumber','internalReference','procurementReference']);
  const pubDate=compactDate(raw.publicationDate)||compactDate(raw.dispatchDate);
- const deadline=compactDate(raw.vaultSubmissionDeadline)||compactDate(raw.tenderSubmissionDeadline);
+ const deadline=compactDate(raw.vaultSubmissionDeadline)||compactDate(raw.tenderSubmissionDeadline)||compactDate(dossier.submissionDeadline);
+ const noticeIdActual=noticeId||String(raw.noticeIds?.[0]||'');
+ const noticeSubType=String(raw.noticeSubType||'');
+ const bdaRef=String(raw.publicationReferenceNumbersBDA?.[0]||'');
+ const tedRef=String(raw.publicationReferenceNumbersTED?.[0]||'');
  return {
-  id:'bosa:'+stable,publicationWorkspaceId,noticeId,procedureIdentifier,internalReference,
-  title,buyer,region,sector:screened.classification.sector,sectors:screened.classification.sectors,
-  score:screened.classification.score,screening:screened.classification.screening,
+  id:'bosa:'+stable,publicationWorkspaceId,noticeId:noticeIdActual,
+  procedureIdentifier,internalReference,title,buyer,region,
+  sector:classification.classification.sector,sectors:classification.classification.sectors,
+  score:classification.classification.score,screening:classification.classification.screening,
   publication:pubDate,deadline,cpv,description:description||title,
-  source:'BOSA',source_status:'bosa_public_search',
-  noticeSubType:raw.noticeSubType||null,
-  url:'https://www.publicprocurement.be/publication-workspaces/'+(publicationWorkspaceId||stable)+'/publications'
+  source:'BOSA',source_status:'bosa_public_browser',
+  noticeSubType,noticeKind:noticeKind(noticeSubType),
+  bdaReference:bdaRef,tedReference:tedRef,
+  url:'https://www.publicprocurement.be/publication-workspaces/'+(publicationWorkspaceId||stable)+'/general'
  };
 }
 async function searchPublications(from,to,fetchFn=fetch){
