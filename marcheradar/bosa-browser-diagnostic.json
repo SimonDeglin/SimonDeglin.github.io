@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-14T15:20:14.530Z",
+  "at": "2026-10-14T15:21:45.235Z",
   "method": "Public navigateur sans authentification",
   "target": "https://www.publicprocurement.be/bda",
   "status": "public-bulletin-visible",
@@ -7,6 +7,11 @@
   "events": [
     {
       "route": "/api/cfg/configs/emergencyProcedure",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "route": "/api/lex/translations/simple",
       "status": 200,
       "method": "GET"
     },
@@ -36,7 +41,7 @@
       "method": "GET"
     },
     {
-      "route": "/api/lex/translations/simple",
+      "route": "/api/dos/enterprises/categories",
       "status": 200,
       "method": "GET"
     },
@@ -46,17 +51,12 @@
       "method": "GET"
     },
     {
-      "route": "/api/loc/currencies",
-      "status": 200,
-      "method": "GET"
-    },
-    {
-      "route": "/api/dos/enterprises/categories",
-      "status": 200,
-      "method": "GET"
-    },
-    {
       "route": "/api/dos/enterprises/classes",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "route": "/api/loc/currencies",
       "status": 200,
       "method": "GET"
     },
@@ -94,7 +94,7 @@
         "totalCount"
       ],
       "responseCounts": {
-        "totalCount": 291765
+        "totalCount": 291766
       },
       "arrays": [
         {
@@ -334,6 +334,11 @@
       }
     },
     {
+      "route": "/api/cfg/configs/emergencyProcedure",
+      "status": 200,
+      "method": "GET"
+    },
+    {
       "route": "/api/sea/search/publications",
       "status": 400,
       "method": "POST"
@@ -344,7 +349,7 @@
   "finalUrl": "https://www.publicprocurement.be/bda",
   "page": {
     "bodyLength": 21387,
-    "bodyExcerpt": "NLFRDEEN\nAutres informations et services officiels : \nwww.belgium.be\nAccueil\nBulletin des Adjudications\nCartes de visite\nBulletin des Adjudications\nCritères de recherche\nCopier lien vers résultats de recherche\nNature principale du marché\nCode CPV\nCode NUTS\nLangue de publication\nDate d'envoi\nDate de publication\nDate limite de soumission\nN'afficher que les dates limites de soumission futures\nOrganisation\nInclure les sous-organisations\nTechnique d'achat spéciale\nAfficher uniquement les marchés sans obligation de publication\nType de procédure\nType d'avis\nMarchés réservés\nEffacer tous les filtres\n1000 BRUXELLES : PALAIS D’EGMONT - Travaux de remplacement d’un ascenseur (n° 002)\nBE\nAttribution\nNuméro de référence\nRDGB-BRU-2026-220022-245_pub02\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nOrganisation\nRégie des Bâtiments - Centre d’expertise technique et d’innovation\nNature du marché\nTravaux\nCatégorie (code CPV)\nTravaux d'installation d'ascenseurs (45313100)\nAgréation requise\nN1 classe 1\nDescription\n Le marché a pour objet les travaux, les fournitures, les services, le transport, la main-d’œuvre et tous les moyens nécessaires à l’installation, en parfait état de fonctionnement, d’un ascenseur électrique sans salle des machines dans le PALAIS D’EGMONT  à 1000 BRUXELLES\nCadre légal\nDirective 2014/24/EU (secteurs classiques)\nProcédure\nProcédure ouverte\nConception, fourniture, installation et mise en service d'une installation hypoxique normobare\nBE\nCompétition\nNuméro de référence\nPPP19O-30/6024/2026/031_001\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nDate limite de soumission\n09/11/2026 11:00 CET\nTemps restant\n25 jours 17:39:36\nOrganisation\nComplexe Sportif de Blocry ASBL\nNature du marché\nTravaux\nCatégorie (code CPV)\nTravaux d'équipement du bâtiment (45300000)\nDescription\nConception, fourniture, installation et mise en service d'une installation hypoxique normobare\nCadre légal\nDirective 2014/24/EU (secteurs classiques)\nProcédure\nProcédure ouverte\nMarché de fournitures - Acquisition d'une camionnette pour le service plantation\nBE\nAttribution\nNuméro de référence\nPPP04Z-2219/6102/2025-2219_002\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nOrganisation\nDison\nNature du marché\nFournitures\nCatégorie (code CPV)\nFourgonnettes (34136100)\nDescription\nCe marché a pour but l'acquisition d'une camionnette châssis simple cabine (avec benne basculante) pour remplacer la camionnette du service plantation de la Commune de Dison.\nCadre légal\nDirective 2014/24/EU (secteurs classiques)\nProcédure\nProcédure négociée sans publication préalable\nLigne 166 : Dinant – Bertrix Tronçon Houyet – Beauraing Stabilisation des talus du tronçon Houyet – Beauraing par la pose d’enrochements\nBE\nCompétition\nNuméro de référence\n5753426049_pub01\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nDate limite de soumission\n17/11/2026 14:00 CET\nTemps restant\n1 mois 2 jours\nOrganisation\nInfrabel Projects South\nNature du marché\nTravaux\nCatégorie (code CPV)\nTravaux d'enrochement (45252125)\nAgréation requise\nE classe 4\nDescription\nCe marché concerne principalement:  - des travaux de stabilisation de pieds de talus par la pose d’enrochements - des travaux de remise en état des caniveaux à câbles\nCadre légal\nDirective 2014/25/EU (secteurs spéciaux)\nProcédure\nProcédure ouverte\nFourniture, pose et mise en service d’un système de coupure d’urgence de la production photovoltaïque\nBE\nCompétition\nNuméro de référence\nPPP18O-142/6055/BH TENDER DDP-ARRET URGENT SOLAIRE (MOENSBERG)_001\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nDate limite de soumission\n30/11/2026 10:00 CET\nTemps restant\n1 mois 15 jours\nOrganisation\nBinHôme\nNature du marché\nTravaux\nCatégorie (code CPV)\nTravaux d'équipement électrique (45310000)\nDescription\nFourniture, pose et mise en service d’un système de coupure d’urgence de la production photovoltaïque (Strings DC) à Moensberg (Ucc",
+    "bodyExcerpt": "NLFRDEEN\nAutres informations et services officiels : \nwww.belgium.be\nAccueil\nBulletin des Adjudications\nCartes de visite\nBulletin des Adjudications\nCritères de recherche\nCopier lien vers résultats de recherche\nNature principale du marché\nCode CPV\nCode NUTS\nLangue de publication\nDate d'envoi\nDate de publication\nDate limite de soumission\nN'afficher que les dates limites de soumission futures\nOrganisation\nInclure les sous-organisations\nTechnique d'achat spéciale\nAfficher uniquement les marchés sans obligation de publication\nType de procédure\nType d'avis\nMarchés réservés\nEffacer tous les filtres\n1000 BRUXELLES : PALAIS D’EGMONT - Travaux de remplacement d’un ascenseur (n° 002)\nBE\nAttribution\nNuméro de référence\nRDGB-BRU-2026-220022-245_pub02\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nOrganisation\nRégie des Bâtiments - Centre d’expertise technique et d’innovation\nNature du marché\nTravaux\nCatégorie (code CPV)\nTravaux d'installation d'ascenseurs (45313100)\nAgréation requise\nN1 classe 1\nDescription\n Le marché a pour objet les travaux, les fournitures, les services, le transport, la main-d’œuvre et tous les moyens nécessaires à l’installation, en parfait état de fonctionnement, d’un ascenseur électrique sans salle des machines dans le PALAIS D’EGMONT  à 1000 BRUXELLES\nCadre légal\nDirective 2014/24/EU (secteurs classiques)\nProcédure\nProcédure ouverte\nConception, fourniture, installation et mise en service d'une installation hypoxique normobare\nBE\nCompétition\nNuméro de référence\nPPP19O-30/6024/2026/031_001\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nDate limite de soumission\n09/11/2026 11:00 CET\nTemps restant\n25 jours 17:37:58\nOrganisation\nComplexe Sportif de Blocry ASBL\nNature du marché\nTravaux\nCatégorie (code CPV)\nTravaux d'équipement du bâtiment (45300000)\nDescription\nConception, fourniture, installation et mise en service d'une installation hypoxique normobare\nCadre légal\nDirective 2014/24/EU (secteurs classiques)\nProcédure\nProcédure ouverte\nMarché de fournitures - Acquisition d'une camionnette pour le service plantation\nBE\nAttribution\nNuméro de référence\nPPP04Z-2219/6102/2025-2219_002\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nOrganisation\nDison\nNature du marché\nFournitures\nCatégorie (code CPV)\nFourgonnettes (34136100)\nDescription\nCe marché a pour but l'acquisition d'une camionnette châssis simple cabine (avec benne basculante) pour remplacer la camionnette du service plantation de la Commune de Dison.\nCadre légal\nDirective 2014/24/EU (secteurs classiques)\nProcédure\nProcédure négociée sans publication préalable\nLigne 166 : Dinant – Bertrix Tronçon Houyet – Beauraing Stabilisation des talus du tronçon Houyet – Beauraing par la pose d’enrochements\nBE\nCompétition\nNuméro de référence\n5753426049_pub01\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nDate limite de soumission\n17/11/2026 14:00 CET\nTemps restant\n1 mois 2 jours\nOrganisation\nInfrabel Projects South\nNature du marché\nTravaux\nCatégorie (code CPV)\nTravaux d'enrochement (45252125)\nAgréation requise\nE classe 4\nDescription\nCe marché concerne principalement:  - des travaux de stabilisation de pieds de talus par la pose d’enrochements - des travaux de remise en état des caniveaux à câbles\nCadre légal\nDirective 2014/25/EU (secteurs spéciaux)\nProcédure\nProcédure ouverte\nFourniture, pose et mise en service d’un système de coupure d’urgence de la production photovoltaïque\nBE\nCompétition\nNuméro de référence\nPPP18O-142/6055/BH TENDER DDP-ARRET URGENT SOLAIRE (MOENSBERG)_001\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nDate limite de soumission\n30/11/2026 10:00 CET\nTemps restant\n1 mois 15 jours\nOrganisation\nBinHôme\nNature du marché\nTravaux\nCatégorie (code CPV)\nTravaux d'équipement électrique (45310000)\nDescription\nFourniture, pose et mise en service d’un système de coupure d’urgence de la production photovoltaïque (Strings DC) à Moensberg (Ucc",
     "links": [
       {
         "text": "",
@@ -509,6 +514,413 @@
         "type": "text"
       }
     ]
+  },
+  "paginator": {
+    "tail": "gal\nDirective 2014/24/EU (secteurs classiques)\nProcédure\nProcédure négociée sans publication préalable\nMarché public de travaux relatif à la restauration du campanile et du péristyle de l'église Saint-Jacques sur Coudenberg.\nBE\nCompétition\nNuméro de référence\n[084_COUDENBERG]_pub01\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nDate limite de soumission\n10/11/2026 14:00 CET\nTemps restant\n26 jours 20:37:58\nOrganisation\nFabrique d'Eglise Saint Jacques-sur-Coudenberg / Kerkfabriek Sint Jacob-op-Koudenberg\nNature du marché\nTravaux\nCatégorie (code CPV)\nTravaux de construction d'églises (45212361)\nAgréation requise\nD24 classe 5\nDescription\nVoir clauses techniques et métré récapitulatif\nCadre légal\nDirective 2014/24/EU (secteurs classiques)\nProcédure\nProcédure ouverte\nProcesbegeleiding toekomstwijk Broekstraat - Den Bremt\nBE\nCompétition\nNuméro de référence\nPPP06V-2388/6403/2026300_001\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nDate limite de soumission\n27/10/2026 10:00 CET\nTemps restant\n12 jours 16:37:58\nOrganisation\nTurnhout\nNature du marché\nServices\nCatégorie (code CPV)\nServices d'orientation et de conseil professionnel (85312300)\nDescription\nProcesbegeleiding toekomstwijk Broekstraat - Den Bremt\nCadre légal\nDirective 2014/24/EU (secteurs classiques)\nProcédure\nProcédure négociée directe avec publication préalable\n1 - 25 / 291766\n1\n2\n3\n4\n5\n...\n11 671\n25\n© 2026 SPF Stratégie et Appui\n|\nConditions d'utilisation\n|\nDéclaration de confidentialité\n|\nPolitique de cookies\n|\nHelpdesk\n|\nCentre d'aide\n\nCe site utilise des cookies\n\nPlus d'informations\nAccepter les cookies",
+    "buttons": [
+      {
+        "text": "NL",
+        "label": "",
+        "title": "",
+        "classes": "",
+        "disabled": false
+      },
+      {
+        "text": "FR",
+        "label": "",
+        "title": "",
+        "classes": "active",
+        "disabled": false
+      },
+      {
+        "text": "DE",
+        "label": "",
+        "title": "",
+        "classes": "",
+        "disabled": false
+      },
+      {
+        "text": "EN",
+        "label": "",
+        "title": "",
+        "classes": "",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "Vider ",
+        "title": "",
+        "classes": "mdi-close-circle mdi v-icon notranslate v-theme--light v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "Copier lien vers résultats de recherche",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--elevated v-theme-- bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated ",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "Vider Nature principale du marché",
+        "title": "",
+        "classes": "mdi-close-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "Vider Code CPV",
+        "title": "",
+        "classes": "mdi-close-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "Vider Code NUTS",
+        "title": "",
+        "classes": "mdi-close-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "Vider Langue de publication",
+        "title": "",
+        "classes": "mdi-close-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "Vider Date d'envoi",
+        "title": "",
+        "classes": "mdi-close-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "Vider Date de publication",
+        "title": "",
+        "classes": "mdi-close-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "Vider Date limite de soumission",
+        "title": "",
+        "classes": "mdi-close-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "Vider Organisation",
+        "title": "",
+        "classes": "mdi-close-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "Vider Technique d'achat spéciale",
+        "title": "",
+        "classes": "mdi-close-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "Vider Type de procédure",
+        "title": "",
+        "classes": "mdi-close-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "Vider Type d'avis",
+        "title": "",
+        "classes": "mdi-close-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "Vider Marchés réservés",
+        "title": "",
+        "classes": "mdi-close-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "mdi-menu-down mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable v-autocomplete__menu-ico",
+        "disabled": false
+      },
+      {
+        "text": "Effacer tous les filtres",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--block v-theme-- text-error v-btn--density-default v-btn--size-default v-btn--variant-text mt-4",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "helpTextDialogIcon.ariaLabel",
+        "title": "",
+        "classes": "mdi-help-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "helpTextDialogIcon.ariaLabel",
+        "title": "",
+        "classes": "mdi-help-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "helpTextDialogIcon.ariaLabel",
+        "title": "",
+        "classes": "mdi-help-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "helpTextDialogIcon.ariaLabel",
+        "title": "",
+        "classes": "mdi-help-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "helpTextDialogIcon.ariaLabel",
+        "title": "",
+        "classes": "mdi-help-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "helpTextDialogIcon.ariaLabel",
+        "title": "",
+        "classes": "mdi-help-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "helpTextDialogIcon.ariaLabel",
+        "title": "",
+        "classes": "mdi-help-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme-- v-btn--density-default v-btn--size-default v-btn--variant-text flex-row align-cent",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "helpTextDialogIcon.ariaLabel",
+        "title": "",
+        "classes": "mdi-help-circle mdi v-icon notranslate v-theme-- v-icon--size-default v-icon--clickable",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "pagination.common.previousPage",
+        "title": "",
+        "classes": "v-btn v-btn--disabled v-btn--icon v-theme--light v-btn--density-comfortable v-btn--size-default v-btn--variant",
+        "disabled": true
+      },
+      {
+        "text": "1",
+        "label": "pagination.common.currentPage ({ 0 })",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme--light bg-primary v-btn--density-comfortable v-btn--size-default v-btn--variant-flat",
+        "disabled": false
+      },
+      {
+        "text": "2",
+        "label": "pagination.common.page ({ 0 })",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme--light v-btn--density-comfortable v-btn--size-default v-btn--variant-flat",
+        "disabled": false
+      },
+      {
+        "text": "3",
+        "label": "pagination.common.page ({ 0 })",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme--light v-btn--density-comfortable v-btn--size-default v-btn--variant-flat",
+        "disabled": false
+      },
+      {
+        "text": "4",
+        "label": "pagination.common.page ({ 0 })",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme--light v-btn--density-comfortable v-btn--size-default v-btn--variant-flat",
+        "disabled": false
+      },
+      {
+        "text": "5",
+        "label": "pagination.common.page ({ 0 })",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme--light v-btn--density-comfortable v-btn--size-default v-btn--variant-flat",
+        "disabled": false
+      },
+      {
+        "text": "...",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--disabled v-btn--icon v-theme--light v-btn--density-comfortable v-btn--size-default v-btn--variant",
+        "disabled": true
+      },
+      {
+        "text": "11 671",
+        "label": "pagination.common.page ({ 0 })",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme--light v-btn--density-comfortable v-btn--size-default v-btn--variant-flat",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "label": "pagination.common.nextPage",
+        "title": "",
+        "classes": "v-btn v-btn--icon v-theme--light v-btn--density-comfortable v-btn--size-default v-btn--variant-flat",
+        "disabled": false
+      },
+      {
+        "text": "Accepter les cookies",
+        "label": "",
+        "title": "",
+        "classes": "v-btn v-btn--elevated v-theme--light bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elev",
+        "disabled": false
+      }
+    ]
+  },
+  "apiRequestHeaderNames": {
+    "ready": true
   },
   "pageTwoViaFetch": {
     "httpStatus": 400,
