@@ -1,0 +1,67 @@
+name: "MarchéRadar — collecte TED"
+run-name: "Veille TED KDRIX • ${{ github.event_name }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      jours:
+        description: "Nombre de jours à analyser (14, 30 ou 100)"
+        type: choice
+        required: true
+        options:
+          - "14"
+          - "30"
+          - "100"
+        default: "14"
+  schedule:
+    # 3 collectes quotidiennes ; ce rythme n'est pas une garantie de l'instant de publication.
+    - cron: "17 5,11,16 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/marcheradar.yml"
+      - "marcheradar/tools/**"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: marcheradar-ted-data
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    name: "Contrôler TED et mettre à jour MarchéRadar"
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: "Récupérer les fichiers"
+        uses: actions/checkout@v4
+
+      - name: "Installer Node.js"
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: "Vérifier le programme"
+        run: node marcheradar/tools/test-collector.cjs
+
+      - name: "Collecter les avis TED"
+        env:
+          MARCHE_RADAR_DAYS: ${{ github.event.inputs.jours || '' }}
+        run: node marcheradar/tools/collect-ted.cjs
+
+      - name: "Publier les nouvelles données"
+        shell: bash
+        run: |
+          if git diff --quiet -- marcheradar/data.json; then
+            echo "Aucune mise à jour du fichier de données."
+            exit 0
+          fi
+          git config user.name "marcheradar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add marcheradar/data.json
+          git commit -m "MarchéRadar: synchronisation des annonces TED [skip ci]"
+          git push
