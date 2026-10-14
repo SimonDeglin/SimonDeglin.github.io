@@ -48,6 +48,19 @@ const report={at:new Date().toISOString(),method:'Public navigateur sans authent
    return {bodyLength:body.length,bodyExcerpt:body.slice(0,3900),links,inputs};
   });
   report.page=data;
+  try{
+   report.pageTwoViaFetch=await page.evaluate(async()=>{
+    const response=await fetch('/api/sea/search/publications',{
+     method:'POST',credentials:'same-origin',
+     headers:{'Content-Type':'application/json','Accept':'application/json'},
+     body:JSON.stringify({includeOrganisationChildren:true,page:2,pageSize:25})
+    });
+    const txt=await response.text();
+    let parsed;try{parsed=JSON.parse(txt)}catch(e){}
+    return {httpStatus:response.status,keys:Object.keys(parsed||{}),count:parsed?.publications?.length||0,
+      sample:parsed?.publications?.[0]&&Object.fromEntries(Object.entries(parsed.publications[0]).filter(([k,v])=>typeof v==='string').slice(0,8))};
+   });
+  }catch(e){report.pageTwoViaFetch={error:String(e.message||e).slice(0,170)}}
   report.status=data.bodyLength>350&&/Bulletin|adjudications|Tender|Publication|search|Rechercher/i.test(data.bodyExcerpt)?'public-bulletin-visible':'frontend-not-loaded';
  }catch(e){report.status='browser-failed';report.errors.push(String(e.message||e).slice(0,400))}
  finally{try{await browser?.close()}catch(e){}}
