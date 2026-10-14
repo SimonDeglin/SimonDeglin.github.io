@@ -1,18 +1,40 @@
 {
-  "checkedAt": "2026-10-14T15:09:19.379Z",
+  "checkedAt": "2026-10-14T15:09:43.329Z",
   "endpoint": "https://www.publicprocurement.be/api/sea/search/publications",
   "checks": [
     {
-      "name": "bosa_public_search",
+      "name": "existing_json",
       "status": "unavailable",
-      "reason": "BOSA HTTP 400 : accès à la recherche publique non validé"
+      "httpStatus": 400,
+      "contentType": "",
+      "bodyKeys": [],
+      "bodyExcerpt": ""
     },
     {
-      "name": "public_bulletin_web",
+      "name": "minimal_page_one",
+      "status": "unavailable",
+      "httpStatus": 400,
+      "contentType": "",
+      "bodyKeys": [],
+      "bodyExcerpt": ""
+    },
+    {
+      "name": "minimal_page_zero",
+      "status": "unavailable",
+      "httpStatus": 400,
+      "contentType": "",
+      "bodyKeys": [],
+      "bodyExcerpt": ""
+    },
+    {
+      "name": "public_web",
       "status": "success",
-      "httpStatus": 200
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "bodyKeys": [],
+      "bodyExcerpt": ""
     }
   ],
   "authorizedPublicSearch": false,
-  "note": "Diagnostic technique. Un refus HTTP ne prouve pas absence de données BOSA ; il signifie que cette méthode non authentifiée est indisponible."
+  "comment": "Tests de méthodes publiques sans session privée; réponses HTTP enregistrées sans cookies ni secrets."
 }
