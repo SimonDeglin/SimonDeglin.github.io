@@ -244,8 +244,8 @@ function renderBanner(){
   el('sideTitle').textContent='Démonstration active';
   el('sideText').textContent='Les marchés affichés sont fictifs. En attente d’une synchronisation officielle TED.';
  }
- var button=el('liveSwitch');if(button)button.addEventListener('click',function(){state.mode='ted';state.markets=state.real;state.view='all';render()});
- button=el('demoSwitch');if(button)button.addEventListener('click',function(){state.mode='demo';state.markets=DEMO;state.view='all';render()});
+ var button=el('liveSwitch');if(button)button.addEventListener('click',function(){state.mode='ted';state.markets=state.real;state.view='inbox';render()});
+ button=el('demoSwitch');if(button)button.addEventListener('click',function(){state.mode='demo';state.markets=DEMO;state.view='inbox';render()});
  button=el('sourceHelp');if(button)button.addEventListener('click',function(){toast('L’import quotidien TED doit être exécuté sur GitHub Actions. Les marchés belges BOSA sont une intégration distincte.')});
  el('lastSync').textContent=live?'Mise à jour : '+(state.generated?fmtDate(state.generated):'inconnue'):'Mode aperçu · données fictives';
  el('listMeta').textContent=live?'Source TED · score indicatif':'Exemples fictifs uniquement';
