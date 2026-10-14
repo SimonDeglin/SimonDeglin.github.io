@@ -14,10 +14,26 @@ const report={at:new Date().toISOString(),method:'Public navigateur sans authent
   else cfg.channel='chrome';
   browser=await chromium.launch(cfg);
   const page=await browser.newPage({locale:'fr-BE',timezoneId:'Europe/Brussels',viewport:{width:1280,height:900}});
-  page.on('response',r=>{try{
+  page.on('response',async r=>{try{
    const url=new URL(r.url());
-   if(url.hostname==='www.publicprocurement.be'&&/api\//.test(url.pathname)&&report.events.length<25)
-    report.events.push({route:url.pathname.slice(0,180),status:r.status(),method:r.request().method()});
+   if(url.hostname==='www.publicprocurement.be'&&/api\//.test(url.pathname)&&report.events.length<25){
+    const item={route:url.pathname.slice(0,180),status:r.status(),method:r.request().method()};
+    if(url.pathname==='/api/sea/search/publications' && r.status()===200){
+     const request=r.request();let input;
+     try{input=request.postDataJSON()}catch(e){input=request.postData()}
+     item.requestBody=input;
+     try{
+      const response=await r.json();
+      item.responseKeys=Object.keys(response||{});
+      item.responseCounts=Object.fromEntries(Object.entries(response||{}).filter(([k,v])=>typeof v==='number'));
+      const arrays=Object.entries(response||{}).filter(([k,v])=>Array.isArray(v));
+      item.arrays=arrays.map(([name,v])=>({name,count:v.length,firstKeys:v[0]?Object.keys(v[0]).slice(0,50):[]}));
+      const first=arrays.map(([k,v])=>v[0]).find(Boolean);
+      if(first)item.firstPublication=Object.fromEntries(Object.entries(first).filter(([k,v])=>typeof v==='string'||typeof v==='number').slice(0,40));
+     }catch(e){item.parseError=String(e.message||e).slice(0,150)}
+    }
+    report.events.push(item);
+   }
   }catch(e){}});
   const response=await page.goto(report.target,{waitUntil:'domcontentloaded',timeout:25000});
   await page.waitForTimeout(5500);
