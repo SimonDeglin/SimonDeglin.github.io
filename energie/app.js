@@ -792,27 +792,58 @@ $('#calendar-reminder').onclick=()=>{const now=new Date(),first=new Date(now.get
 let to=null;function toast(message){const el=$('#toast');el.textContent=message;el.classList.add('show');clearTimeout(to);to=setTimeout(()=>el.classList.remove('show'),3000)}
 
 /* On-device photo reading. Type is selected BEFORE capture; OCR is never saved without confirmation. */
-let scanKind='day',scanCrop=null,scanBusy=false,scanLastText='',scanRequest=0;
+let scanKind='electric',scanCrop=null,scanBusy=false,scanLastText='',scanLastData=null,scanRequest=0;
 let ocrScriptPromise=null,ocrWorkerPromise=null;
 $$('[data-scan-kind]').forEach(button=>button.addEventListener('click',()=>{
- scanKind=button.dataset.scanKind;$('#scan-file').value='';$('#scan-file').click();
+ scanKind=button.dataset.scanKind;
+ $('#scan-file').value='';
+ $('#scan-file').click();
 }));
-$('#scan-meter').onchange=()=>{
- scanKind=$('#scan-meter').value;
- $('#scan-value').step=scanKind==='water'?'0.1':'1';
- updateScanHint();
- const chosen=proposeScanIndex(scanLastText,scanKind);
- if(chosen!=null)$('#scan-value').value=chosen;
-};
+function electricInputs(){
+ const day=$('#scan-day').value,night=$('#scan-night').value;
+ const ok=v=>/^\d{1,7}$/.test(v)&&Number.isSafeInteger(Number(v));
+ return ok(day)&&ok(night)?{day:Number(day),night:Number(night),total:Number(day)+Number(night)}:null;
+}
+function refreshElectricSum(){
+ const values=electricInputs();
+ $('#scan-total').textContent=values?fmt(values.total)+' kWh':'— kWh';
+ const confirm=$('#confirm-scan');
+ if(scanKind==='electric')confirm.disabled=!values;
+ return values;
+}
+['scan-day','scan-night'].forEach(k=>$('#'+k).addEventListener('input',refreshElectricSum));
 function updateScanHint(){
  const hints={
-  pv:'Itron : 6 chiffres noirs + 1 rouge (dixième). Arrondi au kWh. Encadre les chiffres si besoin.',
-  water:'Compteur d’eau : chiffres noirs et rouges. Arrondi au dixième de m³.',
-  day:'Électricité jour : vérifie les chiffres entiers de l’index.',
-  night:'Électricité nuit : vérifie les chiffres entiers de l’index.'
+  electric:'Lune en haut = nuit, soleil en bas = jour. Seuls les chiffres noirs comptent. Encadre les deux lignes si nécessaire.',
+  pv:'Itron : six chiffres noirs et un rouge (dixième). Arrondi au kWh. Encadre les chiffres si nécessaire.',
+  water:'Eau : chiffres noirs et rouges. Arrondi au dixième de m³.'
  };
- const hint=$('#scan-hint');if(hint)hint.textContent=hints[scanKind]||'';
+ $('#scan-hint').textContent=hints[scanKind]||'';
 }
+function showScanKind(){
+ const electric=scanKind==='electric';
+ $('#scan-electric').classList.toggle('hidden',!electric);
+ $('#scan-single-field').classList.toggle('hidden',electric);
+ $('#scan-overlay').classList.toggle('electric-scan',electric);
+ $('#scan-value').step=scanKind==='water'?'0.1':'1';
+ $('#confirm-scan').textContent=electric?'Utiliser ce total':'Utiliser cet index';
+ updateScanHint();
+ if(electric)refreshElectricSum();
+ else $('#confirm-scan').disabled=false;
+}
+$('#scan-meter').onchange=()=>{
+ scanKind=$('#scan-meter').value;
+ $('#scan-value').value='';
+ $('#scan-day').value='';
+ $('#scan-night').value='';
+ showScanKind();
+ if(!scanLastText)return;
+ if(scanKind==='electric')fillElectricFromOcr(scanLastData);
+ else{
+  const chosen=proposeScanIndex(scanLastText,scanKind);
+  if(chosen!=null)$('#scan-value').value=chosen;
+ }
+};
 function capturePhotoData(file){
  return new Promise((resolve,reject)=>{
   const reader=new FileReader();reader.onerror=()=>reject(new Error('lecture du fichier impossible'));
