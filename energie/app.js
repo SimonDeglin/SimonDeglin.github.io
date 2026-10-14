@@ -598,10 +598,11 @@ function renderOilTimeline(model){
 function renderOil(){
  const model=oilModel(),last=oilLastKnown(model),forecast=oilForecast(model),period=oilInitialPeriod(model);
  const output=(id,value)=>{const node=$('#'+id);if(node)node.textContent=value};
- output('oil-home-level',last?'≈ '+fmt(last.liters)+' L':'—');
- output('oil-level-after',last?'≈ '+fmt(last.liters)+' L':'—');
- output('oil-last-date',last?label(last.date)+' · '+(last.derived?'après livraison · niveau actuel non mesuré':'dernier relevé de cuve'):'Niveau inconnu');
- output('oil-level-label',last?.derived?'Niveau après livraison (non remesuré)':'Dernier niveau mesuré');
+ const display=forecast?Math.round(forecast.liters/10)*10:last?.liters;
+ output('oil-home-level',display==null?'—':'≈ '+fmt(display)+' L');
+ output('oil-level-after',display==null?'—':'≈ '+fmt(display)+' L');
+ output('oil-last-date',forecast?'Estimation au '+label(forecast.date)+' · dernier niveau relevé le '+label(last.date):last?'Au '+label(last.date)+' · '+(last.derived?'après livraison':'niveau mesuré'):'Niveau inconnu');
+ output('oil-level-label',forecast?'Reste estimé dans la citerne':last?.derived?'Niveau après livraison':'Dernier niveau mesuré');
  output('oil-used',fmt(model.consumed)+' L');
  output('oil-delivered','+'+fmt(model.delivered)+' L');
  const usage=oilUsageTotals(model);
@@ -616,7 +617,7 @@ function renderOil(){
  $('#oil-hotwater-fill').style.width=(100*usage.hotwater/usageTotal).toFixed(2)+'%';
  output('oil-estimated-remaining',forecast?'≈ '+fmt(Math.round(forecast.liters/10)*10)+' L':'—');
  output('oil-estimated-date',forecast?'Estimation au '+label(forecast.date):'Pas d’estimation après le dernier relevé');
- const oilDate=$('#oil-home-date');if(oilDate)oilDate.textContent=last?'Au '+label(last.date)+(last.derived?' · après livraison':' · relevé de cuve'):'Aucun relevé';
+ const oilDate=$('#oil-home-date');if(oilDate)oilDate.textContent=forecast?'Est. au '+label(forecast.date):last?'Au '+label(last.date)+(last.derived?' · après livraison':' · relevé'):'Aucun relevé';
  const stop=$('#oil-stop-date');if(stop)stop.value=db.oilStopDate||'2026-03-01';
  syncOilChartView();
  renderOilUsage(model);
