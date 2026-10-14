@@ -31,6 +31,26 @@ async function launch(){
  if(!binary)throw Error('Navigateur Chrome absent du runner GitHub');
  return chromium.launch({executablePath:binary,headless:true,args:['--disable-dev-shm-usage','--no-sandbox']});
 }
+/* Les tuiles publiques du bulletin indiquent souvent une date limite
+   que la réponse sommaire JSON ne transmet pas. La lire sur la même page,
+   uniquement lorsqu'elle est affichée explicitement. */
+async function visibleDeadlines(page,items){
+ const first=items?.[0]?.publicationWorkspaceId;
+ if(first){
+  await page.waitForFunction(id=>!!document.querySelector('a[href*="'+id+'"]'),first,{timeout:8000}).catch(()=>{});
+ }
+ return page.evaluate(()=>{
+  const result={};
+  for(const link of document.querySelectorAll('a[href*="/publication-workspaces/"]')){
+   const id=link.href.match(/publication-workspaces\/([a-f0-9-]{36})/i)?.[1];
+   if(!id)continue;
+   const t=link.innerText||'';
+   const m=t.match(/(?:Date limite de soumission|Submission deadline)\s*(\d{2})\/(\d{2})\/(\d{4})/i);
+   if(m)result[id]=m[3]+'-'+m[2]+'-'+m[1];
+  }
+  return result;
+ });
+}
 async function collectBrowser(options={}){
  const maxPages=options.maxPages||MAX_PAGES;
  const lookback=options.days||DAYS;
@@ -55,7 +75,10 @@ async function collectBrowser(options={}){
    const current=parseItems(body);
    if(!current.length){completed=true;break}
    let added=0,minDate='9999-99-99',maxDate='';
+   const deadlines=await visibleDeadlines(page,current);
    for(const item of current){
+    if(deadlines[item.publicationWorkspaceId]&&!item.vaultSubmissionDeadline)
+      item.vaultSubmissionDeadline=deadlines[item.publicationWorkspaceId];
     const day=publicationDate(item);
     if(day&&day<minDate)minDate=day;
     if(day>maxDate)maxDate=day;
@@ -134,5 +157,5 @@ async function run(){
   complete:results.complete,periodFrom:results.cutoff,pages:results.pageCount
  }));
 }
-module.exports={collectBrowser,importPublic,publicationDate,parseItems,performanceDate,run};
+module.exports={collectBrowser,importPublic,publicationDate,parseItems,performanceDate,visibleDeadlines,run};
 if(require.main===module)run().catch(e=>{console.warn('BOSA_BROWSER_NOT_UPDATED',String(e.message||e));process.exitCode=0});
