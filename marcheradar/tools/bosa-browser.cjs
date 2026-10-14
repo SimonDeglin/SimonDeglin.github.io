@@ -8,6 +8,7 @@
 const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process');
 const {chromium}=require('playwright-core');
 const bosa=require('./bosa-public.cjs');
+const profile=require('./kdrix-profile.cjs');
 const DATA=path.resolve(__dirname,'../data.json');
 const URL='https://www.publicprocurement.be/bda';
 const API='/api/sea/search/publications';
@@ -99,7 +100,15 @@ function importPublic(data,results){
   matched++;
   records.push(record);
  }
- const combined=bosa.merge(data.items||[],records);
+ const previous=(data.items||[]).map(function(m){
+  if(m.source!=='BOSA')return m;
+  if((m.languages||[]).length&&m.languages.every(x=>String(x).toUpperCase()==='NL'))
+    return {...m,screening:'excluded'};
+  const result=profile.screen(m);
+  if(!result.classification)return {...m,screening:'excluded'};
+  return {...m,...result.classification};
+ });
+ const combined=bosa.merge(previous,records);
  const now=new Date().toISOString();
  data.items=combined;
  data.coverage={...(data.coverage||{}),BOSA:results.complete?
