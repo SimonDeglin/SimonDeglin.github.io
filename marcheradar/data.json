@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-14T13:12:37.163Z",
+  "generated_at": "2026-10-14T13:39:56.466Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED : collecte automatique active. Profil KDRIX ajusté : auteurs de projet voirie, pas de curage ni grands travaux routiers ; petits travaux techniques ciblés. Dossier BOSA 03.06.04-26-2843 ajouté manuellement. La couverture nationale BOSA et les conseils communaux ne sont pas encore automatisés.",
+  "note": "TED interrogé le 2026-10-14 : 1350 avis examinés ; 24 notices liées aux métiers KDRIX détectées sur la période. BOSA et conseils communaux encore non raccordés.",
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "1 marché BOSA ajouté manuellement, collecte nationale non encore raccordée",
+    "BOSA": "non connecté",
     "communal": "non connecté"
   },
   "metrics": {
@@ -45,9 +45,7 @@
         "reported": 236
       }
     ],
-    "warnings": [],
-    "removed_during_profile_adjustment": 0,
-    "manual_bosa_records": 1
+    "warnings": []
   },
   "items": [
     {
@@ -3408,8 +3406,7 @@
       "region": "Wallonie",
       "sector": "PetitsTravaux",
       "sectors": [
-        "PetitsTravaux",
-        "Hydraulique"
+        "PetitsTravaux"
       ],
       "score": 99,
       "publication": "",
@@ -3429,6 +3426,5 @@
         "Échéance 30/10/2026 à 09:30 (+01:00)"
       ]
     }
-  ],
-  "notes_profile_updated_at": "2026-10-14"
+  ]
 }
