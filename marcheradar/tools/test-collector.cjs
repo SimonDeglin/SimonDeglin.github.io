@@ -5,6 +5,7 @@ const {txt,classify,normalize,combine,codes,earliestDate}=require('./collect-ted
 const multi=classify('Levés topographiques et bathymétriques','Relevé des profils de cours d’eau', ['71353100']);
 assert.ok(multi&&multi.sectors.includes('Topo')&&multi.sectors.includes('Hydro'),'Un marché doit pouvoir relever de plusieurs métiers');
 assert.equal(classify('Achat de matériel scolaire','Fourniture de cahiers et stylos',[]),null,'Écarter les marchés sans signal métier');
+assert.equal(classify('Médicaments divers','Perceel 1: médicaments ; Perceel 2: denosumab',['33690000']),null,'Perceel signifie lot, pas parcelle cadastrale');
 assert.equal(txt({nld:['Nederlandse titel'],fra:['Titre français']}),'Titre français');
 assert.deepEqual(codes(['71353100','71353100','71355000']),['71353100','71355000']);
 assert.equal(earliestDate(['2026-11-20','2026-11-08']), '2026-11-08');
@@ -36,6 +37,8 @@ const seed={id:'ted:111-2026',publicationNumber:'111-2026',relatedNoticeNumbers:
 const replacement={id:'ted:222-2026',publicationNumber:'222-2026',procedureIdentifier:'test',
  title:'Relevé topographique — rectificatif',sector:'Hydro',sectors:['Hydro'],
  score:89,publication:'2026-09-20',deadline:'2026-11-01',source:'TED'};
+const {cleanPrevious}=require('./collect-ted.cjs');
+assert.equal(cleanPrevious([{id:'medical',title:'Fourniture de médicaments',description:'Perceel 1: denosumab',cpv:['33690000'],source:'TED'}]).items.length,0,'Purger les faux positifs anciens');
 const merged=combine([seed],[replacement]);
 assert.equal(merged.length,1,'Un rectificatif ne doit pas créer de doublon');
 assert.equal(merged[0].id,'ted:111-2026','Conserver la clé associée au suivi utilisateur');
