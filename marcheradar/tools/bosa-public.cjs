@@ -77,6 +77,10 @@ function normalize(raw){
  const buyer=stringField(raw,['organisation.organisationNames','organisationName','organizationName','buyerName','contractingAuthorityName','authorityName']);
  const cpv=codeList(raw);
  if(!title||!buyer)return null;
+ const languages=Array.isArray(raw.publicationLanguages)?raw.publicationLanguages.map(x=>String(x).toUpperCase()):[];
+ // Écarter les publications exclusivement néerlandophones, pas les avis
+ // bilingues NL/FR accessibles à KDRIX.
+ if(languages.length&&languages.every(lang=>lang==='NL'))return null;
  const region=regionFromNuts(raw);
  const classification=profile.screen({title,description,buyer,region,cpv});
  if(!classification.classification)return null;
