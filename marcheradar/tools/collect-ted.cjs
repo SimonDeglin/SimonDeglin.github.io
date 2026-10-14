@@ -161,9 +161,12 @@ function cleanPrevious(items){
   if(!result.classification){
    removed.push(m.publicationNumber||m.id);
    reasons[result.reason]=(reasons[result.reason]||0)+1;
+   // Conserver l'identifiant et la fiche historique : un utilisateur a peut-être
+   // déjà classé ce marché. On masque seulement la fiche dans le Listing complet.
+   output.push({...m,screening:'excluded',screeningReason:result.reason});
    continue;
   }
-  output.push({...m,...result.classification});
+  output.push({...m,...result.classification,screeningReason:null});
  }
  return {items:output,removed,reasons};
 }
@@ -285,7 +288,7 @@ async function run(){
  const finalMarkets=enriched.items;
  const reviewCount=finalMarkets.filter(x=>x.screening==='review').length;
  const bosaCount=finalMarkets.filter(x=>x.source==='BOSA').length;
- if(cleaned.removed.length)console.log('Annonces hors périmètre nettoyées:',cleaned.removed.length);
+ if(cleaned.removed.length)console.log('Anciennes fiches hors périmètre conservées mais masquées par défaut:',cleaned.removed.length);
  if(!finalMarkets.length)throw Error('Aucun marché exploitable : données existantes conservées');
  const timestamp=new Date().toISOString();
  const data={
@@ -293,7 +296,7 @@ async function run(){
   collector_status:warnings.length?'partial':'ok',
   note:'TED interrogé le '+timestamp.slice(0,10)+' : '+notices.length+' avis lus, '+enriched.marketMatches+' procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.',
   coverage:{TED:warnings.length?'partiel : exécution en Belgique incomplète':'collecte automatique active',BOSA:bosaCount+' annonce(s) BOSA repérée(s) manuellement ; veille nationale non connectée',communal:'non connecté'},
-  metrics:{scanned:notices.length,matched_current_run:unique.size,records:finalMarkets.length,review_count:reviewCount,award_notice_count:enriched.awardNotices,awarded_market_matches:enriched.marketMatches,award_fields_requested:stats.every(s=>s.fields?.includes('winner-name')),excluded_after_dictionary_update:cleaned.removed.length,excluded_reasons:cleaned.reasons,days_queried:lookback,queries:stats,warnings},
+  metrics:{scanned:notices.length,matched_current_run:unique.size,records:finalMarkets.length,review_count:reviewCount,award_notice_count:enriched.awardNotices,awarded_market_matches:enriched.marketMatches,award_fields_requested:stats.every(s=>s.fields?.includes('winner-name')),retained_as_excluded:cleaned.removed.length,excluded_reasons:cleaned.reasons,days_queried:lookback,queries:stats,warnings},
   items:finalMarkets
  };
  fs.writeFileSync(OUTPUT,JSON.stringify(data,null,2)+'\n','utf8');
