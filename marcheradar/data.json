@@ -6,13 +6,13 @@
   "note": "TED interrogé le 2026-10-14 : 1350 avis lus. 10 annonces présélectionnées et 4 sujets à vérifier. BOSA national et conseils communaux encore à raccorder.",
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "1 annonce(s) BOSA repérée(s) manuellement ; veille nationale non connectée",
+    "BOSA": "Collecte BOSA partielle : limite atteinte avant la date cible 2026-09-30.",
     "communal": "non connecté"
   },
   "metrics": {
     "scanned": 1350,
     "matched_current_run": 2,
-    "records": 14,
+    "records": 28,
     "review_count": 4,
     "excluded_after_dictionary_update": 110,
     "excluded_reasons": {
@@ -51,7 +51,10 @@
         "reported": 236
       }
     ],
-    "warnings": []
+    "warnings": [],
+    "bosa_scanned": 2000,
+    "bosa_imported": 15,
+    "bosa_pages": 80
   },
   "items": [
     {
@@ -83,7 +86,21 @@
         "636498-2026",
         "682034-2026"
       ],
-      "screening": "main"
+      "screening": "main",
+      "publicationWorkspaceId": "f3981a2f-a3f4-4d65-a293-2643b8ee0311",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/682034-2026",
+          "publicationNumber": "682034-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/f3981a2f-a3f4-4d65-a293-2643b8ee0311/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ]
     },
     {
       "id": "ted:685167-2026",
@@ -427,6 +444,499 @@
         "Échéance 30/10/2026 à 09:30 (+01:00)"
       ],
       "screening": "main"
+    },
+    {
+      "id": "bosa:e73a64fc-bc95-43e4-b23f-4775ded5a94d",
+      "publicationWorkspaceId": "e73a64fc-bc95-43e4-b23f-4775ded5a94d",
+      "noticeId": "460a17b1-1efa-4cee-8528-0a89ee557ec1",
+      "procedureIdentifier": "749c4fad-378d-44bd-802f-023af1aacfc4",
+      "internalReference": "PPP0NK-625/6054/SLGH/2026.019_002",
+      "title": "Marché de services pour la certification PEB du parc immobilier de la S.L.G.H",
+      "buyer": "Société du Logement de Grâce-Hollogne SRL",
+      "region": "Wallonie",
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "score": 95,
+      "screening": "review",
+      "publication": "2026-10-13",
+      "deadline": "",
+      "cpv": [
+        "71314300"
+      ],
+      "description": "Marché de services pour la certification PEB du parc immobilier de la S.L.G.H",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0NK-625/6054/SLGH/2026.019_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/e73a64fc-bc95-43e4-b23f-4775ded5a94d/general",
+      "bosaResults": [
+        {
+          "reference": "PPP0NK-625/6054/SLGH/2026.019_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/e73a64fc-bc95-43e4-b23f-4775ded5a94d/general",
+          "publicationDate": "2026-10-13",
+          "kind": "award"
+        }
+      ]
+    },
+    {
+      "id": "bosa:0765b50e-85f5-4aae-b2ca-2ed66c14e354",
+      "publicationWorkspaceId": "0765b50e-85f5-4aae-b2ca-2ed66c14e354",
+      "noticeId": "dfc757dd-3c35-4f56-b965-40880365e77c",
+      "procedureIdentifier": "ebcc024c-1d53-4007-a1a6-1f6880d9fe48",
+      "internalReference": "2026B0173_pub01",
+      "title": "MISSION DE SERVICES DE GÉOMÈTRE POUR LEVÉS BATHYMÉTRIQUES",
+      "buyer": "Bruxelles Environnement",
+      "region": "Bruxelles",
+      "sector": "Hydro",
+      "sectors": [
+        "Hydro",
+        "Topo"
+      ],
+      "score": 83,
+      "screening": "main",
+      "publication": "2026-10-13",
+      "deadline": "",
+      "cpv": [
+        "71355200"
+      ],
+      "description": "Le présent marché s’inscrit dans le cadre des missions dévolues au Département Maillage Bleu, relatives à l’entretien, à la gestion écologique et à la valorisation des étangs situés en Région de Bruxelles-Capitale. Il vise plus spécifiquement la réalisation de levés bathymétriques des étangs régionaux. Ces prestations sont indispensables afin de disposer de données objectives et actualisées sur l’état morphologique des plans d’eau, notamment en ce qui concerne le niveau d’envasement. Ces informations constituent un prérequis technique essentiel à l’évaluation de l’état écologique des étangs et à la définition, la planification et la hiérarchisation des mesures de gestion appropriées, telles que les opérations de curage, de restauration écologique ou d’adaptation des modes de gestion.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E3",
+      "noticeKind": "competition",
+      "bdaReference": "2026B0173_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/general"
+    },
+    {
+      "id": "bosa:3b81ba48-e9f4-4d6f-9c05-5ba699c7f209",
+      "publicationWorkspaceId": "3b81ba48-e9f4-4d6f-9c05-5ba699c7f209",
+      "noticeId": "01fc4a1d-8029-40a8-90bd-1deb009b7e14",
+      "procedureIdentifier": "9acc5102-c130-4ff2-bfe7-6b93f0e72b40",
+      "internalReference": "PPP0CS-2959/6446/2026-1122_001",
+      "title": "Désignation d’une équipe d’auteur.e.s de projet pour une mission d’étude et de suivi, gestion et coordination des travaux de création d’espaces verts et réaménagement de voiries et d’espaces publics dans le quartier du Mont-à-Leux (périmètre rue du Chalet / rue de la Plaquette / rue des Tailleurs / rue du Riez / rue des Cordonniers / Grand-rue / rue Henri Dunant)",
+      "buyer": "Mouscron",
+      "region": "Wallonie",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 83,
+      "screening": "main",
+      "publication": "2026-10-13",
+      "deadline": "",
+      "cpv": [
+        "71000000",
+        "71420000",
+        "71200000",
+        "71400000"
+      ],
+      "description": "Désignation d’une équipe d’auteur.e.s de projet pour une mission d’étude et de suivi, gestion et coordination des travaux de création d’espaces verts et réaménagement de voiries et d’espaces publics dans le quartier du Mont-à-Leux (périmètre rue du Chalet / rue de la Plaquette / rue des Tailleurs / rue du Riez / rue des Cordonniers / Grand-rue / rue Henri Dunant)",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "PPP0CS-2959/6446/2026-1122_001",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/3b81ba48-e9f4-4d6f-9c05-5ba699c7f209/general"
+    },
+    {
+      "id": "bosa:834b6f23-3906-4589-a0e7-afae9c91d26a",
+      "publicationWorkspaceId": "834b6f23-3906-4589-a0e7-afae9c91d26a",
+      "noticeId": "445a2877-eb7a-41fc-aba2-3f07ef322c8f",
+      "procedureIdentifier": "4ac56b96-71aa-449c-a029-c303aac3b7fb",
+      "internalReference": "PPP0MS-2570/6710/2026-2570_001",
+      "title": "Désignation d'un géomètre dans le cadre de la reconversion du site industriel de Chertal",
+      "buyer": "SPI",
+      "region": "Wallonie",
+      "sector": "Topo",
+      "sectors": [
+        "Topo"
+      ],
+      "score": 95,
+      "screening": "main",
+      "publication": "2026-10-12",
+      "deadline": "",
+      "cpv": [
+        "71353000"
+      ],
+      "description": "Le présent marché a pour objet la désignation d'un géomètre chargé de réaliser les prestations décrites dans le présent cahier des charges dans le cadre de la reconversion du site industriel de « Chertal », situé sur les communes de HERSTAL et OUPEYE. Le périmètre de la mission correspond à l'ensemble du site repris au plan et au tableau parcellaire annexés. Le plan annexé précise les limites du périmètre, les parcelles cadastrales concernées, les accès autorisés ainsi que les principaux propriétaires connus.  Le site est propriété de SORECHER SA. Spi est également propriétaire de deux petites emprises en bordure de la propriété SORECHER ; elles sont à intégrer au site à investiguer. La SORASI intervient en qualité de prestataire de services pour le compte de SORECHER SA.   Le site est bordé par la Meuse et le Canal Albert et couvre approximativement 189 hectares. Le site est accessible par le Pont de Wandre et est traversé par la E40/42.   Le site fait l’objet d’opérations de démantèlement en exécution d’un permis délivré le 29 juillet 2021. Ces opérations sont effectuées par l’entreprise WANTY et devraient se finaliser à l’automne 2026.  L’extrait de l’acte d’acquisition de SORECHER avec les parcelles cadastrales, la copie du permis de démantèlement ou l’extrait des pages pertinentes (description des interventions à réaliser, par Wanty), la copie de l’état des lieux d’entrée établi en prévision des opérations de démantèlement de WANTY et les documents cadastraux sont fournis à titre informatif. Le géomètre vérifiera leur cohérence avec la situation observée sur le terrain.  À l'issue des travaux de démantèlement réalisés par l'entreprise WANTY, un plan reprenant le levé des interventions effectuées est joint. Ce plan de levé contient notamment : le périmètre des bâtiments démolis, des bâtiments maintenus, le tracé des voiries existantes, l’emplacement de certaines citernes enterrées ou toute autre information susceptible de traduire les actes et travaux réalisés. Ce document constitue une base de travail que le géomètre devra compléter et vérifier au regard des constats de terrain. Toute incohérence importante devra être signalée à la SORASI.   La SORASI cherche à s’entourer de l’expertise d’un géomètre en vue de réaliser :  - Tranche 1 (ferme) : mission fouillée de levé général ; - Tranche 2 (optionnelle) : mission de compléments en régie ; - Tranche 3 (optionnelle) : mission de contre-expertise d’implantation en régie.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "PPP0MS-2570/6710/2026-2570_001",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/834b6f23-3906-4589-a0e7-afae9c91d26a/general"
+    },
+    {
+      "id": "bosa:dfdf8ed6-f60e-4be6-9024-e608d8bc079a",
+      "publicationWorkspaceId": "dfdf8ed6-f60e-4be6-9024-e608d8bc079a",
+      "noticeId": "0e8dfb9f-a266-4fc7-8661-1cee665bf60c",
+      "procedureIdentifier": "c50cf0d9-e19c-4aa3-898d-58d3c4fc991a",
+      "internalReference": "VLAIO-2026-17_pub01",
+      "title": "Uitbreiding BIZGIS fase 3",
+      "buyer": "Agentschap voor Innoveren en Ondernemen",
+      "region": "Belgique",
+      "sector": "Carto",
+      "sectors": [
+        "Carto"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-10-13",
+      "deadline": "",
+      "cpv": [
+        "72224000",
+        "79411100",
+        "72222000",
+        "73220000"
+      ],
+      "description": "VLAIO beoogt  met deze overheidsopdracht  dat de dienstverlener zowel een algemeen kader uitwerkt om gemeenten te laten participeren aan BIZGIS als ook om de individuele gemeenten te ondersteunen, rekening houdende met de diverse GIS-capaciteiten van lokale besturen en de opportuniteiten om te participeren aan BIZGIS op basis van enkele scenario’s.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "",
+      "tedReference": "VLAIO-2026-17_pub01",
+      "url": "https://www.publicprocurement.be/publication-workspaces/dfdf8ed6-f60e-4be6-9024-e608d8bc079a/general"
+    },
+    {
+      "id": "bosa:b1464bc6-d603-4836-8eb2-ec8fa36c5942",
+      "publicationWorkspaceId": "b1464bc6-d603-4836-8eb2-ec8fa36c5942",
+      "noticeId": "1ffa21f0-7d84-43a0-aa41-aa40a951c834",
+      "procedureIdentifier": "83ac8a4e-aca8-46c0-9a47-989168b80071",
+      "internalReference": "PPP0MS-2546/6591/2026-2546_002",
+      "title": "MARCHE CADRE - MISSION D'ÉTUDES ET CONSEILS EN STABILITE ET EN STABILITE AU FEU",
+      "buyer": "SPI",
+      "region": "Bruxelles",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-10-09",
+      "deadline": "",
+      "cpv": [
+        "71335000"
+      ],
+      "description": "Le marché vise à la conclusion d’un accord-cadre au sens de l’article 2, 35° de la loi du 17 juin 2016. Il vise à constituer une liste de bureaux d’études pouvant être sollicités par le pouvoir adjudicateur. Le nombre maximum de soumissionnaires qui seront retenus est de trois.  La mission concerne les bâtiments et les infrastructures de SPI, de la SORASI ou tous bâtiments ou infrastructures construits ou à construire pour lesquels SPI est mandatée. - Les bâtiments pourront être du type : bâtiments de bureaux, écoles, crèches, hôpitaux, maison de repos, halls sportifs, salles polyvalentes, logements, halls industriels, … - Les infrastructures pourront être du type : Bassins d’orages, canalisations enterrées, murs de soutènements, ponts, voiries, …  Les prestations du bureau d’études varieront en fonction du type de bâtiment et du stade d’études auquel il se trouve ou, si le bâtiment existe déjà, du type de travaux ou d’occupation :  - Etudes, audits, conseils et/ou analyses en stabilité ;  - Etudes, audits, conseils et/ou analyses en stabilité au feu ;   Le bureau d’études travaillera en étroite collaboration avec les intervenants de chaque projet : architectes, bureaux d’études, maître d’ouvrage, occupants, pouvoirs subsidiant, ...   Chaque mission fera l'objet d'une commande séparée. Les prestations sont donc fractionnées et tributaires des commandes passées :  Au préalable et pour chaque nouvelle demande émanant du pouvoir adjudicateur, le bureau d’étude désigné rencontrera celui-ci afin de cerner au mieux la mission demandée tant au niveau technique qu’au niveau financier.  Sur base des desideratas du pouvoir adjudicateur, il rédigera un devis comprenant  - l’objet et la portée de la mission - les délivrables au terme de la mission (rapport, plans, métrés, …) - le cas échéant le nombre de réunions, de visites ou d’inspections estimé - le budget relatif aux prestations du bureau d’études, sur base des taux horaires de son offre. Ce budget sera considéré comme une offre forfaire à la commande. - une estimation du délai de réalisation de la mission, voire plusieurs délais si les prestations sont échelonnées. La remise de ce devis ne garantit pas la commande, aucune indemnité ne peut être réclamée par le bureau d'études si aucune suite n'y est donnée.   Les rapports seront fournis au format Word, les métrés au format Excell, et les plans au format DWG. En complément, tous les documents seront disponibles en PDF.   La conclusion du présent marché ne donne au prestataire aucun droit d’exclusivité. SPI peut, même pendant la période de validité du marché, faire exécuter des prestations identiques ou analogues à celles décrites dans le présent cahier spécial des charges, par d’autres prestataires ou par ses propres services. Dans ce cas, l’adjudicataire, ne peut réclamer des dommages et intérêts.   Lieu de prestation du service : Le territoire de la Province de Liège",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0MS-2546/6591/2026-2546_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/b1464bc6-d603-4836-8eb2-ec8fa36c5942/general",
+      "bosaResults": [
+        {
+          "reference": "PPP0MS-2546/6591/2026-2546_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/b1464bc6-d603-4836-8eb2-ec8fa36c5942/general",
+          "publicationDate": "2026-10-09",
+          "kind": "award"
+        }
+      ]
+    },
+    {
+      "id": "bosa:2057ca19-d4bd-43d6-bf36-bbc34ec2f71f",
+      "publicationWorkspaceId": "2057ca19-d4bd-43d6-bf36-bbc34ec2f71f",
+      "noticeId": "48bbaab2-caeb-4145-a189-1c8a83d4a2d3",
+      "procedureIdentifier": "3dff5d34-aff6-401a-b94d-2a5baa99edfc",
+      "internalReference": "PPP0EM-3747/6121/2026/4992_001",
+      "title": "Désignation d'un certificateur pour l'établissement des attestations PEB du patrimoine locatif des Propriétés communales",
+      "buyer": "Saint-Josse-ten-Noode",
+      "region": "Bruxelles",
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "score": 83,
+      "screening": "main",
+      "publication": "2026-10-07",
+      "deadline": "",
+      "cpv": [
+        "79132000"
+      ],
+      "description": "Le patrimoine immobilier communal comprend actuellement 365 logements, destinés à la location. Parmi ceux-ci, environ 300 logements ne disposent pas ou plus d’un certificat de performance énergétique des bâtiments (PEB) valide.   La réalisation de ce marché vise dès lors à procéder à l’établissement ou au renouvellement des certificats PEB pour les logements concernés, conformément à la règlementation applicable en Région de Bruxelles-Capitale.   La disponibilité de certificats PEB valides pour l’ensemble du parc locatif communal constitue un enjeu important, tant du point de vue de la gestion administrative et locative des logements que de celui de leur performance énergétique.   D’une part, les certificats PEB constituent un élément nécessaire à la détermination et à l’application des règles relatives à l’indexation des loyers, conformément aux dispositions en vigueur en Région de Bruxelles-Capitale. D’autre part, les certificats PEB permettront de disposer d’une vision objective et homogène de la performance énergétique du parc de logements communaux.   Les résultats des certificats PEB pourront ainsi servir de base à l’élaboration d’une programmation pluriannuelle des travaux de rénovation et d’amélioration énergétique du patrimoine communal.   Le présent marché s’inscrit ainsi dans une double démarche :assurer la conformité administrative et règlementaire du parc de logements communaux en disposant de certificats PEB valides ; améliorer la connaissance et la performance énergétique du patrimoine communal, en disposant d’informations permettant de cibler et de prioriser les futurs investissements et travaux de rénovation énergétique. La fixation des prix est effectuée en fonction du type de logement concerné (appartement d’une, deux ou trois chambres, maison, etc.).  Une remise sur les prix est demandée pour les bâtiments comprenant plus de 10 logements, à savoir notamment les bâtiments situés à Pacification, Deux-Églises 105-109-133, Saint-François 57 et Union 12.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "20",
+      "noticeKind": "competition",
+      "bdaReference": "PPP0EM-3747/6121/2026/4992_001",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/2057ca19-d4bd-43d6-bf36-bbc34ec2f71f/general"
+    },
+    {
+      "id": "bosa:faefd75f-ef0f-424b-9c3d-c0ec345ad48a",
+      "publicationWorkspaceId": "faefd75f-ef0f-424b-9c3d-c0ec345ad48a",
+      "noticeId": "6a59db15-8d7a-4dcf-98ba-d684adc182c7",
+      "procedureIdentifier": "fdf6625c-9465-4868-8bbb-ebe65742ce3d",
+      "internalReference": "BEAUMONT 25340313-11_pub02",
+      "title": "BEAUMONT AR: Mission d’auteur de projet pour   la démolition de RTG et reconstruction d'un nouveau bâtiment ‐ études",
+      "buyer": "Direction régionale du Hainaut",
+      "region": "Wallonie",
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-10-09",
+      "deadline": "",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Le présent marché est un marché public de services englobant une mission complète d’auteur de projet comprenant notamment :   L’étude architecturale du projet.   L’étude des équipements de techniques spéciales (chauffage – ventilation – électricité – éclairage – détection incendie, détection intrusion, parlophonie, ascenseur, l’éventuelle étude    / certification Certibeau...).   L’étude du 1er équipement compris suivant l’annexe de l’Arrêté du Gouvernement de la Communauté française du 6 février 2014 régissant les normes physiques et financières.   L’étude PEB suivant nouvelle Directive européenne 2024/1275.   L’étude TOTEM.   L’audit de réemploi.   L’audit d’accessibilité.   L’étude stabilité.   L’étude acoustique.   L’étude signalétique intérieure et extérieure.   L’étude paysagère.   L’étude de perméabilité du sol",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "29",
+      "noticeKind": "award",
+      "bdaReference": "",
+      "tedReference": "BEAUMONT 25340313-11_pub02",
+      "url": "https://www.publicprocurement.be/publication-workspaces/faefd75f-ef0f-424b-9c3d-c0ec345ad48a/general",
+      "bosaResults": [
+        {
+          "reference": "BEAUMONT 25340313-11_pub02",
+          "url": "https://www.publicprocurement.be/publication-workspaces/faefd75f-ef0f-424b-9c3d-c0ec345ad48a/general",
+          "publicationDate": "2026-10-09",
+          "kind": "award"
+        }
+      ]
+    },
+    {
+      "id": "bosa:ab0c7da2-e02f-451f-89a1-bfdc0d14bffd",
+      "publicationWorkspaceId": "ab0c7da2-e02f-451f-89a1-bfdc0d14bffd",
+      "noticeId": "009372a8-620f-4c77-ad20-bfcc728261f5",
+      "procedureIdentifier": "55af827d-15b8-4f22-b10f-cdbb2b3b39b6",
+      "internalReference": "PPP0MS-2414/6129/2025-2414_002",
+      "title": "MARCHE DE SERVICES - LIEGE - WERIHET - PROJET D'AMÉNAGEMENT ET MISE EN OEUVRE D'UN PARC D’ACTIVITE ECONOMIQUE",
+      "buyer": "SPI",
+      "region": "Wallonie",
+      "sector": "Topo",
+      "sectors": [
+        "Topo",
+        "VRD"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-10-08",
+      "deadline": "",
+      "cpv": [
+        "79311000"
+      ],
+      "description": "OBJET DU MARCHE Le marché a pour objet l’élaboration des plans, études et documents nécessaires à l’exécution des travaux d’équipement du parc d’activités économiques dit « Wérihet » à Liège, la direction, le contrôle et la surveillance de ces travaux. Le site dit « Wérihet » est un site d’une trentaine d’hectares située à l’entrée Nord de la ville de Liège, en bordure directe des autoroutes E25 et E42, et accessible directement par l’échangeur de Wandre. Il s’agit de terrains urbanisables, repris majoritairement en zone industrielle au plan de secteur.  Par décision de la ville de Liège et de l’AIDE en 1953, le site doit être remblayé préalablement à toute occupation, de manière à ne pas devoir effectuer un démergement en permanence des eaux. Cette étape de remblaiement préalable est partiellement achevée et fait également partie du futur marché de travaux d’équipement. Le dossier de Reconnaissance de Zone a été élaboré et déposé par Spi en juillet 2015 à la DGO6 - Direction générale de l’Economie. L’accusé de réception a été délivré en avril 2016 par la DEPA (Direction de l’Equipement des Parcs d’Activités). L’arrêté ministériel relatif à l’adoption du périmètre de Reconnaissance de la Zone d’Activités Economiques « Wandre Wérihet » a été délivré en date du 7 mai 2019.  BUDGET Les travaux d’équipement et de mise en œuvre du parc d’activités économiques sont estimés à 11 500 000 EUR TVA comprise.  COMPETENCES Le soumissionnaire devra proposer une offre incluant l'ensemble des compétences suivantes : - Ingénieur avec une expérience dans l’aménagement d’infrastructures liées aux voies routières, impétrants, égouttages, équipements électromécaniques, etc… ; - Ingénieur avec une expérience dans l’aménagement d’un réseau de chaleur ; - Paysagiste ; - Expert en mobilité ; - Géomètre ; - Coordinateur sécurité santé. La mission inclut une mission de coordination des différents intervenants repris ci-dessus et des éventuels intervenants extérieurs nécessaires pour mener à bonne fin la mission qui lui sera confiée. Le détail des missions d’auteur de projet (ingénieur, architecture, paysagiste, ...) est repris au chapitre III \"Description des exigences techniques\".  Le présent marché comprend trois (3) tranches fermes et deux (2) tranches conditionnelles :  Tranche 1 (ferme) – Equipements du Parc d’Activités Economiques :  - Mission complète d’étude et de conception des voiries et des infrastructures techniques relatives à la création du Parc d’Activités Economiques en ce compris les remblais ainsi que le réseau d’égouttage spécifique (notamment bassin d’orage, fonçage et réseau de rejet en Meuse des eaux de ruissellement) ; - La mission comprend également l’élaboration des dossiers de permis et d’adjudication, la coordination, la planification, la direction, le contrôle, la surveillance et la coordination sécurité – santé (CPV 71317210-8) des travaux ; - La mission comprend également la compilation de tous les documents de projet, d’exécution et de réalis",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "29",
+      "noticeKind": "award",
+      "bdaReference": "",
+      "tedReference": "PPP0MS-2414/6129/2025-2414_002",
+      "url": "https://www.publicprocurement.be/publication-workspaces/ab0c7da2-e02f-451f-89a1-bfdc0d14bffd/general",
+      "bosaResults": [
+        {
+          "reference": "PPP0MS-2414/6129/2025-2414_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/ab0c7da2-e02f-451f-89a1-bfdc0d14bffd/general",
+          "publicationDate": "2026-10-08",
+          "kind": "award"
+        }
+      ]
+    },
+    {
+      "id": "bosa:9d028d41-9338-4d74-93d8-eb37249a0902",
+      "publicationWorkspaceId": "9d028d41-9338-4d74-93d8-eb37249a0902",
+      "noticeId": "ae3151e6-68e2-4d23-86ed-958437991943",
+      "procedureIdentifier": "15e81ecd-9cd5-4715-8b57-dee49a9a4e53",
+      "internalReference": "PPP0CN-715/6042/2026284_002",
+      "title": "Désignation d'un auteur de projet et coordinateur sécurité-santé pour les travaux de voirie de la commune de Fauvillers, y compris pour le Fonds extraordinaire régional d’investissement (FERI)",
+      "buyer": "Fauvillers",
+      "region": "Wallonie",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 83,
+      "screening": "review",
+      "publication": "2026-10-05",
+      "deadline": "",
+      "cpv": [
+        "71000000",
+        "71700000"
+      ],
+      "description": "Le présent marché de service porte sur la désignation d’un bureau d’études ayant pour missions l’assistance au Pouvoir Adjudicateur dans des missions d’études, de direction de chantier et de surveillance, de projets communaux tels que des entretiens de voiries simples, la pose de filets d’eau, la pose de tuyaux, la construction de trottoirs…  Ces marchés pourront être subsidiés ou pas. S'ils sont subsidiés, l'auteur de projet devra également assister le Pouvoir Adjudicateur pour l’obtention des subsides.  Le présent marché fait l’objet d’un contrat-cadre pour une durée de quatre ans à dater de la notification de l’attribution du marché par le Pouvoir Adjudicateur.  Les projets concernés par le présent marché devraient représenter environ 2.000.000,00 € TVA comprise, ce montant étant donné à titre purement indicatif et n’engageant en aucun cas le Pouvoir Adjudicateur. Dès lors, l’adjudicataire ne pourra réclamer aucune indemnité dans le cas où ce montant ne serait pas atteint. Le nombre de projets sera défini au cours de l’exécution de la mission en fonction des besoins du Pouvoir Adjudicateur ; ce nombre pourrait être nul le cas échéant sans que l’adjudicataire ne puisse réclamer aucune indemnité.  Les projets seront tous situés sur le territoire de la Commune de Fauvillers, mais pourront aussi faire l'objet d'un marché conjoint avec les communes voisines.  Le Pouvoir Adjudicateur se réserve le droit de passer d’autres marchés de services pour des prestations similaires pour des projets spécifiques sans que le prestataire puisse prétendre à aucune indemnité ni recours.  Les missions de coordinateur sécurité-santé projet et réalisation feront partie intégrante de ce marché.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0CN-715/6042/2026284_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/9d028d41-9338-4d74-93d8-eb37249a0902/general",
+      "bosaResults": [
+        {
+          "reference": "PPP0CN-715/6042/2026284_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/9d028d41-9338-4d74-93d8-eb37249a0902/general",
+          "publicationDate": "2026-10-05",
+          "kind": "award"
+        }
+      ]
+    },
+    {
+      "id": "bosa:aa328366-aa3b-415b-b666-2d59752bf12f",
+      "publicationWorkspaceId": "aa328366-aa3b-415b-b666-2d59752bf12f",
+      "noticeId": "e4d9c42d-7d36-46e6-b578-58907c727c2c",
+      "procedureIdentifier": "876e6397-4482-4a8d-ad54-d72270f674db",
+      "internalReference": "SK26_pub01",
+      "title": "Mission d’auteur de projet relative à la transformation de l’ancienne gare de Cureghem en un ensemble d’espaces dédiés à la création artistique",
+      "buyer": "Anderlecht",
+      "region": "Bruxelles",
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-10-05",
+      "deadline": "",
+      "cpv": [
+        "71250000"
+      ],
+      "description": "Il s’agit d’une mission complète d’auteur de projet pour l’étude et le suivi des travaux de transformation de l’ancienne gare de Cureghem en un ensemble d’espaces dédiés à la création artistique.  Par mission complète d’auteur de projet, nous entendons une mission qui intègre l’architecture, l’acoustique, le design mobilier, la stabilité et les techniques spéciales, et qui comprend également les études préalables (par exemple l’inventaire amiante), les missions de responsable PEB, de coordination sécurité‑santé, ainsi que l’intervention d’un expert en pollution du sol.  L’objectif du projet est de redonner vie au bâtiment en y développant un programme axé sur la création artistique.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "SK26_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/aa328366-aa3b-415b-b666-2d59752bf12f/general",
+      "bosaResults": [
+        {
+          "reference": "SK26_pub01",
+          "url": "https://www.publicprocurement.be/publication-workspaces/aa328366-aa3b-415b-b666-2d59752bf12f/general",
+          "publicationDate": "2026-10-05",
+          "kind": "award"
+        }
+      ]
+    },
+    {
+      "id": "bosa:d132e2d7-29b4-4489-9e26-70db1504fa8f",
+      "publicationWorkspaceId": "d132e2d7-29b4-4489-9e26-70db1504fa8f",
+      "noticeId": "1ef4f042-c114-47b2-9545-63ed1d4a32f2",
+      "procedureIdentifier": "5ccac775-6cd2-4261-870a-400908d707fe",
+      "internalReference": "APIBW/OTT-PLC/GEOMETRE/2026_pub01",
+      "title": "Marché public relatif au mesurage et à la précadastration d’une parcelle publique à Ottignies",
+      "buyer": "Agence de Promotion Immobilière du Brabant wallon",
+      "region": "Wallonie",
+      "sector": "Foncier",
+      "sectors": [
+        "Foncier"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-10-02",
+      "deadline": "",
+      "cpv": [
+        "71350000"
+      ],
+      "description": "Le détail des prestations attendues est le suivant :  - mesurage de la zone de l’espace public entourée par un liseré bleu en vue de sa précadastration (cfr plan en Annexe B) ; - les plans de division des biens ; - le formulaire de précad (acte de base) ; - et tout autre document nécessaire à la précadastration et à l’établissement de l’acte par le notaire. La mission inclut les formalités de précadastration (PRECAD). Aucun bornage contradictoire n’est prévu.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E3",
+      "noticeKind": "competition",
+      "bdaReference": "APIBW/OTT-PLC/GEOMETRE/2026_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/d132e2d7-29b4-4489-9e26-70db1504fa8f/general"
+    },
+    {
+      "id": "bosa:b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6",
+      "publicationWorkspaceId": "b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6",
+      "noticeId": "0f569ad6-f63f-429f-bc99-bce88cedeb9c",
+      "procedureIdentifier": "1506b6f6-1710-4961-8fb7-4f610a97bd4c",
+      "internalReference": "PPP04Z-2341/6160/2026-2341_002",
+      "title": "Marché stock de services - Désignation d'un géomètre pour divisions parcellaires sur le domaine privé ou public communal 2026-2028",
+      "buyer": "Dison",
+      "region": "Bruxelles",
+      "sector": "Topo",
+      "sectors": [
+        "Topo"
+      ],
+      "score": 83,
+      "screening": "review",
+      "publication": "2026-10-01",
+      "deadline": "",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Le Service technique et administratif de la Commune de Dison étant amené à opérer diverses acquisitions ou ventes de biens et de terrains, le présent marché a pour objet la désignation d’un géomètre afin d’accomplir, notamment, les divisions parcellaires sur le domaine privé ou public communal.   Le présent marché consiste en diverses missions relevant légalement de la compétence d’un géomètre.  Le service réalisé par l'adjudicataire inclut notamment les aspects suivants : • l’établissement des limites d’un terrain  • la pose de borne physique  • l’enregistrement auprès du cadastre  • des prestations éventuelles dans le cadre de dossiers « Décret voirie »  • les états des lieux  • les levés typographiques  • diverses autres prestations   Lieux des prestations : sur le territoire communal de Dison",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP04Z-2341/6160/2026-2341_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6/general",
+      "bosaResults": [
+        {
+          "reference": "PPP04Z-2341/6160/2026-2341_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6/general",
+          "publicationDate": "2026-10-01",
+          "kind": "award"
+        }
+      ]
+    },
+    {
+      "id": "bosa:5693dc0a-48d7-485d-9794-7a49c7216ef9",
+      "publicationWorkspaceId": "5693dc0a-48d7-485d-9794-7a49c7216ef9",
+      "noticeId": "cd9992b4-e534-4f54-9d6d-d7a503fd323e",
+      "procedureIdentifier": "ea316fe2-11c9-4793-8a25-763eeb9d2c5d",
+      "internalReference": "25340312-11 - Dour - EAFC \"LES HAUTS-PAYS\"_pub02",
+      "title": "Mission d'auteur de projet pour la \"Démolition des bâtiments vétustes et reconstruction d'un nouveau bâtiment\"",
+      "buyer": "Direction régionale du Hainaut",
+      "region": "Wallonie",
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-10-05",
+      "deadline": "",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Le présent marché est un marché public de services englobant une mission complète d’auteur de projet comprenant notamment : *L’étude architecturale du projet. *L’étude des équipements de techniques spéciales (chauffage – ventilation – électricité – éclairage –détection incendie, détection intrusion, parlophonie, ascenseur, l’éventuelle étude / certificationCertibeau...). *L’étude du 1er équipement compris suivant l’annexe de l’Arrêté du Gouvernement de la Communautéfrançaise du 6 février 2014 régissant les normes physiques et financières. *L’étude PEB suivant nouvelle Directive européenne 2024/1275. *L’étude TOTEM. *L’audit de réemploi. *L’audit d’accessibilité. *L’étude stabilité. *L’étude acoustique. *L’étude signalétique intérieure et extérieure. *L’étude paysagère. *L’étude de perméabilité du sol",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "29",
+      "noticeKind": "award",
+      "bdaReference": "",
+      "tedReference": "25340312-11 - Dour - EAFC \"LES HAUTS-PAYS\"_pub02",
+      "url": "https://www.publicprocurement.be/publication-workspaces/5693dc0a-48d7-485d-9794-7a49c7216ef9/general",
+      "bosaResults": [
+        {
+          "reference": "25340312-11 - Dour - EAFC \"LES HAUTS-PAYS\"_pub02",
+          "url": "https://www.publicprocurement.be/publication-workspaces/5693dc0a-48d7-485d-9794-7a49c7216ef9/general",
+          "publicationDate": "2026-10-05",
+          "kind": "award"
+        }
+      ]
     }
-  ]
+  ],
+  "sources": {
+    "BOSA": {
+      "status": "partial",
+      "last_success": "2026-10-14T15:31:33.494Z",
+      "scanned": 2000,
+      "retained": 15,
+      "period_from": "2026-09-30",
+      "period_to": "2026-10-14",
+      "pages": 80,
+      "complete": false,
+      "raw_candidates": 2000,
+      "oldest_seen": "2026-10-01"
+    }
+  }
 }
