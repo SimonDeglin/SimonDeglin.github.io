@@ -130,6 +130,13 @@ body{background:#f7f7f7;color:#303339}
 }
 @media(max-width:740px){.kpis,.eyebrow{display:none}.hero{display:none}
 .welcome h1{font-size:24px}.notice-banner{margin:0 0 17px}}
+
+/* Touches identitaires supplémentaires, sans surcharger l'écran */
+.brand-sub{color:#ffad85;font-weight:800}
+.section-head h2{border-left:4px solid #f36529;padding-left:11px}
+.result-count{background:#fff0e8;color:#cc6635}
+.filter-select:focus{border-color:#f36529;outline:0;box-shadow:0 0 0 3px #fff1e9}
+.notice-banner{background:#fcfcfc}
 </style>
 </head>
 <body>
@@ -286,7 +293,7 @@ function renderBanner(){
   el('sideTitle').textContent='TED · données publiques';
   el('sideText').textContent='Dernier relevé : '+(state.generated?fmtDate(state.generated):'date inconnue')+'. La couverture belge nationale reste à compléter.';
  }else{
-  b.innerHTML=svg('info')+'<div><b>MODE DÉMONSTRATION — marchés fictifs.</b> Testez librement les filtres, favoris et fiches. Aucun exemple ci-dessous n\'est un véritable appel d\'offres. '+(state.real.length?'<button id="liveSwitch">Afficher les avis TED ('+state.real.length+')</button>':'<button id="sourceHelp">Pourquoi aucune annonce réelle ?</button>')+'</div>';
+  b.innerHTML=svg('info')+'<div><b>MODE DÉMONSTRATION — marchés fictifs.</b> Les annonces affichées sont fictives. '+(state.real.length?'<button id="liveSwitch">Afficher les avis TED ('+state.real.length+')</button>':'<button id="sourceHelp">Pourquoi aucune annonce réelle ?</button>')+'</div>';
   el('sideTitle').textContent='Démonstration active';
   el('sideText').textContent='Les marchés affichés sont fictifs. En attente d’une synchronisation officielle TED.';
  }
