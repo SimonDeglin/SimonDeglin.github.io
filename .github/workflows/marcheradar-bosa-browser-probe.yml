@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/marcheradar-bosa-browser-probe.yml"
+      - "marcheradar/tools/bosa-browser-probe.cjs"
 permissions:
   contents: write
 jobs:
