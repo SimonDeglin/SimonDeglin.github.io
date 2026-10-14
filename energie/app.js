@@ -350,8 +350,8 @@ $$('[data-period-nav]').forEach(button=>button.addEventListener('click',()=>{
 
 function renderChart(id,kind,start){const el=$('#'+id);if(!el)return;let points=cumulativePoints(kind,start);
 if(points.length<2){el.innerHTML='<div class="empty-state">Données insuffisantes pour ce graphique.</div>';return}
-const rawWidth=el.clientWidth||((window.innerWidth||390)-60),w=Math.max(235,Math.round(rawWidth)),h=326,p={left:w<475?38:60,right:w<475?7:14,top:24,bottom:38},ys=points.map(a=>a.value),min=Math.min(0,...ys),max=Math.max(0,...ys),spread=Math.max(1,max-min),low=min-spread*.09,high=max+spread*.12;const x0=parseDate(points[0].date).getTime(),x1=parseDate(points.at(-1).date).getTime(),X=d=>p.left+(parseDate(d).getTime()-x0)/Math.max(1,x1-x0)*(w-p.left-p.right),Y=v=>p.top+(high-v)/(high-low)*(h-p.top-p.bottom);
-const yTicks=Array.from({length:5},(_,i)=>low+(high-low)*i/4);const axis=yTicks.map(v=>'<line class="chart-grid" x1="'+p.left+'" x2="'+(w-p.right)+'" y1="'+Y(v)+'" y2="'+Y(v)+'"/><text class="chart-axis" text-anchor="end" x="'+(p.left-10)+'" y="'+(Y(v)+4)+'">'+fmt(v,0)+'</text>').join('');
+const rawWidth=el.clientWidth||((window.innerWidth||390)-60),w=Math.max(235,Math.round(rawWidth)),h=285,p={left:w<475?40:60,right:w<475?7:14,top:19,bottom:34},ys=points.map(a=>a.value),min=Math.min(0,...ys),max=Math.max(0,...ys),scale=niceAxis(min<0?min*1.06:0,max>0?max*1.06:0),low=scale.lo,high=scale.hi;const x0=parseDate(points[0].date).getTime(),x1=parseDate(points.at(-1).date).getTime(),X=d=>p.left+(parseDate(d).getTime()-x0)/Math.max(1,x1-x0)*(w-p.left-p.right),Y=v=>p.top+(high-v)/(high-low)*(h-p.top-p.bottom);
+const yTicks=scale.ticks;const axis=yTicks.map(v=>'<line class="chart-grid" x1="'+p.left+'" x2="'+(w-p.right)+'" y1="'+Y(v)+'" y2="'+Y(v)+'"/><text class="chart-axis" text-anchor="end" x="'+(p.left-7)+'" y="'+(Y(v)+4)+'">'+axisLabel(v,w<475)+'</text>').join('');
 const major=points.filter((v,i)=>i===0||i===points.length-1||v.date.endsWith('-31')||v.date.endsWith('-30')||v.date.endsWith('-28')).filter((v,i)=>i===0||i===points.length-1||i%2===0).filter((v,i,arr)=>w>=475||i===0||i===arr.length-1||i%3===0);const xlabels=major.map(v=>'<text class="chart-axis" text-anchor="middle" x="'+X(v.date)+'" y="'+(h-8)+'">'+monthLabel(v.date)+'</text>').join('');
 const segs=points.slice(1).map((v,i)=>'<path class="'+((v.exact&&points[i].exact)?'chart-real':'chart-estimated')+'" d="M'+X(points[i].date)+','+Y(points[i].value)+' L'+X(v.date)+','+Y(v.value)+'"/>').join('');
 const d='M'+points.map(v=>X(v.date)+','+Y(v.value)).join(' L');const area='<path class="chart-area" d="'+d+' L'+X(points.at(-1).date)+','+Y(0)+' L'+X(points[0].date)+','+Y(0)+' Z"/>';
@@ -652,12 +652,13 @@ function drawMonthlyBars(id,kind){
  const measuredWidth=el.clientWidth||el.getBoundingClientRect?.().width||0;
  const viewport=window.innerWidth||390;
  const W=Math.max(230,Math.round(measuredWidth||(viewport<=750?viewport-63:viewport-375)));
- const narrow=W<475,H=316,L=narrow?37:58,R=narrow?7:17,T=24,B=45;
+ const narrow=W<475,H=274,L=narrow?39:58,R=narrow?6:15,T=20,B=35;
  const plotH=H-T-B,step=(W-L-R)/entries.length;
  const barW=granularity==='month'?Math.max(9,Math.min(narrow?20:42,step*.67)):
    granularity==='half'?Math.min(116,step*.39):Math.min(155,step*.46);
  const vals=known.map(r=>r[kind]),bottom=Math.min(0,...vals),top=Math.max(0,...vals);
- const hi=Math.max(1,top>0?top*1.15:0),lo=bottom<0?bottom*1.15:0;
+ const axis=niceAxis(bottom<0?bottom*1.06:0,top>0?top*1.06:0);
+ const hi=axis.hi,lo=axis.lo;
  const Y=v=>T+(hi-v)/(hi-lo)*plotH,Y0=Y(0);
  const monthAbbr=['Ja','Fé','Mr','Av','Ma','Jn','Jl','Ao','Se','Oc','No','Dé'];
  const labelMarkup=(r,center)=>{
@@ -667,8 +668,8 @@ function drawMonthlyBars(id,kind){
   return '<text class="bar-x-label bar-x-full" text-anchor="middle" x="'+center.toFixed(1)+'" y="'+y+'">'+full+'</text>'+
    '<text class="bar-x-label bar-x-short" text-anchor="middle" x="'+center.toFixed(1)+'" y="'+y+'">'+short+'</text>';
  };
- const formatTick=v=>narrow&&Math.abs(v)>=1000?fmt(v/1000,1)+'k':fmt(v,kind==='water'&&Math.abs(v)<100?1:0);
- const ticks=Array.from({length:5},(_,i)=>lo+(hi-lo)*i/4).map(v=>{
+ const formatTick=v=>axisLabel(v,narrow);
+ const ticks=axis.ticks.map(v=>{
   const y=Y(v);
   return '<line class="monthly-grid" x1="'+L+'" x2="'+(W-R)+'" y1="'+y.toFixed(1)+'" y2="'+y.toFixed(1)+'"/>'+
    '<text class="bar-y-label" text-anchor="end" x="'+(L-(narrow?4:9))+'" y="'+(y+3.5).toFixed(1)+'">'+formatTick(v)+'</text>';
