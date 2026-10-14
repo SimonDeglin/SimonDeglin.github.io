@@ -835,7 +835,7 @@ function proposeScanIndex(text,kind){
   const number=kind==='water'?roundWater(raw):Math.round(raw);
   if(kind==='water'&&number>99999||kind!=='water'&&number>9999999)return;
   const diff=expected==null?0:Math.abs(number-expected);
-  let score=quality-(expected==null?0:Math.min(75,Math.log1p(diff)*9));
+  let score=quality-(expected==null?0:Math.min(kind==='pv'?150:75,Math.log1p(diff)*9));
   if(kind==='water'&&expected!=null&&number<expected-.5)score-=12;
   if(kind!=='water'&&number<1000)score-=25;
   candidates.push({number,score});
@@ -863,6 +863,14 @@ function proposeScanIndex(text,kind){
  }else if(kind==='pv'){
   // Itron photovoltaic meter: six BLACK whole-kWh wheels followed by one RED tenth.
   // Never concatenate all seven digits into a whole-kWh index.
+  // Some OCR engines split the seven wheels into single separated characters.
+  for(const line of text.replace(/[Oo]/g,'0').replace(/[Il|]/g,'1').split(/\r?\n/)){
+   const singleDigits=line.match(/(?:\b\d\s+){6}\d\b/g)||[];
+   for(const raw of singleDigits){
+    const digits=raw.replace(/\s/g,'');
+    if(digits.length===7)add(Number(digits.slice(0,6))+Number(digits[6])/10,119);
+   }
+  }
   for(let i=0;i<tokens.length;i++){
    const token=tokens[i].replace(',','.');
    if(/^\d{6}\.\d$/.test(token)){
