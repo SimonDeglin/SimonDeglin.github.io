@@ -96,12 +96,60 @@ $$('[data-go][role="button"]').forEach(b=>b.addEventListener('keydown',e=>{
  if(e.key==='Enter'||e.key===' '){e.preventDefault();show(b.dataset.go)}
 }));
 function nextMonthEnd(){const now=new Date();return new Date(now.getFullYear(),now.getMonth()+1,0)}
-function render(){syncPeriodControls();const n=net(),pv=vals('pv'),w=vals('water'),reference=n.find(r=>r.date===REFERENCE),lastNet=n.at(-1),balance=reference&&lastNet?lastNet.value-reference.value:null;
+
+/* Monthly equivalent over the latest 365 days or the shorter observed history.
+   Use the overlap of the known dates, never extrapolate future consumption. */
+function monthlyAverage(kind){
+ const domain=seriesDomain(kind);
+ if(!domain)return null;
+ const yearAgo=dateISO(new Date(parseDate(domain.end).getTime()-365*86400000));
+ const start=domain.start>yearAgo?domain.start:yearAgo,end=domain.end;
+ const duration=days(start,end);
+ if(duration<10)return null;
+ const a=readKind(kind,start),b=readKind(kind,end);
+ if(!Number.isFinite(a)||!Number.isFinite(b))return null;
+ return {value:(b-a)/duration*(365.2425/12),duration,start,end};
+}
+function showMonthlyAverage(id,captionId,kind,unit){
+ const data=monthlyAverage(kind),el=$('#'+id),cap=$('#'+captionId);
+ if(data){
+  el.innerHTML=fmt(data.value,unit==='m³'?1:0)+' <span class="unit">'+unit+'</span>';
+  if(cap)cap.textContent='Moy. / mois · '+(data.duration>=360?'12 derniers mois':fmt(data.duration/30.437,1)+' mois suivis');
+ }else{
+  el.innerHTML='— <span class="unit">'+unit+'</span>';
+  if(cap)cap.textContent='Données insuffisantes';
+ }
+}
+function niceAxis(minimum,maximum,includeZero=true){
+ let min=Number.isFinite(minimum)?minimum:0,max=Number.isFinite(maximum)?maximum:1;
+ if(min>max)[min,max]=[max,min];
+ if(includeZero){min=Math.min(0,min);max=Math.max(0,max)}
+ if(max-min<1e-9){const pad=Math.max(1,Math.abs(max)*.25);min-=includeZero&&min>=0?0:pad;max+=pad;}
+ const family=[1,2,2.5,5,10],powers=[];
+ let magnitude=Math.floor(Math.log10(Math.max(1e-8,(max-min)/4)));
+ let axis=null;
+ for(let pass=0;pass<20;pass++){
+  const candidate=family[pass%5]*Math.pow(10,magnitude+Math.floor(pass/5));
+  if(candidate<=0)continue;
+  let lo=Math.floor((min+candidate*1e-10)/candidate)*candidate;
+  let hi=Math.ceil((max-candidate*1e-10)/candidate)*candidate;
+  if(Math.abs(hi-lo)<candidate*.5)hi=lo+candidate;
+  const count=Math.round((hi-lo)/candidate)+1;
+  if(count<=6){axis={lo:+lo.toFixed(7),hi:+hi.toFixed(7),step:candidate};break;}
+ }
+ if(!axis){const step=Math.pow(10,magnitude+2);axis={lo:Math.floor(min/step)*step,hi:Math.ceil(max/step)*step,step};}
+ const ticks=[];for(let i=0;i<9;i++){const v=axis.lo+i*axis.step;if(v>axis.hi+axis.step*.001)break;ticks.push(Math.abs(v)<axis.step*1e-6?0:+v.toFixed(7))}
+ return {...axis,ticks};
+}
+const axisLabel=(v,compact=false)=>compact&&Math.abs(v)>=1000?
+ fmt(v/1000,Math.abs(v)%1000===0?0:1)+'k':fmt(v,Number.isInteger(v)?0:1);
+
+function render(){syncPeriodControls();syncCompactControls();const n=net(),pv=vals('pv'),w=vals('water'),reference=n.find(r=>r.date===REFERENCE),lastNet=n.at(-1),balance=reference&&lastNet?lastNet.value-reference.value:null;
 $('#balance-value').textContent=balance==null?'—':fmt(Math.abs(balance))+' kWh';$('#balance-value').classList.toggle('negative',balance>0);$('#balance-status').textContent=balance==null?'Sans référence':balance<0?'d’avance sur le bilan annuel':balance>0?'au-dessus de la référence':'à l’équilibre';$('#balance-date').textContent='Dernier relevé : '+(lastNet?label(lastNet.date):'—');
 $('#recent-trend').textContent=lastNet?fmt(lastNet.value)+' kWh':'—';$('#trend-label').textContent='Total jour + nuit';$('#trend-duration').textContent=lastNet?'Relevé du '+label(lastNet.date):'Aucun relevé';
-const pvDelta=pv.length>1?pv.at(-1).value-pv[0].value:null;const netDelta=n.length>1?n.at(-1).value-n[0].value:null;const house=pvDelta!=null&&netDelta!=null?pvDelta+netDelta:null;const waterDelta=w.length>1?w.at(-1).value-w[0].value:null;
-$('#pv-produced').innerHTML=fmt(pvDelta)+' <span class="unit">kWh</span>';$('#home-consumption').innerHTML=fmt(house)+' <span class="unit">kWh</span>';$('#water-consumed').innerHTML=fmt(waterDelta,2)+' <span class="unit">m³</span>';
-const waterCaption=$('#home-water-caption');if(waterCaption)waterCaption.textContent='Depuis l’entrée';
+showMonthlyAverage('home-consumption','home-electric-caption','house','kWh');
+showMonthlyAverage('pv-produced','home-pv-caption','pv','kWh');
+showMonthlyAverage('water-consumed','home-water-caption','water','m³');
 renderChart('balance-chart','network',REFERENCE);renderHistory();renderAnalysis();renderEvents();renderCategoryPages();renderOil()}
 function renderHistory(){
  const base=sorted(),oilLevels=oilReadings(),oilFills=oilDeliveries();
@@ -215,6 +263,38 @@ function cumulativePoints(kind,start){
  return [...dates].sort().map(date=>({date,value:readKind(kind,date)-base,exact:exactKind(kind,date)}))
   .filter(p=>Number.isFinite(p.value));
 }
+
+function syncCompactControls(){
+ $('select[data-compact]').forEach(el=>{
+  const which=el.dataset.compact;
+  const value=which==='granularity'?granularity:which==='period'?periodPreset:
+   which==='electric-mode'?electricBarMode:
+   ($('#elec-view-bilan').classList.contains('hidden')?'mensuel':'bilan');
+  if(el.value!==value)el.value=value;
+  if(which==='electric-view')el.disabled=electricBarMode==='house';
+ });
+ $('.compact-year-controls').forEach(el=>el.classList.toggle('hidden',periodPreset!=='calendar'));
+ $('[data-compact-year]').forEach(el=>el.textContent=String(calendarYear));
+ const maxYear=Number(latestMeterDate().slice(0,4));
+ const minYear=Number(sorted()[0]?.date?.slice(0,4)||2025);
+ $('[data-compact-nav="next"]').forEach(b=>b.disabled=calendarYear>=maxYear);
+ $('[data-compact-nav="prev"]').forEach(b=>b.disabled=calendarYear<=minYear);
+}
+$('select[data-compact]').forEach(el=>el.addEventListener('change',()=>{
+ const attr={
+  granularity:'data-granularity',period:'data-period',
+  'electric-mode':'data-electric-bar','electric-view':'data-elec-view'
+ }[el.dataset.compact];
+ const button=attr?document.querySelector('['+attr+'="'+el.value+'"]'):null;
+ if(button)button.click();
+ syncCompactControls();
+}));
+$('[data-compact-nav]').forEach(el=>el.addEventListener('click',()=>{
+ const btn=$('[data-period-nav="'+el.dataset.compactNav+'"]');
+ if(btn&&!btn.disabled)btn.click();
+ syncCompactControls();
+}));
+
 function syncPeriodControls(){
  const r=periodRange();
  $$('[data-granularity]').forEach(b=>b.classList.toggle('active',b.dataset.granularity===granularity));
@@ -561,6 +641,7 @@ function renderCategoryPages(){
  drawMonthlyBars('monthly-electricity-chart',electricBarMode);
  drawMonthlyBars('monthly-pv-chart','pv');
  drawMonthlyBars('monthly-water-chart','water');
+ syncCompactControls();
 }
 function drawMonthlyBars(id,kind){
  const el=$('#'+id);if(!el)return;
@@ -661,6 +742,7 @@ $$('[data-elec-view]').forEach(button=>button.addEventListener('click',()=>{
  // Measure and draw only after the chosen graph has its full container width.
  if(mode==='bilan')renderChart('balance-chart','network',REFERENCE);
  else drawMonthlyBars('monthly-electricity-chart',electricBarMode);
+ syncCompactControls();
 }));
 
 /* A mazout reading is occasional: keep it separate from the monthly four-meter form. */
