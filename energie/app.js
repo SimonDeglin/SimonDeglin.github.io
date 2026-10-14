@@ -1189,7 +1189,7 @@ $('#confirm-scan').onclick=()=>{
  if(k==='electric'){
   const values=electricInputs();
   if(!values)return toast('Vérifie les index Nuit et Jour avant de confirmer.');
-  $('#reading-total').value=values.total;
+  $('#reading-total').value=String(values.total);
   // For new readings we retain the official monohourly sum, not the two registers.
   pendingPhotos.electric=pendingImage;
  }else{
