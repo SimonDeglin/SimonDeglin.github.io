@@ -1100,3 +1100,67 @@ body[data-section="mazout"] .topbar .title{color:#68513a}
   border-radius:10px;
  }
 }
+
+
+/* OCR audit: diagnostics are collapsed by default, with a legible cropped
+   preview for explaining uncertain recognition. Nothing is uploaded. */
+#scan-preview-wrap{touch-action:none}
+.scan-diagnostics{
+ margin:6px 0 10px;
+ border:1px solid #e7ece6;
+ border-radius:12px;
+ padding:0 11px;
+ background:#f8faf7;
+ overflow:hidden;
+}
+.scan-diagnostics>summary{
+ cursor:pointer;
+ padding:10px 0;
+ list-style:none;
+ font-size:11px;
+ font-weight:750;
+ color:#63776d;
+}
+.scan-diagnostics>summary::-webkit-details-marker{display:none}
+.scan-diagnostics>summary::after{content:"⌄";float:right;color:#91a298}
+.scan-diagnostics[open]>summary::after{content:"⌃"}
+.scan-diagnostics-body{
+ padding-bottom:12px;
+ display:grid;
+ gap:8px;
+}
+#scan-analysis{
+ display:block;
+ width:auto;
+ max-width:100%;
+ max-height:185px;
+ object-fit:contain;
+ object-position:left center;
+ border:1px solid #e5e9e2;
+ border-radius:9px;
+ background:white;
+}
+.scan-diagnostics-title{
+ font-size:10px;
+ font-weight:800;
+ color:#6d7d73;
+}
+#scan-raw-text{
+ margin:0;
+ padding:9px 10px;
+ font:11px/1.45 ui-monospace,SFMono-Regular,monospace;
+ color:#35483e;
+ background:white;
+ border:1px solid #e4eae4;
+ border-radius:10px;
+ white-space:pre-wrap;
+ overflow-wrap:anywhere;
+ max-height:126px;
+ overflow-y:auto;
+}
+@media(max-width:750px){
+ .scan-diagnostics{margin:4px 0 8px;padding:0 9px}
+ .scan-diagnostics>summary{padding:8px 0}
+ #scan-analysis{max-height:125px}
+ #scan-raw-text{font-size:10px}
+}
