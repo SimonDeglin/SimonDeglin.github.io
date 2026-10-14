@@ -6,13 +6,13 @@
   "note": "TED interrogé le 2026-10-14 : 1350 avis lus. 10 annonces présélectionnées et 4 sujets à vérifier. BOSA national et conseils communaux encore à raccorder.",
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte BOSA partielle : limite atteinte avant la date cible 2026-09-30.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 93 page(s) parcourue(s) depuis 2026-09-30.",
     "communal": "non connecté"
   },
   "metrics": {
     "scanned": 1350,
     "matched_current_run": 2,
-    "records": 28,
+    "records": 29,
     "review_count": 4,
     "excluded_after_dictionary_update": 110,
     "excluded_reasons": {
@@ -52,9 +52,9 @@
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2000,
-    "bosa_imported": 15,
-    "bosa_pages": 80
+    "bosa_scanned": 2325,
+    "bosa_imported": 17,
+    "bosa_pages": 93
   },
   "items": [
     {
@@ -128,7 +128,21 @@
       "noticeNumbers": [
         "685167-2026"
       ],
-      "screening": "main"
+      "screening": "main",
+      "publicationWorkspaceId": "486b2f54-2318-4d42-a646-f4a0395e49fb",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/685167-2026",
+          "publicationNumber": "685167-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/486b2f54-2318-4d42-a646-f4a0395e49fb/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ]
     },
     {
       "id": "ted:679780-2026",
@@ -152,7 +166,21 @@
       "source_status": "api",
       "noticeType": "cn-standard",
       "url": "https://ted.europa.eu/fr/notice/-/detail/679780-2026",
-      "screening": "review"
+      "screening": "review",
+      "publicationWorkspaceId": "967f91df-89ea-47e2-8780-3f6b166de63c",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/679780-2026",
+          "publicationNumber": "679780-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/967f91df-89ea-47e2-8780-3f6b166de63c/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ]
     },
     {
       "id": "ted:674146-2026",
@@ -459,7 +487,7 @@
         "PEB"
       ],
       "score": 95,
-      "screening": "review",
+      "screening": "main",
       "publication": "2026-10-13",
       "deadline": "",
       "cpv": [
@@ -479,6 +507,12 @@
           "url": "https://www.publicprocurement.be/publication-workspaces/e73a64fc-bc95-43e4-b23f-4775ded5a94d/general",
           "publicationDate": "2026-10-13",
           "kind": "award"
+        }
+      ],
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/e73a64fc-bc95-43e4-b23f-4775ded5a94d/general"
         }
       ]
     },
@@ -510,7 +544,13 @@
       "noticeKind": "competition",
       "bdaReference": "2026B0173_pub01",
       "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/general"
+      "url": "https://www.publicprocurement.be/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/general",
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/general"
+        }
+      ]
     },
     {
       "id": "bosa:3b81ba48-e9f4-4d6f-9c05-5ba699c7f209",
@@ -542,7 +582,13 @@
       "noticeKind": "competition",
       "bdaReference": "PPP0CS-2959/6446/2026-1122_001",
       "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/3b81ba48-e9f4-4d6f-9c05-5ba699c7f209/general"
+      "url": "https://www.publicprocurement.be/publication-workspaces/3b81ba48-e9f4-4d6f-9c05-5ba699c7f209/general",
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/3b81ba48-e9f4-4d6f-9c05-5ba699c7f209/general"
+        }
+      ]
     },
     {
       "id": "bosa:834b6f23-3906-4589-a0e7-afae9c91d26a",
@@ -571,7 +617,13 @@
       "noticeKind": "competition",
       "bdaReference": "PPP0MS-2570/6710/2026-2570_001",
       "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/834b6f23-3906-4589-a0e7-afae9c91d26a/general"
+      "url": "https://www.publicprocurement.be/publication-workspaces/834b6f23-3906-4589-a0e7-afae9c91d26a/general",
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/834b6f23-3906-4589-a0e7-afae9c91d26a/general"
+        }
+      ]
     },
     {
       "id": "bosa:dfdf8ed6-f60e-4be6-9024-e608d8bc079a",
@@ -587,7 +639,7 @@
         "Carto"
       ],
       "score": 55,
-      "screening": "review",
+      "screening": "excluded",
       "publication": "2026-10-13",
       "deadline": "",
       "cpv": [
@@ -640,6 +692,12 @@
           "publicationDate": "2026-10-09",
           "kind": "award"
         }
+      ],
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/b1464bc6-d603-4836-8eb2-ec8fa36c5942/general"
+        }
       ]
     },
     {
@@ -669,7 +727,13 @@
       "noticeKind": "competition",
       "bdaReference": "PPP0EM-3747/6121/2026/4992_001",
       "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/2057ca19-d4bd-43d6-bf36-bbc34ec2f71f/general"
+      "url": "https://www.publicprocurement.be/publication-workspaces/2057ca19-d4bd-43d6-bf36-bbc34ec2f71f/general",
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/2057ca19-d4bd-43d6-bf36-bbc34ec2f71f/general"
+        }
+      ]
     },
     {
       "id": "bosa:faefd75f-ef0f-424b-9c3d-c0ec345ad48a",
@@ -705,6 +769,12 @@
           "url": "https://www.publicprocurement.be/publication-workspaces/faefd75f-ef0f-424b-9c3d-c0ec345ad48a/general",
           "publicationDate": "2026-10-09",
           "kind": "award"
+        }
+      ],
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/faefd75f-ef0f-424b-9c3d-c0ec345ad48a/general"
         }
       ]
     },
@@ -744,6 +814,12 @@
           "publicationDate": "2026-10-08",
           "kind": "award"
         }
+      ],
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/ab0c7da2-e02f-451f-89a1-bfdc0d14bffd/general"
+        }
       ]
     },
     {
@@ -760,7 +836,7 @@
         "VRD"
       ],
       "score": 83,
-      "screening": "review",
+      "screening": "main",
       "publication": "2026-10-05",
       "deadline": "",
       "cpv": [
@@ -781,6 +857,12 @@
           "url": "https://www.publicprocurement.be/publication-workspaces/9d028d41-9338-4d74-93d8-eb37249a0902/general",
           "publicationDate": "2026-10-05",
           "kind": "award"
+        }
+      ],
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/9d028d41-9338-4d74-93d8-eb37249a0902/general"
         }
       ]
     },
@@ -819,6 +901,12 @@
           "publicationDate": "2026-10-05",
           "kind": "award"
         }
+      ],
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/aa328366-aa3b-415b-b666-2d59752bf12f/general"
+        }
       ]
     },
     {
@@ -848,7 +936,13 @@
       "noticeKind": "competition",
       "bdaReference": "APIBW/OTT-PLC/GEOMETRE/2026_pub01",
       "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/d132e2d7-29b4-4489-9e26-70db1504fa8f/general"
+      "url": "https://www.publicprocurement.be/publication-workspaces/d132e2d7-29b4-4489-9e26-70db1504fa8f/general",
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/d132e2d7-29b4-4489-9e26-70db1504fa8f/general"
+        }
+      ]
     },
     {
       "id": "bosa:b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6",
@@ -864,7 +958,7 @@
         "Topo"
       ],
       "score": 83,
-      "screening": "review",
+      "screening": "main",
       "publication": "2026-10-01",
       "deadline": "",
       "cpv": [
@@ -884,6 +978,12 @@
           "url": "https://www.publicprocurement.be/publication-workspaces/b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6/general",
           "publicationDate": "2026-10-01",
           "kind": "award"
+        }
+      ],
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6/general"
         }
       ]
     },
@@ -922,21 +1022,69 @@
           "publicationDate": "2026-10-05",
           "kind": "award"
         }
+      ],
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/5693dc0a-48d7-485d-9794-7a49c7216ef9/general"
+        }
+      ]
+    },
+    {
+      "id": "bosa:261bf9bd-a457-4f59-8067-350564154af7",
+      "publicationWorkspaceId": "261bf9bd-a457-4f59-8067-350564154af7",
+      "noticeId": "d7a1db7f-181c-41d3-8925-85eaf11ed8e0",
+      "procedureIdentifier": "d63432bc-8003-4b15-b275-f4ee480f1190",
+      "internalReference": "ERASMUS_MS-DO_Bureau de contrôle - Controlebureau_pub02",
+      "title": "Bureau de contrôle - Projet ERASMUS à 1070 Anderlecht.",
+      "buyer": "Société du Logement de la Région de Bruxelles-Capitale",
+      "region": "Bruxelles",
+      "languages": [
+        "NL",
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD",
+        "PEB"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-09-30",
+      "deadline": "",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Le présent marché vise à la désignation d’un organisme de contrôle agréé en vue du suivi et contrôle technique des études et de l’exécution sur l’ensemble du projet, des éléments suivants : - Le gros œuvre fermé des bâtiments comprenant entre autres le complexe de façade, les menuiseries extérieures, les maçonneries de ré-emploi des façades pignons, les protections solaires extérieures et les balcons ; - L’ensemble du gros œuvre et parachèvements des voiries et aménagements extérieurs ;  - La sécurité incendie uniquement au stade de l’étude ;  - Les performances attendues des ouvrages (Acoustique, PEB, étanchéité à l’air). Ce suivi et contrôle technique, tant au cours de l’étude que de l’exécution, s’accompagnera de présence et participation à diverses réunions. Le contrôle par cet organisme agréé permettra sans réserve l’application des garanties sur l’entièreté des ouvrages livrés, portant aussi bien sur la conception que sur l’exécution et le contrôle de l’exécution des travaux, couvertes par les organismes assureurs tant des entrepreneurs, du promoteur que des prestataires de service (architectes, ingénieurs…) La mission du Bureau de Contrôle vise à cet objectif premier, toutes les prestations décrites dans le présent cahier de charges sont motivées par cet objectif. Ce marché fait l’objet d’une tranche ferme pour les phases d'études et de tranches conditionnelles pour les phases d'exécution (voir cahier spécial des charges pour plus d'informations).",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "ERASMUS_MS-DO_Bureau de contrôle - Controlebureau_pub02",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/261bf9bd-a457-4f59-8067-350564154af7/general",
+      "bosaResults": [
+        {
+          "reference": "ERASMUS_MS-DO_Bureau de contrôle - Controlebureau_pub02",
+          "url": "https://www.publicprocurement.be/publication-workspaces/261bf9bd-a457-4f59-8067-350564154af7/general",
+          "publicationDate": "2026-09-30",
+          "kind": "award"
+        }
       ]
     }
   ],
   "sources": {
     "BOSA": {
-      "status": "partial",
-      "last_success": "2026-10-14T15:31:33.494Z",
-      "scanned": 2000,
-      "retained": 15,
+      "status": "accessible",
+      "last_success": "2026-10-14T15:39:47.811Z",
+      "scanned": 2325,
+      "retained": 17,
       "period_from": "2026-09-30",
       "period_to": "2026-10-14",
-      "pages": 80,
-      "complete": false,
-      "raw_candidates": 2000,
-      "oldest_seen": "2026-10-01"
+      "pages": 93,
+      "complete": true,
+      "raw_candidates": 2319,
+      "oldest_seen": "2026-09-29"
     }
   }
 }
