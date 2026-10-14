@@ -53,7 +53,9 @@ const newestSavedDate=db.readings.map(r=>r.date).filter(Boolean).sort().at(-1)||
 let granularity='month',periodPreset='rolling',calendarYear=Number(newestSavedDate.slice(0,4));
 const sorted=()=>[...db.readings].sort((a,b)=>a.date.localeCompare(b.date));
 const vals=k=>sorted().filter(r=>Number.isFinite(r[k])).map(r=>({date:r.date,value:r[k]}));
-const net=()=>sorted().filter(r=>Number.isFinite(r.day)&&Number.isFinite(r.night)).map(r=>({date:r.date,value:r.day+r.night}));
+// The monohourly index is the source of truth for new data. Old day/night readings remain readable.
+const networkTotal=r=>r&&Number.isFinite(r.total)?r.total:r&&Number.isFinite(r.day)&&Number.isFinite(r.night)?r.day+r.night:null;
+const net=()=>sorted().map(r=>({date:r.date,value:networkTotal(r)})).filter(r=>r.value!=null);
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(db));return true}catch(e){toast('Stockage insuffisant. Exporte tes données.');return false}};
 const meterList={network:net,pv:()=>vals('pv'),water:()=>vals('water')};
 function at(series,date,kind='linear'){if(!series.length)return null;const exact=series.find(r=>r.date===date);if(exact)return exact.value;if(date<series[0].date||date>series.at(-1).date)return null;let i=series.findIndex(r=>r.date>date);if(i<1)return null;const a=series[i-1],b=series[i];const useKind=kind==='network'&&b.value<a.value?'pv':kind;const den=integral(a.date,b.date,useKind);const numer=integral(a.date,date,useKind);return a.value+(b.value-a.value)*(den?numer/den:days(a.date,date)/days(a.date,b.date))}
@@ -116,8 +118,7 @@ function renderHistory(){
   const actions=(r?'<button class="mini-btn" title="Modifier les index" data-edit="'+date+'">✎</button><button class="mini-btn danger" title="Supprimer les index" data-delete="'+date+'">×</button>':'')+
    (oilBits.length?'<button class="mini-btn oil-history-open" title="Voir le mazout" data-history-oil="'+date+'">↗</button>':'');
   return '<tr'+(!r&&oilBits.length?' class="history-oil-row"':'')+'><td>'+label(date)+'</td>'+
-   '<td>'+number(r?.day)+'</td><td>'+number(r?.night)+'</td>'+
-   '<td>'+(r?.day!=null&&r?.night!=null?fmt(r.day+r.night):'<span class="muted">—</span>')+'</td>'+
+   '<td class="history-network-cell">'+number(networkTotal(r))+'</td>'+
    '<td>'+number(r?.pv)+'</td>'+
    '<td>'+(r?.water==null?'<span class="muted">—</span>':fmt(r.water,2))+'</td>'+
    '<td class="history-oil-cell">'+oilHtml+'</td>'+
@@ -731,10 +732,45 @@ const roundWater=v=>Math.round((Number(v)+Number.EPSILON)*10)/10;
 $('#reading-water').addEventListener('change',()=>{
  const field=$('#reading-water');if(field.value!==''&&Number.isFinite(Number(field.value)))field.value=roundWater(field.value).toFixed(1);
 });
-function openReading(r){$('#reading-form').reset();$('#reading-id').value=r?.date||'';$('#reading-date').value=r?.date||today();for(const k of ['day','night','pv','water'])$('#reading-'+k).value=r?.[k]==null?'':(k==='water'?roundWater(r[k]).toFixed(1):r[k]);pendingPhotos=r?.photos?{...r.photos}:{};photoFlags();$('#reading-heading').textContent=r?'Modifier le relevé':'Nouveau relevé';modal('reading-overlay')}
-function photoFlags(){$('#photo-flags').innerHTML=Object.keys(pendingPhotos).map(k=>'<span class="photo-flag">Photo '+esc(({day:'jour',night:'nuit',pv:'PV',water:'eau'})[k])+'</span>').join('')}
+function openReading(r){
+ $('#reading-form').reset();
+ $('#reading-id').value=r?.date||'';
+ $('#reading-date').value=r?.date||today();
+ const total=networkTotal(r);
+ $('#reading-total').value=total==null?'':total;
+ for(const k of ['pv','water'])$('#reading-'+k).value=r?.[k]==null?'':k==='water'?roundWater(r[k]).toFixed(1):r[k];
+ pendingPhotos=r?.photos?{...r.photos}:{};
+ photoFlags();
+ $('#reading-heading').textContent=r?'Modifier le relevé':'Nouveau relevé';
+ modal('reading-overlay');
+}
+function photoFlags(){
+ $('#photo-flags').innerHTML=Object.keys(pendingPhotos).map(k=>'<span class="photo-flag">Photo '+esc(({electric:'électricité',day:'jour',night:'nuit',pv:'PV',water:'eau'})[k]||k)+'</span>').join('');
+}
 $('#new-reading').onclick=()=>openReading();
-$('#reading-form').onsubmit=e=>{e.preventDefault();const date=$('#reading-date').value,id=$('#reading-id').value,r={date};let count=0;for(const k of ['day','night','pv','water']){const value=$('#reading-'+k).value;if(value.trim()!==''){r[k]=k==='water'?roundWater(value):k==='pv'?Math.round(Number(value)):Number(value);count++}}if(!count)return toast('Renseigne au moins un index.');if((r.day==null)!==(r.night==null))return toast('Pour le bilan réseau, renseigne jour et nuit ensemble.');if(Object.keys(pendingPhotos).length)r.photos=pendingPhotos;if(db.readings.some(v=>v.date===date&&v.date!==id))return toast('Un relevé existe déjà à cette date.');db.readings=db.readings.filter(v=>v.date!==id);db.readings.push(r);if(!id){calendarYear=Number(date.slice(0,4));}if(!save()){db.readings=db.readings.filter(v=>v.date!==date);if(id)db.readings.push(sorted().find(v=>v.date===id));return}modal('reading-overlay',false);render();toast('Relevé enregistré')};
+$('#reading-form').onsubmit=e=>{
+ e.preventDefault();
+ const date=$('#reading-date').value,id=$('#reading-id').value,r={date};let count=0;
+ for(const k of ['total','pv','water']){
+  const value=$('#reading-'+k).value;
+  if(value.trim()!==''){
+   const numeric=Number(value);
+   if(!Number.isFinite(numeric)||numeric<0)return toast('Vérifie les index avant de les enregistrer.');
+   if(k!=='water'&&!Number.isInteger(numeric))return toast('Électricité et PV : uniquement des kWh entiers.');
+   r[k]=k==='water'?roundWater(numeric):numeric;
+   count++;
+  }
+ }
+ if(!count)return toast('Renseigne au moins un index.');
+ if(Object.keys(pendingPhotos).length)r.photos={...pendingPhotos};
+ if(db.readings.some(v=>v.date===date&&v.date!==id))return toast('Un relevé existe déjà à cette date.');
+ const previousReadings=[...db.readings];
+ db.readings=db.readings.filter(v=>v.date!==id);
+ db.readings.push(r);
+ if(!save()){db.readings=previousReadings;return}
+ if(!id)calendarYear=Number(date.slice(0,4));
+ modal('reading-overlay',false);render();toast('Relevé enregistré');
+};
 $('#history-table').addEventListener('click',e=>{const oil=e.target.closest('[data-history-oil]'),edit=e.target.closest('[data-edit]'),del=e.target.closest('[data-delete]');if(oil){show('mazout');return}if(edit)openReading(db.readings.find(r=>r.date===edit.dataset.edit));if(del&&confirm('Supprimer les index du '+label(del.dataset.delete)+' ?')){db.readings=db.readings.filter(r=>r.date!==del.dataset.delete);save();render()}});
 const exportBlob=(content,type,name)=>{const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000)};
 $('#export-data').onclick=()=>exportBlob(JSON.stringify({version:1,exportedAt:new Date().toISOString(),...db},null,2),'application/json','flux-sauvegarde-'+today()+'.json');
@@ -744,9 +780,9 @@ $('#export-csv').onclick=()=>{
  const rows=allDates.map(date=>{
   const other=byDay.get(date),tank=oil.filter(r=>r.date===date).sort((a,b)=>a.phase==='before'?-1:1);
   const delivery=fills.filter(r=>r.date===date).reduce((sum,r)=>sum+r.liters,0);
-  return [date,other?.day??'',other?.night??'',other?.pv??'',other?.water??'',tank.map(x=>x.liters).join('/'),delivery||''].join(';');
+  return [date,networkTotal(other)??'',other?.pv??'',other?.water??'',tank.map(x=>x.liters).join('/'),delivery||''].join(';');
  });
- exportBlob('\ufeffdate;jour_kwh;nuit_kwh;production_kwh;eau_m3;mazout_niveau_L;livraison_mazout_L\n'+rows.join('\n'),'text/csv','flux-releves-'+today()+'.csv');
+ exportBlob('\ufeffdate;electricite_monohoraire_kwh;production_kwh;eau_m3;mazout_niveau_L;livraison_mazout_L\n'+rows.join('\n'),'text/csv','flux-releves-'+today()+'.csv');
 };
 $('#import-data').onclick=()=>$('#import-file').click();$('#import-file').onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{const d=JSON.parse(await f.text());if(!Array.isArray(d.readings)||!d.readings.every(r=>/^\d{4}-\d{2}-\d{2}$/.test(r.date)))throw Error('Fichier incorrect');if(confirm('Remplacer tous les relevés de cet appareil par ceux du fichier ?')){db={readings:d.readings,events:Array.isArray(d.events)?d.events:[],oilReadings:Array.isArray(d.oilReadings)?d.oilReadings.map(r=>({...r})):DEFAULT_OIL_READINGS.map(r=>({...r})),oilDeliveries:Array.isArray(d.oilDeliveries)?d.oilDeliveries.map(r=>({...r})):DEFAULT_OIL_DELIVERIES.map(r=>({...r})),oilStopDate:d.oilStopDate||'2026-03-01'};const initial=db.oilReadings.find(r=>r.id==='oil-2025-12-12'&&r.date==='2025-12-12');if(initial&&Number(initial.liters)===1000)initial.liters=0;if(initial&&Number(initial.liters)===0&&!db.oilDeliveries.some(x=>x.date==='2025-12-12'&&Number(x.liters)===1000))db.oilDeliveries.push({...DEFAULT_OIL_DELIVERIES[0]});save();render();toast('Import terminé')}}catch(err){toast('Fichier JSON invalide')}e.target.value=''};
 $('#new-event').onclick=()=>{$('#event-form').reset();$('#event-date').value=today();modal('event-overlay')};
