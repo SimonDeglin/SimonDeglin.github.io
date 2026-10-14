@@ -1,24 +1,25 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-14T13:42:25.696Z",
+  "generated_at": "2026-10-14T20:13:41.641Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-10-14 : 1350 avis lus. 10 annonces présélectionnées et 4 sujets à vérifier. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-10-14 : 1350 avis lus, 3 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "coverage": {
     "TED": "collecte automatique active",
     "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 93 page(s) parcourue(s) depuis 2026-09-30.",
-    "communal": "non connecté"
+    "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 33 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
     "scanned": 1350,
-    "matched_current_run": 2,
-    "records": 29,
-    "review_count": 4,
-    "excluded_after_dictionary_update": 110,
+    "matched_current_run": 3,
+    "records": 30,
+    "review_count": 11,
+    "award_notice_count": 389,
+    "awarded_market_matches": 3,
+    "award_fields_requested": false,
+    "retained_as_excluded": 1,
     "excluded_reasons": {
-      "acheteur_flamand": 24,
-      "hors_metier": 84,
-      "avis_neerlandais": 2
+      "acheteur_flamand": 1
     },
     "days_queried": 12,
     "queries": [
@@ -54,425 +55,11 @@
     "warnings": [],
     "bosa_scanned": 2325,
     "bosa_imported": 17,
-    "bosa_pages": 93
+    "bosa_pages": 93,
+    "local_documents": 33,
+    "local_opportunities": 0
   },
   "items": [
-    {
-      "id": "ted:682034-2026",
-      "publicationNumber": "682034-2026",
-      "procedureIdentifier": "07f53028-6212-4143-8dfe-a3a52a5d1719",
-      "title": "Belgique – Services topographiques – 7.1.7.2. Topographie et Quantity Survey 2027-2030 - Marché de services - Procédure ouverte",
-      "buyer": "SPF Mobilité et Transports",
-      "region": "Bruxelles",
-      "sector": "Topo",
-      "sectors": [
-        "Topo"
-      ],
-      "score": 95,
-      "publication": "2026-10-05",
-      "deadline": "2026-11-05",
-      "cpv": [
-        "71351810"
-      ],
-      "description": "La mission comprend : • des levés topographiques de différentes natures, caractérisés par type de site de chantier et/ou les conditions dans lesquelles ils doivent être exécutés • des prestations de Quantity Survey ; • des prestations de modélisation BIM ; • l’exécution de diverses prestations en régie ou à remboursement des frais encourus ; Les prestations porteront sur des bâtiments, des espaces publics, des ouvrages d’art, des tunnels... (cette liste est indicative) en phase programme, étude, exécution et As-Built. Les surfaces à lever et les travaux à métrer se situent exclusivement en région de Bruxelles – Capitale.\n\nLa mission comprend : • des levés topographiques de différentes natures, caractérisés par type de site de chantier et/ou les conditions dans lesquelles ils doivent être exécutés • des prestations de Quantity Survey ; • des prestations de modélisation BIM ; • l’exécution de diverses prestations en régie ou à remboursement des frais encourus ; Les prestations porteront sur des bâtiments, des espaces publics, des ouvrages d’art, des tunnels... (cette liste est indicative) en phase programme, étude, exécution et As-Built. Les surfaces à lever et les travaux à métrer se situent exclusivement en région de Bruxelles – Capitale.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/682034-2026",
-      "relatedNoticeNumbers": [
-        "636498-2026"
-      ],
-      "noticeNumbers": [
-        "636498-2026",
-        "682034-2026"
-      ],
-      "screening": "main",
-      "publicationWorkspaceId": "f3981a2f-a3f4-4d65-a293-2643b8ee0311",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/682034-2026",
-          "publicationNumber": "682034-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/f3981a2f-a3f4-4d65-a293-2643b8ee0311/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        }
-      ]
-    },
-    {
-      "id": "ted:685167-2026",
-      "publicationNumber": "685167-2026",
-      "procedureIdentifier": "66b4d1f2-90db-4da8-ae00-785033bf780d",
-      "title": "Belgique – Services de cartographie numérique – Vectorisation des plans des réseaux de distribution électrique et gaz.",
-      "buyer": "RESA Innovation et Technologie SA en son nom et pour compte de RESA SA Intercommunale",
-      "region": "Wallonie",
-      "sector": "Reseaux",
-      "sectors": [
-        "Reseaux",
-        "Carto"
-      ],
-      "score": 95,
-      "publication": "2026-10-05",
-      "deadline": "2026-10-19",
-      "cpv": [
-        "71354100"
-      ],
-      "description": "Vectorisation des plans des réseaux de distribution électrique et gaz.\n\nVectorisation des plans des réseaux de distribution électrique et gaz.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/685167-2026",
-      "noticeNumbers": [
-        "685167-2026"
-      ],
-      "screening": "main",
-      "publicationWorkspaceId": "486b2f54-2318-4d42-a646-f4a0395e49fb",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/685167-2026",
-          "publicationNumber": "685167-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/486b2f54-2318-4d42-a646-f4a0395e49fb/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        }
-      ]
-    },
-    {
-      "id": "ted:679780-2026",
-      "publicationNumber": "679780-2026",
-      "procedureIdentifier": "db8a7c65-d34b-42f7-b96b-5ea15215d704",
-      "title": "Belgique – Services d'architecture, services de construction, services d'ingénierie et services d'inspection – Préparation du renouvellement de la signalisation des lignes de métro 2 et 6 – Mission complète relative à l’étude et au suivi des travaux d’exécution du gros œuvre et des finitions pour la réalisation d’infrastructures souterraines, visant à construire de nouveaux locaux techniques permettant l’installation de nouveaux équipements.",
-      "buyer": "Société des Transports Intercommunaux de Bruxelles",
-      "region": "Bruxelles",
-      "sector": "Topo",
-      "sectors": [
-        "Topo"
-      ],
-      "score": 55,
-      "publication": "2026-10-02",
-      "deadline": "2026-11-16",
-      "cpv": [
-        "71000000"
-      ],
-      "description": "Cela comprend : - La création de nouveaux locaux techniques. - Des travaux divers liés à l’adaptation des stations existantes y associés. Les interventions auront lieu dans les 26 stations . Dans ces cas, l’étude devra intégrer : - L’implantation des locaux techniques dans de nouvelles structures. - Le cas échéant, une étude de stabilité de la nouvelle infrastructure ainsi que des impacts sur les structures existantes. En moyenne, quatre locaux techniques devront être aménagés par station (par exemple : locaux pour la signalisation, le pilotage de portes, etc.). L’étude inclut: - L’élaboration des plans. - L’étude de stabilité avec les calculs nécessaires. - Les métrés correspondants. - Une étude de faisabilité tenant compte des équipements à intégrer et des techniques associées. - Les levés topographiques des locaux techniques existants et à construire sur les lignes 2-6. - Les contrôles d’implantation avant, pendant et après exécution. - Ces mesurages se feront dans les stations concernées et leurs environs immédiats, selon les consignes du bureau d'études et du fonctionnaire dirigeant. Enfin, ces mesurages ne sont pas limités à un type précis de relevé. Un scan 3D pourra être exigé si le bureau d’études ou le fonctionnaire dirigeant l’estime nécessaire.\n\nCela comprend : - La création de nouveaux locaux techniques. - Des travaux divers liés à l’adaptation des stations existantes y associés. Les interventions auront lieu dans les 26 stations . Dans ces cas, l’étude devra intégrer : - L’implantation des locaux techniques dans de nouvelles structures. - Le cas échéant, une étude de stabilité de la nouvelle infrastructure ainsi que des impacts sur les structures existantes. En moyenne, quatre locaux techniques devront être aménagés par station (par exemple : locaux pour la signalisation, le pilotage de portes, etc.). L’étude inclut: - L’élaboration des plans. - L’étude de stabilité avec les calculs nécessaires. - Les métrés correspondants. - Une étude de faisabilité tenant compte des équipements à intégrer et des techniques associées. - Les levés topographiques des locaux techniques existants et à construire sur les lignes 2-6. - Les contrôles d’implantation avant, pendant et après exécution. - Ces mesurages se feront dans les stations concernées et leurs environs immédiats, selon les consignes du bureau d'études et du fonctionnaire dirigeant. Enfin, ces mesurages ne sont pas limités à un type précis de relevé. Un scan 3D pourra être exigé si le bureau d’études ou le fonctionnaire dirigeant l’estime nécessaire.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/679780-2026",
-      "screening": "review",
-      "publicationWorkspaceId": "967f91df-89ea-47e2-8780-3f6b166de63c",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/679780-2026",
-          "publicationNumber": "679780-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/967f91df-89ea-47e2-8780-3f6b166de63c/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        }
-      ]
-    },
-    {
-      "id": "ted:674146-2026",
-      "publicationNumber": "674146-2026",
-      "title": "Belgique – Services cadastraux – Accord cadre ayant pour objet le relevé de réseaux d’égouttage en Province de Namur",
-      "buyer": "INASEP",
-      "region": "Wallonie",
-      "sector": "Reseaux",
-      "sectors": [
-        "Reseaux",
-        "Topo",
-        "Carto"
-      ],
-      "score": 95,
-      "publication": "2026-09-30",
-      "deadline": "2026-10-29",
-      "cpv": [
-        "71354300"
-      ],
-      "description": "Le présent marché de service consiste en la désignation de bureaux spécialisés en relevé d’ouvrages d’égouttage dans le cadre de la réalisation des cadastres des réseaux d’égouts. Ces relevés sont accompagnés d’opérations topographiques des ouvrages ainsi que de « zoomages » par caméra au niveau des chambres de visite. A ce jour, l’INASEP estime des commandes annuelles pour les prestations de cadastre des réseaux d’égout avec « zoomages » à une longueur de réseau à cadastrer estimée annuellement entre 300 et 320 km pour l’ensemble de la Province de Namur, répartie sur 2 zones géographiques Nord et Sud dans une proportion de l’ordre de 51% de ce total pour le Nord et 49% de ce total pour le Sud. Le programme de réalisation de ces cadastres peut évoluer en fonction des consignes reçues par INASEP des autorités régionales et de la S.P.G.E., et dès lors les soumissionnaires acceptent le risque quant au nombre de commandes effectives et renoncent à toute indemnité à cet égard.\n\nLe présent lot consiste en la désignation de bureaux spécialisés en relevé d’ouvrages d’égouttage dans le cadre de la réalisation des cadastres des réseaux d’égouts pour la partie Nord de la Province de Namur. Ces relevés sont accompagnés d’opérations topographiques des ouvrages ainsi que de « zoomages » par caméra au niveau des chambres de visite. Le présent marché fera l’objet de plusieurs commandes partielles dont l’exécution est subordonnée à la notification de chacune d’elles. A ce jour, l’INASEP estime des commandes annuelles pour les prestations de cadastre des réseaux d’égout avec « zoomages » à une longueur de réseau à cadastrer estimée annuellement entre 300 et 320 km pour l’ensemble de la Province de Namur, dont environ 51% de ce total pour le Nord. ; Le présent lot consiste en la désignation de bureaux spécialisés en relevé d’ouvrages d’égouttage dans le cadre de la réalisation des cadastres des réseaux d’égouts pour la partie Sud de la Province de Namur. Ces relevés sont accompagnés d’opérations topographiques des ouvrages ainsi que de « zoomages » par caméra au niveau des chambres de visite. Le présent marché fera l’objet de plusieurs commandes partielles dont l’exécution est subordonnée à la notification de chacune d’elles. A ce jour, l’INASEP estime des commandes annuelles pour les prestations de cadastre des réseaux d’égout avec « zoomages » à une longueur de réseau à cadastrer estimée annuellement entre 300 et 320 km pour l’ensemble de la Province de Namur, dont environ 49% de ce total pour le Sud.",
-      "source": "TED",
-      "source_status": "api",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/674146-2026",
-      "noticeType": "cn-standard",
-      "procedureIdentifier": "0d4694b3-109d-4119-bed9-22819b1e7315",
-      "noticeNumbers": [
-        "674146-2026"
-      ],
-      "screening": "main"
-    },
-    {
-      "id": "ted:626806-2026",
-      "publicationNumber": "656876-2026",
-      "procedureIdentifier": "2f04052e-60fc-4c38-8c25-d32d7118739f",
-      "title": "Belgique – Services de conseil en rendement énergétique – Réalisation de certificats de performance énergétique (PEB) - Wallonie - Batiments résidentiels",
-      "buyer": "Habitations Sociales de Saint-Nicolas",
-      "region": "Wallonie",
-      "sector": "PEB",
-      "sectors": [
-        "PEB"
-      ],
-      "score": 95,
-      "publication": "2026-09-23",
-      "deadline": "2026-10-13",
-      "cpv": [
-        "71314300",
-        "71314000",
-        "71314200"
-      ],
-      "description": "Marché stock de services pour l’établissement de certificats PEB pour le compte d'une SLSP située en Wallonie. Quantités de PEB à réaliser estimées à : 1.100 logements. Rythme mensuel des commandes attendu en vitesse de croisière : 100 logements/mois Lieu(x) de prestations : bâtiments du patrimoine des HSSN situés sur la commune de Saint-Nicolas (4420) (Province de Liège) (voir liste des logements fournie à titre indicatif) Les logements présentent généralement de surfaces inférieures à 80m² et ne dépassent pas les 100 m² (à l’exception de quelques rares logements).\n\nMarché stock de services pour l’établissement de certificats PEB pour le compte d'une SLSP située en Wallonie. Quantités de PEB à réaliser estimées à : 1.100 logements. Rythme mensuel des commandes attendu en vitesse de croisière : 100 logements/mois Lieu(x) de prestations : bâtiments du patrimoine des HSSN situés sur la commune de Saint-Nicolas (4420) (Province de Liège) (voir liste des logements fournie à titre indicatif) Les logements présentent généralement de surfaces inférieures à 80m² et ne dépassent pas les 100 m² (à l’exception de quelques rares logements).",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/656876-2026",
-      "noticeNumbers": [
-        "626806-2026",
-        "656876-2026"
-      ],
-      "screening": "main"
-    },
-    {
-      "id": "ted:624505-2026",
-      "publicationNumber": "624505-2026",
-      "procedureIdentifier": "7b8d4d9f-8d45-4229-9183-daa2728bca85",
-      "title": "Belgique – Services d'architecture, services de construction, services d'ingénierie et services d'inspection – RMH-25606-Auteur de projet SRA",
-      "buyer": "ASBL GROUPE SANTE CHC",
-      "region": "Wallonie",
-      "sector": "Topo",
-      "sectors": [
-        "Topo",
-        "PEB"
-      ],
-      "score": 55,
-      "publication": "2026-09-10",
-      "deadline": "2026-10-09",
-      "cpv": [
-        "71000000"
-      ],
-      "description": "Le présent marché est un marché public de services dont l’objet est défini comme suit : - mission d’Auteur de Projet d’architecture, de stabilité et de techniques spéciales (mission complète) d’un bâtiment (centre résidentiel de répit pédiatrique palliatif) en construction traditionnelle. La mission complémentaire suivante fait également partie de la mission : - responsable PEB - coordination sécurité santé - relevé sur site par géomètre - réalisation de l’inventaire destructif amiante - réalisation du RQT (rapport qualité des terres) - tentures, le mobilier intégré, le mobilier mobile, les ascenseurs, les équipements de cuisine et autres équipements (antennes wifi, …) doivent être dessinés sur les plans par l’Auteur de Projet. L’étude et l’exécution en sont à sa charge. - contacts avec les instances compétentes (Urbanisme, SRI, CILE, etc.)\n\nLe présent marché est un marché public de services dont l’objet est défini comme suit : - mission d’Auteur de Projet d’architecture, de stabilité et de techniques spéciales (mission complète) d’un bâtiment (centre résidentiel de répit pédiatrique palliatif) en construction traditionnelle. La mission complémentaire suivante fait également partie de la mission : - responsable PEB - coordination sécurité santé - relevé sur site par géomètre - réalisation de l’inventaire destructif amiante - réalisation du RQT (rapport qualité des terres) - tentures, le mobilier intégré, le mobilier mobile, les ascenseurs, les équipements de cuisine et autres équipements (antennes wifi, …) doivent être dessinés sur les plans par l’Auteur de Projet. L’étude et l’exécution en sont à sa charge. - contacts avec les instances compétentes (Urbanisme, SRI, CILE, etc.)",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/624505-2026",
-      "screening": "review"
-    },
-    {
-      "id": "ted:582711-2026",
-      "publicationNumber": "582711-2026",
-      "procedureIdentifier": "c29bbe61-dcc6-4209-92cf-1677ea28ee56",
-      "title": "Belgique – Services d'études – Marché de service de réalisation d'un schéma stratégique de la partie wallonne du bassin versant de la Dyle",
-      "buyer": "Service public de wallonie",
-      "region": "Belgique",
-      "sector": "Hydro",
-      "sectors": [
-        "Hydro"
-      ],
-      "score": 55,
-      "publication": "2026-08-24",
-      "deadline": "2026-09-30",
-      "cpv": [
-        "79311000"
-      ],
-      "description": "L’objet du marché est la prestation de services relatifs à la réalisation d’un schéma stratégique de la partie wallonne du bassin versant de la Dyle (sous-bassins hydrographiques de la Dyle – en ce compris le Pisselet et le Train –, de la Thyle, de l’Orne, de la Lasne et de la Nethen). Le marché comprend 3 volets, à savoir : - Volet 1 : réalisation d’un schéma stratégique de la partie wallonne du bassin versant de la Dyle (rapport scientifique) ; - Volet 2 : réalisation d’une publication spécifique de vulgarisation du schéma stratégique ; - Volet 3 : service après-vente.\n\nL’objet du marché est la prestation de services relatifs à la réalisation d’un schéma stratégique de la partie wallonne du bassin versant de la Dyle (sous-bassins hydrographiques de la Dyle – en ce compris le Pisselet et le Train –, de la Thyle, de l’Orne, de la Lasne et de la Nethen). Le marché comprend 3 volets, à savoir : - Volet 1 : réalisation d’un schéma stratégique de la partie wallonne du bassin versant de la Dyle (rapport scientifique) ; - Volet 2 : réalisation d’une publication spécifique de vulgarisation du schéma stratégique ; - Volet 3 : service après-vente.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/582711-2026",
-      "screening": "review"
-    },
-    {
-      "id": "ted:568525-2026",
-      "publicationNumber": "568525-2026",
-      "procedureIdentifier": "4ef16107-182f-4288-af82-45dbbe460d5e",
-      "title": "Belgique – Services de levés en surface – Prestations relatives à des missions de géomètre dans le cadre de la gestion immobilière",
-      "buyer": "Société publique de Gestion de l’Eau",
-      "region": "Wallonie",
-      "sector": "Topo",
-      "sectors": [
-        "Topo",
-        "Foncier"
-      ],
-      "score": 95,
-      "publication": "2026-08-17",
-      "deadline": "2026-09-07",
-      "cpv": [
-        "71353000"
-      ],
-      "description": "Le présent marché a pour objet la désignation d’un prestataire géomètre expert en vue de préparer, principalement, la documentation nécessaire à la constitution d’un droit de superficie relatif à des ouvrages d’assainissement. Ainsi, le géomètre sera chargé d’effectuer les mesurages, de produire les plans correspondants, ainsi que l’ensemble des prestations techniques et administratives associées, en collaboration avec le processus Investissements et Patrimoine de la SPGE. Le marché est divisé en 5 lots.\n\nLe présent marché a pour objet la désignation d’un prestataire géomètre expert en vue de préparer, principalement, la documentation nécessaire à la constitution d’un droit de superficie relatif à des ouvrages d’assainissement. Ainsi, le géomètre sera chargé d’effectuer les mesurages, de produire les plans correspondants, ainsi que l’ensemble des prestations techniques et administratives associées, en collaboration avec le processus Investissements et Patrimoine de la SPGE. Le marché est divisé en 5 lots. Le lot 1 concerne la province du Hainaut. ; Le présent marché a pour objet la désignation d’un prestataire géomètre expert en vue de préparer, principalement, la documentation nécessaire à la constitution d’un droit de superficie relatif à des ouvrages d’assainissement. Ainsi, le géomètre sera chargé d’effectuer les mesurages, de produire les plans correspondants, ainsi que l’ensemble des prestations techniques et administratives associées, en collaboration avec le processus Investissements et Patrimoine de la SPGE. Le marché est divisé en 5 lots. Le lot 2 concerne la province du Brabant Wallon. ; Le présent marché a pour objet la désignation d’un prestataire géomètre expert en vue de préparer, principalement, la documentation nécessaire à la constitution d’un droit de superficie relatif à des ouvrages d’assainissement. Ainsi, le géomètre sera chargé d’effectuer les mesurages, de produire les plans correspondants, ainsi que l’ensemble des prestations techniques et administratives associées, en collaboration avec le processus Investissements et Patrimoine de la SPGE. Le marché est divisé en 5 lots. Le lot 3 concerne la province de Liège. ; Le présent marché a pour objet la désignation d’un prestataire géomètre expert en vue de préparer, principalement, la documentation nécessaire à la constitution d’un droit de superficie relatif à des ouvrages d’assainissement. Ainsi, le géomètre sera chargé d’effectuer les mesurages, de produire les plans correspondants, ainsi que l’ensemble des prestations techniques et administratives associées, en collaboration avec",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/568525-2026",
-      "screening": "main"
-    },
-    {
-      "id": "ted:557588-2026",
-      "publicationNumber": "557588-2026",
-      "procedureIdentifier": "cfb3ba3e-ec7a-465d-9463-acfbf1a3f390",
-      "title": "Belgique – Services de levés hydrographiques – Levé des cours d’eau couverts sur le territoire de la Province de Liège",
-      "buyer": "Province de Liège",
-      "region": "Wallonie",
-      "sector": "Hydro",
-      "sectors": [
-        "Hydro"
-      ],
-      "score": 95,
-      "publication": "2026-08-12",
-      "deadline": "2026-08-25",
-      "cpv": [
-        "71353100"
-      ],
-      "description": "Le présent marché de services a pour objet le levé des cours d’eau couverts sur le territoire de la Province de Liège.\n\nLe présent marché de services a pour objet le levé des cours d’eau couverts sur le territoire de la Province de Liège.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/557588-2026",
-      "screening": "main"
-    },
-    {
-      "id": "ted:549850-2026",
-      "publicationNumber": "549850-2026",
-      "procedureIdentifier": "43f21200-d55e-4b5b-8117-fef087ecae5a",
-      "title": "Belgique – Services d'ingénierie – MARCHÉ PUBLIC DE SERVICES POUR L'ENTRETIEN ET LE CONTRÔLE PAR JAUGEAGES DE SECTIONS DE MESURES HYDROLOGIQUES DE LA RÉGION WALLONNE.",
-      "buyer": "Service public de wallonie",
-      "region": "Belgique",
-      "sector": "Hydraulique",
-      "sectors": [
-        "Hydraulique",
-        "Topo",
-        "Hydro"
-      ],
-      "score": 83,
-      "publication": "2026-08-07",
-      "deadline": "2026-09-14",
-      "cpv": [
-        "71300000"
-      ],
-      "description": "Le présent marché a pour objet l'entretien et le contrôle de certaines sections de mesures hydrologiques de la Région wallonne gérées par la Direction de la Gestion hydrologique du SPWMI. Les prestations d'entretien à effectuer consistent en : - l'entretien des sections dans lesquelles s'effectuent des mesures hydrologiques ; - le contrôle des stations de mesure et des sections y afférentes, notamment par des jaugeages à pied et à partir d'une camionnette, sur des rivières jusqu'à 150 m de largeur et pour des débits jusqu'à 3200 m3/s. les jaugeages sont réalisés au moyen de moulinets hydrométriques, électromagnétiques ou ADC ou de systèmes ADCP (Acoustic Dopple Current Profiler) ; - des relevés topographiques ou bathymétriques, de faible profondeur, de sections et de stations de mesure ainsi que le traitement des données associées, en ce compris les interactions avec les données hydrologiques ; - des aménagements des stations de mesures et des sections de mesures en vue d'en améliorer l’accessibilité, la sécurité et la pérennité.\n\nLe présent marché a pour objet l'entretien et le contrôle de certaines sections de mesures hydrologiques de la Région wallonne gérées par la Direction de la Gestion hydrologique du SPWMI. Les prestations d'entretien à effectuer consistent en : - l'entretien des sections dans lesquelles s'effectuent des mesures hydrologiques ; - le contrôle des stations de mesure et des sections y afférentes, notamment par des jaugeages à pied et à partir d'une camionnette, sur des rivières jusqu'à 150 m de largeur et pour des débits jusqu'à 3200 m3/s. les jaugeages sont réalisés au moyen de moulinets hydrométriques, électromagnétiques ou ADC ou de systèmes ADCP (Acoustic Dopple Current Profiler) ; - des relevés topographiques ou bathymétriques, de faible profondeur, de sections et de stations de mesure ainsi que le traitement des données associées, en ce compris les interactions avec les données hydrologiques ; - des aménagements des stations de mesures et des sections de mesures en vue d'en améliorer l’accessibilité, la sécurité et la pérennité.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/549850-2026",
-      "screening": "main"
-    },
-    {
-      "id": "ted:470635-2026",
-      "publicationNumber": "538632-2026",
-      "procedureIdentifier": "49161cb2-e7cf-4a0b-9c41-bc0a69029295",
-      "title": "Belgique – Énergie et services connexes – ACCORD-CADRE MULTI ATTRIBUTAIRES RELATIFS À DES SERVICES DE CADASTRES, QUICKSCANS, D’AUDITS ENERGETIQUES, D’ÉTUDE D’OPPORTUNITÉ, DE CERTIFICATS PEB, DE RESPONSABLE PEB ET DE SUPPORT TECHNIQUE DE BÂTIMENTS PUBLICS",
-      "buyer": "ECETIA Intercommunale",
-      "region": "Wallonie",
-      "sector": "PEB",
-      "sectors": [
-        "PEB"
-      ],
-      "score": 83,
-      "publication": "2026-08-04",
-      "deadline": "2026-08-24",
-      "cpv": [
-        "71314000"
-      ],
-      "description": "Ecetia souhaite mettre en place un accord-cadre multi-attributaires permettant d’assurer, de manière flexible et récurrente, la réalisation de missions variées liées à l’énergie. L’Accord-cadre a pour objet la réalisation notamment des missions suivantes : Cadastre énergétique ; Quickscan énergétique ; Audit énergétique ; Étude d’opportunité ; Stratégie immobilière ; Étude monitoring EMS ; Passation marché public EMS ; Assistance à la désignation d’un auteur de projet ou d’un marché design & build ; Assistance au maître d’ouvrage pour le suivi global du projet ; Certification énergétique des bâtiments publics ; Missions d’appui technique ponctuelles.\n\nEcetia souhaite mettre en place un accord-cadre multi-attributaires permettant d’assurer, de manière flexible et récurrente, la réalisation de missions variées liées à l’énergie. L'Accord-cadre aura pour objet la réalisation notamment des missions suivantes :  Cadastre énergétique ;  Quickscan énergétique ;  Audit énergétique ;  Étude d’opportunité ;  Stratégie immobilière ;  Étude monitoring EMS ;  Passation marché public EMS ;  Assistance à la désignation d’un auteur de projet ou d’un marché design & build ;  Assistance au maître d’ouvrage pour le suivi global du projet ;  Certification énergétique des bâtiments publics ;  Missions d’appui technique ponctuelles.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/538632-2026",
-      "noticeNumbers": [
-        "470635-2026",
-        "538632-2026",
-        "537131-2026"
-      ],
-      "screening": "main"
-    },
-    {
-      "id": "ted:523062-2026",
-      "publicationNumber": "523062-2026",
-      "procedureIdentifier": "56c74374-1afe-4b17-b111-7d8119c79d44",
-      "title": "Belgique – Services d'architecture, services de construction, services d'ingénierie et services d'inspection – N54-Lobbes-Erquelinnes : Marché d'études pour la réalisation du chaînon manquant",
-      "buyer": "SOFICO",
-      "region": "Belgique",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 55,
-      "publication": "2026-07-29",
-      "deadline": "2026-08-26",
-      "cpv": [
-        "71000000"
-      ],
-      "description": "Marché global d'études préalables à la mise en œuvre de la nouvelle voirie N54. Le présent marché est un marché de services, comportant des « tranches fermes » (TF), des « tranches conditionnelles » (TC) et une mission en option (Opt). Délai global d'exécution du marché : 4 ans. Durée de validité des offres : 180 JO.\n\nMarché global d'études préalables à la mise en œuvre de la nouvelle voirie N54. Le présent marché est un marché de services, comportant des « tranches fermes » (TF), des « tranches conditionnelles » (TC) et une mission en option (Opt). Délai global d'exécution du marché : 4 ans. Durée de validité des offres : 180 JO.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/523062-2026",
-      "screening": "review"
-    },
-    {
-      "id": "ted:490060-2026",
-      "publicationNumber": "490060-2026",
-      "procedureIdentifier": "cdf82884-cbf2-4b7a-93b0-74eaa81a3a49",
-      "title": "Belgique – Services d'études – Réfection de diverses voiries de l'entité - Mission complète d'auteur de projet et suivi de l'exécution",
-      "buyer": "Commune d'Eghezée",
-      "region": "Wallonie",
-      "sector": "VRD",
-      "sectors": [
-        "VRD",
-        "Topo"
-      ],
-      "score": 83,
-      "publication": "2026-07-15",
-      "deadline": "2026-08-27",
-      "cpv": [
-        "79311000"
-      ],
-      "description": "Le marché a pour objet une mission complète d'étude et de contrôle de l'exécution des travaux de réfaction complète des voiries en tout ou en partie. Lieux de prestations des services : - Rue Alexandre Denil à Saint-Germain; - Rue Dangotte à Dhuy ; - Rue de la Croisette à Warêt-la-Chaussée ; - Impasse de la Forege à Leuze ; - Rue du Roissia à Leuze ; - Rue du Moulin Van Oost à Hanret ; - Rue du Bocage à Eghezée Les marché est divisé en 2 lots détaillés comme suit : • Lot 1 (sans travaux d'égouttage) : Rue Dangotte, Impasse de la Forge, Rue du Roissia, Rue du Moulin Van Oost • Lot 2 (avec travaux d'égouttage) : Rue du Bocage, Rue Alexandre Denil, Rue de la Croisette Le projet devra faire l’objet d’une signalisation adaptée permettant d’en assurer une meilleure visibilité et une utilisation plus aisée. Les aménagements devront être conformes aux règles du Code du Développement territorial (CODT), à la dernière version du Qualiroutes, aux limites du domaine public et aux guides de bonnes pratiques disponibles Description des prestations attendues : - Visite des lieux - Levé topographique de la situation des lieux - Levés sur le terrain intégrant les limites du domaine public afin de s’assurer que l’entièreté du projet soit située en domaine public - Etude de faisabilité éventuelle : évaluation des emprises nécessaires ou recherche d’alternatives permettant d’intégrer les projets dans les limites du domaine public - Etablissement d’un rapport préalable pour définir les solutions possibles et les estimations correspondantes - Sondages préalables (les sondages/essais/RQT,CCQT seront à charge de la commune, l’auteur de projet apportera son aide pour l’établissement des documents, du/des bon(s) de commande auprès du laboratoire désigné suivant centrale marché SPW ou BEP) - Participation à diverses réunions (Réunion de lancement, réunion plénière d’avant-projet, permettant de concerter les différents intervenants pour une mise en évidence des problématiques et impositions, et une planification des travaux, réunions de chantier,...). - Etablissement d’un avant-projet des travaux à réaliser complété par une estimation chiffrée. - Etablissement du projet définitif pour exécution et mise en concurrence des soumissionnaires (rédaction du cahier spécial des charges, métré récapitulatif, métré estimatif, plans, avis de marché le cas échéant, …). - Etablissement éventuel de permis d’urbanisme conformément au CODT - Coordination sécurité en phase « Projet » et en phase « Réalisation » - Collaboration aux opérations relatives aux marchés publics – assistance administrative",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/490060-2026",
-      "screening": "main"
-    },
-    {
-      "id": "bosa:03.06.04-26-2843",
-      "procedureIdentifier": "15c701d6-b5af-42c7-aebf-8258c6ee0a02",
-      "internalReference": "03.06.04-26-2843",
-      "title": "Aménagement d’accès sécurisés aux stations limnimétriques — 3 lots (03.06.04-26-2843)",
-      "buyer": "Service public de Wallonie — Direction des cours d’eau non navigables",
-      "region": "Wallonie",
-      "sector": "PetitsTravaux",
-      "sectors": [
-        "PetitsTravaux"
-      ],
-      "score": 95,
-      "publication": "",
-      "deadline": "2026-10-30",
-      "deadlineTime": "09:30",
-      "cpv": [
-        "45000000"
-      ],
-      "description": "Marché de travaux pour aménager et sécuriser les accès aux stations de mesures limnimétriques en Wallonie. Lot 1 : trois aménagements de moyenne à grande ampleur en province de Luxembourg (Martelange, Herbeumont, Harnoncourt), avec vérification de stabilité et plans d’exécution. Lot 2 : petits et moyens aménagements et réparations, principalement en provinces de Liège, Namur et Luxembourg. Lot 3 : petits et moyens aménagements et réparations, principalement en Hainaut et Brabant wallon. CONDITIONS IMPORTANTES : la publication indique une visite des lieux OBLIGATOIRE le 6 octobre 2026 à 9 h à Marchin (déjà passée au 14 octobre), ainsi qu'une obligation de remettre une offre pour l'ensemble des trois lots. Vérifier dans les documents officiels si une candidature reste possible et si une autre visite peut être organisée. Date limite publiée : 30 octobre 2026 à 09 h 30, fuseau +01:00.",
-      "source": "BOSA",
-      "source_status": "ajout manuel sur la base d'un avis public, lien vers les documents officiels e-Procurement",
-      "noticeType": "cn-standard",
-      "url": "https://www.publicprocurement.be/publication-workspaces/b3502299-990e-444e-8a06-8a220c86c426/documents",
-      "constraints": [
-        "Visite obligatoire annoncée le 06/10/2026 — date passée, admissibilité à vérifier",
-        "Offre obligatoire pour les 3 lots",
-        "Échéance 30/10/2026 à 09:30 (+01:00)"
-      ],
-      "screening": "main"
-    },
     {
       "id": "bosa:e73a64fc-bc95-43e4-b23f-4775ded5a94d",
       "publicationWorkspaceId": "e73a64fc-bc95-43e4-b23f-4775ded5a94d",
@@ -514,7 +101,8 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/e73a64fc-bc95-43e4-b23f-4775ded5a94d/general"
         }
-      ]
+      ],
+      "screeningReason": null
     },
     {
       "id": "bosa:0765b50e-85f5-4aae-b2ca-2ed66c14e354",
@@ -550,7 +138,8 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/general"
         }
-      ]
+      ],
+      "screeningReason": null
     },
     {
       "id": "bosa:3b81ba48-e9f4-4d6f-9c05-5ba699c7f209",
@@ -588,7 +177,41 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/3b81ba48-e9f4-4d6f-9c05-5ba699c7f209/general"
         }
-      ]
+      ],
+      "screeningReason": null
+    },
+    {
+      "id": "bosa:dfdf8ed6-f60e-4be6-9024-e608d8bc079a",
+      "publicationWorkspaceId": "dfdf8ed6-f60e-4be6-9024-e608d8bc079a",
+      "noticeId": "0e8dfb9f-a266-4fc7-8661-1cee665bf60c",
+      "procedureIdentifier": "c50cf0d9-e19c-4aa3-898d-58d3c4fc991a",
+      "internalReference": "VLAIO-2026-17_pub01",
+      "title": "Uitbreiding BIZGIS fase 3",
+      "buyer": "Agentschap voor Innoveren en Ondernemen",
+      "region": "Belgique",
+      "sector": "Carto",
+      "sectors": [
+        "Carto"
+      ],
+      "score": 55,
+      "screening": "excluded",
+      "publication": "2026-10-13",
+      "deadline": "",
+      "cpv": [
+        "72224000",
+        "79411100",
+        "72222000",
+        "73220000"
+      ],
+      "description": "VLAIO beoogt  met deze overheidsopdracht  dat de dienstverlener zowel een algemeen kader uitwerkt om gemeenten te laten participeren aan BIZGIS als ook om de individuele gemeenten te ondersteunen, rekening houdende met de diverse GIS-capaciteiten van lokale besturen en de opportuniteiten om te participeren aan BIZGIS op basis van enkele scenario’s.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "",
+      "tedReference": "VLAIO-2026-17_pub01",
+      "url": "https://www.publicprocurement.be/publication-workspaces/dfdf8ed6-f60e-4be6-9024-e608d8bc079a/general",
+      "screeningReason": "acheteur_flamand"
     },
     {
       "id": "bosa:834b6f23-3906-4589-a0e7-afae9c91d26a",
@@ -623,39 +246,32 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/834b6f23-3906-4589-a0e7-afae9c91d26a/general"
         }
-      ]
+      ],
+      "screeningReason": null
     },
     {
-      "id": "bosa:dfdf8ed6-f60e-4be6-9024-e608d8bc079a",
-      "publicationWorkspaceId": "dfdf8ed6-f60e-4be6-9024-e608d8bc079a",
-      "noticeId": "0e8dfb9f-a266-4fc7-8661-1cee665bf60c",
-      "procedureIdentifier": "c50cf0d9-e19c-4aa3-898d-58d3c4fc991a",
-      "internalReference": "VLAIO-2026-17_pub01",
-      "title": "Uitbreiding BIZGIS fase 3",
-      "buyer": "Agentschap voor Innoveren en Ondernemen",
+      "id": "ted:702319-2026",
+      "publicationNumber": "702319-2026",
+      "procedureIdentifier": "f45d3f54-97be-4601-a918-f633ecb78cc7",
+      "title": "Belgique – Services d'arpentage – Raamovereenkomst voor schattingen, plaatsbeschrijvingen en landmeetkundige opdrachten",
+      "buyer": "Stad Diest",
       "region": "Belgique",
-      "sector": "Carto",
+      "sector": "Topo",
       "sectors": [
-        "Carto"
+        "Topo"
       ],
-      "score": 55,
-      "screening": "excluded",
-      "publication": "2026-10-13",
-      "deadline": "",
+      "score": 95,
+      "screening": "main",
+      "publication": "2026-10-12",
+      "deadline": "2026-11-16",
       "cpv": [
-        "72224000",
-        "79411100",
-        "72222000",
-        "73220000"
+        "71355000"
       ],
-      "description": "VLAIO beoogt  met deze overheidsopdracht  dat de dienstverlener zowel een algemeen kader uitwerkt om gemeenten te laten participeren aan BIZGIS als ook om de individuele gemeenten te ondersteunen, rekening houdende met de diverse GIS-capaciteiten van lokale besturen en de opportuniteiten om te participeren aan BIZGIS op basis van enkele scenario’s.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "16",
-      "noticeKind": "competition",
-      "bdaReference": "",
-      "tedReference": "VLAIO-2026-17_pub01",
-      "url": "https://www.publicprocurement.be/publication-workspaces/dfdf8ed6-f60e-4be6-9024-e608d8bc079a/general"
+      "description": "Raamovereenkomst voor schattingen, plaatsbeschrijvingen en landmeetkundige opdrachten",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/702319-2026"
     },
     {
       "id": "bosa:b1464bc6-d603-4836-8eb2-ec8fa36c5942",
@@ -698,42 +314,8 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/b1464bc6-d603-4836-8eb2-ec8fa36c5942/general"
         }
-      ]
-    },
-    {
-      "id": "bosa:2057ca19-d4bd-43d6-bf36-bbc34ec2f71f",
-      "publicationWorkspaceId": "2057ca19-d4bd-43d6-bf36-bbc34ec2f71f",
-      "noticeId": "48bbaab2-caeb-4145-a189-1c8a83d4a2d3",
-      "procedureIdentifier": "3dff5d34-aff6-401a-b94d-2a5baa99edfc",
-      "internalReference": "PPP0EM-3747/6121/2026/4992_001",
-      "title": "Désignation d'un certificateur pour l'établissement des attestations PEB du patrimoine locatif des Propriétés communales",
-      "buyer": "Saint-Josse-ten-Noode",
-      "region": "Bruxelles",
-      "sector": "PEB",
-      "sectors": [
-        "PEB"
       ],
-      "score": 83,
-      "screening": "main",
-      "publication": "2026-10-07",
-      "deadline": "",
-      "cpv": [
-        "79132000"
-      ],
-      "description": "Le patrimoine immobilier communal comprend actuellement 365 logements, destinés à la location. Parmi ceux-ci, environ 300 logements ne disposent pas ou plus d’un certificat de performance énergétique des bâtiments (PEB) valide.   La réalisation de ce marché vise dès lors à procéder à l’établissement ou au renouvellement des certificats PEB pour les logements concernés, conformément à la règlementation applicable en Région de Bruxelles-Capitale.   La disponibilité de certificats PEB valides pour l’ensemble du parc locatif communal constitue un enjeu important, tant du point de vue de la gestion administrative et locative des logements que de celui de leur performance énergétique.   D’une part, les certificats PEB constituent un élément nécessaire à la détermination et à l’application des règles relatives à l’indexation des loyers, conformément aux dispositions en vigueur en Région de Bruxelles-Capitale. D’autre part, les certificats PEB permettront de disposer d’une vision objective et homogène de la performance énergétique du parc de logements communaux.   Les résultats des certificats PEB pourront ainsi servir de base à l’élaboration d’une programmation pluriannuelle des travaux de rénovation et d’amélioration énergétique du patrimoine communal.   Le présent marché s’inscrit ainsi dans une double démarche :assurer la conformité administrative et règlementaire du parc de logements communaux en disposant de certificats PEB valides ; améliorer la connaissance et la performance énergétique du patrimoine communal, en disposant d’informations permettant de cibler et de prioriser les futurs investissements et travaux de rénovation énergétique. La fixation des prix est effectuée en fonction du type de logement concerné (appartement d’une, deux ou trois chambres, maison, etc.).  Une remise sur les prix est demandée pour les bâtiments comprenant plus de 10 logements, à savoir notamment les bâtiments situés à Pacification, Deux-Églises 105-109-133, Saint-François 57 et Union 12.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "20",
-      "noticeKind": "competition",
-      "bdaReference": "PPP0EM-3747/6121/2026/4992_001",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/2057ca19-d4bd-43d6-bf36-bbc34ec2f71f/general",
-      "officialSources": [
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/2057ca19-d4bd-43d6-bf36-bbc34ec2f71f/general"
-        }
-      ]
+      "screeningReason": null
     },
     {
       "id": "bosa:faefd75f-ef0f-424b-9c3d-c0ec345ad48a",
@@ -776,7 +358,36 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/faefd75f-ef0f-424b-9c3d-c0ec345ad48a/general"
         }
-      ]
+      ],
+      "screeningReason": null,
+      "awards": [
+        {
+          "publicationNumber": "699854-2026",
+          "procedureIdentifier": "fdf6625c-9465-4868-8bbb-ebe65742ce3d",
+          "publicationDate": "2026-10-09",
+          "decisionDate": "",
+          "conclusionDate": "",
+          "noticeType": "can-standard",
+          "source": "TED",
+          "sourceUrl": "https://ted.europa.eu/fr/notice/-/detail/699854-2026",
+          "selectedWinner": false,
+          "winners": [],
+          "winnerIdentifiers": [],
+          "mentionedTenderers": [],
+          "lotIdentifiers": [],
+          "offerCount": null,
+          "offerCountsByLotUnassigned": [],
+          "submissionTypes": [],
+          "winnerSelectionStatuses": [],
+          "notAwardedReasons": [],
+          "tenderValues": [],
+          "lowestTenderValues": [],
+          "highestTenderValues": [],
+          "totalAwardValues": [],
+          "caveat": "Valeurs et soumissionnaires peuvent concerner plusieurs lots. Ne pas apparier les tableaux sans preuve dans l’avis officiel."
+        }
+      ],
+      "lastPublicResultAt": "2026-10-09"
     },
     {
       "id": "bosa:ab0c7da2-e02f-451f-89a1-bfdc0d14bffd",
@@ -820,7 +431,161 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/ab0c7da2-e02f-451f-89a1-bfdc0d14bffd/general"
         }
-      ]
+      ],
+      "screeningReason": null,
+      "awards": [
+        {
+          "publicationNumber": "694052-2026",
+          "procedureIdentifier": "55af827d-15b8-4f22-b10f-cdbb2b3b39b6",
+          "publicationDate": "2026-10-08",
+          "decisionDate": "",
+          "conclusionDate": "",
+          "noticeType": "can-standard",
+          "source": "TED",
+          "sourceUrl": "https://ted.europa.eu/fr/notice/-/detail/694052-2026",
+          "selectedWinner": false,
+          "winners": [],
+          "winnerIdentifiers": [],
+          "mentionedTenderers": [],
+          "lotIdentifiers": [],
+          "offerCount": null,
+          "offerCountsByLotUnassigned": [],
+          "submissionTypes": [],
+          "winnerSelectionStatuses": [],
+          "notAwardedReasons": [],
+          "tenderValues": [],
+          "lowestTenderValues": [],
+          "highestTenderValues": [],
+          "totalAwardValues": [],
+          "caveat": "Valeurs et soumissionnaires peuvent concerner plusieurs lots. Ne pas apparier les tableaux sans preuve dans l’avis officiel."
+        }
+      ],
+      "lastPublicResultAt": "2026-10-08"
+    },
+    {
+      "id": "bosa:2057ca19-d4bd-43d6-bf36-bbc34ec2f71f",
+      "publicationWorkspaceId": "2057ca19-d4bd-43d6-bf36-bbc34ec2f71f",
+      "noticeId": "48bbaab2-caeb-4145-a189-1c8a83d4a2d3",
+      "procedureIdentifier": "3dff5d34-aff6-401a-b94d-2a5baa99edfc",
+      "internalReference": "PPP0EM-3747/6121/2026/4992_001",
+      "title": "Désignation d'un certificateur pour l'établissement des attestations PEB du patrimoine locatif des Propriétés communales",
+      "buyer": "Saint-Josse-ten-Noode",
+      "region": "Bruxelles",
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "score": 83,
+      "screening": "main",
+      "publication": "2026-10-07",
+      "deadline": "",
+      "cpv": [
+        "79132000"
+      ],
+      "description": "Le patrimoine immobilier communal comprend actuellement 365 logements, destinés à la location. Parmi ceux-ci, environ 300 logements ne disposent pas ou plus d’un certificat de performance énergétique des bâtiments (PEB) valide.   La réalisation de ce marché vise dès lors à procéder à l’établissement ou au renouvellement des certificats PEB pour les logements concernés, conformément à la règlementation applicable en Région de Bruxelles-Capitale.   La disponibilité de certificats PEB valides pour l’ensemble du parc locatif communal constitue un enjeu important, tant du point de vue de la gestion administrative et locative des logements que de celui de leur performance énergétique.   D’une part, les certificats PEB constituent un élément nécessaire à la détermination et à l’application des règles relatives à l’indexation des loyers, conformément aux dispositions en vigueur en Région de Bruxelles-Capitale. D’autre part, les certificats PEB permettront de disposer d’une vision objective et homogène de la performance énergétique du parc de logements communaux.   Les résultats des certificats PEB pourront ainsi servir de base à l’élaboration d’une programmation pluriannuelle des travaux de rénovation et d’amélioration énergétique du patrimoine communal.   Le présent marché s’inscrit ainsi dans une double démarche :assurer la conformité administrative et règlementaire du parc de logements communaux en disposant de certificats PEB valides ; améliorer la connaissance et la performance énergétique du patrimoine communal, en disposant d’informations permettant de cibler et de prioriser les futurs investissements et travaux de rénovation énergétique. La fixation des prix est effectuée en fonction du type de logement concerné (appartement d’une, deux ou trois chambres, maison, etc.).  Une remise sur les prix est demandée pour les bâtiments comprenant plus de 10 logements, à savoir notamment les bâtiments situés à Pacification, Deux-Églises 105-109-133, Saint-François 57 et Union 12.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "20",
+      "noticeKind": "competition",
+      "bdaReference": "PPP0EM-3747/6121/2026/4992_001",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/2057ca19-d4bd-43d6-bf36-bbc34ec2f71f/general",
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/2057ca19-d4bd-43d6-bf36-bbc34ec2f71f/general"
+        }
+      ],
+      "screeningReason": null
+    },
+    {
+      "id": "ted:682034-2026",
+      "publicationNumber": "682034-2026",
+      "procedureIdentifier": "07f53028-6212-4143-8dfe-a3a52a5d1719",
+      "title": "Belgique – Services topographiques – 7.1.7.2. Topographie et Quantity Survey 2027-2030 - Marché de services - Procédure ouverte",
+      "buyer": "SPF Mobilité et Transports",
+      "region": "Belgique",
+      "sector": "Topo",
+      "sectors": [
+        "Topo"
+      ],
+      "score": 95,
+      "publication": "2026-10-05",
+      "deadline": "2026-11-05",
+      "cpv": [
+        "71351810"
+      ],
+      "description": "La mission comprend : • des levés topographiques de différentes natures, caractérisés par type de site de chantier et/ou les conditions dans lesquelles ils doivent être exécutés • des prestations de Quantity Survey ; • des prestations de modélisation BIM ; • l’exécution de diverses prestations en régie ou à remboursement des frais encourus ; Les prestations porteront sur des bâtiments, des espaces publics, des ouvrages d’art, des tunnels... (cette liste est indicative) en phase programme, étude, exécution et As-Built. Les surfaces à lever et les travaux à métrer se situent exclusivement en région de Bruxelles – Capitale.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/682034-2026",
+      "relatedNoticeNumbers": [
+        "636498-2026"
+      ],
+      "noticeNumbers": [
+        "636498-2026",
+        "682034-2026"
+      ],
+      "screening": "main",
+      "publicationWorkspaceId": "f3981a2f-a3f4-4d65-a293-2643b8ee0311",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/682034-2026",
+          "publicationNumber": "682034-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/f3981a2f-a3f4-4d65-a293-2643b8ee0311/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ],
+      "screeningReason": null
+    },
+    {
+      "id": "ted:685167-2026",
+      "publicationNumber": "685167-2026",
+      "procedureIdentifier": "66b4d1f2-90db-4da8-ae00-785033bf780d",
+      "title": "Belgique – Services de cartographie numérique – Vectorisation des plans des réseaux de distribution électrique et gaz.",
+      "buyer": "RESA Innovation et Technologie SA en son nom et pour compte de RESA SA Intercommunale",
+      "region": "Belgique",
+      "sector": "Reseaux",
+      "sectors": [
+        "Reseaux",
+        "Carto"
+      ],
+      "score": 95,
+      "publication": "2026-10-05",
+      "deadline": "2026-10-19",
+      "cpv": [
+        "71354100"
+      ],
+      "description": "Vectorisation des plans des réseaux de distribution électrique et gaz.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/685167-2026",
+      "noticeNumbers": [
+        "685167-2026"
+      ],
+      "screening": "main",
+      "publicationWorkspaceId": "486b2f54-2318-4d42-a646-f4a0395e49fb",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/685167-2026",
+          "publicationNumber": "685167-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/486b2f54-2318-4d42-a646-f4a0395e49fb/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ],
+      "screeningReason": null
     },
     {
       "id": "bosa:9d028d41-9338-4d74-93d8-eb37249a0902",
@@ -864,7 +629,8 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/9d028d41-9338-4d74-93d8-eb37249a0902/general"
         }
-      ]
+      ],
+      "screeningReason": null
     },
     {
       "id": "bosa:aa328366-aa3b-415b-b666-2d59752bf12f",
@@ -907,85 +673,8 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/aa328366-aa3b-415b-b666-2d59752bf12f/general"
         }
-      ]
-    },
-    {
-      "id": "bosa:d132e2d7-29b4-4489-9e26-70db1504fa8f",
-      "publicationWorkspaceId": "d132e2d7-29b4-4489-9e26-70db1504fa8f",
-      "noticeId": "1ef4f042-c114-47b2-9545-63ed1d4a32f2",
-      "procedureIdentifier": "5ccac775-6cd2-4261-870a-400908d707fe",
-      "internalReference": "APIBW/OTT-PLC/GEOMETRE/2026_pub01",
-      "title": "Marché public relatif au mesurage et à la précadastration d’une parcelle publique à Ottignies",
-      "buyer": "Agence de Promotion Immobilière du Brabant wallon",
-      "region": "Wallonie",
-      "sector": "Foncier",
-      "sectors": [
-        "Foncier"
       ],
-      "score": 55,
-      "screening": "review",
-      "publication": "2026-10-02",
-      "deadline": "",
-      "cpv": [
-        "71350000"
-      ],
-      "description": "Le détail des prestations attendues est le suivant :  - mesurage de la zone de l’espace public entourée par un liseré bleu en vue de sa précadastration (cfr plan en Annexe B) ; - les plans de division des biens ; - le formulaire de précad (acte de base) ; - et tout autre document nécessaire à la précadastration et à l’établissement de l’acte par le notaire. La mission inclut les formalités de précadastration (PRECAD). Aucun bornage contradictoire n’est prévu.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "E3",
-      "noticeKind": "competition",
-      "bdaReference": "APIBW/OTT-PLC/GEOMETRE/2026_pub01",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/d132e2d7-29b4-4489-9e26-70db1504fa8f/general",
-      "officialSources": [
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/d132e2d7-29b4-4489-9e26-70db1504fa8f/general"
-        }
-      ]
-    },
-    {
-      "id": "bosa:b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6",
-      "publicationWorkspaceId": "b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6",
-      "noticeId": "0f569ad6-f63f-429f-bc99-bce88cedeb9c",
-      "procedureIdentifier": "1506b6f6-1710-4961-8fb7-4f610a97bd4c",
-      "internalReference": "PPP04Z-2341/6160/2026-2341_002",
-      "title": "Marché stock de services - Désignation d'un géomètre pour divisions parcellaires sur le domaine privé ou public communal 2026-2028",
-      "buyer": "Dison",
-      "region": "Bruxelles",
-      "sector": "Topo",
-      "sectors": [
-        "Topo"
-      ],
-      "score": 83,
-      "screening": "main",
-      "publication": "2026-10-01",
-      "deadline": "",
-      "cpv": [
-        "71000000"
-      ],
-      "description": "Le Service technique et administratif de la Commune de Dison étant amené à opérer diverses acquisitions ou ventes de biens et de terrains, le présent marché a pour objet la désignation d’un géomètre afin d’accomplir, notamment, les divisions parcellaires sur le domaine privé ou public communal.   Le présent marché consiste en diverses missions relevant légalement de la compétence d’un géomètre.  Le service réalisé par l'adjudicataire inclut notamment les aspects suivants : • l’établissement des limites d’un terrain  • la pose de borne physique  • l’enregistrement auprès du cadastre  • des prestations éventuelles dans le cadre de dossiers « Décret voirie »  • les états des lieux  • les levés typographiques  • diverses autres prestations   Lieux des prestations : sur le territoire communal de Dison",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "E4",
-      "noticeKind": "award",
-      "bdaReference": "PPP04Z-2341/6160/2026-2341_002",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6/general",
-      "bosaResults": [
-        {
-          "reference": "PPP04Z-2341/6160/2026-2341_002",
-          "url": "https://www.publicprocurement.be/publication-workspaces/b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6/general",
-          "publicationDate": "2026-10-01",
-          "kind": "award"
-        }
-      ],
-      "officialSources": [
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6/general"
-        }
-      ]
+      "screeningReason": null
     },
     {
       "id": "bosa:5693dc0a-48d7-485d-9794-7a49c7216ef9",
@@ -1028,7 +717,185 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/5693dc0a-48d7-485d-9794-7a49c7216ef9/general"
         }
-      ]
+      ],
+      "screeningReason": null,
+      "awards": [
+        {
+          "publicationNumber": "685087-2026",
+          "procedureIdentifier": "ea316fe2-11c9-4793-8a25-763eeb9d2c5d",
+          "publicationDate": "2026-10-05",
+          "decisionDate": "",
+          "conclusionDate": "",
+          "noticeType": "can-standard",
+          "source": "TED",
+          "sourceUrl": "https://ted.europa.eu/fr/notice/-/detail/685087-2026",
+          "selectedWinner": false,
+          "winners": [],
+          "winnerIdentifiers": [],
+          "mentionedTenderers": [],
+          "lotIdentifiers": [],
+          "offerCount": null,
+          "offerCountsByLotUnassigned": [],
+          "submissionTypes": [],
+          "winnerSelectionStatuses": [],
+          "notAwardedReasons": [],
+          "tenderValues": [],
+          "lowestTenderValues": [],
+          "highestTenderValues": [],
+          "totalAwardValues": [],
+          "caveat": "Valeurs et soumissionnaires peuvent concerner plusieurs lots. Ne pas apparier les tableaux sans preuve dans l’avis officiel."
+        }
+      ],
+      "lastPublicResultAt": "2026-10-05"
+    },
+    {
+      "id": "ted:679780-2026",
+      "publicationNumber": "679780-2026",
+      "procedureIdentifier": "db8a7c65-d34b-42f7-b96b-5ea15215d704",
+      "title": "Belgique – Services d'architecture, services de construction, services d'ingénierie et services d'inspection – Préparation du renouvellement de la signalisation des lignes de métro 2 et 6 – Mission complète relative à l’étude et au suivi des travaux d’exécution du gros œuvre et des finitions pour la réalisation d’infrastructures souterraines, visant à construire de nouveaux locaux techniques permettant l’installation de nouveaux équipements.",
+      "buyer": "Société des Transports Intercommunaux de Bruxelles",
+      "region": "Bruxelles",
+      "sector": "Topo",
+      "sectors": [
+        "Topo"
+      ],
+      "score": 55,
+      "publication": "2026-10-02",
+      "deadline": "2026-11-16",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Cela comprend : - La création de nouveaux locaux techniques. - Des travaux divers liés à l’adaptation des stations existantes y associés. Les interventions auront lieu dans les 26 stations . Dans ces cas, l’étude devra intégrer : - L’implantation des locaux techniques dans de nouvelles structures. - Le cas échéant, une étude de stabilité de la nouvelle infrastructure ainsi que des impacts sur les structures existantes. En moyenne, quatre locaux techniques devront être aménagés par station (par exemple : locaux pour la signalisation, le pilotage de portes, etc.). L’étude inclut: - L’élaboration des plans. - L’étude de stabilité avec les calculs nécessaires. - Les métrés correspondants. - Une étude de faisabilité tenant compte des équipements à intégrer et des techniques associées. - Les levés topographiques des locaux techniques existants et à construire sur les lignes 2-6. - Les contrôles d’implantation avant, pendant et après exécution. - Ces mesurages se feront dans les stations concernées et leurs environs immédiats, selon les consignes du bureau d'études et du fonctionnaire dirigeant. Enfin, ces mesurages ne sont pas limités à un type précis de relevé. Un scan 3D pourra être exigé si le bureau d’études ou le fonctionnaire dirigeant l’estime nécessaire.\n\nCela comprend : - La création de nouveaux locaux techniques. - Des travaux divers liés à l’adaptation des stations existantes y associés. Les interventions auront lieu dans les 26 stations . Dans ces cas, l’étude devra intégrer : - L’implantation des locaux techniques dans de nouvelles structures. - Le cas échéant, une étude de stabilité de la nouvelle infrastructure ainsi que des impacts sur les structures existantes. En moyenne, quatre locaux techniques devront être aménagés par station (par exemple : locaux pour la signalisation, le pilotage de portes, etc.). L’étude inclut: - L’élaboration des plans. - L’étude de stabilité avec les calculs nécessaires. - Les métrés correspondants. - Une étude de faisabilité tenant compte des équipements à intégrer et des techniques associées. - Les levés topographiques des locaux techniques existants et à construire sur les lignes 2-6. - Les contrôles d’implantation avant, pendant et après exécution. - Ces mesurages se feront dans les stations concernées et leurs environs immédiats, selon les consignes du bureau d'études et du fonctionnaire dirigeant. Enfin, ces mesurages ne sont pas limités à un type précis de relevé. Un scan 3D pourra être exigé si le bureau d’études ou le fonctionnaire dirigeant l’estime nécessaire.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/679780-2026",
+      "screening": "review",
+      "publicationWorkspaceId": "967f91df-89ea-47e2-8780-3f6b166de63c",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/679780-2026",
+          "publicationNumber": "679780-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/967f91df-89ea-47e2-8780-3f6b166de63c/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ],
+      "screeningReason": null
+    },
+    {
+      "id": "bosa:d132e2d7-29b4-4489-9e26-70db1504fa8f",
+      "publicationWorkspaceId": "d132e2d7-29b4-4489-9e26-70db1504fa8f",
+      "noticeId": "1ef4f042-c114-47b2-9545-63ed1d4a32f2",
+      "procedureIdentifier": "5ccac775-6cd2-4261-870a-400908d707fe",
+      "internalReference": "APIBW/OTT-PLC/GEOMETRE/2026_pub01",
+      "title": "Marché public relatif au mesurage et à la précadastration d’une parcelle publique à Ottignies",
+      "buyer": "Agence de Promotion Immobilière du Brabant wallon",
+      "region": "Wallonie",
+      "sector": "Foncier",
+      "sectors": [
+        "Foncier"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-10-02",
+      "deadline": "",
+      "cpv": [
+        "71350000"
+      ],
+      "description": "Le détail des prestations attendues est le suivant :  - mesurage de la zone de l’espace public entourée par un liseré bleu en vue de sa précadastration (cfr plan en Annexe B) ; - les plans de division des biens ; - le formulaire de précad (acte de base) ; - et tout autre document nécessaire à la précadastration et à l’établissement de l’acte par le notaire. La mission inclut les formalités de précadastration (PRECAD). Aucun bornage contradictoire n’est prévu.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E3",
+      "noticeKind": "competition",
+      "bdaReference": "APIBW/OTT-PLC/GEOMETRE/2026_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/d132e2d7-29b4-4489-9e26-70db1504fa8f/general",
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/d132e2d7-29b4-4489-9e26-70db1504fa8f/general"
+        }
+      ],
+      "screeningReason": null
+    },
+    {
+      "id": "bosa:b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6",
+      "publicationWorkspaceId": "b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6",
+      "noticeId": "0f569ad6-f63f-429f-bc99-bce88cedeb9c",
+      "procedureIdentifier": "1506b6f6-1710-4961-8fb7-4f610a97bd4c",
+      "internalReference": "PPP04Z-2341/6160/2026-2341_002",
+      "title": "Marché stock de services - Désignation d'un géomètre pour divisions parcellaires sur le domaine privé ou public communal 2026-2028",
+      "buyer": "Dison",
+      "region": "Bruxelles",
+      "sector": "Topo",
+      "sectors": [
+        "Topo"
+      ],
+      "score": 83,
+      "screening": "main",
+      "publication": "2026-10-01",
+      "deadline": "",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Le Service technique et administratif de la Commune de Dison étant amené à opérer diverses acquisitions ou ventes de biens et de terrains, le présent marché a pour objet la désignation d’un géomètre afin d’accomplir, notamment, les divisions parcellaires sur le domaine privé ou public communal.   Le présent marché consiste en diverses missions relevant légalement de la compétence d’un géomètre.  Le service réalisé par l'adjudicataire inclut notamment les aspects suivants : • l’établissement des limites d’un terrain  • la pose de borne physique  • l’enregistrement auprès du cadastre  • des prestations éventuelles dans le cadre de dossiers « Décret voirie »  • les états des lieux  • les levés typographiques  • diverses autres prestations   Lieux des prestations : sur le territoire communal de Dison",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP04Z-2341/6160/2026-2341_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6/general",
+      "bosaResults": [
+        {
+          "reference": "PPP04Z-2341/6160/2026-2341_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6/general",
+          "publicationDate": "2026-10-01",
+          "kind": "award"
+        }
+      ],
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6/general"
+        }
+      ],
+      "screeningReason": null
+    },
+    {
+      "id": "ted:674146-2026",
+      "publicationNumber": "674146-2026",
+      "title": "Belgique – Services cadastraux – Accord cadre ayant pour objet le relevé de réseaux d’égouttage en Province de Namur",
+      "buyer": "INASEP",
+      "region": "Wallonie",
+      "sector": "Reseaux",
+      "sectors": [
+        "Reseaux",
+        "Topo",
+        "Carto"
+      ],
+      "score": 95,
+      "publication": "2026-09-30",
+      "deadline": "2026-10-29",
+      "cpv": [
+        "71354300"
+      ],
+      "description": "Le présent marché de service consiste en la désignation de bureaux spécialisés en relevé d’ouvrages d’égouttage dans le cadre de la réalisation des cadastres des réseaux d’égouts. Ces relevés sont accompagnés d’opérations topographiques des ouvrages ainsi que de « zoomages » par caméra au niveau des chambres de visite. A ce jour, l’INASEP estime des commandes annuelles pour les prestations de cadastre des réseaux d’égout avec « zoomages » à une longueur de réseau à cadastrer estimée annuellement entre 300 et 320 km pour l’ensemble de la Province de Namur, répartie sur 2 zones géographiques Nord et Sud dans une proportion de l’ordre de 51% de ce total pour le Nord et 49% de ce total pour le Sud. Le programme de réalisation de ces cadastres peut évoluer en fonction des consignes reçues par INASEP des autorités régionales et de la S.P.G.E., et dès lors les soumissionnaires acceptent le risque quant au nombre de commandes effectives et renoncent à toute indemnité à cet égard.\n\nLe présent lot consiste en la désignation de bureaux spécialisés en relevé d’ouvrages d’égouttage dans le cadre de la réalisation des cadastres des réseaux d’égouts pour la partie Nord de la Province de Namur. Ces relevés sont accompagnés d’opérations topographiques des ouvrages ainsi que de « zoomages » par caméra au niveau des chambres de visite. Le présent marché fera l’objet de plusieurs commandes partielles dont l’exécution est subordonnée à la notification de chacune d’elles. A ce jour, l’INASEP estime des commandes annuelles pour les prestations de cadastre des réseaux d’égout avec « zoomages » à une longueur de réseau à cadastrer estimée annuellement entre 300 et 320 km pour l’ensemble de la Province de Namur, dont environ 51% de ce total pour le Nord. ; Le présent lot consiste en la désignation de bureaux spécialisés en relevé d’ouvrages d’égouttage dans le cadre de la réalisation des cadastres des réseaux d’égouts pour la partie Sud de la Province de Namur. Ces relevés sont accompagnés d’opérations topographiques des ouvrages ainsi que de « zoomages » par caméra au niveau des chambres de visite. Le présent marché fera l’objet de plusieurs commandes partielles dont l’exécution est subordonnée à la notification de chacune d’elles. A ce jour, l’INASEP estime des commandes annuelles pour les prestations de cadastre des réseaux d’égout avec « zoomages » à une longueur de réseau à cadastrer estimée annuellement entre 300 et 320 km pour l’ensemble de la Province de Namur, dont environ 49% de ce total pour le Sud.",
+      "source": "TED",
+      "source_status": "api",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/674146-2026",
+      "noticeType": "cn-standard",
+      "procedureIdentifier": "0d4694b3-109d-4119-bed9-22819b1e7315",
+      "noticeNumbers": [
+        "674146-2026"
+      ],
+      "screening": "main",
+      "screeningReason": null
     },
     {
       "id": "bosa:261bf9bd-a457-4f59-8067-350564154af7",
@@ -1070,21 +937,336 @@
           "publicationDate": "2026-09-30",
           "kind": "award"
         }
+      ],
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/261bf9bd-a457-4f59-8067-350564154af7/general"
+        }
       ]
+    },
+    {
+      "id": "ted:626806-2026",
+      "publicationNumber": "656876-2026",
+      "procedureIdentifier": "2f04052e-60fc-4c38-8c25-d32d7118739f",
+      "title": "Belgique – Services de conseil en rendement énergétique – Réalisation de certificats de performance énergétique (PEB) - Wallonie - Batiments résidentiels",
+      "buyer": "Habitations Sociales de Saint-Nicolas",
+      "region": "Wallonie",
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "score": 95,
+      "publication": "2026-09-23",
+      "deadline": "2026-10-13",
+      "cpv": [
+        "71314300",
+        "71314000",
+        "71314200"
+      ],
+      "description": "Marché stock de services pour l’établissement de certificats PEB pour le compte d'une SLSP située en Wallonie. Quantités de PEB à réaliser estimées à : 1.100 logements. Rythme mensuel des commandes attendu en vitesse de croisière : 100 logements/mois Lieu(x) de prestations : bâtiments du patrimoine des HSSN situés sur la commune de Saint-Nicolas (4420) (Province de Liège) (voir liste des logements fournie à titre indicatif) Les logements présentent généralement de surfaces inférieures à 80m² et ne dépassent pas les 100 m² (à l’exception de quelques rares logements).\n\nMarché stock de services pour l’établissement de certificats PEB pour le compte d'une SLSP située en Wallonie. Quantités de PEB à réaliser estimées à : 1.100 logements. Rythme mensuel des commandes attendu en vitesse de croisière : 100 logements/mois Lieu(x) de prestations : bâtiments du patrimoine des HSSN situés sur la commune de Saint-Nicolas (4420) (Province de Liège) (voir liste des logements fournie à titre indicatif) Les logements présentent généralement de surfaces inférieures à 80m² et ne dépassent pas les 100 m² (à l’exception de quelques rares logements).",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/656876-2026",
+      "noticeNumbers": [
+        "626806-2026",
+        "656876-2026"
+      ],
+      "screening": "main",
+      "screeningReason": null
+    },
+    {
+      "id": "ted:624505-2026",
+      "publicationNumber": "624505-2026",
+      "procedureIdentifier": "7b8d4d9f-8d45-4229-9183-daa2728bca85",
+      "title": "Belgique – Services d'architecture, services de construction, services d'ingénierie et services d'inspection – RMH-25606-Auteur de projet SRA",
+      "buyer": "ASBL GROUPE SANTE CHC",
+      "region": "Wallonie",
+      "sector": "Topo",
+      "sectors": [
+        "Topo",
+        "PEB"
+      ],
+      "score": 55,
+      "publication": "2026-09-10",
+      "deadline": "2026-10-09",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Le présent marché est un marché public de services dont l’objet est défini comme suit : - mission d’Auteur de Projet d’architecture, de stabilité et de techniques spéciales (mission complète) d’un bâtiment (centre résidentiel de répit pédiatrique palliatif) en construction traditionnelle. La mission complémentaire suivante fait également partie de la mission : - responsable PEB - coordination sécurité santé - relevé sur site par géomètre - réalisation de l’inventaire destructif amiante - réalisation du RQT (rapport qualité des terres) - tentures, le mobilier intégré, le mobilier mobile, les ascenseurs, les équipements de cuisine et autres équipements (antennes wifi, …) doivent être dessinés sur les plans par l’Auteur de Projet. L’étude et l’exécution en sont à sa charge. - contacts avec les instances compétentes (Urbanisme, SRI, CILE, etc.)\n\nLe présent marché est un marché public de services dont l’objet est défini comme suit : - mission d’Auteur de Projet d’architecture, de stabilité et de techniques spéciales (mission complète) d’un bâtiment (centre résidentiel de répit pédiatrique palliatif) en construction traditionnelle. La mission complémentaire suivante fait également partie de la mission : - responsable PEB - coordination sécurité santé - relevé sur site par géomètre - réalisation de l’inventaire destructif amiante - réalisation du RQT (rapport qualité des terres) - tentures, le mobilier intégré, le mobilier mobile, les ascenseurs, les équipements de cuisine et autres équipements (antennes wifi, …) doivent être dessinés sur les plans par l’Auteur de Projet. L’étude et l’exécution en sont à sa charge. - contacts avec les instances compétentes (Urbanisme, SRI, CILE, etc.)",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/624505-2026",
+      "screening": "review",
+      "screeningReason": null
+    },
+    {
+      "id": "ted:582711-2026",
+      "publicationNumber": "582711-2026",
+      "procedureIdentifier": "c29bbe61-dcc6-4209-92cf-1677ea28ee56",
+      "title": "Belgique – Services d'études – Marché de service de réalisation d'un schéma stratégique de la partie wallonne du bassin versant de la Dyle",
+      "buyer": "Service public de wallonie",
+      "region": "Belgique",
+      "sector": "Hydro",
+      "sectors": [
+        "Hydro"
+      ],
+      "score": 55,
+      "publication": "2026-08-24",
+      "deadline": "2026-09-30",
+      "cpv": [
+        "79311000"
+      ],
+      "description": "L’objet du marché est la prestation de services relatifs à la réalisation d’un schéma stratégique de la partie wallonne du bassin versant de la Dyle (sous-bassins hydrographiques de la Dyle – en ce compris le Pisselet et le Train –, de la Thyle, de l’Orne, de la Lasne et de la Nethen). Le marché comprend 3 volets, à savoir : - Volet 1 : réalisation d’un schéma stratégique de la partie wallonne du bassin versant de la Dyle (rapport scientifique) ; - Volet 2 : réalisation d’une publication spécifique de vulgarisation du schéma stratégique ; - Volet 3 : service après-vente.\n\nL’objet du marché est la prestation de services relatifs à la réalisation d’un schéma stratégique de la partie wallonne du bassin versant de la Dyle (sous-bassins hydrographiques de la Dyle – en ce compris le Pisselet et le Train –, de la Thyle, de l’Orne, de la Lasne et de la Nethen). Le marché comprend 3 volets, à savoir : - Volet 1 : réalisation d’un schéma stratégique de la partie wallonne du bassin versant de la Dyle (rapport scientifique) ; - Volet 2 : réalisation d’une publication spécifique de vulgarisation du schéma stratégique ; - Volet 3 : service après-vente.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/582711-2026",
+      "screening": "review",
+      "screeningReason": null
+    },
+    {
+      "id": "ted:568525-2026",
+      "publicationNumber": "568525-2026",
+      "procedureIdentifier": "4ef16107-182f-4288-af82-45dbbe460d5e",
+      "title": "Belgique – Services de levés en surface – Prestations relatives à des missions de géomètre dans le cadre de la gestion immobilière",
+      "buyer": "Société publique de Gestion de l’Eau",
+      "region": "Wallonie",
+      "sector": "Topo",
+      "sectors": [
+        "Topo",
+        "Foncier"
+      ],
+      "score": 95,
+      "publication": "2026-08-17",
+      "deadline": "2026-09-07",
+      "cpv": [
+        "71353000"
+      ],
+      "description": "Le présent marché a pour objet la désignation d’un prestataire géomètre expert en vue de préparer, principalement, la documentation nécessaire à la constitution d’un droit de superficie relatif à des ouvrages d’assainissement. Ainsi, le géomètre sera chargé d’effectuer les mesurages, de produire les plans correspondants, ainsi que l’ensemble des prestations techniques et administratives associées, en collaboration avec le processus Investissements et Patrimoine de la SPGE. Le marché est divisé en 5 lots.\n\nLe présent marché a pour objet la désignation d’un prestataire géomètre expert en vue de préparer, principalement, la documentation nécessaire à la constitution d’un droit de superficie relatif à des ouvrages d’assainissement. Ainsi, le géomètre sera chargé d’effectuer les mesurages, de produire les plans correspondants, ainsi que l’ensemble des prestations techniques et administratives associées, en collaboration avec le processus Investissements et Patrimoine de la SPGE. Le marché est divisé en 5 lots. Le lot 1 concerne la province du Hainaut. ; Le présent marché a pour objet la désignation d’un prestataire géomètre expert en vue de préparer, principalement, la documentation nécessaire à la constitution d’un droit de superficie relatif à des ouvrages d’assainissement. Ainsi, le géomètre sera chargé d’effectuer les mesurages, de produire les plans correspondants, ainsi que l’ensemble des prestations techniques et administratives associées, en collaboration avec le processus Investissements et Patrimoine de la SPGE. Le marché est divisé en 5 lots. Le lot 2 concerne la province du Brabant Wallon. ; Le présent marché a pour objet la désignation d’un prestataire géomètre expert en vue de préparer, principalement, la documentation nécessaire à la constitution d’un droit de superficie relatif à des ouvrages d’assainissement. Ainsi, le géomètre sera chargé d’effectuer les mesurages, de produire les plans correspondants, ainsi que l’ensemble des prestations techniques et administratives associées, en collaboration avec le processus Investissements et Patrimoine de la SPGE. Le marché est divisé en 5 lots. Le lot 3 concerne la province de Liège. ; Le présent marché a pour objet la désignation d’un prestataire géomètre expert en vue de préparer, principalement, la documentation nécessaire à la constitution d’un droit de superficie relatif à des ouvrages d’assainissement. Ainsi, le géomètre sera chargé d’effectuer les mesurages, de produire les plans correspondants, ainsi que l’ensemble des prestations techniques et administratives associées, en collaboration avec",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/568525-2026",
+      "screening": "main",
+      "screeningReason": null
+    },
+    {
+      "id": "ted:557588-2026",
+      "publicationNumber": "557588-2026",
+      "procedureIdentifier": "cfb3ba3e-ec7a-465d-9463-acfbf1a3f390",
+      "title": "Belgique – Services de levés hydrographiques – Levé des cours d’eau couverts sur le territoire de la Province de Liège",
+      "buyer": "Province de Liège",
+      "region": "Wallonie",
+      "sector": "Hydro",
+      "sectors": [
+        "Hydro"
+      ],
+      "score": 95,
+      "publication": "2026-08-12",
+      "deadline": "2026-08-25",
+      "cpv": [
+        "71353100"
+      ],
+      "description": "Le présent marché de services a pour objet le levé des cours d’eau couverts sur le territoire de la Province de Liège.\n\nLe présent marché de services a pour objet le levé des cours d’eau couverts sur le territoire de la Province de Liège.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/557588-2026",
+      "screening": "main",
+      "screeningReason": null
+    },
+    {
+      "id": "ted:549850-2026",
+      "publicationNumber": "549850-2026",
+      "procedureIdentifier": "43f21200-d55e-4b5b-8117-fef087ecae5a",
+      "title": "Belgique – Services d'ingénierie – MARCHÉ PUBLIC DE SERVICES POUR L'ENTRETIEN ET LE CONTRÔLE PAR JAUGEAGES DE SECTIONS DE MESURES HYDROLOGIQUES DE LA RÉGION WALLONNE.",
+      "buyer": "Service public de wallonie",
+      "region": "Belgique",
+      "sector": "Hydraulique",
+      "sectors": [
+        "Hydraulique",
+        "Topo",
+        "Hydro"
+      ],
+      "score": 83,
+      "publication": "2026-08-07",
+      "deadline": "2026-09-14",
+      "cpv": [
+        "71300000"
+      ],
+      "description": "Le présent marché a pour objet l'entretien et le contrôle de certaines sections de mesures hydrologiques de la Région wallonne gérées par la Direction de la Gestion hydrologique du SPWMI. Les prestations d'entretien à effectuer consistent en : - l'entretien des sections dans lesquelles s'effectuent des mesures hydrologiques ; - le contrôle des stations de mesure et des sections y afférentes, notamment par des jaugeages à pied et à partir d'une camionnette, sur des rivières jusqu'à 150 m de largeur et pour des débits jusqu'à 3200 m3/s. les jaugeages sont réalisés au moyen de moulinets hydrométriques, électromagnétiques ou ADC ou de systèmes ADCP (Acoustic Dopple Current Profiler) ; - des relevés topographiques ou bathymétriques, de faible profondeur, de sections et de stations de mesure ainsi que le traitement des données associées, en ce compris les interactions avec les données hydrologiques ; - des aménagements des stations de mesures et des sections de mesures en vue d'en améliorer l’accessibilité, la sécurité et la pérennité.\n\nLe présent marché a pour objet l'entretien et le contrôle de certaines sections de mesures hydrologiques de la Région wallonne gérées par la Direction de la Gestion hydrologique du SPWMI. Les prestations d'entretien à effectuer consistent en : - l'entretien des sections dans lesquelles s'effectuent des mesures hydrologiques ; - le contrôle des stations de mesure et des sections y afférentes, notamment par des jaugeages à pied et à partir d'une camionnette, sur des rivières jusqu'à 150 m de largeur et pour des débits jusqu'à 3200 m3/s. les jaugeages sont réalisés au moyen de moulinets hydrométriques, électromagnétiques ou ADC ou de systèmes ADCP (Acoustic Dopple Current Profiler) ; - des relevés topographiques ou bathymétriques, de faible profondeur, de sections et de stations de mesure ainsi que le traitement des données associées, en ce compris les interactions avec les données hydrologiques ; - des aménagements des stations de mesures et des sections de mesures en vue d'en améliorer l’accessibilité, la sécurité et la pérennité.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/549850-2026",
+      "screening": "main",
+      "screeningReason": null
+    },
+    {
+      "id": "ted:470635-2026",
+      "publicationNumber": "538632-2026",
+      "procedureIdentifier": "49161cb2-e7cf-4a0b-9c41-bc0a69029295",
+      "title": "Belgique – Énergie et services connexes – ACCORD-CADRE MULTI ATTRIBUTAIRES RELATIFS À DES SERVICES DE CADASTRES, QUICKSCANS, D’AUDITS ENERGETIQUES, D’ÉTUDE D’OPPORTUNITÉ, DE CERTIFICATS PEB, DE RESPONSABLE PEB ET DE SUPPORT TECHNIQUE DE BÂTIMENTS PUBLICS",
+      "buyer": "ECETIA Intercommunale",
+      "region": "Wallonie",
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "score": 83,
+      "publication": "2026-08-04",
+      "deadline": "2026-08-24",
+      "cpv": [
+        "71314000"
+      ],
+      "description": "Ecetia souhaite mettre en place un accord-cadre multi-attributaires permettant d’assurer, de manière flexible et récurrente, la réalisation de missions variées liées à l’énergie. L’Accord-cadre a pour objet la réalisation notamment des missions suivantes : Cadastre énergétique ; Quickscan énergétique ; Audit énergétique ; Étude d’opportunité ; Stratégie immobilière ; Étude monitoring EMS ; Passation marché public EMS ; Assistance à la désignation d’un auteur de projet ou d’un marché design & build ; Assistance au maître d’ouvrage pour le suivi global du projet ; Certification énergétique des bâtiments publics ; Missions d’appui technique ponctuelles.\n\nEcetia souhaite mettre en place un accord-cadre multi-attributaires permettant d’assurer, de manière flexible et récurrente, la réalisation de missions variées liées à l’énergie. L'Accord-cadre aura pour objet la réalisation notamment des missions suivantes :  Cadastre énergétique ;  Quickscan énergétique ;  Audit énergétique ;  Étude d’opportunité ;  Stratégie immobilière ;  Étude monitoring EMS ;  Passation marché public EMS ;  Assistance à la désignation d’un auteur de projet ou d’un marché design & build ;  Assistance au maître d’ouvrage pour le suivi global du projet ;  Certification énergétique des bâtiments publics ;  Missions d’appui technique ponctuelles.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/538632-2026",
+      "noticeNumbers": [
+        "470635-2026",
+        "538632-2026",
+        "537131-2026"
+      ],
+      "screening": "main",
+      "screeningReason": null
+    },
+    {
+      "id": "ted:523062-2026",
+      "publicationNumber": "523062-2026",
+      "procedureIdentifier": "56c74374-1afe-4b17-b111-7d8119c79d44",
+      "title": "Belgique – Services d'architecture, services de construction, services d'ingénierie et services d'inspection – N54-Lobbes-Erquelinnes : Marché d'études pour la réalisation du chaînon manquant",
+      "buyer": "SOFICO",
+      "region": "Belgique",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 55,
+      "publication": "2026-07-29",
+      "deadline": "2026-08-26",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Marché global d'études préalables à la mise en œuvre de la nouvelle voirie N54. Le présent marché est un marché de services, comportant des « tranches fermes » (TF), des « tranches conditionnelles » (TC) et une mission en option (Opt). Délai global d'exécution du marché : 4 ans. Durée de validité des offres : 180 JO.\n\nMarché global d'études préalables à la mise en œuvre de la nouvelle voirie N54. Le présent marché est un marché de services, comportant des « tranches fermes » (TF), des « tranches conditionnelles » (TC) et une mission en option (Opt). Délai global d'exécution du marché : 4 ans. Durée de validité des offres : 180 JO.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/523062-2026",
+      "screening": "review",
+      "screeningReason": null
+    },
+    {
+      "id": "ted:490060-2026",
+      "publicationNumber": "490060-2026",
+      "procedureIdentifier": "cdf82884-cbf2-4b7a-93b0-74eaa81a3a49",
+      "title": "Belgique – Services d'études – Réfection de diverses voiries de l'entité - Mission complète d'auteur de projet et suivi de l'exécution",
+      "buyer": "Commune d'Eghezée",
+      "region": "Wallonie",
+      "sector": "VRD",
+      "sectors": [
+        "VRD",
+        "Topo"
+      ],
+      "score": 83,
+      "publication": "2026-07-15",
+      "deadline": "2026-08-27",
+      "cpv": [
+        "79311000"
+      ],
+      "description": "Le marché a pour objet une mission complète d'étude et de contrôle de l'exécution des travaux de réfaction complète des voiries en tout ou en partie. Lieux de prestations des services : - Rue Alexandre Denil à Saint-Germain; - Rue Dangotte à Dhuy ; - Rue de la Croisette à Warêt-la-Chaussée ; - Impasse de la Forege à Leuze ; - Rue du Roissia à Leuze ; - Rue du Moulin Van Oost à Hanret ; - Rue du Bocage à Eghezée Les marché est divisé en 2 lots détaillés comme suit : • Lot 1 (sans travaux d'égouttage) : Rue Dangotte, Impasse de la Forge, Rue du Roissia, Rue du Moulin Van Oost • Lot 2 (avec travaux d'égouttage) : Rue du Bocage, Rue Alexandre Denil, Rue de la Croisette Le projet devra faire l’objet d’une signalisation adaptée permettant d’en assurer une meilleure visibilité et une utilisation plus aisée. Les aménagements devront être conformes aux règles du Code du Développement territorial (CODT), à la dernière version du Qualiroutes, aux limites du domaine public et aux guides de bonnes pratiques disponibles Description des prestations attendues : - Visite des lieux - Levé topographique de la situation des lieux - Levés sur le terrain intégrant les limites du domaine public afin de s’assurer que l’entièreté du projet soit située en domaine public - Etude de faisabilité éventuelle : évaluation des emprises nécessaires ou recherche d’alternatives permettant d’intégrer les projets dans les limites du domaine public - Etablissement d’un rapport préalable pour définir les solutions possibles et les estimations correspondantes - Sondages préalables (les sondages/essais/RQT,CCQT seront à charge de la commune, l’auteur de projet apportera son aide pour l’établissement des documents, du/des bon(s) de commande auprès du laboratoire désigné suivant centrale marché SPW ou BEP) - Participation à diverses réunions (Réunion de lancement, réunion plénière d’avant-projet, permettant de concerter les différents intervenants pour une mise en évidence des problématiques et impositions, et une planification des travaux, réunions de chantier,...). - Etablissement d’un avant-projet des travaux à réaliser complété par une estimation chiffrée. - Etablissement du projet définitif pour exécution et mise en concurrence des soumissionnaires (rédaction du cahier spécial des charges, métré récapitulatif, métré estimatif, plans, avis de marché le cas échéant, …). - Etablissement éventuel de permis d’urbanisme conformément au CODT - Coordination sécurité en phase « Projet » et en phase « Réalisation » - Collaboration aux opérations relatives aux marchés publics – assistance administrative",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/490060-2026",
+      "screening": "main",
+      "screeningReason": null
+    },
+    {
+      "id": "bosa:03.06.04-26-2843",
+      "procedureIdentifier": "15c701d6-b5af-42c7-aebf-8258c6ee0a02",
+      "internalReference": "03.06.04-26-2843",
+      "title": "Aménagement d’accès sécurisés aux stations limnimétriques — 3 lots (03.06.04-26-2843)",
+      "buyer": "Service public de Wallonie — Direction des cours d’eau non navigables",
+      "region": "Wallonie",
+      "sector": "PetitsTravaux",
+      "sectors": [
+        "PetitsTravaux"
+      ],
+      "score": 95,
+      "publication": "",
+      "deadline": "2026-10-30",
+      "deadlineTime": "09:30",
+      "cpv": [
+        "45000000"
+      ],
+      "description": "Marché de travaux pour aménager et sécuriser les accès aux stations de mesures limnimétriques en Wallonie. Lot 1 : trois aménagements de moyenne à grande ampleur en province de Luxembourg (Martelange, Herbeumont, Harnoncourt), avec vérification de stabilité et plans d’exécution. Lot 2 : petits et moyens aménagements et réparations, principalement en provinces de Liège, Namur et Luxembourg. Lot 3 : petits et moyens aménagements et réparations, principalement en Hainaut et Brabant wallon. CONDITIONS IMPORTANTES : la publication indique une visite des lieux OBLIGATOIRE le 6 octobre 2026 à 9 h à Marchin (déjà passée au 14 octobre), ainsi qu'une obligation de remettre une offre pour l'ensemble des trois lots. Vérifier dans les documents officiels si une candidature reste possible et si une autre visite peut être organisée. Date limite publiée : 30 octobre 2026 à 09 h 30, fuseau +01:00.",
+      "source": "BOSA",
+      "source_status": "ajout manuel sur la base d'un avis public, lien vers les documents officiels e-Procurement",
+      "noticeType": "cn-standard",
+      "url": "https://www.publicprocurement.be/publication-workspaces/b3502299-990e-444e-8a06-8a220c86c426/documents",
+      "constraints": [
+        "Visite obligatoire annoncée le 06/10/2026 — date passée, admissibilité à vérifier",
+        "Offre obligatoire pour les 3 lots",
+        "Échéance 30/10/2026 à 09:30 (+01:00)"
+      ],
+      "screening": "main",
+      "screeningReason": null
     }
   ],
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-14T15:39:47.811Z",
+      "last_success": "2026-10-14T20:15:16.240Z",
       "scanned": 2325,
       "retained": 17,
       "period_from": "2026-09-30",
       "period_to": "2026-10-14",
       "pages": 93,
       "complete": true,
-      "raw_candidates": 2319,
+      "raw_candidates": 2321,
       "oldest_seen": "2026-09-29"
+    },
+    "LOCALE": {
+      "status": "partial",
+      "last_success": "2026-10-14T20:17:16.378Z",
+      "sources": [
+        {
+          "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
+          "source": "Province de Namur — projets de délibérations",
+          "documents_seen": 12,
+          "documents_read": 12,
+          "signals_detected": 0
+        },
+        {
+          "url": "https://www.province.namur.be/conseil-provincial/05-pv-des-seances/",
+          "source": "Province de Namur — procès-verbaux",
+          "documents_seen": 6,
+          "documents_read": 0,
+          "signals_detected": 0
+        },
+        {
+          "url": "https://www.provincedeliege.be/fr/conseil/ordresdujour",
+          "source": "Province de Liège — ordres du jour",
+          "documents_seen": 12,
+          "documents_read": 12,
+          "signals_detected": 0
+        },
+        {
+          "url": "https://www.provincedeliege.be/fr/conseil/pvcra",
+          "source": "Province de Liège — PV et comptes rendus",
+          "documents_seen": 12,
+          "documents_read": 9,
+          "signals_detected": 0
+        }
+      ],
+      "errors_count": 9,
+      "added": 0
     }
   }
 }
