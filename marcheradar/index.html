@@ -277,7 +277,7 @@ var STORAGE='kdrix.marcheRadar.v1';
 var saved={};
 try{saved=JSON.parse(localStorage.getItem(STORAGE)||'{}')||{}}catch(e){saved={}}
 saved.favorites=saved.favorites||{};saved.statuses=saved.statuses||{};saved.notes=saved.notes||{};saved.hiddenSectors=saved.hiddenSectors||{};
-var state={mode:'loading',sourceOrigin:'none',collectorStatus:'pending',view:'all',sector:'all',region:'all',sort:'deadline',query:'',markets:[],real:[],generated:null,sourceNote:'',selected:null,loadError:false};
+var state={mode:'loading',sourceOrigin:'none',collectorStatus:'pending',view:'all',sector:'all',region:'all',sort:'deadline',query:'',markets:[],real:[],generated:null,sourceNote:'',coverage:{},sources:{},selected:null,loadError:false};
 function el(id){return document.getElementById(id)}
 function svg(id,small){return '<svg class="ico'+(small?' s':'')+'"><use href="#i-'+id+'"/></svg>'}
 function esc(v){return String(v===null||v===undefined?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
@@ -286,7 +286,7 @@ function parseDate(v){if(!v)return null;var d=new Date(String(v).slice(0,10)+'T1
 function daysLeft(v){var d=parseDate(v);if(!d)return null;var t=new Date();t.setHours(12,0,0,0);return Math.round((d-t)/86400000)}
 function fmtDate(v){var d=parseDate(v);return d?d.toLocaleDateString('fr-BE',{day:'2-digit',month:'short',year:'numeric'}):'Non précisé'}
 function fmtShort(v){var d=parseDate(v);return d?d.toLocaleDateString('fr-BE',{day:'2-digit',month:'short'}):'Non précisé'}
-function link(m){if(!m||m.source==='Démo')return '';if(m.url&&/^https:\/\/(ted\.europa\.eu|www\.publicprocurement\.be|www\.province\.namur\.be)\//.test(m.url))return m.url;var pub=String(m.publicationNumber||'').match(/^\d{1,8}-\d{4}$/);return pub?'https://ted.europa.eu/fr/notice/-/detail/'+pub[0]:''}
+function link(m){if(!m||m.source==='Démo')return '';if(m.url&&/^https:\/\/(ted\.europa\.eu|www\.publicprocurement\.be|www\.province\.namur\.be|www\.provincedeliege\.be|provincedeliege\.be)\//.test(m.url))return m.url;var pub=String(m.publicationNumber||'').match(/^\d{1,8}-\d{4}$/);return pub?'https://ted.europa.eu/fr/notice/-/detail/'+pub[0]:''}
 function save(){try{localStorage.setItem(STORAGE,JSON.stringify(saved))}catch(e){toast('Stockage local indisponible')}}
 var timeout=null;function toast(t){el('toast').textContent=t;el('toast').classList.add('show');clearTimeout(timeout);timeout=setTimeout(function(){el('toast').classList.remove('show')},2500)}
 function allMarkets(){return state.markets.filter(function(m){return m.region!=='Flandre'})}
@@ -379,7 +379,17 @@ function settings(){
  el('drawerBody').innerHTML='<div class="drawer-label">Secteurs recherchés</div><p class="drawer-desc" style="margin-top:0">Activez uniquement les activités qui vous intéressent. Les filtres s’appliquent à cette session et à vos prochaines visites sur cet appareil.</p>'+
  SECTORS.filter(function(s){return s.id!=='all'}).map(function(s){return '<div class="setting-row"><div><strong>'+esc(s.label)+'</strong><small>Afficher les annonces de ce secteur</small></div><button aria-label="Activer/désactiver '+esc(s.label)+'" aria-pressed="'+(!saved.hiddenSectors[s.id])+'" class="switch'+(!saved.hiddenSectors[s.id]?' on':'')+'" data-toggle="'+esc(s.id)+'"></button></div>'}).join('')+
  '<div class="settings-info"><b>À savoir :</b> le classement repose sur des mots-clés et des codes CPV, pas sur une intelligence artificielle. Le site reste public mais vos favoris et notes ne quittent pas votre navigateur. Aucune notification automatique ni synchronisation multi-utilisateurs n’est encore activée.</div>'+
- '<div class="drawer-label">Données et couverture</div><p class="drawer-desc">La collecte prévue exploite TED, source européenne officielle. Elle ne couvre pas à elle seule le Bulletin des Adjudications belge. Une connexion nationale BOSA nécessitera une étude complémentaire des accès et des conditions de réutilisation.</p>';
+ '<div class="drawer-label">Données et couverture</div>'+
+ ['TED','BOSA','LOCALE'].map(function(key){
+  var label=key==='LOCALE'?'Sources locales':key;
+  var coverage=state.coverage[key==='LOCALE'?'communal':key]||'Non connecté';
+  var record=state.sources[key]||{};
+  var verified=record.last_success?'<small>Dernier contrôle réussi : '+esc(fmtDate(record.last_success))+'</small>':'';
+  var count=typeof record.scanned==='number'?'<small>'+record.scanned+' publications examinées</small>':
+   (typeof record.added==='number'?'<small>'+record.added+' pistes ajoutées</small>':'');
+  return '<div class="setting-row"><div><strong>'+esc(label)+'</strong><small>'+esc(coverage)+'</small>'+verified+count+'</div></div>';
+ }).join('')+
+ '<p class="legal-note">BOSA national et les communes ne sont pas déclarés couverts avant une collecte réussie. La veille ne garantit pas une exhaustivité totale.</p>';
  el('drawerBody').querySelectorAll('[data-toggle]').forEach(function(b){b.addEventListener('click',function(){var s=b.dataset.toggle;saved.hiddenSectors[s]=!saved.hiddenSectors[s];b.classList.toggle('on',!saved.hiddenSectors[s]);b.setAttribute('aria-pressed',String(!saved.hiddenSectors[s]));save();render()})});
  el('drawerFooter').innerHTML='<button class="primary" id="settingsOk" style="width:100%">Terminé '+svg('check',true)+'</button>';
  el('settingsOk').addEventListener('click',closeDrawer);openDrawer();
@@ -716,6 +726,8 @@ async function load(){
   state.real=uniqueMarkets(obj.items.filter(validMarket));
   state.generated=obj.generated_at||null;
   state.sourceNote=obj.note||'';
+  state.coverage=obj.coverage||{};
+  state.sources=obj.sources||{};
   state.sourceOrigin=obj.data_origin||'unspecified';
   state.collectorStatus=obj.collector_status||'unknown';
   state.mode='ted';
