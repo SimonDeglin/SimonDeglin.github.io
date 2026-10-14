@@ -215,7 +215,7 @@ body{background:#f7f7f7;color:#303339}
       <div class="search-row">
         <div class="search-wrap"><svg class="ico"><use href="#i-search"/></svg><input id="search" type="search" aria-label="Rechercher un marché" placeholder="Rechercher un marché, un acheteur ou un lieu..."></div>
         <select class="filter-select" id="region" aria-label="Filtrer par région"><option value="all">Toutes les zones</option><option value="Wallonie">Wallonie</option><option value="Bruxelles">Bruxelles</option><option value="Flandre">Flandre</option><option value="Belgique">Lieu non précisé</option></select>
-        <select class="filter-select" id="sort" aria-label="Trier les marchés"><option value="score">Plus pertinents</option><option value="recent">Plus récents</option><option value="deadline">Échéance proche</option></select>
+        <select class="filter-select" id="sort" aria-label="Trier les marchés"><option value="deadline">Échéances à venir</option><option value="score">Plus pertinents</option><option value="recent">Plus récents</option></select>
       </div>
       
     </section>
@@ -251,7 +251,7 @@ var STORAGE='kdrix.marcheRadar.v1';
 var saved={};
 try{saved=JSON.parse(localStorage.getItem(STORAGE)||'{}')||{}}catch(e){saved={}}
 saved.favorites=saved.favorites||{};saved.statuses=saved.statuses||{};saved.notes=saved.notes||{};saved.hiddenSectors=saved.hiddenSectors||{};
-var state={mode:'loading',sourceOrigin:'none',collectorStatus:'pending',view:'all',sector:'all',region:'all',sort:'score',query:'',markets:[],real:[],generated:null,sourceNote:'',selected:null,loadError:false};
+var state={mode:'loading',sourceOrigin:'none',collectorStatus:'pending',view:'all',sector:'all',region:'all',sort:'deadline',query:'',markets:[],real:[],generated:null,sourceNote:'',selected:null,loadError:false};
 function el(id){return document.getElementById(id)}
 function svg(id,small){return '<svg class="ico'+(small?' s':'')+'"><use href="#i-'+id+'"/></svg>'}
 function esc(v){return String(v===null||v===undefined?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
