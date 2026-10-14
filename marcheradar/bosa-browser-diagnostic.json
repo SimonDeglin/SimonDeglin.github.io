@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-14T15:14:49.291Z",
+  "at": "2026-10-14T15:20:14.530Z",
   "method": "Public navigateur sans authentification",
   "target": "https://www.publicprocurement.be/bda",
   "status": "public-bulletin-visible",
@@ -26,7 +26,7 @@
       "method": "GET"
     },
     {
-      "route": "/api/lex/translations/simple",
+      "route": "/api/loc/cities",
       "status": 200,
       "method": "GET"
     },
@@ -36,7 +36,7 @@
       "method": "GET"
     },
     {
-      "route": "/api/loc/cities",
+      "route": "/api/lex/translations/simple",
       "status": 200,
       "method": "GET"
     },
@@ -135,7 +135,208 @@
         "publicationType": "ACTIVE",
         "publicationWorkspaceId": "8e9624f3-5803-4caf-8188-18cac945b670",
         "referenceNumber": "RDGB-BRU-2026-220022-245_pub02"
+      },
+      "firstNested": {
+        "cpvAdditionalCodes": {
+          "type": "array",
+          "keys": [
+            "code",
+            "descriptions"
+          ],
+          "sample": "[{\"code\":\"45313100-5\",\"descriptions\":[{\"language\":\"EN\",\"text\":\"Lift installation work\"},{\"language\":\"NL\",\"text\":\"Installeren van liften\"},{\"language\":\"DE\",\"text\":\"Installation von Aufzügen\"},{\"language\":\"FR\",\"text\":\"Travaux d'installation d'ascenseurs\"}]}]"
+        },
+        "cpvMainCode": {
+          "type": "object",
+          "keys": [
+            "code",
+            "descriptions"
+          ],
+          "sample": "{\"code\":\"45313100-5\",\"descriptions\":[{\"language\":\"EN\",\"text\":\"Lift installation work\"},{\"language\":\"NL\",\"text\":\"Installeren van liften\"},{\"language\":\"DE\",\"text\":\"Installation von Aufzügen\"},{\"language\":\"FR\",\"text\":\"Travaux d'installation d'ascenseurs\"}]}"
+        },
+        "dossier": {
+          "type": "object",
+          "keys": [
+            "accreditations",
+            "descriptions",
+            "enterpriseCategories",
+            "legalBasis",
+            "number",
+            "procurementProcedureType",
+            "referenceNumber",
+            "titles"
+          ],
+          "sample": "{\"accreditations\":{\"N1\":1},\"descriptions\":[{\"language\":\"FR\",\"text\":\" Le marché a pour objet les travaux, les fournitures, les services, le transport, la main-d’œuvre et tous les moyens nécessaires à l’installation, en parfait état de fonctionnement, d’un ascenseur électrique sans salle des machines dans le PALAIS D’EGMONT  à 1000 BRUXELLES\"},{\"language\":\"NL\",\"text\":\"Deze Opdracht heeft als voorwerp de werken, leveringen, de diensten, het vervoer, de arbeidskrachten en alle middelen, nodig voor 1 installatie in perfecte staat van werking van een elektrische lift zonder machinekamer in het  EGMONTPALEIS te 1000  BRUSSEL \"}],\"enterpriseCategories\":[{\"categoryCode\":\"N1\",\"levels\":[1]}],\"legalBasis\":\"D24\",\"number\":\"RDGB-BRU-2026-220022-245\",\"procurementProcedureType\":\"OPEN\",\"referenceNumber\":\"RDGB-BRU-2026-220022-245\",\"titles\":[{\"language\":\"FR\",\"text\":\"1000 BRUXELLES : PALAIS D’EGMONT   - Travaux de remplacement d’un ascenseur (n° 002) \"},{\"language\":\"NL\",\"text\":\"1000 BRUSSEL : EGMONTPALEIS  - Vervangen van één liftinstallatie (nr. 002) \"}]}"
+        },
+        "lots": {
+          "type": "array",
+          "keys": [
+            "descriptions",
+            "reservedExecution",
+            "reservedParticipation",
+            "titles"
+          ],
+          "sample": "[{\"descriptions\":[{\"language\":\"FR\",\"text\":\" 1000 BRUXELLES : PALAIS D’EGMONT  - Travaux de remplacement d’un ascenseur (n° 002)  \"},{\"language\":\"NL\",\"text\":\" 1000 BRUSSEL : EGMONTPALEIS  - Vervangen van één liftinstallatie (nr. 002)  \"}],\"reservedExecution\":[\"NO\"],\"reservedParticipation\":[\"NONE\"],\"titles\":[{\"language\":\"NL\",\"text\":\"RDGB-BRU-2026-220022-245 - 1\"},{\"language\":\"FR\",\"text\":\"RDGB-BRU-2026-220022-245 - 1\"}]}]"
+        },
+        "natures": {
+          "type": "array",
+          "keys": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "sample": "[\"WORKS\"]"
+        },
+        "noticeIds": {
+          "type": "array",
+          "keys": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35"
+          ],
+          "sample": "[\"79da2819-333c-49cd-91dd-ff1d7ac6f1d3\"]"
+        },
+        "nutsCodes": {
+          "type": "array",
+          "keys": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "sample": "[\"BE100\"]"
+        },
+        "organisation": {
+          "type": "object",
+          "keys": [
+            "organisationId",
+            "organisationNames",
+            "tree"
+          ],
+          "sample": "{\"organisationId\":5078,\"organisationNames\":[{\"language\":\"EN\",\"text\":\"Buildingsagency - Direction Electromechanical\"},{\"language\":\"FR\",\"text\":\"Régie des Bâtiments - Centre d’expertise technique et d’innovation\"},{\"language\":\"DE\",\"text\":\"Regie der Gebouwen - Directie Elektromechanical\"},{\"language\":\"NL\",\"text\":\"Regie der Gebouwen - Centrum voor technische expertise & innovatie\"}],\"tree\":\"200002.200010.5.5078\"}"
+        },
+        "publicationLanguages": {
+          "type": "array",
+          "keys": [
+            "0",
+            "1"
+          ],
+          "sample": "[\"NL\",\"FR\"]"
+        },
+        "publicationReferenceNumbersBDA": {
+          "type": "array",
+          "keys": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29"
+          ],
+          "sample": "[\"RDGB-BRU-2026-220022-245_pub02\"]"
+        },
+        "publicationReferenceNumbersTED": {
+          "type": "array",
+          "keys": [],
+          "sample": "[]"
+        },
+        "publishedAt": {
+          "type": "array",
+          "keys": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25"
+          ],
+          "sample": "[\"2026-10-14T00:00:47.141134\"]"
+        }
       }
+    },
+    {
+      "route": "/api/sea/search/publications",
+      "status": 400,
+      "method": "POST"
     }
   ],
   "browserBinary": "google-chrome",
@@ -143,7 +344,7 @@
   "finalUrl": "https://www.publicprocurement.be/bda",
   "page": {
     "bodyLength": 21387,
-    "bodyExcerpt": "NLFRDEEN\nAutres informations et services officiels : \nwww.belgium.be\nAccueil\nBulletin des Adjudications\nCartes de visite\nBulletin des Adjudications\nCritères de recherche\nCopier lien vers résultats de recherche\nNature principale du marché\nCode CPV\nCode NUTS\nLangue de publication\nDate d'envoi\nDate de publication\nDate limite de soumission\nN'afficher que les dates limites de soumission futures\nOrganisation\nInclure les sous-organisations\nTechnique d'achat spéciale\nAfficher uniquement les marchés sans obligation de publication\nType de procédure\nType d'avis\nMarchés réservés\nEffacer tous les filtres\n1000 BRUXELLES : PALAIS D’EGMONT - Travaux de remplacement d’un ascenseur (n° 002)\nBE\nAttribution\nNuméro de référence\nRDGB-BRU-2026-220022-245_pub02\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nOrganisation\nRégie des Bâtiments - Centre d’expertise technique et d’innovation\nNature du marché\nTravaux\nCatégorie (code CPV)\nTravaux d'installation d'ascenseurs (45313100)\nAgréation requise\nN1 classe 1\nDescription\n Le marché a pour objet les travaux, les fournitures, les services, le transport, la main-d’œuvre et tous les moyens nécessaires à l’installation, en parfait état de fonctionnement, d’un ascenseur électrique sans salle des machines dans le PALAIS D’EGMONT  à 1000 BRUXELLES\nCadre légal\nDirective 2014/24/EU (secteurs classiques)\nProcédure\nProcédure ouverte\nConception, fourniture, installation et mise en service d'une installation hypoxique normobare\nBE\nCompétition\nNuméro de référence\nPPP19O-30/6024/2026/031_001\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nDate limite de soumission\n09/11/2026 11:00 CET\nTemps restant\n25 jours 17:44:38\nOrganisation\nComplexe Sportif de Blocry ASBL\nNature du marché\nTravaux\nCatégorie (code CPV)\nTravaux d'équipement du bâtiment (45300000)\nDescription\nConception, fourniture, installation et mise en service d'une installation hypoxique normobare\nCadre légal\nDirective 2014/24/EU (secteurs classiques)\nProcédure\nProcédure ouverte\nMarché de fournitures - Acquisition d'une camionnette pour le service plantation\nBE\nAttribution\nNuméro de référence\nPPP04Z-2219/6102/2025-2219_002\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nOrganisation\nDison\nNature du marché\nFournitures\nCatégorie (code CPV)\nFourgonnettes (34136100)\nDescription\nCe marché a pour but l'acquisition d'une camionnette châssis simple cabine (avec benne basculante) pour remplacer la camionnette du service plantation de la Commune de Dison.\nCadre légal\nDirective 2014/24/EU (secteurs classiques)\nProcédure\nProcédure négociée sans publication préalable\nLigne 166 : Dinant – Bertrix Tronçon Houyet – Beauraing Stabilisation des talus du tronçon Houyet – Beauraing par la pose d’enrochements\nBE\nCompétition\nNuméro de référence\n5753426049_pub01\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nDate limite de soumission\n17/11/2026 14:00 CET\nTemps restant\n1 mois 2 jours\nOrganisation\nInfrabel Projects South\nNature du marché\nTravaux\nCatégorie (code CPV)\nTravaux d'enrochement (45252125)\nAgréation requise\nE classe 4\nDescription\nCe marché concerne principalement:  - des travaux de stabilisation de pieds de talus par la pose d’enrochements - des travaux de remise en état des caniveaux à câbles\nCadre légal\nDirective 2014/25/EU (secteurs spéciaux)\nProcédure\nProcédure ouverte\nFourniture, pose et mise en service d’un système de coupure d’urgence de la production photovoltaïque\nBE\nCompétition\nNuméro de référence\nPPP18O-142/6055/BH TENDER DDP-ARRET URGENT SOLAIRE (MOENSBERG)_001\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nDate limite de soumission\n30/11/2026 10:00 CET\nTemps restant\n1 mois 15 jours\nOrganisation\nBinHôme\nNature du marché\nTravaux\nCatégorie (code CPV)\nTravaux d'équipement électrique (45310000)\nDescription\nFourniture, pose et mise en service d’un système de coupure d’urgence de la production photovoltaïque (Strings DC) à Moensberg (Ucc",
+    "bodyExcerpt": "NLFRDEEN\nAutres informations et services officiels : \nwww.belgium.be\nAccueil\nBulletin des Adjudications\nCartes de visite\nBulletin des Adjudications\nCritères de recherche\nCopier lien vers résultats de recherche\nNature principale du marché\nCode CPV\nCode NUTS\nLangue de publication\nDate d'envoi\nDate de publication\nDate limite de soumission\nN'afficher que les dates limites de soumission futures\nOrganisation\nInclure les sous-organisations\nTechnique d'achat spéciale\nAfficher uniquement les marchés sans obligation de publication\nType de procédure\nType d'avis\nMarchés réservés\nEffacer tous les filtres\n1000 BRUXELLES : PALAIS D’EGMONT - Travaux de remplacement d’un ascenseur (n° 002)\nBE\nAttribution\nNuméro de référence\nRDGB-BRU-2026-220022-245_pub02\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nOrganisation\nRégie des Bâtiments - Centre d’expertise technique et d’innovation\nNature du marché\nTravaux\nCatégorie (code CPV)\nTravaux d'installation d'ascenseurs (45313100)\nAgréation requise\nN1 classe 1\nDescription\n Le marché a pour objet les travaux, les fournitures, les services, le transport, la main-d’œuvre et tous les moyens nécessaires à l’installation, en parfait état de fonctionnement, d’un ascenseur électrique sans salle des machines dans le PALAIS D’EGMONT  à 1000 BRUXELLES\nCadre légal\nDirective 2014/24/EU (secteurs classiques)\nProcédure\nProcédure ouverte\nConception, fourniture, installation et mise en service d'une installation hypoxique normobare\nBE\nCompétition\nNuméro de référence\nPPP19O-30/6024/2026/031_001\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nDate limite de soumission\n09/11/2026 11:00 CET\nTemps restant\n25 jours 17:39:36\nOrganisation\nComplexe Sportif de Blocry ASBL\nNature du marché\nTravaux\nCatégorie (code CPV)\nTravaux d'équipement du bâtiment (45300000)\nDescription\nConception, fourniture, installation et mise en service d'une installation hypoxique normobare\nCadre légal\nDirective 2014/24/EU (secteurs classiques)\nProcédure\nProcédure ouverte\nMarché de fournitures - Acquisition d'une camionnette pour le service plantation\nBE\nAttribution\nNuméro de référence\nPPP04Z-2219/6102/2025-2219_002\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nOrganisation\nDison\nNature du marché\nFournitures\nCatégorie (code CPV)\nFourgonnettes (34136100)\nDescription\nCe marché a pour but l'acquisition d'une camionnette châssis simple cabine (avec benne basculante) pour remplacer la camionnette du service plantation de la Commune de Dison.\nCadre légal\nDirective 2014/24/EU (secteurs classiques)\nProcédure\nProcédure négociée sans publication préalable\nLigne 166 : Dinant – Bertrix Tronçon Houyet – Beauraing Stabilisation des talus du tronçon Houyet – Beauraing par la pose d’enrochements\nBE\nCompétition\nNuméro de référence\n5753426049_pub01\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nDate limite de soumission\n17/11/2026 14:00 CET\nTemps restant\n1 mois 2 jours\nOrganisation\nInfrabel Projects South\nNature du marché\nTravaux\nCatégorie (code CPV)\nTravaux d'enrochement (45252125)\nAgréation requise\nE classe 4\nDescription\nCe marché concerne principalement:  - des travaux de stabilisation de pieds de talus par la pose d’enrochements - des travaux de remise en état des caniveaux à câbles\nCadre légal\nDirective 2014/25/EU (secteurs spéciaux)\nProcédure\nProcédure ouverte\nFourniture, pose et mise en service d’un système de coupure d’urgence de la production photovoltaïque\nBE\nCompétition\nNuméro de référence\nPPP18O-142/6055/BH TENDER DDP-ARRET URGENT SOLAIRE (MOENSBERG)_001\nDate d'envoi\n14/10/2026\nDate de publication\n14/10/2026\nDate limite de soumission\n30/11/2026 10:00 CET\nTemps restant\n1 mois 15 jours\nOrganisation\nBinHôme\nNature du marché\nTravaux\nCatégorie (code CPV)\nTravaux d'équipement électrique (45310000)\nDescription\nFourniture, pose et mise en service d’un système de coupure d’urgence de la production photovoltaïque (Strings DC) à Moensberg (Ucc",
     "links": [
       {
         "text": "",
@@ -308,5 +509,10 @@
         "type": "text"
       }
     ]
+  },
+  "pageTwoViaFetch": {
+    "httpStatus": 400,
+    "keys": [],
+    "count": 0
   }
 }
