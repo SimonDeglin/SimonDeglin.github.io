@@ -113,8 +113,8 @@ function monthlyAverage(kind){
 function showMonthlyAverage(id,captionId,kind,unit){
  const data=monthlyAverage(kind),el=$('#'+id),cap=$('#'+captionId);
  if(data){
-  el.innerHTML=fmt(data.value,unit==='m³'?1:0)+' <span class="unit">'+unit+'</span>';
-  if(cap)cap.textContent='Moy. / mois · '+(data.duration>=360?'12 derniers mois':fmt(data.duration/30.437,1)+' mois suivis');
+  el.innerHTML=fmt(data.value,unit==='m³'?1:0)+' <span class="unit">'+unit+'</span><span class="monthly-inline">moy./mois</span>';
+  if(cap)cap.textContent=data.duration>=360?'12 derniers mois':'sur '+fmt(data.duration/30.437,1)+' mois suivis';
  }else{
   el.innerHTML='— <span class="unit">'+unit+'</span>';
   if(cap)cap.textContent='Données insuffisantes';
@@ -140,6 +140,18 @@ function niceAxis(minimum,maximum,includeZero=true){
  if(!axis){const step=Math.pow(10,magnitude+2);axis={lo:Math.floor(min/step)*step,hi:Math.ceil(max/step)*step,step};}
  const ticks=[];for(let i=0;i<9;i++){const v=axis.lo+i*axis.step;if(v>axis.hi+axis.step*.001)break;ticks.push(Math.abs(v)<axis.step*1e-6?0:+v.toFixed(7))}
  return {...axis,ticks};
+}
+/* Denser electricity grid: optional 125 kWh bands where they fit legibly. */
+function electricAxis(min,max){
+ const span=max-min;
+ if(Number.isFinite(span)&&span>=250&&span<=1100){
+  const step=125,lo=Math.floor(min/step)*step,hi=Math.ceil(max/step)*step;
+  const count=Math.round((hi-lo)/step)+1;
+  if(count>=4&&count<=10){
+   return {lo,hi,step,ticks:Array.from({length:count},(_,i)=>lo+i*step)};
+  }
+ }
+ return niceAxis(min,max);
 }
 const axisLabel=(v,compact=false)=>compact&&Math.abs(v)>=1000?
  fmt(v/1000,Math.abs(v)%1000===0?0:Math.abs(v)%500===0?1:2)+'k':fmt(v,Number.isInteger(v)?0:1);
@@ -350,7 +362,7 @@ $$('[data-period-nav]').forEach(button=>button.addEventListener('click',()=>{
 
 function renderChart(id,kind,start){const el=$('#'+id);if(!el)return;let points=cumulativePoints(kind,start);
 if(points.length<2){el.innerHTML='<div class="empty-state">Données insuffisantes pour ce graphique.</div>';return}
-const rawWidth=el.clientWidth||((window.innerWidth||390)-60),w=Math.max(235,Math.round(rawWidth)),h=285,p={left:w<475?40:60,right:w<475?7:14,top:19,bottom:34},ys=points.map(a=>a.value),min=Math.min(0,...ys),max=Math.max(0,...ys),scale=niceAxis(min<0?min*1.06:0,max>0?max*1.06:0),low=scale.lo,high=scale.hi;const x0=parseDate(points[0].date).getTime(),x1=parseDate(points.at(-1).date).getTime(),X=d=>p.left+(parseDate(d).getTime()-x0)/Math.max(1,x1-x0)*(w-p.left-p.right),Y=v=>p.top+(high-v)/(high-low)*(h-p.top-p.bottom);
+const rawWidth=el.clientWidth||((window.innerWidth||390)-60),w=Math.max(235,Math.round(rawWidth)),h=285,p={left:w<475?40:60,right:w<475?7:14,top:19,bottom:34},ys=points.map(a=>a.value),min=Math.min(0,...ys),max=Math.max(0,...ys),scale=kind==='network'||kind==='house'?electricAxis(min<0?min*1.06:0,max>0?max*1.06:0):niceAxis(min<0?min*1.06:0,max>0?max*1.06:0),low=scale.lo,high=scale.hi;const x0=parseDate(points[0].date).getTime(),x1=parseDate(points.at(-1).date).getTime(),X=d=>p.left+(parseDate(d).getTime()-x0)/Math.max(1,x1-x0)*(w-p.left-p.right),Y=v=>p.top+(high-v)/(high-low)*(h-p.top-p.bottom);
 const yTicks=scale.ticks;const axis=yTicks.map(v=>'<line class="chart-grid" x1="'+p.left+'" x2="'+(w-p.right)+'" y1="'+Y(v)+'" y2="'+Y(v)+'"/><text class="chart-axis" text-anchor="end" x="'+(p.left-7)+'" y="'+(Y(v)+4)+'">'+axisLabel(v,w<475)+'</text>').join('');
 const major=points.filter((v,i)=>i===0||i===points.length-1||v.date.endsWith('-31')||v.date.endsWith('-30')||v.date.endsWith('-28')).filter((v,i)=>i===0||i===points.length-1||i%2===0).filter((v,i,arr)=>w>=475||i===0||i===arr.length-1||i%3===0);const xlabels=major.map(v=>'<text class="chart-axis" text-anchor="middle" x="'+X(v.date)+'" y="'+(h-8)+'">'+monthLabel(v.date)+'</text>').join('');
 const segs=points.slice(1).map((v,i)=>'<path class="'+((v.exact&&points[i].exact)?'chart-real':'chart-estimated')+'" d="M'+X(points[i].date)+','+Y(points[i].value)+' L'+X(v.date)+','+Y(v.value)+'"/>').join('');
@@ -567,8 +579,9 @@ function renderOilTimeline(model){
  const el=$('#oil-timeline');if(!el)return;
  const data=oilPlot(model);if(data.length<2){el.innerHTML='<div class="empty-state">Ajoute au moins deux niveaux de cuve.</div>';return}
  const actualWidth=el.clientWidth||window.innerWidth-65,W=Math.max(265,Math.round(actualWidth)),H=263;
- const margins={l:W<400?37:52,r:W<400?10:18,t:19,b:46};
- const first=data[0].date,last=data.at(-1).date,scale=niceAxis(0,Math.max(100,...data.map(d=>d.liters))),lo=scale.lo,hi=scale.hi;
+ const margins={l:W<400?39:52,r:W<400?10:18,t:25,b:46};
+ const first=data[0].date,last=data.at(-1).date,highest=Math.max(1250,...data.map(d=>d.liters));
+ const hi=Math.ceil(highest/250)*250,scale={lo:0,hi,step:250,ticks:Array.from({length:Math.round(hi/250)+1},(_,i)=>i*250)};
  const X=date=>margins.l+(oilMillis(date)-oilMillis(first))/Math.max(1,oilMillis(last)-oilMillis(first))*(W-margins.l-margins.r);
  const Y=volume=>margins.t+(hi-volume)/hi*(H-margins.t-margins.b);
  const grid=scale.ticks.map(v=>'<line x1="'+margins.l+'" x2="'+(W-margins.r)+'" y1="'+Y(v).toFixed(1)+'" y2="'+Y(v).toFixed(1)+'" stroke="#e7edf0"/><text x="'+(margins.l-7)+'" y="'+(Y(v)+3).toFixed(1)+'" text-anchor="end" class="oil-axis-label">'+fmt(v)+'</text>').join('');
@@ -674,7 +687,9 @@ function drawMonthlyBars(id,kind){
  const barW=granularity==='month'?Math.max(9,Math.min(narrow?20:42,step*.67)):
    granularity==='half'?Math.min(116,step*.39):Math.min(155,step*.46);
  const vals=known.map(r=>r[kind]),bottom=Math.min(0,...vals),top=Math.max(0,...vals);
- const axis=niceAxis(bottom<0?bottom*1.06:0,top>0?top*1.06:0);
+ const lowBound=bottom<0?bottom*1.06:0,highBound=top>0?top*1.06:0;
+ const axis=kind==='water'?{lo:0,hi:30,step:5,ticks:[0,5,10,15,20,25,30]}:
+  (kind==='net'||kind==='house'?electricAxis(lowBound,highBound):niceAxis(lowBound,highBound));
  const hi=axis.hi,lo=axis.lo;
  const Y=v=>T+(hi-v)/(hi-lo)*plotH,Y0=Y(0);
  const monthAbbr=['Ja','Fé','Mr','Av','Ma','Jn','Jl','Ao','Se','Oc','No','Dé'];
@@ -700,9 +715,13 @@ function drawMonthlyBars(id,kind){
   let rects='';
   if(kind==='water'){
     const pool=Math.max(0,Math.min(v,r.pool)),domestic=Math.max(0,v-pool);
-    const yHome=Y(domestic),yTotal=Y(v);
+    // Fixed 0–30 m³ chart. Values beyond 30 show a cap + their real value, not a hidden overflow.
+    const shown=Math.min(30,Math.max(0,v)),ratio=v>0?shown/v:1;
+    const yHome=Y(domestic*ratio),yTotal=Y(shown);
     if(domestic>0)rects+='<rect class="monthly-bar" x="'+x.toFixed(1)+'" y="'+yHome.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+Math.max(1,Y0-yHome).toFixed(1)+'" rx="'+Math.min(4,barW/4).toFixed(1)+'" fill="#5b95be" stroke="'+border+'" stroke-width="0.4"/>';
     if(pool>0)rects+='<rect class="monthly-bar" x="'+x.toFixed(1)+'" y="'+yTotal.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+Math.max(1,yHome-yTotal).toFixed(1)+'" rx="'+Math.min(4,barW/4).toFixed(1)+'" fill="#e6b166" stroke="'+border+'" stroke-width="0.4"/>';
+    if(v>30)rects+='<path d="M'+(center-4).toFixed(1)+' '+(T+3)+' L'+center.toFixed(1)+' '+(T-2)+' L'+(center+4).toFixed(1)+' '+(T+3)+'" class="water-overflow-marker"/>'+
+      '<text class="water-overflow-value" x="'+center.toFixed(1)+'" y="'+(T-7)+'" text-anchor="middle">'+fmt(v,1)+'</text>';
   }else{
     const fill=kind==='net'?(v<=0?'#269a80':'#d68c79'):kind==='pv'?'#299d82':'#d58c4e';
     const y=Math.min(Y0,Y(v)),height=Math.max(1,Math.abs(Y(v)-Y0));
@@ -713,10 +732,12 @@ function drawMonthlyBars(id,kind){
    labelMarkup(r,center)+marker+'</g>';
  }).join('');
  const unit=kind==='water'?'m³':'kWh',period=periodRange().heading;
+ const overflowInfo=kind==='water'&&known.some(r=>r.water>30)?
+  '<div class="water-overflow-note">↑ Valeur supérieure à 30 m³ : barre plafonnée, valeur réelle indiquée.</div>':'';
  el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" width="100%" height="'+H+'" role="group" aria-label="'+esc(period)+', histogramme de '+esc(kind)+'">'+
   '<text class="bar-axis-unit" x="'+L+'" y="12">'+unit+'</text>'+ticks+
   '<line class="monthly-zero" x1="'+L+'" x2="'+(W-R)+'" y1="'+Y0.toFixed(1)+'" y2="'+Y0.toFixed(1)+'"/>'+
-  barGroups+'</svg><div class="bar-selection" aria-live="polite"></div>';
+  barGroups+'</svg>'+overflowInfo+'<div class="bar-selection" aria-live="polite"></div>';
  const out=el.querySelector('.bar-selection');
  const select=index=>{
   const r=entries[index],v=r[kind],partialNote=r.partial?' · période partielle':'';
