@@ -1,6 +1,7 @@
 name: "MarchéRadar — collecte TED"
-run-name: "Veille TED KDRIX • ${{ github.event_name }}"
 
+# Exécution uniquement sur planification ou lancement manuel.
+# Les commits de développement ne déclenchent plus de collecte supplémentaire.
 on:
   workflow_dispatch:
     inputs:
@@ -14,14 +15,7 @@ on:
           - "100"
         default: "14"
   schedule:
-    # 3 collectes quotidiennes ; ce rythme n'est pas une garantie de l'instant de publication.
     - cron: "17 5,11,16 * * *"
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/workflows/marcheradar.yml"
-      - "marcheradar/tools/**"
 
 permissions:
   contents: write
@@ -32,36 +26,85 @@ concurrency:
 
 jobs:
   collect:
-    name: "Contrôler TED et mettre à jour MarchéRadar"
+    name: "Collecte TED sans notifications d'échec"
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    # Erreurs visibles dans le journal sans e-mail d'échec GitHub Actions.
+    continue-on-error: true
 
     steps:
-      - name: "Récupérer les fichiers"
+      - name: "Récupérer le dépôt"
+        id: checkout
         uses: actions/checkout@v4
+        continue-on-error: true
 
-      - name: "Installer Node.js"
+      - name: "Préparer Node.js"
+        id: node
+        if: steps.checkout.outcome == 'success'
         uses: actions/setup-node@v4
         with:
           node-version: "22"
+        continue-on-error: true
 
       - name: "Vérifier le programme"
+        id: tests
+        if: steps.node.outcome == 'success'
         run: node marcheradar/tools/test-collector.cjs
+        continue-on-error: true
 
       - name: "Collecter les avis TED"
+        id: collect
+        if: steps.tests.outcome == 'success'
         env:
           MARCHE_RADAR_DAYS: ${{ github.event.inputs.jours || '' }}
         run: node marcheradar/tools/collect-ted.cjs
+        continue-on-error: true
 
-      - name: "Publier les nouvelles données"
+      - name: "Publier uniquement les données valides"
+        id: publish
+        if: steps.collect.outcome == 'success'
         shell: bash
         run: |
           if git diff --quiet -- marcheradar/data.json; then
-            echo "Aucune mise à jour du fichier de données."
+            echo "Aucune nouvelle donnée à publier."
             exit 0
           fi
           git config user.name "marcheradar-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add marcheradar/data.json
           git commit -m "MarchéRadar: synchronisation des annonces TED [skip ci]"
-          git push
+          git push origin HEAD:main
+        continue-on-error: true
+
+      - name: "Rapport discret de collecte"
+        if: always()
+        shell: bash
+        env:
+          CHECKOUT_RESULT: ${{ steps.checkout.outcome }}
+          NODE_RESULT: ${{ steps.node.outcome }}
+          TESTS_RESULT: ${{ steps.tests.outcome }}
+          COLLECT_RESULT: ${{ steps.collect.outcome }}
+          PUBLISH_RESULT: ${{ steps.publish.outcome }}
+        run: |
+          {
+            echo "### MarchéRadar — rapport de collecte"
+            echo ""
+            echo "| Étape | Résultat |"
+            echo "| --- | --- |"
+            echo "| Dépôt | $CHECKOUT_RESULT |"
+            echo "| Node.js | $NODE_RESULT |"
+            echo "| Tests | $TESTS_RESULT |"
+            echo "| Collecte TED | $COLLECT_RESULT |"
+            echo "| Publication | $PUBLISH_RESULT |"
+            echo ""
+            if [ "$COLLECT_RESULT" != "success" ] || [ "$PUBLISH_RESULT" = "failure" ]; then
+              echo "⚠️ **La collecte n'a pas été publiée.** Le dernier fichier valide est conservé."
+              echo ""
+              echo "La cause est consultable dans les étapes précédentes."
+            else
+              echo "Collecte effectuée. Voir le journal pour le nombre d'avis traités."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ "$COLLECT_RESULT" != "success" ] || [ "$PUBLISH_RESULT" = "failure" ]; then
+            echo "::warning::Collecte MarchéRadar non publiée. Dernières données valides conservées."
+          fi
