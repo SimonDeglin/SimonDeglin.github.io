@@ -1503,14 +1503,17 @@ function scanManualZones(){
 }
 function scanAcceptedSingle(raw,kind){
  const clean=String(raw||'').replace(/[Oo]/g,'0').replace(/[Il|]/g,'1');
- // Require the full digit-window pattern. A short serial-number fragment
- // must never become an index just because it is near a historic reading.
- if(kind==='pv'&&!/(?:^|[^\d])\d{7}(?!\d)|\d{6}[.,]\d(?!\d)/m.test(clean.replace(/\s+(?=\d)/g,'')))return null;
- if(kind==='water'&&!/\d{6,9}(?!\d)|\d{2,6}[.,]\d{1,3}/.test(clean.replace(/\s+(?=\d)/g,'')))return null;
- return proposeScanIndex(clean,kind);
+ // Join OCR's individual digit tokens only WITHIN a single image line.
+ // Never combine unrelated labels on successive lines into an index.
+ const rows=clean.split(/\r?\n/).map(line=>line.replace(/(?<=\d)\s+(?=\d)/g,''));
+ const line=rows.find(r=>kind==='pv'?
+  /(?:^|\D)\d{7}(?!\d)|\d{6}[.,]\d(?!\d)/.test(r):
+  /(?:^|\D)\d{6,9}(?!\d)|\d{2,6}[.,]\d{1,3}/.test(r));
+ if(!line)return null;
+ return proposeScanIndex(line,kind);
 }
 function scanRecordDiagnostics(details,preview){
- const raw=details.map((v,i)=>'Essai '+(i+1)+' · '+v.description+'\n'+(v.text||'(aucun chiffre détecté)')).join('\n\n');
+ const raw=details.map((v,i)=>'Essai '+(i+1)+' · '+v.description+(v.confidence==null?'':' · confiance '+Math.round(v.confidence)+' %')+'\n'+(v.text||'(aucun chiffre détecté)')).join('\n\n');
  $('#scan-raw-text').textContent=raw||'Aucune lecture.';
  const img=$('#scan-analysis');if(preview)img.src=preview;
 }
@@ -1523,86 +1526,117 @@ async function withScanDeadline(work,ms=18000){
   ]);
  }finally{clearTimeout(timer)}
 }
-async function recognizeScanZone(worker,engine,rect,negative,kind){
- const mode=kind==='electric'||rect?engine.PSM?.SINGLE_LINE||'7':engine.PSM?.SPARSE_TEXT||'11';
- await withScanDeadline(worker.setParameters({tessedit_char_whitelist:'0123456789,.',tessedit_pageseg_mode:mode}),6000);
- const source=scanSourceImage(rect,negative);
+async function recognizeScanZone(worker,engine,rect,variant,kind){
+ const treatment=variant===true?'invert':variant===false?'raw':variant;
+ const psm=treatment==='enhanced'?(engine.PSM?.RAW_LINE||'13'):
+  (engine.PSM?.SINGLE_LINE||'7');
+ await withScanDeadline(worker.setParameters({
+  tessedit_char_whitelist:'0123456789,.',
+  tessedit_pageseg_mode:psm,
+  preserve_interword_spaces:'1'
+ }),6000);
+ const source=scanSourceImage(rect,treatment);
  const result=await withScanDeadline(worker.recognize(source,{}, {text:true}),18000);
- return {text:result?.data?.text||'',confidence:result?.data?.confidence??null,source};
+ return {text:result?.data?.text||'',confidence:result?.data?.confidence??null,source,treatment};
+}
+async function recognizeWithFallback(worker,engine,rect,kind,diagnostics,description){
+ let best=null;
+ const parse=t=>kind==='electric'?parseElectricWheel(t,description==='Nuit'?'night':'day'):
+  scanAcceptedSingle(t,kind);
+ // Do not run OCR until the user presses "Lire les chiffres".
+ // Three different preprocessing attempts, sharing one cached worker.
+ for(const treatment of ['raw','invert','enhanced']){
+  if(scanDeadline&&scanDeadline-Date.now()<1200)break;
+  let data;
+  try{data=await recognizeScanZone(worker,engine,rect,treatment,kind)}
+  catch(err){
+   diagnostics.push({description:description+' / '+treatment,
+    text:'Erreur : '+String(err?.message||err)});
+   if(String(err?.message)==='OCR_TIMEOUT')throw err;
+   continue;
+  }
+  const guessed=parse(data.text);
+  diagnostics.push({description:description+' / '+treatment,
+   text:data.text,confidence:data.confidence,source:data.source});
+  if(guessed!==null&&guessed!==undefined){
+   best={value:kind==='electric'?guessed.value:guessed,
+    confidence:data.confidence,source:data.source,treatment};
+   break;
+  }
+ }
+ return best;
 }
 async function detectIndexFromImage(){
  if(scanBusy||!pendingImage||!scanCrop)return;
- invalidateScanReading();
- scanBusy=true;scanDeadline=Date.now()+30000;const id=++scanRequest;
+ const preserve=scanKind==='electric'&&scanElectricStep!=='both';
+ invalidateScanReading(preserve);
+ scanBusy=true;scanDeadline=Date.now()+42000;const id=++scanRequest;
  const retry=$('#scan-retry');retry.disabled=true;
- const diagnostics=[];const preview=scanSourceImage();
+ const diagnostics=[],preview=scanSourceImage(scanCrop,'raw');
  $('#scan-analysis').src=preview||pendingImage;
  $('#scan-index-zoom').classList.toggle('hidden',!scanCrop);
- if(scanCrop)$('#scan-zoom').src=preview;
- $('#scan-raw-text').textContent='Analyse en cours…';
- $('#scan-message').textContent=scanCrop?'Analyse des chiffres détectés ou encadrés…':'Recherche des chiffres sur la photo…';
+ if(preview)$('#scan-zoom').src=preview;
+ $('#scan-raw-text').textContent='Lecture en cours…';
+ $('#scan-message').textContent='Reconnaissance des chiffres dans le cadre…';
  try{
   const engine=await withScanDeadline(ocrLibrary(),18000);
   const worker=await withScanDeadline(ocrWorker(),22000);
   if(id!==scanRequest)return;
-  const zones=scanAutoZones||scanManualZones();
-  let result=null;
-  if(scanKind==='electric'&&zones?.length===2){
-   const values=[];
-   for(let i=0;i<2;i++){
-    const kind=i===0?'night':'day',zone=zones[i];
-    const first=await recognizeScanZone(worker,engine,zone,false,'electric');
-    diagnostics.push({description:kind==='night'?'Nuit / brut':'Jour / brut',text:first.text});
-    let guess=parseElectricWheel(first.text,kind);
-    if(!guess){
-     const alternate=await recognizeScanZone(worker,engine,zone,true,'electric');
-     diagnostics.push({description:kind==='night'?'Nuit / contraste':'Jour / contraste',text:alternate.text});
-     guess=parseElectricWheel(alternate.text,kind);
-    }
-    values.push(guess?.value??null);
-   }
-   if(id!==scanRequest)return;
-   $('#scan-night').value=values[0]??'';
-   $('#scan-day').value=values[1]??'';
-   refreshElectricSum();
-   if(values.every(v=>v!==null)){
-    $('#scan-message').textContent='Lecture proposée, à vérifier sur la photo : Nuit en haut, Jour en bas.';
+  const zones=scanManualZones();
+  if(scanKind==='electric'){
+   if(scanElectricStep==='both'&&zones?.length===2){
+    const resultNight=await recognizeWithFallback(worker,engine,zones[0],'electric',diagnostics,'Nuit');
+    const resultDay=await recognizeWithFallback(worker,engine,zones[1],'electric',diagnostics,'Jour');
+    if(id!==scanRequest)return;
+    $('#scan-night').value=resultNight?.value??'';
+    $('#scan-day').value=resultDay?.value??'';
+    refreshElectricSum();
+    $('#scan-message').textContent=resultNight&&resultDay?
+     'Lecture proposée : contrôle bien les deux lignes sur la photo.':
+     'Lecture incertaine. Essaie Nuit et Jour séparément ou complète les index manuellement.';
    }else{
-    $('#scan-message').textContent='Lecture incertaine : vérifie et complète les chiffres affichés. La zone peut être redessinée au doigt.';
+    const step=scanElectricStep==='day'?'day':'night',name=step==='night'?'Nuit':'Jour';
+    const result=await recognizeWithFallback(worker,engine,scanCrop,'electric',diagnostics,name);
+    if(id!==scanRequest)return;
+    $('#scan-'+step).value=result?.value??'';
+    refreshElectricSum();
+    if(step==='night'&&result){
+     scanSetElectricStep('day',false);
+     $('#scan-message').textContent='Nuit proposée. Déplace le cadre sur la ligne Jour, puis appuie sur « Lire Jour ».';
+    }else{
+     $('#scan-message').textContent=result?
+      'Lecture '+name+' proposée : vérifie les chiffres avant validation.':
+      'Lecture impossible. Ajuste le cadre ou saisis les chiffres manuellement.';
+    }
    }
-  }else if(scanKind!=='electric'){
-   const zone=zones?.[0]||null;
-   const first=await recognizeScanZone(worker,engine,zone,false,scanKind);
-   diagnostics.push({description:'Index / brut',text:first.text});
-   let chosen=scanAcceptedSingle(first.text,scanKind);
-   if(chosen===null){
-    const alternate=await recognizeScanZone(worker,engine,zone,true,scanKind);
-    diagnostics.push({description:'Index / contraste',text:alternate.text});
-    chosen=scanAcceptedSingle(alternate.text,scanKind);
-   }
-   if(id!==scanRequest)return;
-   $('#scan-value').value=chosen??'';
-   refreshSingleScanConfirm();
-   $('#scan-message').textContent=chosen===null?
-    'Index non reconnu de façon fiable : recadre la fenêtre des chiffres ou saisis l’index manuellement.':
-    'Index proposé : contrôle tous les chiffres avant de confirmer.';
   }else{
-   // No suitable auto-detected index. Preserve the existing manual workflow.
-   const all=await recognizeScanZone(worker,engine,scanCrop||null,false,'full');
-   diagnostics.push({description:'Image complète (aucun cadrage fiable)',text:all.text});
+   const result=await recognizeWithFallback(worker,engine,scanCrop,scanKind,diagnostics,'Index');
    if(id!==scanRequest)return;
-   $('#scan-night').value='';$('#scan-day').value='';refreshElectricSum();
-   $('#scan-message').textContent='Zone non repérée : recadre les deux lignes Jour/Nuit, ou saisis les index manuellement.';
+   $('#scan-value').value=result?.value??'';
+   refreshSingleScanConfirm();
+   if(result){
+    $('#scan-message').textContent='Index proposé : vérifie chaque chiffre avant de le confirmer.';
+   }else{
+    const fragments=diagnostics.map(v=>v.text||'').join(' ');
+    const hasDigits=/\d/.test(fragments);
+    $('#scan-message').textContent=hasDigits?
+     'Lecture incomplète : chiffres détectés mais index incertain. Ajuste le cadre ou saisis l’index manuellement.':
+     'Lecture impossible. Ajuste le cadre ou saisis les chiffres manuellement.';
+   }
   }
-  scanLastText=diagnostics.map(v=>v.text).join('\n');
+  scanLastText=diagnostics.map(v=>v.text||'').join('\n');
   scanLastData={text:scanLastText};
-  scanRecordDiagnostics(diagnostics,preview);
+  const last=diagnostics.findLast(v=>v.source)||null;
+  scanRecordDiagnostics(diagnostics,last?.source||preview);
  }catch(err){
   if(id===scanRequest){
-   scanRecordDiagnostics([...diagnostics,{description:'Erreur technique',text:String(err?.message||err)}],preview);
+   scanRecordDiagnostics([...diagnostics,{
+    description:'Erreur technique',
+    text:String(err?.message||err)
+   }],diagnostics.findLast(v=>v.source)?.source||preview);
    $('#scan-message').textContent=String(err?.message)==='OCR_TIMEOUT'?
-    'Délai de lecture dépassé. Encadre les chiffres ou saisis-les manuellement.':
-    'Lecture automatique indisponible : saisis l’index manuellement. La photo reste disponible.';
+    'La lecture a dépassé le délai prévu. Ajuste le cadre ou saisis les chiffres.':
+    'Lecture automatique indisponible. La photo et ton cadre sont conservés.';
    if(String(err?.message)==='OCR_TIMEOUT'){
     const old=ocrWorkerPromise;ocrWorkerPromise=null;
     old?.then(w=>w.terminate?.()).catch(()=>{});
