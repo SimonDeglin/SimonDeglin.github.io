@@ -169,7 +169,7 @@ async function run(){
  const registry=JSON.parse(fs.readFileSync(REGISTRY,'utf8'));
  const data=JSON.parse(fs.readFileSync(DATA,'utf8'));
  const eligible=registry.communes.filter(x=>x.zone!=='exterieure_provisoire'&&x.officialSite);
- const ordered=eligible.sort((a,b)=>String(a.lastSiteCheck||'').localeCompare(String(b.lastSiteCheck||''))+(a.estimatedMinutes||999)-(b.estimatedMinutes||999));
+ const ordered=eligible.sort((a,b)=>String(a.lastSiteCheck||'').localeCompare(String(b.lastSiteCheck||''))||((a.estimatedMinutes||999)-(b.estimatedMinutes||999)));
  const selected=ordered.slice(0,Math.min(30,Math.max(1,BATCH)));
  const existing=new Set((data.items||[]).map(x=>x.id));
  const added=[];let sitesOK=0,docsRead=0,errors=0;
