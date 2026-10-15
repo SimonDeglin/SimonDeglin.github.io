@@ -1,4 +1,14 @@
-hive','À approfondir'],['engage','Déjà engagés'],['ecarte','Écartés'],['reference','Références']];
+ocument d’enquête publique porte sur la reconnaissance du périmètre de l’ancienne carrière de Bossimé ; arrêté provisoire daté du 16/03/2026.","url":"https://fr.scribd.com/document/1070454265/Avis-enquete-SARNA172-Bossime","type":"archive"}]}];</script><script>'use strict';
+const $=id=>document.getElementById(id);
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=(n,max=0)=>Number.isFinite(Number(n))?new Intl.NumberFormat('fr-BE',{maximumFractionDigits:max}).format(Number(n)):'—';
+const eur=n=>Number.isFinite(Number(n))?new Intl.NumberFormat('fr-BE',{maximumFractionDigits:0,style:'currency',currency:'EUR'}).format(Number(n)):'—';
+const largeMoney=n=>!Number.isFinite(n)?'À chiffrer':(Math.abs(n)>=1000000?fmt(n/1e6,2)+' M€':Math.abs(n)>=1000?fmt(n/1000,0)+' k€':eur(n));
+const num=n=>n!==null&&n!==''&&n!==undefined&&Number.isFinite(Number(n));
+const safeUrl=u=>{try{const x=new URL(u);return ['https:','http:'].includes(x.protocol)?x.href:''}catch{return ''}};
+const ORIGIN_ADDRESS='Rue de l’Avouerie 5, 4000 Liège, Belgique';
+const STORE_KEY='kdrix_prospection_v3';
+const FILTERS=[['pistes','Pistes à prospecter'],['all','Tous'],['foncier','Foncier'],['archive','À approfondir'],['engage','Déjà engagés'],['ecarte','Écartés'],['reference','Références']];
 const STATUSES={foncier:'Piste foncière',archive:'À approfondir',engage:'Projet engagé',ecarte:'À écarter',reference:'Référence',prospect:'À prospecter',approfondir:'À approfondir',obstacle:'Obstacle majeur'};
 const CATEGORIES=[
  {name:'Terrain et exploitation',items:[
@@ -49,7 +59,7 @@ function ensureStudy(id){if(!db.studies[id])db.studies[id]={polygons:[],exclusio
 function ensureChecks(id){if(!db.checks[id])db.checks[id]={};return db.checks[id]}
 function studyOf(s){return ensureStudy(s.id)}
 function latestCalc(s){return (studyOf(s).calcs||[])[0]||null}
-function studyLowHigh(s){const c=latestCalc(s);if(!c||!num(c.low)&&!num(c.volume))return null;const low=Number(c.low??c.volume),high=Number(c.high??c.volume);return {low,high,source:c}}
+function studyLowHigh(s){const c=latestCalc(s);if(!c||!num(c.low)&&!num(c.volume))return null;if(c.geometryStamp&&c.geometryStamp!==terrainGeomStamp(s))return null;const low=Number(c.low??c.volume),high=Number(c.high??c.volume);return {low,high,source:c}}
 function revenue(s){const vol=studyLowHigh(s);if(!vol)return null;return {low:vol.low*db.prices.low,high:vol.high*db.prices.high,vol}}
 function areaOf(s){const std=studyOf(s);if(std.polygons?.length)return Math.max(0,std.polygons.reduce((v,p)=>v+areaMeters(p),0)-std.exclusions.reduce((v,p)=>v+areaMeters(p),0));return null}
 function allNews(s){return [...(s.news||[]),...(db.news[s.id]||[])].sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')))}
@@ -93,7 +103,4 @@ function areaMeters(ll){if(!Array.isArray(ll)||ll.length<3)return 0;const lat0=l
 function clippedPoly(poly,axis,bound,greater){if(!poly.length)return [];let out=[],inside=p=>greater?p[axis]>=bound-1e-9:p[axis]<=bound+1e-9;for(let i=0;i<poly.length;i++){let a=poly[i],b=poly[(i+1)%poly.length],ia=inside(a),ib=inside(b);if(ia!==ib){let d=b[axis]-a[axis];if(Math.abs(d)>1e-14){const t=(bound-a[axis])/d;out.push([a[0]+t*(b[0]-a[0]),a[1]+t*(b[1]-a[1])])}}if(ib)out.push(b)}return out}
 function clipArea(poly,x0,y0,x1,y1){if(poly.length<3)return 0;let p=clippedPoly(poly,0,x0,true);p=clippedPoly(p,0,x1,false);p=clippedPoly(p,1,y0,true);p=clippedPoly(p,1,y1,false);return p.length>=3?Math.abs(signedArea(p)):0}
 function geometryLocal(s){const st=studyOf(s),ll=st.polygons[0]||[],ctr=siteCoords(s)||{lat:50.55,lon:5.5},lat0=ll.length?ll.reduce((v,p)=>v+p[0],0)/ll.length:ctr.lat,lon0=ll.length?ll.reduce((v,p)=>v+p[1],0)/ll.length:ctr.lon;return{lat0,lon0,includes:st.polygons.map(p=>p.map(x=>localXY(x,lat0,lon0))),holes:st.exclusions.map(p=>p.map(x=>localXY(x,lat0,lon0)))}}
-function projectedVolumeGrid(s,zFn,spacing=4){const geo=geometryLocal(s),areas=geo.includes;let coords=areas.flat();if(!coords.length)throw Error('Dessiner une emprise polygonale avant de calculer');const left=Math.min(...coords.map(x=>x[0])),right=Math.max(...coords.map(x=>x[0])),bottom=Math.min(...coords.map(x=>x[1])),top=Math.max(...coords.map(x=>x[1]));const bboxArea=(right-left)*(top-bottom);if(bboxArea>12000000)throw Error('Étendue trop importante : découper l’emprise en plusieurs études');const pitch=Math.max(spacing,Math.sqrt(Math.max(1,bboxArea)/25000)),nx=Math.ceil((right-left)/pitch),ny=Math.ceil((top-bottom)/pitch);if(nx*ny>65000)throw Error('Maille de calcul trop fine pour cette emprise');let v=0,fillArea=0,seenArea=0,totalArea=0,totalCut=0,minz=Infinity,maxz=-Infinity;for(let row=0;row<ny;row++){const y0=bottom+row*pitch,y1=Math.min(top,y0+pitch);for(let col=0;col<nx;col++){const x0=left+col*pitch,x1=Math.min(right,x0+pitch);let area=0;for(const p of areas)area+=clipArea(p,x0,y0,x1,y1);for(const p of geo.holes)area-=clipArea(p,x0,y0,x1,y1);area=Math.max(0,Math.min(area,(x1-x0)*(y1-y0)));if(area<0.0001)continue;totalArea+=area;const x=(x0+x1)/2,y=(y0+y1)/2,ll=fromLocalXY(x,y,geo.lat0,geo.lon0),actual=rasterAltitude(ll[0],ll[1]);if(actual===null)continue;seenArea+=area;const projected=zFn(x,y,geo,ll,actual);if(!num(projected)||!Number.isFinite(Number(projected)))continue;minz=Math.min(minz,actual);maxz=Math.max(maxz,actual);const diff=Number(projected)-actual;if(diff>0){v+=diff*area;fillArea+=area}else totalCut+=-diff*area}}
-return{volume:v,area:totalArea,coverage:totalArea?seenArea/totalArea:0,measuredArea:seenArea,fillArea,pitch,minz,maxz,totalCut,geometryType:'raster/échantillonnage'} }
-function samplePointElevation(r,lat,lon){if(!r)return null;let coords=[lon,lat];try{if(r.crs&&r.crs!=='EPSG:4326')coords=toCrs(coords,r.crs)}catch{return null}
- if(r.kind==='gri
+function projectedVolumeGrid(s,zFn,spacing=4){const geo=geometryLocal(s),areas=geo.includes;let coords=areas.flat();if(!coords.length)throw Error('Dessiner une emprise polygonale avant de calculer');const left=Math.min(...coords.map(x=>x[0])),right=Math.max(...coords.map(x=>x[0])),bottom=Math.min(...coords.map(x=>x[1])),top=Math.max(...coords.map(x=>x[1]));const bboxArea=(right-left)*(top-bottom);if(bboxArea>12000000)throw Error('Étendue trop importante : découper l’emprise en plusieurs études');const pitch=Math.max(spacing,Math.sqrt(Math.max(1,bboxArea)/25000)),nx=Math.ceil((right-left)/

@@ -1,12 +1,155 @@
-ibute('hidden','');}}
+c)=>Math.min(a[0],b[0])-eps<=c[0]&&c[0]<=Math.max(a[0],b[0])+eps&&Math.min(a[1],b[1])-eps<=c[1]&&c[1]<=Math.max(a[1],b[1])+eps;
+ for(let i=0;i<ll.length;i++){const a=ll[i],b=ll[(i+1)%ll.length];if(Math.hypot(b[0]-a[0],b[1]-a[1])<eps)return false;
+  for(let j=i+1;j<ll.length;j++){if(j===i+1||(i===0&&j===ll.length-1))continue;
+   const c=ll[j],d=ll[(j+1)%ll.length],o1=orientation(a,b,c),o2=orientation(a,b,d),o3=orientation(c,d,a),o4=orientation(c,d,b);
+   if((o1*o2 < -eps*eps&&o3*o4 < -eps*eps) || (Math.abs(o1)<=eps&&onSeg(a,b,c))||(Math.abs(o2)<=eps&&onSeg(a,b,d))||(Math.abs(o3)<=eps&&onSeg(c,d,a))||(Math.abs(o4)<=eps&&onSeg(c,d,b)))return false;
+  }
+ }return true;}
+function exclusionValid(s,points){if(!ringIsSimple(points))return false;const g=geometryLocal(s);return points.every(p=>{const xy=localXY(p,g.lat0,g.lon0);return g.includes.some(ring=>pointInPoly(xy,ring))})}
+function deleteTerrainVertex(s,type,pIndex,vIndex){const arr=type==='exclusions'?studyOf(s).exclusions:studyOf(s).polygons,poly=arr?.[pIndex];if(!poly||poly.length<=3){toast('Un contour doit conserver au moins trois sommets.');return;}queueGeometryUndo(s);poly.splice(vIndex,1);if(type==='exclusions'&&!exclusionValid(s,poly)){undoGeometry(s);toast('Zone exclue invalide ou hors de l’emprise.');return;}invalidateGeom(s);persist();renderMapPolygons(s);refreshMapMetrics(s);toast('Sommet supprimé.');}
+function insertTerrainVertex(s,type,pIndex,afterIndex){const arr=type==='exclusions'?studyOf(s).exclusions:studyOf(s).polygons,poly=arr?.[pIndex];if(!poly)return;queueGeometryUndo(s);const a=poly[afterIndex],b=poly[(afterIndex+1)%poly.length];poly.splice(afterIndex+1,0,[(a[0]+b[0])/2,(a[1]+b[1])/2]);invalidateGeom(s);persist();renderMapPolygons(s);refreshMapMetrics(s);toast('Nouveau sommet ajouté ; glisse-le pour ajuster.');}
+// Un extrait numerique du MNT local est transmis a la vue 3D par IndexedDB,
+// jamais par la representation couleur / le hillshade WMS.
+const TERRAIN_DB='kdrix-terres-terrain-v1',terrainRestored=new Set();
+function openTerrainStore(){return new Promise((resolve,reject)=>{
+ if(!window.indexedDB){reject(Error('Stockage IndexedDB indisponible dans ce navigateur'));return}
+ const req=indexedDB.open(TERRAIN_DB,1);
+ req.onupgradeneeded=()=>{const db=req.result;if(!db.objectStoreNames.contains('patches'))db.createObjectStore('patches',{keyPath:'siteId'})};
+ req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error||Error('IndexedDB indisponible'));
+})}
+async function terrainStorePut(patch){const db=await openTerrainStore();try{await new Promise((resolve,reject)=>{const tx=db.transaction('patches','readwrite');tx.objectStore('patches').put(patch);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error||Error('Enregistrement du MNT impossible'));tx.onabort=()=>reject(tx.error||Error('Espace de stockage insuffisant'))})}finally{db.close()}}
+async function terrainStoreGet(siteId){const db=await openTerrainStore();try{return await new Promise((resolve,reject)=>{const tx=db.transaction('patches','readonly'),req=tx.objectStore('patches').get(siteId);req.onsuccess=()=>resolve(req.result||null);req.onerror=()=>reject(req.error||Error('Lecture MNT impossible'))})}finally{db.close()}}
+function terrainGeomStamp(s){const st=studyOf(s);return JSON.stringify([st.polygons||[],st.exclusions||[]])}
+async function makeTerrainPatch(s){
+ const r=rasterFor(s);if(!r||r.kind!=='grid')throw Error('Pour une vue 3D mesurée, importer d’abord un MNT continu GeoTIFF ou ASC. Les sondages SPW ne suffisent pas.');
+ const st=studyOf(s);if(!st.polygons.length)throw Error('Dessiner d’abord le contour de la carrière.');
+ const geo=geometryLocal(s),pts=geo.includes.flat();if(pts.length<3)throw Error('Emprise non définie.');
+ const minX=Math.min(...pts.map(p=>p[0])),maxX=Math.max(...pts.map(p=>p[0])),minY=Math.min(...pts.map(p=>p[1])),maxY=Math.max(...pts.map(p=>p[1]));
+ const dx=maxX-minX,dy=maxY-minY,pad=Math.max(8,Math.min(45,Math.max(dx,dy)*.09));
+ const x0=minX-pad,x1=maxX+pad,y0=minY-pad,y1=maxY+pad,spanX=x1-x0,spanY=y1-y0;
+ if(spanX*spanY>16000000)throw Error('Emprise trop grande pour une vue 3D légère : scinder la zone.');
+ // Maillage d'affichage echantillonne sur le MNT numerique reel; il ne remplace pas la precision du raster source.
+ const nx=Math.max(46,Math.min(256,Math.ceil(spanX/2)+1)),ny=Math.max(46,Math.min(256,Math.ceil(spanY/2)+1));
+ const z=new Float32Array(nx*ny);let got=0,needed=0,hit=0,zmin=Infinity,zmax=-Infinity;
+ const pulse=$('mntProgress');if(pulse)pulse.textContent='Préparation du MNT pour la vue 3D…';
+ for(let row=0;row<ny;row++){
+  const y=y1-row/(ny-1)*spanY;
+  for(let col=0;col<nx;col++){
+   const x=x0+col/(nx-1)*spanX,pt=fromLocalXY(x,y,geo.lat0,geo.lon0),v=rasterAltitude(pt[0],pt[1]);
+   const inside=geo.includes.some(poly=>pointInPoly([x,y],poly))&&!geo.holes.some(poly=>pointInPoly([x,y],poly));
+   if(inside)needed++;
+   if(v===null||!Number.isFinite(v)){z[row*nx+col]=NaN;continue}
+   z[row*nx+col]=v;got++;if(inside)hit++;zmin=Math.min(zmin,v);zmax=Math.max(zmax,v);
+  }
+  if(row%30===0){if(pulse)pulse.textContent=`MNT 3D : ${Math.round((row+1)/ny*100)} % analysé`;await new Promise(resolve=>setTimeout(resolve,0))}
+ }
+ const coverage=needed?hit/needed:0;if(coverage<.90)throw Error('Le MNT ne couvre que '+fmt(coverage*100,0)+' % de la fosse. Importer un MNT couvrant l’emprise avant la 3D.');
+ const patch={siteId:s.id,siteName:s.name,geometryStamp:terrainGeomStamp(s),storedAt:new Date().toISOString(),
+  source:{name:r.name||'MNT local',crs:r.crs||'indéterminé',kind:'MNT numérique continu',description:r.description||'',acquisition:'Source indiquée dans le fichier MNT ; date non garantie par le seul nom'},
+  nx,ny,x0,x1,y0,y1,lat0:geo.lat0,lon0:geo.lon0,z,covered:got/(nx*ny),coverage,zmin,zmax,displayCellSize:Math.max(spanX/(nx-1),spanY/(ny-1))};
+ await terrainStorePut(patch);
+ st.terrain3D={source:patch.source,storedAt:patch.storedAt,coverage:patch.coverage,displayCellSize:patch.displayCellSize};persist();return patch;
+}
+async function restoreTerrainPatch(s){if(terrainRestored.has(s.id)||rasterFor(s))return false;terrainRestored.add(s.id);
+ let patch;try{patch=await terrainStoreGet(s.id)}catch{return false}
+ if(!patch||patch.geometryStamp!==terrainGeomStamp(s)||patch.coverage<.9)return false;
+ const nw=fromLocalXY(patch.x0,patch.y1,patch.lat0,patch.lon0),se=fromLocalXY(patch.x1,patch.y0,patch.lat0,patch.lon0);
+ const data=patch.z instanceof Float32Array?patch.z:new Float32Array(patch.z);
+ activeRaster={kind:'grid',name:'Extrait local 3D · '+patch.source.name,crs:'EPSG:4326',originX:nw[1],originY:nw[0],resX:(se[1]-nw[1])/(patch.nx-1),resY:(se[0]-nw[0])/(patch.ny-1),width:patch.nx,height:patch.ny,data,nodata:null,count:data.length,description:'Extrait numérique rééchantillonné · maille '+fmt(patch.displayCellSize,1)+' m'};
+ rasterSiteId=s.id;return true;
+}
+function openTerrain3D(s){
+ const url='vue3d.html?site='+encodeURIComponent(s.id)+'&name='+encodeURIComponent(s.name);
+ // Ouvrir immediatement, avant les operations asynchrones, pour eviter le blocage anti-pop-up.
+ const viewer=window.open(url,'_blank');if(!viewer){toast('Autoriser les fenêtres de ce portail pour ouvrir la vue 3D.',5000);return}
+ if(rasterFor(s)?.kind==='grid'){
+  makeTerrainPatch(s).then(p=>{try{viewer.postMessage({type:'KDRIX_3D_PATCH_READY',siteId:s.id},location.origin)}catch{};toast('MNT numérique transmis à la vue 3D · '+fmt(p.coverage*100)+' % de la fosse couvert.');})
+    .catch(e=>{toast('Préparation 3D : '+e.message,6500);try{viewer.postMessage({type:'KDRIX_3D_PATCH_ERROR',siteId:s.id,message:e.message},location.origin)}catch{}});
+ }else toast('Onglet 3D ouvert. Sans MNT continu importé, le viewer expliquera la marche à suivre.',5000);
+}
+
+function renderMapPolygons(s){
+ if(!map||!mapLayers.draw)return;mapLayers.draw.clearLayers();const st=studyOf(s),editable=pageState.tab==='cubature'&&!['draw','exclude'].includes(pageState.mapTool);
+ for(const type of ['polygons','exclusions']){const list=st[type]||[],isHole=type==='exclusions',stroke=isHole?'#b95f3b':'#008b76';
+  for(let k=0;k<list.length;k++){const poly=list[k];if(poly.length<3)continue;
+   L.polygon(poly,{color:stroke,fillColor:stroke,fillOpacity:isHole?.08:.17,weight:3,dashArray:isHole?'7 5':null}).addTo(mapLayers.draw);
+   if(!editable)continue;
+   for(let i=0;i<poly.length;i++){
+    const mid=[(poly[i][0]+poly[(i+1)%poly.length][0])/2,(poly[i][1]+poly[(i+1)%poly.length][1])/2];
+    const midMarker=L.marker(mid,{icon:L.divIcon({className:'',html:`<i class="polyMidHandle ${isHole?'exclusion':''}"></i>`,iconSize:[16,16],iconAnchor:[8,8]}),zIndexOffset:200}).addTo(mapLayers.draw);
+    midMarker.bindTooltip('Cliquer pour ajouter un sommet',{direction:'top'});
+    midMarker.on('click',e=>{L.DomEvent.stopPropagation(e);insertTerrainVertex(s,type,k,i)});
+    // Ligne de segment cliquable : permet aussi d'insérer un point sans chercher la poignée.
+    const seg=L.polyline([poly[i],poly[(i+1)%poly.length]],{color:stroke,opacity:0,weight:13,interactive:true}).addTo(mapLayers.draw);
+    seg.on('click',e=>{L.DomEvent.stopPropagation(e);insertTerrainVertex(s,type,k,i)});
+    const marker=L.marker(poly[i],{draggable:true,autoPan:true,icon:L.divIcon({className:'',html:`<i class="polyHandle ${isHole?'exclusion':''}"></i>`,iconSize:[19,19],iconAnchor:[9,9]}),zIndexOffset:500}).addTo(mapLayers.draw);
+    marker.bindTooltip('Glisser pour déplacer · clic pour supprimer',{direction:'top'});
+    marker.on('dragstart',()=>queueGeometryUndo(s));
+    marker.on('dragend',e=>{const v=e.target.getLatLng(),old=poly[i];poly[i]=[v.lat,v.lng];if(!ringIsSimple(poly)||(isHole&&!exclusionValid(s,poly))){poly[i]=old;const h=terrainEditHistory.get(s.id);h?.pop();toast('Contour invalide : sommet repositionné à son ancienne place.');}
+      else{invalidateGeom(s);persist()}renderMapPolygons(s);refreshMapMetrics(s)});
+    marker.bindPopup(`<button class="popupDeleteVertex" type="button" data-remove-vertex="${type}" data-poly-index="${k}" data-vertex-index="${i}">Supprimer ce sommet</button>`);
+    marker.on('contextmenu',e=>{L.DomEvent.stopPropagation(e);deleteTerrainVertex(s,type,k,i)});
+   }
+  }
+ }
+ renderMapProfile(s);
+}
+function refreshMapMetrics(s){const area=areaOf(s);const h=$('mapLocalStatus');if(h)h.textContent=(area?fmt(area)+' m² · ':'')+locQuality(s);renderPreview(s);renderProfile(s);const sum=$('parcelSummary');if(sum)sum.textContent='Emprise modifiée : relancer le parcellaire pour actualiser le décompte.'}
+function invalidateGeom(s){studyOf(s).geometryUpdatedAt=new Date().toISOString();delete db.autoChecks?.[s.id];delete db.parcels?.[s.id];parcelFeatures=[];parcelSiteId=null;selectedParcelIds=new Set();if(gisParcelLayer){try{map.removeLayer(gisParcelLayer)}catch{}gisParcelLayer=null}}
+
+// Pentes : derivees des cellules d'un MNT continu, jamais de sondages clairsemes.
+function updateSlopeMap(s){
+ const legend=$('colorLegend');if(!map||!legend)return;
+ if(mapLayers.color){try{map.removeLayer(mapLayers.color)}catch{ }mapLayers.color=null;}
+ const r=rasterFor(s);
+ legend.hidden=false;
+ if(!r||r.kind!=='grid'){
+  legend.innerHTML='<b>Carte des pentes : MNT continu requis.</b> Le fond reste le véritable ombrage LiDAR du SPW. Importer un GeoTIFF ou ASC pour calculer des pentes : les sondages espacés ne conviennent pas.';
+  return;
+ }
+ const verts=studyOf(s).polygons.flat();
+ if(verts.length<3){legend.textContent='Dessiner une emprise pour cadrer la carte des pentes.';return;}
+ const ys=verts.map(p=>p[0]),xs=verts.map(p=>p[1]);
+ const ymin=Math.min(...ys),ymax=Math.max(...ys),xmin=Math.min(...xs),xmax=Math.max(...xs);
+ const padY=Math.max(.00004,(ymax-ymin)*.1),padX=Math.max(.00005,(xmax-xmin)*.1);
+ const south=ymin-padY,north=ymax+padY,west=xmin-padX,east=xmax+padX,n=132;
+ const z=new Float32Array(n*n),slopes=new Float32Array(n*n);
+ let valid=0;
+ for(let y=0;y<n;y++)for(let x=0;x<n;x++){
+  const lat=north-(y+.5)*(north-south)/n,lon=west+(x+.5)*(east-west)/n;
+  const value=rasterAltitude(lat,lon);z[y*n+x]=value===null?NaN:value;
+  if(Number.isFinite(value))valid++;
+ }
+ if(valid<n*n*.75){legend.textContent='Couverture MNT insuffisante pour produire une carte des pentes fiable sur cette emprise.';return;}
+ const dy=(north-south)*111132/n,dx=(east-west)*111320*Math.cos((north+south)*Math.PI/360)/n;
+ const canvas=document.createElement('canvas');canvas.width=n;canvas.height=n;
+ const ctx=canvas.getContext('2d'),image=ctx.createImageData(n,n);
+ let shown=0,min=90,max=0;
+ for(let y=1;y<n-1;y++)for(let x=1;x<n-1;x++){
+  const i=y*n+x,aa=z[i-1],bb=z[i+1],cc=z[i-n],dd=z[i+n];
+  if(![aa,bb,cc,dd].every(Number.isFinite))continue;
+  const grad=Math.hypot((bb-aa)/(2*dx),(dd-cc)/(2*dy));
+  const deg=Math.atan(grad)*180/Math.PI;slopes[i]=deg;min=Math.min(min,deg);max=Math.max(max,deg);shown++;
+  const rgb=deg<5?[81,161,126]:deg<15?[230,204,83]:deg<30?[235,133,60]:[197,65,62];
+  const p=i*4;image.data[p]=rgb[0];image.data[p+1]=rgb[1];image.data[p+2]=rgb[2];image.data[p+3]=190;
+ }
+ if(shown<n*n*.65){legend.textContent='Pentes indisponibles : trop de données altimétriques manquantes.';return;}
+ ctx.putImageData(image,0,0);
+ mapLayers.color=L.imageOverlay(canvas.toDataURL('image/png'),[[south,west],[north,east]],{opacity:.82,interactive:false}).addTo(map);
+ legend.innerHTML=`<b>Pentes calculées sur le MNT importé : ${fmt(min,0)}° à ${fmt(max,0)}°</b><div style="display:flex;height:8px;border-radius:5px;overflow:hidden;margin:6px 0"><i style="background:#51a17e;flex:1"></i><i style="background:#e6cc53;flex:1"></i><i style="background:#eb853c;flex:1"></i><i style="background:#c5413e;flex:1"></i></div><small>Vert &lt; 5° · Jaune 5–15° · Orange 15–30° · Rouge &gt; 30°. Pentes indicatives selon la maille d'échantillonnage, ombrage du sol en fond.</small>`;
+}
+
+function setMapMode(s,which){pageState.mapMode=which;if(!map)return;if(mapLayers.base){map.removeLayer(mapLayers.base)}mapLayers.base=makeBase(which);mapLayers.base.addTo(map);mapLayers.base.bringToBack();if(mapLayers.color){map.removeLayer(mapLayers.color);mapLayers.color=null}if(which==='color')updateColorMap(s);else if(which==='slope')updateSlopeMap(s);else{$('colorLegend')?.setAttribute('hidden','');}}
 function setCadastre(enabled){pageState.cadastreOff=!enabled;if(!map||!window.L)return;if(mapLayers.cad){map.removeLayer(mapLayers.cad);mapLayers.cad=null}if(enabled)mapLayers.cad=makeCadLayer().addTo(map)}
 function centerMap(s){if(!map)return;const bounds=mapBoundsFromStudy(s);if(bounds)map.fitBounds(bounds.pad(.35),{maxZoom:18});else{const p=siteCoords(s);if(p)map.setView([p.lat,p.lon],mapDefaultZoom(s))}}
 function placePin(s,confirm=false){if(!map)return;const p=map.getCenter();db.pins[s.id]={lat:p.lat,lon:p.lng,quality:confirm?'site':'manual'};invalidateGeom(s);persist();attachPin(s,db.pins[s.id]);$('mapLocalStatus').textContent=confirm?'Repère situé par l’utilisateur':'Repère placé sur le centre de la carte · à confirmer';toast(confirm?'Repère de fosse confirmé (déclaration de l’utilisateur).':'Repère placé, à confirmer.');}
 function confirmSitePin(s){const p=siteCoords(s);if(!p){toast('Placer d’abord un repère sur la fosse.');return}db.pins[s.id]={lat:pinMarker?.getLatLng()?.lat??p.lat,lon:pinMarker?.getLatLng()?.lng??p.lon,quality:'site'};invalidateGeom(s);persist();attachPin(s,db.pins[s.id]);$('mapLocalStatus').textContent='Repère de carrière confirmé par l’utilisateur';toast('Position du site confirmée. Dessiner maintenant le contour.');}
-function startPoly(){if(!map){toast('Carte non disponible.');return}pageState.mapTool='draw';drawPoints=[];map.doubleClickZoom.disable();map.getContainer().style.cursor='crosshair';toast('Cliquer pour tracer les sommets de la fosse, puis « Terminer le contour ».');}
+function startPoly(mode='draw'){if(!map){toast('Carte non disponible.');return}if(mode==='exclude'&&!studyOf(siteById(pageState.siteId)).polygons.length){toast('Délimiter la fosse avant de dessiner une exclusion.');return}pageState.mapTool=mode;drawPoints=[];map.doubleClickZoom.disable();map.getContainer().style.cursor='crosshair';renderMapPolygons(siteById(pageState.siteId));toast(mode==='exclude'?'Dessiner la zone à ne pas remblayer, puis terminer.':'Cliquer pour tracer les sommets de la fosse, puis terminer le contour.');}
 function cancelPoly(){pageState.mapTool='';drawPoints=[];profileClicks=[];if(drawPreviewLine&&map){map.removeLayer(drawPreviewLine)}drawPreviewLine=null;if(map?.getContainer())map.getContainer().style.cursor='';}
-function finishPoly(s){if(pageState.mapTool!=='draw'||drawPoints.length<3){toast('Tracer au moins 3 sommets, puis terminer.');return}const st=studyOf(s);st.polygons=[drawPoints.slice()];st.exclusions=[];st.sectionLine=null;invalidateGeom(s);cancelPoly();persist();render();toast('Emprise enregistrée : '+fmt(areaOf(s))+' m².');}
-function clearPoly(s){if(!confirm('Effacer l’emprise de cette étude ? Les anciens volumes enregistrés resteront dans l’historique.'))return;studyOf(s).polygons=[];studyOf(s).exclusions=[];studyOf(s).sectionLine=null;invalidateGeom(s);cancelPoly();persist();render()}
+function finishPoly(s){const mode=pageState.mapTool;if(!['draw','exclude'].includes(mode)||drawPoints.length<3){toast('Tracer au moins trois sommets, puis terminer.');return}const poly=drawPoints.slice();if(!ringIsSimple(poly)){toast('Contour impossible : croisements ou superficie trop faible. Modifier le dessin.');return}const st=studyOf(s);if(mode==='exclude'&&!exclusionValid(s,poly)){toast('L’exclusion doit se trouver à l’intérieur du contour principal.');return}queueGeometryUndo(s);if(mode==='exclude')st.exclusions.push(poly);else{st.polygons=[poly];st.exclusions=[];st.sectionLine=null;}invalidateGeom(s);cancelPoly();persist();render();toast((mode==='exclude'?'Zone exclue':'Emprise')+' enregistrée : '+fmt(areaOf(s))+' m² utiles.');}
+function clearPoly(s){if(!confirm('Effacer l’emprise de cette étude ? Les anciens volumes enregistrés resteront dans l’historique.'))return;queueGeometryUndo(s);studyOf(s).polygons=[];studyOf(s).exclusions=[];studyOf(s).sectionLine=null;invalidateGeom(s);cancelPoly();persist();render()}
+function clearExclusions(s){if(!studyOf(s).exclusions.length){toast('Aucune exclusion à effacer.');return}if(!confirm('Effacer les zones exclues ?'))return;queueGeometryUndo(s);studyOf(s).exclusions=[];invalidateGeom(s);persist();render();}
+
 async function geosearchMap(term){if(!map||!term.trim())return;try{const u='https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=1&q='+encodeURIComponent(term);const req=await fetch(u,{headers:{'Accept-Language':'fr'}});if(!req.ok)throw Error('Service indisponible');const a=await req.json();if(!a?.length)throw Error('Lieu introuvable');map.setView([Number(a[0].lat),Number(a[0].lon)],16);toast('Position de recherche trouvée. Place le repère sur la fosse.')}catch(e){toast('Recherche impossible : '+e.message,5000)}}
 function quantile(arr,q){if(!arr.length)return null;const sorted=arr.slice().sort((a,b)=>a-b);return sorted[Math.max(0,Math.min(sorted.length-1,Math.floor((sorted.length-1)*q)))]}
 function colorAt(t){const stops=[[37,70,168],[48,132,206],[55,173,116],[222,210,84],[236,144,65],[174,61,64]];const x=Math.max(0,Math.min(.99999,t))*(stops.length-1),i=Math.floor(x),k=x-i;return stops[i].map((v,j)=>Math.round(v+(stops[i+1][j]-v)*k))}
@@ -27,53 +170,4 @@ function updateColorMap(s){
    L.circleMarker([lat,lon],{radius:5.8,color:'#fff',weight:1.1,fillColor:color,fillOpacity:.95,interactive:true}).bindTooltip(fmt(point.z,1)+' m').addTo(group);
   }
   mapLayers.color=group.addTo(map);
-  legend.hidden=false;legend.innerHTML=`<strong>Altitudes ponctuelles : ${fmt(minimum,1)} à ${fmt(maximum,1)} m</strong><div class="heightRamp"></div><small>${r.kind==='spw'?'Sondages SPW espacés :':'Points XYZ importés :'} couleurs des points mesurés uniquement. Le fond gris est le véritable ombrage MNT du SPW, sans interpolation RGB trompeuse.</small>`;
-  return;
- }
- const st=studyOf(s),vertices=st.polygons.flat();if(!vertices.length){legend.hidden=false;legend.textContent='Dessiner la fosse pour cadrer le MNT coloré.';return}
- const minLat=Math.min(...vertices.map(p=>p[0])),maxLat=Math.max(...vertices.map(p=>p[0])),minLon=Math.min(...vertices.map(p=>p[1])),maxLon=Math.max(...vertices.map(p=>p[1]));
- const dy=Math.max(.00006,(maxLat-minLat)*.09),dx=Math.max(.00009,(maxLon-minLon)*.09),bounds=[[minLat-dy,minLon-dx],[maxLat+dy,maxLon+dx]],n=168,w=168,z=new Float32Array(n*w),valid=[];
- for(let y=0;y<n;y++)for(let x=0;x<w;x++){
-  const lat=bounds[1][0]-(y+.5)/n*(bounds[1][0]-bounds[0][0]),lon=bounds[0][1]+(x+.5)/w*(bounds[1][1]-bounds[0][1]),v=rasterAltitude(lat,lon);
-  z[y*w+x]=v===null?NaN:v;if(v!==null&&Number.isFinite(v))valid.push(v);
- }
- if(valid.length<n*w*.55){legend.hidden=false;legend.textContent='Le MNT importé ne couvre pas suffisamment l’emprise. Vue LiDAR officielle conservée.';return}
- const min=quantile(valid,.025),max=quantile(valid,.975),range=Math.max(.5,max-min),canvas=document.createElement('canvas');canvas.width=w;canvas.height=n;
- const ctx=canvas.getContext('2d'),im=ctx.createImageData(w,n);
- for(let y=0;y<n;y++)for(let x=0;x<w;x++){
-  const k=y*w+x,v=z[k],base=k*4;if(!Number.isFinite(v)){im.data[base+3]=0;continue}
-  const c=colorAt((v-min)/range);for(let j=0;j<3;j++)im.data[base+j]=c[j];im.data[base+3]=190;
- }
- ctx.putImageData(im,0,0);mapLayers.color=L.imageOverlay(canvas.toDataURL('image/png'),bounds,{opacity:.78,interactive:false}).addTo(map);
- legend.hidden=false;legend.innerHTML=`<strong>MNT coloré : ${fmt(min,1)} à ${fmt(max,1)} m</strong><div class="heightRamp"></div><small>Couleurs calculées sur les altitudes numériques du fichier ${esc(r.name)} ; ombrage du sol officiel en arrière-plan.</small>`;
-}
-function approximateParcelAreas(s,features){const st=studyOf(s),area=areaOf(s);if(!area||!st.polygons.length)return features.map(f=>({key:String(f.properties?.CAPAKEY||'Parcelle sans référence'),touch:null}));const geo=geometryLocal(s),pts=geo.includes.flat(),xmin=Math.min(...pts.map(v=>v[0])),xmax=Math.max(...pts.map(v=>v[0])),ymin=Math.min(...pts.map(v=>v[1])),ymax=Math.max(...pts.map(v=>v[1])),pitch=Math.max(3,Math.sqrt(((xmax-xmin)*(ymax-ymin))/460));let testPoints=[];for(let x=xmin+pitch/2;x<xmax;x+=pitch)for(let y=ymin+pitch/2;y<ymax;y+=pitch){if(!geo.includes.some(p=>pointInPoly([x,y],p)))continue;testPoints.push(fromLocalXY(x,y,geo.lat0,geo.lon0))}return features.map(f=>{const rings=(f.geometry?.type==='Polygon'?[f.geometry.coordinates]:f.geometry?.type==='MultiPolygon'?f.geometry.coordinates:[]);const hit=testPoints.filter(ll=>rings.some(p=>p[0]&&pointInPoly([ll[1],ll[0]],p[0]))).length;return {key:String(f.properties?.CAPAKEY||f.properties?.OBJECTID||'Sans référence'),touch:Math.round(hit*pitch*pitch/10)*10}})}
-function updateMapParcels(s,feats){parcelFeatures=feats;parcelSiteId=s.id;if(!map||!window.L||!feats.length)return;if(gisParcelLayer)try{map.removeLayer(gisParcelLayer)}catch{}gisParcelLayer=L.geoJSON({type:'FeatureCollection',features:feats},{style:feature=>({color:selectedParcelIds.has(String(feature.properties?.CAPAKEY))?'#15b7a0':'#f0a52e',weight:selectedParcelIds.has(String(feature.properties?.CAPAKEY))?3:1.3,fillColor:'#07a785',fillOpacity:selectedParcelIds.has(String(feature.properties?.CAPAKEY))?.28:.035}),onEachFeature:(f,layer)=>{const key=String(f.properties?.CAPAKEY||f.properties?.OBJECTID||'');layer.bindTooltip('Parcelle '+key,{sticky:true});layer.on('click',e=>{L.DomEvent.stopPropagation(e);if(selectedParcelIds.has(key))selectedParcelIds.delete(key);else selectedParcelIds.add(key);updateMapParcels(s,feats);const btn=$('useSelectedParcels');if(btn)btn.disabled=selectedParcelIds.size===0;toast(selectedParcelIds.size+' parcelle(s) sélectionnée(s) pour constituer une emprise');})}}).addTo(map);}
-async function autoGIS(s,quiet=false,onlyCad=false){const g=currentGeom(s);if(!g){if(!quiet)toast('Confirmer la position de la carrière ou dessiner une emprise avant la consultation SPW.',5500);return}if(pageState.autoInFlight)return;pageState.autoInFlight=true;const id=s.id,status=$('gisStatus')||$('parcelSummary');if(status)status.textContent='Consultation des couches SPW en cours…';const types=onlyCad?['cadastre']:['secteur','natura','cadastre'];const results=await Promise.all(types.map(async key=>{try{return {key,features:await arcgisQuery(GIS_LAYERS[key],g,'*',key==='cadastre'),ok:true}}catch(e){return {key,ok:false,error:e.message}}}));const cache=db.autoChecks[id]||{};for(const r of results){if(r.ok){if(r.key==='cadastre'){const parc=approximateParcelAreas(s,r.features);cache.cadastre={ok:true,quality:g.quality,date:new Date().toISOString(),parcels:parc,features:null};if(pageState.tab==='cubature')updateMapParcels(s,r.features)}else cache[r.key]={ok:true,quality:g.quality,date:new Date().toISOString(),features:r.features.map(x=>({label:zoneLabel(x.properties),properties:x.properties}))};}else cache[r.key]={ok:false,error:r.error,date:new Date().toISOString()};}cache.lastRun=new Date().toISOString();db.autoChecks[id]=cache;persist();pageState.autoInFlight=false;if(pageState.siteId===id){const tab=pageState.tab;render();if(!quiet){const success=results.filter(x=>x.ok).length;toast(success+' couche(s) SPW interrogée(s) / '+types.length+'. Les échecs restent inconnus. ',5500)}}}
-function useParcelSelection(s){if(!selectedParcelIds.size)return;const polys=parcelFeatures.filter(f=>selectedParcelIds.has(String(f.properties?.CAPAKEY))).flatMap(f=>{const a=f.geometry?.type==='Polygon'?[f.geometry.coordinates]:f.geometry?.type==='MultiPolygon'?f.geometry.coordinates:[];return a.map(z=>z[0]).filter(z=>z?.length>2).map(z=>z.map(x=>[x[1],x[0]]).filter(p=>p.every(Number.isFinite)))});if(!polys.length){toast('Aucune géométrie de parcelle valide.');return}const st=studyOf(s);st.sectionLine=null;st.polygons=polys.map(p=>{if(p.length>3&&p.at(-1)[0]===p[0][0]&&p.at(-1)[1]===p[0][1])p.pop();return p});st.exclusions=[];invalidateGeom(s);persist();render();toast('Emprise constituée avec '+polys.length+' polygone(s) cadastraux (à vérifier).')}
-async function calculateRoute(s){const d=siteCoords(s);if(!d||!['site','emprise'].includes(d.quality)){toast('Confirmer la localisation avant le calcul routier.');return}try{let o=originCoords;if(!o){const resp=await fetch('https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&q='+encodeURIComponent(ORIGIN_ADDRESS));if(!resp.ok)throw Error('Géocodeur indisponible');const rows=await resp.json();if(!rows.length)throw Error('Départ KDRIX introuvable');o={lat:Number(rows[0].lat),lon:Number(rows[0].lon)};originCoords=o}const api=`https://router.project-osrm.org/route/v1/driving/${o.lon},${o.lat};${d.lon},${d.lat}?overview=false`;const resp=await fetch(api);if(!resp.ok)throw Error('Route indisponible');const route=(await resp.json()).routes?.[0];if(!route)throw Error('Pas de trajet connu');db.routes[s.id]={min:Math.round(route.duration/60),km:Math.round(route.distance/100)/10,date:new Date().toISOString().slice(0,10),destination:[d.lat,d.lon],source:'OSRM voiture (indicatif)'};persist();toast('Trajet voiture calculé. Vérifier ensuite le tonnage autorisé.');render()}catch(e){toast('Trajet non disponible : '+e.message,5500)}}
-
-let searchTimer=null;
-function refreshCalculation(s){clearTimeout(quickTimer);quickTimer=setTimeout(()=>{renderPreview(s);renderProfile(s)},150)}
-function changeQuick(s,id,val){const q=quickSettings(s);if(id==='quickDepth')q.depth=val===''?null:Number(val);if(id==='quickDepthDelta')q.depthDelta=val===''?0:Number(val);if(id==='quickLevel'||id==='levelSlider'){q.level=val===''?null:Number(val);if($('quickLevel')&&id==='levelSlider')$('quickLevel').value=q.level;if($('levelSlider')&&id==='quickLevel')$('levelSlider').value=q.level;if($('levelOut'))$('levelOut').textContent=fmt(q.level,1)}if(id==='quickDelta')q.delta=val===''?0:Number(val);if(num(q.level)){q.min=Math.min(Number(q.min??q.level),Number(q.level)-2);q.max=Math.max(Number(q.max??q.level),Number(q.level)+2);const slider=$('levelSlider');if(slider){slider.min=q.min;slider.max=q.max;}}persist();refreshCalculation(s)}
-function importFileOfSite(s){const payload={app:'KDRIX-site-v3',exportedAt:new Date().toISOString(),site:s,study:studyOf(s),overrides:db.overrides[s.id]||null,checks:db.checks[s.id]||{},notes:db.notes[s.id]||'',news:db.news[s.id]||[],docs:db.docs[s.id]||[],routes:db.routes[s.id]||null,pins:db.pins[s.id]||null,autoChecks:siteChecks(s)||{},decision:db.decisions[s.id]||null};downloadText(`KDRIX_${s.id}_prospection.json`,JSON.stringify(payload,null,2));toast('Dossier téléchargé au format JSON')}
-function handleClick(e){const el=e.target,btn=q=>el.closest(q),s=pageState.siteId?siteById(pageState.siteId):null;if(btn('#exportAllBtn'))return exportAll();if(btn('#addSiteBtn'))return openSiteModal();if(btn('#closeModal'))return $('modal').hidden=true;
-let x=btn('[data-filter]');if(x){pageState.filter=x.dataset.filter;render();return}x=btn('[data-tab]');if(x&&s){pageState.tab=x.dataset.tab;cancelPoly();render();return}if(btn('#applyPrices'))return savePrice();if(btn('#favBtn')&&s){db.favorites[s.id]=!db.favorites[s.id];persist();render();return}if(!s)return;
-x=btn('[data-mapmode]');if(x){setMapMode(s,x.dataset.mapmode);document.querySelectorAll('[data-mapmode]').forEach(b=>b.classList.toggle('selected',b===x));return}
-if(btn('#recenterMap'))return centerMap(s);if(btn('#autoProfile'))return resetAutoProfile(s);if(btn('#drawProfile'))return drawNewProfile(s);if(btn('#suggestZ')){proposeZ(s);return}x=btn('[data-zstep]');if(x){const level=Number(quickSettings(s).level);if(Number.isFinite(level))changeQuick(s,'quickLevel',String(Math.round((level+Number(x.dataset.zstep))*2)/2));return}if(btn('#pinAtCenter'))return placePin(s);if(btn('#confirmPin'))return confirmSitePin(s);if(btn('#mapSearchBtn'))return geosearchMap($('mapGeoSearch')?.value||'');if(btn('#drawFootprint'))return startPoly();if(btn('#endFootprint'))return finishPoly(s);if(btn('#cancelDrawing'))return cancelPoly();if(btn('#clearAreas'))return clearPoly(s);
-if(btn('#loadSPW')){if(!studyOf(s).polygons.length){toast('Dessiner d’abord le contour.');return}const status=$('mntProgress'),b=$('loadSPW');if(status)status.textContent='Récupération des altitudes SPW : cela peut prendre quelques instants…';if(b)b.disabled=true;loadSpwSample(s,Math.max(9,Math.min(28,Math.sqrt(areaOf(s)/110)||15))).then(r=>{rasterSiteId=s.id;hintLevel(s);pageState.mapMode='hillshade';persist();render();toast('Sondages chargés. Vue LiDAR du sol + coupe disponibles.');}).catch(e=>{toast('LiDAR indisponible : '+e.message+'. Utiliser le mode indicatif ou importer un MNT.',6500);if(status)status.textContent='SPW indisponible : '+e.message;if(b)b.disabled=false});return}
-if(btn('#loadMntBtn')){const f=$('rasterFile')?.files?.[0],crs=$('rasterCrs')?.value||'EPSG:31370';if(!f){toast('Choisir un fichier MNT.');return}const b=$('loadMntBtn');b.disabled=true;b.textContent='Chargement…';loadRasterFile(f,crs).then(r=>{rasterSiteId=s.id;hintLevel(s);pageState.mapMode='hillshade';persist();render();toast('MNT chargé. Relief du sol et coupe A—B disponibles.');}).catch(e=>{toast(e.message,7000);b.disabled=false;b.textContent='Charger ce MNT'});return}
-if(btn('#saveQuick')){try{volumeResultSave(s)}catch(err){toast(err.message,5200)}return}
-if(btn('#refreshCadastre'))return autoGIS(s,false,true);if(btn('#useSelectedParcels'))return useParcelSelection(s);if(btn('#runGIS'))return autoGIS(s);if(btn('#routeCalcBtn'))return calculateRoute(s);
-x=btn('[data-decision]');if(x){db.decisions[s.id]={choice:x.dataset.decision,date:new Date().toISOString().slice(0,10)};persist();render();toast('Décision interne enregistrée');return}
-if(btn('#openNewEvent')){const e=$('newEventForm');if(e){e.hidden=!e.hidden;if(!e.hidden)e.querySelector('input')?.focus()}return}
-if(btn('#exportSiteBtn'))return importFileOfSite(s);if(btn('#exportSiteGeo'))return exportSiteGeoJSON(s)}
-function handleInput(e){const el=e.target,s=pageState.siteId?siteById(pageState.siteId):null;if(el.id==='siteSearch'){pageState.query=el.value;const pos=el.selectionStart;clearTimeout(searchTimer);searchTimer=setTimeout(()=>{render();const target=$('siteSearch');target?.focus();if(pos!==null)target?.setSelectionRange(pos,pos)},170);return}if(!s)return;
-if(['quickDepth','quickDepthDelta','quickLevel','levelSlider','quickDelta'].includes(el.id))return changeQuick(s,el.id,el.value);
-if(el.id==='internalNotes'){db.notes[s.id]=el.value;persist();return}}
-function handleChange(e){const el=e.target,s=pageState.siteId?siteById(pageState.siteId):null;if(el.id==='siteSort'){pageState.sort=el.value;render();return}if(['priceLow','priceHigh'].includes(el.id))return;if(el.id==='importAllInput'){if(el.files?.[0])importAll(el.files[0]);return}if(!s)return;
-if(el.id==='cadastreToggle')return setCadastre(el.checked);if(el.id==='piccToggle')return setPicc(el.checked);if(el.id==='contourToggle')return setContours(s,el.checked);if(el.id==='contourInterval'){pageState.contourInterval=Number(el.value)||2;if(pageState.contoursOn)setContours(s,true);return;}
-if(el.name==='volumeMode'){const q=quickSettings(s);if(el.value==='spw'&&!rasterFor(s)){toast('Charger d’abord des altitudes numériques.');return}q.mode=el.value;persist();$('levelControls').hidden=q.mode!=='spw';$('depthControls').hidden=q.mode==='spw';refreshCalculation(s);return}}
-function handleSubmit(e){const form=e.target;if(!['addEventForm','newSiteForm'].includes(form.id))return;e.preventDefault();const p=Object.fromEntries(new FormData(form).entries());if(form.id==='newSiteForm'){const name=p.name?.trim(),city=p.city?.trim();if(!name||!city)return;const id='NV-'+Date.now().toString().slice(-10);const lat=p.lat?Number(p.lat):null,lon=p.lon?Number(p.lon):null;const site={id,name,city,lat:Number.isFinite(lat)?lat:null,lon:Number.isFinite(lon)?lon:null,loc:p.loc||'À repérer',kind:'Ancienne excavation à étudier',status:'archive',posQuality:'unknown',priority:4,fact:p.fact||'Nouveau site ajouté manuellement : localisation et situation à vérifier.',obstacle:'À vérifier',action:'Localiser la fosse et dessiner une emprise.',sources:[],news:[],checkedOnline:false,checkDate:new Date().toISOString().slice(0,10)};ensureCustom(site);$('modal').hidden=true;pageState.siteId=id;pageState.tab='cubature';history.replaceState(null,'',tabHref(id));render();return}
-const s=pageState.siteId&&siteById(pageState.siteId);if(!s)return;if(!p.title?.trim()||!p.text?.trim()){toast('Titre et résumé requis.');return}if(p.type==='external'&&!safeUrl(p.url)){toast('Lien de source obligatoire pour une publication publique.');return}saveNews(s.id,{date:p.date||new Date().toISOString().slice(0,10),type:p.type,title:p.title,text:p.text,url:safeUrl(p.url)||''});render();toast('Information enregistrée')}
-function openSit
+  legend.hidden=false;legend.innerHTML=`<strong>Altitudes ponctuelles : ${fmt(minimum,1)} à ${fmt(maximum,1)}

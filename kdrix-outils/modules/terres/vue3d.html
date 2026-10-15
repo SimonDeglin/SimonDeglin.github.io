@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#173746">
+<title>KDRIX — Vue 3D du terrain</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;color:#243f4b;background:#eef3f3}
+*{box-sizing:border-box}body{margin:0;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}
+header{height:72px;padding:0 25px;display:flex;align-items:center;justify-content:space-between;gap:15px;background:#183645;color:#fff}
+.brand{display:flex;align-items:center;gap:13px}.mark{display:grid;place-items:center;border:1px solid #a1bdc4;border-radius:12px;width:40px;height:40px;font-size:25px;font-weight:900;color:#fff}
+header small{display:block;color:#a6c8cb;font-size:10px;font-weight:800;letter-spacing:.14em;margin-top:3px}header strong{font-size:17px}header a{color:#fff;text-decoration:none;border:1px solid #698692;padding:10px 12px;border-radius:9px;font-size:12px;font-weight:700}
+.layout{max-width:1680px;margin:auto;padding:18px 21px;display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:17px}
+.stage{position:relative;background:#122b36;border:1px solid #bdced3;border-radius:15px;overflow:hidden;min-height:min(78vh,810px);box-shadow:0 12px 42px #18334213}
+#scene{position:absolute;inset:0}#scene canvas{width:100%;height:100%;display:block;touch-action:none}
+.stageInfo{position:absolute;top:17px;left:17px;z-index:1;max-width:min(500px,calc(100% - 34px));pointer-events:none;background:#0d2a38d8;color:#e4f1f1;padding:12px 14px;border-radius:10px}
+.stageInfo h2{margin:0 0 5px;font-size:16px}.stageInfo p{margin:0;font-size:11px;line-height:1.5;color:#c1d7d9}
+.tips{position:absolute;bottom:15px;left:15px;right:15px;z-index:1;display:flex;align-items:center;gap:12px;flex-wrap:wrap;pointer-events:none;color:#d4e7e8;font-size:11px;text-shadow:0 1px 5px #000}
+#missing{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(480px,calc(100% - 36px));background:#fff;color:#2e4750;padding:25px 27px;border-radius:15px;box-shadow:0 10px 35px #0003;z-index:2}
+#missing h2{font-size:21px;margin:0 0 10px}#missing p{font-size:13px;line-height:1.65;color:#516873}#missing[hidden]{display:none}
+.panel{background:#fff;border:1px solid #d8e5e6;border-radius:15px;padding:19px;align-self:start;max-height:calc(100vh - 110px);overflow:auto}
+.panel h3{font-size:15px;margin:0 0 7px}.panel small{font-size:11px;color:#65808a;line-height:1.5}.group{padding:17px 0;border-bottom:1px solid #e6eeee}.group:first-child{padding-top:0}.group:last-child{border:0;padding-bottom:0}
+.segment{display:flex;gap:5px;margin-top:11px;flex-wrap:wrap}.segment button{flex:1;min-width:65px;border:1px solid #d2e1e1;border-radius:8px;background:#f5f8f8;color:#43606b;padding:9px 7px;font-size:11px;font-weight:700}.segment button.active{background:#1b6d62;border-color:#1b6d62;color:#fff}
+.segment.compact button{min-width:42px}
+.numberRow{display:flex;align-items:center;gap:7px;margin:10px 0}.numberRow input{width:100%;min-width:0;text-align:center;padding:11px 5px;border-radius:8px;border:1px solid #becfd2;font-weight:850;font-size:18px;color:#1b4651}.numberRow button{flex:0 0 34px;background:#eaf2f1;border:1px solid #c6dddd;border-radius:8px;height:40px;font-weight:850;color:#176659}input[type=range]{width:100%;accent-color:#cf813f;cursor:pointer}
+.line{display:flex;justify-content:space-between;align-items:center;gap:5px;font-size:12px;margin:9px 0}.line label{color:#607882}.line strong{color:#233f49}
+.value{font-size:30px;font-weight:850;letter-spacing:-.045em;color:#1b6d62;margin:6px 0}.note{font-size:11px;color:#6a7e83;line-height:1.65}.warn{border:1px solid #edd6ae;background:#fff9ed;border-radius:9px;color:#845b29;padding:11px;font-size:11px;line-height:1.55;margin-top:12px}
+input[type=number]{width:100%;border:1px solid #becfd2;border-radius:7px;padding:7px;color:#2d4854}.scenarioGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:12px}.scenarioGrid label{font-size:10px;font-weight:700;color:#68808b}.scenarioGrid input{margin-top:5px}
+button:focus-visible,input:focus-visible{outline:3px solid #e7b56d;outline-offset:2px}
+@media(max-width:890px){.layout{grid-template-columns:1fr;padding:10px}.stage{min-height:470px;height:55vh}.panel{max-height:unset}header{padding:0 12px;height:65px}header strong{font-size:13px}header a{font-size:11px}.stageInfo h2{font-size:13px}}
+</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/"}}</script>
+</head>
+<body>
+<header><div class="brand"><div class="mark">K</div><div><strong>KDRIX · Sites récepteurs de terres</strong><small>RELIEF NUMÉRIQUE · CUBATURE INDICATIVE</small></div></div><a id="returnLink" href="index.html">← Retour à la carte</a></header>
+<div class="layout">
+<main class="stage"><div id="scene"></div><div class="stageInfo"><h2 id="siteTitle">Vue 3D de l'excavation</h2><p id="terrainInfo">Chargement de l'extrait numérique du terrain…</p></div>
+ <div id="missing" role="status"><h2>Préparation du terrain 3D</h2><p id="missingText">Lecture du MNT numérique local enregistré depuis la fiche KDRIX…</p><a id="missingBack" href="index.html">Revenir à la fiche →</a></div>
+ <div class="tips">◈ Terrain mesuré uniquement depuis un MNT numérique continu · Gauche : rotation · Molette : zoom · Droite : déplacement · Les hauteurs affichées peuvent être exagérées, jamais les volumes.</div>
+</main>
+<aside class="panel" id="panel">
+ <section class="group"><h3>Visualisation</h3><small>Comparer le terrain existant et la surface finale choisie.</small><div class="segment" id="displayModes"><button data-display="terrain" class="active">Terrain</button><button data-display="fill">Rempli</button><button data-display="compare">Comparaison</button></div>
+ <div class="segment" id="viewButtons"><button id="viewTop">Vue de dessus</button><button id="viewPersp">Perspective</button><button id="viewCenter">Recentrer</button></div><div class="line"><label for="exag">Exagération verticale</label></div><div class="segment compact" id="exagButtons"><button data-exag="1" class="active">×1</button><button data-exag="1.5">×1,5</button><button data-exag="2">×2</button></div></section>
+ <section class="group"><h3>Altitude finale de remplissage</h3><small>Les cotes des trois scénarios restent modifiables.</small><div class="segment" id="scenarioButtons"><button data-scenario="low">Bas</button><button data-scenario="center" class="active">Central</button><button data-scenario="high">Haut</button></div>
+ <div class="numberRow"><button id="zDown" aria-label="Diminuer de 0,5 m">−</button><input id="zValue" type="number" step="0.5" aria-label="Z final en mètres"><button id="zUp" aria-label="Augmenter de 0,5 m">+</button></div><input id="zSlider" type="range" step="0.5"><small>Z final horizontal en mètres, pas une cote autorisée.</small>
+ <div class="scenarioGrid"><label>Bas (m)<input id="zLow" type="number" step="0.5"></label><label>Central (m)<input id="zCentral" type="number" step="0.5"></label><label>Haut (m)<input id="zHigh" type="number" step="0.5"></label></div></section>
+ <section class="group"><h3>Volume potentiel</h3><div class="value" id="volume">— m³</div><div class="line"><label>Surface prise en compte</label><strong id="area">—</strong></div><div class="line"><label>Profondeur moyenne remblayée</label><strong id="depth">—</strong></div><div class="line"><label>CA brut théorique</label><strong id="money">—</strong></div><p class="note" id="volumeMethod">Le volume est estimé sur les cellules numériques couvertes par l'emprise, déduction faite des exclusions.</p><div class="warn">Cubature de prospection uniquement. Une coupe ne donne pas le volume total. Vérifier les évolutions depuis l'acquisition LiDAR et la présence éventuelle d'eau.</div></section>
+ <section class="group"><h3>Source topographique</h3><div id="sourceDetails" class="note">En attente d'un MNT numérique continu.</div></section>
+</aside></div>
+<script type="module" src="./vue3d.js"></script>
+</body></html>
