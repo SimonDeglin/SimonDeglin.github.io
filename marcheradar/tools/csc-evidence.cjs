@@ -19,30 +19,47 @@ function extractPassages(text,options={}){
  const maxTotal=Math.min(Math.max(Number(options.maxTotal)||10,1),20);
  const maxPerKind=Math.min(Math.max(Number(options.maxPerKind)||3,1),5);
  const pages=String(text||'').split('\f');
- const results=[],byKind={},seen=new Set();
+ const candidates=[],seen=new Set(),counters={};
  for(let i=0;i<pages.length;i++){
   const page=pages[i];
   if(!page||!page.trim())continue;
+  // Ne pas saturer l'analyse avec les entrées de table des matières.
+  const heading=page.slice(0,1100).toLowerCase();
+  if(/table\s+des\s+mati[eè]res|inhoudsopgave|sommaire\s+g[eé]n[eé]ral/i.test(heading))continue;
   for(const rule of rules){
-   if((byKind[rule.kind]||0)>=maxPerKind)continue;
    rule.regex.lastIndex=0;
-   let match;
-   while((match=rule.regex.exec(page))!==null){
-    if(results.length>=maxTotal||(byKind[rule.kind]||0)>=maxPerKind)break;
-    // Un extrait court qui peut être retrouvé dans le document officiel.
-    const lo=Math.max(0,match.index-45);
-    const hi=Math.min(page.length,match.index+match[0].length+105);
-    const snippet=normalize(page.slice(lo,hi)).slice(0,185);
-    if(snippet.length<15)continue;
-    const token=rule.kind+':'+snippet.toLowerCase().replace(/[^a-z0-9À-ÿ]/g,'').slice(0,105);
+   let match,found=0;
+   while((match=rule.regex.exec(page))!==null&&found<80&&candidates.length<700){
+    const lo=Math.max(0,match.index-40),hi=Math.min(page.length,match.index+match[0].length+115);
+    const excerpt=normalize(page.slice(lo,hi)).slice(0,185);
+    if(excerpt.length<25)continue;
+    const lineStart=page.lastIndexOf('\n',match.index)+1;
+    const lineEnd=page.indexOf('\n',match.index);
+    const line=page.slice(lineStart,lineEnd<0?page.length:lineEnd);
+    if(/\.{4,}/.test(line)||/[·_]{7,}/.test(line))continue;
+    const token=rule.kind+':'+excerpt.toLowerCase().replace(/[^a-z0-9À-ÿ]/g,'').slice(0,125);
     if(seen.has(token))continue;
     seen.add(token);
-    results.push({kind:rule.kind,page:i+1,excerpt:snippet,reviewStatus:'to_verify'});
-    byKind[rule.kind]=(byKind[rule.kind]||0)+1;
+    let score=3;
+    if(i>=3)score+=2;
+    if(/prix\s+(?:est|constitue)\s+(?:l['’]|le\s+)?(?:unique|seul)|enige\s+gunningscriterium|100\s*%/i.test(excerpt))score+=14;
+    if(/obligatoire|verplicht|au\s+plus\s+tard|avant\s+le|pr[eé]cis[eé]e?\s+dans/i.test(excerpt))score+=5;
+    if(/\b\d{1,2}[\/.-]\d{1,2}[\/.-]20\d{2}\b|\b\d{1,2}\s+(?:octobre|novembre|d[eé]cembre|januari|februari)\s+20\d{2}\b/i.test(excerpt))score+=5;
+    score+=Math.min(excerpt.length,160)/160;
+    candidates.push({kind:rule.kind,page:i+1,excerpt,reviewStatus:'to_verify',score});
+    found++;
    }
   }
  }
- return results.sort((a,b)=>a.page-b.page||a.kind.localeCompare(b.kind));
+ candidates.sort((a,b)=>b.score-a.score||a.page-b.page);
+ const result=[];
+ for(const c of candidates){
+  if(result.length>=maxTotal)break;
+  if((counters[c.kind]||0)>=maxPerKind)continue;
+  counters[c.kind]=(counters[c.kind]||0)+1;
+  result.push({kind:c.kind,page:c.page,excerpt:c.excerpt,reviewStatus:c.reviewStatus});
+ }
+ return result.sort((a,b)=>a.page-b.page||a.kind.localeCompare(b.kind));
 }
 function makeAnalysis({market,document,bytes,numberOfPages,text,extractedAt}){
  if(!market||market.source!=='BOSA'||!market.publicationWorkspaceId)throw Error('Public BOSA market expected');
