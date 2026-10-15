@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="KDRIX Prospection Bathy - phase 1 : couverture géographique permanente et reprise des données.">
+<title>KDRIX — Bathy · Couverture territoriale</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<style>
+:root{--navy:#1a3d48;--teal:#23748a;--paper:#fff;--bg:#edf2f3;--line:#d7e3e6;--muted:#58717b;--blue:#65b7dc;--orange:#efb66d;--green:#79bea0;--gray:#e3e9ec;--danger:#a44742}
+*{box-sizing:border-box}html,body{height:100%;margin:0}body{font:13px/1.45 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:#193943}a{color:#176d85;text-decoration:none}a:hover{text-decoration:underline}
+button,input,select,textarea{font:inherit}button{cursor:pointer;border:1px solid #c6d9de;background:#f6fafb;color:#225767;border-radius:8px;padding:9px 11px;font-weight:740}button:hover:not(:disabled){background:#e6f2f4}button:disabled{opacity:.47;cursor:not-allowed}button.primary{background:var(--teal);border-color:var(--teal);color:#fff}button.primary:hover{background:#16586a}button.critical{color:#9e5149}input,select,textarea{border:1px solid #cad9de;border-radius:8px;padding:9px 10px;background:white;color:var(--navy);width:100%}input[type=checkbox]{width:auto}
+header{min-height:68px;background:var(--navy);color:white;padding:13px max(18px,3vw);display:flex;align-items:center;justify-content:space-between;gap:15px}header strong{display:block;font-size:17px;letter-spacing:-.02em}header small{display:block;color:#b7d2d9;font-size:10px;margin-bottom:3px}header a{color:#e5f6f8;font-size:12px}
+.notice{padding:10px max(18px,3vw);background:#e8f4f4;border-bottom:1px solid #d0e4e6;color:#396470;font-size:12px}
+main{height:calc(100vh - 109px);min-height:590px;display:grid;grid-template-columns:295px minmax(330px,1fr) 330px;gap:10px;padding:10px}
+.panel{min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:auto}.padded{padding:15px}h1,h2,h3{margin:0}h2{font-size:16px;margin-bottom:12px}h3{font-size:13px;margin:15px 0 8px}.eyebrow{font-size:10px;letter-spacing:.08em;font-weight:800;text-transform:uppercase;color:#66848c}.field{margin-bottom:11px}.field label{display:block;font-size:11px;font-weight:750;margin-bottom:5px}.fieldline{display:grid;grid-template-columns:1fr 105px;gap:8px}.buttons{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.buttons button{flex:1}
+.muted{font-size:11px;color:var(--muted)}.status{background:#f1f6f7;border:1px solid #dbe8ea;padding:10px 12px;border-radius:8px;margin-top:12px;white-space:pre-line;color:#386271}.error{background:#fff0eb;border-color:#f2c7bc;color:#94473b}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:13px 0}.stat{background:#f4f8f9;border-radius:8px;padding:10px}.stat b{display:block;font-size:18px}.stat span{font-size:10px;color:#617984}
+.mapwrap{padding:0;position:relative;overflow:hidden}#map{height:100%;min-height:440px;z-index:0}.maptools{position:absolute;z-index:700;top:12px;left:54px;right:12px;display:flex;align-items:center;gap:5px;pointer-events:none;flex-wrap:wrap}.maptools>*{pointer-events:auto}
+.legend{position:absolute;z-index:700;bottom:20px;left:11px;background:#fffffff0;border:1px solid #d9e5e8;border-radius:10px;padding:9px;display:flex;gap:11px;flex-wrap:wrap;max-width:calc(100% - 22px);font-size:10px}.dot{display:inline-block;width:11px;height:11px;margin-right:4px;vertical-align:middle;border:1px solid #71929b;border-radius:2px}.c-gray{background:#e3e9ec}.c-blue{background:#65b7dc}.c-orange{background:#efb66d}.c-green{background:#79bea0}.ring{border:2px dashed #b84b43;background:#fff2ed}
+.tabs{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 14px}.tab{padding:7px 9px;border-radius:8px;background:#eaf1f3;border:1px solid transparent;font-size:11px;font-weight:800}.tab.active{background:var(--teal);color:#fff}.tab:disabled{opacity:.6}
+.readout{background:#f4f8f9;border:1px solid #d9e5e8;border-radius:10px;padding:12px;margin-bottom:12px}.readout p{margin:7px 0}.flag{padding:3px 6px;background:#e9f0f2;border-radius:5px;display:inline-block;font-size:10px;font-weight:800}.flag.done{background:#dff1e8;color:#297355}.flag.wait{background:#f5eee0;color:#8a652b}
+hr{border:0;border-top:1px solid #e1e9eb;margin:16px 0}.celllist{display:grid;gap:5px;max-height:230px;overflow:auto}.cellline{width:100%;border:1px solid #dce6e9;background:white;text-align:left;padding:8px 10px;font-size:11px;font-weight:650}.cellline.active{border-color:#2a8399;background:#ebf8f9}.reviewline{display:flex;gap:8px;align-items:center;margin-top:12px}.reviewline input{accent-color:#207a80}.small{font-size:10px}.placeholder{background:#f4f7f8;padding:10px;border-radius:8px;color:#61747d;font-size:11px;margin-top:10px}
+@media(max-width:1150px){main{height:auto;grid-template-columns:275px minmax(320px,1fr)}.rightpanel{grid-column:1/-1}.mapwrap{height:65vh;min-height:500px}}@media(max-width:700px){main{display:flex;flex-direction:column;min-height:0}.mapwrap{height:60vh;min-height:410px;flex-shrink:0}.fieldline{grid-template-columns:1fr 95px}.padded{padding:13px}.maptools{left:50px}.legend{font-size:9px}header strong{font-size:14px}}
+</style>
+</head>
+<body>
+<header><div><small>KDRIX · Prospection bathymétrique</small><strong>Carte de couverture des recherches</strong></div><div><a href="../">Retour à Bathy</a> &nbsp;·&nbsp; <a href="../../">Portail KDRIX</a></div></header>
+<div class="notice"><b>Nouvelle version — phase 1.</b> Grille permanente et conservation des données. Les deux nouveaux moteurs de recherche sont prévus aux phases 2 et 3 ; aucune zone n'est artificiellement considérée comme analysée.</div>
+<main>
+<section class="panel padded" aria-label="Configuration territoriale">
+<h2>Territoire à explorer</h2>
+<div class="field"><label for="preset">Préréglage</label><select id="preset"><option value="liege">Liège — 75 km</option><option value="huy">Huy — 30 km</option><option value="namur">Namur — 50 km</option><option value="charleroi">Charleroi — 50 km</option><option value="custom">Autre commune</option></select></div>
+<div class="fieldline"><div class="field"><label for="city">Ville belge</label><input id="city" value="Liège" autocomplete="off"></div><div class="field"><label for="radius">Rayon (km)</label><input id="radius" type="number" min="1" max="100" step="1" value="75"></div></div>
+<button id="apply" class="primary" style="width:100%">Afficher le territoire</button>
+<p class="muted">Rayon à vol d'oiseau. Les cellules de 5 × 5 km qui touchent le cercle sont retenues entières, même en bordure.</p>
+<div class="stats"><div class="stat"><b id="total">—</b><span>cellules concernées</span></div><div class="stat"><b id="both">—</b><span>deux recherches terminées</span></div><div class="stat"><b id="water">—</b><span>plans d'eau uniquement</span></div><div class="stat"><b id="companies">—</b><span>sociétés uniquement</span></div><div class="stat"><b id="missing">—</b><span>cellules à compléter</span></div><div class="stat"><b id="errors">—</b><span>partielles / en erreur</span></div></div>
+<div class="field"><label for="engine">Voir les recherches manquantes pour</label><select id="engine"><option value="both">Les deux moteurs</option><option value="water">Plans d'eau</option><option value="company">Sociétés</option></select></div>
+<div id="summary" class="status" aria-live="polite">Chargement de la grille…</div>
+<h3>Outils de sauvegarde</h3>
+<div class="buttons"><button id="export">Exporter</button><button id="import">Importer</button><input type="file" id="file" hidden accept="application/json,.json"></div>
+<div class="buttons"><button id="legacy">Examiner les anciennes données</button></div>
+<p class="muted">Les informations sont sauvegardées sur cet appareil, dans ce navigateur. Pour conserver une copie indépendante, exportez régulièrement les données.</p>
+<div id="message" class="status" role="status" aria-live="polite" hidden></div>
+<hr>
+<p class="muted">Référentiel : cellules fixes Lambert 2008 (EPSG:3812), origine nationale stable ; jamais de grille recalée sur une ville. Les résultats anciens ne prouvent pas qu'une recherche territoriale est complète.</p>
+</section>
+<section class="panel mapwrap" aria-label="Carte des zones prospectées"><div id="map"></div>
+<div class="maptools"><button id="fit">Recentrer</button><button id="showOnlyIncomplete" aria-pressed="false">Afficher toutes les cellules</button></div>
+<div class="legend"><span><i class="dot c-gray"></i>Non prospecté</span><span><i class="dot c-blue"></i>Plans d'eau</span><span><i class="dot c-orange"></i>Sociétés</span><span><i class="dot c-green"></i>Les deux</span><span><i class="dot ring"></i>Partiel / erreur</span><span>✓ = contrôle manuel</span></div>
+</section>
+<section class="panel padded rightpanel" aria-label="Détail et suivi d'une cellule">
+<div class="tabs"><button class="tab active">Couverture</button><button class="tab" disabled title="Phase 2">Plans d'eau</button><button class="tab" disabled title="Phase 3">Sociétés</button><button class="tab" disabled title="Phase 4">Mes prospects</button></div>
+<h2>Suivi d'une zone</h2><div id="detail" class="readout"><p>Sélectionnez une cellule sur la carte ou dans la liste.</p></div>
+<div id="reviewControls" hidden>
+<label class="reviewline"><input type="checkbox" id="review"> <b>OK, terminé — contrôle manuel effectué</b></label>
+<div class="field"><label for="reviewNotes">Observations</label><textarea id="reviewNotes" rows="3" placeholder="Vérifications réalisées, points à revoir…"></textarea></div>
+<button class="primary" id="saveReview" style="width:100%">Enregistrer mon contrôle</button>
+<p class="muted">Ce contrôle est indépendant de la réussite technique des deux moteurs. Il ne change pas leur couleur.</p>
+</div>
+<hr><h3>Cellules à examiner</h3><div id="cells" class="celllist"><div class="muted">Choisissez un territoire.</div></div>
+<div class="placeholder">Les recherches effectives, l'analyse des sociétés et le rapprochement commercial seront raccordés ici aux phases suivantes. Les anciennes recherches restent accessibles depuis le module actuel.</div>
+</section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.9.2/proj4.js"></script>
+<script>
+'use strict';
+(function(){
+const GRID=5000, HALF=2500, DBNAME='kdrix_bathy_v2', VERSION=1, COLLECTIONS=['cells','bodies','companies','relations','prospects','meta'];
+const PROJ='+proj=lcc +lat_0=50.797815 +lon_0=4.35921583333333 +lat_1=49.8333333333333 +lat_2=51.1666666666667 +x_0=649328 +y_0=665262 +ellps=GRS80 +units=m +no_defs +type=crs';
+const PRESETS={liege:{city:'Liège',radius:75,lat:50.6326,lng:5.5797},huy:{city:'Huy',radius:30,lat:50.5198,lng:5.2328},namur:{city:'Namur',radius:50,lat:50.4669,lng:4.8675},charleroi:{city:'Charleroi',radius:50,lat:50.4114,lng:4.4447}};
+const $=id=>document.getElementById(id),escapeHtml=t=>String(t??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const fmt=n=>Number(n).toLocaleString('fr-BE');
+let db=null,map=null,circle=null,cellLayer=null,planned=[],registry=new Map(),current=PRESETS.liege,selected=null,onlyIncomplete=false,busy=false;
+function toast(msg,error=false){const el=$('message');el.hidden=false;el.className='status'+(error?' error':'');el.textContent=msg}
+function xy(lat,lng){return proj4('EPSG:4326','EPSG:3812',[lng,lat])}
+function ll(x,y){const [lng,lat]=proj4('EPSG:3812','EPSG:4326',[x,y]);return [lat,lng]}
+function cellId(ix,iy){return 'BE3812-5K-'+ix+'-'+iy}
+function square(ix,iy){
+ const x=ix*GRID,y=iy*GRID;
+ return {id:cellId(ix,iy),ix,iy,x,y,points:[ll(x,y),ll(x+GRID,y),ll(x+GRID,y+GRID),ll(x,y+GRID)]};
+}
+function intersects(x,y,cx,cy,r){
+ const dx=cx-Math.max(x,Math.min(cx,x+GRID)),dy=cy-Math.max(y,Math.min(cy,y+GRID));
+ return dx*dx+dy*dy<=r*r;
+}
+function planArea(config){
+ const [cx,cy]=xy(config.lat,config.lng),r=config.radius*1000;
+ const imin=Math.floor((cx-r)/GRID),imax=Math.floor((cx+r)/GRID);
+ const jmin=Math.floor((cy-r)/GRID),jmax=Math.floor((cy+r)/GRID);
+ const arr=[];
+ for(let i=imin;i<=imax;i++)for(let j=jmin;j<=jmax;j++){
+  const xx=i*GRID,yy=j*GRID;if(intersects(xx,yy,cx,cy,r)){const cell=square(i,j);cell.dist=(i*GRID+HALF-cx)**2+(j*GRID+HALF-cy)**2;arr.push(cell)}
+ }
+ return arr.sort((a,b)=>a.dist-b.dist);
+}
+function subtiles(cell,engine){
+ const r=[];
+ for(let y=0;y<2;y++)for(let x=0;x<2;x++){
+  const ox=cell.x+x*HALF,oy=cell.y+y*HALF;
+  r.push({id:cell.id+':'+engine+':'+x+':'+y,status:'pending',bounds3812:[ox,oy,ox+HALF,oy+HALF],source:null,checkedAt:null,error:null,records:0});
+ }
+ return r;
+}
+function initRecord(cell){
+ return {id:cell.id,epsg:3812,cellSizeM:GRID,ix:cell.ix,iy:cell.iy,manual:{done:false,notes:'',reviewedAt:null},engines:{water:{subtiles:subtiles(cell,'water'),version:1},company:{subtiles:subtiles(cell,'company'),version:1}},updatedAt:null};
+}
+function engineState(rec,name){
+ const segments=rec?.engines?.[name]?.subtiles||[];
+ if(segments.length!==4)return 'none';
+ const valid=segments.filter(t=>t.status==='complete'&&t.source&&t.checkedAt).length;
+ if(valid===4)return 'complete';
+ if(segments.some(t=>t.status==='error'))return 'error';
+ if(valid>0||segments.some(t=>t.status==='working'||t.status==='complete'))return 'partial';
+ return 'none';
+}
+function coverage(rec){
+ const water=engineState(rec,'water'),company=engineState(rec,'company');
+ const partial=[water,company].some(x=>x==='error'||x==='partial');
+ return {water,company,partial,both:water==='complete'&&company==='complete',color:water==='complete'?(company==='complete'?'both':'water'):(company==='complete'?'company':'gray')};
+}
+function openDB(){return new Promise((resolve,reject)=>{
+ const r=indexedDB.open(DBNAME,VERSION);
+ r.onupgradeneeded=()=>{for(const name of COLLECTIONS)if(!r.result.objectStoreNames.contains(name))r.result.createObjectStore(name,{keyPath:'id'})};
+ r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);r.onblocked=()=>reject(new Error('Base occupée par un autre onglet'));
+})}
+function all(store){return new Promise((resolve,reject)=>{
+ const req=db.transaction(store,'readonly').objectStore(store).getAll();req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);
+})}
+function put(store,item){return new Promise((resolve,reject)=>{
+ const req=db.transaction(store,'readwrite').objectStore(store).put(item);req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);
+})}
+async function getAllData(){const out={};for(const name of COLLECTIONS)out[name]=await all(name);return out}
+function makeMap(){
+ if(typeof L==='undefined'||typeof proj4==='undefined')throw Error('Leaflet ou Proj4 indisponible. Vérifiez votre connexion.');
+ proj4.defs('EPSG:3812',PROJ);
+ map=L.map('map',{preferCanvas:true,zoomControl:true}).setView([50.6326,5.5797],9);
+ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(map);
+ cellLayer=L.layerGroup().addTo(map);
+}
+function styleFor(rec){
+ const c=coverage(rec),fill={gray:'#d9e2e6',water:'#65b7dc',company:'#efb66d',both:'#79bea0'}[c.color];
+ return {color:c.partial?'#ad5148':'#7a929a',weight:c.partial?2:0.9,dashArray:c.partial?'5 4':null,fillColor:fill,fillOpacity:c.color==='gray'?.31:.49};
+}
+function choose(id,center=true){
+ const cell=planned.find(c=>c.id===id);if(!cell)return;
+ selected=id;drawDetail();
+ if(center){const rec=registry.get(id);map.fitBounds(L.latLngBounds(cell.points),{padding:[75,75],maxZoom:12});}
+ renderList();
+}
+function renderMap(){
+ if(!map)return;
+ cellLayer.clearLayers();
+ let bounds=[];
+ for(const cell of planned){
+  const rec=registry.get(cell.id),state=coverage(rec);
+  if(onlyIncomplete&&state.both)continue;
+  const poly=L.polygon(cell.points,styleFor(rec)).addTo(cellLayer);
+  poly.bindTooltip(cell.id+(rec?.manual?.done?' ✓':''));
+  poly.on('click',()=>choose(cell.id));
+  if(rec?.manual?.done)L.circleMarker(ll(cell.x+GRID-800,cell.y+800),{radius:3,color:'#1c666a',fillColor:'#fff',fillOpacity:1,weight:2,interactive:false}).addTo(cellLayer);
+  bounds.push(poly.getBounds());
+ }
+ if(circle){map.removeLayer(circle);circle=null}
+ circle=L.circle([current.lat,current.lng],{radius:current.radius*1000,weight:2,color:'#185f82',fillOpacity:.02,interactive:false}).addTo(map);
+}
+function tally(){
+ let both=0,water=0,companies=0,partial=0,missing=0;
+ for(const cell of planned){
+  const s=coverage(registry.get(cell.id));
+  if(s.both)both++;else if(s.color==='water')water++;else if(s.color==='company')companies++;
+  if(!s.both)missing++;if(s.partial)partial++;
+ }
+ $('total').textContent=fmt(planned.length);$('both').textContent=fmt(both);$('water').textContent=fmt(water);$('companies').textContent=fmt(companies);
+ $('missing').textContent=fmt(missing);$('errors').textContent=fmt(partial);
+ const eng=$('engine').value;
+ const needing=planned.filter(cell=>{
+  const s=coverage(registry.get(cell.id));
+  return eng==='both'?!s.both:eng==='water'?s.water!=='complete':s.company!=='complete';
+ });
+ $('summary').textContent=fmt(needing.length)+' cellules nécessitent encore '+(eng==='both'?'au moins une recherche':eng==='water'?'la recherche par plan d’eau':'la recherche par société')+'.\nAucune recherche n’est lancée depuis cette page de phase 1.';
+}
+function drawDetail(){
+ const cell=planned.find(c=>c.id===selected);
+ if(!cell){$('detail').innerHTML='<p>Sélectionnez une cellule sur la carte ou dans la liste.</p>';$('reviewControls').hidden=true;return}
+ const rec=registry.get(cell.id),s=coverage(rec);
+ function label(mode){const state=s[mode];return state==='complete'?'Terminée (4/4 sous-secteurs)':state==='error'?'Erreur dans au moins un sous-secteur':state==='partial'?'Partielle': 'Non commencée'}
+ const date=mode=>{let ss=rec?.engines?.[mode]?.subtiles||[];return ss.filter(x=>x.checkedAt).map(x=>x.checkedAt).sort().pop()||null};
+ const dates=[['water','Plans d’eau'],['company','Sociétés']].map(([mode,name])=>'<p><b>'+name+':</b> '+escapeHtml(label(mode))+(date(mode)?'<br><span class="muted">Dernier contrôle source : '+escapeHtml(new Date(date(mode)).toLocaleString('fr-BE'))+'</span>':'')+'</p>').join('');
+ const fail=Object.entries(rec?.engines||{}).flatMap(([engine,st])=>(st.subtiles||[]).filter(t=>t.status==='error').map(t=>engine+' / '+t.id+' : '+(t.error||'Erreur inconnue'))).slice(0,4);
+ $('detail').innerHTML='<div class="eyebrow">Cellule permanente · 25 km²</div><h3>'+escapeHtml(cell.id)+'</h3>'+dates+
+ '<p><span class="flag '+(rec?.manual?.done?'done':'wait')+'">'+(rec?.manual?.done?'✓ Contrôle manuel effectué':'Contrôle manuel non effectué')+'</span></p>'+
+ (fail.length?'<p class="muted">Erreurs : '+escapeHtml(fail.join(' | '))+'</p>':'')+
+ '<p class="muted">Projection EPSG:3812 · x : '+fmt(cell.x)+' à '+fmt(cell.x+GRID)+' m · y : '+fmt(cell.y)+' à '+fmt(cell.y+GRID)+' m</p>'+
+ '<p class="muted">La validation manuelle ne marque jamais une recherche technique comme terminée.</p>';
+ $('reviewControls').hidden=false;$('review').checked=!!rec?.manual?.done;$('reviewNotes').value=rec?.manual?.notes||'';
+}
+function renderList(){
+ const engine=$('engine').value;
+ const missing=planned.filter(c=>{const s=coverage(registry.get(c.id));return engine==='both'?!s.both:engine==='water'?s.water!=='complete':s.company!=='complete'});
+ const fragment=missing.slice(0,35).map(c=>{
+  const rec=registry.get(c.id),st=coverage(rec);
+  return '<button type="button" class="cellline '+(c.id===selected?'active':'')+'" data-cell="'+escapeHtml(c.id)+'">'+escapeHtml(c.id)+
+  ' · '+(st.partial?'partielle / erreur':st.color==='gray'?'non analysée':'à compléter')+(rec?.manual?.done?' ✓':'')+'</button>';
+ }).join('');
+ $('cells').innerHTML=fragment||'<div class="muted">Aucune cellule à compléter pour ce filtre.</div>';
+ $('cells').querySelectorAll('[data-cell]').forEach(el=>el.onclick=()=>choose(el.dataset.cell));
+}
+function refresh(){tally();renderMap();drawDetail();renderList()}
+async function apply(config){
+ const r=Number(config.radius);
+ if(!Number.isInteger(r)||r<1||r>100)throw Error('Le rayon doit être un entier compris entre 1 et 100 km.');
+ if(!Number.isFinite(config.lat)||!Number.isFinite(config.lng)||config.lat<49||config.lat>52||config.lng<2||config.lng>7)throw Error('Coordonnées belges non valides.');
+ current={city:String(config.city),radius:r,lat:config.lat,lng:config.lng};
+ planned=planArea(current);if(planned.length>2500)throw Error('Territoire trop étendu : réduisez le rayon.');
+ selected=null;refresh();
+ map.setView([current.lat,current.lng],r>60?9:r>24?10:11);
+ const coverageBounds=circle.getBounds();map.fitBounds(coverageBounds,{padding:[25,25],maxZoom:r>60?10:12});
+ try{localStorage.setItem('kdrix_bathy_v2_last_area',JSON.stringify(current))}catch(e){}
+ toast('Territoire affiché : '+current.city+' · '+r+' km · '+planned.length+' cellules fixes.');
+}
+async function geocode(city){
+ const p=Object.values(PRESETS).find(x=>x.city.toLocaleLowerCase('fr')===city.toLocaleLowerCase('fr'));if(p)return {lat:p.lat,lng:p.lng};
+ const url='https://nominatim.openstreetmap.org/search?format=json&countrycodes=be&limit=3&featuretype=city&q='+encodeURIComponent(city);
+ let result=await fetch(url,{headers:{Accept:'application/json'},cache:'no-store'});
+ if(!result.ok)throw Error('Service de localisation HTTP '+result.status);
+ const list=await result.json();
+ if(!list?.length){
+  const alternative='https://nominatim.openstreetmap.org/search?format=json&countrycodes=be&limit=3&q='+encodeURIComponent(city);
+  result=await fetch(alternative,{headers:{Accept:'application/json'},cache:'no-store'});
+  if(!result.ok)throw Error('Localisation indisponible');
+  const fallback=await result.json();
+  if(!fallback.length)throw Error('Commune introuvable en Belgique');
+  return {lat:Number(fallback[0].lat),lng:Number(fallback[0].lon)};
+ }
+ return {lat:Number(list[0].lat),lng:Number(list[0].lon)};
+}
+async function onApply(){
+ if(busy)return;busy=true;$('apply').disabled=true;
+ try{const name=$('city').value.trim(),r=Number($('radius').value);if(!name)throw Error('Renseignez une ville');
+  if(!Number.isInteger(r)||r<1||r>100)throw Error('Indiquez un rayon entier entre 1 et 100 km');
+  const coords=await geocode(name);await apply({city:name,radius:r,...coords});
+ }catch(e){toast('Impossible d’afficher le territoire : '+e.message,true)}
+ finally{busy=false;$('apply').disabled=false}
+}
+async function saveReview(){
+ const cell=planned.find(c=>c.id===selected);if(!cell)return;
+ let rec=registry.get(cell.id)||initRecord(cell);
+ const done=$('review').checked;
+ if(done&&!rec.manual.done&&!coverage(rec).both&&!confirm('Au moins une recherche technique est encore incomplète. Confirmer uniquement votre contrôle manuel ?'))return;
+ rec.manual={done,notes:$('reviewNotes').value.trim(),reviewedAt:done?new Date().toISOString():null};
+ rec.updatedAt=new Date().toISOString();
+ await put('cells',rec);registry.set(cell.id,rec);refresh();toast('Contrôle manuel enregistré pour '+cell.id+'. Les couleurs des recherches restent inchangées.');
+}
+async function backup(){
+ try{
+  const stores=await getAllData(),payload={app:'KDRIX-BATHY',schema:2,exportedAt:new Date().toISOString(),epsg:3812,gridM:GRID,stores};
+  const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob);
+  const a=document.createElement('a');a.href=url;a.download='kdrix-bathy-sauvegarde-'+new Date().toISOString().slice(0,10)+'.json';a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1500);
+  toast('Sauvegarde créée. Conservez le fichier en lieu sûr.');
+ }catch(e){toast('Export impossible : '+e.message,true)}
+}
+async function restore(file){
+ if(!file)return;
+ try{
+  const payload=JSON.parse(await file.text());
+  if(payload.app!=='KDRIX-BATHY'||payload.schema!==2||payload.epsg!==3812||payload.gridM!==GRID||!payload.stores||!Array.isArray(payload.stores.cells))throw Error('Format ou projection de sauvegarde non conforme.');
+  const count=Object.values(payload.stores).reduce((n,v)=>n+(Array.isArray(v)?v.length:0),0);
+  if(!confirm('Importer '+count+' enregistrements ? Les identifiants déjà présents seront remplacés. Exportez d’abord votre sauvegarde actuelle.'))return;
+  for(const name of COLLECTIONS){
+   const rows=payload.stores[name]||[];
+   if(!Array.isArray(rows))throw Error('Collection incorrecte : '+name);
+   for(const row of rows){if(row&&typeof row.id==='string'&&row.id.length<220)await put(name,row)}
+  }
+  registry=new Map((await all('cells')).map(c=>[c.id,c]));refresh();
+  toast('Import terminé : '+count+' enregistrements proposés. Les données sont enregistrées dans ce navigateur.');
+ }catch(e){toast('Import impossible : '+e.message,true)}
+}
+async function discoverLegacy(){
+ let has=false;
+ try{if(indexedDB.databases){const databases=await indexedDB.databases();has=databases.some(d=>d.name==='kdrix_bathy_inventory_v1')}}catch(e){}
+ let localCount=0;try{const items=JSON.parse(localStorage.getItem('kdrix_bathy_custom_prospects_v1')||'[]');localCount=Array.isArray(items)?items.length:0}catch(e){}
+ if(!has&&!localCount){toast('Aucune ancienne base détectée automatiquement. Les données originales ne sont pas modifiées.');return}
+ if(!confirm('Reprendre les anciennes fiches sans effacer la base originale ? Les anciennes zones ne seront PAS marquées comme prospectées.'))return;
+ let migrated=0,skipped=0;
+ if(has){
+  try{
+   const old=await new Promise((resolve,reject)=>{const r=indexedDB.open('kdrix_bathy_inventory_v1');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)});
+   if(old.objectStoreNames.contains('waters')){
+    const oldBodies=await new Promise((resolve,reject)=>{const r=old.transaction('waters','readonly').objectStore('waters').getAll();r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)});
+    for(const o of oldBodies){
+     if(!o?.id){skipped++;continue}
+     const item={id:'legacy-water:'+o.id,legacyId:o.id,source:'Ancienne recherche étendue',lat:o.lat,lon:o.lon,area:o.area,kind:o.kind||'',name:o.company||'',notes:o.notes||'',status:o.status||'nouveau',original:o,importedAt:new Date().toISOString()};
+     await put('bodies',item);migrated++;
+    }
+   }
+   old.close();
+  }catch(e){toast('Reprise partielle des anciens bassins : '+e.message,true)}
+ }
+ if(localCount){
+  try{const items=JSON.parse(localStorage.getItem('kdrix_bathy_custom_prospects_v1')||'[]');
+   for(let i=0;i<items.length;i++){
+    const o=items[i];if(!o)continue;
+    const id='legacy-prospect:'+String(o.id||i);
+    await put('prospects',{id,name:o.name||'Prospect importé',status:o.status||'nouveau',source:'Ancien module Bathy',original:o,importedAt:new Date().toISOString()});migrated++;
+   }
+  }catch(e){toast('Reprise des fiches anciennes partiellement impossible : '+e.message,true)}
+ }
+ const previous=await all('bodies'),prospects=await all('prospects');
+ toast(migrated+' fiches anciennes reprises (bassins enregistrés : '+previous.length+', prospects : '+prospects.length+', ignorés : '+skipped+'). Aucune cellule marquée terminée. Anciennes bases conservées.');
+}
+function wire(){
+ $('preset').onchange=()=>{const p=PRESETS[$('preset').value];if(p){$('city').value=p.city;$('radius').value=p.radius}};
+ $('city').oninput=()=>{$('preset').value='custom'};
+ $('radius').oninput=()=>{$('preset').value='custom'};
+ $('apply').onclick=onApply;$('saveReview').onclick=()=>saveReview().catch(e=>toast(e.message,true));
+ $('engine').onchange=()=>{tally();renderList()};
+ $('fit').onclick=()=>map.fitBounds(circle.getBounds(),{padding:[20,20]});
+ $('showOnlyIncomplete').onclick=()=>{onlyIncomplete=!onlyIncomplete;$('showOnlyIncomplete').textContent=onlyIncomplete?'Afficher toutes les cellules':'Afficher uniquement les zones à compléter';$('showOnlyIncomplete').setAttribute('aria-pressed',String(onlyIncomplete));renderMap()};
+ $('export').onclick=backup;$('import').onclick=()=>$('file').click();
+ $('file').onchange=e=>{restore(e.target.files?.[0]).finally(()=>e.target.value='')};
+ $('legacy').onclick=discoverLegacy;
+}
+async function init(){
+ try{
+  makeMap();db=await openDB();registry=new Map((await all('cells')).map(c=>[c.id,c]));wire();
+  let last=null;try{last=JSON.parse(localStorage.getItem('kdrix_bathy_v2_last_area')||'null')}catch(e){}
+  const cfg=last&&Number.isFinite(last.lat)&&Number.isFinite(last.lng)?last:PRESETS.liege;
+  $('city').value=cfg.city;$('radius').value=cfg.radius;
+  const matched=Object.entries(PRESETS).find(([key,p])=>p.city===cfg.city&&p.radius===cfg.radius);
+  $('preset').value=matched?matched[0]:'custom';
+  await apply(cfg);
+ }catch(e){toast('Initialisation impossible : '+e.message,true);console.error(e)}
+}
+init();
+})();
+</script></body></html>
