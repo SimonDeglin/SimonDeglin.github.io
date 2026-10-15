@@ -588,6 +588,16 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
    contactName:read('pContactName'),contactRole:read('pContactRole'),interest:read('pInterest'),sourceLinks:read('pSources'),
    notes:read('pNotes'),status:read('pStatus'),updatedAt:new Date().toISOString()};
  }
+ function nearestSaved(item){
+  if(!Number.isFinite(item.lat)||!Number.isFinite(item.lon))return null;
+  let best=null;
+  for(const p of prospects.values()){
+   if(p.archived||!Number.isFinite(p.lat)||!Number.isFinite(p.lon))continue;
+   const meters=distance([p.lat,p.lon],[item.lat,item.lon]);
+   if(meters<=400&&(!best||meters<best.meters))best={prospect:p,meters};
+  }
+  return best;
+ }
  function duplicateFor(x){
   const text=(x.name||'').trim().toLocaleLowerCase('fr'),lat=Number(x.lat),lon=Number(x.lon);
   return [...prospects.values()].find(p=>!p.archived&&(
@@ -653,6 +663,8 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
    const pair=nearest?(item.kind==='company'?relationId(item.id,nearest.item.id):relationId(nearest.item.id,item.id)):null;
    const match=pair?relations.get(pair):null;
    const already=[...prospects.values()].find(p=>!p.archived&&p.targetId===item.id);
+   const localProspect=nearestSaved(item);
+   const alternate=localProspect&&!already?localProspect:null;
    html='<div class="detail"><h2>'+safe(item.kind==='water'?'Plan d’eau PICC · '+fmt(Math.round(item.area||0))+' m²':item.name)+'</h2>'+
     '<p><span class="tag">'+safe(item.category||'À vérifier')+'</span></p>'+
     (item.unnamed?'<p class="hint">Site recensé sans dénomination officielle. Exploitant non identifié.</p>':'')+
@@ -668,6 +680,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
       '<p class="tag">'+safe(match?.status==='confirmed'?'Lien confirmé manuellement':match?.status==='to_verify'?'Lien à vérifier':'Rapprochement indicatif')+'</p>'+
       '<div class="actions"><button id="seeNear">Voir le site voisin</button><button data-relation="confirmed">Lien confirmé</button><button data-relation="to_verify">À vérifier</button><button data-relation="rejected">Aucun lien</button></div></div>':
       '<p class="area-info">Aucun élément déjà cartographié à moins de 750 m dans les résultats enregistrés. Cela ne signifie pas qu’il n’existe aucun site voisin.</p>')+
+    (alternate?'<div class="area-info"><b>Prospect enregistré à proximité :</b> '+safe(alternate.prospect.name)+' ('+fmt(Math.round(alternate.meters))+' m). <b>Le lien entre les sites reste à vérifier.</b><div class="actions"><button id="viewSavedNear">Ouvrir cette fiche existante</button></div></div>':'')+
     '<h3>Vérifier les informations</h3>'+links(item)+
     '<div class="area-info"><b>Compléter l’analyse du voisinage</b><p class="caption">'+
       (item.kind==='company'?'Rechercher directement les plans d’eau PICC dans les environs immédiats de cette adresse.':
@@ -696,6 +709,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
    if($('archiveP'))$('archiveP').onclick=archiveProspect;
   }else if(selected?.type==='water'||selected?.type==='company'){
    if($('prefill'))$('prefill').onclick=()=>openDraft(item);
+   if($('viewSavedNear'))$('viewSavedNear').onclick=()=>{selectTab('prospects');showProspect(alternate.prospect.id)};
    if($('investigateNear'))$('investigateNear').onclick=()=>investigateNear(item);
    if($('openSaved'))$('openSaved').onclick=()=>{selectTab('prospects');showProspect(already.id)};
    if($('seeNear'))$('seeNear').onclick=()=>showEntity(nearest.item.kind,nearest.item.id);
