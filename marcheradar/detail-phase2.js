@@ -33,7 +33,7 @@
   var s=str(raw),date=formattedDate(s);
   if(!s)return 'Non publiée';
   if(/^\d{4}-\d{2}-\d{2}$/.test(s))return date+' — heure non publiée';
-  if(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(s))return date+' · '+esc(s.slice(11,16))+( /(?:Z|[+-]\d{2}:\d{2})$/.test(s)?' (fuseau indiqué dans la source)':' (fuseau à vérifier)' );
+  if(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(s)){var tz=(s.match(/(?:Z|[+-]\d{2}:\d{2})$/)||[])[0];return date+' · '+esc(s.slice(11,16))+(tz?' (UTC'+(tz==='Z'?'+00:00':tz)+')':' (fuseau à vérifier)');}
   return date;
  }
  function status(m,now){
@@ -73,26 +73,45 @@
  }
  function sources(m){
   var out=[],seen=new Set();
-  function add(raw,label,kind,meta){
-   var u=linkUrl(raw);if(!u||seen.has(u))return;
-   seen.add(u);
+  function add(raw,label,kind,meta,unique){
+   var u=linkUrl(raw);if(!u)return;
+   var key=unique?kind+'|'+u+'|'+str(unique):u;
+   if(seen.has(key))return;
+   seen.add(key);
    out.push({url:u,label:str(label),kind:kind,site:hostOf(u),meta:str(meta)});
   }
   (Array.isArray(m.documents)?m.documents:[]).forEach(function(d){
    if(!d||typeof d!=='object')return;
-   add(d.url||d.href,str(d.title||d.label)||docKind(d),'document',d.sourcePage?'Page '+d.sourcePage:'Lien renseigné — accessibilité à vérifier');
+   var direct=linkUrl(d.url||d.href),catalogue=linkUrl(d.accessPageUrl),isListed=!direct&&!!catalogue;
+   var src=direct||catalogue;
+   if(!src)return;
+   var title=str(d.title||d.label)||docKind(d);
+   var label=(d.type&&d.type!=='autre'?docKind(d)+' · ':'')+title;
+   var parts=[];
+   if(isListed)parts.push('Fichier listé sur le portail officiel — téléchargement depuis sa page');
+   else parts.push('Lien direct renseigné — vérifier le fichier');
+   if(d.version)parts.push('version '+str(d.version));
+   if(d.publicationDate)parts.push('publié le '+formattedDate(d.publicationDate));
+   if(d.languages&&d.languages.length)parts.push('langue(s) '+d.languages.join(', '));
+   if(d.sourcePage)parts.push('page '+d.sourcePage);
+   add(src,label,'document',parts.join(' · '),d.id||title);
   });
   (Array.isArray(m.officialSources)?m.officialSources:[]).forEach(function(d){
    if(!d||typeof d!=='object')return;
    var origin=str(d.source).toLowerCase(),url=str(d.url);
    var council=m.source==='LOCALE'||origin.includes('communal');
-   var text=council?'Consulter le document communal':origin.includes('bosa')?'Ouvrir le dossier e-Procurement':origin.includes('ted')?'Ouvrir l’avis TED':'Consulter la publication source';
-   add(url,text,council?'council':'notice',council?'Document source référencé':'Portail officiel — annexes à consulter sur place');
+   if(d.kind==='documents_portal'){
+    add(url,'Accéder au dossier documentaire référencé','document_portal',
+      'Lien figurant dans la publication officielle — fichiers à consulter sur le portail');
+    return;
+   }
+   var label=council?'Consulter le document communal':origin.includes('bosa')?'Ouvrir le dossier e-Procurement':origin.includes('ted')?'Ouvrir l’avis TED':'Consulter la publication source';
+   add(url,label,council?'council':'notice',council?'Document source référencé':'Portail officiel — annexes à consulter sur place');
   });
   if(m.sourceDocument)add(m.sourceDocument,'Consulter le document communal','council','Document source référencé');
   if(m.url){
-   var text=m.source==='TED'?'Ouvrir l’avis TED':m.source==='BOSA'?'Ouvrir le dossier e-Procurement':m.source==='LOCALE'?'Consulter le document communal':'Consulter la publication';
-   add(m.url,text,m.source==='LOCALE'?'council':'notice',m.source==='LOCALE'?'Document source référencé':'Portail officiel — annexes à consulter sur place');
+   var name=m.source==='TED'?'Ouvrir l’avis TED':m.source==='BOSA'?'Ouvrir le dossier e-Procurement':m.source==='LOCALE'?'Consulter le document communal':'Consulter la publication';
+   add(m.url,name,m.source==='LOCALE'?'council':'notice',m.source==='LOCALE'?'Document source référencé':'Portail officiel — annexes à consulter sur place');
   }
   return out;
  }
@@ -138,12 +157,12 @@
   var summary=section('Informations principales','<div class="mr2-fields">'+
    field('Pouvoir adjudicateur',m.buyer||'Non communiqué')+field('Référence',reference(m))+
    field('Zone',m.region||'Non localisée')+field('Date de publication',formattedDate(m.publication))+
-   field('Date limite de remise',dateTime(m.deadline)+(m.deadlineTime&&!/T\d{2}:\d{2}/.test(str(m.deadline))?' · heure signalée '+str(m.deadlineTime)+' (à confirmer)':''),!m.deadline?'Consulter la publication officielle avant d’engager une offre.':/^\d{4}-\d{2}-\d{2}$/.test(str(m.deadline))?'L’heure limite n’est pas présente dans les données.':'Horodatage issu des données de collecte.')+
+   field('Date limite de remise',dateTime(m.deadline)+(m.deadlineTime&&!/T\d{2}:\d{2}/.test(str(m.deadline))?' · heure signalée '+str(m.deadlineTime)+' (à confirmer)':''),m.deadlineEvidence?.verified?'Échéance vérifiée dans '+str(m.deadlineEvidence.source)+' — '+(m.deadlineEvidence.precision==='datetime'?'heure et fuseau disponibles':'heure non publiée'):!m.deadline?'Consulter la publication officielle avant d’engager une offre.':/^\d{4}-\d{2}-\d{2}$/.test(str(m.deadline))?'L’heure limite n’est pas présente dans les données.':'Horodatage issu des données de collecte.')+
    field('CPV',Array.isArray(m.cpv)&&m.cpv.length?m.cpv.join(' · '):'Non renseigné')+
    field('Délai d’exécution',m.executionDuration||'Non renseigné')+
    field('Procédure',noticeType)+
    '</div>'+
-   '<p class="mr2-footnote">Le classement des échéances est indicatif si l’heure de remise n’est pas publiée. Une date dépassée ne constitue pas une preuve de clôture administrative de la procédure.</p>');
+   '<p class="mr2-footnote">Le classement reste indicatif lorsque l’heure n’est pas publiée. Une date dépassée ne prouve pas la clôture administrative.</p>'+ (m.deadlineEvidence?.verified&&linkUrl(m.deadlineEvidence.sourceUrl)?'<p class="mr2-footnote">Échéance documentée : <a class="mr2-inline-link" target="_blank" rel="noopener noreferrer" href="'+esc(linkUrl(m.deadlineEvidence.sourceUrl))+'">voir la publication source ↗</a></p>':'')+(m.deadlineReview?'<div class="mr2-highlight mr2-caution"><strong>Échéance à recontrôler</strong><p>Une nouvelle publication comporte une information différente : la dernière échéance vérifiée a été conservée en attendant une validation.</p></div>':''));
   var visitBody='<div class="mr2-highlight '+(visit.kind==='required'?'mr2-risk':visit.kind==='review'?'mr2-caution':'')+'">'+
    '<strong>'+esc(visit.label)+'</strong>'+
    '<p>'+(visit.kind==='unknown'?'Aucune vérification documentaire de l’existence d’une visite n’est disponible. Consulter le cahier spécial des charges et les avis rectificatifs.':visit.kind==='review'?'Une mention a été repérée, mais son caractère obligatoire, sa date et ses modalités ne sont pas confirmés.':'Information structurée accompagnée d’une référence documentaire.')+'</p>'+
@@ -163,11 +182,11 @@
   }
   var visitSection=section('Visite des lieux',visitBody,'À vérifier avant de répondre');
   var docsBody=docs.length?'<div class="mr2-link-list">'+docs.map(external).join('')+'</div>'+
-    '<p class="mr2-footnote">Liens renseignés dans la source. Leur disponibilité et leur version doivent être contrôlées.</p>':
+    '<p class="mr2-footnote">Les titres et versions proviennent des catalogues publics. Les fichiers simplement listés se téléchargent depuis la page officielle, sans lien individuel supposé.</p>':
     '<div class="mr2-highlight"><strong>Aucun fichier de marché indexé</strong><p>Le cahier spécial des charges, les plans et les bordereaux ne sont pas encore récupérés automatiquement. Utiliser les publications officielles ci-dessous pour les rechercher.</p></div>';
   docsBody+='<h5 class="mr2-mini-title">Publications et documents sources</h5>'+
     (others.length?'<div class="mr2-link-list">'+others.map(external).join('')+'</div>':'<p class="mr2-empty">Aucun lien source exploitable renseigné.</p>');
-  var documents=section('Accès aux documents',docsBody,docs.length+' fichier(s) indexé(s)');
+  var documents=section('Accès aux documents',docsBody,docs.length+' fichier(s) repéré(s)');
   var reqBody='<div class="mr2-highlight"><strong>'+(req.some(function(x){return x.verified})?'Éléments documentés et éléments à contrôler':'Conditions de participation non analysées')+'</strong>'+
    '<p>'+(!req.length?'Les références professionnelles, capacités techniques, critères de sélection et critères d’attribution doivent être consultés dans les documents officiels. Aucun de ces éléments n’a été vérifié par l’application.':'La présence dans cette fiche ne dispense pas de contrôler les exigences et leurs éventuels rectificatifs.')+'</p></div>';
   if(req.length)reqBody+='<div class="mr2-requirements">'+req.map(function(x){
@@ -191,7 +210,7 @@
   var v=visitState(m);
   var vLabel=v.kind==='required'?'Visite obligatoire':v.kind==='optional'?'Visite facultative':v.kind==='review'?'Visite à vérifier':'Visite non renseignée';
   var source=primarySource(m),docs=safeDocs(m);
-  var dLabel=docs.length?docs.length+' document(s) indexé(s)':source?'Accès à la source':'Source non renseignée';
+  var dLabel=docs.length?docs.length+' fichier(s) repéré(s)':source?'Accès à la source':'Source non renseignée';
   return '<div class="mr2-list-hints">'+(m.noticeKind==='award'?'<span>Avis de résultat</span>':'')+'<span>'+esc(vLabel)+'</span><span>'+esc(dLabel)+'</span></div>';
  }
  return {render:render,status:status,sources:sources,primarySource:primarySource,visitState:visitState,requirements:requirements,linkUrl:linkUrl,listHints:listHints};
