@@ -1357,11 +1357,17 @@ function setScanAngle(angle,preserveReading=false){
  $('#scan-angle-value').textContent=(scanAngle>0?'+':'')+Math.round(scanAngle)+'°';
  if(scanCrop){
   scanCrop=clampScanFrame(scanCrop);
-  refreshScanCropPreview();
-  if(!preserveReading)invalidateScanReading();
+  displayImageSpaceCrop(scanCrop);
+  if(!preserveReading){
+   refreshScanCropPreview();
+   invalidateScanReading(scanKind==='electric'&&scanElectricStep!=='both');
+  }
  }
 }
-$('#scan-angle').addEventListener('input',event=>setScanAngle(event.target.value));
+$('#scan-angle').addEventListener('input',event=>setScanAngle(event.target.value,true));
+$('#scan-angle').addEventListener('change',()=>{
+ if(scanCrop){refreshScanCropPreview();invalidateScanReading(scanKind==='electric'&&scanElectricStep!=='both')}
+});
 function defaultScanFrame(){
  const g=scanFrameViewport();if(!g)return null;
  const shape=scanKind==='electric'?
@@ -1657,14 +1663,12 @@ $('#scan-reset-crop').onclick=()=>{
  if(scanBusy)return;
  prepareScanFrame(true);
 };
-/* Mobile crop interaction. Drag anywhere inside the frame to move it,
-   drag one of the four corners to resize; tap outside to reposition.
-   Releasing the finger only updates the source pixels, not the stored reading. */
-let scanPointer=null;
+/* Pointer-based cropper: drag, four corners, rotation handle, two-finger
+   photo zoom/pan. All rectangles and angles remain in ORIGINAL image pixels. */
+let scanPointer=null,scanPointers=new Map(),scanPinch=null;
 function scanFramePoint(ev,g=scanFrameViewport()){
  if(!g)return null;
- return {x:Math.max(0,Math.min(g.w,(ev.clientX-g.left)/g.scale)),
-  y:Math.max(0,Math.min(g.h,(ev.clientY-g.top)/g.scale))};
+ return {x:(ev.clientX-g.left)/g.scale,y:(ev.clientY-g.top)/g.scale};
 }
 function scanMoveOrResize(pointer,p){
  const g=scanFrameViewport();if(!g||!pointer||!p)return null;
@@ -1673,63 +1677,112 @@ function scanMoveOrResize(pointer,p){
   return clampScanFrame({left:origin.left+dx,top:origin.top+dy,
    width:origin.width,height:origin.height});
  }
- const minW=Math.min(g.w,Math.max(g.w*.10,42/g.scale));
- const minH=Math.min(g.h,Math.max(g.h*.055,36/g.scale));
- let l=origin.left,t=origin.top,r=origin.left+origin.width,b=origin.top+origin.height;
- const h=pointer.handle||'se';
- if(h.includes('w'))l=Math.max(0,Math.min(r-minW,l+dx));
- if(h.includes('e'))r=Math.min(g.w,Math.max(l+minW,r+dx));
- if(h.includes('n'))t=Math.max(0,Math.min(b-minH,t+dy));
- if(h.includes('s'))b=Math.min(g.h,Math.max(t+minH,b+dy));
- return clampScanFrame({left:l,top:t,width:r-l,height:b-t});
+ const ang=pointer.angle*Math.PI/180,c=Math.cos(ang),si=Math.sin(ang);
+ const lx=c*dx+si*dy,ly=-si*dx+c*dy;
+ const side=pointer.handle||'se',sx=side.includes('e')?1:-1,sy=side.includes('s')?1:-1;
+ const minW=Math.min(g.w,Math.max(33/g.scale,g.w*.08));
+ const minH=Math.min(g.h,Math.max(26/g.scale,g.h*.04));
+ const width=Math.max(minW,origin.width+sx*lx);
+ const height=Math.max(minH,origin.height+sy*ly);
+ const dw=width-origin.width,dh=height-origin.height;
+ const cx=origin.left+origin.width/2+c*sx*dw/2-si*sy*dh/2;
+ const cy=origin.top+origin.height/2+si*sx*dw/2+c*sy*dh/2;
+ return clampScanFrame({left:cx-width/2,top:cy-height/2,width,height});
+}
+function scanPinchStats(){
+ const pts=[...scanPointers.values()].slice(0,2);
+ if(pts.length<2)return null;
+ return {mx:(pts[0].x+pts[1].x)/2,my:(pts[0].y+pts[1].y)/2,
+  distance:Math.hypot(pts[0].x-pts[1].x,pts[0].y-pts[1].y)};
 }
 function finishScanFrameMove(ev){
+ scanPointers.delete(ev.pointerId);
+ if(scanPinch){
+  if(scanPointers.size<2){scanPinch=null;scanPointer=null}
+  return;
+ }
  if(!scanPointer||ev.pointerId!==scanPointer.id)return;
  const pointer=scanPointer;scanPointer=null;
  const frame=scanCrop,origin=pointer.original;
  const changed=frame&&(
   Math.abs(frame.left-origin.left)>1||Math.abs(frame.top-origin.top)>1||
-  Math.abs(frame.width-origin.width)>1||Math.abs(frame.height-origin.height)>1
+  Math.abs(frame.width-origin.width)>1||Math.abs(frame.height-origin.height)>1||
+  Math.abs(scanAngle-pointer.angle)>.25
  );
  if(changed||pointer.recentered){
   scanAutoZones=null;scanAutoConfidence='manual';
   refreshScanCropPreview();
-  invalidateScanReading();
+  invalidateScanReading(scanKind==='electric'&&scanElectricStep!=='both');
  }
 }
 $('#scan-preview-wrap').addEventListener('pointerdown',ev=>{
- if(scanBusy||scanPointer||!pendingImage)return;
- const g=scanFrameViewport(),p=scanFramePoint(ev,g);
- if(!g||!p)return;
+ if(scanBusy||!pendingImage)return;
+ scanPointers.set(ev.pointerId,{x:ev.clientX,y:ev.clientY});
+ ev.currentTarget.setPointerCapture?.(ev.pointerId);
+ if(scanPointers.size>=2){
+  const p=scanPinchStats();
+  if(p)scanPinch={...p,zoom:scanZoom,pan:{...scanPan}};
+  scanPointer=null;
+  ev.preventDefault();return;
+ }
+ const g=scanFrameViewport(),point=scanFramePoint(ev,g);
+ if(!g||!point)return;
  if(!scanCrop)scanCrop=defaultScanFrame();
  if(!scanCrop)return;
  const handle=ev.target.closest?.('[data-scan-handle]')?.dataset?.scanHandle||null;
  const isInside=!!ev.target.closest?.('#scan-crop-box');
- const original={...scanCrop};
  let recentered=false;
  if(!isInside&&!handle){
-  scanCrop=clampScanFrame({left:p.x-scanCrop.width/2,top:p.y-scanCrop.height/2,
+  scanCrop=clampScanFrame({left:point.x-scanCrop.width/2,top:point.y-scanCrop.height/2,
    width:scanCrop.width,height:scanCrop.height});
   displayImageSpaceCrop(scanCrop);
   recentered=true;
  }
- scanPointer={id:ev.pointerId,start:p,original:{...scanCrop},
-  mode:handle?'resize':'move',handle,recentered,
-  before:original};
- ev.currentTarget.setPointerCapture?.(ev.pointerId);
+ const center={x:scanCrop.left+scanCrop.width/2,y:scanCrop.top+scanCrop.height/2};
+ scanPointer={id:ev.pointerId,start:point,original:{...scanCrop},angle:scanAngle,
+  mode:handle==='rotate'?'rotate':handle?'resize':'move',
+  handle,recentered,center,
+  startPolar:Math.atan2(point.y-center.y,point.x-center.x)};
  ev.preventDefault();
 });
 $('#scan-preview-wrap').addEventListener('pointermove',ev=>{
+ if(!scanPointers.has(ev.pointerId))return;
+ scanPointers.set(ev.pointerId,{x:ev.clientX,y:ev.clientY});
+ if(scanPinch){
+  const p=scanPinchStats();
+  if(p){
+   scanZoom=Math.min(5,Math.max(1,scanPinch.zoom*p.distance/Math.max(1,scanPinch.distance)));
+   scanPan={x:scanPinch.pan.x+(p.mx-scanPinch.mx),y:scanPinch.pan.y+(p.my-scanPinch.my)};
+   applyScanPhotoView();
+  }
+  ev.preventDefault();return;
+ }
  if(!scanPointer||ev.pointerId!==scanPointer.id)return;
- const p=scanFramePoint(ev);if(!p)return;
- const next=scanMoveOrResize(scanPointer,p);
- if(next){scanCrop=next;displayImageSpaceCrop(scanCrop)}
+ const point=scanFramePoint(ev);if(!point)return;
+ if(scanPointer.mode==='rotate'){
+  const c=scanPointer.center;
+  const polar=Math.atan2(point.y-c.y,point.x-c.x);
+  let delta=(polar-scanPointer.startPolar)*180/Math.PI;
+  if(delta>180)delta-=360;
+  if(delta< -180)delta+=360;
+  setScanAngle(scanPointer.angle+delta,true);
+ }else{
+  const next=scanMoveOrResize(scanPointer,point);
+  if(next){scanCrop=next;displayImageSpaceCrop(scanCrop)}
+ }
  ev.preventDefault();
 });
 $('#scan-preview-wrap').addEventListener('pointerup',ev=>{
  finishScanFrameMove(ev);ev.preventDefault();
 });
 $('#scan-preview-wrap').addEventListener('pointercancel',finishScanFrameMove);
+$('#scan-preview-wrap').addEventListener('lostpointercapture',finishScanFrameMove);
+$('#scan-preview-wrap').addEventListener('wheel',ev=>{
+ if(!ev.ctrlKey&&!ev.metaKey)return;
+ ev.preventDefault();
+ scanZoom=Math.min(5,Math.max(1,scanZoom*(ev.deltaY<0?1.11:.9)));
+ applyScanPhotoView();
+},{passive:false});
 $('#confirm-scan').onclick=()=>{
  const k=$('#scan-meter').value;
  if(k==='electric'){
