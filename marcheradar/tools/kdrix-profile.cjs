@@ -16,7 +16,7 @@ function has(s,term){
 }
 const any=(s,arr)=>(arr||[]).some(term=>has(s,term));
 function flemishBuyer(buyer){
- return /\bvlaams(?:e)?\b|\bvlaanderen\b|\bflanders\b|\baquafin\b|\bfluvius\b|openbare vlaamse|eigen vermogen digitaal|digitaal vlaanderen|vlaamse waterweg|vlaamse landmaatschappij|agentschap voor innoveren en ondernemen|agentschap wegen en verkeer|agentschap natuur en bos|\bde lijn\b|stad (?:gent|leuven|antwerpen|brugge|hasselt|oostende|kortrijk|roeselare|sint niklaas)|provincie (?:limburg|antwerpen|oost vlaanderen|west vlaanderen|vlaams brabant)/.test(fold(buyer));
+ return /\bvlaams(?:e)?\b|\bvlaanderen\b|\bflanders\b|\baquafin\b|\bfluvius\b|openbare vlaamse|eigen vermogen digitaal|digitaal vlaanderen|vlaamse waterweg|vlaamse landmaatschappij|agentschap voor innoveren en ondernemen|agentschap wegen en verkeer|agentschap natuur en bos|\bde lijn\b|stad (?:diest|gent|leuven|antwerpen|brugge|hasselt|oostende|kortrijk|roeselare|sint niklaas)|provincie (?:limburg|antwerpen|oost vlaanderen|west vlaanderen|vlaams brabant)/.test(fold(buyer));
 }
 function dutchOnly(title,description){
  const h=fold(subjectOf(title)),b=fold(String(description||'').slice(0,1600));
@@ -56,7 +56,8 @@ function screen(m){
  if(BAD.test(title)&&!little&&!(/\bjaugeag/.test(title)&&/^entretien/.test(title)))return {reason:'objet_hors_domaine',classification:null};
  if(cpv.some(c=>/^665|^909/.test(c)))return {reason:'assurance_ou_nettoyage',classification:null};
  if(SUPPLY.test(title)&&!little&&!STUDY.test(title))return {reason:'fournitures_et_location',classification:null};
- if((cpv.some(c=>/^45/.test(c))||BUILD.test(title))&&!little&&!STUDY.test(title)&&!local)return {reason:'travaux_execution',classification:null};
+ const hasDirectService=Object.entries(WORDS).some(([id,w])=>id!=='_meta'&&id!=='PetitsTravaux'&&any(title,w.direct));
+ if((cpv.some(c=>/^45/.test(c))||BUILD.test(title))&&!little&&!STUDY.test(title)&&!hasDirectService&&!local)return {reason:'travaux_execution',classification:null};
  const hits=[];
  for(const [id,words] of Object.entries(WORDS)){
   if(id==='_meta'||id==='PetitsTravaux')continue;
