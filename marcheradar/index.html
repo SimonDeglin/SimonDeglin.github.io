@@ -184,6 +184,7 @@ body{background:#f7f7f7;color:#303339}
 .coverage-detail-link{display:inline-flex;align-items:center;font-size:11px;font-weight:750;color:#d8612d;text-decoration:none;margin-left:3px;padding:6px 2px}
 .coverage-detail-link:hover{text-decoration:underline}
 </style>
+<link rel="stylesheet" href="detail-phase2.css">
 </head>
 <body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -270,6 +271,7 @@ body{background:#f7f7f7;color:#303339}
 <div class="overlay" id="overlay"></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Détails et préférences"><div class="drawer-head"><div><small id="drawerEyebrow">DÉTAIL DU MARCHÉ</small><h2 id="drawerHeader">Consulter un marché</h2></div><button class="close" id="closeDrawer" aria-label="Fermer"><svg class="ico"><use href="#i-x"/></svg></button></div><div class="drawer-content" id="drawerBody"></div><div class="drawer-footer" id="drawerFooter"></div></aside>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="detail-phase2.js"></script>
 <script>
 (function(){
 'use strict';
@@ -401,8 +403,8 @@ function renderList(){
  el('resultsList').querySelectorAll('[data-star]').forEach(function(b){b.addEventListener('click',function(){var id=b.dataset.star;saved.favorites[id]=!saved.favorites[id];save();render();toast(saved.favorites[id]?'Ajouté aux favoris':'Retiré des favoris')})});
 }
 function render(){if(state.sector!=='all'&&saved.hiddenSectors[state.sector])state.sector='all';renderChips();renderBanner();renderCoverageStrip();renderStats();renderNav();renderList()}
-function openDrawer(){el('overlay').classList.add('on');el('drawer').classList.add('on');document.body.style.overflow='hidden'}
-function closeDrawer(){el('overlay').classList.remove('on');el('drawer').classList.remove('on');document.body.style.overflow='';state.selected=null}
+function openDrawer(){el('drawer').classList.toggle('mr2-drawer',!!state.selected);el('overlay').classList.add('on');el('drawer').classList.add('on');document.body.style.overflow='hidden'}
+function closeDrawer(){el('overlay').classList.remove('on');el('drawer').classList.remove('on');el('drawer').classList.remove('mr2-drawer');document.body.style.overflow='';state.selected=null}
 function openTender(id){
  var m=allMarkets().find(function(a){return a.id===id});if(!m)return;state.selected=id;el('drawerEyebrow').textContent='PUBLICATION · '+(m.source||'TED');el('drawerHeader').textContent='Détail du marché';
  var url=link(m),d=daysLeft(m.deadline);
@@ -696,7 +698,7 @@ function renderList(){
    '<div class="tender-body"><div class="tender-top"><div class="tag-group">'+tags+'</div><span class="micro-tag">'+esc(m.source==='Démo'?'FICTIF':(m.source||'TED'))+'</span>'+
    (current!=='inbox'?'<span class="status-tag '+current+'">'+esc(stageName(current))+'</span>':'')+(m.screening==='review'?'<span class="micro-tag">À vérifier</span>':m.screening==='excluded'?'<span class="micro-tag">Correspondance écartée automatiquement</span>':'')+(m.awards&&m.awards.length?'<span class="micro-tag result-published">Résultat publié</span>':'')+'</div>'+
    '<h3 class="open-tender" role="button" tabindex="0">'+esc(m.title)+'</h3>'+
-   '<div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+'Publié le '+fmtShort(m.publication)+'</span></div></div>'+
+   '<div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+'Publié le '+fmtShort(m.publication)+'</span></div>'+(window.MRDetailV2&&typeof MRDetailV2.listHints==='function'?MRDetailV2.listHints(m):'')+'</div>'+
    '<div class="tender-end"><div class="end-meta"><button class="star'+(saved.favorites[m.id]?' on':'')+'" title="Favori" aria-label="Favori" data-star="'+esc(m.id)+'">'+svg('star',true)+'</button><span class="end-date">'+(m.deadline?'Éch. '+fmtShort(m.deadline):m.source==='LOCALE'&&m.screening!=='excluded'?'Prospection — échéance non publiée':'Échéance non publiée')+'</span><span class="days'+dc+'">'+esc(label)+'</span></div>'+
    '<select class="move-select" data-move="'+esc(m.id)+'" aria-label="Dossier de suivi">'+WORKFLOW.map(function(s){return '<option value="'+esc(s.id)+'"'+(s.id===current?' selected':'')+'>'+esc(s.label)+'</option>'}).join('')+'</select></div></article>';
  }).join('');
@@ -757,21 +759,36 @@ function awardsMarkup(m){
 }
 function openTender(id){
  var m=allMarkets().find(function(a){return a.id===id});if(!m)return;
- state.selected=id;el('drawerEyebrow').textContent=m.source==='LOCALE'?'OPPORTUNITÉ DE PROSPECTION · SOURCE LOCALE':'PUBLICATION · '+(m.source||'TED');el('drawerHeader').textContent='Détail du marché';
- var url=link(m),d=daysLeft(m.deadline);
- var fields=[['Pouvoir adjudicateur',m.buyer||'Non communiqué'],['Zone',m.region||'Belgique'],['Publié le',fmtDate(m.publication)],['Date limite',fmtDate(m.deadline)],['Code(s) CPV',(m.cpv||[]).join(', ')||'Non précisé'],['Pertinence',String(m.score||0)+'/100 (indicative)']];
- var tags=(m.sectors||[m.sector]).map(function(s){var f=SECTORS.find(function(a){return a.id===s});return '<span class="micro-tag sector">'+esc(f?f.label:s)+'</span>'}).join('');
- el('drawerBody').innerHTML='<div class="tender-top">'+tags+'<span class="micro-tag">'+esc(m.source||'TED')+'</span></div>'+
- '<h3 class="drawer-title">'+esc(m.title)+'</h3><p style="color:#8c9bad;font-size:11px;margin:0">Échéance : '+(d===null?'non précisée':d>=0?'dans '+d+' jour(s)':'dépassée')+'</p>'+
- '<div class="detail-grid">'+fields.map(function(f){return '<div class="detail-field"><label>'+esc(f[0])+'</label><div>'+esc(f[1])+'</div></div>'}).join('')+'</div>'+
- (Array.isArray(m.constraints)&&m.constraints.length?'<div class="important-conditions"><strong>Points à vérifier avant de répondre</strong>'+m.constraints.map(function(x){return '<div>• '+esc(x)+'</div>'}).join('')+'</div>':'')+
- '<div class="drawer-label">Objet du marché</div><div class="drawer-desc">'+esc(m.description||'Résumé non disponible. Consulter l’avis officiel.')+'</div>'+
- awardsMarkup(m)+
- '<div class="drawer-label" style="margin-top:26px">Dossier de suivi</div><select class="control-select" id="statusSelect">'+WORKFLOW.map(function(s){return '<option value="'+esc(s.id)+'"'+(s.id===stageOf(id)?' selected':'')+'>'+esc(s.label)+'</option>'}).join('')+'</select>'+
- '<div class="drawer-label">Notes personnelles</div><textarea id="marketNotes" placeholder="Points à vérifier, références, questions...">'+esc(saved.notes[id]||'')+'</textarea>'+
- '<p class="legal-note">Un seul dossier pour ce marché, indépendamment des catégories métier. Statuts et notes conservés sur ce PC et ce navigateur uniquement.</p>';
- el('drawerFooter').innerHTML='<button class="outline" id="drawerStar">'+svg('star',true)+(saved.favorites[id]?' Retirer':' Favori')+'</button>'+
- (url?'<a class="primary" href="'+esc(url)+'" target="_blank" rel="noopener">'+svg('external',true)+(m.source==='LOCALE'?' Document source':' Avis officiel')+'</a>':'<button class="primary" disabled>Document non disponible</button>')+
+ state.selected=id;
+ el('drawerEyebrow').textContent=m.source==='LOCALE'?'DOSSIER DE PROSPECTION · SOURCE LOCALE':'PUBLICATION · '+(m.source||'À VÉRIFIER');
+ el('drawerHeader').textContent='Fiche du marché';
+ // Le module externe ne revendique aucune extraction documentaire non effectuée.
+ var report;
+ try {
+  if(!window.MRDetailV2||typeof MRDetailV2.render!=='function')throw Error('Module documentaire indisponible');
+  report=MRDetailV2.render(m);
+ } catch(e) {
+  // Ne jamais empêcher l'accès aux marchés si le module documentaire manque.
+  var fallbackLink=link(m);
+  report={
+   html:'<div class="mr2-intro"><h3 class="drawer-title">'+esc(m.title)+'</h3><p class="drawer-desc">'+esc(m.description||'')+'</p></div>'+
+    '<div class="detail-grid"><div class="detail-field"><label>Pouvoir adjudicateur</label><div>'+esc(m.buyer||'Non communiqué')+'</div></div>'+
+    '<div class="detail-field"><label>Date limite</label><div>'+esc(fmtDate(m.deadline))+'</div></div></div>'+
+    '<p class="legal-note">Module documentaire temporairement indisponible. Les marchés, les notes et les classements restent accessibles.</p>',
+   primary:fallbackLink?{url:fallbackLink,kind:'notice'}:null
+  };
+ }
+ el('drawerBody').innerHTML=report.html+
+ (Array.isArray(m.awards)&&m.awards.length?'<section class="mr2-section">'+awardsMarkup(m)+'</section>':'')+
+ '<div class="drawer-label">Dossier de suivi KDRIX</div><select class="control-select" id="statusSelect">'+WORKFLOW.map(function(s){
+  return '<option value="'+esc(s.id)+'"'+(s.id===stageOf(id)?' selected':'')+'>'+esc(s.label)+'</option>';
+ }).join('')+'</select>'+
+ '<div class="drawer-label">Notes personnelles</div>'+
+ '<textarea id="marketNotes" placeholder="Visite à confirmer, références, questions, actions internes...">'+esc(saved.notes[id]||'')+'</textarea>'+
+ '<p class="legal-note">Dossier et notes enregistrés sur cet ordinateur et dans ce navigateur uniquement. Les informations des publications restent à contrôler dans les documents officiels.</p>';
+ var source=report.primary;
+ el('drawerFooter').innerHTML='<button class="outline" id="drawerStar">'+svg('star',true)+(saved.favorites[id]?' Retirer le favori':' Favori')+'</button>'+
+ (source?'<a class="primary" href="'+esc(source.url)+'" target="_blank" rel="noopener noreferrer">'+svg('external',true)+(source.kind==='notice'?' Publication officielle':' Document source')+'</a>':'<button class="primary" disabled>Aucun lien source</button>')+
  '<button class="outline" id="saveTender">'+svg('check',true)+' Enregistrer</button>';
  el('drawerStar').addEventListener('click',function(){
   var code=el('statusSelect').value;saved.notes[id]=el('marketNotes').value;
@@ -781,10 +798,11 @@ function openTender(id){
  el('saveTender').addEventListener('click',function(){
   var code=el('statusSelect').value;saved.notes[id]=el('marketNotes').value;
   if(code==='inbox')delete saved.statuses[id];else saved.statuses[id]=code;
-  save();render();closeDrawer();toast('Dossier enregistré sur cet ordinateur');
+  save();render();closeDrawer();toast('Fiche et classement enregistrés sur cet ordinateur');
  });
  openDrawer();
 }
+
 function downloadCSV(){
  var rows=[['Titre','Acheteur','Région','Catégories métier','Score','Publication','Échéance','CPV','Source','Dossier','Favori','Notes','Avis']];
  filtered().forEach(function(m){rows.push([m.title,m.buyer,m.region,(m.sectors||[m.sector]).map(function(s){return (SECTORS.find(function(x){return x.id===s})||{label:s}).label}).join(' / '),m.score,m.publication,m.deadline,(m.cpv||[]).join(' '),m.source||'TED',stageName(stageOf(m.id)),saved.favorites[m.id]?'Oui':'Non',saved.notes[m.id]||'',link(m)])});
