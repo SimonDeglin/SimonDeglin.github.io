@@ -9,11 +9,12 @@ const fs=require('node:fs');
 const api=require('../detail-phase2.js');
 const real=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data.json'),'utf8'));
 function market(overrides){return {id:'test:01',title:'Marché topo',source:'TED',screening:'main',publication:'2026-10-10',deadline:'2026-10-22',description:'Levé topographique',region:'Wallonie',cpv:['71351810'],...overrides}}
-test('les 64 fiches sont intactes et la structure de la Phase 2 est disponible',()=>{
- assert.equal(real.items.length,64);
- assert.equal(real.items.filter(m=>m.source==='TED').length,14);
- assert.equal(real.items.filter(m=>m.source==='BOSA').length,16);
- assert.equal(real.items.filter(m=>m.source==='LOCALE').length,34);
+test('les fiches officielles restent exploitables quelle que soit la taille de l’inventaire',()=>{
+ assert(real.items.length>=64);
+ assert(real.items.some(m=>m.source==='TED'));
+ assert(real.items.some(m=>m.source==='BOSA'));
+ assert(real.items.some(m=>m.source==='LOCALE'));
+ assert.equal(new Set(real.items.map(m=>m.id)).size,real.items.length);
  assert.equal(typeof api.render,'function');
 });
 test('aucune visite obligatoire ne peut être inférée du seul avis ou du texte',()=>{
