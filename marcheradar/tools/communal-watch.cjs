@@ -73,6 +73,21 @@ function pdfText(bytes){
   return cp.execFileSync('pdftotext',['-layout',target,'-'],{timeout:15000,encoding:'utf8',maxBuffer:8_000_000});
  }finally{try{fs.unlinkSync(target)}catch(e){}}
 }
+async function sitemapLinks(base){
+ try{
+  const uri=new URL('/sitemap.xml',base).href;
+  const data=await fetchBytes(uri,1000000);
+  const list=[];
+  for(const m of data.bytes.toString('utf8').matchAll(/<loc>\s*([^<]+)\s*<\/loc>/gi)){
+   const url=m[1].replace(/&amp;/g,'&').trim();
+   if(!isSafeURL(url,base)||!officialLink(url,base))continue;
+   const title=new URL(url).pathname;
+   if(COUNCIL.test(profile.fold(title))&&!list.some(x=>x.url===url))list.push({url,title,text:title});
+   if(list.length>=10)break;
+  }
+  return list;
+ }catch(e){return []}
+}
 function htmlText(html){
  const text=String(html||'').replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,' ')
   .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi,' ')
@@ -138,6 +153,13 @@ async function scanCommune(commune){
  commune.lastSiteCheck=new Date().toISOString();
  const seen=new Set();
  const queue=candidates(homepage,site.url).filter(x=>COUNCIL.test(profile.fold(x.text))).slice(0,ENDPOINTS);
+ if(queue.length<ENDPOINTS){
+  const fromSitemap=await sitemapLinks(site.url);
+  for(const entry of fromSitemap){
+   if(!queue.some(x=>x.url===entry.url))queue.push(entry);
+   if(queue.length>=ENDPOINTS)break;
+  }
+ }
  // Documents PDF directement annoncés sur la page d'accueil.
  for(const x of candidates(homepage,site.url).filter(x=>DOC.test(x.url)).slice(0,MAX_PDF))if(!queue.some(y=>y.url===x.url))queue.push(x);
  let examined=0;
