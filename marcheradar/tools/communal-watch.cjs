@@ -127,7 +127,36 @@ function dateFromText(text){
  const j=value.match(/\b([0-3]\d)[\/\.]([01]\d)[\/\.](20\d{2})\b/);
  return j?j[3]+'-'+j[2]+'-'+j[1]:null;
 }
+/* Une mention de voirie ou d'inondation ne prouve pas une nouvelle mission.
+ * Les extraits de menu, anciens PV et programmes généraux restent archivés
+ * mais ne sont PAS présentés comme prospects actifs.
+ */
+function qualityProspect(url,evidence){
+ const u=String(url||''),t=profile.fold(evidence);
+ const explicit=/bureau d'etudes?|cahier special des charges|passation|mise en concurrence|consultation de bureaux|appel d'offres|marche de services|designation d'un geometre|decision de lancer|decide de lancer|approuv(?:e|al) (?:la|le|une|un) (?:mission|etude|marche)|projets? rest(?:e|ent) en suspens|en attente d'un accord.+(?:travaux|amenagement|caniveau)|solution envisag(?:e|ee)/;
+ const soft=/budget (?:d'etude|prevu pour|pour etude)|etude (?:a realiser|a commander|envisagee)|avant.projet (?:d'|de)|projet (?:de|d') (?:creation|reamenagement|renovation).+(?:approuv|adopt)/;
+ const obviouslyIrrelevant=/service de la jeunesse urbanisme amenagement|passage du tour de france 2017|en savoir plus contactez nous|signaler un depot clandestin|aucune nouvelle mission|il n'y a rien de concret|la facture de ces inondations|nous avons du faire appel a des entreprises equipees/;
+ if(t.length<110)return {ok:false,reason:'extrait_trop_court'};
+ if(obviouslyIrrelevant.test(t))return {ok:false,reason:'navigation_ou_information_generale'};
+ let year=null;
+ const full=u.match(/\b20(2[0-9])\b/);
+ if(full)year=Number(full[0]);
+ const short=u.match(/(?:pv|cc)[^/]{0,12}[-_](2[0-9])(?:0[1-9]|1[0-2])(?:[0-3]\d)/i);
+ if(!year&&short)year=2000+Number(short[1]);
+ if(year&&year<2025)return {ok:false,reason:'document_historique_'+year};
+ const clear=explicit.test(t),context=soft.test(t);
+ if(!clear&&!context)return {ok:false,reason:'intention_de_mission_non_etablie'};
+ // Sans date ou PV identifiable, garder uniquement les annonces de
+ // consultation explicites, jamais les descriptions d'objectifs généraux.
+ const documented=year!==null||/deliberations\.be|\/(?:pv|proces.verbal|deliberation|decisions?)\b/i.test(u);
+ if(!documented&&!/passation|mise en concurrence|appel d'offres|marche de services|decide de lancer|decision de lancer/.test(t)){
+  return {ok:false,reason:'source_non_datee'};
+ }
+ return {ok:true,reason:'signal_concret_a_verifier',year};
+}
 function opportunity(commune,document,text){
+ const quality=qualityProspect(document.url,text);
+ if(!quality.ok)return null;
  const classification=profile.screen({title:text.slice(0,250),description:text,source:'LOCALE',
  buyer:commune.name,region:'Wallonie',opportunityType:'prospection'}).classification;
  if(!classification)return null;
@@ -200,6 +229,17 @@ async function run(){
  const eligible=registry.communes.filter(x=>x.zone!=='exterieure_provisoire'&&x.officialSite);
  const ordered=eligible.sort((a,b)=>String(a.lastSiteCheck||'').localeCompare(String(b.lastSiteCheck||''))||((a.estimatedMinutes||999)-(b.estimatedMinutes||999)));
  const selected=ordered.slice(0,Math.min(30,Math.max(1,BATCH)));
+ // Réexaminer les premiers extraits bruts avant tout affichage commercial.
+ for(const item of data.items||[]){
+  if(item.source!=='LOCALE'||!item.municipalityINS)continue;
+  const q=qualityProspect(item.url,item.evidence||'');
+  if(!q.ok){
+   item.screening='excluded';
+   item.screeningReason='verification_locale_'+q.reason;
+  }else if(item.screeningReason&&item.screeningReason.startsWith('verification_locale_')){
+   item.screening='review';item.screeningReason=null;
+  }
+ }
  const existing=new Set((data.items||[]).map(x=>x.id));
  const added=[];let sitesOK=0,docsRead=0,errors=0;
  for(const commune of selected){
@@ -237,5 +277,5 @@ async function run(){
  fs.writeFileSync(DATA,JSON.stringify(data,null,2)+'\n','utf8');
  console.log('COMMUNAL_WATCH_OK',JSON.stringify({checked:selected.length,sitesOK,docsRead,added:added.length,errors,covered:watched,total:registry.communes.length}));
 }
-module.exports={anchors,candidates,excerpts,councilStage,opportunity,run};
+module.exports={anchors,candidates,excerpts,councilStage,opportunity,qualityProspect,run};
 if(require.main===module)run().catch(e=>{console.error('COMMUNAL_WATCH_UNAVAILABLE',e.message);process.exitCode=1});
