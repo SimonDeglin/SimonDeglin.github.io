@@ -4,6 +4,7 @@
  */
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),cp=require('node:child_process'),crypto=require('node:crypto');
+const profile=require('./kdrix-profile.cjs');
 const INVENTORY=path.resolve(__dirname,'../communes.json'),DATA=path.resolve(__dirname,'../data.json');
 const MAX_COMMUNES=Math.min(8,Math.max(1,Number(process.env.COMMUNES_DOC_BATCH||4)));
 const MATCH=/(?:topograph|g[eé]om[eè]tr|bornage|division parcell|bathym[eé]tr|jaugeag|limnim[eé]tr|[eé]tude hydraulique|bureau d.[eé]tudes|auteur de projet|d[eé]tection de r[eé]seaux|scanner laser|photogramm[eé]tr|certificat PEB|certification [eé]nerg[eé]tique|lev[eé] de terrain|[eé]valuation immobili[eè]re|relev[eé] de cours d.eau)/i;
@@ -70,14 +71,16 @@ async function run(){
       m.readDocuments=[...new Set([...(m.readDocuments||[]),documentId])];
       m.documentsRead=(m.documentsRead||0)+1;
       for(const quote of evidence(content)){
+       const rating=profile.screen({title:quote.slice(0,180),description:quote,buyer:'Commune de '+m.name,region:'Wallonie',source:'LOCALE',opportunityType:'prospection'});
+       if(!rating.classification)continue;
        const id='local:'+crypto.createHash('sha256').update(pdf.url+'|'+quote.slice(0,170)).digest('hex').slice(0,20);
        if(known.has(id))continue;
        known.add(id);
        data.items.push({
         id,title:'Conseil communal — opportunité à vérifier : '+m.name,buyer:'Commune de '+m.name,
         region:'Wallonie',source:'LOCALE',opportunityType:'prospection',
-        opportunityStage:'décision ou besoin à vérifier',sector:'Topo',sectors:['Topo'],
-        score:40,screening:'review',publication:'',deadline:'',
+        opportunityStage:'décision ou besoin à vérifier',sector:rating.classification.sector,sectors:rating.classification.sectors,
+        score:Math.min(60,rating.classification.score),screening:'review',publication:'',deadline:'',
         sourceDocument:pdf.url,url:pdf.url,cpv:[],
         description:'Document communal public. Extrait nécessitant une lecture de validation : '+quote,
         evidence:quote,source_status:'extrait_pdf_a_verifier'
