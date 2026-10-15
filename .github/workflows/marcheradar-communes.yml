@@ -1,0 +1,84 @@
+name: "MarchéRadar — communes wallonnes"
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/marcheradar-communes.yml"]
+  schedule:
+    - cron: "27 2 * * *"
+permissions:
+  contents: write
+concurrency:
+  group: marcheradar-ted-data
+  cancel-in-progress: false
+jobs:
+  municipal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    continue-on-error: true
+    steps:
+      - name: "Récupérer GitHub"
+        id: checkout
+        uses: actions/checkout@v4
+        continue-on-error: true
+      - name: "Node"
+        id: node
+        if: steps.checkout.outcome == 'success'
+        uses: actions/setup-node@v4
+        with: { node-version: "22" }
+        continue-on-error: true
+      - name: "Tests anti-régression"
+        id: tests
+        if: steps.node.outcome == 'success'
+        run: |
+          node marcheradar/tools/test-expanded.cjs
+          node marcheradar/tools/test-collector.cjs
+          node marcheradar/tools/test-bosa.cjs
+          node marcheradar/tools/test-local-watch.cjs
+        continue-on-error: true
+      - name: "Annuaire officiel ODWB"
+        id: directory
+        if: steps.tests.outcome == 'success'
+        run: node marcheradar/tools/municipality-registry.cjs
+        continue-on-error: true
+      - name: "Préparer PDF"
+        id: pdf
+        if: steps.directory.outcome == 'success'
+        run: |
+          if ! command -v pdftotext >/dev/null; then sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils; fi
+        continue-on-error: true
+      - name: "Veille des communes"
+        id: local
+        if: steps.pdf.outcome == 'success'
+        env: { COMMUNAL_BATCH: "24", COMMUNAL_DELAY_MS: "650" }
+        run: node marcheradar/tools/communal-watch.cjs
+        continue-on-error: true
+      - name: "Publier fichiers officiels validés"
+        id: publish
+        if: steps.directory.outcome == 'success'
+        shell: bash
+        run: |
+          git config user.name "marcheradar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add marcheradar/communes.json marcheradar/data.json
+          if ! git diff --cached --quiet; then
+            git commit -m "MarchéRadar: annuaire et prospection communale [skip ci]"
+            git push origin HEAD:main
+          fi
+        continue-on-error: true
+      - name: "Journal sans courriel d'échec"
+        if: always()
+        env:
+          TESTS: ${{ steps.tests.outcome }}
+          ODWB: ${{ steps.directory.outcome }}
+          LOCAL: ${{ steps.local.outcome }}
+          PUBLISH: ${{ steps.publish.outcome }}
+        run: |
+          {
+            echo "### MarchéRadar — communes"
+            echo "Tests : $TESTS"
+            echo "Annuaire ODWB : $ODWB"
+            echo "Collecte locale : $LOCAL"
+            echo "Publication : $PUBLISH"
+            if [ "$LOCAL" != "success" ]; then echo "Les sources non accessibles ne sont pas déclarées surveillées."; fi
+          } >> "$GITHUB_STEP_SUMMARY"
