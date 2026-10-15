@@ -3,7 +3,9 @@
     "version": "2026-10-15",
     "author": "KDRIX",
     "source": "kdrix.be/fr et cahier des charges de MarchéRadar",
-    "description": "Synonymes professionnels. Les familles de l'interface ne changent pas. Le code détecte plusieurs métiers dans un même avis."
+    "description": "Synonymes professionnels. Les familles de l'interface ne changent pas. Le code détecte plusieurs métiers dans un même avis.",
+    "extendedAt": "2026-10-15",
+    "extension": "Synonymes complémentaires tirés du cahier des charges : rangés comme contexte pour limiter les faux positifs."
   },
   "Topo": {
     "family": "Mesurage",
@@ -63,7 +65,18 @@
       "precision planimetrique",
       "controle geometrique",
       "controle altimetrique",
-      "plan terrier"
+      "plan terrier",
+      "profils en long",
+      "plan de l'existant",
+      "levés d'ouvrages",
+      "cubatures",
+      "volumétrie",
+      "mesurage de bâtiment",
+      "tachéométrie",
+      "levés de carrières",
+      "plans de récolement",
+      "modification de relief",
+      "remblais et déblais"
     ]
   },
   "Scan": {
@@ -94,7 +107,12 @@
       "batiment existant",
       "controle de geometrie",
       "maquette 3d",
-      "numerisation de batiments"
+      "numerisation de batiments",
+      "scanner laser 3D",
+      "modélisation 3D de l'existant",
+      "relevé d'ouvrage d'art",
+      "jumeau numérique",
+      "maquette BIM existante"
     ]
   },
   "Drone": {
@@ -119,7 +137,12 @@
       "inspection de toiture par drone",
       "modele photogrammetrique",
       "couverture photographique aerienne",
-      "vues aeriennes georeferencees"
+      "vues aeriennes georeferencees",
+      "photogrammétrie",
+      "orthophotographie",
+      "photographie aérienne technique",
+      "modélisation par drone",
+      "orthophotoplan"
     ]
   },
   "Hydro": {
@@ -161,7 +184,16 @@
       "volume de sediments",
       "plans d'eau",
       "carriere ennoyee",
-      "berges et quais"
+      "berges et quais",
+      "bathymétrie",
+      "hydrographie",
+      "levé de rivière",
+      "relevé d'étang",
+      "plan d'eau",
+      "carrière inondée",
+      "mesure de profondeur",
+      "sédimentation",
+      "volume immergé"
     ]
   },
   "Monitoring": {
@@ -189,7 +221,12 @@
       "deplacement d'ouvrage",
       "batiment instable",
       "surveillance de chantier",
-      "deformation d'un pont"
+      "deformation d'un pont",
+      "auscultation d'ouvrages",
+      "surveillance de déformation",
+      "suivi de tassements",
+      "suivi géométrique",
+      "suivi de mouvements de terrain"
     ]
   },
   "VRD": {
@@ -242,7 +279,16 @@
       "projet d'infrastructure routiere",
       "etudes prealables a la nouvelle voirie",
       "projet d'amenagement communal",
-      "nouveau troncon routier"
+      "nouveau troncon routier",
+      "mission d'ingénierie",
+      "aménagement d'espace public",
+      "études préalables",
+      "cahier spécial des charges",
+      "métrés et bordereaux",
+      "dimensionnement de chaussée",
+      "maîtrise d'œuvre",
+      "suivi de travaux de voirie",
+      "avant-projet d'infrastructure"
     ]
   },
   "Reseaux": {
@@ -284,7 +330,16 @@
       "reseau electrique",
       "chambres de visite",
       "collecteurs d'egouttage",
-      "gestionnaire de reseau"
+      "gestionnaire de reseau",
+      "levé de réseaux",
+      "cadastre de réseaux",
+      "repérage d'impétrants",
+      "GPR",
+      "égouttage",
+      "plans de canalisations",
+      "inventaire de réseau",
+      "géoréférencement de conduites",
+      "plan as-built réseaux"
     ]
   },
   "Hydraulique": {
@@ -324,7 +379,14 @@
       "station de mesure",
       "station hydrometrique",
       "cours d'eau",
-      "debit d'eau"
+      "debit d'eau",
+      "station limnimétrique",
+      "ruissellement",
+      "risque d'inondation",
+      "étude de drainage",
+      "aménagement de cours d'eau",
+      "profils hydrauliques",
+      "ouvrage de franchissement"
     ]
   },
   "PetitsTravaux": {
@@ -348,7 +410,14 @@
       "petite construction metallique",
       "petits ouvrages metalliques",
       "securisation d'ouvrage",
-      "travaux ponctuels d'acces"
+      "travaux ponctuels d'acces",
+      "petit aménagement technique",
+      "sécurisation accès station de mesure",
+      "passerelle de mesure",
+      "échelle d'accès technique",
+      "garde-corps technique",
+      "petite structure métallique",
+      "accès hydrométrique"
     ]
   },
   "Foncier": {
@@ -395,7 +464,16 @@
       "limites de propriete",
       "regularisation parcellaire",
       "urbanisme",
-      "plan de lotissement"
+      "plan de lotissement",
+      "plan d'acte de base",
+      "copropriété",
+      "alignement",
+      "servitude",
+      "sentier communal",
+      "échange de terrain",
+      "acquisition de parcelle",
+      "étude foncière",
+      "emprise"
     ]
   },
   "Implant": {
@@ -419,7 +497,10 @@
       "plans as-built",
       "geometrie du chantier",
       "plan de chantier",
-      "controle d'execution"
+      "controle d'execution",
+      "implantation",
+      "récolement",
+      "implantation d'ouvrage"
     ]
   },
   "Expert": {
@@ -446,7 +527,11 @@
       "expertise pour cession",
       "evaluation de patrimoine",
       "gestion du patrimoine immobilier",
-      "expertise de servitude"
+      "expertise de servitude",
+      "estimation de valeur vénale",
+      "état descriptif",
+      "estimation de terrain",
+      "évaluation du patrimoine immobilier"
     ]
   },
   "PEB": {
@@ -471,7 +556,10 @@
       "performance du batiment",
       "certification de batiment public",
       "certificat energie logement",
-      "certification energetique des immeubles"
+      "certification energetique des immeubles",
+      "performance énergétique bâtiment",
+      "certification bâtiment public",
+      "certificat énergétique résidentiel"
     ]
   },
   "Carto": {
@@ -503,7 +591,10 @@
       "gis",
       "sig",
       "donnees spatiales",
-      "plan numerique"
+      "plan numerique",
+      "cartographie",
+      "bases de données géographiques",
+      "cadastre géospatial"
     ]
   },
   "Relief": {
@@ -527,7 +618,12 @@
       "terrassements",
       "plan terrier",
       "capacite de stockage",
-      "modele de terrain"
+      "modele de terrain",
+      "étude de relief",
+      "cubatures de terrain",
+      "calcul de volume",
+      "remblai",
+      "déblai"
     ]
   }
 }
