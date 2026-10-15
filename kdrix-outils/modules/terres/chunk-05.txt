@@ -34,8 +34,27 @@ function drawProfileCanvas(s){let canvas=$('profileCanvas');if(!canvas)return;co
 // Décision rapide : ne déduire aucune autorisation de l'absence de données.
 const SERVICE_ROOT='https://geoservices.wallonie.be/arcgis/rest/services/';
 const GIS_LAYERS={cadastre:SERVICE_ROOT+'PLAN_REGLEMENT/CADMAP_PARCELLES/MapServer/0',secteur:SERVICE_ROOT+'AMENAGEMENT_TERRITOIRE/PDS/MapServer/22',natura:SERVICE_ROOT+'EAU/ACCES_BETAIL/MapServer/8'};
-function currentGeom(s){const st=studyOf(s);if(st.polygons?.length&&st.polygons[0].length>2){const ring=st.polygons[0].map(ll=>[ll[1],ll[0]]);ring.push(ring[0]);return {geometryType:'esriGeometryPolygon',geometry:{rings:[ring],spatialReference:{wkid:4326}},quality:'emprise'}}const p=siteCoords(s);if(p&&p.quality==='site')return{geometryType:'esriGeometryPoint',geometry:{x:p.lon,y:p.lat,spatialReference:{wkid:4326}},quality:'point'};return null}
-async function arcgisQuery(url,geom,outFields='*',returnGeometry=false){const abort=new AbortController();const timer=setTimeout(()=>abort.abort(),19000);try{const params=new URLSearchParams({f:'geojson',where:'1=1',geometry:JSON.stringify(geom.geometry),geometryType:geom.geometryType,inSR:'4326',outSR:'4326',spatialRel:'esriSpatialRelIntersects',outFields,returnGeometry:String(returnGeometry),resultRecordCount:'400'});const response=await fetch(url+'/query?'+params,{signal:abort.signal});if(!response.ok)throw Error('HTTP '+response.status);const data=await response.json();if(data.error)throw Error(data.error.message||'Erreur du service SPW');if(!Array.isArray(data.features))throw Error('Réponse géographique illisible');return data.features}finally{clearTimeout(timer)}}
+function currentGeom(s){const st=studyOf(s);
+ if(st.polygons?.length){
+  const rings=[];
+  const appendRing=(points,hole=false)=>{
+   if(!Array.isArray(points)||points.length<3)return;
+   const xy=points.map(p=>[Number(p[1]),Number(p[0])]);
+   if(xy.some(p=>!p.every(Number.isFinite)))return;
+   if(xy.length>3&&xy[0][0]===xy.at(-1)[0]&&xy[0][1]===xy.at(-1)[1])xy.pop();
+   let orientation=0;
+   for(let i=0;i<xy.length;i++){const a=xy[i],b=xy[(i+1)%xy.length];orientation+=a[0]*b[1]-b[0]*a[1]}
+   if((hole&&orientation<0)||(!hole&&orientation>0))xy.reverse();
+   rings.push([...xy,xy[0].slice()]);
+  };
+  st.polygons.forEach(p=>appendRing(p,false));
+  (st.exclusions||[]).forEach(p=>appendRing(p,true));
+  if(rings.length)return {geometryType:'esriGeometryPolygon',geometry:{rings,spatialReference:{wkid:4326}},quality:'emprise'};
+ }
+ const p=siteCoords(s);if(p&&p.quality==='site')return{geometryType:'esriGeometryPoint',geometry:{x:p.lon,y:p.lat,spatialReference:{wkid:4326}},quality:'point'};return null}
+async function arcgisQuery(url,geom,outFields='*',returnGeometry=false){const abort=new AbortController();const timer=setTimeout(()=>abort.abort(),19000);try{const params=new URLSearchParams({f:'geojson',where:'1=1',geometry:JSON.stringify(geom.geometry),geometryType:geom.geometryType,inSR:'4326',outSR:'4326',spatialRel:'esriSpatialRelIntersects',outFields,returnGeometry:String(returnGeometry),resultRecordCount:'400'});const response=await fetch(url+'/query?'+params,{signal:abort.signal});if(!response.ok)throw Error('HTTP '+response.status);const data=await response.json();if(data.error)throw Error(data.error.message||'Erreur du service SPW');if(!Array.isArray(data.features))throw Error('Réponse géographique illisible');
+ if(data.exceededTransferLimit===true||data.features.length>=400)throw Error('Résultat SPW possiblement tronqué (limite de 400 objets) : réduire l’emprise pour obtenir une vérification complète.');
+ return data.features}finally{clearTimeout(timer)}}
 function siteChecks(s){return db.autoChecks?.[s.id]||{}}
 function readyCheck(c,kind){return c?.[kind]?.ok===true}
 function officialZone(c){const z=c.secteur;return z?.ok&&z.features?.length?z.features.map(x=>x.label).filter(Boolean).join(' ; '):null}
