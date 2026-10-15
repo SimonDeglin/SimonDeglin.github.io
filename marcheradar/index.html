@@ -550,7 +550,7 @@ function filtered(){
   if(isStage(state.view)&&stageOf(m.id)!==state.view)return false;
   if(state.view==='inbox'&&(m.screening==='review'||m.screening==='excluded'))return false;
   if(state.view==='review'&&!(m.screening==='review'&&stageOf(m.id)==='inbox'))return false;
-  if(m.screening==='excluded'&&stageOf(m.id)==='inbox')return false;
+  if(state.view!=='catalogue'&&m.screening==='excluded'&&stageOf(m.id)==='inbox')return false;
   if(state.view==='favorites'&&!saved.favorites[m.id])return false;
   if(state.view==='urgent'){var d=daysLeft(m.deadline);if(d===null||d<0||d>14)return false}
   var q=norm(state.query).trim();
@@ -587,7 +587,7 @@ function renderCategories(){
   if(isStage(state.view)&&stageOf(m.id)!==state.view)return false;
   if(state.view==='inbox'&&(m.screening==='review'||m.screening==='excluded'))return false;
   if(state.view==='review'&&!(m.screening==='review'&&stageOf(m.id)==='inbox'))return false;
-  if(m.screening==='excluded'&&stageOf(m.id)==='inbox')return false;
+  if(state.view!=='catalogue'&&m.screening==='excluded'&&stageOf(m.id)==='inbox')return false;
   if(state.region!=='all'&&m.region!==state.region)return false;
   return true;
  });
