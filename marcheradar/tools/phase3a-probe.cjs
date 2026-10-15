@@ -67,12 +67,40 @@ function review(text){
         title:document.title,text:(document.body.innerText||'').slice(0,1300),
         anchors:[...document.querySelectorAll('a[href]')].slice(0,35).map(a=>({text:a.innerText.slice(0,80),href:a.href})),
         buttons:[...document.querySelectorAll('button')].map(x=>({text:x.innerText.trim().slice(0,55),aria:x.getAttribute('aria-label')})).filter(x=>x.text||x.aria).slice(0,35),
-        rows:[...document.querySelectorAll('tr,[role="row"]')].slice(0,12).map(r=>r.innerText.slice(0,150))
+        rows:[...document.querySelectorAll('tr,[role="row"]')].slice(0,80).map(r=>r.innerText.slice(0,150))
        }));
       }catch(docErr){e.documentsTab={error:String(docErr.message).slice(0,180)}}
+      // Verify what the public interface really exposes, without inventing a direct file URL.
+      if(e.documentsTab&&!e.documentsTab.error){
+       try{
+        const btn=page.getByRole('button',{name:/Télécharger la dernière version/i}).first();
+        if(await btn.count()){
+         const pending=page.waitForEvent('download',{timeout:8000});
+         await btn.click({timeout:8000});
+         const download=await pending;
+         e.sampleDownload={suggestedFilename:download.suggestedFilename(),officialOrigin:new URL(download.url()).hostname,downloadEvent:true};
+         await download.cancel().catch(()=>{});
+        }else e.sampleDownload={downloadEvent:false,reason:'Aucun bouton de téléchargement direct visible'};
+       }catch(err){e.sampleDownload={downloadEvent:false,reason:String(err.message).slice(0,170)}}
+      }
       await context.close();
      }catch(err){e.browser={error:String(err.message).slice(0,180)}}
     }
+   }
+   // TED API, only on one pilot notice. A search response is stronger than a 202 HTML rendering page.
+   if(m.source==='TED'&&m.publicationNumber==='682034-2026'){
+    const payload={query:'ND = '+m.publicationNumber,fields:[
+      'publication-number','notice-title','deadline-receipt-tender-date-lot',
+      'deadline-receipt-tender-time-lot','links'],scope:'ALL',limit:3,page:1};
+    try{
+     const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),12000);
+     const resp=await fetch('https://api.ted.europa.eu/v3/notices/search',{
+      method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify(payload),signal:ctrl.signal
+     });
+     const raw=(await resp.text()).slice(0,2300);clearTimeout(timer);
+     e.tedApi={http:resp.status,data:raw};
+    }catch(err){e.tedApi={error:String(err.message).slice(0,150)}}
    }
    out.push(e);
    console.log('PROBE_RESULT',JSON.stringify(e));
