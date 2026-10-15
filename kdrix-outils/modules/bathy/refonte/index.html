@@ -427,7 +427,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
    }
    $('mapLegend').innerHTML='<span><i class="bullet unchecked"></i>Aucune recherche</span><span><i class="bullet water"></i>Plans d’eau</span><span><i class="bullet company"></i>Sociétés</span><span><i class="bullet both"></i>Les deux</span><span><i class="bullet failed"></i>Partiel / erreur</span>';
   }else{
-   const all=tab==='water'?visibleEntities('water'):tab==='company'?visibleEntities('company'):[...prospects.values()];
+   const all=tab==='water'?visibleEntities('water'):tab==='company'?visibleEntities('company'):[...prospects.values()].filter(x=>!x.archived);
    for(const item of all.slice(0,1250)){
     const color=item.kind==='water'?'#3589b9':'#dd8551';
     if(!Number.isFinite(item.lat)||!Number.isFinite(item.lon))continue;
@@ -435,7 +435,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
     pin.bindTooltip(item.kind==='water'?fmt(Math.round(item.area||0))+' m²':item.name);
     pin.on('click',()=>tab==='prospects'?showProspect(item.id):showEntity(item.kind,item.id));
    }
-   $('mapLegend').innerHTML='<span><i class="bullet company"></i>Site / société</span><span><i class="bullet water"></i>Plan d’eau PICC</span><span>Attribution à vérifier</span>';
+   $('mapLegend').innerHTML=tab==='prospects'?'<span><i class="bullet company"></i>Prospect entreprise / site</span><span><i class="bullet water"></i>Prospect plan d’eau</span><span>Cliquer sur un point pour ouvrir la fiche</span>':'<span><i class="bullet company"></i>Site / société</span><span><i class="bullet water"></i>Plan d’eau PICC</span><span>Attribution à vérifier</span>';
   }
   focusedDraw();
  }
