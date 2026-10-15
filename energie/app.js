@@ -1403,14 +1403,14 @@ function invalidateScanReading(preserveOpposite=false){
 function scanSetElectricStep(step,preserve=true){
  if(!['both','night','day'].includes(step))return;
  scanElectricStep=step;
- $('[data-scan-electric-step]').forEach(b=>{
+ $$('[data-scan-electric-step]').forEach(b=>{
   const on=b.dataset.scanElectricStep===step;
   b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));
  });
  $('#scan-retry').textContent=step==='night'?'Lire Nuit':step==='day'?'Lire Jour':'Lire les chiffres';
  if(scanCrop&&preserve)invalidateScanReading(true);
 }
-$('[data-scan-electric-step]').forEach(b=>b.addEventListener('click',()=>{
+$$('[data-scan-electric-step]').forEach(b=>b.addEventListener('click',()=>{
  if(scanBusy)return;
  scanSetElectricStep(b.dataset.scanElectricStep);
 }));
