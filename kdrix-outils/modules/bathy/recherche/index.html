@@ -46,6 +46,7 @@ dialog{border:0;border-radius:15px;width:min(610px,calc(100% - 25px));padding:0;
 @media(max-width:650px){.ortho-history{order:2;width:100%;justify-content:center}.ortho-history-state{margin-left:auto;max-width:90px;font-size:9px}.tools-left{order:1;width:100%}.layers{order:3}.map-tools{align-items:stretch}}
 
 </style>
+<style>.rect-grip.rotate{background:#176b84;color:white;border:2px solid white;box-shadow:0 1px 9px #1238;font-size:21px;cursor:grab}</style>
 </head>
 <body>
 <header class="top"><div class="identity"><div class="brand">K</div><div><strong>KDRIX</strong><small>PROSPECTION BATHYMETRIQUE</small></div></div><nav class="header-nav"><a class="link" href="../">&#8592; Mes prospects</a><a class="link" href="../../../">Portail KDRIX</a></nav></header>
@@ -140,17 +141,19 @@ $('close-dialog').onclick=()=>$('prospect-dialog').close();$('ai-copy').onclick=
  const priorInit=init;
  const rectStore='kdrix_bathy_search_km2_v1';
  let state=null,rectOutline=null,rectHandles=null,draggingHandle=null;
+ const angleStore='kdrix_bathy_search_rotation_v1';
  const keepBetween=(n,a,b)=>Math.max(a,Math.min(b,n));
  const radians=n=>n*Math.PI/180;
  const degrees=n=>n*180/Math.PI;
  const allowedKm2=()=>Number($('target-area').value)||10;
+ function localPoint(center,ll){return [(ll.lng-center[1])*Math.PI/180*radius*Math.cos(radians(center[0])),(ll.lat-center[0])*Math.PI/180*radius]}
+ function fromLocal(center,x,y){return [center[0]+degrees(y/radius),center[1]+degrees(x/(radius*Math.cos(radians(center[0]))))]}
+ function rotatePoint(x,y,a){const t=radians(a);return [x*Math.cos(t)-y*Math.sin(t),x*Math.sin(t)+y*Math.cos(t)]}
  function buildRectangle(center,width,target){
-   const latitude=keepBetween(center[0],-80,80),lon=center[1];
-   const safeWidth=keepBetween(width,Math.max(350,Math.sqrt(target)/4),Math.min(14000,Math.sqrt(target)*4));
-   const halfLat=degrees(Math.asin(keepBetween(target/(2*radius*safeWidth),0,.2)));
-   const halfLon=degrees(safeWidth/(2*radius*Math.cos(radians(latitude))));
-   return [[latitude-halfLat,lon-halfLon],[latitude-halfLat,lon+halfLon],
-           [latitude+halfLat,lon+halfLon],[latitude+halfLat,lon-halfLon]];
+   const w=keepBetween(width,Math.max(350,Math.sqrt(target)/4),Math.min(14000,Math.sqrt(target)*4));
+   const a=state?.angle||0;
+   return [[-w/2,-target/w/2],[w/2,-target/w/2],[w/2,target/w/2],[-w/2,target/w/2]]
+     .map(([x,y])=>fromLocal(center,...rotatePoint(x,y,a)));
  }
  function markSearchStale(){
    pickingSite=false;waterResults=[];siteResults=[];allItems=[];
@@ -158,14 +161,14 @@ $('close-dialog').onclick=()=>$('prospect-dialog').close();$('ai-copy').onclick=
  }
  function persistZone(){
    try{localStorage.setItem('kdrix_bathy_search_zone_v1',JSON.stringify(zone));
-       localStorage.setItem(rectStore,String(allowedKm2()))}catch(e){}
+       localStorage.setItem(rectStore,String(allowedKm2()));localStorage.setItem(angleStore,String(state?.angle||0))}catch(e){}
  }
  function rectangleArea(){return zone.length>=3?shapeArea(zone):0}
  function perimeterPoints(){
-   const latS=zone[0][0],latN=zone[2][0],lonW=zone[0][1],lonE=zone[1][1];
-   return {center:[(latS+latN)/2,(lonW+lonE)/2],
-     west:[(latS+latN)/2,lonW],east:[(latS+latN)/2,lonE],
-     north:[latN,(lonW+lonE)/2],south:[latS,(lonW+lonE)/2]};
+   const c=state.center,w=state.widthM/2,h=state.areaM2/state.widthM/2,a=state.angle||0;
+   const pt=(x,y)=>fromLocal(c,...rotatePoint(x,y,a));
+   return {center:c,west:pt(-w,0),east:pt(w,0),north:pt(0,h),south:pt(0,-h),
+     rotate:pt(0,h+Math.max(280,Math.min(650,h*.30)))};
  }
  function moveRectangle(){
    if(!state)return;
@@ -180,35 +183,37 @@ $('close-dialog').onclick=()=>$('prospect-dialog').close();$('ai-copy').onclick=
  function resetRectangle(){
    if(analysisBusy)return;
    markSearchStale();const c=map.getCenter();state.center=[c.lat,c.lng];
-   state.widthM=Math.sqrt(state.areaM2);moveRectangle();
+   state.widthM=Math.sqrt(state.areaM2);state.angle=0;moveRectangle();
    map.fitBounds(zone,{padding:[40,40],maxZoom:14});
    notice('Rectangle réinitialisé : déplacez le centre ou ajustez les bords.','good');
  }
  function changeExtent(type,ll){
    if(!state||analysisBusy)return;
-   if(type==='center'){state.center=[ll.lat,ll.lng]}
-   else if(type==='west'||type==='east'){
-     state.widthM=2*radius*Math.cos(radians(state.center[0]))*radians(Math.abs(ll.lng-state.center[1]));
-   }else if(type==='north'||type==='south'){
-     const half=radians(Math.abs(ll.lat-state.center[0]));
-     state.widthM=state.areaM2/(2*radius*Math.max(0.000001,Math.sin(half)));
+   if(type==='center')state.center=[ll.lat,ll.lng];
+   else if(type==='rotate'){
+     const [x,y]=localPoint(state.center,ll);state.angle=((degrees(Math.atan2(-x,y))%360)+360)%360;
+   }else{
+     const [dx,dy]=localPoint(state.center,ll),t=radians(state.angle||0);
+     const x=dx*Math.cos(t)+dy*Math.sin(t),y=-dx*Math.sin(t)+dy*Math.cos(t);
+     if(type==='west'||type==='east')state.widthM=2*Math.abs(x);
+     else state.widthM=state.areaM2/Math.max(1,2*Math.abs(y));
+     state.widthM=keepBetween(state.widthM,Math.max(350,Math.sqrt(state.areaM2)/4),Math.min(14000,Math.sqrt(state.areaM2)*4));
    }
-   state.widthM=keepBetween(state.widthM,Math.max(350,Math.sqrt(state.areaM2)/4),Math.min(14000,Math.sqrt(state.areaM2)*4));
    moveRectangle();
  }
  function markerIcon(type){
-   const content=type==='center'?'&#10021;':type==='north'||type==='south'?'&#8597;':'&#8596;';
+   const content=type==='center'?'&#10021;':type==='rotate'?'&#8635;':type==='north'||type==='south'?'&#8597;':'&#8596;';
    return L.divIcon({className:'rect-handle-host',
-     html:'<span class="rect-grip '+(type==='center'?'center':type==='north'||type==='south'?'vertical':'')+'" title="'+(type==='center'?'Déplacer toute la zone':'Ajuster la forme sans dépasser la superficie')+'">'+content+'</span>',
+     html:'<span class="rect-grip '+(type==='center'?'center':type==='rotate'?'rotate':type==='north'||type==='south'?'vertical':'')+'" title="'+(type==='center'?'Déplacer toute la zone':type==='rotate'?'Faire pivoter la zone':'Ajuster la forme sans dépasser la superficie')+'">'+content+'</span>',
      iconSize:type==='center'?[38,38]:[32,32],iconAnchor:type==='center'?[19,19]:[16,16]});
  }
  function installHandles(){
    if(rectHandles)return;
    rectHandles={};
    const points=perimeterPoints();
-   for(const type of ['center','west','east','north','south']){
+   for(const type of ['center','west','east','north','south','rotate']){
      const marker=L.marker(points[type],{icon:markerIcon(type),draggable:true,
-       bubblingMouseEvents:false,riseOnHover:true,title:type==='center'?'Déplacer la recherche':'Redimensionner le rectangle'}).addTo(zoneLayer);
+       bubblingMouseEvents:false,riseOnHover:true,title:type==='center'?'Déplacer la recherche':type==='rotate'?'Faire pivoter le rectangle':'Redimensionner le rectangle'}).addTo(zoneLayer);
      marker.on('dragstart',()=>{draggingHandle=type;markSearchStale()});
      marker.on('drag',e=>changeExtent(type,e.target.getLatLng()));
      marker.on('dragend',e=>{changeExtent(type,e.target.getLatLng());draggingHandle=null;
@@ -230,13 +235,13 @@ $('close-dialog').onclick=()=>$('prospect-dialog').close();$('ai-copy').onclick=
    permanentContext();
    const priorArea=Number(localStorage.getItem(rectStore));
    if([1,2,5,10].includes(priorArea))$('target-area').value=String(priorArea);
-   const areaM2=allowedKm2()*1000000*(1-1e-8);
+   const areaM2=allowedKm2()*1000000*.998;
    const saved=Array.isArray(zoneSaved)&&zoneSaved.length>=3?zoneSaved:null;
    const c=saved?[(Math.min(...saved.map(p=>p[0]))+Math.max(...saved.map(p=>p[0])))/2,
                   (Math.min(...saved.map(p=>p[1]))+Math.max(...saved.map(p=>p[1])))/2]:
                  [map.getCenter().lat,map.getCenter().lng];
-   const w=saved?distance([c[0],Math.min(...saved.map(p=>p[1]))],[c[0],Math.max(...saved.map(p=>p[1]))]):Math.sqrt(areaM2);
-   state={center:c,widthM:w,areaM2};
+   const w=saved?distance(saved[0],saved[1]):Math.sqrt(areaM2);
+   state={center:c,widthM:w,areaM2,angle:Number(localStorage.getItem(angleStore))||0};
    drawing=false;map.doubleClickZoom.enable();
    if(zoneLayer){map.removeLayer(zoneLayer);zoneLayer=null}
    if(draftLayer){map.removeLayer(draftLayer);draftLayer=null}
@@ -259,7 +264,7 @@ $('close-dialog').onclick=()=>$('prospect-dialog').close();$('ai-copy').onclick=
      $('zone-metric').classList.toggle('error',!valid);
      $('zone-metric').innerHTML='<strong>'+surface+'</strong><span class="zone-sized">Recherche limitée automatiquement à 10 km²</span><div class="zone-guide">'
        +fmt(w/1000,2)+' km de large × '+fmt(h/1000,2)+' km de long. '
-       +'Glissez le <strong>centre orange</strong> pour déplacer la zone, ou les <strong>poignées sur les bords</strong> pour changer ses dimensions : la superficie reste constante.</div>';
+       +'Glissez le <strong>centre orange</strong> pour déplacer la zone, ou les <strong>poignées sur les bords</strong> pour changer ses dimensions : la superficie reste constante. Utilisez la <strong>poignée ↻</strong> pour faire pivoter la zone ('+fmt(state.angle||0,0)+'°).</div>';
      $('run-btn').disabled=!valid||analysisBusy;
      $('manual-site-btn').disabled=!valid||analysisBusy;
      $('undo-btn').disabled=true;$('reset-btn').disabled=analysisBusy;
@@ -276,7 +281,7 @@ $('close-dialog').onclick=()=>$('prospect-dialog').close();$('ai-copy').onclick=
    $('reset-btn').onclick=resetRectangle;
    $('target-area').onchange=()=>{
      if(analysisBusy)return;
-     markSearchStale();const area=allowedKm2()*1000000*(1-1e-8);
+     markSearchStale();const area=allowedKm2()*1000000*.998;
      state.widthM*=Math.sqrt(area/state.areaM2);state.areaM2=area;
      moveRectangle();map.fitBounds(zone,{padding:[38,38],maxZoom:14});
      notice('Secteur ajusté à '+allowedKm2()+' km². Modifiez sa forme avec les poignées.','good');
@@ -285,7 +290,7 @@ $('close-dialog').onclick=()=>$('prospect-dialog').close();$('ai-copy').onclick=
    zone=buildRectangle(state.center,state.widthM,state.areaM2);
    recalc();persistZone();
    if(saved)map.fitBounds(zone,{padding:[40,40],maxZoom:14});
-   notice('Rectangle prêt : glissez le centre pour déplacer la recherche, les poignées pour modifier sa forme.','good');
+   notice('Rectangle prêt : déplacez le centre, ajustez les bords ou utilisez ↻ pour le faire tourner.','good');
  };
 })();
 
