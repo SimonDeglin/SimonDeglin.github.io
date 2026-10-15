@@ -174,15 +174,35 @@
   docsBody+='<h5 class="mr2-mini-title">Publications et documents sources</h5>'+
     (others.length?'<div class="mr2-link-list">'+others.map(external).join('')+'</div>':'<p class="mr2-empty">Aucun lien source exploitable renseigné.</p>');
   var inventory=Array.isArray(m.documentInventory)?m.documentInventory:[];
+  var analyses=Array.isArray(m.documentAnalyses)?m.documentAnalyses:[];
+  var currentAnalyses=analyses.filter(function(x){return inventory.some(function(doc){return doc.documentId===x.documentId&&doc.versionId===x.versionId})});
   if(inventory.length){
    docsBody='<h5 class="mr2-mini-title">'+inventory.length+' pièce(s) répertoriée(s) dans le registre public BOSA</h5>'+
-   '<p class="mr2-footnote">Les intitulés et identifiants proviennent de l’API publique. Les fichiers ne sont pas encore téléchargés ni analysés. Ouvrir la rubrique Documents pour consulter les pièces.</p>'+
+   '<p class="mr2-footnote">Les intitulés et identifiants proviennent de l’API publique. Certaines pièces peuvent avoir fait l’objet d’une extraction automatique indiquée plus bas. Le téléchargement et les rectificatifs restent à contrôler dans la rubrique Documents.</p>'+
    '<div class="mr2-requirements">'+inventory.slice(0,50).map(function(x){
     return '<div class="mr2-requirement"><strong>'+esc(x.title||'Fichier sans intitulé')+'</strong>'+
-    '<small>'+esc(x.fileType||'format non renseigné')+' · '+esc(x.language||'langue non renseignée')+' · accès à vérifier</small></div>';
+    '<small>'+esc(x.fileType||'format non renseigné')+' · '+esc(x.language||'langue non renseignée')+' · '+(currentAnalyses.some(function(a){return a.documentId===x.documentId&&a.versionId===x.versionId})?'texte extrait automatiquement':'accès à vérifier')+'</small></div>';
    }).join('')+'</div>'+docsBody;
   }
   var documents=section('Accès aux documents',docsBody,inventory.length+' pièce(s) répertoriée(s) · '+docs.length+' fichier(s) lié(s)');
+  // Passages extraits automatiquement, non validés comme faits de la procédure.
+  var reading='';
+  if(currentAnalyses.length){
+   var labels={deadline:'Délais et remise des offres',visit:'Visites / réunions',award:'Attribution',selection:'Sélection et références',deliverables:'Prestations et livrables'};
+   var inner='<div class="mr2-highlight mr2-caution"><strong>Lecture automatique — vérification nécessaire</strong>'+
+    '<p>Ces extraits ont été repérés dans les PDF officiels. Leur formulation ne confirme ni une échéance, ni une obligation de visite, ni la version en vigueur. Consulter les pièces et les rectificatifs avant de répondre.</p></div>';
+   currentAnalyses.forEach(function(a){
+    var url=linkUrl(a.sourcePageUrl);
+    inner+='<h5 class="mr2-mini-title">'+esc(a.fileName||'Document PDF')+' · '+esc(a.pageCount||'?')+' page(s)</h5>'+
+     '<p class="mr2-footnote">Version '+esc(String(a.versionId||'').slice(0,12))+' · empreinte PDF '+esc(String(a.sha256||'').slice(0,14))+'…</p>';
+    (Array.isArray(a.evidence)?a.evidence:[]).slice(0,12).forEach(function(p){
+     inner+='<div class="mr2-evidence"><strong>'+esc(labels[p.kind]||'Passage documentaire')+' — page '+esc(p.page)+'</strong>'+
+      '<p>'+esc(p.excerpt||'')+'</p></div>';
+    });
+    if(url)inner+='<p><a class="mr2-inline-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Retrouver ce document dans e-Procurement ↗</a></p>';
+   });
+   reading=section('Passages repérés dans les documents',inner,currentAnalyses.length+' PDF lu(s)');
+  }
   var reqBody='<div class="mr2-highlight"><strong>'+(req.some(function(x){return x.verified})?'Éléments documentés et éléments à contrôler':'Conditions de participation non analysées')+'</strong>'+
    '<p>'+(!req.length?'Les références professionnelles, capacités techniques, critères de sélection et critères d’attribution doivent être consultés dans les documents officiels. Aucun de ces éléments n’a été vérifié par l’application.':'La présence dans cette fiche ne dispense pas de contrôler les exigences et leurs éventuels rectificatifs.')+'</p></div>';
   if(req.length)reqBody+='<div class="mr2-requirements">'+req.map(function(x){
@@ -199,7 +219,7 @@
    '<p>Un document communal a été repéré. Sa date et son intérêt actuel doivent être vérifiés avant de contacter le pouvoir adjudicateur.</p></div>'+
    (m.evidence?'<div class="mr2-evidence"><strong>Extrait repéré</strong><p>'+esc(m.evidence)+'</p></div>':'')+
    (m.opportunityStage?'<div class="mr2-evidence">Qualification automatique : '+esc(m.opportunityStage.replace(/_/g,' '))+'</div>':'')):'';
-  return {html:header+summary+visitSection+documents+section('Sélection et critères d’attribution',reqBody)+localBody,
+  return {html:header+summary+visitSection+documents+reading+section('Sélection et critères d’attribution',reqBody)+localBody,
    primary:primarySource(m),documentCount:docs.length,visitKind:visit.kind,reference:reference(m),status:due};
  }
  function listHints(m){
