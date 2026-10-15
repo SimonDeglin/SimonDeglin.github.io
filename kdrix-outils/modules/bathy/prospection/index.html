@@ -144,9 +144,11 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
  function waterKind(name){return /piscin|cours d.eau|ruisseau|fossé|foss[eé]/i.test(name)?'À exclure / à vérifier':name||'Emprise d’eau PICC à vérifier'}
  function formatAddress(tags){let x=[tags['addr:street'],tags['addr:housenumber']].filter(Boolean).join(' ');return [x,tags['addr:postcode'],tags['addr:city']].filter(Boolean).join(', ')}
  function companyFrom(o){
-  const t=o.tags||{},name=String(t.name||t.operator||t.brand||'').trim(),lat=Number(o.lat??o.center?.lat),lon=Number(o.lon??o.center?.lon);
+  const t=o.tags||{},originalName=String(t.name||t.operator||t.brand||'').trim();
+  const fallback=t.landuse==='quarry'?'Carrière · exploitant à identifier':t.leisure==='golf_course'?'Golf · gestionnaire à identifier':t.man_made==='wastewater_plant'?'Station d’épuration · gestionnaire à identifier':t.landuse==='aquaculture'?'Pisciculture · exploitant à identifier':'';
+  const name=originalName||fallback,lat=Number(o.lat??o.center?.lat),lon=Number(o.lon??o.center?.lon);
   if(!name||!Number.isFinite(lat)||!Number.isFinite(lon))return null;
-  return {id:'osm:'+o.type+'/'+o.id,name,lat,lon,kind:'company',category:category(t),address:formatAddress(t),town:t['addr:city']||'',website:t.website||t['contact:website']||'',phone:t.phone||t['contact:phone']||'',email:t.email||t['contact:email']||'',operator:t.operator||'',source:SRC_OSM,url:'https://www.openstreetmap.org/'+o.type+'/'+o.id,tags:t,updatedAt:new Date().toISOString()};
+  return {id:'osm:'+o.type+'/'+o.id,name,unnamed:!originalName,lat,lon,kind:'company',category:category(t),address:formatAddress(t),town:t['addr:city']||'',website:t.website||t['contact:website']||'',phone:t.phone||t['contact:phone']||'',email:t.email||t['contact:email']||'',operator:t.operator||'',source:SRC_OSM,url:'https://www.openstreetmap.org/'+o.type+'/'+o.id,tags:t,updatedAt:new Date().toISOString()};
  }
  function waterFrom(f){
   const g=f.geometry,a=geoArea(g),p=centerOf(g),prop=f.properties||{};
@@ -354,7 +356,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
  function links(item){const out=[['Voir sur OpenStreetMap','https://www.openstreetmap.org/?mlat='+item.lat+'&mlon='+item.lon+'#map=17/'+item.lat+'/'+item.lon]];
   if(item.url)out.unshift(['Source',item.url]);
   if(externalURL(item.website))out.push(['Site officiel indiqué',externalURL(item.website)]);
-  if(item.name&&item.kind==='company'){
+  if(item.name&&item.kind==='company'&&!item.unnamed){
    out.push(['Rechercher activité et projets','https://www.google.com/search?q='+encodeURIComponent(item.name+' '+(item.town||'Belgique')+' bassin carrière permis environnement')]);
    out.push(['Rechercher les coordonnées','https://www.google.com/search?q='+encodeURIComponent(item.name+' adresse contact Belgique')]);
   }return '<div class="actions">'+out.map(a=>'<a href="'+safe(a[1])+'" target="_blank" rel="noopener noreferrer">'+safe(a[0])+' ↗</a>').join('')+'</div>';
@@ -375,10 +377,10 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
    const pair=nearest?(item.kind==='company'?relationId(item.id,nearest.item.id):relationId(nearest.item.id,item.id)):null;
    const match=pair?relations.get(pair):null;
    html='<div class="detail"><h2>'+safe(item.kind==='water'?'Plan d’eau · '+fmt(Math.round(item.area))+' m²':item.name)+'</h2>'+
-    '<p><span class="tag">'+safe(item.category||'À vérifier')+'</span></p>'+
+    '<p><span class="tag">'+safe(item.category||'À vérifier')+'</span></p>'+(item.unnamed?'<p class="hint">Site cartographié, mais aucun nom de société renseigné. La présence et l’exploitant sont à vérifier.</p>':'')+
     '<p><b>Source :</b> '+safe(item.source||'à vérifier')+'</p>'+
     (item.kind==='company'?'<p><b>Adresse :</b> '+safe(item.address||'Non renseignée dans OSM')+'</p><p><b>Activité :</b> '+safe(item.category)+'</p>'+
-     '<p><b>Opérateur indiqué :</b> '+safe(item.operator||'Non renseigné')+'</p>'+
+     '<p><b>Exploitant / gestionnaire :</b> '+safe(item.operator||'Non identifié dans la source')+'</p>'+
      (item.phone?'<p><b>Téléphone :</b> '+safe(item.phone)+'</p>':'')+(item.email?'<p><b>E-mail :</b> '+safe(item.email)+'</p>':''):'<p><b>Superficie cartographiée :</b> '+fmt(Math.round(item.area||0))+' m²</p>')+
     '<h3>Pourquoi KDRIX pourrait intervenir</h3><p>'+safe(opportunity(item.kind==='water'?item.category:item.category))+'</p>'+
     (nearest?'<div class="area-info"><b>'+safe(nearest.item.kind==='water'?'Plan d’eau':'Établissement')+' à proximité :</b> '+safe(nearest.item.name||'Plan d’eau')+' · '+fmt(Math.round(nearest.distance))+' m. <b>Le lien d’exploitation n’est pas confirmé.</b><br><span class="tag">'+safe(match?.status==='confirmed'?'Lien confirmé par l’utilisateur':match?.status==='to_verify'?'À vérifier':'Association non vérifiée')+'</span><div class="actions"><button class="minor" id="seeNear">Voir l’élément voisin</button><button class="minor" data-relation="confirmed">Lien confirmé</button><button class="minor" data-relation="to_verify">À vérifier</button><button class="minor" data-relation="rejected">Aucun lien</button></div></div>':'<div class="area-info">Aucun élément complémentaire connu à moins de 750 m dans les données déjà enregistrées. Cela ne signifie pas qu’il n’en existe aucun.</div>')+
