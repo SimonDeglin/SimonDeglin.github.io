@@ -58,9 +58,12 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
  <button id="apply" class="minor" style="width:100%">Voir cette zone sur la carte</button>
  <p class="caption">Rayon à vol d'oiseau. Pour éviter un balayage inutile, cliquez sur la carte et utilisez « Analyser le secteur sélectionné » ; sinon, lancez un petit lot autour de la ville.</p>
  <div id="waterParams" class="hidden"><div class="field"><label for="minArea">Surface minimale des plans d'eau</label><select id="minArea"><option value="400">400 m²</option><option value="1000" selected>1 000 m²</option><option value="5000">5 000 m²</option></select></div></div>
- <div id="scanParams"><div class="field"><label for="batch">Secteurs maximum par lancement</label><select id="batch"><option value="1">1 — pour tester</option><option value="3" selected>3 — recommandé</option><option value="5">5</option><option value="10">10</option></select></div>
+ <div id="scanParams">
  <div class="row"><button class="primary" id="run">Rechercher</button><button id="stop" disabled>Arrêter</button></div>
- <button id="scanSelected" class="minor" style="width:100%" disabled>Rechercher uniquement dans la zone cliquée sur la carte</button></div>
+ <p class="caption">La recherche progresse par lots et conserve l'avancement. Vous pouvez la relancer pour analyser la suite sans refaire les zones terminées.</p>
+ <details class="history"><summary>Options avancées · lots et recherche ciblée</summary>
+ <div class="field"><label for="batch">Zones traitées à chaque lancement</label><select id="batch"><option value="1">1 — test rapide</option><option value="3" selected>3 — recommandé</option><option value="5">5</option><option value="10">10</option></select></div>
+ <button id="scanSelected" class="minor" style="width:100%" disabled>Rechercher uniquement dans la zone cliquée sur la carte</button></details></div>
  <button id="coverageToggle" style="width:100%;margin:8px 0">◫ Voir les zones déjà recherchées</button></div>
  <div class="metrics">
   <div class="metric"><strong id="countCompanies">0</strong><span>Sites / sociétés détectés</span></div>
@@ -374,7 +377,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   let tasks=prioritize?remaining.filter(c=>c.id===selectedCell):remaining;
   if(!tasks.length){status('La cellule sélectionnée est déjà terminée pour ce moteur.');return}
   if(!prioritize&&tasks.length>cap)tasks=tasks.slice(0,cap);
-  if(!confirm('Analyser '+tasks.length+' cellule(s) pour '+(kind==='company'?'les sociétés':'les plans d’eau')+' ? Les résultats seront conservés et le traitement pourra être arrêté.'))return;
+  // Lancer un petit lot n'altère pas les fiches du listing : aucune confirmation supplémentaire nécessaire.
   running=true;stopRequested=false;$('run').disabled=true;$('stop').disabled=false;errors=[];
   let completed=0,total=0,failures=0;
   try{for(const cell of tasks){
@@ -384,7 +387,11 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
    catch(e){errors.push(cell.id+' : '+e.message);failures++}
    completed++;render();if(!stopRequested)await sleep(kind==='company'?1700:550);
   }
-  status((stopRequested?'Arrêt demandé. ':failures>=3?'Arrêt après trois erreurs. ':'Lot terminé. ')+completed+' cellule(s) traitée(s), '+total+' enregistrement(s) trouvé(s) dans les réponses.\nLes résultats sont à vérifier ; un résultat nul ne signifie pas absence de bassin ou d’établissement.',failures>=3);
+  const finished=planned.filter(c=>state(registry.get(c.id),kind)==='complete').length;
+  status((stopRequested?'Recherche arrêtée. ':failures>=3?'Recherche interrompue après erreurs. ':'Lot terminé. ')+
+   completed+' zone(s) traitée(s). '+total+' enregistrement(s) reçus.\nAvancement du territoire : '+finished+' / '+planned.length+' zones terminées pour ce moteur. '+
+   (finished<planned.length?'Cliquez à nouveau sur « Rechercher » pour poursuivre sans refaire les zones terminées.':'Territoire intégralement analysé.')+
+   '\nLes pistes doivent être vérifiées. Une erreur n’est jamais comptée comme une zone terminée.',failures>=3);
   }finally{running=false;$('run').disabled=false;$('stop').disabled=true;render()}
  }
  function focusedDraw(){
@@ -743,6 +750,11 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   const failed=planned.filter(c=>state(registry.get(c.id),kind)==='error');
   $('errors').classList.toggle('hidden',!failed.length);$('errors').textContent=failed.length?'Attention : '+failed.length+' cellule(s) en erreur pour ce moteur. Une recherche en erreur n’est pas comptée comme terminée.':'';
   $('scanSelected').disabled=!selectedCell||running;
+  if(!running&&['company','water'].includes(tab)){
+   const completed=planned.filter(c=>state(registry.get(c.id),kind)==='complete').length;
+   $('run').textContent=completed>=planned.length?'Territoire analysé':completed>0?'Continuer la recherche':tab==='water'?'Rechercher des plans d’eau':'Rechercher des adresses potentielles';
+   $('run').disabled=completed>=planned.length;
+  }
   drawMap();if(selected||selectedCell)renderDetail();else renderResults();
  }
  async function backup(){
