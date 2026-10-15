@@ -218,8 +218,8 @@ body{background:#f7f7f7;color:#303339}
 <div class="section-label">DOSSIERS DE SUIVI</div>
 <div class="side-help">Glisser-déposer pour classer</div>
 <nav aria-label="Dossiers de suivi" id="foldersNav" class="folders">
-<button class="nav-item" data-view="catalogue"><svg class="ico"><use href="#i-list"/></svg><span class="nav-name">Tous les marchés</span><span class="count" data-count="catalogue">0</span></button>
-<button class="nav-item active" data-view="inbox" data-folder="inbox"><svg class="ico"><use href="#i-list"/></svg><span class="nav-name">Listing complet</span><span class="count" data-count="inbox">0</span></button>
+<button class="nav-item active" data-view="catalogue"><svg class="ico"><use href="#i-list"/></svg><span class="nav-name">Listing complet</span><span class="count" data-count="catalogue">0</span></button>
+<button class="nav-item" data-view="inbox" data-folder="inbox"><svg class="ico"><use href="#i-list"/></svg><span class="nav-name">À trier</span><span class="count" data-count="inbox">0</span></button>
 <button class="nav-item" data-view="maybe" data-folder="maybe"><i class="folder-dot maybe"></i><span class="nav-name">À définir</span><span class="count" data-count="maybe">0</span></button>
 <button class="nav-item" data-view="answer" data-folder="answer"><i class="folder-dot answer"></i><span class="nav-name">À répondre</span><span class="count" data-count="answer">0</span></button>
 <button class="nav-item" data-view="await" data-folder="await"><i class="folder-dot await"></i><span class="nav-name">En attente d'attribution</span><span class="count" data-count="await">0</span></button>
@@ -484,7 +484,7 @@ SECTORS=[
  {id:'Reseaux',label:'Réseaux & impétrants'},{id:'PEB',label:'Énergie & PEB'},
  {id:'PetitsTravaux',label:'Petits travaux techniques'}
 ];
-state.view='inbox';
+state.view='catalogue';
 var draggingId=null;
 function stageName(code){return (WORKFLOW.find(function(s){return s.id===code})||WORKFLOW[0]).label}
 function isStage(code){return WORKFLOW.some(function(s){return s.id===code})}
@@ -612,11 +612,12 @@ function renderCategories(){
    var id=btn.dataset.family;
    if(expandedFamily===id){expandedFamily=null;state.sector='all';}
    else{expandedFamily=id;state.sector='group:'+id;}
+   state.view='catalogue';
    render();
   });
  });
  box.querySelectorAll('[data-subcat]').forEach(function(btn){
-  btn.addEventListener('click',function(){state.sector=state.sector===btn.dataset.subcat?'group:'+expandedFamily:btn.dataset.subcat;render()});
+  btn.addEventListener('click',function(){state.sector=state.sector===btn.dataset.subcat?'group:'+expandedFamily:btn.dataset.subcat;state.view='catalogue';render()});
  });
  el('allCategories').classList.toggle('active',state.sector==='all');
  el('allCategories').setAttribute('aria-pressed',String(state.sector==='all'));
@@ -633,9 +634,9 @@ function renderStats(){
  document.querySelectorAll('[data-count]').forEach(function(b){b.textContent=b.dataset.count==='catalogue'?allMarkets().length:b.dataset.count==='inbox'?allMarkets().filter(function(m){return stageOf(m.id)==='inbox'&&m.screening!=='review'&&m.screening!=='excluded'}).length:stageNumber(b.dataset.count)});
 }
 function renderNav(){
- var labels={inbox:'Listing complet',maybe:'À définir',answer:'À répondre',await:"En attente d'attribution",won:'Obtenu',lost:'Perdu',discarded:'Sans suite',catalogue:'Tous les marchés',review:'À vérifier',favorites:'Favoris',urgent:'Échéances proches'};
+ var labels={inbox:'À trier',maybe:'À définir',answer:'À répondre',await:"En attente d'attribution",won:'Obtenu',lost:'Perdu',discarded:'Sans suite',catalogue:'Listing complet',review:'À vérifier',favorites:'Favoris',urgent:'Échéances proches'};
  var descriptions={
- inbox:'Marchés non classés. Glissez une ligne vers un dossier à gauche : elle disparaîtra d’ici.',
+ inbox:'Marchés non classés à trier. Glissez une ligne vers un dossier à gauche pour la classer.',
  maybe:'Opportunités à examiner avant de décider si KDRIX présente une offre.',
  answer:'Marchés auxquels KDRIX prévoit de répondre.',
  await:'Offres déjà remises, en attente de la décision d’attribution.',
@@ -643,7 +644,7 @@ function renderNav(){
  lost:'Marchés attribués à un autre soumissionnaire.',
  discarded:'Opportunités classées sans suite.',
  review:'Correspondances indirectes à analyser avant de les classer.',
- catalogue:'Historique complet. Tous les marchés apparaissent une seule fois, même avec plusieurs catégories métier.',
+ catalogue:'Tous les marchés enregistrés, y compris ceux à vérifier et ceux déjà classés. Chaque marché apparaît une seule fois.',
  favorites:'Vos favoris, indépendamment de leur dossier de suivi.',
  urgent:'Échéances dans les 14 prochains jours, tous dossiers confondus.'
  };
@@ -809,7 +810,7 @@ document.querySelectorAll('[data-folder]').forEach(function(button){
   moveMarket(id,button.dataset.folder);
  });
 });
-el('allCategories').addEventListener('click',function(){expandedFamily=null;state.sector='all';render()});
+el('allCategories').addEventListener('click',function(){expandedFamily=null;state.sector='all';state.view='catalogue';render()});
 render();load();
 })();
 </script>
