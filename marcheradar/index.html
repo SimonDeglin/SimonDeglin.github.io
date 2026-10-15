@@ -542,20 +542,44 @@ function moveMarket(id,code){
  save();render();toast('Marché classé : '+stageName(code));
 }
 function trackCount(){return allMarkets().filter(function(m){return stageOf(m.id)!=='inbox'&&stageOf(m.id)!=='discarded'}).length}
+// Filtrage commun : dossiers (niveau 1), domaines (niveau 2), échéances (niveau 3).
+function todayInBrussels(){
+ var parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Brussels',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+ function part(type){return (parts.find(function(p){return p.type===type})||{}).value||''}
+ return part('year')+'-'+part('month')+'-'+part('day');
+}
+function marketDueStatus(m){
+ var raw=String(m.deadline||'').trim();
+ if(!raw)return m.source==='LOCALE'?'open':'unknown';
+ if(/^\d{4}-\d{2}-\d{2}$/.test(raw)){
+  var parsed=new Date(raw+'T12:00:00Z');
+  if(isNaN(parsed.getTime())||parsed.toISOString().slice(0,10)!==raw)return 'unknown';
+  return raw>=todayInBrussels()?'open':'closed';
+ }
+ // Une heure sans fuseau n'est pas transformée en échéance certaine.
+ if(!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d{1,3})?)?(?:Z|[+-]\d{2}:\d{2})$/.test(raw))return 'unknown';
+ var timestamp=Date.parse(raw);
+ return Number.isFinite(timestamp)?(timestamp>=Date.now()?'open':'closed'):'unknown';
+}
+function matchesGeneralFilters(m){
+ var tags=m.sectors||tagsOf(m);
+ if(!tags.some(function(id){return !saved.hiddenSectors[id]}))return false;
+ if(state.region!=='all'&&m.region!==state.region)return false;
+ if(state.due!=='all'&&marketDueStatus(m)!==state.due)return false;
+ var q=norm(state.query).trim();
+ return !q||norm([m.title,m.description,m.buyer,m.region,tags.join(' '),(m.cpv||[]).join(' ')].join(' ')).includes(q);
+}
+function matchesFolder(m,view){
+ var folder=view||state.view,actual=stageOf(m.id);
+ if(isStage(folder))return actual===folder;
+ if(folder==='review')return actual==='inbox'&&m.screening==='review';
+ if(folder==='favorites')return !!saved.favorites[m.id];
+ if(folder==='urgent'){var d=daysLeft(m.deadline);return d!==null&&d>=0&&d<=14}
+ return folder==='catalogue'||folder==='all';
+}
 function filtered(){
  var list=allMarkets().filter(function(m){
-  var tags=m.sectors||tagsOf(m);
-  if(!tags.some(function(s){return !saved.hiddenSectors[s]}))return false;
-  if(!matchesSectorFilter(tags))return false;
-  if(state.region!=='all'&&m.region!==state.region)return false;
-  if(isStage(state.view)&&stageOf(m.id)!==state.view)return false;
-  if(state.view==='inbox'&&(m.screening==='review'||m.screening==='excluded'))return false;
-  if(state.view==='review'&&!(m.screening==='review'&&stageOf(m.id)==='inbox'))return false;
-  if(state.view!=='catalogue'&&m.screening==='excluded'&&stageOf(m.id)==='inbox')return false;
-  if(state.view==='favorites'&&!saved.favorites[m.id])return false;
-  if(state.view==='urgent'){var d=daysLeft(m.deadline);if(d===null||d<0||d>14)return false}
-  var q=norm(state.query).trim();
-  return !q||norm([m.title,m.description,m.buyer,m.region,tags.join(' '),(m.cpv||[]).join(' ')].join(' ')).includes(q);
+  return matchesGeneralFilters(m)&&matchesFolder(m)&&matchesSectorFilter(m.sectors||tagsOf(m));
  });
  list.sort(function(a,b){
   if(state.sort==='recent')return (b.publication||'').localeCompare(a.publication||'');
@@ -582,16 +606,7 @@ function matchesSectorFilter(tags){
 }
 function renderCategories(){
  var box=el('sidebarCategories');
- var pool=allMarkets().filter(function(m){
-  var tags=m.sectors||tagsOf(m);
-  if(!tags.some(function(s){return !saved.hiddenSectors[s]}))return false;
-  if(isStage(state.view)&&stageOf(m.id)!==state.view)return false;
-  if(state.view==='inbox'&&(m.screening==='review'||m.screening==='excluded'))return false;
-  if(state.view==='review'&&!(m.screening==='review'&&stageOf(m.id)==='inbox'))return false;
-  if(state.view!=='catalogue'&&m.screening==='excluded'&&stageOf(m.id)==='inbox')return false;
-  if(state.region!=='all'&&m.region!==state.region)return false;
-  return true;
- });
+ var pool=allMarkets().filter(function(m){return matchesGeneralFilters(m)&&matchesFolder(m)});
  function count(ids){return pool.filter(function(m){return (m.sectors||tagsOf(m)).some(function(s){return ids.includes(s)})}).length}
  var names={'Topo':'Relevés topo','Scan':'Scanner 3D','Drone':'Drone & photogrammétrie','Hydro':'Bathymétrie',
  'VRD':'Études / projets de voirie','Reseaux':'Réseaux & impétrants','Hydraulique':'Hydraulique & jaugeages',
@@ -613,18 +628,17 @@ function renderCategories(){
    var id=btn.dataset.family;
    if(expandedFamily===id){expandedFamily=null;state.sector='all';}
    else{expandedFamily=id;state.sector='group:'+id;}
-   state.view='catalogue';
    render();
   });
  });
  box.querySelectorAll('[data-subcat]').forEach(function(btn){
-  btn.addEventListener('click',function(){state.sector=state.sector===btn.dataset.subcat?'group:'+expandedFamily:btn.dataset.subcat;state.view='catalogue';render()});
+  btn.addEventListener('click',function(){state.sector=state.sector===btn.dataset.subcat?'group:'+expandedFamily:btn.dataset.subcat;render()});
  });
  el('allCategories').classList.toggle('active',state.sector==='all');
  el('allCategories').setAttribute('aria-pressed',String(state.sector==='all'));
 }
 function renderStats(){
- el('kpiTotal').textContent=allMarkets().filter(function(m){return stageOf(m.id)==='inbox'&&m.screening!=='review'&&m.screening!=='excluded'}).length;
+ el('kpiTotal').textContent=allMarkets().filter(function(m){return stageOf(m.id)==='inbox'}).length;
  el('kpiTop').textContent=stageNumber('answer');
  el('kpiTracked').textContent=stageNumber('await');
  el('kpiUrgent').textContent=stageNumber('won');
@@ -632,7 +646,10 @@ function renderStats(){
  
  
  
- document.querySelectorAll('[data-count]').forEach(function(b){b.textContent=b.dataset.count==='catalogue'?allMarkets().length:b.dataset.count==='inbox'?allMarkets().filter(function(m){return stageOf(m.id)==='inbox'&&m.screening!=='review'&&m.screening!=='excluded'}).length:stageNumber(b.dataset.count)});
+ document.querySelectorAll('[data-count]').forEach(function(b){
+  var code=b.dataset.count;
+  b.textContent=allMarkets().filter(function(m){return matchesGeneralFilters(m)&&(code==='catalogue'||stageOf(m.id)===code)}).length;
+ });
 }
 function renderNav(){
  var labels={inbox:'Listing complet',maybe:'À définir',answer:'À répondre',await:"En attente d'attribution",won:'Obtenu',lost:'Perdu',discarded:'Sans suite',catalogue:'Historique général',review:'À vérifier',favorites:'Favoris',urgent:'Échéances proches'};
@@ -811,7 +828,7 @@ document.querySelectorAll('[data-folder]').forEach(function(button){
   moveMarket(id,button.dataset.folder);
  });
 });
-el('allCategories').addEventListener('click',function(){expandedFamily=null;state.sector='all';state.view='catalogue';render()});
+el('allCategories').addEventListener('click',function(){expandedFamily=null;state.sector='all';render()});
 render();load();
 })();
 </script>
