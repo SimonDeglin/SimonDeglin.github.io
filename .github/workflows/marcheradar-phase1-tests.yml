@@ -2,6 +2,7 @@ name: "MarchéRadar V2 — validation Phase 1"
 on:
   push:
     branches:
+      - "main"
       - "feature/marcheradar-v2-phase1-20261015"
     paths:
       - "marcheradar/index.html"
