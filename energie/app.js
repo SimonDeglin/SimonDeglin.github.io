@@ -1033,11 +1033,11 @@ function capturePhotoData(file){
    const img=new Image();
    img.onerror=()=>reject(new Error('image non prise en charge'));
    img.onload=()=>{
-    const ratio=Math.min(1,1800/Math.max(img.naturalWidth,img.naturalHeight)),canvas=document.createElement('canvas');
+    const ratio=Math.min(1,2560/Math.max(img.naturalWidth,img.naturalHeight)),canvas=document.createElement('canvas');
     canvas.width=Math.max(1,Math.round(img.naturalWidth*ratio));
     canvas.height=Math.max(1,Math.round(img.naturalHeight*ratio));
     canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);
-    resolve(canvas.toDataURL('image/jpeg',.82));
+    resolve(canvas.toDataURL('image/jpeg',.93));
    };
    img.src=reader.result;
   };
@@ -1162,10 +1162,10 @@ function parseElectricWheel(raw,kind){
  const add=(digits,quality)=>{
   const number=Number(digits);
   if(!Number.isSafeInteger(number)||number<1000||number>999999)return;
-  const target=expected??(kind==='night'?25336:30215);
-  const distance=Math.abs(number-target);
-  if(distance>Math.max(18000,target*.55))return;
-  const score=quality-Math.min(125,Math.log1p(distance)*11);
+  // Prior readings can flag a surprising index, but may never substitute
+  // for digits actually present in the crop.
+  const distance=expected==null?null:Math.abs(number-expected);
+  const score=quality-(distance==null?0:Math.min(30,Math.log1p(distance)*3));
   candidates.push({value:number,score});
  };
  for(let i=0;i<tokens.length;i++){
