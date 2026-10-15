@@ -218,8 +218,7 @@ body{background:#f7f7f7;color:#303339}
 <div class="section-label">DOSSIERS DE SUIVI</div>
 <div class="side-help">Glisser-déposer pour classer</div>
 <nav aria-label="Dossiers de suivi" id="foldersNav" class="folders">
-<button class="nav-item active" data-view="catalogue"><svg class="ico"><use href="#i-list"/></svg><span class="nav-name">Listing complet</span><span class="count" data-count="catalogue">0</span></button>
-<button class="nav-item" data-view="inbox" data-folder="inbox"><svg class="ico"><use href="#i-list"/></svg><span class="nav-name">À trier</span><span class="count" data-count="inbox">0</span></button>
+<button class="nav-item active" data-view="inbox" data-folder="inbox"><svg class="ico"><use href="#i-list"/></svg><span class="nav-name">Listing complet</span><span class="count" data-count="inbox">0</span></button>
 <button class="nav-item" data-view="maybe" data-folder="maybe"><i class="folder-dot maybe"></i><span class="nav-name">À définir</span><span class="count" data-count="maybe">0</span></button>
 <button class="nav-item" data-view="answer" data-folder="answer"><i class="folder-dot answer"></i><span class="nav-name">À répondre</span><span class="count" data-count="answer">0</span></button>
 <button class="nav-item" data-view="await" data-folder="await"><i class="folder-dot await"></i><span class="nav-name">En attente d'attribution</span><span class="count" data-count="await">0</span></button>
@@ -253,6 +252,7 @@ body{background:#f7f7f7;color:#303339}
       <div class="search-row">
         <div class="search-wrap"><svg class="ico"><use href="#i-search"/></svg><input id="search" type="search" aria-label="Rechercher un marché" placeholder="Rechercher un marché, un acheteur ou un lieu..."></div>
         <select class="filter-select" id="region" aria-label="Filtrer par région"><option value="all">Wallonie, Bruxelles et à vérifier</option><option value="Wallonie">Wallonie</option><option value="Bruxelles">Bruxelles</option><option value="Belgique">Lieu à vérifier</option></select>
+        <select class="filter-select" id="due" aria-label="Filtrer par échéance"><option value="all">Toutes les échéances</option><option value="open">Marchés ouverts</option><option value="closed">Marchés clôturés</option><option value="unknown">Échéance à vérifier</option></select>
         <select class="filter-select" id="sort" aria-label="Trier les marchés"><option value="deadline">Échéances à venir</option><option value="score">Plus pertinents</option><option value="recent">Plus récents</option></select>
       </div>
       
@@ -297,7 +297,7 @@ var STORAGE='kdrix.marcheRadar.v1';
 var saved={};
 try{saved=JSON.parse(localStorage.getItem(STORAGE)||'{}')||{}}catch(e){saved={}}
 saved.favorites=saved.favorites||{};saved.statuses=saved.statuses||{};saved.notes=saved.notes||{};saved.hiddenSectors=saved.hiddenSectors||{};
-var state={mode:'loading',sourceOrigin:'none',collectorStatus:'pending',view:'all',sector:'all',region:'all',sort:'deadline',query:'',markets:[],real:[],generated:null,sourceNote:'',coverage:{},sources:{},selected:null,loadError:false};
+var state={mode:'loading',sourceOrigin:'none',collectorStatus:'pending',view:'all',sector:'all',region:'all',due:'all',sort:'deadline',query:'',markets:[],real:[],generated:null,sourceNote:'',coverage:{},sources:{},selected:null,loadError:false};
 function el(id){return document.getElementById(id)}
 function svg(id,small){return '<svg class="ico'+(small?' s':'')+'"><use href="#i-'+id+'"/></svg>'}
 function esc(v){return String(v===null||v===undefined?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
@@ -313,16 +313,31 @@ function allMarkets(){return state.markets.filter(function(m){return m.region!==
 function trackCount(){return state.markets.filter(function(m){return !!saved.statuses[m.id]&&saved.statuses[m.id]!=='Écarté'}).length}
 function favoriteCount(){return state.markets.filter(function(m){return !!saved.favorites[m.id]}).length}
 function active(m){var d=daysLeft(m.deadline);return d===null||d>=0}
+function dueStatus(m){
+ if(m.source==='LOCALE'&&!m.deadline)return 'open';
+ if(!m.deadline)return 'unknown';
+ var dt=parseDate(m.deadline);if(!dt||isNaN(dt.getTime()))return 'unknown';
+ // Dates sans heure : une offre peut encore être déposée pendant la journée de clôture.
+ var d=String(m.deadline);
+ if(/^\d{4}-\d{2}-\d{2}$/.test(d)){dt.setHours(23,59,59,999)}
+ return dt.getTime()>=Date.now()?'open':'closed';
+}
+function matchesBaseFilters(m){
+ var tags=m.sectors||tagsOf(m);
+ if(!tags.some(function(s){return !saved.hiddenSectors[s]}))return false;
+ if(isStage(state.view)&&stageOf(m.id)!==state.view)return false;
+ if(state.view==='inbox'&&(m.screening==='review'||m.screening==='excluded'))return false;
+ if(state.view==='review'&&!(m.screening==='review'&&stageOf(m.id)==='inbox'))return false;
+ if(state.view!=='catalogue'&&m.screening==='excluded'&&stageOf(m.id)==='inbox')return false;
+ if(state.view==='favorites'&&!saved.favorites[m.id])return false;
+ if(state.view==='urgent'){var d=daysLeft(m.deadline);if(d===null||d<0||d>14)return false}
+ if(state.region!=='all'&&m.region!==state.region)return false;
+ if(state.due!=='all'&&dueStatus(m)!==state.due)return false;
+ var q=norm(state.query).trim();
+ return !q||norm([m.title,m.description,m.buyer,m.region,tags.join(' '),(m.cpv||[]).join(' ')].join(' ')).includes(q);
+}
 function filtered(){
- var list=allMarkets().filter(function(m){
-  if(saved.hiddenSectors[m.sector])return false;
-  if(state.sector!=='all'&&m.sector!==state.sector)return false;
-  if(state.region!=='all'&&m.region!==state.region)return false;
-  if(state.view==='favorites'&&!saved.favorites[m.id])return false;
-  if(state.view==='tracked'&&(!saved.statuses[m.id]||saved.statuses[m.id]==='Écarté'))return false;
-  if(state.view==='urgent'){var n=daysLeft(m.deadline);if(n===null||n<0||n>14)return false}
-  var q=norm(state.query).trim();return !q||norm([m.title,m.buyer,m.region,m.sector,m.description,(m.cpv||[]).join(' ')].join(' ')).includes(q);
- });
+ var list=allMarkets().filter(function(m){return matchesBaseFilters(m)&&matchesSectorFilter(m.sectors||tagsOf(m))});
  list.sort(function(a,b){if(state.sort==='recent')return (b.publication||'').localeCompare(a.publication||'');if(state.sort==='deadline'){var da=daysLeft(a.deadline),db=daysLeft(b.deadline);return (da===null?9999:da<0?9999:da)-(db===null?9999:db<0?9999:db)}return (b.score||0)-(a.score||0)});
  return list;
 }
@@ -443,7 +458,7 @@ function downloadCSV(){
  var csv='\ufeff'+rows.map(function(r){return r.map(function(v){var s=String(v===undefined?'':v);if(/^[=+@\t\r]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"'}).join(';')}).join('\r\n');
  var a=document.createElement('a'),url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));a.href=url;a.download='marche-radar-'+dateOffset(0)+(state.mode==='demo'?'-DEMONSTRATION':'')+'.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},1000);toast('Export CSV généré');
 }
-function setView(v){state.view=v;document.querySelector('.sidebar').classList.remove('open');render();window.scrollTo({top:0,behavior:'smooth'})}
+function setView(v){state.view=v;state.sector='all';expandedFamily=null;document.querySelector('.sidebar').classList.remove('open');render();window.scrollTo({top:0,behavior:'smooth'})}
 function validMarket(m){return m&&typeof m.id==='string'&&typeof m.title==='string'&&typeof m.score==='number'&&typeof m.sector==='string'&&typeof m.source==='string'}
 async function load(){
  var btn=el('refreshBtn');btn.disabled=true;
@@ -454,8 +469,9 @@ async function load(){
 }
 document.querySelectorAll('[data-view]').forEach(function(b){b.addEventListener('click',function(){setView(b.dataset.view)})});
 el('reviewBtn').addEventListener('click',function(){setView(state.view==='review'?'inbox':'review')});
-el('search').addEventListener('input',function(e){state.query=e.target.value;renderList()});
-el('region').addEventListener('change',function(e){state.region=e.target.value;renderList()});
+el('search').addEventListener('input',function(e){state.query=e.target.value;render()});
+el('region').addEventListener('change',function(e){state.region=e.target.value;render()});
+el('due').addEventListener('change',function(e){state.due=e.target.value;render()});
 el('sort').addEventListener('change',function(e){state.sort=e.target.value;renderList()});
 el('refreshBtn').addEventListener('click',load);
 el('settingsBtn').addEventListener('click',function(){document.querySelector('.sidebar').classList.remove('open');settings()});
@@ -484,7 +500,7 @@ SECTORS=[
  {id:'Reseaux',label:'Réseaux & impétrants'},{id:'PEB',label:'Énergie & PEB'},
  {id:'PetitsTravaux',label:'Petits travaux techniques'}
 ];
-state.view='catalogue';
+state.view='inbox';
 var draggingId=null;
 function stageName(code){return (WORKFLOW.find(function(s){return s.id===code})||WORKFLOW[0]).label}
 function isStage(code){return WORKFLOW.some(function(s){return s.id===code})}
@@ -581,16 +597,7 @@ function matchesSectorFilter(tags){
 }
 function renderCategories(){
  var box=el('sidebarCategories');
- var pool=allMarkets().filter(function(m){
-  var tags=m.sectors||tagsOf(m);
-  if(!tags.some(function(s){return !saved.hiddenSectors[s]}))return false;
-  if(isStage(state.view)&&stageOf(m.id)!==state.view)return false;
-  if(state.view==='inbox'&&(m.screening==='review'||m.screening==='excluded'))return false;
-  if(state.view==='review'&&!(m.screening==='review'&&stageOf(m.id)==='inbox'))return false;
-  if(state.view!=='catalogue'&&m.screening==='excluded'&&stageOf(m.id)==='inbox')return false;
-  if(state.region!=='all'&&m.region!==state.region)return false;
-  return true;
- });
+ var pool=allMarkets().filter(function(m){return matchesBaseFilters(m)});
  function count(ids){return pool.filter(function(m){return (m.sectors||tagsOf(m)).some(function(s){return ids.includes(s)})}).length}
  var names={'Topo':'Relevés topo','Scan':'Scanner 3D','Drone':'Drone & photogrammétrie','Hydro':'Bathymétrie',
  'VRD':'Études / projets de voirie','Reseaux':'Réseaux & impétrants','Hydraulique':'Hydraulique & jaugeages',
@@ -612,12 +619,11 @@ function renderCategories(){
    var id=btn.dataset.family;
    if(expandedFamily===id){expandedFamily=null;state.sector='all';}
    else{expandedFamily=id;state.sector='group:'+id;}
-   state.view='catalogue';
    render();
   });
  });
  box.querySelectorAll('[data-subcat]').forEach(function(btn){
-  btn.addEventListener('click',function(){state.sector=state.sector===btn.dataset.subcat?'group:'+expandedFamily:btn.dataset.subcat;state.view='catalogue';render()});
+  btn.addEventListener('click',function(){state.sector=state.sector===btn.dataset.subcat?'group:'+expandedFamily:btn.dataset.subcat;render()});
  });
  el('allCategories').classList.toggle('active',state.sector==='all');
  el('allCategories').setAttribute('aria-pressed',String(state.sector==='all'));
@@ -631,12 +637,12 @@ function renderStats(){
  
  
  
- document.querySelectorAll('[data-count]').forEach(function(b){b.textContent=b.dataset.count==='catalogue'?allMarkets().length:b.dataset.count==='inbox'?allMarkets().filter(function(m){return stageOf(m.id)==='inbox'&&m.screening!=='review'&&m.screening!=='excluded'}).length:stageNumber(b.dataset.count)});
+ document.querySelectorAll('[data-count]').forEach(function(b){b.textContent=b.dataset.count==='catalogue'?allMarkets().length:allMarkets().filter(function(m){return stageOf(m.id)===b.dataset.count&&(b.dataset.count!=='inbox'||(m.screening!=='review'&&m.screening!=='excluded'))}).length});
 }
 function renderNav(){
- var labels={inbox:'À trier',maybe:'À définir',answer:'À répondre',await:"En attente d'attribution",won:'Obtenu',lost:'Perdu',discarded:'Sans suite',catalogue:'Listing complet',review:'À vérifier',favorites:'Favoris',urgent:'Échéances proches'};
+ var labels={inbox:'Listing complet',maybe:'À définir',answer:'À répondre',await:"En attente d'attribution",won:'Obtenu',lost:'Perdu',discarded:'Sans suite',catalogue:'Listing complet',review:'À vérifier',favorites:'Favoris',urgent:'Échéances proches'};
  var descriptions={
- inbox:'Marchés non classés à trier. Glissez une ligne vers un dossier à gauche pour la classer.',
+ inbox:'Marchés non classés. Glissez une ligne vers un dossier à gauche pour la classer.',
  maybe:'Opportunités à examiner avant de décider si KDRIX présente une offre.',
  answer:'Marchés auxquels KDRIX prévoit de répondre.',
  await:'Offres déjà remises, en attente de la décision d’attribution.',
@@ -663,7 +669,7 @@ function renderList(){
  var list=filtered();el('resultCount').textContent=list.length;
  if(!list.length){
   el('resultsList').innerHTML='<div class="empty"><div class="emptyicon">'+svg('list')+'</div><h3>Aucun marché dans cette sélection</h3><p>Essayez un autre dossier, une autre catégorie ou élargissez les filtres.</p><button id="resetFilters">Afficher le listing complet</button></div>';
-  el('resetFilters').addEventListener('click',function(){state.sector='all';state.region='all';state.query='';state.view='inbox';el('search').value='';el('region').value='all';render()});return;
+  el('resetFilters').addEventListener('click',function(){state.sector='all';state.region='all';state.due='all';state.query='';state.view='inbox';el('search').value='';el('region').value='all';el('due').value='all';render()});return;
  }
  el('resultsList').innerHTML=list.map(function(m){
   var d=daysLeft(m.deadline),label=d===null?'Date inconnue':d<0?'Date dépassée':d===0?"Aujourd'hui":'J-'+d;
@@ -810,7 +816,7 @@ document.querySelectorAll('[data-folder]').forEach(function(button){
   moveMarket(id,button.dataset.folder);
  });
 });
-el('allCategories').addEventListener('click',function(){expandedFamily=null;state.sector='all';state.view='catalogue';render()});
+el('allCategories').addEventListener('click',function(){expandedFamily=null;state.sector='all';render()});
 render();load();
 })();
 </script>
