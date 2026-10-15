@@ -326,9 +326,9 @@ function matchesBaseFilters(m){
  var tags=m.sectors||tagsOf(m);
  if(!tags.some(function(s){return !saved.hiddenSectors[s]}))return false;
  if(isStage(state.view)&&stageOf(m.id)!==state.view)return false;
- if(state.view==='inbox'&&(m.screening==='review'||m.screening==='excluded'))return false;
+ // Le listing d'entree affiche tout dossier non classe, meme a verifier.
  if(state.view==='review'&&!(m.screening==='review'&&stageOf(m.id)==='inbox'))return false;
- if(state.view!=='catalogue'&&m.screening==='excluded'&&stageOf(m.id)==='inbox')return false;
+ // Un statut de pertinence ne remplace pas le classement manuel.
  if(state.view==='favorites'&&!saved.favorites[m.id])return false;
  if(state.view==='urgent'){var d=daysLeft(m.deadline);if(d===null||d<0||d>14)return false}
  if(state.region!=='all'&&m.region!==state.region)return false;
@@ -615,7 +615,7 @@ function renderCategories(){
  el('allCategories').setAttribute('aria-pressed',String(state.sector==='all'));
 }
 function renderStats(){
- el('kpiTotal').textContent=allMarkets().filter(function(m){return stageOf(m.id)==='inbox'&&m.screening!=='review'&&m.screening!=='excluded'}).length;
+ el('kpiTotal').textContent=allMarkets().filter(function(m){return stageOf(m.id)==='inbox'}).length;
  el('kpiTop').textContent=stageNumber('answer');
  el('kpiTracked').textContent=stageNumber('await');
  el('kpiUrgent').textContent=stageNumber('won');
@@ -623,7 +623,7 @@ function renderStats(){
  
  
  
- document.querySelectorAll('[data-count]').forEach(function(b){b.textContent=b.dataset.count==='catalogue'?allMarkets().length:allMarkets().filter(function(m){return stageOf(m.id)===b.dataset.count&&(b.dataset.count!=='inbox'||(m.screening!=='review'&&m.screening!=='excluded'))}).length});
+ document.querySelectorAll('[data-count]').forEach(function(b){b.textContent=b.dataset.count==='catalogue'?allMarkets().length:allMarkets().filter(function(m){return stageOf(m.id)===b.dataset.count}).length});
 }
 function renderNav(){
  var labels={inbox:'Listing complet',maybe:'À définir',answer:'À répondre',await:"En attente d'attribution",won:'Obtenu',lost:'Perdu',discarded:'Sans suite',catalogue:'Listing complet',review:'À vérifier',favorites:'Favoris',urgent:'Échéances proches'};
