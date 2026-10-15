@@ -34,7 +34,7 @@ hr{border:0;border-top:1px solid #e1e9eb;margin:16px 0}.celllist{display:grid;ga
 <div class="field"><label for="preset">Préréglage</label><select id="preset"><option value="liege">Liège — 75 km</option><option value="huy">Huy — 30 km</option><option value="namur">Namur — 50 km</option><option value="charleroi">Charleroi — 50 km</option><option value="custom">Autre commune</option></select></div>
 <div class="fieldline"><div class="field"><label for="city">Ville belge</label><input id="city" value="Liège" autocomplete="off"></div><div class="field"><label for="radius">Rayon (km)</label><input id="radius" type="number" min="1" max="100" step="1" value="75"></div></div>
 <button id="apply" class="primary" style="width:100%">Afficher le territoire</button>
-<p class="muted">Rayon à vol d'oiseau. Les cellules de 5 × 5 km qui touchent le cercle sont retenues entières, même en bordure.</p>
+<p class="muted">Rayon à vol d'oiseau. Les cellules de 5 × 5 km qui touchent le cercle sont retenues entières, même en bordure. Le masque administratif wallon sera raccordé aux moteurs suivants.</p>
 <div class="stats"><div class="stat"><b id="total">—</b><span>cellules concernées</span></div><div class="stat"><b id="both">—</b><span>deux recherches terminées</span></div><div class="stat"><b id="water">—</b><span>plans d'eau uniquement</span></div><div class="stat"><b id="companies">—</b><span>sociétés uniquement</span></div><div class="stat"><b id="missing">—</b><span>cellules à compléter</span></div><div class="stat"><b id="errors">—</b><span>partielles / en erreur</span></div></div>
 <div class="field"><label for="engine">Voir les recherches manquantes pour</label><select id="engine"><option value="both">Les deux moteurs</option><option value="water">Plans d'eau</option><option value="company">Sociétés</option></select></div>
 <div id="summary" class="status" aria-live="polite">Chargement de la grille…</div>
@@ -47,7 +47,7 @@ hr{border:0;border-top:1px solid #e1e9eb;margin:16px 0}.celllist{display:grid;ga
 <p class="muted">Référentiel : cellules fixes Lambert 2008 (EPSG:3812), origine nationale stable ; jamais de grille recalée sur une ville. Les résultats anciens ne prouvent pas qu'une recherche territoriale est complète.</p>
 </section>
 <section class="panel mapwrap" aria-label="Carte des zones prospectées"><div id="map"></div>
-<div class="maptools"><button id="fit">Recentrer</button><button id="showOnlyIncomplete" aria-pressed="false">Afficher toutes les cellules</button></div>
+<div class="maptools"><button id="fit">Recentrer</button><button id="showOnlyIncomplete" aria-pressed="false">Afficher uniquement les zones à compléter</button></div>
 <div class="legend"><span><i class="dot c-gray"></i>Non prospecté</span><span><i class="dot c-blue"></i>Plans d'eau</span><span><i class="dot c-orange"></i>Sociétés</span><span><i class="dot c-green"></i>Les deux</span><span><i class="dot ring"></i>Partiel / erreur</span><span>✓ = contrôle manuel</span></div>
 </section>
 <section class="panel padded rightpanel" aria-label="Détail et suivi d'une cellule">
@@ -223,19 +223,13 @@ async function apply(config){
 }
 async function geocode(city){
  const p=Object.values(PRESETS).find(x=>x.city.toLocaleLowerCase('fr')===city.toLocaleLowerCase('fr'));if(p)return {lat:p.lat,lng:p.lng};
- const url='https://nominatim.openstreetmap.org/search?format=json&countrycodes=be&limit=3&featuretype=city&q='+encodeURIComponent(city);
- let result=await fetch(url,{headers:{Accept:'application/json'},cache:'no-store'});
- if(!result.ok)throw Error('Service de localisation HTTP '+result.status);
- const list=await result.json();
- if(!list?.length){
-  const alternative='https://nominatim.openstreetmap.org/search?format=json&countrycodes=be&limit=3&q='+encodeURIComponent(city);
-  result=await fetch(alternative,{headers:{Accept:'application/json'},cache:'no-store'});
-  if(!result.ok)throw Error('Localisation indisponible');
-  const fallback=await result.json();
-  if(!fallback.length)throw Error('Commune introuvable en Belgique');
-  return {lat:Number(fallback[0].lat),lng:Number(fallback[0].lon)};
- }
- return {lat:Number(list[0].lat),lng:Number(list[0].lon)};
+ // Une seule requête de géocodage, à l'initiative explicite de l'utilisateur.
+ const url='https://nominatim.openstreetmap.org/search?format=json&countrycodes=be&limit=3&q='+encodeURIComponent(city);
+ const response=await fetch(url,{headers:{Accept:'application/json'},cache:'no-store'});
+ if(!response.ok)throw Error('Service de localisation HTTP '+response.status);
+ const rows=await response.json();
+ if(!Array.isArray(rows)||!rows.length)throw Error('Commune belge introuvable');
+ return {lat:Number(rows[0].lat),lng:Number(rows[0].lon)};
 }
 async function onApply(){
  if(busy)return;busy=true;$('apply').disabled=true;
