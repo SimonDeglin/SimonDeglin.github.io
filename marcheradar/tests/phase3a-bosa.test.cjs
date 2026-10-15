@@ -18,7 +18,7 @@ test('public BOSA metadata is a manifest, never a fabricated download link',()=>
  const page=detail.render({title:'Mission bathymétrique',source:'BOSA',documentInventory:n,documentsPageUrl:'https://www.publicprocurement.be/publication-workspaces/'+uuid+'/documents'});
  assert.match(page.html,/1 pièce\(s\) répertoriée\(s\)/);
  assert.match(page.html,/CCH Bathymetrie FR.pdf/);
- assert.match(page.html,/fichiers ne sont pas encore téléchargés/);
+ assert.match(page.html,/intitulés et identifiants proviennent de l’API publique/);
  assert.equal(page.documentCount,0);
 });
 test('external official references preserved without claiming downloads',()=>{
