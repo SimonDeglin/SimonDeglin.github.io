@@ -1,0 +1,32 @@
+# Marché Radar — Phase 3A : audit initial des sources (15 octobre 2026)
+
+## Inventaire réel
+- 64 marchés/opportunités dans `marcheradar/data.json`, répartis entre 16 BOSA, 14 TED et 34 pistes locales.
+- 15 dates limites renseignées, 49 absentes.
+- Aucune liste de pièces de consultation certifiée par le collecteur dans la base actuelle.
+- Les fiches Phase 2 différencient déjà correctement avis officiel, documents effectivement répertoriés et informations non vérifiées.
+
+## Contrôle reproductible sur 10 marchés
+Script : `marcheradar/tools/phase3a-diagnostic.cjs`.  
+Exécution : https://github.com/SimonDeglin/SimonDeglin.github.io/actions/runs/38753986518
+
+Cinq publications BOSA ont répondu HTTP 200 ; cinq publications TED ont donné des réponses HTTP 202 (parfois accompagnées d'une source BOSA HTTP 200).
+- **10** dossiers publics interrogés.
+- **7** dossiers avec au moins une réponse HTTP 200.
+- **0** lien direct de type PDF/Word/Excel/ZIP découvert dans le HTML statique accessible.
+- **0** échéance corrigée automatiquement, car aucune date supplémentaire n'a été **vérifiée**.
+- **0** fichier déclaré comme un CSC sans preuve documentaire.
+
+Les détails par marché (HTTP, documents identifiés, échéance connue) sont disponibles dans les artefacts de l'exécution.
+
+## Conclusion technique
+L'accès simple au HTML public ne permet pas encore de récupérer les CSC. Les plateformes peuvent charger les pièces par des appels API internes ou une interface JavaScript ; certains espaces nécessitent une connexion. Une réponse 200 prouve seulement l'accessibilité d'une réponse, **pas** l'existence ou la lisibilité de ses annexes.
+
+## Étape suivante nécessaire
+1. Tester un navigateur avec exécution JavaScript sur ces dix dossiers ; relever les appels réseau **publics** réellement déclenchés par l'ouverture de la zone Documents.
+2. Identifier les endpoints documentaires officiels réellement accessibles sans authentification ; ne contourner aucun refus.
+3. Mettre en place un extracteur document/échéance spécifique à la source, avec tests de provenance et politique de validation.
+4. Mettre à jour les fiches `data.json` **uniquement** pour les pièces et dates dont le lien, la source et l'accessibilité ont été prouvés.
+5. Relancer les tests des Phases 1–2 et les tests de nouvelles données avant publication.
+
+**État :** la phase 3A est en cours, non livrable à ce stade. La branche publique `main` n'a pas été modifiée.
