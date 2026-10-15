@@ -42,6 +42,20 @@ jobs:
         if: steps.tests.outcome == 'success'
         run: node marcheradar/tools/municipality-registry.cjs
         continue-on-error: true
+      - name: "Publier l'inventaire immédiatement"
+        id: pub_inventory
+        if: steps.directory.outcome == 'success'
+        continue-on-error: true
+        shell: bash
+        run: |
+          git config user.name "marcheradar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add marcheradar/communes.json
+          if ! git diff --cached --quiet; then
+            git commit -m "MarchéRadar: annuaire ODWB [skip ci]"
+            git pull --rebase origin main || true
+            git push origin HEAD:main || true
+          fi
       - name: "Préparer PDF"
         id: pdf
         if: steps.directory.outcome == 'success'
@@ -64,6 +78,7 @@ jobs:
           git add marcheradar/communes.json marcheradar/data.json
           if ! git diff --cached --quiet; then
             git commit -m "MarchéRadar: annuaire et prospection communale [skip ci]"
+            git pull --rebase origin main || true
             git push origin HEAD:main
           fi
         continue-on-error: true
@@ -85,6 +100,7 @@ jobs:
           if [ -f marcheradar/communes-error.json ]; then git add marcheradar/communes-error.json; fi
           if ! git diff --cached --quiet; then
             git commit -m "MarchéRadar: diagnostic de la veille communale [skip ci]"
+            git pull --rebase origin main || true
             git push origin HEAD:main || true
           fi
       - name: "Journal sans courriel d'échec"
