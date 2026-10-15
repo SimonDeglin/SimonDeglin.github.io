@@ -124,20 +124,22 @@ function region(n){
  if(/\bBEZZZ\b/i.test(perf)||detectRegion(perf)===null&&/\bBE\d{3}\b/.test(perf))return 'Belgique';
  return detectRegion(flatten([get(n,'buyer-city')]).join(' '))||'Belgique';
 }
-function normalize(n){
+function normalize(n,funnel){
+ const reject=function(reason){if(funnel)funnel[reason]=(funnel[reason]||0)+1;return null};
  const num=(txt(get(n,'publication-number')).match(/\d{1,8}-\d{4}/)||[])[0];
  const title=txt(get(n,'notice-title')).slice(0,1100);
- if(!num||!title)return null;
+ if(!num||!title)return reject('metadonnees_incompletes');
  const kind=txt(get(n,'notice-type')).toLowerCase();
  // Results of already awarded procedures are not upcoming calls for tenders.
- if(/^(can-|result-|can-|can\b|award-|res-)/.test(kind))return null;
+ if(/^(can-|result-|can-|can\b|award-|res-)/.test(kind))return reject('avis_attribution_analyse_separement');
  const desc=[txt(get(n,'description-proc')),txt(get(n,'description-lot'))].filter(Boolean).join('\n\n').slice(0,2600);
  const cpvs=codes(get(n,'classification-cpv'));
  const buyer=txt(get(n,'buyer-name')).slice(0,500)||'Acheteur non précisé';
  const place=region(n);
- if(profile.excluded({buyer,region:place,title,description:desc}))return null;
- const sector=classify(title,desc,cpvs);
- if(!sector)return null;
+ const verdict=profile.screen({title,description:desc,cpv:cpvs,buyer,region:place,source:'TED'});
+ if(!verdict.classification)return reject(verdict.reason||'non_classe');
+ const sector=verdict.classification;
+ if(funnel)funnel['qualifie_'+sector.screening]=(funnel['qualifie_'+sector.screening]||0)+1;
  const dates=flatten(['deadline-receipt-tender-date-lot','deadline-receipt-request-date-lot','deadline-receipt-expressions-date-lot'].map(f=>get(n,f)));
  const due=earliestDate(dates)||earliestDate(get(n,'deadline'));
  return {
@@ -277,9 +279,9 @@ async function run(){
   }
  }
  if(!stats.length)throw Error('Aucune réponse TED exploitable');
- const unique=new Map();
+ const unique=new Map(),rawFunnel={};
  for(const raw of notices){
-  const n=normalize(raw);
+  const n=normalize(raw,rawFunnel);
   if(n)unique.set(n.publicationNumber,n);
  }
  const cleaned=cleanPrevious(previous.items||[]);
@@ -295,8 +297,9 @@ async function run(){
   schema_version:2,generated_at:timestamp,data_origin:'ted_api',
   collector_status:warnings.length?'partial':'ok',
   note:'TED interrogé le '+timestamp.slice(0,10)+' : '+notices.length+' avis lus, '+enriched.marketMatches+' procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.',
-  coverage:{TED:warnings.length?'partiel : exécution en Belgique incomplète':'collecte automatique active',BOSA:bosaCount+' annonce(s) BOSA repérée(s) manuellement ; veille nationale non connectée',communal:'non connecté'},
-  metrics:{scanned:notices.length,matched_current_run:unique.size,records:finalMarkets.length,review_count:reviewCount,award_notice_count:enriched.awardNotices,awarded_market_matches:enriched.marketMatches,award_fields_requested:stats.every(s=>s.fields?.includes('winner-name')),retained_as_excluded:cleaned.removed.length,excluded_reasons:cleaned.reasons,days_queried:lookback,queries:stats,warnings},
+  sources:previous.sources||{},
+  coverage:{...(previous.coverage||{}),TED:warnings.length?'partiel : exécution en Belgique incomplète':'collecte automatique active'},
+  metrics:{...(previous.metrics||{}),scanned:notices.length,raw_screening:rawFunnel,matched_current_run:unique.size,records:finalMarkets.length,review_count:reviewCount,award_notice_count:enriched.awardNotices,awarded_market_matches:enriched.marketMatches,award_fields_requested:stats.every(s=>s.fields?.includes('winner-name')),retained_as_excluded:cleaned.removed.length,excluded_reasons:cleaned.reasons,days_queried:lookback,queries:stats,warnings},
   items:finalMarkets
  };
  fs.writeFileSync(OUTPUT,JSON.stringify(data,null,2)+'\n','utf8');
