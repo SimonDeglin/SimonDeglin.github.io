@@ -1201,3 +1201,85 @@ body[data-section="mazout"] .topbar .title{color:#68513a}
  .scan-action-row{flex-wrap:wrap;gap:6px}
  .scan-action-row .btn{min-width:0;font-size:10px;flex:1}
 }
+
+
+/* Ôwatt — movable and resizable photographic reading frame (iPhone Safari) */
+#scan-overlay .scan-frame-guide{
+ display:flex;flex-direction:column;gap:3px;
+ margin:0 0 9px;
+ font-size:11px;line-height:1.35;color:#50635a;
+}
+#scan-overlay .scan-frame-guide strong{
+ font-size:12px;font-weight:850;color:#304e44;
+}
+#scan-overlay .scan-frame-guide span{font-size:10px;color:#7b8a81}
+#scan-preview-wrap{
+ position:relative;
+ touch-action:none;
+ background:#e7ece7;
+ border:1px solid #dae5da;
+ overflow:hidden;
+ cursor:crosshair;
+}
+#scan-preview-wrap .scan-preview{pointer-events:none;user-select:none}
+#scan-preview-wrap .scan-crop-box{
+ pointer-events:auto!important;
+ box-sizing:border-box;
+ border:2px solid #f9fffb;
+ outline:2px solid #317f72;
+ background:rgba(99,175,143,.07);
+ box-shadow:0 0 0 250vmax rgba(23,36,35,.29),0 0 10px rgba(14,50,39,.18);
+ border-radius:7px;
+ touch-action:none;
+ cursor:grab;
+ z-index:4;
+}
+#scan-preview-wrap .scan-crop-box:active{cursor:grabbing}
+#scan-preview-wrap .scan-crop-box.hidden{display:none!important}
+#scan-overlay.electric-scan .scan-crop-box::after{
+ content:"";pointer-events:none;
+ position:absolute;left:1px;right:1px;top:50%;
+ border-top:1px dashed rgba(20,87,69,.75);
+}
+#scan-preview-wrap .scan-frame-handle{
+ position:absolute;
+ box-sizing:border-box;
+ width:27px;height:27px;
+ background:#fff;
+ border:3px solid #399880;
+ border-radius:10px;
+ box-shadow:0 2px 8px rgba(11,44,35,.29);
+ touch-action:none;
+ z-index:6;
+}
+#scan-preview-wrap [data-scan-handle="nw"]{left:-14px;top:-14px;cursor:nwse-resize}
+#scan-preview-wrap [data-scan-handle="ne"]{right:-14px;top:-14px;cursor:nesw-resize}
+#scan-preview-wrap [data-scan-handle="sw"]{left:-14px;bottom:-14px;cursor:nesw-resize}
+#scan-preview-wrap [data-scan-handle="se"]{right:-14px;bottom:-14px;cursor:nwse-resize}
+#scan-overlay .scan-read-btn{
+ background:#405385!important;
+ color:#fff!important;
+ font-weight:850!important;
+ border-color:#405385!important;
+}
+#scan-overlay .scan-read-btn:hover{background:#344471!important}
+#scan-overlay .scan-read-btn:disabled{opacity:.52;cursor:wait}
+#scan-overlay .scan-message{
+ font-size:11px;
+ color:#547168;
+}
+#scan-overlay .scan-index-zoom>span{font-weight:850}
+@media(max-width:750px){
+ #scan-preview-wrap .scan-preview{max-height:min(34dvh,270px)}
+ #scan-overlay.electric-scan #scan-preview-wrap .scan-preview{
+  max-height:min(28dvh,224px);
+ }
+ #scan-preview-wrap .scan-frame-handle{width:28px;height:28px}
+ #scan-overlay .scan-action-row{display:flex;gap:6px}
+ #scan-overlay .scan-action-row .btn{font-size:11px}
+ #scan-overlay .scan-action-row #scan-retry{flex:1.5}
+ #scan-overlay .scan-frame-guide strong{font-size:11px}
+}
+@media(max-width:365px){
+ #scan-overlay .scan-action-row .btn{font-size:10px;padding:7px 6px}
+}
