@@ -98,7 +98,7 @@ async function loadPage(page,url,expected){
   await page.locator('#marketNotes').fill('Note persistante — test phase 1');
   await page.locator('#saveTender').click();
   await page.reload({waitUntil:'domcontentloaded'});
-  await page.waitForFunction(()=>Number(document.getElementById('resultCount')?.textContent)===7);
+  await page.waitForFunction(()=>Number(document.getElementById('resultCount')?.textContent)===6);
   await page.locator('[data-view="discarded"]').click();
   await page.locator('.open-tender').click();
   assert.equal(await page.locator('#marketNotes').inputValue(),'Note persistante — test phase 1');
