@@ -1570,8 +1570,9 @@ async function detectIndexFromImage(){
  if(scanBusy||!pendingImage||!scanCrop)return;
  const preserve=scanKind==='electric'&&scanElectricStep!=='both';
  invalidateScanReading(preserve);
- scanBusy=true;scanDeadline=Date.now()+42000;const id=++scanRequest;
+ scanBusy=true;scanDeadline=Date.now()+(ocrWorkerPromise?30000:45000);const id=++scanRequest;
  const retry=$('#scan-retry');retry.disabled=true;
+ for(const name of ['scan-angle','scan-rotate','scan-reset-crop','scan-meter'])$('#'+name).disabled=true;
  const diagnostics=[],preview=scanSourceImage(scanCrop,'raw');
  $('#scan-analysis').src=preview||pendingImage;
  $('#scan-index-zoom').classList.toggle('hidden',!scanCrop);
@@ -1642,7 +1643,9 @@ async function detectIndexFromImage(){
     old?.then(w=>w.terminate?.()).catch(()=>{});
    }
   }
- }finally{scanBusy=false;scanDeadline=0;retry.disabled=false;}
+ }finally{scanBusy=false;scanDeadline=0;retry.disabled=false;
+  for(const name of ['scan-angle','scan-rotate','scan-reset-crop','scan-meter'])$('#'+name).disabled=false;
+ }
 }
 async function scanPreviewReady(){
  const image=$('#scan-preview');
@@ -1756,6 +1759,13 @@ $('#scan-preview-wrap').addEventListener('pointerdown',ev=>{
  if(scanPointers.size>=2){
   const p=scanPinchStats();
   if(p)scanPinch={...p,zoom:scanZoom,pan:{...scanPan}};
+  if(scanPointer){
+   const q=scanPointer.original,r=scanCrop;
+   if(r&&(Math.abs(q.left-r.left)>1||Math.abs(q.top-r.top)>1||
+    Math.abs(q.width-r.width)>1||Math.abs(q.height-r.height)>1)){
+    refreshScanCropPreview();invalidateScanReading(scanKind==='electric'&&scanElectricStep!=='both');
+   }
+  }
   scanPointer=null;
   ev.preventDefault();return;
  }
@@ -1840,12 +1850,14 @@ $('#confirm-scan').onclick=async()=>{
   if(!values)return toast('Vérifie les index Nuit et Jour avant de confirmer.');
   $('#reading-total').value=String(values.total);
   // For new readings we retain the official monohourly sum, not the two registers.
-  pendingPhotos.electric=await photoForReadingArchive(pendingImage);
+  try{pendingPhotos.electric=await photoForReadingArchive(pendingImage)}
+  catch{return toast('La photo ne peut pas être conservée. Essaie à nouveau.')}
  }else{
   const v=$('#scan-value').value;
   if(v.trim()===''||!Number.isFinite(Number(v))||Number(v)<0)return toast('Vérifie l’index avant de confirmer.');
   $('#reading-'+k).value=k==='water'?roundWater(v).toFixed(1):String(Math.round(Number(v)));
-  pendingPhotos[k]=await photoForReadingArchive(pendingImage);
+  try{pendingPhotos[k]=await photoForReadingArchive(pendingImage)}
+  catch{return toast('La photo ne peut pas être conservée. Essaie à nouveau.')}
  }
  photoFlags();
  modal('scan-overlay',false);modal('reading-overlay',true);
