@@ -42,7 +42,7 @@ function normalizeDocuments(raw,workspace,apiUrl){
    access:'public_metadata_only',downloadVerified:false,sourceUrl:apiUrl
   });
  }
- return [...new Map(list.map(x=>[x.id,x])).values()];
+ return [...new Map(list.map(x=>[x.id,x])).values()].sort((a,b)=>a.id.localeCompare(b.id));
 }
 function normalizeConsultationUrls(raw,endpoint){
  const list=[];
@@ -50,27 +50,34 @@ function normalizeConsultationUrls(raw,endpoint){
   const url=safeExternal(x?.url);if(!url)continue;
   list.push({url,type:'officially_referenced_external_documents',access:'destination_not_download_verified',sourceUrl:endpoint,activatedAt:String(x.activatedAt||'')});
  }
- return [...new Map(list.map(x=>[x.url,x])).values()];
+ return [...new Map(list.map(x=>[x.url,x])).values()].sort((a,b)=>a.url.localeCompare(b.url));
 }
 async function enrichRecord(m,fetcher=fetch){
  if(m.source!=='BOSA'||!UUID.test(m.publicationWorkspaceId||''))return {market:m,result:'not_bosa'};
  const api=endpoints(m.publicationWorkspaceId),[d,u]=await Promise.all([jsonArray(api.documents,fetcher),jsonArray(api.urls,fetcher)]);
  const copy={...m},changes=[];
+ function compareList(field,items,key){
+  const prior=Array.isArray(copy[field])?copy[field]:[];
+  const oldSorted=prior.slice().sort((a,b)=>String(a[key]||'').localeCompare(String(b[key]||'')));
+  const fresh=items.slice().sort((a,b)=>String(a[key]||'').localeCompare(String(b[key]||'')));
+  // Une réponse vide ne supprime pas un inventaire auparavant confirmé.
+  if(!fresh.length&&prior.length)return;
+  if(JSON.stringify(oldSorted)!==JSON.stringify(fresh)){
+   copy[field]=fresh;changes.push(field+':'+fresh.length);
+  }else if(!Array.isArray(copy[field]))copy[field]=[];
+ }
  if(d.ok){
-  const fresh=normalizeDocuments(d.data,m.publicationWorkspaceId,api.documents);
-  // Une liste vide ne doit pas effacer un inventaire précédemment confirmé.
-  if(fresh.length||!Array.isArray(copy.documentInventory))copy.documentInventory=fresh;
-  copy.documentsPageUrl='https://www.publicprocurement.be/publication-workspaces/'+m.publicationWorkspaceId+'/documents';
-  copy.documentsPageSource='public_api_200';
-  changes.push('inventory:'+(copy.documentInventory||[]).length);
+  compareList('documentInventory',normalizeDocuments(d.data,m.publicationWorkspaceId,api.documents),'id');
+  const official='https://www.publicprocurement.be/publication-workspaces/'+m.publicationWorkspaceId+'/documents';
+  if(copy.documentsPageUrl!==official){copy.documentsPageUrl=official;changes.push('documentsPageUrl')}
+  if(copy.documentsPageSource!=='public_api_200'){copy.documentsPageSource='public_api_200';changes.push('documentsPageSource')}
  }
- if(u.ok){
-  copy.consultationUrls=normalizeConsultationUrls(u.data,api.urls);
-  changes.push('external:'+copy.consultationUrls.length);
- }
+ if(u.ok)compareList('consultationUrls',normalizeConsultationUrls(u.data,api.urls),'url');
  if(changes.length)copy.documentsCheckedAt=new Date().toISOString();
- return {market:copy,result:changes.length?'enriched':'source_unavailable',changes,endpointStatus:{documents:d.status||d.error||null,urls:u.status||u.error||null}};
+ return {market:changes.length?copy:m,result:changes.length?'enriched':d.ok||u.ok?'unchanged':'source_unavailable',
+  changes,endpointStatus:{documents:d.status||d.error||null,urls:u.status||u.error||null}};
 }
+
 async function run(){
  const source=JSON.parse(fs.readFileSync(SOURCE,'utf8'));
  const selected=process.argv.includes('--sample')?new Set([
@@ -81,7 +88,19 @@ async function run(){
  // Le portail BOSA applique des contrôles différents aux appels Node directs.
  // La consultation navigateur ne contourne aucune connexion : pages et API publiques uniquement.
  const useBrowser=process.argv.includes('--browser');
- const browser=useBrowser?await require('playwright').chromium.launch({headless:true}):null;
+ const browser=useBrowser?await (async function(){
+  let chromium,systemBrowser=false;
+  try{chromium=require('playwright').chromium}catch(e){chromium=require('playwright-core').chromium;systemBrowser=true}
+  const options={headless:true,args:['--disable-dev-shm-usage','--no-sandbox']};
+  if(systemBrowser){
+   const cp=require('node:child_process');
+   const r=cp.spawnSync('bash',['-lc','command -v google-chrome || command -v chromium || command -v chromium-browser'],{encoding:'utf8'});
+   const executable=(r.stdout||'').trim().split('\n')[0];
+   if(!executable)throw Error('Chromium public absent du runner pour la collecte BOSA');
+   options.executablePath=executable;
+  }
+  return chromium.launch(options);
+ })():null;
  const context=browser?await browser.newContext({locale:'fr-BE'}):null;
  try{
  for(let i=0;i<source.items.length;i++){
