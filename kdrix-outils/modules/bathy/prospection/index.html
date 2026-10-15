@@ -111,8 +111,10 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
  function pointsInside(p){return distance(p,[scope.lat,scope.lng])<=scope.radius*1000}
  function visibleEntities(kind){const rows=kind==='company'?[...companies.values()]:[...bodies.values()];return rows.filter(r=>Number.isFinite(r.lat)&&Number.isFinite(r.lon)&&pointsInside([r.lat,r.lon]))}
  function pointId(lat,lon){const p=projected(lat,lon);return cellId(Math.floor(p[0]/GRID),Math.floor(p[1]/GRID))}
- function bestWater(company){let closest=null;for(const w of visibleEntities('water')){const d=distance([company.lat,company.lon],[w.lat,w.lon]);if(d<750&&(!closest||d<closest.distance))closest={item:w,distance:d}}return closest}
- function bestCompany(water){let closest=null;for(const c of visibleEntities('company')){const d=distance([water.lat,water.lon],[c.lat,c.lon]);if(d<750&&(!closest||d<closest.distance))closest={item:c,distance:d}}return closest}
+ function relationId(companyId,waterId){return 'link:'+companyId+'|'+waterId}
+ function isRejected(companyId,waterId){return relations.get(relationId(companyId,waterId))?.status==='rejected'}
+ function bestWater(company){let closest=null;for(const w of visibleEntities('water')){const d=distance([company.lat,company.lon],[w.lat,w.lon]);if(d<750&&!isRejected(company.id,w.id)&&(!closest||d<closest.distance))closest={item:w,distance:d}}return closest}
+ function bestCompany(water){let closest=null;for(const c of visibleEntities('company')){const d=distance([water.lat,water.lon],[c.lat,c.lon]);if(d<750&&!isRejected(c.id,water.id)&&(!closest||d<closest.distance))closest={item:c,distance:d}}return closest}
  function category(tags){
   const x=[tags.landuse,tags.industrial,tags.leisure,tags.man_made,tags.water,tags['generator:source'],tags.power].join(' ').toLowerCase();
   if(/quarry|extract|mining/.test(x))return 'Carrière / extraction';
@@ -164,6 +166,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   proj4.defs('EPSG:3812',PROJECTION);map=L.map('map',{preferCanvas:true}).setView([scope.lat,scope.lng],9);
   base=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:20,attribution:'© OpenStreetMap'}).addTo(map);
   gridLayer=L.layerGroup().addTo(map);resultLayer=L.layerGroup().addTo(map);focusLayer=L.layerGroup().addTo(map);
+  map.on('click',e=>{if(running)return;const id=pointId(e.latlng.lat,e.latlng.lng);if(!planned.some(x=>x.id===id))return;selectedCell=id;selected=null;focus=null;renderDetail();$('scanSelected').disabled=!['company','water'].includes(tab);status('Secteur sélectionné : '+id+'. Vous pouvez analyser uniquement ce secteur.');});
  }
  function background(name){
   if(base)map.removeLayer(base);
@@ -214,7 +217,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
  }
  async function companyCell(cell){
   const response=await fetchJson(OVERPASS,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:new URLSearchParams({data:overpassQuery(cell)})},35000);
-  if(!Array.isArray(response.elements)||response.elements.length>1200)throw Error('Réponse OSM absente ou trop volumineuse');
+  if(!Array.isArray(response.elements)||response.remark||response.elements.length>1200)throw Error('Réponse OSM incomplète : '+(response.remark||'collection absente ou trop volumineuse'));
   let count=0;for(const o of response.elements){const record=companyFrom(o);if(!record)continue;const prev=companies.get(record.id);if(prev){record.notes=prev.notes;record.status=prev.status}
    await write('companies',record);companies.set(record.id,record);count++;
   }return count;
@@ -281,7 +284,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
    for(const item of all.slice(0,1250)){
     const color=item.kind==='water'?'#3589b9':'#dd8551';
     if(!Number.isFinite(item.lat)||!Number.isFinite(item.lon))continue;
-    const pin=L.circleMarker([item.lat,item.lon],{radius:5,color:'#fff',weight:1.5,fillColor:color,fillOpacity:.95}).addTo(resultLayer);
+    const pin=L.circleMarker([item.lat,item.lon],{radius:5,color:'#fff',weight:1.5,fillColor:color,fillOpacity:.95,bubblingMouseEvents:false}).addTo(resultLayer);
     pin.bindTooltip(item.kind==='water'?fmt(Math.round(item.area||0))+' m²':item.name);
     pin.on('click',()=>showEntity(item.kind,item.id));
    }
@@ -340,7 +343,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
  function showEntity(kind,id){
   const item=(kind==='water'?bodies:companies).get(id);if(!item)return;
   selected={type:kind,id};focus=item;selectedCell=pointId(item.lat,item.lon);
-  renderDetail();focusedDraw();
+  renderDetail();focusedDraw();if(window.innerWidth<650)$('map').scrollIntoView({behavior:'smooth',block:'center'});
  }
  function showProspect(id){
   const p=prospects.get(id);if(!p)return;selected={type:'prospect',id};focus=Number.isFinite(p.lat)?{lat:p.lat,lon:p.lon,kind:p.kind}:null;
@@ -367,6 +370,8 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
    item=(selected.type==='water'?bodies:companies).get(selected.id);
    if(!item){closeDetail();return}
    const nearest=item.kind==='water'?bestCompany(item):bestWater(item);
+   const pair=nearest?(item.kind==='company'?relationId(item.id,nearest.item.id):relationId(nearest.item.id,item.id)):null;
+   const match=pair?relations.get(pair):null;
    html='<div class="detail"><h2>'+safe(item.kind==='water'?'Plan d’eau · '+fmt(Math.round(item.area))+' m²':item.name)+'</h2>'+
     '<p><span class="tag">'+safe(item.category||'À vérifier')+'</span></p>'+
     '<p><b>Source :</b> '+safe(item.source||'à vérifier')+'</p>'+
@@ -374,7 +379,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
      '<p><b>Opérateur indiqué :</b> '+safe(item.operator||'Non renseigné')+'</p>'+
      (item.phone?'<p><b>Téléphone :</b> '+safe(item.phone)+'</p>':'')+(item.email?'<p><b>E-mail :</b> '+safe(item.email)+'</p>':''):'<p><b>Superficie cartographiée :</b> '+fmt(Math.round(item.area||0))+' m²</p>')+
     '<h3>Pourquoi KDRIX pourrait intervenir</h3><p>'+safe(opportunity(item.kind==='water'?item.category:item.category))+'</p>'+
-    (nearest?'<div class="area-info"><b>'+safe(nearest.item.kind==='water'?'Plan d’eau':'Établissement')+' à proximité :</b> '+safe(nearest.item.name||'Plan d’eau')+' · '+fmt(Math.round(nearest.distance))+' m. <b>Le lien d’exploitation n’est pas confirmé.</b><br><button class="minor" id="seeNear">Voir l’élément voisin</button></div>':'<div class="area-info">Aucun élément complémentaire connu à moins de 750 m dans les données déjà enregistrées. Cela ne signifie pas qu’il n’en existe aucun.</div>')+
+    (nearest?'<div class="area-info"><b>'+safe(nearest.item.kind==='water'?'Plan d’eau':'Établissement')+' à proximité :</b> '+safe(nearest.item.name||'Plan d’eau')+' · '+fmt(Math.round(nearest.distance))+' m. <b>Le lien d’exploitation n’est pas confirmé.</b><br><span class="tag">'+safe(match?.status==='confirmed'?'Lien confirmé par l’utilisateur':match?.status==='to_verify'?'À vérifier':'Association non vérifiée')+'</span><div class="actions"><button class="minor" id="seeNear">Voir l’élément voisin</button><button class="minor" data-relation="confirmed">Lien confirmé</button><button class="minor" data-relation="to_verify">À vérifier</button><button class="minor" data-relation="rejected">Aucun lien</button></div></div>':'<div class="area-info">Aucun élément complémentaire connu à moins de 750 m dans les données déjà enregistrées. Cela ne signifie pas qu’il n’en existe aucun.</div>')+
     '<h3>Sources et vérifications</h3>'+links(item)+
     '<div class="actions"><button class="primary" id="keep">Ajouter à mes prospects</button></div></div>';
   }else if(selectedCell){
@@ -392,10 +397,20 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   if(selected?.type==='water'||selected?.type==='company'){
    $('keep').onclick=()=>keepProspect(item);
    if($('seeNear'))$('seeNear').onclick=()=>showEntity(nearest.item.kind,nearest.item.id);
+   $('detail').querySelectorAll('[data-relation]').forEach(b=>b.onclick=()=>setRelation(item,nearest.item,b.dataset.relation));
   }
   if(selectedCell&&!selected){$('review').checked=!!registry.get(selectedCell)?.manual?.done;$('reviewNotes').value=registry.get(selectedCell)?.manual?.notes||'';$('saveReview').onclick=reviewCell}
  }
  function statusOptions(value){const options=[['a_etudier','À étudier'],['interessant','Intéressant'],['contact_recherche','Contact recherché'],['contacte','Contacté'],['a_relancer','À relancer'],['offre_envoyee','Offre envoyée'],['dossier_obtenu','Dossier obtenu'],['ecarte','Écarté']];return options.map(([key,label])=>'<option value="'+key+'"'+(key===value?' selected':'')+'>'+label+'</option>').join('')}
+ async function setRelation(item,near,decision){
+  const company=item.kind==='company'?item:near,water=item.kind==='water'?item:near;
+  const id=relationId(company.id,water.id);
+  if(decision==='confirmed'&&!confirm('Confirmer que vous avez vérifié le lien entre cette société et ce plan d’eau ? Il ne s’agit pas automatiquement d’une preuve de propriété.'))return;
+  const value={id,companyId:company.id,bodyId:water.id,status:decision,verifiedBy:'Utilisateur',notes:'',updatedAt:new Date().toISOString()};
+  await write('relations',value);relations.set(id,value);
+  status('Association enregistrée : '+(decision==='confirmed'?'lien confirmé par l’utilisateur':decision==='rejected'?'absence de lien indiquée':'lien à vérifier')+'.');
+  render();
+ }
  async function keepProspect(item){
   const id='prospect:'+item.id,old=prospects.get(id);
   const p={...old,id,targetId:item.id,kind:item.kind,category:item.category,name:item.name||'Plan d’eau à identifier',lat:item.lat,lon:item.lon,town:item.town||'',address:item.address||'',notes:old?.notes||'',status:old?.status||'a_etudier',source:item.source,createdAt:old?.createdAt||new Date().toISOString()};
