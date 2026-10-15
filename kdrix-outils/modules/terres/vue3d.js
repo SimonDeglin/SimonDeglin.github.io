@@ -1,6 +1,7 @@
 /* KDRIX - Vue 3D LiDAR : uniquement un MNT numerique continu preleve sur la fiche.
  * Le niveau final est commun avec le dossier local et la coupe A-B.
  */
+import {setupSpwSampling} from './vue3d_spw.js';
 const STORE_KEY='kdrix_prospection_v3',TERRAIN_DB='kdrix-terres-terrain-v1';
 const params=new URLSearchParams(location.search),siteId=params.get('site')||'',siteName=params.get('name')||'Site non renseigné';
 const $=id=>document.getElementById(id);
@@ -38,11 +39,11 @@ function geometryStamp(st){return JSON.stringify([st?.polygons||[],st?.exclusion
 async function loadPatch(){if(loading)return;loading=true;try{
  const p=await readPatch(),study=getStudy();
  if(!study){missing('Aucun dossier local','Ouvrir d’abord une fiche du module Terres pour créer la géométrie et enregistrer les données.');return}
- if(!p){missing('MNT numérique nécessaire','La vue 3D ne peut pas être calculée à partir du hillshade ou de quelques sondages SPW. Dans la fiche : dessinez le trou, importez un MNT GeoTIFF ou ASC du sol, puis cliquez sur « Ouvrir la 3D ».');return}
+ if(!p){missing('Relief numérique à récupérer','Cliquez sur « Récupérer automatiquement le relief SPW » pour une reconnaissance indicative. Pour une étude plus détaillée, importez un MNT GeoTIFF ou ASC depuis la fiche.');return}
  if(p.geometryStamp!==geometryStamp(study)){missing('La surface a été modifiée','La géométrie de la carrière a changé depuis la préparation de cet extrait. Retournez à la fiche et rouvrez la 3D pour mettre le MNT à jour.');return}
  if(!p.z||!p.nx||!p.ny||p.coverage<.9){missing('MNT incomplet','L’extrait ne contient pas suffisamment d’altitudes numériques pour représenter le terrain.');return}
  patch=p;hideMissing();$('terrainInfo').textContent=`${p.source?.name||'MNT numérique'} · maillage de visualisation ${nf(p.displayCellSize,1)} m · ${nf(p.coverage*100,0)} % de la fosse couvert`;
- $('sourceDetails').textContent=`${p.source?.name||'MNT importé'} · ${p.source?.description||''} · grille d’affichage ${nf(p.displayCellSize,1)} m · ${nf(p.coverage*100,0)} % de la fosse couverte. La date d’acquisition n’est pas vérifiable depuis le fichier seul. Aucun effet de végétation : altitude du sol uniquement si le MNT importé est bien un MNT.`;
+ $('sourceDetails').textContent=p.source?.sampled?`${p.source.name} · ${p.source.description} · couverture ${nf(p.coverage*100,0)} %. Sondages ponctuels SPW interpolés : précision limitée, non équivalente au MNT raster de 0,5 m.`:`${p.source?.name||'MNT importé'} · ${p.source?.description||''} · grille d’affichage ${nf(p.displayCellSize,1)} m · ${nf(p.coverage*100,0)} % de la fosse couverte. Date d’acquisition à vérifier. Relief du sol si le fichier importé est un MNT.`;
  if(!THREE){try{THREE=await import('three');({OrbitControls}=await import('three/addons/controls/OrbitControls.js'))}catch(e){missing('Moteur 3D indisponible','Impossible de charger Three.js. Une connexion Internet autorisant cdn.jsdelivr.net est nécessaire. '+String(e?.message||e));return}}
  if(!renderer)initialize3D();buildTerrain();updateControls();scheduleFill();
 }catch(err){missing('Erreur de chargement',String(err?.message||err))}finally{loading=false}}
@@ -117,7 +118,7 @@ function redrawFill(){if(!patch||!scene||!geometryData)return;disposeGroup(fillO
  const z=valueOfScenario();if(z!==null&&Number.isFinite(z)&&viewMode!=='terrain'){fillObject=fillGeometryFor(z);scene.add(fillObject)}
  const stats=volumesFor(z);if(stats){$('volume').textContent=nf(Math.round(stats.volume/100)*100)+' m³';$('area').textContent=nf(stats.area,0)+' m²';$('depth').textContent=nf(stats.meanDepth,1)+' m';
   const db=readDb(),prices=db.prices||{low:40,high:80};const euros=n=>n>=1e6?nf(n/1e6,2)+' M€':nf(n/1000,0)+' k€';$('money').textContent=euros(stats.volume*(Number(prices.low)||40))+' – '+euros(stats.volume*(Number(prices.high)||80));
-  $('volumeMethod').textContent=`Maillage numérique d'environ ${nf(patch.displayCellSize,1)} m issu d'un MNT importé, ${nf(stats.coverage*100,1)} % de l'emprise couverte. Surface projet horizontale, exclusions déduites. Ordre de grandeur, indépendant de l'exagération verticale.`;
+  $('volumeMethod').textContent=patch.source?.sampled?`Reconnaissance par sondages SPW interpolés espacés d’environ ${nf(patch.displayCellSize,1)} m, couverture ${nf(stats.coverage*100,1)} %. Volume seulement indicatif : pas une cubature sur le raster original 50 cm.`:`Maillage numérique d'environ ${nf(patch.displayCellSize,1)} m issu d'un MNT importé, ${nf(stats.coverage*100,1)} % de l'emprise couverte. Surface projet horizontale, exclusions déduites. Ordre de grandeur, indépendant de l'exagération verticale.`;
  }else $('volume').textContent='— m³';
 }
 function updateControls(){if(!patch)return;const q=settings(),levels=currentLevels(q),lev=levels[activeScenario];
@@ -143,6 +144,7 @@ function wireUI(){document.querySelectorAll('[data-display]').forEach(b=>b.addEv
  window.addEventListener('storage',e=>{if(e.key!==STORE_KEY)return;const st=getStudy();if(patch&&st&&patch.geometryStamp!==geometryStamp(st)){missing('La surface a changé','L’emprise a été modifiée dans la fiche. Rouvrir la vue 3D pour préparer un nouveau MNT.');return}updateControls();scheduleFill()});
  window.addEventListener('message',e=>{if(e.origin!==location.origin||e.data?.siteId!==siteId)return;if(e.data?.type==='KDRIX_3D_PATCH_READY')loadPatch();if(e.data?.type==='KDRIX_3D_PATCH_ERROR')missing('MNT 3D indisponible',String(e.data.message))});
 }
+setupSpwSampling({siteId,storeKey:STORE_KEY,terrainDb:TERRAIN_DB,getStudy,geometryStamp,reload:async()=>{patch=null;await loadPatch()},sourceIsImported:()=>!!patch&&!patch.source?.sampled});
 wireUI();loadPatch();
 // Recharge apres transfert IndexedDB de la fiche, meme si l'onglet etait ouvert plus vite que l'ecriture.
 for(const ms of [1500,4000,8000])setTimeout(()=>{if(!patch)loadPatch()},ms);

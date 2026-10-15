@@ -1,4 +1,6 @@
-c)=>Math.min(a[0],b[0])-eps<=c[0]&&c[0]<=Math.max(a[0],b[0])+eps&&Math.min(a[1],b[1])-eps<=c[1]&&c[1]<=Math.max(a[1],b[1])+eps;
+nts.length<3||areaMeters(points)<1)return false;const ll=points.map(v=>[v[1],v[0]]),eps=1e-12;
+ const orientation=(a,b,c)=>(b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]);
+ const onSeg=(a,b,c)=>Math.min(a[0],b[0])-eps<=c[0]&&c[0]<=Math.max(a[0],b[0])+eps&&Math.min(a[1],b[1])-eps<=c[1]&&c[1]<=Math.max(a[1],b[1])+eps;
  for(let i=0;i<ll.length;i++){const a=ll[i],b=ll[(i+1)%ll.length];if(Math.hypot(b[0]-a[0],b[1]-a[1])<eps)return false;
   for(let j=i+1;j<ll.length;j++){if(j===i+1||(i===0&&j===ll.length-1))continue;
    const c=ll[j],d=ll[(j+1)%ll.length],o1=orientation(a,b,c),o2=orientation(a,b,d),o3=orientation(c,d,a),o4=orientation(c,d,b);
@@ -55,17 +57,17 @@ async function restoreTerrainPatch(s){if(terrainRestored.has(s.id)||rasterFor(s)
  if(!patch||patch.geometryStamp!==terrainGeomStamp(s)||patch.coverage<.9)return false;
  const nw=fromLocalXY(patch.x0,patch.y1,patch.lat0,patch.lon0),se=fromLocalXY(patch.x1,patch.y0,patch.lat0,patch.lon0);
  const data=patch.z instanceof Float32Array?patch.z:new Float32Array(patch.z);
- activeRaster={kind:'grid',name:'Extrait local 3D · '+patch.source.name,crs:'EPSG:4326',originX:nw[1],originY:nw[0],resX:(se[1]-nw[1])/(patch.nx-1),resY:(se[0]-nw[0])/(patch.ny-1),width:patch.nx,height:patch.ny,data,nodata:null,count:data.length,description:'Extrait numérique rééchantillonné · maille '+fmt(patch.displayCellSize,1)+' m'};
+ activeRaster={kind:'grid',sampled:!!patch.source?.sampled,sampleSpacing:patch.displayCellSize,name:(patch.source?.sampled?'Sondages SPW · ':'Extrait local 3D · ')+patch.source.name,crs:'EPSG:4326',originX:nw[1],originY:nw[0],resX:(se[1]-nw[1])/(patch.nx-1),resY:(se[0]-nw[0])/(patch.ny-1),width:patch.nx,height:patch.ny,data,nodata:null,count:data.length,description:(patch.source?.sampled?'Échantillonnage de reconnaissance SPW (interpolation), maille ':'Extrait numérique rééchantillonné · maille ')+fmt(patch.displayCellSize,1)+' m'};
  rasterSiteId=s.id;return true;
 }
 function openTerrain3D(s){
  const url='vue3d.html?site='+encodeURIComponent(s.id)+'&name='+encodeURIComponent(s.name);
  // Ouvrir immediatement, avant les operations asynchrones, pour eviter le blocage anti-pop-up.
  const viewer=window.open(url,'_blank');if(!viewer){toast('Autoriser les fenêtres de ce portail pour ouvrir la vue 3D.',5000);return}
- if(rasterFor(s)?.kind==='grid'){
+ if(rasterFor(s)?.kind==='grid'&&!rasterFor(s).sampled){
   makeTerrainPatch(s).then(p=>{try{viewer.postMessage({type:'KDRIX_3D_PATCH_READY',siteId:s.id},location.origin)}catch{};toast('MNT numérique transmis à la vue 3D · '+fmt(p.coverage*100)+' % de la fosse couvert.');})
     .catch(e=>{toast('Préparation 3D : '+e.message,6500);try{viewer.postMessage({type:'KDRIX_3D_PATCH_ERROR',siteId:s.id,message:e.message},location.origin)}catch{}});
- }else toast('Onglet 3D ouvert. Sans MNT continu importé, le viewer expliquera la marche à suivre.',5000);
+ }else toast('Onglet 3D ouvert : cliquez sur « Récupérer le relief SPW » pour une vue indicative sans import.',5000);
 }
 
 function renderMapPolygons(s){
@@ -103,7 +105,7 @@ function updateSlopeMap(s){
  if(mapLayers.color){try{map.removeLayer(mapLayers.color)}catch{ }mapLayers.color=null;}
  const r=rasterFor(s);
  legend.hidden=false;
- if(!r||r.kind!=='grid'){
+ if(!r||r.kind!=='grid'||r.sampled){
   legend.innerHTML='<b>Carte des pentes : MNT continu requis.</b> Le fond reste le véritable ombrage LiDAR du SPW. Importer un GeoTIFF ou ASC pour calculer des pentes : les sondages espacés ne conviennent pas.';
   return;
  }
@@ -158,16 +160,9 @@ function updateColorMap(s){
  if(mapLayers.color)try{map.removeLayer(mapLayers.color)}catch{}mapLayers.color=null;
  const r=rasterFor(s);
  if(!r){legend.hidden=false;legend.innerHTML='<b>Altitudes indisponibles.</b> L’ombrage LiDAR officiel du sol reste visible. Charger des altitudes SPW ou un MNT numérique pour afficher les valeurs Z.';return}
- const vals=r.kind==='grid'?null:r.points?.map(p=>p.z).filter(Number.isFinite);
+ if(r.sampled){legend.hidden=false;legend.innerHTML='<b>Grille de reconnaissance SPW.</b> L’ombrage réel du sol reste visible ; les points espacés ne permettent pas de courbes ou couleurs altimétriques détaillées. Importer un MNT GeoTIFF pour cela.';return}const vals=r.kind==='grid'?null:r.points?.map(p=>p.z).filter(Number.isFinite);
  if(r.kind!=='grid'){
   // Des sondages clairsemés ne permettent PAS de reconstituer un relief RGB détaillé.
   if(!vals?.length){legend.hidden=false;legend.textContent='Points Z insuffisants.';return}
   const minimum=quantile(vals,.03),maximum=quantile(vals,.97),range=Math.max(1,maximum-minimum),group=L.layerGroup();
-  const selected=r.points.length>1200?r.points.filter((_,i)=>i%Math.ceil(r.points.length/1200)===0):r.points;
-  for(const point of selected){if(!Number.isFinite(point.z))continue;let lat=point.y,lon=point.x;
-   if(r.crs!=='EPSG:4326'){try{const ll=window.proj4?.(r.crs,'EPSG:4326',[point.x,point.y]);if(!ll)continue;lon=ll[0];lat=ll[1]}catch{continue}}
-   const rgb=colorAt((point.z-minimum)/range);const color=`rgb(${rgb.join(',')})`;
-   L.circleMarker([lat,lon],{radius:5.8,color:'#fff',weight:1.1,fillColor:color,fillOpacity:.95,interactive:true}).bindTooltip(fmt(point.z,1)+' m').addTo(group);
-  }
-  mapLayers.color=group.addTo(map);
-  legend.hidden=false;legend.innerHTML=`<strong>Altitudes ponctuelles : ${fmt(minimum,1)} à ${fmt(maximum,1)}
+  const selected=r.points.length>1200?r.points.filter((_,

@@ -25,6 +25,12 @@ header small{display:block;color:#a6c8cb;font-size:10px;font-weight:800;letter-s
 .line{display:flex;justify-content:space-between;align-items:center;gap:5px;font-size:12px;margin:9px 0}.line label{color:#607882}.line strong{color:#233f49}
 .value{font-size:30px;font-weight:850;letter-spacing:-.045em;color:#1b6d62;margin:6px 0}.note{font-size:11px;color:#6a7e83;line-height:1.65}.warn{border:1px solid #edd6ae;background:#fff9ed;border-radius:9px;color:#845b29;padding:11px;font-size:11px;line-height:1.55;margin-top:12px}
 input[type=number]{width:100%;border:1px solid #becfd2;border-radius:7px;padding:7px;color:#2d4854}.scenarioGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:12px}.scenarioGrid label{font-size:10px;font-weight:700;color:#68808b}.scenarioGrid input{margin-top:5px}
+.spwAction{background:#eef8f5;border:1px solid #b5d8cf;border-radius:10px;padding:13px;margin-top:13px}
+.spwAction button{border:0;background:#137b6e;color:white;font-size:13px;font-weight:800;border-radius:9px;padding:11px 13px;width:100%;margin-top:5px}
+.spwAction button[disabled]{opacity:.5;cursor:wait}.spwAction .spwCancel{background:#e4eeee;color:#48646b;width:auto;padding:7px 13px;margin-top:7px}
+.spwAction small{display:block;color:#52716a;font-size:11px;line-height:1.6;margin-top:7px}
+.spwAction progress{width:100%;height:12px;accent-color:#16806d;margin-top:8px}.spwAction progress[hidden]{display:none}
+.spwRefresh{width:100%;background:#ebf6f2;border:1px solid #afd5cb;color:#135b53;border-radius:8px;padding:9px 12px;font-size:11px;font-weight:750;margin-top:13px}
 button:focus-visible,input:focus-visible{outline:3px solid #e7b56d;outline-offset:2px}
 @media(max-width:890px){.layout{grid-template-columns:1fr;padding:10px}.stage{min-height:470px;height:55vh}.panel{max-height:unset}header{padding:0 12px;height:65px}header strong{font-size:13px}header a{font-size:11px}.stageInfo h2{font-size:13px}}
 </style>
@@ -34,8 +40,11 @@ button:focus-visible,input:focus-visible{outline:3px solid #e7b56d;outline-offse
 <header><div class="brand"><div class="mark">K</div><div><strong>KDRIX · Sites récepteurs de terres</strong><small>RELIEF NUMÉRIQUE · CUBATURE INDICATIVE</small></div></div><a id="returnLink" href="index.html">← Retour à la carte</a></header>
 <div class="layout">
 <main class="stage"><div id="scene"></div><div class="stageInfo"><h2 id="siteTitle">Vue 3D de l'excavation</h2><p id="terrainInfo">Chargement de l'extrait numérique du terrain…</p></div>
- <div id="missing" role="status"><h2>Préparation du terrain 3D</h2><p id="missingText">Lecture du MNT numérique local enregistré depuis la fiche KDRIX…</p><a id="missingBack" href="index.html">Revenir à la fiche →</a></div>
- <div class="tips">◈ Terrain mesuré uniquement depuis un MNT numérique continu · Gauche : rotation · Molette : zoom · Droite : déplacement · Les hauteurs affichées peuvent être exagérées, jamais les volumes.</div>
+ <div id="missing" role="status"><h2>Préparation du terrain 3D</h2><p id="missingText">Lecture du MNT numérique local enregistré depuis la fiche KDRIX…</p><div class="spwAction" id="spwBox"><button type="button" id="spwAutoFetch">⬇ Récupérer automatiquement le relief SPW</button>
+<small>Sans téléchargement manuel : interrogation des altitudes LiDAR 2021–2022 sur une grille. <b>Vue 3D indicative, pas un MNT continu à 50 cm.</b> Un GeoTIFF reste recommandé pour une cubature plus sérieuse.</small>
+<progress id="spwProgress" max="100" value="0" hidden></progress><p id="spwStatus" role="status"></p><button type="button" id="spwAbort" class="spwCancel" hidden>Annuler la récupération</button></div>
+<a id="missingBack" href="index.html">Revenir à la fiche →</a></div>
+ <div class="tips">◈ Relief issu d’un MNT importé ou de sondages SPW clairement identifiés · Gauche : rotation · Molette : zoom · Droite : déplacement · Les hauteurs affichées peuvent être exagérées, jamais les volumes.</div>
 </main>
 <aside class="panel" id="panel">
  <section class="group"><h3>Visualisation</h3><small>Comparer le terrain existant et la surface finale choisie.</small><div class="segment" id="displayModes"><button data-display="terrain" class="active">Terrain</button><button data-display="fill">Rempli</button><button data-display="compare">Comparaison</button></div>
@@ -44,7 +53,7 @@ button:focus-visible,input:focus-visible{outline:3px solid #e7b56d;outline-offse
  <div class="numberRow"><button id="zDown" aria-label="Diminuer de 0,5 m">−</button><input id="zValue" type="number" step="0.5" aria-label="Z final en mètres"><button id="zUp" aria-label="Augmenter de 0,5 m">+</button></div><input id="zSlider" type="range" step="0.5"><small>Z final horizontal en mètres, pas une cote autorisée.</small>
  <div class="scenarioGrid"><label>Bas (m)<input id="zLow" type="number" step="0.5"></label><label>Central (m)<input id="zCentral" type="number" step="0.5"></label><label>Haut (m)<input id="zHigh" type="number" step="0.5"></label></div></section>
  <section class="group"><h3>Volume potentiel</h3><div class="value" id="volume">— m³</div><div class="line"><label>Surface prise en compte</label><strong id="area">—</strong></div><div class="line"><label>Profondeur moyenne remblayée</label><strong id="depth">—</strong></div><div class="line"><label>CA brut théorique</label><strong id="money">—</strong></div><p class="note" id="volumeMethod">Le volume est estimé sur les cellules numériques couvertes par l'emprise, déduction faite des exclusions.</p><div class="warn">Cubature de prospection uniquement. Une coupe ne donne pas le volume total. Vérifier les évolutions depuis l'acquisition LiDAR et la présence éventuelle d'eau.</div></section>
- <section class="group"><h3>Source topographique</h3><div id="sourceDetails" class="note">En attente d'un MNT numérique continu.</div></section>
+ <section class="group"><h3>Source topographique</h3><div id="sourceDetails" class="note">En attente d’un MNT importé ou d’un maillage de sondages SPW.</div><button id="spwRefresh" class="spwRefresh" type="button">↻ Recharger les altitudes SPW (reconnaissance)</button></section>
 </aside></div>
 <script type="module" src="./vue3d.js"></script>
 </body></html>
