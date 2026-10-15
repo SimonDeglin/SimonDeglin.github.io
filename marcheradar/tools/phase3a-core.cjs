@@ -74,6 +74,24 @@ function parseTedAPI(data,publicationNumber){
  const officialPdf=safeURL(formats.pdf?.FRA||formats.pdf?.ENG||'');
  return {matched:true,deadline,officialPdf,sourceNotice:tedNotice(publicationNumber)};
 }
+function parseBosaDeadline(pageText){
+ // Strictly the titled tender-submission field on the already verified public BOSA general page.
+ const t=String(pageText||'').replace(/\u00a0/g,' ');
+ const re=/Date\s+limite\s+de\s+soumission\s+(\d{2})\/(\d{2})\/(20\d{2})\s+([01]\d|2[0-3]):([0-5]\d)\s+(CET|CEST)\b/i;
+ const m=re.exec(t);
+ if(!m)return {value:'',precision:'unknown'};
+ const iso=m[3]+'-'+m[2]+'-'+m[1];
+ const d=new Date(iso+'T12:00:00Z');
+ if(isNaN(d.getTime())||d.toISOString().slice(0,10)!==iso)return {value:'',precision:'unknown',warning:'date_invalide'};
+ const zone=m[6].toUpperCase()==='CET'?'+01:00':'+02:00';
+ const value=iso+'T'+m[4]+':'+m[5]+':00'+zone,instant=new Date(value);
+ if(isNaN(instant.getTime()))return {value:'',precision:'unknown'};
+ const zonePart=new Intl.DateTimeFormat('en-US',{timeZone:'Europe/Brussels',timeZoneName:'shortOffset'}).formatToParts(instant).find(x=>x.type==='timeZoneName');
+ const actual=String(zonePart?.value||'').replace('GMT','');
+ const expected=zone==='+01:00'?'+1':'+2';
+ if(actual!==expected)return {value:'',precision:'unknown',warning:'fuseau_CET_CEST_incoherent'};
+ return {value,precision:'datetime',evidence:m[0].replace(/\s+/g,' ').slice(0,130),label:'Date limite de soumission',sourceField:'BOSA page Générale'};
+}
 function docType(filename){
  const name=text(filename).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
  if(/(?:^|[_\s.-])(?:csc|cch|csс|bestek)(?:[_\s.-]|$)|cahier.{0,12}charges|cahier.{0,12}conditions/.test(name))return 'csc';
@@ -160,4 +178,4 @@ function mergeRecords(m,info){
  if(info.audit)item.documentAudit={...info.audit,checkedAt:stamp};
  return item;
 }
-module.exports={safeURL,tedNotice,bosaDocuments,parseTedXML,parseTedAPI,parseDocumentRows,docType,combineDateTime,oneDeadline,mergeRecords};
+module.exports={safeURL,tedNotice,bosaDocuments,parseTedXML,parseTedAPI,parseBosaDeadline,parseDocumentRows,docType,combineDateTime,oneDeadline,mergeRecords};
