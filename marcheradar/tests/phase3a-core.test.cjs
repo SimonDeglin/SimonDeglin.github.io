@@ -80,3 +80,16 @@ test('Fusion conserve ID, suivi et date vérifiée lors dune collecte moins pré
   deadlineVerified:true,deadlineSource:'TED XML',deadlinePublicationNumber:'701111-2026'});
  assert.equal(conflicting.deadline,updated.deadline);assert.equal(conflicting.deadlineReview.reason,'notice_distinct');
 });
+
+test('BOSA: vraie date limite repérée, zone CET/CEST contrôlée, pas de date inventée',()=>{
+ const page='Objet du marché\nMISSION DE SERVICES DE GÉOMÈTRE POUR LEVÉS BATHYMÉTRIQUES\nDate limite de soumission\n10/11/2026\n10:00 CET\nLes questions pourront être soumises';
+ const d=c.parseBosaDeadline(page);
+ assert.equal(d.value,'2026-11-10T10:00:00+01:00');
+ assert.equal(d.precision,'datetime');
+ assert.match(d.evidence,/Date limite de soumission/);
+ assert.equal(c.parseBosaDeadline('Date limite de soumission 16/11/2026 14:00 CET').value,'2026-11-16T14:00:00+01:00');
+ assert.equal(c.parseBosaDeadline('Date limite de soumission 10/07/2026 10:00 CEST').value,'2026-07-10T10:00:00+02:00');
+ assert.equal(c.parseBosaDeadline('Date limite de soumission 10/07/2026 10:00 CET').value,'');
+ assert.equal(c.parseBosaDeadline('Date limite de soumission 31/02/2026 10:00 CET').value,'');
+ assert.equal(c.parseBosaDeadline('Date limite d’inscription aux visites 10/11/2026 10:00 CET').value,'');
+});
