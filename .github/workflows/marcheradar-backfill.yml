@@ -1,0 +1,74 @@
+name: "MarchéRadar — rattrapage historique des marchés"
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/marcheradar-backfill.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: marcheradar-ted-data
+  cancel-in-progress: false
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    continue-on-error: true
+    steps:
+      - name: "Lire le dépôt"
+        id: checkout
+        uses: actions/checkout@v4
+        continue-on-error: true
+      - name: "Node.js 22"
+        id: node
+        uses: actions/setup-node@v4
+        with: { node-version: "22" }
+        continue-on-error: true
+      - name: "Tests métier et collecteurs"
+        id: tests
+        run: |
+          node marcheradar/tools/test-expanded.cjs
+          node marcheradar/tools/test-collector.cjs
+          node marcheradar/tools/test-bosa.cjs
+        continue-on-error: true
+      - name: "Rattrapage TED (90 jours)"
+        id: ted
+        if: steps.tests.outcome == 'success'
+        env: { MARCHE_RADAR_DAYS: "90" }
+        run: node marcheradar/tools/collect-ted.cjs
+        continue-on-error: true
+      - name: "Préparer navigateur BOSA"
+        id: browser
+        if: steps.tests.outcome == 'success'
+        run: npm install --no-save --no-package-lock --ignore-scripts playwright-core@1.56.1
+        continue-on-error: true
+      - name: "Rattrapage BOSA (30 jours)"
+        id: bosa
+        if: steps.browser.outcome == 'success'
+        env: { BOSA_DAYS: "30", BOSA_MAX_PAGES: "230" }
+        run: node marcheradar/tools/bosa-browser.cjs
+        continue-on-error: true
+      - name: "Publier les données authentiques sans doublons"
+        id: publish
+        if: steps.ted.outcome == 'success' || steps.bosa.outcome == 'success'
+        shell: bash
+        continue-on-error: true
+        run: |
+          git config user.name "marcheradar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add marcheradar/data.json
+          if ! git diff --cached --quiet; then
+            git commit -m "MarchéRadar : rattrapage historique TED+BOSA [skip ci]"
+            git pull --rebase origin main || true
+            git push origin HEAD:main || true
+          fi
+      - name: "Rapport sans e-mail d'échec"
+        if: always()
+        env:
+          TESTS: ${{ steps.tests.outcome }}
+          TED: ${{ steps.ted.outcome }}
+          BOSA: ${{ steps.bosa.outcome }}
+          PUBLISH: ${{ steps.publish.outcome }}
+        run: |
+          echo "### Rattrapage MarchéRadar" >> "$GITHUB_STEP_SUMMARY"
+          echo "Tests : $TESTS ; TED : $TED ; BOSA : $BOSA ; publication : $PUBLISH" >> "$GITHUB_STEP_SUMMARY"
