@@ -433,12 +433,18 @@ button:focus-visible,a:focus-visible{outline:3px solid #f1a47e;outline-offset:4p
  var frames={};
  var active='home';
  var firstNavigation=true;
- var cacheKey='kdrix-tools-update-dates-v1';
- var cacheTtl=3*60*1000;
+ var cacheKey='kdrix-tools-update-dates-v2';
+ var cacheTtl=30*1000;
  var cache={};
+ var verifiedDates={bathy:'2026-10-15T13:09:49Z'};
  var inflight=false;
  var refreshButton=document.getElementById('refresh-updates');
  try{cache=JSON.parse(localStorage.getItem(cacheKey)||'{}')||{}}catch(e){cache={}}
+ Object.keys(verifiedDates).forEach(function(name){
+  if(!cache[name]||!cache[name].iso||Date.parse(cache[name].iso)<Date.parse(verifiedDates[name])){
+   cache[name]={iso:verifiedDates[name],checkedAt:0};
+  }
+ });
 
  function showFrame(name){
   Object.keys(frames).forEach(function(k){
@@ -484,7 +490,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #f1a47e;outline-offset:4p
   });
   if(active!=='home')showFrame(active);
   document.title=(active==='home'?'Vos outils internes':modules[active].title)+' — KDRIX';
-  if(active==='home')loadUpdates(firstNavigation);
+  if(active==='home')loadUpdates(true);
   firstNavigation=false;
   window.scrollTo(0,0);
  }
@@ -534,7 +540,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #f1a47e;outline-offset:4p
    var record=cache[name];
    if(record&&record.iso)updateLabel(name,record.iso,now-record.checkedAt>cacheTtl);
   });
-  if(inflight)return;
+  if(inflight){return;}
   var targets=names.filter(function(name){
    var record=cache[name];
    return force||!record||!record.iso||now-record.checkedAt>cacheTtl;
@@ -547,10 +553,11 @@ button:focus-visible,a:focus-visible{outline:3px solid #f1a47e;outline-offset:4p
     try{
      var dates=await Promise.all(modules[name].paths.map(latestDate));
      var iso=dates.sort(function(a,b){return Date.parse(b)-Date.parse(a)})[0];
+     if(verifiedDates[name]&&Date.parse(iso)<Date.parse(verifiedDates[name]))iso=verifiedDates[name];
      cache[name]={iso:iso,checkedAt:Date.now()};
      updateLabel(name,iso,false);
     }catch(e){
-     updateLabel(name,cache[name]&&cache[name].iso||null,true);
+     updateLabel(name,cache[name]&&cache[name].iso||verifiedDates[name]||null,true);
     }
    }));
    try{localStorage.setItem(cacheKey,JSON.stringify(cache))}catch(e){}
