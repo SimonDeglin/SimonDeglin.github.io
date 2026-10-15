@@ -218,6 +218,7 @@ body{background:#f7f7f7;color:#303339}
 <div class="section-label">DOSSIERS DE SUIVI</div>
 <div class="side-help">Glisser-déposer pour classer</div>
 <nav aria-label="Dossiers de suivi" id="foldersNav" class="folders">
+<button class="nav-item" data-view="catalogue"><svg class="ico"><use href="#i-list"/></svg><span class="nav-name">Tous les marchés</span><span class="count" data-count="catalogue">0</span></button>
 <button class="nav-item active" data-view="inbox" data-folder="inbox"><svg class="ico"><use href="#i-list"/></svg><span class="nav-name">Listing complet</span><span class="count" data-count="inbox">0</span></button>
 <button class="nav-item" data-view="maybe" data-folder="maybe"><i class="folder-dot maybe"></i><span class="nav-name">À définir</span><span class="count" data-count="maybe">0</span></button>
 <button class="nav-item" data-view="answer" data-folder="answer"><i class="folder-dot answer"></i><span class="nav-name">À répondre</span><span class="count" data-count="answer">0</span></button>
@@ -580,7 +581,16 @@ function matchesSectorFilter(tags){
 }
 function renderCategories(){
  var box=el('sidebarCategories');
- var pool=allMarkets().filter(function(m){return !isStage(state.view)||stageOf(m.id)===state.view});
+ var pool=allMarkets().filter(function(m){
+  var tags=m.sectors||tagsOf(m);
+  if(!tags.some(function(s){return !saved.hiddenSectors[s]}))return false;
+  if(isStage(state.view)&&stageOf(m.id)!==state.view)return false;
+  if(state.view==='inbox'&&(m.screening==='review'||m.screening==='excluded'))return false;
+  if(state.view==='review'&&!(m.screening==='review'&&stageOf(m.id)==='inbox'))return false;
+  if(m.screening==='excluded'&&stageOf(m.id)==='inbox')return false;
+  if(state.region!=='all'&&m.region!==state.region)return false;
+  return true;
+ });
  function count(ids){return pool.filter(function(m){return (m.sectors||tagsOf(m)).some(function(s){return ids.includes(s)})}).length}
  var names={'Topo':'Relevés topo','Scan':'Scanner 3D','Drone':'Drone & photogrammétrie','Hydro':'Bathymétrie',
  'VRD':'Études / projets de voirie','Reseaux':'Réseaux & impétrants','Hydraulique':'Hydraulique & jaugeages',
@@ -620,7 +630,7 @@ function renderStats(){
  
  
  
- document.querySelectorAll('[data-count]').forEach(function(b){b.textContent=b.dataset.count==='inbox'?allMarkets().filter(function(m){return stageOf(m.id)==='inbox'&&m.screening!=='review'&&m.screening!=='excluded'}).length:stageNumber(b.dataset.count)});
+ document.querySelectorAll('[data-count]').forEach(function(b){b.textContent=b.dataset.count==='catalogue'?allMarkets().length:b.dataset.count==='inbox'?allMarkets().filter(function(m){return stageOf(m.id)==='inbox'&&m.screening!=='review'&&m.screening!=='excluded'}).length:stageNumber(b.dataset.count)});
 }
 function renderNav(){
  var labels={inbox:'Listing complet',maybe:'À définir',answer:'À répondre',await:"En attente d'attribution",won:'Obtenu',lost:'Perdu',discarded:'Sans suite',catalogue:'Tous les marchés',review:'À vérifier',favorites:'Favoris',urgent:'Échéances proches'};
