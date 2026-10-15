@@ -994,9 +994,9 @@ function refreshElectricSum(){
 ['scan-day','scan-night'].forEach(k=>$('#'+k).addEventListener('input',refreshElectricSum));
 function updateScanHint(){
  const hints={
-  electric:'Lune en haut = nuit, soleil en bas = jour. Seuls les chiffres noirs comptent. Encadre les deux lignes si nécessaire.',
-  pv:'Itron : six chiffres noirs et un rouge (dixième). Arrondi au kWh. Encadre les chiffres si nécessaire.',
-  water:'Eau : chiffres noirs et rouges. Arrondi au dixième de m³.'
+  electric:'Place les deux lignes dans le cadre : Nuit en haut, Jour en bas. Le trait central sert de repère.',
+  pv:'Encadre uniquement les six chiffres noirs et le chiffre rouge à droite (dixième de kWh).',
+  water:'Encadre seulement les rouleaux de chiffres noirs et rouges, sans les petits cadrans.'
  };
  $('#scan-hint').textContent=hints[scanKind]||'';
 }
@@ -1009,15 +1009,21 @@ function showScanKind(){
  $('#confirm-scan').textContent=electric?'Utiliser ce total':'Utiliser cet index';
  updateScanHint();
  if(electric)refreshElectricSum();
- else $('#confirm-scan').disabled=false;
+ else refreshSingleScanConfirm();
 }
+function refreshSingleScanConfirm(){
+ if(scanKind==='electric')return refreshElectricSum();
+ const v=$('#scan-value').value.trim();
+ $('#confirm-scan').disabled=!v||!Number.isFinite(Number(v))||Number(v)<0;
+}
+$('#scan-value').addEventListener('input',refreshSingleScanConfirm);
 $('#scan-meter').onchange=()=>{
  scanKind=$('#scan-meter').value;
  $('#scan-value').value='';
  $('#scan-day').value='';
  $('#scan-night').value='';
  showScanKind();
- if(pendingImage&&$('#scan-preview').complete){scanCrop=null;findMeterDisplay();detectIndexFromImage();}
+ if(pendingImage&&$('#scan-preview').complete)prepareScanFrame(true);
 };
 function capturePhotoData(file){
  return new Promise((resolve,reject)=>{
@@ -1297,6 +1303,71 @@ function findMeterDisplay(){
   return true;
  }catch(error){scanAutoZones=null;scanAutoConfidence='none';return false;}
 }
+
+/* The highlighted frame stores actual source-image pixel coordinates;
+   CSS width, iPhone device pixel ratio and object-fit letterboxing do not
+   affect the selected OCR area. */
+function scanFrameViewport(){
+ const image=$('#scan-preview'),wrap=$('#scan-preview-wrap');
+ if(!image?.naturalWidth||!image?.naturalHeight)return null;
+ const ir=image.getBoundingClientRect(),wr=wrap.getBoundingClientRect();
+ const scale=Math.min(ir.width/image.naturalWidth,ir.height/image.naturalHeight);
+ if(!Number.isFinite(scale)||scale<=0)return null;
+ return {w:image.naturalWidth,h:image.naturalHeight,scale,
+  left:ir.left+(ir.width-image.naturalWidth*scale)/2,
+  top:ir.top+(ir.height-image.naturalHeight*scale)/2,
+  wrapLeft:wr.left,wrapTop:wr.top};
+}
+function clampScanFrame(rect){
+ const g=scanFrameViewport();if(!g||!rect)return null;
+ const minW=Math.min(g.w,Math.max(g.w*.10,42/g.scale));
+ const minH=Math.min(g.h,Math.max(g.h*.055,36/g.scale));
+ const width=Math.max(minW,Math.min(g.w,Number(rect.width)||minW));
+ const height=Math.max(minH,Math.min(g.h,Number(rect.height)||minH));
+ return {left:Math.max(0,Math.min(g.w-width,Number(rect.left)||0)),
+  top:Math.max(0,Math.min(g.h-height,Number(rect.top)||0)),width,height};
+}
+function defaultScanFrame(){
+ const g=scanFrameViewport();if(!g)return null;
+ const shape=scanKind==='electric'?
+  {left:.16,top:.30,width:.68,height:.37}:
+  scanKind==='pv'?
+  {left:.14,top:.37,width:.72,height:.22}:
+  {left:.12,top:.37,width:.76,height:.23};
+ return clampScanFrame({left:shape.left*g.w,top:shape.top*g.h,
+  width:shape.width*g.w,height:shape.height*g.h});
+}
+function refreshScanCropPreview(){
+ if(!scanCrop)return;
+ displayImageSpaceCrop(scanCrop);
+ const preview=scanSourceImage(scanCrop,false);
+ if(preview){
+  $('#scan-zoom').src=preview;
+  $('#scan-index-zoom').classList.remove('hidden');
+  $('#scan-analysis').src=preview;
+ }
+}
+function invalidateScanReading(){
+ $('#scan-night').value='';$('#scan-day').value='';$('#scan-value').value='';
+ scanLastText='';scanLastData=null;
+ $('#scan-raw-text').textContent='Aucune lecture de ce cadre pour le moment.';
+ if(scanKind==='electric')refreshElectricSum();else refreshSingleScanConfirm();
+ $('#scan-message').textContent='Cadre prêt : déplace-le ou ajuste ses coins, puis touche « Lire dans le cadre ».';
+}
+function prepareScanFrame(auto=true){
+ scanCrop=null;scanAutoZones=null;scanAutoConfidence='manual';
+ const found=auto&&findMeterDisplay();
+ if(found){
+  scanCrop=clampScanFrame(scanCrop);
+  // When automatic crop is expanded to a minimum touch size, use the
+  // visible frame itself for OCR, not obsolete thin red-wheel subzones.
+  scanAutoZones=null;
+ }else scanCrop=defaultScanFrame();
+ if(scanCrop)refreshScanCropPreview();
+ else $('#scan-crop-box').classList.add('hidden');
+ invalidateScanReading();
+}
+
 function scanSourceImage(rect=scanCrop,negative=false){
  const img=$('#scan-preview');
  if(!rect||!img.complete||!img.naturalWidth)return pendingImage;
