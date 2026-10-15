@@ -159,6 +159,9 @@ function cleanPrevious(items){
  const output=[],removed=[],reasons={};
  for(const m of items||[]){
   if(!m||!m.title||m.source==='Démo')continue;
+  if(m.source==='LOCALE'&&String(m.screeningReason||'').startsWith('verification_locale_')){
+   output.push({...m,screening:'excluded'});continue;
+  }
   const result=profile.screen(m);
   if(!result.classification){
    removed.push(m.publicationNumber||m.id);
