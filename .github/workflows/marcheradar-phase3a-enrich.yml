@@ -23,15 +23,15 @@ jobs:
           node-version: "22"
       - name: Unit tests Phase 3A
         run: node --test marcheradar/tests/phase3a-bosa.test.cjs
-      - name: Collect BOSA metadata (never invent document URLs)
-        run: node marcheradar/tools/bosa-documents-enrich.cjs --write
-      - name: Validate enriched data before allowing branch update
-        run: |
-          node -e "const d=require('./marcheradar/data.json'); if(d.items.length!==64)throw Error('Market count changed');let n=d.items.reduce((s,m)=>s+(m.documentInventory||[]).length,0);console.log('BOSA_DOCUMENTS_INDEXED='+n);if(n<1)throw Error('No document manifest confirmed from public API')"
-      - name: Install Chromium for regression tests
+      - name: Install Chromium for public document collection and regression tests
         run: |
           npm install --no-save --no-package-lock playwright
           npx playwright install chromium
+      - name: Collect BOSA metadata through public web browser (no private authentication)
+        run: node marcheradar/tools/bosa-documents-enrich.cjs --browser --write
+      - name: Validate enriched data before allowing branch update
+        run: |
+          node -e "const d=require('./marcheradar/data.json'); if(d.items.length!==64)throw Error('Market count changed');let n=d.items.reduce((s,m)=>s+(m.documentInventory||[]).length,0);console.log('BOSA_DOCUMENTS_INDEXED='+n);if(n<1)throw Error('No document manifest confirmed from public API')"
       - name: Regression Phase 1
         run: node marcheradar/tests/phase1-browser.cjs
       - name: Regression Phase 2
