@@ -73,14 +73,22 @@ function review(text){
       // Verify what the public interface really exposes, without inventing a direct file URL.
       if(e.documentsTab&&!e.documentsTab.error){
        try{
-        const btn=page.getByRole('button',{name:/Télécharger la dernière version/i}).first();
-        if(await btn.count()){
-         const pending=page.waitForEvent('download',{timeout:8000});
-         await btn.click({timeout:8000});
-         const download=await pending;
-         e.sampleDownload={suggestedFilename:download.suggestedFilename(),officialOrigin:new URL(download.url()).hostname,downloadEvent:true};
-         await download.cancel().catch(()=>{});
-        }else e.sampleDownload={downloadEvent:false,reason:'Aucun bouton de téléchargement direct visible'};
+        if(m.publicationWorkspaceId!=='0765b50e-85f5-4aae-b2ca-2ed66c14e354')e.sampleDownload={downloadEvent:false,reason:'Échantillon limité au dossier Bathymétrie'};
+        else {
+         const btn=page.getByRole('button',{name:/Télécharger tous les documents/i}).first();
+         if(await btn.count()){
+          const pending=page.waitForEvent('download',{timeout:24000});
+          await btn.click({timeout:9000});
+          const download=await pending;
+          const file=await download.path(),size=fs.statSync(file).size;
+          const head=fs.readFileSync(file).subarray(0,6).toString('hex');
+          e.sampleDownload={suggestedFilename:download.suggestedFilename(),officialOrigin:new URL(download.url()).hostname,downloadEvent:true,bytes:size,fileSignature:head};
+          if(size<30_000_000&&head.startsWith('504b')) {
+           try{const cp=require('node:child_process');e.sampleDownload.zipEntries=cp.execFileSync('unzip',['-Z','-1',file],{encoding:'utf8',timeout:6000,maxBuffer:12000}).split('\n').filter(Boolean).slice(0,25);}
+           catch(unzipErr){e.sampleDownload.zipError=String(unzipErr.message).slice(0,100)}
+          }
+         }else e.sampleDownload={downloadEvent:false,reason:'Aucun bouton public de téléchargement du lot'};
+        }
        }catch(err){e.sampleDownload={downloadEvent:false,reason:String(err.message).slice(0,170)}}
       }
       await context.close();
