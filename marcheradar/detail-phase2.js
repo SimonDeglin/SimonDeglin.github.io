@@ -121,7 +121,7 @@
  }
  function pill(text,tone){return '<span class="mr2-pill '+esc(tone||'muted')+'">'+esc(text)+'</span>'}
  function external(item){
-  return '<a class="mr2-source-link" target="_blank" rel="noopener noreferrer" href="'+esc(item.url)+'"><span class="mr2-link-name">'+esc(item.label)+'</span><span class="mr2-link-origin">'+esc(item.site)+'</span><span class="mr2-link-arrow" aria-hidden="true">↗</span></a>';
+  return '<a class="mr2-source-link" target="_blank" rel="noopener noreferrer" href="'+esc(item.url)+'"><span class="mr2-link-name">'+esc(item.label)+'</span><span class="mr2-link-origin">'+esc(item.site)+'</span>'+(item.meta?'<span class="mr2-link-meta">'+esc(item.meta)+'</span>':'')+'<span class="mr2-link-arrow" aria-hidden="true">↗</span></a>';
  }
  function section(title,body,subtitle){
   return '<section class="mr2-section"><div class="mr2-section-head"><h4>'+esc(title)+'</h4>'+(subtitle?'<span>'+esc(subtitle)+'</span>':'')+'</div>'+body+'</section>';
