@@ -1,0 +1,30 @@
+name: "MarchéRadar — Test ciblé CSC BOSA"
+on:
+  push:
+    branches: ["feature/marcheradar-phase3a-download-20261015"]
+    paths:
+      - "marcheradar/tools/phase3a-csc-click-probe.cjs"
+      - ".github/workflows/marcheradar-phase3a-csc.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  document-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install chromium
+      - run: node marcheradar/tools/phase3a-csc-click-probe.cjs
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3a-csc-click-observation
+          if-no-files-found: warn
+          retention-days: 5
+          path: marcheradar/audit/phase3a-csc-click-probe.json
