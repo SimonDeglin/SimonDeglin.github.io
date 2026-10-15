@@ -103,6 +103,24 @@ button:focus-visible,a:focus-visible{outline:3px solid #f1a47e;outline-offset:4p
 .local-copy strong{font:800 14px "Manrope",sans-serif;color:#29414a}
 .local-copy p{margin:6px 0 0;color:#7d8a8b;font-size:12px;line-height:1.5}
 .local-tag{background:#f2f4f1;color:#64796f;border-radius:50px;padding:9px 13px;font-weight:750;font-size:10px;white-space:nowrap}
+.local-panel{flex-wrap:wrap}
+.local-copy{min-width:0}
+.local-actions{width:205px;display:flex;align-items:stretch;flex-direction:column;gap:8px;flex:none}
+.local-tag{align-self:center}
+.local-button{border:1px solid #19313c;border-radius:10px;background:#19313c;color:white;font-weight:800;font-size:12px;padding:12px 16px;transition:background .18s,border-color .18s}
+.local-button:hover{background:#294958;border-color:#294958}
+.local-edit{border:0;background:transparent;color:#67818a;font-size:11px;font-weight:700;padding:5px 10px}
+.local-edit:hover{text-decoration:underline;color:#a95c35}
+.local-config{width:100%;border-top:1px dashed #e1e6e2;padding:17px 0 2px}
+.local-config label{display:block;font-size:12px;font-weight:800;color:#36515b;margin-bottom:8px}
+.local-url-row{display:flex;gap:9px;align-items:center}
+.local-url-row input{flex:1;min-width:0;border:1px solid #cfdcd9;border-radius:10px;background:#fbfcfa;color:#203940;font:500 13px "DM Sans",sans-serif;padding:12px 13px}
+.local-url-row input:focus-visible{outline:2px solid #e7a77e;outline-offset:1px}
+.local-help{font-size:11px;line-height:1.55;color:#728583;margin:10px 0 0}
+.local-feedback{width:100%;color:#38745b;font-size:12px;font-weight:650;line-height:1.5}
+.local-feedback.error{color:#a1442c}
+@media(max-width:700px){.local-actions{width:100%;flex-direction:row;align-items:center}.local-actions .local-button{flex:1}.local-tag{margin-right:auto}}
+@media(max-width:580px){.local-actions{margin-top:3px}.local-edit{padding:8px 0}.local-url-row{flex-direction:column;align-items:stretch}.local-tag{display:none}}
 .footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 0 30px;color:#8a9698;font-size:11px;line-height:1.6}
 .footer strong{font-weight:800;color:#677d80}
 .workspace{height:calc(100dvh - 77px);position:relative;background:white}
@@ -240,8 +258,24 @@ button:focus-visible,a:focus-visible{outline:3px solid #f1a47e;outline-offset:4p
 
   <aside class="local-panel" aria-label="Application locale de suivi">
    <span class="local-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="12" rx="2"/><path d="M8 9V6a4 4 0 0 1 8 0v3M12 14v3"/></svg></span>
-   <div class="local-copy"><strong>Suivi des offres et dossiers</strong><p>Cet outil reste sur votre ordinateur pour préserver la confidentialité des dossiers et factures. Ouvrez-le depuis votre favori local habituel.</p></div>
-   <span class="local-tag">Application locale</span>
+   <div class="local-copy">
+    <strong>Suivi des offres et dossiers</strong>
+    <p>Vos offres, missions et factures restent sur votre ordinateur. Retrouvez ici un raccourci vers votre fichier local, sans publication de données.</p>
+   </div>
+   <div class="local-actions">
+    <span class="local-tag">Application locale</span>
+    <button type="button" class="local-button" id="dossiers-action">Configurer mon raccourci</button>
+    <button type="button" class="local-edit" id="dossiers-edit" hidden>Modifier le lien enregistré</button>
+   </div>
+   <div class="local-config" id="dossiers-config" hidden>
+    <label for="dossiers-url">Adresse de votre favori « Suivi KDRIX »</label>
+    <div class="local-url-row">
+     <input type="text" id="dossiers-url" inputmode="url" autocomplete="off" spellcheck="false" placeholder="file:///C:/Users/.../Suivi_KDRIX%20(1).html">
+     <button type="button" class="local-button" id="dossiers-save">Enregistrer</button>
+    </div>
+    <p class="local-help">Dans Chrome ou Edge : clic droit sur votre favori « Suivi KDRIX » → Modifier → copier l'adresse (URL) → coller ici. Ce lien est enregistré uniquement dans ce navigateur.</p>
+   </div>
+   <div class="local-feedback" id="dossiers-feedback" role="status" aria-live="polite" hidden></div>
   </aside>
  </section>
  <footer class="frame footer">
@@ -258,6 +292,80 @@ button:focus-visible,a:focus-visible{outline:3px solid #f1a47e;outline-offset:4p
 (function(){
  'use strict';
  var repo='SimonDeglin/SimonDeglin.github.io';
+ var dossiersKey='kdrix-local-dossiers-url-v1';
+ var dossiersAction=document.getElementById('dossiers-action');
+ var dossiersEdit=document.getElementById('dossiers-edit');
+ var dossiersConfig=document.getElementById('dossiers-config');
+ var dossiersInput=document.getElementById('dossiers-url');
+ var dossiersSave=document.getElementById('dossiers-save');
+ var dossiersFeedback=document.getElementById('dossiers-feedback');
+ var dossiersUrl='';
+ try{dossiersUrl=localStorage.getItem(dossiersKey)||''}catch(e){}
+ function dossiersMessage(message,error){
+  dossiersFeedback.textContent=message;
+  dossiersFeedback.hidden=!message;
+  dossiersFeedback.classList.toggle('error',!!error);
+ }
+ function dossiersState(){
+  dossiersAction.textContent=dossiersUrl?'Copier le lien du suivi':'Configurer mon raccourci';
+  dossiersEdit.hidden=!dossiersUrl;
+ }
+ function dossiersShowSetup(){
+  dossiersConfig.hidden=false;
+  dossiersInput.value=dossiersUrl;
+  dossiersMessage('',false);
+  dossiersInput.focus();
+ }
+ function dossiersValidUrl(value){
+  try{
+   var parsed=new URL(value);
+   return parsed.protocol==='file:'&&/^\\/[A-Za-z]:\\//.test(parsed.pathname)&&/\\.html?$/i.test(decodeURIComponent(parsed.pathname));
+  }catch(e){return false}
+ }
+ function dossiersSaveUrl(){
+  var raw=dossiersInput.value.trim();
+  if(!dossiersValidUrl(raw)){
+   dossiersMessage("Collez l'adresse complète de votre favori, commençant par file:/// et terminant par .html.",true);
+   dossiersInput.focus();
+   return;
+  }
+  dossiersUrl=new URL(raw).href;
+  try{localStorage.setItem(dossiersKey,dossiersUrl)}catch(e){
+   dossiersMessage("Le raccourci fonctionne pour cette session, mais le navigateur n'autorise pas son enregistrement permanent.",true);
+  }
+  dossiersConfig.hidden=true;
+  dossiersState();
+  if(dossiersFeedback.hidden||!dossiersFeedback.classList.contains('error'))dossiersMessage('Raccourci configuré. Utilisez le bouton « Copier le lien du suivi ».',false);
+ }
+ async function dossiersCopyLink(){
+  if(!dossiersUrl){dossiersShowSetup();return}
+  try{
+   if(!navigator.clipboard||!navigator.clipboard.writeText)throw new Error('Clipboard API absente');
+   await navigator.clipboard.writeText(dossiersUrl);
+   dossiersMessage('Lien copié ! Faites Ctrl + L, puis Ctrl + V et Entrée pour ouvrir votre suivi.',false);
+  }catch(e){
+   var temporary=document.createElement('textarea');
+   temporary.value=dossiersUrl;
+   temporary.style.position='fixed';
+   temporary.style.left='-9999px';
+   document.body.appendChild(temporary);
+   temporary.select();
+   var ok=false;
+   try{ok=document.execCommand('copy')}catch(ex){}
+   temporary.remove();
+   if(ok)dossiersMessage('Lien copié ! Faites Ctrl + L, puis Ctrl + V et Entrée pour ouvrir votre suivi.',false);
+   else{
+    dossiersShowSetup();
+    dossiersInput.select();
+    dossiersMessage("La copie automatique est bloquée. Copiez l'adresse sélectionnée avec Ctrl + C, puis collez-la dans la barre d'adresse.",true);
+   }
+  }
+ }
+ dossiersAction.addEventListener('click',dossiersCopyLink);
+ dossiersEdit.addEventListener('click',dossiersShowSetup);
+ dossiersSave.addEventListener('click',dossiersSaveUrl);
+ dossiersInput.addEventListener('keydown',function(event){if(event.key==='Enter'){event.preventDefault();dossiersSaveUrl()}});
+ dossiersState();
  var modules={
   'marche-radar':{url:'../marcheradar/',title:'Marché Radar',paths:['marcheradar/index.html','marcheradar/tools']},
   bathy:{url:'./modules/bathy/',title:'Prospection Bathy',paths:['kdrix-outils/modules/bathy']},
