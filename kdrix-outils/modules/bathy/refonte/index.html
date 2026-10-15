@@ -368,7 +368,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
     if(!Number.isFinite(item.lat)||!Number.isFinite(item.lon))continue;
     const pin=L.circleMarker([item.lat,item.lon],{radius:5,color:'#fff',weight:1.5,fillColor:color,fillOpacity:.95,bubblingMouseEvents:false}).addTo(resultLayer);
     pin.bindTooltip(item.kind==='water'?fmt(Math.round(item.area||0))+' m²':item.name);
-    pin.on('click',()=>showEntity(item.kind,item.id));
+    pin.on('click',()=>tab==='prospects'?showProspect(item.id):showEntity(item.kind,item.id));
    }
    $('mapLegend').innerHTML='<span><i class="bullet company"></i>Site / société</span><span><i class="bullet water"></i>Plan d’eau PICC</span><span>Attribution à vérifier</span>';
   }
@@ -534,7 +534,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
     (x.targetId&&p.targetId===x.targetId)||
     (x.id&&p.id===x.id)||
     (text.length>2&&p.name?.trim().toLocaleLowerCase('fr')===text&&Number.isFinite(lat)&&Number.isFinite(lon)&&
-     Number.isFinite(Number(p.lat))&&Number.isFinite(Number(p.lon))&&
+     p.lat!=null&&p.lon!=null&&Number.isFinite(Number(p.lat))&&Number.isFinite(Number(p.lon))&&
      distance([lat,lon],[Number(p.lat),Number(p.lon)])<125)
   ));
  }
@@ -552,7 +552,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   const same=item?duplicateFor(incoming):null;
   if(same){status('Ce résultat figure déjà dans « Mon listing ». Ouverture de la fiche existante.');selectTab('prospects');showProspect(same.id);return}
   draft=incoming;selected={type:'draft',id:null};
-  focus=Number.isFinite(Number(incoming.lat))&&Number.isFinite(Number(incoming.lon))?
+  focus=incoming.lat!=null&&incoming.lon!=null&&Number.isFinite(Number(incoming.lat))&&Number.isFinite(Number(incoming.lon))?
    {...incoming,lat:Number(incoming.lat),lon:Number(incoming.lon)}:null;
   renderDetail();if(focus)focusedDraw();
  }
