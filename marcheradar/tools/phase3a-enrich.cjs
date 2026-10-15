@@ -133,7 +133,17 @@ async function fetchBOSA(m){
   if(!norm(body).includes(norm(m.title.slice(0,Math.min(55,m.title.length))))){
    out.status='mismatch';out.error='Titre du dossier BOSA différent de la fiche';return out;
   }
-  const snippets=body.split('\n').map(s=>s.trim()).filter(Boolean);
+  // The title was matched above: interpret only the named official BOSA field.
+  const submission=m.noticeKind==='competition'?core.parseBosaDeadline(body):{value:'',precision:'unknown'};
+  if(submission.value){
+   out.deadline=submission;out.deadlineVerified=true;
+   out.deadlineSource='BOSA — page générale (Date limite de soumission)';
+   out.deadlineSourceUrl=general;
+   out.deadlinePublicationNumber=m.bdaReference||m.internalReference||uuid;
+   out.deadlineFields=['Date limite de soumission','heure et fuseau CET/CEST'];
+   out.deadlineEvidenceText=submission.evidence;
+  }
+    const snippets=body.split('\n').map(s=>s.trim()).filter(Boolean);
   const deadlines=[];
   for(let i=0;i<snippets.length;i++)if(/date limite (?:de )?(?:soumission|remise)|deadline|délai de remise/i.test(snippets[i])){
    deadlines.push(snippets.slice(i,i+4).join(' ').slice(0,250));
@@ -154,7 +164,7 @@ async function fetchBOSA(m){
   out.status='accessible';
   out.audit={source:'BOSA',status:'accessible',document_rows:parsed.documents.length,
    external_catalogues:parsed.external.length,deadline_candidates:deadlines.slice(0,3),
-   warning:'Fichiers référencés dans la liste publique; téléchargement direct et contenu non encore analysés.'};
+   deadline_verified:!!out.deadlineVerified,deadline_value:out.deadline?.value||'',deadline_evidence:out.deadlineEvidenceText||'',warning:'Fichiers référencés dans la liste publique; téléchargement direct et contenu non encore analysés.'};
   return out;
  }catch(err){out.status='failed';out.error=String(err.message).slice(0,240);out.audit={source:'BOSA',status:'failed',error:out.error};return out}
  finally{await context.close().catch(()=>{})}
