@@ -13,13 +13,16 @@
   "counts": {
     "total": 261,
     "sitesRepertories": 261,
-    "sitesVerifies": 0,
-    "deliberationsConnectees": 0,
+    "sitesVerifies": 21,
+    "deliberationsConnectees": 20,
     "zones": {
       "principale": 196,
       "exterieure_provisoire": 26,
       "peripherique": 39
-    }
+    },
+    "checkedWithErrors": 3,
+    "documentsRead": 106,
+    "opportunities": 39
   },
   "communes": [
     {
@@ -181,12 +184,41 @@
       "estimatedMinutes": 17,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.ans-ville.be/ma-ville/vie-politique",
+          "title": "Vie politique",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:30.144Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.ans-ville.be/ma-ville/vie-politique/college-communal",
+          "title": "Collège communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:31.111Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.ans-ville.be/ma-ville/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:31.943Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.ans-ville.be/ma-ville/vie-politique/conseil-du-cpas",
+          "title": "Conseil du CPAS",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:32.776Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:35:29.317Z",
+      "lastDocumentCheck": "2026-10-15T08:35:32.777Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 4,
       "opportunities": 0,
       "errors": []
     },
@@ -397,12 +429,41 @@
       "estimatedMinutes": 20,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.awans.be/ma-commune/vie-politique",
+          "title": "Vie politique",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:09.676Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.awans.be/ma-commune/vie-politique/vie-politique",
+          "title": "Vie politique",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:10.497Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.awans.be/ma-commune/vie-politique/carte-didentite-de-la-commune-dawans",
+          "title": "Carte d'identité de la commune d'Awans",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:11.324Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.awans.be/ma-commune/vie-politique/declaration-de-politique-generale",
+          "title": "Déclaration de politique générale",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:13.693Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:36:08.851Z",
+      "lastDocumentCheck": "2026-10-15T08:36:15.401Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 6,
       "opportunities": 0,
       "errors": []
     },
@@ -469,14 +530,18 @@
       "estimatedMinutes": 26,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_en_erreur",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-15T08:38:03.005Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [
+        {
+          "reason": "fetch failed"
+        }
+      ]
     },
     {
       "ins": "82039",
@@ -685,13 +750,49 @@
       "estimatedMinutes": 18,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.beyne-heusay.be/ma-commune",
+          "title": "Vie politique",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:38.320Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.beyne-heusay.be/conseil-communal",
+          "title": "Le conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:39.115Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.beyne-heusay.be/proces-verbaux-cc",
+          "title": "Conseil communal - Procès verbaux",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:39.912Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.beyne-heusay.be/ordre-du-jour-cc",
+          "title": "Conseil communal - Ordre du jour",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:44.176Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.beyne-heusay.be/sites/default/files/documents/urbanisme/Avis-d-Annonce-de-Projet-rue-de-Clecy-93.pdf",
+          "title": "Rue de Clécy 93 - Avis d'…",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:45.531Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:35:37.525Z",
+      "lastDocumentCheck": "2026-10-15T08:35:45.531Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
-      "opportunities": 0,
+      "documentsRead": 7,
+      "opportunities": 5,
       "errors": []
     },
     {
@@ -757,12 +858,41 @@
       "estimatedMinutes": 23,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.blegny.be/ma-commune/vie-politique",
+          "title": "Vie politique",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:50.374Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.blegny.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:52.351Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.blegny.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:54.813Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.blegny.be/ma-commune/vie-politique/conseil-de-laction-sociale",
+          "title": "Conseil de l'action sociale",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:57.472Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:36:48.841Z",
+      "lastDocumentCheck": "2026-10-15T08:36:57.474Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 4,
       "opportunities": 0,
       "errors": []
     },
@@ -1213,14 +1343,48 @@
       "estimatedMinutes": 18,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.chaudfontaine.be/ma-commune/vie-politique-participation/",
+          "title": "Vie politique &#038; participation",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:49.568Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.chaudfontaine.be/ma-commune/vie-politique-participation/le-bourgmestre-les-elu%c2%b7e%c2%b7s/",
+          "title": "Le Bourgmestre &#038; les élu·e·s",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:50.931Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.chaudfontaine.be/ma-commune/vie-politique-participation/chaudfontaine-demain/",
+          "title": "Chaudfontaine demain",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:52.428Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.chaudfontaine.be/ma-commune/vie-politique-participation/representations-citoyennes/",
+          "title": "Représentations citoyennes",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:53.848Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:35:48.187Z",
+      "lastDocumentCheck": "2026-10-15T08:35:55.716Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
-      "opportunities": 0,
-      "errors": []
+      "documentsRead": 4,
+      "opportunities": 2,
+      "errors": [
+        {
+          "url": "https://www.chaudfontaine.be/wp-content/uploads/2026/10/VAC-217-WEB.pdf",
+          "reason": "Document trop volumineux"
+        }
+      ]
     },
     {
       "ins": "25018",
@@ -1525,13 +1689,42 @@
       "estimatedMinutes": 27,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.crisnee.be/politique/conseil-communal",
+          "title": "Conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:38:18.643Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.crisnee.be/politique/conseil-communal/ordre-du-jour",
+          "title": "Ordre du jour",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:38:20.996Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.crisnee.be/politique/conseil-communal/pv-du-conseil-communal",
+          "title": "PV du Conseil Communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:38:22.059Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.crisnee.be/politique/videos-du-conseil-communal",
+          "title": "Vidéos du conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:38:26.031Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:38:17.712Z",
+      "lastDocumentCheck": "2026-10-15T08:38:26.033Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
-      "opportunities": 0,
+      "documentsRead": 7,
+      "opportunities": 4,
       "errors": []
     },
     {
@@ -1837,12 +2030,41 @@
       "estimatedMinutes": 27,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.engis.be/ma-commune/vie-politique",
+          "title": "Vie politique",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:38:28.924Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.engis.be/ma-commune/vie-politique/cabinet-du-Bourgmestre",
+          "title": "Cabinet du Bourgmestre",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:38:30.440Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.engis.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:38:31.870Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.engis.be/ma-commune/vie-politique/transparence-gouvernance",
+          "title": "Transparence Gouvernance",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:38:33.238Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:38:27.598Z",
+      "lastDocumentCheck": "2026-10-15T08:38:33.240Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 4,
       "opportunities": 0,
       "errors": []
     },
@@ -1909,12 +2131,48 @@
       "estimatedMinutes": 25,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.esneux.be/vie-politique.html?lg=FR",
+          "title": "Vie politique",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:28.246Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.esneux.be/vie-politique/pacte-de-majorite.html?lg=FR",
+          "title": "Pacte de majorité",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:29.295Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.esneux.be/vie-politique/college-communal.html?lg=FR",
+          "title": "Collège communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:32.490Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.esneux.be/vie-politique/conseil-communal.html?lg=FR",
+          "title": "Conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:33.867Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.esneux.be/uploads/files_/PDFgeneral/RAVeL_regle_RAVeL_002.pdf",
+          "title": "Cliquez ici",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:35.603Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:37:27.192Z",
+      "lastDocumentCheck": "2026-10-15T08:37:35.603Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 7,
       "opportunities": 0,
       "errors": []
     },
@@ -2149,13 +2407,42 @@
       "estimatedMinutes": 26,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.fexhe-le-haut-clocher.be/ma-commune/vie-politique",
+          "title": "Vie politique",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:38:06.034Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.fexhe-le-haut-clocher.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:38:07.425Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.fexhe-le-haut-clocher.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:38:08.810Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.fexhe-le-haut-clocher.be/ma-commune/vie-politique/conseil-communal/seances-du-conseil/ordres-du-jour-conseil-communal",
+          "title": "Ordres du jour du Conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:38:10.392Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:38:04.739Z",
+      "lastDocumentCheck": "2026-10-15T08:38:14.744Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
-      "opportunities": 0,
+      "documentsRead": 6,
+      "opportunities": 1,
       "errors": []
     },
     {
@@ -2173,12 +2460,41 @@
       "estimatedMinutes": 21,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique",
+          "title": "Vie politique",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:42.518Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/cabinet-de-la-bourgmestre",
+          "title": "Cabinet de la Bourgmestre",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:44.056Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:46.206Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:47.135Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:36:41.212Z",
+      "lastDocumentCheck": "2026-10-15T08:36:47.137Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 4,
       "opportunities": 0,
       "errors": []
     },
@@ -2197,14 +2513,52 @@
       "estimatedMinutes": 20,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.fleron.be/ma-commune/vie-politique",
+          "title": "Vie politique",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:18.448Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.fleron.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:19.639Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.fleron.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:20.839Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.fleron.be/ma-commune/vie-politique/declaration-de-politique-generale",
+          "title": "Déclaration de Politique Communale (DPC) 2024 - 2030",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:22.176Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:36:16.995Z",
+      "lastDocumentCheck": "2026-10-15T08:36:25.449Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 4,
       "opportunities": 0,
-      "errors": []
+      "errors": [
+        {
+          "url": "https://www.fleron.be/ma-commune/vie-politique/declaration-de-politique-generale/declaration-de-politique-communale-2024-2030.pdf",
+          "reason": "Document trop volumineux"
+        },
+        {
+          "url": "https://www.fleron.be/bulletin-communal/le-mag-107.pdf",
+          "reason": "Document trop volumineux"
+        }
+      ]
     },
     {
       "ins": "52021",
@@ -2629,13 +2983,42 @@
       "estimatedMinutes": 19,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.grace-hollogne.be/ma-commune/vie-politique",
+          "title": "Vie politique",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:58.639Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.grace-hollogne.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:00.096Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.grace-hollogne.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:02.678Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.grace-hollogne.be/ma-commune/vie-politique/conseil-de-laction-sociale",
+          "title": "Conseil de l'Action Sociale",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:05.716Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:35:57.237Z",
+      "lastDocumentCheck": "2026-10-15T08:36:07.157Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
-      "opportunities": 0,
+      "documentsRead": 6,
+      "opportunities": 10,
       "errors": []
     },
     {
@@ -2941,12 +3324,41 @@
       "estimatedMinutes": 16,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.herstal.be/ma-ville/vie-politique",
+          "title": "Vie politique",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:23.886Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.herstal.be/ma-ville/vie-politique/le-college-communal",
+          "title": "Le collège communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:24.831Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.herstal.be/ma-ville/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:25.991Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.herstal.be/ma-ville/vie-politique/transparence",
+          "title": "Transparence",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:27.155Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:35:21.856Z",
+      "lastDocumentCheck": "2026-10-15T08:35:27.157Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 4,
       "opportunities": 0,
       "errors": []
     },
@@ -3229,14 +3641,52 @@
       "estimatedMinutes": 20,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.juprelle.be/ma-commune/vie-politique-1",
+          "title": "Vie politique",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:29.178Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.juprelle.be/publications",
+          "title": "Publications",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:30.334Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.juprelle.be/publications/publications-diverses",
+          "title": "Publications diverses (avant le 1/07/2025)",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:31.605Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.juprelle.be/publications/test-horodatage-recette",
+          "title": "Publications générales",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:36.273Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:36:27.621Z",
+      "lastDocumentCheck": "2026-10-15T08:36:39.704Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 6,
       "opportunities": 0,
-      "errors": []
+      "errors": [
+        {
+          "url": "https://www.juprelle.be/ma-commune/nos-brochures/brochures/juprelle-info-54.pdf",
+          "reason": "Document trop volumineux"
+        },
+        {
+          "url": "https://www.juprelle.be/ma-commune/nos-brochures/brochures/juprelle-info-53.pdf",
+          "reason": "Document trop volumineux"
+        }
+      ]
     },
     {
       "ins": "53044",
@@ -3613,12 +4063,41 @@
       "estimatedMinutes": 10,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.liege.be/mes-services/bien-etre-animal/publications",
+          "title": "Publications",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:06.424Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.liege.be/mes-services/communication/publications",
+          "title": "Publications",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:09.127Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.liege.be/mes-services/sante/publications",
+          "title": "Publications",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:11.922Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.liege.be/mes-services/seniors/conseil-communal-consultatif-des-aines-c-c-c-a",
+          "title": "Conseil communal consultatif des Aînés (CCCA)",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:14.490Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:35:04.131Z",
+      "lastDocumentCheck": "2026-10-15T08:35:14.494Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 4,
       "opportunities": 0,
       "errors": []
     },
@@ -4309,14 +4788,18 @@
       "estimatedMinutes": 27,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_en_erreur",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-15T08:38:34.553Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [
+        {
+          "reason": "fetch failed"
+        }
+      ]
     },
     {
       "ins": "25072",
@@ -4381,13 +4864,42 @@
       "estimatedMinutes": 27,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.olne.be/vie-politique",
+          "title": "Vie politique",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:38:37.417Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.olne.be/vie-politique/declaration-de-politique-generale",
+          "title": "Déclaration de politique communale",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:38:38.329Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.olne.be/vie-politique/college-communal",
+          "title": "Collège communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:38:39.393Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.olne.be/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:38:40.434Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:38:36.502Z",
+      "lastDocumentCheck": "2026-10-15T08:38:40.436Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
-      "opportunities": 0,
+      "documentsRead": 4,
+      "opportunities": 4,
       "errors": []
     },
     {
@@ -4525,12 +5037,48 @@
       "estimatedMinutes": 25,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.oupeye.be/ma-commune/vie-politique",
+          "title": "Vie politique",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:38.530Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.oupeye.be/ma-commune/vie-politique/le-college-communal",
+          "title": "Le Collège communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:40.565Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.oupeye.be/ma-commune/vie-politique/le-conseil-communal",
+          "title": "Le Conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:42.857Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.oupeye.be/ma-commune/vie-politique/elections-2024-1",
+          "title": "Elections communales et provinciales 2024",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:44.763Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.oupeye.be/ma-commune/services-communaux/environnement/avis-et-enquetes-1/reunion-dinformation-demande-de-permis-denvironnement-classe-1-et-etude-dincidences-societe-heidelberg-materials-lixhe/fichiers/hmlixhe-avis_rip_fr_20260916-ok.pdf",
+          "title": "Publié Réunion d'information - Demande de permis d'environnement Classe 1 et étude d'incidences -société Heidelberg Materials Lixhe Concerna",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:50.103Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:37:37.369Z",
+      "lastDocumentCheck": "2026-10-15T08:37:51.863Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 7,
       "opportunities": 0,
       "errors": []
     },
@@ -5149,12 +5697,41 @@
       "estimatedMinutes": 13,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.saint-nicolas.be/ma-commune/vie-politique",
+          "title": "Vie politique",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:17.073Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.saint-nicolas.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:18.003Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.saint-nicolas.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:18.944Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.saint-nicolas.be/ma-commune/vie-politique/imaginer-demain",
+          "title": "Imaginer demain",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:35:20.276Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:35:16.117Z",
+      "lastDocumentCheck": "2026-10-15T08:35:20.278Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 4,
       "opportunities": 0,
       "errors": []
     },
@@ -5269,10 +5846,10 @@
       "estimatedMinutes": 17,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_verifie_sans_document",
       "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "lastSiteCheck": "2026-10-15T08:35:34.889Z",
+      "lastDocumentCheck": "2026-10-15T08:35:35.778Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
@@ -5413,14 +5990,59 @@
       "estimatedMinutes": 24,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "http://www.soumagne.be/index.php?pg=122",
+          "title": "Conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:36:59.572Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "http://www.soumagne.be/index.php?pg=186",
+          "title": "S�ances du Conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:02.893Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "http://www.soumagne.be/index.php?pg=200",
+          "title": "Ecouter le conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:04.872Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "http://www.soumagne.be/index.php?pg=52",
+          "title": "Conseil communal des enfants",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:07.343Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "http://www.soumagne.be/manager/upload/files/PDF/odd/objectifs_developpement_durable.pdf",
+          "title": "Feuille de route vers les objectifs de d�veloppement durable",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:08.295Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:36:58.668Z",
+      "lastDocumentCheck": "2026-10-15T08:37:09.340Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
-      "opportunities": 0,
-      "errors": []
+      "documentsRead": 8,
+      "opportunities": 10,
+      "errors": [
+        {
+          "url": "http://www.soumagne.be/manager/upload/files/PDF/jeunesse/guide_atl_2026_2027.pdf",
+          "reason": "Document trop volumineux"
+        },
+        {
+          "url": "http://www.soumagne.be/manager/upload/files/PDF/jeunesse/guide_atl_2026_2027.pdf",
+          "reason": "Document trop volumineux"
+        }
+      ]
     },
     {
       "ins": "63072",
@@ -5749,13 +6371,42 @@
       "estimatedMinutes": 24,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "sources_documents_lus",
+      "deliberationSources": [
+        {
+          "url": "https://www.trooz.be/ma-commune/vie-politique",
+          "title": "Vie politique",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:12.323Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.trooz.be/ma-commune/vie-politique/copy_of_college-communal",
+          "title": "Collège communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:14.253Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.trooz.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:21.956Z",
+          "documentsRead": 1
+        },
+        {
+          "url": "https://www.trooz.be/ma-commune/vie-politique/fichier",
+          "title": "Pv et ordres du jour du Conseil",
+          "type": "site_communal",
+          "last_success": "2026-10-15T08:37:24.882Z",
+          "documentsRead": 1
+        }
+      ],
+      "lastSiteCheck": "2026-10-15T08:37:10.973Z",
+      "lastDocumentCheck": "2026-10-15T08:37:24.883Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
-      "opportunities": 0,
+      "documentsRead": 6,
+      "opportunities": 3,
       "errors": []
     },
     {
@@ -5989,14 +6640,18 @@
       "estimatedMinutes": 27,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_en_erreur",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-15T08:38:51.577Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [
+        {
+          "reason": "fetch failed"
+        }
+      ]
     },
     {
       "ins": "91143",
@@ -6286,5 +6941,6 @@
       "opportunities": 0,
       "errors": []
     }
-  ]
+  ],
+  "lastMunicipalPass": "2026-10-15T08:38:52.228Z"
 }
