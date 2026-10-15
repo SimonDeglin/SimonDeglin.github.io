@@ -126,7 +126,7 @@ async function run(){
 }
 async function enrichMissing(){
  if(companyBusy||active)return;
- const targets=[...waters.values()].filter(w=>!w.company&&w.status!=='ecarte').slice(0,12);
+ const targets=[...waters.values()].filter(w=>geoDistance([w.lat,w.lon],origin)<=R&&!w.company&&w.status!=='ecarte').slice(0,12);
  if(!targets.length){$('enrichState').textContent='Aucune fiche sans contact à traiter dans les résultats enregistrés.';return}
  if(!confirm('Rechercher les contacts de '+targets.length+' bassins maximum ? Cette action utilise OpenStreetMap et peut être interrompue en fermant l’onglet.'))return;
  companyBusy=true;$('enrich').disabled=true;
