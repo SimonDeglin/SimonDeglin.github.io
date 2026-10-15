@@ -6,8 +6,9 @@ const data=JSON.parse(fs.readFileSync(path.join(ROOT,'data.json'),'utf8'));
 const refs=['682034-2026','674146-2026','549850-2026','656876-2026','490060-2026',
  '0765b50e-85f5-4aae-b2ca-2ed66c14e354','3b81ba48-e9f4-4d6f-9c05-5ba699c7f209',
  '834b6f23-3906-4589-a0e7-afae9c91d26a','2057ca19-d4bd-43d6-bf36-bbc34ec2f71f',
- 'communal:2b207c11f31dd9f8'];
+ 'communal:7092b8f35c924d8b04e4'];
 const selected=refs.map(id=>data.items.find(x=>x.publicationNumber===id||x.publicationWorkspaceId===id||x.id===id)).filter(Boolean);
+if(selected.length!==10)throw Error('Pilot must contain exactly ten real markets, found '+selected.length);
 const budget=Number(process.env.PROBE_LIMIT||10);
 const out=[];
 const allowedDomains=new Set(['ted.europa.eu','www.publicprocurement.be','www.chaudfontaine.be']);
@@ -44,7 +45,7 @@ function review(text){
     if(!safeURL(t.url)){e.error='domain not allowed';continue}
     try{
      const res=await get(t.url);
-     e.direct={http:res.status,type:res.type,bytes:res.bytes,final:res.url,extract:res.status===200?review(res.body):null,preview:res.status===200?clean(res.body.slice(0,400)):''};
+     e.direct={http:res.status,type:res.type,bytes:res.bytes,final:res.url,extract:res.status===200?review(res.body):null,preview:clean(res.body.slice(0,650))};
     }catch(err){e.direct={error:String(err.message).slice(0,180)}}
     if(browser&&m.source==='BOSA'){
      try{
@@ -58,6 +59,17 @@ function review(text){
        anchors:[...document.querySelectorAll('a[href]')].filter(a=>/document|pdf|annexe|cahier|télécharg|bestek|download/i.test(a.href+' '+a.innerText)).slice(0,22).map(a=>({text:a.innerText.slice(0,65),href:a.href})),
        buttons:[...document.querySelectorAll('button')].map(x=>x.innerText.trim().slice(0,50)).filter(Boolean).slice(0,30)
       }));
+      // Document tab is public navigation, not a guessed file download.
+      try{
+       await page.goto(t.url.replace(/\/general(?:[?#].*)?$/,'/documents'),{waitUntil:'domcontentloaded',timeout:24000});
+       await page.waitForTimeout(3000);
+       e.documentsTab=await page.evaluate(()=>({
+        title:document.title,text:(document.body.innerText||'').slice(0,1300),
+        anchors:[...document.querySelectorAll('a[href]')].slice(0,35).map(a=>({text:a.innerText.slice(0,80),href:a.href})),
+        buttons:[...document.querySelectorAll('button')].map(x=>({text:x.innerText.trim().slice(0,55),aria:x.getAttribute('aria-label')})).filter(x=>x.text||x.aria).slice(0,35),
+        rows:[...document.querySelectorAll('tr,[role="row"]')].slice(0,12).map(r=>r.innerText.slice(0,150))
+       }));
+      }catch(docErr){e.documentsTab={error:String(docErr.message).slice(0,180)}}
       await context.close();
      }catch(err){e.browser={error:String(err.message).slice(0,180)}}
     }
