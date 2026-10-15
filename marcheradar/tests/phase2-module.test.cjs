@@ -92,3 +92,27 @@ test('BOSA/TED et sources locales réelles: distinction des types de liens',()=>
  assert.equal(api.primarySource(local).kind,'council');
  assert.match(api.render(local).html,/Il ne s’agit pas nécessairement d’un appel d’offres ouvert/);
 });
+
+
+test('Phase 3A: les fichiers BOSA listés sont visibles sans simuler des liens directs',()=>{
+ const page='https://www.publicprocurement.be/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents';
+ const m=market({
+  source:'BOSA',deadline:'2026-11-10T10:00:00+01:00',
+  deadlineEvidence:{verified:true,precision:'datetime',source:'BOSA page générale',sourceUrl:'https://www.publicprocurement.be/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/general'},
+  documents:[
+   {id:'doc-1',title:'CCH bathymetrie FR.pdf',type:'csc',accessPageUrl:page,accessibility:'listed_public',version:'1',publicationDate:'2026-10-13',languages:['FR'],url:''},
+   {id:'doc-2',title:'Annexe bathymetrie FR.pdf',type:'annexe',accessPageUrl:page,accessibility:'listed_public',version:'1',publicationDate:'2026-10-13',languages:['FR'],url:''}
+  ],
+  officialSources:[{source:'BOSA',url:'https://www.publicprocurement.be/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/general'}]
+ });
+ const rendered=api.render(m),list=api.sources(m);
+ assert.equal(rendered.documentCount,2);
+ assert.equal(list.filter(x=>x.kind==='document').length,2);
+ assert.match(rendered.html,/CCH bathymetrie FR.pdf/);
+ assert.match(rendered.html,/Annexe bathymetrie FR.pdf/);
+ assert.match(rendered.html,/Fichier listé sur le portail officiel/);
+ assert.match(rendered.html,/UTC\+01:00/);
+ assert.match(rendered.html,/Échéance vérifiée dans BOSA page générale/);
+ assert.match(rendered.html,/version 1/);
+ assert.equal(api.primarySource(m).kind,'notice');
+});
