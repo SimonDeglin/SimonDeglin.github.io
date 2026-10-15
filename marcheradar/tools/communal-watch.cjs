@@ -48,6 +48,14 @@ function officialLink(candidate,home){
 }
 const COUNCIL=/conseil communal|conseil municipal|deliberation|deliberations|proces verbal|proces-verbal|pv.des.seances|compte rendu|comptes rendus|ordre du jour|ordres du jour|decision|publication|vie politique/;
 const DOC=/\.(?:pdf|docx?|odt)(?:\?|$)/i;
+function isCouncilSource(source){
+ const title=profile.fold(source.title||'');
+ const route=String(source.url||'').replace(/^https?:\/\/[^/]+/,'').toLowerCase();
+ if(/consultatif|des enfants|vie politique|college communal|declaration de politique/.test(title)&&
+    !/proces verbal|ordre du jour|seance du conseil/.test(title))return false;
+ return /\bconseil communal\b|\bproces verbal\b|\bordres? du jour\b|\bdeliberations?\b|pv du conseil|pv et ordres? du jour|seances? du conseil/.test(title)||
+  /\/(?:conseil-communal|le-conseil-communal|proces-verbaux-cc|ordre-du-jour-cc|pv-du-conseil-communal)(?:\/|$)/i.test(route);
+}
 function candidates(html,url){
  return anchors(html,url).filter(x=>officialLink(x.url,url)&&
   (COUNCIL.test(profile.fold(x.text))||DOC.test(x.url))).sort((a,b)=>{
@@ -203,7 +211,7 @@ async function scanCommune(commune){
    else text=htmlText(r.bytes.toString('utf8'));
    if(text.length<80)continue; // Ne pas qualifier une page JavaScript vide de source connectée.
    examined++;
-   sources.push({url:item.url,title:item.title,type:/deliberations\.be/.test(item.url)?'deliberations_be':'site_communal',
+   if(isCouncilSource(item))sources.push({url:item.url,title:item.title,type:/deliberations\.be/.test(item.url)?'deliberations_be':'conseil_communal',
     last_success:new Date().toISOString(),documentsRead:1});
    for(const s of excerpts(text)){const o=opportunity(commune,{url:item.url},s);if(o)docs.push(o)}
    // Une page de conseil renvoie souvent à des projets/PV en PDF.
@@ -279,5 +287,5 @@ async function run(){
  fs.writeFileSync(DATA,JSON.stringify(data,null,2)+'\n','utf8');
  console.log('COMMUNAL_WATCH_OK',JSON.stringify({checked:selected.length,sitesOK,docsRead,added:added.length,errors,covered:watched,total:registry.communes.length}));
 }
-module.exports={anchors,candidates,excerpts,councilStage,opportunity,qualityProspect,run};
+module.exports={anchors,candidates,isCouncilSource,excerpts,councilStage,opportunity,qualityProspect,run};
 if(require.main===module)run().catch(e=>{console.error('COMMUNAL_WATCH_UNAVAILABLE',e.message);process.exitCode=1});
