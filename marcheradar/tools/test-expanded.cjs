@@ -39,4 +39,13 @@ assert.equal(local.councilStage('Décision portant sur la désignation du bureau
 const o=local.opportunity(entry,{url:'https://www.amay.be/conseil/2026/10/pv.pdf'},"Le conseil communal approuve un projet de réaménagement de la place communale.");
 assert.ok(o&&o.source==='LOCALE'&&o.screening==='review'&&o.url.endsWith('pv.pdf'));
 assert.equal(o.id,local.opportunity(entry,{url:o.url},o.evidence).id);
+// Marchés réellement identifiés lors de l'audit KDRIX du 15 octobre.
+check("Désignation d'un géomètre chargé du site industriel de Chertal","Reconversion de l'ancien site",['71353000'],'Topo');
+check("Désignation d'un géomètre pour divisions parcellaires","Domaine communal à Dison",['71000000'],'Foncier');
+check("Réalisation de certificats de performance énergétique (PEB)","Certification de 1100 logements wallons",['71314300'],'PEB');
+assert.ok(profile.classify("N54 : marché d'études pour la réalisation du chaînon manquant",
+ "Études préalables à la mise en œuvre de la nouvelle voirie",['71000000'])?.sectors.includes('VRD'),
+ 'Les études routières SOFICO restent visibles même sans le mot géomètre');
+assert.equal(profile.screen({title:"Marché de topographie",description:"",region:"Belgique",buyer:"Stad Diest"}).reason,'acheteur_flamand');
+
 console.log('MARCHERADAR_EXPANDED_TEST_OK',JSON.stringify({dictionaryExpressions:total,cases:25}));
