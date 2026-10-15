@@ -126,7 +126,7 @@ async function fetchBOSA(m){
   const page=await context.newPage();
   const general=url.replace(/\/documents$/,'/general');
   await page.goto(general,{waitUntil:'domcontentloaded',timeout:34000});
-  await page.waitForFunction(t=>normInner(document.body.innerText).includes(normInner(t)),m.title.slice(0,60),{timeout:16000})
+  await page.waitForFunction(t=>(document.body.innerText||'').toLowerCase().includes(String(t).toLowerCase()),m.title.slice(0,40),{timeout:10000})
    .catch(()=>{});
   // Explicit website title verification; avoid attaching another procedure's documents.
   const body=(await page.locator('body').innerText({timeout:10000})).slice(0,19000);
