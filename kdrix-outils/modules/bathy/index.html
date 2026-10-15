@@ -169,6 +169,7 @@ header{height:67px;background:#fff;border-bottom:1px solid #dce5e5}.head{height:
 .simple-picc-toggle input{accent-color:#117e9c;width:17px;height:17px;cursor:pointer}
 .simple-picc-toggle span{display:inline-flex;align-items:center;gap:5px}
 .simple-draw{font-size:12px!important;font-weight:840!important;min-height:42px;padding:11px 13px!important}
+.simple-draw.is-drawing{background:#fff3ed!important;color:#a64a22!important;border-color:#efc1ad!important}
 .simple-gis-hint{display:block;margin:7px 0 2px;font-size:10.5px;color:#617f88;line-height:1.4}
 .simple-gis-hint b{color:#164f61}
 .simple-cad-indicator{margin-left:auto;display:inline-flex;gap:5px;align-items:center;font-size:10px;color:#557077;font-weight:750;padding:6px 8px;background:#f1f6f6;border:1px solid #e1e9e9;border-radius:7px}
@@ -271,7 +272,7 @@ function detailSources(p){return p.sources.map(([name,url])=>`<a href="${safe(ur
 function drawDetail(p,node){if(!p||!node)return;node.dataset.ready='yes';const c=p.contact,mail=STATE.drafts[p.id]||{subject:p.subject,body:p.emailBody};node.innerHTML=`<div class="detailrow">
 <div class="panel"><h3 class="details-title">◉ Pourquoi ce prospect ?</h3><p class="detail-copy">${safe(p.fact)} <span style="color:#87969b;font-size:11px">(${safe(p.factDate)})</span></p><div class="factbox"><div class="fact"><b>Prestation :</b> ${safe(p.what)}</div><div class="fact"><b>Décision rendue possible :</b> ${safe(p.decision)}</div><div class="fact"><b>Pourquoi ce rang :</b> ${safe(p.grounds)}</div></div><div class="caution"><b>Avant de contacter :</b> ${safe(p.reservation)}</div><hr class="section-divider"><h3 class="details-title">✉ Interlocuteur professionnel</h3><div class="contact-name">${safe(c.name)}</div><div class="contact-role">${safe(c.role)} · ${safe(c.alt)}</div><div class="contact-links">${c.email?`<a href="mailto:${safe(c.email)}">${safe(c.email)} ↗</a>`:'Courriel à confirmer'}${c.phone?`<a href="tel:${safe(c.phone.replace(/[^\d+]/g,''))}">${safe(c.phone)}</a>`:''}</div><hr class="section-divider"><h3 class="details-title">↗ Sources vérifiables</h3><div class="source-list">${detailSources(p)}</div></div>
 <div class="panel map-panel"><div class="map-toolbar"><h3 class="details-title" style="margin:0">◎ Étendue d’eau — carte interactive</h3><div class="mode-tabs" role="group" aria-label="Fond de carte"><button class="mapmode active" data-act="basemap" data-id="${p.id}" data-layer="ortho">Ortho 2026</button><button class="mapmode" data-act="basemap" data-id="${p.id}" data-layer="lidar">LiDAR</button><button class="mapmode" data-act="basemap" data-id="${p.id}" data-layer="osm">Plan</button></div></div>
-<div class="map-shell" data-shell="${p.id}"><div class="map-inner" id="map-${p.id}" aria-label="Carte interactive du site ${safe(p.name)}"></div><div class="map-fallback"><div><strong>Carte non disponible</strong><p>La cartographie interactive nécessite une connexion Internet et l’accès à la bibliothèque Leaflet. Les liens WalOnMap restent disponibles.</p><a class="btn dark" href="${walon(p)}" target="_blank" rel="noopener">Ouvrir WalOnMap ↗</a></div></div><button type="button" class="mapexpand" data-act="fullscreen" data-id="${p.id}" aria-pressed="false">⛶ Agrandir</button><div class="picc-hint" data-picc-hint="${p.id}" hidden><b>◎ Sélection PICC activée</b><span>Cliquez sur les <strong>contours bleus</strong> pour ajouter les plans d’eau. Cliquez à nouveau pour retirer.</span></div><div class="drawtoolbar" data-drawbar="${p.id}" hidden><div class="drawbar-head"><strong>✎ Dessin en cours</strong><span data-pointcount="${p.id}">0 point</span></div><div class="drawbar-instruction">Cliquez sur les berges ; pour fermer, cliquez sur le <b>premier point orange</b>.</div><b class="livearea" data-livearea="${p.id}">Commencez le contour</b><div class="draw-actions"><button class="btn" data-act="undo" data-id="${p.id}" type="button">↶ Dernier point</button><button class="btn primary" data-act="finishdraw" data-id="${p.id}" type="button" disabled>✓ Terminer</button><button class="btn red" data-act="canceldraw" data-id="${p.id}" type="button">Annuler</button></div></div><div class="vertexbar" data-vertex-controls="${p.id}" hidden><span>● Sommet sélectionné</span><button type="button" class="btn red" data-act="removevertex" data-id="${p.id}">Supprimer ce point</button></div></div>
+<div class="map-shell" data-shell="${p.id}"><div class="map-inner" id="map-${p.id}" aria-label="Carte interactive du site ${safe(p.name)}"></div><div class="map-fallback"><div><strong>Carte non disponible</strong><p>La cartographie interactive nécessite une connexion Internet et l’accès à la bibliothèque Leaflet. Les liens WalOnMap restent disponibles.</p><a class="btn dark" href="${walon(p)}" target="_blank" rel="noopener">Ouvrir WalOnMap ↗</a></div></div><button type="button" class="mapexpand" data-act="fullscreen" data-id="${p.id}" aria-pressed="false">⛶ Agrandir</button><div class="picc-hint" data-picc-hint="${p.id}" hidden><b>◎ Sélection PICC activée</b><span>Cliquez sur les <strong>contours bleus</strong> pour ajouter les plans d’eau. Cliquez à nouveau pour retirer.</span></div><div class="drawtoolbar" data-drawbar="${p.id}" hidden><div class="drawbar-head"><strong>✎ Dessin en cours</strong><span data-pointcount="${p.id}">0 point</span></div><div class="drawbar-instruction">Cliquez sur les berges, puis <b>double-cliquez pour terminer</b> (ou cliquez sur le premier point orange).</div><b class="livearea" data-livearea="${p.id}">Commencez le contour</b><div class="draw-actions"><button class="btn" data-act="undo" data-id="${p.id}" type="button">↶ Dernier point</button><button class="btn primary" data-act="finishdraw" data-id="${p.id}" type="button" disabled>✓ Terminer</button><button class="btn red" data-act="canceldraw" data-id="${p.id}" type="button">Annuler</button></div></div><div class="vertexbar" data-vertex-controls="${p.id}" hidden><span>● Sommet sélectionné</span><button type="button" class="btn red" data-act="removevertex" data-id="${p.id}">Supprimer ce point</button></div></div>
 <div class="map-attribution">© SPW — orthophotos 2026 / MNT 2021–2022 / PICC · © SPW / IGN pour le fond Plan, secours cartographique SPW. Pointeur : localisation indicative.</div>
 <div class="map-controls"><div class="methods"><button class="btn action-picc" data-act="loadpicc" data-id="${p.id}" data-mode-btn="${p.id}" data-mode="picc" aria-pressed="false"><b>◎ Sélectionner au PICC</b><small>Cliquer sur les zones bleues pour les ajouter</small></button><button class="btn action-draw" data-act="startdraw" data-id="${p.id}" data-mode-btn="${p.id}" data-mode="draw" aria-pressed="false"><b>✎ Tracer une étendue d’eau</b><small>Délimiter manuellement sur la carte</small></button></div><button class="btn layer-btn" data-act="picc" data-id="${p.id}">Afficher la couche PICC</button><div class="map-links"><a class="btn" href="${walon(p)}" data-walon="${p.id}" target="_blank" rel="noopener">WalOnMap ↗</a><a class="btn" href="${directions(p)}" target="_blank" rel="noopener">Itinéraire ↗</a><a class="btn" href="${safe(p.site)}" target="_blank" rel="noopener">Site ↗</a></div></div>
 <section class="cad-section" aria-label="Cadastre et sélection des parcelles">
@@ -332,6 +333,25 @@ function initMap(p){
  relief.on('tileerror',()=>{if(inst.base==='lidar')info(p.id,'Le service de relief SPW ne répond pas. Essayez Plan ou Orthophoto.');});
  L.marker(p.point,{opacity:.83,title:'Emplacement indicatif du site, pas un contour de bassin'}).bindTooltip('Site indicatif · bassin à identifier',{direction:'top'}).addTo(map);
  map.on('click',ev=>{if(inst.mode!=='draw')return;inst.draft.push([ev.latlng.lat,ev.latlng.lng]);inst.cursor=null;renderDraft(inst)});
+  // Double-clic : finir le contour sans ajouter deux fois le dernier sommet.
+  // Leaflet emet habituellement deux evenements click avant dblclick.
+  map.on('dblclick',ev=>{
+   if(inst.mode!=='draw')return;
+   if(ev.originalEvent)L.DomEvent.stop(ev.originalEvent);
+   const last=[ev.latlng.lat,ev.latlng.lng];
+   const near=(a,b)=>{
+    const p=map.latLngToContainerPoint(L.latLng(a[0],a[1]));
+    const q=map.latLngToContainerPoint(L.latLng(b[0],b[1]));
+    return Math.hypot(p.x-q.x,p.y-q.y)<=7;
+   };
+   // Conserver un seul dernier point meme si l'utilisateur a double-clique
+   // sur un sommet deja pose.
+   while(inst.draft.length>1&&near(inst.draft.at(-1),inst.draft.at(-2)))inst.draft.pop();
+   if(!inst.draft.length||!near(inst.draft.at(-1),last))inst.draft.push(last);
+   inst.cursor=null;
+   if(inst.draft.length>=3){finishDraw(p.id);}
+   else{renderDraft(inst);info(p.id,'Encore un sommet pour fermer la zone par double-clic.',true);}
+  });
  map.on('mousemove',ev=>{if(inst.mode!=='draw'||!inst.draft.length)return;inst.cursor=[ev.latlng.lat,ev.latlng.lng];if(!inst.pendingFrame){inst.pendingFrame=requestAnimationFrame(()=>{inst.pendingFrame=0;if(inst.mode==='draw')renderDraft(inst)})}});
  map.on('mouseout',()=>{if(inst.mode==='draw'){inst.cursor=null;renderDraft(inst)}});
  paintAreas(p.id);
@@ -457,6 +477,7 @@ function paintAreas(id){
  const walonLink=$(`[data-walon="${id}"]`);if(walonLink)walonLink.href=walon(inst.p);
 }
 function refreshShapeUI(id){
+ syncDrawAction(id);
  const s=getAreaCollection(id),total=areaCalculation(id);const n=$(`[data-measuretotal="${id}"]`),o=$(`[data-measureorigin="${id}"]`),list=$(`[data-measurelist="${id}"]`);
  if(n)n.textContent=s.length?`${total.approx?'≈ ':''}${fmt(total.m2,0)} m² · ${fmt(total.m2/10000,3)} ha`:'—';
  if(o)o.textContent=s.length?`${s.length} étendue${s.length>1?'s':''} · ${total.overlap?'chevauchements déduits (calcul approché)':'surfaces additionnées sans chevauchement détecté'}`:'Aucune emprise sélectionnée';
@@ -464,6 +485,15 @@ function refreshShapeUI(id){
 }
 function refreshMetrics(){DATA.forEach(p=>{const a=areaResult(p),r=getRoute(p),v=$(`[data-area="${p.id}"]`),n=$(`[data-area-note="${p.id}"]`),d=$(`[data-route="${p.id}"]`),dn=$(`[data-route-note="${p.id}"]`);if(v){v.textContent=a.label;v.classList.toggle('pending',a.kind==='pending')}if(n)n.textContent=a.detail;if(d){d.textContent=r.label;d.classList.toggle('pending',r.label==='À calculer')}if(dn)dn.textContent=r.detail;if(STATE.maps[p.id])refreshShapeUI(p.id)})}
 function setLiveArea(id,m2,ready=true){const n=$(`[data-livearea="${id}"]`);if(!n)return;n.textContent=ready?`Surface provisoire : ${fmt(m2,0)} m² · ${fmt(m2/10000,3)} ha`:'Placez au moins trois sommets pour afficher la surface';}
+// Un seul bouton reste visible : son libelle suit l'action utile.
+function syncDrawAction(id){
+ const b=document.querySelector(`[data-simple-draw="${id}"]`),x=STATE.maps[id];
+ if(!b||!x)return;
+ const active=x.mode==='draw';
+ b.textContent=active?'✕ Annuler le tracé':getAreaCollection(id).length?'＋ Ajouter une autre zone':'✎ Dessiner un contour';
+ b.classList.toggle('is-drawing',active);
+ b.setAttribute('aria-pressed',String(active));
+}
 function modeUI(id){
  const x=STATE.maps[id];if(!x)return;
  $$(`[data-mode-btn="${id}"]`).forEach(b=>{const on=b.dataset.mode===x.mode;b.classList.toggle('mode-on',on);b.setAttribute('aria-pressed',String(on))});
@@ -471,6 +501,7 @@ function modeUI(id){
  const float=$(`[data-drawbar="${id}"]`);if(float)float.hidden=x.mode!=='draw';
  const picc=$(`[data-picc-hint="${id}"]`);if(picc)picc.hidden=x.mode!=='picc';
  const vb=$(`[data-vertex-controls="${id}"]`);if(vb)vb.hidden=x.mode!=='none'||!x.selectedVertex;
+ syncDrawAction(id);
 }
 function startDraw(id){
  const x=STATE.maps[id];if(!x){toast('Carte indisponible');return}
@@ -479,7 +510,7 @@ function startDraw(id){
  x.mode='draw';x.draft=[];x.cursor=null;x.selectedUid=null;x.selectedVertex=null;
  x.candidates.clearLayers();x.candidateLayers.clear();x.map.doubleClickZoom?.disable?.();
  modeUI(id);paintAreas(id);renderDraft(x);
- info(id,'Mode dessin activé : cliquez sur les berges, puis sur le premier point pour fermer le contour.',true);
+ info(id,'Mode dessin : cliquez sur les berges, puis double-cliquez pour terminer (ou cliquez sur le premier point orange).',true);
 }
 function renderDraft(x){
  if(x.mode!=='draw')return;
@@ -766,6 +797,7 @@ function paintAreas(id){
  const wl=$(`[data-walon="${id}"]`);if(wl)wl.href=walon(inst.p);
 }
 function refreshShapeUI(id){
+ syncDrawAction(id);
  const shapes=getAreaCollection(id),total=areaCalculation(id),inst=STATE.maps[id];
  const n=$(`[data-measuretotal="${id}"]`),o=$(`[data-measureorigin="${id}"]`),list=$(`[data-measurelist="${id}"]`);
  if(n)n.textContent=shapes.length?`${total.approx?'≈ ':''}${fmt(total.m2,0)} m² · ${fmt(total.m2/10000,3)} ha`:'—';
@@ -1235,7 +1267,7 @@ render();handleActions();handleV5();
   const panel=node.querySelector('.map-controls');
   if(panel){
    const toolbar=document.createElement('div');toolbar.className='simple-gis-toolbar';
-   toolbar.innerHTML=`<label class="simple-picc-toggle" title="Afficher les emprises hydrographiques du PICC wallon et cliquer dessus pour obtenir leur superficie"><input type="checkbox" data-simple-picc="${p.id}" checked><span>◎ Afficher les étendues d’eau PICC</span></label><button type="button" class="btn dark simple-draw" data-simple-draw="${p.id}">✎ Dessiner un contour</button><span class="simple-cad-indicator" data-cad-note="${p.id}">Cadastre affiché automatiquement</span>`;
+   toolbar.innerHTML=`<label class="simple-picc-toggle" title="Afficher les emprises hydrographiques du PICC wallon et cliquer dessus pour obtenir leur superficie"><input type="checkbox" data-simple-picc="${p.id}" checked><span>◎ Afficher les étendues d’eau PICC</span></label><button type="button" class="btn dark simple-draw" data-simple-draw="${p.id}" aria-pressed="false">✎ Dessiner un contour</button><span class="simple-cad-indicator" data-cad-note="${p.id}">Cadastre affiché automatiquement</span>`;
    panel.parentNode.insertBefore(toolbar,panel);
    const help=document.createElement('p');help.className='simple-gis-hint';help.innerHTML='<b>Mesurer :</b> cliquez sur une zone bleue PICC pour l’ajouter à la superficie. Si elle est absente ou inexacte, désactivez le PICC et tracez le contour sur l’orthophoto.';
    toolbar.insertAdjacentElement('afterend',help);
