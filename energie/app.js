@@ -1817,19 +1817,35 @@ $('#scan-preview-wrap').addEventListener('wheel',ev=>{
  scanZoom=Math.min(5,Math.max(1,scanZoom*(ev.deltaY<0?1.11:.9)));
  applyScanPhotoView();
 },{passive:false});
-$('#confirm-scan').onclick=()=>{
+async function photoForReadingArchive(src){
+ // Keep OCR detail in memory but save a compact source photo only when
+ // the user confirms the reading. Avoid filling Safari's storage quota.
+ const img=await new Promise((resolve,reject)=>{
+  const candidate=new Image();
+  candidate.onload=()=>resolve(candidate);
+  candidate.onerror=()=>reject(new Error('image illisible'));
+  candidate.src=src;
+ });
+ const ratio=Math.min(1,1500/Math.max(img.naturalWidth,img.naturalHeight));
+ const canvas=document.createElement('canvas');
+ canvas.width=Math.max(1,Math.round(img.naturalWidth*ratio));
+ canvas.height=Math.max(1,Math.round(img.naturalHeight*ratio));
+ canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);
+ return canvas.toDataURL('image/jpeg',.80);
+}
+$('#confirm-scan').onclick=async()=>{
  const k=$('#scan-meter').value;
  if(k==='electric'){
   const values=electricInputs();
   if(!values)return toast('Vérifie les index Nuit et Jour avant de confirmer.');
   $('#reading-total').value=String(values.total);
   // For new readings we retain the official monohourly sum, not the two registers.
-  pendingPhotos.electric=pendingImage;
+  pendingPhotos.electric=await photoForReadingArchive(pendingImage);
  }else{
   const v=$('#scan-value').value;
   if(v.trim()===''||!Number.isFinite(Number(v))||Number(v)<0)return toast('Vérifie l’index avant de confirmer.');
   $('#reading-'+k).value=k==='water'?roundWater(v).toFixed(1):String(Math.round(Number(v)));
-  pendingPhotos[k]=pendingImage;
+  pendingPhotos[k]=await photoForReadingArchive(pendingImage);
  }
  photoFlags();
  modal('scan-overlay',false);modal('reading-overlay',true);
