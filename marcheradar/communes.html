@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MarchéRadar — Couverture des communes</title>
+<meta name="description" content="Suivi vérifiable des sites communaux wallons et des sources de délibérations analysées par MarchéRadar KDRIX.">
+<style>
+:root{font-family:Inter,Arial,Helvetica,sans-serif;color:#313438;background:#f6f6f5}
+*{box-sizing:border-box}body{margin:0;line-height:1.5}
+header{background:#2d2f31;color:#fff;padding:22px max(calc((100vw - 1240px)/2),28px)}
+header a{color:#f3ae8e;text-decoration:none;font-size:12px}
+header h1{font-size:26px;font-weight:800;letter-spacing:-.8px;margin:12px 0 4px}
+header p{margin:0;color:#d1d1d1;font-size:13px}
+main{max-width:1280px;margin:0 auto;padding:25px 28px 50px}
+.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stat{border:1px solid #e9e9e7;background:#fff;padding:16px 18px;border-radius:11px}
+.stat b{display:block;font-size:26px}.stat span{font-size:12px;color:#73787d}
+.information{border-left:3px solid #f16a32;background:#fff;padding:14px 16px;margin:21px 0;color:#626972;font-size:12px}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+input,select{padding:11px 14px;border:1px solid #ddd;border-radius:9px;background:#fff;color:#34373a;font:inherit;font-size:13px}
+input{min-width:270px;flex:1}
+.panel{background:#fff;border:1px solid #e7e7e7;border-radius:11px;overflow:hidden}
+table{border-collapse:collapse;width:100%;font-size:12px}
+th{text-transform:uppercase;letter-spacing:.7px;color:#80858a;font-size:10px;text-align:left;background:#fafafa}
+td,th{padding:11px 14px;border-bottom:1px solid #eee}
+td:nth-child(3){font-variant-numeric:tabular-nums}
+td a{color:#d66029;text-decoration:none}
+td a:hover{text-decoration:underline}
+.status{display:inline-block;border-radius:6px;background:#f4f4f4;padding:4px 7px;color:#686d72;font-size:11px;white-space:nowrap}
+.status.ok{background:#e9f3ed;color:#24724b}
+.status.err{background:#fff0ec;color:#a64b2d}
+.caption{font-size:12px;color:#787d80;padding:13px 14px;border-top:1px solid #eee}
+#error{color:#ad4d2e;padding:12px 16px}
+@media(max-width:850px){.summary{grid-template-columns:repeat(2,1fr)}th:nth-child(4),td:nth-child(4){display:none}main{padding:18px 12px}header{padding:20px}}
+</style></head>
+<body>
+<header><a href="./">← MarchéRadar</a> &nbsp; <a href="../kdrix-outils/">Portail KDRIX</a>
+<h1>Communes wallonnes surveillées</h1><p>Inventaire et contrôle des publications accessibles — uniquement les sources réellement vérifiées.</p></header>
+<main>
+<section class="summary">
+<div class="stat"><b id="total">—</b><span>Communes dans l’annuaire</span></div>
+<div class="stat"><b id="sites">—</b><span>Sites effectivement vérifiés</span></div>
+<div class="stat"><b id="connected">—</b><span>Communes avec documents lus</span></div>
+<div class="stat"><b id="documents">—</b><span>Documents analysés (cumul)</span></div>
+</section>
+<p class="information">La zone de prospection correspond à un ordre de grandeur d'environ 2 h de Liège. Les durées indiquées sont des <strong>estimations géographiques indicatives</strong>, pas des temps de parcours calculés par un service d'itinéraires. Une commune limitrophe n'est pas écartée automatiquement. La présence d'un site dans l'annuaire ne garantit pas que ses délibérations soient connectées.</p>
+<div class="controls">
+<input type="search" id="search" placeholder="Rechercher une commune..." aria-label="Rechercher une commune">
+<select id="zone" aria-label="Zone géographique"><option value="all">Toutes les zones</option><option value="principale">Zone principale indicative</option><option value="peripherique">Zone périphérique indicative</option><option value="exterieure_provisoire">Zone extérieure indicative</option><option value="a_verifier">Trajet à vérifier</option></select>
+<select id="status" aria-label="État de la collecte"><option value="all">Tous les états</option><option value="sources_documents_lus">Documents lus</option><option value="site_verifie_sans_document">Site vérifié sans document</option><option value="site_en_erreur">Source inaccessible</option><option value="pending">À vérifier</option></select>
+</div>
+<div class="panel"><table><thead><tr><th>Commune</th><th>Zone</th><th>Distance indicative</th><th>Statut de la surveillance</th><th>Publications</th></tr></thead><tbody id="rows"></tbody></table>
+<div id="error" hidden></div><div class="caption"><span id="viewcount">Chargement du registre communal...</span> • Source : <a href="https://digitalwallonia.opendatasoft.com/explore/dataset/communes_s3/" target="_blank" rel="noopener">UVCW / ODWB (CC BY 4.0)</a>. <span id="updated"></span></div></div>
+</main>
+<script>
+(()=>{
+'use strict';
+let list=[];
+const $=id=>document.getElementById(id);
+const str=x=>String(x||'');
+function state(c){
+ if(c.sourceStatus==='sources_documents_lus')return ['Documents lus','ok'];
+ if(c.sourceStatus==='site_verifie_sans_document')return ['Site consulté','ok'];
+ if(c.sourceStatus==='site_en_erreur')return ['Source inaccessible','err'];
+ if(c.sourceStatus==='site_absent_dans_annuaire')return ['Site manquant','err'];
+ return ['À vérifier',''];
+}
+const number=new Intl.NumberFormat('fr-BE');
+function textCell(row,s){const cell=document.createElement('td');cell.textContent=s;row.append(cell);return cell}
+function render(){
+ const q=$('search').value.trim().toLowerCase(),z=$('zone').value,st=$('status').value;
+ const data=list.filter(c=>(z==='all'||c.zone===z)&&
+   (st==='all'||(st==='pending'?!['sources_documents_lus','site_verifie_sans_document','site_en_erreur'].includes(c.sourceStatus):st===c.sourceStatus))&&
+   (!q||(str(c.name)+' '+str(c.ins)).toLowerCase().includes(q)));
+ const table=$('rows');table.replaceChildren();
+ for(const commune of data){
+  const row=document.createElement('tr');
+  const first=textCell(row,commune.name);
+  if(/^https?:\/\//.test(commune.officialSite)){
+   first.replaceChildren();const link=document.createElement('a');link.href=commune.officialSite;
+   link.target='_blank';link.rel='noopener noreferrer';link.textContent=commune.name;first.append(link);
+  }
+  textCell(row,commune.zone==='principale'?'Principale':commune.zone==='peripherique'?'Périphérique':commune.zone==='exterieure_provisoire'?'Extérieure':'À vérifier');
+  textCell(row,Number.isFinite(commune.roadMinutes)?commune.roadMinutes+' min (trajet vérifié)':Number.isFinite(commune.estimatedMinutes)?'≈ '+commune.estimatedMinutes+' min (indicatif)':'Non calculée');
+  const td=textCell(row,'');const [txt,css]=state(commune),badge=document.createElement('span');badge.className='status '+css;badge.textContent=txt;td.append(badge);
+  const docs=(commune.deliberationSources||[]).filter(s=>s.last_success);
+  const source=textCell(row,docs.length?docs.length+' source(s)':'—');
+  if(docs.length&&/^https?:\/\//.test(docs[0].url)){source.replaceChildren();const a=document.createElement('a');a.href=docs[0].url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=docs.length+' source(s)';source.append(a);}
+  table.append(row);
+ }
+ $('viewcount').textContent=data.length+' communes affichées';
+}
+async function load(){
+ try{
+  const response=await fetch('communes.json?v='+Date.now(),{cache:'no-store'});
+  if(!response.ok)throw Error('Annuaire en cours de raccordement.');
+  const info=await response.json();if(!Array.isArray(info.communes))throw Error('Données communales invalides');
+  list=info.communes;const c=info.counts||{};
+  $('total').textContent=number.format(list.length);
+  $('sites').textContent=number.format(c.sitesVerifies||0);
+  $('connected').textContent=number.format(c.deliberationsConnectees||0);
+  $('documents').textContent=number.format(c.documentsRead||0);
+  $('updated').textContent='Annuaire actualisé : '+(info.lastDirectorySync||'date non connue').slice(0,10);
+  render();
+ }catch(e){$('error').hidden=false;$('error').textContent='Le registre officiel n’a pas encore été publié ou n’est pas accessible. '+e.message;$('viewcount').textContent='Aucune couverture déclarée sans preuve.'}
+}
+for(const id of ['search','zone','status'])$(id).addEventListener(id==='search'?'input':'change',render);
+load();
+})();
+</script></body></html>
