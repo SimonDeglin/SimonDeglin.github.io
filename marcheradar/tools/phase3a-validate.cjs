@@ -13,7 +13,7 @@ const count=before.items?.length;
 assert(Number.isInteger(count)&&count>0,'Base originale vide');
 assert.equal(after.items?.length,count,'Le nombre de marchés a changé');
 assert.deepEqual(after.items.map(x=>x.id),before.items.map(x=>x.id),'Identifiants/ordre des dossiers altérés');
-const allowed=new Set(['documents','officialSources','deadline','deadlineEvidence','deadlineHistory','deadlineReview','documentAudit']);
+const allowed=new Set(['documents','officialSources','deadline','deadlineEvidence','deadlineHistory','deadlineReview','documentAudit','bulkDocumentDownload']);
 let upgradedDates=0,addedDocuments=0,newLinks=0;
 for(let i=0;i<count;i++){
  const old=before.items[i],latest=after.items[i];
@@ -31,6 +31,11 @@ for(let i=0;i<count;i++){
    assert(/^https:\/\/www\.publicprocurement\.be\/publication-workspaces\/[a-f0-9-]{36}\/documents$/i.test(doc.accessPageUrl||''),'URL de catalogue non officiel');
    assert(doc.title&&doc.verified===true,'Document non vérifiable : '+old.id);
   }
+ }
+ if(latest.bulkDocumentDownload?.verified){
+  assert(/^https:\/\/www\.publicprocurement\.be\/publication-workspaces\/[a-f0-9-]{36}\/documents$/i.test(latest.bulkDocumentDownload.sourceUrl||''),'Source ZIP non officielle');
+  assert(Number(latest.bulkDocumentDownload.fileCount)>0,'Nombre de fichiers ZIP non renseigné');
+  assert(/^[a-f0-9]{64}$/.test(latest.bulkDocumentDownload.archiveSHA256),'Empreinte ZIP non vérifiable');
  }
  if(old.deadlineEvidence?.verified&&old.deadline!==latest.deadline){
   assert.equal(latest.deadlineEvidence?.verified,true,'Une date vérifiée a été effacée : '+old.id);
