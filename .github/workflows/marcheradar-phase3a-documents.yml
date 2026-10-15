@@ -1,0 +1,27 @@
+name: "MarchéRadar 3A — Pages documents BOSA"
+on:
+  push:
+    branches: ["feature/marcheradar-phase3a-documents-20261015"]
+    paths: ["marcheradar/tools/phase3a-documents-page.cjs",".github/workflows/marcheradar-phase3a-documents.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install chromium
+      - run: node marcheradar/tools/phase3a-documents-page.cjs
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3a-bosa-documents-detail
+          if-no-files-found: warn
+          path: marcheradar/audit/phase3a-documents-page.json
