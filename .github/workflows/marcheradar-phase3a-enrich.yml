@@ -1,62 +1,39 @@
-name: "MarchéRadar 3A — Enrichissement validé"
+name: "MarchéRadar — Tests documentaires 3A"
 on:
   push:
-    branches: ["feature/marcheradar-phase3a-documents-20261015"]
+    branches:
+      - main
+      - feature/marcheradar-phase3a-documents-20261015
     paths:
       - "marcheradar/tools/bosa-documents-enrich.cjs"
-      - "marcheradar/tests/phase3a-bosa.test.cjs"
+      - "marcheradar/tools/bosa-public.cjs"
+      - "marcheradar/tools/collect-ted.cjs"
+      - "marcheradar/tests/**"
+      - "marcheradar/data.json"
       - "marcheradar/detail-phase2.js"
+      - ".github/workflows/marcheradar.yml"
       - ".github/workflows/marcheradar-phase3a-enrich.yml"
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 jobs:
-  enrich:
+  tests:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
-        with:
-          persist-credentials: true
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Unit tests Phase 3A
-        run: node --test marcheradar/tests/phase3a-bosa.test.cjs
-      - name: Install Chromium for public document collection and regression tests
+      - name: "Syntaxe et tests de métadonnées officielles"
+        run: |
+          node --check marcheradar/tools/bosa-documents-enrich.cjs
+          node --test marcheradar/tests/phase3a-bosa.test.cjs
+      - name: "Préparer un navigateur isolé"
         run: |
           npm install --no-save --no-package-lock playwright
           npx playwright install chromium
-      - name: Collect BOSA metadata through public web browser (no private authentication)
-        run: node marcheradar/tools/bosa-documents-enrich.cjs --browser --write
-      - name: Validate enriched data before allowing branch update
-        run: |
-          node -e "const d=require('./marcheradar/data.json'); if(d.items.length!==64)throw Error('Market count changed');let n=d.items.reduce((s,m)=>s+(m.documentInventory||[]).length,0);console.log('BOSA_DOCUMENTS_INDEXED='+n);if(n<1)throw Error('No document manifest confirmed from public API')"
-      - name: Regression Phase 1
+      - name: "Tests de non-régression Phase 1"
         run: node marcheradar/tests/phase1-browser.cjs
-      - name: Regression Phase 2
+      - name: "Tests de non-régression Phase 2"
         run: node marcheradar/tests/phase2-browser.cjs
-      - name: Commit validated data on isolated development branch only
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add marcheradar/data.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Phase 3A: inventaire BOSA public validé automatiquement"
-            git fetch origin feature/marcheradar-phase3a-documents-20261015
-            if git rebase origin/feature/marcheradar-phase3a-documents-20261015; then
-              git push origin HEAD:feature/marcheradar-phase3a-documents-20261015 || echo "::warning::Poussée concurrente, conserver l'artefact validé et réexaminer la branche"
-            else
-              git rebase --abort || true
-              echo "::warning::Branche modifiée pendant les tests; données existantes conservées, revoir l'artefact validé"
-            fi
-          fi
-      - name: Save diagnostic reports
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: marcheradar-phase3a-enriched
-          if-no-files-found: ignore
-          path: |
-            marcheradar/audit/phase3a-enriched-data.json
-            marcheradar/audit/phase3a-enrichment-report.json

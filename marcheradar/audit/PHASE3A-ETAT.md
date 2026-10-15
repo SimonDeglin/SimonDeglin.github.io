@@ -49,3 +49,12 @@ La fiche indique « pièce répertoriée — accès à vérifier », distincteme
 **Validation :** tests unitaires documentaires et tests de non-régression Chromium Phases 1 et 2 exécutés dans GitHub Actions sur la branche de développement.
 
 **Conclusion :** première tranche fonctionnelle de la Phase 3A, encore incomplète pour les échéances et le téléchargement direct.
+
+## Fiabilisation pour la mise en production
+
+- Le collecteur documentaire est intégré à la planification existante TED/BOSA, à la fin du traitement avant publication du JSON.
+- Il conserve les inventaires précédents lorsque le portail échoue ou répond avec une liste vide.
+- Les réponses inchangées n'actualisent plus artificiellement `documentsCheckedAt` et ne provoquent pas une nouvelle publication GitHub Pages.
+- La tâche peut utiliser Chromium installé sur les runners GitHub avec `playwright-core`.
+- Les collecteurs TED et BOSA préservent les champs documentaires lors des fusions ; un test automatique reproduit les deux opérations.
+- Les workflows de diagnostic temporaires sont retirés afin de limiter les notifications GitHub. La validation finale conserve les tests des Phases 1, 2 et 3A.

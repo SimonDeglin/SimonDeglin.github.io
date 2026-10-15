@@ -97,9 +97,15 @@ jobs:
         run: node marcheradar/tools/local-watch.cjs
         continue-on-error: true
 
+      - name: "Répertorier les documents BOSA publics sans inventer de téléchargement"
+        id: documents
+        if: steps.browser.outcome == 'success'
+        run: node marcheradar/tools/bosa-documents-enrich.cjs --browser --write
+        continue-on-error: true
+
       - name: "Publier uniquement les données valides"
         id: publish
-        if: steps.collect.outcome == 'success' || steps.bosa.outcome == 'success' || steps.local.outcome == 'success'
+        if: steps.collect.outcome == 'success' || steps.bosa.outcome == 'success' || steps.local.outcome == 'success' || steps.documents.outcome == 'success'
         shell: bash
         run: |
           if git diff --quiet -- marcheradar/data.json; then
@@ -123,6 +129,7 @@ jobs:
           COLLECT_RESULT: ${{ steps.collect.outcome }}
           BOSA_RESULT: ${{ steps.bosa.outcome }}
           LOCAL_RESULT: ${{ steps.local.outcome }}
+          DOCUMENTS_RESULT: ${{ steps.documents.outcome }}
           PUBLISH_RESULT: ${{ steps.publish.outcome }}
         run: |
           {
@@ -136,6 +143,7 @@ jobs:
             echo "| Collecte TED | $COLLECT_RESULT |"
             echo "| Tentative BOSA | $BOSA_RESULT |"
             echo "| Sources locales (pilote) | $LOCAL_RESULT |"
+            echo "| Métadonnées documents BOSA | $DOCUMENTS_RESULT |"
             echo "| Publication | $PUBLISH_RESULT |"
             echo ""
             if [ "$COLLECT_RESULT" != "success" ] || [ "$PUBLISH_RESULT" = "failure" ]; then

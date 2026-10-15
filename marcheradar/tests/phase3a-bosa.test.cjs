@@ -54,7 +54,7 @@ test('successful responses normalize only official linked metadata',async()=>{
 
 test('données enrichies réelles: 64 marchés, inventaires et liens externes distincts',()=>{
  const current=require('../data.json');
- assert.equal(current.items.length,64);
+ assert(current.items.length>=64,'La base historique doit être conservée');
  const bathy=current.items.find(x=>x.id==='bosa:0765b50e-85f5-4aae-b2ca-2ed66c14e354');
  assert(bathy&&bathy.documentInventory.length>=16,'Métadonnées bathymétriques absentes');
  assert(bathy.documentInventory.some(x=>/CCH.*Bathymetrie/i.test(x.title)));
@@ -66,4 +66,52 @@ test('données enrichies réelles: 64 marchés, inventaires et liens externes di
  const external=current.items.find(x=>x.id==='bosa:834b6f23-3906-4589-a0e7-afae9c91d26a');
  assert(external.consultationUrls.some(x=>x.url.startsWith('https://cloud.3p.eu/')));
  assert.match(detail.render(external).html,/Documents hébergés par un prestataire externe/);
+});
+
+test('La ré-extraction identique ne modifie pas les données ou la date de contrôle',async()=>{
+ const original={source:'BOSA',publicationWorkspaceId:uuid};
+ const fetcher=async url=>({ok:true,status:200,json:async()=>url.includes('/documents?')?raw:[{url:'https://cloud.3p.eu/Downloads/1/3747/EM/2026'}]});
+ const first=await api.enrichRecord(original,fetcher);
+ assert.equal(first.result,'enriched');
+ const second=await api.enrichRecord(first.market,fetcher);
+ assert.equal(second.result,'unchanged');
+ assert.strictEqual(second.market,first.market);
+ assert.equal(second.market.documentsCheckedAt,first.market.documentsCheckedAt);
+});
+test('Une réponse vide temporaire ne doit pas supprimer les pièces ou liens existants',async()=>{
+ const before={source:'BOSA',publicationWorkspaceId:uuid,
+  documentInventory:api.normalizeDocuments(raw,uuid,api.endpoints(uuid).documents),
+  consultationUrls:[{url:'https://cloud.3p.eu/Downloads/1/3747/EM/2026'}],
+  documentsPageUrl:'https://www.publicprocurement.be/publication-workspaces/'+uuid+'/documents',
+  documentsPageSource:'public_api_200',documentsCheckedAt:'2026-10-15T10:00:00Z'};
+ const fetcher=async()=>({ok:true,status:200,json:async()=>[]});
+ const result=await api.enrichRecord(before,fetcher);
+ assert.equal(result.result,'unchanged');
+ assert.deepEqual(result.market.documentInventory,before.documentInventory);
+ assert.deepEqual(result.market.consultationUrls,before.consultationUrls);
+ assert.equal(result.market.documentsCheckedAt,before.documentsCheckedAt);
+});
+test('Les imports TED et BOSA conservent les champs documentaires des marchés suivis',()=>{
+ const stored={source:'BOSA',id:'bosa:'+uuid,publicationWorkspaceId:uuid,
+  procedureIdentifier:'PROC-BATHY-TEST',internalReference:'BATHY-TEST',
+  title:'Relevés topographiques',buyer:'Commune de test',publication:'2026-10-09',
+  region:'Wallonie',score:82,sector:'Topo',sectors:['Topo'],
+  documentInventory:[{id:docId,title:'CCH Bathymetrie FR.pdf'}],
+  consultationUrls:[{url:'https://cloud.3p.eu/Downloads/1/3747/EM/2026'}],
+  documentsPageUrl:'https://www.publicprocurement.be/publication-workspaces/'+uuid+'/documents'};
+ const bosa=require('../tools/bosa-public.cjs');
+ const mergedBosa=bosa.merge([stored],[{source:'BOSA',id:'bosa:new',publicationWorkspaceId:uuid,
+   procedureIdentifier:'PROC-BATHY-TEST',internalReference:'BATHY-TEST',buyer:'Commune de test',
+   title:'Relevés topographiques',publication:'2026-10-12',sector:'Topo',sectors:['Topo'],score:83}]);
+ assert.deepEqual(mergedBosa[0].documentInventory,stored.documentInventory);
+ assert.deepEqual(mergedBosa[0].consultationUrls,stored.consultationUrls);
+ const ted=require('../tools/collect-ted.cjs');
+ const newTED={source:'TED',id:'ted:123456-2026',publicationNumber:'123456-2026',
+   procedureIdentifier:'PROC-BATHY-TEST',title:'Topographie',
+   buyer:'Commune de test',publication:'2026-10-13',deadline:'2026-11-16',
+   sector:'Topo',sectors:['Topo'],score:80,description:'Relevé'};
+ const mergedTED=ted.combine([stored],[newTED]);
+ assert.equal(mergedTED.length,1);
+ assert.deepEqual(mergedTED[0].documentInventory,stored.documentInventory);
+ assert.deepEqual(mergedTED[0].consultationUrls,stored.consultationUrls);
 });
