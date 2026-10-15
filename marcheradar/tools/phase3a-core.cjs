@@ -175,6 +175,7 @@ function mergeRecords(m,info){
    }
   }
  }
+ if(info.bulkDocumentDownload?.verified===true)item.bulkDocumentDownload={...info.bulkDocumentDownload};
  if(info.audit)item.documentAudit={...info.audit,checkedAt:stamp};
  return item;
 }
