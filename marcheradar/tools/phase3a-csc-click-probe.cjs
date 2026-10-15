@@ -12,7 +12,7 @@ const url='https://www.publicprocurement.be/publication-workspaces/'+workspace+'
 function scrub(url){try{let u=new URL(url);return u.origin+u.pathname}catch(e){return ''}}
 (async()=>{
  const browser=await chromium.launch({headless:true});
- const result={time:new Date().toISOString(),source:url,document:target,pageStatus:null,found:false,container:'',actions:[],responses:[],downloadEvents:[],clickResult:'not_attempted',errors:[]};
+ const result={time:new Date().toISOString(),source:url,document:target,pageStatus:null,found:false,container:'',actions:[],responses:[],downloadEvents:[],menuItems:[],menuHtml:'',clickResult:'not_attempted',errors:[]};
  try{
   const ctx=await browser.newContext({locale:'fr-BE',acceptDownloads:true,viewport:{width:1366,height:850}});
   const page=await ctx.newPage();
@@ -40,19 +40,23 @@ function scrub(url){try{let u=new URL(url);return u.origin+u.pathname}catch(e){r
     const nearby=el.locator('xpath=ancestor::*[self::tr or @role="row" or contains(@class,"document")][1]');
     const scope=await nearby.count()?nearby:el.locator('xpath=../..');
     result.actions=await scope.locator('a,button,[role="button"]').evaluateAll(elements=>elements.slice(0,35).map(x=>({tag:x.tagName,title:x.getAttribute('title'),aria:x.getAttribute('aria-label'),text:(x.innerText||'').trim().slice(0,100),href:x.tagName==='A'?scrub(x.href):null})));
-    const controls=scope.locator('button,[role="button"],a');
+    const controls=scope.locator('button');
     const count=await controls.count();
-    let selected=null;
-    for(let i=0;i<Math.min(count,30);i++){
-     const c=controls.nth(i);
-     const score=await c.evaluate(x=>[(x.innerText||''),x.getAttribute('title')||'',x.getAttribute('aria-label')||''].join(' ').toLowerCase());
-     if(/download|télécharg|telecharg|télévers|downloaden|ouvrir|consulter/.test(score)){selected=c;break}
-    }
-    if(selected){
-     try{await selected.click({timeout:9000});result.clickResult='clicked_download_action'}catch(e){result.clickResult='action_failed_'+String(e.name)}
-    }else{
-     try{await el.click({timeout:9000});result.clickResult='clicked_document_label'}catch(e){result.clickResult='label_failed_'+String(e.name)}
-    }
+    if(count>=2){
+     try{
+      await controls.last().click({timeout:9000});
+      await page.waitForTimeout(550);
+      const menus=page.locator('.v-overlay__content:visible');
+      result.menuHtml=(await menus.allTextContents()).join(' | ').slice(0,2800);
+      const items=page.locator('.v-overlay__content:visible .v-list-item');
+      result.menuItems=await items.evaluateAll(list=>list.map(el=>({text:(el.innerText||'').trim().slice(0,130),html:el.outerHTML.slice(0,480)})));
+      const direct=items.filter({hasText:/télécharg|telecharg|download|Télécharger|Download/i});
+      if(await direct.count()){
+       await direct.first().click({timeout:9000});
+       result.clickResult='clicked_download_menu_item';
+      }else result.clickResult='opened_action_menu_only';
+     }catch(e){result.clickResult='menu_failed_'+String(e.name)}
+    }else result.clickResult='no_action_menu_found';
     await page.waitForTimeout(4500);
    }
   }catch(e){result.errors.push('navigation: '+String(e.name)+': '+String(e.message).slice(0,150))}
@@ -61,5 +65,5 @@ function scrub(url){try{let u=new URL(url);return u.origin+u.pathname}catch(e){r
  result.responses=[...new Map(result.responses.map(x=>[x.method+x.url+x.status,x])).values()];
  fs.mkdirSync(root,{recursive:true});
  fs.writeFileSync(path.join(root,'phase3a-csc-click-probe.json'),JSON.stringify(result,null,2));
- console.log(JSON.stringify({pageStatus:result.pageStatus,found:result.found,actions:result.actions,clickResult:result.clickResult,downloadEvents:result.downloadEvents,responses:result.responses.slice(-20),errors:result.errors},null,2));
+ console.log(JSON.stringify({pageStatus:result.pageStatus,found:result.found,actions:result.actions,clickResult:result.clickResult,menuItems:result.menuItems,menuHtml:result.menuHtml,downloadEvents:result.downloadEvents,responses:result.responses.slice(-20),errors:result.errors},null,2));
 })().catch(e=>{console.error(e.stack||e);process.exitCode=1});
