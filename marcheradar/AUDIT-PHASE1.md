@@ -33,14 +33,14 @@
 - Les catégories, les listes et les compteurs s'appuient sur des critères cohérents : dossier, région, recherche et échéance.
 - Nouveau filtre par échéance à l'intérieur du dossier : **toutes**, **ouvertes**, **clôturées**, **à vérifier**.
 - Les dates civiles sont évaluées selon le jour à Bruxelles **sans inventer d'heure limite** ; les horodatages avec fuseau explicite sont comparés à l'heure réelle.
-- Sans date limite : une opportunité `LOCALE` est considérée ouverte **à la prospection**, et les autres marchés restent à vérifier.
+- Sans date limite : une opportunité `LOCALE` non écartée est considérée ouverte **à la prospection** ; les extraits locaux préqualifiés « écartés » et les marchés officiels sans date restent à vérifier. La base n'est pas présentée comme une liste de procédures officiellement ouvertes.
 - Les préqualifications automatiques à vérifier / écartées sont désormais signalées plutôt que masquées silencieusement.
 - Le stockage local existant n'est pas effacé et les identifiants des marchés ne sont pas modifiés.
 - Aucun collecteur, donnée officielle ni module Bathymétrie/Terres n'est modifié.
 
 ## 4. Tests automatisés
 
-Workflow : [Validation Phase 1](https://github.com/SimonDeglin/SimonDeglin.github.io/actions/runs/38733866668) — **succès**.
+Workflow : [Validation Phase 1](https://github.com/SimonDeglin/SimonDeglin.github.io/actions/runs/38734463601) — **succès**.
 
 Le script `marcheradar/tests/phase1-browser.cjs` exécute Chromium via Playwright sur une copie locale de l'application :
 
@@ -52,7 +52,8 @@ Le script `marcheradar/tests/phase1-browser.cjs` exécute Chromium via Playwrigh
 6. Retour du marché vers Listing complet.
 7. Scénarios d'échéance : future, passée, jour même, absente, locale sans limite, horodatages précis.
 8. Recherche texte et cohérence des compteurs.
-9. Absence d'erreur JavaScript non interceptée pendant les scénarios.
+9. Distinction entre une opportunité communale sans échéance et un extrait communal automatiquement écarté.
+10. Absence d'erreur JavaScript non interceptée pendant les scénarios.
 
 Ces tests ont **réellement été exécutés** et ont réussi. Ils ne remplacent pas une revue humaine dans le navigateur sur le site final.
 
