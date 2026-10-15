@@ -82,6 +82,9 @@
    if(!d||typeof d!=='object')return;
    add(d.url||d.href,str(d.title||d.label)||docKind(d),'document',d.sourcePage?'Page '+d.sourcePage:'Lien renseigné — accessibilité à vérifier');
   });
+  // Adresse de la rubrique Documents relevée sur le portail officiel.
+  // Une rubrique accessible n'est PAS un fichier CSC vérifié.
+  if(m.documentsPageUrl)add(m.documentsPageUrl,'Ouvrir la rubrique Documents e-Procurement','portal_documents','Liste officielle des pièces — présence et téléchargement à vérifier');
   (Array.isArray(m.officialSources)?m.officialSources:[]).forEach(function(d){
    if(!d||typeof d!=='object')return;
    var origin=str(d.source).toLowerCase(),url=str(d.url);
