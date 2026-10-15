@@ -43,7 +43,13 @@ jobs:
           git add marcheradar/data.json
           if ! git diff --cached --quiet; then
             git commit -m "Phase 3A: inventaire BOSA public validé automatiquement"
-            git push origin HEAD:feature/marcheradar-phase3a-documents-20261015
+            git fetch origin feature/marcheradar-phase3a-documents-20261015
+            if git rebase origin/feature/marcheradar-phase3a-documents-20261015; then
+              git push origin HEAD:feature/marcheradar-phase3a-documents-20261015 || echo "::warning::Poussée concurrente, conserver l'artefact validé et réexaminer la branche"
+            else
+              git rebase --abort || true
+              echo "::warning::Branche modifiée pendant les tests; données existantes conservées, revoir l'artefact validé"
+            fi
           fi
       - name: Save diagnostic reports
         if: always()
