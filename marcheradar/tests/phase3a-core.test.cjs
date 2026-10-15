@@ -93,3 +93,37 @@ test('BOSA: vraie date limite repérée, zone CET/CEST contrôlée, pas de date 
  assert.equal(c.parseBosaDeadline('Date limite de soumission 31/02/2026 10:00 CET').value,'');
  assert.equal(c.parseBosaDeadline('Date limite d’inscription aux visites 10/11/2026 10:00 CET').value,'');
 });
+
+
+test('Import TED: les dates officielles précises survivent aux imports de date seule',()=>{
+ const ted=require('../tools/collect-ted.cjs');
+ const original={id:'ted:682034-2026',source:'TED',sector:'Topo',sectors:['Topo'],screening:'main',
+  title:'Services topographiques',description:'Levé topographique',publicationNumber:'682034-2026',
+  publication:'2026-10-13',deadline:'2026-11-05T11:00:00+01:00',cpv:['71351810'],score:95,
+  deadlineEvidence:{verified:true,precision:'datetime',publicationNumber:'682034-2026',source:'TED API'}};
+ const updated={...original,publication:'2026-10-14',deadline:'2026-11-05'};
+ delete updated.deadlineEvidence;
+ const merged=ted.combine([original],[updated]);
+ assert.equal(merged.length,1);
+ assert.equal(merged[0].id,original.id);
+ assert.equal(merged[0].deadline,original.deadline);
+ assert.equal(merged[0].deadlineEvidence.verified,true);
+});
+test('Import BOSA: ne pas écraser une heure déjà vérifiée',()=>{
+ const bosa=require('../tools/bosa-public.cjs');
+ const prev={
+  id:'bosa:0765b50e-85f5-4aae-b2ca-2ed66c14e354',source:'BOSA',publicationWorkspaceId:'0765b50e-85f5-4aae-b2ca-2ed66c14e354',
+  sector:'Hydro',sectors:['Hydro'],title:'Levés bathymétriques',buyer:'Bruxelles Environnement',
+  score:83,deadline:'2026-11-10T10:00:00+01:00',publication:'2026-10-13',
+  deadlineEvidence:{verified:true,source:'BOSA page générale'},
+  documents:[{id:'doc1',title:'CSC.pdf',accessPageUrl:'https://www.publicprocurement.be/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents',url:''}]
+ };
+ const next={...prev,deadline:'2026-11-10',publication:'2026-10-14'};
+ delete next.deadlineEvidence;delete next.documents;
+ const result=bosa.merge([prev],[next]);
+ assert.equal(result.length,1);
+ assert.equal(result[0].id,prev.id);
+ assert.equal(result[0].deadline,prev.deadline);
+ assert.equal(result[0].documents.length,1);
+ assert.equal(result[0].deadlineEvidence.verified,true);
+});
