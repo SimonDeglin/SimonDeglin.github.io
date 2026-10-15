@@ -1,0 +1,35 @@
+name: Marché Radar Phase 3A - Audit documentaire pilote
+on:
+  push:
+    branches:
+      - feature/marcheradar-phase3a-20261015
+    paths:
+      - marcheradar/tools/phase3a-probe.cjs
+      - .github/workflows/marcheradar-phase3a-probe.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check marcheradar/tools/phase3a-probe.cjs
+      - run: npm install --no-save --no-package-lock playwright
+      - run: npx playwright install chromium
+      - name: Probe 10 real public notices
+        env:
+          PROBE_LIMIT: '10'
+          PROBE_BROWSER: '1'
+        run: node marcheradar/tools/phase3a-probe.cjs
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3a-pilot-source-probe
+          path: marcheradar/pilot/phase3a-probe-results.json
+          retention-days: 7
+          if-no-files-found: ignore
