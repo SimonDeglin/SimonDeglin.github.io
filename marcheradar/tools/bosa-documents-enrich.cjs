@@ -76,21 +76,44 @@ async function run(){
   'bosa:834b6f23-3906-4589-a0e7-afae9c91d26a','bosa:2057ca19-d4bd-43d6-bf36-bbc34ec2f71f',
   'bosa:d132e2d7-29b4-4489-9e26-70db1504fa8f']):null;
  const report=[];let changed=0;
+ // Le portail BOSA applique des contrôles différents aux appels Node directs.
+ // La consultation navigateur ne contourne aucune connexion : pages et API publiques uniquement.
+ const useBrowser=process.argv.includes('--browser');
+ const browser=useBrowser?await require('playwright').chromium.launch({headless:true}):null;
+ const context=browser?await browser.newContext({locale:'fr-BE'}):null;
+ try{
  for(let i=0;i<source.items.length;i++){
   const m=source.items[i];
   if(m.source!=='BOSA'||selected&&!selected.has(m.id))continue;
-  const r=await enrichRecord(m);
+  let fetcher=fetch,page=null;
+  if(context){
+   page=await context.newPage();
+   try{
+    await page.goto('https://www.publicprocurement.be/publication-workspaces/'+m.publicationWorkspaceId+'/documents',{waitUntil:'domcontentloaded',timeout:25000});
+    await page.waitForTimeout(600);
+    fetcher=async function(url){
+     const v=await page.evaluate(async url=>{
+      const res=await fetch(url,{credentials:'same-origin',headers:{Accept:'application/json'}});
+      return {ok:res.ok,status:res.status,data:res.ok?await res.json():null};
+     },url);
+     return {ok:v.ok,status:v.status,json:async()=>v.data};
+    };
+   }catch(e){fetcher=async()=>({ok:false,status:0})}
+  }
+  const r=await enrichRecord(m,fetcher);
   if(r.result==='enriched'){source.items[i]=r.market;changed++}
   report.push({id:m.id,result:r.result,changes:r.changes||[],endpointStatus:r.endpointStatus||null});
   console.log(m.id+' '+r.result+' '+(r.changes||[]).join(','));
+  if(page)await page.close();
  }
+ }finally{if(browser)await browser.close()}
  const dest=path.resolve(__dirname,'../audit');fs.mkdirSync(dest,{recursive:true});
  const output=path.join(dest,'phase3a-enriched-data.json');
  const control=path.join(dest,'phase3a-enrichment-report.json');
  fs.writeFileSync(output,JSON.stringify(source,null,2)+'\n');
  fs.writeFileSync(control,JSON.stringify({at:new Date().toISOString(),originalCount:source.items.length,enrichedCount:changed,results:report},null,2));
  if(process.argv.includes('--write')&&!process.argv.includes('--sample')&&changed>0)fs.writeFileSync(SOURCE,JSON.stringify(source,null,2)+'\n');
- console.log('RESULT '+JSON.stringify({markets:source.items.length,enriched:changed,sourceFileWritten:process.argv.includes('--write')&&!process.argv.includes('--sample')}));
+ console.log('RESULT '+JSON.stringify({markets:source.items.length,enriched:changed,sourceFileWritten:process.argv.includes('--write')&&!process.argv.includes('--sample')&&changed>0}));
 }
 if(require.main===module)run().catch(e=>{console.error(e);process.exitCode=1});
 module.exports={endpoints,jsonArray,safeExternal,normalizeDocuments,normalizeConsultationUrls,enrichRecord};
