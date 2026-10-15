@@ -1009,8 +1009,8 @@ function showScanKind(){
  $('#scan-value').step=scanKind==='water'?'0.1':'1';
  $('#confirm-scan').textContent=electric?'Utiliser ce total':'Utiliser cet index';
  updateScanHint();
- if(electric)refreshElectricSum();
- else refreshSingleScanConfirm();
+ if(electric){scanSetElectricStep(scanElectricStep,false);refreshElectricSum()}
+ else{$('#scan-retry').textContent='Lire les chiffres';refreshSingleScanConfirm()}
 }
 function refreshSingleScanConfirm(){
  if(scanKind==='electric')return refreshElectricSum();
@@ -1382,16 +1382,36 @@ function refreshScanCropPreview(){
   $('#scan-analysis').src=preview;
  }
 }
-function invalidateScanReading(){
- $('#scan-night').value='';$('#scan-day').value='';$('#scan-value').value='';
+function invalidateScanReading(preserveOpposite=false){
+ if(scanKind==='electric'&&preserveOpposite&&scanElectricStep!=='both'){
+  $('#scan-'+scanElectricStep).value='';
+ }else{
+  $('#scan-night').value='';$('#scan-day').value='';
+ }
+ if(scanKind!=='electric')$('#scan-value').value='';
  scanLastText='';scanLastData=null;
- $('#scan-raw-text').textContent='Aucune lecture de ce cadre pour le moment.';
+ $('#scan-raw-text').textContent='Aucune lecture de cette sélection pour le moment.';
  if(scanKind==='electric')refreshElectricSum();else refreshSingleScanConfirm();
- $('#scan-message').textContent='Cadre prêt : déplace-le ou ajuste ses coins, puis touche « Lire dans le cadre ».';
+ $('#scan-message').textContent='Cadre prêt : vérifie sa position et son inclinaison, puis appuie sur « Lire les chiffres ».';
 }
+function scanSetElectricStep(step,preserve=true){
+ if(!['both','night','day'].includes(step))return;
+ scanElectricStep=step;
+ $('[data-scan-electric-step]').forEach(b=>{
+  const on=b.dataset.scanElectricStep===step;
+  b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));
+ });
+ $('#scan-retry').textContent=step==='night'?'Lire Nuit':step==='day'?'Lire Jour':'Lire les chiffres';
+ if(scanCrop&&preserve)invalidateScanReading(true);
+}
+$('[data-scan-electric-step]').forEach(b=>b.addEventListener('click',()=>{
+ if(scanBusy)return;
+ scanSetElectricStep(b.dataset.scanElectricStep);
+}));
 function prepareScanFrame(auto=true){
  scanCrop=null;scanAutoZones=null;scanAutoConfidence='manual';
  scanAngle=0;scanZoom=1;scanPan={x:0,y:0};
+ scanSetElectricStep('both',false);
  $('#scan-angle').value='0';$('#scan-angle-value').textContent='0°';
  applyScanPhotoView();
  const found=auto&&findMeterDisplay();
