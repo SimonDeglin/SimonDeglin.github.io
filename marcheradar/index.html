@@ -180,6 +180,9 @@ body{background:#f7f7f7;color:#303339}
 .source-coverage-entry .source-led{display:inline-block;flex:none;width:6px;height:6px;border-radius:100%;background:#c9aa74}
 .source-coverage-entry.connected .source-led{background:#42966e}
 @media(max-width:740px){.source-coverage-strip{gap:5px}.source-coverage-entry{font-size:9px;padding:6px 8px}}
+
+.coverage-detail-link{display:inline-flex;align-items:center;font-size:11px;font-weight:750;color:#d8612d;text-decoration:none;margin-left:3px;padding:6px 2px}
+.coverage-detail-link:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -372,7 +375,8 @@ function renderCoverageStrip(){
   span('Sources locales',localConnected?countBySource('LOCALE')+' pistes · veille partielle':countBySource('LOCALE')+' piste(s) · veille non vérifiée',localConnected)+
   span('Communes',local.municipalitiesTotal?
     (local.deliberationSourcesRead||0)+' / '+local.municipalitiesTotal+' sources communales lues':'annuaire en cours de raccordement',
-    !!local.deliberationSourcesRead);
+    !!local.deliberationSourcesRead)+
+  '<a class="coverage-detail-link" href="./communes.html" title="Voir les communes et l’état réel des sources">Voir les communes →</a>';
 }
 function renderNav(){
  var names={all:"Vue d'ensemble",tenders:'Tous les marchés',favorites:'Favoris',tracked:'Dossiers suivis',urgent:'Échéances proches'};
