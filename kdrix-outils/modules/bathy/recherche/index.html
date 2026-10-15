@@ -15,14 +15,29 @@
 dialog{border:0;border-radius:15px;width:min(610px,calc(100% - 25px));padding:0;color:var(--ink);box-shadow:0 20px 90px #10222a77}dialog::backdrop{background:#0c2731bd}.modal-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:17px 20px;border-bottom:1px solid var(--line)}.modal-head h2{font-size:17px;margin:0}.modal-body{padding:18px 20px;max-height:70vh;overflow:auto}.field{display:grid;gap:5px;margin-bottom:12px}.field label{font-size:11px;font-weight:800;color:#4c6872}.field input,.field textarea,.field select{border:1px solid #c9d9df;border-radius:7px;padding:10px 11px;width:100%;font-size:12px;background:white;color:var(--ink)}.field textarea{min-height:74px;resize:vertical;line-height:1.5}.modal-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding:13px 20px 18px}.source-box{border:1px solid #cde4ec;background:#f3fafa;color:#4b717b;padding:10px;border-radius:8px;font-size:11px;line-height:1.5;margin-bottom:13px}.help-note{font-size:11px;color:#698089;line-height:1.5}.pin-label{background:#ffffffeb;border:1px solid #65b3c3;padding:4px 7px;border-radius:6px;white-space:nowrap;font-size:10px;color:#28525f;box-shadow:0 2px 8px #0002}.commune-label{background:#102f3dbd;color:white;border-radius:5px;border:1px solid #fff9;padding:3px 7px;font-weight:850;white-space:nowrap;box-shadow:0 1px 5px #0004}.draft-point{width:12px;height:12px;border:2px solid #fff;background:var(--orange);border-radius:50%;box-shadow:0 1px 6px #0007}
 @media(max-width:1000px){.main{grid-template-columns:1fr;display:flex;flex-direction:column;height:auto;min-height:0}.map-col{height:65vh;min-height:440px}.sidebar{min-height:280px;max-height:none}.side-scroll{overflow:visible}.heading-note{display:none}}
 @media(max-width:610px){.top{padding:0 11px;height:57px}.identity strong{font-size:15px}.header-nav .link{padding:7px 8px;font-size:10px}.heading{padding:12px 13px}.heading h1{font-size:19px}.heading p{font-size:10px}.main{padding:7px;gap:7px}.map-col{height:61vh;min-height:365px}.map-tools{padding:7px}.layers{gap:5px}.check{font-size:9.5px}.btn{padding:8px;font-size:10px}.legend{gap:7px;font-size:9px}.sidebar-head,.side-scroll{padding:11px}.map-status{max-width:calc(100% - 18px);left:9px;bottom:7px;font-size:10px}.float-pill{top:7px;right:7px;font-size:10px}.modal-body{padding:12px}.modal-head,.modal-foot{padding:12px}}
+
+/* KDRIX : zone de recherche rectangulaire, modifiable sans recommencer */
+.always-layer{border:1px solid #cae4db;background:#edf8f3;border-radius:7px;padding:7px 9px;font-size:10.5px;font-weight:790;color:#256957;white-space:nowrap}
+.always-layer::before{content:'\2713';margin-right:4px;color:#168157;font-weight:900}
+#target-area{padding:9px 10px;border-radius:8px;border:1px solid #bfdae0;background:#fff;color:#25545f;font-size:11px;font-weight:800;max-width:150px}
+#undo-btn[hidden]{display:none!important}
+.rect-handle-host{border:none;background:transparent}
+.rect-grip{height:32px;width:32px;border-radius:50%;background:#fff;box-shadow:0 2px 10px #16343d5e;border:3px solid #ed7039;display:grid;place-items:center;color:#ab4e24;font-size:18px;font-weight:950;cursor:ew-resize;line-height:1;user-select:none}
+.rect-grip.vertical{cursor:ns-resize}
+.rect-grip.center{width:38px;height:38px;border-radius:10px;cursor:move;background:#ef733b;color:#fff;border:3px solid white;box-shadow:0 2px 12px #173e47a8;font-size:23px}
+.zone-guide{font-size:11px;line-height:1.5;color:#507078;margin:7px 0 10px}
+.zone-guide strong{color:#154e5a}
+.zone-sized{color:#16805e;font-size:10px;font-weight:780}
+@media(max-width:700px){.always-layer{font-size:9px;padding:6px 7px}.layers{gap:5px}#target-area{max-width:130px}.rect-grip{width:37px;height:37px}.rect-grip.center{width:41px;height:41px}}
+
 </style>
 </head>
 <body>
 <header class="top"><div class="identity"><div class="brand">K</div><div><strong>KDRIX</strong><small>PROSPECTION BATHYMETRIQUE</small></div></div><nav class="header-nav"><a class="link" href="../">&#8592; Mes prospects</a><a class="link" href="../../../">Portail KDRIX</a></nav></header>
-<section class="heading"><div><div class="eyebrow">Recherche cartographique</div><h1>Nouvelle recherche</h1><p>Dessinez une zone, d&eacute;tectez les plans d'eau et rep&eacute;rez les sites &agrave; examiner.</p></div><div class="heading-note">Plan d'eau d&egrave;s <b>400 m&sup2;</b> &middot; Zone de <b>10 km&sup2; maximum</b></div></section>
+<section class="heading"><div><div class="eyebrow">Recherche cartographique</div><h1>Nouvelle recherche</h1><p>Déplacez et redimensionnez le rectangle, puis lancez la recherche de sites potentiels.</p></div><div class="heading-note">Plan d'eau d&egrave;s <b>400 m&sup2;</b> &middot; Zone de <b>10 km&sup2; maximum</b></div></section>
 <main class="main">
-<section class="map-col" aria-label="Carte de recherche"><div class="map-tools"><div class="tools-left"><button class="btn main-btn" id="draw-btn">&#9998; Tracer ma zone</button><button class="btn" id="undo-btn" disabled title="Annuler le dernier point">&#8636; Point</button><button class="btn" id="reset-btn" disabled>Effacer</button></div><div class="layers"><label class="check"><input type="checkbox" id="communes-toggle" checked>Communes</label><label class="check"><input type="checkbox" id="picc-toggle" checked>PICC / Voiries</label><label class="check"><input type="checkbox" id="streams-toggle" checked>Cours d'eau 2e / 3e</label></div></div><div class="map-frame"><div id="map" class="map" role="application" aria-label="Ortho 2026 et zone de recherche"></div><div class="float-pill" id="live-size">Aucune zone</div><div class="map-status" id="map-status">Cliquez sur <b>Tracer ma zone</b>, puis sur la carte pour d&eacute;limiter le secteur. Double-clic pour terminer.</div></div><div class="legend"><span class="key"><i></i>Communes</span><span class="key"><i class="blue"></i>Eau PICC</span><span class="key"><i class="turquoise"></i>2e cat.</span><span class="key"><i class="purple"></i>3e cat.</span><span class="key"><i class="orange"></i>Zone recherch&eacute;e</span><span>&copy; SPW 2026, RHW, PICC &middot; &copy; OpenStreetMap</span></div></section>
-<aside class="sidebar" aria-label="Analyse et prospects"><div class="sidebar-head"><h2>Prospects &agrave; rep&eacute;rer</h2><p>Une recherche guid&eacute;e, sans pr&eacute;tendre qu'un plan d'eau appartient &agrave; l'entreprise la plus proche.</p></div><div class="side-scroll"><div class="step">1. Votre secteur</div><div class="metric" id="zone-metric"><strong>Zone &agrave; tracer</strong>Maximum : 10 km&sup2; (1 000 ha).</div><button class="btn primary launch" id="run-btn" disabled>Analyser la zone &#8594;</button><button class="btn soft launch" id="manual-site-btn" disabled>+ Ajouter un site rep&eacute;r&eacute; sur l'ortho</button><div class="progress" id="progress" hidden></div><div class="results" id="results"><div class="empty">Les r&eacute;sultats appara&icirc;tront ici : <b>plans d'eau d'au moins 400 m&sup2;</b>, puis <b>&eacute;tablissements &agrave; v&eacute;rifier</b>, avec un lien vers leurs sources.</div></div><div class="sources"><b>Sources :</b> <a href="https://geoportail.wallonie.be/catalogue/0757bc5d-d918-47f4-8e70-8600c9286be5.html" target="_blank" rel="noopener">Ortho 2026</a><a href="https://geoportail.wallonie.be/catalogue/b795de68-726c-4bdf-a62a-a42686aa5b6f.html" target="_blank" rel="noopener">PICC</a><a href="https://geoportail.wallonie.be/catalogue/407d2651-e652-4652-8767-459453155bbe.html" target="_blank" rel="noopener">RHW</a><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OSM</a></div></div></aside>
+<section class="map-col" aria-label="Carte de recherche"><div class="map-tools"><div class="tools-left"><button class="btn main-btn" id="draw-btn">&#9678; Centrer la zone ici</button><label for="target-area" class="check">Surface <select id="target-area"><option value="10">10 km&sup2;</option><option value="5">5 km&sup2;</option><option value="2">2 km&sup2;</option><option value="1">1 km&sup2;</option></select></label><button class="btn" id="undo-btn" hidden disabled>Dernier point</button><button class="btn" id="reset-btn">&#8634; R&eacute;initialiser</button></div><div class="layers"><span class="always-layer">Communes</span><span class="always-layer">PICC / Voiries</span><span class="always-layer">Cours d'eau 2e / 3e</span><input type="checkbox" id="communes-toggle" checked disabled hidden><input type="checkbox" id="picc-toggle" checked disabled hidden><input type="checkbox" id="streams-toggle" checked disabled hidden></div></div><div class="map-frame"><div id="map" class="map" role="application" aria-label="Ortho 2026 et zone de recherche"></div><div class="float-pill" id="live-size">Aucune zone</div><div class="map-status" id="map-status">Votre rectangle est pr&ecirc;t. D&eacute;placez son centre orange ou ajustez les poign&eacute;es des c&ocirc;t&eacute;s.</div></div><div class="legend"><span class="key"><i></i>Communes</span><span class="key"><i class="blue"></i>Eau PICC</span><span class="key"><i class="turquoise"></i>2e cat.</span><span class="key"><i class="purple"></i>3e cat.</span><span class="key"><i class="orange"></i>Zone recherch&eacute;e</span><span>&copy; SPW 2026, RHW, PICC &middot; &copy; OpenStreetMap</span></div></section>
+<aside class="sidebar" aria-label="Analyse et prospects"><div class="sidebar-head"><h2>Prospects &agrave; rep&eacute;rer</h2><p>Une recherche guid&eacute;e, sans pr&eacute;tendre qu'un plan d'eau appartient &agrave; l'entreprise la plus proche.</p></div><div class="side-scroll"><div class="step">1. Votre secteur</div><div class="metric" id="zone-metric"><strong>Zone de recherche pr&ecirc;te</strong>Rectangle d&eacute;pla&ccedil;able et modifiable, maximum 10 km&sup2;.</div><button class="btn primary launch" id="run-btn" disabled>Analyser la zone &#8594;</button><button class="btn soft launch" id="manual-site-btn" disabled>+ Ajouter un site rep&eacute;r&eacute; sur l'ortho</button><div class="progress" id="progress" hidden></div><div class="results" id="results"><div class="empty">Les r&eacute;sultats appara&icirc;tront ici : <b>plans d'eau d'au moins 400 m&sup2;</b>, puis <b>&eacute;tablissements &agrave; v&eacute;rifier</b>, avec un lien vers leurs sources.</div></div><div class="sources"><b>Sources :</b> <a href="https://geoportail.wallonie.be/catalogue/0757bc5d-d918-47f4-8e70-8600c9286be5.html" target="_blank" rel="noopener">Ortho 2026</a><a href="https://geoportail.wallonie.be/catalogue/b795de68-726c-4bdf-a62a-a42686aa5b6f.html" target="_blank" rel="noopener">PICC</a><a href="https://geoportail.wallonie.be/catalogue/407d2651-e652-4652-8767-459453155bbe.html" target="_blank" rel="noopener">RHW</a><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OSM</a></div></div></aside>
 </main>
 <dialog id="prospect-dialog"><form id="prospect-form" method="dialog"><div class="modal-head"><h2>Cr&eacute;er une fiche prospect</h2><button type="button" class="btn" id="close-dialog">&#10005;</button></div><div class="modal-body"><div class="source-box" id="form-source">Les pistes ci-dessous reposent sur des donn&eacute;es cartographiques, pas sur une commande du client.</div><div class="field"><label for="f-name">Nom du site / de la soci&eacute;t&eacute; *</label><input id="f-name" required maxlength="130"></div><div class="field"><label for="f-town">Commune ou localisation</label><input id="f-town" maxlength="110"></div><div class="field"><label for="f-why">Pourquoi une bathym&eacute;trie pourrait l'int&eacute;resser ?</label><textarea id="f-why"></textarea></div><div class="field"><label for="f-what">Mission &agrave; proposer &agrave; KDRIX</label><textarea id="f-what"></textarea></div><div class="field"><label for="f-size">Ordre de grandeur du travail</label><input id="f-size"></div><div class="field"><label for="f-check">Points &agrave; v&eacute;rifier avant contact</label><textarea id="f-check"></textarea></div><p class="help-note">Le bouton IA pr&eacute;pare une demande contextualis&eacute;e &agrave; copier dans ChatGPT. L'analyse n'est pas ex&eacute;cut&eacute;e automatiquement : GitHub Pages ne peut pas prot&eacute;ger une cl&eacute; priv&eacute;e d'IA.</p></div><div class="modal-foot"><button class="btn soft" type="button" id="ai-copy">&#10022; Copier pour analyse IA</button><button class="btn primary" type="submit" id="save-prospect">Enregistrer la fiche &#8594;</button></div></form></dialog>
 <div id="toast" role="status" aria-live="polite" style="position:fixed;z-index:10000;bottom:16px;left:50%;transform:translateX(-50%);background:#183f4b;color:white;border-radius:9px;padding:11px 15px;box-shadow:0 7px 25px #0004;font-size:12px;display:none"></div>
@@ -96,6 +111,163 @@ function aiText(){const f=formText(),v=focused;return `Analyse de prospection ba
 async function copyValue(value){try{await navigator.clipboard.writeText(value);toast('Copi\u00e9 pour l\'analyse IA.')}catch{const t=document.createElement('textarea');t.value=value;document.body.append(t);t.select();document.execCommand('copy');t.remove();toast('Texte copi\u00e9.')}}
 function saveForm(){if(!focused)return;const v=focused,f=formText();if(!f.name){toast('Renseignez le nom du site.');return}const existing=(()=>{try{return JSON.parse(localStorage.getItem(CUSTOM_KEY)||'[]')}catch{return []}})();if(existing.some(x=>x.name.toLowerCase()===f.name.toLowerCase()&&distance(x.point,v.point)<100)){toast('Cette fiche existe d\u00e9j\u00e0 dans vos prospects.');return}const category=f.category||(/Golf/i.test(v.category)?'Golf priv\u00e9':/Carri/i.test(v.category)?'Carri\u00e8re':/Etang|eau|Piscicul/i.test(v.category)?'Etangs priv\u00e9s':'Autres');const d={previewSize:f.scale,estimatedWaterM2:v.m2,id:'nouveau-'+Date.now().toString(36)+'-'+Math.floor(Math.random()*10000),name:f.name,town:f.town||'Wallonie',category,confidence:'Opportunit\u00e9 plausible',potential:'Moyen',point:v.point,access:f.town||'Wallonie',why:f.why,fact:v.kind+' ; '+f.scale+'. Ne constitue pas une preuve de besoin.',factDate:'Prospection cartographique 2026',what:f.what,decision:'\u00c9valuer la pertinence du relev\u00e9 et ses livrables avec l\'exploitant.',reservation:f.check,grounds:'Piste cartographique ; activit\u00e9, lien avec l\u2019eau, faisabilit\u00e9 et interlocuteur \u00e0 v\u00e9rifier.',contact:{name:'\u00c0 identifier',role:'Contact technique ou responsable du site',email:'',phone:'',alt:''},sources:[[v.kind,v.source]],site:v.source,subject:'KDRIX - \u00e9tude de faisabilit\u00e9 d\'un relev\u00e9 bathym\u00e9trique',emailBody:'Madame, Monsieur,\n\nJe me permets de vous contacter au nom de KDRIX, bureau d\'\u00e9tudes bas\u00e9 \u00e0 Li\u00e8ge. Votre site pourrait pr\u00e9senter un int\u00e9r\u00eat pour un relev\u00e9 bathym\u00e9trique. Si vous exploitez des retenues ou bassins en eau, nos mesures peuvent aider \u00e0 estimer les profondeurs et les volumes utiles.\n\nUne telle intervention pourrait-elle r\u00e9pondre \u00e0 une question technique de votre exploitation ? Je suis disponible pour en discuter.\n\nBien cordialement,\nSimon Deglin\nPour KDRIX',sitepoint:'Emplacement indicatif d\u2019analyse cartographique',evidenceState:'plausible'};existing.push(d);localStorage.setItem(CUSTOM_KEY,JSON.stringify(existing));$('prospect-dialog').close();toast('Fiche enregistr\u00e9e dans Mes prospects sur ce navigateur.');setTimeout(()=>{if(confirm('Fiche enregistr\u00e9e localement. Ouvrir Mes prospects ?'))location.href='../'},250)}
 $('close-dialog').onclick=()=>$('prospect-dialog').close();$('ai-copy').onclick=()=>copyValue(aiText());$('prospect-form').addEventListener('submit',e=>{e.preventDefault();saveForm()});
+
+/* KDRIX recherche : rectangle 1/2/5/10 km², redimensionnable sans recalcul destructif.
+ * Les communes, le PICC et les cours d'eau ne sont plus masquables. */
+(function(){
+ 'use strict';
+ const priorInit=init;
+ const rectStore='kdrix_bathy_search_km2_v1';
+ let state=null,rectOutline=null,rectHandles=null,draggingHandle=null;
+ const keepBetween=(n,a,b)=>Math.max(a,Math.min(b,n));
+ const radians=n=>n*Math.PI/180;
+ const degrees=n=>n*180/Math.PI;
+ const allowedKm2=()=>Number($('target-area').value)||10;
+ function buildRectangle(center,width,target){
+   const latitude=keepBetween(center[0],-80,80),lon=center[1];
+   const safeWidth=keepBetween(width,Math.max(350,Math.sqrt(target)/4),Math.min(14000,Math.sqrt(target)*4));
+   const halfLat=degrees(Math.asin(keepBetween(target/(2*radius*safeWidth),0,.2)));
+   const halfLon=degrees(safeWidth/(2*radius*Math.cos(radians(latitude))));
+   return [[latitude-halfLat,lon-halfLon],[latitude-halfLat,lon+halfLon],
+           [latitude+halfLat,lon+halfLon],[latitude+halfLat,lon-halfLon]];
+ }
+ function markSearchStale(){
+   pickingSite=false;waterResults=[];siteResults=[];allItems=[];
+   if(!analysisBusy){clearResults();$('progress').hidden=true}
+ }
+ function persistZone(){
+   try{localStorage.setItem('kdrix_bathy_search_zone_v1',JSON.stringify(zone));
+       localStorage.setItem(rectStore,String(allowedKm2()))}catch(e){}
+ }
+ function rectangleArea(){return zone.length>=3?shapeArea(zone):0}
+ function perimeterPoints(){
+   const latS=zone[0][0],latN=zone[2][0],lonW=zone[0][1],lonE=zone[1][1];
+   return {center:[(latS+latN)/2,(lonW+lonE)/2],
+     west:[(latS+latN)/2,lonW],east:[(latS+latN)/2,lonE],
+     north:[latN,(lonW+lonE)/2],south:[latS,(lonW+lonE)/2]};
+ }
+ function moveRectangle(){
+   if(!state)return;
+   zone=buildRectangle(state.center,state.widthM,state.areaM2);
+   persistZone();recalc();
+ }
+ function recenterOnMap(){
+   if(analysisBusy){toast('Attendez la fin de l’analyse en cours.');return}
+   markSearchStale();const c=map.getCenter();state.center=[c.lat,c.lng];
+   moveRectangle();notice('Zone recentrée. Utilisez les poignées pour adapter sa forme.','good')
+ }
+ function resetRectangle(){
+   if(analysisBusy)return;
+   markSearchStale();const c=map.getCenter();state.center=[c.lat,c.lng];
+   state.widthM=Math.sqrt(state.areaM2);moveRectangle();
+   map.fitBounds(zone,{padding:[40,40],maxZoom:14});
+   notice('Rectangle réinitialisé : déplacez le centre ou ajustez les bords.','good');
+ }
+ function changeExtent(type,ll){
+   if(!state||analysisBusy)return;
+   if(type==='center'){state.center=[ll.lat,ll.lng]}
+   else if(type==='west'||type==='east'){
+     state.widthM=2*radius*Math.cos(radians(state.center[0]))*radians(Math.abs(ll.lng-state.center[1]));
+   }else if(type==='north'||type==='south'){
+     const half=radians(Math.abs(ll.lat-state.center[0]));
+     state.widthM=state.areaM2/(2*radius*Math.max(0.000001,Math.sin(half)));
+   }
+   state.widthM=keepBetween(state.widthM,Math.max(350,Math.sqrt(state.areaM2)/4),Math.min(14000,Math.sqrt(state.areaM2)*4));
+   moveRectangle();
+ }
+ function markerIcon(type){
+   const content=type==='center'?'&#10021;':type==='north'||type==='south'?'&#8597;':'&#8596;';
+   return L.divIcon({className:'rect-handle-host',
+     html:'<span class="rect-grip '+(type==='center'?'center':type==='north'||type==='south'?'vertical':'')+'" title="'+(type==='center'?'Déplacer toute la zone':'Ajuster la forme sans dépasser la superficie')+'">'+content+'</span>',
+     iconSize:type==='center'?[38,38]:[32,32],iconAnchor:type==='center'?[19,19]:[16,16]});
+ }
+ function installHandles(){
+   if(rectHandles)return;
+   rectHandles={};
+   const points=perimeterPoints();
+   for(const type of ['center','west','east','north','south']){
+     const marker=L.marker(points[type],{icon:markerIcon(type),draggable:true,
+       bubblingMouseEvents:false,riseOnHover:true,title:type==='center'?'Déplacer la recherche':'Redimensionner le rectangle'}).addTo(zoneLayer);
+     marker.on('dragstart',()=>{draggingHandle=type;markSearchStale()});
+     marker.on('drag',e=>changeExtent(type,e.target.getLatLng()));
+     marker.on('dragend',e=>{changeExtent(type,e.target.getLatLng());draggingHandle=null;
+       paintZone();notice('Zone ajustée : '+fmt(rectangleArea()/1000000,2)+' km². Vous pouvez lancer la recherche.','good')});
+     rectHandles[type]=marker;
+   }
+ }
+ function permanentContext(){
+   for(const name of ['communes','picc','streams']){
+     const box=$(name+'-toggle');if(box){box.checked=true;box.disabled=true}
+   }
+   if(communesLayer&&!map.hasLayer(communesLayer))communesLayer.addTo(map);
+   if(communeNames&&!map.hasLayer(communeNames))communeNames.addTo(map);
+   if(streamsLayer&&!map.hasLayer(streamsLayer))streamsLayer.addTo(map);
+   if(piccLayer&&!map.hasLayer(piccLayer))piccLayer.addTo(map);
+ }
+ init=function(){
+   priorInit();if(!map)return;
+   permanentContext();
+   const priorArea=Number(localStorage.getItem(rectStore));
+   if([1,2,5,10].includes(priorArea))$('target-area').value=String(priorArea);
+   const areaM2=allowedKm2()*1000000*(1-1e-8);
+   const saved=Array.isArray(zoneSaved)&&zoneSaved.length>=3?zoneSaved:null;
+   const c=saved?[(Math.min(...saved.map(p=>p[0]))+Math.max(...saved.map(p=>p[0])))/2,
+                  (Math.min(...saved.map(p=>p[1]))+Math.max(...saved.map(p=>p[1])))/2]:
+                 [map.getCenter().lat,map.getCenter().lng];
+   const w=saved?distance([c[0],Math.min(...saved.map(p=>p[1]))],[c[0],Math.max(...saved.map(p=>p[1]))]):Math.sqrt(areaM2);
+   state={center:c,widthM:w,areaM2};
+   drawing=false;map.doubleClickZoom.enable();
+   if(zoneLayer){map.removeLayer(zoneLayer);zoneLayer=null}
+   if(draftLayer){map.removeLayer(draftLayer);draftLayer=null}
+   paintZone=function(){
+     if(!map||!state)return;
+     if(!zoneLayer)zoneLayer=L.layerGroup().addTo(map);
+     if(!rectOutline){rectOutline=L.polygon(zone,{color:'#ec703a',weight:3.5,
+       fillColor:'#f18b4e',fillOpacity:.12,interactive:false}).addTo(zoneLayer)}
+     else rectOutline.setLatLngs(zone);
+     installHandles();const positions=perimeterPoints();
+     for(const [type,marker] of Object.entries(rectHandles)){
+       if(type!==draggingHandle)marker.setLatLng(positions[type]);
+     }
+   };
+   recalc=function(){
+     const m2=rectangleArea(),valid=zone.length===4&&m2>=50000&&m2<=MAX_M2;
+     const surface=fmt(m2/1000000,2)+' km²',
+           w=distance(zone[0],zone[1]),h=distance(zone[1],zone[2]);
+     $('live-size').textContent=surface+' · zone modifiable';
+     $('zone-metric').classList.toggle('error',!valid);
+     $('zone-metric').innerHTML='<strong>'+surface+'</strong><span class="zone-sized">Recherche limitée automatiquement à 10 km²</span><div class="zone-guide">'
+       +fmt(w/1000,2)+' km de large × '+fmt(h/1000,2)+' km de long. '
+       +'Glissez le <strong>centre orange</strong> pour déplacer la zone, ou les <strong>poignées sur les bords</strong> pour changer ses dimensions : la superficie reste constante.</div>';
+     $('run-btn').disabled=!valid||analysisBusy;
+     $('manual-site-btn').disabled=!valid||analysisBusy;
+     $('undo-btn').disabled=true;$('reset-btn').disabled=analysisBusy;
+     paintZone();return {m2,valid};
+   };
+   beginZone=recenterOnMap;
+   endZone=()=>{};
+   clearZone=resetRectangle;
+   $('draw-btn').textContent='◎ Centrer la zone ici';
+   $('draw-btn').classList.remove('primary');
+   $('draw-btn').onclick=recenterOnMap;
+   $('undo-btn').hidden=true;
+   $('reset-btn').textContent='↺ Réinitialiser';
+   $('reset-btn').onclick=resetRectangle;
+   $('target-area').onchange=()=>{
+     if(analysisBusy)return;
+     markSearchStale();const area=allowedKm2()*1000000*(1-1e-8);
+     state.widthM*=Math.sqrt(area/state.areaM2);state.areaM2=area;
+     moveRectangle();map.fitBounds(zone,{padding:[38,38],maxZoom:14});
+     notice('Secteur ajusté à '+allowedKm2()+' km². Modifiez sa forme avec les poignées.','good');
+   };
+   map.on('zoomend moveend',permanentContext);
+   zone=buildRectangle(state.center,state.widthM,state.areaM2);
+   recalc();persistZone();
+   if(saved)map.fitBounds(zone,{padding:[40,40],maxZoom:14});
+   notice('Rectangle prêt : glissez le centre pour déplacer la recherche, les poignées pour modifier sa forme.','good');
+ };
+})();
+
 init();
 </script>
 </body></html>
