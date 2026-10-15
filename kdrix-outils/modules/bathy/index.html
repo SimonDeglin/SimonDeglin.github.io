@@ -197,6 +197,53 @@ header{height:67px;background:#fff;border-bottom:1px solid #dce5e5}.head{height:
 @media print{.simple-compact{grid-template-columns:28px 150px 1fr 1fr 90px;gap:9px}.simple-col.status{display:none}.simple-compact .actionstack{display:none}.simple-col .interest{font-size:10px}.simple-col.benefit,.simple-col.proposal{display:block}.simple-col.area{grid-column:auto;grid-row:auto}}
 
 </style>
+<style id="kdrix-workspace-style">
+/* KDRIX Bathy: flexible map workbench and quiet polygon selection. */
+.detailrow.kdrix-resizable{grid-template-columns:minmax(210px,var(--kdrix-side-width,32%)) 11px minmax(0,1fr);column-gap:9px;align-items:stretch}
+.detailrow.kdrix-resizable>.panel:first-child{grid-column:1;grid-row:1}
+.detailrow.kdrix-resizable>.map-panel{grid-column:3;grid-row:1;min-width:0}
+.kdrix-splitter{grid-column:2;grid-row:1;display:flex;align-items:center;justify-content:center;border:0;border-radius:8px;background:#dce9ed;color:#5e7b85;cursor:col-resize;touch-action:none;user-select:none;min-height:180px;padding:0 2px}
+.kdrix-splitter span{display:block;width:4px;height:50px;border-radius:4px;background:repeating-linear-gradient(to bottom,#72949e 0 5px,transparent 5px 11px)}
+.kdrix-splitter:hover,.kdrix-splitter:focus-visible{background:#c7e1e8;outline:2px solid #85b6c5}
+.detailrow.kdrix-resizable.kdrix-side-hidden{grid-template-columns:minmax(0,1fr)}
+.detailrow.kdrix-side-hidden>.panel:first-child,.detailrow.kdrix-side-hidden>.kdrix-splitter{display:none}
+.detailrow.kdrix-side-hidden>.map-panel{grid-column:1}
+.map-toolbar .mapexpand{position:static;margin-left:auto;box-shadow:none;padding:9px 11px;white-space:nowrap;background:#e8f3f6;color:#1b5667;border-color:#c0dade;line-height:1.2}
+.map-toolbar .kdrix-side-toggle{font-size:11px;padding:9px 10px;white-space:nowrap}
+.kdrix-results-panel{margin-top:12px;border:1px solid #dce8eb;background:#fff;border-radius:9px;min-width:0}
+.kdrix-results-panel>summary{cursor:pointer;list-style:none;display:flex;gap:8px;align-items:center;justify-content:space-between;padding:10px 11px;color:#2a5564;font-weight:820;font-size:11px}
+.kdrix-results-panel>summary::-webkit-details-marker{display:none}
+.kdrix-results-panel>summary:after{content:'\25be';font-size:15px;color:#4e7b89;transition:transform .15s}
+.kdrix-results-panel[open]>summary:after{transform:rotate(180deg)}
+.kdrix-results-panel .kdrix-summary-total{margin-left:auto;font-size:12px;font-weight:850;color:#126d84;white-space:nowrap}
+.kdrix-results-panel>.measure-line,.kdrix-results-panel>.measure-list,.kdrix-results-panel>.history-row{margin-left:10px;margin-right:10px}
+.kdrix-results-panel>.history-row{margin-bottom:10px}
+.map-panel.kdrix-workbench{position:fixed!important;inset:8px!important;z-index:9100!important;background:#f4f8f9;box-shadow:0 12px 75px #0c293780;border:1px solid #b6ccd2;border-radius:14px;display:flex;flex-direction:column;gap:0;min-height:0;min-width:0;height:auto!important;width:auto!important;max-width:none!important;padding:10px!important}
+.pcard:has(.kdrix-workbench){z-index:9000;overflow:visible}
+body.kdrix-focus-open{overflow:hidden!important}
+body.kdrix-focus-open:before{content:'';position:fixed;inset:0;background:#112c38b8;z-index:8000;pointer-events:none}
+.map-panel.kdrix-workbench>.map-toolbar{flex:0 0 auto;position:relative;z-index:2;padding:2px 3px 9px;margin:0;min-height:44px}
+.map-panel.kdrix-workbench>.map-shell{flex:1 1 0;height:auto!important;min-height:180px;max-height:none;margin:0;border-radius:10px}
+.map-panel.kdrix-workbench>.map-attribution,.map-panel.kdrix-workbench>.map-controls,.map-panel.kdrix-workbench>.simple-gis-hint,.map-panel.kdrix-workbench>.tool-info,.map-panel.kdrix-workbench>.footnote{display:none!important}
+.map-panel.kdrix-workbench>.simple-gis-toolbar{position:absolute;z-index:1600;top:var(--kdrix-tools-top,61px);left:18px;display:flex;gap:6px;max-width:calc(100% - 35px);background:#ffffffef;border:1px solid #c7dde5;border-radius:10px;padding:8px;box-shadow:0 4px 16px #122e3c35;margin:0}
+.map-panel.kdrix-workbench .simple-cad-indicator{display:none}
+.map-panel.kdrix-workbench .simple-picc-toggle,.map-panel.kdrix-workbench .simple-draw{font-size:11px!important;min-height:36px;padding:7px 9px!important;width:auto}
+.map-panel.kdrix-workbench .picc-hint{top:95px;max-width:300px}
+.map-panel.kdrix-workbench .drawtoolbar{bottom:12px;left:12px;transform:none;max-width:380px}
+.map-panel.kdrix-workbench>.kdrix-results-panel{position:absolute;z-index:1600;right:18px;bottom:16px;width:330px;min-width:245px;max-width:min(520px,calc(100% - 36px));max-height:min(56dvh,520px);box-shadow:0 4px 22px #122e3c36;margin:0;background:#fffffff5}
+.map-panel.kdrix-workbench>.kdrix-results-panel[open]{height:min(300px,48dvh);min-height:125px;resize:both;overflow:auto}
+.map-panel.kdrix-workbench>.kdrix-results-panel:not([open]){height:auto;resize:none;overflow:hidden}
+.map-panel.kdrix-workbench .measure-line{padding-top:6px;margin-top:0}
+.map-panel.kdrix-workbench .water-row.v5-row{grid-template-columns:70px minmax(70px,1fr);gap:6px}
+.map-panel.kdrix-workbench .water-row.v5-row .water-area{grid-column:2;text-align:left}
+.map-panel.kdrix-workbench .water-row.v5-row .shape-actions{grid-column:1/-1;justify-content:flex-end}
+.map-panel.kdrix-workbench .mapexpand{background:#1c6579;color:white;border-color:#1c6579}
+.map-panel.kdrix-workbench .kdrix-side-toggle{display:none!important}
+@media(max-width:920px){.detailrow.kdrix-resizable{grid-template-columns:minmax(0,1fr);gap:10px}.detailrow.kdrix-resizable>.panel:first-child{grid-column:1;grid-row:1}.detailrow.kdrix-resizable>.map-panel{grid-column:1;grid-row:2}.detailrow.kdrix-side-hidden>.map-panel{grid-row:1}.kdrix-splitter{display:none}.map-panel.kdrix-workbench>.map-shell{min-height:250px}}
+@media(max-width:620px){.map-panel.kdrix-workbench .map-toolbar{position:relative;padding-top:2px;min-height:64px}.map-panel.kdrix-workbench .map-toolbar .mapexpand{position:absolute;top:0;right:3px;z-index:4;margin:0;white-space:nowrap;font-size:9px;padding:6px 8px}.map-panel.kdrix-workbench .map-toolbar .details-title{font-size:11px;max-width:calc(100% - 138px)}.map-panel.kdrix-workbench .map-toolbar .mode-tabs{width:100%;justify-content:flex-start;margin-top:5px}}
+@media(max-width:620px){.map-panel.kdrix-workbench{inset:3px!important;padding:6px!important;border-radius:8px}.map-panel.kdrix-workbench>.map-toolbar{gap:4px;padding-bottom:6px}.map-toolbar .mapexpand,.map-toolbar .kdrix-side-toggle{font-size:10px;padding:7px 8px}.map-panel.kdrix-workbench>.simple-gis-toolbar{left:10px;right:10px;max-width:none;padding:5px;flex-wrap:wrap}.map-panel.kdrix-workbench .simple-picc-toggle,.map-panel.kdrix-workbench .simple-draw{flex:1 1 auto;min-width:0;font-size:10px!important;padding:5px 8px!important;min-height:31px}.map-panel.kdrix-workbench .picc-hint{top:130px;left:10px;max-width:calc(100% - 20px)}.map-panel.kdrix-workbench>.kdrix-results-panel{right:9px;bottom:9px;max-width:calc(100% - 18px);width:min(330px,calc(100% - 18px))}.map-panel.kdrix-workbench>.kdrix-results-panel[open]{height:min(240px,36dvh);resize:none}.map-panel.kdrix-workbench .drawtoolbar{left:7px;right:7px;width:auto;bottom:66px;max-width:none}.map-panel.kdrix-workbench .mode-tabs{width:auto;display:flex;gap:2px}.map-panel.kdrix-workbench .mapmode{padding:7px 6px}.kdrix-results-panel>.measure-list{max-width:100%}}
+@media print{.kdrix-splitter,.kdrix-side-toggle{display:none!important}.map-panel.kdrix-workbench{position:static!important;box-shadow:none!important}}
+</style>
 </head>
 <body>
 <header><div class="container head"><div class="identity-brand"><div class="logomark">K</div><div><div class="brand-main">KDRIX</div><div class="brand-caption">Prospection · Bathymétrie</div></div></div><div class="headnav"><span class="origin">Départ : rue de l’Avouerie 5 · Liège</span><a href="https://www.kdrix.be/fr/nos-rfrences/" target="_blank" rel="noopener">Nos références ↗</a></div></div></header>
@@ -1391,6 +1438,58 @@ render();handleActions();handleV5();
  render();
 })();
 
+</script>
+<script id="kdrix-workspace-script">
+/* KDRIX Bathy: map-first layout, selectable polygon handles and collapsible results. */
+(function(){
+ 'use strict';
+ const priorDetail=drawDetail, priorInit=initMap, priorStart=startDraw, priorFinish=finishDraw, priorTeardown=teardown, priorMetrics=refreshMetrics;
+ let focusedId=null;
+ const el=(selector,root=document)=>root.querySelector(selector);
+ const current=id=>STATE.maps[id];
+ const invalidate=id=>{const x=current(id);if(!x)return;requestAnimationFrame(()=>{try{x.map.invalidateSize({pan:false})}catch{}});setTimeout(()=>{try{x.map.invalidateSize({pan:false})}catch{}},180)};
+ function syncTotal(id){const x=current(id),node=el('[data-kdrix-total="'+id+'"]');if(!node)return;const count=getAreaCollection(id).length;const total=el('[data-measuretotal="'+id+'"]')?.textContent||'--';node.textContent=count?total:'Aucune surface';const drawer=el('[data-kdrix-drawer="'+id+'"]');if(drawer)drawer.dataset.count=String(count)}
+ function deselect(id){const x=current(id);if(!x||(!x.selectedUid&&!x.selectedVertex&&!x.editingUid))return;x.selectedUid=null;x.selectedVertex=null;x.editingUid=null;paintAreas(id);info(id,'Contour non s\u00e9lectionn\u00e9. Cliquez sur une surface pour modifier ses sommets.');}
+ function exitFocus(){if(focusedId)setFocus(focusedId,false)}
+ function setFocus(id,enabled){const panel=el('[data-kdrix-workbench="'+id+'"]'),x=current(id);if(!panel||!x)return;
+   if(enabled&&focusedId&&focusedId!==id)exitFocus();
+   if(!enabled&&focusedId!==id)return;
+   const drawer=el('[data-kdrix-drawer="'+id+'"]'),btn=el('.mapexpand[data-id="'+id+'"]');
+   panel.classList.toggle('kdrix-workbench',enabled);
+   document.body.classList.toggle('kdrix-focus-open',enabled);
+   focusedId=enabled?id:null;
+   if(drawer){if(enabled){drawer.dataset.previousOpen=String(drawer.open);drawer.open=false}else drawer.open=drawer.dataset.previousOpen!=='false'}
+   if(btn){btn.textContent=enabled?'\u2715 Quitter le mode mesure':'\u26f6 Mode mesure';btn.setAttribute('aria-pressed',String(enabled))}
+   if(enabled){const h=el('.map-toolbar',panel)?.getBoundingClientRect().height||45;panel.style.setProperty('--kdrix-tools-top',(h+14)+'px')}
+   invalidate(id);
+ }
+ function attachSplitter(p,row){row.classList.add('kdrix-resizable');if(el('.kdrix-splitter',row))return;
+   const side=el('.panel',row),mapPanel=el('.map-panel',row);if(!side||!mapPanel)return;
+   const handle=document.createElement('div');handle.className='kdrix-splitter';handle.setAttribute('role','separator');handle.setAttribute('aria-label','Redimensionner les volets : glissez \u00e0 gauche ou \u00e0 droite');handle.setAttribute('aria-orientation','vertical');handle.setAttribute('aria-valuemin','20');handle.setAttribute('aria-valuemax','60');handle.tabIndex=0;handle.title='Glisser pour agrandir la carte, double-clic pour r\u00e9initialiser';handle.innerHTML='<span aria-hidden="true"></span>';row.insertBefore(handle,mapPanel);
+   let pending=0;
+   function width(px){const rect=row.getBoundingClientRect(),max=Math.max(210,Math.min(rect.width*.6,rect.width-390)),w=Math.min(max,Math.max(210,px));row.style.setProperty('--kdrix-side-width',w+'px');handle.setAttribute('aria-valuenow',String(Math.round(w/rect.width*100)));if(!pending)pending=requestAnimationFrame(()=>{pending=0;current(p.id)?.map.invalidateSize({pan:false})})}
+   handle.addEventListener('pointerdown',ev=>{if(ev.button!==0)return;ev.preventDefault();handle.setPointerCapture(ev.pointerId);const move=e=>{width(e.clientX-row.getBoundingClientRect().left)};const stop=()=>{handle.removeEventListener('pointermove',move);handle.removeEventListener('pointerup',stop);handle.removeEventListener('pointercancel',stop)};handle.addEventListener('pointermove',move);handle.addEventListener('pointerup',stop);handle.addEventListener('pointercancel',stop)});
+   handle.addEventListener('dblclick',()=>{row.style.removeProperty('--kdrix-side-width');invalidate(p.id)});
+   handle.addEventListener('keydown',ev=>{if(ev.key!=='ArrowLeft'&&ev.key!=='ArrowRight')return;ev.preventDefault();const w=side.getBoundingClientRect().width;width(w+(ev.key==='ArrowLeft'?-24:24))});
+   const bar=el('.map-toolbar',mapPanel);
+   if(bar){const sideBtn=document.createElement('button');sideBtn.type='button';sideBtn.className='btn kdrix-side-toggle';sideBtn.dataset.kdrixInfo=p.id;sideBtn.textContent='\u2194 Masquer les infos';sideBtn.title='Replier le volet commercial pour agrandir la carte';sideBtn.setAttribute('aria-pressed','false');bar.append(sideBtn);const expand=el('.mapexpand[data-id="'+p.id+'"]',mapPanel);if(expand){bar.append(expand);expand.textContent='\u26f6 Mode mesure';expand.setAttribute('aria-pressed','false');expand.title='Agrandir la carte et conserver les outils de mesure'}}
+ }
+ drawDetail=function(p,node){priorDetail(p,node);if(!node)return;const row=el('.detailrow',node),panel=el('.map-panel',node);if(!row||!panel||panel.dataset.kdrixWorkBench)return;
+   panel.dataset.kdrixWorkbench=p.id;attachSplitter(p,row);
+   const result=el('.measure-line',panel),list=el('.measure-list',panel),hist=el('.history-row',panel);
+   if(result){const drawer=document.createElement('details');drawer.className='kdrix-results-panel';drawer.dataset.kdrixDrawer=p.id;drawer.open=true;const summary=document.createElement('summary');summary.innerHTML='<span>\u25ce Surfaces mesur\u00e9es</span><strong class="kdrix-summary-total" data-kdrix-total="'+p.id+'">--</strong>';drawer.append(summary);result.before(drawer);drawer.append(result);if(list)drawer.append(list);if(hist)drawer.append(hist);syncTotal(p.id)}
+ };
+ initMap=function(p){priorInit(p);const x=current(p.id);if(!x||x.kdrixBlankListener)return;x.kdrixBlankListener=true;
+   x.map.on('click',()=>{if(x.mode!=='draw'&&x.mode!=='parcel')deselect(p.id)});
+ };
+ startDraw=function(id){const x=current(id),starting=x&&x.mode!=='draw';priorStart(id);if(starting&&x?.mode==='draw'){setFocus(id,true);const drawer=el('[data-kdrix-drawer="'+id+'"]');if(drawer)drawer.open=false}};
+ finishDraw=function(id){const x=current(id),hadDraft=x?.mode==='draw'&&x.draft.length>=3;priorFinish(id);if(hadDraft&&x?.mode==='none'){deselect(id);syncTotal(id)}};
+ refreshMetrics=function(){priorMetrics();for(const p of DATA)syncTotal(p.id)};
+ teardown=function(){exitFocus();priorTeardown()};
+ document.addEventListener('click',ev=>{const b=ev.target.closest('.mapexpand[data-act="fullscreen"]');if(!b)return;ev.preventDefault();ev.stopImmediatePropagation();setFocus(b.dataset.id,focusedId!==b.dataset.id)},true);
+ document.addEventListener('click',ev=>{const b=ev.target.closest('[data-kdrix-info]');if(!b)return;const row=b.closest('.detailrow');if(!row)return;const closed=row.classList.toggle('kdrix-side-hidden');b.textContent=closed?'\u2194 Afficher les infos':'\u2194 Masquer les infos';b.setAttribute('aria-pressed',String(closed));invalidate(b.dataset.kdrixInfo)});
+ document.addEventListener('keydown',ev=>{if(ev.key!=='Escape'||ev.target.closest('input,textarea,[contenteditable]'))return;if(focusedId){if(current(focusedId)?.mode==='draw')return;ev.preventDefault();ev.stopImmediatePropagation();exitFocus();return}const selected=Object.values(STATE.maps).find(x=>x.mode!=='draw'&&x.selectedUid);if(selected){ev.preventDefault();ev.stopImmediatePropagation();deselect(selected.p.id)}},true);
+})();
 </script>
 </body>
 </html>
