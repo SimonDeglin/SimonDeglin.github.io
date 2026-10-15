@@ -129,6 +129,20 @@ async function loadPage(page,url,expected){
   await page.locator('#search').fill('');
   assert.equal(await page.locator('.tender').count(),7);
   console.log('OK: échéances, heures, prospect local, recherche et compteurs');
+  // Les extraits locaux écartés par la préqualification ne sont pas des marchés ouverts.
+  const rejectedPage=await context.newPage();
+  const rejected={...item('local-rejected','', 'LOCALE'),screening:'excluded'};
+  await rejectedPage.route('**/marcheradar/data.json*',route=>route.fulfill({
+   status:200,contentType:'application/json',
+   body:JSON.stringify({schema_version:2,items:[item('local-prospect','', 'LOCALE'),rejected]})
+  }));
+  await loadPage(rejectedPage,url,2);
+  await rejectedPage.locator('#dueFilter').selectOption('open');
+  assert.equal(await rejectedPage.locator('.tender').count(),1,'Un extrait écarté ne doit pas être qualifié de prospection ouverte');
+  await rejectedPage.locator('#dueFilter').selectOption('unknown');
+  assert.equal(await rejectedPage.locator('article[data-id="fixture:local-rejected"]').count(),1,'L extrait écarté demeure consultable pour vérification');
+  await rejectedPage.close();
+  console.log('OK: extraits locaux rejetés non présentés comme opportunités ouvertes');
   await context.close();
   assert.deepEqual(browserErrors,[],'Erreurs JavaScript dans le navigateur : '+browserErrors.join('\n'));
   console.log('SUCCÈS : tous les tests de Phase 1 sont passés. Aucune publication sur main.');
