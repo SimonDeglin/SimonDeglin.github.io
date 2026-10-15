@@ -1272,6 +1272,15 @@ function scanUnion(zones){
  const x1=Math.max(...zones.map(z=>z.left+z.width)),y1=Math.max(...zones.map(z=>z.top+z.height));
  return {left:x0,top:y0,width:x1-x0,height:y1-y0};
 }
+function displayScanCrop(start,end){
+ const box=$('#scan-crop-box');
+ const x=Math.min(start.x,end.x),y=Math.min(start.y,end.y);
+ const w=Math.abs(start.x-end.x),h=Math.abs(start.y-end.y);
+ if(!Number.isFinite(x+y+w+h)||w<=0||h<=0)return;
+ box.style.left=x+'px';box.style.top=y+'px';
+ box.style.width=w+'px';box.style.height=h+'px';
+ box.classList.remove('hidden');
+}
 function displayImageSpaceCrop(rect){
  const img=$('#scan-preview');if(!rect||!img?.naturalWidth)return;
  const wrap=$('#scan-preview-wrap'),imageRect=img.getBoundingClientRect(),wrapRect=wrap.getBoundingClientRect();
