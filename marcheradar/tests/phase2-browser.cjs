@@ -75,7 +75,7 @@ function fixture(id,changes){
   const detailText=await page.locator('#drawerBody').innerText();
   assert.match(detailText,/pièce\(s\) répertoriée\(s\)/);
   assert.match(detailText,/CCH.*Bathymetrie/i);
-  assert.match(detailText,/Les fichiers ne sont pas encore téléchargés ni analysés/i);
+  assert.match(detailText,/Les intitulés et identifiants proviennent de l’API publique/i);
   const documentsLink=await page.locator('.mr2-source-link').evaluateAll(nodes=>nodes.map(x=>x.href));
   assert(documentsLink.some(url=>url.endsWith('/documents')),'Le lien vers la rubrique Documents officielle est absent');
   await page.locator('#closeDrawer').click();
