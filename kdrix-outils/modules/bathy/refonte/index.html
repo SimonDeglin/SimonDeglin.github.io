@@ -187,6 +187,62 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   const [cellRows,bodyRows,companyRows,prospectRows,relationRows]=await Promise.all(['cells','bodies','companies','prospects','relations'].map(read));
   registry=new Map(cellRows.map(x=>[x.id,x]));bodies=new Map(bodyRows.map(x=>[x.id,x]));companies=new Map(companyRows.map(x=>[x.id,x]));prospects=new Map(prospectRows.map(x=>[x.id,x]));relations=new Map(relationRows.map(x=>[x.id,x]));
  }
+
+ // Migration additive et non destructive : les anciennes données restent dans leur emplacement d'origine.
+ function oldEntry(o,manual=false){
+  const contact=(o.contact&&typeof o.contact==='object')?o.contact:{},pos=Array.isArray(o.point)?o.point:[o.lat,o.lon];
+  const id=(manual?'manual-old:':'historical:')+String(o.id);
+  return {id,legacyId:o.id,legacyOrigin:manual?'localStorage':'Dossier historique KDRIX',name:o.name||'Site à identifier',
+   category:o.category||o.kind||'',kind:'company',town:o.town||'',address:o.access||o.address||'',lat:Number(pos[0]),lon:Number(pos[1]),
+   website:o.site||o.website||'',contactName:contact.name||'',contactRole:contact.role||'',phone:contact.phone||o.phone||'',
+   email:contact.email||o.email||'',altContact:contact.alt||'',area:o.area||null,hasWater:o.evidenceState==='documente'?'A vérifier · indices documentés':'À vérifier',
+   interest:o.why||o.what||'',notes:o.notes||'',status:o.status||'a_etudier',
+   sources:Array.isArray(o.sources)?o.sources:[],history:o,source:manual?'Ancienne fiche ajoutée manuellement':'Sélection historique KDRIX',
+   createdAt:o.createdAt||new Date().toISOString(),isHistorical:!manual,archived:false};
+ }
+ async function seedHistorical(){
+  let count=0;
+  for(const src of LEGACY_HISTORIC){
+   const prospect=oldEntry(src,false);
+   if(prospects.has(prospect.id))continue;
+   await write('prospects',prospect);prospects.set(prospect.id,prospect);count++;
+  }
+  let oldLocal=[];
+  try{oldLocal=JSON.parse(localStorage.getItem('kdrix_bathy_custom_prospects_v1')||'[]');if(!Array.isArray(oldLocal))oldLocal=[]}catch(e){console.warn('Anciennes fiches manuelles indisponibles',e)}
+  for(const src of oldLocal){
+   if(!src||!src.id||!src.name)continue;
+   const prospect=oldEntry(src,true);
+   if(prospects.has(prospect.id))continue;
+   await write('prospects',prospect);prospects.set(prospect.id,prospect);count++;
+  }
+  // Sauvegarder une copie intacte des données locales historiques, sans altérer leur clé d'origine.
+  const oldKeys=['kdrix_bathy_2026_v3_stars','kdrix_bathy_2026_v3_sizes','kdrix_bathy_2026_v3_routes','kdrix_bathy_2026_v3_drafts','kdrix_bathy_custom_prospects_v1'];
+  for(const key of oldKeys){
+   const raw=localStorage.getItem(key);if(raw===null)continue;
+   const id='legacy-snapshot:'+key;
+   const metaRows=await read('meta');
+   if(metaRows.some(x=>x.id===id))continue;
+   await write('meta',{id,source:key,raw,copiedAt:new Date().toISOString()});
+  }
+  // L'ancienne recherche étendue contenait un inventaire, pas automatiquement des prospects validés.
+  try{
+   const names=typeof indexedDB.databases==='function'?await indexedDB.databases():[];
+   if(names.some(x=>x.name==='kdrix_bathy_inventory_v1')){
+    const older=await new Promise((resolve,reject)=>{const request=indexedDB.open('kdrix_bathy_inventory_v1');request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error)});
+    if(older.objectStoreNames.contains('waters')){
+     const entries=await new Promise((resolve,reject)=>{const t=older.transaction('waters','readonly').objectStore('waters').getAll();t.onsuccess=()=>resolve(t.result);t.onerror=()=>reject(t.error)});
+     for(const o of entries){
+      if(!o||!o.id||!Number.isFinite(Number(o.lat))||!Number.isFinite(Number(o.lon)))continue;
+      const id='legacy-water:'+o.id;if(bodies.has(id))continue;
+      const item={id,name:o.company||'Plan d’eau ancien à attribuer',kind:'water',category:o.kind||'',lat:Number(o.lat),lon:Number(o.lon),area:Number(o.area)||null,source:'Recherche étendue antérieure',history:o,notes:o.notes||'',updatedAt:new Date().toISOString()};
+      await write('bodies',item);bodies.set(id,item);
+     }
+    }
+    older.close();
+   }
+  }catch(e){console.warn('Reprise non critique de l’ancien inventaire',e)}
+  if(count)console.info('Prospects anciens repris :',count);
+ }
  function makeMap(){
   if(typeof L==='undefined'||typeof proj4==='undefined')throw Error('Bibliothèque de cartographie indisponible');
   proj4.defs('EPSG:3812',PROJECTION);map=L.map('map',{preferCanvas:true}).setView([scope.lat,scope.lng],9);
