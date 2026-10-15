@@ -51,3 +51,19 @@ test('successful responses normalize only official linked metadata',async()=>{
  assert.equal(result.market.consultationUrls.length,1);
  assert.equal(result.market.documentsPageUrl,'https://www.publicprocurement.be/publication-workspaces/'+uuid+'/documents');
 });
+
+test('données enrichies réelles: 64 marchés, inventaires et liens externes distincts',()=>{
+ const current=require('../data.json');
+ assert.equal(current.items.length,64);
+ const bathy=current.items.find(x=>x.id==='bosa:0765b50e-85f5-4aae-b2ca-2ed66c14e354');
+ assert(bathy&&bathy.documentInventory.length>=16,'Métadonnées bathymétriques absentes');
+ assert(bathy.documentInventory.some(x=>/CCH.*Bathymetrie/i.test(x.title)));
+ assert.equal(bathy.documentInventory.filter(x=>x.downloadVerified).length,0,'Aucun téléchargement non validé');
+ const body=detail.render(bathy).html;
+ assert.match(body,/pièce\(s\) répertoriée\(s\)/);
+ assert.match(body,/BOSA/);
+ assert.match(body,/2026B0173_CCH - Bathymetrie/);
+ const external=current.items.find(x=>x.id==='bosa:834b6f23-3906-4589-a0e7-afae9c91d26a');
+ assert(external.consultationUrls.some(x=>x.url.startsWith('https://cloud.3p.eu/')));
+ assert.match(detail.render(external).html,/Documents hébergés par un prestataire externe/);
+});
