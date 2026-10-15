@@ -195,7 +195,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   return {id,legacyId:o.id,legacyOrigin:manual?'localStorage':'Dossier historique KDRIX',name:o.name||'Site à identifier',
    category:o.category||o.kind||'',kind:'company',town:o.town||'',address:o.access||o.address||'',lat:Number(pos[0]),lon:Number(pos[1]),
    website:o.site||o.website||'',contactName:contact.name||'',contactRole:contact.role||'',phone:contact.phone||o.phone||'',
-   email:contact.email||o.email||'',altContact:contact.alt||'',area:o.area||null,hasWater:o.evidenceState==='documente'?'A vérifier · indices documentés':'À vérifier',
+   email:contact.email||o.email||'',altContact:contact.alt||'',area:Number(o.estimatedWaterM2)||((Number(o.area)>0)?Number(o.area)*10000:null),areaOrigin:Number(o.estimatedWaterM2)>0?'Estimation historique PICC':Number(o.area)>0?'Surface publiée en hectares, convertie en m²':'À mesurer',hasWater:o.evidenceState==='documente'?'A vérifier · indices documentés':'À vérifier',
    interest:o.why||o.what||'',notes:o.notes||'',status:o.status||'a_etudier',
    sources:Array.isArray(o.sources)?o.sources:[],history:o,source:manual?'Ancienne fiche ajoutée manuellement':'Sélection historique KDRIX',
    createdAt:o.createdAt||new Date().toISOString(),isHistorical:!manual,archived:false};
@@ -207,7 +207,11 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   for(const src of LEGACY_HISTORIC){
    const prospect=oldEntry(src,false);
    if(oldDrafts[src.id])prospect.historicalEmailDraft=oldDrafts[src.id];
-   if(oldSizes[src.id])prospect.historicalShapes=oldSizes[src.id];
+   if(oldSizes[src.id]){
+    prospect.historicalShapes=oldSizes[src.id];
+    const shapes=Array.isArray(oldSizes[src.id].shapes)?oldSizes[src.id].shapes:[];
+    if(shapes.length&&!prospect.area){const sum=shapes.reduce((n,x)=>n+(Number(x.m2)||0),0);if(sum>0){prospect.area=sum;prospect.areaOrigin='Somme brute des emprises historiques, recouvrements possibles'}}
+   }
    if(oldRoutes[src.id])prospect.historicalRoute=oldRoutes[src.id];
    if(Array.isArray(oldStars)&&oldStars.includes(src.id))prospect.favorite=true;
    if(prospects.has(prospect.id))continue;
@@ -385,6 +389,20 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
  }
  function focusedDraw(){
   focusLayer.clearLayers();if(!focus)return;
+  const shapes=Array.isArray(focus.historicalShapes?.shapes)?focus.historicalShapes.shapes:[];
+  let highlighted=[];
+  for(const item of shapes){
+   try{
+    let layer=null;
+    if(item.kind==='manual'&&Array.isArray(item.points)&&item.points.length>=3)layer=L.polygon(item.points,{color:'#176f82',weight:3,fillColor:'#31a8bd',fillOpacity:.18});
+    else if(item.geometry)layer=L.geoJSON({type:'Feature',geometry:item.geometry,properties:{}},{style:{color:'#176f82',weight:3,fillColor:'#31a8bd',fillOpacity:.18}});
+    if(layer){layer.addTo(focusLayer);highlighted.push(layer)}
+   }catch(e){console.warn('Emprise historique non représentable',e)}
+  }
+  if(highlighted.length&&typeof L.featureGroup==='function'){
+   const combined=L.featureGroup(highlighted).getBounds();
+   if(combined.isValid()){map.invalidateSize();map.fitBounds(combined.pad(.35),{maxZoom:17,padding:[65,65]});return}
+  }
   if(focus.kind==='water'&&focus.geometry){try{const poly=L.geoJSON({type:'Feature',geometry:focus.geometry,properties:{}},{style:{color:'#e76a31',weight:3,fillColor:'#e78c48',fillOpacity:.2}}).addTo(focusLayer);
    const bounds=poly.getBounds();if(bounds.isValid()){map.invalidateSize();map.fitBounds(bounds.pad(.5),{maxZoom:17,padding:[65,65]});return}}catch(e){}
   }
@@ -488,7 +506,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   renderDetail();focusedDraw();if(window.innerWidth<650)$('map').scrollIntoView({behavior:'smooth',block:'center'});
  }
  function showProspect(id){
-  const p=prospects.get(id);if(!p)return;selected={type:'prospect',id};focus=Number.isFinite(p.lat)?{lat:p.lat,lon:p.lon,kind:p.kind}:null;
+  const p=prospects.get(id);if(!p)return;selected={type:'prospect',id};focus=Number.isFinite(p.lat)&&Number.isFinite(p.lon)?p:null;
   renderDetail();focusedDraw();
  }
  function links(item){const out=[['Voir sur OpenStreetMap','https://www.openstreetmap.org/?mlat='+item.lat+'&mlon='+item.lon+'#map=17/'+item.lat+'/'+item.lon]];
@@ -520,7 +538,8 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   return '<details class="history"><summary>Dossier historique KDRIX · informations et sources d’origine</summary>'+
    content+(src?'<h3>Sources documentaires</h3><ul>'+src+'</ul>':'')+
    (h.subject?'<p><b>Objet commercial rédigé :</b> '+safe(h.subject)+'</p>':'')+
-   (p.historicalShapes?.shapes?.length?'<p><b>Anciennes emprises mesurées :</b> '+safe(p.historicalShapes.shapes.length)+' forme(s) conservée(s) dans les données historiques.</p>':'')+
+   (p.historicalShapes?.shapes?.length?'<p><b>Anciennes emprises mesurées :</b> '+safe(p.historicalShapes.shapes.length)+' forme(s) conservée(s), visibles sur la carte à l’ouverture de la fiche.</p>':'')+
+   (p.areaOrigin?'<p><b>Origine de la superficie :</b> '+safe(p.areaOrigin)+'</p>':'')+
    (p.historicalEmailDraft?.body?'<details><summary>Voir le dernier courriel personnalisé sauvegardé</summary><p><b>Objet :</b> '+safe(p.historicalEmailDraft.subject||'')+'</p><p style="white-space:pre-wrap">'+safe(p.historicalEmailDraft.body)+'</p></details>':'')+
    (h.emailBody?'<details><summary>Voir le courriel commercial historique</summary><p style="white-space:pre-wrap">'+safe(h.emailBody)+'</p></details>':'')+
    '<p class="caption">Les informations historiques sont conservées telles qu’elles figuraient dans le dossier initial. Vérifiez leur actualité avant de contacter.</p></details>';
