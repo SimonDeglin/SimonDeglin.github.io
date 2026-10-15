@@ -1,0 +1,78 @@
+name: "MarchéRadar — récupération documentaire Phase 3A"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "43 7 * * *"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/marcheradar-phase3a-live.yml"
+permissions:
+  contents: write
+concurrency:
+  group: marcheradar-ted-data
+  cancel-in-progress: false
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+      - name: Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Vérifier les scripts
+        run: |
+          node --check marcheradar/tools/phase3a-core.cjs
+          node --check marcheradar/tools/phase3a-enrich.cjs
+          node --check marcheradar/tools/phase3a-validate.cjs
+          node --test marcheradar/tests/phase3a-core.test.cjs
+          node marcheradar/tools/test-collector.cjs
+          node marcheradar/tools/test-bosa.cjs
+      - name: Préparer le navigateur public
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install chromium
+      - name: Sauvegarde temporaire du dernier inventaire
+        run: cp marcheradar/data.json /tmp/marcheradar-phase3a-original.json
+      - name: Enrichir les marchés officiels — données publiques seulement
+        env:
+          PHASE3A_LIMIT: "45"
+        run: node marcheradar/tools/phase3a-enrich.cjs --all --write
+      - name: Interdire pertes de marchés, faux liens et écrasement des preuves
+        run: node marcheradar/tools/phase3a-validate.cjs /tmp/marcheradar-phase3a-original.json marcheradar/data.json marcheradar/pilot/phase3a-enrichment.json
+      - name: Exiger au moins deux sources réellement accessibles
+        run: |
+          node -e "const x=require('./marcheradar/pilot/phase3a-enrichment.json').summary;if(x.sampleCount<5||x.accessible<2){console.error('Collecte non fiable, ne rien publier',x);process.exit(1)}"
+      - name: Publier uniquement les métadonnées validées
+        shell: bash
+        run: |
+          if git diff --quiet -- marcheradar/data.json; then
+            echo "Aucun enrichissement nouveau. Dernier inventaire conservé."
+            exit 0
+          fi
+          git config user.name "marcheradar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add marcheradar/data.json
+          git commit -m "MarchéRadar : échéances et documents officiels enrichis"
+          git push origin HEAD:main
+      - name: Conserver le rapport des sources contrôlées
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: marche-radar-phase3a-rapport
+          retention-days: 7
+          if-no-files-found: ignore
+          path: marcheradar/pilot/phase3a-enrichment.json
+      - name: Résultat de la collecte
+        if: always()
+        shell: bash
+        run: |
+          echo "### Marché Radar — récupération documentaire" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f marcheradar/pilot/phase3a-enrichment.json ]; then
+            node -e "let s=require('./marcheradar/pilot/phase3a-enrichment.json').summary;process.stdout.write('Marchés examinés : '+s.sampleCount+' ; sources accessibles : '+s.accessible+' ; nouvelles échéances : '+s.newDates+' ; fichiers ajoutés : '+s.newDocuments+'\n')" | tee -a "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Aucun rapport produit : la collecte n'a pas abouti." >> "$GITHUB_STEP_SUMMARY"
+          fi
