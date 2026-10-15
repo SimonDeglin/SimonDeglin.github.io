@@ -218,8 +218,7 @@ body{background:#f7f7f7;color:#303339}
 <div class="section-label">DOSSIERS DE SUIVI</div>
 <div class="side-help">Glisser-déposer pour classer</div>
 <nav aria-label="Dossiers de suivi" id="foldersNav" class="folders">
-<button class="nav-item active" data-view="catalogue"><svg class="ico"><use href="#i-list"/></svg><span class="nav-name">Listing complet</span><span class="count" data-count="catalogue">0</span></button>
-<button class="nav-item" data-view="inbox" data-folder="inbox"><svg class="ico"><use href="#i-list"/></svg><span class="nav-name">À trier</span><span class="count" data-count="inbox">0</span></button>
+<button class="nav-item active" data-view="inbox" data-folder="inbox"><svg class="ico"><use href="#i-list"/></svg><span class="nav-name">Listing complet</span><span class="count" data-count="inbox">0</span></button>
 <button class="nav-item" data-view="maybe" data-folder="maybe"><i class="folder-dot maybe"></i><span class="nav-name">À définir</span><span class="count" data-count="maybe">0</span></button>
 <button class="nav-item" data-view="answer" data-folder="answer"><i class="folder-dot answer"></i><span class="nav-name">À répondre</span><span class="count" data-count="answer">0</span></button>
 <button class="nav-item" data-view="await" data-folder="await"><i class="folder-dot await"></i><span class="nav-name">En attente d'attribution</span><span class="count" data-count="await">0</span></button>
@@ -231,7 +230,8 @@ body{background:#f7f7f7;color:#303339}
 <button class="all-category-btn" id="allCategories" type="button" aria-pressed="true">Toutes les catégories</button>
 <div class="category-groups" id="sidebarCategories" aria-label="Domaines et sous-catégories"></div>
 <div class="section-label">MON ESPACE</div>
-<nav><button class="nav-item" id="settingsBtn"><svg class="ico"><use href="#i-settings"/></svg><span class="nav-name">Préférences</span></button>
+<nav><button class="nav-item" data-view="catalogue"><svg class="ico"><use href="#i-list"/></svg><span class="nav-name">Historique général</span><span class="count" data-count="catalogue">0</span></button>
+<button class="nav-item" id="settingsBtn"><svg class="ico"><use href="#i-settings"/></svg><span class="nav-name">Préférences</span></button>
 <button class="nav-item" id="exportBtn"><svg class="ico"><use href="#i-download"/></svg><span class="nav-name">Exporter en CSV</span></button></nav>
 <div class="sidebar-space"></div>
   <div class="sidebar-bottom"><div class="side-source"><div class="source-title"><i id="sideDot" class="source-dot"></i><span id="sideTitle">Source en attente</span></div><div class="source-text" id="sideText">Aucune donnée officielle synchronisée pour le moment.</div></div><div class="side-foot">MarchéRadar · Prototype KDRIX v1.0</div></div>
@@ -253,6 +253,7 @@ body{background:#f7f7f7;color:#303339}
       <div class="search-row">
         <div class="search-wrap"><svg class="ico"><use href="#i-search"/></svg><input id="search" type="search" aria-label="Rechercher un marché" placeholder="Rechercher un marché, un acheteur ou un lieu..."></div>
         <select class="filter-select" id="region" aria-label="Filtrer par région"><option value="all">Wallonie, Bruxelles et à vérifier</option><option value="Wallonie">Wallonie</option><option value="Bruxelles">Bruxelles</option><option value="Belgique">Lieu à vérifier</option></select>
+        <select class="filter-select" id="dueFilter" aria-label="Filtrer par échéance"><option value="all">Toutes les échéances</option><option value="open">Marchés ouverts</option><option value="closed">Marchés clôturés</option><option value="unknown">Échéance à vérifier</option></select>
         <select class="filter-select" id="sort" aria-label="Trier les marchés"><option value="deadline">Échéances à venir</option><option value="score">Plus pertinents</option><option value="recent">Plus récents</option></select>
       </div>
       
@@ -297,7 +298,7 @@ var STORAGE='kdrix.marcheRadar.v1';
 var saved={};
 try{saved=JSON.parse(localStorage.getItem(STORAGE)||'{}')||{}}catch(e){saved={}}
 saved.favorites=saved.favorites||{};saved.statuses=saved.statuses||{};saved.notes=saved.notes||{};saved.hiddenSectors=saved.hiddenSectors||{};
-var state={mode:'loading',sourceOrigin:'none',collectorStatus:'pending',view:'all',sector:'all',region:'all',sort:'deadline',query:'',markets:[],real:[],generated:null,sourceNote:'',coverage:{},sources:{},selected:null,loadError:false};
+var state={mode:'loading',sourceOrigin:'none',collectorStatus:'pending',view:'all',sector:'all',region:'all',due:'all',sort:'deadline',query:'',markets:[],real:[],generated:null,sourceNote:'',coverage:{},sources:{},selected:null,loadError:false};
 function el(id){return document.getElementById(id)}
 function svg(id,small){return '<svg class="ico'+(small?' s':'')+'"><use href="#i-'+id+'"/></svg>'}
 function esc(v){return String(v===null||v===undefined?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
@@ -443,7 +444,7 @@ function downloadCSV(){
  var csv='\ufeff'+rows.map(function(r){return r.map(function(v){var s=String(v===undefined?'':v);if(/^[=+@\t\r]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"'}).join(';')}).join('\r\n');
  var a=document.createElement('a'),url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));a.href=url;a.download='marche-radar-'+dateOffset(0)+(state.mode==='demo'?'-DEMONSTRATION':'')+'.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},1000);toast('Export CSV généré');
 }
-function setView(v){state.view=v;document.querySelector('.sidebar').classList.remove('open');render();window.scrollTo({top:0,behavior:'smooth'})}
+function setView(v){state.view=v;state.sector='all';expandedFamily=null;document.querySelector('.sidebar').classList.remove('open');render();window.scrollTo({top:0,behavior:'smooth'})}
 function validMarket(m){return m&&typeof m.id==='string'&&typeof m.title==='string'&&typeof m.score==='number'&&typeof m.sector==='string'&&typeof m.source==='string'}
 async function load(){
  var btn=el('refreshBtn');btn.disabled=true;
@@ -484,7 +485,7 @@ SECTORS=[
  {id:'Reseaux',label:'Réseaux & impétrants'},{id:'PEB',label:'Énergie & PEB'},
  {id:'PetitsTravaux',label:'Petits travaux techniques'}
 ];
-state.view='catalogue';
+state.view='inbox';
 var draggingId=null;
 function stageName(code){return (WORKFLOW.find(function(s){return s.id===code})||WORKFLOW[0]).label}
 function isStage(code){return WORKFLOW.some(function(s){return s.id===code})}
@@ -634,9 +635,9 @@ function renderStats(){
  document.querySelectorAll('[data-count]').forEach(function(b){b.textContent=b.dataset.count==='catalogue'?allMarkets().length:b.dataset.count==='inbox'?allMarkets().filter(function(m){return stageOf(m.id)==='inbox'&&m.screening!=='review'&&m.screening!=='excluded'}).length:stageNumber(b.dataset.count)});
 }
 function renderNav(){
- var labels={inbox:'À trier',maybe:'À définir',answer:'À répondre',await:"En attente d'attribution",won:'Obtenu',lost:'Perdu',discarded:'Sans suite',catalogue:'Listing complet',review:'À vérifier',favorites:'Favoris',urgent:'Échéances proches'};
+ var labels={inbox:'Listing complet',maybe:'À définir',answer:'À répondre',await:"En attente d'attribution",won:'Obtenu',lost:'Perdu',discarded:'Sans suite',catalogue:'Historique général',review:'À vérifier',favorites:'Favoris',urgent:'Échéances proches'};
  var descriptions={
- inbox:'Marchés non classés à trier. Glissez une ligne vers un dossier à gauche pour la classer.',
+ inbox:'Tous les marchés non classés. Filtrez-les par domaine et par échéance, puis classez-les dans un dossier de suivi.',
  maybe:'Opportunités à examiner avant de décider si KDRIX présente une offre.',
  answer:'Marchés auxquels KDRIX prévoit de répondre.',
  await:'Offres déjà remises, en attente de la décision d’attribution.',
@@ -644,7 +645,7 @@ function renderNav(){
  lost:'Marchés attribués à un autre soumissionnaire.',
  discarded:'Opportunités classées sans suite.',
  review:'Correspondances indirectes à analyser avant de les classer.',
- catalogue:'Tous les marchés enregistrés, y compris ceux à vérifier et ceux déjà classés. Chaque marché apparaît une seule fois.',
+ catalogue:'Consultation globale, indépendamment des dossiers de suivi. Chaque marché n’apparaît qu’une seule fois.',
  favorites:'Vos favoris, indépendamment de leur dossier de suivi.',
  urgent:'Échéances dans les 14 prochains jours, tous dossiers confondus.'
  };
