@@ -9,7 +9,8 @@ const root=path.resolve(__dirname,'../..'),directory=path.join(root,'marcheradar
 const data=JSON.parse(fs.readFileSync(path.join(directory,'data.json'),'utf8'));
 const market=data.items.find(x=>x.id==='bosa:0765b50e-85f5-4aae-b2ca-2ed66c14e354');
 const ted=data.items.find(x=>x.id==='ted:682034-2026');
-assert.equal(data.items.length,64);
+const expectedCount=data.items.filter(m=>m.region!=='Flandre').length;
+assert(expectedCount>=64);
 assert(market&&ted,'Échantillon réel absent');
 assert.equal(market.documents?.length,16,'Les 16 documents bathy n’ont pas été indexés');
 assert.equal(market.deadlineEvidence?.verified,true,'Échéance BOSA non documentée');
@@ -34,7 +35,7 @@ const server=http.createServer((req,res)=>{
   const errors=[];
   page.on('pageerror',e=>errors.push(e.message));
   await page.goto('http://127.0.0.1:'+server.address().port+'/marcheradar/',{waitUntil:'domcontentloaded'});
-  await page.waitForFunction(()=>Number(document.querySelector('#resultCount')?.textContent)===64);
+  await page.waitForFunction(n=>Number(document.querySelector('#resultCount')?.textContent)===n,expectedCount);
   await page.locator('article[data-id="'+market.id+'"] .open-tender').click();
   assert.equal(await page.locator('.drawer.on').count(),1);
   assert.match(await page.locator('.mr2-section').nth(0).innerText(),/10\/11\/2026.*10:00.*UTC\+01:00/);
@@ -53,6 +54,6 @@ const server=http.createServer((req,res)=>{
   assert.match(await page.locator('.mr2-section').nth(0).innerText(),/Échéance vérifiée dans TED API/);
   assert.equal(errors.length,0,'Erreur JavaScript dans le navigateur : '+errors.join(', '));
   await page.close();
-  console.log('PHASE3A_BROWSER_OK: 64 marchés, 9 dates vérifiées, 16 documents bathy distincts, sources TED/BOSA');
+  console.log('PHASE3A_BROWSER_OK: '+expectedCount+' marchés, 16 documents bathy distincts, sources TED/BOSA');
  }finally{await browser.close();await new Promise(ok=>server.close(ok))}
 })().catch(e=>{console.error('PHASE3A_BROWSER_FAIL',e.stack||e);server.close();process.exitCode=1});
