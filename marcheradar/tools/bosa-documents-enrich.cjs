@@ -88,14 +88,25 @@ async function run(){
   let fetcher=fetch,page=null;
   if(context){
    page=await context.newPage();
+   const observed=new Map();
+   // Capturer uniquement les réponses générées NATURELLEMENT par le portail.
+   // De nouvelles requêtes artificielles à l'API peuvent retourner HTTP 500.
+   page.on('response',async res=>{
+    const url=res.url();
+    if(!url.includes('/api/dos/publication-workspaces/'+m.publicationWorkspaceId+'/'))return;
+    const type=/\/documents(?:\?|$)/.test(url)?'documents':/\/urls(?:\?|$)/.test(url)?'urls':null;
+    if(!type)return;
+    try{
+     const body=res.ok()?await res.json():null;
+     observed.set(type,{ok:res.ok(),status:res.status(),data:body});
+    }catch(e){observed.set(type,{ok:false,status:res.status(),data:null})}
+   });
    try{
     await page.goto('https://www.publicprocurement.be/publication-workspaces/'+m.publicationWorkspaceId+'/documents',{waitUntil:'domcontentloaded',timeout:25000});
-    await page.waitForTimeout(600);
+    await page.waitForTimeout(3000);
     fetcher=async function(url){
-     const v=await page.evaluate(async url=>{
-      const res=await fetch(url,{credentials:'same-origin',headers:{Accept:'application/json'}});
-      return {ok:res.ok,status:res.status,data:res.ok?await res.json():null};
-     },url);
+     const kind=/\/documents(?:\?|$)/.test(url)?'documents':'urls';
+     const v=observed.get(kind)||{ok:false,status:0,data:null};
      return {ok:v.ok,status:v.status,json:async()=>v.data};
     };
    }catch(e){fetcher=async()=>({ok:false,status:0})}
