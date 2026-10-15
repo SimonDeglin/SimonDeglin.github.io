@@ -4,6 +4,7 @@ on:
     branches: ["feature/marcheradar-phase3a-download-20261015"]
     paths:
       - "marcheradar/tools/phase3a-csc-click-probe.cjs"
+      - "marcheradar/tools/phase3a-csc-parse.cjs"
       - ".github/workflows/marcheradar-phase3a-csc.yml"
   workflow_dispatch:
 permissions:
@@ -20,11 +21,22 @@ jobs:
       - run: |
           npm install --no-save --no-package-lock playwright
           npx playwright install chromium
-      - run: node marcheradar/tools/phase3a-csc-click-probe.cjs
+      - name: "Préparer les outils PDF"
+        run: |
+          if ! command -v pdftotext >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq poppler-utils
+          fi
+      - name: "Observer le menu de téléchargement"
+        run: node marcheradar/tools/phase3a-csc-click-probe.cjs
+      - name: "Télécharger temporairement et extraire le texte du CSC"
+        run: node marcheradar/tools/phase3a-csc-parse.cjs
       - if: always()
         uses: actions/upload-artifact@v4
         with:
           name: phase3a-csc-click-observation
           if-no-files-found: warn
           retention-days: 5
-          path: marcheradar/audit/phase3a-csc-click-probe.json
+          path: |
+            marcheradar/audit/phase3a-csc-click-probe.json
+            marcheradar/audit/phase3a-csc-text-probe.json
