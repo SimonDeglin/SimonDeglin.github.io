@@ -130,6 +130,20 @@ function fixture(id,changes){
   await view.screenshot({path:path.join(mdir,'tests/phase2-mobile.png'),animations:'disabled'});
   assert.deepEqual(errors,[],'Erreurs JS navigateur : '+errors.join('\n'));
   await fx.close();
+  // Panne simulée d'une ressource JS : le listing doit rester visible.
+  const resilient=await browser.newContext({viewport:{width:1280,height:800}});
+  const broken=await resilient.newPage();attach(broken);
+  await broken.route('**/marcheradar/detail-phase2.js',route=>route.abort('failed'));
+  await broken.goto(address,{waitUntil:'domcontentloaded'});
+  await ready(broken,64);
+  await broken.locator('article.tender .open-tender').first().click();
+  assert.match(await broken.locator('#drawerBody').innerText(),/Module documentaire temporairement indisponible/);
+  assert.equal(await broken.locator('#saveTender').count(),1);
+  await broken.locator('#marketNotes').fill('Test de fiche simplifiée');
+  await broken.locator('#saveTender').click();
+  assert.equal(await broken.locator('.tender').count(),64);
+  await resilient.close();
+  console.log('OK : affichage des marchés préservé quand le module Phase 2 ne charge pas');
   console.log('OK : visites prouvées/non prouvées, documents, sécurité XSS, conditions, responsive et suivi');
   console.log('SUCCÈS : la Phase 2 fonctionne dans Chromium sans modification de la production.');
  }finally{await browser.close();await new Promise(resolve=>srv.close(resolve))}
