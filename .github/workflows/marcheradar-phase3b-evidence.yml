@@ -1,0 +1,70 @@
+name: "MarchéRadar — Preuves documentaires 3B"
+on:
+  push:
+    branches:
+      - feature/marcheradar-phase3b-document-evidence-20261015
+    paths:
+      - "marcheradar/tools/csc-evidence.cjs"
+      - "marcheradar/tools/bosa-csc-batch.cjs"
+      - "marcheradar/detail-phase2.js"
+      - "marcheradar/tests/phase3b-evidence.test.cjs"
+      - ".github/workflows/marcheradar-phase3b-evidence.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: "Vérifier le code et les règles de provenance"
+        run: |
+          node --check marcheradar/tools/csc-evidence.cjs
+          node --check marcheradar/tools/bosa-csc-batch.cjs
+          node --test marcheradar/tests/phase3b-evidence.test.cjs
+          node --test marcheradar/tests/phase3a-bosa.test.cjs
+      - name: "Installer Chromium pour les PDF accessibles publiquement"
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install chromium
+      - name: "Installer les outils PDF si nécessaires"
+        run: |
+          if ! command -v pdftotext >/dev/null 2>&1 || ! command -v pdfinfo >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq poppler-utils
+          fi
+      - name: "Lire plusieurs pièces officielles sans stocker les PDF"
+        run: node marcheradar/tools/bosa-csc-batch.cjs --write
+      - name: "Tester les analyses réelles et les 64 marchés"
+        run: |
+          node --test marcheradar/tests/phase3b-evidence.test.cjs
+          node --test marcheradar/tests/phase3a-bosa.test.cjs
+          node -e "const d=require('./marcheradar/data.json');if(d.items.length!==64)throw Error('Ancienne base altérée');const m=d.items.filter(x=>x.documentAnalyses?.length);if(m.length<2)throw Error('Moins de deux marchés analysés');console.log('MARCHES_ANALYSES='+m.length);"
+      - name: "Tests Chromium : classement et filtres Phase 1"
+        run: node marcheradar/tests/phase1-browser.cjs
+      - name: "Tests Chromium : fiches et sources Phase 2"
+        run: node marcheradar/tests/phase2-browser.cjs
+      - name: "N'enregistrer les résultats qu'après réussite de tous les contrôles"
+        run: |
+          git diff --check
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add marcheradar/data.json
+          if ! git diff --cached --quiet; then
+            git commit -m "MarchéRadar: preuves PDF de plusieurs marchés [skip ci]"
+            git push origin HEAD:feature/marcheradar-phase3b-document-evidence-20261015
+          fi
+      - name: "Archiver seulement les diagnostics, jamais les PDF"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: marcheradar-phase3b-pdf-evidence
+          if-no-files-found: ignore
+          retention-days: 7
+          path: marcheradar/audit/phase3b-evidence-report.json
