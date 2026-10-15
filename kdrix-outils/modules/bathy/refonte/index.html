@@ -460,49 +460,184 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
    out.push(['Rechercher les coordonnées','https://www.google.com/search?q='+encodeURIComponent(item.name+' adresse contact Belgique')]);
   }return '<div class="actions">'+out.map(a=>'<a href="'+safe(a[1])+'" target="_blank" rel="noopener noreferrer">'+safe(a[0])+' ↗</a>').join('')+'</div>';
  }
+
+ function inputLine(id,label,value,opts={}){
+  const wide=opts.wide?' wide':'',tag=opts.textarea?'textarea':'input';
+  const v=safe(value==null?'':value),more=opts.required?' required':'';
+  if(tag==='textarea')return '<div class="field'+wide+'"><label for="'+id+'">'+safe(label)+'</label><textarea id="'+id+'" rows="'+(opts.rows||3)+'">'+v+'</textarea></div>';
+  return '<div class="field'+wide+'"><label for="'+id+'">'+safe(label)+'</label><input id="'+id+'" type="'+(opts.type||'text')+'" value="'+v+'"'+(opts.placeholder?' placeholder="'+safe(opts.placeholder)+'"':'')+more+'></div>';
+ }
+ function renderSourceLinks(p){
+  let items=Array.isArray(p.sources)?p.sources:[];
+  if(typeof p.sourceLinks==='string')items=items.concat(p.sourceLinks.split(/[\n\r]+/).map(x=>[x.trim(),x.trim()]));
+  return items.filter(a=>Array.isArray(a)&&a[1]&&externalURL(a[1])).map(a=>
+   '<li><a href="'+safe(externalURL(a[1]))+'" target="_blank" rel="noopener noreferrer">'+safe(a[0]||a[1])+' ↗</a></li>').join('');
+ }
+ function historicBlock(p){
+  const h=p.history;if(!h||typeof h!=='object')return '';
+  const facts=[['Information publiée',h.fact],['Origine de l’information',h.factDate],['Prestation envisageable',h.what],['Utilité pour l’exploitant',h.decision],['Réserves et incertitudes',h.reservation],['Justification commerciale initiale',h.grounds],['Contact alternatif',p.altContact]];
+  const content=facts.filter(([,v])=>v).map(([label,val])=>'<p><b>'+safe(label)+' :</b> '+safe(val)+'</p>').join('');
+  const src=renderSourceLinks(p);
+  return '<details class="history"><summary>Dossier historique KDRIX · informations et sources d’origine</summary>'+
+   content+(src?'<h3>Sources documentaires</h3><ul>'+src+'</ul>':'')+
+   (h.subject?'<p><b>Objet commercial rédigé :</b> '+safe(h.subject)+'</p>':'')+
+   (h.emailBody?'<details><summary>Voir le courriel commercial historique</summary><p style="white-space:pre-wrap">'+safe(h.emailBody)+'</p></details>':'')+
+   '<p class="caption">Les informations historiques sont conservées telles qu’elles figuraient dans le dossier initial. Vérifiez leur actualité avant de contacter.</p></details>';
+ }
+ function prospectForm(p,isDraft){
+  const sources=p.sourceLinks||'',archived=!!p.archived;
+  return '<div class="detail"><h2>'+(isDraft?'Préremplir une fiche prospect':'Fiche prospect · modifier')+'</h2>'+
+   '<p class="notice-inline">'+(isDraft?
+   'Vérifiez et corrigez les informations proposées. Rien ne sera ajouté tant que vous ne cliquez pas sur « Ajouter à mon listing ».':
+   'Les modifications sont enregistrées uniquement lorsque vous cliquez sur « Enregistrer les modifications ».')+'</p>'+
+   '<div class="formgrid">'+
+    inputLine('pName','Nom de la société ou du site',p.name,{wide:true,required:true})+
+    inputLine('pTown','Commune',p.town)+inputLine('pCategory','Activité / type',p.category)+
+    inputLine('pAddress','Adresse du site',p.address,{wide:true})+
+    inputLine('pLat','Latitude',Number.isFinite(p.lat)?p.lat:'',{type:'number'})+
+    inputLine('pLon','Longitude',Number.isFinite(p.lon)?p.lon:'',{type:'number'})+
+    inputLine('pArea','Plan d’eau (m²)',p.area??'',{type:'number'})+
+    inputLine('pHasWater','Présence de plan d’eau (à vérifier)',p.hasWater||'À vérifier',{wide:true})+
+    inputLine('pWebsite','Site internet',p.website,{wide:true})+
+    inputLine('pPhone','Téléphone professionnel',p.phone)+
+    inputLine('pEmail','E-mail professionnel',p.email)+
+    inputLine('pContactName','Personne de contact',p.contactName)+
+    inputLine('pContactRole','Fonction du contact',p.contactRole)+
+    inputLine('pInterest','Pourquoi une bathymétrie pourrait être utile',p.interest,{wide:true,textarea:true,rows:3})+
+    inputLine('pSources','Sources complémentaires (une URL par ligne)',sources,{wide:true,textarea:true,rows:2})+
+    inputLine('pNotes','Notes et vérifications personnelles',p.notes,{wide:true,textarea:true,rows:4})+
+    '</div><div class="field"><label for="pStatus">Statut commercial</label><select id="pStatus">'+statusOptions(p.status)+'</select></div>'+
+    '<p class="caption">Source initiale : '+safe(p.source||'Saisie manuelle')+
+    (p.targetId?' · Référence : '+safe(p.targetId):'')+'</p>'+
+    historicBlock(p)+
+    '<div class="quick-actions"><button class="primary" id="saveP">'+(isDraft?'Ajouter à mon listing':'Enregistrer les modifications')+'</button>'+
+    '<button id="cancelP">Annuler</button>'+
+    (isDraft?'':'<button id="archiveP">'+(archived?'Réintégrer au listing':'Retirer du listing')+'</button>')+
+    '</div></div>';
+ }
+ function formValues(base){
+  const read=id=>$(id)?.value?.trim()??'';
+  const latitude=read('pLat'),longitude=read('pLon'),area=read('pArea');
+  const lat=latitude===''?null:Number(latitude),lon=longitude===''?null:Number(longitude);
+  if(!read('pName'))throw Error('Indiquez le nom du prospect.');
+  if((lat!==null&&!Number.isFinite(lat))||(lon!==null&&!Number.isFinite(lon))||(lat!==null&&lon===null)||(lat===null&&lon!==null))throw Error('Les deux coordonnées doivent être présentes et valides, ou toutes deux laissées vides.');
+  if(lat!==null&&(lat<-90||lat>90||lon<-180||lon>180))throw Error('Coordonnées géographiques invalides.');
+  const meters=area===''?null:Number(area);if(meters!==null&&(!Number.isFinite(meters)||meters<0))throw Error('Superficie non valide.');
+  return {...base,name:read('pName'),town:read('pTown'),category:read('pCategory'),address:read('pAddress'),
+   lat,lon,area:meters,hasWater:read('pHasWater'),website:read('pWebsite'),phone:read('pPhone'),email:read('pEmail'),
+   contactName:read('pContactName'),contactRole:read('pContactRole'),interest:read('pInterest'),sourceLinks:read('pSources'),
+   notes:read('pNotes'),status:read('pStatus'),updatedAt:new Date().toISOString()};
+ }
+ function duplicateFor(x){
+  const text=(x.name||'').trim().toLocaleLowerCase('fr'),lat=Number(x.lat),lon=Number(x.lon);
+  return [...prospects.values()].find(p=>!p.archived&&(
+    (x.targetId&&p.targetId===x.targetId)||
+    (x.id&&p.id===x.id)||
+    (text.length>2&&p.name?.trim().toLocaleLowerCase('fr')===text&&Number.isFinite(lat)&&Number.isFinite(lon)&&
+     Number.isFinite(Number(p.lat))&&Number.isFinite(Number(p.lon))&&
+     distance([lat,lon],[Number(p.lat),Number(p.lon)])<125)
+  ));
+ }
+ function openDraft(item=null){
+  if(running){status('Arrêtez le balayage avant de créer une fiche.');return}
+  const incoming=item?{targetId:item.id,kind:item.kind,name:item.kind==='water'?'Plan d’eau à attribuer · '+(item.category||''):item.name,
+   category:item.category||'',town:item.town||'',address:item.address||'',lat:item.lat,lon:item.lon,area:item.area||null,
+   hasWater:item.kind==='water'?'Oui · emprise PICC':bestWater(item)?'Plan d’eau voisin non attribué':'À vérifier',
+   website:item.website||'',phone:item.phone||'',email:item.email||'',contactName:'',contactRole:'',
+   interest:opportunity(item.category||''),notes:'',source:item.source||'Recherche',
+   sourceLinks:item.url||'',status:'a_etudier',sources:item.sources||[],createdAt:new Date().toISOString()}:
+   {kind:'company',name:'',category:'',town:'',address:'',lat:null,lon:null,area:null,hasWater:'À vérifier',
+    website:'',phone:'',email:'',contactName:'',contactRole:'',interest:'',notes:'',source:'Création manuelle',
+    status:'a_etudier',sourceLinks:'',createdAt:new Date().toISOString()};
+  const same=item?duplicateFor(incoming):null;
+  if(same){status('Ce résultat figure déjà dans « Mon listing ». Ouverture de la fiche existante.');selectTab('prospects');showProspect(same.id);return}
+  draft=incoming;selected={type:'draft',id:null};
+  focus=Number.isFinite(Number(incoming.lat))&&Number.isFinite(Number(incoming.lon))?
+   {...incoming,lat:Number(incoming.lat),lon:Number(incoming.lon)}:null;
+  renderDetail();if(focus)focusedDraw();
+ }
+ async function saveDraft(){
+  if(!draft)return;
+  try{
+   const record=formValues(draft),similar=duplicateFor(record);
+   if(similar){alert('Un prospect correspondant existe déjà. Je vous ouvre sa fiche sans ajouter de doublon.');draft=null;selectTab('prospects');showProspect(similar.id);return}
+   record.id='prospect:user:'+Date.now()+'-'+Math.random().toString(36).slice(2,9);record.createdAt=new Date().toISOString();
+   await write('prospects',record);prospects.set(record.id,record);draft=null;
+   status('Fiche ajoutée à « Mon listing ». Vous pouvez maintenant modifier son suivi commercial.');
+   selectTab('prospects');showProspect(record.id);
+  }catch(e){alert('Ajout non enregistré : '+e.message)}
+ }
+ async function updateProspect(){
+  const old=prospects.get(selected?.id);if(!old)return;
+  try{const updated=formValues(old);await write('prospects',updated);prospects.set(updated.id,updated);status('Fiche enregistrée sans perte des données historiques.');showProspect(updated.id);render()}catch(e){alert('Modification non enregistrée : '+e.message)}
+ }
+ async function archiveProspect(){
+  const p=prospects.get(selected?.id);if(!p)return;
+  const next=!p.archived;if(!confirm(next?'Retirer la fiche de mon listing ? Elle restera conservée dans la base et les sauvegardes.':'Réintégrer cette fiche dans mon listing ?'))return;
+  p.archived=next;p.updatedAt=new Date().toISOString();await write('prospects',p);prospects.set(p.id,p);
+  status(next?'Fiche retirée du listing mais conservée en base.':'Fiche réintégrée.');closeDetail();render();
+ }
  function renderDetail(){
-  $('results').classList.add('hidden');$('resultFilters').classList.add('hidden');$('backResults').classList.remove('hidden');$('detail').classList.remove('hidden');
-  let html='',item=null;
-  if(selected?.type==='prospect'){
-   item=prospects.get(selected.id);
-   html='<div class="detail"><h2>'+safe(item?.name||'Fiche prospect')+'</h2><p>'+safe(item?.category||'')+'</p>'+
-   '<div class="field"><label for="pStatus">Statut commercial</label><select id="pStatus">'+statusOptions(item?.status)+'</select></div>'+
-   '<div class="field"><label for="pNotes">Notes et contacts professionnels</label><textarea id="pNotes"></textarea></div>'+
-   '<button class="primary" id="saveP">Enregistrer la fiche</button></div>';
+  $('results').classList.add('hidden');$('resultFilters').classList.add('hidden');
+  $('backResults').classList.remove('hidden');$('detail').classList.remove('hidden');
+  let html='',item=null,nearest=null;
+  if(selected?.type==='draft'){
+   html=prospectForm(draft,true);
+  }else if(selected?.type==='prospect'){
+   item=prospects.get(selected.id);if(!item){closeDetail();return}
+   html=prospectForm(item,false);
   }else if(selected?.type==='water'||selected?.type==='company'){
    item=(selected.type==='water'?bodies:companies).get(selected.id);
    if(!item){closeDetail();return}
-   const nearest=item.kind==='water'?bestCompany(item):bestWater(item);
+   nearest=item.kind==='water'?bestCompany(item):bestWater(item);
    const pair=nearest?(item.kind==='company'?relationId(item.id,nearest.item.id):relationId(nearest.item.id,item.id)):null;
    const match=pair?relations.get(pair):null;
-   html='<div class="detail"><h2>'+safe(item.kind==='water'?'Plan d’eau · '+fmt(Math.round(item.area))+' m²':item.name)+'</h2>'+
-    '<p><span class="tag">'+safe(item.category||'À vérifier')+'</span></p>'+(item.unnamed?'<p class="hint">Site cartographié, mais aucun nom de société renseigné. La présence et l’exploitant sont à vérifier.</p>':'')+
-    '<p><b>Source :</b> '+safe(item.source||'à vérifier')+'</p>'+
-    (item.kind==='company'?'<p><b>Adresse :</b> '+safe(item.address||'Non renseignée dans OSM')+'</p><p><b>Activité :</b> '+safe(item.category)+'</p>'+
-     '<p><b>Exploitant / gestionnaire :</b> '+safe(item.operator||'Non identifié dans la source')+'</p>'+
-     (item.phone?'<p><b>Téléphone :</b> '+safe(item.phone)+'</p>':'')+(item.email?'<p><b>E-mail :</b> '+safe(item.email)+'</p>':''):'<p><b>Superficie cartographiée :</b> '+fmt(Math.round(item.area||0))+' m²</p>')+
-    '<h3>Pourquoi KDRIX pourrait intervenir</h3><p>'+safe(opportunity(item.kind==='water'?item.category:item.category))+'</p>'+
-    (nearest?'<div class="area-info"><b>'+safe(nearest.item.kind==='water'?'Plan d’eau':'Établissement')+' à proximité :</b> '+safe(nearest.item.name||'Plan d’eau')+' · '+fmt(Math.round(nearest.distance))+' m. <b>Le lien d’exploitation n’est pas confirmé.</b><br><span class="tag">'+safe(match?.status==='confirmed'?'Lien confirmé par l’utilisateur':match?.status==='to_verify'?'À vérifier':'Association non vérifiée')+'</span><div class="actions"><button class="minor" id="seeNear">Voir l’élément voisin</button><button class="minor" data-relation="confirmed">Lien confirmé</button><button class="minor" data-relation="to_verify">À vérifier</button><button class="minor" data-relation="rejected">Aucun lien</button></div></div>':'<div class="area-info">Aucun élément complémentaire connu à moins de 750 m dans les données déjà enregistrées. Cela ne signifie pas qu’il n’en existe aucun.</div>')+
-    '<h3>Sources et vérifications</h3>'+links(item)+
-    '<div class="actions"><button class="primary" id="keep">Ajouter à mes prospects</button></div></div>';
+   const already=[...prospects.values()].find(p=>!p.archived&&p.targetId===item.id);
+   html='<div class="detail"><h2>'+safe(item.kind==='water'?'Plan d’eau PICC · '+fmt(Math.round(item.area||0))+' m²':item.name)+'</h2>'+
+    '<p><span class="tag">'+safe(item.category||'À vérifier')+'</span></p>'+
+    (item.unnamed?'<p class="hint">Site recensé sans dénomination officielle. Exploitant non identifié.</p>':'')+
+    '<p><b>Source :</b> '+safe(item.source||'À vérifier')+'</p>'+
+    (item.kind==='company'?'<p><b>Adresse :</b> '+safe(item.address||'Adresse non renseignée')+'</p>'+
+     '<p><b>Exploitant indiqué :</b> '+safe(item.operator||'Non renseigné')+'</p>'+
+     (item.phone?'<p><b>Téléphone :</b> '+safe(item.phone)+'</p>':'')+
+     (item.email?'<p><b>E-mail :</b> '+safe(item.email)+'</p>':''):
+     '<p><b>Surface cartographique :</b> '+fmt(Math.round(item.area||0))+' m²</p>')+
+    '<h3>Quel intérêt pour KDRIX ?</h3><p>'+safe(opportunity(item.category||''))+'</p>'+
+    '<p class="caption">Il s’agit d’une hypothèse technique, pas d’un besoin commercial confirmé.</p>'+
+    (nearest?'<div class="area-info"><b>À proximité :</b> '+safe(nearest.item.name||'Site sans nom')+' ('+fmt(Math.round(nearest.distance))+' m). <b>Lien non établi.</b>'+
+      '<p class="tag">'+safe(match?.status==='confirmed'?'Lien confirmé manuellement':match?.status==='to_verify'?'Lien à vérifier':'Rapprochement indicatif')+'</p>'+
+      '<div class="actions"><button id="seeNear">Voir le site voisin</button><button data-relation="confirmed">Lien confirmé</button><button data-relation="to_verify">À vérifier</button><button data-relation="rejected">Aucun lien</button></div></div>':
+      '<p class="area-info">Aucun élément déjà cartographié à moins de 750 m dans les résultats enregistrés. Cela ne signifie pas qu’il n’existe aucun site voisin.</p>')+
+    '<h3>Vérifier les informations</h3>'+links(item)+
+    '<div class="actions">'+(already?
+     '<button class="primary" id="openSaved">Déjà dans mon listing · ouvrir la fiche</button>':
+     '<button class="primary" id="prefill">Préremplir une fiche prospect</button>')+'</div></div>';
   }else if(selectedCell){
    const cell=planned.find(c=>c.id===selectedCell),rec=registry.get(selectedCell);
    if(!cell){closeDetail();return}
    const w=state(rec,'water'),c=state(rec,'company');
-   html='<div class="detail"><h2>'+safe(cell.id)+'</h2><p><b>Plans d’eau :</b> '+safe(w)+'</p><p><b>Sociétés :</b> '+safe(c)+'</p>'+
-    '<p class="caption">Couverture technique : 4 sous-secteurs de 2,5 km pour chaque moteur.</p>'+
-    '<label class="row"><input type="checkbox" id="review"> OK, terminé — vérification manuelle</label>'+
-    '<div class="field"><label for="reviewNotes">Observations de vérification</label><textarea id="reviewNotes"></textarea></div>'+
-    '<button id="saveReview" class="primary">Enregistrer le contrôle</button><p class="caption">La coche manuelle ne change pas la couleur de couverture.</p></div>';
+   html='<div class="detail"><h2>Zone recherchée · '+safe(cell.id)+'</h2>'+
+    '<p><b>Plans d’eau :</b> '+safe(w)+'</p><p><b>Adresses potentielles :</b> '+safe(c)+'</p>'+
+    '<label class="row"><input type="checkbox" id="review"> OK, terminé — contrôle manuel</label>'+
+    '<div class="field"><label for="reviewNotes">Notes de contrôle</label><textarea id="reviewNotes"></textarea></div>'+
+    '<button class="primary" id="saveReview">Enregistrer le contrôle</button>'+
+    '<p class="caption">Cette case ne valide pas une recherche technique.</p></div>';
   }
   $('detail').innerHTML=html;
-  if(selected?.type==='prospect'){ $('pNotes').value=item.notes||'';$('saveP').onclick=()=>saveProspect(item.id)}
-  if(selected?.type==='water'||selected?.type==='company'){
-   $('keep').onclick=()=>keepProspect(item);
+  if(selected?.type==='draft'||selected?.type==='prospect'){
+   $('saveP').onclick=selected.type==='draft'?saveDraft:updateProspect;
+   $('cancelP').onclick=()=>{draft=null;closeDetail()};
+   if($('archiveP'))$('archiveP').onclick=archiveProspect;
+  }else if(selected?.type==='water'||selected?.type==='company'){
+   if($('prefill'))$('prefill').onclick=()=>openDraft(item);
+   if($('openSaved'))$('openSaved').onclick=()=>{selectTab('prospects');showProspect(already.id)};
    if($('seeNear'))$('seeNear').onclick=()=>showEntity(nearest.item.kind,nearest.item.id);
    $('detail').querySelectorAll('[data-relation]').forEach(b=>b.onclick=()=>setRelation(item,nearest.item,b.dataset.relation));
+  }else if(selectedCell&&!selected){
+   $('review').checked=!!registry.get(selectedCell)?.manual?.done;
+   $('reviewNotes').value=registry.get(selectedCell)?.manual?.notes||'';
+   $('saveReview').onclick=reviewCell;
   }
-  if(selectedCell&&!selected){$('review').checked=!!registry.get(selectedCell)?.manual?.done;$('reviewNotes').value=registry.get(selectedCell)?.manual?.notes||'';$('saveReview').onclick=reviewCell}
  }
  function statusLabel(value){return ({a_etudier:'À étudier',interessant:'Intéressant',contact_recherche:'Contact à rechercher',contacte:'Contacté',a_relancer:'À relancer',offre_envoyee:'Offre envoyée',dossier_obtenu:'Dossier obtenu',ecarte:'Écarté',nouveau:'Nouveau',relance:'À relancer',termine:'Terminé'})[value]||value||'À étudier'}
  function statusOptions(value){const options=[['a_etudier','À étudier'],['interessant','Intéressant'],['contact_recherche','Contact recherché'],['contacte','Contacté'],['a_relancer','À relancer'],['offre_envoyee','Offre envoyée'],['dossier_obtenu','Dossier obtenu'],['ecarte','Écarté']];return options.map(([key,label])=>'<option value="'+key+'"'+(key===value?' selected':'')+'>'+label+'</option>').join('')}
@@ -514,15 +649,6 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   await write('relations',value);relations.set(id,value);
   status('Association enregistrée : '+(decision==='confirmed'?'lien confirmé par l’utilisateur':decision==='rejected'?'absence de lien indiquée':'lien à vérifier')+'.');
   render();
- }
- async function keepProspect(item){
-  const id='prospect:'+item.id,old=prospects.get(id);
-  const p={...old,id,targetId:item.id,kind:item.kind,category:item.category,name:item.name||'Plan d’eau à identifier',lat:item.lat,lon:item.lon,town:item.town||'',address:item.address||'',notes:old?.notes||'',status:old?.status||'a_etudier',source:item.source,createdAt:old?.createdAt||new Date().toISOString()};
-  await write('prospects',p);prospects.set(id,p);status('Prospect enregistré. Retrouvez-le dans « Mes prospects ».');render();showProspect(id);
- }
- async function saveProspect(id){
-  const p=prospects.get(id);if(!p)return;p.status=$('pStatus').value;p.notes=$('pNotes').value.trim();p.updatedAt=new Date().toISOString();
-  await write('prospects',p);prospects.set(id,p);status('Fiche enregistrée.');render();showProspect(id);
  }
  async function reviewCell(){
   const c=planned.find(x=>x.id===selectedCell);if(!c)return;const rec=ensure(c);rec.manual={done:$('review').checked,notes:$('reviewNotes').value.trim(),reviewedAt:$('review').checked?new Date().toISOString():null};rec.updatedAt=new Date().toISOString();
