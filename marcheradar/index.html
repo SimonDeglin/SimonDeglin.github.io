@@ -276,7 +276,15 @@ var SECTORS=[
  {id:'Carto',label:'Cartographie'},
  {id:'Scan',label:'Scan 3D & drone'},
  {id:'Foncier',label:'Expertises & foncier'},
- {id:'PEB',label:'PEB & énergie'}
+ {id:'PEB',label:'PEB & énergie'},
+ {id:'Monitoring',label:'Monitoring des ouvrages'},
+ {id:'Relief',label:'Relief & cubatures'},
+ {id:'Drone',label:'Drone & photogrammétrie'},
+ {id:'Reseaux',label:'Réseaux & impétrants'},
+ {id:'Hydraulique',label:'Hydraulique & jaugeages'},
+ {id:'PetitsTravaux',label:'Petits travaux techniques'},
+ {id:'Implant',label:'Implantations'},
+ {id:'Expert',label:'Expertises'}
 ];
 var DATE=new Date();
 function dateOffset(n){var d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()+n);return d.toISOString().slice(0,10)}
@@ -361,7 +369,10 @@ function renderCoverageStrip(){
  };
  box.innerHTML=span('TED',countBySource('TED')+' fiches · '+tedDate,true)+
   span('BOSA',bosaConnected?countBySource('BOSA')+' fiches · '+(bosaComplete?'veille active':'veille partielle')+(bosaOld?' · à actualiser':''):countBySource('BOSA')+' fiche(s) · collecte non confirmée',bosaConnected&&!bosaOld)+
-  span('Sources locales',localConnected?countBySource('LOCALE')+' pistes · pilote':countBySource('LOCALE')+' piste(s) · veille pilote à vérifier',localConnected);
+  span('Sources locales',localConnected?countBySource('LOCALE')+' pistes · veille partielle':countBySource('LOCALE')+' piste(s) · veille non vérifiée',localConnected)+
+  span('Communes',local.municipalitiesTotal?
+    (local.deliberationSourcesRead||0)+' / '+local.municipalitiesTotal+' sources communales lues':'annuaire en cours de raccordement',
+    !!local.deliberationSourcesRead);
 }
 function renderNav(){
  var names={all:"Vue d'ensemble",tenders:'Tous les marchés',favorites:'Favoris',tracked:'Dossiers suivis',urgent:'Échéances proches'};
@@ -551,11 +562,11 @@ function filtered(){
  return list;
 }
 var FAMILIES=[
- {id:'mesurage',label:'Mesurage',items:['Topo','Scan','Drone','Hydro']},
+ {id:'mesurage',label:'Mesurage',items:['Topo','Scan','Drone','Hydro','Monitoring']},
  {id:'voirie',label:'Projet voirie',items:['VRD','Reseaux','Hydraulique','PetitsTravaux']},
  {id:'geometre',label:'Géomètre',items:['Foncier','Implant']},
  {id:'expertise',label:'Expertise',items:['Expert','PEB']},
- {id:'autres',label:'Autres',items:['Carto']}
+ {id:'autres',label:'Autres',items:['Carto','Relief']}
 ];
 var expandedFamily=null;
 function matchesSectorFilter(tags){
@@ -569,8 +580,8 @@ function renderCategories(){
  function count(ids){return pool.filter(function(m){return (m.sectors||tagsOf(m)).some(function(s){return ids.includes(s)})}).length}
  var names={'Topo':'Relevés topo','Scan':'Scanner 3D','Drone':'Drone & photogrammétrie','Hydro':'Bathymétrie',
  'VRD':'Études / projets de voirie','Reseaux':'Réseaux & impétrants','Hydraulique':'Hydraulique & jaugeages',
- 'PetitsTravaux':'Petits travaux techniques',
- 'Foncier':'Division & bornage','Implant':'Implantations','Expert':'Expertises','PEB':'PEB','Carto':'Cartographie & SIG'};
+ 'PetitsTravaux':'Petits travaux techniques','Monitoring':'Monitoring des ouvrages',
+ 'Foncier':'Division & bornage','Implant':'Implantations','Expert':'Expertises','PEB':'PEB','Carto':'Cartographie & SIG','Relief':'Relief et cubatures'};
  box.innerHTML=FAMILIES.map(function(f){
   var items=f.items.filter(function(id){return !saved.hiddenSectors[id]});
   if(!items.length)return '';
@@ -675,7 +686,7 @@ function renderList(){
   article.addEventListener('dragend',function(){draggingId=null;document.querySelectorAll('.drag-over').forEach(function(b){b.classList.remove('drag-over')})});
  });
 }
-function render(){if(state.sector!=='all'&&saved.hiddenSectors[state.sector])state.sector='all';renderChips();renderBanner();renderStats();renderNav();renderList()}
+function render(){if(state.sector!=='all'&&saved.hiddenSectors[state.sector])state.sector='all';renderChips();renderBanner();renderCoverageStrip();renderStats();renderNav();renderList()}
 
 function formatMoney(value){
  if(!value||typeof value.amount!=='number')return 'Non publié';
