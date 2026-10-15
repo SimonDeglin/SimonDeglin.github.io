@@ -1,0 +1,50 @@
+name: "MarchéRadar V2 — validation Phase 2"
+on:
+  push:
+    branches:
+      - "feature/marcheradar-v2-phase2-20261015"
+      - "main"
+    paths:
+      - "marcheradar/index.html"
+      - "marcheradar/detail-phase2.js"
+      - "marcheradar/detail-phase2.css"
+      - "marcheradar/data.json"
+      - "marcheradar/tests/**"
+      - ".github/workflows/marcheradar-phase2-tests.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: "Contrôler la syntaxe des modules"
+        run: |
+          node --check marcheradar/detail-phase2.js
+          node --check marcheradar/tests/phase2-browser.cjs
+          node --check marcheradar/tests/phase2-module.test.cjs
+      - name: "Tests unitaires documentaires"
+        run: node --test marcheradar/tests/phase2-module.test.cjs
+      - name: "Installer Playwright en environnement isolé"
+        run: npm install --no-save --no-package-lock playwright
+      - name: "Préparer Chromium"
+        run: npx playwright install chromium
+      - name: "Non-régression du classement Phase 1"
+        run: node marcheradar/tests/phase1-browser.cjs
+      - name: "Tests fonctionnels des fiches Phase 2"
+        run: node marcheradar/tests/phase2-browser.cjs
+      - name: "Conserver les captures pour revue visuelle"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: marcheradar-phase2-captures
+          if-no-files-found: ignore
+          retention-days: 7
+          path: |
+            marcheradar/tests/phase2-desktop.png
+            marcheradar/tests/phase2-mobile.png
