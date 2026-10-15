@@ -107,4 +107,10 @@ async function collect(){
  console.log('COMMUNES_DIRECTORY_OK',JSON.stringify(output.counts));
 }
 module.exports={coords,haversine,normalize,approxMinutes,zone,collect};
-if(require.main===module)collect().catch(e=>{console.error('COMMUNES_DIRECTORY_ERROR',e.message);process.exitCode=1});
+if(require.main===module)collect().catch(e=>{
+ const message=String(e.message||e).slice(0,350);
+ fs.writeFileSync(path.resolve(__dirname,'../communes-error.json'),
+  JSON.stringify({at:new Date().toISOString(),error:message},null,2)+'\n','utf8');
+ console.error('COMMUNES_DIRECTORY_ERROR',message);
+ process.exitCode=1;
+});
