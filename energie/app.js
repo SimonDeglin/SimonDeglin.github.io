@@ -973,6 +973,7 @@ let to=null;function toast(message){const el=$('#toast');el.textContent=message;
 
 /* On-device photo reading. Type is selected BEFORE capture; OCR is never saved without confirmation. */
 let scanKind='electric',scanCrop=null,scanBusy=false,scanLastText='',scanLastData=null,scanRequest=0;
+let scanAngle=0,scanZoom=1,scanPan={x:0,y:0},scanElectricStep='both';
 let ocrScriptPromise=null,ocrWorkerPromise=null;
 $$('[data-scan-kind]').forEach(button=>button.addEventListener('click',()=>{
  scanKind=button.dataset.scanKind;
@@ -1289,6 +1290,7 @@ function displayImageSpaceCrop(rect){
  const dy=imageRect.top-wrapRect.top+(imageRect.height-img.naturalHeight*scale)/2;
  displayScanCrop({x:dx+rect.left*scale,y:dy+rect.top*scale},
   {x:dx+(rect.left+rect.width)*scale,y:dy+(rect.top+rect.height)*scale});
+ $('#scan-crop-box').style.transform='rotate('+scanAngle+'deg)';
 }
 function findMeterDisplay(){
  scanAutoZones=null;scanAutoConfidence='none';scanLastMethod='manual';
@@ -1329,13 +1331,37 @@ function scanFrameViewport(){
 }
 function clampScanFrame(rect){
  const g=scanFrameViewport();if(!g||!rect)return null;
- const minW=Math.min(g.w,Math.max(g.w*.10,42/g.scale));
- const minH=Math.min(g.h,Math.max(g.h*.055,36/g.scale));
- const width=Math.max(minW,Math.min(g.w,Number(rect.width)||minW));
- const height=Math.max(minH,Math.min(g.h,Number(rect.height)||minH));
- return {left:Math.max(0,Math.min(g.w-width,Number(rect.left)||0)),
-  top:Math.max(0,Math.min(g.h-height,Number(rect.top)||0)),width,height};
+ const angle=scanAngle*Math.PI/180;
+ const cc=Math.abs(Math.cos(angle)),ss=Math.abs(Math.sin(angle));
+ let width=Math.max(32/g.scale,Math.min(g.w,Number(rect.width)||g.w*.5));
+ let height=Math.max(24/g.scale,Math.min(g.h,Number(rect.height)||g.h*.2));
+ // Keep the four ROTATED corners inside the original photograph.
+ const ex=cc*width/2+ss*height/2,ey=ss*width/2+cc*height/2;
+ const shrink=Math.min(1,g.w/Math.max(1,ex*2),g.h/Math.max(1,ey*2));
+ width*=shrink;height*=shrink;
+ const mx=cc*width/2+ss*height/2,my=ss*width/2+cc*height/2;
+ const originalCenterX=(Number(rect.left)||0)+(Number(rect.width)||width)/2;
+ const originalCenterY=(Number(rect.top)||0)+(Number(rect.height)||height)/2;
+ const cx=Math.max(mx,Math.min(g.w-mx,originalCenterX));
+ const cy=Math.max(my,Math.min(g.h-my,originalCenterY));
+ return {left:cx-width/2,top:cy-height/2,width,height};
 }
+function applyScanPhotoView(){
+ const photo=$('#scan-preview');if(!photo)return;
+ photo.style.transform='translate('+scanPan.x+'px,'+scanPan.y+'px) scale('+scanZoom+')';
+ if(scanCrop)displayImageSpaceCrop(scanCrop);
+}
+function setScanAngle(angle,preserveReading=false){
+ scanAngle=Math.max(-60,Math.min(60,Number(angle)||0));
+ $('#scan-angle').value=String(Math.round(scanAngle));
+ $('#scan-angle-value').textContent=(scanAngle>0?'+':'')+Math.round(scanAngle)+'°';
+ if(scanCrop){
+  scanCrop=clampScanFrame(scanCrop);
+  refreshScanCropPreview();
+  if(!preserveReading)invalidateScanReading();
+ }
+}
+$('#scan-angle').addEventListener('input',event=>setScanAngle(event.target.value));
 function defaultScanFrame(){
  const g=scanFrameViewport();if(!g)return null;
  const shape=scanKind==='electric'?
@@ -1365,6 +1391,9 @@ function invalidateScanReading(){
 }
 function prepareScanFrame(auto=true){
  scanCrop=null;scanAutoZones=null;scanAutoConfidence='manual';
+ scanAngle=0;scanZoom=1;scanPan={x:0,y:0};
+ $('#scan-angle').value='0';$('#scan-angle-value').textContent='0°';
+ applyScanPhotoView();
  const found=auto&&findMeterDisplay();
  if(found){
   scanCrop=clampScanFrame(scanCrop);
@@ -1377,24 +1406,57 @@ function prepareScanFrame(auto=true){
  invalidateScanReading();
 }
 
-function scanSourceImage(rect=scanCrop,negative=false){
+function scanSourceImage(rect=scanCrop,variant='raw'){
  const img=$('#scan-preview');
- if(!rect||!img.complete||!img.naturalWidth)return pendingImage;
- const x=Math.max(0,Math.round(rect.left)),y=Math.max(0,Math.round(rect.top));
- const w=Math.min(img.naturalWidth-x,Math.max(1,Math.round(rect.width)));
- const h=Math.min(img.naturalHeight-y,Math.max(1,Math.round(rect.height)));
- const factor=Math.min(3,Math.max(1,1200/Math.max(w,h)));
- const can=document.createElement('canvas');can.width=Math.max(1,Math.round(w*factor));can.height=Math.max(1,Math.round(h*factor));
- const ctx=can.getContext('2d',{willReadFrequently:negative});
+ if(!rect||!img?.complete||!img.naturalWidth)return pendingImage;
+ const w=Math.max(1,Math.round(rect.width)),h=Math.max(1,Math.round(rect.height));
+ const factor=Math.min(3.4,Math.max(1.5,1100/Math.max(w,h)));
+ const can=document.createElement('canvas');
+ can.width=Math.max(1,Math.round(w*factor));can.height=Math.max(1,Math.round(h*factor));
+ const ctx=can.getContext('2d',{willReadFrequently:variant!==false&&variant!=='raw'});
+ const cx=rect.left+rect.width/2,cy=rect.top+rect.height/2;
+ const angle=(rect.angle??scanAngle)*Math.PI/180;
+ ctx.fillStyle='#fff';ctx.fillRect(0,0,can.width,can.height);
+ ctx.save();
+ ctx.translate(can.width/2,can.height/2);
+ ctx.scale(factor,factor);
+ ctx.rotate(-angle);
+ ctx.translate(-cx,-cy);
  ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
- ctx.drawImage(img,x,y,w,h,0,0,can.width,can.height);
- if(negative){
+ ctx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight);
+ ctx.restore();
+ const mode=variant===true?'invert':variant===false?'raw':variant;
+ if(mode==='invert'||mode==='enhanced'||mode==='binary'){
   const data=ctx.getImageData(0,0,can.width,can.height),pixels=data.data;
-  // White rolling numbers on dark wheels become dark text on a pale field.
-  for(let i=0;i<pixels.length;i+=4){
-   const v=Math.round(.299*pixels[i]+.587*pixels[i+1]+.114*pixels[i+2]);
-   const negativeValue=255-v;
-   pixels[i]=negativeValue;pixels[i+1]=negativeValue;pixels[i+2]=negativeValue;
+  const gray=new Uint8Array(can.width*can.height);
+  let lo=255,hi=0;
+  for(let i=0,j=0;i<pixels.length;i+=4,j++){
+   const y=(77*pixels[i]+150*pixels[i+1]+29*pixels[i+2])>>8;
+   gray[j]=y;if(y<lo)lo=y;if(y>hi)hi=y;
+  }
+  // Enhancing contrast after rectification is not the same as coloring the
+  // entire photo. OCR only ever sees the actual extracted index rectangle.
+  const scale=255/Math.max(60,hi-lo);
+  let integral=null;
+  if(mode==='binary'){
+   const stride=can.width+1;integral=new Uint32Array(stride*(can.height+1));
+   for(let y=0;y<can.height;y++){
+    let row=0;
+    for(let x=0;x<can.width;x++){row+=gray[y*can.width+x];integral[(y+1)*stride+x+1]=integral[y*stride+x+1]+row}
+   }
+  }
+  const radius=17,stride=can.width+1;
+  for(let y=0;y<can.height;y++)for(let x=0;x<can.width;x++){
+   const j=y*can.width+x,i=4*j,val=gray[j];
+   let out;
+   if(mode==='invert')out=255-val;
+   else if(mode==='enhanced')out=Math.max(0,Math.min(255,Math.round((val-lo)*scale)));
+   else{
+    const l=Math.max(0,x-radius),r=Math.min(can.width,x+radius+1),t=Math.max(0,y-radius),b=Math.min(can.height,y+radius+1);
+    const sum=integral[b*stride+r]-integral[b*stride+l]-integral[t*stride+r]+integral[t*stride+l];
+    out=val>sum/((b-t)*(r-l))-11?255:0;
+   }
+   pixels[i]=out;pixels[i+1]=out;pixels[i+2]=out;pixels[i+3]=255;
   }
   ctx.putImageData(data,0,0);
  }
@@ -1402,12 +1464,16 @@ function scanSourceImage(rect=scanCrop,negative=false){
 }
 function scanManualZones(){
  if(!scanCrop)return null;
- if(scanKind!=='electric')return [scanCrop];
- const half=scanCrop.height/2;
- return [
-  {left:scanCrop.left,top:scanCrop.top,width:scanCrop.width,height:half},
-  {left:scanCrop.left,top:scanCrop.top+half,width:scanCrop.width,height:half}
- ];
+ if(scanKind!=='electric'||scanElectricStep!=='both')return [scanCrop];
+ const {left,top,width,height}=scanCrop,ang=scanAngle*Math.PI/180;
+ const cx=left+width/2,cy=top+height/2;
+ // Two HALF-HEIGHT windows rotated with the parent rectangle.
+ // Their pixel centers are offset along the frame's local vertical axis.
+ return [-1,1].map(sign=>{
+  const dx=-Math.sin(ang)*sign*height/4;
+  const dy=Math.cos(ang)*sign*height/4;
+  return {left:cx+dx-width/2,top:cy+dy-height/4,width,height:height/2,angle:scanAngle};
+ });
 }
 function scanAcceptedSingle(raw,kind){
  const clean=String(raw||'').replace(/[Oo]/g,'0').replace(/[Il|]/g,'1');
