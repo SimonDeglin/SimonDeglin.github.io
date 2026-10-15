@@ -2,12 +2,14 @@ name: "MarchéRadar — Preuves documentaires 3B"
 on:
   push:
     branches:
+      - main
       - feature/marcheradar-phase3b-document-evidence-20261015
     paths:
       - "marcheradar/tools/csc-evidence.cjs"
       - "marcheradar/tools/bosa-csc-batch.cjs"
       - "marcheradar/detail-phase2.js"
       - "marcheradar/tests/phase3b-evidence.test.cjs"
+      - "marcheradar/tests/phase2-browser.cjs"
       - ".github/workflows/marcheradar-phase3b-evidence.yml"
   workflow_dispatch:
 permissions:
@@ -39,7 +41,8 @@ jobs:
             sudo apt-get update -qq
             sudo apt-get install -y -qq poppler-utils
           fi
-      - name: "Lire plusieurs pièces officielles sans stocker les PDF"
+      - name: "Lire plusieurs pièces officielles sans stocker les PDF (branche de développement)"
+        if: github.ref == 'refs/heads/feature/marcheradar-phase3b-document-evidence-20261015'
         run: node marcheradar/tools/bosa-csc-batch.cjs --write
       - name: "Tester les analyses réelles et les 64 marchés"
         run: |
@@ -51,6 +54,7 @@ jobs:
       - name: "Tests Chromium : fiches et sources Phase 2"
         run: node marcheradar/tests/phase2-browser.cjs
       - name: "N'enregistrer les résultats qu'après réussite de tous les contrôles"
+        if: github.ref == 'refs/heads/feature/marcheradar-phase3b-document-evidence-20261015'
         run: |
           git diff --check
           git config user.name "github-actions[bot]"

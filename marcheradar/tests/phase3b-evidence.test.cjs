@@ -68,3 +68,27 @@ test('rejeter un document non indexé ou un PDF non conforme',()=>{
  assert.throws(()=>makeAnalysis({market,document,bytes:Buffer.from('not a PDF'),numberOfPages:2,text:source()}),/Invalid or oversized PDF/);
  assert.throws(()=>makeAnalysis({market,document,bytes:pdf,numberOfPages:2,text:'short'}),/No machine-readable PDF text/);
 });
+
+test('les analyses PDF restent associées aux marchés après une nouvelle collecte TED/BOSA',()=>{
+ const original=data.items.find(x=>x.source==='BOSA'&&x.documentAnalyses?.length);
+ assert(original,'Aucun marché avec analyse PDF dans la base testée');
+ const official={...original};
+ const bosa=require('../tools/bosa-public.cjs');
+ const n={source:'BOSA',id:'bosa:notice-republication',publicationWorkspaceId:original.publicationWorkspaceId,
+  procedureIdentifier:original.procedureIdentifier||'PHASE3B-COLLECT',
+  internalReference:original.internalReference,title:original.title,buyer:original.buyer,
+  publication:'2026-10-15',score:80,sector:original.sector,sectors:original.sectors};
+ const mergedBosa=bosa.merge([official],[n]);
+ const found=mergedBosa.find(x=>x.id===original.id);
+ assert(found,'Le marché a disparu pendant la fusion BOSA');
+ assert.deepEqual(found.documentAnalyses,original.documentAnalyses);
+ const ted=require('../tools/collect-ted.cjs');
+ const notice={source:'TED',id:'ted:367372-2026',publicationNumber:'367372-2026',
+  procedureIdentifier:original.procedureIdentifier||'PHASE3B-COLLECT',
+  title:original.title,buyer:original.buyer,publication:'2026-10-16',sector:original.sector,
+  sectors:original.sectors,score:81,description:'Levés géométriques'};
+ const after=ted.combine([original],[notice]);
+ const retained=after.find(x=>x.id===original.id);
+ assert(retained,'Le marché a disparu pendant la fusion TED');
+ assert.deepEqual(retained.documentAnalyses,original.documentAnalyses);
+});

@@ -76,6 +76,13 @@ function fixture(id,changes){
   assert.match(detailText,/pièce\(s\) répertoriée\(s\)/);
   assert.match(detailText,/CCH.*Bathymetrie/i);
   assert.match(detailText,/Les intitulés et identifiants proviennent de l’API publique/i);
+  if(bathy.documentAnalyses?.length){
+   assert.match(detailText,/Passages repérés dans les documents/);
+   assert.match(detailText,/Lecture automatique — vérification nécessaire/);
+   assert.match(detailText,/page 11/);
+   assert.match(detailText,/prix est l'unique critère d'attribution/i);
+   assert.equal(await page.locator('#drawerBody a[href$="/documents"]').count()>0,true);
+  }
   const documentsLink=await page.locator('.mr2-source-link').evaluateAll(nodes=>nodes.map(x=>x.href));
   assert(documentsLink.some(url=>url.endsWith('/documents')),'Le lien vers la rubrique Documents officielle est absent');
   await page.locator('#closeDrawer').click();
