@@ -1,0 +1,30 @@
+name: "MarchéRadar V2 — validation Phase 1"
+on:
+  push:
+    branches:
+      - "feature/marcheradar-v2-phase1-20261015"
+    paths:
+      - "marcheradar/index.html"
+      - "marcheradar/data.json"
+      - "marcheradar/tests/**"
+      - ".github/workflows/marcheradar-phase1-tests.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: "Vérifier la syntaxe du test"
+        run: node --check marcheradar/tests/phase1-browser.cjs
+      - name: "Installer Playwright sans modifier les dépendances suivies"
+        run: npm install --no-save --no-package-lock playwright
+      - name: "Préparer Chromium pour les tests fonctionnels"
+        run: npx playwright install chromium
+      - name: "Vérifier l'application dans un navigateur"
+        run: node marcheradar/tests/phase1-browser.cjs
