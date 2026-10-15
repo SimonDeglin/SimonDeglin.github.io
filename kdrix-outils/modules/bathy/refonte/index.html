@@ -55,12 +55,12 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
  <div id="researchControls">
  <div class="field"><label for="preset">Zone de départ</label><select id="preset"><option value="liege">Liège</option><option value="huy">Huy</option><option value="namur">Namur</option><option value="charleroi">Charleroi</option><option value="custom">Autre commune</option></select></div>
  <div class="two"><div class="field"><label for="city">Ville belge</label><input id="city" value="Liège"></div><div class="field"><label for="radius">Rayon (km)</label><input id="radius" type="number" value="75" min="1" max="100" step="1"></div></div>
- <button id="apply" style="width:100%">Appliquer le territoire</button>
+ <button id="apply" class="minor" style="width:100%">Voir cette zone sur la carte</button>
  <p class="caption">Rayon à vol d'oiseau. Pour éviter un balayage inutile, cliquez sur la carte et utilisez « Analyser le secteur sélectionné » ; sinon, lancez un petit lot autour de la ville.</p>
  <div id="waterParams" class="hidden"><div class="field"><label for="minArea">Surface minimale des plans d'eau</label><select id="minArea"><option value="400">400 m²</option><option value="1000" selected>1 000 m²</option><option value="5000">5 000 m²</option></select></div></div>
  <div id="scanParams"><div class="field"><label for="batch">Secteurs maximum par lancement</label><select id="batch"><option value="1">1 — pour tester</option><option value="3" selected>3 — recommandé</option><option value="5">5</option><option value="10">10</option></select></div>
- <div class="row"><button class="primary" id="run">Rechercher les sociétés</button><button id="stop" disabled>Arrêter</button></div>
- <button id="scanSelected" class="minor" style="width:100%" disabled>Analyser le secteur sélectionné</button></div>
+ <div class="row"><button class="primary" id="run">Rechercher</button><button id="stop" disabled>Arrêter</button></div>
+ <button id="scanSelected" class="minor" style="width:100%" disabled>Rechercher uniquement dans la zone cliquée sur la carte</button></div>
  <button id="coverageToggle" style="width:100%;margin:8px 0">◫ Voir les zones déjà recherchées</button></div>
  <div class="metrics">
   <div class="metric"><strong id="countCompanies">0</strong><span>Sites / sociétés détectés</span></div>
@@ -274,8 +274,20 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   if(!response.ok)throw Error('Géocodage HTTP '+response.status);const list=await response.json();if(!list?.length)throw Error('Ville introuvable en Belgique');
   return {city,lat:Number(list[0].lat),lng:Number(list[0].lon)};
  }
- async function apply(){if(running)return;$('apply').disabled=true;try{const city=$('city').value.trim(),radius=Number($('radius').value);if(!city||!Number.isInteger(radius)||radius<1||radius>100)throw Error('Ville et rayon entier 1 à 100 km requis');
-  const coords=await geocode(city);areaApply({...coords,city,radius})}catch(e){status(e.message,true)}finally{$('apply').disabled=false}}
+ async function apply(){
+  if(running)return false;$('apply').disabled=true;
+  try{const city=$('city').value.trim(),radius=Number($('radius').value);if(!city||!Number.isInteger(radius)||radius<1||radius>100)throw Error('Ville et rayon entier 1 à 100 km requis');
+   const coords=await geocode(city);areaApply({...coords,city,radius});return true
+  }catch(e){status('Territoire impossible : '+e.message,true);return false}
+  finally{$('apply').disabled=false}
+ }
+ async function startSearch(selectedOnly){
+  const city=$('city').value.trim(),r=Number($('radius').value);
+  if(city!==scope.city||r!==scope.radius){
+   const ok=await apply();if(!ok)return;
+  }
+  await scan(!!selectedOnly);
+ }
  async function fetchJson(url,opt={},timeout=28000){
   const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),timeout);pendingFetch=ctrl;
   try{const res=await fetch(url,{...opt,signal:ctrl.signal});if(!res.ok)throw Error('HTTP '+res.status);const data=await res.json();if(data.error)throw Error(data.error.message||'Erreur du service');return data}
@@ -303,6 +315,26 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   let count=0;for(const o of response.elements){const record=companyFrom(o);if(!record)continue;const prev=companies.get(record.id);if(prev){record.notes=prev.notes;record.status=prev.status}
    await write('companies',record);companies.set(record.id,record);count++;
   }return count;
+ }
+ async function investigateNear(item){
+  if(running){status('Une recherche est déjà en cours.');return}
+  running=true;$('run').disabled=true;$('stop').disabled=true;
+  const button=$('investigateNear');if(button){button.disabled=true;button.textContent='Recherche en cours…'}
+  try{
+   const [x,y]=projected(item.lat,item.lon),padding=750;
+   status(item.kind==='water'?'Recherche des sociétés et établissements dans les 750 m…':'Recherche de plans d’eau PICC dans les 750 m…');
+   let found=0;
+   if(item.kind==='company'){
+    found=await waterSubtile({bounds3812:[x-padding,y-padding,x+padding,y+padding]});
+    item.investigatedAt=new Date().toISOString();await write('companies',item);companies.set(item.id,item);
+   }else{
+    const p1=ll(x-padding,y-padding),p2=ll(x+padding,y+padding),cell={points:[[p1[0],p1[1]],[p1[0],p2[1]],[p2[0],p2[1]],[p2[0],p1[1]]]};
+    found=await companyCell(cell);
+    item.investigatedAt=new Date().toISOString();await write('bodies',item);bodies.set(item.id,item);
+   }
+   status('Recherche ciblée terminée : '+found+' enregistrement(s) reçus. Examinez les rapprochements proposés. Cette recherche ponctuelle ne valide pas une cellule de couverture entière.');
+  }catch(e){status('Recherche ciblée impossible : '+e.message+'. Aucun territoire n’a été marqué comme terminé.',true)}
+  finally{running=false;$('run').disabled=false;$('stop').disabled=true;render();showEntity(item.kind,item.id)}
  }
  async function scanCell(cell,kind){
   const rec=ensure(cell),items=rec.engines[kind].subtiles;
@@ -385,7 +417,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   $('searchTitle').textContent=titleFor(mode);
   $('searchHelp').textContent={company:'Chercher des carrières, golfs, stations d’épuration et sites susceptibles d’avoir des bassins.',water:'Chercher les surfaces d’eau du PICC et vérifier les entreprises éventuellement concernées.',prospects:'Retrouvez vos fiches historiques, vos contacts, observations et démarches commerciales.'}[mode];
   $('waterParams').classList.toggle('hidden',mode!=='water');$('scanParams').classList.toggle('hidden',!['water','company'].includes(mode));
-  $('run').textContent=mode==='water'?'Rechercher les plans d’eau':'Rechercher les sociétés';
+  $('run').textContent=mode==='water'?'Rechercher des plans d’eau':'Rechercher des adresses potentielles';
   $('resultHeading').textContent={company:'Adresses et sites potentiels',water:'Plans d’eau PICC détectés',prospects:'Mon listing · prospects enregistrés'}[mode];
   $('resultHelp').textContent={company:'Chaque résultat est une piste. Cliquez pour examiner le site et préremplir une fiche.',water:'Cliquez sur un bassin pour zoomer et préremplir sa fiche si le site vous intéresse.',prospects:'Vos 10 fiches historiques et tous les prospects ajoutés à votre listing.'}[mode];
   $('filter').value='';if(mode==='prospects')status('Mon listing : '+prospects.size+' fiche(s) enregistrée(s). Les deux onglets de recherche ne modifient pas ce listing sans votre accord.');render();
@@ -609,6 +641,12 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
       '<div class="actions"><button id="seeNear">Voir le site voisin</button><button data-relation="confirmed">Lien confirmé</button><button data-relation="to_verify">À vérifier</button><button data-relation="rejected">Aucun lien</button></div></div>':
       '<p class="area-info">Aucun élément déjà cartographié à moins de 750 m dans les résultats enregistrés. Cela ne signifie pas qu’il n’existe aucun site voisin.</p>')+
     '<h3>Vérifier les informations</h3>'+links(item)+
+    '<div class="area-info"><b>Compléter l’analyse du voisinage</b><p class="caption">'+
+      (item.kind==='company'?'Rechercher directement les plans d’eau PICC dans les environs immédiats de cette adresse.':
+       'Rechercher directement les établissements et installations OSM à proximité de ce bassin.')+
+      '</p><button id="investigateNear" class="minor">Chercher autour de ce site (750 m)</button>'+
+      (item.investigatedAt?'<p class="small">Dernière recherche ciblée : '+safe(new Date(item.investigatedAt).toLocaleString('fr-BE'))+'</p>':'')+
+    '</div>'+
     '<div class="actions">'+(already?
      '<button class="primary" id="openSaved">Déjà dans mon listing · ouvrir la fiche</button>':
      '<button class="primary" id="prefill">Préremplir une fiche prospect</button>')+'</div></div>';
@@ -630,6 +668,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
    if($('archiveP'))$('archiveP').onclick=archiveProspect;
   }else if(selected?.type==='water'||selected?.type==='company'){
    if($('prefill'))$('prefill').onclick=()=>openDraft(item);
+   if($('investigateNear'))$('investigateNear').onclick=()=>investigateNear(item);
    if($('openSaved'))$('openSaved').onclick=()=>{selectTab('prospects');showProspect(already.id)};
    if($('seeNear'))$('seeNear').onclick=()=>showEntity(nearest.item.kind,nearest.item.id);
    $('detail').querySelectorAll('[data-relation]').forEach(b=>b.onclick=()=>setRelation(item,nearest.item,b.dataset.relation));
@@ -680,7 +719,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>selectTab(b.dataset.tab));
   $('preset').onchange=()=>{const p=PRESETS[$('preset').value];if(p){$('city').value=p.city;$('radius').value=p.radius}};
   $('city').oninput=()=>{$('preset').value='custom'};$('radius').oninput=()=>{$('preset').value='custom'};
-  $('apply').onclick=apply;$('run').onclick=()=>scan(false);$('scanSelected').onclick=()=>scan(true);
+  $('apply').onclick=apply;$('run').onclick=()=>startSearch(false);$('scanSelected').onclick=()=>startSearch(true);
   $('newManual').onclick=()=>openDraft();
   $('coverageToggle').onclick=()=>{showCoverage=!showCoverage;selected=null;selectedCell=null;focus=null;$('coverageToggle').textContent=showCoverage?'✕ Fermer la carte des zones recherchées':'◫ Voir les zones déjà recherchées';render()};
   $('stop').onclick=()=>{stopRequested=true;status('Arrêt demandé après la requête en cours. Les résultats enregistrés sont conservés.')};
