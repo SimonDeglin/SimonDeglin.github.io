@@ -12,8 +12,14 @@
 *{box-sizing:border-box}html,body{height:100%;margin:0}body{font:13px/1.45 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:#193943}a{color:#176d85;text-decoration:none}a:hover{text-decoration:underline}
 button,input,select,textarea{font:inherit}button{cursor:pointer;border:1px solid #c6d9de;background:#f6fafb;color:#225767;border-radius:8px;padding:9px 11px;font-weight:740}button:hover:not(:disabled){background:#e6f2f4}button:disabled{opacity:.47;cursor:not-allowed}button.primary{background:var(--teal);border-color:var(--teal);color:#fff}button.primary:hover{background:#16586a}button.critical{color:#9e5149}input,select,textarea{border:1px solid #cad9de;border-radius:8px;padding:9px 10px;background:white;color:var(--navy);width:100%}input[type=checkbox]{width:auto}
 header{min-height:68px;background:var(--navy);color:white;padding:13px max(18px,3vw);display:flex;align-items:center;justify-content:space-between;gap:15px}header strong{display:block;font-size:17px;letter-spacing:-.02em}header small{display:block;color:#b7d2d9;font-size:10px;margin-bottom:3px}header a{color:#e5f6f8;font-size:12px}
+.stage-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:10px max(18px,3vw);background:#fff;border-bottom:1px solid #dbe5e8}
+.stage-nav button{padding:11px 14px;text-align:left;min-height:57px;border:1px solid #d9e5e8;background:#f3f7f8;color:#284d58;opacity:1!important;cursor:not-allowed;border-radius:9px;font-size:12px;font-weight:800}
+.stage-nav button span{display:block;font-size:10px;color:#799099;font-weight:550;margin-top:3px}
+.stage-nav button:disabled{opacity:1!important}
+@media(max-width:700px){.stage-nav{grid-template-columns:1fr;gap:6px}.stage-nav button{min-height:45px;padding:7px 11px}}
+
 .notice{padding:10px max(18px,3vw);background:#e8f4f4;border-bottom:1px solid #d0e4e6;color:#396470;font-size:12px}
-main{height:calc(100vh - 109px);min-height:590px;display:grid;grid-template-columns:295px minmax(330px,1fr) 330px;gap:10px;padding:10px}
+main{height:calc(100vh - 195px);min-height:590px;display:grid;grid-template-columns:295px minmax(330px,1fr) 330px;gap:10px;padding:10px}
 .panel{min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:auto}.padded{padding:15px}h1,h2,h3{margin:0}h2{font-size:16px;margin-bottom:12px}h3{font-size:13px;margin:15px 0 8px}.eyebrow{font-size:10px;letter-spacing:.08em;font-weight:800;text-transform:uppercase;color:#66848c}.field{margin-bottom:11px}.field label{display:block;font-size:11px;font-weight:750;margin-bottom:5px}.fieldline{display:grid;grid-template-columns:1fr 105px;gap:8px}.buttons{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.buttons button{flex:1}
 .muted{font-size:11px;color:var(--muted)}.status{background:#f1f6f7;border:1px solid #dbe8ea;padding:10px 12px;border-radius:8px;margin-top:12px;white-space:pre-line;color:#386271}.error{background:#fff0eb;border-color:#f2c7bc;color:#94473b}
 .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:13px 0}.stat{background:#f4f8f9;border-radius:8px;padding:10px}.stat b{display:block;font-size:18px}.stat span{font-size:10px;color:#617984}
@@ -26,8 +32,13 @@ hr{border:0;border-top:1px solid #e1e9eb;margin:16px 0}.celllist{display:grid;ga
 </style>
 </head>
 <body>
-<header><div><small>KDRIX · Prospection bathymétrique</small><strong>Carte de couverture des recherches</strong></div><div><a href="../">Retour à Bathy</a> &nbsp;·&nbsp; <a href="../../../">Portail KDRIX</a></div></header>
-<div class="notice"><b>Nouvelle version — phase 1.</b> Grille permanente et conservation des données. Les deux nouveaux moteurs de recherche sont prévus aux phases 2 et 3 ; aucune zone n'est artificiellement considérée comme analysée.</div>
+<header><div><small>KDRIX · Prospection bathymétrique</small><strong>Carte de couverture des recherches</strong></div><div><a href="../">Ancienne version (secours)</a> &nbsp;·&nbsp; <a href="../../../">Portail KDRIX</a></div></header>
+<div class="notice"><b>Nouvelle interface KDRIX Bathy — phase 1.</b> La carte de couverture est disponible ci-dessous. Les deux moteurs de recherche et le suivi des prospects seront activés dans les prochaines phases ; aucune ancienne donnée n'a été supprimée.</div>
+<nav class="stage-nav" aria-label="Nouvelle organisation des recherches Bathy">
+ <button type="button" disabled title="Moteur à développer en phase 2">1. Recherche par plan d'eau<span>En développement · phase 2</span></button>
+ <button type="button" disabled title="Moteur à développer en phase 3">2. Recherche par société<span>En développement · phase 3</span></button>
+ <button type="button" disabled title="Fiches et suivi commun à développer en phase 4">3. Mes prospects<span>En développement · phase 4</span></button>
+</nav>
 <main>
 <section class="panel padded" aria-label="Configuration territoriale">
 <h2>Territoire à explorer</h2>
@@ -51,7 +62,7 @@ hr{border:0;border-top:1px solid #e1e9eb;margin:16px 0}.celllist{display:grid;ga
 <div class="legend"><span><i class="dot c-gray"></i>Non prospecté</span><span><i class="dot c-blue"></i>Plans d'eau</span><span><i class="dot c-orange"></i>Sociétés</span><span><i class="dot c-green"></i>Les deux</span><span><i class="dot ring"></i>Partiel / erreur</span><span>✓ = contrôle manuel</span></div>
 </section>
 <section class="panel padded rightpanel" aria-label="Détail et suivi d'une cellule">
-<div class="tabs"><button class="tab active">Couverture</button><button class="tab" disabled title="Phase 2">Plans d'eau</button><button class="tab" disabled title="Phase 3">Sociétés</button><button class="tab" disabled title="Phase 4">Mes prospects</button></div>
+<div class="eyebrow" style="margin-bottom:10px">Carte de couverture · Phase 1 disponible</div>
 <h2>Suivi d'une zone</h2><div id="detail" class="readout"><p>Sélectionnez une cellule sur la carte ou dans la liste.</p></div>
 <div id="reviewControls" hidden>
 <label class="reviewline"><input type="checkbox" id="review"> <b>OK, terminé — contrôle manuel effectué</b></label>
