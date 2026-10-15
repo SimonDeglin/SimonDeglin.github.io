@@ -42,8 +42,8 @@ function normalize(row,previous){
  const name=String(f.nom||f.nom_court||'').trim();
  const website=String(f.site_web||f.siteweb||'').trim();
  const point=coords(f.geopoint_administration)||coords(f.centroid);
- if(!name||!/^\d{5}$/.test(ins)||!website)return null;
- let validURL;try{validURL=new URL(website);if(!/^https?:$/.test(validURL.protocol))return null}catch(e){return null}
+ if(!name||!/^\d{5}$/.test(ins))return null;
+ if(website){try{const u=new URL(website);if(!/^https?:$/.test(u.protocol))return null}catch(e){return null}}
  const km=point?Math.round(haversine(point,LIEGE_APPROX)*10)/10:null;
  const estimate=km===null?null:approxMinutes(km);
  const old=previous||{};
@@ -54,7 +54,7 @@ function normalize(row,previous){
   straightLineKm:km,roadMinutes:road,estimatedMinutes:estimate,
   travelMethod:road===null?'estimation_geographique_non_routiere':'itineraire_verifie',
   zone:zone(estimate,road),
-  sourceStatus:old.sourceStatus||'site_repertorie_non_verifie',
+  sourceStatus:old.sourceStatus||(website?'site_repertorie_non_verifie':'site_absent_dans_annuaire'),
   deliberationSources:old.deliberationSources||[],
   lastSiteCheck:old.lastSiteCheck||null,lastDocumentCheck:old.lastDocumentCheck||null,
   latestCouncilDate:old.latestCouncilDate||null,
@@ -88,7 +88,7 @@ async function collect(){
  let prior={communes:[]};try{prior=JSON.parse(fs.readFileSync(OUTPUT,'utf8'))}catch(e){if(e.code!=='ENOENT')throw e}
  const history=new Map((prior.communes||[]).map(x=>[x.ins,x]));
  const communes=rows.map(x=>normalize(x,history.get(String(x.ins??x.INS??'')))).filter(Boolean);
- if(communes.length!==rows.length)throw Error('Communes non normalisées : '+communes.length+'/'+rows.length);
+ if(communes.length!==rows.length){const missed=rows.filter(x=>!normalize(x,history.get(String(x.ins??x.INS??'')))).map(x=>({name:x.nom,ins:x.ins??x.INS,website:x.site_web}));throw Error('Communes non normalisées : '+communes.length+'/'+rows.length+' : '+JSON.stringify(missed).slice(0,300));}
  const ids=new Set(communes.map(x=>x.ins));
  if(ids.size!==communes.length)throw Error('Doublons INS détectés');
  communes.sort((a,b)=>a.name.localeCompare(b.name,'fr'));
