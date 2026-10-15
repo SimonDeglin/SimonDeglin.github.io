@@ -101,7 +101,10 @@ function normalize(raw){
   source:'BOSA',source_status:'bosa_public_browser',
   noticeSubType,noticeKind:noticeKind(noticeSubType),
   bdaReference:bdaRef,tedReference:tedRef,
-  url:'https://www.publicprocurement.be/publication-workspaces/'+(publicationWorkspaceId||stable)+'/general'
+  url:'https://www.publicprocurement.be/publication-workspaces/'+(publicationWorkspaceId||stable)+'/general',
+  // La rubrique est un emplacement officiel, pas une preuve de présence de CSC.
+  documentsPageUrl:publicationWorkspaceId?'https://www.publicprocurement.be/publication-workspaces/'+publicationWorkspaceId+'/documents':'',
+  documentsPageSource:publicationWorkspaceId?'official_workspace_route_not_download_verified':''
  };
 }
 async function searchPublications(from,to,fetchFn=fetch){
