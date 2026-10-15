@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KDRIX — Prospection Bathy · Refondue</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<style>
+:root{--ink:#203e48;--navy:#193c47;--teal:#166f82;--orange:#e98851;--muted:#66808a;--line:#dce6e8;--paper:#fff;--bg:#f0f4f4}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);font:13px/1.48 Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink)}
+a{color:#176f84;text-decoration:none}a:hover{text-decoration:underline}button,input,select,textarea{font:inherit}button{cursor:pointer;padding:9px 11px;border:1px solid #cadde1;background:#f6f9fa;border-radius:8px;color:#265564;font-weight:750}button:hover:not(:disabled){background:#e6f2f4}button:disabled{opacity:.48;cursor:not-allowed}button.primary{background:var(--teal);border-color:var(--teal);color:white}button.primary:hover:not(:disabled){background:#11586a}button.minor{font-size:11px;padding:7px 9px}input,select,textarea{width:100%;border-radius:8px;padding:9px 10px;border:1px solid #cbdce0;background:white;color:var(--ink)}input[type=checkbox]{width:auto}textarea{min-height:78px;resize:vertical}
+header{background:var(--navy);color:#fff;min-height:63px;display:flex;align-items:center;justify-content:space-between;padding:10px 18px;gap:16px}header strong{font-size:18px;letter-spacing:-.02em}header small{color:#c3dade;display:block;font-size:10px;letter-spacing:.06em}header a{color:#e7f5f7;font-size:11px}
+nav{display:flex;align-items:center;gap:7px;padding:10px 14px;background:white;border-bottom:1px solid var(--line);flex-wrap:wrap}nav button{background:#f2f6f6;color:#41636d;border-color:transparent;padding:10px 13px;font-size:12px}nav button.active{background:#176f82;color:white}nav span{color:var(--muted);font-size:11px;margin-left:auto}
+main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;padding:10px;height:calc(100vh - 121px);min-height:570px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:auto;min-width:0}.pad{padding:15px}h2{font-size:16px;margin:0 0 11px}h3{font-size:13px;margin:12px 0 8px}.caption{color:var(--muted);font-size:11px;line-height:1.5}.field{margin:10px 0}.field label{display:block;font-size:11px;font-weight:760;margin-bottom:5px}.two{display:grid;grid-template-columns:1fr 94px;gap:7px}.row{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:8px 0}.row button{flex:1}.divider{border:0;border-top:1px solid #e1e9eb;margin:13px 0}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:10px 0}.metric{background:#f3f7f8;border:1px solid #e5edef;border-radius:9px;padding:10px}.metric strong{display:block;font-size:18px}.metric span{font-size:10px;color:var(--muted)}.progress{background:#eef4f5;padding:11px;border-radius:9px;margin:10px 0;line-height:1.55;white-space:pre-line;font-size:11px;color:#406671}.progress.error{background:#fff0eb;color:#9b513e}.hint{color:#8a642c;background:#fff6e9;border:1px solid #f2e4c9;border-radius:9px;padding:9px;margin:8px 0;font-size:11px}
+#map{height:100%;min-height:400px}.mapbox{position:relative;overflow:hidden}.maptools{position:absolute;z-index:600;top:11px;right:12px;display:flex;gap:6px;flex-wrap:wrap}.maptools button,.maptools select{box-shadow:0 1px 12px #0002;background:#fff}.maptools select{width:140px;padding:7px}.maplegend{position:absolute;bottom:20px;left:11px;z-index:600;background:#fffffff0;border:1px solid var(--line);border-radius:10px;display:flex;gap:9px;padding:8px;flex-wrap:wrap;font-size:10px}.bullet{display:inline-block;width:9px;height:9px;border-radius:50%;background:#2b8493}.bullet.water{background:#3589b9}.bullet.company{background:#dd8551}.bullet.both{background:#67b38e}.bullet.unchecked{background:#d3dde1;border:1px solid #72868c}.bullet.failed{background:white;border:2px dashed #b64a40}
+.result{border:1px solid #dfebed;border-radius:10px;padding:11px;margin:8px 0}.result:hover{border-color:#87b4bd;background:#fbfefe}.result h3{margin:0 0 5px;font-size:13px;line-height:1.4}.small{font-size:11px;color:#64808a}.tag{display:inline-block;border-radius:5px;padding:2px 6px;background:#e8f2f4;color:#286779;font-size:10px;font-weight:770;margin-right:4px}.tag.gray{background:#e9edf0;color:#576c74}.tag.orange{background:#fcf0e3;color:#9a652e}.detail{border:1px solid #d8e8eb;border-radius:10px;padding:12px;background:#f9fbfc}.detail p{margin:8px 0}.actions{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.actions a,.actions button{display:inline-block;padding:7px 9px;font-weight:720;font-size:11px;background:#ecf3f5;border-radius:7px;border:1px solid #dce8ea;color:#215e70}.empty{border:1px dashed #cbdfe4;color:#63808b;background:#f7fafb;border-radius:9px;padding:13px;line-height:1.6;margin-top:12px}
+.resultsnav{display:flex;justify-content:space-between;gap:7px;align-items:center}.resultsnav strong{font-size:15px}.resultsnav button{font-size:11px}.hidden{display:none!important}.keyline{font-size:11px;color:#55747f;margin:6px 0}.sources{font-size:10px;color:#67838c;margin:10px 0}.area-info{padding:10px;background:#f3f8f8;border:1px solid #dce9ea;border-radius:8px;margin:9px 0;font-size:11px}
+@media(max-width:1120px){main{height:auto;grid-template-columns:280px minmax(320px,1fr)}.right{grid-column:1/-1}.mapbox{height:66vh}}@media(max-width:650px){header strong{font-size:15px}main{display:flex;flex-direction:column;min-height:0}.mapbox{height:56vh;min-height:350px;flex-shrink:0}.pad{padding:12px}nav button{font-size:11px;padding:8px 9px}nav span{margin:0}.maptools{top:6px;right:6px}.maptools select{width:124px}}
+
+/* Gestion du listing au premier plan, volet de couverture secondaire */
+.result{transition:background .15s,border-color .15s}
+.result.selected{border-color:var(--teal)}
+.result .cta{font-size:11px;background:#166f82;color:white;border-color:#166f82}
+.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.formgrid>.wide{grid-column:1/-1}
+.formgrid .field{margin:0}
+.formgrid label{font-size:11px;font-weight:740;margin-bottom:4px;display:block}
+.formgrid input,.formgrid select,.formgrid textarea{width:100%}
+.history{border:1px solid #e1e9eb;padding:10px;border-radius:8px;margin:12px 0;background:#fff}
+.history summary{cursor:pointer;font-weight:750;color:#45656f}
+.history p{font-size:11px;margin:7px 0}
+.history ul{padding-left:17px}
+.history a{word-break:break-word}
+.notice-inline{padding:8px 10px;border-radius:8px;background:#eaf3f4;color:#486c75;font-size:11px}
+.quick-actions{display:flex;gap:7px;flex-wrap:wrap;margin:9px 0}
+.quick-actions button{flex:1}
+#researchControls.hidden{display:none!important}
+@media(max-width:750px){.formgrid{grid-template-columns:1fr} .formgrid>.wide{grid-column:auto}}
+</style>
+</head>
+<body>
+<header><div><small>KDRIX · Prospection bathymétrique</small><strong>Prospection Bathy <span style="font-size:11px;font-weight:500;color:#aed6dc">· version de validation</span></strong></div><div><a href="../../../" target="_top">Environnement KDRIX</a> · <a href="../" title="Liste originale et recherches précédentes">Ancienne version conservée</a></div></header>
+<nav aria-label="Navigation Prospection Bathy">
+ <button class="active" id="tab-prospects" data-tab="prospects">1 · Mon listing</button>
+ <button id="tab-company" data-tab="company">2 · Recherche par adresse potentielle</button>
+ <button id="tab-water" data-tab="water">3 · Recherche par plan d’eau PICC</button>
+ <span>Les recherches proposent des opportunités. Vous seul décidez de les enregistrer.</span>
+</nav>
+<main>
+<section class="panel pad" aria-label="Paramètres et progression">
+ <h2 id="searchTitle">Mon listing de prospection</h2>
+ <p class="caption" id="searchHelp">Retrouvez vos 10 fiches historiques, vos coordonnées et les nouveaux sites que vous avez sélectionnés.</p>
+ <div id="listingActions" class="area-info"><b>Mon dossier commercial</b><p class="caption">Vos fiches sont conservées et modifiables. Rien n'est ajouté sans confirmation.</p><button class="primary" id="newManual" style="width:100%">+ Ajouter un prospect manuellement</button><div style="margin-top:8px"><a href="../" target="_blank" rel="noopener">Consulter la liste historique d'origine ↗</a></div></div>
+ <div id="researchControls">
+ <div class="field"><label for="preset">Zone de départ</label><select id="preset"><option value="liege">Liège</option><option value="huy">Huy</option><option value="namur">Namur</option><option value="charleroi">Charleroi</option><option value="custom">Autre commune</option></select></div>
+ <div class="two"><div class="field"><label for="city">Ville belge</label><input id="city" value="Liège"></div><div class="field"><label for="radius">Rayon (km)</label><input id="radius" type="number" value="75" min="1" max="100" step="1"></div></div>
+ <button id="apply" style="width:100%">Appliquer le territoire</button>
+ <p class="caption">Rayon à vol d'oiseau. Pour éviter un balayage inutile, cliquez sur la carte et utilisez « Analyser le secteur sélectionné » ; sinon, lancez un petit lot autour de la ville.</p>
+ <div id="waterParams" class="hidden"><div class="field"><label for="minArea">Surface minimale des plans d'eau</label><select id="minArea"><option value="400">400 m²</option><option value="1000" selected>1 000 m²</option><option value="5000">5 000 m²</option></select></div></div>
+ <div id="scanParams"><div class="field"><label for="batch">Secteurs maximum par lancement</label><select id="batch"><option value="1">1 — pour tester</option><option value="3" selected>3 — recommandé</option><option value="5">5</option><option value="10">10</option></select></div>
+ <div class="row"><button class="primary" id="run">Rechercher les sociétés</button><button id="stop" disabled>Arrêter</button></div>
+ <button id="scanSelected" class="minor" style="width:100%" disabled>Analyser le secteur sélectionné</button></div>
+ <button id="coverageToggle" style="width:100%;margin:8px 0">◫ Voir les zones déjà recherchées</button></div>
+ <div class="metrics">
+  <div class="metric"><strong id="countCompanies">0</strong><span>Sites / sociétés détectés</span></div>
+  <div class="metric"><strong id="countWaters">0</strong><span>Plans d'eau détectés</span></div>
+  <div class="metric"><strong id="countProspects">0</strong><span>Prospects dans mon listing</span></div>
+  <div class="metric"><strong id="countCovered">0</strong><span>Cellules analysées pour ce mode</span></div>
+ </div>
+ <div id="progress" class="progress" aria-live="polite">Votre listing est prêt. Choisissez l’un des deux onglets de recherche pour découvrir de nouvelles opportunités.</div>
+ <hr class="divider">
+ <h3>Conserver mon travail</h3>
+ <div class="row"><button id="export" class="minor">Exporter les données</button><button id="import" class="minor">Importer</button><input type="file" id="file" accept=".json,application/json" hidden></div>
+ <p class="caption">Données locales dans ce navigateur. Les anciennes bases sont préservées. Extraction OSM limitée par son service public : les recherches massives nécessiteront une autre infrastructure. <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">Attribution OSM / ODbL</a>.</p>
+ <div id="errors" class="hint hidden"></div>
+</section>
+<section class="panel mapbox" aria-label="Carte de prospection">
+ <div id="map" role="application" aria-label="Carte de Liège et des sites à prospecter"></div>
+ <div class="maptools"><select id="basemap" aria-label="Fond cartographique"><option value="osm">Carte OpenStreetMap</option><option value="ortho2026">Orthophoto SPW 2026</option><option value="ortho2024">Orthophoto SPW 2024</option></select><button id="fit" class="minor">Voir le territoire</button></div>
+ <div class="maplegend" id="mapLegend"><span><i class="bullet company"></i>Société ou site</span><span><i class="bullet water"></i>Plan d'eau</span><span>Association non confirmée</span></div>
+</section>
+<section class="panel pad right" aria-label="Résultats et fiches">
+ <div class="resultsnav"><strong id="resultHeading">Sociétés et sites à examiner</strong><button id="backResults" class="hidden">← Résultats</button></div>
+ <p class="caption" id="resultHelp">Une société intéressante n'est pas nécessairement propriétaire d'un plan d'eau.</p>
+ <div id="resultFilters"><div class="field"><input id="filter" placeholder="Rechercher un nom, une commune ou une activité…"></div>
+<div id="companyCategory"><div class="field"><label for="categoryFilter">Activité recherchée</label><select id="categoryFilter"><option value="">Toutes les activités</option><option value="Carrière">Carrières / extraction</option><option value="Golf">Golfs</option><option value="Traitement">Traitement des eaux</option><option value="Pisciculture">Pisciculture</option><option value="Retenue">Retenues / hydraulique</option><option value="industriel">Sites industriels</option></select></div></div>
+ <div class="row"><label class="caption"><input type="checkbox" id="hideDiscarded" checked> Masquer les prospects écartés</label></div></div>
+ <div id="resultCount" class="keyline"></div>
+ <div id="results"></div>
+ <div id="detail" class="hidden"></div>
+</section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.9.2/proj4.js"></script>
+<script>
+'use strict';
+(function(){
+ const $=id=>document.getElementById(id);
+ const GRID=5000,HALF=2500,DB='kdrix_bathy_v2',DB_VERSION=1;
+ const STORES=['cells','bodies','companies','relations','prospects','meta'];
+ const PROJECTION='+proj=lcc +lat_0=50.797815 +lon_0=4.35921583333333 +lat_1=49.8333333333333 +lat_2=51.1666666666667 +x_0=649328 +y_0=665262 +ellps=GRS80 +units=m +no_defs +type=crs';
+ const PRESETS={liege:{city:'Liège',radius:75,lat:50.6326,lng:5.5797},huy:{city:'Huy',radius:30,lat:50.5198,lng:5.2328},namur:{city:'Namur',radius:50,lat:50.4669,lng:4.8675},charleroi:{city:'Charleroi',radius:50,lat:50.4114,lng:4.4447}};
+ const LEGACY_HISTORIC=[{"id":"naxhelet","name":"Golf de Naxhelet","town":"Wanze","category":"Golf privé","confidence":"Enjeu documenté","potential":"Fort","point":[50.54096,5.20104],"pointNote":"Point du golf (position indicative, pas le centre des bassins)","access":"Rue Naxhelet 1, 4520 Wanze","why":"Connaître le volume d’eau effectivement mobilisable pour l’arrosage et estimer l’autonomie lors d’une période sèche.","fact":"Le golf indique récupérer les eaux pluviales dans ses étangs pour l’arrosage et certains sanitaires, sans utiliser d’eau de ville pour arroser.","factDate":"Rapport RSE 2022","what":"Bathymétrie des bassins d’irrigation, courbes hauteur-volume et capacité utile en fonction des niveaux de pompage.","decision":"Comparer la réserve disponible aux besoins du parcours, évaluer les risques de manque d’eau et hiérarchiser d’éventuels entretiens.","reservation":"Aucune baisse de capacité ni demande de bathymétrie n’est publiquement établie. Localiser et mesurer les bassins avant chiffrage.","grounds":"Besoin de stockage vérifié + décideur technique identifié + proximité de Liège.","contact":{"name":"Marc Thiebaut","role":"Head Greenkeeper","email":"marc@naxhelet.be","phone":"085 82 64 08","alt":"Caroline Springuel · caroline@naxhelet.be"},"sources":[["Gestion de l’eau — rapport RSE 2022","https://www.terresduval.be/download/124573"],["Contacts de l’équipe du golf","https://www.terresduval.be/fr/golf.html"]],"site":"https://www.terresduval.be/fr/golf.html","subject":"KDRIX — relevé bathymétrique de vos étangs","emailBody":"Madame, Monsieur,\n\nVotre gestion de l’irrigation repose notamment sur des eaux pluviales conservées dans vos étangs. Un modèle des profondeurs permettrait de relier leurs niveaux d’eau aux volumes encore mobilisables pour les greens et départs.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"documente"},{"id":"freux","name":"Pêches de Freux — Robaiwez SRL","town":"Freux / Libramont","category":"Étangs privés","confidence":"Enjeu documenté","potential":"Fort","point":[49.97032,5.45164],"pointNote":"Localisation indicative du domaine : centrer manuellement les trois plans d’eau","access":"Freux-la-Rue 23, 6800 Libramont-Chevigny","area":15.71,"areaEvidence":"Superficie annoncée par l’exploitant (8,40 + 5,38 + 1,93 ha)","why":"Cartographier trois étangs exploités pour cibler l’entretien et disposer d’une base utile à la gestion piscicole.","fact":"Trois étangs de pêche totalisant 15,71 ha. Le site évoque une difficulté liée à la température et à l’oxygénation du Grand Étang.","factDate":"Site officiel consulté en octobre 2026","what":"Cartes de profondeur, volumes, zones profondes, profils des berges et, si pertinent, sondeur de sédiments.","decision":"Localiser les secteurs à approfondir ou surveiller et préparer, si nécessaire, un entretien ciblé ; compléter par des mesures d’oxygène/temperature fournies par spécialistes.","reservation":"Les profondeurs existent déjà partiellement sur le site web. La bathymétrie ne mesure ni l’oxygène ni la température. Vérifier l’intérêt d’une actualisation et le budget.","grounds":"La seule superficie totale de plans d’eau vérifiée à ce stade ; exploitant privé joignable.","contact":{"name":"Robaiwez SRL","role":"Gestionnaire des Pêches de Freux","email":"pechesdefreux@gmail.com","phone":"0485 80 97 38","alt":"Contact général de l’exploitation"},"sources":[["Superficies et contact — Pêches de Freux","https://www.pechesdefreux.be/"],["Grand Étang — indications de fonctionnement","https://www.pechesdefreux.be/grand-etang-peche-de-la-truite-a-la-mouche/"]],"site":"https://www.pechesdefreux.be/","subject":"KDRIX — relevé bathymétrique de vos étangs","emailBody":"Madame, Monsieur,\n\nVos trois étangs représentent plus de 15 hectares de plans d’eau. Une cartographie actualisée des profondeurs pourrait servir de référence pour l’entretien des zones de pêche et l’identification des secteurs sensibles.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"documente"},{"id":"holcim","name":"Holcim — Carrière de Leffe","town":"Dinant","category":"Carrière","confidence":"Enjeu documenté","potential":"Fort","point":[50.27448,4.91283],"pointNote":"Point indicatif de la carrière ; les bassins doivent être identifiés sur l’orthophoto","access":"Carrière de Leffe, Dinant — accès exact à vérifier","why":"Mesurer la capacité restante du bassin de décantation et préparer des interventions sur les dépôts.","fact":"Un acte wallon mentionne un bassin de décantation de 8 000 m³ et un bassin d’eau claire de 300 m³ dans le système de gestion des eaux.","factDate":"Arrêté ministériel du 23 décembre 2024","what":"Levés du fond des bassins accessibles, cubatures disponibles et comparaison avec plans d’origine ou campagnes précédentes.","decision":"Chiffrer les quantités pour un entretien, suivre la disponibilité hydraulique et documenter les contrôles avant/après intervention.","reservation":"Les valeurs 8 000 et 300 m³ sont des volumes de référence, jamais des superficies. Bassins en eau, dimensions et contrats existants à vérifier.","grounds":"Ouvrages et gestion de l’eau documentés ; contact identifié mais direction technique à obtenir.","contact":{"name":"Sébastien Houtrelle","role":"Contact public du projet de carrière","email":"bel-carriere-leffe@holcim.com","phone":"","alt":"Demander le service exploitation / environnement"},"sources":[["Arrêté officiel — description et volumes","https://environnement.wallonie.be/files/eDocs%20Environnement/legis/codeenvironnement/incidences036.html?v=2026012316"],["Holcim Leffe — projet et contact","https://www.holcim.be/fr/leffe"]],"site":"https://www.holcim.be/fr/leffe","subject":"KDRIX — relevé bathymétrique de vos bassins","emailBody":"Madame, Monsieur,\n\nLa documentation relative à la carrière de Leffe décrit un bassin de décantation intégré au circuit de gestion des eaux. Un relevé de fond pourrait aider à quantifier sa capacité disponible et à préparer d’éventuels entretiens.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"documente"},{"id":"lhoist","name":"Lhoist — Marche-les-Dames","town":"Andenne","category":"Carrière","confidence":"Enjeu documenté","potential":"Fort","point":[50.48333,4.98806],"pointNote":"Site industriel approximatif ; emplacement précis du bassin non validé","access":"Carrière des Dolomies de Marche-les-Dames, Andenne","why":"Disposer d’un état du fond après les aménagements du bassin de décantation et surveiller sa capacité utile.","fact":"Des bassins de clarification sont décrits ; la Ville d’Andenne rapporte la fin, en 2025, des travaux de digue d’un bassin.","factDate":"Présentation Lhoist 2024 ; rapport communal publié en 2026","what":"État bathymétrique de référence, capacité en eau et contrôle ultérieur des dépôts si les ouvrages sont bathymétrables.","decision":"Documenter l’état après travaux et organiser les opérations d’entretien en fonction de volumes mesurés.","reservation":"On ne sait pas si le bassin est actuellement rempli d’eau ni si la bathymétrie est prévue dans le suivi des travaux.","grounds":"Aménagement précis et récent + enjeu industriel documenté ; accès commercial moins direct.","contact":{"name":"Laurence Indri","role":"Relations extérieures Belgique — contact d’orientation","email":"laurence.indri@lhoist.com","phone":"","alt":"Demander le responsable technique du site"},"sources":[["Présentation Lhoist — gestion de l’eau 2024","https://www.andenne.be/new22/wp-content/uploads/2024/06/Lhoist-Dolomies-Marche-les-Dames-etude-dincidence_compressed.pdf"],["Rapport communal 2025 — digue","https://www.andenne.be/new22/wp-content/uploads/2026/05/RAPPORT-ANNUEL-AFFAIRES-COMMUNALES-5-DECEMBRE-2025_compressed.pdf"]],"site":"https://www.lhoist.com/fr-BX/contact","subject":"KDRIX — relevé bathymétrique de vos bassins","emailBody":"Madame, Monsieur,\n\nLes aménagements du bassin de décantation de Marche-les-Dames pourraient constituer une bonne occasion d’établir un état de référence du fond, puis de suivre la capacité disponible.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"documente"},{"id":"rigenee","name":"Golf de Rigenée","town":"Villers-la-Ville","category":"Golf privé","confidence":"Enjeu documenté","potential":"Moyen","point":[50.56653,4.52793],"pointNote":"Point indicatif du golf ; eau à repérer visuellement","access":"Rue du Châtelet 62, 1495 Villers-la-Ville","why":"Quantifier les réserves d’étangs utilisées pour arroser le terrain et relier les niveaux d’eau à l’autonomie d’irrigation.","fact":"Le club déclare que 100 % de l’eau utilisée sur le terrain provient de ses étangs ; il documente aussi des améliorations de l’irrigation.","factDate":"Communication 2024-2026","what":"Bathymétrie des étangs d’alimentation et table de correspondance niveau / volume réellement pompable.","decision":"Planifier les prélèvements en période sèche et évaluer l’intérêt d’une hausse de capacité, si nécessaire.","reservation":"L’établissement semble déjà très avancé dans son suivi de l’eau ; vérification préalable de relevés existants indispensable.","grounds":"Usage des étangs vérifié, mais le site peut être déjà équipé de données suffisantes.","contact":{"name":"Secrétariat du golf","role":"Premier point de contact","email":"","phone":"071 87 77 65","alt":"Demander le responsable de l’entretien / des étangs"},"sources":[["Rigenée — 100 % de l’eau du terrain","https://www.rigenee.be/nouvelles/49-nouvelles-club/992-rigenee-proche-de-la-neutralite-carbone"],["Rigenée — contact et accès","https://www.rigenee.be/index.php?id=1&option=com_contact&view=contact"]],"site":"https://www.rigenee.be/","subject":"KDRIX — relevé bathymétrique de vos étangs","emailBody":"Madame, Monsieur,\n\nVous indiquez que l’eau utilisée sur le parcours provient de vos étangs. Une bathymétrie permettrait, si ces données ne sont pas déjà disponibles, de relier le niveau d’eau à la capacité utile des réserves.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"documente"},{"id":"bercuit","name":"Royal Bercuit Golf Club","town":"Grez-Doiceau","category":"Golf privé","confidence":"Enjeu documenté","potential":"Moyen","point":[50.71877,4.67485],"pointNote":"Point indicatif du golf ; bassins à identifier","access":"Les Gottes 1, 1390 Grez-Doiceau","why":"Vérifier combien d’eau les bassins peuvent fournir à ses installations de pompage et anticiper les périodes de restriction.","fact":"Un reportage technique décrit des bassins recevant les eaux de ruissellement et des installations de pompage ; données anciennes.","factDate":"Reportage professionnel antérieur à 2026","what":"Relevé des bassins d’arrosage, capacités utiles aux différents niveaux d’eau, zones de dépôt potentielles.","decision":"Mieux dimensionner l’exploitation de ses réserves, en complément des données de pompage du golf.","reservation":"Nombre/surface des bassins et fonctionnement actuel non vérifiés ; il faut aussi savoir si la direction souhaite investir.","grounds":"Usage de l’eau documenté et manager facilement joignable, mais source technique à actualiser.","contact":{"name":"Daniel Glineur","role":"Manager (site francophone)","email":"manager@rbgc.be","phone":"010 84 15 01","alt":"Greenkeeper : Jean-Marc Dokier (via le golf)"},"sources":[["Greenkeepers Belgium — alimentation en eau","https://greenkeepersbelgium.be/de-bercuit-golfclub-in-grez-doiceau/?lang=FR"],["Équipe Royal Bercuit — contact","https://royalbercuitgolfclub.be/club/notre-equipe/"]],"site":"https://royalbercuitgolfclub.be/","subject":"KDRIX — relevé bathymétrique de vos étangs","emailBody":"Madame, Monsieur,\n\nLes bassins associés à votre gestion de l’arrosage pourraient, selon leurs caractéristiques, faire l’objet d’un relevé permettant de connaître leurs volumes réellement mobilisables.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"documente"},{"id":"bawette","name":"Golf du Château de la Bawette","town":"Wavre","category":"Golf privé","confidence":"Opportunité plausible","potential":"Moyen","point":[50.7294741,4.5961841],"pointNote":"Coordonnées du club ; étangs à retrouver dans le domaine","access":"Chaussée du Château de la Bawette 5, 1300 Wavre","why":"Connaître la capacité réellement stockée dans les étangs alimentés par des sources pour organiser l’arrosage.","fact":"Le propriétaire expliquait en 2015 récupérer l’eau de plusieurs sources dans des étangs pour irriguer le parcours.","factDate":"Interview publiée en 2015","what":"Carte des étangs d’irrigation et courbes hauteur-volume permettant d’évaluer la réserve réellement disponible.","decision":"Comparer stockage et besoins d’arrosage, justifier éventuellement l’entretien d’un bassin.","reservation":"Source datant de 2015 ; confirmer que les étangs servent toujours à l’irrigation et si une mesure présente un intérêt.","grounds":"Usage historique concret et contact actuel, mais aucune actualisation du fonctionnement hydraulique.","contact":{"name":"Accueil du golf","role":"GOLFINGER SA — exploitation privée","email":"info@labawette.com","phone":"010 22 33 32","alt":"Demander la direction ou l’entretien du parcours"},"sources":[["Interview du propriétaire — sources et étangs (2015)","https://www.wawmagazine.be/fr/node/1002"],["Contact actuel du golf","https://www.golflabawette.green/contactus"]],"site":"https://www.golflabawette.green/","subject":"KDRIX — relevé bathymétrique de vos étangs","emailBody":"Madame, Monsieur,\n\nUn reportage décrivait la récupération des eaux de sources dans vos étangs d’arrosage. Si ce fonctionnement est toujours d’actualité, un relevé des fonds pourrait préciser la capacité disponible de ces réserves.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"plausible"},{"id":"prayon","name":"Prayon — Engis","town":"Engis","category":"Industrie","confidence":"Opportunité plausible","potential":"Moyen","point":[50.57499,5.38766],"pointNote":"Complexe industriel ; bassins non localisés","access":"Rue Joseph Wauters 144, 4480 Engis","why":"Évaluer les volumes de boues ou les capacités résiduelles avant un entretien de bassins, si des ouvrages en eau sont adaptés.","fact":"La déclaration environnementale mentionne les boues de curage des bassins de décantation parmi les déchets admis.","factDate":"Déclaration environnementale 2022","what":"Levé de fond et contrôle de volumes sur un bassin ouvert adapté ; analyse technique préalable HSE obligatoire.","decision":"Préparer un curage ou vérifier les quantités évacuées lorsque la configuration le permet.","reservation":"La mention de boues ne prouve pas qu’un bassin accessible au sonar existe, ni qu’un curage est prévu. Régime d’achat à confirmer.","grounds":"Document environnemental concret mais pertinence technique d’une bathymétrie non démontrée.","contact":{"name":"Service technique / environnement","role":"Contact général Prayon","email":"contact@prayon.com","phone":"04 273 92 11","alt":"Demander le responsable maintenance ou environnement"},"sources":[["EMAS Prayon — boues de curage","https://website-v1.s3.fr-par.scw.cloud/uploads/2023/07/EMAS-PRAYON-declaration-de-validation-rapport-final-CET.pdf"],["Coordonnées officielles de Prayon","https://www.prayon.com/en/legal-notice/"]],"site":"https://www.prayon.com/","subject":"KDRIX — relevé bathymétrique de vos bassins","emailBody":"Madame, Monsieur,\n\nLes documents environnementaux du site évoquent des boues issues de bassins de décantation. Si certains de ces ouvrages sont en eau et accessibles, un relevé pourrait contribuer à dimensionner un entretien.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"plausible"},{"id":"ineos","name":"INEOS Inovyn — Jemeppe","town":"Jemeppe-sur-Sambre","category":"Industrie","confidence":"Intérêt à confirmer","potential":"Faible","point":[50.44861,4.66345],"pointNote":"Complexe chimique ; emplacement et existence d’un bassin bathymétrable non confirmés","access":"Rue Solvay 39, 5190 Jemeppe-sur-Sambre","why":"Si des bassins de décantation en eau sont accessibles, contrôler leur volume disponible pour prévoir des entretiens.","fact":"INEOS exploite le site chimique de Jemeppe. Des installations liées à la décantation sont mentionnées dans des registres publics.","factDate":"Installations et autorisations publiques","what":"Sous réserve de faisabilité : bathymétrie de bassin ouvert, cubatures et relevés comparatifs.","decision":"Disposer de quantités fiables pour planifier et réceptionner un entretien, uniquement si les bassins le justifient.","reservation":"Aucun plan d’eau d’une dimension adaptée au sonar n’a été localisé et aucun besoin de mesure n’est établi.","grounds":"Cible très conditionnelle ; ne pas démarcher avant qualification des ouvrages.","contact":{"name":"Contact général du site","role":"INEOS Inovyn Jemeppe","email":"info.jemeppe@ineos.com","phone":"071 26 81 11","alt":"Confirmer d’abord le bon service technique et la présence d’un bassin"},"sources":[["INEOS — établissement de Jemeppe","https://www.ineos.com/fr/sites/jemeppe/"]],"site":"https://www.ineos.com/fr/sites/jemeppe/","subject":"KDRIX — relevé bathymétrique de vos bassins","emailBody":"Madame, Monsieur,\n\nJe souhaiterais savoir si votre site exploite des bassins ouverts pour lesquels un contrôle de la géométrie du fond ou des volumes en eau serait utile et techniquement possible.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"confirmer"},{"id":"coo","name":"ENGIE — Centrale de Coo","town":"Trois-Ponts","category":"Énergie","confidence":"Opportunité plausible","potential":"Faible","point":[50.38484,5.86158],"pointNote":"Site de pompage-turbinage ; localisation indicative du bassin inférieur","access":"Centrale de Coo, 4980 Trois-Ponts — accès d’exploitation à vérifier","why":"Effectuer des contrôles bathymétriques ciblés avant/après travaux ou près d’ouvrages hydrauliques.","fact":"ENGIE a annoncé un projet d’accroissement de capacité des bassins et des aménagements du bassin inférieur.","factDate":"Projet ENGIE publié","what":"Relevés localisés, bathymétrie de contrôle et comparaison des états de fond sur zones désignées par l’exploitant.","decision":"Documenter l’état d’un ouvrage immergé et faciliter une réception de travaux ou une maintenance ponctuelle.","reservation":"Grand exploitant vraisemblablement déjà suivi, avec achats structurés ; intérêt pour un nouveau prestataire particulièrement incertain.","grounds":"Installation et projets réels, mais accès commercial et disponibilité d’un besoin faible.","contact":{"name":"Équipe projet / informations","role":"Contact public ENGIE Coo (pas nécessairement achats)","email":"centralecoo@engie.com","phone":"0800 20 210","alt":"Demander exploitation ou maintenance hydraulique"},"sources":[["ENGIE — extension de la centrale","https://corporate.engie.be/nl/energy/hydraulique/centrale-daccumulation-par-pompage-de-coo/le-projet-dextension"]],"site":"https://corporate.engie.be/fr","subject":"KDRIX — relevé bathymétrique de vos installations hydrauliques","emailBody":"Madame, Monsieur,\n\nLes aménagements hydrauliques de la centrale peuvent nécessiter des contrôles ponctuels des fonds, notamment avant ou après travaux. Je souhaiterais savoir si vous disposez d’un besoin complémentaire dans ce domaine.\n\nKDRIX, basé à Liège, réalise des relevés bathymétriques par échosondeur ainsi que, selon les conditions, des investigations sédimentaires. Nous pouvons vous transmettre des exemples de missions réalisées sur des plans d’eau en carrière et sur le lac de Louvain-la-Neuve.\n\nCe type d’intervention pourrait-il présenter un intérêt pour vos installations ? Je reste disponible pour un bref échange avec la personne responsable.\n\nBien cordialement,\n\nSimon Deglin\nPour le groupe KDRIX\n04 330 93 13\nwww.kdrix.be","sitepoint":"Coordonnées indicatives du site : emprise d’eau non individualisée","evidenceState":"plausible"}];
+ const PICC='https://geoservices.wallonie.be/arcgis/rest/services/TOPOGRAPHIE/PICC_VDIFF/MapServer/30/query';
+ const OVERPASS='https://overpass-api.de/api/interpreter';
+ const SRC_PICC='SPW PICC / Hydrographie - Emprise (couche 30)';
+ const SRC_OSM='OpenStreetMap / Overpass';
+ const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]));
+ const fmt=n=>Number(n).toLocaleString('fr-BE');
+ const rad=n=>n*Math.PI/180;
+ const sleep=n=>new Promise(ok=>setTimeout(ok,n));
+ const distance=(a,b)=>{let lat=rad(b[0]-a[0]),lng=rad(b[1]-a[1]);return 12742000*Math.asin(Math.min(1,Math.sqrt(Math.sin(lat/2)**2+Math.cos(rad(a[0]))*Math.cos(rad(b[0]))*Math.sin(lng/2)**2)))};
+ let db=null,map=null,base=null,circle=null,gridLayer=null,resultLayer=null,focusLayer=null,scope=PRESETS.liege;
+ let tab='prospects',selected=null,focus=null,running=false,stopRequested=false,planned=[],registry=new Map(),companies=new Map(),bodies=new Map(),prospects=new Map(),relations=new Map(),pendingFetch=null,selectedCell=null,errors=[],showCoverage=false,draft=null;
+ function status(msg,bad){$('progress').textContent=msg;$('progress').className='progress'+(bad?' error':'')}
+ function read(store){return new Promise((resolve,reject)=>{const r=db.transaction(store,'readonly').objectStore(store).getAll();r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
+ function write(store,item){return new Promise((resolve,reject)=>{const r=db.transaction(store,'readwrite').objectStore(store).put(item);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
+ function cellId(i,j){return 'BE3812-5K-'+i+'-'+j}
+ function projected(lat,lng){return proj4('EPSG:4326','EPSG:3812',[lng,lat])}
+ function ll(x,y){const p=proj4('EPSG:3812','EPSG:4326',[x,y]);return [p[1],p[0]]}
+ function square(i,j){const x=i*GRID,y=j*GRID;return {id:cellId(i,j),i,j,x,y,points:[ll(x,y),ll(x+GRID,y),ll(x+GRID,y+GRID),ll(x,y+GRID)]}}
+ function plans(area){
+  const point=projected(area.lat,area.lng),cx=point[0],cy=point[1],r=area.radius*1000,list=[];
+  for(let i=Math.floor((cx-r)/GRID);i<=Math.floor((cx+r)/GRID);i++)for(let j=Math.floor((cy-r)/GRID);j<=Math.floor((cy+r)/GRID);j++){
+   const x=i*GRID,y=j*GRID,dx=cx-Math.max(x,Math.min(cx,x+GRID)),dy=cy-Math.max(y,Math.min(cy,y+GRID));
+   if(dx*dx+dy*dy<=r*r){const s=square(i,j);s.sort=(x+HALF-cx)**2+(y+HALF-cy)**2;list.push(s)}
+  }
+  return list.sort((a,b)=>a.sort-b.sort);
+ }
+ function segments(cell,kind){const out=[];for(let j=0;j<2;j++)for(let i=0;i<2;i++){let x=cell.x+i*HALF,y=cell.y+j*HALF;out.push({id:cell.id+':'+kind+':'+i+':'+j,status:'pending',source:null,checkedAt:null,error:null,records:0,bounds3812:[x,y,x+HALF,y+HALF]})}return out}
+ function newRecord(cell){return {id:cell.id,epsg:3812,ix:cell.i,iy:cell.j,cellSizeM:GRID,manual:{done:false,notes:'',reviewedAt:null},engines:{water:{subtiles:segments(cell,'water'),version:1},company:{subtiles:segments(cell,'company'),version:1}},updatedAt:null}}
+ function ensure(cell){let rec=registry.get(cell.id);if(!rec){rec=newRecord(cell);registry.set(cell.id,rec)}for(let kind of ['water','company'])if(!rec.engines?.[kind]?.subtiles?.length){rec.engines=rec.engines||{};rec.engines[kind]={subtiles:segments(cell,kind),version:1}}return rec}
+ function state(rec,kind){const a=rec?.engines?.[kind]?.subtiles||[];if(a.length!==4)return 'pending';if(a.every(t=>t.status==='complete'&&t.source&&t.checkedAt))return 'complete';if(a.some(t=>t.status==='error'))return 'error';if(a.some(t=>t.status==='complete'))return 'partial';return 'pending'}
+ function pointsInside(p){return distance(p,[scope.lat,scope.lng])<=scope.radius*1000}
+ function visibleEntities(kind){const rows=kind==='company'?[...companies.values()]:[...bodies.values()];return rows.filter(r=>Number.isFinite(r.lat)&&Number.isFinite(r.lon)&&pointsInside([r.lat,r.lon]))}
+ function pointId(lat,lon){const p=projected(lat,lon);return cellId(Math.floor(p[0]/GRID),Math.floor(p[1]/GRID))}
+ function relationId(companyId,waterId){return 'link:'+companyId+'|'+waterId}
+ function isRejected(companyId,waterId){return relations.get(relationId(companyId,waterId))?.status==='rejected'}
+ function bestWater(company){let closest=null;for(const w of visibleEntities('water')){const d=distance([company.lat,company.lon],[w.lat,w.lon]);if(d<750&&!isRejected(company.id,w.id)&&(!closest||d<closest.distance))closest={item:w,distance:d}}return closest}
+ function bestCompany(water){let closest=null;for(const c of visibleEntities('company')){const d=distance([water.lat,water.lon],[c.lat,c.lon]);if(d<750&&!isRejected(c.id,water.id)&&(!closest||d<closest.distance))closest={item:c,distance:d}}return closest}
+ function category(tags){
+  const x=[tags.landuse,tags.industrial,tags.leisure,tags.man_made,tags.water,tags['generator:source'],tags.power].join(' ').toLowerCase();
+  if(/quarry|extract|mining/.test(x))return 'Carrière / extraction';
+  if(/golf/.test(x))return 'Golf';
+  if(/wastewater|water_works/.test(x))return 'Traitement des eaux';
+  if(/aquacultur|fish/.test(x))return 'Pisciculture';
+  if(/hydro|dam|reservoir|basin/.test(x))return 'Retenue / hydraulique';
+  if(/industrial/.test(x))return 'Site industriel';
+  return 'Installation à vérifier';
+ }
+ function opportunity(type){
+  if(/Carri/.test(type))return 'Suivi des volumes d’eau en carrière, évolution du fond, dépôts de sédiments et levés de référence.';
+  if(/Golf/.test(type))return 'Volume utile des réserves d’arrosage, courbes niveau-volume et suivi des plans d’eau.';
+  if(/Traitement/.test(type))return 'Évaluation de la capacité de bassins et des dépôts, préalable à un éventuel curage.';
+  if(/Piscic/.test(type))return 'Profondeurs, volumes d’eau et état de référence des bassins d’exploitation.';
+  if(/Retenue/.test(type))return 'Mesures bathymétriques de retenues, volumes et évolution des sédiments.';
+  if(/industriel/.test(type))return 'Bassins de rétention ou de décantation possibles : existence, accessibilité et besoin à vérifier.';
+  return 'Vérifier si un plan d’eau exploitable existe et si sa capacité, sa profondeur ou ses dépôts doivent être suivis.';
+ }
+ function geoArea(g){
+  const ring=pts=>{let sum=0;for(let i=0,j=pts.length-1;i<pts.length;j=i++){const a=pts[j],b=pts[i];sum+=(b[0]-a[0])*rad(1)*(2+Math.sin(rad(a[1]))+Math.sin(rad(b[1])))}return Math.abs(sum*6378137*6378137/2)};
+  const poly=r=>Math.max(0,ring(r[0])-r.slice(1).reduce((a,p)=>a+ring(p),0));
+  return g?.type==='Polygon'?poly(g.coordinates):g?.type==='MultiPolygon'?g.coordinates.reduce((a,p)=>a+poly(p),0):0;
+ }
+ function centerOf(g){const a=g?.type==='Polygon'?g.coordinates[0]:g?.type==='MultiPolygon'?g.coordinates[0]?.[0]:null;if(!a?.length)return null;let bounds=[Infinity,Infinity,-Infinity,-Infinity];for(const p of a){bounds[0]=Math.min(bounds[0],p[0]);bounds[1]=Math.min(bounds[1],p[1]);bounds[2]=Math.max(bounds[2],p[0]);bounds[3]=Math.max(bounds[3],p[1])}return [(bounds[1]+bounds[3])/2,(bounds[0]+bounds[2])/2]}
+ function waterKind(name){return /piscin|cours d.eau|ruisseau|fossé|foss[eé]/i.test(name)?'À exclure / à vérifier':name||'Emprise d’eau PICC à vérifier'}
+ function formatAddress(tags){let x=[tags['addr:street'],tags['addr:housenumber']].filter(Boolean).join(' ');return [x,tags['addr:postcode'],tags['addr:city']].filter(Boolean).join(', ')}
+ function companyFrom(o){
+  const t=o.tags||{},originalName=String(t.name||t.operator||t.brand||'').trim();
+  const fallback=t.landuse==='quarry'?'Carrière · exploitant à identifier':t.leisure==='golf_course'?'Golf · gestionnaire à identifier':t.man_made==='wastewater_plant'?'Station d’épuration · gestionnaire à identifier':t.landuse==='aquaculture'?'Pisciculture · exploitant à identifier':'';
+  const name=originalName||fallback,lat=Number(o.lat??o.center?.lat),lon=Number(o.lon??o.center?.lon);
+  if(!name||!Number.isFinite(lat)||!Number.isFinite(lon))return null;
+  return {id:'osm:'+o.type+'/'+o.id,name,unnamed:!originalName,lat,lon,kind:'company',category:category(t),address:formatAddress(t),town:t['addr:city']||'',website:t.website||t['contact:website']||'',phone:t.phone||t['contact:phone']||'',email:t.email||t['contact:email']||'',operator:t.operator||'',source:SRC_OSM,url:'https://www.openstreetmap.org/'+o.type+'/'+o.id,tags:t,updatedAt:new Date().toISOString()};
+ }
+ function waterFrom(f){
+  const g=f.geometry,a=geoArea(g),p=centerOf(g),prop=f.properties||{};
+  if(!p||!Number.isFinite(a)||a<400||!p.every(Number.isFinite))return null;
+  const label=String(prop.NATUR_DESC||'');
+  if(/piscin|cours d.eau|ruisseau|fossé|foss[eé]/i.test(label))return null;
+  let uid=prop.GEOREF_ID||prop.OBJECTID||f.id;if(uid===undefined||uid===null)return null;
+  return {id:'picc:'+uid,name:'Plan d’eau PICC · '+uid,lat:p[0],lon:p[1],area:a,kind:'water',category:waterKind(label),geometry:g,source:SRC_PICC,url:'https://geoservices.wallonie.be/arcgis/rest/services/TOPOGRAPHIE/PICC_VDIFF/MapServer/30',updatedAt:new Date().toISOString()};
+ }
+ function externalURL(url){if(!url)return '';const s=String(url).trim();return /^https?:\/\//i.test(s)?s:/^[\w.-]+\.[a-z]{2,}/i.test(s)?'https://'+s:''}
+ async function loadData(){
+  db=await new Promise((resolve,reject)=>{const r=indexedDB.open(DB,DB_VERSION);r.onupgradeneeded=()=>{for(const n of STORES)if(!r.result.objectStoreNames.contains(n))r.result.createObjectStore(n,{keyPath:'id'})};r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)});
+  const [cellRows,bodyRows,companyRows,prospectRows,relationRows]=await Promise.all(['cells','bodies','companies','prospects','relations'].map(read));
+  registry=new Map(cellRows.map(x=>[x.id,x]));bodies=new Map(bodyRows.map(x=>[x.id,x]));companies=new Map(companyRows.map(x=>[x.id,x]));prospects=new Map(prospectRows.map(x=>[x.id,x]));relations=new Map(relationRows.map(x=>[x.id,x]));
+ }
+ function makeMap(){
+  if(typeof L==='undefined'||typeof proj4==='undefined')throw Error('Bibliothèque de cartographie indisponible');
+  proj4.defs('EPSG:3812',PROJECTION);map=L.map('map',{preferCanvas:true}).setView([scope.lat,scope.lng],9);
+  base=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:20,attribution:'© OpenStreetMap'}).addTo(map);
+  gridLayer=L.layerGroup().addTo(map);resultLayer=L.layerGroup().addTo(map);focusLayer=L.layerGroup().addTo(map);
+  map.on('click',e=>{if(running)return;const id=pointId(e.latlng.lat,e.latlng.lng);if(!planned.some(x=>x.id===id))return;selectedCell=id;selected=null;focus=null;renderDetail();$('scanSelected').disabled=!['company','water'].includes(tab);status('Secteur sélectionné : '+id+'. Vous pouvez analyser uniquement ce secteur.');});
+ }
+ function background(name){
+  if(base)map.removeLayer(base);
+  if(name==='osm')base=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:20,attribution:'© OpenStreetMap'});
+  else{const slug=name==='ortho2024'?'ORTHO_2024':'ORTHO_2026_PRINTEMPS';
+   base=L.tileLayer.wms('https://geoservices.wallonie.be/arcgis/services/IMAGERIE/'+slug+'/MapServer/WMSServer',{layers:'0',format:'image/jpeg',transparent:false,version:'1.3.0',maxZoom:21,attribution:'© SPW'})}
+  base.addTo(map);base.bringToBack();
+ }
+ function areaApply(conf){
+  if(running)throw Error('Arrêtez la recherche avant de changer de ville.');
+  const r=Number(conf.radius);
+  if(!Number.isInteger(r)||r<1||r>100||!Number.isFinite(conf.lat)||!Number.isFinite(conf.lng))throw Error('Ville ou rayon non valide');
+  scope={city:conf.city,radius:r,lat:conf.lat,lng:conf.lng};planned=plans(scope);
+  if(!planned.length||planned.length>2500)throw Error('Territoire invalide ou trop étendu');
+  selected=null;focus=null;selectedCell=null;
+  map.setView([scope.lat,scope.lng],r>50?9:r>20?10:11);
+  if(circle)map.removeLayer(circle);circle=L.circle([scope.lat,scope.lng],{radius:r*1000,color:'#1d7b8d',weight:2,fillOpacity:.012,interactive:false}).addTo(map);map.fitBounds(circle.getBounds(),{padding:[32,32]});
+  try{localStorage.setItem('kdrix_bathy_v2_last_area',JSON.stringify(scope))}catch(e){}
+  status('Territoire actif : '+scope.city+' · '+r+' km · '+planned.length+' cellules fixes.\nVous pouvez sélectionner un secteur directement sur la carte ou lancer un petit lot.');render();
+ }
+ async function geocode(city){const p=Object.values(PRESETS).find(x=>x.city.toLocaleLowerCase('fr')===city.toLocaleLowerCase('fr'));if(p)return p;
+  const response=await fetch('https://nominatim.openstreetmap.org/search?format=json&countrycodes=be&limit=1&q='+encodeURIComponent(city));
+  if(!response.ok)throw Error('Géocodage HTTP '+response.status);const list=await response.json();if(!list?.length)throw Error('Ville introuvable en Belgique');
+  return {city,lat:Number(list[0].lat),lng:Number(list[0].lon)};
+ }
+ async function apply(){if(running)return;$('apply').disabled=true;try{const city=$('city').value.trim(),radius=Number($('radius').value);if(!city||!Number.isInteger(radius)||radius<1||radius>100)throw Error('Ville et rayon entier 1 à 100 km requis');
+  const coords=await geocode(city);areaApply({...coords,city,radius})}catch(e){status(e.message,true)}finally{$('apply').disabled=false}}
+ async function fetchJson(url,opt={},timeout=28000){
+  const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),timeout);pendingFetch=ctrl;
+  try{const res=await fetch(url,{...opt,signal:ctrl.signal});if(!res.ok)throw Error('HTTP '+res.status);const data=await res.json();if(data.error)throw Error(data.error.message||'Erreur du service');return data}
+  finally{clearTimeout(timer);if(pendingFetch===ctrl)pendingFetch=null}
+ }
+ async function waterSubtile(segment){
+  const b=segment.bounds3812,g={xmin:b[0],ymin:b[1],xmax:b[2],ymax:b[3],spatialReference:{wkid:3812}};
+  const params=new URLSearchParams({f:'geojson',where:"NATUR_DESC <> 'Piscine'",geometry:JSON.stringify(g),geometryType:'esriGeometryEnvelope',inSR:'3812',spatialRel:'esriSpatialRelIntersects',outFields:'OBJECTID,GEOREF_ID,NATUR_DESC',returnGeometry:'true',outSR:'4326',resultRecordCount:'2000'});
+  const data=await fetchJson(PICC+'?'+params.toString(),{},28000);
+  if(!Array.isArray(data.features)||data.exceededTransferLimit||data.features.length>=2000)throw Error('Réponse PICC absente ou tronquée : secteur non validé');
+  let count=0;for(const raw of data.features){const record=waterFrom(raw);if(!record)continue;
+   const prev=bodies.get(record.id);if(prev){record.notes=prev.notes;record.status=prev.status}
+   await write('bodies',record);bodies.set(record.id,record);count++;
+  }
+  return count;
+ }
+ function overpassQuery(cell){
+  const p=cell.points,lat=p.map(x=>x[0]),lon=p.map(x=>x[1]),box='('+Math.min(...lat).toFixed(6)+','+Math.min(...lon).toFixed(6)+','+Math.max(...lat).toFixed(6)+','+Math.max(...lon).toFixed(6)+')';
+  const conditions=['["landuse"="quarry"]','["industrial"="quarry"]','["leisure"="golf_course"]','["landuse"="aquaculture"]','["man_made"="wastewater_plant"]','["man_made"="water_works"]','["name"]["landuse"="industrial"]','["name"]["industrial"]','["operator"]["water"]','["name"]["power"="plant"]','["operator"]["man_made"="reservoir"]','["name"]["water"="reservoir"]'];
+  return '[out:json][timeout:24];('+conditions.map(x=>'nwr'+x+box+';').join('')+');out center tags;';
+ }
+ async function companyCell(cell){
+  const response=await fetchJson(OVERPASS,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:new URLSearchParams({data:overpassQuery(cell)})},35000);
+  if(!Array.isArray(response.elements)||response.remark||response.elements.length>1200)throw Error('Réponse OSM incomplète : '+(response.remark||'collection absente ou trop volumineuse'));
+  let count=0;for(const o of response.elements){const record=companyFrom(o);if(!record)continue;const prev=companies.get(record.id);if(prev){record.notes=prev.notes;record.status=prev.status}
+   await write('companies',record);companies.set(record.id,record);count++;
+  }return count;
+ }
+ async function scanCell(cell,kind){
+  const rec=ensure(cell),items=rec.engines[kind].subtiles;
+  let total=0;
+  if(kind==='company'){
+   if(state(rec,kind)==='complete')return 0;
+   try{total=await companyCell(cell);const now=new Date().toISOString();
+    for(const item of items){item.status='complete';item.source=SRC_OSM;item.checkedAt=now;item.error=null;item.records=total}
+   }catch(e){for(const item of items){item.status='error';item.error=String(e.message)}throw e}
+   finally{rec.updatedAt=new Date().toISOString();await write('cells',rec)}
+   return total;
+  }
+  for(const item of items){
+   if(stopRequested)break;if(item.status==='complete'&&item.source&&item.checkedAt)continue;
+   try{const count=await waterSubtile(item);item.status='complete';item.checkedAt=new Date().toISOString();item.source=SRC_PICC;item.error=null;item.records=count;total+=count}
+   catch(e){item.status='error';item.error=String(e.message);rec.updatedAt=new Date().toISOString();await write('cells',rec);throw e}
+   rec.updatedAt=new Date().toISOString();await write('cells',rec);
+  }
+  return total;
+ }
+ async function scan(prioritize){
+  if(running)return;const kind=tab==='water'?'water':'company';
+  if(!['water','company'].includes(tab))return;
+  const remaining=planned.filter(c=>state(registry.get(c.id),kind)!=='complete');if(!remaining.length){status('Tout le territoire est déjà analysé pour ce moteur.');return}
+  const cap=prioritize?1:Number($('batch').value)||3;
+  let tasks=prioritize?remaining.filter(c=>c.id===selectedCell):remaining;
+  if(!tasks.length){status('La cellule sélectionnée est déjà terminée pour ce moteur.');return}
+  if(!prioritize&&tasks.length>cap)tasks=tasks.slice(0,cap);
+  if(!confirm('Analyser '+tasks.length+' cellule(s) pour '+(kind==='company'?'les sociétés':'les plans d’eau')+' ? Les résultats seront conservés et le traitement pourra être arrêté.'))return;
+  running=true;stopRequested=false;$('run').disabled=true;$('stop').disabled=false;errors=[];
+  let completed=0,total=0,failures=0;
+  try{for(const cell of tasks){
+   if(stopRequested||failures>=3)break;
+   status('Recherche '+(kind==='company'?'de sociétés':'de plans d’eau')+' · cellule '+(completed+1)+' / '+tasks.length+'\n'+cell.id+'\nLes résultats s’enregistrent au fur et à mesure.');
+   try{const added=await scanCell(cell,kind);total+=added;failures=0}
+   catch(e){errors.push(cell.id+' : '+e.message);failures++}
+   completed++;render();if(!stopRequested)await sleep(kind==='company'?1700:550);
+  }
+  status((stopRequested?'Arrêt demandé. ':failures>=3?'Arrêt après trois erreurs. ':'Lot terminé. ')+completed+' cellule(s) traitée(s), '+total+' enregistrement(s) trouvé(s) dans les réponses.\nLes résultats sont à vérifier ; un résultat nul ne signifie pas absence de bassin ou d’établissement.',failures>=3);
+  }finally{running=false;$('run').disabled=false;$('stop').disabled=true;render()}
+ }
+ function focusedDraw(){
+  focusLayer.clearLayers();if(!focus)return;
+  if(focus.kind==='water'&&focus.geometry){try{const poly=L.geoJSON({type:'Feature',geometry:focus.geometry,properties:{}},{style:{color:'#e76a31',weight:3,fillColor:'#e78c48',fillOpacity:.2}}).addTo(focusLayer);
+   const bounds=poly.getBounds();if(bounds.isValid()){map.invalidateSize();map.fitBounds(bounds.pad(.5),{maxZoom:17,padding:[65,65]});return}}catch(e){}
+  }
+  if(Number.isFinite(focus.lat)&&Number.isFinite(focus.lon)){L.circleMarker([focus.lat,focus.lon],{radius:9,color:'#e56d3a',weight:3,fillOpacity:.25}).addTo(focusLayer);
+   map.invalidateSize();map.setView([focus.lat,focus.lon],17)}
+ }
+ function drawMap(){
+  if(!map)return;gridLayer.clearLayers();resultLayer.clearLayers();
+  if(showCoverage){
+   for(const cell of planned){const rec=registry.get(cell.id),w=state(rec,'water'),c=state(rec,'company'),fill=w==='complete'?(c==='complete'?'#79bea0':'#65b7dc'):(c==='complete'?'#efb66d':'#e3e9ec');
+    const err=['error','partial'].includes(w)||['error','partial'].includes(c);
+    const layer=L.polygon(cell.points,{color:err?'#bc554c':'#91a5a8',weight:err?1.8:.8,dashArray:err?'4 4':null,fillColor:fill,fillOpacity:.4}).addTo(gridLayer);
+    layer.on('click',()=>{selectedCell=cell.id;focus=null;selected=null;renderDetail()});
+   }
+   $('mapLegend').innerHTML='<span><i class="bullet unchecked"></i>Aucune recherche</span><span><i class="bullet water"></i>Plans d’eau</span><span><i class="bullet company"></i>Sociétés</span><span><i class="bullet both"></i>Les deux</span><span><i class="bullet failed"></i>Partiel / erreur</span>';
+  }else{
+   const all=tab==='water'?visibleEntities('water'):tab==='company'?visibleEntities('company'):[...prospects.values()];
+   for(const item of all.slice(0,1250)){
+    const color=item.kind==='water'?'#3589b9':'#dd8551';
+    if(!Number.isFinite(item.lat)||!Number.isFinite(item.lon))continue;
+    const pin=L.circleMarker([item.lat,item.lon],{radius:5,color:'#fff',weight:1.5,fillColor:color,fillOpacity:.95,bubblingMouseEvents:false}).addTo(resultLayer);
+    pin.bindTooltip(item.kind==='water'?fmt(Math.round(item.area||0))+' m²':item.name);
+    pin.on('click',()=>showEntity(item.kind,item.id));
+   }
+   $('mapLegend').innerHTML='<span><i class="bullet company"></i>Site / société</span><span><i class="bullet water"></i>Plan d’eau PICC</span><span>Attribution à vérifier</span>';
+  }
+  focusedDraw();
+ }
+ function titleFor(mode){return {company:'Recherche par adresse potentielle',water:'Recherche par plan d’eau PICC',prospects:'Mon listing'}[mode]}
+ function selectTab(mode){
+  if(running&&mode!==tab){status('Arrêtez le lot avant de changer de moteur.',true);return}
+  if(!['prospects','company','water'].includes(mode))return;
+  tab=mode;selected=null;focus=null;selectedCell=null;showCoverage=false;
+  $('listingActions').classList.toggle('hidden',mode!=='prospects');
+  $('researchControls').classList.toggle('hidden',mode==='prospects');
+  document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===mode));
+  $('searchTitle').textContent=titleFor(mode);
+  $('searchHelp').textContent={company:'Chercher des carrières, golfs, stations d’épuration et sites susceptibles d’avoir des bassins.',water:'Chercher les surfaces d’eau du PICC et vérifier les entreprises éventuellement concernées.',prospects:'Retrouvez vos fiches historiques, vos contacts, observations et démarches commerciales.'}[mode];
+  $('waterParams').classList.toggle('hidden',mode!=='water');$('scanParams').classList.toggle('hidden',!['water','company'].includes(mode));
+  $('run').textContent=mode==='water'?'Rechercher les plans d’eau':'Rechercher les sociétés';
+  $('resultHeading').textContent={company:'Adresses et sites potentiels',water:'Plans d’eau PICC détectés',prospects:'Mon listing · prospects enregistrés'}[mode];
+  $('resultHelp').textContent={company:'Chaque résultat est une piste. Cliquez pour examiner le site et préremplir une fiche.',water:'Cliquez sur un bassin pour zoomer et préremplir sa fiche si le site vous intéresse.',prospects:'Vos 10 fiches historiques et tous les prospects ajoutés à votre listing.'}[mode];
+  $('filter').value='';if(mode==='prospects')status('Mon listing : '+prospects.size+' fiche(s) enregistrée(s). Les deux onglets de recherche ne modifient pas ce listing sans votre accord.');render();
+ }
+ function commercialPriority(x){return /Carrière|Golf|Traitement|Pisciculture|Retenue/.test(x.category||'')?2:/industriel/.test(x.category||'')?1:0}
+ function selectedRow(item){const key=tab==='prospects'?'prospects':item.kind;return key}
+ function resultData(){
+  let items=[];
+  if(tab==='company')items=visibleEntities('company').filter(x=>!$('categoryFilter').value||x.category?.includes($('categoryFilter').value));
+  if(tab==='water')items=visibleEntities('water').filter(x=>Number(x.area||0)>=Number($('minArea').value));
+  if(tab==='prospects')items=[...prospects.values()].filter(p=>!p.lat||!Number.isFinite(p.lat)||pointsInside([p.lat,p.lon]));
+ 
+  const term=$('filter').value.toLocaleLowerCase('fr').trim();
+  if(term)items=items.filter(x=>[x.name,x.category,x.id,x.town,x.address,x.notes].join(' ').toLocaleLowerCase('fr').includes(term));
+  if($('hideDiscarded').checked&&tab==='prospects')items=items.filter(p=>p.status!=='ecarte');
+  if(tab==='water')items.sort((a,b)=>(b.area||0)-(a.area||0));
+  if(tab==='company')items.sort((a,b)=>(bestWater(b)?1:0)-(bestWater(a)?1:0)||commercialPriority(b)-commercialPriority(a)||a.name.localeCompare(b.name,'fr'));
+  return items;
+ }
+ function renderResults(){
+  $('resultFilters').classList.remove('hidden');$('companyCategory').classList.toggle('hidden',tab!=='company');
+  const rows=resultData();
+  $('resultCount').textContent=fmt(rows.length)+' élément(s) affiché(s). Cliquez sur une fiche pour l’examiner ou compléter les informations.';
+  let html='';
+  for(const x of rows.slice(0,250)){
+   if(tab==='coverage'){const w=state(registry.get(x.id),'water'),c=state(registry.get(x.id),'company');
+    html+='<article class="result"><h3>'+safe(x.id)+'</h3><span class="tag">Bassin : '+safe(w)+'</span> <span class="tag">Société : '+safe(c)+'</span><div class="actions"><button data-cell="'+safe(x.id)+'">Examiner la cellule</button></div></article>';continue}
+   if(tab==='prospects'){
+    html+='<article class="result"><h3>'+safe(x.name||'Prospect sans titre')+'</h3><span class="tag">'+safe(x.category||x.kind||'Prospect')+'</span><span class="tag orange">'+safe(x.status||'à étudier')+'</span><p class="small">'+safe(x.town||x.address||'Localisation à vérifier')+'</p><button class="minor" data-prospect="'+safe(x.id)+'">Consulter / modifier</button></article>';continue}
+   const nearest=x.kind==='water'?bestCompany(x):bestWater(x);
+   html+='<article class="result"><h3>'+safe(x.kind==='water'?'Plan d’eau · '+fmt(Math.round(x.area))+' m²':x.name)+'</h3>'+
+    '<span class="tag">'+safe(x.category||'À vérifier')+'</span>'+(nearest?'<span class="tag orange">Élément voisin à '+fmt(Math.round(nearest.distance))+' m</span>':'')+
+    '<p class="small">'+safe(x.kind==='company'?(x.address||'Adresse non renseignée dans OSM'):'Emprise PICC · exploitation à vérifier')+'</p>'+ (x.kind==='company'?'<p class="small">'+safe(opportunity(x.category))+'</p>':'')+
+    '<button class="minor" data-entity="'+safe(x.id)+'" data-kind="'+safe(x.kind)+'">Voir et évaluer ce site</button></article>';
+  }
+  $('results').innerHTML=html||'<div class="empty">'+(tab==='prospects'?'Aucun prospect conservé pour ce territoire. Ouvrez un résultat et choisissez « Ajouter à mes prospects ».':tab==='coverage'?'Toutes les cellules affichées sont terminées pour les deux moteurs.':'Aucun résultat enregistré pour ce filtre. Lancez un petit lot et vérifiez les éventuelles erreurs affichées à gauche.')+'</div>';
+  $('results').querySelectorAll('[data-entity]').forEach(b=>b.onclick=()=>showEntity(b.dataset.kind,b.dataset.entity));
+  $('results').querySelectorAll('[data-prospect]').forEach(b=>b.onclick=()=>showProspect(b.dataset.prospect));
+  $('results').querySelectorAll('[data-cell]').forEach(b=>b.onclick=()=>{selectedCell=b.dataset.cell;renderDetail();const c=planned.find(x=>x.id===selectedCell);if(c)map.fitBounds(c.points,{maxZoom:12,padding:[60,60]})});
+ }
+ function showEntity(kind,id){
+  const item=(kind==='water'?bodies:companies).get(id);if(!item)return;
+  selected={type:kind,id};focus=item;selectedCell=pointId(item.lat,item.lon);
+  renderDetail();focusedDraw();if(window.innerWidth<650)$('map').scrollIntoView({behavior:'smooth',block:'center'});
+ }
+ function showProspect(id){
+  const p=prospects.get(id);if(!p)return;selected={type:'prospect',id};focus=Number.isFinite(p.lat)?{lat:p.lat,lon:p.lon,kind:p.kind}:null;
+  renderDetail();focusedDraw();
+ }
+ function links(item){const out=[['Voir sur OpenStreetMap','https://www.openstreetmap.org/?mlat='+item.lat+'&mlon='+item.lon+'#map=17/'+item.lat+'/'+item.lon]];
+  if(item.url)out.unshift(['Source',item.url]);
+  if(externalURL(item.website))out.push(['Site officiel indiqué',externalURL(item.website)]);
+  if(item.name&&item.kind==='company'&&!item.unnamed){
+   out.push(['Rechercher activité et projets','https://www.google.com/search?q='+encodeURIComponent(item.name+' '+(item.town||'Belgique')+' bassin carrière permis environnement')]);
+   out.push(['Rechercher les coordonnées','https://www.google.com/search?q='+encodeURIComponent(item.name+' adresse contact Belgique')]);
+  }return '<div class="actions">'+out.map(a=>'<a href="'+safe(a[1])+'" target="_blank" rel="noopener noreferrer">'+safe(a[0])+' ↗</a>').join('')+'</div>';
+ }
+ function renderDetail(){
+  $('results').classList.add('hidden');$('resultFilters').classList.add('hidden');$('backResults').classList.remove('hidden');$('detail').classList.remove('hidden');
+  let html='',item=null;
+  if(selected?.type==='prospect'){
+   item=prospects.get(selected.id);
+   html='<div class="detail"><h2>'+safe(item?.name||'Fiche prospect')+'</h2><p>'+safe(item?.category||'')+'</p>'+
+   '<div class="field"><label for="pStatus">Statut commercial</label><select id="pStatus">'+statusOptions(item?.status)+'</select></div>'+
+   '<div class="field"><label for="pNotes">Notes et contacts professionnels</label><textarea id="pNotes"></textarea></div>'+
+   '<button class="primary" id="saveP">Enregistrer la fiche</button></div>';
+  }else if(selected?.type==='water'||selected?.type==='company'){
+   item=(selected.type==='water'?bodies:companies).get(selected.id);
+   if(!item){closeDetail();return}
+   const nearest=item.kind==='water'?bestCompany(item):bestWater(item);
+   const pair=nearest?(item.kind==='company'?relationId(item.id,nearest.item.id):relationId(nearest.item.id,item.id)):null;
+   const match=pair?relations.get(pair):null;
+   html='<div class="detail"><h2>'+safe(item.kind==='water'?'Plan d’eau · '+fmt(Math.round(item.area))+' m²':item.name)+'</h2>'+
+    '<p><span class="tag">'+safe(item.category||'À vérifier')+'</span></p>'+(item.unnamed?'<p class="hint">Site cartographié, mais aucun nom de société renseigné. La présence et l’exploitant sont à vérifier.</p>':'')+
+    '<p><b>Source :</b> '+safe(item.source||'à vérifier')+'</p>'+
+    (item.kind==='company'?'<p><b>Adresse :</b> '+safe(item.address||'Non renseignée dans OSM')+'</p><p><b>Activité :</b> '+safe(item.category)+'</p>'+
+     '<p><b>Exploitant / gestionnaire :</b> '+safe(item.operator||'Non identifié dans la source')+'</p>'+
+     (item.phone?'<p><b>Téléphone :</b> '+safe(item.phone)+'</p>':'')+(item.email?'<p><b>E-mail :</b> '+safe(item.email)+'</p>':''):'<p><b>Superficie cartographiée :</b> '+fmt(Math.round(item.area||0))+' m²</p>')+
+    '<h3>Pourquoi KDRIX pourrait intervenir</h3><p>'+safe(opportunity(item.kind==='water'?item.category:item.category))+'</p>'+
+    (nearest?'<div class="area-info"><b>'+safe(nearest.item.kind==='water'?'Plan d’eau':'Établissement')+' à proximité :</b> '+safe(nearest.item.name||'Plan d’eau')+' · '+fmt(Math.round(nearest.distance))+' m. <b>Le lien d’exploitation n’est pas confirmé.</b><br><span class="tag">'+safe(match?.status==='confirmed'?'Lien confirmé par l’utilisateur':match?.status==='to_verify'?'À vérifier':'Association non vérifiée')+'</span><div class="actions"><button class="minor" id="seeNear">Voir l’élément voisin</button><button class="minor" data-relation="confirmed">Lien confirmé</button><button class="minor" data-relation="to_verify">À vérifier</button><button class="minor" data-relation="rejected">Aucun lien</button></div></div>':'<div class="area-info">Aucun élément complémentaire connu à moins de 750 m dans les données déjà enregistrées. Cela ne signifie pas qu’il n’en existe aucun.</div>')+
+    '<h3>Sources et vérifications</h3>'+links(item)+
+    '<div class="actions"><button class="primary" id="keep">Ajouter à mes prospects</button></div></div>';
+  }else if(selectedCell){
+   const cell=planned.find(c=>c.id===selectedCell),rec=registry.get(selectedCell);
+   if(!cell){closeDetail();return}
+   const w=state(rec,'water'),c=state(rec,'company');
+   html='<div class="detail"><h2>'+safe(cell.id)+'</h2><p><b>Plans d’eau :</b> '+safe(w)+'</p><p><b>Sociétés :</b> '+safe(c)+'</p>'+
+    '<p class="caption">Couverture technique : 4 sous-secteurs de 2,5 km pour chaque moteur.</p>'+
+    '<label class="row"><input type="checkbox" id="review"> OK, terminé — vérification manuelle</label>'+
+    '<div class="field"><label for="reviewNotes">Observations de vérification</label><textarea id="reviewNotes"></textarea></div>'+
+    '<button id="saveReview" class="primary">Enregistrer le contrôle</button><p class="caption">La coche manuelle ne change pas la couleur de couverture.</p></div>';
+  }
+  $('detail').innerHTML=html;
+  if(selected?.type==='prospect'){ $('pNotes').value=item.notes||'';$('saveP').onclick=()=>saveProspect(item.id)}
+  if(selected?.type==='water'||selected?.type==='company'){
+   $('keep').onclick=()=>keepProspect(item);
+   if($('seeNear'))$('seeNear').onclick=()=>showEntity(nearest.item.kind,nearest.item.id);
+   $('detail').querySelectorAll('[data-relation]').forEach(b=>b.onclick=()=>setRelation(item,nearest.item,b.dataset.relation));
+  }
+  if(selectedCell&&!selected){$('review').checked=!!registry.get(selectedCell)?.manual?.done;$('reviewNotes').value=registry.get(selectedCell)?.manual?.notes||'';$('saveReview').onclick=reviewCell}
+ }
+ function statusOptions(value){const options=[['a_etudier','À étudier'],['interessant','Intéressant'],['contact_recherche','Contact recherché'],['contacte','Contacté'],['a_relancer','À relancer'],['offre_envoyee','Offre envoyée'],['dossier_obtenu','Dossier obtenu'],['ecarte','Écarté']];return options.map(([key,label])=>'<option value="'+key+'"'+(key===value?' selected':'')+'>'+label+'</option>').join('')}
+ async function setRelation(item,near,decision){
+  const company=item.kind==='company'?item:near,water=item.kind==='water'?item:near;
+  const id=relationId(company.id,water.id);
+  if(decision==='confirmed'&&!confirm('Confirmer que vous avez vérifié le lien entre cette société et ce plan d’eau ? Il ne s’agit pas automatiquement d’une preuve de propriété.'))return;
+  const value={id,companyId:company.id,bodyId:water.id,status:decision,verifiedBy:'Utilisateur',notes:'',updatedAt:new Date().toISOString()};
+  await write('relations',value);relations.set(id,value);
+  status('Association enregistrée : '+(decision==='confirmed'?'lien confirmé par l’utilisateur':decision==='rejected'?'absence de lien indiquée':'lien à vérifier')+'.');
+  render();
+ }
+ async function keepProspect(item){
+  const id='prospect:'+item.id,old=prospects.get(id);
+  const p={...old,id,targetId:item.id,kind:item.kind,category:item.category,name:item.name||'Plan d’eau à identifier',lat:item.lat,lon:item.lon,town:item.town||'',address:item.address||'',notes:old?.notes||'',status:old?.status||'a_etudier',source:item.source,createdAt:old?.createdAt||new Date().toISOString()};
+  await write('prospects',p);prospects.set(id,p);status('Prospect enregistré. Retrouvez-le dans « Mes prospects ».');render();showProspect(id);
+ }
+ async function saveProspect(id){
+  const p=prospects.get(id);if(!p)return;p.status=$('pStatus').value;p.notes=$('pNotes').value.trim();p.updatedAt=new Date().toISOString();
+  await write('prospects',p);prospects.set(id,p);status('Fiche enregistrée.');render();showProspect(id);
+ }
+ async function reviewCell(){
+  const c=planned.find(x=>x.id===selectedCell);if(!c)return;const rec=ensure(c);rec.manual={done:$('review').checked,notes:$('reviewNotes').value.trim(),reviewedAt:$('review').checked?new Date().toISOString():null};rec.updatedAt=new Date().toISOString();
+  await write('cells',rec);status('Contrôle manuel enregistré. Les couleurs techniques restent indépendantes.');renderDetail();
+ }
+ function closeDetail(){selected=null;focus=null;selectedCell=null;$('detail').classList.add('hidden');$('results').classList.remove('hidden');$('backResults').classList.add('hidden');$('resultFilters').classList.remove('hidden');focusLayer.clearLayers();renderResults()}
+ function render(){const cs=visibleEntities('company'),ws=visibleEntities('water');
+  $('countCompanies').textContent=fmt(cs.length);$('countWaters').textContent=fmt(ws.filter(x=>(x.area||0)>=Number($('minArea').value)).length);
+  $('countProspects').textContent=fmt([...prospects.values()].filter(x=>!Number.isFinite(x.lat)||pointsInside([x.lat,x.lon])).length);
+  const kind=tab==='water'?'water':'company';$('countCovered').textContent=fmt(planned.filter(c=>state(registry.get(c.id),kind)==='complete').length)+' / '+fmt(planned.length);
+  const failed=planned.filter(c=>state(registry.get(c.id),kind)==='error');
+  $('errors').classList.toggle('hidden',!failed.length);$('errors').textContent=failed.length?'Attention : '+failed.length+' cellule(s) en erreur pour ce moteur. Une recherche en erreur n’est pas comptée comme terminée.':'';
+  $('scanSelected').disabled=!selectedCell||running;
+  drawMap();if(selected||selectedCell)renderDetail();else renderResults();
+ }
+ async function backup(){
+  try{const data={app:'KDRIX-BATHY',schema:2,exportedAt:new Date().toISOString(),epsg:3812,gridM:5000,stores:{}};
+   for(const n of STORES)data.stores[n]=await read(n);
+   const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='kdrix-bathy-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500);status('Sauvegarde créée. Conservez le fichier.')}
+  catch(e){status('Export impossible : '+e.message,true)}
+ }
+ async function restore(file){if(!file)return;try{const data=JSON.parse(await file.text());if(data.app!=='KDRIX-BATHY'||data.schema!==2||!data.stores||!Array.isArray(data.stores.cells))throw Error('Sauvegarde incompatible');
+   if(!confirm('Importer les données ? Les identifiants identiques seront remplacés. Exportez votre base actuelle auparavant.'))return;
+   for(const n of STORES){if(!Array.isArray(data.stores[n]))continue;for(const p of data.stores[n])if(p&&typeof p.id==='string')await write(n,p)}
+   await loadData();status('Import terminé.');render();
+  }catch(e){status('Import impossible : '+e.message,true)}
+ }
+ function wire(){
+  document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>selectTab(b.dataset.tab));
+  $('preset').onchange=()=>{const p=PRESETS[$('preset').value];if(p){$('city').value=p.city;$('radius').value=p.radius}};
+  $('city').oninput=()=>{$('preset').value='custom'};$('radius').oninput=()=>{$('preset').value='custom'};
+  $('apply').onclick=apply;$('run').onclick=()=>scan(false);$('scanSelected').onclick=()=>scan(true);
+  $('newManual').onclick=()=>openDraft();
+  $('coverageToggle').onclick=()=>{showCoverage=!showCoverage;selected=null;selectedCell=null;focus=null;$('coverageToggle').textContent=showCoverage?'✕ Fermer la carte des zones recherchées':'◫ Voir les zones déjà recherchées';render()};
+  $('stop').onclick=()=>{stopRequested=true;status('Arrêt demandé après la requête en cours. Les résultats enregistrés sont conservés.')};
+  $('fit').onclick=()=>{if(circle)map.fitBounds(circle.getBounds(),{padding:[30,30]})};
+  $('basemap').onchange=()=>background($('basemap').value);
+  $('minArea').onchange=render;$('categoryFilter').onchange=renderResults;$('filter').oninput=renderResults;$('hideDiscarded').onchange=renderResults;$('backResults').onclick=closeDetail;
+  $('export').onclick=backup;$('import').onclick=()=>$('file').click();$('file').onchange=e=>restore(e.target.files?.[0]).finally(()=>e.target.value='');
+ }
+ async function init(){
+  try{makeMap();await loadData();wire();
+   let cfg=null;try{cfg=JSON.parse(localStorage.getItem('kdrix_bathy_v2_last_area')||'null')}catch(e){}
+   if(!cfg?.city||!Number.isFinite(cfg.lat))cfg=PRESETS.liege;
+   $('city').value=cfg.city;$('radius').value=cfg.radius;
+   const found=Object.entries(PRESETS).find(([k,p])=>p.city===cfg.city&&p.radius===cfg.radius);$('preset').value=found?found[0]:'custom';
+   await seedHistorical();areaApply(cfg);selectTab('prospects');
+  }catch(e){status('Impossible d’initialiser la prospection : '+e.message,true);console.error(e)}
+ }
+ init();
+})();
+</script>
+</body></html>
