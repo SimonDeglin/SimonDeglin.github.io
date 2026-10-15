@@ -1430,7 +1430,8 @@ async function recognizeScanZone(worker,engine,rect,negative,kind){
  return {text:result?.data?.text||'',confidence:result?.data?.confidence??null,source};
 }
 async function detectIndexFromImage(){
- if(scanBusy||!pendingImage)return;
+ if(scanBusy||!pendingImage||!scanCrop)return;
+ invalidateScanReading();
  scanBusy=true;scanDeadline=Date.now()+30000;const id=++scanRequest;
  const retry=$('#scan-retry');retry.disabled=true;
  const diagnostics=[];const preview=scanSourceImage();
@@ -1480,6 +1481,7 @@ async function detectIndexFromImage(){
    }
    if(id!==scanRequest)return;
    $('#scan-value').value=chosen??'';
+   refreshSingleScanConfirm();
    $('#scan-message').textContent=chosen===null?
     'Index non reconnu de façon fiable : recadre la fenêtre des chiffres ou saisis l’index manuellement.':
     'Index proposé : contrôle tous les chiffres avant de confirmer.';
@@ -1522,8 +1524,7 @@ $('#scan-file').onchange=async e=>{
   $('#scan-message').textContent='Préparation de la lecture…';
   modal('scan-overlay');
   const image=$('#scan-preview');if(!image.complete)await new Promise(ok=>{image.onload=ok;image.onerror=ok});
-  findMeterDisplay();
-  await detectIndexFromImage();
+  prepareScanFrame(true);
  }catch(err){toast('Impossible de lire cette photo.')}
  e.target.value='';
 };
@@ -1543,54 +1544,88 @@ $('#scan-rotate').onclick=async()=>{
   $('#scan-crop-box').classList.add('hidden');
   const photo=$('#scan-preview');
   if(!photo.complete)await new Promise(ok=>{photo.onload=ok;photo.onerror=ok});
-  findMeterDisplay();
-  await detectIndexFromImage();
+  prepareScanFrame(true);
  }catch(err){toast('Impossible de tourner la photo.')}
  finally{button.disabled=false}
 };
 $('#scan-retry').onclick=()=>detectIndexFromImage();
 $('#scan-reset-crop').onclick=()=>{
- scanCrop=null;scanAutoZones=null;$('#scan-crop-box').classList.add('hidden');detectIndexFromImage();
+ if(scanBusy)return;
+ prepareScanFrame(true);
 };
+/* Mobile crop interaction. Drag anywhere inside the frame to move it,
+   drag one of the four corners to resize; tap outside to reposition.
+   Releasing the finger only updates the source pixels, not the stored reading. */
 let scanPointer=null;
-function scanPoint(ev){
- const wrap=$('#scan-preview-wrap'),rect=wrap.getBoundingClientRect();
- return {x:Math.max(0,Math.min(rect.width,ev.clientX-rect.left)),y:Math.max(0,Math.min(rect.height,ev.clientY-rect.top))};
+function scanFramePoint(ev,g=scanFrameViewport()){
+ if(!g)return null;
+ return {x:Math.max(0,Math.min(g.w,(ev.clientX-g.left)/g.scale)),
+  y:Math.max(0,Math.min(g.h,(ev.clientY-g.top)/g.scale))};
 }
-function displayScanCrop(start,end){
- const box=$('#scan-crop-box'),x=Math.min(start.x,end.x),y=Math.min(start.y,end.y);
- box.style.left=x+'px';box.style.top=y+'px';box.style.width=Math.abs(start.x-end.x)+'px';box.style.height=Math.abs(start.y-end.y)+'px';box.classList.remove('hidden');
+function scanMoveOrResize(pointer,p){
+ const g=scanFrameViewport();if(!g||!pointer||!p)return null;
+ const origin=pointer.original,dx=p.x-pointer.start.x,dy=p.y-pointer.start.y;
+ if(pointer.mode==='move'){
+  return clampScanFrame({left:origin.left+dx,top:origin.top+dy,
+   width:origin.width,height:origin.height});
+ }
+ const minW=Math.min(g.w,Math.max(g.w*.10,42/g.scale));
+ const minH=Math.min(g.h,Math.max(g.h*.055,36/g.scale));
+ let l=origin.left,t=origin.top,r=origin.left+origin.width,b=origin.top+origin.height;
+ const h=pointer.handle||'se';
+ if(h.includes('w'))l=Math.max(0,Math.min(r-minW,l+dx));
+ if(h.includes('e'))r=Math.min(g.w,Math.max(l+minW,r+dx));
+ if(h.includes('n'))t=Math.max(0,Math.min(b-minH,t+dy));
+ if(h.includes('s'))b=Math.min(g.h,Math.max(t+minH,b+dy));
+ return clampScanFrame({left:l,top:t,width:r-l,height:b-t});
+}
+function finishScanFrameMove(ev){
+ if(!scanPointer||ev.pointerId!==scanPointer.id)return;
+ const pointer=scanPointer;scanPointer=null;
+ const frame=scanCrop,origin=pointer.original;
+ const changed=frame&&(
+  Math.abs(frame.left-origin.left)>1||Math.abs(frame.top-origin.top)>1||
+  Math.abs(frame.width-origin.width)>1||Math.abs(frame.height-origin.height)>1
+ );
+ if(changed||pointer.recentered){
+  scanAutoZones=null;scanAutoConfidence='manual';
+  refreshScanCropPreview();
+  invalidateScanReading();
+ }
 }
 $('#scan-preview-wrap').addEventListener('pointerdown',ev=>{
- if(scanBusy)return;const p=scanPoint(ev);scanPointer={id:ev.pointerId,start:p,end:p};
- ev.currentTarget.setPointerCapture?.(ev.pointerId);ev.preventDefault();
+ if(scanBusy||scanPointer||!pendingImage)return;
+ const g=scanFrameViewport(),p=scanFramePoint(ev,g);
+ if(!g||!p)return;
+ if(!scanCrop)scanCrop=defaultScanFrame();
+ if(!scanCrop)return;
+ const handle=ev.target.closest?.('[data-scan-handle]')?.dataset?.scanHandle||null;
+ const isInside=!!ev.target.closest?.('#scan-crop-box');
+ const original={...scanCrop};
+ let recentered=false;
+ if(!isInside&&!handle){
+  scanCrop=clampScanFrame({left:p.x-scanCrop.width/2,top:p.y-scanCrop.height/2,
+   width:scanCrop.width,height:scanCrop.height});
+  displayImageSpaceCrop(scanCrop);
+  recentered=true;
+ }
+ scanPointer={id:ev.pointerId,start:p,original:{...scanCrop},
+  mode:handle?'resize':'move',handle,recentered,
+  before:original};
+ ev.currentTarget.setPointerCapture?.(ev.pointerId);
+ ev.preventDefault();
 });
 $('#scan-preview-wrap').addEventListener('pointermove',ev=>{
  if(!scanPointer||ev.pointerId!==scanPointer.id)return;
- scanPointer.end=scanPoint(ev);displayScanCrop(scanPointer.start,scanPointer.end);ev.preventDefault();
+ const p=scanFramePoint(ev);if(!p)return;
+ const next=scanMoveOrResize(scanPointer,p);
+ if(next){scanCrop=next;displayImageSpaceCrop(scanCrop)}
+ ev.preventDefault();
 });
 $('#scan-preview-wrap').addEventListener('pointerup',ev=>{
- if(!scanPointer||ev.pointerId!==scanPointer.id)return;
- const selection=scanPointer;scanPointer=null;selection.end=scanPoint(ev);
- const a=selection.start,b=selection.end;
- if(Math.abs(a.x-b.x)<14||Math.abs(a.y-b.y)<8){$('#scan-crop-box').classList.add('hidden');return}
- const img=$('#scan-preview'),rect=img.getBoundingClientRect();
- if(!img.naturalWidth||!img.naturalHeight)return;
- // Respect the letterbox introduced by object-fit: contain.
- const scale=Math.min(rect.width/img.naturalWidth,rect.height/img.naturalHeight);
- const shownW=img.naturalWidth*scale,shownH=img.naturalHeight*scale;
- const insetX=(rect.width-shownW)/2+(rect.left-$('#scan-preview-wrap').getBoundingClientRect().left);
- const insetY=(rect.height-shownH)/2+(rect.top-$('#scan-preview-wrap').getBoundingClientRect().top);
- const fromX=Math.max(0,Math.min(img.naturalWidth,(Math.min(a.x,b.x)-insetX)/scale));
- const fromY=Math.max(0,Math.min(img.naturalHeight,(Math.min(a.y,b.y)-insetY)/scale));
- const toX=Math.max(0,Math.min(img.naturalWidth,(Math.max(a.x,b.x)-insetX)/scale));
- const toY=Math.max(0,Math.min(img.naturalHeight,(Math.max(a.y,b.y)-insetY)/scale));
- if(toX-fromX<15||toY-fromY<8)return;
- scanCrop={left:fromX,top:fromY,width:toX-fromX,height:toY-fromY};
- scanAutoZones=null;scanAutoConfidence='manual';
- displayScanCrop(a,b);detectIndexFromImage();
+ finishScanFrameMove(ev);ev.preventDefault();
 });
-$('#scan-preview-wrap').addEventListener('pointercancel',()=>{scanPointer=null});
+$('#scan-preview-wrap').addEventListener('pointercancel',finishScanFrameMove);
 $('#confirm-scan').onclick=()=>{
  const k=$('#scan-meter').value;
  if(k==='electric'){
