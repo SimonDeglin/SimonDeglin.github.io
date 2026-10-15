@@ -48,7 +48,7 @@ jobs:
         run: |
           node --test marcheradar/tests/phase3b-evidence.test.cjs
           node --test marcheradar/tests/phase3a-bosa.test.cjs
-          node -e "const d=require('./marcheradar/data.json');if(d.items.length!==64)throw Error('Ancienne base altérée');const m=d.items.filter(x=>x.documentAnalyses?.length);if(m.length<2)throw Error('Moins de deux marchés analysés');console.log('MARCHES_ANALYSES='+m.length);"
+          node -e "const d=require('./marcheradar/data.json');if(d.items.length<64)throw Error('Marchés historiques manquants');const m=d.items.filter(x=>x.documentAnalyses?.length);if(m.length<2)throw Error('Moins de deux marchés analysés');console.log('MARCHES_ANALYSES='+m.length);"
       - name: "Tests Chromium : classement et filtres Phase 1"
         run: node marcheradar/tests/phase1-browser.cjs
       - name: "Tests Chromium : fiches et sources Phase 2"
