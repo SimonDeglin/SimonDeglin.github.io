@@ -184,6 +184,7 @@
   var docsBody=docs.length?'<div class="mr2-link-list">'+docs.map(external).join('')+'</div>'+
     '<p class="mr2-footnote">Les titres et versions proviennent des catalogues publics. Les fichiers simplement listés se téléchargent depuis la page officielle, sans lien individuel supposé.</p>':
     '<div class="mr2-highlight"><strong>Aucun fichier de marché indexé</strong><p>Le cahier spécial des charges, les plans et les bordereaux ne sont pas encore récupérés automatiquement. Utiliser les publications officielles ci-dessous pour les rechercher.</p></div>';
+  if(m.bulkDocumentDownload?.verified===true)docsBody+='<div class="mr2-highlight"><strong>Téléchargement groupé public vérifié</strong><p>Le téléchargement de l’archive ZIP contenant '+esc(m.bulkDocumentDownload.fileCount)+' fichiers a été testé depuis le portail officiel. Cliquez sur les fichiers ci-dessus pour ouvrir la page Documents et utiliser « Télécharger tous les documents ». L’application ne conserve pas l’archive.</p></div>';
   docsBody+='<h5 class="mr2-mini-title">Publications et documents sources</h5>'+
     (others.length?'<div class="mr2-link-list">'+others.map(external).join('')+'</div>':'<p class="mr2-empty">Aucun lien source exploitable renseigné.</p>');
   var documents=section('Accès aux documents',docsBody,docs.length+' fichier(s) repéré(s)');
