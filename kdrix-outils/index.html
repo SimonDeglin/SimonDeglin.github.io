@@ -319,7 +319,8 @@ button:focus-visible,a:focus-visible{outline:3px solid #f1a47e;outline-offset:4p
  function dossiersValidUrl(value){
   try{
    var parsed=new URL(value);
-   return parsed.protocol==='file:'&&/^\\/[A-Za-z]:\\//.test(parsed.pathname)&&/\\.html?$/i.test(decodeURIComponent(parsed.pathname));
+   var pathname=parsed.pathname.toLowerCase();
+   return parsed.protocol==='file:'&&pathname.length>5&&pathname.charAt(0)==='/'&&pathname.charAt(2)===':'&&pathname.charAt(3)==='/'&&(pathname.endsWith('.html')||pathname.endsWith('.htm'));
   }catch(e){return false}
  }
  function dossiersSaveUrl(){
