@@ -396,36 +396,53 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   let items=[];
   if(tab==='company')items=visibleEntities('company').filter(x=>!$('categoryFilter').value||x.category?.includes($('categoryFilter').value));
   if(tab==='water')items=visibleEntities('water').filter(x=>Number(x.area||0)>=Number($('minArea').value));
-  if(tab==='prospects')items=[...prospects.values()].filter(p=>!p.lat||!Number.isFinite(p.lat)||pointsInside([p.lat,p.lon]));
+  if(tab==='prospects')items=[...prospects.values()].filter(p=>!p.archived);
  
   const term=$('filter').value.toLocaleLowerCase('fr').trim();
   if(term)items=items.filter(x=>[x.name,x.category,x.id,x.town,x.address,x.notes].join(' ').toLocaleLowerCase('fr').includes(term));
   if($('hideDiscarded').checked&&tab==='prospects')items=items.filter(p=>p.status!=='ecarte');
+  if(tab==='prospects')items.sort((a,b)=>Number(!!b.isHistorical)-Number(!!a.isHistorical)||String(a.name||'').localeCompare(String(b.name||''),'fr'));
   if(tab==='water')items.sort((a,b)=>(b.area||0)-(a.area||0));
   if(tab==='company')items.sort((a,b)=>(bestWater(b)?1:0)-(bestWater(a)?1:0)||commercialPriority(b)-commercialPriority(a)||a.name.localeCompare(b.name,'fr'));
   return items;
  }
  function renderResults(){
-  $('resultFilters').classList.remove('hidden');$('companyCategory').classList.toggle('hidden',tab!=='company');
-  const rows=resultData();
-  $('resultCount').textContent=fmt(rows.length)+' élément(s) affiché(s). Cliquez sur une fiche pour l’examiner ou compléter les informations.';
-  let html='';
-  for(const x of rows.slice(0,250)){
-   if(tab==='coverage'){const w=state(registry.get(x.id),'water'),c=state(registry.get(x.id),'company');
-    html+='<article class="result"><h3>'+safe(x.id)+'</h3><span class="tag">Bassin : '+safe(w)+'</span> <span class="tag">Société : '+safe(c)+'</span><div class="actions"><button data-cell="'+safe(x.id)+'">Examiner la cellule</button></div></article>';continue}
+  $('resultFilters').classList.remove('hidden');
+  $('companyCategory').classList.toggle('hidden',tab!=='company');
+  const rows=resultData(),historic=rows.filter(x=>x.isHistorical).length;
+  $('resultCount').textContent=tab==='prospects'?
+   fmt(rows.length)+' fiche(s) · '+historic+' historique(s) affichée(s) · '+fmt(prospects.size)+' enregistrements conservés dans la base':
+   fmt(rows.length)+' résultat(s) disponibles. Cliquez sur un site pour voir les informations et préremplir une fiche.';
+  const boxes=[];
+  for(const x of rows.slice(0,300)){
    if(tab==='prospects'){
-    html+='<article class="result"><h3>'+safe(x.name||'Prospect sans titre')+'</h3><span class="tag">'+safe(x.category||x.kind||'Prospect')+'</span><span class="tag orange">'+safe(x.status||'à étudier')+'</span><p class="small">'+safe(x.town||x.address||'Localisation à vérifier')+'</p><button class="minor" data-prospect="'+safe(x.id)+'">Consulter / modifier</button></article>';continue}
+    const c=x.contactName||x.contact?.name||'';
+    boxes.push('<article class="result"><h3>'+safe(x.name||'Prospect sans nom')+'</h3>'+
+     '<span class="tag">'+safe(x.category||'À identifier')+'</span> '+
+     '<span class="tag '+(x.isHistorical?'':'gray')+'">'+(x.isHistorical?'Historique KDRIX':'Ajouté')+'</span> '+
+     '<span class="tag orange">'+safe(statusLabel(x.status))+'</span>'+
+     '<p class="small">'+safe(x.town||'Commune à préciser')+(x.address?' · '+safe(x.address):'')+'</p>'+
+     '<p class="small">'+safe(c?('Contact : '+c):'Contact à rechercher')+
+     (x.area?' · Plan d’eau : '+fmt(Math.round(Number(x.area)))+' m²':'')+'</p>'+
+     '<button class="minor" data-prospect="'+safe(x.id)+'">Ouvrir et modifier la fiche →</button></article>');
+    continue;
+   }
    const nearest=x.kind==='water'?bestCompany(x):bestWater(x);
-   html+='<article class="result"><h3>'+safe(x.kind==='water'?'Plan d’eau · '+fmt(Math.round(x.area))+' m²':x.name)+'</h3>'+
-    '<span class="tag">'+safe(x.category||'À vérifier')+'</span>'+(nearest?'<span class="tag orange">Élément voisin à '+fmt(Math.round(nearest.distance))+' m</span>':'')+
-    '<p class="small">'+safe(x.kind==='company'?(x.address||'Adresse non renseignée dans OSM'):'Emprise PICC · exploitation à vérifier')+'</p>'+ (x.kind==='company'?'<p class="small">'+safe(opportunity(x.category))+'</p>':'')+
-    '<button class="minor" data-entity="'+safe(x.id)+'" data-kind="'+safe(x.kind)+'">Voir et évaluer ce site</button></article>';
+   const saved=[...prospects.values()].some(p=>!p.archived&&p.targetId===x.id);
+   boxes.push('<article class="result"><h3>'+safe(x.kind==='water'?'Plan d’eau · '+fmt(Math.round(x.area||0))+' m²':x.name)+'</h3>'+
+    '<span class="tag">'+safe(x.category||'À vérifier')+'</span>'+
+    (nearest?'<span class="tag orange">Élément voisin à '+fmt(Math.round(nearest.distance))+' m</span>':'')+
+    (saved?'<span class="tag">Dans mon listing</span>':'')+
+    '<p class="small">'+safe(x.kind==='company'?(x.address||'Adresse indisponible dans la source'):'Emprise PICC · gestionnaire inconnu')+'</p>'+
+    (x.kind==='company'?'<p class="small">'+safe(opportunity(x.category))+'</p>':'')+
+    '<button class="minor" data-entity="'+safe(x.id)+'" data-kind="'+safe(x.kind)+'">Examiner et préremplir →</button></article>');
   }
-  $('results').innerHTML=html||'<div class="empty">'+(tab==='prospects'?'Aucun prospect conservé pour ce territoire. Ouvrez un résultat et choisissez « Ajouter à mes prospects ».':tab==='coverage'?'Toutes les cellules affichées sont terminées pour les deux moteurs.':'Aucun résultat enregistré pour ce filtre. Lancez un petit lot et vérifiez les éventuelles erreurs affichées à gauche.')+'</div>';
+  $('results').innerHTML=boxes.join('')||'<div class="empty">'+(tab==='prospects'?
+   'Aucune fiche avec ces filtres. Désactivez éventuellement « Masquer les prospects écartés », ou ajoutez une fiche manuellement.':
+   'Aucun résultat enregistré dans cette zone. Lancez une recherche ; une erreur de service n’est jamais considérée comme une absence de site.')+'</div>';
   $('results').querySelectorAll('[data-entity]').forEach(b=>b.onclick=()=>showEntity(b.dataset.kind,b.dataset.entity));
   $('results').querySelectorAll('[data-prospect]').forEach(b=>b.onclick=()=>showProspect(b.dataset.prospect));
-  $('results').querySelectorAll('[data-cell]').forEach(b=>b.onclick=()=>{selectedCell=b.dataset.cell;renderDetail();const c=planned.find(x=>x.id===selectedCell);if(c)map.fitBounds(c.points,{maxZoom:12,padding:[60,60]})});
- }
+ } 
  function showEntity(kind,id){
   const item=(kind==='water'?bodies:companies).get(id);if(!item)return;
   selected={type:kind,id};focus=item;selectedCell=pointId(item.lat,item.lon);
@@ -487,6 +504,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   }
   if(selectedCell&&!selected){$('review').checked=!!registry.get(selectedCell)?.manual?.done;$('reviewNotes').value=registry.get(selectedCell)?.manual?.notes||'';$('saveReview').onclick=reviewCell}
  }
+ function statusLabel(value){return ({a_etudier:'À étudier',interessant:'Intéressant',contact_recherche:'Contact à rechercher',contacte:'Contacté',a_relancer:'À relancer',offre_envoyee:'Offre envoyée',dossier_obtenu:'Dossier obtenu',ecarte:'Écarté',nouveau:'Nouveau',relance:'À relancer',termine:'Terminé'})[value]||value||'À étudier'}
  function statusOptions(value){const options=[['a_etudier','À étudier'],['interessant','Intéressant'],['contact_recherche','Contact recherché'],['contacte','Contacté'],['a_relancer','À relancer'],['offre_envoyee','Offre envoyée'],['dossier_obtenu','Dossier obtenu'],['ecarte','Écarté']];return options.map(([key,label])=>'<option value="'+key+'"'+(key===value?' selected':'')+'>'+label+'</option>').join('')}
  async function setRelation(item,near,decision){
   const company=item.kind==='company'?item:near,water=item.kind==='water'?item:near;
@@ -513,7 +531,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
  function closeDetail(){selected=null;focus=null;selectedCell=null;$('detail').classList.add('hidden');$('results').classList.remove('hidden');$('backResults').classList.add('hidden');$('resultFilters').classList.remove('hidden');focusLayer.clearLayers();renderResults()}
  function render(){const cs=visibleEntities('company'),ws=visibleEntities('water');
   $('countCompanies').textContent=fmt(cs.length);$('countWaters').textContent=fmt(ws.filter(x=>(x.area||0)>=Number($('minArea').value)).length);
-  $('countProspects').textContent=fmt([...prospects.values()].filter(x=>!Number.isFinite(x.lat)||pointsInside([x.lat,x.lon])).length);
+  $('countProspects').textContent=fmt([...prospects.values()].filter(x=>!x.archived).length);
   const kind=tab==='water'?'water':'company';$('countCovered').textContent=fmt(planned.filter(c=>state(registry.get(c.id),kind)==='complete').length)+' / '+fmt(planned.length);
   const failed=planned.filter(c=>state(registry.get(c.id),kind)==='error');
   $('errors').classList.toggle('hidden',!failed.length);$('errors').textContent=failed.length?'Attention : '+failed.length+' cellule(s) en erreur pour ce moteur. Une recherche en erreur n’est pas comptée comme terminée.':'';
