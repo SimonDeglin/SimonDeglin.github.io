@@ -37,12 +37,10 @@
   return date;
  }
  function status(m,now){
-  var s=str(m.deadline),today=now?new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Brussels',year:'numeric',month:'2-digit',day:'2-digit'}).format(now):null;
-  if(!today){
-   var parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Brussels',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
-   function p(name){return (parts.find(function(v){return v.type===name})||{}).value||''}
-   today=p('year')+'-'+p('month')+'-'+p('day');
-  }
+  var s=str(m.deadline);
+  var parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Brussels',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(now||new Date());
+  function p(name){return (parts.find(function(v){return v.type===name})||{}).value||''}
+  var today=p('year')+'-'+p('month')+'-'+p('day');
   if(m.noticeKind==='award')return {label:'Avis de résultat',tone:'neutral',kind:'result'};
   if(!s){
    if(m.source==='LOCALE'&&m.screening!=='excluded')return {label:'Prospection — échéance non publiée',tone:'prospect',kind:'prospect'};
@@ -140,7 +138,7 @@
   var summary=section('Informations principales','<div class="mr2-fields">'+
    field('Pouvoir adjudicateur',m.buyer||'Non communiqué')+field('Référence',reference(m))+
    field('Zone',m.region||'Non localisée')+field('Date de publication',formattedDate(m.publication))+
-   field('Date limite de remise',dateTime(m.deadline),!m.deadline?'Consulter la publication officielle avant d’engager une offre.':/^\d{4}-\d{2}-\d{2}$/.test(str(m.deadline))?'L’heure limite n’est pas présente dans les données.':'Horodatage issu des données de collecte.')+
+   field('Date limite de remise',dateTime(m.deadline)+(m.deadlineTime&&!/T\d{2}:\d{2}/.test(str(m.deadline))?' · heure signalée '+str(m.deadlineTime)+' (à confirmer)':''),!m.deadline?'Consulter la publication officielle avant d’engager une offre.':/^\d{4}-\d{2}-\d{2}$/.test(str(m.deadline))?'L’heure limite n’est pas présente dans les données.':'Horodatage issu des données de collecte.')+
    field('CPV',Array.isArray(m.cpv)&&m.cpv.length?m.cpv.join(' · '):'Non renseigné')+
    field('Délai d’exécution',m.executionDuration||'Non renseigné')+
    field('Procédure',noticeType)+
@@ -194,7 +192,7 @@
   var vLabel=v.kind==='required'?'Visite obligatoire':v.kind==='optional'?'Visite facultative':v.kind==='review'?'Visite à vérifier':'Visite non renseignée';
   var source=primarySource(m),docs=safeDocs(m);
   var dLabel=docs.length?docs.length+' document(s) indexé(s)':source?'Accès à la source':'Source non renseignée';
-  return '<div class="mr2-list-hints"><span>'+esc(vLabel)+'</span><span>'+esc(dLabel)+'</span></div>';
+  return '<div class="mr2-list-hints">'+(m.noticeKind==='award'?'<span>Avis de résultat</span>':'')+'<span>'+esc(vLabel)+'</span><span>'+esc(dLabel)+'</span></div>';
  }
  return {render:render,status:status,sources:sources,primarySource:primarySource,visitState:visitState,requirements:requirements,linkUrl:linkUrl,listHints:listHints};
 });
