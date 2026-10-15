@@ -117,6 +117,32 @@ async function startBrowser(){
  browser=await chromium.launch(exe?{executablePath:exe,headless:true}:{headless:true});
  return browser;
 }
+async function verifyBosaBulk(page,m,docs,url,checkedAt){
+ // Only the one confirmed public pilot; do not download every archive automatically.
+ if(isAll||m.publicationWorkspaceId!=='0765b50e-85f5-4aae-b2ca-2ed66c14e354'||!docs.length)return null;
+ const button=page.getByRole('button',{name:/Télécharger tous les documents/i}).first();
+ if(!await button.count())return {verified:false,reason:'Bouton de téléchargement groupé indisponible'};
+ try{
+  const pending=page.waitForEvent('download',{timeout:35000});
+  await button.click({timeout:9000});
+  const download=await pending;
+  const filepath=await download.path(),stat=fs.statSync(filepath);
+  if(stat.size>100_000_000||stat.size<200)throw Error('Taille de l’archive hors limites');
+  const first=Buffer.alloc(4),handle=fs.openSync(filepath,'r');
+  try{fs.readSync(handle,first,0,4,0)}finally{fs.closeSync(handle)}
+  if(first.toString('hex')!=='504b0304')throw Error('Téléchargement non ZIP');
+  const files=child.execFileSync('unzip',['-Z','-1',filepath],{encoding:'utf8',timeout:10000,maxBuffer:200000}).split('\n').filter(x=>x&&!x.endsWith('/'));
+  const listed=new Set(files.map(x=>norm(path.posix.basename(x).replace(/^['‘]/,''))));
+  const matching=docs.filter(d=>listed.has(norm(d.title.replace(/^['‘]/,'')))).length;
+  if(matching!==docs.length||files.length!==docs.length)return {
+   verified:false,reason:'L’inventaire ZIP ne correspond pas au catalogue BOSA',
+   zipEntries:files.length,listedCount:docs.length,matching
+  };
+  const hash=require('node:crypto').createHash('sha256').update(fs.readFileSync(filepath)).digest('hex');
+  return {verified:true,method:'public_bulk_download',sourceUrl:url,checkedAt,
+   archiveSize:stat.size,archiveSHA256:hash,fileCount:files.length,matching,reason:'Liste ZIP vérifiée, contenus non analysés'};
+ }catch(e){return {verified:false,reason:String(e.message).slice(0,160)}}
+}
 async function fetchBOSA(m){
  const uuid=m.publicationWorkspaceId,url=core.bosaDocuments(uuid);
  if(!url)throw Error('Identifiant workspace BOSA manquant ou invalide');
@@ -161,10 +187,11 @@ async function fetchBOSA(m){
   }
   const parsed=core.parseDocumentRows(DOM.rows,m,url,out.checkedAt);
   out.documents=parsed.documents;out.sources=[{source:'BOSA — onglet Documents',kind:'documents_portal',url,verified:true,checkedAt:out.checkedAt},...parsed.external];
+  out.bulkDocumentDownload=await verifyBosaBulk(page,m,parsed.documents,url,out.checkedAt);
   out.status='accessible';
   out.audit={source:'BOSA',status:'accessible',document_rows:parsed.documents.length,
    external_catalogues:parsed.external.length,deadline_candidates:deadlines.slice(0,3),
-   deadline_verified:!!out.deadlineVerified,deadline_value:out.deadline?.value||'',deadline_evidence:out.deadlineEvidenceText||'',warning:'Fichiers référencés dans la liste publique; téléchargement direct et contenu non encore analysés.'};
+   deadline_verified:!!out.deadlineVerified,deadline_value:out.deadline?.value||'',deadline_evidence:out.deadlineEvidenceText||'',bundle_verified:out.bulkDocumentDownload?.verified===true,warning:'Fichiers référencés dans la liste publique; téléchargement direct et contenu non encore analysés.'};
   return out;
  }catch(err){out.status='failed';out.error=String(err.message).slice(0,240);out.audit={source:'BOSA',status:'failed',error:out.error};return out}
  finally{await context.close().catch(()=>{})}
