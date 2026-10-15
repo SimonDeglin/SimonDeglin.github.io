@@ -361,7 +361,7 @@ function renderCoverageStrip(){
  var all=allMarkets();
  var countBySource=function(source){return all.filter(function(m){return m.source===source||(m.officialSources||[]).some(function(s){return s.source===source})}).length};
  var sources=state.sources||{};
- var bosa=sources.BOSA||{},local=sources.LOCALE||{};
+ var bosa=sources.BOSA||{},local=sources.LOCALE||{},communes=sources.COMMUNES||{},municipalDocs=sources.COMMUNES_DOCUMENTS||{};
  var bosaConnected=(bosa.status==='accessible'||bosa.status==='partial')&&!!bosa.last_success;
  var bosaComplete=bosa.status==='accessible';
  var bosaOld=bosa.last_success&&(Date.now()-new Date(bosa.last_success).getTime()>48*60*60*1000);
@@ -373,9 +373,9 @@ function renderCoverageStrip(){
  box.innerHTML=span('TED',countBySource('TED')+' fiches · '+tedDate,true)+
   span('BOSA',bosaConnected?countBySource('BOSA')+' fiches · '+(bosaComplete?'veille active':'veille partielle')+(bosaOld?' · à actualiser':''):countBySource('BOSA')+' fiche(s) · collecte non confirmée',bosaConnected&&!bosaOld)+
   span('Sources locales',localConnected?countBySource('LOCALE')+' pistes · veille partielle':countBySource('LOCALE')+' piste(s) · veille non vérifiée',localConnected)+
-  span('Communes',local.municipalitiesTotal?
-    (local.deliberationSourcesRead||0)+' / '+local.municipalitiesTotal+' sources communales lues':'annuaire en cours de raccordement',
-    !!local.deliberationSourcesRead)+
+  span('Communes',communes.total?
+    (communes.sitesChecked||0)+' / '+communes.total+' sites examinés · '+(communes.candidatePages||0)+' pistes de sources · '+(municipalDocs.documents_read||0)+' documents lus':
+    'annuaire en cours de raccordement',!!(municipalDocs.documents_read>0))+
   '<a class="coverage-detail-link" href="./communes.html" title="Voir les communes et l’état réel des sources">Voir les communes →</a>';
 }
 function renderNav(){
