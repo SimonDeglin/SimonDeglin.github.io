@@ -1518,6 +1518,16 @@ async function detectIndexFromImage(){
   }
  }finally{scanBusy=false;scanDeadline=0;retry.disabled=false;}
 }
+async function scanPreviewReady(){
+ const image=$('#scan-preview');
+ if(typeof image.decode==='function')await image.decode();
+ else if(!image.complete)await new Promise((resolve,reject)=>{
+  image.onload=resolve;
+  image.onerror=()=>reject(new Error('Photo illisible'));
+ });
+ if(!image.naturalWidth||!image.naturalHeight)throw new Error('Photo illisible');
+}
+
 $('#scan-file').onchange=async e=>{
  const file=e.target.files?.[0];if(!file)return;
  try{
@@ -1532,7 +1542,7 @@ $('#scan-file').onchange=async e=>{
   showScanKind();
   $('#scan-message').textContent='Préparation de la lecture…';
   modal('scan-overlay');
-  const image=$('#scan-preview');if(!image.complete)await new Promise(ok=>{image.onload=ok;image.onerror=ok});
+  await scanPreviewReady();
   prepareScanFrame(true);
  }catch(err){toast('Impossible de lire cette photo.')}
  e.target.value='';
@@ -1551,8 +1561,7 @@ $('#scan-rotate').onclick=async()=>{
   scanCrop=null;scanAutoZones=null;scanLastText='';scanLastData=null;
   $('#scan-preview').src=pendingImage;
   $('#scan-crop-box').classList.add('hidden');
-  const photo=$('#scan-preview');
-  if(!photo.complete)await new Promise(ok=>{photo.onload=ok;photo.onerror=ok});
+  await scanPreviewReady();
   prepareScanFrame(true);
  }catch(err){toast('Impossible de tourner la photo.')}
  finally{button.disabled=false}
