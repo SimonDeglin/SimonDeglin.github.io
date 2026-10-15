@@ -8,13 +8,13 @@ $('siteTitle').textContent=siteName;
 $('returnLink').href='index.html?site='+encodeURIComponent(siteId)+'&tab=cubature';
 $('missingBack').href=$('returnLink').href;
 let THREE=null,OrbitControls=null,scene=null,renderer=null,camera=null,orbit=null,patch=null,geometryData=null;
-let terrainObject=null,fillObject=null,wireObject=null,viewMode='compare',activeScenario='center',verticalFactor=1,loading=false,refreshHandle=null;
+let terrainObject=null,fillObject=null,wireObject=null,viewMode='compare',activeScenario='center',verticalFactor=1,loading=false,refreshHandle=null,transientLevel=null,transientScenario=null;
 const nf=(x,d=0)=>Number.isFinite(Number(x))?new Intl.NumberFormat('fr-BE',{maximumFractionDigits:d}).format(Number(x)):'—';
 function readDb(){try{return JSON.parse(localStorage.getItem(STORE_KEY)||'{}')}catch{return {}}}
 function getStudy(db=readDb()){return db.studies?.[siteId]||null}
 function settings(db=readDb()){const q=getStudy(db)?.quick||{};return{...q,level:Number.isFinite(Number(q.level))&&q.level!==null?Number(q.level):null}}
 function currentLevels(q=settings()) {const lev=q.level,delta=Math.max(0,Number(q.delta)||2);return {low:q.lowLevel!==null&&q.lowLevel!==undefined&&q.lowLevel!==''&&Number.isFinite(Number(q.lowLevel))?Number(q.lowLevel):lev===null?null:lev-delta,center:lev,high:q.highLevel!==null&&q.highLevel!==undefined&&q.highLevel!==''&&Number.isFinite(Number(q.highLevel))?Number(q.highLevel):lev===null?null:lev+delta}}
-function valueOfScenario(q=settings()){return currentLevels(q)[activeScenario]}
+function valueOfScenario(q=settings()){return transientLevel!==null&&transientScenario===activeScenario?transientLevel:currentLevels(q)[activeScenario]}
 function writeLevel(scenario,value){if(!Number.isFinite(value))return;const db=readDb(),st=db.studies?.[siteId];if(!st){missing('Dossier manquant','Le dossier est introuvable dans le stockage local de ce navigateur. Retourner à la fiche du site.');return}
  const q=st.quick||(st.quick={mode:'simple',level:null,delta:2,depth:8,depthDelta:2});
  const prev=currentLevels(q),newLevels={...prev,[scenario]:value};
@@ -127,7 +127,7 @@ function updateControls(){if(!patch)return;const q=settings(),levels=currentLeve
  $('zLow').value=levels.low??'';$('zCentral').value=levels.center??'';$('zHigh').value=levels.high??'';
  $('zValue').value=lev??'';const slider=$('zSlider');const min=Math.floor(Math.min(patch.zmin-5,lev??patch.zmin)-5),max=Math.ceil(Math.max(patch.zmax+10,lev??patch.zmax)+5);slider.min=min;slider.max=max;slider.value=lev??min;
 }
-function setScenario(k){activeScenario=k;updateControls();scheduleFill()}
+function setScenario(k){transientLevel=null;transientScenario=null;activeScenario=k;updateControls();scheduleFill()}
 function setMode(k){viewMode=k;updateControls();scheduleFill()}
 function resetCamera(top=false){if(!patch||!orbit)return;const dim=Math.max(patch.x1-patch.x0,patch.y1-patch.y0),dist=Math.max(70,dim*1.6,(patch.zmax-patch.zmin)*3);
  camera.position.set(top?0:dist*.7,top?dist*1.1:dist*.75,top?0.001:dist*.7);camera.up.set(0,1,0);orbit.update();}
@@ -138,7 +138,7 @@ function wireUI(){document.querySelectorAll('[data-display]').forEach(b=>b.addEv
  $('zDown').onclick=()=>{const v=valueOfScenario();if(v!==null)writeLevel(activeScenario,Math.round((v-.5)*2)/2)};
  $('zUp').onclick=()=>{const v=valueOfScenario();if(v!==null)writeLevel(activeScenario,Math.round((v+.5)*2)/2)};
  $('zValue').onchange=e=>writeLevel(activeScenario,Number(e.target.value));
- $('zSlider').oninput=e=>writeLevel(activeScenario,Number(e.target.value));
+ $('zSlider').oninput=e=>{transientScenario=activeScenario;transientLevel=Number(e.target.value);$('zValue').value=transientLevel;scheduleFill()};$('zSlider').onchange=e=>{const z=Number(e.target.value);transientLevel=null;transientScenario=null;writeLevel(activeScenario,z)};
  for(const [input,scenario]of [['zLow','low'],['zCentral','center'],['zHigh','high']])$(input).onchange=e=>writeLevel(scenario,Number(e.target.value));
  window.addEventListener('storage',e=>{if(e.key!==STORE_KEY)return;const st=getStudy();if(patch&&st&&patch.geometryStamp!==geometryStamp(st)){missing('La surface a changé','L’emprise a été modifiée dans la fiche. Rouvrir la vue 3D pour préparer un nouveau MNT.');return}updateControls();scheduleFill()});
  window.addEventListener('message',e=>{if(e.origin!==location.origin||e.data?.siteId!==siteId)return;if(e.data?.type==='KDRIX_3D_PATCH_READY')loadPatch();if(e.data?.type==='KDRIX_3D_PATCH_ERROR')missing('MNT 3D indisponible',String(e.data.message))});
