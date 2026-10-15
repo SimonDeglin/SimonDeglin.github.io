@@ -200,7 +200,17 @@ function combine(old,newItems){
   merged.score=Math.max(prior.score||0,n.score||0);
   merged.noticeNumbers=[...new Set([...(prior.noticeNumbers||[]),...(prior.relatedNoticeNumbers||[]),prior.publicationNumber,n.publicationNumber].filter(Boolean))];
   merged.procedureIdentifier=n.procedureIdentifier||prior.procedureIdentifier||'';
-  merged.deadline=latest?(n.deadline||prior.deadline):(prior.deadline||n.deadline);
+  // A daily import only has dates: it must not erase a verified Phase 3A timestamp.
+  if(prior.deadlineEvidence?.verified===true&&prior.deadline){
+   merged.deadline=prior.deadline;
+   if(n.deadline&&(
+      n.deadline.slice(0,10)!==prior.deadline.slice(0,10)||
+      prior.deadlineEvidence.publicationNumber&&prior.deadlineEvidence.publicationNumber!==n.publicationNumber
+   )){
+    merged.deadlineReview={candidateDate:n.deadline,notice:n.publicationNumber,
+      reason:'nouvelle_publication_a_verifier',checkedAt:new Date().toISOString()};
+   }
+  }else merged.deadline=latest?(n.deadline||prior.deadline):(prior.deadline||n.deadline);
   merged.description=merged.description||prior.description||n.description;
   merged.source_status=n.source_status;
   const rating=classify(merged.title,merged.description,merged.cpv||[]);
