@@ -57,10 +57,12 @@ async function enrichRecord(m,fetcher=fetch){
  const api=endpoints(m.publicationWorkspaceId),[d,u]=await Promise.all([jsonArray(api.documents,fetcher),jsonArray(api.urls,fetcher)]);
  const copy={...m},changes=[];
  if(d.ok){
-  copy.documentInventory=normalizeDocuments(d.data,m.publicationWorkspaceId,api.documents);
+  const fresh=normalizeDocuments(d.data,m.publicationWorkspaceId,api.documents);
+  // Une liste vide ne doit pas effacer un inventaire précédemment confirmé.
+  if(fresh.length||!Array.isArray(copy.documentInventory))copy.documentInventory=fresh;
   copy.documentsPageUrl='https://www.publicprocurement.be/publication-workspaces/'+m.publicationWorkspaceId+'/documents';
   copy.documentsPageSource='public_api_200';
-  changes.push('inventory:'+copy.documentInventory.length);
+  changes.push('inventory:'+(copy.documentInventory||[]).length);
  }
  if(u.ok){
   copy.consultationUrls=normalizeConsultationUrls(u.data,api.urls);
