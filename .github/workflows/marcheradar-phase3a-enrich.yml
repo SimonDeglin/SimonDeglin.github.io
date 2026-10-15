@@ -1,0 +1,56 @@
+name: "MarchéRadar 3A — Enrichissement validé"
+on:
+  push:
+    branches: ["feature/marcheradar-phase3a-documents-20261015"]
+    paths:
+      - "marcheradar/tools/bosa-documents-enrich.cjs"
+      - "marcheradar/tests/phase3a-bosa.test.cjs"
+      - "marcheradar/detail-phase2.js"
+      - ".github/workflows/marcheradar-phase3a-enrich.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Unit tests Phase 3A
+        run: node --test marcheradar/tests/phase3a-bosa.test.cjs
+      - name: Collect BOSA metadata (never invent document URLs)
+        run: node marcheradar/tools/bosa-documents-enrich.cjs --write
+      - name: Validate enriched data before allowing branch update
+        run: |
+          node -e "const d=require('./marcheradar/data.json'); if(d.items.length!==64)throw Error('Market count changed');let n=d.items.reduce((s,m)=>s+(m.documentInventory||[]).length,0);console.log('BOSA_DOCUMENTS_INDEXED='+n);if(n<1)throw Error('No document manifest confirmed from public API')"
+      - name: Install Chromium for regression tests
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install chromium
+      - name: Regression Phase 1
+        run: node marcheradar/tests/phase1-browser.cjs
+      - name: Regression Phase 2
+        run: node marcheradar/tests/phase2-browser.cjs
+      - name: Commit validated data on isolated development branch only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add marcheradar/data.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Phase 3A: inventaire BOSA public validé automatiquement"
+            git push origin HEAD:feature/marcheradar-phase3a-documents-20261015
+          fi
+      - name: Save diagnostic reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: marcheradar-phase3a-enriched
+          if-no-files-found: ignore
+          path: |
+            marcheradar/audit/phase3a-enriched-data.json
+            marcheradar/audit/phase3a-enrichment-report.json
