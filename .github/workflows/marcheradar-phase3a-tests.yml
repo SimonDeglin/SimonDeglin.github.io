@@ -1,0 +1,55 @@
+name: Marché Radar - Phase 3A - Validation et échantillon réel
+on:
+  push:
+    branches:
+      - feature/marcheradar-phase3a-20261015
+    paths:
+      - marcheradar/tools/phase3a-core.cjs
+      - marcheradar/tools/phase3a-enrich.cjs
+      - marcheradar/tests/phase3a-core.test.cjs
+      - marcheradar/detail-phase2.js
+      - .github/workflows/marcheradar-phase3a-tests.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Vérification syntaxique
+        run: |
+          node --check marcheradar/tools/phase3a-core.cjs
+          node --check marcheradar/tools/phase3a-enrich.cjs
+          node --check marcheradar/detail-phase2.js
+          node --check marcheradar/tests/phase3a-core.test.cjs
+      - name: Tests unitaires Phase 3A
+        run: node --test marcheradar/tests/phase3a-core.test.cjs
+      - name: Installer un navigateur pour la lecture BOSA publique
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install chromium
+      - name: Pilote sur dix marchés officiels et communaux
+        run: node marcheradar/tools/phase3a-enrich.cjs --pilot --write
+      - name: Regressions métier et collecteurs
+        run: |
+          node marcheradar/tools/test-collector.cjs
+          node marcheradar/tools/test-bosa.cjs
+      - name: Non-régression Phase 1
+        run: node marcheradar/tests/phase1-browser.cjs
+      - name: Non-régression Phase 2
+        run: node marcheradar/tests/phase2-browser.cjs
+      - name: Conserver l'échantillon enrichi pour validation
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3a-enrichissement-pilote
+          retention-days: 7
+          if-no-files-found: ignore
+          path: |
+            marcheradar/pilot/phase3a-enrichment.json
+            marcheradar/data.json
