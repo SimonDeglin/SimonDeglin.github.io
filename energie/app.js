@@ -1528,7 +1528,7 @@ async function withScanDeadline(work,ms=18000){
 }
 async function recognizeScanZone(worker,engine,rect,variant,kind){
  const treatment=variant===true?'invert':variant===false?'raw':variant;
- const psm=treatment==='enhanced'?(engine.PSM?.RAW_LINE||'13'):
+ const psm=(treatment==='enhanced'||treatment==='binary')?(engine.PSM?.RAW_LINE||'13'):
   (engine.PSM?.SINGLE_LINE||'7');
  await withScanDeadline(worker.setParameters({
   tessedit_char_whitelist:'0123456789,.',
@@ -1545,7 +1545,7 @@ async function recognizeWithFallback(worker,engine,rect,kind,diagnostics,descrip
   scanAcceptedSingle(t,kind);
  // Do not run OCR until the user presses "Lire les chiffres".
  // Three different preprocessing attempts, sharing one cached worker.
- for(const treatment of ['raw','invert','enhanced']){
+ for(const treatment of ['raw','enhanced','binary','invert']){
   if(scanDeadline&&scanDeadline-Date.now()<1200)break;
   let data;
   try{data=await recognizeScanZone(worker,engine,rect,treatment,kind)}
