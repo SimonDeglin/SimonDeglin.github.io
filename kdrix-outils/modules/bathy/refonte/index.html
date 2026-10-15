@@ -202,8 +202,14 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
  }
  async function seedHistorical(){
   let count=0;
+  const oldValue=(key,empty)=>{try{return JSON.parse(localStorage.getItem('kdrix_bathy_2026_v3_'+key)||'null')??empty}catch(e){return empty}};
+  const oldDrafts=oldValue('drafts',{}),oldSizes=oldValue('sizes',{}),oldStars=oldValue('stars',[]),oldRoutes=oldValue('routes',{});
   for(const src of LEGACY_HISTORIC){
    const prospect=oldEntry(src,false);
+   if(oldDrafts[src.id])prospect.historicalEmailDraft=oldDrafts[src.id];
+   if(oldSizes[src.id])prospect.historicalShapes=oldSizes[src.id];
+   if(oldRoutes[src.id])prospect.historicalRoute=oldRoutes[src.id];
+   if(Array.isArray(oldStars)&&oldStars.includes(src.id))prospect.favorite=true;
    if(prospects.has(prospect.id))continue;
    await write('prospects',prospect);prospects.set(prospect.id,prospect);count++;
   }
@@ -285,6 +291,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   const city=$('city').value.trim(),r=Number($('radius').value);
   if(city!==scope.city||r!==scope.radius){
    const ok=await apply();if(!ok)return;
+   if(selectedOnly){status('Territoire modifié. Sélectionnez une zone sur la carte avant de lancer une recherche ciblée.');return}
   }
   await scan(!!selectedOnly);
  }
@@ -507,12 +514,14 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
  }
  function historicBlock(p){
   const h=p.history;if(!h||typeof h!=='object')return '';
-  const facts=[['Information publiée',h.fact],['Origine de l’information',h.factDate],['Prestation envisageable',h.what],['Utilité pour l’exploitant',h.decision],['Réserves et incertitudes',h.reservation],['Justification commerciale initiale',h.grounds],['Contact alternatif',p.altContact]];
+  const facts=[['Niveau d’intérêt initial',h.potential],['Information publiée',h.fact],['Origine de l’information',h.factDate],['Prestation envisageable',h.what],['Utilité pour l’exploitant',h.decision],['Réserves et incertitudes',h.reservation],['Justification commerciale initiale',h.grounds],['Position indicative',h.pointNote],['Précision d’emprise',h.sitepoint],['Contact alternatif',p.altContact]];
   const content=facts.filter(([,v])=>v).map(([label,val])=>'<p><b>'+safe(label)+' :</b> '+safe(val)+'</p>').join('');
   const src=renderSourceLinks(p);
   return '<details class="history"><summary>Dossier historique KDRIX · informations et sources d’origine</summary>'+
    content+(src?'<h3>Sources documentaires</h3><ul>'+src+'</ul>':'')+
    (h.subject?'<p><b>Objet commercial rédigé :</b> '+safe(h.subject)+'</p>':'')+
+   (p.historicalShapes?.shapes?.length?'<p><b>Anciennes emprises mesurées :</b> '+safe(p.historicalShapes.shapes.length)+' forme(s) conservée(s) dans les données historiques.</p>':'')+
+   (p.historicalEmailDraft?.body?'<details><summary>Voir le dernier courriel personnalisé sauvegardé</summary><p><b>Objet :</b> '+safe(p.historicalEmailDraft.subject||'')+'</p><p style="white-space:pre-wrap">'+safe(p.historicalEmailDraft.body)+'</p></details>':'')+
    (h.emailBody?'<details><summary>Voir le courriel commercial historique</summary><p style="white-space:pre-wrap">'+safe(h.emailBody)+'</p></details>':'')+
    '<p class="caption">Les informations historiques sont conservées telles qu’elles figuraient dans le dossier initial. Vérifiez leur actualité avant de contacter.</p></details>';
  }
@@ -549,7 +558,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
  }
  function formValues(base){
   const read=id=>$(id)?.value?.trim()??'';
-  const latitude=read('pLat'),longitude=read('pLon'),area=read('pArea');
+  const latitude=read('pLat').replace(',','.'),longitude=read('pLon').replace(',','.'),area=read('pArea').replace(',','.');
   const lat=latitude===''?null:Number(latitude),lon=longitude===''?null:Number(longitude);
   if(!read('pName'))throw Error('Indiquez le nom du prospect.');
   if((lat!==null&&!Number.isFinite(lat))||(lon!==null&&!Number.isFinite(lon))||(lat!==null&&lon===null)||(lat===null&&lon!==null))throw Error('Les deux coordonnées doivent être présentes et valides, ou toutes deux laissées vides.');
