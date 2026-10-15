@@ -15,6 +15,7 @@ L'application conserve ses **64 marchés** : 14 TED, 16 BOSA, 34 LOCALE au momen
 - `marcheradar/detail-phase2.js` : module autonome de présentation des informations, dates, sources, visites et exigences, avec échappement HTML et rejet des liens dangereux.
 - `marcheradar/detail-phase2.css` : fiche plus large et sections de lecture distinctes, affichage adapté aux écrans étroits.
 - `marcheradar/index.html` : intégration ciblée, sans refonte des listes ni du stockage local.
+- **Mode dégradé** : si le module documentaire ne se charge pas, les 64 marchés restent consultables et une fiche simplifiée permet toujours le classement et la prise de notes.
 - `marcheradar/tests/phase2-module.test.cjs` : tests unitaires des provenances, échéances, titres, documents, visites et informations incertaines.
 - `marcheradar/tests/phase2-browser.cjs` : test fonctionnel dans Chromium, y compris données réelles, source communale, mobile, persistance de notes et filtres.
 - `.github/workflows/marcheradar-phase2-tests.yml` : validation automatique des Phases 1 et 2 à chaque modification du module.
@@ -30,13 +31,15 @@ L'application conserve ses **64 marchés** : 14 TED, 16 BOSA, 34 LOCALE au momen
 
 ## Tests
 
-**Workflow validé sur branche isolée :** [Tests Phase 2](https://github.com/SimonDeglin/SimonDeglin.github.io/actions/runs/38737053321).
+**Workflow validé sur branche isolée :** [Tests Phase 2](https://github.com/SimonDeglin/SimonDeglin.github.io/actions/runs/38737829086).
 
 Résultats :
 - Tests unitaires : succès (aucune erreur).
 - Tests Chromium Phase 1 : 64 marchés chargés, classement, compteurs, filtres, stockage et retour : succès.
 - Tests Chromium Phase 2 : TED, BOSA, document communal, avis de résultat, liens source, visite avec preuve et visite sans preuve, champs inconnus, contre-exemples XSS, notes, classement et affichage mobile : succès.
 - Captures produites dans l'artefact `marcheradar-phase2-captures` de ce workflow, pour revue visuelle complémentaire.
+- Captures vérifiées sur ordinateur et sur mobile (lisibilité de la fiche, bouton de source, notes et classement).
+- Un test complémentaire simule une erreur de chargement du module externe : les listes et la sauvegarde doivent rester disponibles.
 
 ## Limitations explicites
 
