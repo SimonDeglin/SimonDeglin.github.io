@@ -31,7 +31,7 @@ async function getHtml(url){
   return {url:r.url,content:(await r.text()).slice(0,1200000)};
  }finally{clearTimeout(timeout)}
 }
-function eligible(records){return records.filter(x=>x.officialSite&&x.zone!=='exterieure')
+function eligible(records){return records.filter(x=>x.officialSite)
  .sort((a,b)=>(a.lastSiteCheck||'').localeCompare(b.lastSiteCheck||'')||(a.ins||'').localeCompare(b.ins||''))}
 async function run(){
  const idx=JSON.parse(fs.readFileSync(INVENTORY,'utf8'));
@@ -43,9 +43,19 @@ async function run(){
    const site=await getHtml(commune.officialSite);
    const found=links(site.content,site.url);
    const merged=new Map((commune.deliberationSources||[]).map(s=>[s.url,s]));
-   for(const x of found)merged.set(x.url,x);
+   for(const x of found){
+    const previous=merged.get(x.url);
+    if(previous?.status==='page_accessible'){merged.set(x.url,previous);continue;}
+    // Une page de délibérations n'est exploitable qu'après lecture HTML effective.
+    // Les liens PDF directs sont traités par un collecteur dédié, pas comme des pages.
+    if(/\.pdf(?:$|[?#])/i.test(x.url)){merged.set(x.url,{...x,status:'document_pdf_a_analyser'});continue;}
+    try{
+     const verified=await getHtml(x.url);
+     merged.set(x.url,{...x,url:verified.url,status:'page_accessible',last_success:today});
+    }catch(e){merged.set(x.url,{...x,status:'lien_public_repere_non_analyse',last_error:String(e.message||e).slice(0,120)});}
+   }
    commune.deliberationSources=[...merged.values()];
-   commune.sourceStatus=found.length?'pages_candidates_trouvees':'site_lu_sources_non_localisees';
+   commune.sourceStatus=commune.deliberationSources.some(x=>x.status==='page_accessible')?'pages_conseils_verifiees':found.length?'pages_candidates_trouvees':'site_lu_sources_non_localisees';
    commune.errors=[];
    results.push({name:commune.name,links:found.length});
   }catch(e){
