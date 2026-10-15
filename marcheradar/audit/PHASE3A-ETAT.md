@@ -29,4 +29,23 @@ L'accès simple au HTML public ne permet pas encore de récupérer les CSC. Les 
 4. Mettre à jour les fiches `data.json` **uniquement** pour les pièces et dates dont le lien, la source et l'accessibilité ont été prouvés.
 5. Relancer les tests des Phases 1–2 et les tests de nouvelles données avant publication.
 
-**État :** la phase 3A est en cours, non livrable à ce stade. La branche publique `main` n'a pas été modifiée.
+## Résultats complémentaires — inventaires réels BOSA
+
+Les tests en navigateur ont observé les rubriques officielles « Documents » de cinq marchés BOSA et les réponses JSON publiques de leurs API documentaires.
+
+L'enrichissement généralisé de la branche de développement a confirmé :
+- 64 marchés conservés, sans changement d'identifiants.
+- 15 dossiers BOSA avec récupération de métadonnées publiques.
+- 25 pièces identifiées par nom, format, version et référence source, réparties entre 3 marchés.
+- 3 URL de consultation documentaire externe publiées officiellement sur BOSA.
+- 16 pièces répertoriées pour la bathymétrie des étangs de Bruxelles Environnement, dont un CSC français et des annexes.
+
+Les noms de fichiers et les identifiants sont issus de l'API publique ; aucun fichier n'est déclaré téléchargé ni analysé.
+Le code conserve les anciens inventaires si une réponse de source devient vide ou inaccessible.
+La fiche indique « pièce répertoriée — accès à vérifier », distinctement des fichiers directement liés.
+
+**Limite majeure :** aucune date limite nouvelle n'a encore été vérifiée ou mise à jour. La lecture effective du contenu des CSC et la vérification des téléchargements demeurent à réaliser.
+
+**Validation :** tests unitaires documentaires et tests de non-régression Chromium Phases 1 et 2 exécutés dans GitHub Actions sur la branche de développement.
+
+**Conclusion :** première tranche fonctionnelle de la Phase 3A, encore incomplète pour les échéances et le téléchargement direct.
