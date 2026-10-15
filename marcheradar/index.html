@@ -698,7 +698,7 @@ function renderList(){
    '<div class="tender-body"><div class="tender-top"><div class="tag-group">'+tags+'</div><span class="micro-tag">'+esc(m.source==='Démo'?'FICTIF':(m.source||'TED'))+'</span>'+
    (current!=='inbox'?'<span class="status-tag '+current+'">'+esc(stageName(current))+'</span>':'')+(m.screening==='review'?'<span class="micro-tag">À vérifier</span>':m.screening==='excluded'?'<span class="micro-tag">Correspondance écartée automatiquement</span>':'')+(m.awards&&m.awards.length?'<span class="micro-tag result-published">Résultat publié</span>':'')+'</div>'+
    '<h3 class="open-tender" role="button" tabindex="0">'+esc(m.title)+'</h3>'+
-   '<div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+'Publié le '+fmtShort(m.publication)+'</span></div>'+MRDetailV2.listHints(m)+'</div>'+
+   '<div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+'Publié le '+fmtShort(m.publication)+'</span></div>'+(window.MRDetailV2&&typeof MRDetailV2.listHints==='function'?MRDetailV2.listHints(m):'')+'</div>'+
    '<div class="tender-end"><div class="end-meta"><button class="star'+(saved.favorites[m.id]?' on':'')+'" title="Favori" aria-label="Favori" data-star="'+esc(m.id)+'">'+svg('star',true)+'</button><span class="end-date">'+(m.deadline?'Éch. '+fmtShort(m.deadline):m.source==='LOCALE'&&m.screening!=='excluded'?'Prospection — échéance non publiée':'Échéance non publiée')+'</span><span class="days'+dc+'">'+esc(label)+'</span></div>'+
    '<select class="move-select" data-move="'+esc(m.id)+'" aria-label="Dossier de suivi">'+WORKFLOW.map(function(s){return '<option value="'+esc(s.id)+'"'+(s.id===current?' selected':'')+'>'+esc(s.label)+'</option>'}).join('')+'</select></div></article>';
  }).join('');
@@ -763,7 +763,21 @@ function openTender(id){
  el('drawerEyebrow').textContent=m.source==='LOCALE'?'DOSSIER DE PROSPECTION · SOURCE LOCALE':'PUBLICATION · '+(m.source||'À VÉRIFIER');
  el('drawerHeader').textContent='Fiche du marché';
  // Le module externe ne revendique aucune extraction documentaire non effectuée.
- var report=MRDetailV2.render(m);
+ var report;
+ try {
+  if(!window.MRDetailV2||typeof MRDetailV2.render!=='function')throw Error('Module documentaire indisponible');
+  report=MRDetailV2.render(m);
+ } catch(e) {
+  // Ne jamais empêcher l'accès aux marchés si le module documentaire manque.
+  var fallbackLink=link(m);
+  report={
+   html:'<div class="mr2-intro"><h3 class="drawer-title">'+esc(m.title)+'</h3><p class="drawer-desc">'+esc(m.description||'')+'</p></div>'+
+    '<div class="detail-grid"><div class="detail-field"><label>Pouvoir adjudicateur</label><div>'+esc(m.buyer||'Non communiqué')+'</div></div>'+
+    '<div class="detail-field"><label>Date limite</label><div>'+esc(fmtDate(m.deadline))+'</div></div></div>'+
+    '<p class="legal-note">Module documentaire temporairement indisponible. Les marchés, les notes et les classements restent accessibles.</p>',
+   primary:fallbackLink?{url:fallbackLink,kind:'notice'}:null
+  };
+ }
  el('drawerBody').innerHTML=report.html+
  (Array.isArray(m.awards)&&m.awards.length?'<section class="mr2-section">'+awardsMarkup(m)+'</section>':'')+
  '<div class="drawer-label">Dossier de suivi KDRIX</div><select class="control-select" id="statusSelect">'+WORKFLOW.map(function(s){
