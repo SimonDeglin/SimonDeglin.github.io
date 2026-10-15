@@ -28,10 +28,14 @@ test('analyse tracée par numéro de document, version, SHA-256 et numéro de pa
  assert.equal(m.reviewStatus,'to_verify');
  assert(m.evidence.some(x=>x.page===2));
  assert(!m.downloadUrl&&!m.deadline&&!m.visit,'Pas de lien temporaire ni de fait inventé');
+ const existing=Array.isArray(market.documentAnalyses)?market.documentAnalyses:[];
+ const originalReference=market.documentAnalyses;
+ const priorCount=existing.length;
+ const wasPresent=existing.some(x=>x.documentId===m.documentId);
  const merged=mergeAnalysis(market,m);
  assert(merged.updated);
- assert.equal(merged.market.documentAnalyses.length,1);
- assert.equal(market.documentAnalyses,undefined,'Source initiale immuable');
+ assert.equal(merged.market.documentAnalyses.length,priorCount+(wasPresent?0:1));
+ assert.strictEqual(market.documentAnalyses,originalReference,'Source initiale immuable');
  const unchanged=mergeAnalysis(merged.market,{...m,extractedAt:'2026-10-15T18:00:00.000Z'});
  assert.equal(unchanged.updated,false,'La même analyse ne génère pas de nouvelle publication');
  assert.strictEqual(unchanged.market,merged.market);
