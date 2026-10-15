@@ -7,7 +7,7 @@
   "coverage": {
     "TED": "collecte automatique active",
     "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 93 page(s) parcourue(s) depuis 2026-09-30.",
-    "communal": "Veille progressive sur 20 communes avec page de conseil lue ; 21 sites municipaux vérifiés sur 261 répertoriés. Zone de trajet indicative, non routière."
+    "communal": "Veille pilote communale : 34 extraits bruts, 1 piste(s) à vérifier et 33 extraits écartés. Les sites et les données doivent être contrôlés avant prospection."
   },
   "metrics": {
     "scanned": 1350,
@@ -59,7 +59,17 @@
     "local_documents": 33,
     "local_opportunities": 0,
     "local_communes_checked": 24,
-    "local_new_opportunities": 34
+    "local_new_opportunities": 34,
+    "municipal_candidates_detected": 34,
+    "municipal_candidates_pending_review": 1,
+    "municipal_candidates_excluded": 33,
+    "municipal_exclusion_reasons": {
+      "document_historique_2023": 1,
+      "document_historique_2022": 4,
+      "intention_de_mission_non_etablie": 15,
+      "navigation_ou_information_generale": 10,
+      "document_historique_2024": 3
+    }
   },
   "items": [
     {
@@ -1231,7 +1241,7 @@
         "Hydro"
       ],
       "score": 68,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1250,7 +1260,8 @@
           "source": "Site communal officiel",
           "url": "https://www.beyne-heusay.be/sites/default/files/pv-conseil/Pv-cc-230130.pdf"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_document_historique_2023"
     },
     {
       "id": "communal:c3599ff87890bfb78368",
@@ -1263,7 +1274,7 @@
         "VRD"
       ],
       "score": 52,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "etude_a_prevoir",
       "source": "LOCALE",
@@ -1282,7 +1293,8 @@
           "source": "Site communal officiel",
           "url": "https://www.beyne-heusay.be/sites/default/files/pv-conseil/Pv-cc-221201.pdf"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_document_historique_2022"
     },
     {
       "id": "communal:3194b52888377b68a5ac",
@@ -1295,7 +1307,7 @@
         "VRD"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1314,7 +1326,8 @@
           "source": "Site communal officiel",
           "url": "https://www.beyne-heusay.be/sites/default/files/pv-conseil/Pv-cc-221201.pdf"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_document_historique_2022"
     },
     {
       "id": "communal:90dcfbe31cac9e4aa7cd",
@@ -1327,7 +1340,7 @@
         "VRD"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1346,7 +1359,8 @@
           "source": "Site communal officiel",
           "url": "https://www.beyne-heusay.be/sites/default/files/pv-conseil/Pv-cc-221201.pdf"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_document_historique_2022"
     },
     {
       "id": "communal:7e9464973f8c2bf653df",
@@ -1360,7 +1374,7 @@
         "Foncier"
       ],
       "score": 68,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1379,7 +1393,8 @@
           "source": "Site communal officiel",
           "url": "https://www.beyne-heusay.be/sites/default/files/pv-conseil/Pv-cc-221201.pdf"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_document_historique_2022"
     },
     {
       "id": "communal:e316891cd5dc3b0595e5",
@@ -1392,7 +1407,7 @@
         "Hydraulique"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1411,7 +1426,8 @@
           "source": "Site communal officiel",
           "url": "https://www.chaudfontaine.be/ma-commune/vie-politique-participation/chaudfontaine-demain/"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
       "id": "communal:2b207c11f31dd9f80dd3",
@@ -1424,7 +1440,7 @@
         "Hydraulique"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1443,7 +1459,8 @@
           "source": "Site communal officiel",
           "url": "https://www.chaudfontaine.be/ma-commune/vie-politique-participation/chaudfontaine-demain/"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
       "id": "communal:f2b63c0c91e00efd5fe2",
@@ -1456,7 +1473,7 @@
         "Foncier"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1475,7 +1492,8 @@
           "source": "Site communal officiel",
           "url": "https://www.grace-hollogne.be/ma-commune/vie-politique"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_navigation_ou_information_generale"
     },
     {
       "id": "communal:2033430ca5727b4d99a8",
@@ -1488,7 +1506,7 @@
         "Foncier"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1507,7 +1525,8 @@
           "source": "Site communal officiel",
           "url": "https://www.grace-hollogne.be/ma-commune/vie-politique/conseil-communal"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_navigation_ou_information_generale"
     },
     {
       "id": "communal:84530b20295059869ff4",
@@ -1520,7 +1539,7 @@
         "Foncier"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1539,7 +1558,8 @@
           "source": "Site communal officiel",
           "url": "https://www.grace-hollogne.be/ma-commune/vie-politique/college-communal"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_navigation_ou_information_generale"
     },
     {
       "id": "communal:d8e9d0a156c037851fe3",
@@ -1552,7 +1572,7 @@
         "VRD"
       ],
       "score": 52,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1571,7 +1591,8 @@
           "source": "Site communal officiel",
           "url": "https://www.grace-hollogne.be/ma-commune/vie-politique/college-communal"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
       "id": "communal:c52909b7af07ab9306c4",
@@ -1584,7 +1605,7 @@
         "VRD"
       ],
       "score": 52,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1603,7 +1624,8 @@
           "source": "Site communal officiel",
           "url": "https://www.grace-hollogne.be/ma-commune/vie-politique/college-communal"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
       "id": "communal:54c20f0e5800720e4664",
@@ -1616,7 +1638,7 @@
         "VRD"
       ],
       "score": 52,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1635,7 +1657,8 @@
           "source": "Site communal officiel",
           "url": "https://www.grace-hollogne.be/ma-commune/vie-politique/college-communal"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
       "id": "communal:5bde4edd6eb83624ab79",
@@ -1648,7 +1671,7 @@
         "PEB"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1667,7 +1690,8 @@
           "source": "Site communal officiel",
           "url": "https://www.grace-hollogne.be/ma-commune/vie-politique/college-communal"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
       "id": "communal:32ab943c69bed7d1aa23",
@@ -1680,7 +1704,7 @@
         "VRD"
       ],
       "score": 68,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "prestataire_designe",
       "source": "LOCALE",
@@ -1699,7 +1723,8 @@
           "source": "Site communal officiel",
           "url": "https://www.grace-hollogne.be/ma-commune/vie-politique/college-communal"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
       "id": "communal:bc8c19de6b665df2a5b4",
@@ -1712,7 +1737,7 @@
         "VRD"
       ],
       "score": 68,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "prestataire_designe",
       "source": "LOCALE",
@@ -1731,7 +1756,8 @@
           "source": "Site communal officiel",
           "url": "https://www.grace-hollogne.be/ma-commune/vie-politique/college-communal"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
       "id": "communal:a9348c51d0efbc23abc3",
@@ -1744,7 +1770,7 @@
         "Foncier"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1763,7 +1789,8 @@
           "source": "Site communal officiel",
           "url": "https://www.grace-hollogne.be/ma-commune/vie-politique/conseil-de-laction-sociale"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_navigation_ou_information_generale"
     },
     {
       "id": "communal:efd68bc674476b43a4fc",
@@ -1776,7 +1803,7 @@
         "VRD"
       ],
       "score": 52,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1795,7 +1822,8 @@
           "source": "Site communal officiel",
           "url": "http://www.soumagne.be/manager/upload/files/PDF/odd/objectifs_developpement_durable.pdf"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
       "id": "communal:e45e3c804654791dac86",
@@ -1808,7 +1836,7 @@
         "VRD"
       ],
       "score": 52,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1827,7 +1855,8 @@
           "source": "Site communal officiel",
           "url": "http://www.soumagne.be/manager/upload/files/PDF/odd/objectifs_developpement_durable.pdf"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
       "id": "communal:f5af85827929f847ddc4",
@@ -1840,7 +1869,7 @@
         "VRD"
       ],
       "score": 52,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1859,7 +1888,8 @@
           "source": "Site communal officiel",
           "url": "http://www.soumagne.be/manager/upload/files/PDF/odd/objectifs_developpement_durable.pdf"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
       "id": "communal:1a7941834f7cc113ccfc",
@@ -1873,7 +1903,7 @@
         "Hydraulique"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1892,7 +1922,8 @@
           "source": "Site communal officiel",
           "url": "http://www.soumagne.be/manager/upload/files/PDF/odd/objectifs_developpement_durable.pdf"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
       "id": "communal:c75548970616d54c4b50",
@@ -1906,7 +1937,7 @@
         "PEB"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1925,7 +1956,8 @@
           "source": "Site communal officiel",
           "url": "http://www.soumagne.be/manager/upload/files/PDF/odd/objectifs_developpement_durable.pdf"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
       "id": "communal:28bc64cd3a8ffaca60d8",
@@ -1938,7 +1970,7 @@
         "Hydraulique"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "etude_a_prevoir",
       "source": "LOCALE",
@@ -1957,7 +1989,8 @@
           "source": "Site communal officiel",
           "url": "https://www.trooz.be/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale/dpc-finalisee-au-9-janvier-2024.pdf"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_document_historique_2024"
     },
     {
       "id": "communal:2c9cf49fa2354f15e324",
@@ -1970,7 +2003,7 @@
         "VRD"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -1989,7 +2022,8 @@
           "source": "Site communal officiel",
           "url": "https://www.trooz.be/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale/dpc-finalisee-au-9-janvier-2024.pdf"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_document_historique_2024"
     },
     {
       "id": "communal:55cd15534a3b69ddf1c5",
@@ -2002,7 +2036,7 @@
         "Hydraulique"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -2021,7 +2055,8 @@
           "source": "Site communal officiel",
           "url": "https://www.trooz.be/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale/dpc-finalisee-au-9-janvier-2024.pdf"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_document_historique_2024"
     },
     {
       "id": "communal:642c542c96c54627e2e8",
@@ -2034,7 +2069,7 @@
         "VRD"
       ],
       "score": 52,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "prestataire_designe",
       "source": "LOCALE",
@@ -2053,7 +2088,8 @@
           "source": "Site communal officiel",
           "url": "https://www.fexhe-le-haut-clocher.be/ma-commune/vie-politique/conseil-communal"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
       "id": "communal:f21a4926381a223952f5",
@@ -2070,7 +2106,7 @@
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
-      "source_status": "detection_a_verifier",
+      "source_status": "prospection_a_confirmer_sans_consultation_publique",
       "publication": "",
       "dateSource": null,
       "dateMention": null,
@@ -2085,7 +2121,8 @@
           "source": "Site communal officiel",
           "url": "https://www.crisnee.be/images/conseil/pv/1.PV%20du%2022%2006%202026.pdf"
         }
-      ]
+      ],
+      "screeningReason": null
     },
     {
       "id": "communal:e99cbce359f12fb1e9d0",
@@ -2099,7 +2136,7 @@
         "Foncier"
       ],
       "score": 52,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -2118,7 +2155,8 @@
           "source": "Site communal officiel",
           "url": "https://www.crisnee.be/images/conseil/pv/1.PV%20du%2022%2006%202026.pdf"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
       "id": "communal:337ac89559fe7dd90405",
@@ -2131,7 +2169,7 @@
         "Hydraulique"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -2150,7 +2188,8 @@
           "source": "Site communal officiel",
           "url": "https://www.crisnee.be/images/conseil/pv/1.PV%20du%2022%2006%202026.pdf"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_navigation_ou_information_generale"
     },
     {
       "id": "communal:be54dd83c1cfb1440cf1",
@@ -2163,7 +2202,7 @@
         "Hydraulique"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -2182,7 +2221,8 @@
           "source": "Site communal officiel",
           "url": "https://www.crisnee.be/images/conseil/pv/1.PV%20du%2022%2006%202026.pdf"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_navigation_ou_information_generale"
     },
     {
       "id": "communal:b1861eb1b20ae4efcd0c",
@@ -2195,7 +2235,7 @@
         "Hydraulique"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -2214,7 +2254,8 @@
           "source": "Site communal officiel",
           "url": "https://www.olne.be/vie-politique"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_navigation_ou_information_generale"
     },
     {
       "id": "communal:d258e32f7d908b1fa316",
@@ -2227,7 +2268,7 @@
         "Hydraulique"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -2246,7 +2287,8 @@
           "source": "Site communal officiel",
           "url": "https://www.olne.be/vie-politique/declaration-de-politique-generale"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_navigation_ou_information_generale"
     },
     {
       "id": "communal:07edeccaeb445e3f452b",
@@ -2259,7 +2301,7 @@
         "Hydraulique"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -2278,7 +2320,8 @@
           "source": "Site communal officiel",
           "url": "https://www.olne.be/vie-politique/college-communal"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_navigation_ou_information_generale"
     },
     {
       "id": "communal:d208ee01437ef647cb7e",
@@ -2291,7 +2334,7 @@
         "Hydraulique"
       ],
       "score": 66,
-      "screening": "review",
+      "screening": "excluded",
       "opportunityType": "prospection",
       "opportunityStage": "projet_evoque",
       "source": "LOCALE",
@@ -2310,7 +2353,8 @@
           "source": "Site communal officiel",
           "url": "https://www.olne.be/vie-politique/conseil-communal"
         }
-      ]
+      ],
+      "screeningReason": "verification_locale_navigation_ou_information_generale"
     }
   ],
   "sources": {
