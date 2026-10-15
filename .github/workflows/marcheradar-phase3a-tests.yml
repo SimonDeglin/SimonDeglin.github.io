@@ -6,6 +6,7 @@ on:
     paths:
       - marcheradar/tools/phase3a-core.cjs
       - marcheradar/tools/phase3a-enrich.cjs
+      - marcheradar/tools/phase3a-validate.cjs
       - marcheradar/tests/phase3a-core.test.cjs
       - marcheradar/tests/phase3a-browser.cjs
       - marcheradar/tools/collect-ted.cjs
@@ -37,8 +38,12 @@ jobs:
         run: |
           npm install --no-save --no-package-lock playwright
           npx playwright install chromium
+      - name: Snapshot des données avant enrichment
+        run: cp marcheradar/data.json /tmp/marcheradar-3a-before.json
       - name: Pilote sur dix marchés officiels et communaux
         run: node marcheradar/tools/phase3a-enrich.cjs --pilot --write
+      - name: Vérification de l'intégrité du portefeuille
+        run: node marcheradar/tools/phase3a-validate.cjs /tmp/marcheradar-3a-before.json marcheradar/data.json marcheradar/pilot/phase3a-enrichment.json
       - name: Regressions métier et collecteurs
         run: |
           node marcheradar/tools/test-collector.cjs
