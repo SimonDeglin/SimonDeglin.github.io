@@ -76,6 +76,8 @@ function screen(m){
   if(local&&/(reamenagement|rehabilitation|transformation|creation|renovation|investissement|programme)/.test(both)&&
     /(voirie|espace public|place communale|cours d'eau|reseau|terrain communal|batiment communal|bassin d'orage)/.test(both))
    return {reason:null,classification:{sector:'VRD',sectors:['VRD'],score:52,screening:'review',matchReason:'projet_communal_indirect'}};
+  if(/(?:assistance technique|prestations intellectuelles|prestations de services techniques|etude preparatoire|programme pluriannuel)/.test(both)&&/(voirie|ouvrage|terrain|reseau|amenagement|infrastructure|patrimoine|eau|rehabilitation)/.test(both))
+   return {reason:null,classification:{sector:'VRD',sectors:['VRD'],score:46,screening:'review',matchReason:'prestation_technique_a_verifier'}};
   if(TECH.test(both)&&/(voirie|ouvrage|terrain|reseau|amenagement|infrastructure|patrimoine|eau)/.test(both))
    return {reason:null,classification:{sector:'VRD',sectors:['VRD'],score:49,screening:'review',matchReason:'mission_technique_generique'}};
   return {reason:'aucun_signal_metier',classification:null};
