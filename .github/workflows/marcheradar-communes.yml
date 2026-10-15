@@ -29,8 +29,15 @@ jobs:
           COMMUNES_BATCH: "12"
         run: node marcheradar/tools/communes-discovery.cjs
         continue-on-error: true
-      - name: "Enregistrer seulement les changements valides"
+      - name: "Lire les documents communaux accessibles"
+        id: documents
         if: steps.collect.outcome == 'success'
+        env:
+          COMMUNES_DOC_BATCH: "4"
+        run: node marcheradar/tools/communes-documents.cjs
+        continue-on-error: true
+      - name: "Enregistrer seulement les changements valides"
+        if: steps.collect.outcome == 'success' || steps.documents.outcome == 'success'
         continue-on-error: true
         shell: bash
         run: |
