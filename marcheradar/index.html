@@ -551,7 +551,7 @@ function todayInBrussels(){
 }
 function marketDueStatus(m){
  var raw=String(m.deadline||'').trim();
- if(!raw)return m.source==='LOCALE'?'open':'unknown';
+ if(!raw)return m.source==='LOCALE'&&m.screening!=='excluded'?'open':'unknown';
  if(/^\d{4}-\d{2}-\d{2}$/.test(raw)){
   var parsed=new Date(raw+'T12:00:00Z');
   if(isNaN(parsed.getTime())||parsed.toISOString().slice(0,10)!==raw)return 'unknown';
@@ -685,7 +685,7 @@ function renderList(){
   el('resetFilters').addEventListener('click',function(){state.sector='all';state.region='all';state.due='all';state.query='';el('search').value='';el('region').value='all';el('dueFilter').value='all';render()});return;
  }
  el('resultsList').innerHTML=list.map(function(m){
-  var d=daysLeft(m.deadline),due=marketDueStatus(m),label=!m.deadline?(m.source==='LOCALE'?'Prospection':'À vérifier'):due==='unknown'?'À vérifier':d===null?'Date à vérifier':d<0?'Date dépassée':d===0?"Aujourd'hui":'J-'+d;
+  var d=daysLeft(m.deadline),due=marketDueStatus(m),label=!m.deadline?(m.source==='LOCALE'&&m.screening!=='excluded'?'Prospection':'À vérifier'):due==='unknown'?'À vérifier':d===null?'Date à vérifier':d<0?'Date dépassée':d===0?"Aujourd'hui":'J-'+d;
   var dc=d!==null&&d<0?' over':d!==null&&d<=14?' urgent':'';
   var color=m.score>=85?'#4fa786':m.score>=65?'#d6a65f':'#9ab1c6';
   var current=stageOf(m.id);
@@ -697,7 +697,7 @@ function renderList(){
    (current!=='inbox'?'<span class="status-tag '+current+'">'+esc(stageName(current))+'</span>':'')+(m.screening==='review'?'<span class="micro-tag">À vérifier</span>':m.screening==='excluded'?'<span class="micro-tag">Correspondance écartée automatiquement</span>':'')+(m.awards&&m.awards.length?'<span class="micro-tag result-published">Résultat publié</span>':'')+'</div>'+
    '<h3 class="open-tender" role="button" tabindex="0">'+esc(m.title)+'</h3>'+
    '<div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+'Publié le '+fmtShort(m.publication)+'</span></div></div>'+
-   '<div class="tender-end"><div class="end-meta"><button class="star'+(saved.favorites[m.id]?' on':'')+'" title="Favori" aria-label="Favori" data-star="'+esc(m.id)+'">'+svg('star',true)+'</button><span class="end-date">'+(m.deadline?'Éch. '+fmtShort(m.deadline):m.source==='LOCALE'?'Prospection — échéance non publiée':'Échéance non publiée')+'</span><span class="days'+dc+'">'+esc(label)+'</span></div>'+
+   '<div class="tender-end"><div class="end-meta"><button class="star'+(saved.favorites[m.id]?' on':'')+'" title="Favori" aria-label="Favori" data-star="'+esc(m.id)+'">'+svg('star',true)+'</button><span class="end-date">'+(m.deadline?'Éch. '+fmtShort(m.deadline):m.source==='LOCALE'&&m.screening!=='excluded'?'Prospection — échéance non publiée':'Échéance non publiée')+'</span><span class="days'+dc+'">'+esc(label)+'</span></div>'+
    '<select class="move-select" data-move="'+esc(m.id)+'" aria-label="Dossier de suivi">'+WORKFLOW.map(function(s){return '<option value="'+esc(s.id)+'"'+(s.id===current?' selected':'')+'>'+esc(s.label)+'</option>'}).join('')+'</select></div></article>';
  }).join('');
  el('resultsList').querySelectorAll('.open-tender').forEach(function(node){
