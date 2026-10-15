@@ -14,7 +14,8 @@ const script=html.match(/<script>([\s\S]*?)<\/script>/);
 assert(script,'script principal introuvable');
 new vm.Script(script[1]);
 new vm.Script(fs.readFileSync(path.join(mdir,'detail-phase2.js'),'utf8'));
-assert.equal(data.items.length,64);
+assert(data.items.length>=64,'La base historique doit être conservée');
+const visibleMarkets=data.items.filter(m=>m.region!=='Flandre').length;
 assert.match(html,/src="detail-phase2\.js"/);
 assert.match(html,/href="detail-phase2\.css"/);
 const contentTypes={'.html':'text/html; charset=utf-8','.json':'application/json; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml'};
@@ -50,8 +51,8 @@ function fixture(id,changes){
   const cx=await browser.newContext({viewport:{width:1440,height:920}});
   const page=await cx.newPage();attach(page);
   await page.goto(address,{waitUntil:'domcontentloaded'});
-  await ready(page,64);
-  assert.equal(await page.locator('.mr2-list-hints').count(),64);
+  await ready(page,visibleMarkets);
+  assert.equal(await page.locator('.mr2-list-hints').count(),visibleMarkets);
   const bosa=data.items.find(m=>m.source==='BOSA'&&m.noticeKind==='award');
   const ted=data.items.find(m=>m.source==='TED');
   const local=data.items.find(m=>m.source==='LOCALE'&&m.sourceDocument);
@@ -67,6 +68,17 @@ function fixture(id,changes){
   assert(bosaLinks.some(l=>l.includes('www.publicprocurement.be/')));
   assert.equal(await page.locator('.drawer-footer a.primary').count(),1);
   await page.locator('#closeDrawer').click();
+  // Données BOSA effectivement collectées : distinction inventaire / pièce téléchargeable.
+  const bathy=data.items.find(m=>m.source==='BOSA'&&m.documentInventory?.length>=16);
+  assert(bathy,'Inventaire BOSA réel absent du test');
+  await article(page,bathy).locator('.open-tender').click();
+  const detailText=await page.locator('#drawerBody').innerText();
+  assert.match(detailText,/pièce\(s\) répertoriée\(s\)/);
+  assert.match(detailText,/CCH.*Bathymetrie/i);
+  assert.match(detailText,/Les fichiers ne sont pas encore téléchargés ni analysés/i);
+  const documentsLink=await page.locator('.mr2-source-link').evaluateAll(nodes=>nodes.map(x=>x.href));
+  assert(documentsLink.some(url=>url.endsWith('/documents')),'Le lien vers la rubrique Documents officielle est absent');
+  await page.locator('#closeDrawer').click();
   await article(page,ted).locator('.open-tender').click();
   assert.match(await page.locator('.mr2-intro').innerText(),/PUBLICATION OFFICIELLE/);
   const tedPrimary=await page.locator('.drawer-footer a.primary').getAttribute('href');
@@ -79,7 +91,7 @@ function fixture(id,changes){
   await page.screenshot({path:path.join(mdir,'tests/phase2-desktop.png'),animations:'disabled'});
   await page.locator('#closeDrawer').click();
   await cx.close();
-  console.log('OK : 64 marchés réels, fiches TED/BOSA/locales et sources documentaires');
+  console.log('OK : '+visibleMarkets+' marchés réels, fiches TED/BOSA/locales et sources documentaires');
   const m=fixture('fixture:verified',{
     title:'<img src=x onerror=alert(1)> Levé de contrôle',
     visit:{status:'required',verified:true,date:'2026-11-02',time:'10:15',place:'Chantier A',
@@ -135,13 +147,13 @@ function fixture(id,changes){
   const broken=await resilient.newPage();attach(broken);
   await broken.route('**/marcheradar/detail-phase2.js',route=>route.abort('failed'));
   await broken.goto(address,{waitUntil:'domcontentloaded'});
-  await ready(broken,64);
+  await ready(broken,visibleMarkets);
   await broken.locator('article.tender .open-tender').first().click();
   assert.match(await broken.locator('#drawerBody').innerText(),/Module documentaire temporairement indisponible/);
   assert.equal(await broken.locator('#saveTender').count(),1);
   await broken.locator('#marketNotes').fill('Test de fiche simplifiée');
   await broken.locator('#saveTender').click();
-  assert.equal(await broken.locator('.tender').count(),64);
+  assert.equal(await broken.locator('.tender').count(),visibleMarkets);
   await resilient.close();
   console.log('OK : affichage des marchés préservé quand le module Phase 2 ne charge pas');
   console.log('OK : visites prouvées/non prouvées, documents, sécurité XSS, conditions, responsive et suivi');

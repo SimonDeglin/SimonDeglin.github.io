@@ -82,6 +82,12 @@
    if(!d||typeof d!=='object')return;
    add(d.url||d.href,str(d.title||d.label)||docKind(d),'document',d.sourcePage?'Page '+d.sourcePage:'Lien renseigné — accessibilité à vérifier');
   });
+  // Adresse de la rubrique Documents relevée sur le portail officiel.
+  // Une rubrique accessible n'est PAS un fichier CSC vérifié.
+  if(m.documentsPageUrl)add(m.documentsPageUrl,'Ouvrir la rubrique Documents e-Procurement','portal_documents','Liste officielle des pièces — présence et téléchargement à vérifier');
+  (Array.isArray(m.consultationUrls)?m.consultationUrls:[]).forEach(function(x){
+   if(x&&x.url)add(x.url,'Documents hébergés par un prestataire externe','external_consultation','Lien référencé par BOSA — fichiers et accès à vérifier');
+  });
   (Array.isArray(m.officialSources)?m.officialSources:[]).forEach(function(d){
    if(!d||typeof d!=='object')return;
    var origin=str(d.source).toLowerCase(),url=str(d.url);
@@ -167,7 +173,16 @@
     '<div class="mr2-highlight"><strong>Aucun fichier de marché indexé</strong><p>Le cahier spécial des charges, les plans et les bordereaux ne sont pas encore récupérés automatiquement. Utiliser les publications officielles ci-dessous pour les rechercher.</p></div>';
   docsBody+='<h5 class="mr2-mini-title">Publications et documents sources</h5>'+
     (others.length?'<div class="mr2-link-list">'+others.map(external).join('')+'</div>':'<p class="mr2-empty">Aucun lien source exploitable renseigné.</p>');
-  var documents=section('Accès aux documents',docsBody,docs.length+' fichier(s) indexé(s)');
+  var inventory=Array.isArray(m.documentInventory)?m.documentInventory:[];
+  if(inventory.length){
+   docsBody='<h5 class="mr2-mini-title">'+inventory.length+' pièce(s) répertoriée(s) dans le registre public BOSA</h5>'+
+   '<p class="mr2-footnote">Les intitulés et identifiants proviennent de l’API publique. Les fichiers ne sont pas encore téléchargés ni analysés. Ouvrir la rubrique Documents pour consulter les pièces.</p>'+
+   '<div class="mr2-requirements">'+inventory.slice(0,50).map(function(x){
+    return '<div class="mr2-requirement"><strong>'+esc(x.title||'Fichier sans intitulé')+'</strong>'+
+    '<small>'+esc(x.fileType||'format non renseigné')+' · '+esc(x.language||'langue non renseignée')+' · accès à vérifier</small></div>';
+   }).join('')+'</div>'+docsBody;
+  }
+  var documents=section('Accès aux documents',docsBody,inventory.length+' pièce(s) répertoriée(s) · '+docs.length+' fichier(s) lié(s)');
   var reqBody='<div class="mr2-highlight"><strong>'+(req.some(function(x){return x.verified})?'Éléments documentés et éléments à contrôler':'Conditions de participation non analysées')+'</strong>'+
    '<p>'+(!req.length?'Les références professionnelles, capacités techniques, critères de sélection et critères d’attribution doivent être consultés dans les documents officiels. Aucun de ces éléments n’a été vérifié par l’application.':'La présence dans cette fiche ne dispense pas de contrôler les exigences et leurs éventuels rectificatifs.')+'</p></div>';
   if(req.length)reqBody+='<div class="mr2-requirements">'+req.map(function(x){
@@ -191,7 +206,8 @@
   var v=visitState(m);
   var vLabel=v.kind==='required'?'Visite obligatoire':v.kind==='optional'?'Visite facultative':v.kind==='review'?'Visite à vérifier':'Visite non renseignée';
   var source=primarySource(m),docs=safeDocs(m);
-  var dLabel=docs.length?docs.length+' document(s) indexé(s)':source?'Accès à la source':'Source non renseignée';
+  var inv=Array.isArray(m.documentInventory)?m.documentInventory:[];
+  var dLabel=inv.length?inv.length+' pièce(s) répertoriée(s) — accès à vérifier':docs.length?docs.length+' document(s) indexé(s)':source?'Accès à la source':'Source non renseignée';
   return '<div class="mr2-list-hints">'+(m.noticeKind==='award'?'<span>Avis de résultat</span>':'')+'<span>'+esc(vLabel)+'</span><span>'+esc(dLabel)+'</span></div>';
  }
  return {render:render,status:status,sources:sources,primarySource:primarySource,visitState:visitState,requirements:requirements,linkUrl:linkUrl,listHints:listHints};

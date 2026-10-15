@@ -10,7 +10,7 @@ const api=require('../detail-phase2.js');
 const real=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data.json'),'utf8'));
 function market(overrides){return {id:'test:01',title:'Marché topo',source:'TED',screening:'main',publication:'2026-10-10',deadline:'2026-10-22',description:'Levé topographique',region:'Wallonie',cpv:['71351810'],...overrides}}
 test('les 64 fiches sont intactes et la structure de la Phase 2 est disponible',()=>{
- assert.equal(real.items.length,64);
+ assert(real.items.length>=64,'Au minimum 64 marchés historiques doivent être conservés');
  assert.equal(real.items.filter(m=>m.source==='TED').length,14);
  assert.equal(real.items.filter(m=>m.source==='BOSA').length,16);
  assert.equal(real.items.filter(m=>m.source==='LOCALE').length,34);
