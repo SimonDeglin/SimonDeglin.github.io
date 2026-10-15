@@ -73,6 +73,13 @@ function pdfText(bytes){
   return cp.execFileSync('pdftotext',['-layout',target,'-'],{timeout:15000,encoding:'utf8',maxBuffer:8_000_000});
  }finally{try{fs.unlinkSync(target)}catch(e){}}
 }
+function htmlText(html){
+ const text=String(html||'').replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,' ')
+  .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi,' ')
+  .replace(/<\/?(?:p|div|h[1-6]|li|tr|br|article|section)\b[^>]*>/gi,'\n')
+  .replace(/<[^>]+>/g,' ');
+ return text.split(/\r?\n/).map(line=>clean(line)).filter(Boolean).join('\n');
+}
 function excerpts(raw){
  const text=String(raw||'');
  if(!text.trim())return [];
@@ -140,7 +147,7 @@ async function scanCommune(commune){
    const r=await fetchBytes(item.url,5000000);
    let text='';
    if(DOC.test(r.url)||/^%PDF/.test(r.bytes.slice(0,6).toString()))text=pdfText(r.bytes);
-   else text=clean(r.bytes.toString('utf8'));
+   else text=htmlText(r.bytes.toString('utf8'));
    if(text.length<80)continue; // Ne pas qualifier une page JavaScript vide de source connectée.
    examined++;
    sources.push({url:item.url,title:item.title,type:/deliberations\.be/.test(item.url)?'deliberations_be':'site_communal',
