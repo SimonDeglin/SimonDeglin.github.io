@@ -184,9 +184,16 @@ function merge(existing,newItems){
    publicationWorkspaceId:record.publicationWorkspaceId||before.publicationWorkspaceId,
    officialSources:sources
   };
+  const oldVerified=before.deadlineEvidence?.verified===true&&!!before.deadline;
   if(record.publication>(before.publication||'')){
    result.publication=record.publication;
-   if(record.deadline)result.deadline=record.deadline;
+   if(record.deadline){
+    if(oldVerified){
+     if(record.deadline.slice(0,10)!==before.deadline.slice(0,10))
+      result.deadlineReview={candidateDate:record.deadline,notice:record.bdaReference||record.internalReference,
+       reason:'avis_BOSA_nouvelle_date_a_verifier',checkedAt:new Date().toISOString()};
+    }else result.deadline=record.deadline;
+   }
   }else if(!result.deadline&&record.deadline)result.deadline=record.deadline;
   if(record.noticeKind==='award'){
    const notices=Array.isArray(before.bosaResults)?before.bosaResults.slice():[];
