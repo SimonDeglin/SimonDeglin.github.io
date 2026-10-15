@@ -117,7 +117,7 @@ function opportunity(commune,document,text){
   score:Math.min(68,classification.score),screening:'review',
   opportunityType:'prospection',opportunityStage:councilStage(text),
   source:'LOCALE',source_status:'detection_a_verifier',
-  publication:'',dateSource:dateFromText(text),deadline:'',cpv:[],
+  publication:'',dateSource:null,dateMention:dateFromText(text),deadline:'',cpv:[],
   description:'Extrait du document public : '+text+'\nLe document complet doit être vérifié avant tout contact commercial.',
   evidence:text,url:document.url,sourceDocument:document.url,
   officialSources:[{source:'Site communal officiel',url:document.url}]
@@ -141,6 +141,7 @@ async function scanCommune(commune){
    let text='';
    if(DOC.test(r.url)||/^%PDF/.test(r.bytes.slice(0,6).toString()))text=pdfText(r.bytes);
    else text=clean(r.bytes.toString('utf8'));
+   if(text.length<80)continue; // Ne pas qualifier une page JavaScript vide de source connectée.
    examined++;
    sources.push({url:item.url,title:item.title,type:/deliberations\.be/.test(item.url)?'deliberations_be':'site_communal',
     last_success:new Date().toISOString(),documentsRead:1});
@@ -167,8 +168,8 @@ async function run(){
  if(!fs.existsSync(REGISTRY))throw Error('Exécuter le répertoire ODWB avant la collecte communale');
  const registry=JSON.parse(fs.readFileSync(REGISTRY,'utf8'));
  const data=JSON.parse(fs.readFileSync(DATA,'utf8'));
- const eligible=registry.communes.filter(x=>x.zone!=='exterieure_provisoire');
- const ordered=eligible.sort((a,b)=>String(a.lastSiteCheck||'').localeCompare(String(b.lastSiteCheck||'')));
+ const eligible=registry.communes.filter(x=>x.zone!=='exterieure_provisoire'&&x.officialSite);
+ const ordered=eligible.sort((a,b)=>String(a.lastSiteCheck||'').localeCompare(String(b.lastSiteCheck||''))+(a.estimatedMinutes||999)-(b.estimatedMinutes||999));
  const selected=ordered.slice(0,Math.min(30,Math.max(1,BATCH)));
  const existing=new Set((data.items||[]).map(x=>x.id));
  const added=[];let sitesOK=0,docsRead=0,errors=0;
