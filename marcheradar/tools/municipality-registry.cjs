@@ -40,14 +40,15 @@ function zone(estimated,road){
 function normalize(row,previous){
  const f=row||{},ins=String(f.ins??f.INS??f.code_ins??'').trim();
  const name=String(f.nom||f.nom_court||'').trim();
- const website=String(f.site_web||f.siteweb||'').trim();
+ const rawWebsite=String(f.site_web||f.siteweb||'').trim();
+ const website=/^www\.[a-z0-9.-]+$/i.test(rawWebsite)?'https://'+rawWebsite:rawWebsite;
  const point=coords(f.geopoint_administration)||coords(f.centroid);
  if(!name||!/^\d{5}$/.test(ins))return null;
  if(website){try{const u=new URL(website);if(!/^https?:$/.test(u.protocol))return null}catch(e){return null}}
  const km=point?Math.round(haversine(point,LIEGE_APPROX)*10)/10:null;
  const estimate=km===null?null:approxMinutes(km);
  const old=previous||{};
- const road=Number.isFinite(old.route_minutes)?old.route_minutes:null;
+ const road=Number.isFinite(old.roadMinutes)?old.roadMinutes:null;
  return {
   ins,name,officialSite:website,postCode:String(f.cp||''),municipalAddress:String(f.adresse||''),
   coordinates:point,
