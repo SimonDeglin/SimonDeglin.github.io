@@ -316,10 +316,10 @@ function active(m){var d=daysLeft(m.deadline);return d===null||d>=0}
 function dueStatus(m){
  if(m.source==='LOCALE'&&!m.deadline)return 'open';
  if(!m.deadline)return 'unknown';
- var dt=parseDate(m.deadline);if(!dt||isNaN(dt.getTime()))return 'unknown';
- // Dates sans heure : une offre peut encore être déposée pendant la journée de clôture.
- var d=String(m.deadline);
- if(/^\d{4}-\d{2}-\d{2}$/.test(d)){dt.setHours(23,59,59,999)}
+ var d=String(m.deadline),dt=parseDate(d);if(!dt||isNaN(dt.getTime()))return 'unknown';
+ // Dates avec heure explicite : conserver l'heure publiée et le fuseau indiqué.
+ if(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(d)){dt=new Date(d);if(isNaN(dt.getTime()))return 'unknown'}
+ else dt.setHours(23,59,59,999);
  return dt.getTime()>=Date.now()?'open':'closed';
 }
 function matchesBaseFilters(m){
@@ -557,21 +557,7 @@ function moveMarket(id,code){
  save();render();toast('Marché classé : '+stageName(code));
 }
 function trackCount(){return allMarkets().filter(function(m){return stageOf(m.id)!=='inbox'&&stageOf(m.id)!=='discarded'}).length}
-function filtered(){
- var list=allMarkets().filter(function(m){
-  var tags=m.sectors||tagsOf(m);
-  if(!tags.some(function(s){return !saved.hiddenSectors[s]}))return false;
-  if(!matchesSectorFilter(tags))return false;
-  if(state.region!=='all'&&m.region!==state.region)return false;
-  if(isStage(state.view)&&stageOf(m.id)!==state.view)return false;
-  if(state.view==='inbox'&&(m.screening==='review'||m.screening==='excluded'))return false;
-  if(state.view==='review'&&!(m.screening==='review'&&stageOf(m.id)==='inbox'))return false;
-  if(state.view!=='catalogue'&&m.screening==='excluded'&&stageOf(m.id)==='inbox')return false;
-  if(state.view==='favorites'&&!saved.favorites[m.id])return false;
-  if(state.view==='urgent'){var d=daysLeft(m.deadline);if(d===null||d<0||d>14)return false}
-  var q=norm(state.query).trim();
-  return !q||norm([m.title,m.description,m.buyer,m.region,tags.join(' '),(m.cpv||[]).join(' ')].join(' ')).includes(q);
- });
+
  list.sort(function(a,b){
   if(state.sort==='recent')return (b.publication||'').localeCompare(a.publication||'');
   if(state.sort==='deadline'){
