@@ -1,0 +1,322 @@
+{
+  "version": 1,
+  "updated": "2026-10-15",
+  "description": "Dictionnaire de détection KDRIX. Les expressions sont des indices positifs, pas une condition d'exclusion définitive.",
+  "families": [
+    {
+      "id": "mesurage",
+      "title": "Mesurage",
+      "categories": [
+        {
+          "id": "Topo",
+          "keywords": [
+            "levé topographique",
+            "relevé de terrain",
+            "levé altimétrique",
+            "levé planimétrique",
+            "nivellement",
+            "profils en long",
+            "profils en travers",
+            "plan de l'existant",
+            "levés d'ouvrages",
+            "cubatures",
+            "volumétrie",
+            "mesurage de bâtiment",
+            "modèle numérique de terrain",
+            "contrôle géométrique",
+            "géomètre",
+            "tachéométrie",
+            "levés de carrières",
+            "plans de récolement",
+            "modification de relief",
+            "remblais et déblais"
+          ]
+        },
+        {
+          "id": "Scan",
+          "keywords": [
+            "scanner laser 3D",
+            "LiDAR terrestre",
+            "nuage de points",
+            "scan to BIM",
+            "modélisation 3D de l'existant",
+            "relevé de façade",
+            "relevé intérieur",
+            "relevé d'ouvrage d'art",
+            "jumeau numérique",
+            "maquette BIM existante"
+          ]
+        },
+        {
+          "id": "Drone",
+          "keywords": [
+            "photogrammétrie",
+            "relevé par drone",
+            "orthophotographie",
+            "orthomosaïque",
+            "LiDAR aérien",
+            "photographie aérienne technique",
+            "modélisation par drone",
+            "orthophotoplan"
+          ]
+        },
+        {
+          "id": "Hydro",
+          "keywords": [
+            "bathymétrie",
+            "hydrographie",
+            "échosondage",
+            "sonar",
+            "levé de rivière",
+            "levé de cours d'eau",
+            "relevé d'étang",
+            "plan d'eau",
+            "carrière inondée",
+            "cartographie des fonds",
+            "mesure de profondeur",
+            "sédimentation",
+            "sondage sédimentaire",
+            "volume immergé"
+          ]
+        },
+        {
+          "id": "Monitoring",
+          "keywords": [
+            "auscultation d'ouvrages",
+            "monitoring topographique",
+            "surveillance de déformation",
+            "suivi de tassements",
+            "suivi géométrique",
+            "contrôle de stabilité géométrique",
+            "suivi de mouvements de terrain"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "voirie",
+      "title": "Projet voirie",
+      "categories": [
+        {
+          "id": "VRD",
+          "keywords": [
+            "auteur de projet",
+            "bureau d'études voirie",
+            "mission d'ingénierie",
+            "conception de voirie",
+            "étude de voirie",
+            "aménagement d'espace public",
+            "études préalables",
+            "cahier spécial des charges",
+            "métrés et bordereaux",
+            "dimensionnement de chaussée",
+            "mobilité douce",
+            "piste cyclable",
+            "RAVeL",
+            "maîtrise d'œuvre",
+            "suivi de travaux de voirie",
+            "avant-projet d'infrastructure"
+          ]
+        },
+        {
+          "id": "Reseaux",
+          "keywords": [
+            "levé de réseaux",
+            "cadastre de réseaux",
+            "repérage d'impétrants",
+            "détection de réseaux",
+            "géoradar",
+            "GPR",
+            "égouttage",
+            "plans de canalisations",
+            "relevé de chambres de visite",
+            "inventaire de réseau",
+            "géoréférencement de conduites",
+            "plan as-built réseaux"
+          ]
+        },
+        {
+          "id": "Hydraulique",
+          "keywords": [
+            "étude hydraulique",
+            "modélisation hydrologique",
+            "jaugeage",
+            "mesure de débit",
+            "ADCP",
+            "station limnimétrique",
+            "station hydrométrique",
+            "bassin d'orage",
+            "bassin de rétention",
+            "ruissellement",
+            "risque d'inondation",
+            "étude de drainage",
+            "aménagement de cours d'eau",
+            "profils hydrauliques",
+            "ouvrage de franchissement"
+          ]
+        },
+        {
+          "id": "PetitsTravaux",
+          "keywords": [
+            "petit aménagement technique",
+            "sécurisation accès station de mesure",
+            "station limnimétrique",
+            "passerelle de mesure",
+            "échelle d'accès technique",
+            "garde-corps technique",
+            "petite structure métallique",
+            "accès hydrométrique"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "geometre",
+      "title": "Géomètre",
+      "categories": [
+        {
+          "id": "Foncier",
+          "keywords": [
+            "bornage",
+            "plan de division",
+            "division parcellaire",
+            "délimitation de propriété",
+            "mesurage cadastral",
+            "plan de lotissement",
+            "plan d'acte de base",
+            "copropriété",
+            "division d'immeuble",
+            "alignement",
+            "servitude",
+            "chemin vicinal",
+            "sentier communal",
+            "vente de terrain communal",
+            "échange de terrain",
+            "acquisition de parcelle",
+            "étude foncière",
+            "emprise"
+          ]
+        },
+        {
+          "id": "Implant",
+          "keywords": [
+            "implantation",
+            "piquetage",
+            "récolement",
+            "contrôle d'implantation",
+            "implantation de bâtiment",
+            "implantation d'ouvrage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expertise",
+      "title": "Expertise",
+      "categories": [
+        {
+          "id": "Expert",
+          "keywords": [
+            "expertise immobilière",
+            "évaluation immobilière",
+            "estimation de valeur vénale",
+            "valeur locative",
+            "expropriation",
+            "expertise foncière",
+            "état descriptif",
+            "estimation de terrain",
+            "évaluation du patrimoine immobilier",
+            "expertise judiciaire"
+          ]
+        },
+        {
+          "id": "PEB",
+          "keywords": [
+            "certificat PEB",
+            "certification énergétique",
+            "certificateur PEB",
+            "performance énergétique bâtiment",
+            "certification bâtiment public",
+            "certificat énergétique résidentiel"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "autres",
+      "title": "Autres",
+      "categories": [
+        {
+          "id": "Carto",
+          "keywords": [
+            "cartographie",
+            "SIG",
+            "GIS",
+            "géomatique",
+            "bases de données géographiques",
+            "géoréférencement",
+            "vectorisation de plans",
+            "orthophotoplan",
+            "inventaire géoréférencé",
+            "cadastre géospatial"
+          ]
+        },
+        {
+          "id": "Relief",
+          "keywords": [
+            "étude de relief",
+            "cubatures de terrain",
+            "calcul de volume",
+            "comparaison LiDAR",
+            "remblai",
+            "déblai",
+            "étude volumétrique",
+            "capacité de stockage"
+          ]
+        }
+      ]
+    }
+  ],
+  "administrativeSignals": [
+    "désignation d'un bureau d'études",
+    "désignation d'un géomètre",
+    "lancement d'une consultation",
+    "marché de services",
+    "approbation d'un cahier spécial des charges",
+    "approbation d'une étude",
+    "budget d'étude",
+    "mission d'auteur de projet",
+    "acquisition de terrain",
+    "vente de parcelle",
+    "plan d'investissement communal",
+    "avant-projet",
+    "programme de travaux",
+    "plan de division",
+    "études préparatoires",
+    "assistance à maîtrise d'ouvrage"
+  ],
+  "negativeContexts": [
+    "achat de balayeuse",
+    "marché d'assurance",
+    "achat de véhicules",
+    "fourniture pharmaceutique",
+    "curage exécuté",
+    "dragage exécuté",
+    "travaux routiers d'exécution",
+    "nettoyage industriel",
+    "fourniture de mobilier"
+  ],
+  "policy": {
+    "softMatchesGoTo": "review",
+    "dontDropOnGenericCPV": true,
+    "ambiguousTerms": [
+      "entretien",
+      "travaux",
+      "voirie",
+      "infrastructure",
+      "aménagement",
+      "réseaux"
+    ],
+    "deduplicatePerProcedure": true
+  }
+}
