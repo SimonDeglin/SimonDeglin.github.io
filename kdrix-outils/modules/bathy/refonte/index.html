@@ -478,8 +478,15 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   if(running&&mode!==tab){status('Arrêtez le lot avant de changer de moteur.',true);return}
   if(!['prospects','company','water'].includes(mode))return;
   tab=mode;selected=null;focus=null;selectedCell=null;showCoverage=false;
-  $('listingActions').classList.toggle('hidden',mode!=='prospects');
-  $('researchControls').classList.toggle('hidden',mode==='prospects');
+  const listing=mode==='prospects';
+  $('listingView').classList.toggle('hidden',!listing);
+  $('researchWorkspace').classList.toggle('hidden',listing);
+  $('listingEditor').classList.add('hidden');
+  if($('detail').parentNode!==$('resultPanel'))$('resultPanel').insertBefore($('detail'),$('results'));
+  $('detail').classList.add('hidden');
+  $('listingActions').classList.toggle('hidden',!listing);
+  $('researchControls').classList.toggle('hidden',listing);
+  if(listing){refreshListingPicker();ensureLegacyView()}else setTimeout(()=>{try{map.invalidateSize();drawMap()}catch(e){}},60);
   document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===mode));
   $('searchTitle').textContent=titleFor(mode);
   $('searchHelp').textContent={company:'Chercher des carrières, golfs, stations d’épuration et sites susceptibles d’avoir des bassins.',water:'Chercher les surfaces d’eau du PICC et vérifier les entreprises éventuellement concernées.',prospects:'Retrouvez vos fiches historiques, vos contacts, observations et démarches commerciales.'}[mode];
