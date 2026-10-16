@@ -285,6 +285,22 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   try{localStorage.setItem(LEGACY_CARDS,JSON.stringify(entries));return true}
   catch(e){status('Prospect conservé dans la base moderne, mais transfert au listing historique impossible : '+e.message,true);return false}
  }
+
+ function persistHistoricOverride(p){
+  if(!p?.isHistorical||!p.updatedAt)return true;
+  const key='kdrix_bathy_v3_historical_overrides';
+  try{
+   const existing=JSON.parse(localStorage.getItem(key)||'{}');
+   if(!existing||Array.isArray(existing)||typeof existing!=='object')throw Error('données de modification historiques non reconnues');
+   existing[p.legacyId]={
+    name:p.name,town:p.town,category:p.category,access:p.address,why:p.interest,
+    site:p.website,contact:{name:p.contactName,role:p.contactRole,email:p.email,phone:p.phone,alt:p.altContact||''},
+    kdrixArchived:!!p.archived,kdrixStatus:p.status,kdrixNotes:p.notes,
+    ...(Number(p.area)>0?{estimatedWaterM2:Number(p.area)}:{})
+   };
+   localStorage.setItem(key,JSON.stringify(existing));return true;
+  }catch(e){status('Fiche sauvegardée, mais mise à jour de son affichage historique indisponible : '+e.message,true);return false}
+ }
  function refreshListingPicker(){
   const picker=$('listingPick'),keep=picker.value;
   picker.replaceChildren(new Option('Modifier une fiche…',''));
@@ -756,19 +772,27 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
    if(similar){alert('Un prospect correspondant existe déjà. Je vous ouvre sa fiche sans ajouter de doublon.');draft=null;selectTab('prospects');showProspect(similar.id);return}
    record.id='prospect:user:'+Date.now()+'-'+Math.random().toString(36).slice(2,9);record.createdAt=new Date().toISOString();
    await write('prospects',record);prospects.set(record.id,record);draft=null;
-   status('Fiche ajoutée à « Mon listing ». Vous pouvez maintenant modifier son suivi commercial.');
-   selectTab('prospects');showProspect(record.id);
+   const mirrored=mirrorIntoOriginal();
+   status(mirrored?'Prospect ajouté au listing, dans la même présentation que les fiches historiques.':'Fiche conservée, mais affichage dans les anciennes cartes à actualiser.');
+   selectTab('prospects');ensureLegacyView(true,mirrored&&record.lat!=null?legacyCard(record)?.id:null);
+   if(!mirrored||record.lat==null||record.lon==null)showProspect(record.id);
   }catch(e){alert('Ajout non enregistré : '+e.message)}
  }
  async function updateProspect(){
   const old=prospects.get(selected?.id);if(!old)return;
-  try{const updated=formValues(old);await write('prospects',updated);prospects.set(updated.id,updated);status('Fiche enregistrée sans perte des données historiques.');showProspect(updated.id);render()}catch(e){alert('Modification non enregistrée : '+e.message)}
+  try{
+   const updated=formValues(old);await write('prospects',updated);prospects.set(updated.id,updated);
+   persistHistoricOverride(updated);mirrorIntoOriginal();refreshListingPicker();ensureLegacyView(true);
+   status('Fiche enregistrée. Le listing historique est actualisé.');showProspect(updated.id);render();
+  }catch(e){alert('Modification non enregistrée : '+e.message)}
  }
  async function archiveProspect(){
   const p=prospects.get(selected?.id);if(!p)return;
   const next=!p.archived;if(!confirm(next?'Retirer la fiche de mon listing ? Elle restera conservée dans la base et les sauvegardes.':'Réintégrer cette fiche dans mon listing ?'))return;
   p.archived=next;p.updatedAt=new Date().toISOString();await write('prospects',p);prospects.set(p.id,p);
-  status(next?'Fiche retirée du listing mais conservée en base.':'Fiche réintégrée.');closeDetail();render();
+  persistHistoricOverride(p);mirrorIntoOriginal();refreshListingPicker();ensureLegacyView(true);
+  status(next?'Fiche retirée du listing mais conservée en base.':'Fiche réintégrée.');
+  closeDetail();render();
  }
  function renderDetail(){
   const inListing=tab==='prospects';
@@ -928,7 +952,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
    if(!cfg?.city||!Number.isFinite(cfg.lat))cfg=PRESETS.liege;
    $('city').value=cfg.city;$('radius').value=cfg.radius;
    const found=Object.entries(PRESETS).find(([k,p])=>p.city===cfg.city&&p.radius===cfg.radius);$('preset').value=found?found[0]:'custom';
-   await seedHistorical();areaApply(cfg);
+   await seedHistorical();mirrorIntoOriginal();areaApply(cfg);
    const requestedTab=new URLSearchParams(window.location.search).get('onglet');
    selectTab(requestedTab==='company'||requestedTab==='water'?requestedTab:'prospects');
   }catch(e){status('Impossible d’initialiser la prospection : '+e.message,true);console.error(e)}
