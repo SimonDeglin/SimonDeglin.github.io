@@ -75,7 +75,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
 <select id="listingPick" aria-label="Sélectionner une fiche pour la modifier"><option value="">Modifier une fiche…</option></select>
 <button id="listingEdit" title="Modifier les coordonnées, notes ou statut d’un prospect existant">Modifier la fiche</button>
 <button id="listingNew" class="primary">+ Nouveau prospect</button>
-</div><iframe id="legacyFrame" title="Listing original : fiches détaillées KDRIX" src="about:blank" loading="eager"></iframe>
+</div><iframe id="legacyFrame" title="Listing original : fiches détaillées KDRIX" data-loaded="1" onload="this.dataset.ready='1'" src="../?embedded=1&amp;view=listing&amp;layout=20261016-v3" loading="eager"></iframe>
 </section>
 <main id="researchWorkspace" class="hidden">
 <section class="panel pad" aria-label="Paramètres et progression">
@@ -336,10 +336,13 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
    frame.dataset.loaded='1';
    frame.addEventListener('load',()=>{frame.dataset.ready='1'},{once:true});
    frame.src='../?embedded=1&view=listing&layout=20261016-v3';
-  }else if(reload&&frame.dataset.ready==='1'){
-   frame.dataset.ready='0';
-   frame.addEventListener('load',()=>{frame.dataset.ready='1'},{once:true});
-   try{frame.contentWindow.location.reload()}catch(e){frame.src='../?embedded=1&view=listing&layout=20261016-v3&refresh='+Date.now()}
+  }else if(reload){
+   const reloadFrame=()=>{
+    frame.dataset.ready='0';
+    try{frame.contentWindow.location.reload()}catch(e){frame.src='../?embedded=1&view=listing&layout=20261016-v3&refresh='+Date.now()}
+   };
+   if(frame.dataset.ready==='1')reloadFrame();
+   else frame.addEventListener('load',()=>reloadFrame(),{once:true});
   }
  }
  function oldEntry(o,manual=false){
@@ -978,7 +981,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
    if(!cfg?.city||!Number.isFinite(cfg.lat))cfg=PRESETS.liege;
    $('city').value=cfg.city;$('radius').value=cfg.radius;
    const found=Object.entries(PRESETS).find(([k,p])=>p.city===cfg.city&&p.radius===cfg.radius);$('preset').value=found?found[0]:'custom';
-   await seedHistorical();mirrorIntoOriginal();areaApply(cfg);
+   await seedHistorical();mirrorIntoOriginal();ensureLegacyView(true);areaApply(cfg);
    const requestedTab=new URLSearchParams(window.location.search).get('onglet');
    selectTab(requestedTab==='company'||requestedTab==='water'?requestedTab:'prospects');
   }catch(e){status('Impossible d’initialiser la prospection : '+e.message,true);console.error(e)}
