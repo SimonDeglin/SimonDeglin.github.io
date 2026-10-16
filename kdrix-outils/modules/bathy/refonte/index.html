@@ -71,7 +71,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
  <button id="tab-water" data-tab="water">3 · Recherche par plan d’eau PICC</button>
  <span>Les recherches proposent des opportunités. Vous seul décidez de les enregistrer.</span>
 </nav>
-<section id="listingView" aria-label="Mon listing historique de prospection"><div class="listing-toolbar"><div class="listing-heading"><strong>Mon listing Bathy</strong><small>Retrouvez la présentation historique, les cartes et toutes les fiches retenues.</small></div>
+<section id="listingView" aria-label="Mon listing historique de prospection"><div class="listing-toolbar"><div class="listing-heading"><strong>Mon listing Bathy</strong><small id="listingHint">Retrouvez la présentation historique, les cartes et toutes les fiches retenues.</small></div>
 <select id="listingPick" aria-label="Sélectionner une fiche pour la modifier"><option value="">Modifier une fiche…</option></select>
 <button id="listingEdit" title="Modifier les coordonnées, notes ou statut d’un prospect existant">Modifier la fiche</button>
 <button id="listingNew" class="primary">+ Nouveau prospect</button>
@@ -771,8 +771,19 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   status(next?'Fiche retirée du listing mais conservée en base.':'Fiche réintégrée.');closeDetail();render();
  }
  function renderDetail(){
-  $('results').classList.add('hidden');$('resultFilters').classList.add('hidden');
-  $('backResults').classList.remove('hidden');$('detail').classList.remove('hidden');
+  const inListing=tab==='prospects';
+  if(inListing){
+   $('listingEditor').classList.remove('hidden');
+   if($('detail').parentNode!==$('listingEditorContent'))$('listingEditorContent').appendChild($('detail'));
+   $('backResults').classList.add('hidden');
+  }else{
+   $('listingEditor').classList.add('hidden');
+   if($('detail').parentNode!==$('resultPanel'))$('resultPanel').insertBefore($('detail'),$('results'));
+   $('results').classList.remove('hidden');
+   $('resultFilters').classList.remove('hidden');
+   $('backResults').classList.remove('hidden');
+  }
+  $('detail').classList.remove('hidden');
   let html='',item=null,nearest=null;
   if(selected?.type==='draft'){
    html=prospectForm(draft,true);
@@ -858,7 +869,13 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   const c=planned.find(x=>x.id===selectedCell);if(!c)return;const rec=ensure(c);rec.manual={done:$('review').checked,notes:$('reviewNotes').value.trim(),reviewedAt:$('review').checked?new Date().toISOString():null};rec.updatedAt=new Date().toISOString();
   await write('cells',rec);status('Contrôle manuel enregistré. Les couleurs techniques restent indépendantes.');renderDetail();
  }
- function closeDetail(){selected=null;focus=null;selectedCell=null;$('detail').classList.add('hidden');$('results').classList.remove('hidden');$('backResults').classList.add('hidden');$('resultFilters').classList.remove('hidden');focusLayer.clearLayers();renderResults()}
+ function closeDetail(){
+  selected=null;focus=null;selectedCell=null;draft=null;
+  $('detail').classList.add('hidden');$('listingEditor').classList.add('hidden');
+  $('results').classList.remove('hidden');$('backResults').classList.add('hidden');$('resultFilters').classList.remove('hidden');
+  focusLayer.clearLayers();
+  if(tab!=='prospects')renderResults();
+ }
  function render(){const cs=visibleEntities('company'),ws=visibleEntities('water');
   $('countCompanies').textContent=fmt(cs.length);$('countWaters').textContent=fmt(ws.filter(x=>(x.area||0)>=Number($('minArea').value)).length);
   $('countProspects').textContent=fmt([...prospects.values()].filter(x=>!x.archived).length);
@@ -891,6 +908,13 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   $('city').oninput=()=>{$('preset').value='custom'};$('radius').oninput=()=>{$('preset').value='custom'};
   $('apply').onclick=apply;$('run').onclick=()=>startSearch(false);$('scanSelected').onclick=()=>startSearch(true);
   $('newManual').onclick=()=>openDraft();
+  $('listingNew').onclick=()=>openDraft();
+  $('listingEdit').onclick=()=>{
+   const id=$('listingPick').value;
+   if(!id){status('Choisissez d’abord une fiche dans le menu « Modifier une fiche »');return}
+   showProspect(id);
+  };
+  $('closeListingEditor').onclick=closeDetail;
   $('coverageToggle').onclick=()=>{showCoverage=!showCoverage;selected=null;selectedCell=null;focus=null;$('coverageToggle').textContent=showCoverage?'✕ Fermer la carte des zones recherchées':'◫ Voir les zones déjà recherchées';render()};
   $('stop').onclick=()=>{stopRequested=true;status('Arrêt demandé après la requête en cours. Les résultats enregistrés sont conservés.')};
   $('fit').onclick=()=>{if(circle)map.fitBounds(circle.getBounds(),{padding:[30,30]})};
