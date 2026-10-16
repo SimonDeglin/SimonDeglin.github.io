@@ -227,6 +227,79 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
  }
 
  // Migration additive et non destructive : les anciennes données restent dans leur emplacement d'origine.
+
+ // Passerelle prudente : les cartes de l'ancien listing restent la présentation de référence.
+ // On n'écrase jamais les 10 fiches originales ni les enregistrements inconnus.
+ const LEGACY_CARDS='kdrix_bathy_custom_prospects_v1';
+ function legacyCard(p){
+  const lat=Number(p.lat),lon=Number(p.lon);
+  if(p.lat==null||p.lon==null||!Number.isFinite(lat)||!Number.isFinite(lon))return null;
+  const reference=p.legacyOrigin==='localStorage'&&p.legacyId?String(p.legacyId):
+   'refonte-'+String(p.id||'').replace(/[^a-zA-Z0-9_-]/g,'-');
+  const links=Array.isArray(p.sources)?p.sources.filter(x=>Array.isArray(x)&&x[1]&&externalURL(x[1])).map(x=>[String(x[0]||'Source'),externalURL(x[1])]):[];
+  for(const url of String(p.sourceLinks||'').split(/[\n\r]+/).map(x=>x.trim())){
+   const valid=externalURL(url);if(valid&&!links.some(x=>x[1]===valid))links.push(['Source de la prospection',valid]);
+  }
+  if(p.website&&externalURL(p.website)&&!links.some(x=>x[1]===externalURL(p.website)))links.push(['Site officiel indiqué',externalURL(p.website)]);
+  const hasWater=p.kind==='water',area=Number(p.area);
+  return {
+   id:reference,name:String(p.name||'Site à identifier'),town:String(p.town||'Commune à vérifier'),
+   category:String(p.category|| (hasWater?'Plan d’eau':'Site potentiel')),confidence:'Piste à vérifier',
+   potential:'Moyen',point:[lat,lon],pointNote:'Localisation issue de la prospection : position et exploitation à confirmer',
+   access:String(p.address||'Adresse à vérifier'),why:String(p.interest||'Étudier si les volumes, profondeurs ou dépôts d’un plan d’eau justifient une bathymétrie.'),
+   fact:'Site sélectionné manuellement pour la prospection commerciale KDRIX. Lien avec un exploitant et besoin bathymétrique à vérifier.',
+   factDate:'Prospection KDRIX',what:String(p.interest||'Évaluer les profondeurs, volumes et sédiments éventuels.'),
+   decision:'Vérifier la pertinence technique d’une mission et identifier le responsable du site.',
+   reservation:String(p.notes||'Vérifier la présence du plan d’eau et l’identité de son exploitant.'),
+   grounds:'Piste commerciale retenue et non commande confirmée.',
+   contact:{name:String(p.contactName||'À identifier'),role:String(p.contactRole||'Contact technique à rechercher'),
+    email:String(p.email||''),phone:String(p.phone||''),alt:''},
+   sources:links,site:String(p.website||''),subject:'KDRIX — relevé bathymétrique / prise de contact',
+   emailBody:'Madame, Monsieur,\n\nJe me permets de vous contacter pour échanger sur les éventuels besoins de suivi de vos bassins ou plans d’eau.\n\nBien cordialement,\nKDRIX',
+   sitepoint:'Emplacement indicatif à vérifier',evidenceState:'plausible',
+   ...(area>0&&Number.isFinite(area)?{estimatedWaterM2:area}:{}),
+   kdrixRefonteId:p.id,kdrixStatus:p.status||'a_etudier',kdrixNotes:p.notes||'',
+   kdrixArchived:!!p.archived
+  };
+ }
+ function mirrorIntoOriginal(){
+  let entries;
+  try{
+   const raw=localStorage.getItem(LEGACY_CARDS);
+   entries=raw===null?[]:JSON.parse(raw);
+   if(!Array.isArray(entries))throw Error('le format des anciens prospects n’est pas un tableau');
+  }catch(e){status('Liste historique conservée : impossible de vérifier son format ('+e.message+'). Aucune écriture effectuée.',true);return false}
+  let modified=false;
+  for(const p of prospects.values()){
+   if(p.isHistorical)continue;
+   if(p.legacyOrigin==='localStorage'&&!p.updatedAt)continue; // L'entrée d'origine a priorité.
+   const mapped=legacyCard(p);if(!mapped)continue;
+   const index=entries.findIndex(x=>x&&x.id===mapped.id);
+   if(index<0){entries.push(mapped);modified=true}
+   else if(entries[index].kdrixRefonteId||p.legacyOrigin==='localStorage'){
+    const next={...entries[index],...mapped};
+    if(JSON.stringify(entries[index])!==JSON.stringify(next)){entries[index]=next;modified=true}
+   }
+  }
+  if(!modified)return true;
+  try{localStorage.setItem(LEGACY_CARDS,JSON.stringify(entries));return true}
+  catch(e){status('Prospect conservé dans la base moderne, mais transfert au listing historique impossible : '+e.message,true);return false}
+ }
+ function refreshListingPicker(){
+  const picker=$('listingPick'),keep=picker.value;
+  picker.replaceChildren(new Option('Modifier une fiche…',''));
+  const available=[...prospects.values()].filter(p=>!p.archived).sort((a,b)=>String(a.name||'').localeCompare(String(b.name||''),'fr'));
+  for(const p of available){const opt=new Option(p.name||'Prospect sans nom',p.id);picker.add(opt)}
+  picker.value=available.some(x=>x.id===keep)?keep:'';
+  const missing=available.filter(p=>!Number.isFinite(p.lat)||!Number.isFinite(p.lon));
+  const subtitle=$('listingHint');if(subtitle)subtitle.textContent=missing.length?
+   missing.length+' fiche(s) sans coordonnées : accessibles via « Modifier une fiche ».':'Fiches historiques, cartes et nouveaux prospects.';
+ }
+ function ensureLegacyView(reload=false){
+  const frame=$('legacyFrame');if(!frame)return;
+  if(!frame.dataset.loaded){frame.dataset.loaded='1';frame.src='../?embedded=1&view=listing'}
+  else if(reload){try{frame.contentWindow.location.reload()}catch(e){frame.src='../?embedded=1&view=listing'}}
+ }
  function oldEntry(o,manual=false){
   const contact=(o.contact&&typeof o.contact==='object')?o.contact:{},pos=Array.isArray(o.point)?o.point:[o.lat,o.lon];
   const id=(manual?'manual-old:':'historical:')+String(o.id);
