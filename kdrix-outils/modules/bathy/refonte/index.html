@@ -37,6 +37,30 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
 .quick-actions button{flex:1}
 #researchControls.hidden{display:none!important}
 @media(max-width:750px){.formgrid{grid-template-columns:1fr} .formgrid>.wide{grid-column:auto}}
+/* Listing original, affiché à pleine largeur; les moteurs restent dans trois colonnes. */
+#listingView{height:calc(100vh - 124px);min-height:560px;padding:10px;display:flex;flex-direction:column;gap:8px}
+#listingView.hidden{display:none!important}
+.listing-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:white;border:1px solid var(--line);border-radius:11px;padding:9px 14px}
+.listing-toolbar .listing-heading{flex:1 1 250px}
+.listing-toolbar strong{display:block;font-size:14px}
+.listing-toolbar small{color:var(--muted);font-size:11px}
+.listing-toolbar button{font-size:11px;padding:8px 11px}
+.listing-toolbar select{width:min(310px,100%);font-size:11px;padding:7px 9px}
+#legacyFrame{display:block;width:100%;height:100%;min-height:440px;flex:1;background:white;border:1px solid var(--line);border-radius:11px}
+#researchWorkspace.hidden{display:none!important}
+#listingEditor{position:fixed;right:12px;top:80px;bottom:12px;z-index:9000;width:min(520px,calc(100vw - 24px));background:#fff;border:1px solid #b7d3d8;border-radius:13px;box-shadow:0 20px 65px #102f3b52;display:flex;flex-direction:column}
+#listingEditor.hidden{display:none!important}
+#listingEditorHeader{padding:11px 14px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}
+#listingEditorHeader strong{font-size:14px}
+#listingEditorContent{padding:12px;overflow:auto;flex:1}
+#listingEditor .detail{border:0;background:white;padding:0}
+#listingEditorContent #detail{width:100%}
+.right .resultsnav{position:sticky;top:-15px;z-index:6;background:#fff;padding:8px 0;border-bottom:1px solid var(--line)}
+.right #detail:not(.hidden){margin:12px 0;border:2px solid #b6d6df;border-radius:11px;padding:4px;background:#fbfdfd}
+.right #results:not(.hidden){display:block!important}
+.right .result{position:relative}
+.right .result button{min-height:34px}
+@media(max-width:700px){#listingView{height:calc(100vh - 118px);padding:7px}#listingEditor{top:52px;bottom:5px;right:5px;width:calc(100vw - 10px)}.listing-toolbar{padding:9px}.listing-toolbar .listing-heading{flex-basis:100%}}
 </style>
 </head>
 <body>
@@ -47,7 +71,13 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
  <button id="tab-water" data-tab="water">3 · Recherche par plan d’eau PICC</button>
  <span>Les recherches proposent des opportunités. Vous seul décidez de les enregistrer.</span>
 </nav>
-<main>
+<section id="listingView" aria-label="Mon listing historique de prospection"><div class="listing-toolbar"><div class="listing-heading"><strong>Mon listing Bathy</strong><small>Retrouvez la présentation historique, les cartes et toutes les fiches retenues.</small></div>
+<select id="listingPick" aria-label="Sélectionner une fiche pour la modifier"><option value="">Modifier une fiche…</option></select>
+<button id="listingEdit" title="Modifier les coordonnées, notes ou statut d’un prospect existant">Modifier la fiche</button>
+<button id="listingNew" class="primary">+ Nouveau prospect</button>
+</div><iframe id="legacyFrame" title="Listing original : fiches détaillées KDRIX" src="about:blank" loading="eager"></iframe>
+</section>
+<main id="researchWorkspace" class="hidden">
 <section class="panel pad" aria-label="Paramètres et progression">
  <h2 id="searchTitle">Mon listing de prospection</h2>
  <p class="caption" id="searchHelp">Retrouvez vos 10 fiches historiques, vos coordonnées et les nouveaux sites que vous avez sélectionnés.</p>
@@ -83,18 +113,22 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
  <div class="maptools"><select id="basemap" aria-label="Fond cartographique"><option value="osm">Carte OpenStreetMap</option><option value="ortho2026">Orthophoto SPW 2026</option><option value="ortho2024">Orthophoto SPW 2024</option></select><button id="fit" class="minor">Voir le territoire</button></div>
  <div class="maplegend" id="mapLegend"><span><i class="bullet company"></i>Société ou site</span><span><i class="bullet water"></i>Plan d'eau</span><span>Association non confirmée</span></div>
 </section>
-<section class="panel pad right" aria-label="Résultats et fiches">
- <div class="resultsnav"><strong id="resultHeading">Sociétés et sites à examiner</strong><button id="backResults" class="hidden">← Résultats</button></div>
+<section id="resultPanel" class="panel pad right" aria-label="Trouvailles avant sélection commerciale">
+ <div class="resultsnav"><strong id="resultHeading">Trouvailles de la recherche</strong><button id="backResults" class="hidden">Fermer la fiche ×</button></div>
  <p class="caption" id="resultHelp">Une société intéressante n'est pas nécessairement propriétaire d'un plan d'eau.</p>
  <div id="resultFilters"><div class="field"><input id="filter" placeholder="Rechercher un nom, une commune ou une activité…"></div>
 <div id="companyCategory"><div class="field"><label for="categoryFilter">Activité recherchée</label><select id="categoryFilter"><option value="">Toutes les activités</option><option value="Carrière">Carrières / extraction</option><option value="Golf">Golfs</option><option value="Traitement">Traitement des eaux</option><option value="Pisciculture">Pisciculture</option><option value="Retenue">Retenues / hydraulique</option><option value="industriel">Sites industriels</option></select></div></div>
  <div class="row"><label class="caption"><input type="checkbox" id="hideDiscarded" checked> Masquer les prospects écartés</label></div>
 <div class="row" id="archivedFilter"><label class="caption"><input type="checkbox" id="showArchived"> Afficher les fiches retirées du listing</label></div></div>
  <div id="resultCount" class="keyline"></div>
- <div id="results"></div>
  <div id="detail" class="hidden"></div>
+ <div id="results"></div>
 </section>
 </main>
+<aside id="listingEditor" class="hidden" role="dialog" aria-label="Modifier une fiche de prospect">
+ <div id="listingEditorHeader"><strong>Fiche prospect · modification</strong><button id="closeListingEditor">✕ Fermer</button></div>
+ <div id="listingEditorContent"></div>
+</aside>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.9.2/proj4.js"></script>
 <script>
