@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light">
+<script>if(new URLSearchParams(location.search).get("embedded")==="1")document.documentElement.classList.add("bathy-embedded");</script>
 <meta name="description" content="Dossier interne KDRIX : dix prospects privés pour des missions de bathymétrie, intérêts documentés, cartes et fiches détaillées.">
 <title>KDRIX — Prospection bathymétrique · Carte et emprises</title>
 <link rel="preconnect" href="https://geoservices.wallonie.be">
@@ -131,6 +132,12 @@ header{height:67px;background:#fff;border-bottom:1px solid #dce5e5}.head{height:
 .kdrix-v6-refresh:not([hidden]) {display:inline-flex;white-space:nowrap;background:#e3f4f9;color:#126580;border-color:#a8d9e6}
 #routes {background:#e8f4f7;color:#1b6175;border-color:#b4d7df}
 @media(max-width:680px){.kdrix-v6-map-help {align-items:stretch;flex-direction:column}.kdrix-v6-refresh:not([hidden]){align-self:flex-start}}
+/* Affichage du listing historique dans l'onglet de la refonte. Le site original reste inchangé hors intégration. */
+html.bathy-embedded header{display:none!important}
+html.bathy-embedded [aria-label="Accès direct aux trois onglets Prospection Bathy"]{display:none!important}
+html.bathy-embedded .container{width:min(1290px,calc(100% - 26px))}
+html.bathy-embedded .hero{margin-top:12px}
+html.bathy-embedded body{background:#f3f7f8}
 </style>
 <style id="kdrix-simple-style">
 /* KDRIX Bathy : vue de prospection simplifiee (direction et technicien). */
