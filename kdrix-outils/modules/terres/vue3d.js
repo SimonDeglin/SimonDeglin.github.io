@@ -116,7 +116,13 @@ function fillGeometryFor(level){const cells=geometryData.cells.filter(c=>c.valid
 function scheduleFill(){clearTimeout(refreshHandle);refreshHandle=setTimeout(redrawFill,75)}
 function redrawFill(){if(!patch||!scene||!geometryData)return;disposeGroup(fillObject);fillObject=null;
  const z=valueOfScenario();if(z!==null&&Number.isFinite(z)&&viewMode!=='terrain'){fillObject=fillGeometryFor(z);scene.add(fillObject)}
- const stats=volumesFor(z);if(stats){$('volume').textContent=nf(Math.round(stats.volume/100)*100)+' m³';$('area').textContent=nf(stats.area,0)+' m²';$('depth').textContent=nf(stats.meanDepth,1)+' m';
+ const stats=volumesFor(z);
+ if(stats&&stats.coverage<.995){
+  $('volume').textContent='— m³';$('area').textContent=nf(stats.area,0)+' m²';$('depth').textContent='—';$('money').textContent='—';
+  $('volumeMethod').textContent='Couverture altimétrique partielle ('+nf(stats.coverage*100,1)+' %) : le volume global est masqué pour ne pas présenter un volume partiel comme une capacité totale. Importer un MNT plus complet ou réduire l’emprise.';
+  return;
+ }
+ if(stats){$('volume').textContent=nf(Math.round(stats.volume/100)*100)+' m³';$('area').textContent=nf(stats.area,0)+' m²';$('depth').textContent=nf(stats.meanDepth,1)+' m';
   const db=readDb(),prices=db.prices||{low:40,high:80};const euros=n=>n>=1e6?nf(n/1e6,2)+' M€':nf(n/1000,0)+' k€';$('money').textContent=euros(stats.volume*(Number(prices.low)||40))+' – '+euros(stats.volume*(Number(prices.high)||80));
   $('volumeMethod').textContent=patch.source?.sampled?`Reconnaissance par sondages SPW interpolés espacés d’environ ${nf(patch.displayCellSize,1)} m, couverture ${nf(stats.coverage*100,1)} %. Volume seulement indicatif : pas une cubature sur le raster original 50 cm.`:`Maillage numérique d'environ ${nf(patch.displayCellSize,1)} m issu d'un MNT importé, ${nf(stats.coverage*100,1)} % de l'emprise couverte. Surface projet horizontale, exclusions déduites. Ordre de grandeur, indépendant de l'exagération verticale.`;
  }else $('volume').textContent='— m³';

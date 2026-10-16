@@ -60,7 +60,7 @@ async function restoreTerrainPatch(s){if(terrainRestored.has(s.id)||rasterFor(s)
  activeRaster={kind:'grid',sampled:!!patch.source?.sampled,sampleSpacing:patch.displayCellSize,name:(patch.source?.sampled?'Sondages SPW · ':'Extrait local 3D · ')+patch.source.name,crs:'EPSG:4326',originX:nw[1],originY:nw[0],resX:(se[1]-nw[1])/(patch.nx-1),resY:(se[0]-nw[0])/(patch.ny-1),width:patch.nx,height:patch.ny,data,nodata:null,count:data.length,description:(patch.source?.sampled?'Échantillonnage de reconnaissance SPW (interpolation), maille ':'Extrait numérique rééchantillonné · maille ')+fmt(patch.displayCellSize,1)+' m'};
  rasterSiteId=s.id;return true;
 }
-function openTerrain3D(s){
+function openTerrain3D(s){if(overlappingPolygons(s)){toast('La vue 3D ne peut pas calculer de cubature avec des contours superposés. Corriger les emprises.',5500);return;}
  const url='vue3d.html?site='+encodeURIComponent(s.id)+'&name='+encodeURIComponent(s.name);
  // Ouvrir immediatement, avant les operations asynchrones, pour eviter le blocage anti-pop-up.
  const viewer=window.open(url,'_blank');if(!viewer){toast('Autoriser les fenêtres de ce portail pour ouvrir la vue 3D.',5000);return}
