@@ -301,6 +301,11 @@ if(document.documentElement.classList.contains('bathy-embedded')){
   }
  }catch(e){console.warn('Affichage des modifications historiques indisponible',e)}
 }
+// Le compteur du listing intégré tient compte des fiches retenues en plus des dix fiches historiques.
+if(document.documentElement.classList.contains('bathy-embedded')){
+ const total=document.querySelector('.hero-stats .hero-stat strong');
+ if(total)total.textContent=String(DATA.filter(p=>!p.kdrixArchived).length);
+}
 const ORIGIN='Rue de l’Avouerie 5, 4000 Liège, Belgique';
 const MAPS={
  ortho:'https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2026_PRINTEMPS/MapServer/WMSServer',
