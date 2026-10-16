@@ -277,7 +277,17 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
    const index=entries.findIndex(x=>x&&x.id===mapped.id);
    if(index<0){entries.push(mapped);modified=true}
    else if(entries[index].kdrixRefonteId||p.legacyOrigin==='localStorage'){
-    const next={...entries[index],...mapped};
+    // Conserver les faits, sources et courriels rédigés dans les anciennes fiches manuelles.
+    const next=p.legacyOrigin==='localStorage'?{
+     ...entries[index],name:p.name||entries[index].name,town:p.town||entries[index].town,
+     category:p.category||entries[index].category,point:mapped.point,access:p.address||entries[index].access,
+     why:p.interest||entries[index].why,site:p.website||entries[index].site,
+     contact:{...(entries[index].contact||{}),name:p.contactName||'À identifier',
+      role:p.contactRole||'',email:p.email||'',phone:p.phone||''},
+     ...(Number(p.area)>0?{estimatedWaterM2:Number(p.area)}:{}),
+     kdrixStatus:p.status||'a_etudier',kdrixNotes:p.notes||'',kdrixArchived:!!p.archived,
+     kdrixRefonteId:p.id
+    }:{...entries[index],...mapped};
     if(JSON.stringify(entries[index])!==JSON.stringify(next)){entries[index]=next;modified=true}
    }
   }
@@ -322,8 +332,8 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
     }catch(e){console.warn('Fiche ajoutée mais défilement automatique indisponible',e)}
    },{once:true});
   }
-  if(!frame.dataset.loaded){frame.dataset.loaded='1';frame.src='../?embedded=1&view=listing'}
-  else if(reload){try{frame.contentWindow.location.reload()}catch(e){frame.src='../?embedded=1&view=listing&refresh='+Date.now()}}
+  if(!frame.dataset.loaded){frame.dataset.loaded='1';frame.src='../?embedded=1&view=listing&layout=20261016-v3'}
+  else if(reload){try{frame.contentWindow.location.reload()}catch(e){frame.src='../?embedded=1&view=listing&layout=20261016-v3&refresh='+Date.now()}}
  }
  function oldEntry(o,manual=false){
   const contact=(o.contact&&typeof o.contact==='object')?o.contact:{},pos=Array.isArray(o.point)?o.point:[o.lat,o.lon];
@@ -590,8 +600,8 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   $('searchHelp').textContent={company:'Chercher des carrières, golfs, stations d’épuration et sites susceptibles d’avoir des bassins.',water:'Chercher les surfaces d’eau du PICC et vérifier les entreprises éventuellement concernées.',prospects:'Retrouvez vos fiches historiques, vos contacts, observations et démarches commerciales.'}[mode];
   $('waterParams').classList.toggle('hidden',mode!=='water');$('scanParams').classList.toggle('hidden',!['water','company'].includes(mode));
   $('run').textContent=mode==='water'?'Rechercher des plans d’eau':'Rechercher des adresses potentielles';
-  $('resultHeading').textContent={company:'Adresses et sites potentiels',water:'Plans d’eau PICC détectés',prospects:'Mon listing · prospects enregistrés'}[mode];
-  $('resultHelp').textContent={company:'Chaque résultat est une piste. Cliquez pour examiner le site et préremplir une fiche.',water:'Cliquez sur un bassin pour zoomer et préremplir sa fiche si le site vous intéresse.',prospects:'Vos 10 fiches historiques et tous les prospects ajoutés à votre listing.'}[mode];
+  $('resultHeading').textContent={company:'Trouvailles · adresses potentielles',water:'Trouvailles · plans d’eau PICC',prospects:'Mon listing · prospects enregistrés'}[mode];
+  $('resultHelp').textContent={company:'Ces adresses sont des pistes, non ajoutées au listing. Ouvrez une trouvaille pour l’examiner avant de décider.',water:'Ces bassins sont des pistes, non ajoutées au listing. Examinez-les sur la carte avant de les retenir.',prospects:'Vos prospects historiques et sélectionnés.'}[mode];
   $('filter').value='';if(mode==='prospects')status('Mon listing : '+prospects.size+' fiche(s) enregistrée(s). Les deux onglets de recherche ne modifient pas ce listing sans votre accord.');render();
  }
  function commercialPriority(x){return /Carrière|Golf|Traitement|Pisciculture|Retenue/.test(x.category||'')?2:/industriel/.test(x.category||'')?1:0}
@@ -651,7 +661,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
  function showEntity(kind,id){
   const item=(kind==='water'?bodies:companies).get(id);if(!item)return;
   selected={type:kind,id};focus=item;selectedCell=pointId(item.lat,item.lon);
-  renderDetail();focusedDraw();if(window.innerWidth<650)$('map').scrollIntoView({behavior:'smooth',block:'center'});
+  renderDetail();$('resultPanel').scrollTop=0;focusedDraw();if(window.innerWidth<650)$('map').scrollIntoView({behavior:'smooth',block:'center'});
  }
  function showProspect(id){
   const p=prospects.get(id);if(!p)return;selected={type:'prospect',id};focus=Number.isFinite(p.lat)&&Number.isFinite(p.lon)?p:null;
@@ -921,7 +931,7 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
    $('run').textContent=completed>=planned.length?'Territoire analysé':completed>0?'Continuer la recherche':tab==='water'?'Rechercher des plans d’eau':'Rechercher des adresses potentielles';
    $('run').disabled=completed>=planned.length;
   }
-  drawMap();if(selected||selectedCell)renderDetail();else renderResults();
+  drawMap();renderResults();if(selected||selectedCell)renderDetail();
  }
  async function backup(){
   try{const data={app:'KDRIX-BATHY',schema:2,exportedAt:new Date().toISOString(),epsg:3812,gridM:5000,stores:{}};
