@@ -332,8 +332,15 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
     }catch(e){console.warn('Fiche ajoutée mais défilement automatique indisponible',e)}
    },{once:true});
   }
-  if(!frame.dataset.loaded){frame.dataset.loaded='1';frame.src='../?embedded=1&view=listing&layout=20261016-v3'}
-  else if(reload){try{frame.contentWindow.location.reload()}catch(e){frame.src='../?embedded=1&view=listing&layout=20261016-v3&refresh='+Date.now()}}
+  if(!frame.dataset.loaded){
+   frame.dataset.loaded='1';
+   frame.addEventListener('load',()=>{frame.dataset.ready='1'},{once:true});
+   frame.src='../?embedded=1&view=listing&layout=20261016-v3';
+  }else if(reload&&frame.dataset.ready==='1'){
+   frame.dataset.ready='0';
+   frame.addEventListener('load',()=>{frame.dataset.ready='1'},{once:true});
+   try{frame.contentWindow.location.reload()}catch(e){frame.src='../?embedded=1&view=listing&layout=20261016-v3&refresh='+Date.now()}
+  }
  }
  function oldEntry(o,manual=false){
   const contact=(o.contact&&typeof o.contact==='object')?o.contact:{},pos=Array.isArray(o.point)?o.point:[o.lat,o.lon];
