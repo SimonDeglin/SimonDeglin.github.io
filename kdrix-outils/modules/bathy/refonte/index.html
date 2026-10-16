@@ -311,10 +311,19 @@ main{display:grid;grid-template-columns:280px minmax(340px,1fr) 380px;gap:10px;p
   const subtitle=$('listingHint');if(subtitle)subtitle.textContent=missing.length?
    missing.length+' fiche(s) sans coordonnées : accessibles via « Modifier une fiche ».':'Fiches historiques, cartes et nouveaux prospects.';
  }
- function ensureLegacyView(reload=false){
+ function ensureLegacyView(reload=false,highlightId=null){
   const frame=$('legacyFrame');if(!frame)return;
+  if(highlightId){
+   frame.addEventListener('load',function revealCard(){
+    try{
+     const cards=[...frame.contentDocument.querySelectorAll('details.pcard')];
+     const card=cards.find(x=>x.dataset.id===highlightId);
+     if(card){card.open=true;card.scrollIntoView({block:'start',behavior:'smooth'})}
+    }catch(e){console.warn('Fiche ajoutée mais défilement automatique indisponible',e)}
+   },{once:true});
+  }
   if(!frame.dataset.loaded){frame.dataset.loaded='1';frame.src='../?embedded=1&view=listing'}
-  else if(reload){try{frame.contentWindow.location.reload()}catch(e){frame.src='../?embedded=1&view=listing'}}
+  else if(reload){try{frame.contentWindow.location.reload()}catch(e){frame.src='../?embedded=1&view=listing&refresh='+Date.now()}}
  }
  function oldEntry(o,manual=false){
   const contact=(o.contact&&typeof o.contact==='object')?o.contact:{},pos=Array.isArray(o.point)?o.point:[o.lat,o.lon];
