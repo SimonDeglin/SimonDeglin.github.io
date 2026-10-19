@@ -1,25 +1,25 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-19T10:49:25.862Z",
+  "generated_at": "2026-10-19T17:30:08.212Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-10-19 : 1443 avis lus, 4 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-10-19 : 1443 avis lus, 6 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-19T10:51:13.788Z",
-      "scanned": 2325,
-      "retained": 63,
+      "last_success": "2026-10-19T17:31:51.670Z",
+      "scanned": 2400,
+      "retained": 64,
       "period_from": "2026-10-05",
       "period_to": "2026-10-19",
-      "pages": 93,
+      "pages": 96,
       "complete": true,
-      "raw_candidates": 2304,
+      "raw_candidates": 2385,
       "oldest_seen": "2026-10-02"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-10-19T10:54:02.509Z",
+      "last_success": "2026-10-19T17:33:37.163Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -75,16 +75,16 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 93 page(s) parcourue(s) depuis 2026-10-05.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 96 page(s) parcourue(s) depuis 2026-10-05.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 33 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
     "scanned": 1443,
     "matched_current_run": 19,
-    "records": 123,
-    "review_count": 50,
-    "award_notice_count": 412,
-    "awarded_market_matches": 4,
+    "records": 124,
+    "review_count": 52,
+    "award_notice_count": 413,
+    "awarded_market_matches": 6,
     "award_fields_requested": false,
     "retained_as_excluded": 2,
     "excluded_reasons": {
@@ -122,9 +122,9 @@
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2325,
-    "bosa_imported": 63,
-    "bosa_pages": 93,
+    "bosa_scanned": 2400,
+    "bosa_imported": 64,
+    "bosa_pages": 96,
     "local_documents": 33,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -140,19 +140,199 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "aucun_signal_metier": 419,
-      "avis_attribution_analyse_separement": 412,
-      "acheteur_flamand": 134,
-      "avis_neerlandais": 147,
+      "avis_attribution_analyse_separement": 413,
+      "aucun_signal_metier": 421,
+      "avis_neerlandais": 145,
+      "qualifie_review": 29,
+      "acheteur_flamand": 135,
       "travaux_execution": 124,
-      "objet_hors_domaine": 103,
-      "qualifie_review": 30,
+      "objet_hors_domaine": 102,
       "assurance_ou_nettoyage": 26,
       "fournitures_et_location": 42,
       "qualifie_main": 6
     }
   },
   "items": [
+    {
+      "id": "bosa:cad02ebd-b140-48ed-a970-6c3bab54c6aa",
+      "publicationWorkspaceId": "cad02ebd-b140-48ed-a970-6c3bab54c6aa",
+      "noticeId": "351cd0ae-30e3-4efb-ac74-4f4755f9bd25",
+      "procedureIdentifier": "320a3293-effb-4941-92d2-440471e10d53",
+      "internalReference": "MP2587_pub02",
+      "title": "Certification PEB du patrimoine de la Maison Liégeoise",
+      "buyer": "La Maison Liégeoise SRL",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "score": 95,
+      "screening": "main",
+      "publication": "2026-10-19",
+      "deadline": "",
+      "cpv": [
+        "71340000",
+        "71000000"
+      ],
+      "description": "Le marché de services consiste en la réalisation de certification PEB, conformément à la législation en vigueur en région wallonne, de l’ensemble du patrimoine de l’adjudicataire pour :  • Tous les logements dont le certificat PEB résidentiel n’est plus valable  • Tous les logements dont le certificat PEB résidentiel est inexistant  • Tous les logements dans le cadre d’une vente  Les immeubles à appartements qui disposent d’une installation commune de chauffage, d’eau chaude sanitaire, de ventilation ou de panneaux solaires photovoltaïques doivent faire l’objet d’un « rapport partiel » délivré par un certificateur. Lieu(x) de prestations : ensemble d’immeubles à logements situés à Liège, rive gauche (4000) et rive droite (4020) de la Meuse.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "29",
+      "noticeKind": "award",
+      "bdaReference": "",
+      "tedReference": "MP2587_pub02",
+      "url": "https://www.publicprocurement.be/publication-workspaces/cad02ebd-b140-48ed-a970-6c3bab54c6aa/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/cad02ebd-b140-48ed-a970-6c3bab54c6aa/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "MP2587_pub02",
+          "url": "https://www.publicprocurement.be/publication-workspaces/cad02ebd-b140-48ed-a970-6c3bab54c6aa/general",
+          "publicationDate": "2026-10-19",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-19T10:57:21.223Z",
+      "matchReason": "prestation_decrite",
+      "screeningReason": null,
+      "awards": [
+        {
+          "publicationNumber": "720665-2026",
+          "procedureIdentifier": "320a3293-effb-4941-92d2-440471e10d53",
+          "publicationDate": "2026-10-19",
+          "decisionDate": "",
+          "conclusionDate": "",
+          "noticeType": "can-standard",
+          "source": "TED",
+          "sourceUrl": "https://ted.europa.eu/fr/notice/-/detail/720665-2026",
+          "selectedWinner": false,
+          "winners": [],
+          "winnerIdentifiers": [],
+          "mentionedTenderers": [],
+          "lotIdentifiers": [],
+          "offerCount": null,
+          "offerCountsByLotUnassigned": [],
+          "submissionTypes": [],
+          "winnerSelectionStatuses": [],
+          "notAwardedReasons": [],
+          "tenderValues": [],
+          "lowestTenderValues": [],
+          "highestTenderValues": [],
+          "totalAwardValues": [],
+          "caveat": "Valeurs et soumissionnaires peuvent concerner plusieurs lots. Ne pas apparier les tableaux sans preuve dans l’avis officiel."
+        }
+      ],
+      "lastPublicResultAt": "2026-10-19",
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/cad02ebd-b140-48ed-a970-6c3bab54c6aa/general"
+        }
+      ]
+    },
+    {
+      "id": "bosa:01585054-3e27-4d0e-bb3c-ea614119d7b4",
+      "publicationWorkspaceId": "01585054-3e27-4d0e-bb3c-ea614119d7b4",
+      "noticeId": "41390e4f-6e7e-4e8c-847f-d4a8074f7aa3",
+      "procedureIdentifier": "403d4f3c-1e7b-417d-956e-732bc2700f92",
+      "internalReference": "F030bis /2026_pub01",
+      "title": "Cahier spécial des charges relatif au marché public de fournitures pour la conception et la réalisation de jeux d’antan sur le site du FOURNEAU SAINT MICHEL",
+      "buyer": "Province de Luxembourg - Service Provincial du Fonctionnement",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 74,
+      "screening": "review",
+      "publication": "2026-10-19",
+      "deadline": "",
+      "cpv": [
+        "37500000"
+      ],
+      "description": "Conception et la réalisation de jeux d’antan sur le site du FOURNEAU SAINT MICHEL",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "F030bis /2026_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/01585054-3e27-4d0e-bb3c-ea614119d7b4/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/01585054-3e27-4d0e-bb3c-ea614119d7b4/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "0e76d0c9-da67-4b48-a636-4da4191b750d",
+          "title": "2026 Octobre CSC Fournitures_Jeux_Antan_PNDPP IRGR Fourneau St Michel (002).docx",
+          "kind": "csc",
+          "fileType": "docx",
+          "versionId": "0e9ac9b8-a0f8-4a93-a2d1-808c616a539c",
+          "documentId": "9292aee6-84d0-483a-8f21-dfa71ea8b020",
+          "activatedAt": "2026-10-19T10:40:45.012651",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/01585054-3e27-4d0e-bb3c-ea614119d7b4/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "6d7808a3-3483-460b-b483-635250929ac6",
+          "title": "Annexe 3 - Illustrations à titre d'exemple.docx",
+          "kind": "annex",
+          "fileType": "docx",
+          "versionId": "441c216a-af9f-4725-b177-c4a6e0b948b5",
+          "documentId": "a066d8e0-19b3-488d-8f20-fdf5db223548",
+          "activatedAt": "2026-10-19T10:40:45.012651",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/01585054-3e27-4d0e-bb3c-ea614119d7b4/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "98b7f79b-8efe-42d8-ba25-a4554b8b7fa4",
+          "title": "Annexe 1 - Formulaire d'offre.docx",
+          "kind": "annex",
+          "fileType": "docx",
+          "versionId": "e79b3bea-2852-4cc8-9520-bdf453ce94fd",
+          "documentId": "7a4ade56-831e-4405-9e36-58d96226e38a",
+          "activatedAt": "2026-10-19T10:40:45.012651",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/01585054-3e27-4d0e-bb3c-ea614119d7b4/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "df9634e2-afd6-4f54-98f9-c8b342b5ca1c",
+          "title": "Annexe 2 - Attestation de visite.docx",
+          "kind": "annex",
+          "fileType": "docx",
+          "versionId": "8e0f9b41-7f2e-4c5e-8f2d-945fa5029423",
+          "documentId": "2b78f637-d8d7-4267-a369-9b8e21ac27b7",
+          "activatedAt": "2026-10-19T10:40:45.012651",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/01585054-3e27-4d0e-bb3c-ea614119d7b4/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-19T10:57:17.530Z",
+      "matchReason": "projet_indirect",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/01585054-3e27-4d0e-bb3c-ea614119d7b4/general"
+        }
+      ]
+    },
     {
       "id": "ted:721110-2026",
       "publicationNumber": "721110-2026",
@@ -189,6 +369,11 @@
           "bdaReference": "",
           "noticeKind": "competition"
         }
+      ],
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "721110-2026"
       ]
     },
     {
@@ -226,6 +411,92 @@
           "url": "https://www.publicprocurement.be/publication-workspaces/bec6e680-b514-4f62-bb7c-d80927a86707/general",
           "bdaReference": "",
           "noticeKind": "competition"
+        }
+      ],
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "719477-2026"
+      ]
+    },
+    {
+      "id": "bosa:ceb26939-f737-4a41-91fb-c193e9e2f285",
+      "publicationWorkspaceId": "ceb26939-f737-4a41-91fb-c193e9e2f285",
+      "noticeId": "7e6ff32b-a9f8-4cf9-b94d-3777ab6f0429",
+      "procedureIdentifier": "f783e0b1-8649-4729-af7b-511403c37def",
+      "internalReference": "PPP0O5-1404/6292/2634S_004",
+      "title": "Désignation d’un Bureau d’Etudes en Techniques Spéciales et en Stabilité pour l’étude et le suivi de l’exécution de la restructuration et rationalisation des Travaux Pratiques (Chimie) et des salles de cours pour les étudiants (bât. B6d-chimie travaux pratiques) - par étapes",
+      "buyer": "Université de Liège (3P)",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 49,
+      "screening": "review",
+      "publication": "2026-10-19",
+      "deadline": "",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Le présent marché de services porte sur la désignation d’un Bureau d’Etudes en Techniques Spéciales et en Stabilité pour l’étude et le contrôle de l’exécution de la restructuration et rationalisation des Travaux Pratiques (Chimie) et des salles de cours pour les étudiants (bât. B6d-chimie travaux pratiques), en étroite collaboration avec les responsables techniques de l’Administration des Ressources Immobilières de l’ULiège (ARI) qui se chargent des parties gros-œuvre (hors stabilité), parachèvements, mobilier (excepté les sorbonnes de laboratoire) et équipement audiovisuel (matériel) ainsi que de la coordination d’ensemble. Le projet est phasé (4 étapes pour l’exécution des travaux). Une étude de programmation a été finalisée en 2025 par le bureau de programmation ATO consultants & managers SA. Il s’agit d’une restructuration, par ÉTAPES, de l’occupation du bâtiment de Chimie Travaux Pratiques B6d, afin de regrouper sur un même site les travaux pratiques de Chimie dispensés aux étudiants, dans des laboratoires multi-facultaires sécurisés et spécifiques, adaptés à ce type d’activités. Ce projet comprend également les mises aux normes (électricité, HVAC, sorbonnes, fluides, stockage produits chimiques, etc.) et les améliorations techniques nécessaires. 4 ÉTAPES (appelées « étape » pour éviter la confusion avec les phases de la mission) de travaux sont explicitées dans les documents techniques. La note d’orientations jointe au présent cahier des charges explicite le projet et comprend les résultats de l’étude de programmation. L’enveloppe du bâtiment B6d a déjà été précédemment rénovée énergétiquement.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "29",
+      "noticeKind": "award",
+      "bdaReference": "",
+      "tedReference": "PPP0O5-1404/6292/2634S_004",
+      "url": "https://www.publicprocurement.be/publication-workspaces/ceb26939-f737-4a41-91fb-c193e9e2f285/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/ceb26939-f737-4a41-91fb-c193e9e2f285/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP0O5-1404/6292/2634S_004",
+          "url": "https://www.publicprocurement.be/publication-workspaces/ceb26939-f737-4a41-91fb-c193e9e2f285/general",
+          "publicationDate": "2026-10-19",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-19T10:57:24.920Z",
+      "matchReason": "mission_technique_generique",
+      "screeningReason": null,
+      "awards": [
+        {
+          "publicationNumber": "720789-2026",
+          "procedureIdentifier": "f783e0b1-8649-4729-af7b-511403c37def",
+          "publicationDate": "2026-10-19",
+          "decisionDate": "",
+          "conclusionDate": "",
+          "noticeType": "can-standard",
+          "source": "TED",
+          "sourceUrl": "https://ted.europa.eu/fr/notice/-/detail/720789-2026",
+          "selectedWinner": false,
+          "winners": [],
+          "winnerIdentifiers": [],
+          "mentionedTenderers": [],
+          "lotIdentifiers": [],
+          "offerCount": null,
+          "offerCountsByLotUnassigned": [],
+          "submissionTypes": [],
+          "winnerSelectionStatuses": [],
+          "notAwardedReasons": [],
+          "tenderValues": [],
+          "lowestTenderValues": [],
+          "highestTenderValues": [],
+          "totalAwardValues": [],
+          "caveat": "Valeurs et soumissionnaires peuvent concerner plusieurs lots. Ne pas apparier les tableaux sans preuve dans l’avis officiel."
+        }
+      ],
+      "lastPublicResultAt": "2026-10-19",
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/ceb26939-f737-4a41-91fb-c193e9e2f285/general"
         }
       ]
     },
@@ -1245,7 +1516,7 @@
           "versionId": "36488d00-f30c-407b-abf7-ea1924b6b999",
           "documentId": "917f42c5-0419-4611-8398-5561fefe4efc",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1271,7 +1542,7 @@
           "versionId": "26b15544-17fc-43c0-826c-1322f33b9850",
           "documentId": "20364704-82a0-4eb0-a213-7965e3328061",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1323,7 +1594,7 @@
           "versionId": "f5ff3774-83d7-49c0-abe1-28e026816900",
           "documentId": "ff53ea2a-b24f-4586-b315-523295f56f5c",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1336,7 +1607,7 @@
           "versionId": "8228202b-2303-4eba-8e13-0fe820c5023d",
           "documentId": "ac74d28e-0bfa-4c78-af2b-da7f05b117dd",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1369,7 +1640,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-19T10:54:46.059Z",
+      "documentsCheckedAt": "2026-10-19T17:34:30.164Z",
       "documentAnalyses": [
         {
           "documentId": "7259aed6-32b5-4e0b-88c0-ffa7fa606658",
@@ -2358,7 +2629,7 @@
       ],
       "score": 52,
       "screening": "review",
-      "publication": "2026-10-12",
+      "publication": "2026-10-19",
       "deadline": "",
       "cpv": [
         "71520000"
@@ -2376,13 +2647,13 @@
       "documentInventory": [
         {
           "id": "06290c38-65cc-4593-9f24-44ee651379d0",
-          "title": "01_UKR24001-10342_Tender Specifications.pdf",
+          "title": "01_UKR24001-10342_Tender Specifications_v2.0.pdf",
           "kind": "other",
           "fileType": "pdf",
-          "versionId": "c805e826-13b5-4e01-8049-0c6d3171113e",
-          "documentId": "478801f2-7505-4501-a9af-e9548ce91106",
-          "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "FR,EN",
+          "versionId": "bcdca6d0-d13f-4138-99c5-6e122da4dde8",
+          "documentId": "17848170-0136-4662-8b9a-69f321d687c5",
+          "activatedAt": "2026-10-19T14:35:45.019469",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2395,7 +2666,7 @@
           "versionId": "7a672143-498d-40bf-85d2-1a0ccd6c89b8",
           "documentId": "338ce9a3-7ba9-4ed9-99b8-3bd5f1ce416e",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2408,40 +2679,53 @@
           "versionId": "5a3371af-caf1-41b9-89e6-e6eade671b0a",
           "documentId": "23b3699b-6288-4049-922c-146ae89c1eb4",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         },
         {
           "id": "8ec5e22a-6982-4e29-909a-6383711be0d3",
-          "title": "Annexes_Lot 1.zip",
+          "title": "Annexes_Lot 1_v2.0.zip",
           "kind": "annex",
           "fileType": "zip",
-          "versionId": "6b7a0447-f72a-4ff3-9960-7e0256c5ccad",
-          "documentId": "22254b9f-7831-499f-833d-ff2d4d598d7b",
-          "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "FR,EN",
+          "versionId": "6dabd106-495c-4884-b407-a9d35ae4800b",
+          "documentId": "d182b6fc-7127-4669-95f9-5b81310dc8c6",
+          "activatedAt": "2026-10-19T14:35:45.019469",
+          "language": "EN,FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "9ed565c0-767e-4eb9-b58c-385bf3c85c04",
+          "title": "01.2_UKR24001-10342_Addendum_01.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "62dd41f2-e318-42b1-b772-46e8d5633836",
+          "documentId": "5ebc8928-f728-45bd-8c0d-992a55d8ce01",
+          "activatedAt": "2026-10-19T14:35:45.019469",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         },
         {
           "id": "ad23c7e4-e35f-4ac6-b0d9-091f75ea9aa9",
-          "title": "01.1_UKR24001-10342_FORMS.docx",
+          "title": "01.1_UKR24001-10342_FORMS_v2.0.docx",
           "kind": "other",
           "fileType": "docx",
-          "versionId": "33b0b8dc-89c2-45b8-b93f-c7c32753cf28",
-          "documentId": "44d4cd3e-4a35-4aa2-bdaa-48145ec60824",
-          "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "FR,EN",
+          "versionId": "1b6ff5ed-8135-422d-81f1-ab428d851133",
+          "documentId": "f7b3b39c-0bec-4f55-8e29-844c0e81c6b6",
+          "activatedAt": "2026-10-19T14:35:45.019469",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-15T20:00:36.596Z",
+      "documentsCheckedAt": "2026-10-19T17:35:03.033Z",
       "matchReason": "description_ou_contexte",
       "screeningReason": null,
       "officialSources": [
@@ -4391,7 +4675,7 @@
           "versionId": "22cc83b1-d599-4416-96d9-c1a354861889",
           "documentId": "425d5ba1-de86-4335-b68e-3b58107c5b6d",
           "activatedAt": "2026-09-29T15:00:45.021111",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -4404,14 +4688,14 @@
           "versionId": "354fbb7b-5f90-4703-9d8e-dae76f7aa72f",
           "documentId": "3b9e3ed1-8163-4041-a26c-eb15668ce044",
           "activatedAt": "2026-10-05T15:31:45.185664",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-18T18:46:17.399Z",
+      "documentsCheckedAt": "2026-10-19T17:36:27.111Z",
       "matchReason": "description_ou_contexte",
       "screeningReason": null,
       "officialSources": [
@@ -6346,185 +6630,51 @@
       "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
-      "id": "bosa:01585054-3e27-4d0e-bb3c-ea614119d7b4",
-      "publicationWorkspaceId": "01585054-3e27-4d0e-bb3c-ea614119d7b4",
-      "noticeId": "41390e4f-6e7e-4e8c-847f-d4a8074f7aa3",
-      "procedureIdentifier": "403d4f3c-1e7b-417d-956e-732bc2700f92",
-      "internalReference": "F030bis /2026_pub01",
-      "title": "Cahier spécial des charges relatif au marché public de fournitures pour la conception et la réalisation de jeux d’antan sur le site du FOURNEAU SAINT MICHEL",
-      "buyer": "Province de Luxembourg - Service Provincial du Fonctionnement",
+      "id": "bosa:9adfd516-1615-4a05-8bc5-347c42646a57",
+      "publicationWorkspaceId": "9adfd516-1615-4a05-8bc5-347c42646a57",
+      "noticeId": "1b01629f-da71-4435-b168-274f0b4835b0",
+      "procedureIdentifier": "6fa4e0b9-24ec-4626-8bb7-cf8729c9ba9b",
+      "internalReference": "PPP06E-1625/6097/2026.1625 3P_001",
+      "title": "Marché annuel 2026-2030: Désignation d'un géomètre pour diverses missions",
+      "buyer": "Commune d'Amay",
       "region": "Wallonie",
       "languages": [
         "FR"
       ],
-      "sector": "VRD",
+      "sector": "Topo",
       "sectors": [
-        "VRD"
+        "Topo",
+        "Foncier",
+        "Implant"
       ],
-      "score": 74,
-      "screening": "review",
+      "score": 95,
+      "screening": "main",
       "publication": "2026-10-19",
       "deadline": "",
       "cpv": [
-        "37500000"
+        "71351810"
       ],
-      "description": "Conception et la réalisation de jeux d’antan sur le site du FOURNEAU SAINT MICHEL",
+      "description": "Les missions seront des missions d'estimations de terrains, de bornages et de recherches documentaires mais a également pour objet l’indication de l’implantation des constructions nouvelles et de constructions régularisées, sur le territoire communal d’AMAY, par les soins d’un géomètre expert-immobilier au nom du Collège des Bourgmestre et Échevins conformément à l’article D.IV.72 du CoDT. Durée d'un an à dater de l'attribution et reconductible 2 fois. Soit jusqu'au mois d'anniversaire en 2030.  Le présent marché n'implique aucune exclusivité en faveur de l'adjudicataire et la commune se réserve le droit de choisir pour chaque mission si le présent marché s'applique ou si un marché de service séparé doit être conclu.",
       "source": "BOSA",
       "source_status": "bosa_public_browser",
       "noticeSubType": "16",
       "noticeKind": "competition",
-      "bdaReference": "F030bis /2026_pub01",
+      "bdaReference": "PPP06E-1625/6097/2026.1625 3P_001",
       "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/01585054-3e27-4d0e-bb3c-ea614119d7b4/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/01585054-3e27-4d0e-bb3c-ea614119d7b4/documents",
+      "url": "https://www.publicprocurement.be/publication-workspaces/9adfd516-1615-4a05-8bc5-347c42646a57/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/9adfd516-1615-4a05-8bc5-347c42646a57/documents",
       "documentsPageSource": "public_api_200",
-      "documentInventory": [
-        {
-          "id": "0e76d0c9-da67-4b48-a636-4da4191b750d",
-          "title": "2026 Octobre CSC Fournitures_Jeux_Antan_PNDPP IRGR Fourneau St Michel (002).docx",
-          "kind": "csc",
-          "fileType": "docx",
-          "versionId": "0e9ac9b8-a0f8-4a93-a2d1-808c616a539c",
-          "documentId": "9292aee6-84d0-483a-8f21-dfa71ea8b020",
-          "activatedAt": "2026-10-19T10:40:45.012651",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/01585054-3e27-4d0e-bb3c-ea614119d7b4/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "6d7808a3-3483-460b-b483-635250929ac6",
-          "title": "Annexe 3 - Illustrations à titre d'exemple.docx",
-          "kind": "annex",
-          "fileType": "docx",
-          "versionId": "441c216a-af9f-4725-b177-c4a6e0b948b5",
-          "documentId": "a066d8e0-19b3-488d-8f20-fdf5db223548",
-          "activatedAt": "2026-10-19T10:40:45.012651",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/01585054-3e27-4d0e-bb3c-ea614119d7b4/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "98b7f79b-8efe-42d8-ba25-a4554b8b7fa4",
-          "title": "Annexe 1 - Formulaire d'offre.docx",
-          "kind": "annex",
-          "fileType": "docx",
-          "versionId": "e79b3bea-2852-4cc8-9520-bdf453ce94fd",
-          "documentId": "7a4ade56-831e-4405-9e36-58d96226e38a",
-          "activatedAt": "2026-10-19T10:40:45.012651",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/01585054-3e27-4d0e-bb3c-ea614119d7b4/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "df9634e2-afd6-4f54-98f9-c8b342b5ca1c",
-          "title": "Annexe 2 - Attestation de visite.docx",
-          "kind": "annex",
-          "fileType": "docx",
-          "versionId": "8e0f9b41-7f2e-4c5e-8f2d-945fa5029423",
-          "documentId": "2b78f637-d8d7-4267-a369-9b8e21ac27b7",
-          "activatedAt": "2026-10-19T10:40:45.012651",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/01585054-3e27-4d0e-bb3c-ea614119d7b4/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        }
-      ],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-19T10:57:17.530Z"
-    },
-    {
-      "id": "bosa:cad02ebd-b140-48ed-a970-6c3bab54c6aa",
-      "publicationWorkspaceId": "cad02ebd-b140-48ed-a970-6c3bab54c6aa",
-      "noticeId": "351cd0ae-30e3-4efb-ac74-4f4755f9bd25",
-      "procedureIdentifier": "320a3293-effb-4941-92d2-440471e10d53",
-      "internalReference": "MP2587_pub02",
-      "title": "Certification PEB du patrimoine de la Maison Liégeoise",
-      "buyer": "La Maison Liégeoise SRL",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "PEB",
-      "sectors": [
-        "PEB"
-      ],
-      "score": 95,
-      "screening": "review",
-      "publication": "2026-10-19",
-      "deadline": "",
-      "cpv": [
-        "71340000",
-        "71000000"
-      ],
-      "description": "Le marché de services consiste en la réalisation de certification PEB, conformément à la législation en vigueur en région wallonne, de l’ensemble du patrimoine de l’adjudicataire pour :  • Tous les logements dont le certificat PEB résidentiel n’est plus valable  • Tous les logements dont le certificat PEB résidentiel est inexistant  • Tous les logements dans le cadre d’une vente  Les immeubles à appartements qui disposent d’une installation commune de chauffage, d’eau chaude sanitaire, de ventilation ou de panneaux solaires photovoltaïques doivent faire l’objet d’un « rapport partiel » délivré par un certificateur. Lieu(x) de prestations : ensemble d’immeubles à logements situés à Liège, rive gauche (4000) et rive droite (4020) de la Meuse.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "29",
-      "noticeKind": "award",
-      "bdaReference": "",
-      "tedReference": "MP2587_pub02",
-      "url": "https://www.publicprocurement.be/publication-workspaces/cad02ebd-b140-48ed-a970-6c3bab54c6aa/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/cad02ebd-b140-48ed-a970-6c3bab54c6aa/documents",
-      "documentsPageSource": "public_api_200",
-      "bosaResults": [
-        {
-          "reference": "MP2587_pub02",
-          "url": "https://www.publicprocurement.be/publication-workspaces/cad02ebd-b140-48ed-a970-6c3bab54c6aa/general",
-          "publicationDate": "2026-10-19",
-          "kind": "award"
-        }
-      ],
       "documentInventory": [],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-19T10:57:21.223Z"
-    },
-    {
-      "id": "bosa:ceb26939-f737-4a41-91fb-c193e9e2f285",
-      "publicationWorkspaceId": "ceb26939-f737-4a41-91fb-c193e9e2f285",
-      "noticeId": "7e6ff32b-a9f8-4cf9-b94d-3777ab6f0429",
-      "procedureIdentifier": "f783e0b1-8649-4729-af7b-511403c37def",
-      "internalReference": "PPP0O5-1404/6292/2634S_004",
-      "title": "Désignation d’un Bureau d’Etudes en Techniques Spéciales et en Stabilité pour l’étude et le suivi de l’exécution de la restructuration et rationalisation des Travaux Pratiques (Chimie) et des salles de cours pour les étudiants (bât. B6d-chimie travaux pratiques) - par étapes",
-      "buyer": "Université de Liège (3P)",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 49,
-      "screening": "review",
-      "publication": "2026-10-19",
-      "deadline": "",
-      "cpv": [
-        "71000000"
-      ],
-      "description": "Le présent marché de services porte sur la désignation d’un Bureau d’Etudes en Techniques Spéciales et en Stabilité pour l’étude et le contrôle de l’exécution de la restructuration et rationalisation des Travaux Pratiques (Chimie) et des salles de cours pour les étudiants (bât. B6d-chimie travaux pratiques), en étroite collaboration avec les responsables techniques de l’Administration des Ressources Immobilières de l’ULiège (ARI) qui se chargent des parties gros-œuvre (hors stabilité), parachèvements, mobilier (excepté les sorbonnes de laboratoire) et équipement audiovisuel (matériel) ainsi que de la coordination d’ensemble. Le projet est phasé (4 étapes pour l’exécution des travaux). Une étude de programmation a été finalisée en 2025 par le bureau de programmation ATO consultants & managers SA. Il s’agit d’une restructuration, par ÉTAPES, de l’occupation du bâtiment de Chimie Travaux Pratiques B6d, afin de regrouper sur un même site les travaux pratiques de Chimie dispensés aux étudiants, dans des laboratoires multi-facultaires sécurisés et spécifiques, adaptés à ce type d’activités. Ce projet comprend également les mises aux normes (électricité, HVAC, sorbonnes, fluides, stockage produits chimiques, etc.) et les améliorations techniques nécessaires. 4 ÉTAPES (appelées « étape » pour éviter la confusion avec les phases de la mission) de travaux sont explicitées dans les documents techniques. La note d’orientations jointe au présent cahier des charges explicite le projet et comprend les résultats de l’étude de programmation. L’enveloppe du bâtiment B6d a déjà été précédemment rénovée énergétiquement.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "29",
-      "noticeKind": "award",
-      "bdaReference": "",
-      "tedReference": "PPP0O5-1404/6292/2634S_004",
-      "url": "https://www.publicprocurement.be/publication-workspaces/ceb26939-f737-4a41-91fb-c193e9e2f285/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/ceb26939-f737-4a41-91fb-c193e9e2f285/documents",
-      "documentsPageSource": "public_api_200",
-      "bosaResults": [
+      "consultationUrls": [
         {
-          "reference": "PPP0O5-1404/6292/2634S_004",
-          "url": "https://www.publicprocurement.be/publication-workspaces/ceb26939-f737-4a41-91fb-c193e9e2f285/general",
-          "publicationDate": "2026-10-19",
-          "kind": "award"
+          "url": "https://cloud.3p.eu/Downloads/1/1625/6E/2026",
+          "type": "officially_referenced_external_documents",
+          "access": "destination_not_download_verified",
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/9adfd516-1615-4a05-8bc5-347c42646a57/urls?full=false",
+          "activatedAt": "2026-10-19T13:53:45.022438"
         }
       ],
-      "documentInventory": [],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-19T10:57:24.920Z"
+      "documentsCheckedAt": "2026-10-19T17:37:00.041Z"
     }
   ]
 }
