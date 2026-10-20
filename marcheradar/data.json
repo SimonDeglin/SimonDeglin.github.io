@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-19T17:30:08.212Z",
+  "generated_at": "2026-10-20T10:07:21.761Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-10-19 : 1443 avis lus, 6 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-10-20 : 1459 avis lus, 5 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
@@ -19,7 +19,7 @@
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-10-19T17:33:37.163Z",
+      "last_success": "2026-10-20T10:12:21.202Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -79,12 +79,12 @@
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 33 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
-    "scanned": 1443,
-    "matched_current_run": 19,
-    "records": 124,
-    "review_count": 52,
-    "award_notice_count": 413,
-    "awarded_market_matches": 6,
+    "scanned": 1459,
+    "matched_current_run": 22,
+    "records": 126,
+    "review_count": 53,
+    "award_notice_count": 442,
+    "awarded_market_matches": 5,
     "award_fields_requested": false,
     "retained_as_excluded": 2,
     "excluded_reasons": {
@@ -94,31 +94,31 @@
     "queries": [
       {
         "source": "Acheteurs belges",
-        "from": "20261008",
-        "to": "20261014",
-        "found": 456,
-        "reported": 456
+        "from": "20261009",
+        "to": "20261015",
+        "found": 452,
+        "reported": 452
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261008",
-        "to": "20261014",
-        "found": 420,
-        "reported": 420
+        "from": "20261009",
+        "to": "20261015",
+        "found": 417,
+        "reported": 417
       },
       {
         "source": "Acheteurs belges",
-        "from": "20261015",
-        "to": "20261019",
-        "found": 295,
-        "reported": 295
+        "from": "20261016",
+        "to": "20261020",
+        "found": 306,
+        "reported": 306
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261015",
-        "to": "20261019",
-        "found": 272,
-        "reported": 272
+        "from": "20261016",
+        "to": "20261020",
+        "found": 284,
+        "reported": 284
       }
     ],
     "warnings": [],
@@ -140,19 +140,155 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "avis_attribution_analyse_separement": 413,
-      "aucun_signal_metier": 421,
-      "avis_neerlandais": 145,
+      "assurance_ou_nettoyage": 27,
+      "fournitures_et_location": 48,
+      "objet_hors_domaine": 93,
       "qualifie_review": 29,
-      "acheteur_flamand": 135,
-      "travaux_execution": 124,
-      "objet_hors_domaine": 102,
-      "assurance_ou_nettoyage": 26,
-      "fournitures_et_location": 42,
-      "qualifie_main": 6
+      "aucun_signal_metier": 404,
+      "avis_attribution_analyse_separement": 442,
+      "travaux_execution": 111,
+      "avis_neerlandais": 154,
+      "acheteur_flamand": 139,
+      "qualifie_main": 12
     }
   },
   "items": [
+    {
+      "id": "ted:685167-2026",
+      "publicationNumber": "724256-2026",
+      "procedureIdentifier": "66b4d1f2-90db-4da8-ae00-785033bf780d",
+      "title": "Belgique – Services de cartographie numérique – Vectorisation des plans des réseaux de distribution électrique et gaz.",
+      "buyer": "RESA Innovation et Technologie SA en son nom et pour compte de RESA SA Intercommunale",
+      "region": "Belgique",
+      "sector": "Carto",
+      "sectors": [
+        "Carto"
+      ],
+      "score": 95,
+      "publication": "2026-10-20",
+      "deadline": "2026-10-19",
+      "cpv": [
+        "71354100"
+      ],
+      "description": "Vectorisation des plans des réseaux de distribution électrique et gaz.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/724256-2026",
+      "noticeNumbers": [
+        "685167-2026",
+        "724256-2026"
+      ],
+      "screening": "main",
+      "publicationWorkspaceId": "486b2f54-2318-4d42-a646-f4a0395e49fb",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/685167-2026",
+          "publicationNumber": "685167-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/486b2f54-2318-4d42-a646-f4a0395e49fb/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ],
+      "screeningReason": null,
+      "matchReason": "prestation_decrite"
+    },
+    {
+      "id": "ted:682582-2026",
+      "publicationNumber": "722810-2026",
+      "procedureIdentifier": "9492f68c-30e2-4f2e-b13a-987b2a466987",
+      "title": "Belgique – Services d'architecte pour les bâtiments – Mission d’auteur de projet relative à la rénovation de trois bâtiments en logements et équipement mixte de proximité dans le cadre du Contrat de Quartier Durable « Conscience »",
+      "buyer": "Commune d'Evere",
+      "region": "Belgique",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 95,
+      "screening": "main",
+      "publication": "2026-10-20",
+      "deadline": "",
+      "cpv": [
+        "71221000"
+      ],
+      "description": "Mission d’auteur de projet relative à la rénovation de trois bâtiments en logements et équipement mixte de proximité dans le cadre du Contrat de Quartier Durable « Conscience »",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/722810-2026",
+      "publicationWorkspaceId": "a84d88b2-2d0b-4a95-863c-1ba6c3f79041",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/682582-2026",
+          "publicationNumber": "682582-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/a84d88b2-2d0b-4a95-863c-1ba6c3f79041/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ],
+      "matchReason": "prestation_decrite",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "682582-2026",
+        "722810-2026"
+      ]
+    },
+    {
+      "id": "ted:722881-2026",
+      "publicationNumber": "722881-2026",
+      "procedureIdentifier": "d985a953-8839-4b4f-b98c-74b1f444f83f",
+      "title": "Belgique – Services d'architecte pour les bâtiments – Marché de services - Intervention d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
+      "buyer": "Ville de Soignies",
+      "region": "Belgique",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 95,
+      "screening": "main",
+      "publication": "2026-10-20",
+      "deadline": "2026-11-20",
+      "cpv": [
+        "71221000"
+      ],
+      "description": "Marché de services - Intervention d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/722881-2026"
+    },
+    {
+      "id": "ted:725331-2026",
+      "publicationNumber": "725331-2026",
+      "procedureIdentifier": "3668f938-340f-46ac-952f-0f5d6f82c26c",
+      "title": "Belgique – Matériel de plomberie et de chauffage – Marché à bons de commandes - fournitures sanitaires et chauffage",
+      "buyer": "La Dinantaise",
+      "region": "Belgique",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-20",
+      "deadline": "2026-11-17",
+      "cpv": [
+        "44115200"
+      ],
+      "description": "Objet des fournitures : Accord-cadre multi-attributaires pour la fourniture de matériels de plomberie, chauffage et sanitaire. Commentaire : Le présent marché a pour objet la conclusion d’un accord-cadre multi-attributaires pour la fourniture de matériels nécessaires aux interventions de la régie technique de la société de logement de service public. Les fournitures comprennent des accessoires et produits de plomberie, sanitaires et de chauffage. Il s'agit d’un marché public de fournitures. Le marché est conclu sous la forme d’un accord-cadre avec un maximum de trois attributaires, pour une durée de quatre ans. Les commandes seront exécutées selon un système en cascade. L’adjudicataire ne livre pas l’ensemble des fournitures en une fois, mais par livraisons fractionnées sur base de bons de commandes successifs au gré des besoins du pouvoir adjudicateur, pendant toute la durée du marché. Le marché porte sur la totalité des produits repris dans l’inventaire ci-joint ET du catalogue du soumissionnaire, dont les articles font partie de l’objet du présent marché. Par conséquent, le pouvoir adjudicateur aura accès au catalogue de l’adjudicataire moyennant une remise. Le pouvoir adjudicateur disposera d’un compte client, permettant le suivi des commandes, suivi des livraisons, accès aux fiches techniques du matériel et état du stock. Le soumissionnaire fournira, avec son offre, un compte client temporaire pour que l’adjudicateur puisse tester l’interface du catalogue en ligne. Au moment de la rédaction des conditions du présent marché, l’administration n’est pas en mesure de définir avec précision les quantités de fournitures dont elle aura besoin. En conséquence, les quantités présumées indiquées dans le présent cahier spécial des charges régissant le présent marché sont à titre purement indicatif et elles n’engagent nullement l’administration. Le marché est attribué au(x) soumissionnaire(s) dont l’offre est régulière et économiquement la plus avantageuse. Le classement établi lors de l’analyse des offres déterminera l’ordre de recours aux fournisseurs dans le cadre d'un système en cascade. Les commandes sont d’abord adressées au fournisseur le mieux classé. En cas d’indisponibilité d’un article ou de délai de livraison non respecté, la commande est passée au fournisseur suivant dans le classement. L’indisponibilité devra être confirmée par écrit par le fournisseur concerné dans un délai de 24h ouvrables. Les fournitures seront livrées au siège de la slsp. Le délai standard de livraison doit être indiqué et ne pourra excéder 48 heures ouvrables sauf exception.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/725331-2026"
+    },
     {
       "id": "bosa:cad02ebd-b140-48ed-a970-6c3bab54c6aa",
       "publicationWorkspaceId": "cad02ebd-b140-48ed-a970-6c3bab54c6aa",
@@ -234,6 +370,55 @@
           "url": "https://www.publicprocurement.be/publication-workspaces/cad02ebd-b140-48ed-a970-6c3bab54c6aa/general"
         }
       ]
+    },
+    {
+      "id": "bosa:9adfd516-1615-4a05-8bc5-347c42646a57",
+      "publicationWorkspaceId": "9adfd516-1615-4a05-8bc5-347c42646a57",
+      "noticeId": "1b01629f-da71-4435-b168-274f0b4835b0",
+      "procedureIdentifier": "6fa4e0b9-24ec-4626-8bb7-cf8729c9ba9b",
+      "internalReference": "PPP06E-1625/6097/2026.1625 3P_001",
+      "title": "Marché annuel 2026-2030: Désignation d'un géomètre pour diverses missions",
+      "buyer": "Commune d'Amay",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Topo",
+      "sectors": [
+        "Topo",
+        "Foncier",
+        "Implant"
+      ],
+      "score": 95,
+      "screening": "main",
+      "publication": "2026-10-19",
+      "deadline": "",
+      "cpv": [
+        "71351810"
+      ],
+      "description": "Les missions seront des missions d'estimations de terrains, de bornages et de recherches documentaires mais a également pour objet l’indication de l’implantation des constructions nouvelles et de constructions régularisées, sur le territoire communal d’AMAY, par les soins d’un géomètre expert-immobilier au nom du Collège des Bourgmestre et Échevins conformément à l’article D.IV.72 du CoDT. Durée d'un an à dater de l'attribution et reconductible 2 fois. Soit jusqu'au mois d'anniversaire en 2030.  Le présent marché n'implique aucune exclusivité en faveur de l'adjudicataire et la commune se réserve le droit de choisir pour chaque mission si le présent marché s'applique ou si un marché de service séparé doit être conclu.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "PPP06E-1625/6097/2026.1625 3P_001",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/9adfd516-1615-4a05-8bc5-347c42646a57/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/9adfd516-1615-4a05-8bc5-347c42646a57/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [],
+      "consultationUrls": [
+        {
+          "url": "https://cloud.3p.eu/Downloads/1/1625/6E/2026",
+          "type": "officially_referenced_external_documents",
+          "access": "destination_not_download_verified",
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/9adfd516-1615-4a05-8bc5-347c42646a57/urls?full=false",
+          "activatedAt": "2026-10-19T13:53:45.022438"
+        }
+      ],
+      "documentsCheckedAt": "2026-10-19T17:37:00.041Z",
+      "matchReason": "prestation_decrite",
+      "screeningReason": null
     },
     {
       "id": "bosa:01585054-3e27-4d0e-bb3c-ea614119d7b4",
@@ -417,6 +602,131 @@
       "screeningReason": null,
       "noticeNumbers": [
         "719477-2026"
+      ]
+    },
+    {
+      "id": "bosa:be6bb1c0-8542-44d9-a9c0-56938e517c69",
+      "publicationWorkspaceId": "be6bb1c0-8542-44d9-a9c0-56938e517c69",
+      "noticeId": "c7a7b1fc-eebf-4590-ab77-c4668eef99c0",
+      "procedureIdentifier": "589bcf39-9d53-495d-9e70-6a739b18d477",
+      "internalReference": "UKR24001-10342_pub01",
+      "title": "Public service contract for “Technical Supervision Services for Reconstruction and Repair Projects at Educational and Healthcare Facilities in Chernihiv and Kyiv Regions”",
+      "buyer": "Enabel",
+      "region": "Belgique",
+      "languages": [
+        "FR",
+        "EN"
+      ],
+      "sector": "Foncier",
+      "sectors": [
+        "Foncier"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-19",
+      "deadline": "",
+      "cpv": [
+        "71520000"
+      ],
+      "description": "Les Services consistent en la supervision technique des travaux de construction afin de garantir leur conformité à la documentation du projet, aux exigences réglementaires et aux normes de qualité applicables. Le Prestataire de services est tenu de procéder à des inspections, de surveiller l’exécution des travaux par les entrepreneurs, de vérifier la conformité des matériaux et des ouvrages réalisés, de tenir à jour les registres et documents de suivi, ainsi que de rendre compte de l’avancement des travaux, le tout dans le strict respect de la législation ukrainienne, notamment de la Loi relative aux activités architecturales, de la Loi relative à la réglementation des activités d’urbanisme, de la Procédure de supervision technique (Résolution n° 903) et des normes nationales de construction applicables.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E3",
+      "noticeKind": "competition",
+      "bdaReference": "UKR24001-10342_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "06290c38-65cc-4593-9f24-44ee651379d0",
+          "title": "01_UKR24001-10342_Tender Specifications_v2.0.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "bcdca6d0-d13f-4138-99c5-6e122da4dde8",
+          "documentId": "17848170-0136-4662-8b9a-69f321d687c5",
+          "activatedAt": "2026-10-19T14:35:45.019469",
+          "language": "FR,EN",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "233fdba3-8cc2-4caa-a7ec-b79180caa88c",
+          "title": "Annexes_Lot 3.zip",
+          "kind": "annex",
+          "fileType": "zip",
+          "versionId": "7a672143-498d-40bf-85d2-1a0ccd6c89b8",
+          "documentId": "338ce9a3-7ba9-4ed9-99b8-3bd5f1ce416e",
+          "activatedAt": "2026-10-12T11:33:45.047117",
+          "language": "FR,EN",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "80e227ff-6b44-4db1-8732-92554ce36874",
+          "title": "Annexes_Lot 2.zip",
+          "kind": "annex",
+          "fileType": "zip",
+          "versionId": "5a3371af-caf1-41b9-89e6-e6eade671b0a",
+          "documentId": "23b3699b-6288-4049-922c-146ae89c1eb4",
+          "activatedAt": "2026-10-12T11:33:45.047117",
+          "language": "FR,EN",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "8ec5e22a-6982-4e29-909a-6383711be0d3",
+          "title": "Annexes_Lot 1_v2.0.zip",
+          "kind": "annex",
+          "fileType": "zip",
+          "versionId": "6dabd106-495c-4884-b407-a9d35ae4800b",
+          "documentId": "d182b6fc-7127-4669-95f9-5b81310dc8c6",
+          "activatedAt": "2026-10-19T14:35:45.019469",
+          "language": "FR,EN",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "9ed565c0-767e-4eb9-b58c-385bf3c85c04",
+          "title": "01.2_UKR24001-10342_Addendum_01.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "62dd41f2-e318-42b1-b772-46e8d5633836",
+          "documentId": "5ebc8928-f728-45bd-8c0d-992a55d8ce01",
+          "activatedAt": "2026-10-19T14:35:45.019469",
+          "language": "FR,EN",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "ad23c7e4-e35f-4ac6-b0d9-091f75ea9aa9",
+          "title": "01.1_UKR24001-10342_FORMS_v2.0.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "1b6ff5ed-8135-422d-81f1-ab428d851133",
+          "documentId": "f7b3b39c-0bec-4f55-8e29-844c0e81c6b6",
+          "activatedAt": "2026-10-19T14:35:45.019469",
+          "language": "FR,EN",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-20T10:12:38.814Z",
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/general"
+        }
       ]
     },
     {
@@ -2611,131 +2921,6 @@
       ]
     },
     {
-      "id": "bosa:be6bb1c0-8542-44d9-a9c0-56938e517c69",
-      "publicationWorkspaceId": "be6bb1c0-8542-44d9-a9c0-56938e517c69",
-      "noticeId": "c7a7b1fc-eebf-4590-ab77-c4668eef99c0",
-      "procedureIdentifier": "589bcf39-9d53-495d-9e70-6a739b18d477",
-      "internalReference": "UKR24001-10342_pub01",
-      "title": "Public service contract for “Technical Supervision Services for Reconstruction and Repair Projects at Educational and Healthcare Facilities in Chernihiv and Kyiv Regions”",
-      "buyer": "Enabel",
-      "region": "Belgique",
-      "languages": [
-        "FR",
-        "EN"
-      ],
-      "sector": "Foncier",
-      "sectors": [
-        "Foncier"
-      ],
-      "score": 52,
-      "screening": "review",
-      "publication": "2026-10-19",
-      "deadline": "",
-      "cpv": [
-        "71520000"
-      ],
-      "description": "Les Services consistent en la supervision technique des travaux de construction afin de garantir leur conformité à la documentation du projet, aux exigences réglementaires et aux normes de qualité applicables. Le Prestataire de services est tenu de procéder à des inspections, de surveiller l’exécution des travaux par les entrepreneurs, de vérifier la conformité des matériaux et des ouvrages réalisés, de tenir à jour les registres et documents de suivi, ainsi que de rendre compte de l’avancement des travaux, le tout dans le strict respect de la législation ukrainienne, notamment de la Loi relative aux activités architecturales, de la Loi relative à la réglementation des activités d’urbanisme, de la Procédure de supervision technique (Résolution n° 903) et des normes nationales de construction applicables.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "E3",
-      "noticeKind": "competition",
-      "bdaReference": "UKR24001-10342_pub01",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [
-        {
-          "id": "06290c38-65cc-4593-9f24-44ee651379d0",
-          "title": "01_UKR24001-10342_Tender Specifications_v2.0.pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "bcdca6d0-d13f-4138-99c5-6e122da4dde8",
-          "documentId": "17848170-0136-4662-8b9a-69f321d687c5",
-          "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "233fdba3-8cc2-4caa-a7ec-b79180caa88c",
-          "title": "Annexes_Lot 3.zip",
-          "kind": "annex",
-          "fileType": "zip",
-          "versionId": "7a672143-498d-40bf-85d2-1a0ccd6c89b8",
-          "documentId": "338ce9a3-7ba9-4ed9-99b8-3bd5f1ce416e",
-          "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "EN,FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "80e227ff-6b44-4db1-8732-92554ce36874",
-          "title": "Annexes_Lot 2.zip",
-          "kind": "annex",
-          "fileType": "zip",
-          "versionId": "5a3371af-caf1-41b9-89e6-e6eade671b0a",
-          "documentId": "23b3699b-6288-4049-922c-146ae89c1eb4",
-          "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "EN,FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "8ec5e22a-6982-4e29-909a-6383711be0d3",
-          "title": "Annexes_Lot 1_v2.0.zip",
-          "kind": "annex",
-          "fileType": "zip",
-          "versionId": "6dabd106-495c-4884-b407-a9d35ae4800b",
-          "documentId": "d182b6fc-7127-4669-95f9-5b81310dc8c6",
-          "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "9ed565c0-767e-4eb9-b58c-385bf3c85c04",
-          "title": "01.2_UKR24001-10342_Addendum_01.pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "62dd41f2-e318-42b1-b772-46e8d5633836",
-          "documentId": "5ebc8928-f728-45bd-8c0d-992a55d8ce01",
-          "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "ad23c7e4-e35f-4ac6-b0d9-091f75ea9aa9",
-          "title": "01.1_UKR24001-10342_FORMS_v2.0.docx",
-          "kind": "other",
-          "fileType": "docx",
-          "versionId": "1b6ff5ed-8135-422d-81f1-ab428d851133",
-          "documentId": "f7b3b39c-0bec-4f55-8e29-844c0e81c6b6",
-          "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        }
-      ],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-19T17:35:03.033Z",
-      "matchReason": "description_ou_contexte",
-      "screeningReason": null,
-      "officialSources": [
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/general"
-        }
-      ]
-    },
-    {
       "id": "bosa:0a68b2b8-2e25-43c7-b9c1-bd3988de7958",
       "publicationWorkspaceId": "0a68b2b8-2e25-43c7-b9c1-bd3988de7958",
       "noticeId": "8ed64fb0-de03-42a6-8db3-b3776c264741",
@@ -4363,49 +4548,6 @@
       "matchReason": "prestation_decrite"
     },
     {
-      "id": "ted:685167-2026",
-      "publicationNumber": "685167-2026",
-      "procedureIdentifier": "66b4d1f2-90db-4da8-ae00-785033bf780d",
-      "title": "Belgique – Services de cartographie numérique – Vectorisation des plans des réseaux de distribution électrique et gaz.",
-      "buyer": "RESA Innovation et Technologie SA en son nom et pour compte de RESA SA Intercommunale",
-      "region": "Belgique",
-      "sector": "Carto",
-      "sectors": [
-        "Carto"
-      ],
-      "score": 95,
-      "publication": "2026-10-05",
-      "deadline": "2026-10-19",
-      "cpv": [
-        "71354100"
-      ],
-      "description": "Vectorisation des plans des réseaux de distribution électrique et gaz.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/685167-2026",
-      "noticeNumbers": [
-        "685167-2026"
-      ],
-      "screening": "main",
-      "publicationWorkspaceId": "486b2f54-2318-4d42-a646-f4a0395e49fb",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/685167-2026",
-          "publicationNumber": "685167-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/486b2f54-2318-4d42-a646-f4a0395e49fb/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        }
-      ],
-      "screeningReason": null,
-      "matchReason": "prestation_decrite"
-    },
-    {
       "id": "bosa:5693dc0a-48d7-485d-9794-7a49c7216ef9",
       "publicationWorkspaceId": "5693dc0a-48d7-485d-9794-7a49c7216ef9",
       "noticeId": "cd9992b4-e534-4f54-9d6d-d7a503fd323e",
@@ -4482,49 +4624,6 @@
       "consultationUrls": [],
       "documentsCheckedAt": "2026-10-15T15:06:06.873Z",
       "matchReason": "prestation_decrite"
-    },
-    {
-      "id": "ted:682582-2026",
-      "publicationNumber": "682582-2026",
-      "procedureIdentifier": "9492f68c-30e2-4f2e-b13a-987b2a466987",
-      "title": "Belgique – Services d'architecte pour les bâtiments – Mission d’auteur de projet relative à la rénovation de trois bâtiments en logements et équipement mixte de proximité dans le cadre du Contrat de Quartier Durable « Conscience »",
-      "buyer": "Commune d'Evere",
-      "region": "Belgique",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 95,
-      "screening": "main",
-      "publication": "2026-10-05",
-      "deadline": "",
-      "cpv": [
-        "71221000"
-      ],
-      "description": "Mission d’auteur de projet relative à la rénovation de trois bâtiments en logements et équipement mixte de proximité dans le cadre du Contrat de Quartier Durable « Conscience »",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/682582-2026",
-      "publicationWorkspaceId": "a84d88b2-2d0b-4a95-863c-1ba6c3f79041",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/682582-2026",
-          "publicationNumber": "682582-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/a84d88b2-2d0b-4a95-863c-1ba6c3f79041/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        }
-      ],
-      "matchReason": "prestation_decrite",
-      "screeningReason": null,
-      "noticeNumbers": [
-        "682582-2026"
-      ]
     },
     {
       "id": "bosa:7c6f139f-e8ef-41c1-8b2b-c8bcece9817b",
@@ -4675,7 +4774,7 @@
           "versionId": "22cc83b1-d599-4416-96d9-c1a354861889",
           "documentId": "425d5ba1-de86-4335-b68e-3b58107c5b6d",
           "activatedAt": "2026-09-29T15:00:45.021111",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -4688,14 +4787,14 @@
           "versionId": "354fbb7b-5f90-4703-9d8e-dae76f7aa72f",
           "documentId": "3b9e3ed1-8163-4041-a26c-eb15668ce044",
           "activatedAt": "2026-10-05T15:31:45.185664",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-19T17:36:27.111Z",
+      "documentsCheckedAt": "2026-10-20T10:15:19.288Z",
       "matchReason": "description_ou_contexte",
       "screeningReason": null,
       "officialSources": [
@@ -6628,53 +6727,6 @@
         }
       ],
       "screeningReason": "verification_locale_intention_de_mission_non_etablie"
-    },
-    {
-      "id": "bosa:9adfd516-1615-4a05-8bc5-347c42646a57",
-      "publicationWorkspaceId": "9adfd516-1615-4a05-8bc5-347c42646a57",
-      "noticeId": "1b01629f-da71-4435-b168-274f0b4835b0",
-      "procedureIdentifier": "6fa4e0b9-24ec-4626-8bb7-cf8729c9ba9b",
-      "internalReference": "PPP06E-1625/6097/2026.1625 3P_001",
-      "title": "Marché annuel 2026-2030: Désignation d'un géomètre pour diverses missions",
-      "buyer": "Commune d'Amay",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Topo",
-      "sectors": [
-        "Topo",
-        "Foncier",
-        "Implant"
-      ],
-      "score": 95,
-      "screening": "main",
-      "publication": "2026-10-19",
-      "deadline": "",
-      "cpv": [
-        "71351810"
-      ],
-      "description": "Les missions seront des missions d'estimations de terrains, de bornages et de recherches documentaires mais a également pour objet l’indication de l’implantation des constructions nouvelles et de constructions régularisées, sur le territoire communal d’AMAY, par les soins d’un géomètre expert-immobilier au nom du Collège des Bourgmestre et Échevins conformément à l’article D.IV.72 du CoDT. Durée d'un an à dater de l'attribution et reconductible 2 fois. Soit jusqu'au mois d'anniversaire en 2030.  Le présent marché n'implique aucune exclusivité en faveur de l'adjudicataire et la commune se réserve le droit de choisir pour chaque mission si le présent marché s'applique ou si un marché de service séparé doit être conclu.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "16",
-      "noticeKind": "competition",
-      "bdaReference": "PPP06E-1625/6097/2026.1625 3P_001",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/9adfd516-1615-4a05-8bc5-347c42646a57/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/9adfd516-1615-4a05-8bc5-347c42646a57/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [],
-      "consultationUrls": [
-        {
-          "url": "https://cloud.3p.eu/Downloads/1/1625/6E/2026",
-          "type": "officially_referenced_external_documents",
-          "access": "destination_not_download_verified",
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/9adfd516-1615-4a05-8bc5-347c42646a57/urls?full=false",
-          "activatedAt": "2026-10-19T13:53:45.022438"
-        }
-      ],
-      "documentsCheckedAt": "2026-10-19T17:37:00.041Z"
     }
   ]
 }
