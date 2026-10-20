@@ -1,25 +1,25 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-20T15:40:35.321Z",
+  "generated_at": "2026-10-20T20:00:48.451Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
   "note": "TED interrogé le 2026-10-20 : 1459 avis lus, 5 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-20T15:42:34.126Z",
-      "scanned": 2475,
+      "last_success": "2026-10-20T20:02:35.470Z",
+      "scanned": 2500,
       "retained": 68,
       "period_from": "2026-10-06",
       "period_to": "2026-10-20",
-      "pages": 99,
+      "pages": 100,
       "complete": true,
-      "raw_candidates": 2474,
+      "raw_candidates": 2478,
       "oldest_seen": "2026-10-05"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-10-20T15:44:49.738Z",
+      "last_success": "2026-10-20T20:04:18.999Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -75,14 +75,14 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 99 page(s) parcourue(s) depuis 2026-10-06.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 100 page(s) parcourue(s) depuis 2026-10-06.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 33 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
     "scanned": 1459,
     "matched_current_run": 22,
     "records": 133,
-    "review_count": 53,
+    "review_count": 58,
     "award_notice_count": 441,
     "awarded_market_matches": 5,
     "award_fields_requested": false,
@@ -122,9 +122,9 @@
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2475,
+    "bosa_scanned": 2500,
     "bosa_imported": 68,
-    "bosa_pages": 99,
+    "bosa_pages": 100,
     "local_documents": 33,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -141,14 +141,14 @@
     },
     "raw_screening": {
       "assurance_ou_nettoyage": 27,
-      "fournitures_et_location": 48,
-      "objet_hors_domaine": 93,
-      "qualifie_review": 29,
-      "aucun_signal_metier": 405,
       "avis_attribution_analyse_separement": 441,
-      "travaux_execution": 112,
-      "avis_neerlandais": 153,
+      "aucun_signal_metier": 407,
       "acheteur_flamand": 139,
+      "travaux_execution": 113,
+      "qualifie_review": 29,
+      "fournitures_et_location": 48,
+      "objet_hors_domaine": 92,
+      "avis_neerlandais": 151,
       "qualifie_main": 12
     }
   },
@@ -295,6 +295,407 @@
       ]
     },
     {
+      "id": "bosa:443228c0-3dec-4eba-bef0-857510a777d7",
+      "publicationWorkspaceId": "443228c0-3dec-4eba-bef0-857510a777d7",
+      "noticeId": "f5141403-837d-4a4b-a16e-853db3ec13ef",
+      "procedureIdentifier": "38e426ed-12f9-4b17-adca-f5efdb897f84",
+      "internalReference": "O4.04.01-26-3590_pub01",
+      "title": "Marché de services relatif aux missions de guidance technique et juridique en matière de certification PEB des bâtiments publics, à destination des certificateurs et des autorités publiques, ainsi qu’au développement et à l’actualisation continue des outils et outils connexes",
+      "buyer": "SPW-O4.04.01 - Direction des Bâtiments durables",
+      "region": "Belgique",
+      "languages": [
+        "FR"
+      ],
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "score": 95,
+      "screening": "main",
+      "publication": "2026-10-20",
+      "deadline": "",
+      "cpv": [
+        "71310000"
+      ],
+      "description": "Le marché prévoit, outre une guidance technique et juridique relative à la certification PEB des bâtiments publics, l’actualisation et le développement des supports et outils destinés aux candidats certificateurs, aux certificateurs agréés et aux autorités publiques. Les supports existants seront mis à jour en fonction des retours de terrain et des évolutions réglementaires, dans une logique de continuité. Parallèlement, le pouvoir adjudicateur pourra confier à l’adjudicataire des prestations de préparation et d’accompagnement de l’extension de la certification PEB à l’ensemble des bâtiments non-résidentiels existants, sur la base du dispositif applicable aux bâtiments publics. Cette extension nécessitera des analyses, adaptations et développements plus conséquents qu’une simple mise à jour liée aux retours de terrain ou aux évolutions réglementaires. Sont notamment concernés la méthode de calcul, les procédures, le protocole et le formulaire de collecte des données, les modèles de certificats, les supports de formation et d’examen, les outils d’information et de guidance ainsi que le logiciel.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "O4.04.01-26-3590_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/443228c0-3dec-4eba-bef0-857510a777d7/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/443228c0-3dec-4eba-bef0-857510a777d7/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "6ced9c2c-42ec-4899-8bac-b7c18a84200c",
+          "title": "Annexe 2 - Contrat de Sous-Traitance RGPD Guidance Certif PEB BP.docx",
+          "kind": "annex",
+          "fileType": "docx",
+          "versionId": "b012846f-d974-4e91-8e71-937792011f74",
+          "documentId": "9eb11345-20cd-43c3-9d92-3abd3c5891a5",
+          "activatedAt": "2026-10-20T15:19:46.017398",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/443228c0-3dec-4eba-bef0-857510a777d7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "93737b31-37ee-4206-8ce5-8646ec5743a2",
+          "title": "Annexe 3 - Recours Auprès du Conseil d'Etat.pdf",
+          "kind": "annex",
+          "fileType": "pdf",
+          "versionId": "9353c7c8-9a5f-4498-ba83-5d3d52cf432d",
+          "documentId": "6adf5ddf-f802-4e61-9fd4-b115c9667386",
+          "activatedAt": "2026-10-20T15:19:46.017398",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/443228c0-3dec-4eba-bef0-857510a777d7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "eb41f319-49d9-47ec-a91a-27684204594f",
+          "title": "Annexe 1 - CSC Guidance BP - 2027.pdf",
+          "kind": "csc",
+          "fileType": "pdf",
+          "versionId": "70c181eb-cd8a-41c3-8381-50ec2401ee83",
+          "documentId": "363aa0a4-b242-4c74-9acc-c29fbeda927c",
+          "activatedAt": "2026-10-20T15:19:46.017398",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/443228c0-3dec-4eba-bef0-857510a777d7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-20T15:48:22.601Z",
+      "matchReason": "prestation_decrite",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/443228c0-3dec-4eba-bef0-857510a777d7/general"
+        }
+      ]
+    },
+    {
+      "id": "bosa:e26a641b-92f3-441a-b4ba-e23435579289",
+      "publicationWorkspaceId": "e26a641b-92f3-441a-b4ba-e23435579289",
+      "noticeId": "d1944c69-b43c-4844-bb3a-ceed4316a3f5",
+      "procedureIdentifier": "6e28bdc5-a6b8-4fb5-93b8-f8261df13e5c",
+      "internalReference": "2026B0184_pub01",
+      "title": "EXECUTION DE RELEVES TOPOGRAPHIQUES EN REGION DE BRUXELLES-CAPITALE : TYPE RESEAU HYDROGRAPHIQUE",
+      "buyer": "Bruxelles Environnement",
+      "region": "Bruxelles",
+      "languages": [
+        "NL",
+        "FR"
+      ],
+      "sector": "Topo",
+      "sectors": [
+        "Topo",
+        "Hydro"
+      ],
+      "score": 95,
+      "screening": "main",
+      "publication": "2026-10-20",
+      "deadline": "",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "EXECUTION DE RELEVES TOPOGRAPHIQUES EN REGION DE BRUXELLES-CAPITALE : TYPE RESEAU HYDROGRAPHIQUE",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E3",
+      "noticeKind": "competition",
+      "bdaReference": "2026B0184_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "2157ce6f-63b0-466f-9480-cfe09a17eeb2",
+          "title": "02_2026B0184_xxxx_Inventaris_ERR.xlsx",
+          "kind": "bill_of_quantities",
+          "fileType": "xlsx",
+          "versionId": "2c9a2a66-1581-49af-a58e-3923b72e1879",
+          "documentId": "39eac235-3299-46b0-8ff6-8ce816bbd456",
+          "activatedAt": "2026-10-20T15:41:46.02487",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "4d2b1699-1a19-4334-a6c9-396be04be3c8",
+          "title": "2026B0184_2026_07_14_Bestek - Model 3P_NL_F_ERR.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "7a289ae2-b691-4dce-978b-5f65116306ce",
+          "documentId": "92b05544-9a28-4277-a0a0-7715a5429f48",
+          "activatedAt": "2026-10-20T15:41:46.02487",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "5ee8159f-0eb3-4869-a5f5-691b1fc342dd",
+          "title": "02_2026B0184_xxxx_Inventaire_ERR.xlsx",
+          "kind": "bill_of_quantities",
+          "fileType": "xlsx",
+          "versionId": "2ff287e1-32b9-4ae8-98c0-f1cde5733fee",
+          "documentId": "d4011719-8d65-4ea9-aa70-4f62493fad13",
+          "activatedAt": "2026-10-20T15:41:46.02487",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "684891e4-535b-46ec-8536-8bfba93df2d4",
+          "title": "05_2026B0184_xxxx_Diversen.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "dd18a51f-9c81-4827-a8bf-144300cc42fa",
+          "documentId": "3cab4a56-b742-489e-9b03-f6f9038c132d",
+          "activatedAt": "2026-09-29T11:38:46.021384",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "937d8799-07b9-4a8f-8470-398fb1c2f277",
+          "title": "01_2026B0184_xxxx_Formulier.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "09362205-709c-4c96-a5c4-f76f62116acb",
+          "documentId": "f6d370f4-e835-4d85-866e-7d1728844eb6",
+          "activatedAt": "2026-09-29T11:38:46.021384",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "9c459dc9-4f0b-44a6-bb08-50fc0633a36d",
+          "title": "2026B0184_Bijlage D_Catalogus_2026_topo_G4_NL.pdf",
+          "kind": "annex",
+          "fileType": "pdf",
+          "versionId": "65f12964-c3e7-45f4-adf4-66ec3ac33cd0",
+          "documentId": "d9bbf091-ea69-45f2-a549-dedcbbca450e",
+          "activatedAt": "2026-09-29T11:38:46.021384",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "ba9984af-28ca-4543-abdb-594983c02714",
+          "title": "2026B0184_ANNEXE D_Catalogus_2026_topo_G4_FR.pdf",
+          "kind": "annex",
+          "fileType": "pdf",
+          "versionId": "aed8afbc-0bed-4d47-881e-b95247b7e1af",
+          "documentId": "42c6cfa7-415d-48fe-b23d-4f6e7eafc799",
+          "activatedAt": "2026-09-29T11:38:46.021384",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "cc549efb-cff5-487a-bfbd-1e495e203b04",
+          "title": "05_2026B0184_xxxx_Divers.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "7c20f305-70e8-4985-90f6-52b92fc112bc",
+          "documentId": "edacc2b6-753c-4e65-9990-137580c29920",
+          "activatedAt": "2026-09-29T11:38:46.021384",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "de1740dc-3a98-48c4-ac6b-04e41bb2e3b7",
+          "title": "01_2026B0184_xxxx_Formulaire.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "3677efca-132b-4752-a159-2dc7d26e1398",
+          "documentId": "dd63d656-0cbb-4ab6-99ff-453c081348a9",
+          "activatedAt": "2026-09-29T11:38:46.021384",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "e3dd6a3a-a77c-4ecf-881d-46ca369c7ee7",
+          "title": "2026B0184_2026_07_14_CCH - Modele 3P_FR_ERR.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "329d60cb-076d-4fc4-965a-8309170611aa",
+          "documentId": "37f7f1e9-76ac-43ed-8c0a-ae72d8c863c9",
+          "activatedAt": "2026-10-20T15:41:46.02487",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-20T15:48:26.163Z",
+      "matchReason": "prestation_decrite",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/general"
+        }
+      ]
+    },
+    {
+      "id": "bosa:aa503fa1-8c7e-4bf4-aca0-7b78c0b36369",
+      "publicationWorkspaceId": "aa503fa1-8c7e-4bf4-aca0-7b78c0b36369",
+      "noticeId": "1129f6eb-3cbd-426b-9b69-7b1e716a2dee",
+      "procedureIdentifier": "94220a6b-c8be-456e-a510-585fcec0e160",
+      "internalReference": "022-2026 PO_pub01",
+      "title": "FEDER - Florenville - Rénovation énergétique - Désignation AP",
+      "buyer": "IDELUX Projets publics",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 71,
+      "screening": "review",
+      "publication": "2026-10-20",
+      "deadline": "",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Il s'agit d'un marché conjoint (IDELUX Projets publics - Commune de Florenville) portant sur la désignation d'un auteur de projet dans le cadre d'une importante rénovation énergétique du bâtiment de l'Administration communale de Florenville et de son \"Espace Florenville\" (rue du Château, 5 à 6820 Florenville) dans le cadre de la programmation « FEDER 2021-2027 – Mesure 8 ».       Le soumissionnaire a l’obligation de visiter les lieux concernés afin d’appréhender toutes les conditions particulières d’exécution du présent marché.  Les dates de visite sont fixées :   • Jeudi 5 novembre 2026 à 13h30  • Jeudi 12 novembre 2026 à 13h30  • Mardi 17 novembre 2026 à 13h30    Ces dates pourraient être amenées à évoluer selon les besoins.      Dans tous les cas, pour la bonne organisation des visites, chaque soumissionnaire doit obligatoirement prendre rendez-vous par mail ou par téléphone avec Richard CONSTANT – 0496 549 516 – richard.constant@idelux.be",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "022-2026 PO_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "650ee356-0d82-4f9a-9054-7c55193df11f",
+          "title": "Annexe 7 - Candidature FEDER.pdf",
+          "kind": "annex",
+          "fileType": "pdf",
+          "versionId": "42cade26-24b0-432b-af41-42b9e970d80b",
+          "documentId": "d5603421-39f8-491c-b6a2-cf2055744552",
+          "activatedAt": "2026-10-20T07:58:45.043749",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "7f25d99e-96da-4fa2-85b7-a083373a9893",
+          "title": "CSC Services - Auteur de projet - Florenville VF Publié.pdf",
+          "kind": "csc",
+          "fileType": "pdf",
+          "versionId": "f1ddb68e-e3fc-4b0a-950c-20f55197805f",
+          "documentId": "9c5b5664-3f26-43dd-9bd4-a1e35e352c85",
+          "activatedAt": "2026-10-20T07:58:45.043749",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "ed73fee1-c63c-4e47-87a6-f6c35b5cfbdc",
+          "title": "Annexe 2 - Documentations techniques.zip",
+          "kind": "annex",
+          "fileType": "zip",
+          "versionId": "6e3ddb29-89d9-4d3b-ac02-0200df20de6e",
+          "documentId": "6eb701f6-db72-4d03-bbe6-e5daf9157e2b",
+          "activatedAt": "2026-10-20T07:58:45.043749",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-20T15:48:11.919Z",
+      "matchReason": "prestation_decrite",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/general"
+        }
+      ]
+    },
+    {
+      "id": "bosa:9b2d4ca1-90f1-48ea-95dd-0383fdb60adc",
+      "publicationWorkspaceId": "9b2d4ca1-90f1-48ea-95dd-0383fdb60adc",
+      "noticeId": "836e4e88-1ccb-4459-abe2-fe65fd0bd277",
+      "procedureIdentifier": "8172ed88-2a98-41fb-af61-4095549f5961",
+      "internalReference": "PPP0FL-2299/6072/2026/16 U_003",
+      "title": "Révision du guide communal d'urbanisme - Réalisation d'un rapport sur les incidences environnementales",
+      "buyer": "Rixensart",
+      "region": "Bruxelles",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Foncier",
+      "sectors": [
+        "Foncier"
+      ],
+      "score": 62,
+      "screening": "review",
+      "publication": "2026-10-20",
+      "deadline": "",
+      "cpv": [
+        "71410000"
+      ],
+      "description": "Révision du guide communal d'urbanisme : Réalisation d'un rapport sur les incidences environnementales",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0FL-2299/6072/2026/16 U_003",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/9b2d4ca1-90f1-48ea-95dd-0383fdb60adc/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/9b2d4ca1-90f1-48ea-95dd-0383fdb60adc/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP0FL-2299/6072/2026/16 U_003",
+          "url": "https://www.publicprocurement.be/publication-workspaces/9b2d4ca1-90f1-48ea-95dd-0383fdb60adc/general",
+          "publicationDate": "2026-10-20",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-20T15:48:29.753Z",
+      "matchReason": "projet_indirect",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/9b2d4ca1-90f1-48ea-95dd-0383fdb60adc/general"
+        }
+      ]
+    },
+    {
       "id": "ted:725331-2026",
       "publicationNumber": "725331-2026",
       "procedureIdentifier": "3668f938-340f-46ac-952f-0f5d6f82c26c",
@@ -334,6 +735,445 @@
           "url": "https://www.publicprocurement.be/publication-workspaces/b9f442ae-150a-460a-b309-c2d96466114e/general",
           "bdaReference": "",
           "noticeKind": "competition"
+        }
+      ]
+    },
+    {
+      "id": "bosa:13b247ed-f02c-4300-adab-5ee0e34f3ba8",
+      "publicationWorkspaceId": "13b247ed-f02c-4300-adab-5ee0e34f3ba8",
+      "noticeId": "faffd4be-a86c-4ace-ab4f-2a2b5c3aea93",
+      "procedureIdentifier": "75ac46e6-69e9-4b93-aa33-55a53abdc89d",
+      "internalReference": "CSC Mobile mapping 2026_pub01",
+      "title": "MARCHÉ DE FOURNITURE ET TRAITEMENT DE DONNÉES CARTOGRAPHIQUES EN LIEN AVEC LA MOBILITÉ SUR LE TERRITOIRE DE LA VILLE DE LIÈGE",
+      "buyer": "Ville de Liège - Direction développement stratégique / Communication",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Carto",
+      "sectors": [
+        "Carto"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-20",
+      "deadline": "",
+      "cpv": [
+        "30220000"
+      ],
+      "description": "Le présent marché a pour objet la fourniture et le traitement de données cartographiques en lien avec la mobilité et les équipements urbains associés sur le territoire de la Ville de Liège par un relevé sur terrain réalisé par la technique du « mobile mapping ». Le « mobile mapping » ou « cartographie mobile » est un processus de collecte de données à grande échelle à partir d’un véhicule en mouvement. Cette collecte permet, via traitement et analyse, la géolocalisation et le référencement d’équipements, d’infrastructures, de bâtiments… Les résultats du traitement et de l’analyse des données collectées doivent être utilisables par les outils cartographiques de la Ville (portail cartographique ESRI sur ArcGIS Enterprise). Les différents éléments faisant l’objet du relevé par mobile mapping sont décrits en détail au chapitre 8. Le relevé concerne l’entièreté des voiries publiques situées sur le territoire de la Ville de Liège hors exceptions listées au chapitre 8. La langue du marché est le français.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E3",
+      "noticeKind": "competition",
+      "bdaReference": "CSC Mobile mapping 2026_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "517ce059-a2d2-4427-8d00-f3f73cd7cd86",
+          "title": "Annexe B.docx",
+          "kind": "annex",
+          "fileType": "docx",
+          "versionId": "3644b920-9ab7-4fbd-9443-3ffe22a0c7b6",
+          "documentId": "34335375-cd8a-49a8-8014-ff31b76c91bf",
+          "activatedAt": "2026-10-20T10:55:45.019763",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "75b00281-8d93-42d6-8414-39b1729095f8",
+          "title": "Annexe C.docx",
+          "kind": "annex",
+          "fileType": "docx",
+          "versionId": "8e9b7534-5092-4610-b376-5b337790da1b",
+          "documentId": "ef4ff820-2fc0-41c1-a77f-650ce29b7847",
+          "activatedAt": "2026-10-20T10:55:45.019763",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "ab88ef30-b03f-479a-91e2-7390d15aebf9",
+          "title": "Annexe D - Recours à la sous-traitance.docx",
+          "kind": "annex",
+          "fileType": "docx",
+          "versionId": "5b27e0c5-d82c-4693-a881-d7258ba1168d",
+          "documentId": "bfbbcc37-0052-4581-8d44-1debc7de0f45",
+          "activatedAt": "2026-10-20T10:55:45.019763",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "c17fb344-2037-4eb7-a53e-f35f38cc5535",
+          "title": "Annexe A.docx",
+          "kind": "annex",
+          "fileType": "docx",
+          "versionId": "2fbf2f5d-85f4-43f6-a34b-59c2258f7edf",
+          "documentId": "3dbd0eb6-cec8-4fbc-afd8-d7ec1d90799d",
+          "activatedAt": "2026-10-20T10:55:45.019763",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "c77704e6-9318-4cd9-8b86-338016c68dbf",
+          "title": "CSC Mobile mapping 2026 VF (2).pdf",
+          "kind": "csc",
+          "fileType": "pdf",
+          "versionId": "31b41913-1e45-4755-ae4f-dac0439d623e",
+          "documentId": "58152120-f793-4fab-9147-9ba7846c454b",
+          "activatedAt": "2026-10-20T10:55:45.019763",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "e45f9630-e814-43f9-ae40-55df60a52dc8",
+          "title": "Annexe technique - Format des données.pdf",
+          "kind": "annex",
+          "fileType": "pdf",
+          "versionId": "cc1d4513-f230-4814-98a9-fe6ad82e729b",
+          "documentId": "d5ea800a-193c-4e64-ac30-2ad362522430",
+          "activatedAt": "2026-10-20T10:55:45.019763",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-20T15:48:15.484Z",
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/general"
+        }
+      ]
+    },
+    {
+      "id": "bosa:95f71e2e-add3-49e6-a9d0-86c90b50edeb",
+      "publicationWorkspaceId": "95f71e2e-add3-49e6-a9d0-86c90b50edeb",
+      "noticeId": "929482e4-42c4-4d06-b1c7-2ee4ac06afeb",
+      "procedureIdentifier": "ba115540-bcbe-49ea-93b9-cca98b91f765",
+      "internalReference": "2026-S2300000-115_pub01",
+      "title": "2026M039_Internet - Accord-cadre de services relatif aux accès Internet du Service public de Wallonie",
+      "buyer": "S2.22.03 - Direction des Solutions logicielles et des Projets",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-20",
+      "deadline": "",
+      "cpv": [
+        "72400000"
+      ],
+      "description": "Le Département de l’exploitation du SPW Digital assure les accès internet de l’ensemble des équipements informatiques du SPW et d’entités associées vers les services web externes ainsi que vers les services web du SPW : diverses DMZ (zone démilitarisée accessible par quiconque ayant une connexion Internet) ou Intranet (zone du SPW inaccessible d’Internet sans un protocole de sécurité avec encryption). Les entités associées sont les cabinets ministériels du Gouvernement wallon et certaines entités qui dépendent de ces cabinets pour lesquels des accords de fournitures de services d’accès Internet existent avec le SPW. Les accès bidirectionnels entre Internet et l’Intranet du SPW ne sont possibles que via des technologies et protocoles IP munis d’encryptage : VPN IPSEC, VPN-SSL et autres protocoles avec méthodes d’encryption des données. Le SPW Digital possède et gère trois routeurs Internet d’accès aux services du prestataire actuel qui assure les services d’accès Internet. Chacun de ces routeurs est connecté d’un côté à son cluster de firewall et de l’autre côté à un routeur du prestataire actuel. Côté prestataire, deux de ces routeurs sont connectés sur un Pop situé à Namur et le troisième est connecté sur un Pop situé à Bruxelles. Les interconnexions physiques (niveau 1 du modèle OSI) entre les routeurs Internet du SPW et ceux du prestataire actuel sont assurées par des liens gérés par la SOFICO.  Ce marché a pour objet : a. La mise à disposition de trois interconnexions physiques (circuits d’accès), niveau 1 du modèle OSI entre les trois routeurs Internet du pouvoir adjudicateur et les trois routeurs de l’adjudicataire ; b. La mise à disposition de deux PoPs au minimum dans lesquels l’adjudicataire installe ces trois routeurs interconnectés aux trois routeurs du pouvoir adjudicateur : ces deux Pops seront distants d’au moins 5 km ; c. La mise à disposition de la connexion IPv4 de et vers Internet ; d. La mise à disposition de la Bande passante Internet nécessaire aux besoins du SPW ; e. La mise à disposition d’un monitoring et reporting de ces accès Internet par l’adjudicataire. f. La mise en œuvre par l’adjudicataire dans son infrastructure réseau d’un système anti-DDoS contre les attaques depuis Internet pour la protection des datacenters du pouvoir adjudicateur. Trois types de prestations sont prévues à cette fin : - les prestations d’exploitation des accès et services Internet, telles que détaillées dans la partie technique du cahier spécial des charges ; - les prestations relatives à des projets d’évolution ponctuelle des accès et services Internet ; - la mise à disposition de personnel en vue de réaliser des évolutions planifiées ou urgentes des accès et services Internet.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "2026-S2300000-115_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "1e3b5a1d-454c-4035-9bf2-ead715f66eef",
+          "title": "2026M039 Annexe 11 - gestion des problemes.pdf",
+          "kind": "annex",
+          "fileType": "pdf",
+          "versionId": "4fe2a701-9cbf-4077-ae33-97c47f8e16f7",
+          "documentId": "cc44cdf0-2f2f-4677-86e8-f05750aa2d26",
+          "activatedAt": "2026-10-20T11:28:45.019495",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "2395e623-2241-46eb-8dfc-3909b041a38b",
+          "title": "2026M039 Annexe 2 - Inventaire.xls",
+          "kind": "bill_of_quantities",
+          "fileType": "xls",
+          "versionId": "8bb8bdb1-10ae-4b43-bafa-f867fabc9c61",
+          "documentId": "adecbe64-3a45-4495-b10d-c2bdf7fa2a2a",
+          "activatedAt": "2026-10-20T11:28:45.019495",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "24bc8854-725b-4bdd-ad17-adcc8dc90668",
+          "title": "2026M039 Annexe 3 PSSI.zip",
+          "kind": "annex",
+          "fileType": "zip",
+          "versionId": "b8139698-3747-47ff-8dbc-34473b8bbbb9",
+          "documentId": "c0110c5d-d471-4d1e-85e2-20e3e198c974",
+          "activatedAt": "2026-10-20T11:28:45.019495",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "3377ecd2-5ab0-49b1-a121-9e63856a372f",
+          "title": "2026M039 Annexe 12 - fiche descriptive correspondant informatique local.pdf",
+          "kind": "annex",
+          "fileType": "pdf",
+          "versionId": "49b3e98d-0f7e-4415-a0ca-55e84ce884d6",
+          "documentId": "82d35029-6af3-41aa-98ac-ac53d1211e08",
+          "activatedAt": "2026-10-20T11:28:45.019495",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "5e7856dd-56f4-48f0-97c5-c59a385d9435",
+          "title": "2026M039 Annexe 8 - gestion des incidents.pdf",
+          "kind": "annex",
+          "fileType": "pdf",
+          "versionId": "f9bec364-bf00-424a-98b6-1e9d9bbd091f",
+          "documentId": "b8e0bb4a-34d7-46bd-89e1-26f290f9d265",
+          "activatedAt": "2026-10-20T11:28:45.019495",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "761b50d4-ddb3-449f-8214-a70a3942fa6e",
+          "title": "2026M039 Annexe 10 - gestion des mises en production.pdf",
+          "kind": "annex",
+          "fileType": "pdf",
+          "versionId": "3210a752-5cdb-48bd-a016-4f71c275bc09",
+          "documentId": "f3e0ac97-2227-4bb1-b673-3bba0f7f42fa",
+          "activatedAt": "2026-10-20T11:28:45.019495",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "7c77d444-fcfc-4dfa-91a9-8d88c0c44bed",
+          "title": "2026M039 Annexe 13 - catalogue des services IT.pdf",
+          "kind": "annex",
+          "fileType": "pdf",
+          "versionId": "c406b3c7-d885-4e66-a9bb-909a91f6ca62",
+          "documentId": "eb5a1140-6209-4d98-944a-24c0f4ec0c68",
+          "activatedAt": "2026-10-20T11:28:45.019495",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "7f5e530d-990c-486e-88f9-738a9e681d4e",
+          "title": "Recours auprès du Conseil d'Etat.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "a745768e-c001-40ca-888e-30929dac1b0f",
+          "documentId": "64988ea4-856f-44fe-8259-e5d6fef6f6a0",
+          "activatedAt": "2026-10-20T11:28:45.019495",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "9bd0c8b6-5d56-4233-9863-d2758c48ab98",
+          "title": "2026M039 Annexe 6 - Liste du matériel et des interconnexions.xlsx",
+          "kind": "annex",
+          "fileType": "xlsx",
+          "versionId": "7eef478e-e13f-4f3e-9e24-2bfdef236c55",
+          "documentId": "d2f2873b-aff5-4d26-957f-8c247015bf80",
+          "activatedAt": "2026-10-20T11:28:45.019495",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "a596f027-eb3d-412a-8791-3e3608be0ec9",
+          "title": "2026M039 Annexe 9 - gestion des configurations.pdf",
+          "kind": "annex",
+          "fileType": "pdf",
+          "versionId": "bec2a76f-b4ee-47d5-a56b-e69e74f48310",
+          "documentId": "f3d1db68-be02-40b3-b009-86cecf54d35b",
+          "activatedAt": "2026-10-20T11:28:45.019495",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "a6a66513-2b2f-4571-b464-b787de2fd30e",
+          "title": "2026M039 Internet-CSC VF publiée.pdf",
+          "kind": "csc",
+          "fileType": "pdf",
+          "versionId": "c7579a4b-8f80-4ea8-bb54-9bfb13dcaa93",
+          "documentId": "c4419d08-670b-4c74-bcd7-6720230045b0",
+          "activatedAt": "2026-10-20T11:28:45.019495",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "acefea8f-2f5d-444f-be82-c82a9b46d943",
+          "title": "2026M039 Annexe 7 - gestion_changement.pdf",
+          "kind": "annex",
+          "fileType": "pdf",
+          "versionId": "0e8a8e9a-4956-4886-8df5-b206218cbe36",
+          "documentId": "7ade18ae-3034-4e02-bc74-b23ab1ad1a10",
+          "activatedAt": "2026-10-20T11:28:45.019495",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "b744387a-a7cd-4d67-8b6d-82bada29d015",
+          "title": "2026M039 Annexe 4 - Accord de confidentialité VF.docx",
+          "kind": "annex",
+          "fileType": "docx",
+          "versionId": "91db82a7-c62a-4e76-8c53-39f502924183",
+          "documentId": "b18a62b8-288b-438e-a846-cd9c7e237c3b",
+          "activatedAt": "2026-10-20T11:28:45.019495",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "ba9bf488-45b6-40aa-a6d9-4273af1fa934",
+          "title": "2026M039 Annexe 5 - contrat de sous-traitance RGPD VF.docx",
+          "kind": "annex",
+          "fileType": "docx",
+          "versionId": "fb806aa2-af94-4fd1-b3ef-75b2b8ac8b54",
+          "documentId": "0fe8c836-672d-4030-9507-5e18551d6ab4",
+          "activatedAt": "2026-10-20T11:28:45.019495",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "e5bcae2d-ec13-4087-9ee2-cd4b336ba051",
+          "title": "2026M039 Annexe 1 - Formulaire d'offre VF.docx",
+          "kind": "annex",
+          "fileType": "docx",
+          "versionId": "6e98e377-8712-4650-b836-708ebeac80ae",
+          "documentId": "eb0d906f-4338-4700-b1e2-6d7c5165abd0",
+          "activatedAt": "2026-10-20T11:28:45.019495",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-20T15:48:19.045Z",
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/general"
+        }
+      ]
+    },
+    {
+      "id": "bosa:39d44437-5cbe-4fa2-886e-3e5a3af6ea5c",
+      "publicationWorkspaceId": "39d44437-5cbe-4fa2-886e-3e5a3af6ea5c",
+      "noticeId": "d2cf5a25-26b1-4ecf-b08c-89c6ba0bd2eb",
+      "procedureIdentifier": "072485c8-595d-4c8f-8dca-9711f5b8234c",
+      "internalReference": "FbINFRA.NvA/04.01-00.5561/26.684_pub01",
+      "title": "Contrat d'honoraires pour l'architecture & la stabilité - Rénovation du toit de la maison Klötzerbahn 27 à 4700 Eupen",
+      "buyer": "Ministère de la Communauté germanophone de Belgique",
+      "region": "Wallonie",
+      "languages": [
+        "FR",
+        "DE"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 49,
+      "screening": "review",
+      "publication": "2026-10-20",
+      "deadline": "",
+      "cpv": [
+        "71221000",
+        "71200000"
+      ],
+      "description": "Réalisation d'études et de documents nécessaires pour la planification, l'appel d'offres et l'exé-cution d'une rénovation de toiture du bâtiment Klötzerbahn 27 à Eupen par un archi-tecte/bureau d'architecture et/ou un ingénieur et/ou un bureau d'études et/ou un groupement de bureaux d'études, ci-après dénommé \"auteur du projet\".",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E3",
+      "noticeKind": "competition",
+      "bdaReference": "FbINFRA.NvA/04.01-00.5561/26.684_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "06c0e3de-69dd-4e61-bd91-d29ef3bcf687",
+          "title": "5561 260914 LH Dienstleistung - Architektur & Statik.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "ddf24280-7180-4af0-9cc3-c050455a2c18",
+          "documentId": "6c1fd0d8-3f25-4764-8e27-9bb907ccf665",
+          "activatedAt": "2026-10-20T10:28:45.134859",
+          "language": "DE,FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "d2627ece-e4b0-4a74-b41e-5eae56838068",
+          "title": "Gebäudeplan.pdf",
+          "kind": "plan",
+          "fileType": "pdf",
+          "versionId": "41c1dfd3-e395-4b17-9583-72b8baeacc90",
+          "documentId": "815fd779-551d-48fc-a533-f11b9a86434c",
+          "activatedAt": "2026-10-20T10:28:45.134859",
+          "language": "DE,FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-20T15:48:33.306Z",
+      "matchReason": "mission_technique_generique",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/general"
         }
       ]
     },
@@ -701,7 +1541,7 @@
           "versionId": "bcdca6d0-d13f-4138-99c5-6e122da4dde8",
           "documentId": "17848170-0136-4662-8b9a-69f321d687c5",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -714,7 +1554,7 @@
           "versionId": "7a672143-498d-40bf-85d2-1a0ccd6c89b8",
           "documentId": "338ce9a3-7ba9-4ed9-99b8-3bd5f1ce416e",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -727,7 +1567,7 @@
           "versionId": "5a3371af-caf1-41b9-89e6-e6eade671b0a",
           "documentId": "23b3699b-6288-4049-922c-146ae89c1eb4",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -740,7 +1580,7 @@
           "versionId": "6dabd106-495c-4884-b407-a9d35ae4800b",
           "documentId": "d182b6fc-7127-4669-95f9-5b81310dc8c6",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -753,7 +1593,7 @@
           "versionId": "62dd41f2-e318-42b1-b772-46e8d5633836",
           "documentId": "5ebc8928-f728-45bd-8c0d-992a55d8ce01",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -766,14 +1606,14 @@
           "versionId": "1b6ff5ed-8135-422d-81f1-ab428d851133",
           "documentId": "f7b3b39c-0bec-4f55-8e29-844c0e81c6b6",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-20T15:45:06.304Z",
+      "documentsCheckedAt": "2026-10-20T20:05:01.232Z",
       "matchReason": "description_ou_contexte",
       "screeningReason": null,
       "officialSources": [
@@ -4828,7 +5668,7 @@
           "versionId": "22cc83b1-d599-4416-96d9-c1a354861889",
           "documentId": "425d5ba1-de86-4335-b68e-3b58107c5b6d",
           "activatedAt": "2026-09-29T15:00:45.021111",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -4841,14 +5681,14 @@
           "versionId": "354fbb7b-5f90-4703-9d8e-dae76f7aa72f",
           "documentId": "3b9e3ed1-8163-4041-a26c-eb15668ce044",
           "activatedAt": "2026-10-05T15:31:45.185664",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-20T10:15:19.288Z",
+      "documentsCheckedAt": "2026-10-20T20:07:39.412Z",
       "matchReason": "description_ou_contexte",
       "screeningReason": null,
       "officialSources": [
@@ -6781,790 +7621,6 @@
         }
       ],
       "screeningReason": "verification_locale_intention_de_mission_non_etablie"
-    },
-    {
-      "id": "bosa:aa503fa1-8c7e-4bf4-aca0-7b78c0b36369",
-      "publicationWorkspaceId": "aa503fa1-8c7e-4bf4-aca0-7b78c0b36369",
-      "noticeId": "1129f6eb-3cbd-426b-9b69-7b1e716a2dee",
-      "procedureIdentifier": "94220a6b-c8be-456e-a510-585fcec0e160",
-      "internalReference": "022-2026 PO_pub01",
-      "title": "FEDER - Florenville - Rénovation énergétique - Désignation AP",
-      "buyer": "IDELUX Projets publics",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 71,
-      "screening": "review",
-      "publication": "2026-10-20",
-      "deadline": "",
-      "cpv": [
-        "71000000"
-      ],
-      "description": "Il s'agit d'un marché conjoint (IDELUX Projets publics - Commune de Florenville) portant sur la désignation d'un auteur de projet dans le cadre d'une importante rénovation énergétique du bâtiment de l'Administration communale de Florenville et de son \"Espace Florenville\" (rue du Château, 5 à 6820 Florenville) dans le cadre de la programmation « FEDER 2021-2027 – Mesure 8 ».       Le soumissionnaire a l’obligation de visiter les lieux concernés afin d’appréhender toutes les conditions particulières d’exécution du présent marché.  Les dates de visite sont fixées :   • Jeudi 5 novembre 2026 à 13h30  • Jeudi 12 novembre 2026 à 13h30  • Mardi 17 novembre 2026 à 13h30    Ces dates pourraient être amenées à évoluer selon les besoins.      Dans tous les cas, pour la bonne organisation des visites, chaque soumissionnaire doit obligatoirement prendre rendez-vous par mail ou par téléphone avec Richard CONSTANT – 0496 549 516 – richard.constant@idelux.be",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "16",
-      "noticeKind": "competition",
-      "bdaReference": "022-2026 PO_pub01",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [
-        {
-          "id": "650ee356-0d82-4f9a-9054-7c55193df11f",
-          "title": "Annexe 7 - Candidature FEDER.pdf",
-          "kind": "annex",
-          "fileType": "pdf",
-          "versionId": "42cade26-24b0-432b-af41-42b9e970d80b",
-          "documentId": "d5603421-39f8-491c-b6a2-cf2055744552",
-          "activatedAt": "2026-10-20T07:58:45.043749",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "7f25d99e-96da-4fa2-85b7-a083373a9893",
-          "title": "CSC Services - Auteur de projet - Florenville VF Publié.pdf",
-          "kind": "csc",
-          "fileType": "pdf",
-          "versionId": "f1ddb68e-e3fc-4b0a-950c-20f55197805f",
-          "documentId": "9c5b5664-3f26-43dd-9bd4-a1e35e352c85",
-          "activatedAt": "2026-10-20T07:58:45.043749",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "ed73fee1-c63c-4e47-87a6-f6c35b5cfbdc",
-          "title": "Annexe 2 - Documentations techniques.zip",
-          "kind": "annex",
-          "fileType": "zip",
-          "versionId": "6e3ddb29-89d9-4d3b-ac02-0200df20de6e",
-          "documentId": "6eb701f6-db72-4d03-bbe6-e5daf9157e2b",
-          "activatedAt": "2026-10-20T07:58:45.043749",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        }
-      ],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-20T15:48:11.919Z"
-    },
-    {
-      "id": "bosa:13b247ed-f02c-4300-adab-5ee0e34f3ba8",
-      "publicationWorkspaceId": "13b247ed-f02c-4300-adab-5ee0e34f3ba8",
-      "noticeId": "faffd4be-a86c-4ace-ab4f-2a2b5c3aea93",
-      "procedureIdentifier": "75ac46e6-69e9-4b93-aa33-55a53abdc89d",
-      "internalReference": "CSC Mobile mapping 2026_pub01",
-      "title": "MARCHÉ DE FOURNITURE ET TRAITEMENT DE DONNÉES CARTOGRAPHIQUES EN LIEN AVEC LA MOBILITÉ SUR LE TERRITOIRE DE LA VILLE DE LIÈGE",
-      "buyer": "Ville de Liège - Direction développement stratégique / Communication",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Carto",
-      "sectors": [
-        "Carto"
-      ],
-      "score": 52,
-      "screening": "review",
-      "publication": "2026-10-20",
-      "deadline": "",
-      "cpv": [
-        "30220000"
-      ],
-      "description": "Le présent marché a pour objet la fourniture et le traitement de données cartographiques en lien avec la mobilité et les équipements urbains associés sur le territoire de la Ville de Liège par un relevé sur terrain réalisé par la technique du « mobile mapping ». Le « mobile mapping » ou « cartographie mobile » est un processus de collecte de données à grande échelle à partir d’un véhicule en mouvement. Cette collecte permet, via traitement et analyse, la géolocalisation et le référencement d’équipements, d’infrastructures, de bâtiments… Les résultats du traitement et de l’analyse des données collectées doivent être utilisables par les outils cartographiques de la Ville (portail cartographique ESRI sur ArcGIS Enterprise). Les différents éléments faisant l’objet du relevé par mobile mapping sont décrits en détail au chapitre 8. Le relevé concerne l’entièreté des voiries publiques situées sur le territoire de la Ville de Liège hors exceptions listées au chapitre 8. La langue du marché est le français.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "E3",
-      "noticeKind": "competition",
-      "bdaReference": "CSC Mobile mapping 2026_pub01",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [
-        {
-          "id": "517ce059-a2d2-4427-8d00-f3f73cd7cd86",
-          "title": "Annexe B.docx",
-          "kind": "annex",
-          "fileType": "docx",
-          "versionId": "3644b920-9ab7-4fbd-9443-3ffe22a0c7b6",
-          "documentId": "34335375-cd8a-49a8-8014-ff31b76c91bf",
-          "activatedAt": "2026-10-20T10:55:45.019763",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "75b00281-8d93-42d6-8414-39b1729095f8",
-          "title": "Annexe C.docx",
-          "kind": "annex",
-          "fileType": "docx",
-          "versionId": "8e9b7534-5092-4610-b376-5b337790da1b",
-          "documentId": "ef4ff820-2fc0-41c1-a77f-650ce29b7847",
-          "activatedAt": "2026-10-20T10:55:45.019763",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "ab88ef30-b03f-479a-91e2-7390d15aebf9",
-          "title": "Annexe D - Recours à la sous-traitance.docx",
-          "kind": "annex",
-          "fileType": "docx",
-          "versionId": "5b27e0c5-d82c-4693-a881-d7258ba1168d",
-          "documentId": "bfbbcc37-0052-4581-8d44-1debc7de0f45",
-          "activatedAt": "2026-10-20T10:55:45.019763",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "c17fb344-2037-4eb7-a53e-f35f38cc5535",
-          "title": "Annexe A.docx",
-          "kind": "annex",
-          "fileType": "docx",
-          "versionId": "2fbf2f5d-85f4-43f6-a34b-59c2258f7edf",
-          "documentId": "3dbd0eb6-cec8-4fbc-afd8-d7ec1d90799d",
-          "activatedAt": "2026-10-20T10:55:45.019763",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "c77704e6-9318-4cd9-8b86-338016c68dbf",
-          "title": "CSC Mobile mapping 2026 VF (2).pdf",
-          "kind": "csc",
-          "fileType": "pdf",
-          "versionId": "31b41913-1e45-4755-ae4f-dac0439d623e",
-          "documentId": "58152120-f793-4fab-9147-9ba7846c454b",
-          "activatedAt": "2026-10-20T10:55:45.019763",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "e45f9630-e814-43f9-ae40-55df60a52dc8",
-          "title": "Annexe technique - Format des données.pdf",
-          "kind": "annex",
-          "fileType": "pdf",
-          "versionId": "cc1d4513-f230-4814-98a9-fe6ad82e729b",
-          "documentId": "d5ea800a-193c-4e64-ac30-2ad362522430",
-          "activatedAt": "2026-10-20T10:55:45.019763",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        }
-      ],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-20T15:48:15.484Z"
-    },
-    {
-      "id": "bosa:95f71e2e-add3-49e6-a9d0-86c90b50edeb",
-      "publicationWorkspaceId": "95f71e2e-add3-49e6-a9d0-86c90b50edeb",
-      "noticeId": "929482e4-42c4-4d06-b1c7-2ee4ac06afeb",
-      "procedureIdentifier": "ba115540-bcbe-49ea-93b9-cca98b91f765",
-      "internalReference": "2026-S2300000-115_pub01",
-      "title": "2026M039_Internet - Accord-cadre de services relatif aux accès Internet du Service public de Wallonie",
-      "buyer": "S2.22.03 - Direction des Solutions logicielles et des Projets",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 52,
-      "screening": "review",
-      "publication": "2026-10-20",
-      "deadline": "",
-      "cpv": [
-        "72400000"
-      ],
-      "description": "Le Département de l’exploitation du SPW Digital assure les accès internet de l’ensemble des équipements informatiques du SPW et d’entités associées vers les services web externes ainsi que vers les services web du SPW : diverses DMZ (zone démilitarisée accessible par quiconque ayant une connexion Internet) ou Intranet (zone du SPW inaccessible d’Internet sans un protocole de sécurité avec encryption). Les entités associées sont les cabinets ministériels du Gouvernement wallon et certaines entités qui dépendent de ces cabinets pour lesquels des accords de fournitures de services d’accès Internet existent avec le SPW. Les accès bidirectionnels entre Internet et l’Intranet du SPW ne sont possibles que via des technologies et protocoles IP munis d’encryptage : VPN IPSEC, VPN-SSL et autres protocoles avec méthodes d’encryption des données. Le SPW Digital possède et gère trois routeurs Internet d’accès aux services du prestataire actuel qui assure les services d’accès Internet. Chacun de ces routeurs est connecté d’un côté à son cluster de firewall et de l’autre côté à un routeur du prestataire actuel. Côté prestataire, deux de ces routeurs sont connectés sur un Pop situé à Namur et le troisième est connecté sur un Pop situé à Bruxelles. Les interconnexions physiques (niveau 1 du modèle OSI) entre les routeurs Internet du SPW et ceux du prestataire actuel sont assurées par des liens gérés par la SOFICO.  Ce marché a pour objet : a. La mise à disposition de trois interconnexions physiques (circuits d’accès), niveau 1 du modèle OSI entre les trois routeurs Internet du pouvoir adjudicateur et les trois routeurs de l’adjudicataire ; b. La mise à disposition de deux PoPs au minimum dans lesquels l’adjudicataire installe ces trois routeurs interconnectés aux trois routeurs du pouvoir adjudicateur : ces deux Pops seront distants d’au moins 5 km ; c. La mise à disposition de la connexion IPv4 de et vers Internet ; d. La mise à disposition de la Bande passante Internet nécessaire aux besoins du SPW ; e. La mise à disposition d’un monitoring et reporting de ces accès Internet par l’adjudicataire. f. La mise en œuvre par l’adjudicataire dans son infrastructure réseau d’un système anti-DDoS contre les attaques depuis Internet pour la protection des datacenters du pouvoir adjudicateur. Trois types de prestations sont prévues à cette fin : - les prestations d’exploitation des accès et services Internet, telles que détaillées dans la partie technique du cahier spécial des charges ; - les prestations relatives à des projets d’évolution ponctuelle des accès et services Internet ; - la mise à disposition de personnel en vue de réaliser des évolutions planifiées ou urgentes des accès et services Internet.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "16",
-      "noticeKind": "competition",
-      "bdaReference": "2026-S2300000-115_pub01",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [
-        {
-          "id": "1e3b5a1d-454c-4035-9bf2-ead715f66eef",
-          "title": "2026M039 Annexe 11 - gestion des problemes.pdf",
-          "kind": "annex",
-          "fileType": "pdf",
-          "versionId": "4fe2a701-9cbf-4077-ae33-97c47f8e16f7",
-          "documentId": "cc44cdf0-2f2f-4677-86e8-f05750aa2d26",
-          "activatedAt": "2026-10-20T11:28:45.019495",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "2395e623-2241-46eb-8dfc-3909b041a38b",
-          "title": "2026M039 Annexe 2 - Inventaire.xls",
-          "kind": "bill_of_quantities",
-          "fileType": "xls",
-          "versionId": "8bb8bdb1-10ae-4b43-bafa-f867fabc9c61",
-          "documentId": "adecbe64-3a45-4495-b10d-c2bdf7fa2a2a",
-          "activatedAt": "2026-10-20T11:28:45.019495",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "24bc8854-725b-4bdd-ad17-adcc8dc90668",
-          "title": "2026M039 Annexe 3 PSSI.zip",
-          "kind": "annex",
-          "fileType": "zip",
-          "versionId": "b8139698-3747-47ff-8dbc-34473b8bbbb9",
-          "documentId": "c0110c5d-d471-4d1e-85e2-20e3e198c974",
-          "activatedAt": "2026-10-20T11:28:45.019495",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "3377ecd2-5ab0-49b1-a121-9e63856a372f",
-          "title": "2026M039 Annexe 12 - fiche descriptive correspondant informatique local.pdf",
-          "kind": "annex",
-          "fileType": "pdf",
-          "versionId": "49b3e98d-0f7e-4415-a0ca-55e84ce884d6",
-          "documentId": "82d35029-6af3-41aa-98ac-ac53d1211e08",
-          "activatedAt": "2026-10-20T11:28:45.019495",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "5e7856dd-56f4-48f0-97c5-c59a385d9435",
-          "title": "2026M039 Annexe 8 - gestion des incidents.pdf",
-          "kind": "annex",
-          "fileType": "pdf",
-          "versionId": "f9bec364-bf00-424a-98b6-1e9d9bbd091f",
-          "documentId": "b8e0bb4a-34d7-46bd-89e1-26f290f9d265",
-          "activatedAt": "2026-10-20T11:28:45.019495",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "761b50d4-ddb3-449f-8214-a70a3942fa6e",
-          "title": "2026M039 Annexe 10 - gestion des mises en production.pdf",
-          "kind": "annex",
-          "fileType": "pdf",
-          "versionId": "3210a752-5cdb-48bd-a016-4f71c275bc09",
-          "documentId": "f3e0ac97-2227-4bb1-b673-3bba0f7f42fa",
-          "activatedAt": "2026-10-20T11:28:45.019495",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "7c77d444-fcfc-4dfa-91a9-8d88c0c44bed",
-          "title": "2026M039 Annexe 13 - catalogue des services IT.pdf",
-          "kind": "annex",
-          "fileType": "pdf",
-          "versionId": "c406b3c7-d885-4e66-a9bb-909a91f6ca62",
-          "documentId": "eb5a1140-6209-4d98-944a-24c0f4ec0c68",
-          "activatedAt": "2026-10-20T11:28:45.019495",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "7f5e530d-990c-486e-88f9-738a9e681d4e",
-          "title": "Recours auprès du Conseil d'Etat.pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "a745768e-c001-40ca-888e-30929dac1b0f",
-          "documentId": "64988ea4-856f-44fe-8259-e5d6fef6f6a0",
-          "activatedAt": "2026-10-20T11:28:45.019495",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "9bd0c8b6-5d56-4233-9863-d2758c48ab98",
-          "title": "2026M039 Annexe 6 - Liste du matériel et des interconnexions.xlsx",
-          "kind": "annex",
-          "fileType": "xlsx",
-          "versionId": "7eef478e-e13f-4f3e-9e24-2bfdef236c55",
-          "documentId": "d2f2873b-aff5-4d26-957f-8c247015bf80",
-          "activatedAt": "2026-10-20T11:28:45.019495",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "a596f027-eb3d-412a-8791-3e3608be0ec9",
-          "title": "2026M039 Annexe 9 - gestion des configurations.pdf",
-          "kind": "annex",
-          "fileType": "pdf",
-          "versionId": "bec2a76f-b4ee-47d5-a56b-e69e74f48310",
-          "documentId": "f3d1db68-be02-40b3-b009-86cecf54d35b",
-          "activatedAt": "2026-10-20T11:28:45.019495",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "a6a66513-2b2f-4571-b464-b787de2fd30e",
-          "title": "2026M039 Internet-CSC VF publiée.pdf",
-          "kind": "csc",
-          "fileType": "pdf",
-          "versionId": "c7579a4b-8f80-4ea8-bb54-9bfb13dcaa93",
-          "documentId": "c4419d08-670b-4c74-bcd7-6720230045b0",
-          "activatedAt": "2026-10-20T11:28:45.019495",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "acefea8f-2f5d-444f-be82-c82a9b46d943",
-          "title": "2026M039 Annexe 7 - gestion_changement.pdf",
-          "kind": "annex",
-          "fileType": "pdf",
-          "versionId": "0e8a8e9a-4956-4886-8df5-b206218cbe36",
-          "documentId": "7ade18ae-3034-4e02-bc74-b23ab1ad1a10",
-          "activatedAt": "2026-10-20T11:28:45.019495",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "b744387a-a7cd-4d67-8b6d-82bada29d015",
-          "title": "2026M039 Annexe 4 - Accord de confidentialité VF.docx",
-          "kind": "annex",
-          "fileType": "docx",
-          "versionId": "91db82a7-c62a-4e76-8c53-39f502924183",
-          "documentId": "b18a62b8-288b-438e-a846-cd9c7e237c3b",
-          "activatedAt": "2026-10-20T11:28:45.019495",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "ba9bf488-45b6-40aa-a6d9-4273af1fa934",
-          "title": "2026M039 Annexe 5 - contrat de sous-traitance RGPD VF.docx",
-          "kind": "annex",
-          "fileType": "docx",
-          "versionId": "fb806aa2-af94-4fd1-b3ef-75b2b8ac8b54",
-          "documentId": "0fe8c836-672d-4030-9507-5e18551d6ab4",
-          "activatedAt": "2026-10-20T11:28:45.019495",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "e5bcae2d-ec13-4087-9ee2-cd4b336ba051",
-          "title": "2026M039 Annexe 1 - Formulaire d'offre VF.docx",
-          "kind": "annex",
-          "fileType": "docx",
-          "versionId": "6e98e377-8712-4650-b836-708ebeac80ae",
-          "documentId": "eb0d906f-4338-4700-b1e2-6d7c5165abd0",
-          "activatedAt": "2026-10-20T11:28:45.019495",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        }
-      ],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-20T15:48:19.045Z"
-    },
-    {
-      "id": "bosa:443228c0-3dec-4eba-bef0-857510a777d7",
-      "publicationWorkspaceId": "443228c0-3dec-4eba-bef0-857510a777d7",
-      "noticeId": "f5141403-837d-4a4b-a16e-853db3ec13ef",
-      "procedureIdentifier": "38e426ed-12f9-4b17-adca-f5efdb897f84",
-      "internalReference": "O4.04.01-26-3590_pub01",
-      "title": "Marché de services relatif aux missions de guidance technique et juridique en matière de certification PEB des bâtiments publics, à destination des certificateurs et des autorités publiques, ainsi qu’au développement et à l’actualisation continue des outils et outils connexes",
-      "buyer": "SPW-O4.04.01 - Direction des Bâtiments durables",
-      "region": "Belgique",
-      "languages": [
-        "FR"
-      ],
-      "sector": "PEB",
-      "sectors": [
-        "PEB"
-      ],
-      "score": 95,
-      "screening": "main",
-      "publication": "2026-10-20",
-      "deadline": "",
-      "cpv": [
-        "71310000"
-      ],
-      "description": "Le marché prévoit, outre une guidance technique et juridique relative à la certification PEB des bâtiments publics, l’actualisation et le développement des supports et outils destinés aux candidats certificateurs, aux certificateurs agréés et aux autorités publiques. Les supports existants seront mis à jour en fonction des retours de terrain et des évolutions réglementaires, dans une logique de continuité. Parallèlement, le pouvoir adjudicateur pourra confier à l’adjudicataire des prestations de préparation et d’accompagnement de l’extension de la certification PEB à l’ensemble des bâtiments non-résidentiels existants, sur la base du dispositif applicable aux bâtiments publics. Cette extension nécessitera des analyses, adaptations et développements plus conséquents qu’une simple mise à jour liée aux retours de terrain ou aux évolutions réglementaires. Sont notamment concernés la méthode de calcul, les procédures, le protocole et le formulaire de collecte des données, les modèles de certificats, les supports de formation et d’examen, les outils d’information et de guidance ainsi que le logiciel.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "16",
-      "noticeKind": "competition",
-      "bdaReference": "O4.04.01-26-3590_pub01",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/443228c0-3dec-4eba-bef0-857510a777d7/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/443228c0-3dec-4eba-bef0-857510a777d7/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [
-        {
-          "id": "6ced9c2c-42ec-4899-8bac-b7c18a84200c",
-          "title": "Annexe 2 - Contrat de Sous-Traitance RGPD Guidance Certif PEB BP.docx",
-          "kind": "annex",
-          "fileType": "docx",
-          "versionId": "b012846f-d974-4e91-8e71-937792011f74",
-          "documentId": "9eb11345-20cd-43c3-9d92-3abd3c5891a5",
-          "activatedAt": "2026-10-20T15:19:46.017398",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/443228c0-3dec-4eba-bef0-857510a777d7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "93737b31-37ee-4206-8ce5-8646ec5743a2",
-          "title": "Annexe 3 - Recours Auprès du Conseil d'Etat.pdf",
-          "kind": "annex",
-          "fileType": "pdf",
-          "versionId": "9353c7c8-9a5f-4498-ba83-5d3d52cf432d",
-          "documentId": "6adf5ddf-f802-4e61-9fd4-b115c9667386",
-          "activatedAt": "2026-10-20T15:19:46.017398",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/443228c0-3dec-4eba-bef0-857510a777d7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "eb41f319-49d9-47ec-a91a-27684204594f",
-          "title": "Annexe 1 - CSC Guidance BP - 2027.pdf",
-          "kind": "csc",
-          "fileType": "pdf",
-          "versionId": "70c181eb-cd8a-41c3-8381-50ec2401ee83",
-          "documentId": "363aa0a4-b242-4c74-9acc-c29fbeda927c",
-          "activatedAt": "2026-10-20T15:19:46.017398",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/443228c0-3dec-4eba-bef0-857510a777d7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        }
-      ],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-20T15:48:22.601Z"
-    },
-    {
-      "id": "bosa:e26a641b-92f3-441a-b4ba-e23435579289",
-      "publicationWorkspaceId": "e26a641b-92f3-441a-b4ba-e23435579289",
-      "noticeId": "d1944c69-b43c-4844-bb3a-ceed4316a3f5",
-      "procedureIdentifier": "6e28bdc5-a6b8-4fb5-93b8-f8261df13e5c",
-      "internalReference": "2026B0184_pub01",
-      "title": "EXECUTION DE RELEVES TOPOGRAPHIQUES EN REGION DE BRUXELLES-CAPITALE : TYPE RESEAU HYDROGRAPHIQUE",
-      "buyer": "Bruxelles Environnement",
-      "region": "Bruxelles",
-      "languages": [
-        "NL",
-        "FR"
-      ],
-      "sector": "Topo",
-      "sectors": [
-        "Topo",
-        "Hydro"
-      ],
-      "score": 95,
-      "screening": "main",
-      "publication": "2026-10-20",
-      "deadline": "",
-      "cpv": [
-        "71000000"
-      ],
-      "description": "EXECUTION DE RELEVES TOPOGRAPHIQUES EN REGION DE BRUXELLES-CAPITALE : TYPE RESEAU HYDROGRAPHIQUE",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "E3",
-      "noticeKind": "competition",
-      "bdaReference": "2026B0184_pub01",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [
-        {
-          "id": "2157ce6f-63b0-466f-9480-cfe09a17eeb2",
-          "title": "02_2026B0184_xxxx_Inventaris_ERR.xlsx",
-          "kind": "bill_of_quantities",
-          "fileType": "xlsx",
-          "versionId": "2c9a2a66-1581-49af-a58e-3923b72e1879",
-          "documentId": "39eac235-3299-46b0-8ff6-8ce816bbd456",
-          "activatedAt": "2026-10-20T15:41:46.02487",
-          "language": "NL",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "4d2b1699-1a19-4334-a6c9-396be04be3c8",
-          "title": "2026B0184_2026_07_14_Bestek - Model 3P_NL_F_ERR.pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "7a289ae2-b691-4dce-978b-5f65116306ce",
-          "documentId": "92b05544-9a28-4277-a0a0-7715a5429f48",
-          "activatedAt": "2026-10-20T15:41:46.02487",
-          "language": "NL",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "5ee8159f-0eb3-4869-a5f5-691b1fc342dd",
-          "title": "02_2026B0184_xxxx_Inventaire_ERR.xlsx",
-          "kind": "bill_of_quantities",
-          "fileType": "xlsx",
-          "versionId": "2ff287e1-32b9-4ae8-98c0-f1cde5733fee",
-          "documentId": "d4011719-8d65-4ea9-aa70-4f62493fad13",
-          "activatedAt": "2026-10-20T15:41:46.02487",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "684891e4-535b-46ec-8536-8bfba93df2d4",
-          "title": "05_2026B0184_xxxx_Diversen.docx",
-          "kind": "other",
-          "fileType": "docx",
-          "versionId": "dd18a51f-9c81-4827-a8bf-144300cc42fa",
-          "documentId": "3cab4a56-b742-489e-9b03-f6f9038c132d",
-          "activatedAt": "2026-09-29T11:38:46.021384",
-          "language": "NL",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "937d8799-07b9-4a8f-8470-398fb1c2f277",
-          "title": "01_2026B0184_xxxx_Formulier.docx",
-          "kind": "other",
-          "fileType": "docx",
-          "versionId": "09362205-709c-4c96-a5c4-f76f62116acb",
-          "documentId": "f6d370f4-e835-4d85-866e-7d1728844eb6",
-          "activatedAt": "2026-09-29T11:38:46.021384",
-          "language": "NL",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "9c459dc9-4f0b-44a6-bb08-50fc0633a36d",
-          "title": "2026B0184_Bijlage D_Catalogus_2026_topo_G4_NL.pdf",
-          "kind": "annex",
-          "fileType": "pdf",
-          "versionId": "65f12964-c3e7-45f4-adf4-66ec3ac33cd0",
-          "documentId": "d9bbf091-ea69-45f2-a549-dedcbbca450e",
-          "activatedAt": "2026-09-29T11:38:46.021384",
-          "language": "NL",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "ba9984af-28ca-4543-abdb-594983c02714",
-          "title": "2026B0184_ANNEXE D_Catalogus_2026_topo_G4_FR.pdf",
-          "kind": "annex",
-          "fileType": "pdf",
-          "versionId": "aed8afbc-0bed-4d47-881e-b95247b7e1af",
-          "documentId": "42c6cfa7-415d-48fe-b23d-4f6e7eafc799",
-          "activatedAt": "2026-09-29T11:38:46.021384",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "cc549efb-cff5-487a-bfbd-1e495e203b04",
-          "title": "05_2026B0184_xxxx_Divers.docx",
-          "kind": "other",
-          "fileType": "docx",
-          "versionId": "7c20f305-70e8-4985-90f6-52b92fc112bc",
-          "documentId": "edacc2b6-753c-4e65-9990-137580c29920",
-          "activatedAt": "2026-09-29T11:38:46.021384",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "de1740dc-3a98-48c4-ac6b-04e41bb2e3b7",
-          "title": "01_2026B0184_xxxx_Formulaire.docx",
-          "kind": "other",
-          "fileType": "docx",
-          "versionId": "3677efca-132b-4752-a159-2dc7d26e1398",
-          "documentId": "dd63d656-0cbb-4ab6-99ff-453c081348a9",
-          "activatedAt": "2026-09-29T11:38:46.021384",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "e3dd6a3a-a77c-4ecf-881d-46ca369c7ee7",
-          "title": "2026B0184_2026_07_14_CCH - Modele 3P_FR_ERR.pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "329d60cb-076d-4fc4-965a-8309170611aa",
-          "documentId": "37f7f1e9-76ac-43ed-8c0a-ae72d8c863c9",
-          "activatedAt": "2026-10-20T15:41:46.02487",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e26a641b-92f3-441a-b4ba-e23435579289/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        }
-      ],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-20T15:48:26.163Z"
-    },
-    {
-      "id": "bosa:9b2d4ca1-90f1-48ea-95dd-0383fdb60adc",
-      "publicationWorkspaceId": "9b2d4ca1-90f1-48ea-95dd-0383fdb60adc",
-      "noticeId": "836e4e88-1ccb-4459-abe2-fe65fd0bd277",
-      "procedureIdentifier": "8172ed88-2a98-41fb-af61-4095549f5961",
-      "internalReference": "PPP0FL-2299/6072/2026/16 U_003",
-      "title": "Révision du guide communal d'urbanisme - Réalisation d'un rapport sur les incidences environnementales",
-      "buyer": "Rixensart",
-      "region": "Bruxelles",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Foncier",
-      "sectors": [
-        "Foncier"
-      ],
-      "score": 62,
-      "screening": "review",
-      "publication": "2026-10-20",
-      "deadline": "",
-      "cpv": [
-        "71410000"
-      ],
-      "description": "Révision du guide communal d'urbanisme : Réalisation d'un rapport sur les incidences environnementales",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "E4",
-      "noticeKind": "award",
-      "bdaReference": "PPP0FL-2299/6072/2026/16 U_003",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/9b2d4ca1-90f1-48ea-95dd-0383fdb60adc/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/9b2d4ca1-90f1-48ea-95dd-0383fdb60adc/documents",
-      "documentsPageSource": "public_api_200",
-      "bosaResults": [
-        {
-          "reference": "PPP0FL-2299/6072/2026/16 U_003",
-          "url": "https://www.publicprocurement.be/publication-workspaces/9b2d4ca1-90f1-48ea-95dd-0383fdb60adc/general",
-          "publicationDate": "2026-10-20",
-          "kind": "award"
-        }
-      ],
-      "documentInventory": [],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-20T15:48:29.753Z"
-    },
-    {
-      "id": "bosa:39d44437-5cbe-4fa2-886e-3e5a3af6ea5c",
-      "publicationWorkspaceId": "39d44437-5cbe-4fa2-886e-3e5a3af6ea5c",
-      "noticeId": "d2cf5a25-26b1-4ecf-b08c-89c6ba0bd2eb",
-      "procedureIdentifier": "072485c8-595d-4c8f-8dca-9711f5b8234c",
-      "internalReference": "FbINFRA.NvA/04.01-00.5561/26.684_pub01",
-      "title": "Contrat d'honoraires pour l'architecture & la stabilité - Rénovation du toit de la maison Klötzerbahn 27 à 4700 Eupen",
-      "buyer": "Ministère de la Communauté germanophone de Belgique",
-      "region": "Wallonie",
-      "languages": [
-        "FR",
-        "DE"
-      ],
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 49,
-      "screening": "review",
-      "publication": "2026-10-20",
-      "deadline": "",
-      "cpv": [
-        "71221000",
-        "71200000"
-      ],
-      "description": "Réalisation d'études et de documents nécessaires pour la planification, l'appel d'offres et l'exé-cution d'une rénovation de toiture du bâtiment Klötzerbahn 27 à Eupen par un archi-tecte/bureau d'architecture et/ou un ingénieur et/ou un bureau d'études et/ou un groupement de bureaux d'études, ci-après dénommé \"auteur du projet\".",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "E3",
-      "noticeKind": "competition",
-      "bdaReference": "FbINFRA.NvA/04.01-00.5561/26.684_pub01",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [
-        {
-          "id": "06c0e3de-69dd-4e61-bd91-d29ef3bcf687",
-          "title": "5561 260914 LH Dienstleistung - Architektur & Statik.pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "ddf24280-7180-4af0-9cc3-c050455a2c18",
-          "documentId": "6c1fd0d8-3f25-4764-8e27-9bb907ccf665",
-          "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "DE,FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "d2627ece-e4b0-4a74-b41e-5eae56838068",
-          "title": "Gebäudeplan.pdf",
-          "kind": "plan",
-          "fileType": "pdf",
-          "versionId": "41c1dfd3-e395-4b17-9583-72b8baeacc90",
-          "documentId": "815fd779-551d-48fc-a533-f11b9a86434c",
-          "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "DE,FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        }
-      ],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-20T15:48:33.306Z"
     }
   ]
 }
