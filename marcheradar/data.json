@@ -1,25 +1,25 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-21T10:13:56.924Z",
+  "generated_at": "2026-10-21T15:58:52.603Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
   "note": "TED interrogé le 2026-10-21 : 1452 avis lus, 4 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-21T10:15:57.351Z",
-      "scanned": 2425,
-      "retained": 65,
+      "last_success": "2026-10-21T16:00:55.713Z",
+      "scanned": 2500,
+      "retained": 67,
       "period_from": "2026-10-07",
       "period_to": "2026-10-21",
-      "pages": 97,
+      "pages": 100,
       "complete": true,
-      "raw_candidates": 2412,
+      "raw_candidates": 2484,
       "oldest_seen": "2026-10-06"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-10-21T10:18:12.864Z",
+      "last_success": "2026-10-21T16:01:33.464Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -31,26 +31,12 @@
         {
           "url": "https://www.province.namur.be/conseil-provincial/05-pv-des-seances/",
           "source": "Province de Namur — procès-verbaux",
-          "documents_seen": 6,
-          "documents_read": 0,
+          "documents_seen": 7,
+          "documents_read": 1,
           "signals_detected": 0
-        },
-        {
-          "url": "https://www.provincedeliege.be/fr/conseil/ordresdujour",
-          "source": "Province de Liège — ordres du jour",
-          "documents_seen": 12,
-          "documents_read": 12,
-          "signals_detected": 0
-        },
-        {
-          "url": "https://www.provincedeliege.be/fr/conseil/pvcra",
-          "source": "Province de Liège — PV et comptes rendus",
-          "documents_seen": 12,
-          "documents_read": 9,
-          "signals_detected": 1
         }
       ],
-      "errors_count": 9,
+      "errors_count": 8,
       "added": 0
     },
     "COMMUNES": {
@@ -75,13 +61,13 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 97 page(s) parcourue(s) depuis 2026-10-07.",
-    "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 33 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 100 page(s) parcourue(s) depuis 2026-10-07.",
+    "communal": "Pilote de sources provinciales Liège/Namur : 2 page(s) officielle(s), 13 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
     "scanned": 1452,
     "matched_current_run": 21,
-    "records": 134,
+    "records": 136,
     "review_count": 58,
     "award_notice_count": 442,
     "awarded_market_matches": 4,
@@ -122,10 +108,10 @@
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2425,
-    "bosa_imported": 65,
-    "bosa_pages": 97,
-    "local_documents": 33,
+    "bosa_scanned": 2500,
+    "bosa_imported": 67,
+    "bosa_pages": 100,
+    "local_documents": 13,
     "local_opportunities": 0,
     "local_communes_checked": 24,
     "local_new_opportunities": 34,
@@ -140,19 +126,72 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
+      "aucun_signal_metier": 404,
       "avis_attribution_analyse_separement": 442,
-      "aucun_signal_metier": 405,
-      "avis_neerlandais": 147,
       "assurance_ou_nettoyage": 29,
-      "acheteur_flamand": 138,
-      "travaux_execution": 108,
-      "fournitures_et_location": 52,
+      "acheteur_flamand": 136,
+      "avis_neerlandais": 150,
+      "fournitures_et_location": 53,
+      "travaux_execution": 106,
       "qualifie_review": 28,
-      "objet_hors_domaine": 91,
+      "objet_hors_domaine": 92,
       "qualifie_main": 12
     }
   },
   "items": [
+    {
+      "id": "bosa:3bbd0f37-c7aa-4792-be75-0c5abbd1752f",
+      "publicationWorkspaceId": "3bbd0f37-c7aa-4792-be75-0c5abbd1752f",
+      "noticeId": "e1f7aa35-b837-4912-881c-715b004200b3",
+      "procedureIdentifier": "b4c36157-44d8-4d8f-ae95-5680130cc2a9",
+      "internalReference": "PPP0EV-3091/6203/2026-2074_002",
+      "title": "Réalisation des installations footballistiques de Meslin L’Evêque – Désignation d’un auteur de projet",
+      "buyer": "Ath",
+      "region": "Bruxelles",
+      "languages": [
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 88,
+      "screening": "main",
+      "publication": "2026-10-21",
+      "deadline": "",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "L’équipe footballistique de Meslin-L’Evêque doit actuellement réaliser ses entrainements et matchs sur deux terrains présents dans l’entité de Ath et Lessines.  D’un point de vue organisationnel, cette gestion est extrêmement difficile et le fait de ne pas se trouver dans sa terre d’accueil engendre une diminution du nombre d'inscriptions pour ces jeunes sportifs.  Suite à cela, l’Administration communale d’Ath envisage la possibilité d’aménager à l’arrière de son site sportif « La Couturelle », situé au Chemin Preuscamp 18 à Meslin-L’Evêque, deux terrains de football et un bâtiment comprenant des vestiaires et une buvette.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0EV-3091/6203/2026-2074_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/3bbd0f37-c7aa-4792-be75-0c5abbd1752f/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/3bbd0f37-c7aa-4792-be75-0c5abbd1752f/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP0EV-3091/6203/2026-2074_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/3bbd0f37-c7aa-4792-be75-0c5abbd1752f/general",
+          "publicationDate": "2026-10-21",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-21T10:22:07.210Z",
+      "matchReason": "prestation_decrite",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/3bbd0f37-c7aa-4792-be75-0c5abbd1752f/general"
+        }
+      ]
+    },
     {
       "id": "ted:685167-2026",
       "publicationNumber": "724256-2026",
@@ -1541,7 +1580,7 @@
           "versionId": "bcdca6d0-d13f-4138-99c5-6e122da4dde8",
           "documentId": "17848170-0136-4662-8b9a-69f321d687c5",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1554,7 +1593,7 @@
           "versionId": "7a672143-498d-40bf-85d2-1a0ccd6c89b8",
           "documentId": "338ce9a3-7ba9-4ed9-99b8-3bd5f1ce416e",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1567,7 +1606,7 @@
           "versionId": "5a3371af-caf1-41b9-89e6-e6eade671b0a",
           "documentId": "23b3699b-6288-4049-922c-146ae89c1eb4",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1580,7 +1619,7 @@
           "versionId": "6dabd106-495c-4884-b407-a9d35ae4800b",
           "documentId": "d182b6fc-7127-4669-95f9-5b81310dc8c6",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1593,7 +1632,7 @@
           "versionId": "62dd41f2-e318-42b1-b772-46e8d5633836",
           "documentId": "5ebc8928-f728-45bd-8c0d-992a55d8ce01",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1606,14 +1645,14 @@
           "versionId": "1b6ff5ed-8135-422d-81f1-ab428d851133",
           "documentId": "f7b3b39c-0bec-4f55-8e29-844c0e81c6b6",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-20T20:05:01.232Z",
+      "documentsCheckedAt": "2026-10-21T16:02:21.040Z",
       "matchReason": "description_ou_contexte",
       "screeningReason": null,
       "officialSources": [
@@ -5681,14 +5720,14 @@
           "versionId": "354fbb7b-5f90-4703-9d8e-dae76f7aa72f",
           "documentId": "3b9e3ed1-8163-4041-a26c-eb15668ce044",
           "activatedAt": "2026-10-05T15:31:45.185664",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-20T20:07:39.412Z",
+      "documentsCheckedAt": "2026-10-21T16:05:47.227Z",
       "matchReason": "description_ou_contexte",
       "screeningReason": null,
       "officialSources": [
@@ -7623,14 +7662,14 @@
       "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
-      "id": "bosa:3bbd0f37-c7aa-4792-be75-0c5abbd1752f",
-      "publicationWorkspaceId": "3bbd0f37-c7aa-4792-be75-0c5abbd1752f",
-      "noticeId": "e1f7aa35-b837-4912-881c-715b004200b3",
-      "procedureIdentifier": "b4c36157-44d8-4d8f-ae95-5680130cc2a9",
-      "internalReference": "PPP0EV-3091/6203/2026-2074_002",
-      "title": "Réalisation des installations footballistiques de Meslin L’Evêque – Désignation d’un auteur de projet",
-      "buyer": "Ath",
-      "region": "Bruxelles",
+      "id": "bosa:1ec3a4ad-4466-416b-b7c5-818f4ba95c88",
+      "publicationWorkspaceId": "1ec3a4ad-4466-416b-b7c5-818f4ba95c88",
+      "noticeId": "a558c274-dcbb-41d4-bbbb-b97eaf11e931",
+      "procedureIdentifier": "0816d870-50fb-4fa6-b06b-b222299ca26a",
+      "internalReference": "PPP0VS-906/6449/Le Circuit 2026/069_002",
+      "title": "Mission complète d'auteur de projet relative à des travaux piste et abords au Circuit de Spa-Francorchamps",
+      "buyer": "SA Le Circuit de Spa-Francorchamps - le concédant",
+      "region": "Wallonie",
       "languages": [
         "FR"
       ],
@@ -7638,34 +7677,87 @@
       "sectors": [
         "VRD"
       ],
-      "score": 88,
+      "score": 95,
       "screening": "review",
       "publication": "2026-10-21",
       "deadline": "",
       "cpv": [
-        "71000000"
+        "71240000"
       ],
-      "description": "L’équipe footballistique de Meslin-L’Evêque doit actuellement réaliser ses entrainements et matchs sur deux terrains présents dans l’entité de Ath et Lessines.  D’un point de vue organisationnel, cette gestion est extrêmement difficile et le fait de ne pas se trouver dans sa terre d’accueil engendre une diminution du nombre d'inscriptions pour ces jeunes sportifs.  Suite à cela, l’Administration communale d’Ath envisage la possibilité d’aménager à l’arrière de son site sportif « La Couturelle », situé au Chemin Preuscamp 18 à Meslin-L’Evêque, deux terrains de football et un bâtiment comprenant des vestiaires et une buvette.",
+      "description": "Mission complète d'auteur de projet relative à des travaux piste et abords au Circuit de Spa-Francorchamps",
       "source": "BOSA",
       "source_status": "bosa_public_browser",
       "noticeSubType": "E4",
       "noticeKind": "award",
-      "bdaReference": "PPP0EV-3091/6203/2026-2074_002",
+      "bdaReference": "PPP0VS-906/6449/Le Circuit 2026/069_002",
       "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/3bbd0f37-c7aa-4792-be75-0c5abbd1752f/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/3bbd0f37-c7aa-4792-be75-0c5abbd1752f/documents",
+      "url": "https://www.publicprocurement.be/publication-workspaces/1ec3a4ad-4466-416b-b7c5-818f4ba95c88/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/1ec3a4ad-4466-416b-b7c5-818f4ba95c88/documents",
       "documentsPageSource": "public_api_200",
       "bosaResults": [
         {
-          "reference": "PPP0EV-3091/6203/2026-2074_002",
-          "url": "https://www.publicprocurement.be/publication-workspaces/3bbd0f37-c7aa-4792-be75-0c5abbd1752f/general",
+          "reference": "PPP0VS-906/6449/Le Circuit 2026/069_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/1ec3a4ad-4466-416b-b7c5-818f4ba95c88/general",
           "publicationDate": "2026-10-21",
           "kind": "award"
         }
       ],
       "documentInventory": [],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-21T10:22:07.210Z"
+      "documentsCheckedAt": "2026-10-21T16:06:20.857Z"
+    },
+    {
+      "id": "bosa:32f67a37-5891-4648-a96a-af40e9033011",
+      "publicationWorkspaceId": "32f67a37-5891-4648-a96a-af40e9033011",
+      "noticeId": "e89ccf26-06b1-4ef4-a6e3-5932fd6a9995",
+      "procedureIdentifier": "3dd662fc-c2e3-46e4-a5a7-875817befe4f",
+      "internalReference": "RDGB-WRE-2025-611533-309_pub01",
+      "title": "Herstal - SPF Intérieur - Etudes en vue des travaux de démontage et de mise en conformité des réseaux de distribution d’eau sanitaire et d’extinction incendie",
+      "buyer": "Régie des Bâtiments - Wallonie Région Est",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Reseaux",
+      "sectors": [
+        "Reseaux"
+      ],
+      "score": 74,
+      "screening": "review",
+      "publication": "2026-10-21",
+      "deadline": "",
+      "cpv": [
+        "71300000",
+        "71317100",
+        "71322000"
+      ],
+      "description": "Le Marché a pour objet les travaux, les fournitures, les services, le transport, la main-d’oeuvre et tous les moyens nécessaires à la réalisation d’études en vue des travaux de démontage et de mise en conformité des réseaux de distribution d’eau sanitaire et d’extinction d’incendie.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "RDGB-WRE-2025-611533-309_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "0d16f934-ba92-43e5-8c3d-71c1e856f4b2",
+          "title": "WRE-2025-611533-309 Formulaire de demande documents du marché.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "b7468d58-745d-45c6-aee6-b1e4f29f7b00",
+          "documentId": "de51f515-81d4-4514-8acf-eebbc2143ccb",
+          "activatedAt": "2026-10-21T14:46:46.019466",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-21T16:06:24.655Z"
     }
   ]
 }
