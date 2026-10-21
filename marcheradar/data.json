@@ -1,25 +1,25 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-21T15:58:52.603Z",
+  "generated_at": "2026-10-21T20:12:14.056Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
   "note": "TED interrogé le 2026-10-21 : 1452 avis lus, 4 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-21T16:00:55.713Z",
+      "last_success": "2026-10-21T20:13:53.464Z",
       "scanned": 2500,
       "retained": 67,
       "period_from": "2026-10-07",
       "period_to": "2026-10-21",
       "pages": 100,
       "complete": true,
-      "raw_candidates": 2484,
+      "raw_candidates": 2487,
       "oldest_seen": "2026-10-06"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-10-21T16:01:33.464Z",
+      "last_success": "2026-10-21T20:14:30.321Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -68,8 +68,8 @@
     "scanned": 1452,
     "matched_current_run": 21,
     "records": 136,
-    "review_count": 58,
-    "award_notice_count": 442,
+    "review_count": 59,
+    "award_notice_count": 445,
     "awarded_market_matches": 4,
     "award_fields_requested": false,
     "retained_as_excluded": 2,
@@ -126,19 +126,72 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "aucun_signal_metier": 404,
-      "avis_attribution_analyse_separement": 442,
+      "aucun_signal_metier": 403,
+      "avis_attribution_analyse_separement": 445,
       "assurance_ou_nettoyage": 29,
       "acheteur_flamand": 136,
       "avis_neerlandais": 150,
       "fournitures_et_location": 53,
-      "travaux_execution": 106,
-      "qualifie_review": 28,
-      "objet_hors_domaine": 92,
+      "travaux_execution": 107,
+      "qualifie_review": 27,
+      "objet_hors_domaine": 90,
       "qualifie_main": 12
     }
   },
   "items": [
+    {
+      "id": "bosa:1ec3a4ad-4466-416b-b7c5-818f4ba95c88",
+      "publicationWorkspaceId": "1ec3a4ad-4466-416b-b7c5-818f4ba95c88",
+      "noticeId": "a558c274-dcbb-41d4-bbbb-b97eaf11e931",
+      "procedureIdentifier": "0816d870-50fb-4fa6-b06b-b222299ca26a",
+      "internalReference": "PPP0VS-906/6449/Le Circuit 2026/069_002",
+      "title": "Mission complète d'auteur de projet relative à des travaux piste et abords au Circuit de Spa-Francorchamps",
+      "buyer": "SA Le Circuit de Spa-Francorchamps - le concédant",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 95,
+      "screening": "main",
+      "publication": "2026-10-21",
+      "deadline": "",
+      "cpv": [
+        "71240000"
+      ],
+      "description": "Mission complète d'auteur de projet relative à des travaux piste et abords au Circuit de Spa-Francorchamps",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0VS-906/6449/Le Circuit 2026/069_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/1ec3a4ad-4466-416b-b7c5-818f4ba95c88/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/1ec3a4ad-4466-416b-b7c5-818f4ba95c88/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP0VS-906/6449/Le Circuit 2026/069_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/1ec3a4ad-4466-416b-b7c5-818f4ba95c88/general",
+          "publicationDate": "2026-10-21",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-21T16:06:20.857Z",
+      "matchReason": "prestation_decrite",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/1ec3a4ad-4466-416b-b7c5-818f4ba95c88/general"
+        }
+      ]
+    },
     {
       "id": "bosa:3bbd0f37-c7aa-4792-be75-0c5abbd1752f",
       "publicationWorkspaceId": "3bbd0f37-c7aa-4792-be75-0c5abbd1752f",
@@ -189,6 +242,67 @@
         {
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/3bbd0f37-c7aa-4792-be75-0c5abbd1752f/general"
+        }
+      ]
+    },
+    {
+      "id": "bosa:32f67a37-5891-4648-a96a-af40e9033011",
+      "publicationWorkspaceId": "32f67a37-5891-4648-a96a-af40e9033011",
+      "noticeId": "e89ccf26-06b1-4ef4-a6e3-5932fd6a9995",
+      "procedureIdentifier": "3dd662fc-c2e3-46e4-a5a7-875817befe4f",
+      "internalReference": "RDGB-WRE-2025-611533-309_pub01",
+      "title": "Herstal - SPF Intérieur - Etudes en vue des travaux de démontage et de mise en conformité des réseaux de distribution d’eau sanitaire et d’extinction incendie",
+      "buyer": "Régie des Bâtiments - Wallonie Région Est",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Reseaux",
+      "sectors": [
+        "Reseaux"
+      ],
+      "score": 74,
+      "screening": "review",
+      "publication": "2026-10-21",
+      "deadline": "",
+      "cpv": [
+        "71300000",
+        "71317100",
+        "71322000"
+      ],
+      "description": "Le Marché a pour objet les travaux, les fournitures, les services, le transport, la main-d’oeuvre et tous les moyens nécessaires à la réalisation d’études en vue des travaux de démontage et de mise en conformité des réseaux de distribution d’eau sanitaire et d’extinction d’incendie.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "RDGB-WRE-2025-611533-309_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "0d16f934-ba92-43e5-8c3d-71c1e856f4b2",
+          "title": "WRE-2025-611533-309 Formulaire de demande documents du marché.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "b7468d58-745d-45c6-aee6-b1e4f29f7b00",
+          "documentId": "de51f515-81d4-4514-8acf-eebbc2143ccb",
+          "activatedAt": "2026-10-21T14:46:46.019466",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-21T16:06:24.655Z",
+      "matchReason": "projet_indirect",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/general"
         }
       ]
     },
@@ -2759,7 +2873,7 @@
           "versionId": "36488d00-f30c-407b-abf7-ea1924b6b999",
           "documentId": "917f42c5-0419-4611-8398-5561fefe4efc",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2785,7 +2899,7 @@
           "versionId": "26b15544-17fc-43c0-826c-1322f33b9850",
           "documentId": "20364704-82a0-4eb0-a213-7965e3328061",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2837,7 +2951,7 @@
           "versionId": "f5ff3774-83d7-49c0-abe1-28e026816900",
           "documentId": "ff53ea2a-b24f-4586-b315-523295f56f5c",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2850,7 +2964,7 @@
           "versionId": "8228202b-2303-4eba-8e13-0fe820c5023d",
           "documentId": "ac74d28e-0bfa-4c78-af2b-da7f05b117dd",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2883,7 +2997,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-20T15:45:49.209Z",
+      "documentsCheckedAt": "2026-10-21T20:16:05.873Z",
       "documentAnalyses": [
         {
           "documentId": "7259aed6-32b5-4e0b-88c0-ffa7fa606658",
@@ -5707,7 +5821,7 @@
           "versionId": "22cc83b1-d599-4416-96d9-c1a354861889",
           "documentId": "425d5ba1-de86-4335-b68e-3b58107c5b6d",
           "activatedAt": "2026-09-29T15:00:45.021111",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5727,7 +5841,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-21T16:05:47.227Z",
+      "documentsCheckedAt": "2026-10-21T20:17:57.488Z",
       "matchReason": "description_ou_contexte",
       "screeningReason": null,
       "officialSources": [
@@ -7660,104 +7774,6 @@
         }
       ],
       "screeningReason": "verification_locale_intention_de_mission_non_etablie"
-    },
-    {
-      "id": "bosa:1ec3a4ad-4466-416b-b7c5-818f4ba95c88",
-      "publicationWorkspaceId": "1ec3a4ad-4466-416b-b7c5-818f4ba95c88",
-      "noticeId": "a558c274-dcbb-41d4-bbbb-b97eaf11e931",
-      "procedureIdentifier": "0816d870-50fb-4fa6-b06b-b222299ca26a",
-      "internalReference": "PPP0VS-906/6449/Le Circuit 2026/069_002",
-      "title": "Mission complète d'auteur de projet relative à des travaux piste et abords au Circuit de Spa-Francorchamps",
-      "buyer": "SA Le Circuit de Spa-Francorchamps - le concédant",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 95,
-      "screening": "review",
-      "publication": "2026-10-21",
-      "deadline": "",
-      "cpv": [
-        "71240000"
-      ],
-      "description": "Mission complète d'auteur de projet relative à des travaux piste et abords au Circuit de Spa-Francorchamps",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "E4",
-      "noticeKind": "award",
-      "bdaReference": "PPP0VS-906/6449/Le Circuit 2026/069_002",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/1ec3a4ad-4466-416b-b7c5-818f4ba95c88/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/1ec3a4ad-4466-416b-b7c5-818f4ba95c88/documents",
-      "documentsPageSource": "public_api_200",
-      "bosaResults": [
-        {
-          "reference": "PPP0VS-906/6449/Le Circuit 2026/069_002",
-          "url": "https://www.publicprocurement.be/publication-workspaces/1ec3a4ad-4466-416b-b7c5-818f4ba95c88/general",
-          "publicationDate": "2026-10-21",
-          "kind": "award"
-        }
-      ],
-      "documentInventory": [],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-21T16:06:20.857Z"
-    },
-    {
-      "id": "bosa:32f67a37-5891-4648-a96a-af40e9033011",
-      "publicationWorkspaceId": "32f67a37-5891-4648-a96a-af40e9033011",
-      "noticeId": "e89ccf26-06b1-4ef4-a6e3-5932fd6a9995",
-      "procedureIdentifier": "3dd662fc-c2e3-46e4-a5a7-875817befe4f",
-      "internalReference": "RDGB-WRE-2025-611533-309_pub01",
-      "title": "Herstal - SPF Intérieur - Etudes en vue des travaux de démontage et de mise en conformité des réseaux de distribution d’eau sanitaire et d’extinction incendie",
-      "buyer": "Régie des Bâtiments - Wallonie Région Est",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Reseaux",
-      "sectors": [
-        "Reseaux"
-      ],
-      "score": 74,
-      "screening": "review",
-      "publication": "2026-10-21",
-      "deadline": "",
-      "cpv": [
-        "71300000",
-        "71317100",
-        "71322000"
-      ],
-      "description": "Le Marché a pour objet les travaux, les fournitures, les services, le transport, la main-d’oeuvre et tous les moyens nécessaires à la réalisation d’études en vue des travaux de démontage et de mise en conformité des réseaux de distribution d’eau sanitaire et d’extinction d’incendie.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "16",
-      "noticeKind": "competition",
-      "bdaReference": "RDGB-WRE-2025-611533-309_pub01",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [
-        {
-          "id": "0d16f934-ba92-43e5-8c3d-71c1e856f4b2",
-          "title": "WRE-2025-611533-309 Formulaire de demande documents du marché.docx",
-          "kind": "other",
-          "fileType": "docx",
-          "versionId": "b7468d58-745d-45c6-aee6-b1e4f29f7b00",
-          "documentId": "de51f515-81d4-4514-8acf-eebbc2143ccb",
-          "activatedAt": "2026-10-21T14:46:46.019466",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        }
-      ],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-21T16:06:24.655Z"
     }
   ]
 }
