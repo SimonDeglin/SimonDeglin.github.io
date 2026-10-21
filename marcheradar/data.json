@@ -1,25 +1,25 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-20T20:00:48.451Z",
+  "generated_at": "2026-10-21T10:13:56.924Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-10-20 : 1459 avis lus, 5 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-10-21 : 1452 avis lus, 4 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-20T20:02:35.470Z",
-      "scanned": 2500,
-      "retained": 68,
-      "period_from": "2026-10-06",
-      "period_to": "2026-10-20",
-      "pages": 100,
+      "last_success": "2026-10-21T10:15:57.351Z",
+      "scanned": 2425,
+      "retained": 65,
+      "period_from": "2026-10-07",
+      "period_to": "2026-10-21",
+      "pages": 97,
       "complete": true,
-      "raw_candidates": 2478,
-      "oldest_seen": "2026-10-05"
+      "raw_candidates": 2412,
+      "oldest_seen": "2026-10-06"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-10-20T20:04:18.999Z",
+      "last_success": "2026-10-21T10:18:12.864Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -75,16 +75,16 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 100 page(s) parcourue(s) depuis 2026-10-06.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 97 page(s) parcourue(s) depuis 2026-10-07.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 33 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
-    "scanned": 1459,
-    "matched_current_run": 22,
-    "records": 133,
+    "scanned": 1452,
+    "matched_current_run": 21,
+    "records": 134,
     "review_count": 58,
-    "award_notice_count": 441,
-    "awarded_market_matches": 5,
+    "award_notice_count": 442,
+    "awarded_market_matches": 4,
     "award_fields_requested": false,
     "retained_as_excluded": 2,
     "excluded_reasons": {
@@ -94,37 +94,37 @@
     "queries": [
       {
         "source": "Acheteurs belges",
-        "from": "20261009",
-        "to": "20261015",
-        "found": 452,
-        "reported": 452
+        "from": "20261010",
+        "to": "20261016",
+        "found": 454,
+        "reported": 454
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261009",
-        "to": "20261015",
-        "found": 417,
-        "reported": 417
+        "from": "20261010",
+        "to": "20261016",
+        "found": 421,
+        "reported": 421
       },
       {
         "source": "Acheteurs belges",
-        "from": "20261016",
-        "to": "20261020",
-        "found": 306,
-        "reported": 306
+        "from": "20261017",
+        "to": "20261021",
+        "found": 302,
+        "reported": 302
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261016",
-        "to": "20261020",
-        "found": 284,
-        "reported": 284
+        "from": "20261017",
+        "to": "20261021",
+        "found": 275,
+        "reported": 275
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2500,
-    "bosa_imported": 68,
-    "bosa_pages": 100,
+    "bosa_scanned": 2425,
+    "bosa_imported": 65,
+    "bosa_pages": 97,
     "local_documents": 33,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -140,15 +140,15 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "assurance_ou_nettoyage": 27,
-      "avis_attribution_analyse_separement": 441,
-      "aucun_signal_metier": 407,
-      "acheteur_flamand": 139,
-      "travaux_execution": 113,
-      "qualifie_review": 29,
-      "fournitures_et_location": 48,
-      "objet_hors_domaine": 92,
-      "avis_neerlandais": 151,
+      "avis_attribution_analyse_separement": 442,
+      "aucun_signal_metier": 405,
+      "avis_neerlandais": 147,
+      "assurance_ou_nettoyage": 29,
+      "acheteur_flamand": 138,
+      "travaux_execution": 108,
+      "fournitures_et_location": 52,
+      "qualifie_review": 28,
+      "objet_hors_domaine": 91,
       "qualifie_main": 12
     }
   },
@@ -1147,7 +1147,7 @@
           "versionId": "ddf24280-7180-4af0-9cc3-c050455a2c18",
           "documentId": "6c1fd0d8-3f25-4764-8e27-9bb907ccf665",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "DE,FR",
+          "language": "FR,DE",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1160,14 +1160,14 @@
           "versionId": "41c1dfd3-e395-4b17-9583-72b8baeacc90",
           "documentId": "815fd779-551d-48fc-a533-f11b9a86434c",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "DE,FR",
+          "language": "FR,DE",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-20T15:48:33.306Z",
+      "documentsCheckedAt": "2026-10-21T10:18:40.976Z",
       "matchReason": "mission_technique_generique",
       "screeningReason": null,
       "officialSources": [
@@ -7621,6 +7621,51 @@
         }
       ],
       "screeningReason": "verification_locale_intention_de_mission_non_etablie"
+    },
+    {
+      "id": "bosa:3bbd0f37-c7aa-4792-be75-0c5abbd1752f",
+      "publicationWorkspaceId": "3bbd0f37-c7aa-4792-be75-0c5abbd1752f",
+      "noticeId": "e1f7aa35-b837-4912-881c-715b004200b3",
+      "procedureIdentifier": "b4c36157-44d8-4d8f-ae95-5680130cc2a9",
+      "internalReference": "PPP0EV-3091/6203/2026-2074_002",
+      "title": "Réalisation des installations footballistiques de Meslin L’Evêque – Désignation d’un auteur de projet",
+      "buyer": "Ath",
+      "region": "Bruxelles",
+      "languages": [
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 88,
+      "screening": "review",
+      "publication": "2026-10-21",
+      "deadline": "",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "L’équipe footballistique de Meslin-L’Evêque doit actuellement réaliser ses entrainements et matchs sur deux terrains présents dans l’entité de Ath et Lessines.  D’un point de vue organisationnel, cette gestion est extrêmement difficile et le fait de ne pas se trouver dans sa terre d’accueil engendre une diminution du nombre d'inscriptions pour ces jeunes sportifs.  Suite à cela, l’Administration communale d’Ath envisage la possibilité d’aménager à l’arrière de son site sportif « La Couturelle », situé au Chemin Preuscamp 18 à Meslin-L’Evêque, deux terrains de football et un bâtiment comprenant des vestiaires et une buvette.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0EV-3091/6203/2026-2074_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/3bbd0f37-c7aa-4792-be75-0c5abbd1752f/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/3bbd0f37-c7aa-4792-be75-0c5abbd1752f/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP0EV-3091/6203/2026-2074_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/3bbd0f37-c7aa-4792-be75-0c5abbd1752f/general",
+          "publicationDate": "2026-10-21",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-21T10:22:07.210Z"
     }
   ]
 }
