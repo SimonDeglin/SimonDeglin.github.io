@@ -1,25 +1,25 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-21T20:12:14.056Z",
+  "generated_at": "2026-10-22T10:14:41.187Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-10-21 : 1452 avis lus, 4 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-10-22 : 1617 avis lus, 4 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-21T20:13:53.464Z",
-      "scanned": 2500,
-      "retained": 67,
-      "period_from": "2026-10-07",
-      "period_to": "2026-10-21",
-      "pages": 100,
+      "last_success": "2026-10-22T10:16:13.668Z",
+      "scanned": 2425,
+      "retained": 65,
+      "period_from": "2026-10-08",
+      "period_to": "2026-10-22",
+      "pages": 97,
       "complete": true,
-      "raw_candidates": 2487,
-      "oldest_seen": "2026-10-06"
+      "raw_candidates": 2420,
+      "oldest_seen": "2026-10-07"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-10-21T20:14:30.321Z",
+      "last_success": "2026-10-22T10:16:37.945Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -61,15 +61,15 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 100 page(s) parcourue(s) depuis 2026-10-07.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 97 page(s) parcourue(s) depuis 2026-10-08.",
     "communal": "Pilote de sources provinciales Liège/Namur : 2 page(s) officielle(s), 13 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
-    "scanned": 1452,
-    "matched_current_run": 21,
-    "records": 136,
-    "review_count": 59,
-    "award_notice_count": 445,
+    "scanned": 1617,
+    "matched_current_run": 24,
+    "records": 141,
+    "review_count": 61,
+    "award_notice_count": 488,
     "awarded_market_matches": 4,
     "award_fields_requested": false,
     "retained_as_excluded": 2,
@@ -80,37 +80,37 @@
     "queries": [
       {
         "source": "Acheteurs belges",
-        "from": "20261010",
-        "to": "20261016",
+        "from": "20261011",
+        "to": "20261017",
         "found": 454,
         "reported": 454
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261010",
-        "to": "20261016",
+        "from": "20261011",
+        "to": "20261017",
         "found": 421,
         "reported": 421
       },
       {
         "source": "Acheteurs belges",
-        "from": "20261017",
-        "to": "20261021",
-        "found": 302,
-        "reported": 302
+        "from": "20261018",
+        "to": "20261022",
+        "found": 387,
+        "reported": 387
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261017",
-        "to": "20261021",
-        "found": 275,
-        "reported": 275
+        "from": "20261018",
+        "to": "20261022",
+        "found": 355,
+        "reported": 355
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2500,
-    "bosa_imported": 67,
-    "bosa_pages": 100,
+    "bosa_scanned": 2425,
+    "bosa_imported": 65,
+    "bosa_pages": 97,
     "local_documents": 13,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -126,19 +126,132 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "aucun_signal_metier": 403,
-      "avis_attribution_analyse_separement": 445,
-      "assurance_ou_nettoyage": 29,
-      "acheteur_flamand": 136,
-      "avis_neerlandais": 150,
-      "fournitures_et_location": 53,
-      "travaux_execution": 107,
-      "qualifie_review": 27,
-      "objet_hors_domaine": 90,
+      "avis_attribution_analyse_separement": 488,
+      "aucun_signal_metier": 452,
+      "avis_neerlandais": 166,
+      "assurance_ou_nettoyage": 31,
+      "acheteur_flamand": 151,
+      "fournitures_et_location": 61,
+      "travaux_execution": 120,
+      "objet_hors_domaine": 104,
+      "qualifie_review": 32,
       "qualifie_main": 12
     }
   },
   "items": [
+    {
+      "id": "ted:714793-2026",
+      "publicationNumber": "730347-2026",
+      "procedureIdentifier": "8f6b998b-2231-481d-b2b7-a527202165be",
+      "title": "Belgique – Énergie et services connexes – Intégration de la cuisine électrique et de la mobilité électrique dans le réseau électrique du Mozambique",
+      "buyer": "Enabel",
+      "region": "Belgique",
+      "sector": "Reseaux",
+      "sectors": [
+        "Reseaux"
+      ],
+      "score": 62,
+      "screening": "review",
+      "publication": "2026-10-22",
+      "deadline": "",
+      "cpv": [
+        "71314000",
+        "71314200"
+      ],
+      "description": "Intégration de la cuisine électrique et de la mobilité électrique dans le réseau électrique du Mozambique",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/730347-2026",
+      "noticeNumbers": [
+        "714793-2026",
+        "700454-2026",
+        "730347-2026"
+      ],
+      "matchReason": "projet_indirect",
+      "publicationWorkspaceId": "8e7ba771-58e6-45b4-b2ae-93e925b4b2d4",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/714793-2026",
+          "publicationNumber": "714793-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/8e7ba771-58e6-45b4-b2ae-93e925b4b2d4/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        },
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/730347-2026",
+          "publicationNumber": "730347-2026"
+        }
+      ],
+      "screeningReason": null
+    },
+    {
+      "id": "ted:732017-2026",
+      "publicationNumber": "732017-2026",
+      "procedureIdentifier": "2810c8d5-8817-486c-97a6-11ed2438ce3e",
+      "title": "Belgique – Services de technologies de l'information, conseil, développement de logiciels, internet et appui – GIS",
+      "buyer": "Lantis (de naam waaronder BAM nv van publiek recht handelt)",
+      "region": "Belgique",
+      "sector": "Carto",
+      "sectors": [
+        "Carto"
+      ],
+      "score": 62,
+      "screening": "review",
+      "publication": "2026-10-22",
+      "deadline": "2026-11-24",
+      "cpv": [
+        "72000000"
+      ],
+      "description": "GIS",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/732017-2026"
+    },
+    {
+      "id": "ted:731266-2026",
+      "publicationNumber": "731266-2026",
+      "procedureIdentifier": "1df7b4c3-7162-4fd8-bd0e-854978c2bd2a",
+      "title": "Belgique – Location de véhicules de transport de personnes avec chauffeur – Accord-cadre relatif au transport collectif de résidents en autocar entre Ciney et Paris - 2027-2030",
+      "buyer": "Les Foyers des Pauvres Sœurs ASBL",
+      "region": "Belgique",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-22",
+      "deadline": "2026-11-23",
+      "cpv": [
+        "60170000"
+      ],
+      "description": "Le présent accord-cadre a pour objet l’organisation et l’exécution du transport par autocar des résidents des Chemins d’Ariane entre Ciney et Paris, à l’occasion de leurs retours en famille. Les prestations sont organisées sous la forme de rotations Ciney–Paris–Ciney, principalement les vendredis et dimanches ainsi qu’à l’occasion des périodes de fêtes. À titre indicatif, les besoins actuels correspondent à 14 périodes de transport par an, comprenant chacune : • Un transport le vendredi : Ciney–Paris avec les résidents et leurs accompagnateurs, suivi du retour Paris–Ciney des accompagnateurs ; • Un transport le dimanche : Ciney–Paris des accompagnateurs, suivi du retour Paris–Ciney avec les résidents et leurs accompagnateurs. Les quantités et le calendrier repris dans les documents du marché sont présumés et communiqués à titre indicatif. Ils sont établis sur la base des besoins actuellement connus et ne constituent ni un engagement de commande ni une fréquence minimale ou maximale de prestations. Un planning prévisionnel des transports est joint au présent cahier spécial des charges. Il constitue une estimation de la programmation des déplacements et pourra être adapté en fonction des besoins du pouvoir adjudicateur. Les prestations pourront être réalisées au moyen d’un autocar standard ou, lorsque les besoins le nécessitent, d’un autocar équipé pour le transport de personnes à mobilité réduite, conformément aux exigences prévues par les documents du marché. Lieu de départ des prestations : Les Chemins d’Ariane Tienne à la Justice 24 5590 Ciney",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/731266-2026",
+      "publicationWorkspaceId": "967d2f75-9bcc-4c6b-a52b-be0b5e958b97",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/731266-2026",
+          "publicationNumber": "731266-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/967d2f75-9bcc-4c6b-a52b-be0b5e958b97/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ]
+    },
     {
       "id": "bosa:1ec3a4ad-4466-416b-b7c5-818f4ba95c88",
       "publicationWorkspaceId": "1ec3a4ad-4466-416b-b7c5-818f4ba95c88",
@@ -2353,51 +2466,6 @@
         {
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/2858fc52-1fd3-47f4-9e27-fca850b80917/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        }
-      ],
-      "screeningReason": null
-    },
-    {
-      "id": "ted:714793-2026",
-      "publicationNumber": "714793-2026",
-      "procedureIdentifier": "8f6b998b-2231-481d-b2b7-a527202165be",
-      "title": "Belgique – Énergie et services connexes – Intégration de la cuisine électrique et de la mobilité électrique dans le réseau électrique du Mozambique",
-      "buyer": "Enabel",
-      "region": "Belgique",
-      "sector": "Reseaux",
-      "sectors": [
-        "Reseaux"
-      ],
-      "score": 62,
-      "screening": "review",
-      "publication": "2026-10-15",
-      "deadline": "",
-      "cpv": [
-        "71314000",
-        "71314200"
-      ],
-      "description": "Intégration de la cuisine électrique et de la mobilité électrique dans le réseau électrique du Mozambique",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/714793-2026",
-      "noticeNumbers": [
-        "714793-2026",
-        "700454-2026"
-      ],
-      "matchReason": "projet_indirect",
-      "publicationWorkspaceId": "8e7ba771-58e6-45b4-b2ae-93e925b4b2d4",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/714793-2026",
-          "publicationNumber": "714793-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/8e7ba771-58e6-45b4-b2ae-93e925b4b2d4/general",
           "bdaReference": "",
           "noticeKind": "competition"
         }
@@ -7774,6 +7842,258 @@
         }
       ],
       "screeningReason": "verification_locale_intention_de_mission_non_etablie"
+    },
+    {
+      "id": "bosa:3d464fb7-ccf9-43c6-97dd-54e641b17836",
+      "publicationWorkspaceId": "3d464fb7-ccf9-43c6-97dd-54e641b17836",
+      "noticeId": "6efb47eb-b360-4c22-af0c-9a830c4744a8",
+      "procedureIdentifier": "3797179b-85d7-4f98-bd8e-8ef5efd795e0",
+      "internalReference": "PPP0B1-627/6061/2026-026_001",
+      "title": "Mission complète d'auteur de projet relative à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR)",
+      "buyer": "Ellezelles",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 95,
+      "screening": "main",
+      "publication": "2026-10-22",
+      "deadline": "",
+      "cpv": [
+        "71240000"
+      ],
+      "description": "Mission complète d'auteur de projet relative à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR)",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "PPP0B1-627/6061/2026-026_001",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/3d464fb7-ccf9-43c6-97dd-54e641b17836/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/3d464fb7-ccf9-43c6-97dd-54e641b17836/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [],
+      "consultationUrls": [
+        {
+          "url": "https://cloud.3p.eu/Downloads/1/627/B1/2026",
+          "type": "officially_referenced_external_documents",
+          "access": "destination_not_download_verified",
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/3d464fb7-ccf9-43c6-97dd-54e641b17836/urls?full=false",
+          "activatedAt": "2026-09-30T12:34:45.021105"
+        }
+      ],
+      "documentsCheckedAt": "2026-10-22T10:20:30.143Z"
+    },
+    {
+      "id": "bosa:3ab3ec25-78b5-4c2f-af13-1cb572590b1c",
+      "publicationWorkspaceId": "3ab3ec25-78b5-4c2f-af13-1cb572590b1c",
+      "noticeId": "4ca4e346-2fc0-4dec-8830-bbbf995a200a",
+      "procedureIdentifier": "2bff9eb8-248e-4150-b6b1-4fb8c08ae086",
+      "internalReference": "CM019BU2025-0012699_pub01",
+      "title": "Participation à une consultation de marché dans la gare de CHARLEROI-CENTRAL, concept BRASSERIE",
+      "buyer": "SNCB-Stations Commercialisation",
+      "region": "Wallonie",
+      "languages": [
+        "NL",
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-22",
+      "deadline": "",
+      "cpv": [
+        "55000000"
+      ],
+      "description": "La SNCB recherche un concessionnaire pour l'exploitation d'un concept « brasserie » dans la gare de Charleroi-Central.   Le concessionnaire implantera une brasserie contemporaine en façade de la gare, offrant une expérience qualitative tant aux voyageurs qu’aux riverains.   L’établissement devra proposer une atmosphère chaleureuse et accueillante, avec une identité visuelle forte et cohérente, valorisant la façade de la gare et contribuant à l’animation de l’espace public.  La brasserie devra offrir une restauration de type brasserie moderne, accessible tout au long de la journée : petit-déjeuner, déjeuner, après-midi et soirée.  L’offre culinaire privilégiera des produits de qualité et une carte suffisamment diversifiée pour répondre aux différents profils de clientèle (voyageurs pressés, travailleurs, habitants du quartier, touristes).  L’installation d’une terrasse aménagée est obligatoire durant les beaux jours. Celle-ci devra s’intégrer harmonieusement à l’environnement de la gare et respecter les prescriptions urbanistiques et de mobilité.   L’aménagement comprendra du mobilier de qualité, confortable et résistant, ainsi qu’un dispositif de délimitation esthétique (bacs végétalisés, brise-vues, parasols, etc.). La terrasse devra contribuer à créer une ambiance conviviale et attractive, tout en permettant une circulation fluide des usagers aux abords du bâtiment.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "19",
+      "noticeKind": "competition",
+      "bdaReference": "CM019BU2025-0012699_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/3ab3ec25-78b5-4c2f-af13-1cb572590b1c/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/3ab3ec25-78b5-4c2f-af13-1cb572590b1c/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "51a70005-0e7f-450d-8d25-f106bd08b00a",
+          "title": "4. Charte CSR SNCB_Concessionnaires_V5.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "3bb627c0-40a5-47ae-a4c9-b22922b9d875",
+          "documentId": "0e5ca045-7e0e-45cb-9236-dc35116d42be",
+          "activatedAt": "2026-10-22T11:14:46.014445",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/3ab3ec25-78b5-4c2f-af13-1cb572590b1c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "7bd34351-8440-4596-ace6-fbd18f2792f5",
+          "title": "3. COM - Formulaire d'offre - VF_100ans.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "5d820f01-e19b-4f99-865c-f16796d03f98",
+          "documentId": "f7d85fce-3501-4e25-922f-f06af8698e44",
+          "activatedAt": "2026-10-22T11:14:46.014445",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/3ab3ec25-78b5-4c2f-af13-1cb572590b1c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "8ba52e1b-a5f7-4e18-803f-a252758dc711",
+          "title": "5. Manual Façades - FR - V2.0.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "aae7f345-3f66-4171-8f49-23c5e0258179",
+          "documentId": "a5dbd75b-50cd-4ebe-b25e-db7449f3e1d0",
+          "activatedAt": "2026-10-22T11:14:46.014445",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/3ab3ec25-78b5-4c2f-af13-1cb572590b1c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "9028c4d0-0e9c-4aed-aa23-dc4b30f99cae",
+          "title": "4. CSR Charter NMBS ConcessiesV5.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "ee45405a-2ef5-4132-9d0d-d6ccf110abc4",
+          "documentId": "7a7fa8af-8156-4e50-8bb1-01875c65077a",
+          "activatedAt": "2026-10-22T11:14:46.014445",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/3ab3ec25-78b5-4c2f-af13-1cb572590b1c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "98a83b7f-8584-46bd-a6dc-f12310c6d7c5",
+          "title": "CHARLEROI-CENTRAL_FB BRASSERIE_Fr(new)_Promo.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "3d46e999-b274-4751-b79c-f99dcda226c2",
+          "documentId": "08e8ec6d-f48b-4d1c-96da-c1bdc6ebc276",
+          "activatedAt": "2026-10-22T11:14:46.014445",
+          "language": "FR,NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/3ab3ec25-78b5-4c2f-af13-1cb572590b1c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "a0b5c77b-1b17-4ba4-b75d-1a8596642a71",
+          "title": "3. COM - Offerteformulier - VF_100jaar.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "be1ca3b3-0b2a-4298-9100-125a017b592d",
+          "documentId": "bfc9f692-69bf-4279-8a93-1cea721003a7",
+          "activatedAt": "2026-10-22T11:14:46.014445",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/3ab3ec25-78b5-4c2f-af13-1cb572590b1c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "bd025112-2095-4962-92de-4c76b3afb8b9",
+          "title": "2. Conditions générales - Variable Mensuel - VF - 1.5 - DEF.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "548b2b93-8d04-4f4c-87c7-1877c052bdc3",
+          "documentId": "b0e27dc9-7271-4ca2-b79c-4c3ec6420004",
+          "activatedAt": "2026-10-22T11:14:46.014445",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/3ab3ec25-78b5-4c2f-af13-1cb572590b1c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "d055dc2a-dcd4-4b75-8b33-8bca7bac8629",
+          "title": "2. Algemene voorwaarden - Maandelijkse variabele - VF - 1.5 - DEF.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "32c585dc-cd5f-4d3f-b9fa-e7903d19b487",
+          "documentId": "853e83b7-03b6-4759-b5a4-bbdb3935e330",
+          "activatedAt": "2026-10-22T11:14:46.014445",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/3ab3ec25-78b5-4c2f-af13-1cb572590b1c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "fa290442-5436-4cab-a016-337bb6ca23b8",
+          "title": "5. Handleiding Gevels - NL - V2.0.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "e58ea97b-d8bb-4ccf-a4f7-06283384791b",
+          "documentId": "54832198-0978-413d-a634-fa0d1757d884",
+          "activatedAt": "2026-10-22T11:14:46.014445",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/3ab3ec25-78b5-4c2f-af13-1cb572590b1c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-22T10:20:33.628Z"
+    },
+    {
+      "id": "bosa:c02b39f7-a9c2-4c4a-9df7-1c282473aacd",
+      "publicationWorkspaceId": "c02b39f7-a9c2-4c4a-9df7-1c282473aacd",
+      "noticeId": "5d123b2a-268a-4c6e-a6d4-971e93699e8d",
+      "procedureIdentifier": "8b937d36-4e67-489d-875b-5490b6531f11",
+      "internalReference": "CSCHOwT2026/1_pub01",
+      "title": "Appui à l’Observatoire wallon du Tourisme pour la gouvernance, l’analyse et la valorisation des données touristiques et le développement d’outils d’aide à la décision",
+      "buyer": "Tourisme Wallonie",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-22",
+      "deadline": "",
+      "cpv": [
+        "72316000"
+      ],
+      "description": "L’objet du marché est la prestation de services d’appui à l’Observatoire wallon du Tourisme en matière de recensement, de gestion, de structuration, de réconciliation, d’analyse et de valorisation des données touristiques, ainsi que de gouvernance de la donnée, de développement d’outils d’observation et d’aide à la décision et de transfert de compétences. Objectifs prioritaires de la mission : la mission doit permettre de structurer et de fiabiliser les données touristiques wallonnes, d’en organiser la gouvernance partagée avec les partenaires concernés, de développer des capacités d’analyse et des outils d’aide à la décision, et de garantir l’autonomie de l’Observatoire dans l’utilisation et la mise à jour des dispositifs développés. Les prestations permettant d’atteindre ces objectifs sont détaillées dans la partie 2 du présent cahier spécial des charges. Des premiers résultats opérationnels sont attendus dès le premier semestre 2027. Description des services à exécuter : la mission consiste à fournir à l’Observatoire wallon du Tourisme un appui opérationnel et méthodologique complémentaire à l’expertise déjà présente au sein de l’équipe. Les prestations seront exécutées conformément aux objectifs, exigences, livrables et jalons définis dans la partie 2 du présent cahier spécial des charges, en concertation avec les partenaires publics et privés concernés et dans le respect de la convention liant Tourisme Wallonie à l’IWEPS en matière d’établissement des statistiques sur le tourisme wallon.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "CSCHOwT2026/1_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/c02b39f7-a9c2-4c4a-9df7-1c282473aacd/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/c02b39f7-a9c2-4c4a-9df7-1c282473aacd/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "96e54acd-ce07-4ef2-bbac-c17e8a299e9e",
+          "title": "20261020 CSCH signé.pdf",
+          "kind": "csc",
+          "fileType": "pdf",
+          "versionId": "decfa7fd-9f78-40a4-9865-2290d7893aa5",
+          "documentId": "711acb52-3e08-477a-a1e6-90d8b182a77e",
+          "activatedAt": "2026-10-22T11:54:46.017597",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/c02b39f7-a9c2-4c4a-9df7-1c282473aacd/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-22T10:20:37.120Z"
     }
   ]
 }
