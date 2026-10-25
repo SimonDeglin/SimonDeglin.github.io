@@ -23,9 +23,9 @@
     "checkedWithErrors": 3,
     "documentsRead": 106,
     "opportunities": 39,
-    "sitesChecked": 132,
-    "candidatePages": 122,
-    "sourceErrors": 3
+    "sitesChecked": 144,
+    "candidatePages": 132,
+    "sourceErrors": 5
   },
   "communes": [
     {
@@ -129,14 +129,16 @@
       "estimatedMinutes": 77,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_indisponible",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-25T11:57:46.472Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [
+        "HTTP 404"
+      ]
     },
     {
       "ins": "92003",
@@ -309,9 +311,28 @@
       "estimatedMinutes": 33,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://anthisnes.be/conseil-communal/",
+          "title": "Le conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://anthisnes.be/20220429-conseil-communal/",
+          "title": "Conseil communal",
+          "status": "lien_public_repere_non_analyse",
+          "last_error": "HTTP 500"
+        },
+        {
+          "url": "https://anthisnes.be/seance-du-conseil-communal-3-2/",
+          "title": "Lire Plus",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-25T11:57:46.472Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -521,9 +542,40 @@
       "estimatedMinutes": 37,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal-des-enfants",
+          "title": "Conseil communal des enfants",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-prochain-conseil-communal",
+          "title": "Ordre du jour du prochain Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/copy_of_proces-verbaux",
+          "title": "Procès verbaux du conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/assemblees-generales-des-intercommunales/assemblees-generales-des-intercommunales",
+          "title": "Assemblées générales des intercommunales",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-25T11:57:46.472Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -598,9 +650,28 @@
       "estimatedMinutes": 35,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale-2024-2030",
+          "title": "Déclaration de politique communale 2024-2030",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil",
+          "title": "Procès-verbaux des séances du Conseil",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-25T11:57:46.472Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -622,9 +693,16 @@
       "estimatedMinutes": 45,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.baelen.be/commune/vie-politique/conseil-communal",
+          "title": "Conseil Communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-25T11:57:46.472Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -1600,14 +1678,16 @@
       "estimatedMinutes": 79,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_indisponible",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-25T11:57:46.472Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [
+        "HTTP 307"
+      ]
     },
     {
       "ins": "61010",
@@ -2258,9 +2338,34 @@
       "estimatedMinutes": 33,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.comblainaupont.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.comblainaupont.be/ma-commune/vie-politique/conseil-communal-des-enfants",
+          "title": "Conseil communal des enfants",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.comblainaupont.be/vivre-a/enfance-et-petite-enfance/conseil-communal-des-enfants",
+          "title": "Conseil communal des enfants",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.comblainaupont.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-25T11:57:46.472Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -2488,9 +2593,34 @@
       "estimatedMinutes": 30,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.dalhem.be/actualites/conseil-communal-des-enfants-cce-appel-a-candidatures",
+          "title": "Conseil communal des Enfants (CCE) - Appel à candidatures",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.dalhem.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.dalhem.be/ma-commune/vie-politique/diffusion-du-conseil-communal",
+          "title": "Diffusion du Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.dalhem.be/ma-commune/vie-politique/ordres-du-jour-du-conseil-communal",
+          "title": "Ordres du jour du Conseil Communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-25T11:57:46.472Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -8397,9 +8527,28 @@
       "estimatedMinutes": 31,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.sprimont.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.sprimont.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour",
+          "title": "Ordre du jour",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.sprimont.be/ma-commune/vie-politique/conseil-communal/pv-des-conseils",
+          "title": "PV des Conseils communaux",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-25T11:57:46.472Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -8608,9 +8757,40 @@
       "estimatedMinutes": 39,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.tinlot.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.tinlot.be/ma-commune/vie-politique/conseil-communal/declaration-de-politique-generale",
+          "title": "Déclaration de Politique Générale",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.tinlot.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-1",
+          "title": "Ordre du jour",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.tinlot.be/ma-commune/vie-politique/conseil-communal/plan-strategique-transversal-pst-2018-2024",
+          "title": "Plan Stratégique Transversal (PST)",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.deliberations.be/tinlot/decisions",
+          "title": "Délibérations.be",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-25T11:57:46.472Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -8983,9 +9163,58 @@
       "estimatedMinutes": 39,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.villers-le-bouillet.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.villers-le-bouillet.be/ma-commune/vie-politique/conseil-communal/publications-conseil-communal/proces-verbaux-du-conseil-communal",
+          "title": "Procès-verbaux du Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.villers-le-bouillet.be/ma-commune/vie-politique/conseil-communal/publications-conseil-communal/ordres-du-jour-du-conseil-communal",
+          "title": "Ordres du jour du Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.villers-le-bouillet.be/ma-commune/vie-politique/conseil-communal/publications-conseil-communal/reglements-communaux",
+          "title": "Règlements communaux",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.villers-le-bouillet.be/vivre-a-vlb/participation-citoyenne/ccca",
+          "title": "Conseil Consultatif Communal des Aînés (CCCA)",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.villers-le-bouillet.be/agenda/conseil-communal-du-27-octobre?u=2a4230ba707340cc97dba25770020b8c",
+          "title": "Le 27 10 Conseil communal du 27 octobre",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.villers-le-bouillet.be/agenda/conseil-communal-du-24-novembre?u=9b08e476d0cf4241b1fc37b45e56f930",
+          "title": "Le 24 11 Conseil communal du 24 novembre",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.villers-le-bouillet.be/agenda/conseil-communal-du-22-decembre?u=27007145a36b419a992514cf6a5af17a",
+          "title": "Le 22 12 Conseil communal du 22 décembre",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-25T11:57:46.472Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -9198,9 +9427,58 @@
       "estimatedMinutes": 45,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.wanze.be/commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.wanze.be/commune/vie-politique/conseil-communal/comptes-rendu-des-conseils-communaux",
+          "title": "Comptes-rendus des Conseils communaux",
+          "status": "lien_public_repere_non_analyse",
+          "last_error": "HTTP 404"
+        },
+        {
+          "url": "https://www.deliberations.be/wanze/publications",
+          "title": "Publication règlements, ordonnances et avis d'enquête",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.wanze.be/commune/Participation%20_et_%20citoyennete/conseil-communal-des-enfants",
+          "title": "Conseil Communal des Enfants",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.wanze.be/commune/Participation%20_et_%20citoyennete/Conseil-Consultatif-des-Aines",
+          "title": "Conseil Consultatif Communal des Aînés",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.wanze.be/commune/Participation%20_et_%20citoyennete/conseil-communal-consultatif-de-la-personne-handicapee",
+          "title": "Conseil Consultatif Communal de la Personne Handicapée",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.wanze.be/commune/Participation%20_et_%20citoyennete/conseil-communal-des-jeunes",
+          "title": "Conseil Communal des Jeunes",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        },
+        {
+          "url": "https://www.wanze.be/commune/vie-politique/conseil-communal/compte-rendu-des-principales-decisions-du-conseil-communal-du-14-septembre",
+          "title": "Compte-rendu des principales décisions du Conseil communal du 12 octobre",
+          "status": "page_accessible",
+          "last_success": "2026-10-25T11:57:46.472Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-25T11:57:46.472Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -9396,5 +9674,5 @@
       "errors": []
     }
   ],
-  "lastMunicipalPass": "2026-10-24T11:34:01.696Z"
+  "lastMunicipalPass": "2026-10-25T11:57:46.472Z"
 }
