@@ -1,25 +1,25 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-25T09:51:04.800Z",
+  "generated_at": "2026-10-25T14:58:08.280Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
   "note": "TED interrogé le 2026-10-25 : 1445 avis lus, 2 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-25T09:52:53.648Z",
+      "last_success": "2026-10-25T14:59:49.069Z",
       "scanned": 2350,
       "retained": 54,
       "period_from": "2026-10-11",
       "period_to": "2026-10-25",
       "pages": 94,
       "complete": true,
-      "raw_candidates": 2327,
+      "raw_candidates": 2328,
       "oldest_seen": "2026-10-09"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-10-25T09:55:33.251Z",
+      "last_success": "2026-10-25T15:01:50.801Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -83,7 +83,7 @@
     "matched_current_run": 17,
     "records": 143,
     "review_count": 64,
-    "award_notice_count": 426,
+    "award_notice_count": 428,
     "awarded_market_matches": 2,
     "award_fields_requested": false,
     "retained_as_excluded": 2,
@@ -140,16 +140,16 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "aucun_signal_metier": 410,
-      "avis_neerlandais": 149,
-      "avis_attribution_analyse_separement": 426,
+      "aucun_signal_metier": 415,
+      "avis_attribution_analyse_separement": 428,
+      "objet_hors_domaine": 91,
+      "acheteur_flamand": 148,
       "qualifie_main": 8,
-      "acheteur_flamand": 147,
-      "objet_hors_domaine": 93,
-      "qualifie_review": 24,
+      "avis_neerlandais": 145,
       "travaux_execution": 106,
-      "assurance_ou_nettoyage": 26,
-      "fournitures_et_location": 56
+      "qualifie_review": 24,
+      "assurance_ou_nettoyage": 27,
+      "fournitures_et_location": 53
     }
   },
   "items": [
@@ -2234,7 +2234,7 @@
           "versionId": "bcdca6d0-d13f-4138-99c5-6e122da4dde8",
           "documentId": "17848170-0136-4662-8b9a-69f321d687c5",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2247,7 +2247,7 @@
           "versionId": "7a672143-498d-40bf-85d2-1a0ccd6c89b8",
           "documentId": "338ce9a3-7ba9-4ed9-99b8-3bd5f1ce416e",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2260,7 +2260,7 @@
           "versionId": "5a3371af-caf1-41b9-89e6-e6eade671b0a",
           "documentId": "23b3699b-6288-4049-922c-146ae89c1eb4",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2273,7 +2273,7 @@
           "versionId": "6dabd106-495c-4884-b407-a9d35ae4800b",
           "documentId": "d182b6fc-7127-4669-95f9-5b81310dc8c6",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2286,7 +2286,7 @@
           "versionId": "62dd41f2-e318-42b1-b772-46e8d5633836",
           "documentId": "5ebc8928-f728-45bd-8c0d-992a55d8ce01",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2299,14 +2299,14 @@
           "versionId": "1b6ff5ed-8135-422d-81f1-ab428d851133",
           "documentId": "f7b3b39c-0bec-4f55-8e29-844c0e81c6b6",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-25T09:56:46.558Z",
+      "documentsCheckedAt": "2026-10-25T15:03:04.220Z",
       "matchReason": "description_ou_contexte",
       "screeningReason": null,
       "officialSources": [
