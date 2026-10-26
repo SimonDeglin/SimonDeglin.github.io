@@ -1,25 +1,25 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-26T11:10:16.381Z",
+  "generated_at": "2026-10-26T17:25:10.940Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
   "note": "TED interrogé le 2026-10-26 : 1415 avis lus, 2 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-26T11:12:16.976Z",
-      "scanned": 2475,
+      "last_success": "2026-10-26T17:27:20.773Z",
+      "scanned": 2525,
       "retained": 58,
       "period_from": "2026-10-12",
       "period_to": "2026-10-26",
-      "pages": 99,
+      "pages": 101,
       "complete": true,
-      "raw_candidates": 2459,
-      "oldest_seen": "2026-10-09"
+      "raw_candidates": 2518,
+      "oldest_seen": "2026-10-11"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-10-26T11:15:28.160Z",
+      "last_success": "2026-10-26T17:30:32.663Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -75,7 +75,7 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 99 page(s) parcourue(s) depuis 2026-10-12.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 101 page(s) parcourue(s) depuis 2026-10-12.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
@@ -122,9 +122,9 @@
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2475,
+    "bosa_scanned": 2525,
     "bosa_imported": 58,
-    "bosa_pages": 99,
+    "bosa_pages": 101,
     "local_documents": 34,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -143,13 +143,13 @@
       "assurance_ou_nettoyage": 26,
       "travaux_execution": 108,
       "avis_attribution_analyse_separement": 400,
-      "aucun_signal_metier": 426,
-      "fournitures_et_location": 48,
-      "avis_neerlandais": 136,
-      "acheteur_flamand": 145,
-      "objet_hors_domaine": 90,
+      "aucun_signal_metier": 421,
+      "fournitures_et_location": 51,
+      "avis_neerlandais": 139,
+      "acheteur_flamand": 144,
+      "objet_hors_domaine": 91,
       "qualifie_main": 10,
-      "qualifie_review": 26
+      "qualifie_review": 25
     }
   },
   "items": [
@@ -203,6 +203,59 @@
       ]
     },
     {
+      "id": "bosa:289c32a7-5b46-4717-be44-969eebeae536",
+      "publicationWorkspaceId": "289c32a7-5b46-4717-be44-969eebeae536",
+      "noticeId": "b8080126-244d-470a-9d59-0dbe6def5f8e",
+      "procedureIdentifier": "50f716cc-dec3-4edd-bb6f-34816e934f75",
+      "internalReference": "PPP0XS-657/6102/2026/481_002",
+      "title": "Désignation d'un certificateur PEB pour les bâtiments publics de la commune",
+      "buyer": "Etalle",
+      "region": "Bruxelles",
+      "languages": [
+        "FR"
+      ],
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "score": 95,
+      "screening": "main",
+      "publication": "2026-10-26",
+      "deadline": "",
+      "cpv": [
+        "79132000"
+      ],
+      "description": "Désignation d'un certificateur PEB pour les bâtiments publics de la commune",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0XS-657/6102/2026/481_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/289c32a7-5b46-4717-be44-969eebeae536/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/289c32a7-5b46-4717-be44-969eebeae536/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP0XS-657/6102/2026/481_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/289c32a7-5b46-4717-be44-969eebeae536/general",
+          "publicationDate": "2026-10-26",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-26T11:19:58.982Z",
+      "matchReason": "prestation_decrite",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/289c32a7-5b46-4717-be44-969eebeae536/general"
+        }
+      ]
+    },
+    {
       "id": "ted:739966-2026",
       "publicationNumber": "739966-2026",
       "procedureIdentifier": "6f1846ec-d60f-43ef-aefc-eef6f1b5196d",
@@ -238,6 +291,11 @@
           "bdaReference": "",
           "noticeKind": "competition"
         }
+      ],
+      "matchReason": "projet_indirect",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "739966-2026"
       ]
     },
     {
@@ -276,6 +334,11 @@
           "bdaReference": "",
           "noticeKind": "competition"
         }
+      ],
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "740374-2026"
       ]
     },
     {
@@ -1965,7 +2028,7 @@
           "versionId": "ddf24280-7180-4af0-9cc3-c050455a2c18",
           "documentId": "6c1fd0d8-3f25-4764-8e27-9bb907ccf665",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "DE,FR",
+          "language": "FR,DE",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1978,14 +2041,14 @@
           "versionId": "41c1dfd3-e395-4b17-9583-72b8baeacc90",
           "documentId": "815fd779-551d-48fc-a533-f11b9a86434c",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "DE,FR",
+          "language": "FR,DE",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-26T11:16:29.913Z",
+      "documentsCheckedAt": "2026-10-26T17:31:35.043Z",
       "matchReason": "mission_technique_generique",
       "screeningReason": null,
       "officialSources": [
@@ -2359,7 +2422,7 @@
           "versionId": "bcdca6d0-d13f-4138-99c5-6e122da4dde8",
           "documentId": "17848170-0136-4662-8b9a-69f321d687c5",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2372,7 +2435,7 @@
           "versionId": "7a672143-498d-40bf-85d2-1a0ccd6c89b8",
           "documentId": "338ce9a3-7ba9-4ed9-99b8-3bd5f1ce416e",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2385,7 +2448,7 @@
           "versionId": "5a3371af-caf1-41b9-89e6-e6eade671b0a",
           "documentId": "23b3699b-6288-4049-922c-146ae89c1eb4",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2398,7 +2461,7 @@
           "versionId": "6dabd106-495c-4884-b407-a9d35ae4800b",
           "documentId": "d182b6fc-7127-4669-95f9-5b81310dc8c6",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2411,7 +2474,7 @@
           "versionId": "62dd41f2-e318-42b1-b772-46e8d5633836",
           "documentId": "5ebc8928-f728-45bd-8c0d-992a55d8ce01",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2424,14 +2487,14 @@
           "versionId": "1b6ff5ed-8135-422d-81f1-ab428d851133",
           "documentId": "f7b3b39c-0bec-4f55-8e29-844c0e81c6b6",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-25T15:03:04.220Z",
+      "documentsCheckedAt": "2026-10-26T17:31:49.986Z",
       "matchReason": "description_ou_contexte",
       "screeningReason": null,
       "officialSources": [
@@ -6398,7 +6461,7 @@
           "versionId": "22cc83b1-d599-4416-96d9-c1a354861889",
           "documentId": "425d5ba1-de86-4335-b68e-3b58107c5b6d",
           "activatedAt": "2026-09-29T15:00:45.021111",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -6418,7 +6481,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-26T11:19:25.404Z",
+      "documentsCheckedAt": "2026-10-26T17:34:30.827Z",
       "matchReason": "description_ou_contexte",
       "screeningReason": null,
       "officialSources": [
@@ -8351,51 +8414,6 @@
         }
       ],
       "screeningReason": "verification_locale_intention_de_mission_non_etablie"
-    },
-    {
-      "id": "bosa:289c32a7-5b46-4717-be44-969eebeae536",
-      "publicationWorkspaceId": "289c32a7-5b46-4717-be44-969eebeae536",
-      "noticeId": "b8080126-244d-470a-9d59-0dbe6def5f8e",
-      "procedureIdentifier": "50f716cc-dec3-4edd-bb6f-34816e934f75",
-      "internalReference": "PPP0XS-657/6102/2026/481_002",
-      "title": "Désignation d'un certificateur PEB pour les bâtiments publics de la commune",
-      "buyer": "Etalle",
-      "region": "Bruxelles",
-      "languages": [
-        "FR"
-      ],
-      "sector": "PEB",
-      "sectors": [
-        "PEB"
-      ],
-      "score": 95,
-      "screening": "review",
-      "publication": "2026-10-26",
-      "deadline": "",
-      "cpv": [
-        "79132000"
-      ],
-      "description": "Désignation d'un certificateur PEB pour les bâtiments publics de la commune",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "E4",
-      "noticeKind": "award",
-      "bdaReference": "PPP0XS-657/6102/2026/481_002",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/289c32a7-5b46-4717-be44-969eebeae536/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/289c32a7-5b46-4717-be44-969eebeae536/documents",
-      "documentsPageSource": "public_api_200",
-      "bosaResults": [
-        {
-          "reference": "PPP0XS-657/6102/2026/481_002",
-          "url": "https://www.publicprocurement.be/publication-workspaces/289c32a7-5b46-4717-be44-969eebeae536/general",
-          "publicationDate": "2026-10-26",
-          "kind": "award"
-        }
-      ],
-      "documentInventory": [],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-26T11:19:58.982Z"
     }
   ]
 }
