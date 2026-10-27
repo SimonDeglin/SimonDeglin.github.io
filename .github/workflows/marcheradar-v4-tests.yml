@@ -1,0 +1,53 @@
+name: "Marché Radar V4 — cockpit et dossiers"
+on:
+  push:
+    branches:
+      - "feature/marcheradar-cockpit-20261027"
+      - "main"
+    paths:
+      - "marcheradar/index.html"
+      - "marcheradar/cockpit-v4.js"
+      - "marcheradar/cockpit-v4.css"
+      - "marcheradar/tests/cockpit-v4*"
+      - ".github/workflows/marcheradar-v4-tests.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: "Contrôler la syntaxe et la typologie"
+        run: |
+          node --check marcheradar/cockpit-v4.js
+          node --check marcheradar/tests/cockpit-v4-browser.cjs
+          node --test marcheradar/tests/cockpit-v4.test.cjs
+      - name: "Préparer Chromium isolé"
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install chromium
+      - name: "Tester le cockpit et la navigation réelle"
+        run: node marcheradar/tests/cockpit-v4-browser.cjs
+      - name: "Tester le suivi des marchés existant"
+        run: node marcheradar/tests/phase1-browser.cjs
+      - name: "Tester les fiches documentaires existantes"
+        run: node marcheradar/tests/phase2-browser.cjs
+      - name: "Tester la préservation documentaire"
+        run: |
+          node --test marcheradar/tests/phase3a-bosa.test.cjs
+          node --test marcheradar/tests/phase3b-evidence.test.cjs
+      - name: "Conserver les captures"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: marche-radar-v4-screenshots
+          retention-days: 7
+          if-no-files-found: ignore
+          path: |
+            marcheradar/tests/cockpit-v4-desktop.png
+            marcheradar/tests/cockpit-v4-mobile.png
