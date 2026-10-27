@@ -23,9 +23,9 @@
     "checkedWithErrors": 3,
     "documentsRead": 106,
     "opportunities": 39,
-    "sitesChecked": 156,
-    "candidatePages": 137,
-    "sourceErrors": 7
+    "sitesChecked": 168,
+    "candidatePages": 146,
+    "sourceErrors": 8
   },
   "communes": [
     {
@@ -1730,9 +1730,9 @@
       "estimatedMinutes": 84,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_lu_sources_non_localisees",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-27T12:38:21.465Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -7532,14 +7532,16 @@
       "estimatedMinutes": 47,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_indisponible",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-27T12:38:21.465Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [
+        "fetch failed"
+      ]
     },
     {
       "ins": "52055",
@@ -8289,9 +8291,9 @@
       "estimatedMinutes": 81,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_lu_sources_non_localisees",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-27T12:38:21.465Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -8638,9 +8640,28 @@
       "estimatedMinutes": 43,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.villedespa.be/ma-ville/vie-politique/conseil-communal",
+          "title": "Conseil Communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        },
+        {
+          "url": "https://www.villedespa.be/ma-ville/vie-politique/conseil-communal/plan-strategique-transversal-pst",
+          "title": "Plan Stratégique Transversal (PST)",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        },
+        {
+          "url": "https://www.villedespa.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour-et-proces-verbaux/2024",
+          "title": "Séances du Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-27T12:38:21.465Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -8705,9 +8726,16 @@
       "estimatedMinutes": 57,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.stavelot.be/ma-commune/vie-politique/le-conseil-communal",
+          "title": "Le Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-27T12:38:21.465Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -8729,9 +8757,28 @@
       "estimatedMinutes": 49,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.stoumont.be/",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        },
+        {
+          "url": "https://www.stoumont.be/le-conseil-communal/",
+          "title": "Le Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        },
+        {
+          "url": "https://www.stoumont.be/le-conseil-communal-des-enfants/",
+          "title": "Le Conseil communal des enfants",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-27T12:38:21.465Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -8801,9 +8848,28 @@
       "estimatedMinutes": 36,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.theux.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        },
+        {
+          "url": "https://www.theux.be/ma-commune/vie-politique/conseil-communal/publications/pv-du-conseil-communal",
+          "title": "PV du Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        },
+        {
+          "url": "https://www.theux.be/ma-commune/vie-politique/conseil-communal/publications/ordre-du-jour-conseil-communal",
+          "title": "Ordre du jour du Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-27T12:38:21.465Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -8825,9 +8891,22 @@
       "estimatedMinutes": 36,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.thimister-clermont.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        },
+        {
+          "url": "https://www.thimister-clermont.be/ma-commune/vie-politique/conseil-communal/publications/videos-des-conseils",
+          "title": "Notre chaîne YouTube",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-27T12:38:21.465Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -9008,9 +9087,16 @@
       "estimatedMinutes": 56,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.troisponts.be/ma-commune/vie-politique/le-conseil-communal",
+          "title": "Le Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-27T12:38:21.465Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -9201,9 +9287,28 @@
       "estimatedMinutes": 37,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.verviers.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        },
+        {
+          "url": "https://www.verviers.be/ma-commune/vie-politique/conseil-communal-des-enfants",
+          "title": "Conseil Communal des enfants",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        },
+        {
+          "url": "https://www.verviers.be/ma-commune/vie-politique/conseil-communal-des-jeunes",
+          "title": "Conseil communal des jeunes",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-27T12:38:21.465Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -9471,9 +9576,22 @@
       "estimatedMinutes": 67,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.waimes.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        },
+        {
+          "url": "https://www.deliberations.be/waimes/decisions",
+          "title": "Délibérations.be",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-27T12:38:21.465Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -9751,9 +9869,40 @@
       "estimatedMinutes": 46,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.welkenraedt.be/commune/politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        },
+        {
+          "url": "https://www.welkenraedt.be/commune/politique/conseil-communal/plan-strategique-transversal-pst",
+          "title": "Programme Stratégique Transversal (PST)",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        },
+        {
+          "url": "https://www.welkenraedt.be/commune/politique/conseil-communal/seances-du-conseil-communal",
+          "title": "Séances du Conseil communal",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        },
+        {
+          "url": "https://www.welkenraedt.be/commune/citoyennete/conseil-communal-consultatif-des-aines",
+          "title": "Conseil consultatif communal des Aînés (CCCA)",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        },
+        {
+          "url": "https://www.welkenraedt.be/commune/citoyennete/conseil-communal-des-enfants",
+          "title": "Conseil communal des Enfants (CCE)",
+          "status": "page_accessible",
+          "last_success": "2026-10-27T12:38:21.465Z"
+        }
+      ],
+      "lastSiteCheck": "2026-10-27T12:38:21.465Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
@@ -9809,5 +9958,5 @@
       "errors": []
     }
   ],
-  "lastMunicipalPass": "2026-10-26T13:29:54.736Z"
+  "lastMunicipalPass": "2026-10-27T12:38:21.465Z"
 }
