@@ -1,0 +1,102 @@
+/* MarchéRadar — cockpit KDRIX V4. Laisser les dossiers et catégories en place.
+ * Densité professionnelle: moins de décoration, plus de données exploitables.
+ */
+:root{--v4-orange:#ea7540;--v4-navy:#1d2c3d;--v4-muted:#748396}
+.content{max-width:1580px;padding-top:22px}
+.welcome{margin-bottom:17px;align-items:center}
+.welcome h1{font-size:26px;letter-spacing:-.95px}
+.welcome .eyebrow{margin-bottom:5px}
+.welcome p{font-size:12px}
+.hero,.kpis{display:none!important}
+.cockpit-v4{margin-bottom:17px}
+.v4-cockpit-title{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:12px}
+.v4-eyebrow{display:block;font-size:9px;letter-spacing:1.15px;font-weight:850;color:#e47848}
+.v4-cockpit-title h2{font:800 17px/1.4 Manrope,sans-serif;letter-spacing:-.45px;margin:4px 0}
+.v4-cockpit-title p{font-size:11px;color:var(--v4-muted);margin:0;line-height:1.5}
+.v4-total{font-size:11px;font-weight:750;color:#788799;white-space:nowrap}
+.v4-kpi-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.v4-metric{min-width:0;text-align:left;position:relative;background:#fff;border:1px solid #e5e9ef;border-radius:12px;min-height:111px;padding:13px 15px;display:flex;flex-direction:column;align-items:flex-start;box-shadow:0 2px 12px #1a2a3c06;color:#2b394d;font:inherit}
+.v4-metric-action{cursor:pointer}
+.v4-metric-action:hover,.v4-metric-action:focus-visible{border-color:#e7b197;box-shadow:0 4px 16px #c1683514;outline:0}
+.v4-metric-label{font-size:11px;font-weight:750;color:#68788c}
+.v4-metric strong{font:800 27px/1.25 Manrope,sans-serif;color:#263a4e;letter-spacing:-1px;margin:5px 0 1px}
+.v4-metric small{font-size:9px;line-height:1.4;color:#8c99a7;display:block;max-width:100%}
+.v4-metric-see{position:absolute;right:13px;top:14px;font-size:10px;color:#c57243;font-weight:800}
+.source-coverage-strip{margin-bottom:17px}
+.filter-panel{padding:13px 15px;margin-bottom:10px;border-radius:12px}
+.search-row{gap:8px}
+.search-wrap input,.filter-select{height:39px;font-size:11px}
+.v4-kind-filter{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin:0 0 10px;padding:9px 10px;background:#fff;border:1px solid #e7ebef;border-radius:12px}
+.v4-kind-filter-label{font-size:10px;color:#8e9baa;font-weight:750;letter-spacing:.35px;text-transform:uppercase;margin-right:6px}
+.v4-type-btn{border:1px solid #e7ebf0;background:#f7f9fb;padding:8px 11px;font:750 11px/1.1 inherit;color:#586a7e;border-radius:8px;cursor:pointer;white-space:nowrap}
+.v4-type-btn:hover,.v4-type-btn:focus-visible{border-color:#dab99f;outline:0}
+.v4-type-btn.active{background:#21374d;color:#fff;border-color:#21374d}
+.v4-type-count{font-size:9px;display:inline-block;opacity:.75;margin-left:4px}
+.workspace{grid-template-columns:minmax(0,1fr) minmax(268px,302px);gap:12px}
+.results{border-radius:12px}
+.result-head{padding:14px 17px 12px}
+.tender{gap:11px;padding:12px 15px;align-items:center}
+.tender .grip{opacity:.4}
+.score-ring{width:43px;height:43px;min-width:43px}
+.score-ring:before{inset:4px}
+.score-ring strong{font-size:12px}
+.tender h3{font-size:12px;line-height:1.42;margin:0 0 5px;font-weight:800}
+.tender-top{gap:5px;margin-bottom:5px}
+.micro-tag{font-size:9px;padding:3px 5px;letter-spacing:0;font-weight:700}
+.tender-sub{font-size:10px;gap:9px;line-height:1.3}
+.tender .mr2-list-hints{margin-top:5px;gap:8px}
+.tender .mr2-list-hints span{font-size:9px}
+.tender-end{min-width:125px;gap:5px}
+.tender-end .end-date{font-size:10px}
+.tender-end .days{font-size:9px}
+.tender-end .move-select{font-size:10px}
+.v4-kind{display:inline-flex;align-items:center;white-space:nowrap;border-radius:6px;font-size:9px;font-weight:800;padding:4px 7px;background:#edf2fa;color:#4b6284;border:1px solid #e1e8f4}
+.v4-kind-result{color:#6f5b85;background:#f3eef8;border-color:#eae0f2}
+.v4-kind-prospect{color:#356f6b;background:#e9f6f2;border-color:#cfebe2}
+.v4-kind-unknown{color:#8a6e47;background:#fff4e3;border-color:#f6e4c5}
+.v4-kind-competition{color:#34608c;background:#eaf3ff;border-color:#d8e5f6}
+.v4-preview-panel{background:#fff;border:1px solid #e3e9ee;border-radius:12px;padding:18px;position:sticky;top:92px;box-shadow:0 3px 15px #18283908}
+.v4-preview-head h3{font:800 13px/1.5 Manrope,sans-serif;color:#263749;letter-spacing:-.15px;margin:8px 0 9px;overflow-wrap:anywhere}
+.v4-preview-fields{display:grid;gap:0;margin-top:17px}
+.v4-preview-field{border-bottom:1px solid #eef0f4;padding:10px 0}
+.v4-preview-field span{display:block;font-size:9px;color:#8996a5;margin-bottom:4px}
+.v4-preview-field b{display:block;font-size:11px;line-height:1.5;color:#3d4f64;overflow-wrap:anywhere}
+.v4-preview-status{font-size:11px;line-height:1.6;font-weight:700;color:#55718c;margin:14px 0 9px}
+.v4-preview-advice{font-size:10px;line-height:1.65;color:#8a7781;background:#fbf5f2;border:1px solid #f5e9df;padding:9px 10px;border-radius:8px;margin:0}
+.v4-preview-open{margin-top:14px;width:100%;background:#1f344a;border:1px solid #1f344a;border-radius:9px;color:#fff;font-size:11px;font-weight:800;min-height:38px;padding:10px 12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.v4-preview-open:hover{background:#2b4866}
+.v4-preview-idle p{font-size:11px;line-height:1.6;color:#8796a6}
+.aside-panel{display:block}
+.legal-note{font-size:10px}
+@media(max-width:1260px){
+ .workspace{grid-template-columns:minmax(0,1fr) 250px}
+ .v4-preview-panel{padding:13px}
+}
+@media(max-width:1080px){
+ .workspace{grid-template-columns:1fr}
+ .v4-preview-panel{position:static}
+ .v4-preview-fields{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:18px}
+ .v4-kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:740px){
+ .content{padding-top:16px}
+ .welcome h1{font-size:23px}
+ .v4-cockpit-title{align-items:start}
+ .v4-total{white-space:normal;text-align:right}
+ .v4-metric{min-height:108px;padding:12px}
+ .v4-metric strong{font-size:25px}
+ .v4-metric-label{font-size:10px}
+ .v4-type-btn{padding:8px}
+ .v4-kind-filter{gap:6px}
+ .tender{flex-wrap:wrap;padding:13px 11px;align-items:flex-start}
+ .tender .grip{display:none}
+ .tender-end{flex-direction:row;align-items:center;justify-content:flex-end;width:100%;min-width:0}
+ .tender-end .end-meta{display:flex;align-items:center;gap:7px}
+ .v4-preview-fields{grid-template-columns:1fr}
+}
+@media(max-width:390px){
+ .v4-cockpit-title h2{font-size:15px}
+ .v4-kpi-grid{gap:7px}
+ .v4-metric{padding:10px}
+ .v4-metric-see{position:static;margin-top:4px}
+}
