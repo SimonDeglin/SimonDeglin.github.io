@@ -1,25 +1,25 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-26T17:25:10.940Z",
+  "generated_at": "2026-10-27T10:38:12.398Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-10-26 : 1415 avis lus, 2 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-10-27 : 1389 avis lus, 2 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-26T17:27:20.773Z",
-      "scanned": 2525,
-      "retained": 58,
-      "period_from": "2026-10-12",
-      "period_to": "2026-10-26",
-      "pages": 101,
+      "last_success": "2026-10-27T10:40:05.711Z",
+      "scanned": 2500,
+      "retained": 56,
+      "period_from": "2026-10-13",
+      "period_to": "2026-10-27",
+      "pages": 100,
       "complete": true,
-      "raw_candidates": 2518,
-      "oldest_seen": "2026-10-11"
+      "raw_candidates": 2473,
+      "oldest_seen": "2026-10-12"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-10-26T17:30:32.663Z",
+      "last_success": "2026-10-27T10:42:00.101Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -75,15 +75,15 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 101 page(s) parcourue(s) depuis 2026-10-12.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 100 page(s) parcourue(s) depuis 2026-10-13.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
-    "scanned": 1415,
-    "matched_current_run": 19,
-    "records": 146,
+    "scanned": 1389,
+    "matched_current_run": 17,
+    "records": 149,
     "review_count": 66,
-    "award_notice_count": 400,
+    "award_notice_count": 385,
     "awarded_market_matches": 2,
     "award_fields_requested": false,
     "retained_as_excluded": 2,
@@ -94,37 +94,37 @@
     "queries": [
       {
         "source": "Acheteurs belges",
-        "from": "20261015",
-        "to": "20261021",
-        "found": 498,
-        "reported": 498
+        "from": "20261016",
+        "to": "20261022",
+        "found": 481,
+        "reported": 481
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261015",
-        "to": "20261021",
-        "found": 460,
-        "reported": 460
+        "from": "20261016",
+        "to": "20261022",
+        "found": 446,
+        "reported": 446
       },
       {
         "source": "Acheteurs belges",
-        "from": "20261022",
-        "to": "20261026",
-        "found": 233,
-        "reported": 233
+        "from": "20261023",
+        "to": "20261027",
+        "found": 235,
+        "reported": 235
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261022",
-        "to": "20261026",
-        "found": 224,
-        "reported": 224
+        "from": "20261023",
+        "to": "20261027",
+        "found": 227,
+        "reported": 227
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2525,
-    "bosa_imported": 58,
-    "bosa_pages": 101,
+    "bosa_scanned": 2500,
+    "bosa_imported": 56,
+    "bosa_pages": 100,
     "local_documents": 34,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -140,19 +140,162 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "assurance_ou_nettoyage": 26,
-      "travaux_execution": 108,
-      "avis_attribution_analyse_separement": 400,
-      "aucun_signal_metier": 421,
       "fournitures_et_location": 51,
-      "avis_neerlandais": 139,
+      "aucun_signal_metier": 423,
+      "travaux_execution": 106,
+      "avis_neerlandais": 138,
+      "avis_attribution_analyse_separement": 385,
       "acheteur_flamand": 144,
-      "objet_hors_domaine": 91,
-      "qualifie_main": 10,
-      "qualifie_review": 25
+      "objet_hors_domaine": 83,
+      "qualifie_review": 19,
+      "assurance_ou_nettoyage": 26,
+      "qualifie_main": 14
     }
   },
   "items": [
+    {
+      "id": "ted:685167-2026",
+      "publicationNumber": "742024-2026",
+      "procedureIdentifier": "66b4d1f2-90db-4da8-ae00-785033bf780d",
+      "title": "Belgique – Services de cartographie numérique – Vectorisation des plans des réseaux de distribution électrique et gaz.",
+      "buyer": "RESA Innovation et Technologie SA en son nom et pour compte de RESA SA Intercommunale",
+      "region": "Belgique",
+      "sector": "Carto",
+      "sectors": [
+        "Carto"
+      ],
+      "score": 95,
+      "publication": "2026-10-27",
+      "deadline": "2026-10-19",
+      "cpv": [
+        "71354100"
+      ],
+      "description": "Vectorisation des plans des réseaux de distribution électrique et gaz.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/742024-2026",
+      "noticeNumbers": [
+        "685167-2026",
+        "724256-2026",
+        "742024-2026"
+      ],
+      "screening": "main",
+      "publicationWorkspaceId": "486b2f54-2318-4d42-a646-f4a0395e49fb",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/685167-2026",
+          "publicationNumber": "685167-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/486b2f54-2318-4d42-a646-f4a0395e49fb/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        },
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/724256-2026",
+          "publicationNumber": "724256-2026"
+        },
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/742024-2026",
+          "publicationNumber": "742024-2026"
+        }
+      ],
+      "screeningReason": null,
+      "matchReason": "prestation_decrite"
+    },
+    {
+      "id": "ted:691823-2026",
+      "publicationNumber": "742617-2026",
+      "procedureIdentifier": "1f0da72d-e394-4640-af83-7ecfb112421f",
+      "title": "Belgique – Services d'architecture – HERON - Désignation d’un auteur de projet pour une mission d’élaboration d’une stratégie d’intervention suivie de l’étude et du suivi de l’exécution des travaux de rénovation et d’extension des écoles communales de Surlemez et Waret-l'Evêque",
+      "buyer": "Administration communale de Héron",
+      "region": "Belgique",
+      "sector": "VRD",
+      "sectors": [
+        "VRD",
+        "Implant"
+      ],
+      "score": 95,
+      "screening": "main",
+      "publication": "2026-10-27",
+      "deadline": "",
+      "cpv": [
+        "71200000"
+      ],
+      "description": "Les services visés par le présent marché concernent le projet de rénovation et d’extension des infrastructures scolaires de la Commune de Héron, situées sur les deux implantations de Waret-l'Evêque et de Surlemez. ---------------------------------------------------------------------------------------------------------------------------------------- Au cours des 10 dernières années, la population scolaire des implantations communales a sensiblement augmenté. Principalement touchés par cette augmentation, les sites de Waret-l’Evêque et de Surlemez ont fait l’objet de plusieurs interventions ponctuelles pour accueillir les élèves (placement de modules, réaffectation de locaux, etc.). Les infrastructures de ces deux sites sont par ailleurs vieillissantes et témoignent de nombreux problèmes fonctionnels, sécuritaires, de confort énergétique, etc. Aujourd’hui, la Commune de Héron souhaite se doter d’une vision long terme pour disposer d’infrastructures pérennes répondant pleinement aux besoins de la communauté scolaire. Si la Commune ne dispose pas à l’heure actuelle des moyens budgétaires pour réaliser l’entièreté des travaux, l’objectif est de pouvoir programmer ceux-ci, en tenant compte des disponibilités sur fonds propres et des opportunités de subventions qui se présenteraient. ---------------------------------------------------------------------------------------------------------------------------------------- Dans ce cadre, le présent marché a pour objet de désigner un auteur de projet chargé d’accompagner la Commune dans la définition et la mise en œuvre de cette stratégie d’intervention à court, moyen et long terme pour la rénovation et l’extension des deux sites de Waret-l’Evêque et de Surlemez. ---------------------------------------------------------------------------------------------------------------------------------------- La mission de l’auteur de projet est, à ce titre, divisée en deux parties : [1] une mission d’étude préalable et de définition de la stratégie globale d’intervention sur les deux implantations communales ; [2] une mission complète d’étude et de suivi de l’exécution de tout ou partie des travaux tels qu’identifiés au terme de la stratégie et qui comportera toutes les prestations relevant du domaine de la rénovation et/ou de la construction neuve. ---------------------------------------------------------------------------------------------------------------------------------------- ATTENTION : [1] Le projet pourra faire l’objet de subventions par la Fédération Wallonie-Bruxelles et/ou par la Région Wallonne, ce qui aura sur l",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/742617-2026",
+      "publicationWorkspaceId": "edece2ac-6bf5-41d3-8246-d285ba41a3c1",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/691823-2026",
+          "publicationNumber": "691823-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/edece2ac-6bf5-41d3-8246-d285ba41a3c1/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        },
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/742617-2026",
+          "publicationNumber": "742617-2026"
+        }
+      ],
+      "matchReason": "prestation_decrite",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "691823-2026",
+        "742617-2026"
+      ]
+    },
+    {
+      "id": "ted:741500-2026",
+      "publicationNumber": "741500-2026",
+      "procedureIdentifier": "44457595-75fb-4a94-ac9d-53c48da30407",
+      "title": "Belgique – Services d'architecture, services de construction, services d'ingénierie et services d'inspection – 6.25.1.9 Mission d’auteur de projet pour la restauration des façades du Musée Art et Histoire dans le Parc du Cinquantenaire à Bruxelles – Marché de services - Procédure ouverte",
+      "buyer": "SPF Mobilité et Transports",
+      "region": "Belgique",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 91,
+      "screening": "main",
+      "publication": "2026-10-27",
+      "deadline": "2026-12-01",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Le présent marché porte sur l’étude de la restauration des façades du Musée Art et Histoire sur le site du Cinquantenaire à Bruxelles. La Régie des Bâtiments a déjà rénové les autres façades du site. Dès lors, l’étude en vue de la restauration des façades extérieures et des façades des cours intérieures du Musée Art et Histoire du Cinquantenaire est opportune pour la cohérence de l’ensemble. Ces façades sont classées, voir Arrêté de classement du 22.04.2004 en annexe 04. Le marché vise les études complètes en vue de - la restauration des façades du Musée Art et d’Histoire (voir périmètre en annexe), y compris les statues, les lettrages, etc. - la faisabilité de la mise aux normes incendie en façade des bâtiments et d’un chemin d’évacuation supplémentaire au rez-de-chaussée pour l’Horeca actuel - la restauration de l’hémicycle du Musée Art et Histoire - étudier et proposer des possibilités d’intégration et/ou de reconversion de l’ancienne entrée de l’esplanade du Musée Art & Histoire, en vue de renforcer sa visibilité et d’en faire un véritable espace de mise en valeur des activités et collections du Musée. Pour plus d'information voir le cahier spécial des charges en annexe à cet avis de marché.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/741500-2026",
+      "publicationWorkspaceId": "3ffc8455-2c7d-4e80-92ea-5b533ba9188f",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/741500-2026",
+          "publicationNumber": "741500-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/3ffc8455-2c7d-4e80-92ea-5b533ba9188f/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ]
+    },
     {
       "id": "ted:703599-2026",
       "publicationNumber": "738011-2026",
@@ -1033,55 +1176,6 @@
           "url": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/general"
         }
       ]
-    },
-    {
-      "id": "ted:685167-2026",
-      "publicationNumber": "724256-2026",
-      "procedureIdentifier": "66b4d1f2-90db-4da8-ae00-785033bf780d",
-      "title": "Belgique – Services de cartographie numérique – Vectorisation des plans des réseaux de distribution électrique et gaz.",
-      "buyer": "RESA Innovation et Technologie SA en son nom et pour compte de RESA SA Intercommunale",
-      "region": "Belgique",
-      "sector": "Carto",
-      "sectors": [
-        "Carto"
-      ],
-      "score": 95,
-      "publication": "2026-10-20",
-      "deadline": "2026-10-19",
-      "cpv": [
-        "71354100"
-      ],
-      "description": "Vectorisation des plans des réseaux de distribution électrique et gaz.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/724256-2026",
-      "noticeNumbers": [
-        "685167-2026",
-        "724256-2026"
-      ],
-      "screening": "main",
-      "publicationWorkspaceId": "486b2f54-2318-4d42-a646-f4a0395e49fb",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/685167-2026",
-          "publicationNumber": "685167-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/486b2f54-2318-4d42-a646-f4a0395e49fb/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        },
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/724256-2026",
-          "publicationNumber": "724256-2026"
-        }
-      ],
-      "screeningReason": null,
-      "matchReason": "prestation_decrite"
     },
     {
       "id": "ted:682582-2026",
@@ -2028,7 +2122,7 @@
           "versionId": "ddf24280-7180-4af0-9cc3-c050455a2c18",
           "documentId": "6c1fd0d8-3f25-4764-8e27-9bb907ccf665",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "FR,DE",
+          "language": "DE,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2041,14 +2135,14 @@
           "versionId": "41c1dfd3-e395-4b17-9583-72b8baeacc90",
           "documentId": "815fd779-551d-48fc-a533-f11b9a86434c",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "FR,DE",
+          "language": "DE,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-26T17:31:35.043Z",
+      "documentsCheckedAt": "2026-10-27T10:43:01.334Z",
       "matchReason": "mission_technique_generique",
       "screeningReason": null,
       "officialSources": [
@@ -5546,50 +5640,6 @@
       ]
     },
     {
-      "id": "ted:691823-2026",
-      "publicationNumber": "691823-2026",
-      "procedureIdentifier": "1f0da72d-e394-4640-af83-7ecfb112421f",
-      "title": "Belgique – Services d'architecture – HERON - Désignation d’un auteur de projet pour une mission d’élaboration d’une stratégie d’intervention suivie de l’étude et du suivi de l’exécution des travaux de rénovation et d’extension des écoles communales de Surlemez et Waret-l'Evêque",
-      "buyer": "Administration communale de Héron",
-      "region": "Belgique",
-      "sector": "VRD",
-      "sectors": [
-        "VRD",
-        "Implant"
-      ],
-      "score": 95,
-      "screening": "main",
-      "publication": "2026-10-07",
-      "deadline": "",
-      "cpv": [
-        "71200000"
-      ],
-      "description": "Les services visés par le présent marché concernent le projet de rénovation et d’extension des infrastructures scolaires de la Commune de Héron, situées sur les deux implantations de Waret-l'Evêque et de Surlemez. ---------------------------------------------------------------------------------------------------------------------------------------- Au cours des 10 dernières années, la population scolaire des implantations communales a sensiblement augmenté. Principalement touchés par cette augmentation, les sites de Waret-l’Evêque et de Surlemez ont fait l’objet de plusieurs interventions ponctuelles pour accueillir les élèves (placement de modules, réaffectation de locaux, etc.). Les infrastructures de ces deux sites sont par ailleurs vieillissantes et témoignent de nombreux problèmes fonctionnels, sécuritaires, de confort énergétique, etc. Aujourd’hui, la Commune de Héron souhaite se doter d’une vision long terme pour disposer d’infrastructures pérennes répondant pleinement aux besoins de la communauté scolaire. Si la Commune ne dispose pas à l’heure actuelle des moyens budgétaires pour réaliser l’entièreté des travaux, l’objectif est de pouvoir programmer ceux-ci, en tenant compte des disponibilités sur fonds propres et des opportunités de subventions qui se présenteraient. ---------------------------------------------------------------------------------------------------------------------------------------- Dans ce cadre, le présent marché a pour objet de désigner un auteur de projet chargé d’accompagner la Commune dans la définition et la mise en œuvre de cette stratégie d’intervention à court, moyen et long terme pour la rénovation et l’extension des deux sites de Waret-l’Evêque et de Surlemez. ---------------------------------------------------------------------------------------------------------------------------------------- La mission de l’auteur de projet est, à ce titre, divisée en deux parties : [1] une mission d’étude préalable et de définition de la stratégie globale d’intervention sur les deux implantations communales ; [2] une mission complète d’étude et de suivi de l’exécution de tout ou partie des travaux tels qu’identifiés au terme de la stratégie et qui comportera toutes les prestations relevant du domaine de la rénovation et/ou de la construction neuve. ---------------------------------------------------------------------------------------------------------------------------------------- ATTENTION : [1] Le projet pourra faire l’objet de subventions par la Fédération Wallonie-Bruxelles et/ou par la Région Wallonne, ce qui aura sur l",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/691823-2026",
-      "publicationWorkspaceId": "edece2ac-6bf5-41d3-8246-d285ba41a3c1",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/691823-2026",
-          "publicationNumber": "691823-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/edece2ac-6bf5-41d3-8246-d285ba41a3c1/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        }
-      ],
-      "matchReason": "prestation_decrite",
-      "screeningReason": null,
-      "noticeNumbers": [
-        "691823-2026"
-      ]
-    },
-    {
       "id": "bosa:2057ca19-d4bd-43d6-bf36-bbc34ec2f71f",
       "publicationWorkspaceId": "2057ca19-d4bd-43d6-bf36-bbc34ec2f71f",
       "noticeId": "48bbaab2-caeb-4145-a189-1c8a83d4a2d3",
@@ -8414,6 +8464,96 @@
         }
       ],
       "screeningReason": "verification_locale_intention_de_mission_non_etablie"
+    },
+    {
+      "id": "bosa:c97a59fa-3786-465a-a433-0dfd87354e3b",
+      "publicationWorkspaceId": "c97a59fa-3786-465a-a433-0dfd87354e3b",
+      "noticeId": "81af90f6-2c54-46da-8d8b-8765d89dd102",
+      "procedureIdentifier": "f20dd260-25cd-40d9-a05f-73ae8ae34bef",
+      "internalReference": "PPP0DV-1449/6240/Zone 2026/01_002",
+      "title": "Accord-cadre relatif à la fourniture de vélos via une formule de leasing à destination du personnel de la Zone VHP",
+      "buyer": "ZONE DE SECOURS VESDRE HOEGNE ET PLATEAU",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-27",
+      "deadline": "",
+      "cpv": [
+        "34430000"
+      ],
+      "description": "1) Le pouvoir adjudicateur souhaite pouvoir mettre des vélos à disposition des membres de son personnel, qui en supporteront intégralement la charge financière via la conversion de leur allocation de fin d’année. En fin de leasing, le vélo pourra être racheté par le travailleur pour un montant fixé au départ. En complément de la mise à disposition du vélo, le soumissionnaire devra offrir des services d’entretiens, d'assistance routière, et d’assistance. Il pourra le cas échéant proposer d’autres services (gestion du parc de vélos, etc.)  2) Le Conseil de zone de la Zone de secours VHP a arrêté les termes d’un règlement organisant la conversion de tout ou partie de l’allocation de fin d’année des membres du personnel en un budget permettant de financer les avantages dans le cadre d’un leasing vélo. Ce règlement est annexé au présent cahier spécial des charges de telle sorte que le présent marché public devra s’inscrire dans le respect de ce règlement, visant à permettre son exécution intégrale.  3) Le présent marché est passé sous la forme d’un accord-cadre qui sera conclu avec un seul adjudicataire. Chaque commande de vélo constituera un marché subséquent, fondé sur cet accord-cadre. Ces marchés subséquents seront attribués dans les limites des conditions fixées dans l’accord-cadre.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0DV-1449/6240/Zone 2026/01_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/c97a59fa-3786-465a-a433-0dfd87354e3b/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/c97a59fa-3786-465a-a433-0dfd87354e3b/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP0DV-1449/6240/Zone 2026/01_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/c97a59fa-3786-465a-a433-0dfd87354e3b/general",
+          "publicationDate": "2026-10-27",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-27T10:46:28.069Z"
+    },
+    {
+      "id": "bosa:ef52d1fe-e207-41fb-be78-940a79c6e01c",
+      "publicationWorkspaceId": "ef52d1fe-e207-41fb-be78-940a79c6e01c",
+      "noticeId": "d139d693-6fa7-4ff8-a3b1-a48f2bd81b26",
+      "procedureIdentifier": "8c803efd-a1b5-4dfb-979f-8326b78478a5",
+      "internalReference": "SOWAER/FIN/GEN/847/2026_pub01",
+      "title": "MERCEDES GLA",
+      "buyer": "SOWAER Affaires générales - Secteurs spéciaux",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-27",
+      "deadline": "",
+      "cpv": [
+        "66114000"
+      ],
+      "description": "L’objet du présent marché vise la conclusion d’un contrat de leasing opérationnel pour le véhicule repris en annexe du présent cahier spécial des charges.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "SOWAER/FIN/GEN/847/2026_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/ef52d1fe-e207-41fb-be78-940a79c6e01c/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/ef52d1fe-e207-41fb-be78-940a79c6e01c/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "SOWAER/FIN/GEN/847/2026_pub01",
+          "url": "https://www.publicprocurement.be/publication-workspaces/ef52d1fe-e207-41fb-be78-940a79c6e01c/general",
+          "publicationDate": "2026-10-27",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-27T10:46:31.793Z"
     }
   ]
 }
