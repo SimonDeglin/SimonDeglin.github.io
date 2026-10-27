@@ -185,6 +185,7 @@ body{background:#f7f7f7;color:#303339}
 .coverage-detail-link:hover{text-decoration:underline}
 </style>
 <link rel="stylesheet" href="detail-phase2.css">
+<link rel="stylesheet" href="cockpit-v4.css">
 </head>
 <body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -235,7 +236,7 @@ body{background:#f7f7f7;color:#303339}
 <button class="nav-item" id="settingsBtn"><svg class="ico"><use href="#i-settings"/></svg><span class="nav-name">Préférences</span></button>
 <button class="nav-item" id="exportBtn"><svg class="ico"><use href="#i-download"/></svg><span class="nav-name">Exporter en CSV</span></button></nav>
 <div class="sidebar-space"></div>
-  <div class="sidebar-bottom"><div class="side-source"><div class="source-title"><i id="sideDot" class="source-dot"></i><span id="sideTitle">Source en attente</span></div><div class="source-text" id="sideText">Aucune donnée officielle synchronisée pour le moment.</div></div><div class="side-foot">MarchéRadar · Prototype KDRIX v1.0</div></div>
+  <div class="sidebar-bottom"><div class="side-source"><div class="source-title"><i id="sideDot" class="source-dot"></i><span id="sideTitle">Source en attente</span></div><div class="source-text" id="sideText">Aucune donnée officielle synchronisée pour le moment.</div></div><div class="side-foot">Marché Radar · KDRIX · Veille interne</div></div>
 </aside>
 <div class="main">
   <header class="topbar">
@@ -243,13 +244,15 @@ body{background:#f7f7f7;color:#303339}
     <div class="top-actions"><span class="today" id="today"></span><div class="top-divider"></div><a class="refresh-btn" href="https://www.kdrix.be/fr/" target="_blank" rel="noopener" title="Site KDRIX">KDRIX <svg class="ico s"><use href="#i-external"/></svg></a><div class="initials">KD</div></div>
   </header>
   <main class="content">
-    <section class="welcome"><div><div class="eyebrow">VEILLE KDRIX</div><h1>Marchés publics <span style="color:#f45f25">✳</span></h1><p>Les opportunités KDRIX, classées et suivies.</p></div><button class="refresh-btn" id="refreshBtn"><svg class="ico s"><use href="#i-refresh"/></svg><span class="refresh-text">Rafraîchir la liste</span></button></section>
+    <section class="welcome"><div><div class="eyebrow">VEILLE KDRIX</div><h1>Marché Radar <span style="color:#f45f25">✳</span></h1><p>Veille des marchés, décisions et suivi des offres KDRIX.</p></div><button class="refresh-btn" id="refreshBtn"><svg class="ico s"><use href="#i-refresh"/></svg><span class="refresh-text">Rafraîchir la liste</span></button></section>
     <section class="hero"><div class="hero-main"><div class="hero-tag"><svg class="ico s"><use href="#i-radar"/></svg> VOTRE RADAR EST PRÊT</div><h2>Les bons marchés.<br>Au bon moment.</h2><p>Topographie, hydrographie, VRD, cartographie, expertise immobilière et PEB : une veille construite autour des compétences du groupe.</p></div><div class="hero-side"><div class="hero-number" id="heroCount">—</div><span>opportunités affichées</span></div></section>
+    <section class="cockpit-v4" id="cockpit" aria-label="Tableau de bord opérationnel"><div class="v4-cockpit-title"><div><span class="v4-eyebrow">VEILLE OPÉRATIONNELLE</span><h2>Les dossiers qui comptent</h2></div></div></section>
     <div class="notice-banner" id="noticeBanner"><svg class="ico l"><use href="#i-info"/></svg><div><b>Chargement en cours.</b> Vérification des publications disponibles.</div></div>
     <section class="kpis" aria-label="Indicateurs"><div class="kpi"><div><div class="num" id="kpiTotal">—</div><div class="label">Dans le listing</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-radar"/></svg></div></div><div class="kpi"><div><div class="num" id="kpiTop">—</div><div class="label">À répondre</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-target"/></svg></div></div><div class="kpi"><div><div class="num" id="kpiTracked">—</div><div class="label">En attente d’attribution</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-bookmark"/></svg></div></div><div class="kpi"><div><div class="num" id="kpiUrgent">—</div><div class="label">Marchés obtenus</div></div><div class="kpi-icon"><svg class="ico"><use href="#i-calendar"/></svg></div></div></section>
     <div class="source-coverage-strip" id="coverageStrip" aria-label="État des sources"></div>
     <div class="section-head"><h2 id="sectionTitle">Listing complet</h2><div class="section-right"><button id="reviewBtn" class="review-btn" type="button">À vérifier <span id="reviewCount">0</span></button><small id="lastSync"></small></div></div>
     <div id="listDescription" class="list-description">Marchés à trier, non encore classés. Glissez une ligne vers un dossier à gauche.</div>
+    <div class="v4-kind-filter" aria-label="Filtrer les publications"><span class="v4-kind-filter-label">Type de publication</span><div id="publicationFilters" class="v4-type-buttons" role="group" aria-label="Type de publication"></div></div>
     <section class="filter-panel">
       <div class="search-row">
         <div class="search-wrap"><svg class="ico"><use href="#i-search"/></svg><input id="search" type="search" aria-label="Rechercher un marché" placeholder="Rechercher un marché, un acheteur ou un lieu..."></div>
@@ -261,10 +264,9 @@ body{background:#f7f7f7;color:#303339}
     </section>
     <div class="workspace">
       <section class="results" aria-label="Liste des marchés"><div class="result-head"><div class="result-title" id="resultTitle">Listing complet <span class="result-count" id="resultCount">0</span></div><div class="table-meta" id="listMeta">Classés pour KDRIX</div></div><div id="resultsList"></div></section>
-      <aside class="aside-panel"><div class="aside-card"><h3>Comment fonctionne le radar ?</h3><div class="insight"><div class="badge-icon"><svg class="ico s"><use href="#i-target"/></svg></div><div><div class="a">Pertinence métier</div><div class="b">Score indicatif fondé sur les mots-clés et les codes CPV.</div></div></div><div class="insight"><div class="badge-icon"><svg class="ico s"><use href="#i-star"/></svg></div><div><div class="a">Sélection personnelle</div><div class="b">Favoris et décisions enregistrés sur cet appareil.</div></div></div><div class="insight"><div class="badge-icon"><svg class="ico s"><use href="#i-bell"/></svg></div><div><div class="a">Échéances visibles</div><div class="b">Repérage des dates proches, à vérifier sur l'avis officiel.</div></div></div></div>
-      <div class="resource"><h3>Source officielle belge</h3><p>La plateforme fédérale e-Procurement couvre des avis belges non repris sur TED. Son intégration reste à réaliser pour une veille complète.</p><a href="https://www.publicprocurement.be/" target="_blank" rel="noopener">Consulter e-Procurement <svg class="ico s"><use href="#i-external"/></svg></a></div><div class="aside-bottom">Un outil de présélection, pas une garantie d'exhaustivité.<br>Toujours vérifier le cahier des charges.</div></aside>
+      <aside class="aside-panel" aria-label="Aperçu du marché sélectionné"><div class="v4-preview-panel" id="quickPreview"><div class="v4-preview-idle"><strong>Lecture rapide</strong><p>Sélectionne un marché pour examiner ses informations principales.</p></div></div></aside>
     </div>
-    <p class="legal-note">MarchéRadar · Préqualification de publications TED. Vérifiez les documents officiels et les rectificatifs ; bulletin national belge et communes encore à intégrer.</p>
+    <p class="legal-note">Marché Radar · Veille TED, e-Procurement et pistes communales. Les scores restent indicatifs ; vérifier les documents officiels et les rectificatifs avant toute offre.</p>
   </main>
 </div>
 </div>
@@ -272,6 +274,7 @@ body{background:#f7f7f7;color:#303339}
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Détails et préférences"><div class="drawer-head"><div><small id="drawerEyebrow">DÉTAIL DU MARCHÉ</small><h2 id="drawerHeader">Consulter un marché</h2></div><button class="close" id="closeDrawer" aria-label="Fermer"><svg class="ico"><use href="#i-x"/></svg></button></div><div class="drawer-content" id="drawerBody"></div><div class="drawer-footer" id="drawerFooter"></div></aside>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script src="detail-phase2.js"></script>
+<script src="cockpit-v4.js"></script>
 <script>
 (function(){
 'use strict';
@@ -300,7 +303,7 @@ var STORAGE='kdrix.marcheRadar.v1';
 var saved={};
 try{saved=JSON.parse(localStorage.getItem(STORAGE)||'{}')||{}}catch(e){saved={}}
 saved.favorites=saved.favorites||{};saved.statuses=saved.statuses||{};saved.notes=saved.notes||{};saved.hiddenSectors=saved.hiddenSectors||{};
-var state={mode:'loading',sourceOrigin:'none',collectorStatus:'pending',view:'all',sector:'all',region:'all',due:'all',sort:'deadline',query:'',markets:[],real:[],generated:null,sourceNote:'',coverage:{},sources:{},selected:null,loadError:false};
+var state={mode:'loading',sourceOrigin:'none',collectorStatus:'pending',view:'all',sector:'all',publication:'all',previewId:null,region:'all',due:'all',sort:'deadline',query:'',markets:[],real:[],generated:null,sourceNote:'',coverage:{},sources:{},selected:null,loadError:false};
 function el(id){return document.getElementById(id)}
 function svg(id,small){return '<svg class="ico'+(small?' s':'')+'"><use href="#i-'+id+'"/></svg>'}
 function esc(v){return String(v===null||v===undefined?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
@@ -446,7 +449,7 @@ function downloadCSV(){
  var csv='\ufeff'+rows.map(function(r){return r.map(function(v){var s=String(v===undefined?'':v);if(/^[=+@\t\r]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"'}).join(';')}).join('\r\n');
  var a=document.createElement('a'),url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));a.href=url;a.download='marche-radar-'+dateOffset(0)+(state.mode==='demo'?'-DEMONSTRATION':'')+'.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},1000);toast('Export CSV généré');
 }
-function setView(v){state.view=v;state.sector='all';expandedFamily=null;document.querySelector('.sidebar').classList.remove('open');render();window.scrollTo({top:0,behavior:'smooth'})}
+function setView(v){state.view=v;state.sector='all';state.publication='all';state.previewId=null;expandedFamily=null;document.querySelector('.sidebar').classList.remove('open');render();window.scrollTo({top:0,behavior:'smooth'})}
 function validMarket(m){return m&&typeof m.id==='string'&&typeof m.title==='string'&&typeof m.score==='number'&&typeof m.sector==='string'&&typeof m.source==='string'}
 async function load(){
  var btn=el('refreshBtn');btn.disabled=true;
