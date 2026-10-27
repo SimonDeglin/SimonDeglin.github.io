@@ -90,7 +90,7 @@
   if(type==='result')when='Avis de résultat publié — aucune soumission à préparer sur cet avis';
   else if(type==='prospect')when='Piste communale — aucune procédure ouverte confirmée';
   else if(type==='competition')when=!m.deadline?
-   'Date limite de remise non vérifiée':(deadlineStatus==='open'?'Date de remise à venir selon la source':'Date limite dépassée ou à contrôler');
+   'Date limite de remise non vérifiée':(deadlineStatus==='open'?'Date de remise à venir selon la source':deadlineStatus==='closed'?'Date limite publiée dépassée':'Date et heure limites à vérifier');
   else when='Nature de la procédure à confirmer';
   const field=(label,value)=>'<div class="v4-preview-field"><span>'+esc(label)+'</span><b>'+esc(value)+'</b></div>';
   const deadline=txt(m.deadline)?txt(m.deadline).slice(0,10).split('-').reverse().join('/'):'Non renseignée';
