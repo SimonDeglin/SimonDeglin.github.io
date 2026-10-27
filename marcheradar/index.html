@@ -583,9 +583,50 @@ function matchesFolder(m,view){
  if(folder==='urgent'){var d=daysLeft(m.deadline);return d!==null&&d>=0&&d<=14}
  return folder==='catalogue'||folder==='all';
 }
+function publicationKind(m){
+ return window.MRCockpit&&typeof MRCockpit.kind==='function'?MRCockpit.kind(m):
+  m.source==='LOCALE'?'prospect':m.noticeKind==='award'?'result':m.noticeKind==='competition'||m.source==='TED'?'competition':'unknown';
+}
+function matchesPublicationType(m){return state.publication==='all'||publicationKind(m)===state.publication}
+function renderPublicationFilters(){
+ var box=el('publicationFilters');if(!box||!window.MRCockpit)return;
+ var pool=allMarkets().filter(function(m){return matchesGeneralFilters(m)&&matchesFolder(m)&&matchesSectorFilter(m.sectors||tagsOf(m))});
+ box.innerHTML=MRCockpit.renderTypeFilters(MRCockpit.typeCounts(pool),state.publication);
+ box.querySelectorAll('[data-publication]').forEach(function(b){
+  b.addEventListener('click',function(){
+   state.publication=b.dataset.publication;
+   state.due='all';el('dueFilter').value='all';
+   state.previewId=null;render();
+  });
+ });
+}
+function renderCockpitV4(){
+ var box=el('cockpit');if(!box||!window.MRCockpit)return;
+ var counts=MRCockpit.metrics(allMarkets(),stageOf,marketDueStatus,daysLeft);
+ box.innerHTML=MRCockpit.renderCockpit(counts);
+ box.querySelectorAll('[data-cockpit]').forEach(function(b){
+  b.addEventListener('click',function(){
+   var isResult=b.dataset.cockpit==='result';
+   state.view=isResult?'catalogue':'inbox';
+   state.publication=isResult?'result':'competition';
+   state.previewId=null;state.sector='all';expandedFamily=null;
+   state.query='';state.due='all';state.region='all';
+   el('search').value='';el('dueFilter').value='all';el('region').value='all';
+   render();
+   el('sectionTitle').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+ });
+}
+function renderQuickPreviewV4(m){
+ var box=el('quickPreview');if(!box||!window.MRCockpit)return;
+ box.innerHTML=MRCockpit.preview(m,m?stageName(stageOf(m.id)):'',m?marketDueStatus(m):'unknown');
+ var b=el('quickOpenTender');
+ if(b)b.addEventListener('click',function(){openTender(b.dataset.id)});
+}
+
 function filtered(){
  var list=allMarkets().filter(function(m){
-  return matchesGeneralFilters(m)&&matchesFolder(m)&&matchesSectorFilter(m.sectors||tagsOf(m));
+  return matchesGeneralFilters(m)&&matchesFolder(m)&&matchesSectorFilter(m.sectors||tagsOf(m))&&matchesPublicationType(m);
  });
  list.sort(function(a,b){
   if(state.sort==='recent')return (b.publication||'').localeCompare(a.publication||'');
@@ -612,7 +653,7 @@ function matchesSectorFilter(tags){
 }
 function renderCategories(){
  var box=el('sidebarCategories');
- var pool=allMarkets().filter(function(m){return matchesGeneralFilters(m)&&matchesFolder(m)});
+ var pool=allMarkets().filter(function(m){return matchesGeneralFilters(m)&&matchesFolder(m)&&matchesPublicationType(m)});
  function count(ids){return pool.filter(function(m){return (m.sectors||tagsOf(m)).some(function(s){return ids.includes(s)})}).length}
  var names={'Topo':'Relevés topo','Scan':'Scanner 3D','Drone':'Drone & photogrammétrie','Hydro':'Bathymétrie',
  'VRD':'Études / projets de voirie','Reseaux':'Réseaux & impétrants','Hydraulique':'Hydraulique & jaugeages',
@@ -654,7 +695,7 @@ function renderStats(){
  
  document.querySelectorAll('[data-count]').forEach(function(b){
   var code=b.dataset.count;
-  b.textContent=allMarkets().filter(function(m){return matchesGeneralFilters(m)&&(code==='catalogue'||stageOf(m.id)===code)}).length;
+  b.textContent=allMarkets().filter(function(m){return matchesGeneralFilters(m)&&matchesPublicationType(m)&&(code==='catalogue'||stageOf(m.id)===code)}).length;
  });
 }
 function renderNav(){
@@ -686,8 +727,9 @@ function renderNav(){
 function renderList(){
  var list=filtered();el('resultCount').textContent=list.length;
  if(!list.length){
+  renderQuickPreviewV4(null);
   el('resultsList').innerHTML='<div class="empty"><div class="emptyicon">'+svg('list')+'</div><h3>Aucun marché dans cette sélection</h3><p>Essayez un autre domaine ou élargissez les filtres du dossier sélectionné.</p><button id="resetFilters">Réinitialiser les filtres</button></div>';
-  el('resetFilters').addEventListener('click',function(){state.sector='all';state.region='all';state.due='all';state.query='';el('search').value='';el('region').value='all';el('dueFilter').value='all';render()});return;
+  el('resetFilters').addEventListener('click',function(){state.sector='all';state.publication='all';state.region='all';state.due='all';state.query='';el('search').value='';el('region').value='all';el('dueFilter').value='all';render()});return;
  }
  el('resultsList').innerHTML=list.map(function(m){
   var d=daysLeft(m.deadline),due=marketDueStatus(m),label=!m.deadline?(m.source==='LOCALE'&&m.screening!=='excluded'?'Prospection':'À vérifier'):due==='unknown'?'À vérifier':d===null?'Date à vérifier':d<0?'Date dépassée':d===0?"Aujourd'hui":'J-'+d;
@@ -698,7 +740,7 @@ function renderList(){
   return '<article class="tender" draggable="true" data-id="'+esc(m.id)+'" title="Glisser cette ligne vers un dossier de suivi">'+
    '<div class="grip" aria-hidden="true">⠿</div>'+
    '<div class="score-ring" style="--score:'+Math.min(100,Math.max(0,m.score||0))+';--ring:'+color+'"><strong>'+esc(m.score||0)+'</strong></div>'+
-   '<div class="tender-body"><div class="tender-top"><div class="tag-group">'+tags+'</div><span class="micro-tag">'+esc(m.source==='Démo'?'FICTIF':(m.source||'TED'))+'</span>'+
+   '<div class="tender-body"><div class="tender-top"><div class="tag-group">'+tags+'</div>'+(window.MRCockpit?MRCockpit.typeBadge(m):'')+'<span class="micro-tag">'+esc(m.source==='Démo'?'FICTIF':(m.source||'TED'))+'</span>'+
    (current!=='inbox'?'<span class="status-tag '+current+'">'+esc(stageName(current))+'</span>':'')+(m.screening==='review'?'<span class="micro-tag">À vérifier</span>':m.screening==='excluded'?'<span class="micro-tag">Correspondance écartée automatiquement</span>':'')+(m.awards&&m.awards.length?'<span class="micro-tag result-published">Résultat publié</span>':'')+'</div>'+
    '<h3 class="open-tender" role="button" tabindex="0">'+esc(m.title)+'</h3>'+
    '<div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+'Publié le '+fmtShort(m.publication)+'</span></div>'+(window.MRDetailV2&&typeof MRDetailV2.listHints==='function'?MRDetailV2.listHints(m):'')+'</div>'+
@@ -716,6 +758,7 @@ function renderList(){
   b.addEventListener('change',function(){moveMarket(b.dataset.move,b.value)});
   b.addEventListener('mousedown',function(e){e.stopPropagation()});
  });
+ renderQuickPreviewV4(list.find(function(m){return m.id===state.previewId})||list[0]);
  el('resultsList').querySelectorAll('article[draggable]').forEach(function(article){
   article.addEventListener('dragstart',function(e){
    if(e.target.closest('button,select')){e.preventDefault();return}
@@ -725,7 +768,7 @@ function renderList(){
   article.addEventListener('dragend',function(){draggingId=null;document.querySelectorAll('.drag-over').forEach(function(b){b.classList.remove('drag-over')})});
  });
 }
-function render(){if(state.sector!=='all'&&saved.hiddenSectors[state.sector])state.sector='all';renderChips();renderBanner();renderCoverageStrip();renderStats();renderNav();renderList()}
+function render(){if(state.sector!=='all'&&saved.hiddenSectors[state.sector])state.sector='all';renderChips();renderBanner();renderCoverageStrip();renderCockpitV4();renderStats();renderNav();renderPublicationFilters();renderList()}
 
 function formatMoney(value){
  if(!value||typeof value.amount!=='number')return 'Non publié';
@@ -762,7 +805,7 @@ function awardsMarkup(m){
 }
 function openTender(id){
  var m=allMarkets().find(function(a){return a.id===id});if(!m)return;
- state.selected=id;
+ state.selected=id;state.previewId=id;renderQuickPreviewV4(m);
  el('drawerEyebrow').textContent=m.source==='LOCALE'?'DOSSIER DE PROSPECTION · SOURCE LOCALE':'PUBLICATION · '+(m.source||'À VÉRIFIER');
  el('drawerHeader').textContent='Fiche du marché';
  // Le module externe ne revendique aucune extraction documentaire non effectuée.
