@@ -1,25 +1,25 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-27T10:38:12.398Z",
+  "generated_at": "2026-10-27T16:42:30.966Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
   "note": "TED interrogé le 2026-10-27 : 1389 avis lus, 2 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-27T10:40:05.711Z",
-      "scanned": 2500,
-      "retained": 56,
+      "last_success": "2026-10-27T16:44:24.298Z",
+      "scanned": 2575,
+      "retained": 58,
       "period_from": "2026-10-13",
       "period_to": "2026-10-27",
-      "pages": 100,
+      "pages": 103,
       "complete": true,
-      "raw_candidates": 2473,
+      "raw_candidates": 2562,
       "oldest_seen": "2026-10-12"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-10-27T10:42:00.101Z",
+      "last_success": "2026-10-27T16:48:16.179Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -75,15 +75,15 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 100 page(s) parcourue(s) depuis 2026-10-13.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 103 page(s) parcourue(s) depuis 2026-10-13.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
     "scanned": 1389,
     "matched_current_run": 17,
-    "records": 149,
-    "review_count": 66,
-    "award_notice_count": 385,
+    "records": 150,
+    "review_count": 68,
+    "award_notice_count": 380,
     "awarded_market_matches": 2,
     "award_fields_requested": false,
     "retained_as_excluded": 2,
@@ -122,9 +122,9 @@
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2500,
-    "bosa_imported": 56,
-    "bosa_pages": 100,
+    "bosa_scanned": 2575,
+    "bosa_imported": 58,
+    "bosa_pages": 103,
     "local_documents": 34,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -140,13 +140,13 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "fournitures_et_location": 51,
-      "aucun_signal_metier": 423,
+      "fournitures_et_location": 52,
+      "aucun_signal_metier": 429,
       "travaux_execution": 106,
-      "avis_neerlandais": 138,
-      "avis_attribution_analyse_separement": 385,
-      "acheteur_flamand": 144,
-      "objet_hors_domaine": 83,
+      "avis_neerlandais": 135,
+      "avis_attribution_analyse_separement": 380,
+      "acheteur_flamand": 146,
+      "objet_hors_domaine": 82,
       "qualifie_review": 19,
       "assurance_ou_nettoyage": 26,
       "qualifie_main": 14
@@ -165,6 +165,7 @@
         "Carto"
       ],
       "score": 95,
+      "screening": "main",
       "publication": "2026-10-27",
       "deadline": "2026-10-19",
       "cpv": [
@@ -180,7 +181,6 @@
         "724256-2026",
         "742024-2026"
       ],
-      "screening": "main",
       "publicationWorkspaceId": "486b2f54-2318-4d42-a646-f4a0395e49fb",
       "officialSources": [
         {
@@ -293,6 +293,117 @@
           "url": "https://www.publicprocurement.be/publication-workspaces/3ffc8455-2c7d-4e80-92ea-5b533ba9188f/general",
           "bdaReference": "",
           "noticeKind": "competition"
+        }
+      ],
+      "matchReason": "prestation_decrite",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "741500-2026"
+      ]
+    },
+    {
+      "id": "bosa:c97a59fa-3786-465a-a433-0dfd87354e3b",
+      "publicationWorkspaceId": "c97a59fa-3786-465a-a433-0dfd87354e3b",
+      "noticeId": "81af90f6-2c54-46da-8d8b-8765d89dd102",
+      "procedureIdentifier": "f20dd260-25cd-40d9-a05f-73ae8ae34bef",
+      "internalReference": "PPP0DV-1449/6240/Zone 2026/01_002",
+      "title": "Accord-cadre relatif à la fourniture de vélos via une formule de leasing à destination du personnel de la Zone VHP",
+      "buyer": "ZONE DE SECOURS VESDRE HOEGNE ET PLATEAU",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-27",
+      "deadline": "",
+      "cpv": [
+        "34430000"
+      ],
+      "description": "1) Le pouvoir adjudicateur souhaite pouvoir mettre des vélos à disposition des membres de son personnel, qui en supporteront intégralement la charge financière via la conversion de leur allocation de fin d’année. En fin de leasing, le vélo pourra être racheté par le travailleur pour un montant fixé au départ. En complément de la mise à disposition du vélo, le soumissionnaire devra offrir des services d’entretiens, d'assistance routière, et d’assistance. Il pourra le cas échéant proposer d’autres services (gestion du parc de vélos, etc.)  2) Le Conseil de zone de la Zone de secours VHP a arrêté les termes d’un règlement organisant la conversion de tout ou partie de l’allocation de fin d’année des membres du personnel en un budget permettant de financer les avantages dans le cadre d’un leasing vélo. Ce règlement est annexé au présent cahier spécial des charges de telle sorte que le présent marché public devra s’inscrire dans le respect de ce règlement, visant à permettre son exécution intégrale.  3) Le présent marché est passé sous la forme d’un accord-cadre qui sera conclu avec un seul adjudicataire. Chaque commande de vélo constituera un marché subséquent, fondé sur cet accord-cadre. Ces marchés subséquents seront attribués dans les limites des conditions fixées dans l’accord-cadre.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0DV-1449/6240/Zone 2026/01_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/c97a59fa-3786-465a-a433-0dfd87354e3b/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/c97a59fa-3786-465a-a433-0dfd87354e3b/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP0DV-1449/6240/Zone 2026/01_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/c97a59fa-3786-465a-a433-0dfd87354e3b/general",
+          "publicationDate": "2026-10-27",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-27T10:46:28.069Z",
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/c97a59fa-3786-465a-a433-0dfd87354e3b/general"
+        }
+      ]
+    },
+    {
+      "id": "bosa:ef52d1fe-e207-41fb-be78-940a79c6e01c",
+      "publicationWorkspaceId": "ef52d1fe-e207-41fb-be78-940a79c6e01c",
+      "noticeId": "d139d693-6fa7-4ff8-a3b1-a48f2bd81b26",
+      "procedureIdentifier": "8c803efd-a1b5-4dfb-979f-8326b78478a5",
+      "internalReference": "SOWAER/FIN/GEN/847/2026_pub01",
+      "title": "MERCEDES GLA",
+      "buyer": "SOWAER Affaires générales - Secteurs spéciaux",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-27",
+      "deadline": "",
+      "cpv": [
+        "66114000"
+      ],
+      "description": "L’objet du présent marché vise la conclusion d’un contrat de leasing opérationnel pour le véhicule repris en annexe du présent cahier spécial des charges.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "SOWAER/FIN/GEN/847/2026_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/ef52d1fe-e207-41fb-be78-940a79c6e01c/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/ef52d1fe-e207-41fb-be78-940a79c6e01c/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "SOWAER/FIN/GEN/847/2026_pub01",
+          "url": "https://www.publicprocurement.be/publication-workspaces/ef52d1fe-e207-41fb-be78-940a79c6e01c/general",
+          "publicationDate": "2026-10-27",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-27T10:46:31.793Z",
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/ef52d1fe-e207-41fb-be78-940a79c6e01c/general"
         }
       ]
     },
@@ -6633,7 +6744,7 @@
       ],
       "score": 71,
       "screening": "review",
-      "publication": "2026-10-02",
+      "publication": "2026-10-27",
       "deadline": "",
       "cpv": [
         "71200000",
@@ -8466,13 +8577,13 @@
       "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
-      "id": "bosa:c97a59fa-3786-465a-a433-0dfd87354e3b",
-      "publicationWorkspaceId": "c97a59fa-3786-465a-a433-0dfd87354e3b",
-      "noticeId": "81af90f6-2c54-46da-8d8b-8765d89dd102",
-      "procedureIdentifier": "f20dd260-25cd-40d9-a05f-73ae8ae34bef",
-      "internalReference": "PPP0DV-1449/6240/Zone 2026/01_002",
-      "title": "Accord-cadre relatif à la fourniture de vélos via une formule de leasing à destination du personnel de la Zone VHP",
-      "buyer": "ZONE DE SECOURS VESDRE HOEGNE ET PLATEAU",
+      "id": "bosa:678cdb9e-c6a9-4aa3-bca7-3fccd0041195",
+      "publicationWorkspaceId": "678cdb9e-c6a9-4aa3-bca7-3fccd0041195",
+      "noticeId": "82b08990-8546-4ba8-8b88-1f9e32cd30a4",
+      "procedureIdentifier": "53282ac8-06dc-4aa0-b018-12dceb6ff9ff",
+      "internalReference": "PPP0H0-922/6136/20260023_001",
+      "title": "Désignation d'un auteur de projet pour la mise en oeuvre de la fiche-projet n°1 du PATO - réaménagement de la Place Saint-Remacle, de la rue du Vinâve et de la rue Général Jacques",
+      "buyer": "Stavelot",
       "region": "Wallonie",
       "languages": [
         "FR"
@@ -8481,79 +8592,34 @@
       "sectors": [
         "VRD"
       ],
-      "score": 52,
-      "screening": "review",
+      "score": 95,
+      "screening": "main",
       "publication": "2026-10-27",
       "deadline": "",
       "cpv": [
-        "34430000"
+        "71240000"
       ],
-      "description": "1) Le pouvoir adjudicateur souhaite pouvoir mettre des vélos à disposition des membres de son personnel, qui en supporteront intégralement la charge financière via la conversion de leur allocation de fin d’année. En fin de leasing, le vélo pourra être racheté par le travailleur pour un montant fixé au départ. En complément de la mise à disposition du vélo, le soumissionnaire devra offrir des services d’entretiens, d'assistance routière, et d’assistance. Il pourra le cas échéant proposer d’autres services (gestion du parc de vélos, etc.)  2) Le Conseil de zone de la Zone de secours VHP a arrêté les termes d’un règlement organisant la conversion de tout ou partie de l’allocation de fin d’année des membres du personnel en un budget permettant de financer les avantages dans le cadre d’un leasing vélo. Ce règlement est annexé au présent cahier spécial des charges de telle sorte que le présent marché public devra s’inscrire dans le respect de ce règlement, visant à permettre son exécution intégrale.  3) Le présent marché est passé sous la forme d’un accord-cadre qui sera conclu avec un seul adjudicataire. Chaque commande de vélo constituera un marché subséquent, fondé sur cet accord-cadre. Ces marchés subséquents seront attribués dans les limites des conditions fixées dans l’accord-cadre.",
+      "description": "Désignation d'un auteur de projet pour la mise en oeuvre de la fiche-projet n°1 du PATO - réaménagement de la Place Saint-Remacle, de la rue du Vinâve et de la rue Général Jacques",
       "source": "BOSA",
       "source_status": "bosa_public_browser",
-      "noticeSubType": "E4",
-      "noticeKind": "award",
-      "bdaReference": "PPP0DV-1449/6240/Zone 2026/01_002",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "PPP0H0-922/6136/20260023_001",
       "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/c97a59fa-3786-465a-a433-0dfd87354e3b/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/c97a59fa-3786-465a-a433-0dfd87354e3b/documents",
+      "url": "https://www.publicprocurement.be/publication-workspaces/678cdb9e-c6a9-4aa3-bca7-3fccd0041195/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/678cdb9e-c6a9-4aa3-bca7-3fccd0041195/documents",
       "documentsPageSource": "public_api_200",
-      "bosaResults": [
+      "documentInventory": [],
+      "consultationUrls": [
         {
-          "reference": "PPP0DV-1449/6240/Zone 2026/01_002",
-          "url": "https://www.publicprocurement.be/publication-workspaces/c97a59fa-3786-465a-a433-0dfd87354e3b/general",
-          "publicationDate": "2026-10-27",
-          "kind": "award"
+          "url": "https://cloud.3p.eu/Downloads/1/922/H0/2026",
+          "type": "officially_referenced_external_documents",
+          "access": "destination_not_download_verified",
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/678cdb9e-c6a9-4aa3-bca7-3fccd0041195/urls?full=false",
+          "activatedAt": "2026-10-27T13:58:46.018452"
         }
       ],
-      "documentInventory": [],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-27T10:46:28.069Z"
-    },
-    {
-      "id": "bosa:ef52d1fe-e207-41fb-be78-940a79c6e01c",
-      "publicationWorkspaceId": "ef52d1fe-e207-41fb-be78-940a79c6e01c",
-      "noticeId": "d139d693-6fa7-4ff8-a3b1-a48f2bd81b26",
-      "procedureIdentifier": "8c803efd-a1b5-4dfb-979f-8326b78478a5",
-      "internalReference": "SOWAER/FIN/GEN/847/2026_pub01",
-      "title": "MERCEDES GLA",
-      "buyer": "SOWAER Affaires générales - Secteurs spéciaux",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 52,
-      "screening": "review",
-      "publication": "2026-10-27",
-      "deadline": "",
-      "cpv": [
-        "66114000"
-      ],
-      "description": "L’objet du présent marché vise la conclusion d’un contrat de leasing opérationnel pour le véhicule repris en annexe du présent cahier spécial des charges.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "E4",
-      "noticeKind": "award",
-      "bdaReference": "SOWAER/FIN/GEN/847/2026_pub01",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/ef52d1fe-e207-41fb-be78-940a79c6e01c/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/ef52d1fe-e207-41fb-be78-940a79c6e01c/documents",
-      "documentsPageSource": "public_api_200",
-      "bosaResults": [
-        {
-          "reference": "SOWAER/FIN/GEN/847/2026_pub01",
-          "url": "https://www.publicprocurement.be/publication-workspaces/ef52d1fe-e207-41fb-be78-940a79c6e01c/general",
-          "publicationDate": "2026-10-27",
-          "kind": "award"
-        }
-      ],
-      "documentInventory": [],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-27T10:46:31.793Z"
+      "documentsCheckedAt": "2026-10-27T16:52:54.514Z"
     }
   ]
 }
