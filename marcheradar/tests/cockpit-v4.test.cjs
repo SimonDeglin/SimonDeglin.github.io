@@ -20,7 +20,7 @@ test('les compteurs par type ont une définition unique et ne mélangent pas les
  assert.deepEqual(api.typeCounts(fixture),{all:6,competition:2,result:1,prospect:2,unknown:1});
  const html=api.renderTypeFilters(api.typeCounts(fixture),'competition');
  assert.match(html,/data-publication="competition" aria-pressed="true"/);
- assert.match(html,/Appels d.offres/);
+ assert.match(html,/Appels d&#39;offres/);
  assert.match(html,/v4-type-count">2<\/span>/);
 });
 test('l’interface ne déclare pas un marché ouvert si l’échéance officielle est inconnue',()=>{
@@ -32,7 +32,7 @@ test('l’interface ne déclare pas un marché ouvert si l’échéance officiel
 });
 test('les métriques restent explicites et ne présentent pas les avis de résultat comme offres à remettre',()=>{
  const statuses={c1:'answer'},stage=id=>statuses[id]||'inbox';
- const due=m=>m.deadline?'open':'unknown',days=m=>m.deadline?6:null;
+ const due=m=>m.deadline?'open':'unknown',days=deadline=>deadline?6:null;
  const m=api.metrics(fixture,stage,due,days);
  assert.equal(m.unclassified,1);
  assert.equal(m.nearDeadline,1);
