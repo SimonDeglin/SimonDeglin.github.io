@@ -160,3 +160,15 @@
 .v6-analysis-row p{margin:5px 0;overflow-wrap:anywhere}
 .v6-analysis-row a{font-size:10px;color:#326a8e;text-decoration:underline}
 .v6-source-link{font-size:11px;color:#326a8e;text-decoration:underline}
+
+/* Sauvegarde privée du suivi, avec aperçu avant restauration. */
+.mr-backup{padding:14px;background:#f5f8fb;border:1px solid #dce5ed;border-radius:10px;margin-bottom:24px}
+.mr-backup p{font-size:12px;line-height:1.6;color:#52667b;overflow-wrap:anywhere}
+.mr-backup-actions{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.mr-backup-file{display:flex;flex-direction:column;gap:8px;cursor:pointer;min-width:0}
+.mr-backup-file input{max-width:100%;font-size:11px}
+.mr-backup-previous{border:0;background:none;text-decoration:underline;color:#315b78;font-size:11px;text-align:left;padding:5px 0}
+#backupFeedback{font-size:12px;line-height:1.6;color:#375e78;margin-top:8px;overflow-wrap:anywhere}
+#backupPreview{border-top:1px solid #dce5ed;margin-top:12px;padding-top:12px}
+#backupPreview h4{margin:3px 0 8px;font-size:13px}
+#backupPreview label{font-size:12px;font-weight:700}

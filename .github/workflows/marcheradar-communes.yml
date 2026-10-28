@@ -22,16 +22,29 @@ jobs:
         with:
           node-version: "22"
         continue-on-error: true
+      - name: "Vérifier la conservation des dossiers et versions"
+        id: tests
+        if: steps.node.outcome == 'success'
+        run: node --test marcheradar/tests/municipal-versions.test.cjs
+        continue-on-error: true
       - name: "Découvrir progressivement les pages des conseils"
         id: collect
-        if: steps.node.outcome == 'success'
+        if: steps.tests.outcome == 'success'
         env:
           COMMUNES_BATCH: "12"
         run: node marcheradar/tools/communes-discovery.cjs
         continue-on-error: true
+      - name: "Préparer la lecture des PDF"
+        id: pdf
+        if: steps.collect.outcome == 'success'
+        run: |
+          if ! command -v pdftotext >/dev/null; then
+            sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+          fi
+        continue-on-error: true
       - name: "Lire les documents communaux accessibles"
         id: documents
-        if: steps.collect.outcome == 'success'
+        if: steps.pdf.outcome == 'success'
         env:
           COMMUNES_DOC_BATCH: "4"
         run: node marcheradar/tools/communes-documents.cjs
@@ -52,6 +65,11 @@ jobs:
         shell: bash
         env:
           RESULT: ${{ steps.collect.outcome }}
+          DOCUMENTS: ${{ steps.documents.outcome }}
         run: |
           echo "Découverte communale : $RESULT" >> "$GITHUB_STEP_SUMMARY"
+          echo "Lecture et contrôle des versions PDF : $DOCUMENTS" >> "$GITHUB_STEP_SUMMARY"
+          if [ "$DOCUMENTS" != "success" ]; then
+            echo "::warning::Contrôle documentaire non terminé ; dernière version exploitable conservée."
+          fi
           echo "Les sites inventoriés ne sont pas automatiquement des sites surveillés." >> "$GITHUB_STEP_SUMMARY"
