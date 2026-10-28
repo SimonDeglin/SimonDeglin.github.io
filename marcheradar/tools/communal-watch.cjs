@@ -236,7 +236,7 @@ async function run(){
  if(!fs.existsSync(REGISTRY))throw Error('Exécuter le répertoire ODWB avant la collecte communale');
  const registry=JSON.parse(fs.readFileSync(REGISTRY,'utf8'));
  const data=JSON.parse(fs.readFileSync(DATA,'utf8'));
- const eligible=registry.communes.filter(x=>x.zone!=='exterieure_provisoire'&&x.officialSite);
+ const eligible=registry.communes.filter(x=>x.officialSite);
  const ordered=eligible.sort((a,b)=>String(a.lastSiteCheck||'').localeCompare(String(b.lastSiteCheck||''))||((a.estimatedMinutes||999)-(b.estimatedMinutes||999)));
  const selected=ordered.slice(0,Math.min(30,Math.max(1,BATCH)));
  // Réexaminer les premiers extraits bruts avant tout affichage commercial.
@@ -276,7 +276,7 @@ async function run(){
  const watched=registry.counts.deliberationsConnectees;
  data.items.push(...added);
  data.sources={...(data.sources||{}),LOCALE:{status:watched?'partial':'pilot',last_success:registry.lastMunicipalPass,
-  municipalitiesTotal:registry.communes.length,municipalitiesInProvisionalZone:eligible.length,
+  municipalitiesTotal:registry.communes.length,municipalitiesInProvisionalZone:eligible.filter(x=>x.zone!=='exterieure_provisoire').length,
   sitesVerified:registry.counts.sitesVerifies,deliberationSourcesRead:watched,
   checkedThisRun:selected.length,documentsReadTotal:registry.counts.documentsRead,
   newOpportunities:added.length,errorsThisRun:errors}};

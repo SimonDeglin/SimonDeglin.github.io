@@ -182,11 +182,24 @@ async function ready(page,n){
   await dynamic.locator('[data-view="irrelevant"]').click();await ready(dynamic,1);
   assert.equal(await dynamic.locator('article[data-id="t2"] [data-open-full]').count(),1,'Fiche accessible sur petit écran');
   await dynamic.screenshot({path:path.join(app,'tests/cockpit-v4b-mobile.png'),animations:'disabled'});
+  // Une catégorie masquée dans les préférences ne doit jamais empêcher de restaurer.
+  await dynamic.evaluate(()=>{
+   const key='kdrix.marcheRadar.v1',s=JSON.parse(localStorage.getItem(key));
+   s.hiddenSectors={Topo:true};localStorage.setItem(key,JSON.stringify(s));
+  });
+  await dynamic.reload({waitUntil:'domcontentloaded'});await ready(dynamic,0);
+  await dynamic.locator('#mobileMenu').click();
+  await dynamic.locator('[data-view="irrelevant"]').click();await ready(dynamic,1);
+  await dynamic.locator('article[data-id="t2"] .open-tender').click();
+  assert(await dynamic.locator('#quickPreview').evaluate(e=>{const r=e.getBoundingClientRect();return r.top>=0&&r.top<innerHeight}), 'Lecture rapide immédiatement visible sur mobile');
+  assert.equal(await dynamic.locator('.drawer.on').count(),0);
+  await dynamic.locator('#quickDismissTender').click();await ready(dynamic,0);
+  console.log('OK: Hors sujet accessible malgré les métiers masqués, aperçu mobile visible');
   await clean.close();
   const fallback=await browser.newContext({viewport:{width:1280,height:800}});
   const broken=await fallback.newPage();
   broken.on('pageerror',e=>errors.push(String(e.stack||e)));
-  await broken.route('**/marcheradar/cockpit-v4.js',r=>r.abort('failed'));
+  await broken.route('**/marcheradar/cockpit-v4.js*',r=>r.abort('failed'));
   await broken.goto(url,{waitUntil:'domcontentloaded'});
   const currentData=require('../data.json');
   const expected=currentData.items.filter(x=>x.region!=='Flandre').length;

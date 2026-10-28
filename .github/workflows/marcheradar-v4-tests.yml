@@ -1,15 +1,22 @@
 name: "Marché Radar V4 — cockpit et dossiers"
 on:
+  pull_request:
+    paths:
+      - "marcheradar/**"
+      - ".github/workflows/marcheradar-v4-tests.yml"
   push:
     branches:
       - "feature/marcheradar-cockpit-20261027"
       - "feature/marcheradar-v4b-quickread-hors-sujet-20261028"
       - "main"
+      - "feature/marcheradar-reliability-20261028"
     paths:
       - "marcheradar/index.html"
       - "marcheradar/cockpit-v4.js"
       - "marcheradar/cockpit-v4.css"
-      - "marcheradar/tests/cockpit-v4*"
+      - "marcheradar/tests/**"
+      - "marcheradar/tools/**"
+      - "marcheradar/detail-phase2.js"
       - ".github/workflows/marcheradar-v4-tests.yml"
   workflow_dispatch:
 permissions:
@@ -27,7 +34,11 @@ jobs:
         run: |
           node --check marcheradar/cockpit-v4.js
           node --check marcheradar/tests/cockpit-v4-browser.cjs
-          node --test marcheradar/tests/cockpit-v4.test.cjs
+          node --test marcheradar/tests/*.test.cjs
+          node marcheradar/tools/test-collector.cjs
+          node marcheradar/tools/test-bosa.cjs
+          node marcheradar/tools/test-expanded.cjs
+          node marcheradar/tools/test-local-watch.cjs
       - name: "Préparer Chromium isolé"
         run: |
           npm install --no-save --no-package-lock playwright

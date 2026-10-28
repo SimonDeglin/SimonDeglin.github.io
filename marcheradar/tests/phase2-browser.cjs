@@ -16,7 +16,7 @@ new vm.Script(script[1]);
 new vm.Script(fs.readFileSync(path.join(mdir,'detail-phase2.js'),'utf8'));
 assert(data.items.length>=64,'La base historique doit être conservée');
 const visibleMarkets=data.items.filter(m=>m.region!=='Flandre').length;
-assert.match(html,/src="detail-phase2\.js"/);
+assert.match(html,/src="detail-phase2\.js(?:\?[^"\s]+)?"/);
 assert.match(html,/href="detail-phase2\.css"/);
 const contentTypes={'.html':'text/html; charset=utf-8','.json':'application/json; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml'};
 const srv=http.createServer((req,res)=>{
@@ -152,7 +152,7 @@ function fixture(id,changes){
   // Panne simulée d'une ressource JS : le listing doit rester visible.
   const resilient=await browser.newContext({viewport:{width:1280,height:800}});
   const broken=await resilient.newPage();attach(broken);
-  await broken.route('**/marcheradar/detail-phase2.js',route=>route.abort('failed'));
+  await broken.route('**/marcheradar/detail-phase2.js*',route=>route.abort('failed'));
   await broken.goto(address,{waitUntil:'domcontentloaded'});
   await ready(broken,visibleMarkets);
   await broken.locator('article.tender .v5-full-open').first().click();

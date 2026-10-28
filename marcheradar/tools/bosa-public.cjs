@@ -143,25 +143,31 @@ async function searchPublications(from,to,fetchFn=fetch){
 }
 function merge(existing,newItems){
  const byId=new Map((existing||[]).filter(x=>x&&x.id).map(x=>[x.id,{...x}]));
- const byProcedure=new Map(),byRef=new Map(),byUniqueRef=new Map(),refCollisions=new Set();
+ const byProcedure=new Map(),byRef=new Map(),refCollisions=new Set();
  const normalizeRef=x=>String(x||'').trim().toUpperCase().replace(/\s+/g,'');
  function index(item){
   if(item.procedureIdentifier)byProcedure.set(item.procedureIdentifier,item.id);
   const ref=normalizeRef(item.internalReference);
   if(ref){
-   if(byUniqueRef.has(ref)&&byUniqueRef.get(ref)!==item.id)refCollisions.add(ref);
-   else byUniqueRef.set(ref,item.id);
-   if(item.buyer)byRef.set(ref+'|'+item.buyer.toLocaleLowerCase('fr-BE'),item.id);
+   if(item.buyer){
+    const key=ref+'|'+item.buyer.trim().toLocaleLowerCase('fr-BE');
+    if(byRef.has(key)&&byRef.get(key)!==item.id)refCollisions.add(key);
+    else byRef.set(key,item.id);
+   }
   }
  }
  for(const item of byId.values())index(item);
  for(const record of newItems){
   const ref=normalizeRef(record.internalReference);
-  const existingId=
+  const refKey=ref+'|'+String(record.buyer||'').trim().toLocaleLowerCase('fr-BE');
+  const refId=ref&&record.buyer&&!refCollisions.has(refKey)&&byRef.get(refKey);
+  const refMatch=refId&&byId.get(refId);
+  // Une référence interne n'est pas mondiale : deux acheteurs ou deux procédures
+  // explicites différentes ne doivent jamais partager une décision utilisateur.
+  const compatible=refMatch&&!(record.procedureIdentifier&&refMatch.procedureIdentifier&&record.procedureIdentifier!==refMatch.procedureIdentifier);
+  const existingId=(byId.has(record.id)&&record.id)||
     (record.procedureIdentifier&&byProcedure.get(record.procedureIdentifier))||
-    (ref&&record.buyer&&byRef.get(ref+'|'+record.buyer.toLocaleLowerCase('fr-BE')))||
-    (ref&&!refCollisions.has(ref)&&byUniqueRef.get(ref))||
-    record.id;
+    (compatible&&refId)||record.id;
   const before=byId.get(existingId);
   if(!before){
    const fresh={...record};

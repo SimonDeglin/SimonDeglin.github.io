@@ -16,7 +16,8 @@ assert.equal(normalized.source,'BOSA');
 assert.equal(normalized.publicationWorkspaceId,raw.publicationWorkspaceId);
 assert.ok(normalized.sectors.includes('Foncier'));
 assert.equal(p.normalize({...raw,title:'Fourniture de balayeuse',cpvCodes:['34144431']}),null,'Fournitures exclues');
-assert.equal(p.normalize({...raw,title:'Prestations de géomètre',organisationName:'Vlaamse Overheid'}),null,'Organisme flamand exclu');
+assert.ok(p.normalize({...raw,title:'Prestations de géomètre',organisationName:'Vlaamse Overheid'}),'Lieu d’exécution wallon explicite prioritaire sur le siège de l’acheteur');
+assert.equal(p.normalize({...raw,nutsCodes:['BE211'],title:'Prestations de géomètre',organisationName:'Vlaamse Overheid'}),null,'Exécution flamande exclue');
 assert.equal(p.normalize({...raw,publicationWorkspaceId:'not-an-id'}),null,'Pas de fausse URL officielle');
 const old={id:'ted:100-2026',title:raw.title,source:'TED',buyer:'Commune de Liège',
  procedureIdentifier:raw.procedureIdentifier,url:'https://ted.europa.eu/fr/notice/-/detail/100-2026',

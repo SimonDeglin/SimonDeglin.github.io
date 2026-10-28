@@ -36,7 +36,7 @@ const html='<a href="/vie-communale/conseil-communal">Conseil communal</a><a hre
 assert.equal(local.candidates(html,home).length,2);
 assert.equal(local.councilStage('Le collège approuve le projet.'),'projet_approuve');
 assert.equal(local.councilStage('Décision portant sur la désignation du bureau adjudicataire'),'prestataire_designe');
-const o=local.opportunity(entry,{url:'https://www.amay.be/conseil/2026/10/pv.pdf'},"Le conseil communal approuve un projet de réaménagement de la place communale.");
+const o=local.opportunity(entry,{url:'https://www.amay.be/conseil/2026/10/pv.pdf'},"Le conseil communal décide de lancer un marché de services pour une mission d’auteur de projet de réaménagement de la place communale, avec études de voirie et relevés topographiques.");
 assert.ok(o&&o.source==='LOCALE'&&o.screening==='review'&&o.url.endsWith('pv.pdf'));
 assert.equal(o.id,local.opportunity(entry,{url:o.url},o.evidence).id);
 // Marchés réellement identifiés lors de l'audit KDRIX du 15 octobre.
