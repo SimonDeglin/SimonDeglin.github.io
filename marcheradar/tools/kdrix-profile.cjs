@@ -15,6 +15,12 @@ function has(s,term){
  return q.length>5||(/[^a-z0-9]/.test(s[n-1]||' ')&&/[^a-z0-9]/.test(s[n+q.length]||' '));
 }
 const any=(s,arr)=>(arr||[]).some(term=>has(s,term));
+// Une formule administrative commune à tous les achats ne décrit aucun métier.
+// Garder le dictionnaire intact, mais ne pas laisser cette formule créer seule
+// une correspondance VRD (vêtements, leasing, logiciels, repas, etc.).
+const ADMIN_CONTEXT=new Set(['cahier special des charges']);
+const CONTEXT=Object.fromEntries(Object.entries(WORDS).filter(([,w])=>w.context)
+ .map(([id,w])=>[id,w.context.filter(term=>!ADMIN_CONTEXT.has(fold(term)))]));
 function flemishBuyer(buyer){
  return /\bvlaams(?:e)?\b|\bvlaanderen\b|\bflanders\b|\baquafin\b|\bfluvius\b|openbare vlaamse|eigen vermogen digitaal|digitaal vlaanderen|vlaamse waterweg|vlaamse landmaatschappij|agentschap voor innoveren en ondernemen|agentschap wegen en verkeer|agentschap natuur en bos|\bde lijn\b|stad (?:diest|gent|leuven|antwerpen|brugge|hasselt|oostende|kortrijk|roeselare|sint niklaas)|provincie (?:limburg|antwerpen|oost vlaanderen|west vlaanderen|vlaams brabant)/.test(fold(buyer));
 }
@@ -61,7 +67,7 @@ function screen(m){
  const hits=[];
  for(const [id,words] of Object.entries(WORDS)){
   if(id==='_meta'||id==='PetitsTravaux')continue;
-  const ht=any(title,words.direct),hc=any(title,words.context),bd=any(detail,words.direct),bc=any(detail,words.context);
+  const ht=any(title,words.direct),hc=any(title,CONTEXT[id]),bd=any(detail,words.direct),bc=any(detail,CONTEXT[id]);
   if(!ht&&!hc&&!bd&&!bc)continue;
   let score=ht?88:hc?66:bd?71:52;
   if(ht&&bd)score+=7;if(ht&&bc)score+=3;
@@ -80,7 +86,7 @@ function screen(m){
    return {reason:null,classification:{sector:'VRD',sectors:['VRD'],score:46,screening:'review',matchReason:'prestation_technique_a_verifier'}};
   if(TECH.test(both)&&/(voirie|ouvrage|terrain|reseau|amenagement|infrastructure|patrimoine|eau)/.test(both))
    return {reason:null,classification:{sector:'VRD',sectors:['VRD'],score:49,screening:'review',matchReason:'mission_technique_generique'}};
-  return {reason:'aucun_signal_metier',classification:null};
+  return {reason:any(both,[...ADMIN_CONTEXT])?'formule_administrative_sans_signal_metier':'aucun_signal_metier',classification:null};
  }
  hits.sort((a,b)=>b.score-a.score);
  const best=hits[0],clear=best.explicit||STUDY.test(title)||TECH.test(title);
