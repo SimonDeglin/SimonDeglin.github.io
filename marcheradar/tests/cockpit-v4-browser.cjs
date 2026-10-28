@@ -126,8 +126,8 @@ async function ready(page,n){
   const currentData=require('../data.json');
   const expected=currentData.items.filter(x=>x.region!=='Flandre').length;
   await ready(broken,expected);
-  assert.equal(await broken.locator('#resultsList .open-tender').count(),expected);
-  await broken.locator('#resultsList .open-tender').first().click();
+  assert.equal(await broken.locator('#resultsList .v5-full-open').count(),expected);
+  await broken.locator('#resultsList .v5-full-open').first().click();
   assert.equal(await broken.locator('.drawer.on').count(),1);
   await fallback.close();
   assert.deepEqual(errors,[],'Erreurs JavaScript navigateur : '+errors.join('\n'));
