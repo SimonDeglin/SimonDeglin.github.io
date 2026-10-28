@@ -152,7 +152,10 @@ async function ready(page,n){
   assert.equal(await dynamic.locator('article[data-id="t2"]').count(),0,'Hors sujet ne doit pas revenir dans Historique général');
   await dynamic.reload({waitUntil:'domcontentloaded'});await ready(dynamic,6);
   assert.equal(Number(await dynamic.locator('[data-count="irrelevant"]').textContent()),1,'Classement conservé après actualisation complète des marchés');
+  await dynamic.locator('#search').fill('aucune-correspondance');
+  await ready(dynamic,0);
   await dynamic.locator('[data-view="irrelevant"]').click();await ready(dynamic,1);
+  assert.equal(await dynamic.locator('#search').inputValue(),'','Entrer dans Hors sujet doit nettoyer le filtre masquant les archives');
   assert.equal(await dynamic.locator('article[data-id="t2"]').count(),1);
   assert.match(await dynamic.locator('#quickPreview').innerText(),/Note de suivi préservée/);
   await dynamic.locator('#quickDismissTender').click();
