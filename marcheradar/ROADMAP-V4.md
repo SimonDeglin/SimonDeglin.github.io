@@ -69,3 +69,16 @@ Les **dossiers de suivi restent le premier niveau de navigation**, les domaines 
 **Limite actuelle importante :** les classements, notes et exclusions sont enregistrés dans le stockage local du navigateur (`kdrix.marcheRadar.v1`). Ce n'est pas une suppression des avis officiels du fichier public ni un classement synchronisé entre ordinateurs. Un espace sécurisé partagé est un chantier transversal ultérieur.
 
 **Étapes suivantes :** V4-C (pertinence, vrais marchés ouverts, dates officielles, provenance des sources et regroupement des rectificatifs), puis V4-D (CSC et analyse métier), V4-E (décision et préparation d'offres), V4-F (statistiques et veille concurrentielle).
+
+## V4-C — dates BOSA (premier lot vérifié)
+
+Audit public du 28 octobre 2026 : 5 avis de mise en concurrence BOSA confirmés avec accord exact entre la rubrique « Date limite de soumission » du portail, la valeur `vault.submissionDeadline` de l'API officielle, et le fuseau CET/CEST de Bruxelles.
+
+- La date du dossier Wodecq était prolongée : l'état actif est retenu plutôt que l'ancienne version.
+- L'importeur n'enrichit que les **avis de mise en concurrence**, jamais les avis d'attribution.
+- Une date absente, contradictoire ou non explicitement affichée ne peut pas être inventée.
+- Les dates préexistantes contradictoires d'origine indéterminée restent inchangées pour vérification humaine.
+- La source BOSA et son URL figurent dans les fiches ; l'application ne garantit pas l'absence de futurs rectificatifs.
+- Lors de collectes futures, seule une nouvelle preuve peut modifier une date vérifiée ; l'ancienne valeur est alors conservée dans l'historique.
+
+La qualité métier, les doublons et la veille communale restent les autres priorités du chantier V4-C.

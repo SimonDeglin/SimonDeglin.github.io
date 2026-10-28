@@ -3,12 +3,17 @@ on:
   push:
     branches:
       - "feature/marcheradar-v4c-bosa-deadlines-audit-20261028"
+      - "main"
     paths:
       - "marcheradar/tools/v4c-bosa-deadlines-probe.cjs"
       - "marcheradar/tools/bosa-deadline.cjs"
       - "marcheradar/tools/bosa-deadline-enrich.cjs"
       - "marcheradar/tests/v4c-bosa-deadline.test.cjs"
       - ".github/workflows/marcheradar-v4c-dates-probe.yml"
+      - "marcheradar/cockpit-v4.js"
+      - "marcheradar/detail-phase2.js"
+      - "marcheradar/data.json"
+      - "marcheradar/tests/cockpit-v4.test.cjs"
   workflow_dispatch:
 permissions:
   contents: read
@@ -29,7 +34,8 @@ jobs:
         run: |
           npm install --no-save --no-package-lock playwright
           npx playwright install chromium
-      - name: "Récupérer uniquement les échéances confirmées par les pages BOSA"
+      - name: "Récupérer uniquement les échéances confirmées par les pages BOSA (branche test)"
+        if: github.ref == 'refs/heads/feature/marcheradar-v4c-bosa-deadlines-audit-20261028'
         run: node marcheradar/tools/bosa-deadline-enrich.cjs --sample --write
       - name: "Contrôler la conservation de la base et les dates probantes"
         run: |
@@ -46,6 +52,7 @@ jobs:
           NODE
       - name: "Tests de non-régression classement et fiche"
         run: |
+          node --test marcheradar/tests/cockpit-v4.test.cjs
           node marcheradar/tests/phase1-browser.cjs
           node marcheradar/tests/phase2-browser.cjs
       - name: "Exporter uniquement les preuves et données candidates, sans publication"

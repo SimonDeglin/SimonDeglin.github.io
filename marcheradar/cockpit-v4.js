@@ -99,6 +99,10 @@
   else when='Nature de la procédure à confirmer';
   const field=(label,value)=>'<div class="v4-preview-field"><span>'+esc(label)+'</span><b>'+esc(value)+'</b></div>';
   const deadline=txt(m.deadline)?txt(m.deadline).slice(0,10).split('-').reverse().join('/'):'Non renseignée';
+  const verifiedDate=m.deadlineSourceKind==='bosa_verified_public'&&
+   /^https:\/\/www\.publicprocurement\.be\/publication-workspaces\/[a-f0-9-]{36}\/general$/i.test(txt(m.deadlineSourceUrl));
+  const zoneName=String(m.deadline||'').endsWith('+01:00')?'CET':String(m.deadline||'').endsWith('+02:00')?'CEST':'Europe/Brussels';
+  const displayedDeadline=verifiedDate?deadline+' à '+txt(m.deadlineTime||String(m.deadline).slice(11,16))+' '+zoneName:deadline;
   const warning=type==='competition'&&!m.deadline?'Vérifier la date sur e-Procurement ou TED avant toute décision.':
    type==='prospect'?'Vérifier que le projet communal correspond à une opportunité d’étude réelle.':
    type==='result'?'Résultat utile pour la veille concurrentielle et les renouvellements.':
@@ -121,10 +125,11 @@
    field('Acheteur',m.buyer||'Non renseigné')+
    field('Dossier KDRIX',stage)+
    field('Domaine(s)',sectors.join(' · '))+
-   field('Échéance',type==='competition'?deadline:'Pas de date de remise associée')+
+   field('Échéance',type==='competition'?displayedDeadline:'Pas de date de remise associée')+
    field('Documents',docText)+
    field('Source et zone',(m.source||'Source non renseignée')+' · '+(m.region||'Région non précisée'))+
    '</div>'+
+   (verifiedDate?'<div class="v5-deadline-proof"><strong>Échéance vérifiée dans e-Procurement</strong><a href="'+esc(m.deadlineSourceUrl)+'" target="_blank" rel="noopener noreferrer">Contrôler l’heure et les éventuels rectificatifs ↗</a></div>':'')+
    '<p class="v4-preview-status">'+esc(when)+'</p>'+passages+
    (notes?'<div class="v5-preview-note"><strong>Votre note KDRIX</strong><p>'+esc(notes.slice(0,240))+'</p></div>':'')+
    '<p class="v4-preview-advice">'+esc(warning)+'</p>'+

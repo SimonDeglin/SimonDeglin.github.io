@@ -144,7 +144,7 @@
   var summary=section('Informations principales','<div class="mr2-fields">'+
    field('Pouvoir adjudicateur',m.buyer||'Non communiqué')+field('Référence',reference(m))+
    field('Zone',m.region||'Non localisée')+field('Date de publication',formattedDate(m.publication))+
-   field('Date limite de remise',dateTime(m.deadline)+(m.deadlineTime&&!/T\d{2}:\d{2}/.test(str(m.deadline))?' · heure signalée '+str(m.deadlineTime)+' (à confirmer)':''),!m.deadline?'Consulter la publication officielle avant d’engager une offre.':/^\d{4}-\d{2}-\d{2}$/.test(str(m.deadline))?'L’heure limite n’est pas présente dans les données.':'Horodatage issu des données de collecte.')+
+   field('Date limite de remise',dateTime(m.deadline)+(m.deadlineTime&&!/T\d{2}:\d{2}/.test(str(m.deadline))?' · heure signalée '+str(m.deadlineTime)+' (à confirmer)':''),m.deadlineSourceKind==='bosa_verified_public'&&m.deadlineSourceUrl?'Date et heure vérifiées dans le dossier officiel e-Procurement. Vérifier les éventuels rectificatifs.':!m.deadline?'Consulter la publication officielle avant d’engager une offre.':/^\d{4}-\d{2}-\d{2}$/.test(str(m.deadline))?'L’heure limite n’est pas présente dans les données.':'Horodatage issu des données de collecte.')+
    field('CPV',Array.isArray(m.cpv)&&m.cpv.length?m.cpv.join(' · '):'Non renseigné')+
    field('Délai d’exécution',m.executionDuration||'Non renseigné')+
    field('Procédure',noticeType)+
