@@ -450,7 +450,7 @@ function downloadCSV(){
  var csv='\ufeff'+rows.map(function(r){return r.map(function(v){var s=String(v===undefined?'':v);if(/^[=+@\t\r]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"'}).join(';')}).join('\r\n');
  var a=document.createElement('a'),url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));a.href=url;a.download='marche-radar-'+dateOffset(0)+(state.mode==='demo'?'-DEMONSTRATION':'')+'.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},1000);toast('Export CSV généré');
 }
-function setView(v){state.view=v;state.sector='all';state.publication='all';state.previewId=null;expandedFamily=null;document.querySelector('.sidebar').classList.remove('open');render();window.scrollTo({top:0,behavior:'smooth'})}
+function setView(v){state.view=v;state.sector='all';state.publication='all';state.previewId=null;expandedFamily=null;if(v==='irrelevant'){state.region='all';state.due='all';state.query='';el('region').value='all';el('dueFilter').value='all';el('search').value=''}document.querySelector('.sidebar').classList.remove('open');render();window.scrollTo({top:0,behavior:'smooth'})}
 function validMarket(m){return m&&typeof m.id==='string'&&typeof m.title==='string'&&typeof m.score==='number'&&typeof m.sector==='string'&&typeof m.source==='string'}
 async function load(){
  var btn=el('refreshBtn');btn.disabled=true;
