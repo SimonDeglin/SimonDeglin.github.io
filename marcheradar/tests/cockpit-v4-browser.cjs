@@ -175,6 +175,7 @@ async function ready(page,n){
   await ready(dynamic,6);
   console.log('OK: lecture rapide au clic et au clavier, fiche explicite, Hors sujet restaurable, notes et actualisation');
   await dynamic.setViewportSize({width:390,height:844});
+  await dynamic.locator('#mobileMenu').click();
   await dynamic.locator('[data-view="irrelevant"]').click();await ready(dynamic,1);
   assert.equal(await dynamic.locator('article[data-id="t2"] [data-open-full]').count(),1,'Fiche accessible sur petit écran');
   await dynamic.screenshot({path:path.join(app,'tests/cockpit-v4b-mobile.png'),animations:'disabled'});
