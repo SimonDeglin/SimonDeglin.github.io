@@ -1,25 +1,25 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-28T11:22:47.948Z",
+  "generated_at": "2026-10-28T21:08:06.336Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
   "note": "TED interrogé le 2026-10-28 : 1412 avis lus, 2 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-28T11:24:39.811Z",
-      "scanned": 2550,
-      "retained": 62,
+      "last_success": "2026-10-28T21:09:57.263Z",
+      "scanned": 2650,
+      "retained": 46,
       "period_from": "2026-10-14",
       "period_to": "2026-10-28",
-      "pages": 102,
+      "pages": 106,
       "complete": true,
-      "raw_candidates": 2533,
+      "raw_candidates": 2630,
       "oldest_seen": "2026-10-13"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-10-28T11:26:33.749Z",
+      "last_success": "2026-10-28T21:11:33.939Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -75,19 +75,20 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 102 page(s) parcourue(s) depuis 2026-10-14.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 106 page(s) parcourue(s) depuis 2026-10-14.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
     "scanned": 1412,
-    "matched_current_run": 21,
-    "records": 158,
-    "review_count": 73,
+    "matched_current_run": 12,
+    "records": 159,
+    "review_count": 46,
     "award_notice_count": 367,
     "awarded_market_matches": 2,
     "award_fields_requested": false,
-    "retained_as_excluded": 2,
+    "retained_as_excluded": 31,
     "excluded_reasons": {
+      "formule_administrative_sans_signal_metier": 29,
       "acheteur_flamand": 2
     },
     "days_queried": 12,
@@ -122,9 +123,9 @@
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2550,
-    "bosa_imported": 62,
-    "bosa_pages": 102,
+    "bosa_scanned": 2650,
+    "bosa_imported": 46,
+    "bosa_pages": 106,
     "local_documents": 34,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -141,14 +142,15 @@
     },
     "raw_screening": {
       "objet_hors_domaine": 77,
-      "aucun_signal_metier": 461,
-      "acheteur_flamand": 149,
+      "aucun_signal_metier": 460,
+      "acheteur_flamand": 150,
       "avis_neerlandais": 128,
-      "fournitures_et_location": 61,
-      "travaux_execution": 111,
+      "fournitures_et_location": 62,
+      "travaux_execution": 110,
       "avis_attribution_analyse_separement": 367,
-      "assurance_ou_nettoyage": 18,
-      "qualifie_review": 25,
+      "assurance_ou_nettoyage": 17,
+      "qualifie_review": 7,
+      "formule_administrative_sans_signal_metier": 19,
       "qualifie_main": 15
     }
   },
@@ -188,6 +190,159 @@
           "url": "https://www.publicprocurement.be/publication-workspaces/0ffc770c-a8b2-40f3-96a3-0a9cff633efd/general",
           "bdaReference": "",
           "noticeKind": "competition"
+        }
+      ],
+      "matchReason": "prestation_decrite",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "748312-2026"
+      ]
+    },
+    {
+      "id": "bosa:a6fb49e3-670e-4995-b0a6-f74dc70dcf89",
+      "publicationWorkspaceId": "a6fb49e3-670e-4995-b0a6-f74dc70dcf89",
+      "noticeId": "c7318b87-900c-43c1-b2a7-bf6e373bc7f6",
+      "procedureIdentifier": "292d4419-3d64-4147-8bef-1e545baf780d",
+      "internalReference": "03.06.04-26-790_pub01",
+      "title": "MARCHÉ DE SERVICES POUR L’ÉTUDE DE PROJETS, LA SURVEILLANCE TECHNIQUE DES  CHANTIERS ET LA COORDINATION SÉCURITÉ-SANTÉ DES TRAVAUX RELATIFS AUX COURS  D’EAU NON NAVIGABLES DE PREMIÈRE CATÉGORIE DU DISTRICT DE LIEGE",
+      "buyer": "O3.06.04 - Direction des Cours d'eau non navigables",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Hydraulique",
+      "sectors": [
+        "Hydraulique"
+      ],
+      "score": 74,
+      "screening": "review",
+      "publication": "2026-10-28",
+      "deadline": "",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Marché de services visant à l’assistance au District de Liège dans le  cadre d’études de projets, à la surveillance technique de chantiers et  à la coordination sécurité-santé (phase projet et phase réalisation)  pour les chantiers de travaux d’entretien et les travaux de modification  du lit ou des ouvrages d’art y établis et les travaux d’aménagement de  passe à poissons permettant de rétablir la libre circulation du poisson,  sur les secteurs de Huy, de Malmedy et de Verviers.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "33",
+      "noticeKind": "award",
+      "bdaReference": "03.06.04-26-790_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/a6fb49e3-670e-4995-b0a6-f74dc70dcf89/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/a6fb49e3-670e-4995-b0a6-f74dc70dcf89/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "03.06.04-26-790_pub01",
+          "url": "https://www.publicprocurement.be/publication-workspaces/a6fb49e3-670e-4995-b0a6-f74dc70dcf89/general",
+          "publicationDate": "2026-10-28",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [
+        {
+          "id": "7be55a27-23cf-4abc-9f6b-6abb4cc994c0",
+          "title": "Recours auprès du Conseil d'Etat.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "76132a41-24e7-4e18-8e96-daf7b359ab4f",
+          "documentId": "7604bef0-dedf-4fea-b8e1-3d1efcbc9ca9",
+          "activatedAt": "2026-10-28T08:28:46.009324",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/a6fb49e3-670e-4995-b0a6-f74dc70dcf89/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-28T11:31:19.937Z",
+      "matchReason": "projet_indirect",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/a6fb49e3-670e-4995-b0a6-f74dc70dcf89/general"
+        }
+      ]
+    },
+    {
+      "id": "bosa:29e497d1-4590-4abe-b113-8df4abe95987",
+      "publicationWorkspaceId": "29e497d1-4590-4abe-b113-8df4abe95987",
+      "noticeId": "0eb9401b-8a1f-42ef-82a2-d6e1d35c6161",
+      "procedureIdentifier": "c0a3ba95-6650-4702-a95a-9853302cf5ad",
+      "internalReference": "03.06.04-26-598_pub01",
+      "title": "Marché de fournitures de matériel limnimétrique : data loggers XLink500 et sondes de pression PLS500",
+      "buyer": "O3.06.04 - Direction des Cours d'eau non navigables",
+      "region": "Belgique",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Hydraulique",
+      "sectors": [
+        "Hydraulique"
+      ],
+      "score": 71,
+      "screening": "review",
+      "publication": "2026-10-28",
+      "deadline": "",
+      "cpv": [
+        "32260000",
+        "32581000"
+      ],
+      "description": "La Direction des Cours d’Eau non navigables (DCENN) dispose d’un réseau de mesures limnimétriques composé de plus de 300 stations. Elle réalise l’installation, l’entretien et le jaugeage de son réseau de mesures en interne. Ce type de matériel peut subir des dommages irréversibles. Il est dès lors indispensable de disposer d’un stock pour garantir une réactivité suffisante en cas de panne. A cette fin, il a été décidé",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "03.06.04-26-598_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/29e497d1-4590-4abe-b113-8df4abe95987/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/29e497d1-4590-4abe-b113-8df4abe95987/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "03.06.04-26-598_pub01",
+          "url": "https://www.publicprocurement.be/publication-workspaces/29e497d1-4590-4abe-b113-8df4abe95987/general",
+          "publicationDate": "2026-10-28",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [
+        {
+          "id": "a5435300-1fd4-45f4-b45a-3800150b066a",
+          "title": "DMA_MaterielLimni.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "f1b56252-802c-4a48-8062-8558b1c15f03",
+          "documentId": "fd3a694d-645f-4980-aa3a-cd08b0e0c2f7",
+          "activatedAt": "2026-10-28T08:21:46.026348",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/29e497d1-4590-4abe-b113-8df4abe95987/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "d882553c-97bc-4480-95b6-47ebd59e5613",
+          "title": "Recours auprès du Conseil d'Etat.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "e92a20e4-651b-4d72-93f5-7502f54715a2",
+          "documentId": "8417a32c-7958-43bb-ae29-feb76241b05f",
+          "activatedAt": "2026-10-28T08:21:46.026348",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/29e497d1-4590-4abe-b113-8df4abe95987/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-28T11:31:16.223Z",
+      "matchReason": "prestation_decrite",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/29e497d1-4590-4abe-b113-8df4abe95987/general"
         }
       ]
     },
@@ -267,6 +422,11 @@
           "bdaReference": "",
           "noticeKind": "competition"
         }
+      ],
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "747579-2026"
       ]
     },
     {
@@ -563,7 +723,7 @@
       "sectors": [
         "VRD"
       ],
-      "score": 91,
+      "score": 88,
       "screening": "main",
       "publication": "2026-10-27",
       "deadline": "2026-12-01",
@@ -3523,7 +3683,7 @@
       "sectors": [
         "VRD"
       ],
-      "score": 58,
+      "score": 49,
       "screening": "review",
       "publication": "2026-10-16",
       "deadline": "",
@@ -3551,7 +3711,7 @@
       "documentInventory": [],
       "consultationUrls": [],
       "documentsCheckedAt": "2026-10-16T15:30:46.509Z",
-      "matchReason": "description_ou_contexte",
+      "matchReason": "mission_technique_generique",
       "screeningReason": null,
       "officialSources": [
         {
@@ -5875,7 +6035,7 @@
       "sectors": [
         "VRD"
       ],
-      "score": 58,
+      "score": 49,
       "screening": "review",
       "publication": "2026-10-09",
       "deadline": "",
@@ -5910,7 +6070,7 @@
       "documentsPageSource": "public_api_200",
       "consultationUrls": [],
       "documentsCheckedAt": "2026-10-15T15:05:45.294Z",
-      "matchReason": "description_ou_contexte"
+      "matchReason": "mission_technique_generique"
     },
     {
       "id": "bosa:da5bde7e-0592-4bfd-a936-a091712802dc",
@@ -7844,7 +8004,7 @@
         "Reseaux",
         "Foncier"
       ],
-      "score": 98,
+      "score": 95,
       "publication": "2026-07-15",
       "deadline": "2026-08-27",
       "cpv": [
@@ -9052,136 +9212,56 @@
       "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
-      "id": "bosa:29e497d1-4590-4abe-b113-8df4abe95987",
-      "publicationWorkspaceId": "29e497d1-4590-4abe-b113-8df4abe95987",
-      "noticeId": "0eb9401b-8a1f-42ef-82a2-d6e1d35c6161",
-      "procedureIdentifier": "c0a3ba95-6650-4702-a95a-9853302cf5ad",
-      "internalReference": "03.06.04-26-598_pub01",
-      "title": "Marché de fournitures de matériel limnimétrique : data loggers XLink500 et sondes de pression PLS500",
-      "buyer": "O3.06.04 - Direction des Cours d'eau non navigables",
-      "region": "Belgique",
+      "id": "bosa:b421ef8a-d870-48cc-89a7-91bb1489e278",
+      "publicationWorkspaceId": "b421ef8a-d870-48cc-89a7-91bb1489e278",
+      "noticeId": "bf9ae459-1d13-467a-a418-65544af9d2ca",
+      "procedureIdentifier": "560c293f-0c8f-44ed-9e1a-a62fd377ed1c",
+      "internalReference": "PPP0KC-2881/6941/AC2026-089 CB_001",
+      "title": "Services d'Assistance à Maîtrise d'Ouvrage (AMO) et de Pilotage de Projet",
+      "buyer": "CHU Brugmann - Association Hospitalière de Bruxelles et de Schaerbeek",
+      "region": "Bruxelles",
       "languages": [
+        "NL",
         "FR"
       ],
-      "sector": "Hydraulique",
+      "sector": "VRD",
       "sectors": [
-        "Hydraulique"
+        "VRD"
       ],
-      "score": 71,
+      "score": 62,
       "screening": "review",
       "publication": "2026-10-28",
-      "deadline": "",
+      "deadline": "2026-11-17T11:00:00+01:00",
       "cpv": [
-        "32260000",
-        "32581000"
+        "71541000"
       ],
-      "description": "La Direction des Cours d’Eau non navigables (DCENN) dispose d’un réseau de mesures limnimétriques composé de plus de 300 stations. Elle réalise l’installation, l’entretien et le jaugeage de son réseau de mesures en interne. Ce type de matériel peut subir des dommages irréversibles. Il est dès lors indispensable de disposer d’un stock pour garantir une réactivité suffisante en cas de panne. A cette fin, il a été décidé",
+      "description": "Services d'Assistance à Maîtrise d'Ouvrage (AMO) et de Pilotage de Projet",
       "source": "BOSA",
       "source_status": "bosa_public_browser",
-      "noticeSubType": "E4",
-      "noticeKind": "award",
-      "bdaReference": "03.06.04-26-598_pub01",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "PPP0KC-2881/6941/AC2026-089 CB_001",
       "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/29e497d1-4590-4abe-b113-8df4abe95987/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/29e497d1-4590-4abe-b113-8df4abe95987/documents",
+      "url": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/documents",
       "documentsPageSource": "public_api_200",
-      "bosaResults": [
+      "documentInventory": [],
+      "consultationUrls": [
         {
-          "reference": "03.06.04-26-598_pub01",
-          "url": "https://www.publicprocurement.be/publication-workspaces/29e497d1-4590-4abe-b113-8df4abe95987/general",
-          "publicationDate": "2026-10-28",
-          "kind": "award"
+          "url": "https://cloud.3p.eu/Downloads/1/2881/KC/2026",
+          "type": "officially_referenced_external_documents",
+          "access": "destination_not_download_verified",
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/urls?full=false",
+          "activatedAt": "2026-10-28T15:20:46.016102"
         }
       ],
-      "documentInventory": [
-        {
-          "id": "a5435300-1fd4-45f4-b45a-3800150b066a",
-          "title": "DMA_MaterielLimni.pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "f1b56252-802c-4a48-8062-8558b1c15f03",
-          "documentId": "fd3a694d-645f-4980-aa3a-cd08b0e0c2f7",
-          "activatedAt": "2026-10-28T08:21:46.026348",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/29e497d1-4590-4abe-b113-8df4abe95987/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "d882553c-97bc-4480-95b6-47ebd59e5613",
-          "title": "Recours auprès du Conseil d'Etat.pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "e92a20e4-651b-4d72-93f5-7502f54715a2",
-          "documentId": "8417a32c-7958-43bb-ae29-feb76241b05f",
-          "activatedAt": "2026-10-28T08:21:46.026348",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/29e497d1-4590-4abe-b113-8df4abe95987/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        }
-      ],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-28T11:31:16.223Z"
-    },
-    {
-      "id": "bosa:a6fb49e3-670e-4995-b0a6-f74dc70dcf89",
-      "publicationWorkspaceId": "a6fb49e3-670e-4995-b0a6-f74dc70dcf89",
-      "noticeId": "c7318b87-900c-43c1-b2a7-bf6e373bc7f6",
-      "procedureIdentifier": "292d4419-3d64-4147-8bef-1e545baf780d",
-      "internalReference": "03.06.04-26-790_pub01",
-      "title": "MARCHÉ DE SERVICES POUR L’ÉTUDE DE PROJETS, LA SURVEILLANCE TECHNIQUE DES  CHANTIERS ET LA COORDINATION SÉCURITÉ-SANTÉ DES TRAVAUX RELATIFS AUX COURS  D’EAU NON NAVIGABLES DE PREMIÈRE CATÉGORIE DU DISTRICT DE LIEGE",
-      "buyer": "O3.06.04 - Direction des Cours d'eau non navigables",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Hydraulique",
-      "sectors": [
-        "Hydraulique"
-      ],
-      "score": 74,
-      "screening": "review",
-      "publication": "2026-10-28",
-      "deadline": "",
-      "cpv": [
-        "71000000"
-      ],
-      "description": "Marché de services visant à l’assistance au District de Liège dans le  cadre d’études de projets, à la surveillance technique de chantiers et  à la coordination sécurité-santé (phase projet et phase réalisation)  pour les chantiers de travaux d’entretien et les travaux de modification  du lit ou des ouvrages d’art y établis et les travaux d’aménagement de  passe à poissons permettant de rétablir la libre circulation du poisson,  sur les secteurs de Huy, de Malmedy et de Verviers.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "33",
-      "noticeKind": "award",
-      "bdaReference": "03.06.04-26-790_pub01",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/a6fb49e3-670e-4995-b0a6-f74dc70dcf89/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/a6fb49e3-670e-4995-b0a6-f74dc70dcf89/documents",
-      "documentsPageSource": "public_api_200",
-      "bosaResults": [
-        {
-          "reference": "03.06.04-26-790_pub01",
-          "url": "https://www.publicprocurement.be/publication-workspaces/a6fb49e3-670e-4995-b0a6-f74dc70dcf89/general",
-          "publicationDate": "2026-10-28",
-          "kind": "award"
-        }
-      ],
-      "documentInventory": [
-        {
-          "id": "7be55a27-23cf-4abc-9f6b-6abb4cc994c0",
-          "title": "Recours auprès du Conseil d'Etat.pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "76132a41-24e7-4e18-8e96-daf7b359ab4f",
-          "documentId": "7604bef0-dedf-4fea-b8e1-3d1efcbc9ca9",
-          "activatedAt": "2026-10-28T08:28:46.009324",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/a6fb49e3-670e-4995-b0a6-f74dc70dcf89/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        }
-      ],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-28T11:31:19.937Z"
+      "documentsCheckedAt": "2026-10-28T21:16:21.283Z",
+      "deadlineTime": "11:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n17/11/2026 11:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T21:16:21.724Z"
     }
   ]
 }
