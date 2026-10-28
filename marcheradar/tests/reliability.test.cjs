@@ -45,3 +45,12 @@ test('analyse : références, contraintes et livrables disposent chacun d’un e
  assert.match(html,/CSC.pdf/);assert.match(html,/Références exigées/);assert.match(html,/Non documenté/);
  assert.doesNotMatch(view.analysisChecklist({...m,documentInventory:[]}),/Lambert 2008/);
 });
+
+test('base réelle : requalification et recollectes conservent tous les identifiants historiques',()=>{
+ const items=require('../data.json').items;
+ const ids=items.map(m=>m.id).sort();
+ assert.equal(new Set(ids).size,items.length);
+ assert.deepEqual(ted.cleanPrevious(items).items.map(m=>m.id).sort(),ids);
+ assert.deepEqual(bosa.merge(items,items).map(m=>m.id).sort(),ids);
+ assert.deepEqual(ted.combine(items,items).map(m=>m.id).sort(),ids);
+});

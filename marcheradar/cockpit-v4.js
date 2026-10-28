@@ -140,6 +140,7 @@
    '<div class="v5-preview-summary"><strong>Objet de la mission</strong><p>'+esc(shortDescription||'Aucun descriptif suffisamment précis dans les données collectées. Consulter la source officielle.')+'</p></div>'+
    '<div class="v4-preview-fields">'+
    field('Acheteur',m.buyer||'Non renseigné')+
+   field('Référence',m.internalReference||m.publicationNumber||m.bdaReference||'Non renseignée')+
    field('Dossier KDRIX',stage)+
    field('Domaine(s)',sectors.join(' · '))+
    field('Échéance',type==='competition'?displayedDeadline:'Pas de date de remise associée')+
@@ -153,6 +154,7 @@
    '<div class="v5-preview-actions"><button type="button" class="v4-preview-open" id="quickOpenTender" data-id="'+esc(m.id)+'">Fiche complète <span aria-hidden="true">↗</span></button>'+
    '<button type="button" class="v5-preview-dismiss'+(archived?' v5-restore':'')+'" id="quickDismissTender" data-id="'+esc(m.id)+'">'+
    (archived?'Réintégrer au listing':'Écarter : Hors sujet')+'</button></div>'+
+   (/^https:\/\/(?:ted\.europa\.eu|www\.publicprocurement\.be)\//.test(txt(m.url))?'<p><a class="v6-source-link" href="'+esc(m.url)+'" target="_blank" rel="noopener noreferrer">Consulter la publication officielle ↗</a></p>':'')+
    '<p class="v5-preview-footnote">Les informations affichées proviennent des publications collectées. Les obligations restent à confirmer dans le CSC.</p>';
  }
  return {kind,matchesType,types,typeLabel,typeBadge,typeCounts,renderTypeFilters,metrics,renderCockpit,preview,sourceCount,analysisChecklist};
