@@ -8,11 +8,13 @@
 'use strict';
 const crypto=require('node:crypto');
 const rules=[
+ {kind:'references',label:'Références exigées',regex:/\b(r[ée]f[ée]rences?\s+(?:similaires?|professionnelles?|de\s+(?:services|missions|travaux))|liste\s+des\s+(?:principaux\s+)?services|attestations?\s+de\s+bonne\s+ex[ée]cution)\b/gi},
+ {kind:'constraints',label:'Contraintes techniques',regex:/\b(syst[eè]me\s+de\s+coordonn[ée]es|Lambert\s*(?:72|2008)|pr[ée]cision\s+(?:planim[ée]trique|altim[ée]trique)|[ée]quipe\s+bilingue|mat[ée]riel\s+(?:requis|impos[ée])|format\s+(?:DWG|DXF|XML|ACCESS)|ADCP|BEFDSS)\b/gi},
  {kind:'deadline',label:'Dates et remise des offres',regex:/\b(date\s+limite|d[ée]lai\s+de\s+remise|heure\s+limite|remise\s+des\s+offres|d[ée]p[oô]t\s+des\s+offres|soumission\s+des\s+offres|uiterste\s+(?:datum|indieningsdatum)|indiening\s+van\s+de\s+offertes?)\b/gi},
  {kind:'visit',label:'Visites et réunions',regex:/\b(visite\s+(?:des\s+lieux|du\s+site|obligatoire|sur\s+place)|r[ée]union\s+d['’]information|plaatsbezoek|verplicht\s+plaatsbezoek)\b/gi},
  {kind:'award',label:'Critères d’attribution',regex:/\b(crit[eè]res?\s+d['’]attribution|prix\s+(?:est\s+)?(?:l['’])?unique\s+crit[eè]re|pond[ée]ration\s+des\s+crit[eè]res?|gunningscriteria|gunningscriterium|gunningscriterium\s+prijs)\b/gi},
  {kind:'selection',label:'Conditions de participation',regex:/\b(s[ée]lection\s+qualitative|capacit[ée]\s+technique|r[ée]f[ée]rences?\s+similaires?|agr[ée]ation|erkenning|technische\s+bekwaamheid|selectiecriteria)\b/gi},
- {kind:'deliverables',label:'Prestations et livrables',regex:/\b(livrables?|profils?\s+en\s+travers|plan\s+topographique|lev[ée]s?\s+bathym[ée]triques?|opmetingen|dwarsprofielen|meetstaten)\b/gi}
+ {kind:'deliverables',label:'Prestations et livrables',regex:/\b(livrables?|prestations?\s+[àa]\s+r[ée]aliser|plans?\s+d['’]ex[ée]cution|nuages?\s+de\s+points|mod[eè]le\s+num[ée]rique|profils?\s+en\s+travers|plan\s+topographique|lev[ée]s?\s+bathym[ée]triques?|opmetingen|dwarsprofielen|meetstaten)\b/gi}
 ];
 function normalize(s){return String(s||'').replace(/\s+/g,' ').trim()}
 function extractPassages(text,options={}){
@@ -53,7 +55,12 @@ function extractPassages(text,options={}){
  }
  candidates.sort((a,b)=>b.score-a.score||a.page-b.page);
  const result=[];
- for(const c of candidates){
+ // Donner d'abord une place à chaque rubrique, même si une page contient
+ // de nombreuses mentions du prix ou des dates.
+ const firstKinds=new Set();
+ const balanced=candidates.filter(c=>{if(firstKinds.has(c.kind))return false;firstKinds.add(c.kind);return true});
+ const ordered=[...balanced,...candidates.filter(c=>!balanced.includes(c))];
+ for(const c of ordered){
   if(result.length>=maxTotal)break;
   if((counters[c.kind]||0)>=maxPerKind)continue;
   counters[c.kind]=(counters[c.kind]||0)+1;

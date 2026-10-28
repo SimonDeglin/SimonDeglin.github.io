@@ -28,7 +28,7 @@ function dutchOnly(title,description){
 function excluded(m){
  if(!m)return 'invalide';
  if(m.region==='Flandre')return 'execution_flandre';
- if(flemishBuyer(m.buyer))return 'acheteur_flamand';
+ if(m.region!=='Wallonie'&&flemishBuyer(m.buyer))return 'acheteur_flamand';
  if(dutchOnly(m.title,m.description))return 'avis_neerlandais';
  if((m.languages||[]).length&&m.languages.every(x=>String(x).toUpperCase()==='NL'))return 'avis_neerlandais';
  return null;

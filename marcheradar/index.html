@@ -185,7 +185,7 @@ body{background:#f7f7f7;color:#303339}
 .coverage-detail-link:hover{text-decoration:underline}
 </style>
 <link rel="stylesheet" href="detail-phase2.css">
-<link rel="stylesheet" href="cockpit-v4.css">
+<link rel="stylesheet" href="cockpit-v4.css?v=20261028-reliability">
 </head>
 <body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -274,8 +274,8 @@ body{background:#f7f7f7;color:#303339}
 <div class="overlay" id="overlay"></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Détails et préférences"><div class="drawer-head"><div><small id="drawerEyebrow">DÉTAIL DU MARCHÉ</small><h2 id="drawerHeader">Consulter un marché</h2></div><button class="close" id="closeDrawer" aria-label="Fermer"><svg class="ico"><use href="#i-x"/></svg></button></div><div class="drawer-content" id="drawerBody"></div><div class="drawer-footer" id="drawerFooter"></div></aside>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="detail-phase2.js"></script>
-<script src="cockpit-v4.js"></script>
+<script src="detail-phase2.js?v=20261028-reliability"></script>
+<script src="cockpit-v4.js?v=20261028-reliability"></script>
 <script>
 (function(){
 'use strict';
@@ -294,6 +294,7 @@ var SECTORS=[
  {id:'Reseaux',label:'Réseaux & impétrants'},
  {id:'Hydraulique',label:'Hydraulique & jaugeages'},
  {id:'PetitsTravaux',label:'Petits travaux techniques'},
+ {id:'Monitoring',label:'Monitoring & auscultation'},{id:'Relief',label:'Cubatures & relief'},
  {id:'Implant',label:'Implantations'},
  {id:'Expert',label:'Expertises'}
 ];
@@ -395,7 +396,7 @@ function renderList(){
  var list=filtered();el('resultCount').textContent=list.length;
  if(!list.length){el('resultsList').innerHTML='<div class="empty"><div class="emptyicon">'+svg('search')+'</div><h3>Aucun marché dans cette sélection</h3><p>Élargissez les filtres ou affichez tous les marchés pour reprendre votre recherche.</p><button id="resetFilters">Réinitialiser les filtres</button></div>';el('resetFilters').addEventListener('click',function(){state.sector='all';state.region='all';state.query='';state.view='all';el('search').value='';el('region').value='all';render()});return}
  el('resultsList').innerHTML=list.map(function(m){
-  var d=daysLeft(m.deadline),label=d===null?'Date inconnue':d<0?'Date dépassée':d===0?"Aujourd'hui":'J-'+d;
+  var d=daysLeft(m.deadline),label=d===null?'Date inconnue':due==='closed'?'Date dépassée':d===0?"Aujourd'hui":'J-'+d;
   var daysCls=d!==null&&d<0?' over':d!==null&&d<=14?' urgent':'';
   var col=m.score>=85?'#4fa786':m.score>=65?'#d6a65f':'#9ab1c6';
   return '<article class="tender" data-id="'+esc(m.id)+'"><div class="score-ring" style="--score:'+Math.max(0,Math.min(100,Number(m.score)||0))+';--ring:'+col+'" title="Score de pertinence indicatif"><strong>'+esc(m.score||0)+'</strong></div>'+
@@ -490,7 +491,8 @@ SECTORS=[
  {id:'Hydro',label:'Bathymétrie & hydrographie'},{id:'Hydraulique',label:'Hydraulique & jaugeages'},
  {id:'Carto',label:'Cartographie & SIG'},{id:'Implant',label:'Implantations & chantier'},
  {id:'Reseaux',label:'Réseaux & impétrants'},{id:'PEB',label:'Énergie & PEB'},
- {id:'PetitsTravaux',label:'Petits travaux techniques'}
+ {id:'PetitsTravaux',label:'Petits travaux techniques'},
+ {id:'Monitoring',label:'Monitoring & auscultation'},{id:'Relief',label:'Cubatures & relief'}
 ];
 state.view='inbox';
 var draggingId=null;
@@ -570,7 +572,7 @@ function marketDueStatus(m){
 }
 function matchesGeneralFilters(m){
  var tags=m.sectors||tagsOf(m);
- if(!tags.some(function(id){return !saved.hiddenSectors[id]}))return false;
+ if(state.view!=='irrelevant'&&!tags.some(function(id){return !saved.hiddenSectors[id]}))return false;
  if(state.region!=='all'&&m.region!==state.region)return false;
  if(state.due!=='all'&&marketDueStatus(m)!==state.due)return false;
  var q=norm(state.query).trim();
@@ -644,6 +646,7 @@ function selectQuickMarket(id){
  var chosen=filtered().find(function(m){return m.id===id});
  if(!chosen)return;
  renderQuickPreviewV4(chosen);
+ if(window.matchMedia('(max-width:1080px)').matches&&el('quickPreview'))el('quickPreview').scrollIntoView({block:'start',behavior:'instant'});
 }
 
 function filtered(){
@@ -755,8 +758,8 @@ function renderList(){
   el('resetFilters').addEventListener('click',function(){state.sector='all';state.publication='all';state.region='all';state.due='all';state.query='';el('search').value='';el('region').value='all';el('dueFilter').value='all';render()});return;
  }
  el('resultsList').innerHTML=list.map(function(m){
-  var d=daysLeft(m.deadline),due=marketDueStatus(m),label=!m.deadline?(m.source==='LOCALE'&&m.screening!=='excluded'?'Prospection':'À vérifier'):due==='unknown'?'À vérifier':d===null?'Date à vérifier':d<0?'Date dépassée':d===0?"Aujourd'hui":'J-'+d;
-  var dc=d!==null&&d<0?' over':d!==null&&d<=14?' urgent':'';
+  var d=daysLeft(m.deadline),due=marketDueStatus(m),label=!m.deadline?(m.source==='LOCALE'&&m.screening!=='excluded'?'Prospection':'À vérifier'):due==='unknown'?'À vérifier':d===null?'Date à vérifier':due==='closed'?'Date dépassée':d===0?"Aujourd'hui":'J-'+d;
+  var dc=due==='closed'?' over':d!==null&&d<=14?' urgent':'';
   var color=m.score>=85?'#4fa786':m.score>=65?'#d6a65f':'#9ab1c6';
   var current=stageOf(m.id);
   var tags=(m.sectors||tagsOf(m)).map(function(s){var found=SECTORS.find(function(a){return a.id===s});return '<span class="micro-tag sector">'+esc(found?found.label:s)+'</span>'}).join('');
@@ -772,7 +775,7 @@ function renderList(){
    '<select class="move-select" data-move="'+esc(m.id)+'" aria-label="Dossier de suivi">'+WORKFLOW.map(function(s){return '<option value="'+esc(s.id)+'"'+(s.id===current?' selected':'')+'>'+esc(s.label)+'</option>'}).join('')+'</select></div></article>';
  }).join('');
  el('resultsList').querySelectorAll('.open-tender').forEach(function(node){
-  node.addEventListener('click',function(){selectQuickMarket(node.closest('[data-id]').dataset.id)});
+  node.addEventListener('click',function(e){e.stopPropagation();selectQuickMarket(node.closest('[data-id]').dataset.id)});
   node.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();selectQuickMarket(node.closest('[data-id]').dataset.id)}});
  });
  // Un clic dans la ligne change uniquement la lecture rapide : le grand panneau

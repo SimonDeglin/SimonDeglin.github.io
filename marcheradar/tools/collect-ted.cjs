@@ -189,7 +189,7 @@ function combine(old,newItems){
   byId.set(item.id,item);index(item);
  }
  for(const n of newItems){
-  const prevId=byPub.get(n.publicationNumber)||byProcedure.get(n.procedureIdentifier);
+  const prevId=(byId.has(n.id)&&n.id)||byPub.get(n.publicationNumber)||byProcedure.get(n.procedureIdentifier);
   if(!prevId||!byId.has(prevId)){byId.set(n.id,n);index(n);continue}
   const prior=byId.get(prevId);
   const nextDate=n.publication||'';

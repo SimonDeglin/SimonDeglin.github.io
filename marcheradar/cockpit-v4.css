@@ -149,3 +149,13 @@
 .v5-deadline-proof{border:1px solid #cae4d7;border-radius:9px;background:#eef9f3;padding:10px 12px;margin:12px 0}
 .v5-deadline-proof strong{display:block;color:#2f7755;font-size:10px;line-height:1.4}
 .v5-deadline-proof a{display:block;margin-top:5px;font-size:10px;font-weight:750;line-height:1.45;color:#236345;text-decoration:underline;text-underline-offset:2px}
+
+/* Audit V6 : lecture rapide repérable sur écran étroit, analyse sourcée dépliable. */
+#quickPreview{scroll-margin-top:85px}
+.v6-analysis{border-top:1px solid #e7ebf0;margin-top:12px;padding-top:12px;font-size:11px;line-height:1.6}
+.v6-analysis summary{cursor:pointer;font-weight:800;color:#40576f}
+.v6-analysis>p,.v6-analysis small{font-size:10px;color:#748396}
+.v6-analysis-row{padding:9px 0;border-bottom:1px solid #eef0f4}
+.v6-analysis-row strong,.v6-analysis-row small,.v6-analysis-row a{display:block}
+.v6-analysis-row p{margin:5px 0;overflow-wrap:anywhere}
+.v6-analysis-row a{font-size:10px;color:#326a8e;text-decoration:underline}

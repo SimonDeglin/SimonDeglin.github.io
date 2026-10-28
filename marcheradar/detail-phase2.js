@@ -188,7 +188,7 @@
   // Passages extraits automatiquement, non validés comme faits de la procédure.
   var reading='';
   if(currentAnalyses.length){
-   var labels={deadline:'Délais et remise des offres',visit:'Visites / réunions',award:'Attribution',selection:'Sélection et références',deliverables:'Prestations et livrables'};
+   var labels={references:'Références exigées',constraints:'Contraintes techniques',deadline:'Délais et remise des offres',visit:'Visites / réunions',award:'Attribution',selection:'Sélection et références',deliverables:'Prestations et livrables'};
    var inner='<div class="mr2-highlight mr2-caution"><strong>Lecture automatique — vérification nécessaire</strong>'+
     '<p>Ces extraits ont été repérés dans les PDF officiels. Leur formulation ne confirme ni une échéance, ni une obligation de visite, ni la version en vigueur. Consulter les pièces et les rectificatifs avant de répondre.</p></div>';
    currentAnalyses.forEach(function(a){

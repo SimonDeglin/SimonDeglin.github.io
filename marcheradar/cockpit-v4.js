@@ -87,6 +87,23 @@
     d.documentId===a.documentId&&d.versionId===a.versionId)).length;
   return {indexed:n,linked:files,read};
  }
+ // Une rubrique absente reste explicitement inconnue ; un extrait n'est pas un fait validé.
+ function analysisChecklist(m){
+  const analyses=(Array.isArray(m.documentAnalyses)?m.documentAnalyses:[]).filter(a=>
+   (m.documentInventory||[]).some(d=>d.documentId===a.documentId&&d.versionId===a.versionId));
+  const rows=[['deliverables','Prestations et livrables'],['deadline','Délais documentaires'],
+   ['award','Critères d’attribution'],['selection','Sélection et capacités'],
+   ['references','Références exigées'],['constraints','Contraintes techniques'],['visit','Visites']];
+  return '<details class="v6-analysis"><summary>Analyse et points à vérifier</summary><p>Extraits automatiques, sans validation des obligations. Une absence d’extrait ne signifie pas une absence d’exigence.</p>'+
+   rows.map(([kind,label])=>{
+    const hit=analyses.flatMap(a=>(a.evidence||[]).filter(e=>e.kind===kind).map(e=>({a,e})))[0];
+    const url=hit&&/^https:\/\/www\.publicprocurement\.be\//.test(txt(hit.a.sourcePageUrl))?hit.a.sourcePageUrl:'';
+    return '<div class="v6-analysis-row"><strong>'+esc(label)+'</strong>'+(hit?
+     '<p>'+esc(hit.e.excerpt)+'</p><small>'+esc(hit.a.fileName)+' · p. '+esc(hit.e.page)+' · à vérifier</small>'+
+     (url?'<a target="_blank" rel="noopener noreferrer" href="'+esc(url)+'">Documents officiels ↗</a>':''):
+     '<small>Non documenté dans les extraits disponibles — consulter le CSC.</small>')+'</div>';
+   }).join('')+'</details>';
+ }
  function preview(m,stage,deadlineStatus,options={}){
   if(!m)return '<div class="v4-preview-idle"><strong>Aucun marché visible</strong><p>Adapte les filtres pour retrouver les dossiers de suivi.</p></div>';
   const type=kind(m),sources=sourceCount(m);
@@ -130,7 +147,7 @@
    field('Source et zone',(m.source||'Source non renseignée')+' · '+(m.region||'Région non précisée'))+
    '</div>'+
    (verifiedDate?'<div class="v5-deadline-proof"><strong>Échéance vérifiée dans e-Procurement</strong><a href="'+esc(m.deadlineSourceUrl)+'" target="_blank" rel="noopener noreferrer">Contrôler l’heure et les éventuels rectificatifs ↗</a></div>':'')+
-   '<p class="v4-preview-status">'+esc(when)+'</p>'+passages+
+   '<p class="v4-preview-status">'+esc(when)+'</p>'+passages+analysisChecklist(m)+
    (notes?'<div class="v5-preview-note"><strong>Votre note KDRIX</strong><p>'+esc(notes.slice(0,240))+'</p></div>':'')+
    '<p class="v4-preview-advice">'+esc(warning)+'</p>'+
    '<div class="v5-preview-actions"><button type="button" class="v4-preview-open" id="quickOpenTender" data-id="'+esc(m.id)+'">Fiche complète <span aria-hidden="true">↗</span></button>'+
@@ -138,5 +155,5 @@
    (archived?'Réintégrer au listing':'Écarter : Hors sujet')+'</button></div>'+
    '<p class="v5-preview-footnote">Les informations affichées proviennent des publications collectées. Les obligations restent à confirmer dans le CSC.</p>';
  }
- return {kind,matchesType,types,typeLabel,typeBadge,typeCounts,renderTypeFilters,metrics,renderCockpit,preview,sourceCount};
+ return {kind,matchesType,types,typeLabel,typeBadge,typeCounts,renderTypeFilters,metrics,renderCockpit,preview,sourceCount,analysisChecklist};
 });
