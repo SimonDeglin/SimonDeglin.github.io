@@ -625,6 +625,7 @@ function renderCockpitV4(){
 }
 function renderQuickPreviewV4(m){
  var box=el('quickPreview');
+ var changed=state.previewId!==(m?m.id:null);
  state.previewId=m?m.id:null;
  document.querySelectorAll('#resultsList article.tender[data-id]').forEach(function(article){
   var selected=!!m&&article.dataset.id===m.id;
@@ -634,6 +635,7 @@ function renderQuickPreviewV4(m){
  if(!box||!window.MRCockpit)return;
  box.innerHTML=MRCockpit.preview(m,m?stageName(stageOf(m.id)):'',m?marketDueStatus(m):'unknown',
    m?{notes:saved.notes[m.id]||'',horsSujet:stageOf(m.id)==='irrelevant'}:{});
+ if(changed)box.scrollTop=0;
  var open=el('quickOpenTender');
  if(open)open.addEventListener('click',function(){openTender(open.dataset.id)});
  var discard=el('quickDismissTender');

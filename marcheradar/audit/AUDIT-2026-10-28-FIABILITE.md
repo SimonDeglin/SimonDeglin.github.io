@@ -14,7 +14,7 @@ Test interactif du site public : chargement des 150 marchés ; clic sur un titre
 
 ## Corrections
 
-- Un clic sur un titre sélectionne une seule fois l'aperçu. Sur petit écran, l'aperçu est amené immédiatement dans la zone visible. La fiche complète garde ses boutons explicites.
+- Un clic sur un titre sélectionne une seule fois l'aperçu et remet son défilement interne en haut pour laisser le nouveau titre visible. Sur petit écran, l'aperçu est amené immédiatement dans la zone visible. La fiche complète garde ses boutons explicites.
 - Le dossier Hors sujet reste accessible même si tous les métiers du marché sont masqués dans les préférences. Les décisions et notes existantes restent sous `kdrix.marcheRadar.v1`.
 - Monitoring et Relief ne sont plus perdus par la normalisation des catégories à l'affichage.
 - Une heure limite déjà dépassée aujourd'hui affiche « Date dépassée », au lieu de « Aujourd'hui ».
