@@ -60,3 +60,36 @@ test('base réelle : distinguer les avis de concurrence, résultats et veille co
  assert(grouped.prospect>0);
  assert.equal(grouped.all,data.items.length);
 });
+
+test('les hors sujet ne gonflent pas les compteurs commerciaux du cockpit',()=>{
+ const stage=id=>id==='r1'||id==='l1'?'irrelevant':'inbox';
+ const metrics=api.metrics(fixture,stage,m=>m.deadline?'open':'unknown',deadline=>deadline?3:null);
+ assert.equal(metrics.total,4);
+ assert.equal(metrics.awards,0);
+ assert.equal(metrics.localProspects,0);
+ assert.equal(metrics.unclassified,2);
+});
+test('lecture rapide riche, note métier échappée et décision réversible',()=>{
+ const market={...fixture[0],title:'Levé topographique Hannut',buyer:'Commune de Hannut',description:'Levés détaillés, dix profils en travers et plan altimétrique pour travaux de voirie.',sectors:['Topo','VRD']};
+ const preview=api.preview(market,'À définir','open',{notes:'À confirmer <img src=x onerror=alert(1)>'});
+ assert.match(preview,/Objet de la mission/);
+ assert.match(preview,/dix profils en travers/);
+ assert.match(preview,/Commune de Hannut/);
+ assert.match(preview,/Topo · VRD/);
+ assert.match(preview,/quickOpenTender/);
+ assert.match(preview,/quickDismissTender/);
+ assert.match(preview,/Écarter : Hors sujet/);
+ assert(preview.includes('&lt;img src=x'));
+ assert(!preview.includes('<img src=x'));
+ const archived=api.preview(market,'Hors sujet','open',{horsSujet:true});
+ assert.match(archived,/Réintégrer au listing/);
+});
+test('le résumé documentaire reste une extraction automatique non certifiée',()=>{
+ const market={...fixture[0],documentInventory:[{documentId:'doc',versionId:'version'}],
+  documentAnalyses:[{documentId:'doc',versionId:'version',fileName:'CCH.pdf',evidence:[{kind:'visit',page:8,excerpt:'La visite est recommandée, pas forcément obligatoire.'}]}]};
+ const html=api.preview(market,'Listing complet','unknown');
+ assert.match(html,/Passages repérés automatiquement — à vérifier/);
+ assert.match(html,/CCH.pdf · p. 8/);
+ assert.match(html,/La visite est recommandée/);
+ assert.doesNotMatch(api.preview({...market,documentInventory:[]},'Listing complet','unknown'),/La visite est recommandée/);
+});
