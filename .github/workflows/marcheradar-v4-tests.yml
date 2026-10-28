@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - "feature/marcheradar-cockpit-20261027"
+      - "feature/marcheradar-v4b-quickread-hors-sujet-20261028"
       - "main"
     paths:
       - "marcheradar/index.html"
@@ -51,3 +52,4 @@ jobs:
           path: |
             marcheradar/tests/cockpit-v4-desktop.png
             marcheradar/tests/cockpit-v4-mobile.png
+            marcheradar/tests/cockpit-v4b-mobile.png

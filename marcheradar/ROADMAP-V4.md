@@ -41,7 +41,7 @@ Les **dossiers de suivi restent le premier niveau de navigation**, les domaines 
 - Fusionner seulement une version avec tests réussis ; conserver le retour arrière.
 - Ne jamais déclarer une date, une visite ou un CSC « vérifié » sur simple inférence de mots-clés.
 
-## V4-A — premier chantier en développement
+## V4-A — premier chantier publié
 
 - Remplacer le grand bandeau décoratif par un tableau de bord à 4 indicateurs opérationnels.
 - Séparer les **appels d'offres**, les **avis de résultat**, la **prospection locale** et les publications encore à qualifier.
@@ -52,4 +52,20 @@ Les **dossiers de suivi restent le premier niveau de navigation**, les domaines 
 - Préserver la fiche complète des Phases 1–3B en parallèle.
 - Tester le déplacement d'un marché, le changement de domaine et de type, le retour à Listing complet et le mode dégradé.
 
-**Avancement :** V4-A en cours sur la branche de développement `feature/marcheradar-cockpit-20261027`. Les autres tranches sont une feuille de route, non des fonctionnalités déjà livrées.
+**Avancement :** V4-A publiée le 27 octobre 2026. La version initiale ouvrait encore le grand panneau au clic sur le marché ; ce retour utilisateur est traité dans V4-B.
+
+## V4-B — lecture rapide réellement dynamique et dossier Hors sujet
+
+- Clic sur une ligne ou sur son titre : **sélectionne le marché et actualise la lecture rapide** sans ouvrir le grand tiroir.
+- Bouton **Fiche complète** : seul déclencheur explicite du tiroir détaillé, depuis la ligne ou l'aperçu.
+- Aperçu enrichi par l'objet réel, l'acheteur, les domaines, les pièces disponibles, les courts extraits PDF courants et les notes enregistrées.
+- Ligne sélectionnée visuellement distinguée ; navigation au clavier prise en charge.
+- Dossier **Hors sujet** distinct de **Sans suite** : un marché sans intérêt métier est masqué des dossiers de travail, favoris, urgences et historique général ; il reste visible dans son dossier spécifique.
+- Actions simples **Écarter : Hors sujet / Réintégrer**, et classement également possible depuis la fiche complète et le menu déroulant.
+- Conservation du classement après rechargement du site ou nouvelle collecte, tant que l'identifiant du marché reste stable.
+- Réinitialisation des filtres masquants lors de l'ouverture de Hors sujet.
+- Tests Chromium des transitions, du mobile, du stockage et des Phases 1–3B.
+
+**Limite actuelle importante :** les classements, notes et exclusions sont enregistrés dans le stockage local du navigateur (`kdrix.marcheRadar.v1`). Ce n'est pas une suppression des avis officiels du fichier public ni un classement synchronisé entre ordinateurs. Un espace sécurisé partagé est un chantier transversal ultérieur.
+
+**Étapes suivantes :** V4-C (pertinence, vrais marchés ouverts, dates officielles, provenance des sources et regroupement des rectificatifs), puis V4-D (CSC et analyse métier), V4-E (décision et préparation d'offres), V4-F (statistiques et veille concurrentielle).

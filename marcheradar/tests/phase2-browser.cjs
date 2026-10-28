@@ -57,7 +57,7 @@ function fixture(id,changes){
   const ted=data.items.find(m=>m.source==='TED');
   const local=data.items.find(m=>m.source==='LOCALE'&&m.sourceDocument);
   assert(bosa&&ted&&local,'Jeu de données incomplet');
-  await article(page,bosa).locator('.open-tender').click();
+  await article(page,bosa).locator('.v5-full-open').click();
   assert.equal(await page.locator('.drawer.on.mr2-drawer').count(),1);
   assert.match(await page.locator('.mr2-intro').innerText(),/Avis de résultat/);
   assert.match(await page.locator('.mr2-section').nth(0).innerText(),/Référence/);
@@ -71,7 +71,7 @@ function fixture(id,changes){
   // Données BOSA effectivement collectées : distinction inventaire / pièce téléchargeable.
   const bathy=data.items.find(m=>m.source==='BOSA'&&m.documentInventory?.length>=16);
   assert(bathy,'Inventaire BOSA réel absent du test');
-  await article(page,bathy).locator('.open-tender').click();
+  await article(page,bathy).locator('.v5-full-open').click();
   const detailText=await page.locator('#drawerBody').innerText();
   assert.match(detailText,/pièce\(s\) répertoriée\(s\)/);
   assert.match(detailText,/CCH.*Bathymetrie/i);
@@ -86,12 +86,12 @@ function fixture(id,changes){
   const documentsLink=await page.locator('.mr2-source-link').evaluateAll(nodes=>nodes.map(x=>x.href));
   assert(documentsLink.some(url=>url.endsWith('/documents')),'Le lien vers la rubrique Documents officielle est absent');
   await page.locator('#closeDrawer').click();
-  await article(page,ted).locator('.open-tender').click();
+  await article(page,ted).locator('.v5-full-open').click();
   assert.match(await page.locator('.mr2-intro').innerText(),/PUBLICATION OFFICIELLE/);
   const tedPrimary=await page.locator('.drawer-footer a.primary').getAttribute('href');
   assert(tedPrimary.includes('ted.europa.eu'));
   await page.locator('#closeDrawer').click();
-  await article(page,local).locator('.open-tender').click();
+  await article(page,local).locator('.v5-full-open').click();
   assert.match(await page.locator('.mr2-section').last().innerText(),/Il ne s’agit pas nécessairement d’un appel d’offres ouvert/);
   assert.match(await page.locator('.mr2-intro').innerText(),/VEILLE COMMUNALE/);
   assert.equal(await page.locator('.drawer-footer a.primary').getAttribute('href'),local.sourceDocument);
@@ -121,7 +121,7 @@ function fixture(id,changes){
   await view.route('**/marcheradar/data.json*',route=>route.fulfill({status:200,contentType:'application/json',
     body:JSON.stringify({schema_version:2,generated_at:new Date().toISOString(),data_origin:'test',collector_status:'ok',items:[m,review]})}));
   await view.goto(address,{waitUntil:'domcontentloaded'});await ready(view,2);
-  await article(view,m).locator('.open-tender').click();
+  await article(view,m).locator('.v5-full-open').click();
   assert.equal(await view.locator('.mr2-highlight.mr2-risk').count(),1);
   assert.match(await view.locator('.mr2-section').nth(1).innerText(),/Visite obligatoire/);
   assert.match(await view.locator('.mr2-section').nth(1).innerText(),/Chantier A/);
@@ -135,11 +135,11 @@ function fixture(id,changes){
   await view.locator('#saveTender').click();
   assert.equal(await view.locator('.tender').count(),1,'le marché classé doit quitter le Listing complet');
   await view.locator('[data-view="answer"]').click();
-  await article(view,m).locator('.open-tender').click();
+  await article(view,m).locator('.v5-full-open').click();
   assert.equal(await view.locator('#marketNotes').inputValue(),'Prévoir visite; relire le CSC');
   await view.locator('#closeDrawer').click();
   await view.locator('[data-view="inbox"]').click();
-  await article(view,review).locator('.open-tender').click();
+  await article(view,review).locator('.v5-full-open').click();
   assert.match(await view.locator('.mr2-section').nth(1).innerText(),/Mention de visite à vérifier/);
   assert.equal(await view.locator('.mr2-highlight.mr2-risk').count(),0,'ne pas affirmer une obligation sans source');
   assert.match(await view.locator('.mr2-section').nth(2).innerText(),/Aucun fichier de marché indexé/);
@@ -155,7 +155,7 @@ function fixture(id,changes){
   await broken.route('**/marcheradar/detail-phase2.js',route=>route.abort('failed'));
   await broken.goto(address,{waitUntil:'domcontentloaded'});
   await ready(broken,visibleMarkets);
-  await broken.locator('article.tender .open-tender').first().click();
+  await broken.locator('article.tender .v5-full-open').first().click();
   assert.match(await broken.locator('#drawerBody').innerText(),/Module documentaire temporairement indisponible/);
   assert.equal(await broken.locator('#saveTender').count(),1);
   await broken.locator('#marketNotes').fill('Test de fiche simplifiée');
