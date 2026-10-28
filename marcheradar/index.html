@@ -396,7 +396,7 @@ function renderList(){
  var list=filtered();el('resultCount').textContent=list.length;
  if(!list.length){el('resultsList').innerHTML='<div class="empty"><div class="emptyicon">'+svg('search')+'</div><h3>Aucun marché dans cette sélection</h3><p>Élargissez les filtres ou affichez tous les marchés pour reprendre votre recherche.</p><button id="resetFilters">Réinitialiser les filtres</button></div>';el('resetFilters').addEventListener('click',function(){state.sector='all';state.region='all';state.query='';state.view='all';el('search').value='';el('region').value='all';render()});return}
  el('resultsList').innerHTML=list.map(function(m){
-  var d=daysLeft(m.deadline),label=d===null?'Date inconnue':due==='closed'?'Date dépassée':d===0?"Aujourd'hui":'J-'+d;
+  var d=daysLeft(m.deadline),label=d===null?'Date inconnue':d<0?'Date dépassée':d===0?"Aujourd'hui":'J-'+d;
   var daysCls=d!==null&&d<0?' over':d!==null&&d<=14?' urgent':'';
   var col=m.score>=85?'#4fa786':m.score>=65?'#d6a65f':'#9ab1c6';
   return '<article class="tender" data-id="'+esc(m.id)+'"><div class="score-ring" style="--score:'+Math.max(0,Math.min(100,Number(m.score)||0))+';--ring:'+col+'" title="Score de pertinence indicatif"><strong>'+esc(m.score||0)+'</strong></div>'+

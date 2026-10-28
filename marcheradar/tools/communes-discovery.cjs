@@ -32,7 +32,7 @@ async function getHtml(url){
  }finally{clearTimeout(timeout)}
 }
 function eligible(records){return records.filter(x=>x.officialSite)
- .sort((a,b)=>(a.lastSiteCheck||'').localeCompare(b.lastSiteCheck||'')||(a.ins||'').localeCompare(b.ins||''))}
+ .sort((a,b)=>(a.lastSiteCheck||'').localeCompare(b.lastSiteCheck||'')||(Number.isFinite(a.estimatedMinutes)?a.estimatedMinutes:9999)-(Number.isFinite(b.estimatedMinutes)?b.estimatedMinutes:9999)||(a.ins||'').localeCompare(b.ins||''))}
 async function run(){
  const idx=JSON.parse(fs.readFileSync(INVENTORY,'utf8'));
  if(!Array.isArray(idx.communes))throw Error('No commune directory');

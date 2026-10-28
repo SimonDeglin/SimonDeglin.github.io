@@ -79,6 +79,7 @@ async function loadPage(page,url,expected){
     body:JSON.stringify({schema_version:2,generated_at:new Date().toISOString(),data_origin:'test',collector_status:'ok',items:fixtures})
   }));
   await loadPage(page,url,7);
+  assert.equal(await page.locator('article[data-id="fixture:hour-past"] .days').innerText(),'Date dépassée','Une heure déjà passée doit être affichée comme dépassée');
   assert.equal(Number(await page.locator('[data-family="voirie"] .family-count').textContent()),7);
   await page.locator('[data-family="voirie"]').click();
   assert.equal(await page.locator('[data-view="inbox"].active').count(),1,'Cliquer sur un domaine ne doit pas changer le dossier');

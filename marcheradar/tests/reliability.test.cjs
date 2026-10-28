@@ -54,3 +54,11 @@ test('base réelle : requalification et recollectes conservent tous les identifi
  assert.deepEqual(bosa.merge(items,items).map(m=>m.id).sort(),ids);
  assert.deepEqual(ted.combine(items,items).map(m=>m.id).sort(),ids);
 });
+
+test('veille communale : priorité à la rotation puis à la proximité, sans coupure de zone',()=>{
+ const {eligible}=require('../tools/communes-discovery.cjs');
+ const records=[{ins:'far',officialSite:'https://x.be',zone:'exterieure_provisoire',estimatedMinutes:190},
+ {ins:'near',officialSite:'https://y.be',estimatedMinutes:35},
+ {ins:'recent',officialSite:'https://z.be',estimatedMinutes:10,lastSiteCheck:'2026-10-28'}];
+ assert.deepEqual(eligible(records).map(x=>x.ins),['near','far','recent']);
+});
