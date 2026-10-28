@@ -124,7 +124,7 @@
    type==='prospect'?'Vérifier que le projet communal correspond à une opportunité d’étude réelle.':
    type==='result'?'Résultat utile pour la veille concurrentielle et les renouvellements.':
    'Vérifier le type de publication et les documents.';
-  const docText=sources.read?sources.read+' PDF lu(s) automatiquement':
+  const docText=m.source==='LOCALE'&&m.sourceDocumentVersion?.sha256?'PDF communal contrôlé — voir la fiche':sources.read?sources.read+' PDF lu(s) automatiquement':
    sources.indexed?sources.indexed+' pièce(s) répertoriée(s), lecture à vérifier':
    sources.linked?sources.linked+' fichier(s) lié(s)':'Aucune pièce indexée';
   const sectors=Array.isArray(m.sectors)&&m.sectors.length?m.sectors:[m.sector||'À déterminer'];
@@ -148,7 +148,9 @@
    field('Source et zone',(m.source||'Source non renseignée')+' · '+(m.region||'Région non précisée'))+
    '</div>'+
    (verifiedDate?'<div class="v5-deadline-proof"><strong>Échéance vérifiée dans e-Procurement</strong><a href="'+esc(m.deadlineSourceUrl)+'" target="_blank" rel="noopener noreferrer">Contrôler l’heure et les éventuels rectificatifs ↗</a></div>':'')+
-   '<p class="v4-preview-status">'+esc(when)+'</p>'+passages+analysisChecklist(m)+
+   '<p class="v4-preview-status">'+esc(when)+'</p>'+
+   (m.source==='LOCALE'&&(m.sourceDocumentVersion?.changedAt||m.sourceEvidenceStatus==='not_found'||m.sourceDocumentReview?.candidates?.length)?'<p class="v4-preview-advice">Document communal à recontrôler : '+(m.sourceEvidenceStatus==='not_found'?'extrait historique non retrouvé. ':'')+(m.sourceDocumentReview?.candidates?.length?'Des passages du document restent à comparer. ':'')+'Consulter la trace de prospection dans la fiche complète.</p>':'')+
+   passages+analysisChecklist(m)+
    (notes?'<div class="v5-preview-note"><strong>Votre note KDRIX</strong><p>'+esc(notes.slice(0,240))+'</p></div>':'')+
    '<p class="v4-preview-advice">'+esc(warning)+'</p>'+
    '<div class="v5-preview-actions"><button type="button" class="v4-preview-open" id="quickOpenTender" data-id="'+esc(m.id)+'">Fiche complète <span aria-hidden="true">↗</span></button>'+

@@ -185,7 +185,7 @@ body{background:#f7f7f7;color:#303339}
 .coverage-detail-link:hover{text-decoration:underline}
 </style>
 <link rel="stylesheet" href="detail-phase2.css">
-<link rel="stylesheet" href="cockpit-v4.css?v=20261028-reliability">
+<link rel="stylesheet" href="cockpit-v4.css?v=20261028-backups-versions">
 </head>
 <body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -274,8 +274,9 @@ body{background:#f7f7f7;color:#303339}
 <div class="overlay" id="overlay"></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Détails et préférences"><div class="drawer-head"><div><small id="drawerEyebrow">DÉTAIL DU MARCHÉ</small><h2 id="drawerHeader">Consulter un marché</h2></div><button class="close" id="closeDrawer" aria-label="Fermer"><svg class="ico"><use href="#i-x"/></svg></button></div><div class="drawer-content" id="drawerBody"></div><div class="drawer-footer" id="drawerFooter"></div></aside>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="detail-phase2.js?v=20261028-reliability"></script>
-<script src="cockpit-v4.js?v=20261028-reliability"></script>
+<script src="detail-phase2.js?v=20261028-backups-versions"></script>
+<script src="cockpit-v4.js?v=20261028-backups-versions"></script>
+<script src="followup-backup.js?v=20261028-1"></script>
 <script>
 (function(){
 'use strict';
@@ -425,9 +426,62 @@ function openTender(id){
  el('saveTender').addEventListener('click',function(){saved.statuses[id]=el('statusSelect').value;saved.notes[id]=el('marketNotes').value;save();render();closeDrawer();toast('Votre suivi est enregistré sur cet appareil')});
  openDrawer();
 }
+function backupSettingsMarkup(){
+ if(!window.MRBackup)return '<p class="settings-info">Sauvegarde temporairement indisponible. Rechargez la page.</p>';
+ var previous=false;try{previous=!!localStorage.getItem(STORAGE+'.beforeImport')}catch(e){}
+ return '<section class="mr-backup" aria-label="Sauvegarde du suivi"><div class="drawer-label">Sauvegarde du suivi</div>'+
+ '<p>Classements, notes, favoris et préférences restent sur cet appareil. Téléchargez une sauvegarde pour les retrouver sur un autre navigateur. Le fichier contient vos notes internes : conservez-le dans un emplacement privé.</p>'+
+ '<div class="mr-backup-actions"><button class="outline" type="button" id="backupExport">Télécharger une sauvegarde</button><label class="outline mr-backup-file" for="backupFile">Choisir une sauvegarde<input type="file" id="backupFile" accept="application/json,.json"></label></div>'+
+ (previous?'<button class="mr-backup-previous" id="backupPrevious" type="button">Télécharger l’état avant le dernier import</button>':'')+
+ '<div id="backupFeedback" role="status" aria-live="polite"></div><div id="backupPreview" hidden></div></section>';
+}
+function downloadBackupText(text,suffix){
+ var url=URL.createObjectURL(new Blob([text],{type:'application/json;charset=utf-8'})),a=document.createElement('a');
+ a.href=url;a.download='marche-radar-suivi-'+dateOffset(0)+(suffix||'')+'.json';document.body.appendChild(a);a.click();a.remove();
+ setTimeout(function(){URL.revokeObjectURL(url)},1000);
+}
+function bindBackupSettings(){
+ if(!window.MRBackup||!el('backupFile'))return;
+ var pending=null,reading=0,previewBox=el('backupPreview');
+ function feedback(text){el('backupFeedback').textContent=text}
+ el('backupExport').addEventListener('click',function(){
+  try{downloadBackupText(MRBackup.serialize(saved));feedback('Sauvegarde préparée. Vérifiez le fichier dans vos téléchargements.')}catch(e){feedback('Sauvegarde impossible : '+e.message)}
+ });
+ if(el('backupPrevious'))el('backupPrevious').addEventListener('click',function(){
+  try{var raw=localStorage.getItem(STORAGE+'.beforeImport');MRBackup.parse(raw);downloadBackupText(raw,'-avant-import')}catch(e){feedback('Sauvegarde antérieure indisponible : '+e.message)}
+ });
+ el('backupFile').addEventListener('change',async function(event){
+  var file=event.target.files&&event.target.files[0],request=++reading;pending=null;el('backupPreview').hidden=true;feedback('');
+  if(!file)return;
+  try{
+   if(file.size>MRBackup.MAX_BYTES)throw Error('Le fichier dépasse 5 Mo.');
+   var contents=await file.text();
+   if(request!==reading||el('backupPreview')!==previewBox)return;
+   pending=MRBackup.parse(contents);
+   var count=MRBackup.summary(pending.state),box=el('backupPreview');
+   box.innerHTML='<h4>Vérifier la restauration</h4><p>'+esc(file.name)+' · sauvegarde du '+esc(new Date(pending.createdAt).toLocaleString('fr-BE'))+'</p>'+
+    '<p>'+count.markets+' marché(s) avec suivi · '+count.classified+' classement(s) · '+count.notes+' note(s) · '+count.favorites+' favori(s)</p>'+
+    '<label for="backupMode">En cas de valeur différente</label><select class="control-select" id="backupMode"><option value="keep">Conserver la valeur sur cet appareil</option><option value="incoming">Utiliser la valeur de la sauvegarde</option></select>'+
+    '<p id="backupDiff"></p><p>Les éléments absents du fichier sont conservés. L’état actuel sera sauvegardé sur cet appareil avant l’import.</p>'+
+    '<div class="mr-backup-actions"><button type="button" class="primary" id="backupApply">Appliquer la restauration</button><button type="button" class="outline" id="backupCancel">Annuler</button></div>';
+   box.hidden=false;
+   function refreshDiff(){var r=MRBackup.merge(saved,pending.state,el('backupMode').value).report;el('backupDiff').textContent=r.added+' valeur(s) à ajouter · '+r.conflicts+' différence(s) · '+r.replaced+' valeur(s) à remplacer.'}
+   refreshDiff();el('backupMode').addEventListener('change',refreshDiff);
+   el('backupCancel').addEventListener('click',function(){pending=null;box.hidden=true;el('backupFile').value='';feedback('Restauration annulée. Votre suivi est conservé.')});
+   el('backupApply').addEventListener('click',function(){
+    if(!pending)return;
+    try{
+     var result=MRBackup.apply(localStorage,STORAGE,saved,pending.state,el('backupMode').value);
+     saved=result.state;pending=null;render();settings();
+     el('backupFeedback').textContent='Restauration enregistrée sur cet appareil. '+result.report.added+' valeur(s) ajoutée(s), '+result.report.replaced+' remplacée(s).';
+    }catch(e){feedback('Restauration non appliquée. Le suivi actuel est conservé. '+e.message)}
+   });
+  }catch(e){if(request!==reading||el('backupPreview')!==previewBox)return;pending=null;feedback('Fichier refusé : '+e.message)}
+ });
+}
 function settings(){
  state.selected='settings';el('drawerEyebrow').textContent='PERSONNALISATION';el('drawerHeader').textContent='Vos préférences';
- el('drawerBody').innerHTML='<div class="drawer-label">Secteurs recherchés</div><p class="drawer-desc" style="margin-top:0">Activez uniquement les activités qui vous intéressent. Les filtres s’appliquent à cette session et à vos prochaines visites sur cet appareil.</p>'+
+ el('drawerBody').innerHTML=backupSettingsMarkup()+'<div class="drawer-label">Secteurs recherchés</div><p class="drawer-desc" style="margin-top:0">Activez uniquement les activités qui vous intéressent. Les filtres s’appliquent à cette session et à vos prochaines visites sur cet appareil.</p>'+
  SECTORS.filter(function(s){return s.id!=='all'}).map(function(s){return '<div class="setting-row"><div><strong>'+esc(s.label)+'</strong><small>Afficher les annonces de ce secteur</small></div><button aria-label="Activer/désactiver '+esc(s.label)+'" aria-pressed="'+(!saved.hiddenSectors[s.id])+'" class="switch'+(!saved.hiddenSectors[s.id]?' on':'')+'" data-toggle="'+esc(s.id)+'"></button></div>'}).join('')+
  '<div class="settings-info"><b>À savoir :</b> le classement repose sur des mots-clés et des codes CPV, pas sur une intelligence artificielle. Le site reste public mais vos favoris et notes ne quittent pas votre navigateur. Aucune notification automatique ni synchronisation multi-utilisateurs n’est encore activée.</div>'+
  '<div class="drawer-label">Données et couverture</div>'+
@@ -443,6 +497,7 @@ function settings(){
  '<p class="legal-note">BOSA national et les communes ne sont pas déclarés couverts avant une collecte réussie. La veille ne garantit pas une exhaustivité totale.</p>';
  el('drawerBody').querySelectorAll('[data-toggle]').forEach(function(b){b.addEventListener('click',function(){var s=b.dataset.toggle;saved.hiddenSectors[s]=!saved.hiddenSectors[s];b.classList.toggle('on',!saved.hiddenSectors[s]);b.setAttribute('aria-pressed',String(!saved.hiddenSectors[s]));save();render()})});
  el('drawerFooter').innerHTML='<button class="primary" id="settingsOk" style="width:100%">Terminé '+svg('check',true)+'</button>';
+ bindBackupSettings();
  el('settingsOk').addEventListener('click',closeDrawer);openDrawer();
 }
 function downloadCSV(){
@@ -547,7 +602,7 @@ function stageNumber(code){return allMarkets().filter(function(m){return stageOf
 function moveMarket(id,code){
  if(!isStage(code)||!allMarkets().some(function(m){return m.id===id}))return;
  if(stageOf(id)===code)return;
- if(code==='inbox')delete saved.statuses[id];else saved.statuses[id]=code;
+ saved.statuses[id]=code;
  save();render();toast('Marché classé : '+stageName(code));
 }
 function trackCount(){return allMarkets().filter(function(m){return stageOf(m.id)!=='inbox'&&stageOf(m.id)!=='discarded'&&stageOf(m.id)!=='irrelevant'}).length}
@@ -884,12 +939,12 @@ function openTender(id){
  '<button class="outline" id="saveTender">'+svg('check',true)+' Enregistrer</button>';
  el('drawerStar').addEventListener('click',function(){
   var code=el('statusSelect').value;saved.notes[id]=el('marketNotes').value;
-  if(code==='inbox')delete saved.statuses[id];else saved.statuses[id]=code;
+  saved.statuses[id]=code;
   saved.favorites[id]=!saved.favorites[id];save();render();openTender(id);
  });
  el('saveTender').addEventListener('click',function(){
   var code=el('statusSelect').value;saved.notes[id]=el('marketNotes').value;
-  if(code==='inbox')delete saved.statuses[id];else saved.statuses[id]=code;
+  saved.statuses[id]=code;
   save();render();closeDrawer();toast('Fiche et classement enregistrés sur cet ordinateur');
  });
  openDrawer();

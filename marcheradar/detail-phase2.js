@@ -217,10 +217,27 @@
   var localBody=local?section('Trace de prospection',
    '<div class="mr2-highlight"><strong>Il ne s’agit pas nécessairement d’un appel d’offres ouvert.</strong>'+
    '<p>Un document communal a été repéré. Sa date et son intérêt actuel doivent être vérifiés avant de contacter le pouvoir adjudicateur.</p></div>'+
-   (m.evidence?'<div class="mr2-evidence"><strong>Extrait repéré</strong><p>'+esc(m.evidence)+'</p></div>':'')+
+   municipalDocumentTrace(m)+
+   (m.evidence?'<div class="mr2-evidence"><strong>'+(m.sourceEvidenceStatus==='not_found'?'Extrait historique — à revalider':'Extrait repéré')+'</strong><p>'+esc(m.evidence)+'</p></div>':'')+
    (m.opportunityStage?'<div class="mr2-evidence">Qualification automatique : '+esc(m.opportunityStage.replace(/_/g,' '))+'</div>':'')):'';
   return {html:header+summary+visitSection+documents+reading+section('Sélection et critères d’attribution',reqBody)+localBody,
    primary:primarySource(m),documentCount:docs.length,visitKind:visit.kind,reference:reference(m),status:due};
+ }
+ function municipalDocumentTrace(m){
+  var v=m.sourceDocumentVersion;
+  if(!v||!str(v.sha256))return '';
+  var date=Number.isFinite(Date.parse(v.checkedAt))?new Intl.DateTimeFormat('fr-BE',{timeZone:'Europe/Brussels',dateStyle:'short',timeStyle:'short'}).format(new Date(v.checkedAt)):'date non renseignée';
+  var html='<div class="mr2-highlight mr2-caution"><strong>'+(v.changedAt?'Modification du fichier PDF détectée':'Version du PDF contrôlée')+'</strong>'+
+   '<p>Dernier contrôle : '+esc(date)+' (Bruxelles). Empreinte '+esc(str(v.sha256).slice(0,16))+'…</p>'+
+   (v.changedAt?'<p>Une modification du fichier ne constitue pas, à elle seule, un rectificatif officiel du marché.</p>':'')+
+   (m.sourceEvidenceStatus==='not_found'?'<p><strong>L’extrait historique n’a pas été retrouvé dans la version contrôlée. Sa validité actuelle doit être vérifiée.</strong></p>':'')+'</div>';
+  var review=m.sourceDocumentReview;
+  if(review&&review.sha256===v.sha256&&Array.isArray(review.candidates)&&review.candidates.length){
+   html+='<details class="mr2-source-changes"><summary>Passages du document à comparer ('+review.candidates.length+')</summary>'+
+    '<p class="mr2-footnote">Ces passages concernent le document entier. Leur rattachement à ce marché n’est pas confirmé. Le dossier et son classement sont conservés.</p>'+
+    review.candidates.slice(0,6).map(function(p){return '<div class="mr2-evidence"><strong>Page '+esc(p.page)+' — à vérifier</strong><p>'+esc(p.excerpt)+'</p></div>'}).join('')+'</details>';
+  }
+  return html;
  }
  function listHints(m){
   var v=visitState(m);
@@ -230,5 +247,5 @@
   var dLabel=inv.length?inv.length+' pièce(s) répertoriée(s) — accès à vérifier':docs.length?docs.length+' document(s) indexé(s)':source?'Accès à la source':'Source non renseignée';
   return '<div class="mr2-list-hints">'+(m.noticeKind==='award'?'<span>Avis de résultat</span>':'')+'<span>'+esc(vLabel)+'</span><span>'+esc(dLabel)+'</span></div>';
  }
- return {render:render,status:status,sources:sources,primarySource:primarySource,visitState:visitState,requirements:requirements,linkUrl:linkUrl,listHints:listHints};
+ return {municipalDocumentTrace:municipalDocumentTrace,render:render,status:status,sources:sources,primarySource:primarySource,visitState:visitState,requirements:requirements,linkUrl:linkUrl,listHints:listHints};
 });

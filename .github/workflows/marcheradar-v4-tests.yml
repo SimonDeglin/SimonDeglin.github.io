@@ -17,6 +17,7 @@ on:
       - "marcheradar/tests/**"
       - "marcheradar/tools/**"
       - "marcheradar/detail-phase2.js"
+      - "marcheradar/followup-backup.js"
       - ".github/workflows/marcheradar-v4-tests.yml"
   workflow_dispatch:
 permissions:
@@ -33,6 +34,7 @@ jobs:
       - name: "Contrôler la syntaxe et la typologie"
         run: |
           node --check marcheradar/cockpit-v4.js
+          node --check marcheradar/followup-backup.js
           node --check marcheradar/tests/cockpit-v4-browser.cjs
           node --test marcheradar/tests/*.test.cjs
           node marcheradar/tools/test-collector.cjs
@@ -45,6 +47,8 @@ jobs:
           npx playwright install chromium
       - name: "Tester le cockpit et la navigation réelle"
         run: node marcheradar/tests/cockpit-v4-browser.cjs
+      - name: "Tester la sauvegarde et la restauration du suivi"
+        run: node marcheradar/tests/followup-backup-browser.cjs
       - name: "Tester le suivi des marchés existant"
         run: node marcheradar/tests/phase1-browser.cjs
       - name: "Tester les fiches documentaires existantes"
@@ -64,3 +68,5 @@ jobs:
             marcheradar/tests/cockpit-v4-desktop.png
             marcheradar/tests/cockpit-v4-mobile.png
             marcheradar/tests/cockpit-v4b-mobile.png
+            marcheradar/tests/followup-backup-preview.png
+            marcheradar/tests/municipal-document-versions.png
