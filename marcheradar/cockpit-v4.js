@@ -48,6 +48,7 @@
   const ongoing=['inbox','maybe','answer'];
   for(const m of list||[]){
    const t=kind(m),stage=stageOf(m.id);
+   if(stage==='irrelevant'){result.total--;continue}
    if(t==='competition'){
     const due=dueStatus(m);
     if(stage==='inbox'&&m.screening!=='excluded')result.unclassified++;
@@ -83,9 +84,10 @@
   const read=(Array.isArray(m.documentAnalyses)?m.documentAnalyses.length:0);
   return {indexed:n,linked:files,read};
  }
- function preview(m,stage,deadlineStatus){
+ function preview(m,stage,deadlineStatus,options={}){
   if(!m)return '<div class="v4-preview-idle"><strong>Aucun marché visible</strong><p>Adapte les filtres pour retrouver les dossiers de suivi.</p></div>';
   const type=kind(m),sources=sourceCount(m);
+  const archived=options.horsSujet===true;
   let when;
   if(type==='result')when='Avis de résultat publié — aucune soumission à préparer sur cet avis';
   else if(type==='prospect')when='Piste communale — aucune procédure ouverte confirmée';
@@ -101,15 +103,32 @@
   const docText=sources.read?sources.read+' PDF lu(s) automatiquement':
    sources.indexed?sources.indexed+' pièce(s) répertoriée(s), lecture à vérifier':
    sources.linked?sources.linked+' fichier(s) lié(s)':'Aucune pièce indexée';
-  return '<div class="v4-preview-head"><span class="v4-eyebrow">LECTURE RAPIDE</span><h3>'+esc(m.title||'Publication sans titre')+'</h3>'+
-   '<div>'+typeBadge(m)+'</div></div><div class="v4-preview-fields">'+
+  const sectors=Array.isArray(m.sectors)&&m.sectors.length?m.sectors:[m.sector||'À déterminer'];
+  const description=txt(m.description).replace(/\s+/g,' ');
+  const shortDescription=description.length>450?description.slice(0,449).replace(/\s+\S*$/,'')+'…':description;
+  const analyses=Array.isArray(m.documentAnalyses)?m.documentAnalyses.filter(a=>Array.isArray(m.documentInventory)&&m.documentInventory.some(d=>d.documentId===a.documentId&&d.versionId===a.versionId)):[];
+  const firstEvidence=analyses.flatMap(a=>(a.evidence||[]).slice(0,1).map(e=>({file:a.fileName,page:e.page,excerpt:e.excerpt}))).slice(0,2);
+  const passages=firstEvidence.length?'<div class="v5-preview-evidence"><strong>Passages repérés automatiquement — à vérifier</strong>'+
+   firstEvidence.map(e=>'<p><span>'+esc(e.file||'PDF')+' · p. '+esc(e.page)+'</span>'+esc(e.excerpt||'')+'</p>').join('')+'</div>':'';
+  const notes=txt(options.notes).replace(/\s+/g,' ');
+  return '<div class="v4-preview-head"><span class="v4-eyebrow">LECTURE RAPIDE · MARCHÉ SÉLECTIONNÉ</span><h3>'+esc(m.title||'Publication sans titre')+'</h3>'+
+   '<div>'+typeBadge(m)+'</div></div>'+
+   '<div class="v5-preview-summary"><strong>Objet de la mission</strong><p>'+esc(shortDescription||'Aucun descriptif suffisamment précis dans les données collectées. Consulter la source officielle.')+'</p></div>'+
+   '<div class="v4-preview-fields">'+
    field('Acheteur',m.buyer||'Non renseigné')+
    field('Dossier KDRIX',stage)+
-   field('Échéance',type==='competition'?deadline:'Sans échéance de remise à afficher')+
-   field('Documents',docText)+'</div>'+
-   '<p class="v4-preview-status">'+esc(when)+'</p>'+
+   field('Domaine(s)',sectors.join(' · '))+
+   field('Échéance',type==='competition'?deadline:'Pas de date de remise associée')+
+   field('Documents',docText)+
+   field('Source et zone',(m.source||'Source non renseignée')+' · '+(m.region||'Région non précisée'))+
+   '</div>'+
+   '<p class="v4-preview-status">'+esc(when)+'</p>'+passages+
+   (notes?'<div class="v5-preview-note"><strong>Votre note KDRIX</strong><p>'+esc(notes.slice(0,240))+'</p></div>':'')+
    '<p class="v4-preview-advice">'+esc(warning)+'</p>'+
-   '<button type="button" class="v4-preview-open" id="quickOpenTender" data-id="'+esc(m.id)+'">Ouvrir la fiche complète <span aria-hidden="true">↗</span></button>';
+   '<div class="v5-preview-actions"><button type="button" class="v4-preview-open" id="quickOpenTender" data-id="'+esc(m.id)+'">Fiche complète <span aria-hidden="true">↗</span></button>'+
+   '<button type="button" class="v5-preview-dismiss'+(archived?' v5-restore':'')+'" id="quickDismissTender" data-id="'+esc(m.id)+'">'+
+   (archived?'Réintégrer au listing':'Écarter : Hors sujet')+'</button></div>'+
+   '<p class="v5-preview-footnote">Les informations affichées proviennent des publications collectées. Les obligations restent à confirmer dans le CSC.</p>';
  }
  return {kind,matchesType,types,typeLabel,typeBadge,typeCounts,renderTypeFilters,metrics,renderCockpit,preview,sourceCount};
 });
