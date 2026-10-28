@@ -81,7 +81,10 @@
  function sourceCount(m){
   const n=(Array.isArray(m.documentInventory)?m.documentInventory.length:0);
   const files=(Array.isArray(m.documents)?m.documents.length:0);
-  const read=(Array.isArray(m.documentAnalyses)?m.documentAnalyses.length:0);
+  // Une analyse d'une ancienne version ne prouve pas la lecture du CSC actuel.
+  const read=(Array.isArray(m.documentAnalyses)?m.documentAnalyses:[]).filter(a=>
+   (Array.isArray(m.documentInventory)?m.documentInventory:[]).some(d=>
+    d.documentId===a.documentId&&d.versionId===a.versionId)).length;
   return {indexed:n,linked:files,read};
  }
  function preview(m,stage,deadlineStatus,options={}){
