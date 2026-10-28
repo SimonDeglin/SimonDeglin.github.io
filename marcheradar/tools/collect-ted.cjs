@@ -200,7 +200,10 @@ function combine(old,newItems){
   merged.score=Math.max(prior.score||0,n.score||0);
   merged.noticeNumbers=[...new Set([...(prior.noticeNumbers||[]),...(prior.relatedNoticeNumbers||[]),prior.publicationNumber,n.publicationNumber].filter(Boolean))];
   merged.procedureIdentifier=n.procedureIdentifier||prior.procedureIdentifier||'';
-  merged.deadline=latest?(n.deadline||prior.deadline):(prior.deadline||n.deadline);
+  // An ISO submission timestamp verified on the official BOSA workspace must not
+  // be overwritten by an older, date-only summary from a different source.
+  merged.deadline=prior.deadlineSourceKind==='bosa_verified_public'&&prior.deadline?
+    prior.deadline:(latest?(n.deadline||prior.deadline):(prior.deadline||n.deadline));
   merged.description=merged.description||prior.description||n.description;
   merged.source_status=n.source_status;
   const rating=classify(merged.title,merged.description,merged.cpv||[]);

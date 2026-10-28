@@ -189,7 +189,7 @@ function merge(existing,newItems){
   };
   if(record.publication>(before.publication||'')){
    result.publication=record.publication;
-   if(record.deadline)result.deadline=record.deadline;
+   if(record.deadline&&before.deadlineSourceKind!=='bosa_verified_public')result.deadline=record.deadline;
   }else if(!result.deadline&&record.deadline)result.deadline=record.deadline;
   if(record.noticeKind==='award'){
    const notices=Array.isArray(before.bosaResults)?before.bosaResults.slice():[];

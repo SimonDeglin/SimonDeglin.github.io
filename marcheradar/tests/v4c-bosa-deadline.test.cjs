@@ -52,3 +52,21 @@ test('garder les dates préexistantes contradictoires non sourcées et les avis 
  assert.equal(twice.changed,false);
  assert.strictEqual(twice.market,once);
 });
+
+test('collecteurs TED/BOSA ne remplacent jamais une date BOSA vérifiée par une date sommaire',()=>{
+ const verified=updateMarket({...market,publication:'2026-10-15',sector:'Topo',sectors:['Topo'],
+  score:85,buyer:'Commune test',procedureIdentifier:'PROC-BOSA-TEST'},validate(api,id,page)).market;
+ const bosa=require('../tools/bosa-public.cjs');
+ const mergedBosa=bosa.merge([verified],[{...verified,publication:'2026-10-29',deadline:'2026-11-09',title:verified.title}]);
+ assert.equal(mergedBosa.length,1);
+ assert.equal(mergedBosa[0].deadline,verified.deadline);
+ assert.equal(mergedBosa[0].deadlineSourceKind,'bosa_verified_public');
+ const ted=require('../tools/collect-ted.cjs');
+ const next={id:'ted:777777-2026',source:'TED',publicationNumber:'777777-2026',
+  procedureIdentifier:'PROC-BOSA-TEST',buyer:verified.buyer,title:verified.title,
+  publication:'2026-10-30',deadline:'2026-11-09',sectors:['Topo'],sector:'Topo',score:82,description:'Levé topo'};
+ const combined=ted.combine([verified],[next]);
+ assert.equal(combined.length,1);
+ assert.equal(combined[0].deadline,verified.deadline);
+ assert.equal(combined[0].deadlineSourceKind,'bosa_verified_public');
+});
