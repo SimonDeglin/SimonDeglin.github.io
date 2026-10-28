@@ -93,3 +93,15 @@ test('le résumé documentaire reste une extraction automatique non certifiée',
  assert.match(html,/La visite est recommandée/);
  assert.doesNotMatch(api.preview({...market,documentInventory:[]},'Listing complet','unknown'),/La visite est recommandée/);
 });
+
+test('date BOSA sourcée visible avec heure CET et lien officiel',()=>{
+ const m={...fixture[1],id:'bosa:7f4255eb-6857-4d85-85e5-4aac8b0fe4e8',
+  deadline:'2026-11-16T10:00:00+01:00',deadlineTime:'10:00',
+  deadlineSourceKind:'bosa_verified_public',
+  deadlineSourceUrl:'https://www.publicprocurement.be/publication-workspaces/7f4255eb-6857-4d85-85e5-4aac8b0fe4e8/general'};
+ const html=api.preview(m,'Listing complet','open');
+ assert.match(html,/16\/11\/2026 à 10:00 CET/);
+ assert.match(html,/Échéance vérifiée dans e-Procurement/);
+ assert.match(html,/Contrôler l’heure et les éventuels rectificatifs/);
+ assert.doesNotMatch(api.preview({...m,deadlineSourceUrl:'javascript:alert(1)'},'Listing complet','open'),/Échéance vérifiée dans e-Procurement/);
+});

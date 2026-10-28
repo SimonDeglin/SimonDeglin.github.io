@@ -52,6 +52,7 @@ jobs:
         run: |
           node marcheradar/tools/test-collector.cjs
           node marcheradar/tools/test-bosa.cjs
+          node --test marcheradar/tests/v4c-bosa-deadline.test.cjs
           node marcheradar/tools/test-local-watch.cjs
         continue-on-error: true
 
@@ -103,9 +104,15 @@ jobs:
         run: node marcheradar/tools/bosa-documents-enrich.cjs --browser --write
         continue-on-error: true
 
+      - name: "Vérifier les échéances BOSA à la source (page + API concordantes)"
+        id: deadlines
+        if: steps.browser.outcome == 'success'
+        run: node marcheradar/tools/bosa-deadline-enrich.cjs --write
+        continue-on-error: true
+
       - name: "Publier uniquement les données valides"
         id: publish
-        if: steps.collect.outcome == 'success' || steps.bosa.outcome == 'success' || steps.local.outcome == 'success' || steps.documents.outcome == 'success'
+        if: steps.collect.outcome == 'success' || steps.bosa.outcome == 'success' || steps.local.outcome == 'success' || steps.documents.outcome == 'success' || steps.deadlines.outcome == 'success'
         shell: bash
         run: |
           if git diff --quiet -- marcheradar/data.json; then
@@ -130,6 +137,7 @@ jobs:
           BOSA_RESULT: ${{ steps.bosa.outcome }}
           LOCAL_RESULT: ${{ steps.local.outcome }}
           DOCUMENTS_RESULT: ${{ steps.documents.outcome }}
+          DEADLINES_RESULT: ${{ steps.deadlines.outcome }}
           PUBLISH_RESULT: ${{ steps.publish.outcome }}
         run: |
           {
@@ -144,6 +152,7 @@ jobs:
             echo "| Tentative BOSA | $BOSA_RESULT |"
             echo "| Sources locales (pilote) | $LOCAL_RESULT |"
             echo "| Métadonnées documents BOSA | $DOCUMENTS_RESULT |"
+            echo "| Échéances officielles BOSA | $DEADLINES_RESULT |"
             echo "| Publication | $PUBLISH_RESULT |"
             echo ""
             if [ "$COLLECT_RESULT" != "success" ] || [ "$PUBLISH_RESULT" = "failure" ]; then
