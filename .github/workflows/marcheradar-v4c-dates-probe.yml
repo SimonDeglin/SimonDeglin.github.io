@@ -1,34 +1,60 @@
-name: "Marché Radar V4C — Audit des dates BOSA"
+name: "Marché Radar V4C — Dates BOSA vérifiées"
 on:
   push:
     branches:
       - "feature/marcheradar-v4c-bosa-deadlines-audit-20261028"
     paths:
       - "marcheradar/tools/v4c-bosa-deadlines-probe.cjs"
+      - "marcheradar/tools/bosa-deadline.cjs"
+      - "marcheradar/tools/bosa-deadline-enrich.cjs"
+      - "marcheradar/tests/v4c-bosa-deadline.test.cjs"
       - ".github/workflows/marcheradar-v4c-dates-probe.yml"
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
-  probe:
+  verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 14
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: "Navigateur isolé, uniquement sur les avis publics"
+      - name: "Vérifier dates, rectificatifs, heure et fuseau"
+        run: |
+          node --check marcheradar/tools/bosa-deadline-enrich.cjs
+          node --test marcheradar/tests/v4c-bosa-deadline.test.cjs
+      - name: "Navigateur public isolé"
         run: |
           npm install --no-save --no-package-lock playwright
           npx playwright install chromium
-      - name: "Observer les dates affichées et les réponses publiques sans modifier les marchés"
-        run: node marcheradar/tools/v4c-bosa-deadlines-probe.cjs
-      - name: "Conserver les observations sourcées"
+      - name: "Récupérer uniquement les échéances confirmées par les pages BOSA"
+        run: node marcheradar/tools/bosa-deadline-enrich.cjs --sample --write
+      - name: "Contrôler la conservation de la base et les dates probantes"
+        run: |
+          node - <<'NODE'
+          const assert=require('node:assert/strict'),d=require('./marcheradar/data.json');
+          const verified=d.items.filter(m=>m.deadlineSourceKind==='bosa_verified_public');
+          assert(d.items.length>=150,'Marchés historiques manquants');
+          assert(verified.length>=4,'Moins de quatre dates officielles confirmées');
+          for(const m of verified){
+            assert.match(m.deadline,/^20\d\d-\d\d-\d\dT\d\d:\d\d:00\+0[12]:00$/);
+            assert(m.deadlineSourceUrl.includes(m.publicationWorkspaceId));
+          }
+          console.log('V4C_VERIFIED_DATES='+verified.length);
+          NODE
+      - name: "Tests de non-régression classement et fiche"
+        run: |
+          node marcheradar/tests/phase1-browser.cjs
+          node marcheradar/tests/phase2-browser.cjs
+      - name: "Exporter uniquement les preuves et données candidates, sans publication"
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: marcheradar-v4c-bosa-dates
+          name: marcheradar-v4c-verified-deadlines
           if-no-files-found: warn
           retention-days: 7
-          path: marcheradar/audit/v4c-bosa-deadlines-probe.json
+          path: |
+            marcheradar/data.json
+            marcheradar/audit/v4c-bosa-deadlines-enrichment.json
