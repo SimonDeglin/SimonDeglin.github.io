@@ -1,0 +1,34 @@
+name: "Marché Radar V4C — Audit des dates BOSA"
+on:
+  push:
+    branches:
+      - "feature/marcheradar-v4c-bosa-deadlines-audit-20261028"
+    paths:
+      - "marcheradar/tools/v4c-bosa-deadlines-probe.cjs"
+      - ".github/workflows/marcheradar-v4c-dates-probe.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: "Navigateur isolé, uniquement sur les avis publics"
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install chromium
+      - name: "Observer les dates affichées et les réponses publiques sans modifier les marchés"
+        run: node marcheradar/tools/v4c-bosa-deadlines-probe.cjs
+      - name: "Conserver les observations sourcées"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: marcheradar-v4c-bosa-dates
+          if-no-files-found: warn
+          retention-days: 7
+          path: marcheradar/audit/v4c-bosa-deadlines-probe.json
