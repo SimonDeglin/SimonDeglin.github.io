@@ -131,7 +131,9 @@ async function ready(page,n){
   assert.match(await dynamic.locator('#quickPreview').innerText(),/Essai t2/);
   assert.equal(await dynamic.locator('article[data-id="t2"].v5-selected').count(),1,'La ligne choisie doit être identifiée');
   assert.equal(await dynamic.locator('.drawer.on').count(),0,'Un clic normal ne doit pas ouvrir le grand panneau');
+  await dynamic.locator('#quickPreview').evaluate(e=>e.scrollTop=e.scrollHeight);
   await dynamic.locator('article[data-id="r1"]').click({position:{x:250,y:20}});
+  assert.equal(await dynamic.locator('#quickPreview').evaluate(e=>e.scrollTop),0,'Changer de marché doit remettre le titre de l’aperçu en vue');
   assert.match(await dynamic.locator('#quickPreview').innerText(),/Essai r1/);
   assert.equal(await dynamic.locator('.drawer.on').count(),0);
   await dynamic.locator('article[data-id="t2"] .open-tender').focus();
