@@ -1,25 +1,25 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-27T16:42:30.966Z",
+  "generated_at": "2026-10-28T11:22:47.948Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-10-27 : 1389 avis lus, 2 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-10-28 : 1412 avis lus, 2 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-27T16:44:24.298Z",
-      "scanned": 2575,
-      "retained": 58,
-      "period_from": "2026-10-13",
-      "period_to": "2026-10-27",
-      "pages": 103,
+      "last_success": "2026-10-28T11:24:39.811Z",
+      "scanned": 2550,
+      "retained": 62,
+      "period_from": "2026-10-14",
+      "period_to": "2026-10-28",
+      "pages": 102,
       "complete": true,
-      "raw_candidates": 2562,
-      "oldest_seen": "2026-10-12"
+      "raw_candidates": 2533,
+      "oldest_seen": "2026-10-13"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-10-27T16:48:16.179Z",
+      "last_success": "2026-10-28T11:26:33.749Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -75,15 +75,15 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 103 page(s) parcourue(s) depuis 2026-10-13.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 102 page(s) parcourue(s) depuis 2026-10-14.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
-    "scanned": 1389,
-    "matched_current_run": 17,
-    "records": 150,
-    "review_count": 68,
-    "award_notice_count": 380,
+    "scanned": 1412,
+    "matched_current_run": 21,
+    "records": 158,
+    "review_count": 73,
+    "award_notice_count": 367,
     "awarded_market_matches": 2,
     "award_fields_requested": false,
     "retained_as_excluded": 2,
@@ -94,37 +94,37 @@
     "queries": [
       {
         "source": "Acheteurs belges",
-        "from": "20261016",
-        "to": "20261022",
-        "found": 481,
-        "reported": 481
+        "from": "20261017",
+        "to": "20261023",
+        "found": 464,
+        "reported": 464
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261016",
-        "to": "20261022",
-        "found": 446,
-        "reported": 446
+        "from": "20261017",
+        "to": "20261023",
+        "found": 433,
+        "reported": 433
       },
       {
         "source": "Acheteurs belges",
-        "from": "20261023",
-        "to": "20261027",
-        "found": 235,
-        "reported": 235
+        "from": "20261024",
+        "to": "20261028",
+        "found": 264,
+        "reported": 264
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261023",
-        "to": "20261027",
-        "found": 227,
-        "reported": 227
+        "from": "20261024",
+        "to": "20261028",
+        "found": 251,
+        "reported": 251
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2575,
-    "bosa_imported": 58,
-    "bosa_pages": 103,
+    "bosa_scanned": 2550,
+    "bosa_imported": 62,
+    "bosa_pages": 102,
     "local_documents": 34,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -140,19 +140,250 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "fournitures_et_location": 52,
-      "aucun_signal_metier": 429,
-      "travaux_execution": 106,
-      "avis_neerlandais": 135,
-      "avis_attribution_analyse_separement": 380,
-      "acheteur_flamand": 146,
-      "objet_hors_domaine": 82,
-      "qualifie_review": 19,
-      "assurance_ou_nettoyage": 26,
-      "qualifie_main": 14
+      "objet_hors_domaine": 77,
+      "aucun_signal_metier": 461,
+      "acheteur_flamand": 149,
+      "avis_neerlandais": 128,
+      "fournitures_et_location": 61,
+      "travaux_execution": 111,
+      "avis_attribution_analyse_separement": 367,
+      "assurance_ou_nettoyage": 18,
+      "qualifie_review": 25,
+      "qualifie_main": 15
     }
   },
   "items": [
+    {
+      "id": "ted:748312-2026",
+      "publicationNumber": "748312-2026",
+      "procedureIdentifier": "542dff59-2ff5-476a-8867-bec232031dba",
+      "title": "Belgique – Services d'architecture, d'ingénierie et de planification – MISSION D’AUTEUR DE PROJET POUR LA RESTAURATION DE L’EDIFICE : SUIVI DES ÉTUDES PRÉALABLES ÉLABORATION DES DOSSIERS D’EXÉCUTION ET SUIVI DES TRAVAUX",
+      "buyer": "Fabrique d'Eglise Saint Jacques à Liège",
+      "region": "Belgique",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 99,
+      "screening": "main",
+      "publication": "2026-10-28",
+      "deadline": "",
+      "cpv": [
+        "71240000"
+      ],
+      "description": "Le présent marché public de services a pour objet la désignation d’un auteur de projet chargé d’une mission complète relative à la restauration de l’église Saint-Jacques. Cette mission comprend notamment l’analyse et le suivi des études préalables, l’élaboration des dossiers d’exécution et des dossiers relatifs aux subsides à envoyer à la Région Wallonne, l’assistance à la passation des marchés de travaux ainsi que le suivi de l’exécution des travaux jusqu’à la réception définitive. La mission porte sur l’ensemble des disciplines nécessaires à la réalisation du projet, incluant l’architecture et la stabilité. Il s’agit d’un marché relevant du code CPV 71240000-2 (Services d’architecture, d’ingénierie et de planification). Ces services sont mieux décrits dans la partie technique au point 4 du cahier des charges.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/748312-2026",
+      "publicationWorkspaceId": "0ffc770c-a8b2-40f3-96a3-0a9cff633efd",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/748312-2026",
+          "publicationNumber": "748312-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/0ffc770c-a8b2-40f3-96a3-0a9cff633efd/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ]
+    },
+    {
+      "id": "ted:745821-2026",
+      "publicationNumber": "745821-2026",
+      "procedureIdentifier": "d9079f4d-112a-4e15-b01f-1df821762cfc",
+      "title": "Belgique – Services d'hôtellerie, de restauration et de commerce au détail – Contrat de location portant sur l’aménagement et l’exploitation d’un point de vente « RETAIL (exclusion Horeca) » situé face à la gare de Bruxelles-Midi, dans le BLOC II, sis Place Victor Horta, 26 à 1060 Bruxellesf",
+      "buyer": "SNCB",
+      "region": "Belgique",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-28",
+      "deadline": "2027-01-29",
+      "cpv": [
+        "55000000"
+      ],
+      "description": "Le présent cahier spécial des charges a pour objet l’attribution d’un contrat de location portant sur l’aménagement et l’exploitation d’un point de vente « RETAIL (exclusion Horeca) » situé face à la gare de Bruxelles-Midi, dans le BLOC II, sis Place Victor Horta, 26 à 1060 Bruxelles. Par le biais de la présente consultation de marché, la SNCB souhaite donc désigner un locataire pour l’exploitation de d’un point de vente \"RETAIL (exclusion Horeca)\", ci-après “l’Espace Commercial”, sur la base d’un contrat de bail commercial, au sens de la loi du 30 avril 1951 sur les baux commerciaux (Ancien Code Civil - Livre III - Titre VIII - Chapitre II, Section 2bis : Des règles particulières aux baux commerciaux),",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/745821-2026",
+      "publicationWorkspaceId": "a68c8638-f93e-43df-a364-24d845d1d1de",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/745821-2026",
+          "publicationNumber": "745821-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/a68c8638-f93e-43df-a364-24d845d1d1de/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ]
+    },
+    {
+      "id": "ted:747579-2026",
+      "publicationNumber": "747579-2026",
+      "procedureIdentifier": "febaa264-75f7-4048-8155-9c37fa7920ea",
+      "title": "Belgique – Autres sources d'approvisionnement en énergie et leur distribution – Valorisation de capacités de production électrique pilotables au gaz naturel",
+      "buyer": "Agence Intercommunale de Développement de Tournai, d'Ath et des communes avoisinantes IDETA scrl",
+      "region": "Belgique",
+      "sector": "Reseaux",
+      "sectors": [
+        "Reseaux"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-28",
+      "deadline": "",
+      "cpv": [
+        "65400000",
+        "65000000"
+      ],
+      "description": "II.1. Objet général de l'avis Le présent avis vise à informer le marché, à titre purement prévisionnel et non contraignant, de la réflexion menée par le pouvoir adjudicateur concernant la mise en place d'un mécanisme de valorisation économique de capacités de production électrique pilotables fonctionnant au gaz et destinées à répondre à des besoins d'intérêt général liés à l'accès à la puissance électrique. Le pouvoir adjudicateur étudie actuellement la possibilité de confier à un opérateur économique, dans le cadre d'un montage susceptible de relever du régime de la concession de services, l'exploitation commerciale et la valorisation économique de capacités de production électrique appartenant ou destinées à appartenir à une autorité publique. II.2. Description indicative du projet Le pouvoir adjudicateur étudie actuellement le développement de plusieurs unités de production électrique pilotables au gaz naturel destinées à soutenir l'alimentation électrique de zones d'activité économique confrontées à des contraintes de capacité du réseau. Le modèle envisagé repose sur une dissociation entre : - la propriété des installations détenue par l'autorité publique porteuse du projet, laquelle pourrait être le SPW ou toute autre entité publique participant à la procédure de marché définitive ; - la valorisation économique de la capacité, confiée à un opérateur économique sélectionné dans le cadre d'une procédure concurrentielle, qui est l’objet de cet appel à manifestation. À titre indicatif, la capacité concernée pourrait représenter jusqu'à quatre sites distincts pour une puissance totale comprise entre 80 et 100 MW. Le principe étudié repose sur la priorité donnée à l'intérêt général. L'installation devra être mobilisée lorsque cela est nécessaire pour répondre aux besoins locaux du réseau électrique. La capacité non requise pour cette mission pourra être valorisée librement par l'opérateur économique titulaire des droits d'usage sur les marchés de l'électricité. Lorsque l'installation est mobilisée à la demande de l'autorité publique afin de répondre à une contrainte locale du réseau ou à un besoin d'intérêt général, un mécanisme contractuel spécifique pourrait prévoir une compensation des coûts ou conséquences économiques directement imputables à cette mobilisation imposée. Les modalités précises de ce mécanisme restent à définir. En dehors de ces situations particulières, l'opérateur supporterait les risques liés à l'exploitation commerciale et à la valorisation économique de la capacité disponible sur les marchés de l'électricité. II.3. RISQUE D’EXPLOIT",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "pin-cfc-social",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/747579-2026",
+      "publicationWorkspaceId": "bff624cd-cd8d-4456-b659-46fa9c8aea12",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/747579-2026",
+          "publicationNumber": "747579-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/bff624cd-cd8d-4456-b659-46fa9c8aea12/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ]
+    },
+    {
+      "id": "ted:746859-2026",
+      "publicationNumber": "746859-2026",
+      "procedureIdentifier": "a20386ce-431f-404f-8c7a-a60f8ed53ef9",
+      "title": "Belgique – Vêtements professionnels, vêtements de travail spéciaux et accessoires – Marché stock catalogue à lots relatif à l'achat, la location, l'entretien et la réparation des vêtements de travail du personnel ouvrier et des auxiliaires professionnelles de la Ville de Herstal",
+      "buyer": "Ville de Herstal - Centre administratif \"La Ruche\"",
+      "region": "Belgique",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-28",
+      "deadline": "2026-11-27",
+      "cpv": [
+        "18100000"
+      ],
+      "description": "Le code du bien-être au travail indique dans son livre IX, titre 3, chapitre III « Vêtements de travail - Conditions d'utilisation » que l'Employeur est tenu de fournir sans frais un vêtement de travail aux travailleurs, l'Employeur assure ou fait assurer, à ses frais, le nettoyage, la réparation, l'entretien ainsi que le renouvellement en temps utiles des vêtements de travail. Le marché est divisé en lots comme suit : Lot 1 “ location, l’entretien et la réparation de vêtements de travail pour les ouvriers et les auxiliaires professionnelles ”: Lot 2 “Vêtements de type \"Courants”: Lot 3 “Achats de vêtements spécifiques”: La description ci-dessus est indicative et non exhaustive. Le détail précis des prestations par lot figure dans les clauses techniques et les métrés récapitulatifs annexés au présent Cahier Spécial des Charges",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/746859-2026",
+      "publicationWorkspaceId": "f79ef586-e2c3-4242-a0fd-89a9ae349cf7",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/746859-2026",
+          "publicationNumber": "746859-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/f79ef586-e2c3-4242-a0fd-89a9ae349cf7/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ]
+    },
+    {
+      "id": "ted:745617-2026",
+      "publicationNumber": "745617-2026",
+      "procedureIdentifier": "c9bfec8e-2c75-4133-a078-cfe5030cb854",
+      "title": "Belgique – Services horticoles – Direction des routes du Luxembourg - Entretien des espaces verts sur le réseau routier - District d'Arlon",
+      "buyer": "SOFICO (Société Wallonne de Financement Complémentaire des Infrastructures)",
+      "region": "Belgique",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-28",
+      "deadline": "2026-12-01",
+      "cpv": [
+        "77300000",
+        "77310000",
+        "77340000"
+      ],
+      "description": "Chacun des marchés conclus sur la base de l’accord-cadre est un marché de services qui a pour objet l’exécution de services d’entretien ordinaire des plantations et des espaces verts le long des routes du réseau de la Direction des routes du Luxembourg – district d’Arlon. Les services s’effectuent sur des routes appartenant au réseau I qui sont décrites en annexe du présent cahier spécial des charges ainsi que sur des routes du réseau II. Le relevé des deux réseaux est repris en annexe du présent CSC. Les services sont de l’entretien préventif, conditionnel et curatif (voir glossaire).",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/745617-2026",
+      "publicationWorkspaceId": "f6154835-5b4d-4e35-8c8e-3a5ce7fd0dda",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/745617-2026",
+          "publicationNumber": "745617-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/f6154835-5b4d-4e35-8c8e-3a5ce7fd0dda/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ]
+    },
+    {
+      "id": "ted:746827-2026",
+      "publicationNumber": "746827-2026",
+      "procedureIdentifier": "307f50eb-e9b8-4037-8927-ff4dc91e7f9d",
+      "title": "Belgique – Services de développement de logiciels de gestion des relations clientèle (CRM) – Mission de reprise, maintenance et d'évolution de l'outil de gestion de la relation client (CRM)",
+      "buyer": "OPERATEUR DE TRANSPORT DE WALLONIE",
+      "region": "Belgique",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-28",
+      "deadline": "",
+      "cpv": [
+        "72212445"
+      ],
+      "description": "Objet du marché : Mission de reprise, maintenance et d’évolution de l’outil de gestion de la relation client (CRM). Le présent cahier spécial des charges et son annexe « Exigences techniques » décrivent les types de prestations que LETEC souhaite activer pour l’exécution de ce marché. Ces éléments permettent de traduire la philosophie des réalisations attendues et doivent permettre au soumissionnaire de définir les profils ainsi que la méthodologie les plus adéquats pour parvenir aux objectifs évoqués. Néanmoins, une partie des prestations sera provisionnée sous l’angle de profils-types à activer (voir document d’inventaire). Leur activation effective sera à confirmer en cours d’exécution de marché par le pouvoir adjudicateur à travers l’utilisation du mécanisme de bons de commande. Les prestations principales peuvent être décrites comme telles : - Accompagnement méthodologique et bonnes pratiques : o Élaboration d’audit d’utilisation/audit technique, définition des priorités, définition des roadmaps, o Conduite d’ateliers de co-création, formalisation des processus, o Définition des KPIs et paramétrage des outils associés, o Gestion de projet dans les règles de l’art, portant notamment sur les aspects de gestion de planning, gestion budgétaire, gestion du backlog, documentation fonctionnelle et technique. o Partage de bonnes pratiques et benchmark sur base d’expériences aurprès d’organisations comparables - Reprise de l’existant : o Reprise des environnements, paramétrages, développements spécifiques, intégrations et composants existants, o Reprise de la documentation fonctionnelle, technique, maintenance et mise à jour, o Reprise du matériel de formation, maintenance et mise à jour, o Organisation et réalisation des transferts de connaissances avec les parties prenantes concernées o Prise en charge de la maintenance et des évolutions de la plateforme dès la fin de la période de transition - Accompagnement fonctionnel : o Développement ou paramétrage de nouvelles fonctionnalités, de préférence en standard ou customisées aux besoins de LETEC, o Décommissionnement de fonctionnalités obsolètes, o Adaptations fonctionnelles suite aux évolutions Microsoft, o Intégration de besoins en lien avec les autres plateformes digitales LETEC (comme par exemple – non limitatif : site client letec.be ou futur site professionnel LETEC pro, applications mobiles, back-end de vente, réseaux sociaux) o Constitution et administration des référentiels de données et des APIS nécessaires à leur exposition, dans le respect des normes de sécurité et de gestion des données à caract",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/746827-2026",
+      "publicationWorkspaceId": "b3f28044-abc6-4b92-bb7d-f0495b57c8f9",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/746827-2026",
+          "publicationNumber": "746827-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/b3f28044-abc6-4b92-bb7d-f0495b57c8f9/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ]
+    },
     {
       "id": "ted:685167-2026",
       "publicationNumber": "742024-2026",
@@ -259,6 +490,65 @@
       ]
     },
     {
+      "id": "bosa:678cdb9e-c6a9-4aa3-bca7-3fccd0041195",
+      "publicationWorkspaceId": "678cdb9e-c6a9-4aa3-bca7-3fccd0041195",
+      "noticeId": "82b08990-8546-4ba8-8b88-1f9e32cd30a4",
+      "procedureIdentifier": "53282ac8-06dc-4aa0-b018-12dceb6ff9ff",
+      "internalReference": "PPP0H0-922/6136/20260023_001",
+      "title": "Désignation d'un auteur de projet pour la mise en oeuvre de la fiche-projet n°1 du PATO - réaménagement de la Place Saint-Remacle, de la rue du Vinâve et de la rue Général Jacques",
+      "buyer": "Stavelot",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 95,
+      "screening": "main",
+      "publication": "2026-10-27",
+      "deadline": "2026-12-01T12:00:00+01:00",
+      "cpv": [
+        "71240000"
+      ],
+      "description": "Désignation d'un auteur de projet pour la mise en oeuvre de la fiche-projet n°1 du PATO - réaménagement de la Place Saint-Remacle, de la rue du Vinâve et de la rue Général Jacques",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "PPP0H0-922/6136/20260023_001",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/678cdb9e-c6a9-4aa3-bca7-3fccd0041195/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/678cdb9e-c6a9-4aa3-bca7-3fccd0041195/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [],
+      "consultationUrls": [
+        {
+          "url": "https://cloud.3p.eu/Downloads/1/922/H0/2026",
+          "type": "officially_referenced_external_documents",
+          "access": "destination_not_download_verified",
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/678cdb9e-c6a9-4aa3-bca7-3fccd0041195/urls?full=false",
+          "activatedAt": "2026-10-27T13:58:46.018452"
+        }
+      ],
+      "documentsCheckedAt": "2026-10-27T16:52:54.514Z",
+      "matchReason": "prestation_decrite",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/678cdb9e-c6a9-4aa3-bca7-3fccd0041195/general"
+        }
+      ],
+      "deadlineTime": "12:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/678cdb9e-c6a9-4aa3-bca7-3fccd0041195/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n01/12/2026 12:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
+    },
+    {
       "id": "ted:741500-2026",
       "publicationNumber": "741500-2026",
       "procedureIdentifier": "44457595-75fb-4a94-ac9d-53c48da30407",
@@ -300,6 +590,137 @@
       "noticeNumbers": [
         "741500-2026"
       ]
+    },
+    {
+      "id": "bosa:b0df4a96-c1e3-4632-a4dd-583d65708f60",
+      "publicationWorkspaceId": "b0df4a96-c1e3-4632-a4dd-583d65708f60",
+      "noticeId": "8f979915-f4e9-4735-84b7-a4a274f02df7",
+      "procedureIdentifier": "99947cb6-a5f5-4e68-815b-54192849b935",
+      "internalReference": "STPI 2026/43_pub01",
+      "title": "Marché de service de désignation d’un bureau d’études pour l’analyse du patrimoine immobilier et l’élaboration d’un plan stratégique de priorisation et de planification des travaux",
+      "buyer": "Province de Namur - Service des marchés publics",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 71,
+      "screening": "review",
+      "publication": "2026-10-27",
+      "deadline": "2026-11-05T09:30:00+01:00",
+      "cpv": [
+        "71200000",
+        "71240000"
+      ],
+      "description": "Le marché de services porte sur la réalisation d’un diagnostic complet du patrimoine immobilier provincial des sites suivants : Ecole Provinciale d’Agronomie et des Sciences de Ciney (EPASC) – Ecole Provinciale d’Elevages et d’Equitation de Gesves (EPEEG) – Campus Provincial (CAMPUS) – Maison Administrative de la Province de Namur (MAP) -  Haute Ecole de la Province de Namur (HEPN) et l’élaboration d’une stratégie intégrée de priorisation, de planification et de programmation des interventions (rénovation, mise en conformité, performance énergétique, conservation patrimoniale, de maintenance préventive etc…).  Ce marché intègrera également une analyse du musée de Arts anciens pour lequel un marché d’auteur de projet est prévu en parallèle de cette mission. La mission de l’auteur de projet aura pour objet la réalisation d’un projet complet de rénovation du bâtiment.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E3",
+      "noticeKind": "competition",
+      "bdaReference": "STPI 2026/43_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "0921d6ea-8160-41a1-8a8d-d7da2c188ed2",
+          "title": "20210525 - Modèle Offre.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "9b191199-fa0a-450c-a61d-b1d041a9fc47",
+          "documentId": "8e089714-2e3c-4263-a8ed-e3af162cd539",
+          "activatedAt": "2026-10-02T15:02:45.040013",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "119ed0dd-79c4-4e39-be28-597cb7c0a175",
+          "title": "Strat Immo (1).pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "10a29f5e-adb1-414e-bb43-2bbdc882c9bd",
+          "documentId": "0677abc5-a6b5-4404-bd65-2f7e9cd60cb7",
+          "activatedAt": "2026-10-02T15:02:45.040013",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "4758603d-ac09-4b6d-b721-288e198aa229",
+          "title": "Bordereau_Eleny TUTTOBENE.xlsx",
+          "kind": "bill_of_quantities",
+          "fileType": "xlsx",
+          "versionId": "5d68d41e-b0a6-4fd5-a9a6-fc7f0437d587",
+          "documentId": "5a88835f-590f-45df-9a73-adc9be0d83a9",
+          "activatedAt": "2026-10-02T15:02:45.040013",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "892dea8d-ed3a-4347-8a41-cb0267bf1558",
+          "title": "CSC - 2026-43.pdf",
+          "kind": "csc",
+          "fileType": "pdf",
+          "versionId": "2791156c-f9e1-422c-b4b5-9207c37226f5",
+          "documentId": "90f61b63-a80a-4838-baff-5553777cfc60",
+          "activatedAt": "2026-10-02T15:02:45.040013",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "dddb5a40-9c14-4a3f-9052-7801fa13aac7",
+          "title": "Batiments Strat photos.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "8a42ec9b-0c93-4a06-8e6d-aa5e480e7043",
+          "documentId": "e8f583ce-3f9b-468b-9db4-827eefd228f8",
+          "activatedAt": "2026-10-02T15:02:45.040013",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "eea16fe9-c176-4705-ac50-f3c5a494773c",
+          "title": "CSC AP Plan quinquennal final_Eleny TUTTOBENE.pdf",
+          "kind": "csc",
+          "fileType": "pdf",
+          "versionId": "3aad187e-2bde-44d2-9408-cc8ffccd3382",
+          "documentId": "0f1e33fd-112b-4b08-a2de-244747947f4a",
+          "activatedAt": "2026-10-02T15:02:45.040013",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-15T20:01:46.561Z",
+      "matchReason": "prestation_decrite",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/general"
+        }
+      ],
+      "deadlineTime": "09:30",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n05/11/2026 09:30 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:c97a59fa-3786-465a-a433-0dfd87354e3b",
@@ -936,7 +1357,7 @@
       "score": 52,
       "screening": "review",
       "publication": "2026-10-22",
-      "deadline": "",
+      "deadline": "2027-01-15T12:00:00+01:00",
       "cpv": [
         "55000000"
       ],
@@ -1078,7 +1499,13 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/3ab3ec25-78b5-4c2f-af13-1cb572590b1c/general"
         }
-      ]
+      ],
+      "deadlineTime": "12:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/3ab3ec25-78b5-4c2f-af13-1cb572590b1c/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n15/01/2027 12:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:c02b39f7-a9c2-4c4a-9df7-1c282473aacd",
@@ -1099,7 +1526,7 @@
       "score": 52,
       "screening": "review",
       "publication": "2026-10-22",
-      "deadline": "",
+      "deadline": "2026-11-16T10:00:00+01:00",
       "cpv": [
         "72316000"
       ],
@@ -1137,7 +1564,13 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/c02b39f7-a9c2-4c4a-9df7-1c282473aacd/general"
         }
-      ]
+      ],
+      "deadlineTime": "10:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/c02b39f7-a9c2-4c4a-9df7-1c282473aacd/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n16/11/2026 10:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:1ec3a4ad-4466-416b-b7c5-818f4ba95c88",
@@ -1264,7 +1697,7 @@
       "score": 74,
       "screening": "review",
       "publication": "2026-10-21",
-      "deadline": "",
+      "deadline": "2026-11-27T11:00:00+01:00",
       "cpv": [
         "71300000",
         "71317100",
@@ -1304,7 +1737,13 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/general"
         }
-      ]
+      ],
+      "deadlineTime": "11:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n27/11/2026 11:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "ted:682582-2026",
@@ -1417,7 +1856,7 @@
       "score": 95,
       "screening": "main",
       "publication": "2026-10-20",
-      "deadline": "",
+      "deadline": "2026-11-20T10:00:00+01:00",
       "cpv": [
         "71310000"
       ],
@@ -1481,7 +1920,13 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/443228c0-3dec-4eba-bef0-857510a777d7/general"
         }
-      ]
+      ],
+      "deadlineTime": "10:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/443228c0-3dec-4eba-bef0-857510a777d7/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n20/11/2026 10:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:e26a641b-92f3-441a-b4ba-e23435579289",
@@ -1686,7 +2131,7 @@
       "score": 71,
       "screening": "review",
       "publication": "2026-10-20",
-      "deadline": "",
+      "deadline": "2026-11-25T12:00:00+01:00",
       "cpv": [
         "71000000"
       ],
@@ -1750,7 +2195,13 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/general"
         }
-      ]
+      ],
+      "deadlineTime": "12:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n25/11/2026 12:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:9b2d4ca1-90f1-48ea-95dd-0383fdb60adc",
@@ -1867,7 +2318,7 @@
       "score": 52,
       "screening": "review",
       "publication": "2026-10-20",
-      "deadline": "",
+      "deadline": "2026-11-12T12:00:00+01:00",
       "cpv": [
         "30220000"
       ],
@@ -1970,7 +2421,13 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/general"
         }
-      ]
+      ],
+      "deadlineTime": "12:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/13b247ed-f02c-4300-adab-5ee0e34f3ba8/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n12/11/2026 12:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:95f71e2e-add3-49e6-a9d0-86c90b50edeb",
@@ -1991,7 +2448,7 @@
       "score": 52,
       "screening": "review",
       "publication": "2026-10-20",
-      "deadline": "",
+      "deadline": "2026-11-16T12:00:00+01:00",
       "cpv": [
         "72400000"
       ],
@@ -2211,7 +2668,13 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/general"
         }
-      ]
+      ],
+      "deadlineTime": "12:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/95f71e2e-add3-49e6-a9d0-86c90b50edeb/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n16/11/2026 12:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:39d44437-5cbe-4fa2-886e-3e5a3af6ea5c",
@@ -2233,7 +2696,7 @@
       "score": 49,
       "screening": "review",
       "publication": "2026-10-20",
-      "deadline": "",
+      "deadline": "2026-11-17T09:00:00+01:00",
       "cpv": [
         "71221000",
         "71200000"
@@ -2285,7 +2748,13 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/general"
         }
-      ]
+      ],
+      "deadlineTime": "09:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n17/11/2026 09:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:cad02ebd-b140-48ed-a970-6c3bab54c6aa",
@@ -2449,7 +2918,7 @@
       "score": 74,
       "screening": "review",
       "publication": "2026-10-19",
-      "deadline": "",
+      "deadline": "2026-11-30T18:00:00+01:00",
       "cpv": [
         "37500000"
       ],
@@ -2526,7 +2995,13 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/01585054-3e27-4d0e-bb3c-ea614119d7b4/general"
         }
-      ]
+      ],
+      "deadlineTime": "18:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/01585054-3e27-4d0e-bb3c-ea614119d7b4/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n30/11/2026 18:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "ted:721110-2026",
@@ -2634,7 +3109,7 @@
       "score": 52,
       "screening": "review",
       "publication": "2026-10-19",
-      "deadline": "",
+      "deadline": "2026-11-02T15:00:00+01:00",
       "cpv": [
         "71520000"
       ],
@@ -2737,7 +3212,13 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/general"
         }
-      ]
+      ],
+      "deadlineTime": "15:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n02/11/2026 15:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:ceb26939-f737-4a41-91fb-c193e9e2f285",
@@ -3683,7 +4164,7 @@
       "score": 98,
       "screening": "main",
       "publication": "2026-10-13",
-      "deadline": "",
+      "deadline": "2026-11-10T10:00:00+01:00",
       "cpv": [
         "71355200"
       ],
@@ -4028,7 +4509,13 @@
           ]
         }
       ],
-      "matchReason": "prestation_decrite"
+      "matchReason": "prestation_decrite",
+      "deadlineTime": "10:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n10/11/2026 10:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:e73a64fc-bc95-43e4-b23f-4775ded5a94d",
@@ -4141,7 +4628,7 @@
       "score": 74,
       "screening": "review",
       "publication": "2026-10-13",
-      "deadline": "",
+      "deadline": "2026-11-16T14:00:00+01:00",
       "cpv": [
         "71000000",
         "71420000",
@@ -4176,7 +4663,13 @@
         }
       ],
       "documentsCheckedAt": "2026-10-15T15:05:34.500Z",
-      "matchReason": "projet_indirect"
+      "matchReason": "projet_indirect",
+      "deadlineTime": "14:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/3b81ba48-e9f4-4d6f-9c05-5ba699c7f209/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n16/11/2026 14:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:5bd81436-f6c8-4b29-934f-a319902d7f1b",
@@ -4247,7 +4740,7 @@
       "score": 55,
       "screening": "excluded",
       "publication": "2026-10-13",
-      "deadline": "",
+      "deadline": "2026-11-12T12:00:00+01:00",
       "cpv": [
         "72224000",
         "79411100",
@@ -4272,6 +4765,19 @@
           "versionId": "01148e64-5a0a-4a3d-b0e6-9e3e244b15e2",
           "documentId": "3604f8b5-085a-4ad4-924c-6b6bd04f2b0d",
           "activatedAt": "2026-10-13T04:29:04.373261",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/dfdf8ed6-f60e-4be6-9024-e608d8bc079a/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "53d90487-0750-4242-bacb-5bcc49d18a67",
+          "title": "Rechtzettingsbericht_VLAIO-2026-17_BIZGIS_fase_3.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "581825a4-1392-483d-af1c-4e0f3e261635",
+          "documentId": "ae7d35b2-cc1c-4eb9-be8a-9a1c4d4666bf",
+          "activatedAt": "2026-10-28T04:23:17.908539",
           "language": "NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
@@ -4372,7 +4878,7 @@
       "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/dfdf8ed6-f60e-4be6-9024-e608d8bc079a/documents",
       "documentsPageSource": "public_api_200",
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-15T15:05:38.091Z",
+      "documentsCheckedAt": "2026-10-28T11:29:06.358Z",
       "documentAnalyses": [
         {
           "documentId": "10b78ba2-8404-4eba-a96a-0c4346f29731",
@@ -4444,7 +4950,13 @@
             }
           ]
         }
-      ]
+      ],
+      "deadlineTime": "12:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/dfdf8ed6-f60e-4be6-9024-e608d8bc079a/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n12/11/2026 12:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "ted:704246-2026",
@@ -4507,7 +5019,7 @@
       "score": 98,
       "screening": "main",
       "publication": "2026-10-12",
-      "deadline": "",
+      "deadline": "2026-11-10T11:00:00+01:00",
       "cpv": [
         "71353000"
       ],
@@ -4539,7 +5051,13 @@
         }
       ],
       "documentsCheckedAt": "2026-10-15T15:05:41.694Z",
-      "matchReason": "prestation_decrite"
+      "matchReason": "prestation_decrite",
+      "deadlineTime": "11:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/834b6f23-3906-4589-a0e7-afae9c91d26a/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n10/11/2026 11:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "ted:702319-2026",
@@ -4861,7 +5379,7 @@
       "score": 52,
       "screening": "review",
       "publication": "2026-10-12",
-      "deadline": "",
+      "deadline": "2026-10-22T09:30:00+02:00",
       "cpv": [
         "31600000"
       ],
@@ -4938,7 +5456,13 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/0a68b2b8-2e25-43c7-b9c1-bd3988de7958/general"
         }
-      ]
+      ],
+      "deadlineTime": "09:30",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/0a68b2b8-2e25-43c7-b9c1-bd3988de7958/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n22/10/2026 09:30 CEST",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:bfe42a0b-24c3-4380-b90b-80cdcf48327b",
@@ -5541,7 +6065,7 @@
       "score": 62,
       "screening": "review",
       "publication": "2026-10-08",
-      "deadline": "",
+      "deadline": "2026-11-03T12:15:00+01:00",
       "cpv": [
         "63500000"
       ],
@@ -5670,7 +6194,13 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/701ccecb-d0c3-40ee-a001-6b3f31284990/general"
         }
-      ]
+      ],
+      "deadlineTime": "12:15",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/701ccecb-d0c3-40ee-a001-6b3f31284990/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n03/11/2026 12:15 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:9d0ec06d-a008-4d61-b1a2-914f5e0bc153",
@@ -5796,7 +6326,7 @@
       "score": 71,
       "screening": "review",
       "publication": "2026-10-07",
-      "deadline": "",
+      "deadline": "2026-10-26T11:00:00+01:00",
       "cpv": [
         "79132000"
       ],
@@ -5828,7 +6358,13 @@
         }
       ],
       "documentsCheckedAt": "2026-10-15T15:05:56.045Z",
-      "matchReason": "prestation_decrite"
+      "matchReason": "prestation_decrite",
+      "deadlineTime": "11:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/2057ca19-d4bd-43d6-bf36-bbc34ec2f71f/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n26/10/2026 11:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:89cf5bb4-298c-469e-a617-808e4dd53e0a",
@@ -6000,7 +6536,7 @@
       "score": 95,
       "screening": "main",
       "publication": "2026-10-06",
-      "deadline": "",
+      "deadline": "2026-11-03T12:00:00+01:00",
       "cpv": [
         "73000000"
       ],
@@ -6051,7 +6587,13 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/dc91d29f-1949-4ab7-8b6f-a8fbb4cf251b/general"
         }
-      ]
+      ],
+      "deadlineTime": "12:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/dc91d29f-1949-4ab7-8b6f-a8fbb4cf251b/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n03/11/2026 12:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:01509819-f5c0-415f-8117-7aa3ba361605",
@@ -6072,7 +6614,7 @@
       "score": 74,
       "screening": "review",
       "publication": "2026-10-06",
-      "deadline": "",
+      "deadline": "2026-11-06T11:00:00+01:00",
       "cpv": [
         "45315400"
       ],
@@ -6104,7 +6646,13 @@
           "activatedAt": "2026-10-06T12:58:45.015167"
         }
       ],
-      "documentsCheckedAt": "2026-10-16T15:29:45.714Z"
+      "documentsCheckedAt": "2026-10-16T15:29:45.714Z",
+      "deadlineTime": "11:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/01509819-f5c0-415f-8117-7aa3ba361605/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n06/11/2026 11:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "ted:688800-2026",
@@ -6211,7 +6759,7 @@
       "score": 52,
       "screening": "review",
       "publication": "2026-10-06",
-      "deadline": "",
+      "deadline": "2026-11-03T12:00:00+01:00",
       "cpv": [
         "79952000"
       ],
@@ -6275,7 +6823,13 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/aa38b685-c160-4637-9387-7ca56b1e8db0/general"
         }
-      ]
+      ],
+      "deadlineTime": "12:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/aa38b685-c160-4637-9387-7ca56b1e8db0/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n03/11/2026 12:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:9d028d41-9338-4d74-93d8-eb37249a0902",
@@ -6629,7 +7183,7 @@
       "score": 52,
       "screening": "review",
       "publication": "2026-10-05",
-      "deadline": "",
+      "deadline": "2026-10-29T11:00:00+01:00",
       "cpv": [
         "45000000"
       ],
@@ -6680,7 +7234,13 @@
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/general"
         }
-      ]
+      ],
+      "deadlineTime": "11:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n29/10/2026 11:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:d132e2d7-29b4-4489-9e26-70db1504fa8f",
@@ -6699,7 +7259,7 @@
       "score": 95,
       "screening": "main",
       "publication": "2026-10-02",
-      "deadline": "",
+      "deadline": "2026-10-09T10:00:00+02:00",
       "cpv": [
         "71350000"
       ],
@@ -6754,132 +7314,13 @@
           "evidence": []
         }
       ],
-      "matchReason": "prestation_decrite"
-    },
-    {
-      "id": "bosa:b0df4a96-c1e3-4632-a4dd-583d65708f60",
-      "publicationWorkspaceId": "b0df4a96-c1e3-4632-a4dd-583d65708f60",
-      "noticeId": "8f979915-f4e9-4735-84b7-a4a274f02df7",
-      "procedureIdentifier": "99947cb6-a5f5-4e68-815b-54192849b935",
-      "internalReference": "STPI 2026/43_pub01",
-      "title": "Marché de service de désignation d’un bureau d’études pour l’analyse du patrimoine immobilier et l’élaboration d’un plan stratégique de priorisation et de planification des travaux",
-      "buyer": "Province de Namur - Service des marchés publics",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 71,
-      "screening": "review",
-      "publication": "2026-10-27",
-      "deadline": "",
-      "cpv": [
-        "71200000",
-        "71240000"
-      ],
-      "description": "Le marché de services porte sur la réalisation d’un diagnostic complet du patrimoine immobilier provincial des sites suivants : Ecole Provinciale d’Agronomie et des Sciences de Ciney (EPASC) – Ecole Provinciale d’Elevages et d’Equitation de Gesves (EPEEG) – Campus Provincial (CAMPUS) – Maison Administrative de la Province de Namur (MAP) -  Haute Ecole de la Province de Namur (HEPN) et l’élaboration d’une stratégie intégrée de priorisation, de planification et de programmation des interventions (rénovation, mise en conformité, performance énergétique, conservation patrimoniale, de maintenance préventive etc…).  Ce marché intègrera également une analyse du musée de Arts anciens pour lequel un marché d’auteur de projet est prévu en parallèle de cette mission. La mission de l’auteur de projet aura pour objet la réalisation d’un projet complet de rénovation du bâtiment.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "E3",
-      "noticeKind": "competition",
-      "bdaReference": "STPI 2026/43_pub01",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [
-        {
-          "id": "0921d6ea-8160-41a1-8a8d-d7da2c188ed2",
-          "title": "20210525 - Modèle Offre.docx",
-          "kind": "other",
-          "fileType": "docx",
-          "versionId": "9b191199-fa0a-450c-a61d-b1d041a9fc47",
-          "documentId": "8e089714-2e3c-4263-a8ed-e3af162cd539",
-          "activatedAt": "2026-10-02T15:02:45.040013",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "119ed0dd-79c4-4e39-be28-597cb7c0a175",
-          "title": "Strat Immo (1).pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "10a29f5e-adb1-414e-bb43-2bbdc882c9bd",
-          "documentId": "0677abc5-a6b5-4404-bd65-2f7e9cd60cb7",
-          "activatedAt": "2026-10-02T15:02:45.040013",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "4758603d-ac09-4b6d-b721-288e198aa229",
-          "title": "Bordereau_Eleny TUTTOBENE.xlsx",
-          "kind": "bill_of_quantities",
-          "fileType": "xlsx",
-          "versionId": "5d68d41e-b0a6-4fd5-a9a6-fc7f0437d587",
-          "documentId": "5a88835f-590f-45df-9a73-adc9be0d83a9",
-          "activatedAt": "2026-10-02T15:02:45.040013",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "892dea8d-ed3a-4347-8a41-cb0267bf1558",
-          "title": "CSC - 2026-43.pdf",
-          "kind": "csc",
-          "fileType": "pdf",
-          "versionId": "2791156c-f9e1-422c-b4b5-9207c37226f5",
-          "documentId": "90f61b63-a80a-4838-baff-5553777cfc60",
-          "activatedAt": "2026-10-02T15:02:45.040013",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "dddb5a40-9c14-4a3f-9052-7801fa13aac7",
-          "title": "Batiments Strat photos.pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "8a42ec9b-0c93-4a06-8e6d-aa5e480e7043",
-          "documentId": "e8f583ce-3f9b-468b-9db4-827eefd228f8",
-          "activatedAt": "2026-10-02T15:02:45.040013",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "eea16fe9-c176-4705-ac50-f3c5a494773c",
-          "title": "CSC AP Plan quinquennal final_Eleny TUTTOBENE.pdf",
-          "kind": "csc",
-          "fileType": "pdf",
-          "versionId": "3aad187e-2bde-44d2-9408-cc8ffccd3382",
-          "documentId": "0f1e33fd-112b-4b08-a2de-244747947f4a",
-          "activatedAt": "2026-10-02T15:02:45.040013",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        }
-      ],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-15T20:01:46.561Z",
       "matchReason": "prestation_decrite",
-      "screeningReason": null,
-      "officialSources": [
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/b0df4a96-c1e3-4632-a4dd-583d65708f60/general"
-        }
-      ]
+      "deadlineTime": "10:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/d132e2d7-29b4-4489-9e26-70db1504fa8f/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n09/10/2026 10:00 CEST",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
       "id": "bosa:b23c11c4-56da-45fc-a9a0-aa4c2ae8c5a6",
@@ -8607,49 +9048,136 @@
       "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
-      "id": "bosa:678cdb9e-c6a9-4aa3-bca7-3fccd0041195",
-      "publicationWorkspaceId": "678cdb9e-c6a9-4aa3-bca7-3fccd0041195",
-      "noticeId": "82b08990-8546-4ba8-8b88-1f9e32cd30a4",
-      "procedureIdentifier": "53282ac8-06dc-4aa0-b018-12dceb6ff9ff",
-      "internalReference": "PPP0H0-922/6136/20260023_001",
-      "title": "Désignation d'un auteur de projet pour la mise en oeuvre de la fiche-projet n°1 du PATO - réaménagement de la Place Saint-Remacle, de la rue du Vinâve et de la rue Général Jacques",
-      "buyer": "Stavelot",
+      "id": "bosa:29e497d1-4590-4abe-b113-8df4abe95987",
+      "publicationWorkspaceId": "29e497d1-4590-4abe-b113-8df4abe95987",
+      "noticeId": "0eb9401b-8a1f-42ef-82a2-d6e1d35c6161",
+      "procedureIdentifier": "c0a3ba95-6650-4702-a95a-9853302cf5ad",
+      "internalReference": "03.06.04-26-598_pub01",
+      "title": "Marché de fournitures de matériel limnimétrique : data loggers XLink500 et sondes de pression PLS500",
+      "buyer": "O3.06.04 - Direction des Cours d'eau non navigables",
+      "region": "Belgique",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Hydraulique",
+      "sectors": [
+        "Hydraulique"
+      ],
+      "score": 71,
+      "screening": "review",
+      "publication": "2026-10-28",
+      "deadline": "",
+      "cpv": [
+        "32260000",
+        "32581000"
+      ],
+      "description": "La Direction des Cours d’Eau non navigables (DCENN) dispose d’un réseau de mesures limnimétriques composé de plus de 300 stations. Elle réalise l’installation, l’entretien et le jaugeage de son réseau de mesures en interne. Ce type de matériel peut subir des dommages irréversibles. Il est dès lors indispensable de disposer d’un stock pour garantir une réactivité suffisante en cas de panne. A cette fin, il a été décidé",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "03.06.04-26-598_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/29e497d1-4590-4abe-b113-8df4abe95987/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/29e497d1-4590-4abe-b113-8df4abe95987/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "03.06.04-26-598_pub01",
+          "url": "https://www.publicprocurement.be/publication-workspaces/29e497d1-4590-4abe-b113-8df4abe95987/general",
+          "publicationDate": "2026-10-28",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [
+        {
+          "id": "a5435300-1fd4-45f4-b45a-3800150b066a",
+          "title": "DMA_MaterielLimni.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "f1b56252-802c-4a48-8062-8558b1c15f03",
+          "documentId": "fd3a694d-645f-4980-aa3a-cd08b0e0c2f7",
+          "activatedAt": "2026-10-28T08:21:46.026348",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/29e497d1-4590-4abe-b113-8df4abe95987/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "d882553c-97bc-4480-95b6-47ebd59e5613",
+          "title": "Recours auprès du Conseil d'Etat.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "e92a20e4-651b-4d72-93f5-7502f54715a2",
+          "documentId": "8417a32c-7958-43bb-ae29-feb76241b05f",
+          "activatedAt": "2026-10-28T08:21:46.026348",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/29e497d1-4590-4abe-b113-8df4abe95987/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-28T11:31:16.223Z"
+    },
+    {
+      "id": "bosa:a6fb49e3-670e-4995-b0a6-f74dc70dcf89",
+      "publicationWorkspaceId": "a6fb49e3-670e-4995-b0a6-f74dc70dcf89",
+      "noticeId": "c7318b87-900c-43c1-b2a7-bf6e373bc7f6",
+      "procedureIdentifier": "292d4419-3d64-4147-8bef-1e545baf780d",
+      "internalReference": "03.06.04-26-790_pub01",
+      "title": "MARCHÉ DE SERVICES POUR L’ÉTUDE DE PROJETS, LA SURVEILLANCE TECHNIQUE DES  CHANTIERS ET LA COORDINATION SÉCURITÉ-SANTÉ DES TRAVAUX RELATIFS AUX COURS  D’EAU NON NAVIGABLES DE PREMIÈRE CATÉGORIE DU DISTRICT DE LIEGE",
+      "buyer": "O3.06.04 - Direction des Cours d'eau non navigables",
       "region": "Wallonie",
       "languages": [
         "FR"
       ],
-      "sector": "VRD",
+      "sector": "Hydraulique",
       "sectors": [
-        "VRD"
+        "Hydraulique"
       ],
-      "score": 95,
-      "screening": "main",
-      "publication": "2026-10-27",
+      "score": 74,
+      "screening": "review",
+      "publication": "2026-10-28",
       "deadline": "",
       "cpv": [
-        "71240000"
+        "71000000"
       ],
-      "description": "Désignation d'un auteur de projet pour la mise en oeuvre de la fiche-projet n°1 du PATO - réaménagement de la Place Saint-Remacle, de la rue du Vinâve et de la rue Général Jacques",
+      "description": "Marché de services visant à l’assistance au District de Liège dans le  cadre d’études de projets, à la surveillance technique de chantiers et  à la coordination sécurité-santé (phase projet et phase réalisation)  pour les chantiers de travaux d’entretien et les travaux de modification  du lit ou des ouvrages d’art y établis et les travaux d’aménagement de  passe à poissons permettant de rétablir la libre circulation du poisson,  sur les secteurs de Huy, de Malmedy et de Verviers.",
       "source": "BOSA",
       "source_status": "bosa_public_browser",
-      "noticeSubType": "16",
-      "noticeKind": "competition",
-      "bdaReference": "PPP0H0-922/6136/20260023_001",
+      "noticeSubType": "33",
+      "noticeKind": "award",
+      "bdaReference": "03.06.04-26-790_pub01",
       "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/678cdb9e-c6a9-4aa3-bca7-3fccd0041195/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/678cdb9e-c6a9-4aa3-bca7-3fccd0041195/documents",
+      "url": "https://www.publicprocurement.be/publication-workspaces/a6fb49e3-670e-4995-b0a6-f74dc70dcf89/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/a6fb49e3-670e-4995-b0a6-f74dc70dcf89/documents",
       "documentsPageSource": "public_api_200",
-      "documentInventory": [],
-      "consultationUrls": [
+      "bosaResults": [
         {
-          "url": "https://cloud.3p.eu/Downloads/1/922/H0/2026",
-          "type": "officially_referenced_external_documents",
-          "access": "destination_not_download_verified",
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/678cdb9e-c6a9-4aa3-bca7-3fccd0041195/urls?full=false",
-          "activatedAt": "2026-10-27T13:58:46.018452"
+          "reference": "03.06.04-26-790_pub01",
+          "url": "https://www.publicprocurement.be/publication-workspaces/a6fb49e3-670e-4995-b0a6-f74dc70dcf89/general",
+          "publicationDate": "2026-10-28",
+          "kind": "award"
         }
       ],
-      "documentsCheckedAt": "2026-10-27T16:52:54.514Z"
+      "documentInventory": [
+        {
+          "id": "7be55a27-23cf-4abc-9f6b-6abb4cc994c0",
+          "title": "Recours auprès du Conseil d'Etat.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "76132a41-24e7-4e18-8e96-daf7b359ab4f",
+          "documentId": "7604bef0-dedf-4fea-b8e1-3d1efcbc9ca9",
+          "activatedAt": "2026-10-28T08:28:46.009324",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/a6fb49e3-670e-4995-b0a6-f74dc70dcf89/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-28T11:31:19.937Z"
     }
   ]
 }
