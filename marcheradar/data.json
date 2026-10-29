@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-29T11:33:32.222Z",
+  "generated_at": "2026-10-29T21:10:21.330Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
   "note": "TED interrogé le 2026-10-29 : 1595 avis lus, 2 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-29T11:35:51.092Z",
-      "scanned": 2600,
-      "retained": 46,
+      "last_success": "2026-10-29T21:12:21.722Z",
+      "scanned": 2700,
+      "retained": 47,
       "period_from": "2026-10-15",
       "period_to": "2026-10-29",
-      "pages": 104,
+      "pages": 108,
       "complete": true,
-      "raw_candidates": 2594,
+      "raw_candidates": 2683,
       "oldest_seen": "2026-10-14",
-      "last_attempt": "2026-10-29T11:35:51.092Z",
+      "last_attempt": "2026-10-29T21:12:21.722Z",
       "last_error": null,
-      "last_complete_success": "2026-10-29T11:35:51.092Z"
+      "last_complete_success": "2026-10-29T21:12:21.722Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-10-29T11:38:11.725Z",
+      "last_success": "2026-10-29T21:14:02.230Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -97,14 +97,14 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 104 page(s) parcourue(s) depuis 2026-10-15.",
-    "communal": "Collecte communale progressive : 261 communes répertoriées, 126 PDF lus dans 22 communes. Couverture partielle ; traitement par lots et suivi des erreurs."
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 108 page(s) parcourue(s) depuis 2026-10-15.",
+    "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
     "scanned": 1595,
     "matched_current_run": 12,
-    "records": 174,
-    "review_count": 68,
+    "records": 175,
+    "review_count": 81,
     "award_notice_count": 421,
     "awarded_market_matches": 2,
     "award_fields_requested": false,
@@ -146,9 +146,9 @@
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2600,
-    "bosa_imported": 46,
-    "bosa_pages": 104,
+    "bosa_scanned": 2700,
+    "bosa_imported": 47,
+    "bosa_pages": 108,
     "local_documents": 34,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -164,15 +164,15 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
+      "aucun_signal_metier": 510,
+      "avis_neerlandais": 147,
+      "fournitures_et_location": 69,
+      "acheteur_flamand": 175,
       "objet_hors_domaine": 85,
-      "aucun_signal_metier": 507,
-      "acheteur_flamand": 177,
-      "avis_neerlandais": 149,
-      "fournitures_et_location": 68,
-      "travaux_execution": 120,
       "avis_attribution_analyse_separement": 421,
-      "assurance_ou_nettoyage": 22,
+      "travaux_execution": 121,
       "qualifie_review": 18,
+      "assurance_ou_nettoyage": 21,
       "formule_administrative_sans_signal_metier": 24,
       "qualifie_main": 4
     }
@@ -210,7 +210,7 @@
       "tedReference": "",
       "url": "https://www.publicprocurement.be/publication-workspaces/7fbc278d-2757-4e84-9536-b7b0f060a75d/general",
       "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/7fbc278d-2757-4e84-9536-b7b0f060a75d/documents",
-      "documentsPageSource": "official_workspace_route_not_download_verified",
+      "documentsPageSource": "public_api_200",
       "bosaResults": [
         {
           "reference": "PPP05K-1908/6316/2026/3P/1908_002",
@@ -232,6 +232,77 @@
         {
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/7fbc278d-2757-4e84-9536-b7b0f060a75d/general"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-29T21:14:07.699Z"
+    },
+    {
+      "id": "bosa:af5b161f-7ca2-4748-9872-35ddc4870980",
+      "publicationWorkspaceId": "af5b161f-7ca2-4748-9872-35ddc4870980",
+      "noticeId": "c39cb1cd-6959-4811-a558-5f80e13f3d6a",
+      "procedureIdentifier": "6bd2e57c-3ef4-4b8e-a3d0-e2c27713e5b1",
+      "internalReference": "PPP0UM-20023/6505/2026B0259_001",
+      "title": "Facilitateur Eaux pluviales",
+      "buyer": "Bruxelles Environnement",
+      "region": "Bruxelles",
+      "languages": [
+        "NL",
+        "FR"
+      ],
+      "sector": "Hydraulique",
+      "sectors": [
+        "Hydraulique",
+        "VRD"
+      ],
+      "score": 62,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "projet_indirect",
+      "publication": "2026-10-29",
+      "deadline": "2026-11-19T10:00:00+01:00",
+      "cpv": [
+        "71313000"
+      ],
+      "description": "La mission de ce marché vise à encourager les investissements, la prise de mesures préventives de plusieurs risques environnentaux en milieu urbain et une gestion durable de l’eau dans les bâtiments et dans l’ espace public, en Région de Bruxelles-Capitale à travers la mise à disposition d’une expertise technique et méthodologique en matière de gestion de l’eau qui vise à épauler Bruxelles-Environnement dans son rôle de :  • stimulation et (in)formation permanente du secteur du bâtiment et de l’aménagement du territoire; • soutien aux secteurs professionnels pour améliorer leurs performances; • soutien au démarrage et à la réalisation de projets, avec une facilitation pour l’accès aux permis et démarches urbanistiques.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "PPP0UM-20023/6505/2026B0259_001",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/af5b161f-7ca2-4748-9872-35ddc4870980/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/af5b161f-7ca2-4748-9872-35ddc4870980/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [],
+      "consultationUrls": [
+        {
+          "url": "https://cloud.3p.eu/Downloads/1/20023/UM/2026",
+          "type": "officially_referenced_external_documents",
+          "access": "destination_not_download_verified",
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/af5b161f-7ca2-4748-9872-35ddc4870980/urls?full=false",
+          "activatedAt": "2026-10-29T12:12:46.015837"
+        }
+      ],
+      "documentsCheckedAt": "2026-10-29T11:43:41.140Z",
+      "deadlineTime": "10:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/af5b161f-7ca2-4748-9872-35ddc4870980/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n19/11/2026 10:00 CET",
+      "deadlineVerifiedAt": "2026-10-29T11:43:45.213Z",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/af5b161f-7ca2-4748-9872-35ddc4870980/general"
         }
       ]
     },
@@ -3713,7 +3784,7 @@
           "versionId": "bcdca6d0-d13f-4138-99c5-6e122da4dde8",
           "documentId": "17848170-0136-4662-8b9a-69f321d687c5",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -3726,7 +3797,7 @@
           "versionId": "7a672143-498d-40bf-85d2-1a0ccd6c89b8",
           "documentId": "338ce9a3-7ba9-4ed9-99b8-3bd5f1ce416e",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -3739,7 +3810,7 @@
           "versionId": "5a3371af-caf1-41b9-89e6-e6eade671b0a",
           "documentId": "23b3699b-6288-4049-922c-146ae89c1eb4",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -3752,7 +3823,7 @@
           "versionId": "6dabd106-495c-4884-b407-a9d35ae4800b",
           "documentId": "d182b6fc-7127-4669-95f9-5b81310dc8c6",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -3765,7 +3836,7 @@
           "versionId": "62dd41f2-e318-42b1-b772-46e8d5633836",
           "documentId": "5ebc8928-f728-45bd-8c0d-992a55d8ce01",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -3778,14 +3849,14 @@
           "versionId": "1b6ff5ed-8135-422d-81f1-ab428d851133",
           "documentId": "f7b3b39c-0bec-4f55-8e29-844c0e81c6b6",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-26T17:31:49.986Z",
+      "documentsCheckedAt": "2026-10-29T21:15:51.777Z",
       "matchReason": "description_ou_contexte",
       "screeningReason": null,
       "officialSources": [
@@ -4729,6 +4800,66 @@
       }
     },
     {
+      "id": "bosa:a65b6e91-155d-471d-ba9d-73e8ff4c0d13",
+      "publicationWorkspaceId": "a65b6e91-155d-471d-ba9d-73e8ff4c0d13",
+      "noticeId": "cbf53eb3-f22c-4ac5-a77d-4b3230e4ecde",
+      "procedureIdentifier": "f7f095e0-32f9-4826-a597-d545200e12ed",
+      "internalReference": "PPP0MG-843/6052/2026008_002",
+      "title": "Marché de services relatifs à l’élaboration d’un schéma de développement communal global conformément à la législation relative à l’aménagement du territoire",
+      "buyer": "Sivry-Rance",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 46,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "etude_urbanistique_a_qualifier",
+      "publication": "2026-10-15",
+      "deadline": "",
+      "cpv": [
+        "71410000"
+      ],
+      "description": "Marché de services relatifs à l’élaboration d’un schéma de développement communal global conformément à la législation relative à l’aménagement du territoire",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0MG-843/6052/2026008_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/a65b6e91-155d-471d-ba9d-73e8ff4c0d13/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/a65b6e91-155d-471d-ba9d-73e8ff4c0d13/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP0MG-843/6052/2026008_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/a65b6e91-155d-471d-ba9d-73e8ff4c0d13/general",
+          "publicationDate": "2026-10-15",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-29T11:43:44.824Z",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/a65b6e91-155d-471d-ba9d-73e8ff4c0d13/general"
+        }
+      ]
+    },
+    {
       "id": "bosa:bfede479-c5fe-4cc6-a832-375d832f1487",
       "publicationWorkspaceId": "bfede479-c5fe-4cc6-a832-375d832f1487",
       "noticeId": "f694a143-a25e-48df-a9b6-82f44b6fe8bb",
@@ -4957,7 +5088,7 @@
           "versionId": "36488d00-f30c-407b-abf7-ea1924b6b999",
           "documentId": "917f42c5-0419-4611-8398-5561fefe4efc",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -4983,7 +5114,7 @@
           "versionId": "26b15544-17fc-43c0-826c-1322f33b9850",
           "documentId": "20364704-82a0-4eb0-a213-7965e3328061",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5035,7 +5166,7 @@
           "versionId": "f5ff3774-83d7-49c0-abe1-28e026816900",
           "documentId": "ff53ea2a-b24f-4586-b315-523295f56f5c",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5048,7 +5179,7 @@
           "versionId": "8228202b-2303-4eba-8e13-0fe820c5023d",
           "documentId": "ac74d28e-0bfa-4c78-af2b-da7f05b117dd",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5081,7 +5212,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-23T10:15:39.733Z",
+      "documentsCheckedAt": "2026-10-29T21:16:39.985Z",
       "documentAnalyses": [
         {
           "documentId": "7259aed6-32b5-4e0b-88c0-ffa7fa606658",
@@ -8864,6 +8995,93 @@
       }
     },
     {
+      "id": "local:52e731a7f4c9e9562f48",
+      "title": "Conseil communal — opportunité à vérifier : Hannut",
+      "buyer": "Commune de Hannut",
+      "municipalityINS": "64034",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "8. Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er – Approbation des conditions et du mode de passation Vu le Code",
+        "sourceUrl": "https://www.hannut.be/download/proces-verbal-86/",
+        "page": 10,
+        "sha256": "8c39854a577388a0310f0d2615a624916e4c3a2fc0c13b71070f95357dbf9d25"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 71,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.hannut.be/download/proces-verbal-86/",
+      "url": "https://www.hannut.be/download/proces-verbal-86/",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 8. Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er – Approbation des conditions et du mode de passation Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs",
+      "evidence": "8. Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er – Approbation des conditions et du mode de passation Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs",
+      "municipalReference": "2026/486",
+      "municipalSection": "8. Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant",
+      "municipalEvidence": [
+        {
+          "page": 10,
+          "excerpt": "8. Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er – Approbation des conditions et du mode de passation Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs"
+        },
+        {
+          "page": 11,
+          "excerpt": "Considérant, dès lors, qu’une procédure de marché public de services doit être lancée pour répondre à ce besoin ; Considérant le cahier des charges N° 2026/486 relatif au marché “Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er” établi le 16 avril 2026 par le Département Infrastructures communales ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Tranche de marché 1 - Esquisse (Estimé à : 21.000,00 € hors TVA ou 25.410,00 €, 21%"
+        },
+        {
+          "page": 11,
+          "excerpt": "besoin ; Considérant le cahier des charges N° 2026/486 relatif au marché “Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er” établi le 16 avril 2026 par le Département Infrastructures communales ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Tranche de marché 1 - Esquisse (Estimé à : 21.000,00 € hors TVA ou 25.410,00 €, 21% TVA comprise) ;"
+        },
+        {
+          "page": 12,
+          "excerpt": "Robin, Médart Emilie et Sacré Mathilde) ; DÉCIDE : Article 1er – D'approuver le cahier des charges N° 2026/486 du 16 avril 2026 et le montant estimé du marché “Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er”, établis par le Département Infrastructures communales. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 35.000,00 € hors TVA ou 42.350,00 €, 21% TVA comprise."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 10,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:de82dfee2cff09c0c1",
+        "sha256": "8c39854a577388a0310f0d2615a624916e4c3a2fc0c13b71070f95357dbf9d25",
+        "checkedAt": "2026-10-29T10:21:49.216Z",
+        "changedAt": null
+      },
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.hannut.be/download/proces-verbal-86/",
+        "sha256": "8c39854a577388a0310f0d2615a624916e4c3a2fc0c13b71070f95357dbf9d25",
+        "session": {
+          "date": "2026-05-21",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "Séance du 21 mai 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified",
+        "extractedAt": "2026-10-29T13:06:46.056Z"
+      },
+      "matchReason": "prestation_decrite",
+      "screeningReason": null
+    },
+    {
       "id": "communal:7092b8f35c924d8b04e4",
       "title": "Prospection · Beyne-Heusay · des différents paysages énoncés précédemment, mais aussi favorables pour la biodiversité, les luttes Attendu que l’étu…",
       "buyer": "Commune de Beyne-Heusay",
@@ -9993,6 +10211,367 @@
       }
     },
     {
+      "id": "local:c9795ed3ebb7dc137cf4",
+      "title": "Conseil communal — opportunité à vérifier : Hannut",
+      "buyer": "Commune de Hannut",
+      "municipalityINS": "64034",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "À l’unanimité ; DÉCIDE : Article 1er – D'approuver le cahier des charges N° 20250024 et le montant estimé du marché “Développement urbain - Espace de rencontre citoyen - Travaux”, établis par l’auteur de projet, Monsieur",
+        "sourceUrl": "https://www.hannut.be/download/proces-verbal-87/",
+        "page": 22,
+        "sha256": "f7e4eef7f2f1a7699fb8328ca965e9830ee98dd6bf1c7cc7e73644bacec7ac9a"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.hannut.be/download/proces-verbal-87/",
+      "url": "https://www.hannut.be/download/proces-verbal-87/",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : À l’unanimité ; DÉCIDE : Article 1er – D'approuver le cahier des charges N° 20250024 et le montant estimé du marché “Développement urbain - Espace de rencontre citoyen - Travaux”, établis par l’auteur de projet, Monsieur Jean-Philippe JASIENSKI de MATADOR, Société d'Architectes, N° BCE BE 0453 882 497, Avenue Brugmann 306 boîte 7 à 1180 Uccle. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 1.239.501,09 € hors TVA ou 1.469.241,87 €, TVA comprise.",
+      "evidence": "À l’unanimité ; DÉCIDE : Article 1er – D'approuver le cahier des charges N° 20250024 et le montant estimé du marché “Développement urbain - Espace de rencontre citoyen - Travaux”, établis par l’auteur de projet, Monsieur Jean-Philippe JASIENSKI de MATADOR, Société d'Architectes, N° BCE BE 0453 882 497, Avenue Brugmann 306 boîte 7 à 1180 Uccle. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 1.239.501,09 € hors TVA ou 1.469.241,87 €, TVA comprise.",
+      "municipalReference": "20250024",
+      "municipalSection": "12. Développement urbain - Espace de rencontre citoyen - Travaux - Approbation des conditions et du",
+      "municipalEvidence": [
+        {
+          "page": 22,
+          "excerpt": "À l’unanimité ; DÉCIDE : Article 1er – D'approuver le cahier des charges N° 20250024 et le montant estimé du marché “Développement urbain - Espace de rencontre citoyen - Travaux”, établis par l’auteur de projet, Monsieur Jean-Philippe JASIENSKI de MATADOR, Société d'Architectes, N° BCE BE 0453 882 497, Avenue Brugmann 306 boîte 7 à 1180 Uccle. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 1.239.501,09 € hors TVA ou 1.469.241,87 €, TVA comprise."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 22,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:7be7f4ede9930c466c",
+        "sha256": "f7e4eef7f2f1a7699fb8328ca965e9830ee98dd6bf1c7cc7e73644bacec7ac9a",
+        "checkedAt": "2026-10-29T10:21:49.216Z",
+        "changedAt": null
+      },
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.hannut.be/download/proces-verbal-87/",
+        "sha256": "f7e4eef7f2f1a7699fb8328ca965e9830ee98dd6bf1c7cc7e73644bacec7ac9a",
+        "session": {
+          "date": "2026-06-25",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "Séance du 25 juin 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified",
+        "extractedAt": "2026-10-29T13:06:46.034Z"
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local:c70383c52557ead00503",
+      "title": "Conseil communal — opportunité à vérifier : Andenne",
+      "buyer": "Commune de Andenne",
+      "municipalityINS": "92003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet sera lancée en 2023 et les travaux pourr",
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+        "page": 147,
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
+        "session": null,
+        "document": {
+          "date": "2024-06-20",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "20 juin 2024",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet sera lancée en 2023 et les travaux pourraient débuter en 2024. Page 147",
+      "evidence": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet sera lancée en 2023 et les travaux pourraient débuter en 2024. Page 147",
+      "municipalReference": null,
+      "municipalSection": "3. Le mobilier et les objets d’art : au terme des travaux décrits plus haut, l’ensemble du",
+      "municipalEvidence": [
+        {
+          "page": 147,
+          "excerpt": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet sera lancée en 2023 et les travaux pourraient débuter en 2024. Page 147"
+        },
+        {
+          "page": 148,
+          "excerpt": "En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 147,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:e480354f989e90a4f6",
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
+        "checkedAt": "2026-10-29T16:27:23.740Z",
+        "changedAt": null
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local:860d9645335c562dda33",
+      "title": "Conseil communal — opportunité à vérifier : Andenne",
+      "buyer": "Commune de Andenne",
+      "municipalityINS": "92003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "award",
+      "webTypeEvidence": {
+        "kind": "award",
+        "reason": "attribution_explicitement_mentionnee",
+        "excerpt": "ar le Conseil communal en septembre. Ce marché a été attribué le 11 décembre 2020 par le Collège communal. • A l’effet de garantir la coordination et la mise en œuvre de ce dossier, le",
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+        "page": 214,
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
+        "session": null,
+        "document": {
+          "date": "2024-06-20",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "20 juin 2024",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : sur l’assistance technique de la Direction de la Planification de la Mobilité en vue de l’élaboration du PCM. •      Le cahier spécial des charges relatif à la désignation d’un auteur de projet chargé d’élaborer le PCM a été approuvé par le Conseil communal en septembre. Ce marché a été attribué le 11 décembre 2020 par le Collège communal. •      A l’effet de garantir la coordination et la mise en œuvre de ce dossier, le",
+      "evidence": "sur l’assistance technique de la Direction de la Planification de la Mobilité en vue de l’élaboration du PCM. •      Le cahier spécial des charges relatif à la désignation d’un auteur de projet chargé d’élaborer le PCM a été approuvé par le Conseil communal en septembre. Ce marché a été attribué le 11 décembre 2020 par le Collège communal. •      A l’effet de garantir la coordination et la mise en œuvre de ce dossier, le",
+      "municipalReference": null,
+      "municipalSection": "5. Référencer les initiatives et les mettre en valeur (publication, site internet, matinée",
+      "municipalEvidence": [
+        {
+          "page": 214,
+          "excerpt": "sur l’assistance technique de la Direction de la Planification de la Mobilité en vue de l’élaboration du PCM. •      Le cahier spécial des charges relatif à la désignation d’un auteur de projet chargé d’élaborer le PCM a été approuvé par le Conseil communal en septembre. Ce marché a été attribué le 11 décembre 2020 par le Collège communal. •      A l’effet de garantir la coordination et la mise en œuvre de ce dossier, le"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 214,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:e480354f989e90a4f6",
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
+        "checkedAt": "2026-10-29T16:27:23.740Z",
+        "changedAt": null
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local:95d9bced83c5dda9bec3",
+      "title": "Conseil communal — opportunité à vérifier : Andenne",
+      "buyer": "Commune de Andenne",
+      "municipalityINS": "92003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pour",
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+        "page": 12,
+        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef",
+        "session": null,
+        "document": null,
+        "status": "unknown"
+      },
+      "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier.",
+      "evidence": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier.",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 12,
+          "excerpt": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 12,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:615150fda7de1a0432",
+        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef",
+        "checkedAt": "2026-10-29T16:27:23.740Z",
+        "changedAt": null
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local:ad56015f6260d142084a",
+      "title": "Conseil communal — opportunité à vérifier : Andenne",
+      "buyer": "Commune de Andenne",
+      "municipalityINS": "92003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui",
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+        "page": 12,
+        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef",
+        "session": null,
+        "document": null,
+        "status": "unknown"
+      },
+      "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier.  Equiper une salle du Conseil communal en matériel audio/vidéo et diffusion (A.261) [100 %]",
+      "evidence": "dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier.  Equiper une salle du Conseil communal en matériel audio/vidéo et diffusion (A.261) [100 %]",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 12,
+          "excerpt": "dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier.  Equiper une salle du Conseil communal en matériel audio/vidéo et diffusion (A.261) [100 %]"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 12,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:615150fda7de1a0432",
+        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef",
+        "checkedAt": "2026-10-29T16:27:23.740Z",
+        "changedAt": null
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
       "id": "communal:c3599ff87890bfb78368",
       "title": "Prospection · Beyne-Heusay · 17) Règlement complémentaire de roulage - Création d’un emplacement de stationnement pour personnes handicapées - Plac…",
       "buyer": "Commune de Beyne-Heusay",
@@ -10443,121 +11022,7 @@
       }
     },
     {
-      "id": "bosa:af5b161f-7ca2-4748-9872-35ddc4870980",
-      "publicationWorkspaceId": "af5b161f-7ca2-4748-9872-35ddc4870980",
-      "noticeId": "c39cb1cd-6959-4811-a558-5f80e13f3d6a",
-      "procedureIdentifier": "6bd2e57c-3ef4-4b8e-a3d0-e2c27713e5b1",
-      "internalReference": "PPP0UM-20023/6505/2026B0259_001",
-      "title": "Facilitateur Eaux pluviales",
-      "buyer": "Bruxelles Environnement",
-      "region": "Bruxelles",
-      "languages": [
-        "NL",
-        "FR"
-      ],
-      "sector": "Hydraulique",
-      "sectors": [
-        "Hydraulique",
-        "VRD"
-      ],
-      "score": 62,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
-        "capacityStatus": "not_assessed"
-      },
-      "matchReason": "projet_indirect",
-      "publication": "2026-10-29",
-      "deadline": "2026-11-19T10:00:00+01:00",
-      "cpv": [
-        "71313000"
-      ],
-      "description": "La mission de ce marché vise à encourager les investissements, la prise de mesures préventives de plusieurs risques environnentaux en milieu urbain et une gestion durable de l’eau dans les bâtiments et dans l’ espace public, en Région de Bruxelles-Capitale à travers la mise à disposition d’une expertise technique et méthodologique en matière de gestion de l’eau qui vise à épauler Bruxelles-Environnement dans son rôle de :  • stimulation et (in)formation permanente du secteur du bâtiment et de l’aménagement du territoire; • soutien aux secteurs professionnels pour améliorer leurs performances; • soutien au démarrage et à la réalisation de projets, avec une facilitation pour l’accès aux permis et démarches urbanistiques.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "16",
-      "noticeKind": "competition",
-      "bdaReference": "PPP0UM-20023/6505/2026B0259_001",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/af5b161f-7ca2-4748-9872-35ddc4870980/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/af5b161f-7ca2-4748-9872-35ddc4870980/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [],
-      "consultationUrls": [
-        {
-          "url": "https://cloud.3p.eu/Downloads/1/20023/UM/2026",
-          "type": "officially_referenced_external_documents",
-          "access": "destination_not_download_verified",
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/af5b161f-7ca2-4748-9872-35ddc4870980/urls?full=false",
-          "activatedAt": "2026-10-29T12:12:46.015837"
-        }
-      ],
-      "documentsCheckedAt": "2026-10-29T11:43:41.140Z",
-      "deadlineTime": "10:00",
-      "deadlineTimeZone": "Europe/Brussels",
-      "deadlineSourceKind": "bosa_verified_public",
-      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/af5b161f-7ca2-4748-9872-35ddc4870980/general",
-      "deadlineSourceEvidence": "Date limite de soumission\n19/11/2026 10:00 CET",
-      "deadlineVerifiedAt": "2026-10-29T11:43:45.213Z"
-    },
-    {
-      "id": "bosa:a65b6e91-155d-471d-ba9d-73e8ff4c0d13",
-      "publicationWorkspaceId": "a65b6e91-155d-471d-ba9d-73e8ff4c0d13",
-      "noticeId": "cbf53eb3-f22c-4ac5-a77d-4b3230e4ecde",
-      "procedureIdentifier": "f7f095e0-32f9-4826-a597-d545200e12ed",
-      "internalReference": "PPP0MG-843/6052/2026008_002",
-      "title": "Marché de services relatifs à l’élaboration d’un schéma de développement communal global conformément à la législation relative à l’aménagement du territoire",
-      "buyer": "Sivry-Rance",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 46,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
-        "capacityStatus": "not_assessed"
-      },
-      "matchReason": "etude_urbanistique_a_qualifier",
-      "publication": "2026-10-15",
-      "deadline": "",
-      "cpv": [
-        "71410000"
-      ],
-      "description": "Marché de services relatifs à l’élaboration d’un schéma de développement communal global conformément à la législation relative à l’aménagement du territoire",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "E4",
-      "noticeKind": "award",
-      "bdaReference": "PPP0MG-843/6052/2026008_002",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/a65b6e91-155d-471d-ba9d-73e8ff4c0d13/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/a65b6e91-155d-471d-ba9d-73e8ff4c0d13/documents",
-      "documentsPageSource": "public_api_200",
-      "bosaResults": [
-        {
-          "reference": "PPP0MG-843/6052/2026008_002",
-          "url": "https://www.publicprocurement.be/publication-workspaces/a65b6e91-155d-471d-ba9d-73e8ff4c0d13/general",
-          "publicationDate": "2026-10-15",
-          "kind": "award"
-        }
-      ],
-      "documentInventory": [],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-29T11:43:44.824Z"
-    },
-    {
-      "id": "local:c9795ed3ebb7dc137cf4",
+      "id": "local:51e9ccc95b48db26238f",
       "title": "Conseil communal — opportunité à vérifier : Hannut",
       "buyer": "Commune de Hannut",
       "municipalityINS": "64034",
@@ -10569,90 +11034,17 @@
       "webTypeEvidence": {
         "kind": "prospection",
         "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "À l’unanimité ; DÉCIDE : Article 1er – D'approuver le cahier des charges N° 20250024 et le montant estimé du marché “Développement urbain - Espace de rencontre citoyen - Travaux”, établis par l’auteur de projet, Monsieur",
-        "sourceUrl": "https://www.hannut.be/download/proces-verbal-87/",
-        "page": 22,
-        "sha256": "f7e4eef7f2f1a7699fb8328ca965e9830ee98dd6bf1c7cc7e73644bacec7ac9a"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.hannut.be/download/proces-verbal-87/",
-      "url": "https://www.hannut.be/download/proces-verbal-87/",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : À l’unanimité ; DÉCIDE : Article 1er – D'approuver le cahier des charges N° 20250024 et le montant estimé du marché “Développement urbain - Espace de rencontre citoyen - Travaux”, établis par l’auteur de projet, Monsieur Jean-Philippe JASIENSKI de MATADOR, Société d'Architectes, N° BCE BE 0453 882 497, Avenue Brugmann 306 boîte 7 à 1180 Uccle. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 1.239.501,09 € hors TVA ou 1.469.241,87 €, TVA comprise.",
-      "evidence": "À l’unanimité ; DÉCIDE : Article 1er – D'approuver le cahier des charges N° 20250024 et le montant estimé du marché “Développement urbain - Espace de rencontre citoyen - Travaux”, établis par l’auteur de projet, Monsieur Jean-Philippe JASIENSKI de MATADOR, Société d'Architectes, N° BCE BE 0453 882 497, Avenue Brugmann 306 boîte 7 à 1180 Uccle. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 1.239.501,09 € hors TVA ou 1.469.241,87 €, TVA comprise.",
-      "municipalReference": "20250024",
-      "municipalSection": "12. Développement urbain - Espace de rencontre citoyen - Travaux - Approbation des conditions et du",
-      "municipalEvidence": [
-        {
-          "page": 22,
-          "excerpt": "À l’unanimité ; DÉCIDE : Article 1er – D'approuver le cahier des charges N° 20250024 et le montant estimé du marché “Développement urbain - Espace de rencontre citoyen - Travaux”, établis par l’auteur de projet, Monsieur Jean-Philippe JASIENSKI de MATADOR, Société d'Architectes, N° BCE BE 0453 882 497, Avenue Brugmann 306 boîte 7 à 1180 Uccle. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 1.239.501,09 € hors TVA ou 1.469.241,87 €, TVA comprise."
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 22,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:7be7f4ede9930c466c",
-        "sha256": "f7e4eef7f2f1a7699fb8328ca965e9830ee98dd6bf1c7cc7e73644bacec7ac9a",
-        "checkedAt": "2026-10-29T10:21:49.216Z",
-        "changedAt": null
-      },
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.hannut.be/download/proces-verbal-87/",
-        "sha256": "f7e4eef7f2f1a7699fb8328ca965e9830ee98dd6bf1c7cc7e73644bacec7ac9a",
-        "session": {
-          "date": "2026-06-25",
-          "kind": "session",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "Séance du 25 juin 2026",
-          "confidence": "explicit"
-        },
-        "document": null,
-        "status": "identified",
-        "extractedAt": "2026-10-29T13:06:46.034Z"
-      }
-    },
-    {
-      "id": "local:52e731a7f4c9e9562f48",
-      "title": "Conseil communal — opportunité à vérifier : Hannut",
-      "buyer": "Commune de Hannut",
-      "municipalityINS": "64034",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "8. Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er – Approbation des conditions et du mode de passation Vu le Code",
-        "sourceUrl": "https://www.hannut.be/download/proces-verbal-86/",
-        "page": 10,
-        "sha256": "8c39854a577388a0310f0d2615a624916e4c3a2fc0c13b71070f95357dbf9d25"
+        "excerpt": "délibération ; Considérant que la Commune est amenée régulièrement à lancer des marchés de travaux de réfection des voiries ; Considérant que dans le cadre de ces travaux de voiries, la coordination santé et sécurité est",
+        "sourceUrl": "https://www.hannut.be/download/proces-verbal-85/",
+        "page": 32,
+        "sha256": "10ab632c353c249a05f4a1a2be8b3368770da9934703c5aae0bcf7df7fc42440"
       },
       "opportunityStage": "décision ou besoin à vérifier",
       "sector": "VRD",
       "sectors": [
         "VRD"
       ],
-      "score": 60,
+      "score": 52,
       "screening": "review",
       "qualification": {
         "version": "2026-10-29",
@@ -10663,56 +11055,54 @@
       },
       "publication": "",
       "deadline": "",
-      "sourceDocument": "https://www.hannut.be/download/proces-verbal-86/",
-      "url": "https://www.hannut.be/download/proces-verbal-86/",
+      "sourceDocument": "https://www.hannut.be/download/proces-verbal-85/",
+      "url": "https://www.hannut.be/download/proces-verbal-85/",
       "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : 8. Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er – Approbation des conditions et du mode de passation Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs",
-      "evidence": "8. Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er – Approbation des conditions et du mode de passation Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs",
-      "municipalReference": "2026/486",
-      "municipalSection": "8. Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant",
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : délibération ; Considérant que la Commune est amenée régulièrement à lancer des marchés de travaux de réfection des voiries ; Considérant que dans le cadre de ces travaux de voiries, la coordination santé et sécurité est obligatoire ; Considérant que les communes adhérentes bénéficieront des conditions identiques à celles obtenues par l'A.I.D.E. dans le cadre de ce marché de services de coordination santé et sécurité et plus particulièrement le bénéfice de prix intéressants tout en jouissant d'une certaine sécurité juridique et technique ;",
+      "evidence": "délibération ; Considérant que la Commune est amenée régulièrement à lancer des marchés de travaux de réfection des voiries ; Considérant que dans le cadre de ces travaux de voiries, la coordination santé et sécurité est obligatoire ; Considérant que les communes adhérentes bénéficieront des conditions identiques à celles obtenues par l'A.I.D.E. dans le cadre de ce marché de services de coordination santé et sécurité et plus particulièrement le bénéfice de prix intéressants tout en jouissant d'une certaine sécurité juridique et technique ;",
+      "municipalReference": null,
+      "municipalSection": "19. Accord-cadre 2026-2029 pour la coordination en matière de sécurité et de santé en phase projet",
       "municipalEvidence": [
         {
-          "page": 10,
-          "excerpt": "8. Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er – Approbation des conditions et du mode de passation Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs"
+          "page": 32,
+          "excerpt": "délibération ; Considérant que la Commune est amenée régulièrement à lancer des marchés de travaux de réfection des voiries ; Considérant que dans le cadre de ces travaux de voiries, la coordination santé et sécurité est obligatoire ; Considérant que les communes adhérentes bénéficieront des conditions identiques à celles obtenues par l'A.I.D.E. dans le cadre de ce marché de services de coordination santé et sécurité et plus particulièrement le bénéfice de prix intéressants tout en jouissant d'une certaine sécurité juridique et technique ;"
         },
         {
-          "page": 11,
-          "excerpt": "Considérant, dès lors, qu’une procédure de marché public de services doit être lancée pour répondre à ce besoin ; Considérant le cahier des charges N° 2026/486 relatif au marché “Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er” établi le 16 avril 2026 par le Département Infrastructures communales ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Tranche de marché 1 - Esquisse (Estimé à : 21.000,00 € hors TVA ou 25.410,00 €, 21%"
+          "page": 32,
+          "excerpt": "Considérant que la Commune est amenée régulièrement à lancer des marchés de travaux de réfection des voiries ; Considérant que dans le cadre de ces travaux de voiries, la coordination santé et sécurité est obligatoire ; Considérant que les communes adhérentes bénéficieront des conditions identiques à celles obtenues par l'A.I.D.E. dans le cadre de ce marché de services de coordination santé et sécurité et plus particulièrement le bénéfice de prix intéressants tout en jouissant d'une certaine sécurité juridique et technique ; Considérant la réduction considérable du temps de traitement des commandes permettant une"
         },
         {
-          "page": 11,
-          "excerpt": "besoin ; Considérant le cahier des charges N° 2026/486 relatif au marché “Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er” établi le 16 avril 2026 par le Département Infrastructures communales ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Tranche de marché 1 - Esquisse (Estimé à : 21.000,00 € hors TVA ou 25.410,00 €, 21% TVA comprise) ;"
-        },
-        {
-          "page": 12,
-          "excerpt": "Robin, Médart Emilie et Sacré Mathilde) ; DÉCIDE : Article 1er – D'approuver le cahier des charges N° 2026/486 du 16 avril 2026 et le montant estimé du marché “Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er”, établis par le Département Infrastructures communales. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 35.000,00 € hors TVA ou 42.350,00 €, 21% TVA comprise."
+          "page": 33,
+          "excerpt": "Le marché constitue un marché de services visés par le code CPV 71317210-8 défini par le règlement européen (CE) n°213/2008. Ce marché de services consiste à réaliser, dans le cadre des projets d'assainissement et de voirie repris dans les programmes d'investissement communaux et les programmes d'investissement de la SPGE, les missions de coordination en matière de sécurité et de santé en phase projet et en phase réalisation de ceux-ci. Les interventions se font sur l’entièreté du territoire de la Province de Liège sur lequel sont repartis les réseaux d'assainissement communaux (84 communes) et de l'AIDE ainsi que les réseaux des sociétés"
         }
       ],
       "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 10,
+      "sourceEvidencePage": 32,
       "sourceEvidenceStatus": "found",
       "sourceDocumentVersion": {
-        "documentId": "municipal-doc:de82dfee2cff09c0c1",
-        "sha256": "8c39854a577388a0310f0d2615a624916e4c3a2fc0c13b71070f95357dbf9d25",
+        "documentId": "municipal-doc:7a38af0b55f75484fc",
+        "sha256": "10ab632c353c249a05f4a1a2be8b3368770da9934703c5aae0bcf7df7fc42440",
         "checkedAt": "2026-10-29T10:21:49.216Z",
         "changedAt": null
       },
       "sourceDocumentDates": {
         "version": 1,
-        "sourceUrl": "https://www.hannut.be/download/proces-verbal-86/",
-        "sha256": "8c39854a577388a0310f0d2615a624916e4c3a2fc0c13b71070f95357dbf9d25",
+        "sourceUrl": "https://www.hannut.be/download/proces-verbal-85/",
+        "sha256": "10ab632c353c249a05f4a1a2be8b3368770da9934703c5aae0bcf7df7fc42440",
         "session": {
-          "date": "2026-05-21",
+          "date": "2026-04-23",
           "kind": "session",
           "page": 1,
           "source": "pdf_text",
-          "excerpt": "Séance du 21 mai 2026",
+          "excerpt": "Séance du 23 avril 2026",
           "confidence": "explicit"
         },
         "document": null,
         "status": "identified",
-        "extractedAt": "2026-10-29T13:06:46.056Z"
-      }
+        "extractedAt": "2026-10-29T13:06:46.220Z"
+      },
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null
     },
     {
       "id": "local:20c9f5a442bb49018409",
@@ -10792,88 +11182,9 @@
         },
         "status": "identified",
         "extractedAt": "2026-10-29T13:06:46.199Z"
-      }
-    },
-    {
-      "id": "local:51e9ccc95b48db26238f",
-      "title": "Conseil communal — opportunité à vérifier : Hannut",
-      "buyer": "Commune de Hannut",
-      "municipalityINS": "64034",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "délibération ; Considérant que la Commune est amenée régulièrement à lancer des marchés de travaux de réfection des voiries ; Considérant que dans le cadre de ces travaux de voiries, la coordination santé et sécurité est",
-        "sourceUrl": "https://www.hannut.be/download/proces-verbal-85/",
-        "page": 32,
-        "sha256": "10ab632c353c249a05f4a1a2be8b3368770da9934703c5aae0bcf7df7fc42440"
       },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 60,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.hannut.be/download/proces-verbal-85/",
-      "url": "https://www.hannut.be/download/proces-verbal-85/",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : délibération ; Considérant que la Commune est amenée régulièrement à lancer des marchés de travaux de réfection des voiries ; Considérant que dans le cadre de ces travaux de voiries, la coordination santé et sécurité est obligatoire ; Considérant que les communes adhérentes bénéficieront des conditions identiques à celles obtenues par l'A.I.D.E. dans le cadre de ce marché de services de coordination santé et sécurité et plus particulièrement le bénéfice de prix intéressants tout en jouissant d'une certaine sécurité juridique et technique ;",
-      "evidence": "délibération ; Considérant que la Commune est amenée régulièrement à lancer des marchés de travaux de réfection des voiries ; Considérant que dans le cadre de ces travaux de voiries, la coordination santé et sécurité est obligatoire ; Considérant que les communes adhérentes bénéficieront des conditions identiques à celles obtenues par l'A.I.D.E. dans le cadre de ce marché de services de coordination santé et sécurité et plus particulièrement le bénéfice de prix intéressants tout en jouissant d'une certaine sécurité juridique et technique ;",
-      "municipalReference": null,
-      "municipalSection": "19. Accord-cadre 2026-2029 pour la coordination en matière de sécurité et de santé en phase projet",
-      "municipalEvidence": [
-        {
-          "page": 32,
-          "excerpt": "délibération ; Considérant que la Commune est amenée régulièrement à lancer des marchés de travaux de réfection des voiries ; Considérant que dans le cadre de ces travaux de voiries, la coordination santé et sécurité est obligatoire ; Considérant que les communes adhérentes bénéficieront des conditions identiques à celles obtenues par l'A.I.D.E. dans le cadre de ce marché de services de coordination santé et sécurité et plus particulièrement le bénéfice de prix intéressants tout en jouissant d'une certaine sécurité juridique et technique ;"
-        },
-        {
-          "page": 32,
-          "excerpt": "Considérant que la Commune est amenée régulièrement à lancer des marchés de travaux de réfection des voiries ; Considérant que dans le cadre de ces travaux de voiries, la coordination santé et sécurité est obligatoire ; Considérant que les communes adhérentes bénéficieront des conditions identiques à celles obtenues par l'A.I.D.E. dans le cadre de ce marché de services de coordination santé et sécurité et plus particulièrement le bénéfice de prix intéressants tout en jouissant d'une certaine sécurité juridique et technique ; Considérant la réduction considérable du temps de traitement des commandes permettant une"
-        },
-        {
-          "page": 33,
-          "excerpt": "Le marché constitue un marché de services visés par le code CPV 71317210-8 défini par le règlement européen (CE) n°213/2008. Ce marché de services consiste à réaliser, dans le cadre des projets d'assainissement et de voirie repris dans les programmes d'investissement communaux et les programmes d'investissement de la SPGE, les missions de coordination en matière de sécurité et de santé en phase projet et en phase réalisation de ceux-ci. Les interventions se font sur l’entièreté du territoire de la Province de Liège sur lequel sont repartis les réseaux d'assainissement communaux (84 communes) et de l'AIDE ainsi que les réseaux des sociétés"
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 32,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:7a38af0b55f75484fc",
-        "sha256": "10ab632c353c249a05f4a1a2be8b3368770da9934703c5aae0bcf7df7fc42440",
-        "checkedAt": "2026-10-29T10:21:49.216Z",
-        "changedAt": null
-      },
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.hannut.be/download/proces-verbal-85/",
-        "sha256": "10ab632c353c249a05f4a1a2be8b3368770da9934703c5aae0bcf7df7fc42440",
-        "session": {
-          "date": "2026-04-23",
-          "kind": "session",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "Séance du 23 avril 2026",
-          "confidence": "explicit"
-        },
-        "document": null,
-        "status": "identified",
-        "extractedAt": "2026-10-29T13:06:46.220Z"
-      }
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
     },
     {
       "id": "local:9e6c428e8c39f0992650",
@@ -10954,7 +11265,9 @@
         "document": null,
         "status": "identified",
         "extractedAt": "2026-10-29T13:06:46.242Z"
-      }
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
     },
     {
       "id": "local:5a8e427981f75e7906ca",
@@ -11034,7 +11347,9 @@
         "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
         "checkedAt": "2026-10-29T16:27:23.740Z",
         "changedAt": null
-      }
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
     },
     {
       "id": "local:ac42e6d3ea4b598689f7",
@@ -11110,285 +11425,142 @@
         "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
         "checkedAt": "2026-10-29T16:27:23.740Z",
         "changedAt": null
-      }
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
     },
     {
-      "id": "local:c70383c52557ead00503",
-      "title": "Conseil communal — opportunité à vérifier : Andenne",
-      "buyer": "Commune de Andenne",
-      "municipalityINS": "92003",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet sera lancée en 2023 et les travaux pourr",
-        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
-        "page": 147,
-        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "PEB",
-      "sectors": [
-        "PEB"
+      "id": "bosa:f1a52462-a841-49cb-8bfc-06db0c5e5f4a",
+      "publicationWorkspaceId": "f1a52462-a841-49cb-8bfc-06db0c5e5f4a",
+      "noticeId": "af5ff5c3-6ef2-4f1a-905b-3f9dbeb67f1a",
+      "procedureIdentifier": "ba3c4e63-4990-4a1f-829e-1020d6b13c7f",
+      "internalReference": "03.06.04-26-2992_pub01",
+      "title": "Marché de services visant à l’acquisition topobathymétrique par LiDAR aéroporté et levé topographique terrestre de la Berwinne (Meuse-aval)",
+      "buyer": "O3.06.04 - Direction des Cours d'eau non navigables",
+      "region": "Belgique",
+      "languages": [
+        "FR"
       ],
-      "score": 55,
-      "screening": "review",
+      "sector": "Topo",
+      "sectors": [
+        "Topo",
+        "Scan",
+        "Hydraulique",
+        "Foncier"
+      ],
+      "score": 98,
+      "screening": "main",
       "qualification": {
         "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "kind": "services",
+        "route": "service",
+        "explanation": "Prestation métier repérée dans l’objet. Les conditions de participation et les moyens KDRIX restent à vérifier.",
         "capacityStatus": "not_assessed"
       },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
-        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
-        "session": null,
-        "document": {
-          "date": "2024-06-20",
-          "kind": "document",
-          "page": null,
-          "source": "link_title",
-          "excerpt": "20 juin 2024",
-          "confidence": "inferred"
+      "matchReason": "prestation_decrite",
+      "publication": "2026-10-29",
+      "deadline": "2027-11-09T09:30:00+01:00",
+      "cpv": [
+        "71351810"
+      ],
+      "description": "• L’acquisition topobathymétrique par LiDAR aéroporté du linéaire de cours de 1ère catégorie de la Berwinne (≃ 20 km de linéaire de cours d’eau), avec une emprise couverture au sol minimale d’environ 400m de part et d’autre du lit mineur ; incluant donc le lit mineur et le lit majeur. • Les levés topographiques terrestres de linéaires restreints et localisés de la Berwinne :  o Pour mesurer et représenter (profils en travers et en long, plans, photos) l’ensemble des ouvrages (ponts, pertuis, vannages, seuils…) ;  o Pour compléter les données LiDAR à l’aide de levés ponctuels, afin de caler le nuage de points, et d’attester de la qualité du livrable final ; o Le levé d’ouvrages (environ 40 à 45)",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "03.06.04-26-2992_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/f1a52462-a841-49cb-8bfc-06db0c5e5f4a/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/f1a52462-a841-49cb-8bfc-06db0c5e5f4a/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "28c4b5ce-a901-463a-9199-472ea7756697",
+          "title": "Justificatif de mise à jour cahier 03.06.04-26-2992.pdf",
+          "kind": "csc",
+          "fileType": "pdf",
+          "versionId": "534a0971-d892-44be-9ba0-4a253fef54d3",
+          "documentId": "707a7a71-091d-40e8-93f1-70a8f85b3e15",
+          "activatedAt": "2026-10-29T14:45:45.027617",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/f1a52462-a841-49cb-8bfc-06db0c5e5f4a/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         },
-        "status": "identified"
-      },
-      "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet sera lancée en 2023 et les travaux pourraient débuter en 2024. Page 147",
-      "evidence": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet sera lancée en 2023 et les travaux pourraient débuter en 2024. Page 147",
-      "municipalReference": null,
-      "municipalSection": "3. Le mobilier et les objets d’art : au terme des travaux décrits plus haut, l’ensemble du",
-      "municipalEvidence": [
         {
-          "page": 147,
-          "excerpt": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet sera lancée en 2023 et les travaux pourraient débuter en 2024. Page 147"
+          "id": "835078e5-65d1-47ec-9735-6282bd40f581",
+          "title": "CSC_topo_Berwinne.pdf",
+          "kind": "csc",
+          "fileType": "pdf",
+          "versionId": "1b6f8e94-325f-4dae-9504-cbc07631f6c7",
+          "documentId": "ecaf8576-8d52-46ee-903c-9342d6148fb0",
+          "activatedAt": "2026-09-25T15:14:45.010384",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/f1a52462-a841-49cb-8bfc-06db0c5e5f4a/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         },
         {
-          "page": 148,
-          "excerpt": "En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier."
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 147,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:e480354f989e90a4f6",
-        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
-        "checkedAt": "2026-10-29T16:27:23.740Z",
-        "changedAt": null
-      }
-    },
-    {
-      "id": "local:860d9645335c562dda33",
-      "title": "Conseil communal — opportunité à vérifier : Andenne",
-      "buyer": "Commune de Andenne",
-      "municipalityINS": "92003",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "award",
-      "webTypeEvidence": {
-        "kind": "award",
-        "reason": "attribution_explicitement_mentionnee",
-        "excerpt": "ar le Conseil communal en septembre. Ce marché a été attribué le 11 décembre 2020 par le Collège communal. • A l’effet de garantir la coordination et la mise en œuvre de ce dossier, le",
-        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
-        "page": 214,
-        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
-        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
-        "session": null,
-        "document": {
-          "date": "2024-06-20",
-          "kind": "document",
-          "page": null,
-          "source": "link_title",
-          "excerpt": "20 juin 2024",
-          "confidence": "inferred"
+          "id": "a4a09517-4511-4a06-9297-b63de556087d",
+          "title": "Comment soumettre une offre.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "4503ab21-9043-49ec-b403-ff2399981798",
+          "documentId": "0b6b8b84-ba13-4d57-b3ad-8f5ea6d6243c",
+          "activatedAt": "2026-09-25T15:14:45.010384",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/f1a52462-a841-49cb-8bfc-06db0c5e5f4a/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         },
-        "status": "identified"
-      },
-      "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : sur l’assistance technique de la Direction de la Planification de la Mobilité en vue de l’élaboration du PCM. •      Le cahier spécial des charges relatif à la désignation d’un auteur de projet chargé d’élaborer le PCM a été approuvé par le Conseil communal en septembre. Ce marché a été attribué le 11 décembre 2020 par le Collège communal. •      A l’effet de garantir la coordination et la mise en œuvre de ce dossier, le",
-      "evidence": "sur l’assistance technique de la Direction de la Planification de la Mobilité en vue de l’élaboration du PCM. •      Le cahier spécial des charges relatif à la désignation d’un auteur de projet chargé d’élaborer le PCM a été approuvé par le Conseil communal en septembre. Ce marché a été attribué le 11 décembre 2020 par le Collège communal. •      A l’effet de garantir la coordination et la mise en œuvre de ce dossier, le",
-      "municipalReference": null,
-      "municipalSection": "5. Référencer les initiatives et les mettre en valeur (publication, site internet, matinée",
-      "municipalEvidence": [
         {
-          "page": 214,
-          "excerpt": "sur l’assistance technique de la Direction de la Planification de la Mobilité en vue de l’élaboration du PCM. •      Le cahier spécial des charges relatif à la désignation d’un auteur de projet chargé d’élaborer le PCM a été approuvé par le Conseil communal en septembre. Ce marché a été attribué le 11 décembre 2020 par le Collège communal. •      A l’effet de garantir la coordination et la mise en œuvre de ce dossier, le"
+          "id": "c5b11f39-f5df-43e4-b365-9f25c477378d",
+          "title": "Recours auprès du Conseil d'Etat.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "e0537fea-e3c8-4548-ba66-9925e8c61d43",
+          "documentId": "1223214d-6e80-4def-b896-fcfa1079f7b0",
+          "activatedAt": "2026-09-25T15:14:45.010384",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/f1a52462-a841-49cb-8bfc-06db0c5e5f4a/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "e7ed1548-a3db-42fb-b0f1-a2d9d057e536",
+          "title": "annexe adresses de soumission e-procurement.pdf",
+          "kind": "annex",
+          "fileType": "pdf",
+          "versionId": "2955fe8a-006f-4e7f-aadd-7a3b2250cdd1",
+          "documentId": "f8e9f4ce-79de-410a-8b9f-7c242d32f9db",
+          "activatedAt": "2026-09-25T15:14:45.010384",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/f1a52462-a841-49cb-8bfc-06db0c5e5f4a/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "ecf88fad-86f3-4f67-93a2-91fe17c5b035",
+          "title": "FORMULAIRE OFFRE_topo_Berwinne.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "3be822f0-bf81-4e26-bf4e-901f6adc5791",
+          "documentId": "d3145ee9-2840-4e0d-87e2-05dce34ad2a3",
+          "activatedAt": "2026-09-25T15:14:45.010384",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/f1a52462-a841-49cb-8bfc-06db0c5e5f4a/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 214,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:e480354f989e90a4f6",
-        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
-        "checkedAt": "2026-10-29T16:27:23.740Z",
-        "changedAt": null
-      }
-    },
-    {
-      "id": "local:95d9bced83c5dda9bec3",
-      "title": "Conseil communal — opportunité à vérifier : Andenne",
-      "buyer": "Commune de Andenne",
-      "municipalityINS": "92003",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pour",
-        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
-        "page": 12,
-        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "PEB",
-      "sectors": [
-        "PEB"
-      ],
-      "score": 55,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
-        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef",
-        "session": null,
-        "document": null,
-        "status": "unknown"
-      },
-      "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier.",
-      "evidence": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier.",
-      "municipalReference": null,
-      "municipalSection": null,
-      "municipalEvidence": [
-        {
-          "page": 12,
-          "excerpt": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier."
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 12,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:615150fda7de1a0432",
-        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef",
-        "checkedAt": "2026-10-29T16:27:23.740Z",
-        "changedAt": null
-      }
-    },
-    {
-      "id": "local:ad56015f6260d142084a",
-      "title": "Conseil communal — opportunité à vérifier : Andenne",
-      "buyer": "Commune de Andenne",
-      "municipalityINS": "92003",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui",
-        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
-        "page": 12,
-        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
-        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef",
-        "session": null,
-        "document": null,
-        "status": "unknown"
-      },
-      "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier.  Equiper une salle du Conseil communal en matériel audio/vidéo et diffusion (A.261) [100 %]",
-      "evidence": "dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier.  Equiper une salle du Conseil communal en matériel audio/vidéo et diffusion (A.261) [100 %]",
-      "municipalReference": null,
-      "municipalSection": null,
-      "municipalEvidence": [
-        {
-          "page": 12,
-          "excerpt": "dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier.  Equiper une salle du Conseil communal en matériel audio/vidéo et diffusion (A.261) [100 %]"
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 12,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:615150fda7de1a0432",
-        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef",
-        "checkedAt": "2026-10-29T16:27:23.740Z",
-        "changedAt": null
-      }
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-29T21:19:05.262Z",
+      "deadlineTime": "09:30",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/f1a52462-a841-49cb-8bfc-06db0c5e5f4a/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n09/11/2027 09:30 CET",
+      "deadlineVerifiedAt": "2026-10-29T21:19:05.701Z"
     }
   ]
 }
