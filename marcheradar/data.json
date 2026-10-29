@@ -58,40 +58,40 @@
     },
     "COMMUNES": {
       "status": "inventory_not_document_collection",
-      "updatedAt": "2026-10-29T16:25:44.211Z",
-      "last_attempt": "2026-10-29T16:25:44.211Z",
+      "updatedAt": "2026-10-29T22:01:43.925Z",
+      "last_attempt": "2026-10-29T22:01:43.925Z",
       "scope": {
         "province": "all",
         "ins": ""
       },
       "total": 261,
       "sitesRepertories": 261,
-      "sitesVerifies": 193,
-      "deliberationsConnectees": 24,
+      "sitesVerifies": 205,
+      "deliberationsConnectees": 26,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 132,
-      "opportunities": 50,
-      "sitesChecked": 193,
-      "candidatePages": 149,
-      "sourceErrors": 19
+      "documentsRead": 146,
+      "opportunities": 67,
+      "sitesChecked": 205,
+      "candidatePages": 160,
+      "sourceErrors": 21
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-10-29T16:27:23.740Z",
-      "last_success": "2026-10-29T16:27:23.740Z",
+      "last_attempt": "2026-10-29T22:03:14.944Z",
+      "last_success": "2026-10-29T22:03:14.944Z",
       "last_batch": 4,
-      "documents_checked": 6,
-      "documents_read": 6,
+      "documents_checked": 14,
+      "documents_read": 14,
       "documents_unchanged": 0,
       "documents_modified": 0,
-      "opportunities_found": 6,
+      "opportunities_found": 17,
       "review_candidates": 0,
-      "errors_count": 4,
+      "errors_count": 13,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel."
     }
   },
@@ -103,7 +103,7 @@
   "metrics": {
     "scanned": 1595,
     "matched_current_run": 12,
-    "records": 175,
+    "records": 192,
     "review_count": 81,
     "award_notice_count": 421,
     "awarded_market_matches": 2,
@@ -11561,6 +11561,1261 @@
       "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/f1a52462-a841-49cb-8bfc-06db0c5e5f4a/general",
       "deadlineSourceEvidence": "Date limite de soumission\n09/11/2027 09:30 CET",
       "deadlineVerifiedAt": "2026-10-29T21:19:05.701Z"
+    },
+    {
+      "id": "local:d4f8368660c06879b904",
+      "title": "Conseil communal — opportunité à vérifier : Aubel",
+      "buyer": "Commune de Aubel",
+      "municipalityINS": "63003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "l’art. D.II.12 du CoDT §2 : un rapport sur les incidences environnementales (R.I.E.) a été réalisé sur l’avant-projet de S.O.L., à l’initiative et à charge de la société BATICO ; Considérant que ce R.I.E., élaboré par le",
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-30-janvier-2023.pdf",
+        "page": 6,
+        "sha256": "f2249fa03f6181d333b8cd5f2b5dde76317e2f4ed3be5a40bfa784449de0cb05"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-30-janvier-2023.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-30-janvier-2023.pdf",
+        "sha256": "f2249fa03f6181d333b8cd5f2b5dde76317e2f4ed3be5a40bfa784449de0cb05",
+        "session": null,
+        "document": {
+          "date": "2023-01-30",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "30/01/2023",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-30-janvier-2023.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : l’art. D.II.12 du CoDT §2 : un rapport sur les incidences environnementales (R.I.E.) a été réalisé sur l’avant-projet de S.O.L., à l’initiative et à charge de la société BATICO ; Considérant que ce R.I.E., élaboré par le bureau d’études SEN5, a analysé l’ensemble des points requis, et a émis des recommandations quant à la mise en œuvre du projet de S.O.L., depuis son avant-projet présenté au Conseil du 14.02.2022 ; Qu’en termes de densités, le RIE recommande de les revoir à la hausse, principalement les poches A et C ;",
+      "evidence": "l’art. D.II.12 du CoDT §2 : un rapport sur les incidences environnementales (R.I.E.) a été réalisé sur l’avant-projet de S.O.L., à l’initiative et à charge de la société BATICO ; Considérant que ce R.I.E., élaboré par le bureau d’études SEN5, a analysé l’ensemble des points requis, et a émis des recommandations quant à la mise en œuvre du projet de S.O.L., depuis son avant-projet présenté au Conseil du 14.02.2022 ; Qu’en termes de densités, le RIE recommande de les revoir à la hausse, principalement les poches A et C ;",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 6,
+          "excerpt": "l’art. D.II.12 du CoDT §2 : un rapport sur les incidences environnementales (R.I.E.) a été réalisé sur l’avant-projet de S.O.L., à l’initiative et à charge de la société BATICO ; Considérant que ce R.I.E., élaboré par le bureau d’études SEN5, a analysé l’ensemble des points requis, et a émis des recommandations quant à la mise en œuvre du projet de S.O.L., depuis son avant-projet présenté au Conseil du 14.02.2022 ; Qu’en termes de densités, le RIE recommande de les revoir à la hausse, principalement les poches A et C ;"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 6,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6aaaa93828e705744c",
+        "sha256": "f2249fa03f6181d333b8cd5f2b5dde76317e2f4ed3be5a40bfa784449de0cb05",
+        "checkedAt": "2026-10-29T22:03:14.944Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:3613ad4074a5d39b430f",
+      "title": "Conseil communal — opportunité à vérifier : Aubel",
+      "buyer": "Commune de Aubel",
+      "municipalityINS": "63003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "la densité pour la zone C, revenant à celle proposée dans l’avant-projet, à savoir 25-30 logements/hectare ; Que le demandeur et son auteur de projet en ont été informés ; Considérant que le projet de S.O.L. s’est vu ame",
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-30-janvier-2023.pdf",
+        "page": 8,
+        "sha256": "f2249fa03f6181d333b8cd5f2b5dde76317e2f4ed3be5a40bfa784449de0cb05"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-30-janvier-2023.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-30-janvier-2023.pdf",
+        "sha256": "f2249fa03f6181d333b8cd5f2b5dde76317e2f4ed3be5a40bfa784449de0cb05",
+        "session": null,
+        "document": {
+          "date": "2023-01-30",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "30/01/2023",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-30-janvier-2023.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : la densité pour la zone C, revenant à celle proposée dans l’avant-projet, à savoir 25-30 logements/hectare ; Que le demandeur et son auteur de projet en ont été informés ; Considérant que le projet de S.O.L. s’est vu amendé en ce sens ; en effet, la carte d’orientation et les objectifs ont été adaptés, et déposés à l’administration communale en date du 15.09.2022 par l’auteur de projet ; Considérant qu’il appartient au Conseil communal d’approuver le projet de S.O.L. amendé,",
+      "evidence": "la densité pour la zone C, revenant à celle proposée dans l’avant-projet, à savoir 25-30 logements/hectare ; Que le demandeur et son auteur de projet en ont été informés ; Considérant que le projet de S.O.L. s’est vu amendé en ce sens ; en effet, la carte d’orientation et les objectifs ont été adaptés, et déposés à l’administration communale en date du 15.09.2022 par l’auteur de projet ; Considérant qu’il appartient au Conseil communal d’approuver le projet de S.O.L. amendé,",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 8,
+          "excerpt": "la densité pour la zone C, revenant à celle proposée dans l’avant-projet, à savoir 25-30 logements/hectare ; Que le demandeur et son auteur de projet en ont été informés ; Considérant que le projet de S.O.L. s’est vu amendé en ce sens ; en effet, la carte d’orientation et les objectifs ont été adaptés, et déposés à l’administration communale en date du 15.09.2022 par l’auteur de projet ; Considérant qu’il appartient au Conseil communal d’approuver le projet de S.O.L. amendé,"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 8,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6aaaa93828e705744c",
+        "sha256": "f2249fa03f6181d333b8cd5f2b5dde76317e2f4ed3be5a40bfa784449de0cb05",
+        "checkedAt": "2026-10-29T22:03:14.944Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:af7f744efbbe4364bf33",
+      "title": "Conseil communal — opportunité à vérifier : Aubel",
+      "buyer": "Commune de Aubel",
+      "municipalityINS": "63003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Considérant que le projet de S.O.L. s’est vu amendé en ce sens ; en effet, la carte d’orientation et les objectifs ont été adaptés, et déposés à l’administration communale en date du 15.09.2022 par l’auteur de projet ; C",
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-30-janvier-2023.pdf",
+        "page": 8,
+        "sha256": "f2249fa03f6181d333b8cd5f2b5dde76317e2f4ed3be5a40bfa784449de0cb05"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-30-janvier-2023.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-30-janvier-2023.pdf",
+        "sha256": "f2249fa03f6181d333b8cd5f2b5dde76317e2f4ed3be5a40bfa784449de0cb05",
+        "session": null,
+        "document": {
+          "date": "2023-01-30",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "30/01/2023",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-30-janvier-2023.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Considérant que le projet de S.O.L. s’est vu amendé en ce sens ; en effet, la carte d’orientation et les objectifs ont été adaptés, et déposés à l’administration communale en date du 15.09.2022 par l’auteur de projet ; Considérant qu’il appartient au Conseil communal d’approuver le projet de S.O.L. amendé, préalablement à l’organisation de l’enquête publique et la consultation des instances requises ; Considérant que le Conseil communal s’est réuni en séance du 10.10.2022 ; Vu sa décision",
+      "evidence": "Considérant que le projet de S.O.L. s’est vu amendé en ce sens ; en effet, la carte d’orientation et les objectifs ont été adaptés, et déposés à l’administration communale en date du 15.09.2022 par l’auteur de projet ; Considérant qu’il appartient au Conseil communal d’approuver le projet de S.O.L. amendé, préalablement à l’organisation de l’enquête publique et la consultation des instances requises ; Considérant que le Conseil communal s’est réuni en séance du 10.10.2022 ; Vu sa décision",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 8,
+          "excerpt": "Considérant que le projet de S.O.L. s’est vu amendé en ce sens ; en effet, la carte d’orientation et les objectifs ont été adaptés, et déposés à l’administration communale en date du 15.09.2022 par l’auteur de projet ; Considérant qu’il appartient au Conseil communal d’approuver le projet de S.O.L. amendé, préalablement à l’organisation de l’enquête publique et la consultation des instances requises ; Considérant que le Conseil communal s’est réuni en séance du 10.10.2022 ; Vu sa décision"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 8,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6aaaa93828e705744c",
+        "sha256": "f2249fa03f6181d333b8cd5f2b5dde76317e2f4ed3be5a40bfa784449de0cb05",
+        "checkedAt": "2026-10-29T22:03:14.944Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:ddcc11c62ddefc6ea12d",
+      "title": "Conseil communal — opportunité à vérifier : Aubel",
+      "buyer": "Commune de Aubel",
+      "municipalityINS": "63003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "DECIDE, à l’unanimité, Article 1er : D'approuver le cahier des charges N° 2022/301 et le montant estimé du marché “Nettoyage et désinfection de l'abattoir bovin”, établis par l’auteur de projet. Les conditions sont fixée",
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-30-janvier-2023.pdf",
+        "page": 23,
+        "sha256": "f2249fa03f6181d333b8cd5f2b5dde76317e2f4ed3be5a40bfa784449de0cb05"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-30-janvier-2023.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-30-janvier-2023.pdf",
+        "sha256": "f2249fa03f6181d333b8cd5f2b5dde76317e2f4ed3be5a40bfa784449de0cb05",
+        "session": null,
+        "document": {
+          "date": "2023-01-30",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "30/01/2023",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-30-janvier-2023.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : DECIDE, à l’unanimité, Article 1er : D'approuver le cahier des charges N° 2022/301 et le montant estimé du marché “Nettoyage et désinfection de l'abattoir bovin”, établis par l’auteur de projet. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 110.000,00 € TVAC. Article 2 : De passer le marché par la procédure négociée sans publication préalable. Article 3 : De financer cette dépense par le crédit inscrit au budget ordinaire de l’exercice",
+      "evidence": "DECIDE, à l’unanimité, Article 1er : D'approuver le cahier des charges N° 2022/301 et le montant estimé du marché “Nettoyage et désinfection de l'abattoir bovin”, établis par l’auteur de projet. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 110.000,00 € TVAC. Article 2 : De passer le marché par la procédure négociée sans publication préalable. Article 3 : De financer cette dépense par le crédit inscrit au budget ordinaire de l’exercice",
+      "municipalReference": "2022/301",
+      "municipalSection": "18. Marché pour l’achat d’une centrale Hydraulique",
+      "municipalEvidence": [
+        {
+          "page": 23,
+          "excerpt": "DECIDE, à l’unanimité, Article 1er : D'approuver le cahier des charges N° 2022/301 et le montant estimé du marché “Nettoyage et désinfection de l'abattoir bovin”, établis par l’auteur de projet. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 110.000,00 € TVAC. Article 2 : De passer le marché par la procédure négociée sans publication préalable. Article 3 : De financer cette dépense par le crédit inscrit au budget ordinaire de l’exercice"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 23,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6aaaa93828e705744c",
+        "sha256": "f2249fa03f6181d333b8cd5f2b5dde76317e2f4ed3be5a40bfa784449de0cb05",
+        "checkedAt": "2026-10-29T22:03:14.944Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:9d1c42e3f9c506e7516e",
+      "title": "Conseil communal — opportunité à vérifier : Aubel",
+      "buyer": "Commune de Aubel",
+      "municipalityINS": "63003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Article 4 : de transmettre cette convention à l’asbl TRW’ORGANISATION, Rue Cense de la Motte, 49 à 7170 Manage. Point 7 – MARCHÉ PUBLIC - Cœur de Village- Désignation d’un auteur de projet - Approbation service complémen",
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-6-mars-2023-internet.pdf",
+        "page": 20,
+        "sha256": "43fb66bff407cbbd181baa0d632695a13dce3b9bd5a9000b772e56c8fba7d198"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-6-mars-2023-internet.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-6-mars-2023-internet.pdf",
+        "sha256": "43fb66bff407cbbd181baa0d632695a13dce3b9bd5a9000b772e56c8fba7d198",
+        "session": null,
+        "document": {
+          "date": "2023-03-06",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "06/03/2023",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-6-mars-2023-internet.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Article 4 : de transmettre cette convention à l’asbl TRW’ORGANISATION, Rue Cense de la Motte, 49 à 7170 Manage. Point 7 – MARCHÉ PUBLIC - Cœur de Village- Désignation d’un auteur de projet - Approbation service complémentaire Vu la loi du 17 juin 2016 relative aux marchés publics ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de",
+      "evidence": "Article 4 : de transmettre cette convention à l’asbl TRW’ORGANISATION, Rue Cense de la Motte, 49 à 7170 Manage. Point 7 – MARCHÉ PUBLIC - Cœur de Village- Désignation d’un auteur de projet - Approbation service complémentaire Vu la loi du 17 juin 2016 relative aux marchés publics ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de",
+      "municipalReference": null,
+      "municipalSection": "4.     Le tarif de base est appliqué aux organismes, associations et personnes suivants,",
+      "municipalEvidence": [
+        {
+          "page": 20,
+          "excerpt": "Article 4 : de transmettre cette convention à l’asbl TRW’ORGANISATION, Rue Cense de la Motte, 49 à 7170 Manage. Point 7 – MARCHÉ PUBLIC - Cœur de Village- Désignation d’un auteur de projet - Approbation service complémentaire Vu la loi du 17 juin 2016 relative aux marchés publics ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de"
+        },
+        {
+          "page": 36,
+          "excerpt": "parcelle n° 1A, pour une superficie mesurée de 482 mètres carrés, partie de la parcelle n° 16A, pour une superficie mesurée de 415 mètres carrés, telles que représentées sur les plans de mesurage des emprises levés et dressés par le Bureau d’Etudes SOTREZ-NIZET en date du 11.05.2022 ; Considérant l’estimation de la valeur vénale des terrains à acquérir par la commune d’Aubel telles qu’estimée par le Département des Comités d’Acquisition, Direction de Liège dans son courrier daté du 21 octobre 2021 (150.000,00 €) ;"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 20,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:ca3c60b0d45053ed1a",
+        "sha256": "43fb66bff407cbbd181baa0d632695a13dce3b9bd5a9000b772e56c8fba7d198",
+        "checkedAt": "2026-10-29T22:03:14.944Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:cb529b04ecb4b385a654",
+      "title": "Conseil communal — opportunité à vérifier : Aubel",
+      "buyer": "Commune de Aubel",
+      "municipalityINS": "63003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "classiques et ses modifications ultérieures ; Considérant le cahier des charges N° 2020/214 relatif au marché “Revitalisation Urbaine - Désignation d’un auteur de projet ” établi par la Commune d'Aubel et approuvé par le",
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-6-mars-2023-internet.pdf",
+        "page": 21,
+        "sha256": "43fb66bff407cbbd181baa0d632695a13dce3b9bd5a9000b772e56c8fba7d198"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-6-mars-2023-internet.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-6-mars-2023-internet.pdf",
+        "sha256": "43fb66bff407cbbd181baa0d632695a13dce3b9bd5a9000b772e56c8fba7d198",
+        "session": null,
+        "document": {
+          "date": "2023-03-06",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "06/03/2023",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/pv-du-6-mars-2023-internet.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : classiques et ses modifications ultérieures ; Considérant le cahier des charges N° 2020/214 relatif au marché “Revitalisation Urbaine - Désignation d’un auteur de projet ” établi par la Commune d'Aubel et approuvé par le Conseil Communale le 12 octobre 2020 ; Considérant que le Collège, par délibération du 15 février 2021, a attribué ce marché à l’architecte Jean-Pierre DONÉA ; Considérant que le projet déposé dans le cadre de l’appel à projet « Cœur de Village » était",
+      "evidence": "classiques et ses modifications ultérieures ; Considérant le cahier des charges N° 2020/214 relatif au marché “Revitalisation Urbaine - Désignation d’un auteur de projet ” établi par la Commune d'Aubel et approuvé par le Conseil Communale le 12 octobre 2020 ; Considérant que le Collège, par délibération du 15 février 2021, a attribué ce marché à l’architecte Jean-Pierre DONÉA ; Considérant que le projet déposé dans le cadre de l’appel à projet « Cœur de Village » était",
+      "municipalReference": "2020/214",
+      "municipalSection": "4.     Le tarif de base est appliqué aux organismes, associations et personnes suivants,",
+      "municipalEvidence": [
+        {
+          "page": 21,
+          "excerpt": "classiques et ses modifications ultérieures ; Considérant le cahier des charges N° 2020/214 relatif au marché “Revitalisation Urbaine - Désignation d’un auteur de projet ” établi par la Commune d'Aubel et approuvé par le Conseil Communale le 12 octobre 2020 ; Considérant que le Collège, par délibération du 15 février 2021, a attribué ce marché à l’architecte Jean-Pierre DONÉA ; Considérant que le projet déposé dans le cadre de l’appel à projet « Cœur de Village » était"
+        },
+        {
+          "page": 22,
+          "excerpt": "PV Conseil Communal du 6 mars 2023 Considérant que l’offre initial de l’architecte DONEA pour le marché “Revitalisation Urbaine - Désignation d’un auteur de projet ” s’élevait à 108.000,00 € ; Considérant que le projet rentré dans le cadre de l’appel à projet « Cœur de village » amènera des honoraires complémentaires estimé de 49.500,00 € ; Considérant que les honoraires de l’Architecte DONEA ne dépasseront pas les 50% de la valeur du marché initial repris dans l’article 38/1 l’arrêté royal du 14 janvier 2013 ;"
+        },
+        {
+          "page": 22,
+          "excerpt": "Considérant l’avis positif du directeur financier remis en date du 24 février 2023, DECIDE, par 8 voix pour et 3 abstentions, Article 1er : De modifier le marché « Revitalisation Urbaine - Désignation d’un auteur de projet » en y intégrant le projet rentré dans le cadre de « Cœur de Village - Désignation d’un auteur de projet ». Article 2 : De faire application de l’article 38/1 de l’arrêté royal du 14 janvier 2013. Article 3 : De charger l’architecte Jean-Pierre DONÉA comme auteur de projet pour le projet"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 21,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:ca3c60b0d45053ed1a",
+        "sha256": "43fb66bff407cbbd181baa0d632695a13dce3b9bd5a9000b772e56c8fba7d198",
+        "checkedAt": "2026-10-29T22:03:14.944Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:318d76a5d68cd7ecad53",
+      "title": "Conseil communal — opportunité à vérifier : Aubel",
+      "buyer": "Commune de Aubel",
+      "municipalityINS": "63003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "PV Conseil communal du 17 avril 2023 Considérant que ce R.I.E., élaboré par le bureau d’études SEN5, a analysé l’ensemble des points requis, et a émis des recommandations quant à la mise en œuvre du projet de S.O.L., dep",
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/conseil-communal-proces-verbal-17-avril-2023.pdf",
+        "page": 31,
+        "sha256": "064abb71cbedac775596575d7ccabc488d2d230ca596909a06aa193c1168ffac"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/conseil-communal-proces-verbal-17-avril-2023.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/conseil-communal-proces-verbal-17-avril-2023.pdf",
+        "sha256": "064abb71cbedac775596575d7ccabc488d2d230ca596909a06aa193c1168ffac",
+        "session": null,
+        "document": {
+          "date": "2023-04-17",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "17/04/2023",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/conseil-communal-proces-verbal-17-avril-2023.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : PV Conseil communal du 17 avril 2023 Considérant que ce R.I.E., élaboré par le bureau d’études SEN5, a analysé l’ensemble des points requis, et a émis des recommandations quant à la mise en œuvre du projet de S.O.L., depuis son avant-projet présenté au Conseil du 14.02.2022 ; Qu’en termes de densités, le RIE recommande de les revoir à la hausse, principalement les poches A et C;",
+      "evidence": "PV Conseil communal du 17 avril 2023 Considérant que ce R.I.E., élaboré par le bureau d’études SEN5, a analysé l’ensemble des points requis, et a émis des recommandations quant à la mise en œuvre du projet de S.O.L., depuis son avant-projet présenté au Conseil du 14.02.2022 ; Qu’en termes de densités, le RIE recommande de les revoir à la hausse, principalement les poches A et C;",
+      "municipalReference": null,
+      "municipalSection": "4.     Le tarif de base est appliqué aux organismes, associations et personnes suivants, faisant partie",
+      "municipalEvidence": [
+        {
+          "page": 31,
+          "excerpt": "PV Conseil communal du 17 avril 2023 Considérant que ce R.I.E., élaboré par le bureau d’études SEN5, a analysé l’ensemble des points requis, et a émis des recommandations quant à la mise en œuvre du projet de S.O.L., depuis son avant-projet présenté au Conseil du 14.02.2022 ; Qu’en termes de densités, le RIE recommande de les revoir à la hausse, principalement les poches A et C;"
+        },
+        {
+          "page": 32,
+          "excerpt": "de Schéma d'orientation local (S.O.L.) dit « La Driesch » visant à une réduction de la densité pour la zone C, revenant à celle proposée dans l’avant-projet, à savoir 25-30 logements/hectare ; Que le demandeur et son auteur de projet en ont été informés ; Considérant que le projet de S.O.L. s’est vu amendé en ce sens ; en effet, la carte d’orientation et les objectifs ont été adaptés, et déposés en nos services en date du 15.09.2022 par l’auteur de projet ; Considérant qu’il appartient au Conseil communal d’approuver le projet de S.O.L. amendé, préalablement à l’organisation de l’enquête publique et la consultation des instances requises ;"
+        },
+        {
+          "page": 32,
+          "excerpt": "le demandeur et son auteur de projet en ont été informés ; Considérant que le projet de S.O.L. s’est vu amendé en ce sens ; en effet, la carte d’orientation et les objectifs ont été adaptés, et déposés en nos services en date du 15.09.2022 par l’auteur de projet ; Considérant qu’il appartient au Conseil communal d’approuver le projet de S.O.L. amendé, préalablement à l’organisation de l’enquête publique et la consultation des instances requises ; Considérant que le Conseil communal s’est réuni en séance du 10.10.2022 ; Vu sa décision :"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 31,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:50430b245dd0be12f0",
+        "sha256": "064abb71cbedac775596575d7ccabc488d2d230ca596909a06aa193c1168ffac",
+        "checkedAt": "2026-10-29T22:03:14.944Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:0528a140c4725beb5947",
+      "title": "Conseil communal — opportunité à vérifier : Aubel",
+      "buyer": "Commune de Aubel",
+      "municipalityINS": "63003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Considérant l’intérêt de prévoir un itinéraire dans le but de relier le RAVeL Ligne 38 au parking de la zone d’activité commerciale Solifo, sise rue de Battice, 125 à 4880 Aubel ; Considérant que l’article 10 du Décret r",
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-08-mai-2023.pdf",
+        "page": 8,
+        "sha256": "26472c55bdb03e93fa3cf6416c838adb61f7cd94077360c8517c328bc8874c64"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-08-mai-2023.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-08-mai-2023.pdf",
+        "sha256": "26472c55bdb03e93fa3cf6416c838adb61f7cd94077360c8517c328bc8874c64",
+        "session": null,
+        "document": {
+          "date": "2023-05-08",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "08/05/2023",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-08-mai-2023.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Considérant l’intérêt de prévoir un itinéraire dans le but de relier le RAVeL Ligne 38 au parking de la zone d’activité commerciale Solifo, sise rue de Battice, 125 à 4880 Aubel ; Considérant que l’article 10 du Décret relatif à la voirie communale du 6 février 2014 prévoit la possibilité de conclure une convention entre le propriétaire des parcelles concernées et la commune en vue de permettre d’établir une voirie publique provisoire et conventionnelle sur un terrain privé, DÉCIDE, à l'unanimité, Article unique : D'approuver la convention d'autorisation de passage en terrain privé entre la",
+      "evidence": "Considérant l’intérêt de prévoir un itinéraire dans le but de relier le RAVeL Ligne 38 au parking de la zone d’activité commerciale Solifo, sise rue de Battice, 125 à 4880 Aubel ; Considérant que l’article 10 du Décret relatif à la voirie communale du 6 février 2014 prévoit la possibilité de conclure une convention entre le propriétaire des parcelles concernées et la commune en vue de permettre d’établir une voirie publique provisoire et conventionnelle sur un terrain privé, DÉCIDE, à l'unanimité, Article unique : D'approuver la convention d'autorisation de passage en terrain privé entre la",
+      "municipalReference": null,
+      "municipalSection": "2. Approbation séance tenante du procès-verbal de l'Assemblée générale extraordinaire du 30",
+      "municipalEvidence": [
+        {
+          "page": 8,
+          "excerpt": "Considérant l’intérêt de prévoir un itinéraire dans le but de relier le RAVeL Ligne 38 au parking de la zone d’activité commerciale Solifo, sise rue de Battice, 125 à 4880 Aubel ; Considérant que l’article 10 du Décret relatif à la voirie communale du 6 février 2014 prévoit la possibilité de conclure une convention entre le propriétaire des parcelles concernées et la commune en vue de permettre d’établir une voirie publique provisoire et conventionnelle sur un terrain privé, DÉCIDE, à l'unanimité, Article unique : D'approuver la convention d'autorisation de passage en terrain privé entre la"
+        },
+        {
+          "page": 8,
+          "excerpt": "Considérant que l’article 10 du Décret relatif à la voirie communale du 6 février 2014 prévoit la possibilité de conclure une convention entre le propriétaire des parcelles concernées et la commune en vue de permettre d’établir une voirie publique provisoire et conventionnelle sur un terrain privé, DÉCIDE, à l'unanimité, Article unique : D'approuver la convention d'autorisation de passage en terrain privé entre la commune d'Aubel et Solifo NV/SA (le propriétaire) afin de relier le RAVeL Ligne 38 au parking de la zone d’activité commerciale Solifo, sise rue de Battice, 125 à 4880 Aubel.Telle que rédigée comme suit :"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 8,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:de3812ee4c7d37fbe7",
+        "sha256": "26472c55bdb03e93fa3cf6416c838adb61f7cd94077360c8517c328bc8874c64",
+        "checkedAt": "2026-10-29T22:03:14.944Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:eb5e9395702fc8aee726",
+      "title": "Conseil communal — opportunité à vérifier : Aubel",
+      "buyer": "Commune de Aubel",
+      "municipalityINS": "63003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Vu le mail du 27 avril 2023 par lequel FINIMO a transmis à la commune d'Aubel le nouveau cahier spécial des charges divisé en trois lots : basse tension, éclairage public et gaz naturel, cahier spécial des charges rédigé",
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-26-juin-2023-internet.pdf",
+        "page": 2,
+        "sha256": "9ed58af4d456fb008fd74df2ca044ac15f0834ae04dd89d758736819388047a7"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-26-juin-2023-internet.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-26-juin-2023-internet.pdf",
+        "sha256": "9ed58af4d456fb008fd74df2ca044ac15f0834ae04dd89d758736819388047a7",
+        "session": null,
+        "document": {
+          "date": "2023-06-26",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "26/06/2023",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-26-juin-2023-internet.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Vu le mail du 27 avril 2023 par lequel FINIMO a transmis à la commune d'Aubel le nouveau cahier spécial des charges divisé en trois lots : basse tension, éclairage public et gaz naturel, cahier spécial des charges rédigé par le bureau d'études Coretec en vue dudit achat groupé ; Vu la législation en la matière ; Vu la délibération du 06 mars 2023 du conseil communal fixant la délégation de compétences en matière de marchés publics et de concession et plus particulièrement l’article 2 donnant délégation Page 2 sur 18",
+      "evidence": "Vu le mail du 27 avril 2023 par lequel FINIMO a transmis à la commune d'Aubel le nouveau cahier spécial des charges divisé en trois lots : basse tension, éclairage public et gaz naturel, cahier spécial des charges rédigé par le bureau d'études Coretec en vue dudit achat groupé ; Vu la législation en la matière ; Vu la délibération du 06 mars 2023 du conseil communal fixant la délégation de compétences en matière de marchés publics et de concession et plus particulièrement l’article 2 donnant délégation Page 2 sur 18",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 2,
+          "excerpt": "Vu le mail du 27 avril 2023 par lequel FINIMO a transmis à la commune d'Aubel le nouveau cahier spécial des charges divisé en trois lots : basse tension, éclairage public et gaz naturel, cahier spécial des charges rédigé par le bureau d'études Coretec en vue dudit achat groupé ; Vu la législation en la matière ; Vu la délibération du 06 mars 2023 du conseil communal fixant la délégation de compétences en matière de marchés publics et de concession et plus particulièrement l’article 2 donnant délégation Page 2 sur 18"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 2,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:5e1d837d6c369fecb4",
+        "sha256": "9ed58af4d456fb008fd74df2ca044ac15f0834ae04dd89d758736819388047a7",
+        "checkedAt": "2026-10-29T22:03:14.944Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:0d0f6f245e1fd0dc3d0c",
+      "title": "Conseil communal — opportunité à vérifier : Aubel",
+      "buyer": "Commune de Aubel",
+      "municipalityINS": "63003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Vu la délibération du Conseil communal du 20 juin 2022 approuvant le cahier des charges N° 2022/274 et le mode de passation ; Vu le cahier spécial des charges N° 2022/274 relatif à ce marché établi par l’auteur de projet",
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-26-juin-2023-internet.pdf",
+        "page": 9,
+        "sha256": "9ed58af4d456fb008fd74df2ca044ac15f0834ae04dd89d758736819388047a7"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-26-juin-2023-internet.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-26-juin-2023-internet.pdf",
+        "sha256": "9ed58af4d456fb008fd74df2ca044ac15f0834ae04dd89d758736819388047a7",
+        "session": null,
+        "document": {
+          "date": "2023-06-26",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "26/06/2023",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-26-juin-2023-internet.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Vu la délibération du Conseil communal du 20 juin 2022 approuvant le cahier des charges N° 2022/274 et le mode de passation ; Vu le cahier spécial des charges N° 2022/274 relatif à ce marché établi par l’auteur de projet, Sotrez- Nizet Sprl sprl, Outre-cour 124/14 à 4651 Herve ; Considérant que le département des infrastructures locales du SPW a demandé aux Autorités communales de tenir compte de quelques remarques quant au cahier spécial des charges N° 2022/274 ;",
+      "evidence": "Vu la délibération du Conseil communal du 20 juin 2022 approuvant le cahier des charges N° 2022/274 et le mode de passation ; Vu le cahier spécial des charges N° 2022/274 relatif à ce marché établi par l’auteur de projet, Sotrez- Nizet Sprl sprl, Outre-cour 124/14 à 4651 Herve ; Considérant que le département des infrastructures locales du SPW a demandé aux Autorités communales de tenir compte de quelques remarques quant au cahier spécial des charges N° 2022/274 ;",
+      "municipalReference": "2022/274",
+      "municipalSection": "4. Lecture et approbation du procès-verbal",
+      "municipalEvidence": [
+        {
+          "page": 9,
+          "excerpt": "Vu la délibération du Conseil communal du 20 juin 2022 approuvant le cahier des charges N° 2022/274 et le mode de passation ; Vu le cahier spécial des charges N° 2022/274 relatif à ce marché établi par l’auteur de projet, Sotrez- Nizet Sprl sprl, Outre-cour 124/14 à 4651 Herve ; Considérant que le département des infrastructures locales du SPW a demandé aux Autorités communales de tenir compte de quelques remarques quant au cahier spécial des charges N° 2022/274 ;"
+        },
+        {
+          "page": 10,
+          "excerpt": "Article 2 : D'approuver le cahier des charges N° 2022/274 modifié en fonction des remarques de la tutelle et le montant estimé du marché “PIWACY - Piste cyclo-pédestre entre le RAVel L38 et le giratoire N608”, établis par l’auteur de projet, Sotrez-Nizet Sprl , Outre-cour 124/14 à 4651 Herve. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 132.573,00 € hors TVA ou 160.413,33 €, 21% TVA comprise (27.840,33 € TVA cocontractant). Article 3 : De passer le marché par la procédure ouverte."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 9,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:5e1d837d6c369fecb4",
+        "sha256": "9ed58af4d456fb008fd74df2ca044ac15f0834ae04dd89d758736819388047a7",
+        "checkedAt": "2026-10-29T22:03:14.944Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:9773b420dd06b427bb5d",
+      "title": "Conseil communal — opportunité à vérifier : Aubel",
+      "buyer": "Commune de Aubel",
+      "municipalityINS": "63003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "de l’accès vers le parc au départ de la place Albert 1er. Article 2 : D’approuver le cahier des charges 2023/326 relatif au marché \" Coeur de Village: Aménagement de la nouvelle salle polyvalente et de ses abords\" établi",
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-26-juin-2023-internet.pdf",
+        "page": 11,
+        "sha256": "9ed58af4d456fb008fd74df2ca044ac15f0834ae04dd89d758736819388047a7"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-26-juin-2023-internet.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-26-juin-2023-internet.pdf",
+        "sha256": "9ed58af4d456fb008fd74df2ca044ac15f0834ae04dd89d758736819388047a7",
+        "session": null,
+        "document": {
+          "date": "2023-06-26",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "26/06/2023",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-26-juin-2023-internet.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : de l’accès vers le parc au départ de la place Albert 1er. Article 2 : D’approuver le cahier des charges 2023/326 relatif au marché \" Coeur de Village: Aménagement de la nouvelle salle polyvalente et de ses abords\" établi par l'auteur de projet. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics; Article 3: De lancer la procédure visant l'attribution du marché \" Coeur de Village: Aménagement de la nouvelle salle polyvalente et de ses abords\" suiavnt la procédure de passation choisie (procédure",
+      "evidence": "de l’accès vers le parc au départ de la place Albert 1er. Article 2 : D’approuver le cahier des charges 2023/326 relatif au marché \" Coeur de Village: Aménagement de la nouvelle salle polyvalente et de ses abords\" établi par l'auteur de projet. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics; Article 3: De lancer la procédure visant l'attribution du marché \" Coeur de Village: Aménagement de la nouvelle salle polyvalente et de ses abords\" suiavnt la procédure de passation choisie (procédure",
+      "municipalReference": "2023/326",
+      "municipalSection": "4. Lecture et approbation du procès-verbal",
+      "municipalEvidence": [
+        {
+          "page": 11,
+          "excerpt": "de l’accès vers le parc au départ de la place Albert 1er. Article 2 : D’approuver le cahier des charges 2023/326 relatif au marché \" Coeur de Village: Aménagement de la nouvelle salle polyvalente et de ses abords\" établi par l'auteur de projet. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics; Article 3: De lancer la procédure visant l'attribution du marché \" Coeur de Village: Aménagement de la nouvelle salle polyvalente et de ses abords\" suiavnt la procédure de passation choisie (procédure"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 11,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:5e1d837d6c369fecb4",
+        "sha256": "9ed58af4d456fb008fd74df2ca044ac15f0834ae04dd89d758736819388047a7",
+        "checkedAt": "2026-10-29T22:03:14.944Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:21d2d72fabc71ee7344f",
+      "title": "Conseil communal — opportunité à vérifier : Aubel",
+      "buyer": "Commune de Aubel",
+      "municipalityINS": "63003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "visite concernées ; Vu le courriel du 22.06.2023 par lequel la société A.I.D.E. transmet à la Commune d'Aubel le plan de division daté du 13.06.2023, levé et dressé par le géomètre-expert LECOQ Pascaline, reprenant le dé",
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-09-octobre-2023-20-00.pdf",
+        "page": 2,
+        "sha256": "d496b07d4ba89e62b71414571e8622f58a8495caaed494940fd33298d06f8795"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Foncier",
+      "sectors": [
+        "Foncier",
+        "Topo"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-09-octobre-2023-20-00.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-09-octobre-2023-20-00.pdf",
+        "sha256": "d496b07d4ba89e62b71414571e8622f58a8495caaed494940fd33298d06f8795",
+        "session": null,
+        "document": {
+          "date": "2023-10-09",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "09/10/2023",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-09-octobre-2023-20-00.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : visite concernées ; Vu le courriel du 22.06.2023 par lequel la société A.I.D.E. transmet à la Commune d'Aubel le plan de division daté du 13.06.2023, levé et dressé par le géomètre-expert LECOQ Pascaline, reprenant le détail et le métré des servitudes en sous-sol et des emprises en pleine propriété, et sollicite l'avis de principe du Collège Communal sur leur proposition de transfert de ces ouvrages pour l'euro symbolique ; Vu l'extrait du registre aux délibérations du Collège Communal du 26.06.2023, par lequel il décide",
+      "evidence": "visite concernées ; Vu le courriel du 22.06.2023 par lequel la société A.I.D.E. transmet à la Commune d'Aubel le plan de division daté du 13.06.2023, levé et dressé par le géomètre-expert LECOQ Pascaline, reprenant le détail et le métré des servitudes en sous-sol et des emprises en pleine propriété, et sollicite l'avis de principe du Collège Communal sur leur proposition de transfert de ces ouvrages pour l'euro symbolique ; Vu l'extrait du registre aux délibérations du Collège Communal du 26.06.2023, par lequel il décide",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 2,
+          "excerpt": "visite concernées ; Vu le courriel du 22.06.2023 par lequel la société A.I.D.E. transmet à la Commune d'Aubel le plan de division daté du 13.06.2023, levé et dressé par le géomètre-expert LECOQ Pascaline, reprenant le détail et le métré des servitudes en sous-sol et des emprises en pleine propriété, et sollicite l'avis de principe du Collège Communal sur leur proposition de transfert de ces ouvrages pour l'euro symbolique ; Vu l'extrait du registre aux délibérations du Collège Communal du 26.06.2023, par lequel il décide"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 2,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:4621fd420e177debc6",
+        "sha256": "d496b07d4ba89e62b71414571e8622f58a8495caaed494940fd33298d06f8795",
+        "checkedAt": "2026-10-29T22:03:14.944Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:e93b4ae60c0c0d8b061f",
+      "title": "Conseil communal — opportunité à vérifier : Aubel",
+      "buyer": "Commune de Aubel",
+      "municipalityINS": "63003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "DECIDE, à l'unanimité, Article 1er : de confirmer son accord sur la cession à la société A.I.D.E., pour l'euro symbolique, des ouvrages définis sur le plan de division daté du 13.06.2023, levé et dressé par le géomètre-e",
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-09-octobre-2023-20-00.pdf",
+        "page": 2,
+        "sha256": "d496b07d4ba89e62b71414571e8622f58a8495caaed494940fd33298d06f8795"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Foncier",
+      "sectors": [
+        "Foncier",
+        "Topo"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-09-octobre-2023-20-00.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-09-octobre-2023-20-00.pdf",
+        "sha256": "d496b07d4ba89e62b71414571e8622f58a8495caaed494940fd33298d06f8795",
+        "session": null,
+        "document": {
+          "date": "2023-10-09",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "09/10/2023",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-09-octobre-2023-20-00.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : DECIDE, à l'unanimité, Article 1er : de confirmer son accord sur la cession à la société A.I.D.E., pour l'euro symbolique, des ouvrages définis sur le plan de division daté du 13.06.2023, levé et dressé par le géomètre-expert LECOQ Pascaline, sous forme de servitudes en sous-sol et d'emprises en pleine propriété, conformément aux modalités définies dans le projet de convention sous seing privé d'acquisition d'immeuble et de constitution de servitudes repris ci-après : \"ENTRE LES SOUSSIGNES :",
+      "evidence": "DECIDE, à l'unanimité, Article 1er : de confirmer son accord sur la cession à la société A.I.D.E., pour l'euro symbolique, des ouvrages définis sur le plan de division daté du 13.06.2023, levé et dressé par le géomètre-expert LECOQ Pascaline, sous forme de servitudes en sous-sol et d'emprises en pleine propriété, conformément aux modalités définies dans le projet de convention sous seing privé d'acquisition d'immeuble et de constitution de servitudes repris ci-après : \"ENTRE LES SOUSSIGNES :",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 2,
+          "excerpt": "DECIDE, à l'unanimité, Article 1er : de confirmer son accord sur la cession à la société A.I.D.E., pour l'euro symbolique, des ouvrages définis sur le plan de division daté du 13.06.2023, levé et dressé par le géomètre-expert LECOQ Pascaline, sous forme de servitudes en sous-sol et d'emprises en pleine propriété, conformément aux modalités définies dans le projet de convention sous seing privé d'acquisition d'immeuble et de constitution de servitudes repris ci-après : \"ENTRE LES SOUSSIGNES :"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 2,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:4621fd420e177debc6",
+        "sha256": "d496b07d4ba89e62b71414571e8622f58a8495caaed494940fd33298d06f8795",
+        "checkedAt": "2026-10-29T22:03:14.944Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:c090f51dfeabff610108",
+      "title": "Conseil communal — opportunité à vérifier : Aubel",
+      "buyer": "Commune de Aubel",
+      "municipalityINS": "63003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "DECIDE, à l'unanimité, Article 1er : D'approuver le cahier des charges N° 2023/312 et le montant estimé du marché “Fourniture d'alarmes incendie et entretien du système existant”, établis par l’auteur de projet. Les cond",
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-09-octobre-2023-20-00.pdf",
+        "page": 21,
+        "sha256": "d496b07d4ba89e62b71414571e8622f58a8495caaed494940fd33298d06f8795"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-09-octobre-2023-20-00.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-09-octobre-2023-20-00.pdf",
+        "sha256": "d496b07d4ba89e62b71414571e8622f58a8495caaed494940fd33298d06f8795",
+        "session": null,
+        "document": {
+          "date": "2023-10-09",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "09/10/2023",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-09-octobre-2023-20-00.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : DECIDE, à l'unanimité, Article 1er : D'approuver le cahier des charges N° 2023/312 et le montant estimé du marché “Fourniture d'alarmes incendie et entretien du système existant”, établis par l’auteur de projet. Les conditions sont Page 21 sur 29",
+      "evidence": "DECIDE, à l'unanimité, Article 1er : D'approuver le cahier des charges N° 2023/312 et le montant estimé du marché “Fourniture d'alarmes incendie et entretien du système existant”, établis par l’auteur de projet. Les conditions sont Page 21 sur 29",
+      "municipalReference": "2023/312",
+      "municipalSection": "2. Montants des dotations issus du budget des entités consolidées",
+      "municipalEvidence": [
+        {
+          "page": 21,
+          "excerpt": "DECIDE, à l'unanimité, Article 1er : D'approuver le cahier des charges N° 2023/312 et le montant estimé du marché “Fourniture d'alarmes incendie et entretien du système existant”, établis par l’auteur de projet. Les conditions sont Page 21 sur 29"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 21,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:4621fd420e177debc6",
+        "sha256": "d496b07d4ba89e62b71414571e8622f58a8495caaed494940fd33298d06f8795",
+        "checkedAt": "2026-10-29T22:03:14.944Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:1468247dfb263ccea4ed",
+      "title": "Conseil communal — opportunité à vérifier : Aubel",
+      "buyer": "Commune de Aubel",
+      "municipalityINS": "63003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "15. Marché de désignation d’un géomètre Marché attribué le 11 septembre 2023 à Marilyn Mullender Rue Saint Vincent 60 à 4840 Welkenraedt pour le montant de 15.275 € HTVA ou 18.482,75 € TVAC. Article 2 : De l'attribution",
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-09-octobre-2023-20-00.pdf",
+        "page": 24,
+        "sha256": "d496b07d4ba89e62b71414571e8622f58a8495caaed494940fd33298d06f8795"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Topo",
+      "sectors": [
+        "Topo",
+        "Foncier"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-09-octobre-2023-20-00.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-09-octobre-2023-20-00.pdf",
+        "sha256": "d496b07d4ba89e62b71414571e8622f58a8495caaed494940fd33298d06f8795",
+        "session": null,
+        "document": {
+          "date": "2023-10-09",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "09/10/2023",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/proces-verbal-09-octobre-2023-20-00.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 15. Marché de désignation d’un géomètre Marché attribué le 11 septembre 2023 à Marilyn Mullender Rue Saint Vincent 60 à 4840 Welkenraedt pour le montant de 15.275 € HTVA ou 18.482,75 € TVAC. Article 2 : De l'attribution des marchés de faibles montants suivant tableau en annexe. 12 - POPULATION - Etat-civil - Demande dérogation salle de mariage à l'Espace Culture",
+      "evidence": "15. Marché de désignation d’un géomètre Marché attribué le 11 septembre 2023 à Marilyn Mullender Rue Saint Vincent 60 à 4840 Welkenraedt pour le montant de 15.275 € HTVA ou 18.482,75 € TVAC. Article 2 : De l'attribution des marchés de faibles montants suivant tableau en annexe. 12 - POPULATION - Etat-civil - Demande dérogation salle de mariage à l'Espace Culture",
+      "municipalReference": null,
+      "municipalSection": "15. Marché de désignation d’un géomètre",
+      "municipalEvidence": [
+        {
+          "page": 24,
+          "excerpt": "15. Marché de désignation d’un géomètre Marché attribué le 11 septembre 2023 à Marilyn Mullender Rue Saint Vincent 60 à 4840 Welkenraedt pour le montant de 15.275 € HTVA ou 18.482,75 € TVAC. Article 2 : De l'attribution des marchés de faibles montants suivant tableau en annexe. 12 - POPULATION - Etat-civil - Demande dérogation salle de mariage à l'Espace Culture"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 24,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:4621fd420e177debc6",
+        "sha256": "d496b07d4ba89e62b71414571e8622f58a8495caaed494940fd33298d06f8795",
+        "checkedAt": "2026-10-29T22:03:14.944Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:d471369c4e199a5e697e",
+      "title": "Conseil communal — opportunité à vérifier : Aubel",
+      "buyer": "Commune de Aubel",
+      "municipalityINS": "63003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "communal souhaiterait réaliser dans le cadre du PIC 2022 - 2024 ; Vu la décision du Collège communal du 25 avril 2022 relative à l'attribution du marché “PIC 2022 - 2024 - PIMACI - Désignation Auteur de projet” à « Sotre",
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/23-12-11-proces-verbal-11-decembre-2023-20-00.pdf",
+        "page": 6,
+        "sha256": "c06f8fefaef4e651e3ca2865d337f5686a29d579481acec44b4b80e677a1f7a6"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/23-12-11-proces-verbal-11-decembre-2023-20-00.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/23-12-11-proces-verbal-11-decembre-2023-20-00.pdf",
+        "sha256": "c06f8fefaef4e651e3ca2865d337f5686a29d579481acec44b4b80e677a1f7a6",
+        "session": null,
+        "document": {
+          "date": "2023-12-11",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "11/12/2023",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/23-12-11-proces-verbal-11-decembre-2023-20-00.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : communal souhaiterait réaliser dans le cadre du PIC 2022 - 2024 ; Vu la décision du Collège communal du 25 avril 2022 relative à l'attribution du marché “PIC 2022 - 2024 - PIMACI - Désignation Auteur de projet” à « Sotrez-Nizet Sprl », Outre-cour 124/14 à 4651 Herve ; Vu le plan d’investissement et les fiches projets rédigées par l’auteur de projet « Sotrez-Nizet Sprl » pour le dossier PIC 2022 – 2024 ; Vu la décision du Conseil communal du 4 juillet 2022 d’approuver le plan d’investissement communal",
+      "evidence": "communal souhaiterait réaliser dans le cadre du PIC 2022 - 2024 ; Vu la décision du Collège communal du 25 avril 2022 relative à l'attribution du marché “PIC 2022 - 2024 - PIMACI - Désignation Auteur de projet” à « Sotrez-Nizet Sprl », Outre-cour 124/14 à 4651 Herve ; Vu le plan d’investissement et les fiches projets rédigées par l’auteur de projet « Sotrez-Nizet Sprl » pour le dossier PIC 2022 – 2024 ; Vu la décision du Conseil communal du 4 juillet 2022 d’approuver le plan d’investissement communal",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 6,
+          "excerpt": "communal souhaiterait réaliser dans le cadre du PIC 2022 - 2024 ; Vu la décision du Collège communal du 25 avril 2022 relative à l'attribution du marché “PIC 2022 - 2024 - PIMACI - Désignation Auteur de projet” à « Sotrez-Nizet Sprl », Outre-cour 124/14 à 4651 Herve ; Vu le plan d’investissement et les fiches projets rédigées par l’auteur de projet « Sotrez-Nizet Sprl » pour le dossier PIC 2022 – 2024 ; Vu la décision du Conseil communal du 4 juillet 2022 d’approuver le plan d’investissement communal"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 6,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:5307d763aca0786b9b",
+        "sha256": "c06f8fefaef4e651e3ca2865d337f5686a29d579481acec44b4b80e677a1f7a6",
+        "checkedAt": "2026-10-29T22:03:14.944Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:35decd44121724ca9b84",
+      "title": "Conseil communal — opportunité à vérifier : Aubel",
+      "buyer": "Commune de Aubel",
+      "municipalityINS": "63003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "2024 - PIMACI - Désignation Auteur de projet” à « Sotrez-Nizet Sprl », Outre-cour 124/14 à 4651 Herve ; Vu le plan d’investissement et les fiches projets rédigées par l’auteur de projet « Sotrez-Nizet Sprl » pour le doss",
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/23-12-11-proces-verbal-11-decembre-2023-20-00.pdf",
+        "page": 6,
+        "sha256": "c06f8fefaef4e651e3ca2865d337f5686a29d579481acec44b4b80e677a1f7a6"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/23-12-11-proces-verbal-11-decembre-2023-20-00.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/23-12-11-proces-verbal-11-decembre-2023-20-00.pdf",
+        "sha256": "c06f8fefaef4e651e3ca2865d337f5686a29d579481acec44b4b80e677a1f7a6",
+        "session": null,
+        "document": {
+          "date": "2023-12-11",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "11/12/2023",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.aubel.be/fr/ma-commune/vie-politique/conseil-communal/pdf/23-12-11-proces-verbal-11-decembre-2023-20-00.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 2024 - PIMACI - Désignation Auteur de projet” à « Sotrez-Nizet Sprl », Outre-cour 124/14 à 4651 Herve ; Vu le plan d’investissement et les fiches projets rédigées par l’auteur de projet « Sotrez-Nizet Sprl » pour le dossier PIC 2022 – 2024 ; Vu la décision du Conseil communal du 4 juillet 2022 d’approuver le plan d’investissement communal (PIC) 2022-2024 ; Vu le courrier du 16 février 2023 du SPW attirant notre attention sur le fait que, suite au retrait du",
+      "evidence": "2024 - PIMACI - Désignation Auteur de projet” à « Sotrez-Nizet Sprl », Outre-cour 124/14 à 4651 Herve ; Vu le plan d’investissement et les fiches projets rédigées par l’auteur de projet « Sotrez-Nizet Sprl » pour le dossier PIC 2022 – 2024 ; Vu la décision du Conseil communal du 4 juillet 2022 d’approuver le plan d’investissement communal (PIC) 2022-2024 ; Vu le courrier du 16 février 2023 du SPW attirant notre attention sur le fait que, suite au retrait du",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 6,
+          "excerpt": "2024 - PIMACI - Désignation Auteur de projet” à « Sotrez-Nizet Sprl », Outre-cour 124/14 à 4651 Herve ; Vu le plan d’investissement et les fiches projets rédigées par l’auteur de projet « Sotrez-Nizet Sprl » pour le dossier PIC 2022 – 2024 ; Vu la décision du Conseil communal du 4 juillet 2022 d’approuver le plan d’investissement communal (PIC) 2022-2024 ; Vu le courrier du 16 février 2023 du SPW attirant notre attention sur le fait que, suite au retrait du"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 6,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:5307d763aca0786b9b",
+        "sha256": "c06f8fefaef4e651e3ca2865d337f5686a29d579481acec44b4b80e677a1f7a6",
+        "checkedAt": "2026-10-29T22:03:14.944Z",
+        "changedAt": null
+      }
     }
   ]
 }
