@@ -5,10 +5,10 @@
  */
 (function(root,factory){
  'use strict';
- var api=factory();
+ var api=factory(typeof module==='object'&&module.exports?require('./publication-filters.js'):root.MRPublications);
  if(typeof module==='object'&&module.exports)module.exports=api;
  if(root)root.MRDetailV2=api;
-})(typeof globalThis!=='undefined'?globalThis:this,function(){
+})(typeof globalThis!=='undefined'?globalThis:this,function(publications){
  'use strict';
  function str(x){return x==null?'':String(x).trim()}
  function esc(x){return str(x).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
@@ -97,7 +97,7 @@
   });
   if(m.sourceDocument)add(m.sourceDocument,'Consulter le document communal','council','Document source référencé');
   if(m.url){
-   var text=m.source==='TED'?'Ouvrir l’avis TED':m.source==='BOSA'?'Ouvrir le dossier e-Procurement':m.source==='LOCALE'?'Consulter le document communal':'Consulter la publication';
+   var text=m.source==='TED'?'Ouvrir l’avis TED':m.source==='BOSA'?'Ouvrir le dossier e-Procurement':m.source==='LOCALE'?(publications&&publications.source(m)==='other'?'Consulter le document public':'Consulter le document communal'):'Consulter la publication';
    add(m.url,text,m.source==='LOCALE'?'council':'notice',m.source==='LOCALE'?'Document source référencé':'Portail officiel — annexes à consulter sur place');
   }
   return out;
@@ -135,16 +135,20 @@
  function render(m,options){
   options=options||{};
   var all=sources(m),docs=all.filter(function(x){return x.kind==='document'}),others=all.filter(function(x){return x.kind!=='document'});
-  var visit=visitState(m),req=requirements(m),due=status(m),local=m.source==='LOCALE';
+  var selectedType=options.publicationType||'all',selectedSource=options.sourceFilter||'all';
+  var focused=publications&&(selectedType!=='all'||selectedSource!=='all')?publications.facets(m).find(function(f){return (selectedType==='all'||f.type===selectedType)&&(selectedSource==='all'||f.source===selectedSource)}):null;
+  var visit=visitState(m),req=requirements(m),due=selectedType==='result'&&focused?{label:'Avis de résultat',tone:'neutral',kind:'result'}:status(m),local=m.source==='LOCALE'&&(!publications||publications.source(m)==='municipal');
   var noticeType=m.noticeKind==='award'?'Avis de résultat':m.noticeKind==='competition'?'Avis de mise en concurrence':local?'Piste de prospection':'Publication';
-  var header='<div class="mr2-intro"><div class="mr2-eyebrow">'+esc(local?'VEILLE COMMUNALE':'PUBLICATION OFFICIELLE')+' · '+esc(str(m.source)||'Source à vérifier')+'</div>'+
+  if(focused&&selectedType!=='all')noticeType=selectedType==='result'?'Avis de résultat':selectedType==='competition'?'Avis de mise en concurrence':selectedType==='prospect'?'Piste de prospection':'Autre publication';
+  var selection=focused?'<div class="mr2-highlight mr2-caution"><strong>Vue sélectionnée : '+esc((publications.sources.find(function(s){return s.id===focused.source})||{label:focused.source}).label)+' · '+esc(noticeType)+'</strong><p>Les rubriques décrivent le dossier regroupé. Vérifier la chronologie et les versions des avis.</p></div>':'';
+  var header='<div class="mr2-intro"><div class="mr2-eyebrow">'+esc(local?'VEILLE COMMUNALE':m.source==='LOCALE'?'SITE PUBLIC':'PUBLICATION OFFICIELLE')+' · '+esc(publications?publications.labels(m,selectedSource):(str(m.source)||'Source à vérifier'))+'</div>'+
    '<h3 class="mr2-title">'+esc(m.title||'Marché sans intitulé')+'</h3>'+
    '<div class="mr2-pills">'+pill(due.label,due.tone)+pill(noticeType,'muted')+(m.screening==='review'?pill('Correspondance à vérifier','unknown'):m.screening==='excluded'?pill('Correspondance écartée à examiner','unknown'):'')+'</div>'+
    '<p class="mr2-summary">'+esc(m.description||'Résumé non renseigné dans les données collectées.')+'</p></div>';
   var summary=section('Informations principales','<div class="mr2-fields">'+
    field('Pouvoir adjudicateur',m.buyer||'Non communiqué')+field('Référence',reference(m))+
    field('Zone',m.region||'Non localisée')+field('Date de publication',formattedDate(m.publication))+
-   field('Date limite de remise',dateTime(m.deadline)+(m.deadlineTime&&!/T\d{2}:\d{2}/.test(str(m.deadline))?' · heure signalée '+str(m.deadlineTime)+' (à confirmer)':''),m.deadlineSourceKind==='bosa_verified_public'&&m.deadlineSourceUrl?'Date et heure vérifiées dans le dossier officiel e-Procurement. Vérifier les éventuels rectificatifs.':!m.deadline?'Consulter la publication officielle avant d’engager une offre.':/^\d{4}-\d{2}-\d{2}$/.test(str(m.deadline))?'L’heure limite n’est pas présente dans les données.':'Horodatage issu des données de collecte.')+
+   field(selectedType==='result'&&focused?'Date limite de l’appel d’offres du dossier':'Date limite de remise',dateTime(m.deadline)+(m.deadlineTime&&!/T\d{2}:\d{2}/.test(str(m.deadline))?' · heure signalée '+str(m.deadlineTime)+' (à confirmer)':''),m.deadlineSourceKind==='bosa_verified_public'&&m.deadlineSourceUrl?'Date et heure vérifiées dans le dossier officiel e-Procurement. Vérifier les éventuels rectificatifs.':!m.deadline?'Consulter la publication officielle avant d’engager une offre.':/^\d{4}-\d{2}-\d{2}$/.test(str(m.deadline))?'L’heure limite n’est pas présente dans les données.':'Horodatage issu des données de collecte.')+
    field('CPV',Array.isArray(m.cpv)&&m.cpv.length?m.cpv.join(' · '):'Non renseigné')+
    field('Délai d’exécution',m.executionDuration||'Non renseigné')+
    field('Procédure',noticeType)+
@@ -214,14 +218,14 @@
    reqBody+='<h5 class="mr2-mini-title">Points signalés par la collecte — non vérifiés dans le CSC</h5>'+
      '<div class="mr2-bullets">'+m.constraints.map(function(x){return '<div>• '+esc(x)+'</div>'}).join('')+'</div>';
   }
-  var localBody=local?section('Trace de prospection',
+  var localBody=m.source==='LOCALE'?section('Trace de prospection',
    '<div class="mr2-highlight"><strong>Il ne s’agit pas nécessairement d’un appel d’offres ouvert.</strong>'+
-   '<p>Un document communal a été repéré. Sa date et son intérêt actuel doivent être vérifiés avant de contacter le pouvoir adjudicateur.</p></div>'+
+   '<p>Un document public a été repéré. Sa date et son intérêt actuel doivent être vérifiés avant de contacter le pouvoir adjudicateur.</p></div>'+
    municipalDocumentTrace(m)+
    (m.evidence?'<div class="mr2-evidence"><strong>'+(m.sourceEvidenceStatus==='not_found'?'Extrait historique — à revalider':'Extrait repéré')+'</strong><p>'+esc(m.evidence)+'</p></div>':'')+
    (m.opportunityStage?'<div class="mr2-evidence">Qualification automatique : '+esc(m.opportunityStage.replace(/_/g,' '))+'</div>':'')):'';
-  return {html:header+summary+visitSection+documents+reading+section('Sélection et critères d’attribution',reqBody)+localBody,
-   primary:primarySource(m),documentCount:docs.length,visitKind:visit.kind,reference:reference(m),status:due};
+  return {html:selection+header+summary+visitSection+documents+reading+section('Sélection et critères d’attribution',reqBody)+localBody,
+   primary:focused&&linkUrl(focused.url)?{url:linkUrl(focused.url),kind:'notice'}:primarySource(m),documentCount:docs.length,visitKind:visit.kind,reference:reference(m),status:due};
  }
  function municipalDocumentTrace(m){
   var v=m.sourceDocumentVersion;
@@ -231,6 +235,9 @@
    '<p>Dernier contrôle : '+esc(date)+' (Bruxelles). Empreinte '+esc(str(v.sha256).slice(0,16))+'…</p>'+
    (v.changedAt?'<p>Une modification du fichier ne constitue pas, à elle seule, un rectificatif officiel du marché.</p>':'')+
    (m.sourceEvidenceStatus==='not_found'?'<p><strong>L’extrait historique n’a pas été retrouvé dans la version contrôlée. Sa validité actuelle doit être vérifiée.</strong></p>':'')+'</div>';
+  if(Array.isArray(m.municipalEvidence)&&m.municipalEvidence.length>1){
+   html+='<details class="mr2-source-passages"><summary>Passages regroupés du même document ('+m.municipalEvidence.length+')</summary>'+(m.municipalReference?'<p>Référence explicitement repérée : '+esc(m.municipalReference)+'</p>':'<p>Passages du même point communal, à vérifier.</p>')+m.municipalEvidence.slice(0,6).map(function(p){return '<div class="mr2-evidence"><strong>Page '+esc(p.page)+'</strong><p>'+esc(p.excerpt)+'</p></div>'}).join('')+'</details>';
+  }
   var review=m.sourceDocumentReview;
   if(review&&review.sha256===v.sha256&&Array.isArray(review.candidates)&&review.candidates.length){
    html+='<details class="mr2-source-changes"><summary>Passages du document à comparer ('+review.candidates.length+')</summary>'+

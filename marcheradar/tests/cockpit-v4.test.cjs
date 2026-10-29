@@ -11,7 +11,7 @@ const fixture=[
 ];
 test('une procédure de concurrence n’est pas un résultat, une piste locale n’est pas un appel d’offres',()=>{
  assert.deepEqual(fixture.map(api.kind),['competition','competition','result','prospect','prospect','unknown']);
- assert.equal(api.typeLabel('result'),'Avis de résultat');
+ assert.equal(api.typeLabel('result'),'Attribution');
  assert.equal(api.matchesType(fixture[0],'result'),false);
  assert.equal(api.matchesType(fixture[2],'competition'),false);
  assert.equal(api.matchesType(fixture[2],'all'),true);
@@ -20,7 +20,7 @@ test('les compteurs par type ont une définition unique et ne mélangent pas les
  assert.deepEqual(api.typeCounts(fixture),{all:6,competition:2,result:1,prospect:2,unknown:1});
  const html=api.renderTypeFilters(api.typeCounts(fixture),'competition');
  assert.match(html,/data-publication="competition" aria-pressed="true"/);
- assert.match(html,/Appels d&#39;offres/);
+ assert.match(html,/Appels d[’']offres/);
  assert.match(html,/v4-type-count">2<\/span>/);
 });
 test('l’interface ne déclare pas un marché ouvert si l’échéance officielle est inconnue',()=>{

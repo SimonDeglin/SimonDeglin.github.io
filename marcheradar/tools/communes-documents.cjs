@@ -7,9 +7,14 @@ const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),cp=r
 const profile=require('./kdrix-profile.cjs');
 const {selection}=require('./communes-scope.cjs');
 const queueApi=require('./municipal-queue.cjs');
+const sourcePolicy=require('./communal-source-policy.cjs');
+const webType=require('./web-publication-type.cjs');
+const signals=require('./municipal-signals.cjs');
+const sourceHealth=require('../source-health.js');
 const INVENTORY=path.resolve(__dirname,'../communes.json'),DATA=path.resolve(__dirname,'../data.json');
+const EXTRACTION_VERSION='2026-10-29-publications-v4';
 const MAX_COMMUNES=Math.min(8,Math.max(1,Number(process.env.COMMUNES_DOC_BATCH||4)));
-const MATCH=/(?:topograph|g[eé]om[eè]tr|bornage|division parcell|bathym[eé]tr|jaugeag|limnim[eé]tr|[eé]tude hydraulique|bureau d.[eé]tudes|auteur de projet|d[eé]tection de r[eé]seaux|scanner laser|photogramm[eé]tr|certificat PEB|certification [eé]nerg[eé]tique|lev[eé] de terrain|[eé]valuation immobili[eè]re|relev[eé] de cours d.eau)/i;
+const MATCH=/(?:topograph|g[eé]om[eè]tr|bornage|division parcell|bathym[eé]tr|jaugeag|limnim[eé]tr|[eé]tude hydraulique|bureau d.[eé]tudes|auteur de projet|d[eé]tection de r[eé]seaux|scanner laser|photogramm[eé]tr|certificat PEB|certification [eé]nerg[eé]tique|lev[eé] de terrain|[eé]valuation immobili[eè]re|relev[eé] de cours d.eau|voirie|espace public|am[eé]nagement.{0,15}place|bassin d.orage|acquisition.{0,15}parcelle|vente.{0,15}terrain)/i;
 const INTENT=/(?:d[eé]cide|approuve|d[eé]lib[eè]re|march[eé] de services|d[eé]signation|consultation|cahier sp[eé]cial des charges|lancement d.un march[eé]|mise en concurrence|bureau d.[eé]tudes|mission d.auteur de projet|budget d.[eé]tudes?)/i;
 function textOnly(h){return String(h||'').replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,' ').replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi,' ').replace(/<[^>]*>/g,' ').replace(/&(?:amp|nbsp|quot|#39);/gi,' ').replace(/\s+/g,' ').trim()}
 function fileLinks(html,base){
@@ -17,9 +22,15 @@ function fileLinks(html,base){
  for(const a of String(html).matchAll(/<a\b[^>]*href\s*=\s*["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)){
   let uri;try{uri=new URL(a[1].replace(/&amp;/g,'&'),base)}catch(e){continue}
   if(!/^https?:$/.test(uri.protocol))continue;
-  if(!/\.pdf(?:$|[?#])/i.test(uri.href))continue;
+  const title=textOnly(a[2]).slice(0,90);
+  const gateway=/\/download\/[^/]+\/?$/i.test(uri.pathname)&&/ordre.{0,15}jour|proc[eè]s.{0,10}verbal|\bpv\b|avis.{0,15}march[eé]|cahier.{0,15}charges/i.test(title);
+  const typed=/type\s*=\s*["']application\/pdf["']/i.test(a[0])||/\/@@download\/file(?:$|\?)/i.test(uri.href);
+  if(!/\.pdf(?:$|[?#])/i.test(uri.href)&&!gateway&&!typed)continue;
+  // WordPress Download Monitor ajoute une valeur de cache variable : elle ne
+  // doit pas créer une nouvelle identité de document à chaque passage.
+  if(gateway)uri.searchParams.delete('tmstv');
   uri.hash='';
-  if(!out.some(x=>x.url===uri.href))out.push({url:uri.href,title:textOnly(a[2]).slice(0,90)});
+  if(!out.some(x=>x.url===uri.href))out.push({url:uri.href,title});
  }
  return out;
 }
@@ -30,10 +41,10 @@ function childPages(html,base){
   u.hash='';
   if(u.origin!==parent.origin||u.pathname===parent.pathname||!u.pathname.startsWith(parent.pathname.replace(/\/$/,'')+'/'))continue;
   if(/\.pdf(?:$|[?#])/i.test(u.href)||!/conseil|deliber|d[eé]lib[eé]r|proces|proc[eè]s|ordre|seance|s[eé]ance|pv-|march[eé]s|20\d{2}/i.test(u.pathname+' '+textOnly(a[2])))continue;
-  if(!out.includes(u.href))out.push(u.href);
+  if(!sourcePolicy.excluded({url:u.href,title:textOnly(a[2])})&&!out.includes(u.href))out.push(u.href);
  }return out;
 }
-function readableSource(s){return s.status==='page_accessible'||s.status==='document_pdf_a_analyser'}
+function readableSource(s){return s.scopeStatus!=='non_documentary'&&!sourcePolicy.excluded(s)&&(s.status==='page_accessible'||s.status==='document_pdf_a_analyser')}
 async function download(url,type,max,options={}){
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);
  try{
@@ -67,17 +78,21 @@ function pdfText(bytes){
  finally{try{fs.unlinkSync(tmp)}catch(e){}}
 }
 function passages(text){
- const out=[];
+ const out=[];let sectionHeading=null;
  for(const [pageNo,page] of String(text||'').split('\f').entries()){
   const lines=page.split('\n').map(x=>x.trim()).filter(Boolean);
   for(let i=0;i<lines.length;i++){
-   if(!MATCH.test(lines[i]))continue;
-   const quote=lines.slice(Math.max(0,i-2),Math.min(lines.length,i+5)).join(' ').slice(0,1400);
-   if(INTENT.test(quote)&&!out.some(x=>x.excerpt.slice(0,100)===quote.slice(0,100)))out.push({excerpt:quote,page:pageNo+1});
-   if(out.length>=6)return out;
+   if(/^\d{1,3}[.)]\s+.{30,}/.test(lines[i]))sectionHeading=lines[i].slice(0,250);
+   if(!MATCH.test(lines[i])||/agent constatateur|assermentation|d[eé]signation.{0,35}(?:conseiller|d[eé]l[eé]gu[eé]|membre du conseil)/i.test(lines[i]))continue;
+   let lo=Math.max(0,i-2),hi=Math.min(lines.length,i+5);
+   for(let j=i;j>=lo;j--)if(/^\d{1,3}[.)]\s/.test(lines[j])){lo=j;break}
+   for(let j=i+1;j<hi;j++)if(/^\d{1,3}[.)]\s/.test(lines[j])){hi=j;break}
+   const quote=lines.slice(lo,hi).join(' ').slice(0,1400);
+   if(INTENT.test(quote)&&!out.some(x=>x.excerpt.slice(0,100)===quote.slice(0,100)))out.push({excerpt:quote,page:pageNo+1,sectionHeading});
+   if(out.length>=36)return signals.group(out).slice(0,6);
   }
  }
- return out;
+ return signals.group(out).slice(0,6);
 }
 function evidence(text){return passages(text).map(x=>x.excerpt)}
 function digest(value){return crypto.createHash('sha256').update(value).digest('hex')}
@@ -93,19 +108,20 @@ function processDocument(items,commune,pdf,file,now,extract=pdfText){
  if(!file.notModified){
   if(!Buffer.isBuffer(file.bytes)||file.bytes.subarray(0,5).toString()!=='%PDF-')throw Error('Le fichier reçu n’est pas un PDF');
   sha=digest(file.bytes);changed=!!prior.sha256&&prior.sha256!==sha;
-  if(sha!==prior.sha256){text=extract(file.bytes);if(!text||!text.trim())throw Error('PDF sans texte exploitable ; version antérieure conservée');parsed=true;}
+  if(sha!==prior.sha256||prior.extractorVersion!==EXTRACTION_VERSION){text=extract(file.bytes);if(!text||!text.trim())throw Error('PDF sans texte exploitable ; version antérieure conservée');parsed=true;}
   check.etag=file.etag||'';check.lastModified=file.lastModified||'';check.contentCheckedAt=now;
  }else if(!sha)throw Error('Version précédente absente');
  if(changed){
   check.history=[...(prior.history||[]),{sha256:prior.sha256,firstSeenAt:prior.firstSeenAt,lastSeenAt:prior.lastSuccess||prior.lastChecked||null}];
   check.changedAt=now;
  }
+ if(parsed){check.extractorVersion=EXTRACTION_VERSION;check.textExtractedAt=now;}
  check.sha256=sha;check.firstSeenAt=(!prior.sha256||changed)?now:prior.firstSeenAt;
  const nextCommune={...commune,documentChecks:{...(commune.documentChecks||{}),[id]:check}};
  const wasRead=(commune.readDocuments||[]).includes(id);
  nextCommune.readDocuments=[...new Set([...(commune.readDocuments||[]),id])];
  nextCommune.documentsRead=(commune.documentsRead||0)+(wasRead?0:1);
- nextCommune.documentVersionsRead=(commune.documentVersionsRead||0)+(parsed?1:0);
+ nextCommune.documentVersionsRead=(commune.documentVersionsRead||0)+(parsed&&sha!==prior.sha256?1:0);
  const candidates=text===null?[]:passages(text).map(p=>({...p,rating:profile.screen({title:p.excerpt.slice(0,180),description:p.excerpt,buyer:'Commune de '+commune.name,region:'Wallonie',source:'LOCALE',opportunityType:'prospection'}).classification})).filter(p=>p.rating);
  // Les passages nouveaux d'un document déjà suivi ne deviennent pas silencieusement
  // de nouveaux dossiers : cela ressusciterait une décision Hors sujet après correction du PDF.
@@ -118,6 +134,11 @@ function processDocument(items,commune,pdf,file,now,extract=pdfText){
   if(text!==null){
    next.sourceEvidenceStatus=m.evidence?(normalized(text).includes(normalized(m.evidence))?'found':'not_found'):'unverified';
    next.sourceDocumentReview={sha256:sha,checkedAt:now,candidates:review};
+   if(next.sourceEvidenceStatus==='found'){
+    const type=webType.classify((pdf.title||'')+' '+pdf.url.replace(/[\/_-]/g,' '),text,m.evidence);
+    next.noticeKind=type.kind;next.webSourceType='municipal';
+    next.webTypeEvidence={...type,sourceUrl:pdf.url,page:m.sourceEvidencePage||null,sha256:sha};
+   }
   }
   return next;
  });
@@ -130,11 +151,13 @@ function processDocument(items,commune,pdf,file,now,extract=pdfText){
    if(known.has(marketId))continue;
    known.add(marketId);created++;
    result.push({id:marketId,title:'Conseil communal — opportunité à vérifier : '+commune.name,buyer:'Commune de '+commune.name,
-    municipalityINS:commune.ins,region:'Wallonie',source:'LOCALE',opportunityType:'prospection',
+    municipalityINS:commune.ins,region:'Wallonie',source:'LOCALE',webSourceType:'municipal',opportunityType:'prospection',
+    noticeKind:webType.classify((pdf.title||'')+' '+pdf.url.replace(/[\/_-]/g,' '),text,p.excerpt).kind,
+    webTypeEvidence:{...webType.classify((pdf.title||'')+' '+pdf.url.replace(/[\/_-]/g,' '),text,p.excerpt),sourceUrl:pdf.url,page:p.page,sha256:sha},
     opportunityStage:'décision ou besoin à vérifier',sector:p.rating.sector,sectors:p.rating.sectors,
     score:Math.min(60,p.rating.score),screening:'review',qualification:p.rating.qualification,publication:'',deadline:'',
     sourceDocument:pdf.url,url:pdf.url,cpv:[],description:'Document communal public. Extrait nécessitant une lecture de validation : '+p.excerpt,
-    evidence:p.excerpt,source_status:'extrait_pdf_a_verifier',sourceEvidencePage:p.page,sourceEvidenceStatus:'found',sourceDocumentVersion:version});
+    evidence:p.excerpt,municipalReference:p.explicitReference||null,municipalSection:p.sectionHeading||null,municipalEvidence:p.relatedPassages||[{page:p.page,excerpt:p.excerpt}],source_status:'extrait_pdf_a_verifier',sourceEvidencePage:p.page,sourceEvidenceStatus:'found',sourceDocumentVersion:version});
   }
  }
  nextCommune.opportunities=(commune.opportunities||0)+created;
@@ -156,6 +179,7 @@ async function run(options={}){
  let documentsRead=0,checked=0,unchanged=0,modified=0,created=0,reviewCandidates=0,errors=[];
  for(const m of ready){
   const before={checked,errors:errors.length},queue=queueApi.init(m);
+  for(const entry of Object.values(queue.pages))entry.scopeExcluded=sourcePolicy.excluded(entry)||null;
   for(const src of m.deliberationSources.filter(readableSource)){
    if(/\.pdf(?:$|[?#])/i.test(src.url))queueApi.remember(queue,'documents',{url:src.url,title:src.title||'',sourceUrl:src.url},now);
    else{
@@ -183,10 +207,10 @@ async function run(options={}){
    }
   }
   const maxDocuments=Math.min(12,Math.max(1,Number(options.maxDocuments)||12));
-  const documents=queueApi.pendingDocuments(queue,m.documentChecks||{},now).slice(0,maxDocuments);
+  const documents=queueApi.pendingDocuments(queue,m.documentChecks||{},now).filter(([,pdf])=>!options.documentURLs||options.documentURLs.includes(pdf.url)).slice(0,maxDocuments);
   for(const [id,pdf] of documents){
    try{
-    const file=await download(pdf.url,'application/pdf',9000000,{fetchFn:options.fetchFn,previous:m.documentChecks?.[id],now});
+    const file=await download(pdf.url,'application/pdf',9000000,{fetchFn:options.fetchFn,previous:m.documentChecks?.[id]?.extractorVersion===EXTRACTION_VERSION?m.documentChecks[id]:undefined,now});
     const next=processDocument(data.items,m,pdf,file,now,options.extract||pdfText);
     data.items=next.items;Object.assign(m,next.commune);
     m.documentChecks[id].nextAttemptAt=null;
@@ -204,8 +228,11 @@ async function run(options={}){
   if(checked>before.checked)m.lastDocumentSuccess=now;
  }
 
+ data.metrics={...(data.metrics||{}),records:data.items.length};
  inventory.lastMunicipalDocumentPass=now;
- inventory.counts={...(inventory.counts||{}),documentsRead:inventory.communes.reduce((n,x)=>n+(x.documentsRead||0),0),opportunities:inventory.communes.reduce((n,x)=>n+(x.opportunities||0),0)};
+ const actualCounts=sourceHealth.counts(inventory.communes);
+ inventory.counts={...(inventory.counts||{}),total:actualCounts.total,sitesChecked:actualCounts.sites,sitesVerifies:actualCounts.sites,candidatePages:actualCounts.pages,documentsRead:actualCounts.documents,deliberationsConnectees:actualCounts.read,sourceErrors:actualCounts.errors,opportunities:inventory.communes.reduce((n,x)=>n+(x.opportunities||0),0)};
+ if(data.sources?.COMMUNES)data.sources.COMMUNES={...data.sources.COMMUNES,...inventory.counts};
  const prior=data.sources?.COMMUNES_DOCUMENTS||{};
  data.sources={...(data.sources||{}),COMMUNES_DOCUMENTS:{...prior,status:errors.length?'partial':checked?'pilot':'no_documents',last_attempt:now,
   last_success:checked?now:(prior.last_success||null),last_batch:ready.length,documents_checked:checked,documents_read:documentsRead,
