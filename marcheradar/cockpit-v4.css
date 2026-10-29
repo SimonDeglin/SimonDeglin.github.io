@@ -197,3 +197,7 @@
 .mr-qualification small{display:block;font-size:10px;line-height:1.5;color:#8091a2}
 
 .v4-facet-note{font-size:10px;line-height:1.5;color:#8391a1;margin:0 2px 10px}
+
+.mr-document-date{padding:11px 13px;margin:10px 0;background:#f2f6fa;border-left:3px solid #ee7432;border-radius:5px}.mr-document-date strong{display:block;font-size:12px;line-height:1.6;color:#253d53}.mr-document-date small{display:block;font-size:10px;line-height:1.6;color:#64778a;margin-top:4px;overflow-wrap:anywhere}
+/* La date reste visible dans le listing, y compris sur téléphone. */
+.tender-sub span:nth-child(3){display:inline-flex;max-width:100%;overflow-wrap:anywhere}

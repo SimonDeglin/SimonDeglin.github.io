@@ -5,10 +5,10 @@
  */
 (function(root,factory){
  'use strict';
- const api=factory(typeof module==='object'&&module.exports?require('./publication-filters.js'):root.MRPublications);
+ const api=factory(typeof module==='object'&&module.exports?require('./publication-filters.js'):root.MRPublications,typeof module==='object'&&module.exports?require('./document-dates.js'):root.MRDocumentDates);
  if(typeof module==='object'&&module.exports)module.exports=api;
  if(root)root.MRCockpit=api;
-})(typeof globalThis!=='undefined'?globalThis:this,function(publications){
+})(typeof globalThis!=='undefined'?globalThis:this,function(publications,documentDates){
  'use strict';
  function txt(v){return v==null?'':String(v).trim()}
  function esc(v){return txt(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
@@ -131,9 +131,11 @@
   const firstEvidence=analyses.flatMap(a=>(a.evidence||[]).slice(0,1).map(e=>({file:a.fileName,page:e.page,excerpt:e.excerpt}))).slice(0,2);
   const passages=firstEvidence.length?'<div class="v5-preview-evidence"><strong>Passages repérés automatiquement — à vérifier</strong>'+
    firstEvidence.map(e=>'<p><span>'+esc(e.file||'PDF')+' · p. '+esc(e.page)+'</span>'+esc(e.excerpt||'')+'</p>').join('')+'</div>':'';
+  const dated=documentDates&&documentDates.view(m);
   const notes=txt(options.notes).replace(/\s+/g,' ');
   return '<div class="v4-preview-head"><span class="v4-eyebrow">LECTURE RAPIDE · MARCHÉ SÉLECTIONNÉ</span><h3>'+esc(m.title||'Publication sans titre')+'</h3>'+
    '<div>'+typeBadge(m,options.sourceFilter||'all',options.publicationType||'all')+'</div></div>'+
+   (dated?'<div class="mr-document-date"><strong>'+esc(dated.summary)+'</strong><small>'+esc(dated.proof)+'</small></div>':'')+
    (typeof globalThis.MRQualification!=='undefined'?globalThis.MRQualification.render(m,{manualOverride:m.screening==='excluded'&&options.autoExcluded===false&&!options.horsSujet}):'')+
    '<div class="v5-preview-summary"><strong>Objet de la mission</strong><p>'+esc(shortDescription||'Aucun descriptif suffisamment précis dans les données collectées. Consulter la source officielle.')+'</p></div>'+
    '<div class="v4-preview-fields">'+

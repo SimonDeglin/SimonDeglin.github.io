@@ -36,6 +36,7 @@ jobs:
           node --check marcheradar/cockpit-v4.js
           node --check marcheradar/followup-backup.js
           node --check marcheradar/publication-filters.js
+          node --check marcheradar/document-dates.js
           node --check marcheradar/qualification.js
           node --check marcheradar/source-health.js
           node --check marcheradar/sources-dashboard.js
@@ -76,6 +77,7 @@ jobs:
           if-no-files-found: ignore
           path: |
             marcheradar/tests/source-type-bosa-attribution.png
+            marcheradar/tests/communal-document-date.png
             marcheradar/tests/qualification-kdrix.png
             marcheradar/tests/exclusions-filtre.png
             marcheradar/tests/ux-preview-25th.png

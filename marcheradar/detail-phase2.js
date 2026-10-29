@@ -5,10 +5,10 @@
  */
 (function(root,factory){
  'use strict';
- var api=factory(typeof module==='object'&&module.exports?require('./publication-filters.js'):root.MRPublications);
+ var api=factory(typeof module==='object'&&module.exports?require('./publication-filters.js'):root.MRPublications,typeof module==='object'&&module.exports?require('./document-dates.js'):root.MRDocumentDates);
  if(typeof module==='object'&&module.exports)module.exports=api;
  if(root)root.MRDetailV2=api;
-})(typeof globalThis!=='undefined'?globalThis:this,function(publications){
+})(typeof globalThis!=='undefined'?globalThis:this,function(publications,documentDates){
  'use strict';
  function str(x){return x==null?'':String(x).trim()}
  function esc(x){return str(x).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
@@ -145,9 +145,10 @@
    '<h3 class="mr2-title">'+esc(m.title||'Marché sans intitulé')+'</h3>'+
    '<div class="mr2-pills">'+pill(due.label,due.tone)+pill(noticeType,'muted')+(m.screening==='review'?pill('Correspondance à vérifier','unknown'):m.screening==='excluded'?pill('Correspondance écartée à examiner','unknown'):'')+'</div>'+
    '<p class="mr2-summary">'+esc(m.description||'Résumé non renseigné dans les données collectées.')+'</p></div>';
+  var dated=documentDates&&documentDates.view(m);
   var summary=section('Informations principales','<div class="mr2-fields">'+
    field('Pouvoir adjudicateur',m.buyer||'Non communiqué')+field('Référence',reference(m))+
-   field('Zone',m.region||'Non localisée')+field('Date de publication',formattedDate(m.publication))+
+   field('Zone',m.region||'Non localisée')+(dated?field(dated.label,dated.value,dated.proof)+(m.sourceDocumentDates?.session&&m.sourceDocumentDates?.document?field('Date du document',documentDates.format(m.sourceDocumentDates.document.date),'Date distincte de la séance et de la collecte.'):'' ):field('Date de publication',formattedDate(m.publication)))+
    field(selectedType==='result'&&focused?'Date limite de l’appel d’offres du dossier':'Date limite de remise',dateTime(m.deadline)+(m.deadlineTime&&!/T\d{2}:\d{2}/.test(str(m.deadline))?' · heure signalée '+str(m.deadlineTime)+' (à confirmer)':''),m.deadlineSourceKind==='bosa_verified_public'&&m.deadlineSourceUrl?'Date et heure vérifiées dans le dossier officiel e-Procurement. Vérifier les éventuels rectificatifs.':!m.deadline?'Consulter la publication officielle avant d’engager une offre.':/^\d{4}-\d{2}-\d{2}$/.test(str(m.deadline))?'L’heure limite n’est pas présente dans les données.':'Horodatage issu des données de collecte.')+
    field('CPV',Array.isArray(m.cpv)&&m.cpv.length?m.cpv.join(' · '):'Non renseigné')+
    field('Délai d’exécution',m.executionDuration||'Non renseigné')+
