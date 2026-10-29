@@ -245,7 +245,7 @@ body{background:#f7f7f7;color:#303339}
     <div class="top-actions"><span class="today" id="today"></span><div class="top-divider"></div><a class="refresh-btn" href="https://www.kdrix.be/fr/" target="_blank" rel="noopener" title="Site KDRIX">KDRIX <svg class="ico s"><use href="#i-external"/></svg></a><div class="initials">KD</div></div>
   </header>
   <main class="content">
-    <section class="welcome"><div><div class="eyebrow">VEILLE KDRIX</div><h1>Marché Radar <span style="color:#f45f25">✳</span></h1><p>Veille des marchés, décisions et suivi des offres KDRIX.</p></div><button class="refresh-btn" id="refreshBtn"><svg class="ico s"><use href="#i-refresh"/></svg><span class="refresh-text">Recharger les données</span></button></section>
+    <section class="welcome"><div><div class="eyebrow">VEILLE KDRIX</div><h1>Marché Radar <span style="color:#f45f25">✳</span></h1><p>Veille des marchés, décisions et suivi des offres KDRIX.</p></div><button class="refresh-btn" id="refreshBtn" aria-label="Recharger les dernières données publiées" title="Récupère les données publiées sans relancer les collecteurs"><svg class="ico s"><use href="#i-refresh"/></svg><span class="refresh-text">Recharger les données</span></button></section>
     <section class="hero"><div class="hero-main"><div class="hero-tag"><svg class="ico s"><use href="#i-radar"/></svg> VOTRE RADAR EST PRÊT</div><h2>Les bons marchés.<br>Au bon moment.</h2><p>Topographie, hydrographie, VRD, cartographie, expertise immobilière et PEB : une veille construite autour des compétences du groupe.</p></div><div class="hero-side"><div class="hero-number" id="heroCount">—</div><span>opportunités affichées</span></div></section>
     <section class="cockpit-v4" id="cockpit" aria-label="Tableau de bord opérationnel"><div class="v4-cockpit-title"><div><span class="v4-eyebrow">VEILLE OPÉRATIONNELLE</span><h2>Les dossiers qui comptent</h2></div></div></section>
     <div class="notice-banner" id="noticeBanner"><svg class="ico l"><use href="#i-info"/></svg><div><b>Chargement en cours.</b> Vérification des publications disponibles.</div></div>
@@ -351,7 +351,7 @@ function renderBanner(){
  if(!ready){
   b.innerHTML=svg('info')+'<div><b>'+(state.mode==='loading'?'Chargement des avis officiels...':'Marchés officiels indisponibles.')+'</b> '+(state.mode==='loading'?'Lecture de la dernière sélection TED.':'La liste reste vide tant que les données ne sont pas accessibles.')+'</div>';
   el('sideTitle').textContent='Données non chargées';
-  el('sideText').textContent='Relancer depuis Rafraîchir la liste.';
+  el('sideText').textContent='Utiliser Recharger les données.';
   el('lastSync').textContent='En attente de données';
  }else if(seed){
   b.innerHTML=svg('info')+'<div><b>Premières annonces réelles.</b> '+allMarkets().length+' avis identifiés. Veille TED programmée ; première synchronisation non encore confirmée.</div>';
@@ -518,7 +518,7 @@ el('exportBtn').addEventListener('click',downloadCSV);
 el('overlay').addEventListener('click',function(){closeDrawer();el('sidebar').classList.remove('open')});
 el('closeDrawer').addEventListener('click',closeDrawer);
 el('mobileMenu').addEventListener('click',function(){var sidebar=el('sidebar');sidebar.classList.toggle('open')});
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeDrawer();el('sidebar').classList.remove('open')}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){var wasOpen=el('drawer').classList.contains('on');closeDrawer();el('sidebar').classList.remove('open');if(!wasOpen&&!e.target.closest('input,textarea,select'))renderQuickPreviewV4(null)}});
 el('today').textContent=DATE.toLocaleDateString('fr-BE',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
 
 /* v2 : un marché = une seule ligne et un seul dossier, plusieurs étiquettes métier */
@@ -988,7 +988,6 @@ document.querySelectorAll('[data-folder]').forEach(function(button){
  });
 });
 el('allCategories').addEventListener('click',function(){expandedFamily=null;state.sector='all';render()});
-document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!el('drawer').classList.contains('on')&&!e.target.closest('input,textarea,select'))renderQuickPreviewV4(null)});
 render();load();
 })();
 </script>
