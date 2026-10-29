@@ -18,6 +18,7 @@ for(const [id,text] of [['web-call','Séance du 25 juin 2026'],['web-award','===
   assert.match(await page.locator('article[data-id="web-call"]').innerText(),/Séance du 25\/06\/2026/);assert.match(await page.locator('article[data-id="web-award"]').innerText(),/plus d’un an/);assert.match(await page.locator('article[data-id="web-prospect"]').innerText(),/Date du document non identifiée/);
   await page.locator('article[data-id="web-call"] .open-tender').click();assert.match(await page.locator('#quickPreview').innerText(),/Séance du 25\/06\/2026/);assert.match(await page.locator('#quickPreview').innerText(),/Date lue dans le PDF/);
   await page.screenshot({path:path.join(__dirname,'communal-document-date.png')});
+  await page.setViewportSize({width:390,height:844});assert(await page.locator('article[data-id="web-call"] .tender-sub span:nth-child(3)').isVisible(),'La date reste visible sur téléphone');await page.setViewportSize({width:1440,height:950});
   await page.locator('#quickOpenTender').click();assert.match(await page.locator('.mr2-fields').innerText(),/Date de séance/);assert.match(await page.locator('.mr2-fields').innerText(),/25\/06\/2026/);await page.locator('#closeDrawer').click();
   await type('competition');await ready(1);assert.equal(await page.locator('article[data-id="web-call"]').count(),1);
   await type('result');await ready(1);assert.equal(await page.locator('article[data-id="web-award"]').count(),1);
