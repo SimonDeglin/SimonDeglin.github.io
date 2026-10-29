@@ -35,6 +35,7 @@ jobs:
         run: |
           node --check marcheradar/cockpit-v4.js
           node --check marcheradar/followup-backup.js
+          node --check marcheradar/publication-filters.js
           node --check marcheradar/qualification.js
           node --check marcheradar/source-health.js
           node --check marcheradar/sources-dashboard.js
@@ -54,6 +55,8 @@ jobs:
         run: node marcheradar/tests/ux-sources-browser.cjs
       - name: "Vérifier les qualifications et les exclusions automatiques réversibles"
         run: node marcheradar/tests/quality-browser.cjs
+      - name: "Tester les filtres source puis nature de publication"
+        run: node marcheradar/tests/source-type-browser.cjs
       - name: "Tester la sauvegarde et la restauration du suivi"
         run: node marcheradar/tests/followup-backup-browser.cjs
       - name: "Tester le suivi des marchés existant"
@@ -72,6 +75,7 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
           path: |
+            marcheradar/tests/source-type-bosa-attribution.png
             marcheradar/tests/qualification-kdrix.png
             marcheradar/tests/exclusions-filtre.png
             marcheradar/tests/ux-preview-25th.png

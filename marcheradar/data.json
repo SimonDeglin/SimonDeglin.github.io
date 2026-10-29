@@ -58,33 +58,52 @@
     },
     "COMMUNES": {
       "status": "inventory_not_document_collection",
-      "updatedAt": "2026-10-28T13:29:37.963Z",
+      "updatedAt": "2026-10-29T10:10:27.758Z",
+      "last_attempt": "2026-10-29T10:10:27.758Z",
+      "scope": {
+        "province": "all",
+        "ins": "64074"
+      },
       "total": 261,
       "sitesRepertories": 261,
-      "sitesVerifies": 21,
-      "deliberationsConnectees": 20,
+      "sitesVerifies": 181,
+      "deliberationsConnectees": 22,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 106,
-      "opportunities": 39,
-      "sitesChecked": 180,
-      "candidatePages": 158,
-      "sourceErrors": 8
+      "documentsRead": 126,
+      "opportunities": 44,
+      "sitesChecked": 181,
+      "candidatePages": 139,
+      "sourceErrors": 17
+    },
+    "COMMUNES_DOCUMENTS": {
+      "status": "pilot",
+      "last_attempt": "2026-10-29T10:21:49.216Z",
+      "last_success": "2026-10-29T10:21:49.216Z",
+      "last_batch": 1,
+      "documents_checked": 5,
+      "documents_read": 5,
+      "documents_unchanged": 0,
+      "documents_modified": 0,
+      "opportunities_found": 5,
+      "review_candidates": 0,
+      "errors_count": 0,
+      "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel."
     }
   },
   "coverage": {
     "TED": "collecte automatique active",
     "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 104 page(s) parcourue(s) depuis 2026-10-15.",
-    "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
+    "communal": "Collecte communale progressive : 261 communes répertoriées, 126 PDF lus dans 22 communes. Couverture partielle ; traitement par lots et suivi des erreurs."
   },
   "metrics": {
     "scanned": 1595,
     "matched_current_run": 12,
-    "records": 163,
+    "records": 168,
     "review_count": 68,
     "award_notice_count": 421,
     "awarded_market_matches": 2,
@@ -10130,6 +10149,319 @@
       "documentInventory": [],
       "consultationUrls": [],
       "documentsCheckedAt": "2026-10-29T11:43:44.824Z"
+    },
+    {
+      "id": "local:c9795ed3ebb7dc137cf4",
+      "title": "Conseil communal — opportunité à vérifier : Hannut",
+      "buyer": "Commune de Hannut",
+      "municipalityINS": "64034",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "À l’unanimité ; DÉCIDE : Article 1er – D'approuver le cahier des charges N° 20250024 et le montant estimé du marché “Développement urbain - Espace de rencontre citoyen - Travaux”, établis par l’auteur de projet, Monsieur",
+        "sourceUrl": "https://www.hannut.be/download/proces-verbal-87/",
+        "page": 22,
+        "sha256": "f7e4eef7f2f1a7699fb8328ca965e9830ee98dd6bf1c7cc7e73644bacec7ac9a"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.hannut.be/download/proces-verbal-87/",
+      "url": "https://www.hannut.be/download/proces-verbal-87/",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : À l’unanimité ; DÉCIDE : Article 1er – D'approuver le cahier des charges N° 20250024 et le montant estimé du marché “Développement urbain - Espace de rencontre citoyen - Travaux”, établis par l’auteur de projet, Monsieur Jean-Philippe JASIENSKI de MATADOR, Société d'Architectes, N° BCE BE 0453 882 497, Avenue Brugmann 306 boîte 7 à 1180 Uccle. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 1.239.501,09 € hors TVA ou 1.469.241,87 €, TVA comprise.",
+      "evidence": "À l’unanimité ; DÉCIDE : Article 1er – D'approuver le cahier des charges N° 20250024 et le montant estimé du marché “Développement urbain - Espace de rencontre citoyen - Travaux”, établis par l’auteur de projet, Monsieur Jean-Philippe JASIENSKI de MATADOR, Société d'Architectes, N° BCE BE 0453 882 497, Avenue Brugmann 306 boîte 7 à 1180 Uccle. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 1.239.501,09 € hors TVA ou 1.469.241,87 €, TVA comprise.",
+      "municipalReference": "20250024",
+      "municipalSection": "12. Développement urbain - Espace de rencontre citoyen - Travaux - Approbation des conditions et du",
+      "municipalEvidence": [
+        {
+          "page": 22,
+          "excerpt": "À l’unanimité ; DÉCIDE : Article 1er – D'approuver le cahier des charges N° 20250024 et le montant estimé du marché “Développement urbain - Espace de rencontre citoyen - Travaux”, établis par l’auteur de projet, Monsieur Jean-Philippe JASIENSKI de MATADOR, Société d'Architectes, N° BCE BE 0453 882 497, Avenue Brugmann 306 boîte 7 à 1180 Uccle. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 1.239.501,09 € hors TVA ou 1.469.241,87 €, TVA comprise."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 22,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:7be7f4ede9930c466c",
+        "sha256": "f7e4eef7f2f1a7699fb8328ca965e9830ee98dd6bf1c7cc7e73644bacec7ac9a",
+        "checkedAt": "2026-10-29T10:21:49.216Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:52e731a7f4c9e9562f48",
+      "title": "Conseil communal — opportunité à vérifier : Hannut",
+      "buyer": "Commune de Hannut",
+      "municipalityINS": "64034",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "8. Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er – Approbation des conditions et du mode de passation Vu le Code",
+        "sourceUrl": "https://www.hannut.be/download/proces-verbal-86/",
+        "page": 10,
+        "sha256": "8c39854a577388a0310f0d2615a624916e4c3a2fc0c13b71070f95357dbf9d25"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.hannut.be/download/proces-verbal-86/",
+      "url": "https://www.hannut.be/download/proces-verbal-86/",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 8. Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er – Approbation des conditions et du mode de passation Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs",
+      "evidence": "8. Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er – Approbation des conditions et du mode de passation Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs",
+      "municipalReference": "2026/486",
+      "municipalSection": "8. Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant",
+      "municipalEvidence": [
+        {
+          "page": 10,
+          "excerpt": "8. Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er – Approbation des conditions et du mode de passation Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs"
+        },
+        {
+          "page": 11,
+          "excerpt": "Considérant, dès lors, qu’une procédure de marché public de services doit être lancée pour répondre à ce besoin ; Considérant le cahier des charges N° 2026/486 relatif au marché “Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er” établi le 16 avril 2026 par le Département Infrastructures communales ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Tranche de marché 1 - Esquisse (Estimé à : 21.000,00 € hors TVA ou 25.410,00 €, 21%"
+        },
+        {
+          "page": 11,
+          "excerpt": "besoin ; Considérant le cahier des charges N° 2026/486 relatif au marché “Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er” établi le 16 avril 2026 par le Département Infrastructures communales ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Tranche de marché 1 - Esquisse (Estimé à : 21.000,00 € hors TVA ou 25.410,00 €, 21% TVA comprise) ;"
+        },
+        {
+          "page": 12,
+          "excerpt": "Robin, Médart Emilie et Sacré Mathilde) ; DÉCIDE : Article 1er – D'approuver le cahier des charges N° 2026/486 du 16 avril 2026 et le montant estimé du marché “Entretien extraordinaire des voiries communales 2026 - Désignation d'un auteur de projet ayant pour mission l'étude de la rénovation de la rue Albert 1er”, établis par le Département Infrastructures communales. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 35.000,00 € hors TVA ou 42.350,00 €, 21% TVA comprise."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 10,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:de82dfee2cff09c0c1",
+        "sha256": "8c39854a577388a0310f0d2615a624916e4c3a2fc0c13b71070f95357dbf9d25",
+        "checkedAt": "2026-10-29T10:21:49.216Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:20c9f5a442bb49018409",
+      "title": "Conseil communal — opportunité à vérifier : Hannut",
+      "buyer": "Commune de Hannut",
+      "municipalityINS": "64034",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "27) Enseignement - Démolition des préfabriqués et construction de 3 nouvelles classes, d’un local technique, de sanitaires et de préaux à l’école de Merdorp - Désignation d'un bureau d'études - Honoraires – Approbation",
+        "sourceUrl": "https://www.hannut.be/download/ordre-du-jour-82/",
+        "page": 2,
+        "sha256": "6372f82c2ed7404afcf44c5430fe1835085ee1ddf4e28f0ceaaa1508ebadfd1c"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.hannut.be/download/ordre-du-jour-82/",
+      "url": "https://www.hannut.be/download/ordre-du-jour-82/",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 27)   Enseignement - Démolition des préfabriqués et construction de 3 nouvelles classes, d’un local technique, de sanitaires et de préaux à l’école de Merdorp - Désignation d'un bureau d'études - Honoraires – Approbation des conditions et du mode de passation - Décision",
+      "evidence": "27)   Enseignement - Démolition des préfabriqués et construction de 3 nouvelles classes, d’un local technique, de sanitaires et de préaux à l’école de Merdorp - Désignation d'un bureau d'études - Honoraires – Approbation des conditions et du mode de passation - Décision",
+      "municipalReference": null,
+      "municipalSection": "27)   Enseignement - Démolition des préfabriqués et construction de 3 nouvelles classes, d’un local technique,",
+      "municipalEvidence": [
+        {
+          "page": 2,
+          "excerpt": "27)   Enseignement - Démolition des préfabriqués et construction de 3 nouvelles classes, d’un local technique, de sanitaires et de préaux à l’école de Merdorp - Désignation d'un bureau d'études - Honoraires – Approbation des conditions et du mode de passation - Décision"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 2,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:5079b80d64dd858833",
+        "sha256": "6372f82c2ed7404afcf44c5430fe1835085ee1ddf4e28f0ceaaa1508ebadfd1c",
+        "checkedAt": "2026-10-29T10:21:49.216Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:51e9ccc95b48db26238f",
+      "title": "Conseil communal — opportunité à vérifier : Hannut",
+      "buyer": "Commune de Hannut",
+      "municipalityINS": "64034",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "délibération ; Considérant que la Commune est amenée régulièrement à lancer des marchés de travaux de réfection des voiries ; Considérant que dans le cadre de ces travaux de voiries, la coordination santé et sécurité est",
+        "sourceUrl": "https://www.hannut.be/download/proces-verbal-85/",
+        "page": 32,
+        "sha256": "10ab632c353c249a05f4a1a2be8b3368770da9934703c5aae0bcf7df7fc42440"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.hannut.be/download/proces-verbal-85/",
+      "url": "https://www.hannut.be/download/proces-verbal-85/",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : délibération ; Considérant que la Commune est amenée régulièrement à lancer des marchés de travaux de réfection des voiries ; Considérant que dans le cadre de ces travaux de voiries, la coordination santé et sécurité est obligatoire ; Considérant que les communes adhérentes bénéficieront des conditions identiques à celles obtenues par l'A.I.D.E. dans le cadre de ce marché de services de coordination santé et sécurité et plus particulièrement le bénéfice de prix intéressants tout en jouissant d'une certaine sécurité juridique et technique ;",
+      "evidence": "délibération ; Considérant que la Commune est amenée régulièrement à lancer des marchés de travaux de réfection des voiries ; Considérant que dans le cadre de ces travaux de voiries, la coordination santé et sécurité est obligatoire ; Considérant que les communes adhérentes bénéficieront des conditions identiques à celles obtenues par l'A.I.D.E. dans le cadre de ce marché de services de coordination santé et sécurité et plus particulièrement le bénéfice de prix intéressants tout en jouissant d'une certaine sécurité juridique et technique ;",
+      "municipalReference": null,
+      "municipalSection": "19. Accord-cadre 2026-2029 pour la coordination en matière de sécurité et de santé en phase projet",
+      "municipalEvidence": [
+        {
+          "page": 32,
+          "excerpt": "délibération ; Considérant que la Commune est amenée régulièrement à lancer des marchés de travaux de réfection des voiries ; Considérant que dans le cadre de ces travaux de voiries, la coordination santé et sécurité est obligatoire ; Considérant que les communes adhérentes bénéficieront des conditions identiques à celles obtenues par l'A.I.D.E. dans le cadre de ce marché de services de coordination santé et sécurité et plus particulièrement le bénéfice de prix intéressants tout en jouissant d'une certaine sécurité juridique et technique ;"
+        },
+        {
+          "page": 32,
+          "excerpt": "Considérant que la Commune est amenée régulièrement à lancer des marchés de travaux de réfection des voiries ; Considérant que dans le cadre de ces travaux de voiries, la coordination santé et sécurité est obligatoire ; Considérant que les communes adhérentes bénéficieront des conditions identiques à celles obtenues par l'A.I.D.E. dans le cadre de ce marché de services de coordination santé et sécurité et plus particulièrement le bénéfice de prix intéressants tout en jouissant d'une certaine sécurité juridique et technique ; Considérant la réduction considérable du temps de traitement des commandes permettant une"
+        },
+        {
+          "page": 33,
+          "excerpt": "Le marché constitue un marché de services visés par le code CPV 71317210-8 défini par le règlement européen (CE) n°213/2008. Ce marché de services consiste à réaliser, dans le cadre des projets d'assainissement et de voirie repris dans les programmes d'investissement communaux et les programmes d'investissement de la SPGE, les missions de coordination en matière de sécurité et de santé en phase projet et en phase réalisation de ceux-ci. Les interventions se font sur l’entièreté du territoire de la Province de Liège sur lequel sont repartis les réseaux d'assainissement communaux (84 communes) et de l'AIDE ainsi que les réseaux des sociétés"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 32,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:7a38af0b55f75484fc",
+        "sha256": "10ab632c353c249a05f4a1a2be8b3368770da9934703c5aae0bcf7df7fc42440",
+        "checkedAt": "2026-10-29T10:21:49.216Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:9e6c428e8c39f0992650",
+      "title": "Conseil communal — opportunité à vérifier : Hannut",
+      "buyer": "Commune de Hannut",
+      "municipalityINS": "64034",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "27. Enseignement - Démolition des préfabriqués et construction de 3 nouvelles classes, d’un local technique, de sanitaires et de préaux à l’école de Merdorp - Désignation d'un bureau d'études - Honoraires – Approbation d",
+        "sourceUrl": "https://www.hannut.be/download/proces-verbal-85/",
+        "page": 44,
+        "sha256": "10ab632c353c249a05f4a1a2be8b3368770da9934703c5aae0bcf7df7fc42440"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.hannut.be/download/proces-verbal-85/",
+      "url": "https://www.hannut.be/download/proces-verbal-85/",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 27. Enseignement - Démolition des préfabriqués et construction de 3 nouvelles classes, d’un local technique, de sanitaires et de préaux à l’école de Merdorp - Désignation d'un bureau d'études - Honoraires – Approbation des conditions et du mode de passation - Décision Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ;",
+      "evidence": "27. Enseignement - Démolition des préfabriqués et construction de 3 nouvelles classes, d’un local technique, de sanitaires et de préaux à l’école de Merdorp - Désignation d'un bureau d'études - Honoraires – Approbation des conditions et du mode de passation - Décision Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ;",
+      "municipalReference": "2026/477",
+      "municipalSection": "27. Enseignement - Démolition des préfabriqués et construction de 3 nouvelles classes, d’un local",
+      "municipalEvidence": [
+        {
+          "page": 44,
+          "excerpt": "27. Enseignement - Démolition des préfabriqués et construction de 3 nouvelles classes, d’un local technique, de sanitaires et de préaux à l’école de Merdorp - Désignation d'un bureau d'études - Honoraires – Approbation des conditions et du mode de passation - Décision Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ;"
+        },
+        {
+          "page": 45,
+          "excerpt": "Considérant le cahier des charges N° 2026/477 relatif au marché “ENSEIGNEMENT - Démolition des préfabriqués et construction de 3 nouvelles classes, d’un local technique, de sanitaires et de préaux à l’école de Merdorp - Désignation d'un bureau d'études - Honoraires” établi le 8 avril 2026 par le Département Infrastructures communales ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Tranche de marché 1 – Esquisse : Montant alloué à la tranche est équivalent à 5% du montant estimatif des travaux. (Estimé à : 3.066,01 € hors TVA ou 3.709,87 €, 21% TVA comprise)"
+        },
+        {
+          "page": 47,
+          "excerpt": "Article 1er – D'approuver le cahier des charges N° 2026/477 du 8 avril 2026 et le montant estimé du marché “ENSEIGNEMENT - Démolition des préfabriqués et construction de 3 nouvelles classes, d’un local technique, de sanitaires et de préaux à l’école de Merdorp - Désignation d'un bureau d'études - Honoraires”, établis par le Département Infrastructures communales. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 61.320,24 € hors TVA ou 74.197,49 €, 21% TVA comprise. Article 2 – De passer le marché par la procédure négociée sans publication préalable."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 44,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:7a38af0b55f75484fc",
+        "sha256": "10ab632c353c249a05f4a1a2be8b3368770da9934703c5aae0bcf7df7fc42440",
+        "checkedAt": "2026-10-29T10:21:49.216Z",
+        "changedAt": null
+      }
     }
   ]
 }

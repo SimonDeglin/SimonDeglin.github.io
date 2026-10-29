@@ -49,7 +49,7 @@
   const rows=group.filter(c=>(!q||fold(c.name+' '+c.ins).includes(q))&&(st==='all'||api.communeState(c).key===st)&&(z==='all'||c.zone===z));
   const body=$('rows');body.replaceChildren();
   for(const c of rows){
-   const tr=node('tr');tr.dataset.ins=c.ins;const first=node('td');first.append(safeLink(c.officialSite,c.name),node('small',(api.provinces[api.provinceOf(c)]||'Province à vérifier')+' · INS '+c.ins));
+   const tr=node('tr');tr.dataset.ins=c.ins;const first=node('td');first.append(safeLink(c.verifiedSite?.url||c.officialSite,c.name),node('small',(api.provinces[api.provinceOf(c)]||'Province à vérifier')+' · INS '+c.ins));
    const state=api.communeState(c),status=node('td');status.append(node('span',state.label,'badge'+(state.key==='error'?' error':state.key==='read'?' ok':'')));
    if(state.errors.length)status.append(node('small',state.errors.join(' · ')));
    const when=node('td');when.append(node('span','Site : '+api.date(c.lastSiteCheck)),node('small','Documents : '+api.date(c.lastDocumentCheck)));
@@ -60,7 +60,7 @@
    else read.append(node('small','Exploration restante non encore mesurée.'));
    if(c.lastDocumentResult)read.append(node('small','Dernier lot : '+c.lastDocumentResult.checked+' contrôlés, '+c.lastDocumentResult.errors+' erreurs'));
    const actions=node('td'),details=node('details'),sources=c.deliberationSources||[];details.append(node('summary',sources.length+' source(s) repérée(s)'));
-   const ul=node('ul');for(const s of sources){const li=node('li');li.append(safeLink(s.url,s.title||s.url),node('small',s.status==='page_accessible'?'Page accessible lors du contrôle du '+api.date(s.last_success):s.status==='document_pdf_a_analyser'?'Lien PDF à analyser':'Lien à vérifier'));ul.append(li)}
+   const ul=node('ul');for(const s of sources){const li=node('li');li.append(safeLink(s.url,s.title||s.url),node('small',s.scopeStatus==='non_documentary'?'Source administrative hors du parcours documentaire':s.status==='page_accessible'?'Page accessible lors du contrôle du '+api.date(s.last_success):s.status==='document_pdf_a_analyser'?'Lien PDF à analyser':'Lien à vérifier'));ul.append(li)}
    if(!sources.length)ul.append(node('li','Aucune publication localisée.'));details.append(ul);actions.append(details);
    const launch=node('button','Préparer une relance…','row-launch');launch.type='button';launch.addEventListener('click',()=>{$('collectProvince').value=api.provinceOf(c);updateCommuneChoices(c.ins);$('prepare').scrollIntoView({block:'start',behavior:'smooth'})});actions.append(launch);
    tr.append(first,status,when,read,actions);body.append(tr);

@@ -5,41 +5,37 @@
  */
 (function(root,factory){
  'use strict';
- const api=factory();
+ const api=factory(typeof module==='object'&&module.exports?require('./publication-filters.js'):root.MRPublications);
  if(typeof module==='object'&&module.exports)module.exports=api;
  if(root)root.MRCockpit=api;
-})(typeof globalThis!=='undefined'?globalThis:this,function(){
+})(typeof globalThis!=='undefined'?globalThis:this,function(publications){
  'use strict';
  function txt(v){return v==null?'':String(v).trim()}
  function esc(v){return txt(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
- const types=[
-  {id:'all',label:'Tous les types'},
-  {id:'competition',label:"Appels d'offres"},
-  {id:'result',label:'Résultats'},
-  {id:'prospect',label:'Prospection'},
-  {id:'unknown',label:'À qualifier'}
- ];
+ const types=publications?publications.types:[{id:'all',label:'Tous les types'},{id:'competition',label:'Appels d’offres'},{id:'result',label:'Attributions'},{id:'prospect',label:'Prospection'},{id:'unknown',label:'Autres'}];
  function kind(m){
-  if(!m||typeof m!=='object')return 'unknown';
-  if(m.source==='LOCALE')return 'prospect';
-  const k=txt(m.noticeKind).toLowerCase();
-  const notice=txt(m.noticeType).toLowerCase();
-  if(k==='award'||/^(can|e4|result|award)(?:[-_]|$)/.test(notice))return 'result';
-  if(k==='competition'||/^cn(?:[-_]|$)/.test(notice))return 'competition';
-  return 'unknown';
+  if(publications)return publications.kind(m);
+  if(m.noticeKind==='award')return 'result';
+  if(m.noticeKind==='competition'||/^cn(?:[-_]|$)/.test(txt(m.noticeType)))return 'competition';
+  return m.source==='LOCALE'?'prospect':'unknown';
  }
- function matchesType(m,type){return !type||type==='all'||kind(m)===type}
+ function matchesType(m,type){return publications?publications.matches(m,'all',type||'all'):!type||type==='all'||kind(m)===type}
  function typeLabel(type){
-  return ({competition:"Appel d'offres",result:"Avis de résultat",prospect:'Prospection locale',unknown:'Type à confirmer'})[type]||'Publication';
+  return ({competition:"Appel d'offres",result:'Attribution',prospect:'Prospection',unknown:'Autres'})[type]||'Publication';
  }
- function typeBadge(m){const k=kind(m);return '<span class="v4-kind v4-kind-'+esc(k)+'">'+esc(typeLabel(k))+'</span>'}
- function typeCounts(list){
+ function typeBadge(m,origin='all',selected='all'){const kinds=publications?[...new Set(publications.facets(m).filter(f=>(origin==='all'||f.source===origin)&&(selected==='all'||f.type===selected)).map(f=>f.type))]:[kind(m)];return kinds.map(k=>'<span class="v4-kind v4-kind-'+esc(k)+'">'+esc(typeLabel(k))+'</span>').join('')}
+ function typeCounts(list,origin){
+  if(publications)return publications.typeCounts(list,origin);
   const r={all:0,competition:0,result:0,prospect:0,unknown:0};
   for(const m of list||[]){const k=kind(m);r.all++;r[k]++}
   return r;
  }
  function renderTypeFilters(counts,active){
   return types.map(t=>'<button type="button" class="v4-type-btn'+(t.id===active?' active':'')+'" data-publication="'+esc(t.id)+'" aria-pressed="'+(t.id===active?'true':'false')+'">'+esc(t.label)+' <span class="v4-type-count">'+(counts[t.id]||0)+'</span></button>').join('');
+ }
+ function renderSourceFilters(counts,active){
+  if(!publications)return '';
+  return publications.sources.filter(s=>s.id!=='other'||counts.other>0||active==='other').map(s=>'<button type="button" class="v4-type-btn'+(s.id===active?' active':'')+'" data-source-filter="'+esc(s.id)+'" aria-pressed="'+(s.id===active?'true':'false')+'">'+esc(s.label)+' <span class="v4-type-count">'+(counts[s.id]||0)+'</span></button>').join('');
  }
  // Metrics do not equate "date not published" with an officially open procedure.
  function metrics(list,stageOf,dueStatus,daysLeft,isAutoExcluded){
@@ -107,7 +103,7 @@
  }
  function preview(m,stage,deadlineStatus,options={}){
   if(!m)return '<div class="v4-preview-idle"><strong>Aucun marché visible</strong><p>Adapte les filtres pour retrouver les dossiers de suivi.</p></div>';
-  const type=kind(m),sources=sourceCount(m);
+  const type=options.publicationType&&options.publicationType!=='all'&&publications&&publications.matches(m,options.sourceFilter||'all',options.publicationType)?options.publicationType:kind(m),sources=sourceCount(m);
   const archived=options.horsSujet===true||options.autoExcluded===true;
   let when;
   if(type==='result')when='Avis de résultat publié — aucune soumission à préparer sur cet avis';
@@ -137,7 +133,7 @@
    firstEvidence.map(e=>'<p><span>'+esc(e.file||'PDF')+' · p. '+esc(e.page)+'</span>'+esc(e.excerpt||'')+'</p>').join('')+'</div>':'';
   const notes=txt(options.notes).replace(/\s+/g,' ');
   return '<div class="v4-preview-head"><span class="v4-eyebrow">LECTURE RAPIDE · MARCHÉ SÉLECTIONNÉ</span><h3>'+esc(m.title||'Publication sans titre')+'</h3>'+
-   '<div>'+typeBadge(m)+'</div></div>'+
+   '<div>'+typeBadge(m,options.sourceFilter||'all',options.publicationType||'all')+'</div></div>'+
    (typeof globalThis.MRQualification!=='undefined'?globalThis.MRQualification.render(m,{manualOverride:m.screening==='excluded'&&options.autoExcluded===false&&!options.horsSujet}):'')+
    '<div class="v5-preview-summary"><strong>Objet de la mission</strong><p>'+esc(shortDescription||'Aucun descriptif suffisamment précis dans les données collectées. Consulter la source officielle.')+'</p></div>'+
    '<div class="v4-preview-fields">'+
@@ -147,7 +143,7 @@
    field('Domaine(s)',sectors.join(' · '))+
    field('Échéance',type==='competition'?displayedDeadline:'Pas de date de remise associée')+
    field('Documents',docText)+
-   field('Source et zone',(m.source||'Source non renseignée')+' · '+(m.region||'Région non précisée'))+
+   field('Source et zone',(publications?publications.labels(m,options.sourceFilter||'all'):(m.source||'Source non renseignée'))+' · '+(m.region||'Région non précisée'))+
    '</div>'+
    (verifiedDate?'<div class="v5-deadline-proof"><strong>Échéance vérifiée dans e-Procurement</strong><a href="'+esc(m.deadlineSourceUrl)+'" target="_blank" rel="noopener noreferrer">Contrôler l’heure et les éventuels rectificatifs ↗</a></div>':'')+
    '<p class="v4-preview-status">'+esc(when)+'</p>'+
@@ -161,5 +157,5 @@
    (/^https:\/\/(?:ted\.europa\.eu|www\.publicprocurement\.be)\//.test(txt(m.url))?'<p><a class="v6-source-link" href="'+esc(m.url)+'" target="_blank" rel="noopener noreferrer">Consulter la publication officielle ↗</a></p>':'')+
    '<p class="v5-preview-footnote">Les informations affichées proviennent des publications collectées. Les obligations restent à confirmer dans le CSC.</p>';
  }
- return {kind,matchesType,types,typeLabel,typeBadge,typeCounts,renderTypeFilters,metrics,renderCockpit,preview,sourceCount,analysisChecklist};
+ return {kind,matchesType,types,typeLabel,typeBadge,typeCounts,renderTypeFilters,renderSourceFilters,metrics,renderCockpit,preview,sourceCount,analysisChecklist};
 });

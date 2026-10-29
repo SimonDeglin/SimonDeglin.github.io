@@ -13,19 +13,19 @@
   "counts": {
     "total": 261,
     "sitesRepertories": 261,
-    "sitesVerifies": 21,
-    "deliberationsConnectees": 20,
+    "sitesVerifies": 181,
+    "deliberationsConnectees": 22,
     "zones": {
       "principale": 196,
       "exterieure_provisoire": 26,
       "peripherique": 39
     },
     "checkedWithErrors": 3,
-    "documentsRead": 106,
-    "opportunities": 39,
-    "sitesChecked": 180,
-    "candidatePages": 158,
-    "sourceErrors": 8
+    "documentsRead": 126,
+    "opportunities": 44,
+    "sitesChecked": 181,
+    "candidatePages": 139,
+    "sourceErrors": 17
   },
   "communes": [
     {
@@ -105,14 +105,178 @@
           "title": "Décisions du Conseil communal",
           "status": "page_accessible",
           "last_success": "2026-10-24T11:34:01.696Z"
+        },
+        {
+          "url": "https://www.deliberations.be/amay/decisions",
+          "title": "Décisions du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T10:03:46.901Z",
+          "last_success": "2026-10-29T10:03:46.901Z",
+          "last_error": null
         }
       ],
-      "lastSiteCheck": "2026-10-24T11:34:01.696Z",
-      "lastDocumentCheck": null,
+      "lastSiteCheck": "2026-10-29T10:03:46.901Z",
+      "lastDocumentCheck": "2026-10-29T10:03:59.767Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 2,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.amay.be",
+        "checkedAt": "2026-10-29T09:58:58.639Z",
+        "method": "redirect_http_observed"
+      },
+      "documentSourceChecks": {
+        "municipal-doc:08a4c929b1fb09b17f": {
+          "url": "https://www.amay.be/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-29T10:03:59.767Z",
+          "lastSuccess": "2026-10-29T10:03:59.767Z",
+          "lastError": null
+        },
+        "municipal-doc:f454cbdea174d84cb6": {
+          "url": "https://www.amay.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil",
+          "lastAttempt": "2026-10-29T10:03:59.767Z",
+          "lastSuccess": "2026-10-29T10:03:59.767Z",
+          "lastError": null
+        },
+        "municipal-doc:69c53233b07519682a": {
+          "url": "https://www.deliberations.be/amay/decisions",
+          "lastAttempt": "2026-10-29T10:03:59.767Z",
+          "lastSuccess": "2026-10-29T10:03:59.767Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:55b32555e716166d0e": {
+          "url": "https://www.amay.be/ma-commune/vie-politique/conseil-communal/conseil-communal/reglement-declaration-dapparentement/declaration-apparentement.pdf",
+          "finalUrl": "https://www.amay.be/ma-commune/vie-politique/conseil-communal/conseil-communal/reglement-declaration-dapparentement/declaration-apparentement.pdf",
+          "lastAttempt": "2026-10-29T10:03:59.767Z",
+          "lastChecked": "2026-10-29T10:03:59.767Z",
+          "lastSuccess": "2026-10-29T10:03:59.767Z",
+          "lastError": null,
+          "etag": "\"|1757331397.0||Anonymous|1793152973.7787669|1793265729.0441906\"",
+          "lastModified": "Mon, 08 Sep 2025 12:36:37 GMT",
+          "contentCheckedAt": "2026-10-29T10:03:59.767Z",
+          "sha256": "d7c6bc02d39f38b5f632a0d628c71c47b9dd8fc743523666201010395fb054bd",
+          "firstSeenAt": "2026-10-29T10:03:59.767Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:d7917614525139705f": {
+          "url": "https://www.amay.be/ma-commune/vie-politique/conseil-communal/conseil-communal/reglement-declaration-dapparentement/roi-approuve-28-03-23.pdf",
+          "finalUrl": "https://www.amay.be/ma-commune/vie-politique/conseil-communal/conseil-communal/reglement-declaration-dapparentement/roi-approuve-28-03-23.pdf",
+          "lastAttempt": "2026-10-29T10:03:59.767Z",
+          "lastChecked": "2026-10-29T10:03:59.767Z",
+          "lastSuccess": "2026-10-29T10:03:59.767Z",
+          "lastError": null,
+          "etag": "\"|1757331677.0||Anonymous|1793152973.7787669|1793265729.0441906\"",
+          "lastModified": "Mon, 08 Sep 2025 12:41:17 GMT",
+          "contentCheckedAt": "2026-10-29T10:03:59.767Z",
+          "sha256": "74e8334ef036eebd702a5e2a254d1e58e1d3ca28c478c80a0154af0e5045cead",
+          "firstSeenAt": "2026-10-29T10:03:59.767Z",
+          "nextAttemptAt": null
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:55b32555e716166d0e",
+        "municipal-doc:d7917614525139705f"
+      ],
+      "documentVersionsRead": 2,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:08a4c929b1fb09b17f": {
+            "url": "https://www.amay.be/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T10:03:59.767Z",
+            "lastSuccess": "2026-10-29T10:03:59.767Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T10:03:59.767Z",
+            "lastSeen": "2026-10-29T10:03:59.767Z",
+            "nextAttemptAt": null
+          },
+          "municipal-doc:f454cbdea174d84cb6": {
+            "url": "https://www.amay.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T10:03:59.767Z",
+            "lastSuccess": "2026-10-29T10:03:59.767Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T10:03:59.767Z",
+            "lastSeen": "2026-10-29T10:03:59.767Z",
+            "nextAttemptAt": null
+          },
+          "municipal-doc:69c53233b07519682a": {
+            "url": "https://www.deliberations.be/amay/decisions",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T10:03:59.767Z",
+            "lastSuccess": "2026-10-29T10:03:59.767Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T10:03:59.767Z",
+            "lastSeen": "2026-10-29T10:03:59.767Z",
+            "nextAttemptAt": null
+          },
+          "municipal-doc:cedf678d9b62ca49e7": {
+            "url": "https://www.amay.be/ma-commune/vie-politique/conseil-communal/agenda-du-conseil",
+            "depth": 1,
+            "sourceUrl": "https://www.amay.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T10:03:59.767Z",
+            "lastSeen": "2026-10-29T10:03:59.767Z"
+          },
+          "municipal-doc:eb10247d4e8c846dc7": {
+            "url": "https://www.amay.be/ma-commune/vie-politique/conseil-communal/pv-et-resumes-du-conseil",
+            "depth": 1,
+            "sourceUrl": "https://www.amay.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T10:03:59.767Z",
+            "lastSeen": "2026-10-29T10:03:59.767Z"
+          },
+          "municipal-doc:5f2b298b5c634b17dd": {
+            "url": "https://www.amay.be/ma-commune/vie-politique/conseil-communal/pv-et-resumes-du-conseil/resumes",
+            "depth": 1,
+            "sourceUrl": "https://www.amay.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T10:03:59.767Z",
+            "lastSeen": "2026-10-29T10:03:59.767Z"
+          },
+          "municipal-doc:e4205fa81d96da412c": {
+            "url": "https://www.amay.be/ma-commune/vie-politique/conseil-communal/pv-et-resumes-du-conseil/proces-verbaux",
+            "depth": 1,
+            "sourceUrl": "https://www.amay.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T10:03:59.767Z",
+            "lastSeen": "2026-10-29T10:03:59.767Z"
+          }
+        },
+        "documents": {
+          "municipal-doc:d7917614525139705f": {
+            "url": "https://www.amay.be/ma-commune/vie-politique/conseil-communal/conseil-communal/reglement-declaration-dapparentement/roi-approuve-28-03-23.pdf",
+            "title": "Consultez le règlement du Conseil communal",
+            "sourceUrl": "https://www.amay.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T10:03:59.767Z",
+            "lastSeen": "2026-10-29T10:03:59.767Z"
+          },
+          "municipal-doc:55b32555e716166d0e": {
+            "url": "https://www.amay.be/ma-commune/vie-politique/conseil-communal/conseil-communal/reglement-declaration-dapparentement/declaration-apparentement.pdf",
+            "title": "Déclaration d'apparentement-Prise d'acte.pdf 134.3 KB",
+            "sourceUrl": "https://www.amay.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T10:03:59.767Z",
+            "lastSeen": "2026-10-29T10:03:59.767Z"
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 7,
+        "pagesPending": 4,
+        "documentsKnown": 2,
+        "documentsPending": 0,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 2,
+        "errors": 0,
+        "attempted": 2,
+        "pagesAttempted": 3
+      },
+      "lastDocumentSuccess": "2026-10-29T10:03:59.767Z"
     },
     {
       "ins": "63001",
@@ -4714,15 +4878,652 @@
           "url": "https://www.hannut.be/autorites-communales/conseil-communal/",
           "title": "Conseil communal",
           "status": "page_accessible",
-          "last_success": "2026-10-28T13:29:37.963Z"
+          "last_attempt": "2026-10-29T10:08:27.948Z",
+          "last_success": "2026-10-29T10:08:27.948Z",
+          "last_error": null
         }
       ],
-      "lastSiteCheck": "2026-10-28T13:29:37.963Z",
-      "lastDocumentCheck": null,
+      "lastSiteCheck": "2026-10-29T10:08:27.948Z",
+      "lastDocumentCheck": "2026-10-29T10:21:49.216Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
-      "opportunities": 0,
-      "errors": []
+      "documentsRead": 18,
+      "opportunities": 5,
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.hannut.be/",
+        "checkedAt": "2026-10-29T10:08:27.948Z"
+      },
+      "documentSourceChecks": {
+        "municipal-doc:838f194c9cffa0c193": {
+          "url": "https://www.hannut.be/autorites-communales/conseil-communal/",
+          "lastAttempt": "2026-10-29T10:21:49.216Z",
+          "lastSuccess": "2026-10-29T10:21:49.216Z",
+          "lastError": null
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:838f194c9cffa0c193": {
+            "url": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T10:21:49.216Z",
+            "lastSuccess": "2026-10-29T10:21:49.216Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T10:04:52.007Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "nextAttemptAt": null,
+            "discoveryOrder": 0,
+            "scopeExcluded": null
+          }
+        },
+        "documents": {
+          "municipal-doc:2b10be8345b3bff454": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-87/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:c03f60db2045c2c3c0": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-86/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 1
+          },
+          "municipal-doc:2c3cde5ccb2c7c0923": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-85/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 2
+          },
+          "municipal-doc:74a163f3857e337fb9": {
+            "url": "https://www.hannut.be/download/proces-verbal-88/",
+            "title": "Procès verbal",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:d396dd9dafad2a5d40": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-84/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:7be7f4ede9930c466c": {
+            "url": "https://www.hannut.be/download/proces-verbal-87/",
+            "title": "Procès verbal",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:5cc6dd4fff1d358d3d": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-83/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:de82dfee2cff09c0c1": {
+            "url": "https://www.hannut.be/download/proces-verbal-86/",
+            "title": "Procès verbal",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:5079b80d64dd858833": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-82/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:7a38af0b55f75484fc": {
+            "url": "https://www.hannut.be/download/proces-verbal-85/",
+            "title": "Procès verbal",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:93f015388889851208": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-81/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:5d9585ea244e961948": {
+            "url": "https://www.hannut.be/download/proces-verbal-84/",
+            "title": "Procès verbal",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:7b0020dc3f76a88627": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-80/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:1e689521258919e72b": {
+            "url": "https://www.hannut.be/download/proces-verbal-83/",
+            "title": "Procès verbal",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:2807e9907018dba387": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-79/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 14
+          },
+          "municipal-doc:5db84d1706252e0516": {
+            "url": "https://www.hannut.be/download/proces-verbal-82/",
+            "title": "Procès verbal",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 15
+          },
+          "municipal-doc:142086b139b06dfa72": {
+            "url": "https://www.hannut.be/download/odre-du-jour-3/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 16
+          },
+          "municipal-doc:b715b627ee6f630f25": {
+            "url": "https://www.hannut.be/download/proces-verbal-81/",
+            "title": "Procès verbal",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 17
+          },
+          "municipal-doc:628cd41e237e0072f6": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-78/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 18
+          },
+          "municipal-doc:e11ab1d19091657467": {
+            "url": "https://www.hannut.be/download/proces-verbal-80/",
+            "title": "Procès verbal",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 19
+          },
+          "municipal-doc:e60092422c87dc4420": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-77/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 20
+          },
+          "municipal-doc:fe09f9cbdaf0aff876": {
+            "url": "https://www.hannut.be/download/proces-verbal-79/",
+            "title": "Procès verbal",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 21
+          },
+          "municipal-doc:348d269b6f67919617": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-76/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 22
+          },
+          "municipal-doc:7f178677e1511a91c6": {
+            "url": "https://www.hannut.be/download/proces-verbal-78/",
+            "title": "Procès verbal",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 23
+          },
+          "municipal-doc:d7648dc65405b7fe7e": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-75/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 24
+          },
+          "municipal-doc:b630404eae3c2603ed": {
+            "url": "https://www.hannut.be/download/proces-verbal-77/",
+            "title": "Procès verbal",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 25
+          },
+          "municipal-doc:3446c60b3d13e4e9f0": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-74/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 26
+          },
+          "municipal-doc:2602f0aed4d363d5f1": {
+            "url": "https://www.hannut.be/download/proces-verbal-76/",
+            "title": "Procès verbal",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 27
+          },
+          "municipal-doc:dc1b8b37e5f2241113": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-73/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 28
+          },
+          "municipal-doc:3402df41613583ba9f": {
+            "url": "https://www.hannut.be/download/proces-verbal-75/",
+            "title": "Procès verbal",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 29
+          },
+          "municipal-doc:46ec099f182ef6072d": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-72/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 30
+          },
+          "municipal-doc:f588e925120b66be67": {
+            "url": "https://www.hannut.be/download/proces-verbal-74/",
+            "title": "Procès verbal",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 31
+          },
+          "municipal-doc:941e81eb7e26fd8c1c": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-71/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 32
+          },
+          "municipal-doc:41da96de8800f6edd3": {
+            "url": "https://www.hannut.be/download/proces-verbal-73/",
+            "title": "Procès verbal",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 33
+          },
+          "municipal-doc:9c478d368537cbd285": {
+            "url": "https://www.hannut.be/download/ordre-du-jour-70/",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 34
+          },
+          "municipal-doc:a21ecad6e12c11e523": {
+            "url": "https://www.hannut.be/download/proces-verbal-72/",
+            "title": "Procès verbal",
+            "sourceUrl": "https://www.hannut.be/autorites-communales/conseil-communal/",
+            "discoveredAt": "2026-10-29T10:08:46.797Z",
+            "lastSeen": "2026-10-29T10:21:49.216Z",
+            "discoveryOrder": 35
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 1,
+        "pagesPending": 0,
+        "documentsKnown": 36,
+        "documentsPending": 18,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 5,
+        "errors": 0,
+        "attempted": 5,
+        "pagesAttempted": 1
+      },
+      "documentChecks": {
+        "municipal-doc:142086b139b06dfa72": {
+          "url": "https://www.hannut.be/download/odre-du-jour-3/",
+          "finalUrl": "https://www.hannut.be/download/odre-du-jour-3/",
+          "lastAttempt": "2026-10-29T10:08:46.797Z",
+          "lastChecked": "2026-10-29T10:08:46.797Z",
+          "lastSuccess": "2026-10-29T10:08:46.797Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:08:46.797Z",
+          "sha256": "1d8e655b177d6b8a5d5f0c712917b051074e87334355f24fc8779c80e3b3ee93",
+          "firstSeenAt": "2026-10-29T10:08:46.797Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:9c478d368537cbd285": {
+          "url": "https://www.hannut.be/download/ordre-du-jour-70/",
+          "finalUrl": "https://www.hannut.be/download/ordre-du-jour-70/",
+          "lastAttempt": "2026-10-29T10:08:46.797Z",
+          "lastChecked": "2026-10-29T10:08:46.797Z",
+          "lastSuccess": "2026-10-29T10:08:46.797Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:08:46.797Z",
+          "sha256": "7a2eacda3a8ec2067eb212011e5ae948a33d9597e838ecf7675f620e7585ef40",
+          "firstSeenAt": "2026-10-29T10:08:46.797Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:941e81eb7e26fd8c1c": {
+          "url": "https://www.hannut.be/download/ordre-du-jour-71/",
+          "finalUrl": "https://www.hannut.be/download/ordre-du-jour-71/",
+          "lastAttempt": "2026-10-29T10:08:46.797Z",
+          "lastChecked": "2026-10-29T10:08:46.797Z",
+          "lastSuccess": "2026-10-29T10:08:46.797Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:08:46.797Z",
+          "sha256": "356b7a0c6c5c5d4bf3ade8e406da81a6535d22e3c792c5e485333713cba0558b",
+          "firstSeenAt": "2026-10-29T10:08:46.797Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:46ec099f182ef6072d": {
+          "url": "https://www.hannut.be/download/ordre-du-jour-72/",
+          "finalUrl": "https://www.hannut.be/download/ordre-du-jour-72/",
+          "lastAttempt": "2026-10-29T10:08:46.797Z",
+          "lastChecked": "2026-10-29T10:08:46.797Z",
+          "lastSuccess": "2026-10-29T10:08:46.797Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:08:46.797Z",
+          "sha256": "45f3bf51e0a21c7d50daf85fb2f88604ad20be40d2836bd4f7605e7fac23622a",
+          "firstSeenAt": "2026-10-29T10:08:46.797Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:dc1b8b37e5f2241113": {
+          "url": "https://www.hannut.be/download/ordre-du-jour-73/",
+          "finalUrl": "https://www.hannut.be/download/ordre-du-jour-73/",
+          "lastAttempt": "2026-10-29T10:08:46.797Z",
+          "lastChecked": "2026-10-29T10:08:46.797Z",
+          "lastSuccess": "2026-10-29T10:08:46.797Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:08:46.797Z",
+          "sha256": "a70a3c66b8c59a13c93075afe60ce32da792975b7d20286df262df11a6ebc864",
+          "firstSeenAt": "2026-10-29T10:08:46.797Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:3446c60b3d13e4e9f0": {
+          "url": "https://www.hannut.be/download/ordre-du-jour-74/",
+          "finalUrl": "https://www.hannut.be/download/ordre-du-jour-74/",
+          "lastAttempt": "2026-10-29T10:08:46.797Z",
+          "lastChecked": "2026-10-29T10:08:46.797Z",
+          "lastSuccess": "2026-10-29T10:08:46.797Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:08:46.797Z",
+          "sha256": "f71bd90561070dcce97057deac9f69c82075340e4f6597b99502370d1eacc494",
+          "firstSeenAt": "2026-10-29T10:08:46.797Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:2b10be8345b3bff454": {
+          "url": "https://www.hannut.be/download/ordre-du-jour-87/",
+          "finalUrl": "https://www.hannut.be/download/ordre-du-jour-87/",
+          "lastAttempt": "2026-10-29T10:21:49.216Z",
+          "lastChecked": "2026-10-29T10:21:49.216Z",
+          "lastSuccess": "2026-10-29T10:21:49.216Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:21:49.216Z",
+          "extractorVersion": "2026-10-29-publications-v4",
+          "textExtractedAt": "2026-10-29T10:21:49.216Z",
+          "sha256": "21e11771928cb9b4c96a90d37f040f3b1b15c6490bb8e2db381ae1ea1f6f6ff0",
+          "firstSeenAt": "2026-10-29T10:13:48.789Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:c03f60db2045c2c3c0": {
+          "url": "https://www.hannut.be/download/ordre-du-jour-86/",
+          "finalUrl": "https://www.hannut.be/download/ordre-du-jour-86/",
+          "lastAttempt": "2026-10-29T10:13:48.789Z",
+          "lastChecked": "2026-10-29T10:13:48.789Z",
+          "lastSuccess": "2026-10-29T10:13:48.789Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:13:48.789Z",
+          "extractorVersion": "2026-10-29-publications-v2",
+          "textExtractedAt": "2026-10-29T10:13:48.789Z",
+          "sha256": "813dfcdf3570c37e4f647a9c7efdae335b1068d969a73a7d0ab04f71305bc346",
+          "firstSeenAt": "2026-10-29T10:13:48.789Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:2c3cde5ccb2c7c0923": {
+          "url": "https://www.hannut.be/download/ordre-du-jour-85/",
+          "finalUrl": "https://www.hannut.be/download/ordre-du-jour-85/",
+          "lastAttempt": "2026-10-29T10:13:48.789Z",
+          "lastChecked": "2026-10-29T10:13:48.789Z",
+          "lastSuccess": "2026-10-29T10:13:48.789Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:13:48.789Z",
+          "extractorVersion": "2026-10-29-publications-v2",
+          "textExtractedAt": "2026-10-29T10:13:48.789Z",
+          "sha256": "6423ae570360becc512a6a718b48cb536df171130faa5052cb24c2d5b0ea8ff5",
+          "firstSeenAt": "2026-10-29T10:13:48.789Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:74a163f3857e337fb9": {
+          "url": "https://www.hannut.be/download/proces-verbal-88/",
+          "finalUrl": "https://www.hannut.be/download/proces-verbal-88/",
+          "lastAttempt": "2026-10-29T10:13:48.789Z",
+          "lastChecked": "2026-10-29T10:13:48.789Z",
+          "lastSuccess": "2026-10-29T10:13:48.789Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:13:48.789Z",
+          "extractorVersion": "2026-10-29-publications-v2",
+          "textExtractedAt": "2026-10-29T10:13:48.789Z",
+          "sha256": "5f3325d7cf82a50249121e91a95e50d4ba74e6839d5700fe3487d6b44e439ae4",
+          "firstSeenAt": "2026-10-29T10:13:48.789Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:d396dd9dafad2a5d40": {
+          "url": "https://www.hannut.be/download/ordre-du-jour-84/",
+          "finalUrl": "https://www.hannut.be/download/ordre-du-jour-84/",
+          "lastAttempt": "2026-10-29T10:13:48.789Z",
+          "lastChecked": "2026-10-29T10:13:48.789Z",
+          "lastSuccess": "2026-10-29T10:13:48.789Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:13:48.789Z",
+          "extractorVersion": "2026-10-29-publications-v2",
+          "textExtractedAt": "2026-10-29T10:13:48.789Z",
+          "sha256": "b850531d91ea6d3e6d336acce99b892aac6b754dd71a9a5d123449eea2e95dc1",
+          "firstSeenAt": "2026-10-29T10:13:48.789Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:7be7f4ede9930c466c": {
+          "url": "https://www.hannut.be/download/proces-verbal-87/",
+          "finalUrl": "https://www.hannut.be/download/proces-verbal-87/",
+          "lastAttempt": "2026-10-29T10:21:49.216Z",
+          "lastChecked": "2026-10-29T10:21:49.216Z",
+          "lastSuccess": "2026-10-29T10:21:49.216Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:21:49.216Z",
+          "extractorVersion": "2026-10-29-publications-v4",
+          "textExtractedAt": "2026-10-29T10:21:49.216Z",
+          "sha256": "f7e4eef7f2f1a7699fb8328ca965e9830ee98dd6bf1c7cc7e73644bacec7ac9a",
+          "firstSeenAt": "2026-10-29T10:13:48.789Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:5cc6dd4fff1d358d3d": {
+          "url": "https://www.hannut.be/download/ordre-du-jour-83/",
+          "finalUrl": "https://www.hannut.be/download/ordre-du-jour-83/",
+          "lastAttempt": "2026-10-29T10:13:48.789Z",
+          "lastChecked": "2026-10-29T10:13:48.789Z",
+          "lastSuccess": "2026-10-29T10:13:48.789Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:13:48.789Z",
+          "extractorVersion": "2026-10-29-publications-v2",
+          "textExtractedAt": "2026-10-29T10:13:48.789Z",
+          "sha256": "889c91c75df5652422218b923996c69ff2a638079ddefe6358a9bfc1714af174",
+          "firstSeenAt": "2026-10-29T10:13:48.789Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:de82dfee2cff09c0c1": {
+          "url": "https://www.hannut.be/download/proces-verbal-86/",
+          "finalUrl": "https://www.hannut.be/download/proces-verbal-86/",
+          "lastAttempt": "2026-10-29T10:21:49.216Z",
+          "lastChecked": "2026-10-29T10:21:49.216Z",
+          "lastSuccess": "2026-10-29T10:21:49.216Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:21:49.216Z",
+          "extractorVersion": "2026-10-29-publications-v4",
+          "textExtractedAt": "2026-10-29T10:21:49.216Z",
+          "sha256": "8c39854a577388a0310f0d2615a624916e4c3a2fc0c13b71070f95357dbf9d25",
+          "firstSeenAt": "2026-10-29T10:13:48.789Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:5079b80d64dd858833": {
+          "url": "https://www.hannut.be/download/ordre-du-jour-82/",
+          "finalUrl": "https://www.hannut.be/download/ordre-du-jour-82/",
+          "lastAttempt": "2026-10-29T10:21:49.216Z",
+          "lastChecked": "2026-10-29T10:21:49.216Z",
+          "lastSuccess": "2026-10-29T10:21:49.216Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:21:49.216Z",
+          "extractorVersion": "2026-10-29-publications-v4",
+          "textExtractedAt": "2026-10-29T10:21:49.216Z",
+          "sha256": "6372f82c2ed7404afcf44c5430fe1835085ee1ddf4e28f0ceaaa1508ebadfd1c",
+          "firstSeenAt": "2026-10-29T10:13:48.789Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:7a38af0b55f75484fc": {
+          "url": "https://www.hannut.be/download/proces-verbal-85/",
+          "finalUrl": "https://www.hannut.be/download/proces-verbal-85/",
+          "lastAttempt": "2026-10-29T10:21:49.216Z",
+          "lastChecked": "2026-10-29T10:21:49.216Z",
+          "lastSuccess": "2026-10-29T10:21:49.216Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:21:49.216Z",
+          "extractorVersion": "2026-10-29-publications-v4",
+          "textExtractedAt": "2026-10-29T10:21:49.216Z",
+          "sha256": "10ab632c353c249a05f4a1a2be8b3368770da9934703c5aae0bcf7df7fc42440",
+          "firstSeenAt": "2026-10-29T10:13:48.789Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:93f015388889851208": {
+          "url": "https://www.hannut.be/download/ordre-du-jour-81/",
+          "finalUrl": "https://www.hannut.be/download/ordre-du-jour-81/",
+          "lastAttempt": "2026-10-29T10:13:48.789Z",
+          "lastChecked": "2026-10-29T10:13:48.789Z",
+          "lastSuccess": "2026-10-29T10:13:48.789Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:13:48.789Z",
+          "extractorVersion": "2026-10-29-publications-v2",
+          "textExtractedAt": "2026-10-29T10:13:48.789Z",
+          "sha256": "3638db12ab255cbb835dc473dff02b28bd8131f80800e54a5de0437f5c85b119",
+          "firstSeenAt": "2026-10-29T10:13:48.789Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:5d9585ea244e961948": {
+          "url": "https://www.hannut.be/download/proces-verbal-84/",
+          "finalUrl": "https://www.hannut.be/download/proces-verbal-84/",
+          "lastAttempt": "2026-10-29T10:13:48.789Z",
+          "lastChecked": "2026-10-29T10:13:48.789Z",
+          "lastSuccess": "2026-10-29T10:13:48.789Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-10-29T10:13:48.789Z",
+          "extractorVersion": "2026-10-29-publications-v2",
+          "textExtractedAt": "2026-10-29T10:13:48.789Z",
+          "sha256": "0b732070c89ac4289232b347452bb1bbeab669bdc54d991c9d7caa77296781fa",
+          "firstSeenAt": "2026-10-29T10:13:48.789Z",
+          "nextAttemptAt": null
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:142086b139b06dfa72",
+        "municipal-doc:9c478d368537cbd285",
+        "municipal-doc:941e81eb7e26fd8c1c",
+        "municipal-doc:46ec099f182ef6072d",
+        "municipal-doc:dc1b8b37e5f2241113",
+        "municipal-doc:3446c60b3d13e4e9f0",
+        "municipal-doc:2b10be8345b3bff454",
+        "municipal-doc:c03f60db2045c2c3c0",
+        "municipal-doc:2c3cde5ccb2c7c0923",
+        "municipal-doc:74a163f3857e337fb9",
+        "municipal-doc:d396dd9dafad2a5d40",
+        "municipal-doc:7be7f4ede9930c466c",
+        "municipal-doc:5cc6dd4fff1d358d3d",
+        "municipal-doc:de82dfee2cff09c0c1",
+        "municipal-doc:5079b80d64dd858833",
+        "municipal-doc:7a38af0b55f75484fc",
+        "municipal-doc:93f015388889851208",
+        "municipal-doc:5d9585ea244e961948"
+      ],
+      "documentVersionsRead": 18,
+      "lastDocumentSuccess": "2026-10-29T10:21:49.216Z"
     },
     {
       "ins": "91142",
@@ -5177,7 +5978,12 @@
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.huy.be",
+        "checkedAt": "2026-10-29T09:58:58.639Z",
+        "method": "redirect_http_observed"
+      }
     },
     {
       "ins": "25043",
@@ -5422,7 +6228,12 @@
       "opportunities": 0,
       "errors": [
         "fetch failed"
-      ]
+      ],
+      "verifiedSite": {
+        "url": "https://www.jodoigne.be",
+        "checkedAt": "2026-10-29T09:58:58.639Z",
+        "method": "redirect_http_observed"
+      }
     },
     {
       "ins": "62060",
@@ -6969,14 +7780,229 @@
       "estimatedMinutes": 77,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.namur.be/fr/ma-ville/administration/services-communaux/marches-publics/marches-publics-annonces",
+          "title": "Marchés publics et annonces",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T10:09:40.476Z",
+          "last_success": "2026-10-29T10:09:40.476Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T10:09:40.476Z",
+          "last_success": "2026-10-29T10:09:40.476Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/deliberations.be",
+          "title": "deliberations.be",
+          "status": "lien_public_repere_non_analyse",
+          "last_attempt": "2026-10-29T10:09:40.476Z",
+          "last_error": "fetch failed"
+        }
+      ],
+      "lastSiteCheck": "2026-10-29T10:09:40.476Z",
+      "lastDocumentCheck": "2026-10-29T10:15:08.790Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.namur.be/fr",
+        "checkedAt": "2026-10-29T10:09:40.476Z"
+      },
+      "documentSourceChecks": {
+        "municipal-doc:3aa8fd446c6c3a1bae": {
+          "url": "https://www.namur.be/fr/ma-ville/administration/services-communaux/marches-publics/marches-publics-annonces",
+          "lastAttempt": "2026-10-29T10:10:21.034Z",
+          "lastSuccess": "2026-10-29T10:10:21.034Z",
+          "lastError": null
+        },
+        "municipal-doc:9e72a00139f4acab7d": {
+          "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-29T10:10:21.034Z",
+          "lastSuccess": "2026-10-29T10:10:21.034Z",
+          "lastError": null
+        },
+        "municipal-doc:33740ad0dbae42e9d1": {
+          "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/annuaire-des-conseillers-et%20conseilleres",
+          "lastAttempt": "2026-10-29T10:10:21.034Z",
+          "lastSuccess": "2026-10-29T10:10:21.034Z",
+          "lastError": null
+        },
+        "municipal-doc:f0ce5503f6721477aa": {
+          "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/deliberations.be",
+          "lastAttempt": "2026-10-29T10:15:08.790Z",
+          "lastError": "fetch failed"
+        },
+        "municipal-doc:3be591c1fcb6d25b55": {
+          "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/le-conseil-communal/sendtomanager_form",
+          "lastAttempt": "2026-10-29T10:15:08.790Z",
+          "lastSuccess": "2026-10-29T10:15:08.790Z",
+          "lastError": null
+        },
+        "municipal-doc:a04e295746df3760d1": {
+          "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/seances-du-conseil/seances-du-conseil",
+          "lastAttempt": "2026-10-29T10:15:08.790Z",
+          "lastSuccess": "2026-10-29T10:15:08.790Z",
+          "lastError": null
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:3aa8fd446c6c3a1bae": {
+            "url": "https://www.namur.be/fr/ma-ville/administration/services-communaux/marches-publics/marches-publics-annonces",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T10:10:21.034Z",
+            "lastSuccess": "2026-10-29T10:10:21.034Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T10:10:21.034Z",
+            "lastSeen": "2026-10-29T10:15:08.790Z",
+            "nextAttemptAt": null,
+            "discoveryOrder": 0,
+            "scopeExcluded": null
+          },
+          "municipal-doc:9e72a00139f4acab7d": {
+            "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T10:10:21.034Z",
+            "lastSuccess": "2026-10-29T10:10:21.034Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T10:10:21.034Z",
+            "lastSeen": "2026-10-29T10:15:08.790Z",
+            "nextAttemptAt": null,
+            "discoveryOrder": 1,
+            "scopeExcluded": null
+          },
+          "municipal-doc:f0ce5503f6721477aa": {
+            "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/deliberations.be",
+            "depth": 1,
+            "sourceUrl": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T10:10:21.034Z",
+            "lastSeen": "2026-10-29T10:10:21.034Z",
+            "discoveryOrder": 2,
+            "scopeExcluded": null,
+            "lastAttempt": "2026-10-29T10:15:08.790Z",
+            "lastError": "fetch failed",
+            "nextAttemptAt": "2026-10-29T16:15:08.790Z"
+          },
+          "municipal-doc:3be591c1fcb6d25b55": {
+            "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/le-conseil-communal/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T10:10:21.034Z",
+            "lastSeen": "2026-10-29T10:10:21.034Z",
+            "discoveryOrder": 3,
+            "scopeExcluded": null,
+            "lastAttempt": "2026-10-29T10:15:08.790Z",
+            "lastSuccess": "2026-10-29T10:15:08.790Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:a04e295746df3760d1": {
+            "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/seances-du-conseil/seances-du-conseil",
+            "depth": 1,
+            "sourceUrl": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T10:10:21.034Z",
+            "lastSeen": "2026-10-29T10:10:21.034Z",
+            "discoveryOrder": 4,
+            "scopeExcluded": null,
+            "lastAttempt": "2026-10-29T10:15:08.790Z",
+            "lastSuccess": "2026-10-29T10:15:08.790Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:33740ad0dbae42e9d1": {
+            "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/annuaire-des-conseillers-et%20conseilleres",
+            "depth": 1,
+            "sourceUrl": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T10:10:21.034Z",
+            "lastSeen": "2026-10-29T10:10:21.034Z",
+            "lastAttempt": "2026-10-29T10:10:21.034Z",
+            "lastSuccess": "2026-10-29T10:10:21.034Z",
+            "lastError": null,
+            "nextAttemptAt": null,
+            "discoveryOrder": 5,
+            "scopeExcluded": null
+          },
+          "municipal-doc:be74a8c9b670e50439": {
+            "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/seances-du-conseil",
+            "depth": 1,
+            "sourceUrl": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T10:10:21.034Z",
+            "lastSeen": "2026-10-29T10:10:21.034Z",
+            "discoveryOrder": 6,
+            "scopeExcluded": null
+          },
+          "municipal-doc:9d2cee4ca8aecc3afe": {
+            "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/commissions",
+            "depth": 1,
+            "sourceUrl": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T10:10:21.034Z",
+            "lastSeen": "2026-10-29T10:10:21.034Z",
+            "discoveryOrder": 7,
+            "scopeExcluded": null
+          },
+          "municipal-doc:ac290d9947751f11bf": {
+            "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/annuaire-des-conseillers-et%20conseilleres/sendtomanager_form",
+            "depth": 2,
+            "sourceUrl": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/annuaire-des-conseillers-et%20conseilleres",
+            "discoveredAt": "2026-10-29T10:10:21.034Z",
+            "lastSeen": "2026-10-29T10:10:21.034Z",
+            "discoveryOrder": 8,
+            "scopeExcluded": null
+          },
+          "municipal-doc:f07f9d951dfe330380": {
+            "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/annuaire-des-conseillers-et%20conseilleres/majorite-les-engages-mr",
+            "depth": 2,
+            "sourceUrl": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/annuaire-des-conseillers-et%20conseilleres",
+            "discoveredAt": "2026-10-29T10:10:21.034Z",
+            "lastSeen": "2026-10-29T10:10:21.034Z",
+            "discoveryOrder": 9,
+            "scopeExcluded": null
+          },
+          "municipal-doc:c8602a1e0c983a940a": {
+            "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/annuaire-des-conseillers-et%20conseilleres/opposition-ps-ecolo-ptb",
+            "depth": 2,
+            "sourceUrl": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/annuaire-des-conseillers-et%20conseilleres",
+            "discoveredAt": "2026-10-29T10:10:21.034Z",
+            "lastSeen": "2026-10-29T10:10:21.034Z",
+            "discoveryOrder": 10,
+            "scopeExcluded": null
+          },
+          "municipal-doc:cfb07723a75671e4d2": {
+            "url": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/seances-du-conseil/seances-du-conseil/sendtomanager_form",
+            "depth": 2,
+            "sourceUrl": "https://www.namur.be/fr/ma-ville/vie-politique/conseil-communal/seances-du-conseil/seances-du-conseil",
+            "discoveredAt": "2026-10-29T10:15:08.790Z",
+            "lastSeen": "2026-10-29T10:15:08.790Z",
+            "discoveryOrder": 11
+          }
+        },
+        "documents": {},
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 12,
+        "pagesPending": 7,
+        "documentsKnown": 0,
+        "documentsPending": 0,
+        "errors": 1,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 0,
+        "errors": 1,
+        "attempted": 0,
+        "pagesAttempted": 3
+      }
     },
     {
       "ins": "61043",
@@ -10008,13 +11034,17 @@
           "url": "https://www.waremme.be/ma-ville/vie-politique/conseil-communal-des-enfants",
           "title": "Conseil Communal des Enfants",
           "status": "page_accessible",
-          "last_success": "2026-10-28T13:29:37.963Z"
+          "last_success": "2026-10-28T13:29:37.963Z",
+          "scopeStatus": "non_documentary",
+          "scopeReason": "instance_ou_demande_hors_collecte"
         },
         {
           "url": "https://www.waremme.be/ma-ville/vie-politique/conseil-communal/demande-d-interpellation-citoyenne",
           "title": "Demande d' interpellation citoyenne",
           "status": "page_accessible",
-          "last_success": "2026-10-28T13:29:37.963Z"
+          "last_success": "2026-10-28T13:29:37.963Z",
+          "scopeStatus": "non_documentary",
+          "scopeReason": "instance_ou_demande_hors_collecte"
         },
         {
           "url": "https://www.waremme.be/ma-ville/vie-politique/conseil-communal/copy_of_ordres-du-jour",
@@ -10026,15 +11056,97 @@
           "url": "https://www.deliberations.be/waremme/decisions",
           "title": "Conseil communal",
           "status": "page_accessible",
-          "last_success": "2026-10-28T13:29:37.963Z"
+          "last_attempt": "2026-10-29T10:10:27.758Z",
+          "last_success": "2026-10-29T10:10:27.758Z",
+          "last_error": null
         }
       ],
-      "lastSiteCheck": "2026-10-28T13:29:37.963Z",
-      "lastDocumentCheck": null,
+      "lastSiteCheck": "2026-10-29T10:10:27.758Z",
+      "lastDocumentCheck": "2026-10-29T10:15:32.798Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:70f49682d4199f7c6f": {
+          "url": "https://www.deliberations.be/waremme/decisions",
+          "lastAttempt": "2026-10-29T10:15:32.798Z",
+          "lastSuccess": "2026-10-29T10:15:32.798Z",
+          "lastError": null
+        },
+        "municipal-doc:c886cd040bb0ca464d": {
+          "url": "https://www.waremme.be/ma-ville/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-29T10:05:20.623Z",
+          "lastError": "This operation was aborted"
+        },
+        "municipal-doc:1321deb9a9d2afac36": {
+          "url": "https://www.waremme.be/ma-ville/vie-politique/conseil-communal/copy_of_ordres-du-jour",
+          "lastAttempt": "2026-10-29T10:15:32.798Z",
+          "lastSuccess": "2026-10-29T10:15:32.798Z",
+          "lastError": null
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:c886cd040bb0ca464d": {
+            "url": "https://www.waremme.be/ma-ville/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T10:05:20.623Z",
+            "lastError": "This operation was aborted",
+            "discoveredAt": "2026-10-29T10:05:20.623Z",
+            "lastSeen": "2026-10-29T10:15:32.798Z",
+            "nextAttemptAt": "2026-10-29T16:05:20.623Z",
+            "discoveryOrder": 0,
+            "scopeExcluded": null
+          },
+          "municipal-doc:1321deb9a9d2afac36": {
+            "url": "https://www.waremme.be/ma-ville/vie-politique/conseil-communal/copy_of_ordres-du-jour",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T10:15:32.798Z",
+            "lastSuccess": "2026-10-29T10:15:32.798Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T10:05:20.623Z",
+            "lastSeen": "2026-10-29T10:15:32.798Z",
+            "nextAttemptAt": null,
+            "discoveryOrder": 1,
+            "scopeExcluded": null
+          },
+          "municipal-doc:70f49682d4199f7c6f": {
+            "url": "https://www.deliberations.be/waremme/decisions",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T10:15:32.798Z",
+            "lastSuccess": "2026-10-29T10:15:32.798Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T10:05:20.623Z",
+            "lastSeen": "2026-10-29T10:15:32.798Z",
+            "nextAttemptAt": null,
+            "discoveryOrder": 2,
+            "scopeExcluded": null
+          }
+        },
+        "documents": {},
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 3,
+        "pagesPending": 1,
+        "documentsKnown": 0,
+        "documentsPending": 0,
+        "errors": 1,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 0,
+        "errors": 0,
+        "attempted": 0,
+        "pagesAttempted": 2
+      },
+      "verifiedSite": {
+        "url": "https://www.waremme.be/",
+        "checkedAt": "2026-10-29T10:10:27.758Z"
+      }
     },
     {
       "ins": "64075",
@@ -10232,5 +11344,6 @@
       "errors": []
     }
   ],
-  "lastMunicipalPass": "2026-10-28T13:29:37.963Z"
+  "lastMunicipalPass": "2026-10-29T10:10:27.758Z",
+  "lastMunicipalDocumentPass": "2026-10-29T10:21:49.216Z"
 }
