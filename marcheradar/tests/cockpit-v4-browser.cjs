@@ -42,6 +42,7 @@ const fixtures=[
  entry('u1',{source:'BOSA',noticeType:null,deadline:''}),
  entry('t3',{deadline:future(-5)})
 ];
+for(const m of fixtures.filter(m=>m.source==='LOCALE'))m.sourceDocumentDates={session:{date:future(-1),kind:'session',confidence:'explicit',source:'pdf_text',excerpt:'Séance du jeu de test'}};
 const errors=[];
 async function ready(page,n){
  await page.waitForFunction(expected=>Number(document.querySelector('#resultCount')?.textContent)===expected,n,{timeout:20000});
@@ -209,7 +210,7 @@ async function ready(page,n){
   await broken.route('**/marcheradar/cockpit-v4.js*',r=>r.abort('failed'));
   await broken.goto(url,{waitUntil:'domcontentloaded'});
   const currentData=require('../data.json');
-  const expected=currentData.items.filter(x=>x.region!=='Flandre'&&x.screening!=='excluded').length;
+  const expected=currentData.items.filter(x=>x.region!=='Flandre'&&x.screening!=='excluded'&&(x.source!=='LOCALE'||require('../publication-filters.js').source(x)!=='municipal'||require('../document-dates.js').freshness(x).active)).length;
   await ready(broken,expected);
   assert.equal(await broken.locator('#resultsList .v5-full-open').count(),expected);
   await broken.locator('#resultsList .v5-full-open').first().click();

@@ -11,7 +11,7 @@
  function extract({text='',title='',url='',sha256=''}={}){
   // Un en-tête suffit ; ne pas retenir une séance précédente citée dans le corps.
   const header=String(text).split('\f')[0].slice(0,1800),lines=header.split('\n').slice(0,26).join('\n');
-  const sessionPattern=new RegExp('(?:^|\\n| {3,})\\s*(?:[= *-]+\\s*)?(?:seance(?:\\s+(?:publique|ordinaire|extraordinaire))?|conseil(?:\\s+(?:communal|provincial))?)\\s+(?:du|en date du)\\s+'+weekday+'('+token+')','i');
+  const sessionPattern=new RegExp('(?:^|\\n| {3,})\\s*(?:[= *-]+\\s*)?(?:(?:proces[ -]verbal|pv)\\s+de\\s+la\\s+)?(?:seance(?:\\s+(?:publique|ordinaire|extraordinaire))?|conseil(?:\\s+(?:communal|provincial))?)\\s+(?:du|en date du)\\s+'+weekday+'('+token+')','i');
   let session=evidence(lines,sessionPattern,'session',1,'pdf_text');
   if(!session)session=evidence(header,new RegExp('(?:prochain\\s+)?conseil\\s+(?:communal|provincial)\\s+qui\\s+se\\s+deroulera\\s+le\\s+'+weekday+'('+token+')','i'),'session',1,'pdf_text');
   const issued=new RegExp('(?:^|\\n)\\s*(?:(?:fait\\s+a\\s+)?[a-z][a-z .’\x27-]{1,55},\\s*le|date\\s+du\\s+document\\s*[:：]?|publie(?:e)?\\s+le)\\s*('+token+')','i');
@@ -24,6 +24,7 @@
    if(!fallback)fallback=evidence(name,pattern,'document',null,'filename');
    if(!fallback){const m=name.match(/(?:^|[^0-9])((?:19|20)\d{2})(\d{2})(\d{2})(?!\d)/);const date=m&&iso(m[1],m[2],m[3]);if(date)fallback={date,kind:'document',page:null,source:'filename',excerpt:name,confidence:'inferred'};}
   }
+  if(!session&&!document&&!fallback){let name='';try{name=decodeURIComponent(new URL(url).pathname.split('/').pop()||'')}catch(e){}const m=name.match(/^(?:pv|cc|oj)[-_]?(\d{2})(\d{2})(\d{2})(?:[^0-9]|$)/i),date=m&&iso(2000+Number(m[1]),m[2],m[3]);if(date)fallback={date,kind:'document',page:null,source:'filename',excerpt:name,confidence:'inferred'};}
   if(fallback)document=fallback;
   return {version:1,sourceUrl:url,sha256:sha256||null,session,document,status:session||document?'identified':'unknown'};
  }
@@ -39,7 +40,18 @@
   const label=p.kind==='session'?'Séance du':'Document du',inferred=p.confidence!=='explicit';
   const extra=d.session&&d.document&&d.document.date!==d.session.date?' · document du '+format(d.document.date):'';
   const old=Date.parse(now)-Date.parse(p.date)>365*86400000;
-  return {label:p.kind==='session'?'Date de séance':'Date du document',value:format(p.date)+(inferred?' · à confirmer':''),summary:label+' '+format(p.date)+(inferred?' · à confirmer':'')+extra+(old?' · plus d’un an':''),date:p.date,old,proof:(inferred?(p.source==='link_title'?'Date déduite du titre du lien':'Date déduite du nom du fichier'):'Date lue dans le PDF'+(p.page?' · page '+p.page:''))+' : '+p.excerpt};
+  return {label:p.kind==='session'?'Date de séance':'Date du document',value:format(p.date)+(inferred?' · à confirmer':''),summary:label+' '+format(p.date)+(inferred?' · à confirmer':'')+extra+(old?' · plus d’un an':''),date:p.date,old,proof:(inferred?(p.source==='link_title'?'Date déduite du titre du lien':'Date déduite du nom du fichier'):(p.source==='html_text'?'Date lue sur la page officielle':'Date lue dans le PDF')+(p.page?' · page '+p.page:''))+' : '+p.excerpt};
  }
- return {parse,extract,view,format};
+ function cutoff(now=new Date()){
+  const day=new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Brussels',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(now));
+  const [y,m,d]=day.split('-').map(Number),target=new Date(Date.UTC(y,m-4,1)),last=new Date(Date.UTC(target.getUTCFullYear(),target.getUTCMonth()+1,0)).getUTCDate();
+  return iso(target.getUTCFullYear(),target.getUTCMonth()+1,Math.min(d,last));
+ }
+ function freshness(m,now=new Date()){
+  if(!m||m.source!=='LOCALE')return {active:true,reason:'not_local'};
+  const v=view(m,now),date=v.date,from=cutoff(now);
+  if(!date)return {active:false,reason:'date_unknown',cutoff:from,date:''};
+  return {active:date>=from,reason:date>=from?'recent':'older_than_three_months',cutoff:from,date};
+ }
+ return {parse,extract,view,format,cutoff,freshness};
 });
