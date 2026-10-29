@@ -28,8 +28,9 @@
   const communes=card('Documents communaux','Couverture progressive · non exhaustive',false);
   line(communes,'Dernière tentative documentaire',local.last_attempt);
   line(communes,'Dernier passage avec lecture ou contrôle réussi',local.last_success);
+  if(local.html_documents_read)communes.append(node('p',local.html_documents_read+' documents HTML lus dans le dernier lot.'));
   if(local.last_attempt)communes.append(node('p','Dernier lot : '+(local.last_batch||0)+' communes · '+(local.documents_checked||0)+' PDF contrôlés · '+(local.documents_modified||0)+' versions modifiées · '+(local.errors_count||0)+' erreurs.'));
-  communes.append(node('p','Consulter les dates de chaque commune ci-dessous. Une page accessible ne prouve pas que ses délibérations ont été lues. PDF textuels publics uniquement ; pas d’OCR.','muted'));
+  communes.append(node('p','Consulter les dates de chaque commune ci-dessous. Une page accessible ne prouve pas que ses délibérations ont été lues. PDF textuels et décisions HTML publiques ; pas d’OCR. Pistes actives limitées aux 3 derniers mois.','muted'));
   box.append(ted,bosa,communes);
  }
  function renderProvinces(){
@@ -55,7 +56,7 @@
    const when=node('td');when.append(node('span','Site : '+api.date(c.lastSiteCheck)),node('small','Documents : '+api.date(c.lastDocumentCheck)));
    const successful=c.lastDocumentSuccess||Object.values(c.documentChecks||{}).map(v=>v.lastSuccess).filter(Boolean).sort().at(-1);
    if(successful)when.append(node('small','Dernier PDF contrôlé : '+api.date(successful)));
-   const read=node('td',api.docs(c));
+   const read=node('td',api.docs(c)+' PDF');if(c.htmlDocumentsRead)read.append(node('small',c.htmlDocumentsRead+' décisions / documents HTML')); 
    if(c.documentProgress){const p=c.documentProgress;read.append(node('small','À traiter : '+p.pagesPending+' pages · '+p.documentsPending+' PDF'));if(p.limited)read.append(node('small','Limite d’exploration atteinte : contrôle complémentaire nécessaire.'));}
    else read.append(node('small','Exploration restante non encore mesurée.'));
    if(c.lastDocumentResult)read.append(node('small','Dernier lot : '+c.lastDocumentResult.checked+' contrôlés, '+c.lastDocumentResult.errors+' erreurs'));
@@ -70,7 +71,7 @@
  }
  function instructions(){
   const p=$('collectProvince').value,c=$('collectCommune').value;
-  $('launchInstructions').textContent='Dans « Run workflow », choisir province = '+p+(c?', commune = '+c:', laisser commune vide')+'. Le lancement traitera '+(c?'cette commune uniquement':'un lot de 12 sites au maximum et de 4 communes pour les PDF, dans cette province')+'. Relancer un lot poursuit la rotation.';
+  $('launchInstructions').textContent='Dans « Run workflow », choisir province = '+p+(c?', commune = '+c:', laisser commune vide')+'. Le lancement traitera '+(c?'cette commune uniquement':'un lot de 12 communes au maximum, avec lecture des publications récentes et rotation, dans cette province')+'. Relancer un lot poursuit la rotation.';
  }
  function updateCommuneChoices(ins=''){
   const box=$('collectCommune'),p=$('collectProvince').value;box.replaceChildren();const opt=node('option','Rotation automatique');opt.value='';box.append(opt);

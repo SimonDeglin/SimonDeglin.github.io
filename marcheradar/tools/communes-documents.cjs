@@ -11,9 +11,10 @@ const sourcePolicy=require('./communal-source-policy.cjs');
 const webType=require('./web-publication-type.cjs');
 const signals=require('./municipal-signals.cjs');
 const documentDates=require('../document-dates.js');
+const htmlSource=require('./communal-html.cjs');
 const sourceHealth=require('../source-health.js');
 const INVENTORY=path.resolve(__dirname,'../communes.json'),DATA=path.resolve(__dirname,'../data.json');
-const EXTRACTION_VERSION='2026-10-29-document-dates-v5';
+const EXTRACTION_VERSION='2026-10-29-recent-v6';
 const MAX_COMMUNES=Math.min(8,Math.max(1,Number(process.env.COMMUNES_DOC_BATCH||4)));
 const MATCH=/(?:topograph|g[eé]om[eè]tr|bornage|division parcell|bathym[eé]tr|jaugeag|limnim[eé]tr|[eé]tude hydraulique|bureau d.[eé]tudes|auteur de projet|d[eé]tection de r[eé]seaux|scanner laser|photogramm[eé]tr|certificat PEB|certification [eé]nerg[eé]tique|lev[eé] de terrain|[eé]valuation immobili[eè]re|relev[eé] de cours d.eau|voirie|espace public|am[eé]nagement.{0,15}place|bassin d.orage|acquisition.{0,15}parcelle|vente.{0,15}terrain)/i;
 const INTENT=/(?:d[eé]cide|approuve|d[eé]lib[eè]re|march[eé] de services|d[eé]signation|consultation|cahier sp[eé]cial des charges|lancement d.un march[eé]|mise en concurrence|bureau d.[eé]tudes|mission d.auteur de projet|budget d.[eé]tudes?)/i;
@@ -40,7 +41,10 @@ function childPages(html,base){
  for(const a of String(html).matchAll(/<a\b[^>]*href\s*=\s*["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)){
   let u;try{u=new URL(a[1].replace(/&amp;/g,'&'),base)}catch(e){continue}
   u.hash='';
-  if(u.origin!==parent.origin||u.pathname===parent.pathname||!u.pathname.startsWith(parent.pathname.replace(/\/$/,'')+'/'))continue;
+  const platform=/^(?:www\.)?deliberations\.be$/.test(u.hostname);
+  if(platform&&/deliberations\.be$/.test(parent.hostname)&&u.pathname.split('/')[1]!==parent.pathname.split('/')[1])continue;
+  if(platform&&/@@faceted_query/.test(parent.pathname))continue;
+  if((u.origin!==parent.origin&&!platform)||u.href===parent.href||(!platform&&!u.pathname.startsWith(parent.pathname.replace(/\/$/,'')+'/')))continue;
   if(/\.pdf(?:$|[?#])/i.test(u.href)||!/conseil|deliber|d[eé]lib[eé]r|proces|proc[eè]s|ordre|seance|s[eé]ance|pv-|march[eé]s|20\d{2}/i.test(u.pathname+' '+textOnly(a[2])))continue;
   if(!sourcePolicy.excluded({url:u.href,title:textOnly(a[2])})&&!out.includes(u.href))out.push(u.href);
  }return out;
@@ -101,6 +105,20 @@ function documentId(url){return 'municipal-doc:'+digest(url).slice(0,18)}
 function normalized(text){return String(text||'').normalize('NFKC').replace(/\s+/g,' ').trim()}
 function belongs(m,commune,url){return m.source==='LOCALE'&&(m.sourceDocument||m.url)===url&&
  (m.municipalityINS===commune.ins||m.buyer==='Commune de '+commune.name)}
+function processHTML(items,commune,html,url,context,now){
+ const parsed=htmlSource.read(html,url,context);if(!parsed)return {items,created:0,read:false};
+ const sha=digest(html);parsed.dates.sha256=sha;
+ if(!documentDates.freshness({source:'LOCALE',sourceDocument:url,sourceDocumentDates:parsed.dates},now).active)return {items,created:0,read:true};
+ const linked=items.filter(m=>belongs(m,commune,url)),out=items.map(m=>belongs(m,commune,url)?{...m,sourceDocumentDates:parsed.dates,sourceDocumentVersion:{documentId:documentId(url),sha256:sha,format:'html',checkedAt:now},sourceEvidenceStatus:normalized(parsed.text).includes(normalized(m.evidence))?'found':'not_found'}:m);
+ let created=0;
+ if(!linked.length)for(const p of (parsed.platform?passages(parsed.text).slice(0,1):passages(parsed.text))){
+  const rating=profile.screen({title:parsed.title,description:p.excerpt,buyer:'Commune de '+commune.name,region:'Wallonie',source:'LOCALE',opportunityType:'prospection'}).classification;
+  if(!rating||rating.screening==='excluded')continue;
+  const type=webType.classify((parsed.project?'Projet de délibération ':'')+parsed.title,parsed.text,p.excerpt),id='local-html:'+digest(url+'|'+p.excerpt.slice(0,170)).slice(0,20);if(out.some(m=>m.id===id))continue;
+  out.push({id,title:parsed.title,buyer:'Commune de '+commune.name,municipalityINS:commune.ins,region:'Wallonie',source:'LOCALE',webSourceType:'municipal',sourceDocumentFormat:'html',noticeKind:type.kind,opportunityType:'prospection',opportunityStage:'décision ou besoin à vérifier',sector:rating.sector,sectors:rating.sectors,screening:'review',score:Math.min(60,rating.score),qualification:rating.qualification,publication:'',deadline:'',url,sourceDocument:url,sourceDocumentDates:parsed.dates,sourceDocumentVersion:{documentId:documentId(url),sha256:sha,format:'html',checkedAt:now},webTypeEvidence:{...type,sourceUrl:url,page:null,sha256:sha},description:p.excerpt,evidence:p.excerpt,sourceEvidenceStatus:'found',municipalReference:p.explicitReference||null});created++;
+ }
+ return {items:out,created,read:true};
+}
 function processDocument(items,commune,pdf,file,now,extract=pdfText){
  const id=documentId(pdf.url),prior=commune.documentChecks?.[id]||{};
  const linked=items.filter(m=>belongs(m,commune,pdf.url));
@@ -145,7 +163,7 @@ function processDocument(items,commune,pdf,file,now,extract=pdfText){
   return next;
  });
  let created=0;
- if(!linked.length){
+ if(!linked.length&&(!check.sourceDocumentDates?.session&&!check.sourceDocumentDates?.document||documentDates.freshness({source:'LOCALE',sourceDocument:pdf.url,sourceDocumentDates:check.sourceDocumentDates},now).active)){
   const known=new Set(items.map(x=>x.id));
   for(const p of candidates){
    // Conserver l'algorithme d'identifiant historique pour les premières lectures.
@@ -191,7 +209,7 @@ async function run(options={}){
   }
   // Les PDF déjà contrôlés restent suivis même si leur lien disparaît d'une page.
   for(const prior of Object.values(m.documentChecks||{}))if(prior.url)queueApi.remember(queue,'documents',{url:prior.url,title:'PDF déjà suivi',sourceUrl:prior.url},now);
-  const attemptedPages=new Set(),maxPages=Math.min(6,Math.max(1,Number(options.maxPages)||3));
+  const attemptedPages=new Set(),maxPages=Math.min(24,Math.max(1,Number(options.maxPages)||8));
   for(let count=0;count<maxPages;count++){
    const candidate=queueApi.pendingPages(queue,attemptedPages,now)[0];if(!candidate)break;
    const [id,pageEntry]=candidate;attemptedPages.add(id);
@@ -199,6 +217,8 @@ async function run(options={}){
     const page=await download(pageEntry.url,'text/html',1200000,{fetchFn:options.fetchFn}),html=page.bytes.toString('utf8');
     for(const pdf of fileLinks(html,page.finalUrl))queueApi.remember(queue,'documents',{...pdf,sourceUrl:pageEntry.url},now);
     for(const url of childPages(html,page.finalUrl))queueApi.remember(queue,'pages',{url,depth:(pageEntry.depth||0)+1,sourceUrl:pageEntry.url},now);
+    for(const entry of htmlSource.links(html,page.finalUrl,now,pageEntry))queueApi.remember(queue,'pages',{...entry,sourceUrl:pageEntry.url},now);
+    const extracted=processHTML(data.items,m,html,page.finalUrl,pageEntry,now);data.items=extracted.items;created+=extracted.created;m.opportunities=(m.opportunities||0)+extracted.created;if(extracted.read)m.htmlDocumentsRead=(m.htmlDocumentsRead||0)+(m.htmlDocumentChecks?.[id]?0:1);if(extracted.read)m.htmlDocumentChecks={...(m.htmlDocumentChecks||{}),[id]:{url:page.finalUrl,lastSuccess:now,sha256:digest(html)}};
     queue.pages[id]={...pageEntry,lastAttempt:now,lastSuccess:now,lastError:null,nextAttemptAt:null};
     m.documentSourceChecks={...(m.documentSourceChecks||{}),[id]:{url:pageEntry.url,lastAttempt:now,lastSuccess:now,lastError:null}};
    }catch(e){
@@ -247,5 +267,5 @@ async function run(options={}){
  if(!options.quiet)console.log('COMMUNES_DOCUMENTS',JSON.stringify(summary));
  return summary;
 }
-module.exports={fileLinks,childPages,evidence,passages,pdfText,documentId,download,processDocument,run};
+module.exports={fileLinks,childPages,evidence,passages,pdfText,documentId,download,processDocument,processHTML,run};
 if(require.main===module)run().catch(e=>{console.warn('COMMUNES_DOCUMENT_READ_ERROR',e.message);process.exitCode=1});

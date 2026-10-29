@@ -38,7 +38,7 @@ function brusselsDay(offset){
 function item(id,deadline,source='TED'){
  return {id:'fixture:'+id,title:'Contrôle '+id,description:'Mission de voirie et études techniques',buyer:'Commune de test',
   region:'Wallonie',source,sector:'VRD',sectors:['VRD'],screening:'main',score:90,
-  publication:brusselsDay(-10),deadline,cpv:[]};
+  publication:brusselsDay(-10),deadline,cpv:[],...(source==='LOCALE'?{sourceDocumentDates:{session:{date:brusselsDay(-10),kind:'session',confidence:'explicit',source:'pdf_text',excerpt:'Date de séance du jeu de test'}}}:{})};
 }
 const fixtures=[
  item('future',brusselsDay(3)),item('today',brusselsDay(0)),
@@ -66,7 +66,7 @@ async function loadPage(page,url,expected){
   // 1. Test de chargement et d'intégrité de la base existante.
   const first=await browser.newContext({viewport:{width:1440,height:900}});
   const realPage=await first.newPage();
-  await loadPage(realPage,url,real.items.filter(m=>m.region!=='Flandre'&&m.screening!=='excluded').length);
+  await loadPage(realPage,url,real.items.filter(m=>m.region!=='Flandre'&&m.screening!=='excluded'&&(m.source!=='LOCALE'||require('../publication-filters.js').source(m)!=='municipal'||require('../document-dates.js').freshness(m).active)).length);
   assert.equal((await realPage.locator('[data-view="inbox"]').getAttribute('class')).includes('active'),true,'Le dossier initial doit être Listing complet');
   await realPage.locator('[data-view="catalogue"]').click();
   assert.equal(await realPage.locator('article.tender').count(),initialIds.size,'Tous les dossiers historiques restent accessibles');
@@ -121,7 +121,7 @@ async function loadPage(page,url,expected){
    assert.equal(Number(await page.locator('[data-count="inbox"]').textContent()),count,'Compteur dossier sous filtre '+value);
   }
   await page.locator('#dueFilter').selectOption('open');
-  assert.equal(await page.locator('article[data-id="fixture:local"]').count(),1,'La prospection locale sans date doit rester ouverte');
+  assert.equal(await page.locator('article[data-id="fixture:local"]').count(),1,'La prospection récente sans échéance doit rester visible');
   assert.equal(await page.locator('article[data-id="fixture:unknown"]').count(),0,'Une procédure sans date vérifiée ne peut être déclarée ouverte');
   await page.locator('#dueFilter').selectOption('all');
   // La recherche filtre les listes et les compteurs, sans changer le dossier.

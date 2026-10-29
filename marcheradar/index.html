@@ -185,7 +185,7 @@ body{background:#f7f7f7;color:#303339}
 .coverage-detail-link:hover{text-decoration:underline}
 </style>
 <link rel="stylesheet" href="detail-phase2.css">
-<link rel="stylesheet" href="cockpit-v4.css?v=20261029-document-dates">
+<link rel="stylesheet" href="cockpit-v4.css?v=20261029-recent-communes">
 </head>
 <body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -254,6 +254,7 @@ body{background:#f7f7f7;color:#303339}
     <div class="source-coverage-strip" id="coverageStrip" aria-label="État des sources"></div>
     <div class="section-head"><h2 id="sectionTitle">Listing complet</h2><div class="section-right"><button id="reviewBtn" class="review-btn" type="button">À vérifier <span id="reviewCount">0</span></button><small id="lastSync"></small></div></div>
     <div id="listDescription" class="list-description">Marchés à trier, non encore classés. Glissez une ligne vers un dossier à gauche.</div>
+    <p class="v4-facet-note">Sites communaux : pistes des 3 derniers mois dans le listing actif. Les documents plus anciens ou sans date identifiable restent dans l’historique ; vos dossiers classés sont conservés.</p>
     <div class="v4-kind-filter" aria-label="Filtrer par source"><span class="v4-kind-filter-label">Source</span><div id="sourceFilters" class="v4-type-buttons" role="group" aria-label="Source de publication"></div></div>
     <div class="v4-kind-filter" aria-label="Filtrer les publications"><span class="v4-kind-filter-label">Type de publication</span><div id="publicationFilters" class="v4-type-buttons" role="group" aria-label="Type de publication"></div></div>
     <section class="filter-panel">
@@ -276,10 +277,10 @@ body{background:#f7f7f7;color:#303339}
 <div class="overlay" id="overlay"></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Détails et préférences"><div class="drawer-head"><div><small id="drawerEyebrow">DÉTAIL DU MARCHÉ</small><h2 id="drawerHeader">Consulter un marché</h2></div><button class="close" id="closeDrawer" aria-label="Fermer"><svg class="ico"><use href="#i-x"/></svg></button></div><div class="drawer-content" id="drawerBody"></div><div class="drawer-footer" id="drawerFooter"></div></aside>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="document-dates.js?v=20261029-dates-1"></script>
+<script src="document-dates.js?v=20261029-recent-2"></script>
 <script src="publication-filters.js?v=20261029-1"></script>
-<script src="detail-phase2.js?v=20261029-document-dates"></script>
-<script src="cockpit-v4.js?v=20261029-document-dates"></script>
+<script src="detail-phase2.js?v=20261029-recent-communes"></script>
+<script src="cockpit-v4.js?v=20261029-recent-communes"></script>
 <script src="followup-backup.js?v=20261028-1"></script>
 <script src="source-health.js?v=20261029-1"></script>
 <script src="qualification.js?v=20261029-1"></script>
@@ -633,9 +634,10 @@ function matchesGeneralFilters(m){
  var q=norm(state.query).trim();
  return !q||norm([m.title,m.description,m.buyer,m.region,tags.join(' '),(m.cpv||[]).join(' ')].join(' ')).includes(q);
 }
+function municipalActive(m){return m.source!=='LOCALE'||(window.MRPublications&&MRPublications.source(m)!=='municipal')||isStage(saved.statuses[m.id])||!window.MRDocumentDates||MRDocumentDates.freshness(m).active}
 function matchesFolder(m,view){
  var folder=view||state.view,actual=stageOf(m.id);
- if(isStage(folder))return actual===folder&&(folder!=='inbox'||!autoExcluded(m));
+ if(isStage(folder))return actual===folder&&(folder!=='inbox'||(!autoExcluded(m)&&municipalActive(m))); 
  if(folder==='screened')return autoExcluded(m)&&actual!=='irrelevant';
  // Un marché explicitement écarté ne réapparaît pas dans les vues de travail,
  // même après une nouvelle collecte automatique.
@@ -670,7 +672,7 @@ function renderPublicationFilters(){
 }
 function renderCockpitV4(){
  var box=el('cockpit');if(!box||!window.MRCockpit)return;
- var counts=MRCockpit.metrics(allMarkets(),stageOf,marketDueStatus,daysLeft,autoExcluded);
+ var counts=MRCockpit.metrics(allMarkets().filter(municipalActive),stageOf,marketDueStatus,daysLeft,autoExcluded);
  box.innerHTML=MRCockpit.renderCockpit(counts);
  box.querySelectorAll('[data-cockpit]').forEach(function(b){
   b.addEventListener('click',function(){

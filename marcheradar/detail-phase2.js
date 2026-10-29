@@ -232,7 +232,7 @@
   var v=m.sourceDocumentVersion;
   if(!v||!str(v.sha256))return '';
   var date=Number.isFinite(Date.parse(v.checkedAt))?new Intl.DateTimeFormat('fr-BE',{timeZone:'Europe/Brussels',dateStyle:'short',timeStyle:'short'}).format(new Date(v.checkedAt)):'date non renseignée';
-  var html='<div class="mr2-highlight mr2-caution"><strong>'+(v.changedAt?'Modification du fichier PDF détectée':'Version du PDF contrôlée')+'</strong>'+
+  var html='<div class="mr2-highlight mr2-caution"><strong>'+(v.changedAt?'Modification du document détectée':v.format==='html'?'Version de la page officielle contrôlée':'Version du PDF contrôlée')+'</strong>'+
    '<p>Dernier contrôle : '+esc(date)+' (Bruxelles). Empreinte '+esc(str(v.sha256).slice(0,16))+'…</p>'+
    (v.changedAt?'<p>Une modification du fichier ne constitue pas, à elle seule, un rectificatif officiel du marché.</p>':'')+
    (m.sourceEvidenceStatus==='not_found'?'<p><strong>L’extrait historique n’a pas été retrouvé dans la version contrôlée. Sa validité actuelle doit être vérifiée.</strong></p>':'')+'</div>';

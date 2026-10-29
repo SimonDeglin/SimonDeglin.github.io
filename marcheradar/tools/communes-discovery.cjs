@@ -84,7 +84,7 @@ async function run(options={}){
     // Une page de délibérations n'est exploitable qu'après lecture HTML effective.
     // Les liens PDF directs sont traités par un collecteur dédié, pas comme des pages.
     if(/\.pdf(?:$|[?#])/i.test(x.url)){merged.set(x.url,{...x,status:'document_pdf_a_analyser'});continue;}
-    if(verifiedCount>=6){if(!previous)merged.set(x.url,x);continue;}
+    if(verifiedCount>=(options.maxSources||6)){if(!previous)merged.set(x.url,x);continue;}
     verifiedCount++;
     try{
      const verified=await fetchPage(x.url);
