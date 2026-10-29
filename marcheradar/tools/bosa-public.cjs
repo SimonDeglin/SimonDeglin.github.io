@@ -97,6 +97,7 @@ function normalize(raw){
   procedureIdentifier,internalReference,title,buyer,region,languages,
   sector:classification.classification.sector,sectors:classification.classification.sectors,
   score:classification.classification.score,screening:classification.classification.screening,
+  qualification:classification.classification.qualification,matchReason:classification.classification.matchReason,
   publication:pubDate,deadline,cpv,description:description||title,
   source:'BOSA',source_status:'bosa_public_browser',
   noticeSubType,noticeKind:noticeKind(noticeSubType),

@@ -4,15 +4,24 @@
  */
 'use strict';
 const WORDS=require('./kdrix-keywords.json');
+const qualification=require('../qualification.js');
 const fold=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()
  .replace(/[’‘]/g,"'").replace(/[–—-]/g,' ').replace(/\s+/g,' ').trim();
 function subjectOf(s){
  const p=String(s||'').split(/\s+[–—]\s+/);
  return p.length>=3?p.slice(2).join(' – '):String(s||'');
 }
+const STEMS=new Set(['topograph','topometr','tach eometr','tachymetr','photogrammet','aerophotogrammet','orthophot','bathymetr','hydrograph','debimetri']);
 function has(s,term){
- const q=fold(term),n=s.indexOf(q);if(q.length<3||n<0)return false;
- return q.length>5||(/[^a-z0-9]/.test(s[n-1]||' ')&&/[^a-z0-9]/.test(s[n+q.length]||' '));
+ const q=fold(term);if(q.length<3)return false;
+ let from=0,n;
+ while((n=s.indexOf(q,from))>=0){
+  const start=n===0||/[^a-z0-9]/.test(s[n-1]);
+  const tail=s.slice(n+q.length),end=STEMS.has(q)||/^(?:s|x)?(?:$|[^a-z0-9])/.test(tail);
+  if(start&&end)return true;
+  from=n+1;
+ }
+ return false;
 }
 const any=(s,arr)=>(arr||[]).some(term=>has(s,term));
 // Une formule administrative commune à tous les achats ne décrit aucun métier.
@@ -20,7 +29,7 @@ const any=(s,arr)=>(arr||[]).some(term=>has(s,term));
 // une correspondance VRD (vêtements, leasing, logiciels, repas, etc.).
 const ADMIN_CONTEXT=new Set(['cahier special des charges']);
 const CONTEXT=Object.fromEntries(Object.entries(WORDS).filter(([,w])=>w.context)
- .map(([id,w])=>[id,w.context.filter(term=>!ADMIN_CONTEXT.has(fold(term)))]));
+ .map(([id,w])=>[id,w.context.filter(term=>!ADMIN_CONTEXT.has(fold(term))&&!(id==='Implant'&&fold(term)==='implantation'))]));
 function flemishBuyer(buyer){
  return /\bvlaams(?:e)?\b|\bvlaanderen\b|\bflanders\b|\baquafin\b|\bfluvius\b|openbare vlaamse|eigen vermogen digitaal|digitaal vlaanderen|vlaamse waterweg|vlaamse landmaatschappij|agentschap voor innoveren en ondernemen|agentschap wegen en verkeer|agentschap natuur en bos|\bde lijn\b|stad (?:diest|gent|leuven|antwerpen|brugge|hasselt|oostende|kortrijk|roeselare|sint niklaas)|provincie (?:limburg|antwerpen|oost vlaanderen|west vlaanderen|vlaams brabant)/.test(fold(buyer));
 }
@@ -52,7 +61,7 @@ function smallTechnicalWork(title,cpv){
  const studyOnly=/^(?:etude|diagnostic|conception|dimensionnement|mission de services)\b/.test(h)&&!/\btravaux\b/.test(h);
  return !studyOnly&&allowed&&work.test(h)&&((cpv||[]).some(x=>/^45/.test(x))||/travaux|amenagement|passerelle|pose/.test(h));
 }
-function screen(m){
+function detect(m){
  if(!m||!m.title)return {reason:'titre_absent',classification:null};
  const ex=excluded(m);if(ex)return {reason:ex,classification:null};
  const title=fold(subjectOf(m.title)),detail=fold(String(m.description||'').slice(0,14000));
@@ -79,6 +88,10 @@ function screen(m){
  if(little)hits.push({id:'PetitsTravaux',score:99,explicit:true,head:true});
  if(!hits.length){
   const both=title+' '+detail;
+  // Un schéma communal constitue une étude potentielle à qualifier ; le mot
+  // « implantations commerciales » ne doit pas devenir de l'implantation topo.
+  if(/schema(?:s)? de developpement (?:communal|pluricommunal|territorial)|plan communal d'amenagement/.test(title)&&/etude|services|elaboration|mission/.test(both))
+   return {reason:null,classification:{sector:'Qualif',sectors:['Qualif'],score:46,screening:'review',matchReason:'etude_urbanistique_a_qualifier'}};
   if(local&&/(reamenagement|rehabilitation|transformation|creation|renovation|investissement|programme)/.test(both)&&
     /(voirie|espace public|place communale|cours d'eau|reseau|terrain communal|batiment communal|bassin d'orage)/.test(both))
    return {reason:null,classification:{sector:'VRD',sectors:['VRD'],score:52,screening:'review',matchReason:'projet_communal_indirect'}};
@@ -93,6 +106,10 @@ function screen(m){
  return {reason:null,classification:{sector:best.id,sectors:[...new Set(hits.map(x=>x.id))],score:best.score,
   screening:local?'review':best.score>=75&&clear?'main':'review',
   matchReason:best.explicit?'prestation_decrite':best.head?'projet_indirect':'description_ou_contexte'}};
+}
+function screen(m){
+ const result=detect(m);
+ return result.classification?{...result,classification:qualification.enrich(m,result.classification)}:result;
 }
 function classify(title,description,cpv){
  return screen({title,description,cpv:cpv||[],buyer:'',region:'Belgique'}).classification;

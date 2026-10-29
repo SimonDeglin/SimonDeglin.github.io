@@ -66,9 +66,10 @@ async function loadPage(page,url,expected){
   // 1. Test de chargement et d'intégrité de la base existante.
   const first=await browser.newContext({viewport:{width:1440,height:900}});
   const realPage=await first.newPage();
-  await loadPage(realPage,url,initialIds.size);
+  await loadPage(realPage,url,real.items.filter(m=>m.region!=='Flandre'&&m.screening!=='excluded').length);
   assert.equal((await realPage.locator('[data-view="inbox"]').getAttribute('class')).includes('active'),true,'Le dossier initial doit être Listing complet');
-  assert.equal(await realPage.locator('article.tender').count(),initialIds.size);
+  await realPage.locator('[data-view="catalogue"]').click();
+  assert.equal(await realPage.locator('article.tender').count(),initialIds.size,'Tous les dossiers historiques restent accessibles');
   await first.close();
   console.log('OK: données existantes, affichage et compteurs du dossier initial ('+initialIds.size+' marchés)');
   // 2. Jeux de données déterministes : dates civiles, heures et prospection locale.
@@ -137,7 +138,11 @@ async function loadPage(page,url,expected){
    status:200,contentType:'application/json',
    body:JSON.stringify({schema_version:2,items:[item('local-prospect','', 'LOCALE'),rejected]})
   }));
-  await loadPage(rejectedPage,url,2);
+  await loadPage(rejectedPage,url,1);
+  await rejectedPage.locator('[data-view="screened"]').click();
+  await rejectedPage.locator('article[data-id="fixture:local-rejected"] [data-irrelevant]').click();
+  await rejectedPage.locator('[data-view="inbox"]').click();
+  assert.equal(await rejectedPage.locator('.tender').count(),2,'La réintégration explicite prime sur le filtre');
   await rejectedPage.locator('#dueFilter').selectOption('open');
   assert.equal(await rejectedPage.locator('.tender').count(),1,'Un extrait écarté ne doit pas être qualifié de prospection ouverte');
   await rejectedPage.locator('#dueFilter').selectOption('unknown');

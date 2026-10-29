@@ -145,7 +145,7 @@ function normalize(n,funnel){
  return {
   id:'ted:'+num,publicationNumber:num,procedureIdentifier:txt(get(n,'procedure-identifier')),
   title,buyer,
-  region:place,sector:sector.sector,sectors:sector.sectors,score:sector.score,screening:sector.screening,
+  region:place,sector:sector.sector,sectors:sector.sectors,score:sector.score,screening:sector.screening,qualification:sector.qualification,matchReason:sector.matchReason,
   publication:iso(get(n,'publication-date')),deadline:due,cpv:cpvs,
   description:desc||'Le détail de cette prestation est à consulter dans l’avis officiel.',
   source:'TED',source_status:'api',noticeType:kind,

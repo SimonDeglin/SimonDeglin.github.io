@@ -6,6 +6,7 @@
 const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),cp=require('node:child_process'),crypto=require('node:crypto');
 const profile=require('./kdrix-profile.cjs');
 const {selection}=require('./communes-scope.cjs');
+const queueApi=require('./municipal-queue.cjs');
 const INVENTORY=path.resolve(__dirname,'../communes.json'),DATA=path.resolve(__dirname,'../data.json');
 const MAX_COMMUNES=Math.min(8,Math.max(1,Number(process.env.COMMUNES_DOC_BATCH||4)));
 const MATCH=/(?:topograph|g[eé]om[eè]tr|bornage|division parcell|bathym[eé]tr|jaugeag|limnim[eé]tr|[eé]tude hydraulique|bureau d.[eé]tudes|auteur de projet|d[eé]tection de r[eé]seaux|scanner laser|photogramm[eé]tr|certificat PEB|certification [eé]nerg[eé]tique|lev[eé] de terrain|[eé]valuation immobili[eè]re|relev[eé] de cours d.eau)/i;
@@ -20,7 +21,7 @@ function fileLinks(html,base){
   uri.hash='';
   if(!out.some(x=>x.url===uri.href))out.push({url:uri.href,title:textOnly(a[2]).slice(0,90)});
  }
- return out.slice(0,12);
+ return out;
 }
 function childPages(html,base){
  const parent=new URL(base),out=[];
@@ -30,7 +31,7 @@ function childPages(html,base){
   if(u.origin!==parent.origin||u.pathname===parent.pathname||!u.pathname.startsWith(parent.pathname.replace(/\/$/,'')+'/'))continue;
   if(/\.pdf(?:$|[?#])/i.test(u.href)||!/conseil|deliber|d[eé]lib[eé]r|proces|proc[eè]s|ordre|seance|s[eé]ance|pv-|march[eé]s|20\d{2}/i.test(u.pathname+' '+textOnly(a[2])))continue;
   if(!out.includes(u.href))out.push(u.href);
- }return out.slice(0,2);
+ }return out;
 }
 function readableSource(s){return s.status==='page_accessible'||s.status==='document_pdf_a_analyser'}
 async function download(url,type,max,options={}){
@@ -131,7 +132,7 @@ function processDocument(items,commune,pdf,file,now,extract=pdfText){
    result.push({id:marketId,title:'Conseil communal — opportunité à vérifier : '+commune.name,buyer:'Commune de '+commune.name,
     municipalityINS:commune.ins,region:'Wallonie',source:'LOCALE',opportunityType:'prospection',
     opportunityStage:'décision ou besoin à vérifier',sector:p.rating.sector,sectors:p.rating.sectors,
-    score:Math.min(60,p.rating.score),screening:'review',publication:'',deadline:'',
+    score:Math.min(60,p.rating.score),screening:'review',qualification:p.rating.qualification,publication:'',deadline:'',
     sourceDocument:pdf.url,url:pdf.url,cpv:[],description:'Document communal public. Extrait nécessitant une lecture de validation : '+p.excerpt,
     evidence:p.excerpt,source_status:'extrait_pdf_a_verifier',sourceEvidencePage:p.page,sourceEvidenceStatus:'found',sourceDocumentVersion:version});
   }
@@ -152,67 +153,68 @@ async function run(options={}){
  const ready=selection(inventory.communes,options).filter(m=>m.deliberationSources?.some(readableSource))
   .sort((a,b)=>(a.lastDocumentCheck||'').localeCompare(b.lastDocumentCheck||''))
   .slice(0,limit);
- let documents=0,checked=0,unchanged=0,modified=0,created=0,reviewCandidates=0,errors=[];
+ let documentsRead=0,checked=0,unchanged=0,modified=0,created=0,reviewCandidates=0,errors=[];
  for(const m of ready){
-  const attempted=new Set();
-  const before={checked,errors:errors.length};
-  const sources=m.deliberationSources.filter(readableSource).sort((a,b)=>(m.documentSourceChecks?.[documentId(a.url)]?.lastAttempt||'').localeCompare(m.documentSourceChecks?.[documentId(b.url)]?.lastAttempt||'')).slice(0,3);
-  for(const src of sources){
-   const sourceKey=documentId(src.url),oldSource=m.documentSourceChecks?.[sourceKey]||{};
-   const sourceErrorStart=errors.length;
-   try{
-    let files=[];
-    if(/\.pdf(?:$|[?#])/i.test(src.url))files=[{url:src.url,title:src.title||''}];
-    else{
-     const page=await download(src.url,'text/html',1200000,{fetchFn:options.fetchFn});
-     const html=page.bytes.toString('utf8');files=fileLinks(html,page.finalUrl);
-     for(const url of childPages(html,page.finalUrl)){
-      try{const child=await download(url,'text/html',1200000,{fetchFn:options.fetchFn});files.push(...fileLinks(child.bytes.toString('utf8'),child.finalUrl));}
-      catch(e){errors.push({site:m.name,link:url,error:String(e.message||e).slice(0,160)})}
-     }
-    }
-    // Les versions les moins récemment contrôlées passent en premier. Le lot
-    // reste borné, même si une page énumère des années entières d'archives.
-    files.sort((a,b)=>(m.documentChecks?.[documentId(a.url)]?.lastAttempt||'').localeCompare(m.documentChecks?.[documentId(b.url)]?.lastAttempt||''));
-    for(const pdf of files){
-     if(attempted.size>=12)break;
-     const id=documentId(pdf.url);if(attempted.has(id))continue;attempted.add(id);
-     try{
-      const file=await download(pdf.url,'application/pdf',9000000,{fetchFn:options.fetchFn,previous:m.documentChecks?.[id],now});
-      const next=processDocument(data.items,m,pdf,file,now,options.extract||pdfText);
-      data.items=next.items;Object.assign(m,next.commune);
-      checked++;if(next.parsed)documents++;if(next.unchanged)unchanged++;if(next.changed)modified++;
-      created+=next.created;reviewCandidates+=next.reviewCandidates;
-     }catch(e){
-      const message=String(e.message||e).slice(0,160);
-      m.documentChecks={...(m.documentChecks||{}),[id]:{...(m.documentChecks?.[id]||{}),url:pdf.url,lastAttempt:now,lastError:message}};
-      errors.push({site:m.name,link:pdf.url,error:message});
-     }
-    }
-    m.documentSourceChecks={...(m.documentSourceChecks||{}),[sourceKey]:errors.length>sourceErrorStart?
-     {...oldSource,url:src.url,lastAttempt:now,lastError:errors[sourceErrorStart].error}:
-     {url:src.url,lastAttempt:now,lastSuccess:now,lastError:null}};
-   }catch(e){
-    const message=String(e.message||e).slice(0,160);
-    m.documentSourceChecks={...(m.documentSourceChecks||{}),[sourceKey]:{...oldSource,url:src.url,lastAttempt:now,lastError:message}};
-    errors.push({site:m.name,link:src.url,error:message});
+  const before={checked,errors:errors.length},queue=queueApi.init(m);
+  for(const src of m.deliberationSources.filter(readableSource)){
+   if(/\.pdf(?:$|[?#])/i.test(src.url))queueApi.remember(queue,'documents',{url:src.url,title:src.title||'',sourceUrl:src.url},now);
+   else{
+    const previous=m.documentSourceChecks?.[documentId(src.url)]||{};
+    queueApi.remember(queue,'pages',{url:src.url,depth:0,lastAttempt:previous.lastAttempt,lastSuccess:previous.lastSuccess,lastError:previous.lastError},now);
    }
   }
+  // Les PDF déjà contrôlés restent suivis même si leur lien disparaît d'une page.
+  for(const prior of Object.values(m.documentChecks||{}))if(prior.url)queueApi.remember(queue,'documents',{url:prior.url,title:'PDF déjà suivi',sourceUrl:prior.url},now);
+  const attemptedPages=new Set(),maxPages=Math.min(6,Math.max(1,Number(options.maxPages)||3));
+  for(let count=0;count<maxPages;count++){
+   const candidate=queueApi.pendingPages(queue,attemptedPages,now)[0];if(!candidate)break;
+   const [id,pageEntry]=candidate;attemptedPages.add(id);
+   try{
+    const page=await download(pageEntry.url,'text/html',1200000,{fetchFn:options.fetchFn}),html=page.bytes.toString('utf8');
+    for(const pdf of fileLinks(html,page.finalUrl))queueApi.remember(queue,'documents',{...pdf,sourceUrl:pageEntry.url},now);
+    for(const url of childPages(html,page.finalUrl))queueApi.remember(queue,'pages',{url,depth:(pageEntry.depth||0)+1,sourceUrl:pageEntry.url},now);
+    queue.pages[id]={...pageEntry,lastAttempt:now,lastSuccess:now,lastError:null,nextAttemptAt:null};
+    m.documentSourceChecks={...(m.documentSourceChecks||{}),[id]:{url:pageEntry.url,lastAttempt:now,lastSuccess:now,lastError:null}};
+   }catch(e){
+    const message=String(e.message||e).slice(0,160),nextAttemptAt=new Date(Date.parse(now)+6*3600000).toISOString();
+    queue.pages[id]={...pageEntry,lastAttempt:now,lastError:message,nextAttemptAt};
+    m.documentSourceChecks={...(m.documentSourceChecks||{}),[id]:{...(m.documentSourceChecks?.[id]||{}),url:pageEntry.url,lastAttempt:now,lastError:message}};
+    errors.push({site:m.name,link:pageEntry.url,error:message});
+   }
+  }
+  const maxDocuments=Math.min(12,Math.max(1,Number(options.maxDocuments)||12));
+  const documents=queueApi.pendingDocuments(queue,m.documentChecks||{},now).slice(0,maxDocuments);
+  for(const [id,pdf] of documents){
+   try{
+    const file=await download(pdf.url,'application/pdf',9000000,{fetchFn:options.fetchFn,previous:m.documentChecks?.[id],now});
+    const next=processDocument(data.items,m,pdf,file,now,options.extract||pdfText);
+    data.items=next.items;Object.assign(m,next.commune);
+    m.documentChecks[id].nextAttemptAt=null;
+    checked++;if(next.parsed)documentsRead++;if(next.unchanged)unchanged++;if(next.changed)modified++;
+    created+=next.created;reviewCandidates+=next.reviewCandidates;
+   }catch(e){
+    const message=String(e.message||e).slice(0,160);
+    m.documentChecks={...(m.documentChecks||{}),[id]:{...(m.documentChecks?.[id]||{}),url:pdf.url,lastAttempt:now,lastError:message,nextAttemptAt:new Date(Date.parse(now)+6*3600000).toISOString()}};
+    errors.push({site:m.name,link:pdf.url,error:message});
+   }
+  }
+  m.documentQueue=queue;m.documentProgress=queueApi.progress(queue,m.documentChecks||{});
   m.lastDocumentCheck=now;
-  m.lastDocumentResult={checked:checked-before.checked,errors:errors.length-before.errors,attempted:attempted.size};
+  m.lastDocumentResult={checked:checked-before.checked,errors:errors.length-before.errors,attempted:documents.length,pagesAttempted:attemptedPages.size};
   if(checked>before.checked)m.lastDocumentSuccess=now;
  }
+
  inventory.lastMunicipalDocumentPass=now;
  inventory.counts={...(inventory.counts||{}),documentsRead:inventory.communes.reduce((n,x)=>n+(x.documentsRead||0),0),opportunities:inventory.communes.reduce((n,x)=>n+(x.opportunities||0),0)};
  const prior=data.sources?.COMMUNES_DOCUMENTS||{};
  data.sources={...(data.sources||{}),COMMUNES_DOCUMENTS:{...prior,status:errors.length?'partial':checked?'pilot':'no_documents',last_attempt:now,
-  last_success:checked?now:(prior.last_success||null),last_batch:ready.length,documents_checked:checked,documents_read:documents,
+  last_success:checked?now:(prior.last_success||null),last_batch:ready.length,documents_checked:checked,documents_read:documentsRead,
   documents_unchanged:unchanged,documents_modified:modified,opportunities_found:created,review_candidates:reviewCandidates,errors_count:errors.length,
   warning:'Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.'}};
  // L'historique d'abord : si le second fichier échoue, la prochaine passe reprend
  // la lecture et retrouve les mêmes ID, au lieu de marquer des données perdues comme lues.
  writeJSON(dataPath,data);writeJSON(inventoryPath,inventory);
- const summary={communes:ready.length,checked,documents,unchanged,modified,opportunities:created,reviewCandidates,errors:errors.length};
+ const summary={communes:ready.length,checked,documents:documentsRead,unchanged,modified,opportunities:created,reviewCandidates,errors:errors.length};
  if(!options.quiet)console.log('COMMUNES_DOCUMENTS',JSON.stringify(summary));
  return summary;
 }
