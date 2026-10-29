@@ -185,7 +185,7 @@ body{background:#f7f7f7;color:#303339}
 .coverage-detail-link:hover{text-decoration:underline}
 </style>
 <link rel="stylesheet" href="detail-phase2.css">
-<link rel="stylesheet" href="cockpit-v4.css?v=20261029-ux-sources">
+<link rel="stylesheet" href="cockpit-v4.css?v=20261029-quality">
 </head>
 <body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -234,6 +234,7 @@ body{background:#f7f7f7;color:#303339}
 <div class="category-groups" id="sidebarCategories" aria-label="Domaines et sous-catégories"></div>
 <div class="section-label">MON ESPACE</div>
 <nav><button class="nav-item" data-view="catalogue"><svg class="ico"><use href="#i-list"/></svg><span class="nav-name">Historique général</span><span class="count" data-count="catalogue">0</span></button>
+<button class="nav-item" data-view="screened"><svg class="ico"><use href="#i-shield"/></svg><span class="nav-name">Écartés par le filtre</span><span class="count" data-count="screened">0</span></button>
 <button class="nav-item" id="settingsBtn"><svg class="ico"><use href="#i-settings"/></svg><span class="nav-name">Préférences</span></button>
 <button class="nav-item" id="exportBtn"><svg class="ico"><use href="#i-download"/></svg><span class="nav-name">Exporter en CSV</span></button></nav>
 <div class="sidebar-space"></div>
@@ -275,9 +276,10 @@ body{background:#f7f7f7;color:#303339}
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Détails et préférences"><div class="drawer-head"><div><small id="drawerEyebrow">DÉTAIL DU MARCHÉ</small><h2 id="drawerHeader">Consulter un marché</h2></div><button class="close" id="closeDrawer" aria-label="Fermer"><svg class="ico"><use href="#i-x"/></svg></button></div><div class="drawer-content" id="drawerBody"></div><div class="drawer-footer" id="drawerFooter"></div></aside>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script src="detail-phase2.js?v=20261028-backups-versions"></script>
-<script src="cockpit-v4.js?v=20261028-backups-versions"></script>
+<script src="cockpit-v4.js?v=20261029-quality"></script>
 <script src="followup-backup.js?v=20261028-1"></script>
 <script src="source-health.js?v=20261029-1"></script>
+<script src="qualification.js?v=20261029-1"></script>
 <script>
 (function(){
 'use strict';
@@ -297,6 +299,7 @@ var SECTORS=[
  {id:'Hydraulique',label:'Hydraulique & jaugeages'},
  {id:'PetitsTravaux',label:'Petits travaux techniques'},
  {id:'Monitoring',label:'Monitoring & auscultation'},{id:'Relief',label:'Cubatures & relief'},
+ {id:'Qualif',label:'Mission à qualifier'},
  {id:'Implant',label:'Implantations'},
  {id:'Expert',label:'Expertises'}
 ];
@@ -497,7 +500,7 @@ function downloadCSV(){
  var csv='\ufeff'+rows.map(function(r){return r.map(function(v){var s=String(v===undefined?'':v);if(/^[=+@\t\r]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"'}).join(';')}).join('\r\n');
  var a=document.createElement('a'),url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));a.href=url;a.download='marche-radar-'+dateOffset(0)+(state.mode==='demo'?'-DEMONSTRATION':'')+'.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},1000);toast('Export CSV généré');
 }
-function setView(v){state.view=v;state.sector='all';state.publication='all';state.previewId=null;expandedFamily=null;if(v==='irrelevant'){state.region='all';state.due='all';state.query='';el('region').value='all';el('dueFilter').value='all';el('search').value=''}document.querySelector('.sidebar').classList.remove('open');render();window.scrollTo({top:0,behavior:'smooth'})}
+function setView(v){state.view=v;state.sector='all';state.publication='all';state.previewId=null;expandedFamily=null;if(v==='irrelevant'||v==='screened'){state.region='all';state.due='all';state.query='';el('region').value='all';el('dueFilter').value='all';el('search').value=''}document.querySelector('.sidebar').classList.remove('open');render();window.scrollTo({top:0,behavior:'smooth'})}
 function validMarket(m){return m&&typeof m.id==='string'&&typeof m.title==='string'&&typeof m.score==='number'&&typeof m.sector==='string'&&typeof m.source==='string'}
 async function load(){
  var btn=el('refreshBtn');btn.disabled=true;
@@ -538,16 +541,19 @@ SECTORS=[
  {id:'Carto',label:'Cartographie & SIG'},{id:'Implant',label:'Implantations & chantier'},
  {id:'Reseaux',label:'Réseaux & impétrants'},{id:'PEB',label:'Énergie & PEB'},
  {id:'PetitsTravaux',label:'Petits travaux techniques'},
- {id:'Monitoring',label:'Monitoring & auscultation'},{id:'Relief',label:'Cubatures & relief'}
+ {id:'Monitoring',label:'Monitoring & auscultation'},{id:'Relief',label:'Cubatures & relief'},
+ {id:'Qualif',label:'Mission à qualifier'}
 ];
 state.view='inbox';
 var draggingId=null;
 function stageName(code){return (WORKFLOW.find(function(s){return s.id===code})||WORKFLOW[0]).label}
 function isStage(code){return WORKFLOW.some(function(s){return s.id===code})}
 function stageOf(id){return isStage(saved.statuses[id])?saved.statuses[id]:'inbox'}
+function autoExcluded(m){return m.screening==='excluded'&&!isStage(saved.statuses[m.id])}
 function tagsOf(m){
  var list=Array.isArray(m.sectors)?m.sectors.slice():[m.sector],valid=SECTORS.map(function(s){return s.id});
  list=list.filter(function(s,i){return valid.includes(s)&&list.indexOf(s)===i});
+ if(list.length)return list; // Respecter la qualification des collecteurs ; ne pas réajouter des métiers au titre seul.
  var txt=norm([m.title,m.description].join(' '));
  var patterns=[
  ['Topo',/(topograph|leve|releve|geometr|plan altimetri|profil en travers)/],
@@ -565,7 +571,7 @@ function tagsOf(m){
  ['PetitsTravaux',/(station.{0,28}limnimetr|limnimetr|petits? travaux.{0,38}(cours d'eau|hydrauli|mesure)|acces securise.{0,35}cours d'eau)/]
  ];
  patterns.forEach(function(p){if(p[1].test(txt)&&!list.includes(p[0]))list.push(p[0])});
- return list.length?list:['Topo'];
+ return list.length?list:['Qualif'];
 }
 function uniqueMarkets(items){
  var map=new Map();
@@ -592,7 +598,7 @@ function uniqueMarkets(items){
 function stageNumber(code){return allMarkets().filter(function(m){return stageOf(m.id)===code}).length}
 function moveMarket(id,code){
  if(!isStage(code)||!allMarkets().some(function(m){return m.id===id}))return;
- if(stageOf(id)===code)return;
+ if(stageOf(id)===code&&!(code==='inbox'&&!isStage(saved.statuses[id])))return;
  saved.statuses[id]=code;
  save();render();toast('Marché classé : '+stageName(code));
 }
@@ -618,7 +624,7 @@ function marketDueStatus(m){
 }
 function matchesGeneralFilters(m){
  var tags=m.sectors||tagsOf(m);
- if(state.view!=='irrelevant'&&!tags.some(function(id){return !saved.hiddenSectors[id]}))return false;
+ if(state.view!=='irrelevant'&&state.view!=='screened'&&!tags.some(function(id){return !saved.hiddenSectors[id]}))return false;
  if(state.region!=='all'&&m.region!==state.region)return false;
  if(state.due!=='all'&&marketDueStatus(m)!==state.due)return false;
  var q=norm(state.query).trim();
@@ -626,7 +632,8 @@ function matchesGeneralFilters(m){
 }
 function matchesFolder(m,view){
  var folder=view||state.view,actual=stageOf(m.id);
- if(isStage(folder))return actual===folder;
+ if(isStage(folder))return actual===folder&&(folder!=='inbox'||!autoExcluded(m));
+ if(folder==='screened')return autoExcluded(m)&&actual!=='irrelevant';
  // Un marché explicitement écarté ne réapparaît pas dans les vues de travail,
  // même après une nouvelle collecte automatique.
  if(actual==='irrelevant')return false;
@@ -654,7 +661,7 @@ function renderPublicationFilters(){
 }
 function renderCockpitV4(){
  var box=el('cockpit');if(!box||!window.MRCockpit)return;
- var counts=MRCockpit.metrics(allMarkets(),stageOf,marketDueStatus,daysLeft);
+ var counts=MRCockpit.metrics(allMarkets(),stageOf,marketDueStatus,daysLeft,autoExcluded);
  box.innerHTML=MRCockpit.renderCockpit(counts);
  box.querySelectorAll('[data-cockpit]').forEach(function(b){
   b.addEventListener('click',function(){
@@ -682,14 +689,15 @@ function renderQuickPreviewV4(m){
  if(!box||!window.MRCockpit)return;
  box.closest('.aside-panel').classList.toggle('has-preview',!!m);
  box.innerHTML=(m?'<div class="v7-preview-toolbar"><strong>Lecture rapide</strong><button type="button" id="clearQuickPreview" aria-label="Désélectionner le marché et vider la lecture rapide">Désélectionner ×</button></div>':'')+MRCockpit.preview(m,m?stageName(stageOf(m.id)):'',m?marketDueStatus(m):'unknown',
-   m?{notes:saved.notes[m.id]||'',horsSujet:stageOf(m.id)==='irrelevant'}:{});
+   m?{notes:saved.notes[m.id]||'',horsSujet:stageOf(m.id)==='irrelevant',autoExcluded:autoExcluded(m)}:{});
  if(changed)box.scrollTop=0;
  var clear=el('clearQuickPreview');if(clear)clear.addEventListener('click',function(){renderQuickPreviewV4(null)});
  var open=el('quickOpenTender');
  if(open)open.addEventListener('click',function(){openTender(open.dataset.id)});
  var discard=el('quickDismissTender');
  if(discard)discard.addEventListener('click',function(){
-  var code=stageOf(discard.dataset.id)==='irrelevant'?'inbox':'irrelevant';
+  var target=allMarkets().find(function(m){return m.id===discard.dataset.id});
+  var code=stageOf(discard.dataset.id)==='irrelevant'||autoExcluded(target)?'inbox':'irrelevant';
   moveMarket(discard.dataset.id,code);
  });
 }
@@ -718,7 +726,7 @@ var FAMILIES=[
  {id:'voirie',label:'Projet voirie',items:['VRD','Reseaux','Hydraulique','PetitsTravaux']},
  {id:'geometre',label:'Géomètre',items:['Foncier','Implant']},
  {id:'expertise',label:'Expertise',items:['Expert','PEB']},
- {id:'autres',label:'Autres',items:['Carto','Relief']}
+ {id:'autres',label:'Autres',items:['Carto','Relief','Qualif']}
 ];
 var expandedFamily=null;
 function matchesSectorFilter(tags){
@@ -733,7 +741,7 @@ function renderCategories(){
  var names={'Topo':'Relevés topo','Scan':'Scanner 3D','Drone':'Drone & photogrammétrie','Hydro':'Bathymétrie',
  'VRD':'Études / projets de voirie','Reseaux':'Réseaux & impétrants','Hydraulique':'Hydraulique & jaugeages',
  'PetitsTravaux':'Petits travaux techniques','Monitoring':'Monitoring des ouvrages',
- 'Foncier':'Division & bornage','Implant':'Implantations','Expert':'Expertises','PEB':'PEB','Carto':'Cartographie & SIG','Relief':'Relief et cubatures'};
+ 'Foncier':'Division & bornage','Implant':'Implantations','Expert':'Expertises','PEB':'PEB','Carto':'Cartographie & SIG','Relief':'Relief et cubatures','Qualif':'Mission à qualifier'};
  box.innerHTML=FAMILIES.map(function(f){
   var items=f.items.filter(function(id){return !saved.hiddenSectors[id]});
   if(!items.length)return '';
@@ -760,7 +768,7 @@ function renderCategories(){
  el('allCategories').setAttribute('aria-pressed',String(state.sector==='all'));
 }
 function renderStats(){
- el('kpiTotal').textContent=allMarkets().filter(function(m){return stageOf(m.id)==='inbox'}).length;
+ el('kpiTotal').textContent=allMarkets().filter(function(m){return matchesFolder(m,'inbox')}).length;
  el('kpiTop').textContent=stageNumber('answer');
  el('kpiTracked').textContent=stageNumber('await');
  el('kpiUrgent').textContent=stageNumber('won');
@@ -770,13 +778,14 @@ function renderStats(){
  
  document.querySelectorAll('[data-count]').forEach(function(b){
   var code=b.dataset.count;
-  b.textContent=allMarkets().filter(function(m){return matchesGeneralFilters(m)&&matchesPublicationType(m)&&(code==='catalogue'?stageOf(m.id)!=='irrelevant':stageOf(m.id)===code)}).length;
+  b.textContent=allMarkets().filter(function(m){return matchesGeneralFilters(m)&&matchesPublicationType(m)&&matchesFolder(m,code)}).length;
  });
 }
 function renderNav(){
- var labels={inbox:'Listing complet',maybe:'À définir',answer:'À répondre',await:"En attente d'attribution",won:'Obtenu',lost:'Perdu',discarded:'Sans suite',irrelevant:'Hors sujet',catalogue:'Historique général',review:'À vérifier',favorites:'Favoris',urgent:'Échéances proches'};
+ var labels={inbox:'Listing complet',maybe:'À définir',answer:'À répondre',await:"En attente d'attribution",won:'Obtenu',lost:'Perdu',discarded:'Sans suite',irrelevant:'Hors sujet',catalogue:'Historique général',screened:'Écartés par le filtre',review:'À vérifier',favorites:'Favoris',urgent:'Échéances proches'};
  var descriptions={
- inbox:'Tous les marchés non classés. Filtrez-les par domaine et par échéance, puis classez-les dans un dossier de suivi.',
+ screened:'Correspondances non retenues automatiquement. Vérifiez le motif et réintégrez un dossier si le filtre a écarté une mission utile.',
+ inbox:'Marchés non classés, hors correspondances écartées automatiquement. Filtrez-les par domaine et par échéance, puis classez-les dans un dossier de suivi.',
  maybe:'Opportunités à examiner avant de décider si KDRIX présente une offre.',
  answer:'Marchés auxquels KDRIX prévoit de répondre.',
  await:'Offres déjà remises, en attente de la décision d’attribution.',
@@ -815,13 +824,13 @@ function renderList(){
   var tags=(m.sectors||tagsOf(m)).map(function(s){var found=SECTORS.find(function(a){return a.id===s});return '<span class="micro-tag sector">'+esc(found?found.label:s)+'</span>'}).join('');
   return '<article class="tender" draggable="true" data-id="'+esc(m.id)+'" title="Cliquer pour actualiser la lecture rapide ou glisser vers un dossier de suivi">'+
    '<div class="grip" aria-hidden="true">⠿</div>'+
-   '<div class="score-ring" style="--score:'+Math.min(100,Math.max(0,m.score||0))+';--ring:'+color+'"><strong>'+esc(m.score||0)+'</strong></div>'+
+   '<div class="score-ring" title="Indice de repérage métier, sans validation de candidature" style="--score:'+Math.min(100,Math.max(0,m.score||0))+';--ring:'+color+'"><strong>'+esc(m.score||0)+'</strong></div>'+
    '<div class="tender-body"><div class="tender-top"><div class="tag-group">'+tags+'</div>'+(window.MRCockpit?MRCockpit.typeBadge(m):'')+'<span class="micro-tag">'+esc(m.source==='Démo'?'FICTIF':(m.source||'TED'))+'</span>'+
-   (current!=='inbox'?'<span class="status-tag '+current+'">'+esc(stageName(current))+'</span>':'')+(m.screening==='review'?'<span class="micro-tag">À vérifier</span>':m.screening==='excluded'?'<span class="micro-tag">Correspondance écartée automatiquement</span>':'')+(m.awards&&m.awards.length?'<span class="micro-tag result-published">Résultat publié</span>':'')+'</div>'+
+   (current!=='inbox'?'<span class="status-tag '+current+'">'+esc(stageName(current))+'</span>':'')+(m.screening==='review'?'<span class="micro-tag">À vérifier</span>':m.screening==='excluded'?'<span class="micro-tag">'+(autoExcluded(m)?'Écarté par le filtre':current==='inbox'?'Réintégré manuellement':'Classement manuel conservé')+'</span>':'')+(m.awards&&m.awards.length?'<span class="micro-tag result-published">Résultat publié</span>':'')+'</div>'+
    '<h3 class="open-tender" role="button" tabindex="0" title="Afficher en lecture rapide" aria-label="Lire rapidement : '+esc(m.title)+'">'+esc(m.title)+'</h3>'+
    '<div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+'Publié le '+fmtShort(m.publication)+'</span></div>'+(window.MRDetailV2&&typeof MRDetailV2.listHints==='function'?MRDetailV2.listHints(m):'')+'</div>'+
    '<div class="tender-end"><div class="end-meta"><button class="star'+(saved.favorites[m.id]?' on':'')+'" title="Favori" aria-label="Favori" data-star="'+esc(m.id)+'">'+svg('star',true)+'</button><span class="end-date">'+(m.deadline?'Éch. '+fmtShort(m.deadline):m.source==='LOCALE'&&m.screening!=='excluded'?'Prospection — échéance non publiée':'Échéance non publiée')+'</span><span class="days'+dc+'">'+esc(label)+'</span></div>'+
-   '<div class="v5-row-actions"><button type="button" class="v5-full-open" data-open-full="'+esc(m.id)+'" aria-label="Ouvrir la fiche complète : '+esc(m.title)+'">Fiche complète ↗</button><button type="button" class="v5-reject" data-irrelevant="'+esc(m.id)+'" aria-label="'+(current==='irrelevant'?'Réintégrer le marché':'Classer ce marché hors sujet')+'">'+(current==='irrelevant'?'Réintégrer':'Hors sujet')+'</button></div>'+
+   '<div class="v5-row-actions"><button type="button" class="v5-full-open" data-open-full="'+esc(m.id)+'" aria-label="Ouvrir la fiche complète : '+esc(m.title)+'">Fiche complète ↗</button><button type="button" class="v5-reject" data-irrelevant="'+esc(m.id)+'" aria-label="'+(current==='irrelevant'||autoExcluded(m)?'Réintégrer le marché':'Classer ce marché hors sujet')+'">'+((current==='irrelevant'||autoExcluded(m))?'Réintégrer':'Hors sujet')+'</button></div>'+
    '<select class="move-select" data-move="'+esc(m.id)+'" aria-label="Dossier de suivi">'+WORKFLOW.map(function(s){return '<option value="'+esc(s.id)+'"'+(s.id===current?' selected':'')+'>'+esc(s.label)+'</option>'}).join('')+'</select></div></article>';
  }).join('');
  el('resultsList').querySelectorAll('.open-tender').forEach(function(node){
@@ -842,7 +851,8 @@ function renderList(){
  el('resultsList').querySelectorAll('[data-irrelevant]').forEach(function(b){
   b.addEventListener('click',function(event){
    event.stopPropagation();
-   moveMarket(b.dataset.irrelevant,stageOf(b.dataset.irrelevant)==='irrelevant'?'inbox':'irrelevant');
+   var target=allMarkets().find(function(m){return m.id===b.dataset.irrelevant});
+   moveMarket(b.dataset.irrelevant,stageOf(b.dataset.irrelevant)==='irrelevant'||autoExcluded(target)?'inbox':'irrelevant');
   });
  });
  el('resultsList').querySelectorAll('[data-star]').forEach(function(b){b.addEventListener('click',function(){

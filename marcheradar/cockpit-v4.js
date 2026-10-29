@@ -42,23 +42,24 @@
   return types.map(t=>'<button type="button" class="v4-type-btn'+(t.id===active?' active':'')+'" data-publication="'+esc(t.id)+'" aria-pressed="'+(t.id===active?'true':'false')+'">'+esc(t.label)+' <span class="v4-type-count">'+(counts[t.id]||0)+'</span></button>').join('');
  }
  // Metrics do not equate "date not published" with an officially open procedure.
- function metrics(list,stageOf,dueStatus,daysLeft){
+ function metrics(list,stageOf,dueStatus,daysLeft,isAutoExcluded){
   const result={unclassified:0,nearDeadline:0,unknownDeadline:0,awards:0,localProspects:0,
    total:(list||[]).length};
   const ongoing=['inbox','maybe','answer'];
   for(const m of list||[]){
    const t=kind(m),stage=stageOf(m.id);
    if(stage==='irrelevant'){result.total--;continue}
+   if(isAutoExcluded?isAutoExcluded(m):m.screening==='excluded'&&stage==='inbox')continue;
    if(t==='competition'){
     const due=dueStatus(m);
-    if(stage==='inbox'&&m.screening!=='excluded')result.unclassified++;
+    if(stage==='inbox')result.unclassified++;
     if(ongoing.includes(stage)){
      if(due==='unknown')result.unknownDeadline++;
      const n=daysLeft(m.deadline);
      if(due==='open'&&n!==null&&n>=0&&n<=14)result.nearDeadline++;
     }
    }else if(t==='result')result.awards++;
-   else if(t==='prospect'&&m.screening!=='excluded')result.localProspects++;
+   else if(t==='prospect')result.localProspects++;
   }
   return result;
  }
@@ -107,7 +108,7 @@
  function preview(m,stage,deadlineStatus,options={}){
   if(!m)return '<div class="v4-preview-idle"><strong>Aucun marché visible</strong><p>Adapte les filtres pour retrouver les dossiers de suivi.</p></div>';
   const type=kind(m),sources=sourceCount(m);
-  const archived=options.horsSujet===true;
+  const archived=options.horsSujet===true||options.autoExcluded===true;
   let when;
   if(type==='result')when='Avis de résultat publié — aucune soumission à préparer sur cet avis';
   else if(type==='prospect')when='Piste communale — aucune procédure ouverte confirmée';
@@ -137,6 +138,7 @@
   const notes=txt(options.notes).replace(/\s+/g,' ');
   return '<div class="v4-preview-head"><span class="v4-eyebrow">LECTURE RAPIDE · MARCHÉ SÉLECTIONNÉ</span><h3>'+esc(m.title||'Publication sans titre')+'</h3>'+
    '<div>'+typeBadge(m)+'</div></div>'+
+   (typeof globalThis.MRQualification!=='undefined'?globalThis.MRQualification.render(m,{manualOverride:m.screening==='excluded'&&options.autoExcluded===false&&!options.horsSujet}):'')+
    '<div class="v5-preview-summary"><strong>Objet de la mission</strong><p>'+esc(shortDescription||'Aucun descriptif suffisamment précis dans les données collectées. Consulter la source officielle.')+'</p></div>'+
    '<div class="v4-preview-fields">'+
    field('Acheteur',m.buyer||'Non renseigné')+

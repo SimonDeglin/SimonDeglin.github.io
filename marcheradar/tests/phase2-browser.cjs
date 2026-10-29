@@ -51,6 +51,8 @@ function fixture(id,changes){
   const cx=await browser.newContext({viewport:{width:1440,height:920}});
   const page=await cx.newPage();attach(page);
   await page.goto(address,{waitUntil:'domcontentloaded'});
+  await page.waitForSelector('article.tender');
+  await page.locator('[data-view="catalogue"]').click();
   await ready(page,visibleMarkets);
   assert.equal(await page.locator('.mr2-list-hints').count(),visibleMarkets);
   const bosa=data.items.find(m=>m.source==='BOSA'&&m.noticeKind==='award');

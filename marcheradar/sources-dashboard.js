@@ -55,7 +55,10 @@
    const when=node('td');when.append(node('span','Site : '+api.date(c.lastSiteCheck)),node('small','Documents : '+api.date(c.lastDocumentCheck)));
    const successful=c.lastDocumentSuccess||Object.values(c.documentChecks||{}).map(v=>v.lastSuccess).filter(Boolean).sort().at(-1);
    if(successful)when.append(node('small','Dernier PDF contrôlé : '+api.date(successful)));
-   const read=node('td',api.docs(c));if(c.lastDocumentResult)read.append(node('small','Dernier lot : '+c.lastDocumentResult.checked+' contrôlés, '+c.lastDocumentResult.errors+' erreurs'));
+   const read=node('td',api.docs(c));
+   if(c.documentProgress){const p=c.documentProgress;read.append(node('small','À traiter : '+p.pagesPending+' pages · '+p.documentsPending+' PDF'));if(p.limited)read.append(node('small','Limite d’exploration atteinte : contrôle complémentaire nécessaire.'));}
+   else read.append(node('small','Exploration restante non encore mesurée.'));
+   if(c.lastDocumentResult)read.append(node('small','Dernier lot : '+c.lastDocumentResult.checked+' contrôlés, '+c.lastDocumentResult.errors+' erreurs'));
    const actions=node('td'),details=node('details'),sources=c.deliberationSources||[];details.append(node('summary',sources.length+' source(s) repérée(s)'));
    const ul=node('ul');for(const s of sources){const li=node('li');li.append(safeLink(s.url,s.title||s.url),node('small',s.status==='page_accessible'?'Page accessible lors du contrôle du '+api.date(s.last_success):s.status==='document_pdf_a_analyser'?'Lien PDF à analyser':'Lien à vérifier'));ul.append(li)}
    if(!sources.length)ul.append(node('li','Aucune publication localisée.'));details.append(ul);actions.append(details);

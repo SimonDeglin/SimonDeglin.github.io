@@ -56,7 +56,7 @@ async function ready(page,n){
   const page=await ctx.newPage();
   page.on('pageerror',e=>errors.push(String(e.stack||e)));
   await page.addInitScript(()=>{
-   localStorage.setItem('kdrix.marcheRadar.v1',JSON.stringify({statuses:{t1:'answer'},favorites:{},notes:{},hiddenSectors:{}}));
+   localStorage.setItem('kdrix.marcheRadar.v1',JSON.stringify({statuses:{t1:'answer',l2:'inbox'},favorites:{},notes:{},hiddenSectors:{}}));
   });
   await page.route('**/marcheradar/data.json*',r=>r.fulfill({status:200,contentType:'application/json',body:JSON.stringify({schema_version:2,generated_at:new Date().toISOString(),collector_status:'ok',data_origin:'test',items:fixtures})}));
   await page.goto(url,{waitUntil:'domcontentloaded'});
@@ -123,6 +123,8 @@ async function ready(page,n){
   // Un clic doit sélectionner la lecture rapide et ne plus ouvrir la grande fiche.
   // L'archivage Hors sujet doit tenir malgré les rafraîchissements des sources.
   const clean=await browser.newContext({viewport:{width:1440,height:900}});
+  // Cet extrait local a déjà été réintégré par l'utilisateur : sa décision prime.
+  await clean.addInitScript(()=>{if(!localStorage.getItem('kdrix.marcheRadar.v1'))localStorage.setItem('kdrix.marcheRadar.v1',JSON.stringify({statuses:{l2:'inbox'},notes:{},favorites:{},hiddenSectors:{}}))});
   const dynamic=await clean.newPage();
   dynamic.on('pageerror',e=>errors.push(String(e.stack||e)));
   await dynamic.route('**/marcheradar/data.json*',r=>r.fulfill({status:200,contentType:'application/json',
@@ -207,7 +209,7 @@ async function ready(page,n){
   await broken.route('**/marcheradar/cockpit-v4.js*',r=>r.abort('failed'));
   await broken.goto(url,{waitUntil:'domcontentloaded'});
   const currentData=require('../data.json');
-  const expected=currentData.items.filter(x=>x.region!=='Flandre').length;
+  const expected=currentData.items.filter(x=>x.region!=='Flandre'&&x.screening!=='excluded').length;
   await ready(broken,expected);
   assert.equal(await broken.locator('#resultsList .v5-full-open').count(),expected);
   await broken.locator('#resultsList .v5-full-open').first().click();
