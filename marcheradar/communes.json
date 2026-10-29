@@ -13,19 +13,19 @@
   "counts": {
     "total": 261,
     "sitesRepertories": 261,
-    "sitesVerifies": 181,
-    "deliberationsConnectees": 22,
+    "sitesVerifies": 193,
+    "deliberationsConnectees": 24,
     "zones": {
       "principale": 196,
       "exterieure_provisoire": 26,
       "peripherique": 39
     },
     "checkedWithErrors": 3,
-    "documentsRead": 126,
-    "opportunities": 44,
-    "sitesChecked": 181,
-    "candidatePages": 139,
-    "sourceErrors": 17
+    "documentsRead": 132,
+    "opportunities": 50,
+    "sitesChecked": 193,
+    "candidatePages": 149,
+    "sourceErrors": 19
   },
   "communes": [
     {
@@ -65,11 +65,150 @@
         }
       ],
       "lastSiteCheck": "2026-10-20T12:05:04.430Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-29T16:27:23.740Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:15f12072a8e76fd084": {
+          "url": "https://www.aiseau-presles.be/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastSuccess": "2026-10-29T16:27:23.740Z",
+          "lastError": null
+        },
+        "municipal-doc:a902b44751517459e8": {
+          "url": "https://www.aiseau-presles.be/ma-commune/vie-politique/conseil-communal/date-du-prochain-conseil-communal/date-du-prochain-conseil-communal",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastSuccess": "2026-10-29T16:27:23.740Z",
+          "lastError": null
+        },
+        "municipal-doc:faf1789b52a17599ff": {
+          "url": "https://www.aiseau-presles.be/ma-commune/services-communaux/administration-generale/publications/publication-des-reglements-et-ordonnances-sur-deliberations.be",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastSuccess": "2026-10-29T16:27:23.740Z",
+          "lastError": null
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:15f12072a8e76fd084": {
+            "url": "https://www.aiseau-presles.be/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T16:27:23.740Z",
+            "lastSuccess": "2026-10-29T16:27:23.740Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:a902b44751517459e8": {
+            "url": "https://www.aiseau-presles.be/ma-commune/vie-politique/conseil-communal/date-du-prochain-conseil-communal/date-du-prochain-conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T16:27:23.740Z",
+            "lastSuccess": "2026-10-29T16:27:23.740Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:faf1789b52a17599ff": {
+            "url": "https://www.aiseau-presles.be/ma-commune/services-communaux/administration-generale/publications/publication-des-reglements-et-ordonnances-sur-deliberations.be",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T16:27:23.740Z",
+            "lastSuccess": "2026-10-29T16:27:23.740Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:dba1f6114dc6dfc337": {
+            "url": "https://www.aiseau-presles.be/ma-commune/vie-politique/conseil-communal/conseil-communal/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.aiseau-presles.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:7edee0085b57831bbd": {
+            "url": "https://www.aiseau-presles.be/ma-commune/vie-politique/conseil-communal/date-du-prochain-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.aiseau-presles.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:61a14ed14248adbf5d": {
+            "url": "https://www.aiseau-presles.be/ma-commune/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.aiseau-presles.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:4f9aa636a0062fb9f8": {
+            "url": "https://www.aiseau-presles.be/ma-commune/vie-politique/conseil-communal/reglement-dordre-interieur-du-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.aiseau-presles.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:2695adc8f1e657b323": {
+            "url": "https://www.aiseau-presles.be/ma-commune/vie-politique/conseil-communal/declaration-dapparentement",
+            "depth": 1,
+            "sourceUrl": "https://www.aiseau-presles.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:c44d9928aa0bbaae77": {
+            "url": "https://www.aiseau-presles.be/ma-commune/vie-politique/conseil-communal/date-du-prochain-conseil-communal/date-du-prochain-conseil-communal/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.aiseau-presles.be/ma-commune/vie-politique/conseil-communal/date-du-prochain-conseil-communal/date-du-prochain-conseil-communal",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:0534128bd519bd3da3": {
+            "url": "https://www.aiseau-presles.be/ma-commune/services-communaux/administration-generale/publications/publication-des-reglements-et-ordonnances-sur-deliberations.be/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.aiseau-presles.be/ma-commune/services-communaux/administration-generale/publications/publication-des-reglements-et-ordonnances-sur-deliberations.be",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:30def9fd2043b42c59": {
+            "url": "https://www.aiseau-presles.be/ma-commune/services-communaux/administration-generale/publications/publication-des-reglements-et-ordonnances-sur-deliberations.be/@@images/c59e1be8-f754-48e3-85ff-e1fae7d9e071.png",
+            "depth": 1,
+            "sourceUrl": "https://www.aiseau-presles.be/ma-commune/services-communaux/administration-generale/publications/publication-des-reglements-et-ordonnances-sur-deliberations.be",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 10
+          }
+        },
+        "documents": {},
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 11,
+        "pagesPending": 8,
+        "documentsKnown": 0,
+        "documentsPending": 0,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 0,
+        "errors": 0,
+        "attempted": 0,
+        "pagesAttempted": 3
+      }
     },
     {
       "ins": "61003",
@@ -319,14 +458,442 @@
       "estimatedMinutes": 57,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.andenne.be/vie-communale/politique/conseil-communal/",
+          "title": "l",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.andenne.be/vie-communale/politique/college-communal/",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.andenne.be/vie-communale/politique/pst/",
+          "title": "Programme stratégique transversal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.andenne.be/publication-officielle-decision-du-conseil-communal-sentier-communal-n130/",
+          "title": "Publication officielle &#8211; Décision du Conseil communal &#8211; Sentier communal n°130",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-29T16:25:44.211Z",
+      "lastDocumentCheck": "2026-10-29T16:27:23.740Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
-      "opportunities": 0,
-      "errors": []
+      "documentsRead": 5,
+      "opportunities": 6,
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.andenne.be/",
+        "checkedAt": "2026-10-29T16:25:44.211Z"
+      },
+      "documentSourceChecks": {
+        "municipal-doc:756f125aa33897357f": {
+          "url": "https://www.andenne.be/vie-communale/politique/conseil-communal/",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastSuccess": "2026-10-29T16:27:23.740Z",
+          "lastError": null
+        },
+        "municipal-doc:907eaca55b695b2093": {
+          "url": "https://www.andenne.be/vie-communale/politique/college-communal/",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastSuccess": "2026-10-29T16:27:23.740Z",
+          "lastError": null
+        },
+        "municipal-doc:1c6c51a77432b1b549": {
+          "url": "https://www.andenne.be/vie-communale/politique/pst/",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastSuccess": "2026-10-29T16:27:23.740Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:9b94dbd383efdd509d": {
+          "url": "https://www.andenne.be/new22/wp-content/uploads/files/reglements/R%C3%A8glement%20g%C3%A9n%C3%A9ral%20de%20police%20administrative.pdf",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastError": "HTTP 404",
+          "nextAttemptAt": "2026-10-29T22:27:23.740Z"
+        },
+        "municipal-doc:59a0b2bcd73eb71c92": {
+          "url": "https://www.andenne.be/new22/wp-content/uploads/files/reglements/Conseil%20communal%20-%20R%C3%A8glement%20d%20ordre%20int%C3%A9rieur.pdf",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastError": "Fichier supérieur à la limite",
+          "nextAttemptAt": "2026-10-29T22:27:23.740Z"
+        },
+        "municipal-doc:e480354f989e90a4f6": {
+          "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+          "finalUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastChecked": "2026-10-29T16:27:23.740Z",
+          "lastSuccess": "2026-10-29T16:27:23.740Z",
+          "lastError": null,
+          "etag": "\"554fb9-61c45561eb999-gzip\"",
+          "lastModified": "Tue, 02 Jul 2024 15:26:23 GMT",
+          "contentCheckedAt": "2026-10-29T16:27:23.740Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+            "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
+            "session": null,
+            "document": {
+              "date": "2024-06-20",
+              "kind": "document",
+              "page": null,
+              "source": "link_title",
+              "excerpt": "20 juin 2024",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-29T16:27:23.740Z",
+          "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
+          "firstSeenAt": "2026-10-29T16:27:23.740Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:cfc78eafdd8be19776": {
+          "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-Precisions-utiles.pdf",
+          "finalUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-Precisions-utiles.pdf",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastChecked": "2026-10-29T16:27:23.740Z",
+          "lastSuccess": "2026-10-29T16:27:23.740Z",
+          "lastError": null,
+          "etag": "\"1eae2-61c45565b9f3e-gzip\"",
+          "lastModified": "Tue, 02 Jul 2024 15:26:27 GMT",
+          "contentCheckedAt": "2026-10-29T16:27:23.740Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-Precisions-utiles.pdf",
+            "sha256": "ed5f7112c965bd9d39feb465de2f35b1c34903d44e3f4ad326ad30ec69191f2d",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-29T16:27:23.740Z",
+          "sha256": "ed5f7112c965bd9d39feb465de2f35b1c34903d44e3f4ad326ad30ec69191f2d",
+          "firstSeenAt": "2026-10-29T16:27:23.740Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:615150fda7de1a0432": {
+          "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+          "finalUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastChecked": "2026-10-29T16:27:23.740Z",
+          "lastSuccess": "2026-10-29T16:27:23.740Z",
+          "lastError": null,
+          "etag": "\"dc224-61c45569e87ed-gzip\"",
+          "lastModified": "Tue, 02 Jul 2024 15:26:31 GMT",
+          "contentCheckedAt": "2026-10-29T16:27:23.740Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+            "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-29T16:27:23.740Z",
+          "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef",
+          "firstSeenAt": "2026-10-29T16:27:23.740Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:7d0270be8e8e82ee09": {
+          "url": "https://www.andenne.be/new22/wp-content/uploads/2022/06/Andenne-PST-2020-2024-Mode-demploi.pdf",
+          "finalUrl": "https://www.andenne.be/new22/wp-content/uploads/2022/06/Andenne-PST-2020-2024-Mode-demploi.pdf",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastChecked": "2026-10-29T16:27:23.740Z",
+          "lastSuccess": "2026-10-29T16:27:23.740Z",
+          "lastError": null,
+          "etag": "\"a69a-5e15150379181-gzip\"",
+          "lastModified": "Mon, 13 Jun 2022 09:57:17 GMT",
+          "contentCheckedAt": "2026-10-29T16:27:23.740Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2022/06/Andenne-PST-2020-2024-Mode-demploi.pdf",
+            "sha256": "7fafd7a1d7be17cf296725c8b1e7d456589940a0968f52f04aa982b57dcd4488",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-29T16:27:23.740Z",
+          "sha256": "7fafd7a1d7be17cf296725c8b1e7d456589940a0968f52f04aa982b57dcd4488",
+          "firstSeenAt": "2026-10-29T16:27:23.740Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:15a818639c0ed5f29e": {
+          "url": "https://www.andenne.be/new22/wp-content/uploads/2022/06/Andenne-PST-2020-2024-presentation.pdf",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-29T22:27:23.740Z"
+        },
+        "municipal-doc:4ecc4592f8824d3a63": {
+          "url": "https://www.andenne.be/new22/wp-content/uploads/2022/06/Andenne-PST-2020-2024-evaluation-mi-legislature-mars-2022.pdf",
+          "finalUrl": "https://www.andenne.be/new22/wp-content/uploads/2022/06/Andenne-PST-2020-2024-evaluation-mi-legislature-mars-2022.pdf",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastChecked": "2026-10-29T16:27:23.740Z",
+          "lastSuccess": "2026-10-29T16:27:23.740Z",
+          "lastError": null,
+          "etag": "\"bc398-5e15150c4bd9e-gzip\"",
+          "lastModified": "Mon, 13 Jun 2022 09:57:27 GMT",
+          "contentCheckedAt": "2026-10-29T16:27:23.740Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2022/06/Andenne-PST-2020-2024-evaluation-mi-legislature-mars-2022.pdf",
+            "sha256": "88d1eaabb8fe3c94e81da71f5bad349a8220c5156143cf52ea128e6827871c78",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-29T16:27:23.740Z",
+          "sha256": "88d1eaabb8fe3c94e81da71f5bad349a8220c5156143cf52ea128e6827871c78",
+          "firstSeenAt": "2026-10-29T16:27:23.740Z",
+          "nextAttemptAt": null
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:e480354f989e90a4f6",
+        "municipal-doc:cfc78eafdd8be19776",
+        "municipal-doc:615150fda7de1a0432",
+        "municipal-doc:7d0270be8e8e82ee09",
+        "municipal-doc:4ecc4592f8824d3a63"
+      ],
+      "documentVersionsRead": 5,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:756f125aa33897357f": {
+            "url": "https://www.andenne.be/vie-communale/politique/conseil-communal/",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T16:27:23.740Z",
+            "lastSuccess": "2026-10-29T16:27:23.740Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:907eaca55b695b2093": {
+            "url": "https://www.andenne.be/vie-communale/politique/college-communal/",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T16:27:23.740Z",
+            "lastSuccess": "2026-10-29T16:27:23.740Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:1c6c51a77432b1b549": {
+            "url": "https://www.andenne.be/vie-communale/politique/pst/",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T16:27:23.740Z",
+            "lastSuccess": "2026-10-29T16:27:23.740Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:4ed53b7c6cb20744de": {
+            "url": "https://www.andenne.be/publication-officielle-decision-du-conseil-communal-sentier-communal-n130/",
+            "depth": 0,
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:1c9efa01d2dbcba5ca": {
+            "url": "https://www.andenne.be/vie-communale/politique/conseil-communal/archives-du-conseil-communal/?y=2018",
+            "depth": 1,
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/conseil-communal/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:faeba3167d21c9162a": {
+            "url": "https://www.andenne.be/vie-communale/politique/conseil-communal/archives-du-conseil-communal/?y=2019",
+            "depth": 1,
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/conseil-communal/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:a701ea08b43a150212": {
+            "url": "https://www.andenne.be/vie-communale/politique/conseil-communal/archives-du-conseil-communal/?y=2020",
+            "depth": 1,
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/conseil-communal/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:cb3b4b9dde7fa47863": {
+            "url": "https://www.andenne.be/vie-communale/politique/conseil-communal/archives-du-conseil-communal/?y=2021",
+            "depth": 1,
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/conseil-communal/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:b3de0c4caf7441d8b5": {
+            "url": "https://www.andenne.be/vie-communale/politique/conseil-communal/archives-du-conseil-communal/?y=2022",
+            "depth": 1,
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/conseil-communal/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:cf33f616f1e0845e98": {
+            "url": "https://www.andenne.be/vie-communale/politique/conseil-communal/archives-du-conseil-communal/?y=2023",
+            "depth": 1,
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/conseil-communal/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:6b68d6384a79cb94d8": {
+            "url": "https://www.andenne.be/vie-communale/politique/conseil-communal/archives-du-conseil-communal/?y=2024",
+            "depth": 1,
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/conseil-communal/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:95ccb64ba9e711fb7a": {
+            "url": "https://www.andenne.be/vie-communale/politique/conseil-communal/archives-du-conseil-communal/?y=2025",
+            "depth": 1,
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/conseil-communal/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:6906a8d8acf42ca44f": {
+            "url": "https://www.andenne.be/vie-communale/politique/conseil-communal/archives-du-conseil-communal/?y=2026",
+            "depth": 1,
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/conseil-communal/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:4727a2b183f1215121": {
+            "url": "https://www.andenne.be/vie-communale/politique/conseil-communal/proces-verbaux-des-conseils-communaux/",
+            "depth": 1,
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/conseil-communal/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:f58b0726c59739010b": {
+            "url": "https://www.andenne.be/vie-communale/politique/conseil-communal/archives-du-conseil-communal/",
+            "depth": 1,
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/conseil-communal/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 14
+          }
+        },
+        "documents": {
+          "municipal-doc:9b94dbd383efdd509d": {
+            "url": "https://www.andenne.be/new22/wp-content/uploads/files/reglements/R%C3%A8glement%20g%C3%A9n%C3%A9ral%20de%20police%20administrative.pdf",
+            "title": "Règlement général de police administrative",
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/conseil-communal/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:59a0b2bcd73eb71c92": {
+            "url": "https://www.andenne.be/new22/wp-content/uploads/files/reglements/Conseil%20communal%20-%20R%C3%A8glement%20d%20ordre%20int%C3%A9rieur.pdf",
+            "title": "Règlement d’ordre intérieur du Conseil communal – version 31 janvier 2022",
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/conseil-communal/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 1
+          },
+          "municipal-doc:e480354f989e90a4f6": {
+            "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+            "title": "Andenne &#8211; PST 2020 2024 &#8211; 20 juin 2024 &#8211; bilan",
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/pst/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 2
+          },
+          "municipal-doc:cfc78eafdd8be19776": {
+            "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-Precisions-utiles.pdf",
+            "title": "Andenne &#8211; PST 2020 2024 &#8211; Précisions utiles",
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/pst/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:615150fda7de1a0432": {
+            "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+            "title": "Andenne &#8211; PST 2020-2024 &#8211; synthèse de fin de législature",
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/pst/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:7d0270be8e8e82ee09": {
+            "url": "https://www.andenne.be/new22/wp-content/uploads/2022/06/Andenne-PST-2020-2024-Mode-demploi.pdf",
+            "title": "Andenne &#8211; PST 2020-2024 &#8211; Mode d&#8217;emploi",
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/pst/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:15a818639c0ed5f29e": {
+            "url": "https://www.andenne.be/new22/wp-content/uploads/2022/06/Andenne-PST-2020-2024-presentation.pdf",
+            "title": "Andenne &#8211; PST 2020-2024 &#8211; présentation",
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/pst/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:4ecc4592f8824d3a63": {
+            "url": "https://www.andenne.be/new22/wp-content/uploads/2022/06/Andenne-PST-2020-2024-evaluation-mi-legislature-mars-2022.pdf",
+            "title": "Andenne &#8211; PST 2020-2024 évaluation mi-législature &#8211; mars 2022",
+            "sourceUrl": "https://www.andenne.be/vie-communale/politique/pst/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 7
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 15,
+        "pagesPending": 12,
+        "documentsKnown": 8,
+        "documentsPending": 3,
+        "errors": 3,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 5,
+        "errors": 3,
+        "attempted": 8,
+        "pagesAttempted": 3
+      },
+      "lastDocumentSuccess": "2026-10-29T16:27:23.740Z"
     },
     {
       "ins": "56001",
@@ -377,11 +944,167 @@
         }
       ],
       "lastSiteCheck": "2026-10-21T12:19:29.071Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-29T16:27:23.740Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:35c38e314268edda1f": {
+          "url": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastSuccess": "2026-10-29T16:27:23.740Z",
+          "lastError": null
+        },
+        "municipal-doc:018e1c587a2fbef206": {
+          "url": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil/ordre-du-jour-du-conseil-communal",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastSuccess": "2026-10-29T16:27:23.740Z",
+          "lastError": null
+        },
+        "municipal-doc:524b87bdf25b76f253": {
+          "url": "https://www.anderlues.be/actualites/motion-pour-un-soutien-aux-cpas",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastSuccess": "2026-10-29T16:27:23.740Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:181d8086b5997ba4d5": {
+          "url": "https://www.anderlues.be/actualites/motion-pour-un-soutien-aux-cpas.pdf",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-29T22:27:23.740Z"
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:35c38e314268edda1f": {
+            "url": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T16:27:23.740Z",
+            "lastSuccess": "2026-10-29T16:27:23.740Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:018e1c587a2fbef206": {
+            "url": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil/ordre-du-jour-du-conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T16:27:23.740Z",
+            "lastSuccess": "2026-10-29T16:27:23.740Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:524b87bdf25b76f253": {
+            "url": "https://www.anderlues.be/actualites/motion-pour-un-soutien-aux-cpas",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T16:27:23.740Z",
+            "lastSuccess": "2026-10-29T16:27:23.740Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:60772407995db136a9": {
+            "url": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal/conseil-communal/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:5355c78a95f67f0ce1": {
+            "url": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal/composition",
+            "depth": 1,
+            "sourceUrl": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:c80d0a5ed45fa21af2": {
+            "url": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil",
+            "depth": 1,
+            "sourceUrl": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:6bece38cce6ee53cc3": {
+            "url": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal/decisions-du-conseil",
+            "depth": 1,
+            "sourceUrl": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:2cda9e870c20366680": {
+            "url": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale",
+            "depth": 1,
+            "sourceUrl": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:a25a6bcf232fee0539": {
+            "url": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal/apparentement-des-conseillers-communaux",
+            "depth": 1,
+            "sourceUrl": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:ad07135abf9079dab8": {
+            "url": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal/reglement-dordre-interieur-du-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:54934b310d92594476": {
+            "url": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil/ordre-du-jour-du-conseil-communal/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.anderlues.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 10
+          }
+        },
+        "documents": {
+          "municipal-doc:181d8086b5997ba4d5": {
+            "url": "https://www.anderlues.be/actualites/motion-pour-un-soutien-aux-cpas.pdf",
+            "title": "Point supplémentaire présenté par le groupe \"PS\" - Motion pour un soutien aux CPAS qui dev",
+            "sourceUrl": "https://www.anderlues.be/actualites/motion-pour-un-soutien-aux-cpas",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 0
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 11,
+        "pagesPending": 8,
+        "documentsKnown": 1,
+        "documentsPending": 1,
+        "errors": 1,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 0,
+        "errors": 1,
+        "attempted": 1,
+        "pagesAttempted": 3
+      }
     },
     {
       "ins": "91005",
@@ -497,11 +1220,116 @@
         }
       ],
       "lastSiteCheck": "2026-10-25T11:57:46.472Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-29T16:27:23.740Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 1,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:6a543170ce00c93f88": {
+          "url": "https://anthisnes.be/conseil-communal/",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastSuccess": "2026-10-29T16:27:23.740Z",
+          "lastError": null
+        },
+        "municipal-doc:d13a6325f48a95d4d8": {
+          "url": "https://anthisnes.be/seance-du-conseil-communal-3-2/",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastSuccess": "2026-10-29T16:27:23.740Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:7bf01ebf6f6eccc232": {
+          "url": "https://anthisnes.be/wp-content/uploads/2021/10/apparentement.pdf",
+          "finalUrl": "https://anthisnes.be/wp-content/uploads/2021/10/apparentement.pdf",
+          "lastAttempt": "2026-10-29T16:27:23.740Z",
+          "lastChecked": "2026-10-29T16:27:23.740Z",
+          "lastSuccess": "2026-10-29T16:27:23.740Z",
+          "lastError": null,
+          "etag": "\"1b93c-655e1975f1168\"",
+          "lastModified": "Sun, 05 Jul 2026 18:47:35 GMT",
+          "contentCheckedAt": "2026-10-29T16:27:23.740Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://anthisnes.be/wp-content/uploads/2021/10/apparentement.pdf",
+            "sha256": "91ca4365800a0dab2374dcb078275e7be3c952dfe8e3ec5e730fa566b7ea6b61",
+            "session": {
+              "date": "2018-12-21",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Séance du 21 décembre 2018",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-29T16:27:23.740Z",
+          "sha256": "91ca4365800a0dab2374dcb078275e7be3c952dfe8e3ec5e730fa566b7ea6b61",
+          "firstSeenAt": "2026-10-29T16:27:23.740Z",
+          "nextAttemptAt": null
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:7bf01ebf6f6eccc232"
+      ],
+      "documentVersionsRead": 1,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:6a543170ce00c93f88": {
+            "url": "https://anthisnes.be/conseil-communal/",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T16:27:23.740Z",
+            "lastSuccess": "2026-10-29T16:27:23.740Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:d13a6325f48a95d4d8": {
+            "url": "https://anthisnes.be/seance-du-conseil-communal-3-2/",
+            "depth": 0,
+            "lastAttempt": "2026-10-29T16:27:23.740Z",
+            "lastSuccess": "2026-10-29T16:27:23.740Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          }
+        },
+        "documents": {
+          "municipal-doc:7bf01ebf6f6eccc232": {
+            "url": "https://anthisnes.be/wp-content/uploads/2021/10/apparentement.pdf",
+            "title": "composition politique du Conseil",
+            "sourceUrl": "https://anthisnes.be/conseil-communal/",
+            "discoveredAt": "2026-10-29T16:27:23.740Z",
+            "lastSeen": "2026-10-29T16:27:23.740Z",
+            "discoveryOrder": 0
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 2,
+        "pagesPending": 0,
+        "documentsKnown": 1,
+        "documentsPending": 0,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 1,
+        "errors": 0,
+        "attempted": 1,
+        "pagesAttempted": 2
+      },
+      "lastDocumentSuccess": "2026-10-29T16:27:23.740Z"
     },
     {
       "ins": "57003",
@@ -3272,14 +4100,43 @@
       "estimatedMinutes": 59,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.erezee.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.erezee.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.erezee.be/ma-commune/services-communaux/marches-publics",
+          "title": "Service marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-29T16:25:44.211Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.erezee.be/",
+        "checkedAt": "2026-10-29T16:25:44.211Z"
+      }
     },
     {
       "ins": "56022",
@@ -3709,14 +4566,43 @@
       "estimatedMinutes": 63,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.fernelmont.be/ma-commune/vie-politique/le-college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.fernelmont.be/ma-commune/vie-politique/le-conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.fernelmont.be/ma-commune/vie-politique/le-conseil-communal/ordre-du-jour-du-prochain-conseil-communal/ordre-du-jour-des-conseils-communaux",
+          "title": "Ordre du jour du prochain Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-29T16:25:44.211Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.fernelmont.be/",
+        "checkedAt": "2026-10-29T16:25:44.211Z"
+      }
     },
     {
       "ins": "61019",
@@ -4558,14 +5444,59 @@
       "estimatedMinutes": 66,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "http://www.gesves.be/marches-publics/",
+          "title": "Marchés Publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "http://www.gesves.be/college-communal/",
+          "title": "Le Collège Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "http://www.gesves.be/le-conseil/",
+          "title": "Le Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "http://www.gesves.be/proces-verbaux-des-seances-du-conseil/",
+          "title": "PV de Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "http://www.gesves.be/oj-seances-du-conseil/",
+          "title": "Ordres du jour du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-29T16:25:44.211Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "http://www.gesves.be/",
+        "checkedAt": "2026-10-29T16:25:44.211Z"
+      }
     },
     {
       "ins": "82037",
@@ -5886,14 +6817,18 @@
       "estimatedMinutes": 63,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_lu_sources_non_localisees",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-29T16:25:44.211Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.hotton.be/",
+        "checkedAt": "2026-10-29T16:25:44.211Z"
+      }
     },
     {
       "ins": "82014",
@@ -6969,14 +7904,87 @@
       "estimatedMinutes": 59,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.lincent.be/ma-commune/college-communal",
+          "title": "Vie Politique",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.lincent.be/ma-commune/college-communal/le-bourgmestre",
+          "title": "Le mot du Bourgmestre",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.lincent.be/ma-commune/college-communal/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.lincent.be/ma-commune/college-communal/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.lincent.be/ma-commune/college-communal/conseil-de-laction-sociale",
+          "title": "Conseil de l'Action Sociale",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.lincent.be/ma-commune/college-communal/conseil-communal-de-laccueil-cca",
+          "title": "Commission Communale de l'Accueil (CCA)",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.lincent.be/ma-commune/college-communal/publications-reglements-communaux",
+          "title": "Publications de règlements et ordonnances communaux",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.lincent.be/ma-commune/college-communal/ordre-du-jour-du-prochain-conseil-communal",
+          "title": "Ordre du jour du prochain Conseil Communal",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.lincent.be/ma-commune/services-communaux/travaux-et-marches-publics",
+          "title": "Travaux et Marchés Publics",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.lincent.be/actualites/retour-sur-la-seance-du-conseil-communal-du-30?u=fc631b355cad44e6a896579b84e192af",
+          "title": "Projets de ville Administration communale Publié Retour sur la séance du conseil communal du 30 septembre dernier Inscri",
+          "status": "lien_public_repere_non_analyse"
+        }
+      ],
+      "lastSiteCheck": "2026-10-29T16:25:44.211Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.lincent.be/",
+        "checkedAt": "2026-10-29T16:25:44.211Z"
+      }
     },
     {
       "ins": "56044",
@@ -7164,14 +8172,18 @@
       "estimatedMinutes": 60,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_lu_sources_non_localisees",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-29T16:25:44.211Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.manhay.be/",
+        "checkedAt": "2026-10-29T16:25:44.211Z"
+      }
     },
     {
       "ins": "83034",
@@ -8193,14 +9205,43 @@
       "estimatedMinutes": 59,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.ohey.be/ordres-du-jour/",
+          "title": "Ordres du jour du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.ohey.be/deliberations-du-conseil-communal/",
+          "title": "Délibérations du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.ohey.be/consultation-des-projets-de-decisions-et-des-decisions-du-conseil-communal/",
+          "title": "",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-29T16:25:44.211Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.ohey.be/",
+        "checkedAt": "2026-10-29T16:25:44.211Z"
+      }
     },
     {
       "ins": "63057",
@@ -9137,14 +10178,51 @@
       "estimatedMinutes": 67,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.rendeux.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.rendeux.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.rendeux.be/ma-commune/vie-politique/conseil-communal/convocation-du-conseil-communal",
+          "title": "Convocation du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.rendeux.be/ma-commune/services-communaux/marches-publics",
+          "title": "Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-29T16:25:44.211Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.rendeux.be/",
+        "checkedAt": "2026-10-29T16:25:44.211Z"
+      }
     },
     {
       "ins": "25091",
@@ -9816,14 +10894,43 @@
       "estimatedMinutes": 63,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.sommeleuze.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.sommeleuze.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.sommeleuze.be/ma-commune/services-communaux/marche-publics",
+          "title": "Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-29T16:25:44.211Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.sommeleuze.be/",
+        "checkedAt": "2026-10-29T16:25:44.211Z"
+      }
     },
     {
       "ins": "62099",
@@ -10599,14 +11706,43 @@
       "estimatedMinutes": 69,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.vielsalm.be/commune/vie-politique/conseil-communal-1",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.vielsalm.be/commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.vielsalm.be/vivre-a-vielsalm/commerce-et-economie/marches-publics",
+          "title": "Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-29T16:25:44.211Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.vielsalm.be/",
+        "checkedAt": "2026-10-29T16:25:44.211Z"
+      }
     },
     {
       "ins": "25107",
@@ -11163,14 +12299,77 @@
       "estimatedMinutes": 60,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.wasseiges.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.wasseiges.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.deliberations.be/wasseiges/publications",
+          "title": "Publications de règlements et ordonnances communaux",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.wasseiges.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/ordre-du-jour-du-prochain-conseil-communal/odj",
+          "title": "Ordre du jour du prochain Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.wasseiges.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+          "title": "Procès-verbaux",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.deliberations.be/wasseiges/decisions",
+          "title": "Projets de séances du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-29T16:25:44.211Z",
+          "last_success": "2026-10-29T16:25:44.211Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.wasseiges.be/ma-commune/construire-demain/programme-strategique-transversal",
+          "title": "Programme Stratégique Transversal",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.wasseiges.be/vivre-a-wasseiges/social/conseil-communal-des-aines",
+          "title": "Conseil Communal des Ainés",
+          "status": "lien_public_repere_non_analyse"
+        }
+      ],
+      "lastSiteCheck": "2026-10-29T16:25:44.211Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.wasseiges.be/",
+        "checkedAt": "2026-10-29T16:25:44.211Z"
+      }
     },
     {
       "ins": "25110",
@@ -11344,6 +12543,6 @@
       "errors": []
     }
   ],
-  "lastMunicipalPass": "2026-10-29T10:10:27.758Z",
-  "lastMunicipalDocumentPass": "2026-10-29T10:21:49.216Z"
+  "lastMunicipalPass": "2026-10-29T16:25:44.211Z",
+  "lastMunicipalDocumentPass": "2026-10-29T16:27:23.740Z"
 }

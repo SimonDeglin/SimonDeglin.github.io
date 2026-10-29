@@ -58,40 +58,40 @@
     },
     "COMMUNES": {
       "status": "inventory_not_document_collection",
-      "updatedAt": "2026-10-29T10:10:27.758Z",
-      "last_attempt": "2026-10-29T10:10:27.758Z",
+      "updatedAt": "2026-10-29T16:25:44.211Z",
+      "last_attempt": "2026-10-29T16:25:44.211Z",
       "scope": {
         "province": "all",
-        "ins": "64074"
+        "ins": ""
       },
       "total": 261,
       "sitesRepertories": 261,
-      "sitesVerifies": 181,
-      "deliberationsConnectees": 22,
+      "sitesVerifies": 193,
+      "deliberationsConnectees": 24,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 126,
-      "opportunities": 44,
-      "sitesChecked": 181,
-      "candidatePages": 139,
-      "sourceErrors": 17
+      "documentsRead": 132,
+      "opportunities": 50,
+      "sitesChecked": 193,
+      "candidatePages": 149,
+      "sourceErrors": 19
     },
     "COMMUNES_DOCUMENTS": {
-      "status": "pilot",
-      "last_attempt": "2026-10-29T10:21:49.216Z",
-      "last_success": "2026-10-29T10:21:49.216Z",
-      "last_batch": 1,
-      "documents_checked": 5,
-      "documents_read": 5,
+      "status": "partial",
+      "last_attempt": "2026-10-29T16:27:23.740Z",
+      "last_success": "2026-10-29T16:27:23.740Z",
+      "last_batch": 4,
+      "documents_checked": 6,
+      "documents_read": 6,
       "documents_unchanged": 0,
       "documents_modified": 0,
-      "opportunities_found": 5,
+      "opportunities_found": 6,
       "review_candidates": 0,
-      "errors_count": 0,
+      "errors_count": 4,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel."
     }
   },
@@ -103,7 +103,7 @@
   "metrics": {
     "scanned": 1595,
     "matched_current_run": 12,
-    "records": 168,
+    "records": 174,
     "review_count": 68,
     "award_notice_count": 421,
     "awarded_market_matches": 2,
@@ -10954,6 +10954,440 @@
         "document": null,
         "status": "identified",
         "extractedAt": "2026-10-29T13:06:46.242Z"
+      }
+    },
+    {
+      "id": "local:5a8e427981f75e7906ca",
+      "title": "Conseil communal — opportunité à vérifier : Andenne",
+      "buyer": "Commune de Andenne",
+      "municipalityINS": "92003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Wallonie 2020 30 800,0 Progression 5 Constat Le dossier de base de l'opération confié à un bureau d'études été finalisé en 2016. Le diagnostic réalisé par ce bureau",
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+        "page": 45,
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
+        "session": null,
+        "document": {
+          "date": "2024-06-20",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "20 juin 2024",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Wallonie                                        2020         30 800,0 Progression 5 Constat         Le dossier de base de l'opération confié à un bureau d'études été finalisé en 2016. Le diagnostic réalisé par ce bureau d'études révèle que le quartier est confronté à une problématique majeure en matière de mobilité. Ce constat qui ira en s'aggravant est partagé par les habitants au travers de la Commission de rénovation urbaine créée en 2013.",
+      "evidence": "Wallonie                                        2020         30 800,0 Progression 5 Constat         Le dossier de base de l'opération confié à un bureau d'études été finalisé en 2016. Le diagnostic réalisé par ce bureau d'études révèle que le quartier est confronté à une problématique majeure en matière de mobilité. Ce constat qui ira en s'aggravant est partagé par les habitants au travers de la Commission de rénovation urbaine créée en 2013.",
+      "municipalReference": null,
+      "municipalSection": "2. Etre une Ville qui développe des projets territoriaux de",
+      "municipalEvidence": [
+        {
+          "page": 45,
+          "excerpt": "Wallonie                                        2020         30 800,0 Progression 5 Constat         Le dossier de base de l'opération confié à un bureau d'études été finalisé en 2016. Le diagnostic réalisé par ce bureau d'études révèle que le quartier est confronté à une problématique majeure en matière de mobilité. Ce constat qui ira en s'aggravant est partagé par les habitants au travers de la Commission de rénovation urbaine créée en 2013."
+        },
+        {
+          "page": 45,
+          "excerpt": "Progression 5 Constat         Le dossier de base de l'opération confié à un bureau d'études été finalisé en 2016. Le diagnostic réalisé par ce bureau d'études révèle que le quartier est confronté à une problématique majeure en matière de mobilité. Ce constat qui ira en s'aggravant est partagé par les habitants au travers de la Commission de rénovation urbaine créée en 2013. Ainsi, quatre grandes actions ont été proposées par le bureau d’études :"
+        },
+        {
+          "page": 45,
+          "excerpt": "partagé par les habitants au travers de la Commission de rénovation urbaine créée en 2013. Ainsi, quatre grandes actions ont été proposées par le bureau d’études : Page 45"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 45,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:e480354f989e90a4f6",
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
+        "checkedAt": "2026-10-29T16:27:23.740Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:ac42e6d3ea4b598689f7",
+      "title": "Conseil communal — opportunité à vérifier : Andenne",
+      "buyer": "Commune de Andenne",
+      "municipalityINS": "92003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "4. Intervention sur le bâti. En 2020, le dossier de base a dû être revu et, compte tenu de la faillite du bureau d'études désigné, un nouveau bureau d'études doit être choisi pour reprendre la mission. Plusieurs rencontr",
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+        "page": 46,
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
+        "session": null,
+        "document": {
+          "date": "2024-06-20",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "20 juin 2024",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 4. Intervention sur le bâti. En 2020, le dossier de base a dû être revu et, compte tenu de la faillite du bureau d'études désigné, un nouveau bureau d'études doit être choisi pour reprendre la mission. Plusieurs rencontres ont eu lieu en 2021 avec les représentants du SPW ainsi que du Ministre en charge de ce dossier. A ce jour, la volonté du Collège communal est de réaliser cet objectif pour autant que le décret qui régit cette matière soit adapté et permette la création d’un parking dans le quartier en vue de résoudre le problème de la",
+      "evidence": "4. Intervention sur le bâti. En 2020, le dossier de base a dû être revu et, compte tenu de la faillite du bureau d'études désigné, un nouveau bureau d'études doit être choisi pour reprendre la mission. Plusieurs rencontres ont eu lieu en 2021 avec les représentants du SPW ainsi que du Ministre en charge de ce dossier. A ce jour, la volonté du Collège communal est de réaliser cet objectif pour autant que le décret qui régit cette matière soit adapté et permette la création d’un parking dans le quartier en vue de résoudre le problème de la",
+      "municipalReference": null,
+      "municipalSection": "3. Création d'un parking d'environ 30 places rue Hanesse à Andenne (terrain",
+      "municipalEvidence": [
+        {
+          "page": 46,
+          "excerpt": "4. Intervention sur le bâti. En 2020, le dossier de base a dû être revu et, compte tenu de la faillite du bureau d'études désigné, un nouveau bureau d'études doit être choisi pour reprendre la mission. Plusieurs rencontres ont eu lieu en 2021 avec les représentants du SPW ainsi que du Ministre en charge de ce dossier. A ce jour, la volonté du Collège communal est de réaliser cet objectif pour autant que le décret qui régit cette matière soit adapté et permette la création d’un parking dans le quartier en vue de résoudre le problème de la"
+        },
+        {
+          "page": 50,
+          "excerpt": "courant de l'année 2022. En 2022, les travaux du Bloc D ont continué, les parachèvements intérieurs sont en cours. La DST a mandaté le bureau d'études C2 Projects pour réaliser l'étude des aménagements extérieurs. Un avant-projet a été reçu en décembre 2022. La DST est en train de l'analyser et fera ses remarques dans le 1er trimestre 2023. Les travaux pourraient avoir lieu en 2024. En 2024, le permis a été obtenu et le marché de travaux passe au Conseil"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 46,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:e480354f989e90a4f6",
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
+        "checkedAt": "2026-10-29T16:27:23.740Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:c70383c52557ead00503",
+      "title": "Conseil communal — opportunité à vérifier : Andenne",
+      "buyer": "Commune de Andenne",
+      "municipalityINS": "92003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet sera lancée en 2023 et les travaux pourr",
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+        "page": 147,
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
+        "session": null,
+        "document": {
+          "date": "2024-06-20",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "20 juin 2024",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet sera lancée en 2023 et les travaux pourraient débuter en 2024. Page 147",
+      "evidence": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet sera lancée en 2023 et les travaux pourraient débuter en 2024. Page 147",
+      "municipalReference": null,
+      "municipalSection": "3. Le mobilier et les objets d’art : au terme des travaux décrits plus haut, l’ensemble du",
+      "municipalEvidence": [
+        {
+          "page": 147,
+          "excerpt": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet sera lancée en 2023 et les travaux pourraient débuter en 2024. Page 147"
+        },
+        {
+          "page": 148,
+          "excerpt": "En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 147,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:e480354f989e90a4f6",
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
+        "checkedAt": "2026-10-29T16:27:23.740Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:860d9645335c562dda33",
+      "title": "Conseil communal — opportunité à vérifier : Andenne",
+      "buyer": "Commune de Andenne",
+      "municipalityINS": "92003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "award",
+      "webTypeEvidence": {
+        "kind": "award",
+        "reason": "attribution_explicitement_mentionnee",
+        "excerpt": "ar le Conseil communal en septembre. Ce marché a été attribué le 11 décembre 2020 par le Collège communal. • A l’effet de garantir la coordination et la mise en œuvre de ce dossier, le",
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+        "page": 214,
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
+        "session": null,
+        "document": {
+          "date": "2024-06-20",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "20 juin 2024",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-20-juin-2024-bilan.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : sur l’assistance technique de la Direction de la Planification de la Mobilité en vue de l’élaboration du PCM. •      Le cahier spécial des charges relatif à la désignation d’un auteur de projet chargé d’élaborer le PCM a été approuvé par le Conseil communal en septembre. Ce marché a été attribué le 11 décembre 2020 par le Collège communal. •      A l’effet de garantir la coordination et la mise en œuvre de ce dossier, le",
+      "evidence": "sur l’assistance technique de la Direction de la Planification de la Mobilité en vue de l’élaboration du PCM. •      Le cahier spécial des charges relatif à la désignation d’un auteur de projet chargé d’élaborer le PCM a été approuvé par le Conseil communal en septembre. Ce marché a été attribué le 11 décembre 2020 par le Collège communal. •      A l’effet de garantir la coordination et la mise en œuvre de ce dossier, le",
+      "municipalReference": null,
+      "municipalSection": "5. Référencer les initiatives et les mettre en valeur (publication, site internet, matinée",
+      "municipalEvidence": [
+        {
+          "page": 214,
+          "excerpt": "sur l’assistance technique de la Direction de la Planification de la Mobilité en vue de l’élaboration du PCM. •      Le cahier spécial des charges relatif à la désignation d’un auteur de projet chargé d’élaborer le PCM a été approuvé par le Conseil communal en septembre. Ce marché a été attribué le 11 décembre 2020 par le Collège communal. •      A l’effet de garantir la coordination et la mise en œuvre de ce dossier, le"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 214,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:e480354f989e90a4f6",
+        "sha256": "8ffef66abcab8b70276cc9a6e3a0789dd745a1084c395733499aa014196920b3",
+        "checkedAt": "2026-10-29T16:27:23.740Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:95d9bced83c5dda9bec3",
+      "title": "Conseil communal — opportunité à vérifier : Andenne",
+      "buyer": "Commune de Andenne",
+      "municipalityINS": "92003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pour",
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+        "page": 12,
+        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef",
+        "session": null,
+        "document": null,
+        "status": "unknown"
+      },
+      "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier.",
+      "evidence": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier.",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 12,
+          "excerpt": "En 2022, un audit énergétique a été réalisé et une demande de subside PRR a été introduite. Le dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 12,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:615150fda7de1a0432",
+        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef",
+        "checkedAt": "2026-10-29T16:27:23.740Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:ad56015f6260d142084a",
+      "title": "Conseil communal — opportunité à vérifier : Andenne",
+      "buyer": "Commune de Andenne",
+      "municipalityINS": "92003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui",
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+        "page": 12,
+        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef",
+        "session": null,
+        "document": null,
+        "status": "unknown"
+      },
+      "url": "https://www.andenne.be/new22/wp-content/uploads/2024/07/Andenne-PST-2020-2024-synthese-de-fin-de-legislature.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier.  Equiper une salle du Conseil communal en matériel audio/vidéo et diffusion (A.261) [100 %]",
+      "evidence": "dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier.  Equiper une salle du Conseil communal en matériel audio/vidéo et diffusion (A.261) [100 %]",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 12,
+          "excerpt": "dossier a été retenu pour un subside de +/- 649.300 €. La mission d'auteur de projet a été lancée en 2023 et les travaux pourraient débuter en 2024. En 2023, l'auteur de projet a été désigné et a étudié le dossier. Celui-ci s'avère très compliqué à cause du classement de la Place des Tilleuls. L'AWAP est donc partenaire de ce projet et c'est elle qui décide ce que la Ville pourra ou ne pourra pas faire pour rénover ce bâtiment. En 2024, plusieurs réunions ont eu lieu avec l'AWAP pour avance dans le dossier.  Equiper une salle du Conseil communal en matériel audio/vidéo et diffusion (A.261) [100 %]"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 12,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:615150fda7de1a0432",
+        "sha256": "34b1975edc2dea69f04caf017a7d1124631ea490e9a6560be9eb0fa6b9e888ef",
+        "checkedAt": "2026-10-29T16:27:23.740Z",
+        "changedAt": null
       }
     }
   ]
