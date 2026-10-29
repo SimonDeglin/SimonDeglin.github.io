@@ -6,7 +6,6 @@
  */
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process');
-const {chromium}=require('playwright-core');
 const bosa=require('./bosa-public.cjs');
 const profile=require('./kdrix-profile.cjs');
 const DATA=path.resolve(__dirname,'../data.json');
@@ -26,6 +25,7 @@ function performanceDate(item){
  return dates.map(x=>String(x).slice(0,10)).filter(x=>/^20\d{2}-\d\d-\d\d$/.test(x)).sort()[0]||'';
 }
 async function launch(){
+ const {chromium}=require('playwright-core');
  const command=cp.spawnSync('bash',['-lc','command -v google-chrome || command -v chromium || command -v chromium-browser'],{encoding:'utf8'});
  const binary=(command.stdout||'').trim().split('\n')[0];
  if(!binary)throw Error('Navigateur Chrome absent du runner GitHub');
@@ -137,8 +137,10 @@ function importPublic(data,results){
  data.coverage={...(data.coverage||{}),BOSA:results.complete?
   'Collecte du Bulletin officiel active. Historique partiel : '+results.pageCount+' page(s) parcourue(s) depuis '+results.cutoff+'.':
   'Collecte BOSA partielle : limite atteinte avant la date cible '+results.cutoff+'.'};
- data.sources={...(data.sources||{}),BOSA:{status:results.complete?'accessible':'partial',
-  last_success:now,scanned:results.progress.reduce((v,x)=>v+x.received,0),
+ data.sources={...(data.sources||{}),BOSA:{...(data.sources?.BOSA||{}),status:results.complete?'accessible':'partial',
+  last_attempt:now,last_success:now,last_error:null,
+  last_complete_success:results.complete?now:(data.sources?.BOSA?.last_complete_success||null),
+  scanned:results.progress.reduce((v,x)=>v+x.received,0),
   retained:matched,period_from:results.cutoff,period_to:currentISO(),
   pages:results.pageCount,complete:results.complete,
   raw_candidates:results.publications.length,oldest_seen:results.oldest}};
@@ -146,16 +148,29 @@ function importPublic(data,results){
    bosa_imported:matched,bosa_pages:results.pageCount,records:combined.length};
  return {data,inserted:matched,total:combined.length,scanned:data.sources.BOSA.scanned};
 }
-async function run(){
- let data=JSON.parse(fs.readFileSync(DATA,'utf8'));
- const results=await collectBrowser();
- if(!results.publications.length)throw Error('BOSA : aucune publication collectée, conserver les dernières données');
- const imported=importPublic(data,results);
- fs.writeFileSync(DATA,JSON.stringify(imported.data,null,2)+'\n','utf8');
+async function run(options={}){
+ const dataPath=options.dataPath||DATA;
+ let data=JSON.parse(fs.readFileSync(dataPath,'utf8'));
+ let imported;
+ try{
+  const results=await (options.collect||collectBrowser)();
+  if(!results.publications.length)throw Error('BOSA : aucune publication collectée, conserver les dernières données');
+  imported=importPublic(data,results);
+ }catch(e){
+  // Une tentative en erreur n'efface ni l'historique ni le dernier succès.
+  data.sources={...(data.sources||{}),BOSA:{...(data.sources?.BOSA||{}),status:'unavailable',
+   last_attempt:new Date().toISOString(),last_error:String(e.message||e).slice(0,240)}};
+  fs.writeFileSync(dataPath,JSON.stringify(data,null,2)+'\n','utf8');
+  throw e;
+ }
+ fs.writeFileSync(dataPath,JSON.stringify(imported.data,null,2)+'\n','utf8');
+ const source=imported.data.sources.BOSA;
+ if(options.quiet)return imported;
  console.log('BOSA_BROWSER_OK',JSON.stringify({
   imported:imported.inserted,total:imported.total,scanned:imported.scanned,
-  complete:results.complete,periodFrom:results.cutoff,pages:results.pageCount
+  complete:source.complete,periodFrom:source.period_from,pages:source.pages
  }));
+ return imported;
 }
 module.exports={collectBrowser,importPublic,publicationDate,parseItems,performanceDate,visibleDeadlines,run};
-if(require.main===module)run().catch(e=>{console.warn('BOSA_BROWSER_NOT_UPDATED',String(e.message||e));process.exitCode=0});
+if(require.main===module)run().catch(e=>{console.warn('BOSA_BROWSER_NOT_UPDATED',String(e.message||e));process.exitCode=1});

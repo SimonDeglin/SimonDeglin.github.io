@@ -1,8 +1,19 @@
 name: "MarchéRadar — découverte des conseils communaux"
 on:
   workflow_dispatch:
+    inputs:
+      province:
+        description: "Province à contrôler (lot progressif)"
+        type: choice
+        options: [all, brabant_wallon, hainaut, liege, luxembourg, namur]
+        default: all
+        required: true
+      commune:
+        description: "Code INS de cinq chiffres (facultatif, une commune seulement)"
+        type: string
+        default: ""
   schedule:
-    - cron: "43 6 * * *"
+    - cron: "43 1,5,9,13,17,21 * * *"
 permissions:
   contents: write
 concurrency:
@@ -11,7 +22,7 @@ concurrency:
 jobs:
   discover:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 35
     continue-on-error: true
     steps:
       - uses: actions/checkout@v4
@@ -25,13 +36,15 @@ jobs:
       - name: "Vérifier la conservation des dossiers et versions"
         id: tests
         if: steps.node.outcome == 'success'
-        run: node --test marcheradar/tests/municipal-versions.test.cjs
+        run: node --test marcheradar/tests/municipal-versions.test.cjs marcheradar/tests/sources-health.test.cjs marcheradar/tests/communes-scope.test.cjs
         continue-on-error: true
       - name: "Découvrir progressivement les pages des conseils"
         id: collect
         if: steps.tests.outcome == 'success'
         env:
           COMMUNES_BATCH: "12"
+          COMMUNES_PROVINCE: ${{ inputs.province || 'all' }}
+          COMMUNES_INS: ${{ inputs.commune || '' }}
         run: node marcheradar/tools/communes-discovery.cjs
         continue-on-error: true
       - name: "Préparer la lecture des PDF"
@@ -47,6 +60,8 @@ jobs:
         if: steps.pdf.outcome == 'success'
         env:
           COMMUNES_DOC_BATCH: "4"
+          COMMUNES_PROVINCE: ${{ inputs.province || 'all' }}
+          COMMUNES_INS: ${{ inputs.commune || '' }}
         run: node marcheradar/tools/communes-documents.cjs
         continue-on-error: true
       - name: "Enregistrer seulement les changements valides"
@@ -64,6 +79,8 @@ jobs:
         if: always()
         shell: bash
         env:
+          COMMUNES_PROVINCE: ${{ inputs.province || 'all' }}
+          COMMUNES_INS: ${{ inputs.commune || '' }}
           RESULT: ${{ steps.collect.outcome }}
           DOCUMENTS: ${{ steps.documents.outcome }}
         run: |
@@ -72,4 +89,5 @@ jobs:
           if [ "$DOCUMENTS" != "success" ]; then
             echo "::warning::Contrôle documentaire non terminé ; dernière version exploitable conservée."
           fi
+          echo "Périmètre : province $COMMUNES_PROVINCE, commune $COMMUNES_INS" >> "$GITHUB_STEP_SUMMARY"
           echo "Les sites inventoriés ne sont pas automatiquement des sites surveillés." >> "$GITHUB_STEP_SUMMARY"

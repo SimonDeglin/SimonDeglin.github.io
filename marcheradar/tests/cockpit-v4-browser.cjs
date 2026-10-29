@@ -76,6 +76,7 @@ async function ready(page,n){
   await page.locator('[data-family="mesurage"]').click();
   await ready(page,1);
   assert.equal(await page.locator('[data-view="inbox"].active').count(),1,'Le filtre de domaine ne change pas le dossier');
+  await page.locator('article[data-id="r1"] .open-tender').click();
   await page.locator('#quickOpenTender').click();
   assert.equal(await page.locator('.drawer.on').count(),1);
   assert.match(await page.locator('#drawerBody').innerText(),/Avis de résultat/);
@@ -111,6 +112,7 @@ async function ready(page,n){
   assert.equal(await page.locator('[data-view="inbox"].active').count(),1);
   await page.locator('#publicationFilters [data-publication="prospect"]').click();
   await ready(page,2);
+  await page.locator('article[data-id="l1"] .open-tender').click();
   const txt=await page.locator('#quickPreview').innerText();
   assert.match(txt,/aucune procédure ouverte confirmée/);
   console.log('OK: accès cockpit, résultats et prospection sans fausse échéance');
@@ -159,6 +161,7 @@ async function ready(page,n){
   await dynamic.locator('[data-view="irrelevant"]').click();await ready(dynamic,1);
   assert.equal(await dynamic.locator('#search').inputValue(),'','Entrer dans Hors sujet doit nettoyer le filtre masquant les archives');
   assert.equal(await dynamic.locator('article[data-id="t2"]').count(),1);
+  await dynamic.locator('article[data-id="t2"] .open-tender').click();
   assert.match(await dynamic.locator('#quickPreview').innerText(),/Note de suivi préservée/);
   await dynamic.locator('#quickDismissTender').click();
   await ready(dynamic,0);
