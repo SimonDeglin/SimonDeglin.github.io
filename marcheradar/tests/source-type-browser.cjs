@@ -3,6 +3,8 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const root=path.resolve(__dirname,'../..');const server=http.createServer((req,res)=>{let p=new URL(req.url,'http://localhost').pathname;if(p.endsWith('/'))p+='index.html';const f=path.resolve(root,'.'+p);if(!f.startsWith(root+path.sep)){res.writeHead(403).end();return}fs.readFile(f,(e,b)=>{if(e){res.writeHead(404).end();return}res.writeHead(200,{'Content-Type':({'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json'})[path.extname(f)]||'text/plain'}).end(b)})});
 const item=(id,more={})=>({id,title:'Mission '+id,description:'Prestations de géomètre.',buyer:'Commune de test',source:'BOSA',noticeKind:'competition',region:'Wallonie',sector:'Topo',sectors:['Topo'],score:80,screening:'main',publication:'2026-10-29',deadline:'2027-11-01',...more});
 const items=[item('shared',{source:'TED',noticeKind:undefined,noticeType:'cn-standard',officialSources:[{source:'TED'},{source:'BOSA',noticeKind:'award',url:'https://www.publicprocurement.be/publication-workspaces/00000000-0000-4000-8000-000000000001/general'}]}),item('bosa'),item('other',{noticeKind:'other'}),item('web-call',{source:'LOCALE',municipalityINS:'61003'}),item('web-award',{source:'LOCALE',municipalityINS:'61003',noticeKind:'award'}),item('web-prospect',{source:'LOCALE',municipalityINS:'61003',noticeKind:undefined,deadline:''}),item('province',{source:'LOCALE',buyer:'Province de Liège',noticeKind:undefined,deadline:''})];
+const dates=require('../document-dates.js');
+for(const [id,text] of [['web-call','Séance du 25 juin 2026'],['web-award','=== CONSEIL DU 01 DÉCEMBRE 2022 ===']]){const m=items.find(m=>m.id===id);m.sourceDocument='https://commune.be/'+id+'.pdf';m.sourceDocumentDates=dates.extract({text,url:m.sourceDocument});}
 (async()=>{
  await new Promise(r=>server.listen(0,'127.0.0.1',r));let browser;
  try{
@@ -11,7 +13,13 @@ const items=[item('shared',{source:'TED',noticeKind:undefined,noticeType:'cn-sta
   const ready=async n=>{await page.waitForFunction(n=>document.querySelector('#resultCount').textContent===String(n),n);assert.equal(await page.locator('article.tender').count(),n)};
   const source=async id=>page.locator('[data-source-filter="'+id+'"]').click(),type=async id=>page.locator('#publicationFilters [data-publication="'+id+'"]').click();
   await ready(7);assert.equal(await page.locator('[data-source-filter="BOSA"] .v4-type-count').innerText(),'3');assert.equal(await page.locator('[data-source-filter="municipal"] .v4-type-count').innerText(),'3');
-  await source('municipal');await ready(3);await type('competition');await ready(1);assert.equal(await page.locator('article[data-id="web-call"]').count(),1);
+  await source('municipal');await ready(3);
+  await page.locator('#sort').selectOption('recent');assert.deepEqual(await page.locator('article.tender').evaluateAll(a=>a.map(x=>x.dataset.id)),['web-call','web-award','web-prospect']);
+  assert.match(await page.locator('article[data-id="web-call"]').innerText(),/Séance du 25\/06\/2026/);assert.match(await page.locator('article[data-id="web-award"]').innerText(),/plus d’un an/);assert.match(await page.locator('article[data-id="web-prospect"]').innerText(),/Date du document non identifiée/);
+  await page.locator('article[data-id="web-call"] .open-tender').click();assert.match(await page.locator('#quickPreview').innerText(),/Séance du 25\/06\/2026/);assert.match(await page.locator('#quickPreview').innerText(),/Date lue dans le PDF/);
+  await page.screenshot({path:path.join(__dirname,'communal-document-date.png')});
+  await page.locator('#quickOpenTender').click();assert.match(await page.locator('.mr2-fields').innerText(),/Date de séance/);assert.match(await page.locator('.mr2-fields').innerText(),/25\/06\/2026/);await page.locator('#closeDrawer').click();
+  await type('competition');await ready(1);assert.equal(await page.locator('article[data-id="web-call"]').count(),1);
   await type('result');await ready(1);assert.equal(await page.locator('article[data-id="web-award"]').count(),1);
   await type('prospect');await ready(1);assert.equal(await page.locator('article[data-id="web-prospect"]').count(),1);await type('unknown');await ready(0);
   await source('BOSA');await ready(3);await type('result');await ready(1);assert.equal(await page.locator('article[data-id="shared"]').count(),1);assert.match(await page.locator('article.tender .v4-kind').innerText(),/Attribution/);

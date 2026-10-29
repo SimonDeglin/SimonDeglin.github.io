@@ -36,7 +36,7 @@ jobs:
       - name: "Vérifier la conservation des dossiers et versions"
         id: tests
         if: steps.node.outcome == 'success'
-        run: node --test marcheradar/tests/municipal-versions.test.cjs marcheradar/tests/sources-health.test.cjs marcheradar/tests/communes-scope.test.cjs marcheradar/tests/municipal-queue.test.cjs marcheradar/tests/communal-downloads.test.cjs
+        run: node --test marcheradar/tests/municipal-versions.test.cjs marcheradar/tests/sources-health.test.cjs marcheradar/tests/communes-scope.test.cjs marcheradar/tests/municipal-queue.test.cjs marcheradar/tests/communal-downloads.test.cjs marcheradar/tests/document-dates.test.cjs
         continue-on-error: true
       - name: "Découvrir progressivement les pages des conseils"
         id: collect

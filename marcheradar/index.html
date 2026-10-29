@@ -185,7 +185,7 @@ body{background:#f7f7f7;color:#303339}
 .coverage-detail-link:hover{text-decoration:underline}
 </style>
 <link rel="stylesheet" href="detail-phase2.css">
-<link rel="stylesheet" href="cockpit-v4.css?v=20261029-communal-sources">
+<link rel="stylesheet" href="cockpit-v4.css?v=20261029-document-dates">
 </head>
 <body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -276,9 +276,10 @@ body{background:#f7f7f7;color:#303339}
 <div class="overlay" id="overlay"></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Détails et préférences"><div class="drawer-head"><div><small id="drawerEyebrow">DÉTAIL DU MARCHÉ</small><h2 id="drawerHeader">Consulter un marché</h2></div><button class="close" id="closeDrawer" aria-label="Fermer"><svg class="ico"><use href="#i-x"/></svg></button></div><div class="drawer-content" id="drawerBody"></div><div class="drawer-footer" id="drawerFooter"></div></aside>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="document-dates.js?v=20261029-dates-1"></script>
 <script src="publication-filters.js?v=20261029-1"></script>
-<script src="detail-phase2.js?v=20261029-communal-sources"></script>
-<script src="cockpit-v4.js?v=20261029-communal-sources"></script>
+<script src="detail-phase2.js?v=20261029-document-dates"></script>
+<script src="cockpit-v4.js?v=20261029-document-dates"></script>
 <script src="followup-backup.js?v=20261028-1"></script>
 <script src="source-health.js?v=20261029-1"></script>
 <script src="qualification.js?v=20261029-1"></script>
@@ -338,7 +339,7 @@ function filtered(){
   if(state.view==='urgent'){var n=daysLeft(m.deadline);if(n===null||n<0||n>14)return false}
   var q=norm(state.query).trim();return !q||norm([m.title,m.buyer,m.region,m.sector,m.description,(m.cpv||[]).join(' ')].join(' ')).includes(q);
  });
- list.sort(function(a,b){if(state.sort==='recent')return (b.publication||'').localeCompare(a.publication||'');if(state.sort==='deadline'){var da=daysLeft(a.deadline),db=daysLeft(b.deadline);return (da===null?9999:da<0?9999:da)-(db===null?9999:db<0?9999:db)}return (b.score||0)-(a.score||0)});
+ list.sort(function(a,b){if(state.sort==='recent')return (marketDate(b)||'').localeCompare(marketDate(a)||'');if(state.sort==='deadline'){var da=daysLeft(a.deadline),db=daysLeft(b.deadline);return (da===null?9999:da<0?9999:da)-(db===null?9999:db<0?9999:db)}return (b.score||0)-(a.score||0)});
  return list;
 }
 function renderChips(){}
@@ -398,7 +399,7 @@ function renderList(){
   var col=m.score>=85?'#4fa786':m.score>=65?'#d6a65f':'#9ab1c6';
   return '<article class="tender" data-id="'+esc(m.id)+'"><div class="score-ring" style="--score:'+Math.max(0,Math.min(100,Number(m.score)||0))+';--ring:'+col+'" title="Score de pertinence indicatif"><strong>'+esc(m.score||0)+'</strong></div>'+
   '<div class="tender-body"><div class="tender-top"><span class="micro-tag sector">'+esc(SECTORS.find(function(s){return s.id===m.sector})?.label||m.sector||'Autre')+'</span><span class="micro-tag">'+esc(m.source==='Démo'?'FICTIF':(window.MRPublications?MRPublications.labels(m,state.sourceFilter):(m.source||'TED')))+'</span>'+(saved.statuses[m.id]?'<span class="micro-tag danger">'+esc(saved.statuses[m.id])+'</span>':'')+'</div>'+
-  '<h3 class="open-tender" role="button" tabindex="0">'+esc(m.title)+'</h3><div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+'Publié le '+fmtShort(m.publication)+'</span></div></div>'+
+  '<h3 class="open-tender" role="button" tabindex="0">'+esc(m.title)+'</h3><div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+(window.MRDocumentDates&&m.source==='LOCALE'?esc(MRDocumentDates.view(m).summary):'Publié le '+fmtShort(m.publication))+'</span></div></div>'+
   '<div class="tender-end"><button class="star'+(saved.favorites[m.id]?' on':'')+'" aria-label="Ajouter aux favoris" title="Favori" data-star="'+esc(m.id)+'">'+svg('star',true)+'</button><div class="end-date">'+(m.deadline?'Éch. '+fmtShort(m.deadline):'Échéance —')+'</div><span class="days'+daysCls+'">'+esc(label)+'</span></div></article>';
  }).join('');
  el('resultsList').querySelectorAll('.open-tender').forEach(function(node){node.addEventListener('click',function(){openTender(node.closest('[data-id]').dataset.id)});node.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openTender(node.closest('[data-id]').dataset.id)}})});
@@ -644,6 +645,7 @@ function matchesFolder(m,view){
  if(folder==='urgent'){var d=daysLeft(m.deadline);return d!==null&&d>=0&&d<=14}
  return folder==='catalogue'||folder==='all';
 }
+function marketDate(m){return m.source==='LOCALE'&&window.MRDocumentDates?MRDocumentDates.view(m).date:m.publication}
 function publicationKind(m){
  return window.MRCockpit&&typeof MRCockpit.kind==='function'?MRCockpit.kind(m):
   m.source==='LOCALE'?'prospect':m.noticeKind==='award'?'result':m.noticeKind==='competition'||m.source==='TED'?'competition':'unknown';
@@ -719,7 +721,7 @@ function filtered(){
   return matchesGeneralFilters(m)&&matchesFolder(m)&&matchesSectorFilter(m.sectors||tagsOf(m))&&matchesPublicationType(m);
  });
  list.sort(function(a,b){
-  if(state.sort==='recent')return (b.publication||'').localeCompare(a.publication||'');
+  if(state.sort==='recent')return (marketDate(b)||'').localeCompare(marketDate(a)||'');
   if(state.sort==='deadline'){
    var x=daysLeft(a.deadline),y=daysLeft(b.deadline);
    return (x===null||x<0?9999:x)-(y===null||y<0?9999:y);
@@ -835,7 +837,7 @@ function renderList(){
    '<div class="tender-body"><div class="tender-top"><div class="tag-group">'+tags+'</div>'+(window.MRCockpit?MRCockpit.typeBadge(m,state.sourceFilter,state.publication):'')+'<span class="micro-tag">'+esc(m.source==='Démo'?'FICTIF':(window.MRPublications?MRPublications.labels(m,state.sourceFilter):(m.source||'TED')))+'</span>'+
    (current!=='inbox'?'<span class="status-tag '+current+'">'+esc(stageName(current))+'</span>':'')+(m.screening==='review'?'<span class="micro-tag">À vérifier</span>':m.screening==='excluded'?'<span class="micro-tag">'+(autoExcluded(m)?'Écarté par le filtre':current==='inbox'?'Réintégré manuellement':'Classement manuel conservé')+'</span>':'')+(m.awards&&m.awards.length?'<span class="micro-tag result-published">Résultat publié</span>':'')+'</div>'+
    '<h3 class="open-tender" role="button" tabindex="0" title="Afficher en lecture rapide" aria-label="Lire rapidement : '+esc(m.title)+'">'+esc(m.title)+'</h3>'+
-   '<div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+'Publié le '+fmtShort(m.publication)+'</span></div>'+(window.MRDetailV2&&typeof MRDetailV2.listHints==='function'?MRDetailV2.listHints(m):'')+'</div>'+
+   '<div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+(window.MRDocumentDates&&m.source==='LOCALE'?esc(MRDocumentDates.view(m).summary):'Publié le '+fmtShort(m.publication))+'</span></div>'+(window.MRDetailV2&&typeof MRDetailV2.listHints==='function'?MRDetailV2.listHints(m):'')+'</div>'+
    '<div class="tender-end"><div class="end-meta"><button class="star'+(saved.favorites[m.id]?' on':'')+'" title="Favori" aria-label="Favori" data-star="'+esc(m.id)+'">'+svg('star',true)+'</button><span class="end-date">'+(m.deadline?'Éch. '+fmtShort(m.deadline):m.source==='LOCALE'&&m.screening!=='excluded'?'Prospection — échéance non publiée':'Échéance non publiée')+'</span><span class="days'+dc+'">'+esc(label)+'</span></div>'+
    '<div class="v5-row-actions"><button type="button" class="v5-full-open" data-open-full="'+esc(m.id)+'" aria-label="Ouvrir la fiche complète : '+esc(m.title)+'">Fiche complète ↗</button><button type="button" class="v5-reject" data-irrelevant="'+esc(m.id)+'" aria-label="'+(current==='irrelevant'||autoExcluded(m)?'Réintégrer le marché':'Classer ce marché hors sujet')+'">'+((current==='irrelevant'||autoExcluded(m))?'Réintégrer':'Hors sujet')+'</button></div>'+
    '<select class="move-select" data-move="'+esc(m.id)+'" aria-label="Dossier de suivi">'+WORKFLOW.map(function(s){return '<option value="'+esc(s.id)+'"'+(s.id===current?' selected':'')+'>'+esc(s.label)+'</option>'}).join('')+'</select></div></article>';
