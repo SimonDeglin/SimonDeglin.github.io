@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-28T21:08:06.336Z",
+  "generated_at": "2026-10-29T11:33:32.222Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-10-28 : 1412 avis lus, 2 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-10-29 : 1595 avis lus, 2 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-29T08:42:04.350Z",
-      "scanned": 2550,
-      "retained": 45,
+      "last_success": "2026-10-29T11:35:51.092Z",
+      "scanned": 2600,
+      "retained": 46,
       "period_from": "2026-10-15",
       "period_to": "2026-10-29",
-      "pages": 102,
+      "pages": 104,
       "complete": true,
-      "raw_candidates": 2539,
+      "raw_candidates": 2594,
       "oldest_seen": "2026-10-14",
-      "last_attempt": "2026-10-29T08:42:04.350Z",
+      "last_attempt": "2026-10-29T11:35:51.092Z",
       "last_error": null,
-      "last_complete_success": "2026-10-29T08:42:04.350Z"
+      "last_complete_success": "2026-10-29T11:35:51.092Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-10-28T21:11:33.939Z",
+      "last_success": "2026-10-29T11:38:11.725Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -79,75 +79,62 @@
       "sitesChecked": 181,
       "candidatePages": 139,
       "sourceErrors": 17
-    },
-    "COMMUNES_DOCUMENTS": {
-      "status": "pilot",
-      "last_attempt": "2026-10-29T10:21:49.216Z",
-      "last_success": "2026-10-29T10:21:49.216Z",
-      "last_batch": 1,
-      "documents_checked": 5,
-      "documents_read": 5,
-      "documents_unchanged": 0,
-      "documents_modified": 0,
-      "opportunities_found": 5,
-      "review_candidates": 0,
-      "errors_count": 0,
-      "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel."
     }
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 102 page(s) parcourue(s) depuis 2026-10-15.",
-    "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 104 page(s) parcourue(s) depuis 2026-10-15.",
+    "communal": "Collecte communale progressive : 261 communes répertoriées, 126 PDF lus dans 22 communes. Couverture partielle ; traitement par lots et suivi des erreurs."
   },
   "metrics": {
-    "scanned": 1412,
+    "scanned": 1595,
     "matched_current_run": 12,
-    "records": 166,
-    "review_count": 46,
-    "award_notice_count": 367,
+    "records": 168,
+    "review_count": 68,
+    "award_notice_count": 421,
     "awarded_market_matches": 2,
     "award_fields_requested": false,
-    "retained_as_excluded": 31,
+    "retained_as_excluded": 36,
     "excluded_reasons": {
       "formule_administrative_sans_signal_metier": 29,
+      "aucun_signal_metier": 5,
       "acheteur_flamand": 2
     },
     "days_queried": 12,
     "queries": [
       {
         "source": "Acheteurs belges",
-        "from": "20261017",
-        "to": "20261023",
+        "from": "20261018",
+        "to": "20261024",
         "found": 464,
         "reported": 464
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261017",
-        "to": "20261023",
+        "from": "20261018",
+        "to": "20261024",
         "found": 433,
         "reported": 433
       },
       {
         "source": "Acheteurs belges",
-        "from": "20261024",
-        "to": "20261028",
-        "found": 264,
-        "reported": 264
+        "from": "20261025",
+        "to": "20261029",
+        "found": 358,
+        "reported": 358
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261024",
-        "to": "20261028",
-        "found": 251,
-        "reported": 251
+        "from": "20261025",
+        "to": "20261029",
+        "found": 340,
+        "reported": 340
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2550,
-    "bosa_imported": 45,
-    "bosa_pages": 102,
+    "bosa_scanned": 2600,
+    "bosa_imported": 46,
+    "bosa_pages": 104,
     "local_documents": 34,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -163,69 +150,138 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "objet_hors_domaine": 77,
-      "aucun_signal_metier": 460,
-      "acheteur_flamand": 150,
-      "avis_neerlandais": 128,
-      "fournitures_et_location": 62,
-      "travaux_execution": 110,
-      "avis_attribution_analyse_separement": 367,
-      "assurance_ou_nettoyage": 17,
-      "qualifie_review": 7,
-      "formule_administrative_sans_signal_metier": 19,
-      "qualifie_main": 15
+      "objet_hors_domaine": 85,
+      "aucun_signal_metier": 507,
+      "acheteur_flamand": 177,
+      "avis_neerlandais": 149,
+      "fournitures_et_location": 68,
+      "travaux_execution": 120,
+      "avis_attribution_analyse_separement": 421,
+      "assurance_ou_nettoyage": 22,
+      "qualifie_review": 18,
+      "formule_administrative_sans_signal_metier": 24,
+      "qualifie_main": 4
     }
   },
   "items": [
     {
-      "id": "ted:748312-2026",
-      "publicationNumber": "748312-2026",
-      "procedureIdentifier": "542dff59-2ff5-476a-8867-bec232031dba",
-      "title": "Belgique – Services d'architecture, d'ingénierie et de planification – MISSION D’AUTEUR DE PROJET POUR LA RESTAURATION DE L’EDIFICE : SUIVI DES ÉTUDES PRÉALABLES ÉLABORATION DES DOSSIERS D’EXÉCUTION ET SUIVI DES TRAVAUX",
-      "buyer": "Fabrique d'Eglise Saint Jacques à Liège",
-      "region": "Belgique",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
+      "id": "bosa:7fbc278d-2757-4e84-9536-b7b0f060a75d",
+      "publicationWorkspaceId": "7fbc278d-2757-4e84-9536-b7b0f060a75d",
+      "noticeId": "c3b9332f-2668-47de-97cf-35ef64b89991",
+      "procedureIdentifier": "a4c7376f-98a2-44d8-ae53-fea166f08c45",
+      "internalReference": "PPP05K-1908/6316/2026/3P/1908_002",
+      "title": "Étude et dimensionnement de dispositifs de lutte contre les inondations au sud de Neufvilles",
+      "buyer": "Soignies",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
       ],
-      "score": 55,
+      "sector": "Hydraulique",
+      "sectors": [
+        "Hydraulique"
+      ],
+      "score": 74,
       "screening": "review",
-      "publication": "2026-10-28",
+      "publication": "2026-10-29",
       "deadline": "",
       "cpv": [
-        "71240000"
+        "71241000"
       ],
-      "description": "Le présent marché public de services a pour objet la désignation d’un auteur de projet chargé d’une mission complète relative à la restauration de l’église Saint-Jacques. Cette mission comprend notamment l’analyse et le suivi des études préalables, l’élaboration des dossiers d’exécution et des dossiers relatifs aux subsides à envoyer à la Région Wallonne, l’assistance à la passation des marchés de travaux ainsi que le suivi de l’exécution des travaux jusqu’à la réception définitive. La mission porte sur l’ensemble des disciplines nécessaires à la réalisation du projet, incluant l’architecture et la stabilité. Il s’agit d’un marché relevant du code CPV 71240000-2 (Services d’architecture, d’ingénierie et de planification). Ces services sont mieux décrits dans la partie technique au point 4 du cahier des charges.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/748312-2026",
-      "publicationWorkspaceId": "0ffc770c-a8b2-40f3-96a3-0a9cff633efd",
-      "officialSources": [
+      "description": "Étude et dimensionnement de dispositifs de lutte contre les inondations au sud de Neufvilles",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP05K-1908/6316/2026/3P/1908_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/7fbc278d-2757-4e84-9536-b7b0f060a75d/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/7fbc278d-2757-4e84-9536-b7b0f060a75d/documents",
+      "documentsPageSource": "official_workspace_route_not_download_verified",
+      "bosaResults": [
         {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/748312-2026",
-          "publicationNumber": "748312-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/0ffc770c-a8b2-40f3-96a3-0a9cff633efd/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
+          "reference": "PPP05K-1908/6316/2026/3P/1908_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/7fbc278d-2757-4e84-9536-b7b0f060a75d/general",
+          "publicationDate": "2026-10-29",
+          "kind": "award"
         }
       ],
-      "matchReason": "mission_architecturale_a_qualifier",
-      "screeningReason": null,
-      "noticeNumbers": [
-        "748312-2026"
-      ],
+      "matchReason": "projet_indirect",
       "qualification": {
         "version": "2026-10-29",
         "kind": "services",
-        "route": "partner",
-        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
         "capacityStatus": "not_assessed"
-      }
+      },
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/7fbc278d-2757-4e84-9536-b7b0f060a75d/general"
+        }
+      ]
+    },
+    {
+      "id": "bosa:a896ecc8-7aee-4a3a-81e9-94aa0d6a67c9",
+      "publicationWorkspaceId": "a896ecc8-7aee-4a3a-81e9-94aa0d6a67c9",
+      "noticeId": "e46b4ff4-e171-4e1b-9d3b-b3ac4422e049",
+      "procedureIdentifier": "d28a62b0-22ac-4d0d-b0b3-a25c6daccc68",
+      "internalReference": "Maintenance HT DEP Step_pub01",
+      "title": "Belgique – Services de réparation et d'entretien de matériel de distribution électrique – Maintenance et entretien des installations haute tension des ouvrages d'assainissement et de production d'eau potable d'in BW en collaboration avec le constructeur",
+      "buyer": "Intercommunale du Brabant wallon",
+      "region": "Belgique",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Reseaux",
+      "sectors": [
+        "Reseaux"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-29",
+      "deadline": "2026-11-20",
+      "cpv": [
+        "50532400",
+        "50000000"
+      ],
+      "description": "Le marché consiste en la maintenance et l’entretien des installations Haute Tension de l’ensemble des ouvrages d'in BW selon les recommandations et prescriptions du constructeur. Les services seront à effectuer sur les stations d'épuration et de pompages des ouvrages du département Assainissement d’in BW ainsi que pour les sites de production et le siège administratif du Département Eau potable. Ce marché est prévu pour une durée de 4 ans (1 an renouvelable 3x 1 an). Les prestations à réaliser sont les nettoyages et les entretiens des installations HT par une société habilitée et spécialisée dans le domaine de la HT ainsi que le constructeur pour permettre de : • assurer la sécurité des intervenants ; • assurer le bon fonctionnement des installations et réduire le risque de panne ; • réaliser les maintenances suivant les règlementations du constructeur ; • conserver la conformité suite au contrôle périodique annuel électrique ; • obtenir des rapports d’entretien, de contrôle thermographie et d’analyse d’huile pour chaque installation ; • etc. La maintenance de chaque installation sera réalisée sur l’ensemble des appareillages et protections HT, ainsi que sur le transformateur HT/BT. En collaboration avec in BW, l’attributaire interviendra avec le constructeur (fabricant de l’installation HT) et le gestionnaire de réseau pour permettre un travail HORS tension et en sécurité. Pour chaque installation, les prestations suivantes seront à réaliser : • coupures et remises en service de l’installation HT, tests de coupure de l’alimentation HT et minima de tension, etc. • nettoyage des locaux, des cabines (cellules et ses composants), des parties électriques, etc. • contrôles visuels de l’aspect général de l’installation HT, des accès, des règlementations, des différents risques, du bon état de l’installation, etc. • entretiens, maintenances et travaux des installations et disjoncteurs par le constructeur suivant ses recommandations, prescriptions d’obligation et règles, ainsi que les législations et sécurité légale en vigueur • réalisation d’un contrôle par caméra thermographie. Le présent CSC prend en compte tous les travaux non prévus dus à des réparations éventuelles de pièces déficientes et défectueuses, des levées des remarques listées par un organisme agréé non liées à l’exécution des travaux précités ou une éventuelle obligation du constructeur, des réparations pour chaque anomalie détectée, ou la mise en conformité éventuelle de l’installation ou des propositions d’amélioration.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "",
+      "tedReference": "Maintenance HT DEP Step_pub01",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/750561-2026",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/a896ecc8-7aee-4a3a-81e9-94aa0d6a67c9/documents",
+      "documentsPageSource": "official_workspace_route_not_download_verified",
+      "matchReason": "description_ou_contexte",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "unknown",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "screeningReason": null,
+      "publicationNumber": "750561-2026",
+      "noticeType": "cn-standard",
+      "noticeNumbers": [
+        "750561-2026"
+      ],
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/750561-2026",
+          "publicationNumber": "750561-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/a896ecc8-7aee-4a3a-81e9-94aa0d6a67c9/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ]
     },
     {
       "id": "bosa:a6fb49e3-670e-4995-b0a6-f74dc70dcf89",
@@ -386,6 +442,123 @@
         "kind": "unknown",
         "route": "scope",
         "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      }
+    },
+    {
+      "id": "bosa:b421ef8a-d870-48cc-89a7-91bb1489e278",
+      "publicationWorkspaceId": "b421ef8a-d870-48cc-89a7-91bb1489e278",
+      "noticeId": "bf9ae459-1d13-467a-a418-65544af9d2ca",
+      "procedureIdentifier": "560c293f-0c8f-44ed-9e1a-a62fd377ed1c",
+      "internalReference": "PPP0KC-2881/6941/AC2026-089 CB_001",
+      "title": "Services d'Assistance à Maîtrise d'Ouvrage (AMO) et de Pilotage de Projet",
+      "buyer": "CHU Brugmann - Association Hospitalière de Bruxelles et de Schaerbeek",
+      "region": "Bruxelles",
+      "languages": [
+        "NL",
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 62,
+      "screening": "review",
+      "publication": "2026-10-28",
+      "deadline": "2026-11-17T11:00:00+01:00",
+      "cpv": [
+        "71541000"
+      ],
+      "description": "Services d'Assistance à Maîtrise d'Ouvrage (AMO) et de Pilotage de Projet",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "PPP0KC-2881/6941/AC2026-089 CB_001",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [],
+      "consultationUrls": [
+        {
+          "url": "https://cloud.3p.eu/Downloads/1/2881/KC/2026",
+          "type": "officially_referenced_external_documents",
+          "access": "destination_not_download_verified",
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/urls?full=false",
+          "activatedAt": "2026-10-28T15:20:46.016102"
+        }
+      ],
+      "documentsCheckedAt": "2026-10-28T21:16:21.283Z",
+      "deadlineTime": "11:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n17/11/2026 11:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T21:16:21.724Z",
+      "matchReason": "projet_indirect",
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/general"
+        }
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "screeningReason": null
+    },
+    {
+      "id": "ted:748312-2026",
+      "publicationNumber": "748312-2026",
+      "procedureIdentifier": "542dff59-2ff5-476a-8867-bec232031dba",
+      "title": "Belgique – Services d'architecture, d'ingénierie et de planification – MISSION D’AUTEUR DE PROJET POUR LA RESTAURATION DE L’EDIFICE : SUIVI DES ÉTUDES PRÉALABLES ÉLABORATION DES DOSSIERS D’EXÉCUTION ET SUIVI DES TRAVAUX",
+      "buyer": "Fabrique d'Eglise Saint Jacques à Liège",
+      "region": "Belgique",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-10-28",
+      "deadline": "",
+      "cpv": [
+        "71240000"
+      ],
+      "description": "Le présent marché public de services a pour objet la désignation d’un auteur de projet chargé d’une mission complète relative à la restauration de l’église Saint-Jacques. Cette mission comprend notamment l’analyse et le suivi des études préalables, l’élaboration des dossiers d’exécution et des dossiers relatifs aux subsides à envoyer à la Région Wallonne, l’assistance à la passation des marchés de travaux ainsi que le suivi de l’exécution des travaux jusqu’à la réception définitive. La mission porte sur l’ensemble des disciplines nécessaires à la réalisation du projet, incluant l’architecture et la stabilité. Il s’agit d’un marché relevant du code CPV 71240000-2 (Services d’architecture, d’ingénierie et de planification). Ces services sont mieux décrits dans la partie technique au point 4 du cahier des charges.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/748312-2026",
+      "publicationWorkspaceId": "0ffc770c-a8b2-40f3-96a3-0a9cff633efd",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/748312-2026",
+          "publicationNumber": "748312-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/0ffc770c-a8b2-40f3-96a3-0a9cff633efd/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ],
+      "matchReason": "mission_architecturale_a_qualifier",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "748312-2026"
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "partner",
+        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
         "capacityStatus": "not_assessed"
       }
     },
@@ -611,6 +784,14 @@
       ],
       "score": 95,
       "screening": "main",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "service",
+        "explanation": "Prestation métier repérée dans l’objet. Les conditions de participation et les moyens KDRIX restent à vérifier.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "prestation_decrite",
       "publication": "2026-10-27",
       "deadline": "2026-10-19",
       "cpv": [
@@ -650,71 +831,7 @@
           "publicationNumber": "742024-2026"
         }
       ],
-      "screeningReason": null,
-      "matchReason": "prestation_decrite",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "service",
-        "explanation": "Prestation métier repérée dans l’objet. Les conditions de participation et les moyens KDRIX restent à vérifier.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
-      "id": "ted:691823-2026",
-      "publicationNumber": "742617-2026",
-      "procedureIdentifier": "1f0da72d-e394-4640-af83-7ecfb112421f",
-      "title": "Belgique – Services d'architecture – HERON - Désignation d’un auteur de projet pour une mission d’élaboration d’une stratégie d’intervention suivie de l’étude et du suivi de l’exécution des travaux de rénovation et d’extension des écoles communales de Surlemez et Waret-l'Evêque",
-      "buyer": "Administration communale de Héron",
-      "region": "Belgique",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "publication": "2026-10-27",
-      "deadline": "",
-      "cpv": [
-        "71200000"
-      ],
-      "description": "Les services visés par le présent marché concernent le projet de rénovation et d’extension des infrastructures scolaires de la Commune de Héron, situées sur les deux implantations de Waret-l'Evêque et de Surlemez. ---------------------------------------------------------------------------------------------------------------------------------------- Au cours des 10 dernières années, la population scolaire des implantations communales a sensiblement augmenté. Principalement touchés par cette augmentation, les sites de Waret-l’Evêque et de Surlemez ont fait l’objet de plusieurs interventions ponctuelles pour accueillir les élèves (placement de modules, réaffectation de locaux, etc.). Les infrastructures de ces deux sites sont par ailleurs vieillissantes et témoignent de nombreux problèmes fonctionnels, sécuritaires, de confort énergétique, etc. Aujourd’hui, la Commune de Héron souhaite se doter d’une vision long terme pour disposer d’infrastructures pérennes répondant pleinement aux besoins de la communauté scolaire. Si la Commune ne dispose pas à l’heure actuelle des moyens budgétaires pour réaliser l’entièreté des travaux, l’objectif est de pouvoir programmer ceux-ci, en tenant compte des disponibilités sur fonds propres et des opportunités de subventions qui se présenteraient. ---------------------------------------------------------------------------------------------------------------------------------------- Dans ce cadre, le présent marché a pour objet de désigner un auteur de projet chargé d’accompagner la Commune dans la définition et la mise en œuvre de cette stratégie d’intervention à court, moyen et long terme pour la rénovation et l’extension des deux sites de Waret-l’Evêque et de Surlemez. ---------------------------------------------------------------------------------------------------------------------------------------- La mission de l’auteur de projet est, à ce titre, divisée en deux parties : [1] une mission d’étude préalable et de définition de la stratégie globale d’intervention sur les deux implantations communales ; [2] une mission complète d’étude et de suivi de l’exécution de tout ou partie des travaux tels qu’identifiés au terme de la stratégie et qui comportera toutes les prestations relevant du domaine de la rénovation et/ou de la construction neuve. ---------------------------------------------------------------------------------------------------------------------------------------- ATTENTION : [1] Le projet pourra faire l’objet de subventions par la Fédération Wallonie-Bruxelles et/ou par la Région Wallonne, ce qui aura sur l",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/742617-2026",
-      "publicationWorkspaceId": "edece2ac-6bf5-41d3-8246-d285ba41a3c1",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/691823-2026",
-          "publicationNumber": "691823-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/edece2ac-6bf5-41d3-8246-d285ba41a3c1/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        },
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/742617-2026",
-          "publicationNumber": "742617-2026"
-        }
-      ],
-      "matchReason": "mission_architecturale_a_qualifier",
-      "screeningReason": null,
-      "noticeNumbers": [
-        "691823-2026",
-        "742617-2026"
-      ],
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "partner",
-        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
-        "capacityStatus": "not_assessed"
-      }
+      "screeningReason": null
     },
     {
       "id": "bosa:678cdb9e-c6a9-4aa3-bca7-3fccd0041195",
@@ -779,6 +896,62 @@
         "kind": "services",
         "route": "service",
         "explanation": "Prestation métier repérée dans l’objet. Les conditions de participation et les moyens KDRIX restent à vérifier.",
+        "capacityStatus": "not_assessed"
+      }
+    },
+    {
+      "id": "ted:691823-2026",
+      "publicationNumber": "742617-2026",
+      "procedureIdentifier": "1f0da72d-e394-4640-af83-7ecfb112421f",
+      "title": "Belgique – Services d'architecture – HERON - Désignation d’un auteur de projet pour une mission d’élaboration d’une stratégie d’intervention suivie de l’étude et du suivi de l’exécution des travaux de rénovation et d’extension des écoles communales de Surlemez et Waret-l'Evêque",
+      "buyer": "Administration communale de Héron",
+      "region": "Belgique",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-10-27",
+      "deadline": "",
+      "cpv": [
+        "71200000"
+      ],
+      "description": "Les services visés par le présent marché concernent le projet de rénovation et d’extension des infrastructures scolaires de la Commune de Héron, situées sur les deux implantations de Waret-l'Evêque et de Surlemez. ---------------------------------------------------------------------------------------------------------------------------------------- Au cours des 10 dernières années, la population scolaire des implantations communales a sensiblement augmenté. Principalement touchés par cette augmentation, les sites de Waret-l’Evêque et de Surlemez ont fait l’objet de plusieurs interventions ponctuelles pour accueillir les élèves (placement de modules, réaffectation de locaux, etc.). Les infrastructures de ces deux sites sont par ailleurs vieillissantes et témoignent de nombreux problèmes fonctionnels, sécuritaires, de confort énergétique, etc. Aujourd’hui, la Commune de Héron souhaite se doter d’une vision long terme pour disposer d’infrastructures pérennes répondant pleinement aux besoins de la communauté scolaire. Si la Commune ne dispose pas à l’heure actuelle des moyens budgétaires pour réaliser l’entièreté des travaux, l’objectif est de pouvoir programmer ceux-ci, en tenant compte des disponibilités sur fonds propres et des opportunités de subventions qui se présenteraient. ---------------------------------------------------------------------------------------------------------------------------------------- Dans ce cadre, le présent marché a pour objet de désigner un auteur de projet chargé d’accompagner la Commune dans la définition et la mise en œuvre de cette stratégie d’intervention à court, moyen et long terme pour la rénovation et l’extension des deux sites de Waret-l’Evêque et de Surlemez. ---------------------------------------------------------------------------------------------------------------------------------------- La mission de l’auteur de projet est, à ce titre, divisée en deux parties : [1] une mission d’étude préalable et de définition de la stratégie globale d’intervention sur les deux implantations communales ; [2] une mission complète d’étude et de suivi de l’exécution de tout ou partie des travaux tels qu’identifiés au terme de la stratégie et qui comportera toutes les prestations relevant du domaine de la rénovation et/ou de la construction neuve. ---------------------------------------------------------------------------------------------------------------------------------------- ATTENTION : [1] Le projet pourra faire l’objet de subventions par la Fédération Wallonie-Bruxelles et/ou par la Région Wallonne, ce qui aura sur l",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/742617-2026",
+      "publicationWorkspaceId": "edece2ac-6bf5-41d3-8246-d285ba41a3c1",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/691823-2026",
+          "publicationNumber": "691823-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/edece2ac-6bf5-41d3-8246-d285ba41a3c1/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        },
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/742617-2026",
+          "publicationNumber": "742617-2026"
+        }
+      ],
+      "matchReason": "mission_architecturale_a_qualifier",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "691823-2026",
+        "742617-2026"
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "partner",
+        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
         "capacityStatus": "not_assessed"
       }
     },
@@ -1077,62 +1250,6 @@
       ]
     },
     {
-      "id": "ted:703599-2026",
-      "publicationNumber": "738011-2026",
-      "procedureIdentifier": "daa0f293-acd8-4549-8083-f82cb855302b",
-      "title": "Belgique – Services d'architecture, services de construction, services d'ingénierie et services d'inspection – FEDER - Chiny - Rénovation énergétique - Désignation d'auteur de projet",
-      "buyer": "IDELUX Projets publics ; Commune de Chiny",
-      "region": "Belgique",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "publication": "2026-10-26",
-      "deadline": "2026-11-27",
-      "cpv": [
-        "71000000"
-      ],
-      "description": "Il s'agit d'un marché conjoint (IDELUX Projets publics - Commune de Chiny) portant sur la désignation d'un auteur de projet pour une importante rénovation énergétique du bâtiment de l’Administration communale de Chiny (Château du Faing) dans le cadre de la programmation « FEDER 2021-2027 – Mesure 8 ». Le bâtiment et ses alentours, sis à la Rue du Faing, 10 à 6810 Chiny, comportent certaines parties classées selon l’arrêté du 18 février 1997 au patrimoine protégé par l’administration wallonne. Le soumissionnaire a l’obligation de visiter les lieux concernés afin d’appréhender toutes les conditions particulières d’exécution du présent marché. Les dates de visite sont fixées : • Mercredi 21 octobre 2026 à 10h00 • Mercredi 28 octobre 2026 à 13h30 • Mercredi 04 novembre 2026 à 13h30 • Vendredi13 novembre 2026 à 13h30 Ces dates pourraient être amenées à évoluer selon les besoins. Dans tous les cas, pour la bonne organisation des visites, chaque soumissionnaire doit obligatoirement prendre rendez-vous par mail ou par téléphone avec Richard CONSTANT – 0496 549 516 – richard.constant@idelux.be",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/738011-2026",
-      "publicationWorkspaceId": "c8f644c1-84c5-4e68-bb7e-c1d2dbfd603c",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/703599-2026",
-          "publicationNumber": "703599-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/c8f644c1-84c5-4e68-bb7e-c1d2dbfd603c/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        },
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/738011-2026",
-          "publicationNumber": "738011-2026"
-        }
-      ],
-      "matchReason": "mission_globale_a_qualifier",
-      "screeningReason": null,
-      "noticeNumbers": [
-        "703599-2026",
-        "738011-2026"
-      ],
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
       "id": "bosa:289c32a7-5b46-4717-be44-969eebeae536",
       "publicationWorkspaceId": "289c32a7-5b46-4717-be44-969eebeae536",
       "noticeId": "b8080126-244d-470a-9d59-0dbe6def5f8e",
@@ -1234,6 +1351,62 @@
       "noticeNumbers": [
         "739966-2026"
       ]
+    },
+    {
+      "id": "ted:703599-2026",
+      "publicationNumber": "738011-2026",
+      "procedureIdentifier": "daa0f293-acd8-4549-8083-f82cb855302b",
+      "title": "Belgique – Services d'architecture, services de construction, services d'ingénierie et services d'inspection – FEDER - Chiny - Rénovation énergétique - Désignation d'auteur de projet",
+      "buyer": "IDELUX Projets publics ; Commune de Chiny",
+      "region": "Belgique",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-10-26",
+      "deadline": "2026-11-27",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Il s'agit d'un marché conjoint (IDELUX Projets publics - Commune de Chiny) portant sur la désignation d'un auteur de projet pour une importante rénovation énergétique du bâtiment de l’Administration communale de Chiny (Château du Faing) dans le cadre de la programmation « FEDER 2021-2027 – Mesure 8 ». Le bâtiment et ses alentours, sis à la Rue du Faing, 10 à 6810 Chiny, comportent certaines parties classées selon l’arrêté du 18 février 1997 au patrimoine protégé par l’administration wallonne. Le soumissionnaire a l’obligation de visiter les lieux concernés afin d’appréhender toutes les conditions particulières d’exécution du présent marché. Les dates de visite sont fixées : • Mercredi 21 octobre 2026 à 10h00 • Mercredi 28 octobre 2026 à 13h30 • Mercredi 04 novembre 2026 à 13h30 • Vendredi13 novembre 2026 à 13h30 Ces dates pourraient être amenées à évoluer selon les besoins. Dans tous les cas, pour la bonne organisation des visites, chaque soumissionnaire doit obligatoirement prendre rendez-vous par mail ou par téléphone avec Richard CONSTANT – 0496 549 516 – richard.constant@idelux.be",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/738011-2026",
+      "publicationWorkspaceId": "c8f644c1-84c5-4e68-bb7e-c1d2dbfd603c",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/703599-2026",
+          "publicationNumber": "703599-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/c8f644c1-84c5-4e68-bb7e-c1d2dbfd603c/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        },
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/738011-2026",
+          "publicationNumber": "738011-2026"
+        }
+      ],
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "703599-2026",
+        "738011-2026"
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
+        "capacityStatus": "not_assessed"
+      }
     },
     {
       "id": "ted:740374-2026",
@@ -1341,72 +1514,6 @@
         "kind": "services",
         "route": "partner",
         "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
-      "id": "bosa:3d464fb7-ccf9-43c6-97dd-54e641b17836",
-      "publicationWorkspaceId": "3d464fb7-ccf9-43c6-97dd-54e641b17836",
-      "noticeId": "6efb47eb-b360-4c22-af0c-9a830c4744a8",
-      "procedureIdentifier": "3797179b-85d7-4f98-bd8e-8ef5efd795e0",
-      "internalReference": "PPP0B1-627/6061/2026-026_001",
-      "title": "Mission complète d'auteur de projet relative à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR)",
-      "buyer": "Ellezelles",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "publication": "2026-10-22",
-      "deadline": "2026-11-16T10:00:00+01:00",
-      "cpv": [
-        "71240000"
-      ],
-      "description": "Mission complète d'auteur de projet relative à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR)",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "16",
-      "noticeKind": "competition",
-      "bdaReference": "PPP0B1-627/6061/2026-026_001",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/3d464fb7-ccf9-43c6-97dd-54e641b17836/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/3d464fb7-ccf9-43c6-97dd-54e641b17836/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [],
-      "consultationUrls": [
-        {
-          "url": "https://cloud.3p.eu/Downloads/1/627/B1/2026",
-          "type": "officially_referenced_external_documents",
-          "access": "destination_not_download_verified",
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/3d464fb7-ccf9-43c6-97dd-54e641b17836/urls?full=false",
-          "activatedAt": "2026-09-30T12:34:45.021105"
-        }
-      ],
-      "documentsCheckedAt": "2026-10-22T10:20:30.143Z",
-      "matchReason": "mission_globale_a_qualifier",
-      "screeningReason": null,
-      "officialSources": [
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/3d464fb7-ccf9-43c6-97dd-54e641b17836/general"
-        }
-      ],
-      "deadlineTime": "10:00",
-      "deadlineTimeZone": "Europe/Brussels",
-      "deadlineSourceKind": "bosa_verified_public",
-      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/3d464fb7-ccf9-43c6-97dd-54e641b17836/general",
-      "deadlineSourceEvidence": "Date limite de soumission 16/11/2026 10:00 CET",
-      "deadlineVerifiedAt": "2026-10-28T08:35:44.807Z",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
         "capacityStatus": "not_assessed"
       }
     },
@@ -1588,6 +1695,72 @@
         "kind": "unknown",
         "route": "scope",
         "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      }
+    },
+    {
+      "id": "bosa:3d464fb7-ccf9-43c6-97dd-54e641b17836",
+      "publicationWorkspaceId": "3d464fb7-ccf9-43c6-97dd-54e641b17836",
+      "noticeId": "6efb47eb-b360-4c22-af0c-9a830c4744a8",
+      "procedureIdentifier": "3797179b-85d7-4f98-bd8e-8ef5efd795e0",
+      "internalReference": "PPP0B1-627/6061/2026-026_001",
+      "title": "Mission complète d'auteur de projet relative à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR)",
+      "buyer": "Ellezelles",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-10-22",
+      "deadline": "2026-11-16T10:00:00+01:00",
+      "cpv": [
+        "71240000"
+      ],
+      "description": "Mission complète d'auteur de projet relative à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR)",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "PPP0B1-627/6061/2026-026_001",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/3d464fb7-ccf9-43c6-97dd-54e641b17836/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/3d464fb7-ccf9-43c6-97dd-54e641b17836/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [],
+      "consultationUrls": [
+        {
+          "url": "https://cloud.3p.eu/Downloads/1/627/B1/2026",
+          "type": "officially_referenced_external_documents",
+          "access": "destination_not_download_verified",
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/3d464fb7-ccf9-43c6-97dd-54e641b17836/urls?full=false",
+          "activatedAt": "2026-09-30T12:34:45.021105"
+        }
+      ],
+      "documentsCheckedAt": "2026-10-22T10:20:30.143Z",
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/3d464fb7-ccf9-43c6-97dd-54e641b17836/general"
+        }
+      ],
+      "deadlineTime": "10:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/3d464fb7-ccf9-43c6-97dd-54e641b17836/general",
+      "deadlineSourceEvidence": "Date limite de soumission 16/11/2026 10:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T08:35:44.807Z",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
         "capacityStatus": "not_assessed"
       }
     },
@@ -1877,6 +2050,80 @@
       "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
     },
     {
+      "id": "bosa:32f67a37-5891-4648-a96a-af40e9033011",
+      "publicationWorkspaceId": "32f67a37-5891-4648-a96a-af40e9033011",
+      "noticeId": "e89ccf26-06b1-4ef4-a6e3-5932fd6a9995",
+      "procedureIdentifier": "3dd662fc-c2e3-46e4-a5a7-875817befe4f",
+      "internalReference": "RDGB-WRE-2025-611533-309_pub01",
+      "title": "Herstal - SPF Intérieur - Etudes en vue des travaux de démontage et de mise en conformité des réseaux de distribution d’eau sanitaire et d’extinction incendie",
+      "buyer": "Régie des Bâtiments - Wallonie Région Est",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Reseaux",
+      "sectors": [
+        "Reseaux"
+      ],
+      "score": 74,
+      "screening": "review",
+      "publication": "2026-10-21",
+      "deadline": "2026-11-27T11:00:00+01:00",
+      "cpv": [
+        "71300000",
+        "71317100",
+        "71322000"
+      ],
+      "description": "Le Marché a pour objet les travaux, les fournitures, les services, le transport, la main-d’oeuvre et tous les moyens nécessaires à la réalisation d’études en vue des travaux de démontage et de mise en conformité des réseaux de distribution d’eau sanitaire et d’extinction d’incendie.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "RDGB-WRE-2025-611533-309_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "0d16f934-ba92-43e5-8c3d-71c1e856f4b2",
+          "title": "WRE-2025-611533-309 Formulaire de demande documents du marché.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "b7468d58-745d-45c6-aee6-b1e4f29f7b00",
+          "documentId": "de51f515-81d4-4514-8acf-eebbc2143ccb",
+          "activatedAt": "2026-10-21T14:46:46.019466",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-21T16:06:24.655Z",
+      "matchReason": "projet_indirect",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/general"
+        }
+      ],
+      "deadlineTime": "11:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n27/11/2026 11:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      }
+    },
+    {
       "id": "bosa:1ec3a4ad-4466-416b-b7c5-818f4ba95c88",
       "publicationWorkspaceId": "1ec3a4ad-4466-416b-b7c5-818f4ba95c88",
       "noticeId": "a558c274-dcbb-41d4-bbbb-b97eaf11e931",
@@ -1993,186 +2240,6 @@
         "kind": "services",
         "route": "scope",
         "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
-      "id": "bosa:32f67a37-5891-4648-a96a-af40e9033011",
-      "publicationWorkspaceId": "32f67a37-5891-4648-a96a-af40e9033011",
-      "noticeId": "e89ccf26-06b1-4ef4-a6e3-5932fd6a9995",
-      "procedureIdentifier": "3dd662fc-c2e3-46e4-a5a7-875817befe4f",
-      "internalReference": "RDGB-WRE-2025-611533-309_pub01",
-      "title": "Herstal - SPF Intérieur - Etudes en vue des travaux de démontage et de mise en conformité des réseaux de distribution d’eau sanitaire et d’extinction incendie",
-      "buyer": "Régie des Bâtiments - Wallonie Région Est",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Reseaux",
-      "sectors": [
-        "Reseaux"
-      ],
-      "score": 74,
-      "screening": "review",
-      "publication": "2026-10-21",
-      "deadline": "2026-11-27T11:00:00+01:00",
-      "cpv": [
-        "71300000",
-        "71317100",
-        "71322000"
-      ],
-      "description": "Le Marché a pour objet les travaux, les fournitures, les services, le transport, la main-d’oeuvre et tous les moyens nécessaires à la réalisation d’études en vue des travaux de démontage et de mise en conformité des réseaux de distribution d’eau sanitaire et d’extinction d’incendie.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "16",
-      "noticeKind": "competition",
-      "bdaReference": "RDGB-WRE-2025-611533-309_pub01",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [
-        {
-          "id": "0d16f934-ba92-43e5-8c3d-71c1e856f4b2",
-          "title": "WRE-2025-611533-309 Formulaire de demande documents du marché.docx",
-          "kind": "other",
-          "fileType": "docx",
-          "versionId": "b7468d58-745d-45c6-aee6-b1e4f29f7b00",
-          "documentId": "de51f515-81d4-4514-8acf-eebbc2143ccb",
-          "activatedAt": "2026-10-21T14:46:46.019466",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        }
-      ],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-21T16:06:24.655Z",
-      "matchReason": "projet_indirect",
-      "screeningReason": null,
-      "officialSources": [
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/general"
-        }
-      ],
-      "deadlineTime": "11:00",
-      "deadlineTimeZone": "Europe/Brussels",
-      "deadlineSourceKind": "bosa_verified_public",
-      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/32f67a37-5891-4648-a96a-af40e9033011/general",
-      "deadlineSourceEvidence": "Date limite de soumission\n27/11/2026 11:00 CET",
-      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
-      "id": "ted:682582-2026",
-      "publicationNumber": "722810-2026",
-      "procedureIdentifier": "9492f68c-30e2-4f2e-b13a-987b2a466987",
-      "title": "Belgique – Services d'architecte pour les bâtiments – Mission d’auteur de projet relative à la rénovation de trois bâtiments en logements et équipement mixte de proximité dans le cadre du Contrat de Quartier Durable « Conscience »",
-      "buyer": "Commune d'Evere",
-      "region": "Belgique",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "publication": "2026-10-20",
-      "deadline": "",
-      "cpv": [
-        "71221000"
-      ],
-      "description": "Mission d’auteur de projet relative à la rénovation de trois bâtiments en logements et équipement mixte de proximité dans le cadre du Contrat de Quartier Durable « Conscience »",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/722810-2026",
-      "publicationWorkspaceId": "a84d88b2-2d0b-4a95-863c-1ba6c3f79041",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/682582-2026",
-          "publicationNumber": "682582-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/a84d88b2-2d0b-4a95-863c-1ba6c3f79041/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        },
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/722810-2026",
-          "publicationNumber": "722810-2026"
-        }
-      ],
-      "matchReason": "mission_architecturale_a_qualifier",
-      "screeningReason": null,
-      "noticeNumbers": [
-        "682582-2026",
-        "722810-2026"
-      ],
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "partner",
-        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
-      "id": "ted:722881-2026",
-      "publicationNumber": "722881-2026",
-      "procedureIdentifier": "d985a953-8839-4b4f-b98c-74b1f444f83f",
-      "title": "Belgique – Services d'architecte pour les bâtiments – Marché de services - Intervention d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
-      "buyer": "Ville de Soignies",
-      "region": "Belgique",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "publication": "2026-10-20",
-      "deadline": "2026-11-20",
-      "cpv": [
-        "71221000"
-      ],
-      "description": "Marché de services - Intervention d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/722881-2026",
-      "matchReason": "mission_architecturale_a_qualifier",
-      "screeningReason": null,
-      "noticeNumbers": [
-        "722881-2026"
-      ],
-      "publicationWorkspaceId": "aff07e4b-f1d4-427d-bd0f-e1baf7aa4f73",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/722881-2026",
-          "publicationNumber": "722881-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/aff07e4b-f1d4-427d-bd0f-e1baf7aa4f73/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        }
-      ],
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "partner",
-        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
         "capacityStatus": "not_assessed"
       }
     },
@@ -2466,6 +2533,172 @@
       }
     },
     {
+      "id": "bosa:9b2d4ca1-90f1-48ea-95dd-0383fdb60adc",
+      "publicationWorkspaceId": "9b2d4ca1-90f1-48ea-95dd-0383fdb60adc",
+      "noticeId": "836e4e88-1ccb-4459-abe2-fe65fd0bd277",
+      "procedureIdentifier": "8172ed88-2a98-41fb-af61-4095549f5961",
+      "internalReference": "PPP0FL-2299/6072/2026/16 U_003",
+      "title": "Révision du guide communal d'urbanisme - Réalisation d'un rapport sur les incidences environnementales",
+      "buyer": "Rixensart",
+      "region": "Bruxelles",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Foncier",
+      "sectors": [
+        "Foncier"
+      ],
+      "score": 62,
+      "screening": "review",
+      "publication": "2026-10-20",
+      "deadline": "",
+      "cpv": [
+        "71410000"
+      ],
+      "description": "Révision du guide communal d'urbanisme : Réalisation d'un rapport sur les incidences environnementales",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0FL-2299/6072/2026/16 U_003",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/9b2d4ca1-90f1-48ea-95dd-0383fdb60adc/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/9b2d4ca1-90f1-48ea-95dd-0383fdb60adc/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP0FL-2299/6072/2026/16 U_003",
+          "url": "https://www.publicprocurement.be/publication-workspaces/9b2d4ca1-90f1-48ea-95dd-0383fdb60adc/general",
+          "publicationDate": "2026-10-20",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-20T15:48:29.753Z",
+      "matchReason": "projet_indirect",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/9b2d4ca1-90f1-48ea-95dd-0383fdb60adc/general"
+        }
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      }
+    },
+    {
+      "id": "ted:682582-2026",
+      "publicationNumber": "722810-2026",
+      "procedureIdentifier": "9492f68c-30e2-4f2e-b13a-987b2a466987",
+      "title": "Belgique – Services d'architecte pour les bâtiments – Mission d’auteur de projet relative à la rénovation de trois bâtiments en logements et équipement mixte de proximité dans le cadre du Contrat de Quartier Durable « Conscience »",
+      "buyer": "Commune d'Evere",
+      "region": "Belgique",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-10-20",
+      "deadline": "",
+      "cpv": [
+        "71221000"
+      ],
+      "description": "Mission d’auteur de projet relative à la rénovation de trois bâtiments en logements et équipement mixte de proximité dans le cadre du Contrat de Quartier Durable « Conscience »",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/722810-2026",
+      "publicationWorkspaceId": "a84d88b2-2d0b-4a95-863c-1ba6c3f79041",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/682582-2026",
+          "publicationNumber": "682582-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/a84d88b2-2d0b-4a95-863c-1ba6c3f79041/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        },
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/722810-2026",
+          "publicationNumber": "722810-2026"
+        }
+      ],
+      "matchReason": "mission_architecturale_a_qualifier",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "682582-2026",
+        "722810-2026"
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "partner",
+        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
+        "capacityStatus": "not_assessed"
+      }
+    },
+    {
+      "id": "ted:722881-2026",
+      "publicationNumber": "722881-2026",
+      "procedureIdentifier": "d985a953-8839-4b4f-b98c-74b1f444f83f",
+      "title": "Belgique – Services d'architecte pour les bâtiments – Marché de services - Intervention d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
+      "buyer": "Ville de Soignies",
+      "region": "Belgique",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-10-20",
+      "deadline": "2026-11-20",
+      "cpv": [
+        "71221000"
+      ],
+      "description": "Marché de services - Intervention d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/722881-2026",
+      "matchReason": "mission_architecturale_a_qualifier",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "722881-2026"
+      ],
+      "publicationWorkspaceId": "aff07e4b-f1d4-427d-bd0f-e1baf7aa4f73",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/722881-2026",
+          "publicationNumber": "722881-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/aff07e4b-f1d4-427d-bd0f-e1baf7aa4f73/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "partner",
+        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
+        "capacityStatus": "not_assessed"
+      }
+    },
+    {
       "id": "bosa:aa503fa1-8c7e-4bf4-aca0-7b78c0b36369",
       "publicationWorkspaceId": "aa503fa1-8c7e-4bf4-aca0-7b78c0b36369",
       "noticeId": "1129f6eb-3cbd-426b-9b69-7b1e716a2dee",
@@ -2560,66 +2793,6 @@
         "kind": "services",
         "route": "scope",
         "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
-      "id": "bosa:9b2d4ca1-90f1-48ea-95dd-0383fdb60adc",
-      "publicationWorkspaceId": "9b2d4ca1-90f1-48ea-95dd-0383fdb60adc",
-      "noticeId": "836e4e88-1ccb-4459-abe2-fe65fd0bd277",
-      "procedureIdentifier": "8172ed88-2a98-41fb-af61-4095549f5961",
-      "internalReference": "PPP0FL-2299/6072/2026/16 U_003",
-      "title": "Révision du guide communal d'urbanisme - Réalisation d'un rapport sur les incidences environnementales",
-      "buyer": "Rixensart",
-      "region": "Bruxelles",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Foncier",
-      "sectors": [
-        "Foncier"
-      ],
-      "score": 62,
-      "screening": "review",
-      "publication": "2026-10-20",
-      "deadline": "",
-      "cpv": [
-        "71410000"
-      ],
-      "description": "Révision du guide communal d'urbanisme : Réalisation d'un rapport sur les incidences environnementales",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "E4",
-      "noticeKind": "award",
-      "bdaReference": "PPP0FL-2299/6072/2026/16 U_003",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/9b2d4ca1-90f1-48ea-95dd-0383fdb60adc/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/9b2d4ca1-90f1-48ea-95dd-0383fdb60adc/documents",
-      "documentsPageSource": "public_api_200",
-      "bosaResults": [
-        {
-          "reference": "PPP0FL-2299/6072/2026/16 U_003",
-          "url": "https://www.publicprocurement.be/publication-workspaces/9b2d4ca1-90f1-48ea-95dd-0383fdb60adc/general",
-          "publicationDate": "2026-10-20",
-          "kind": "award"
-        }
-      ],
-      "documentInventory": [],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-20T15:48:29.753Z",
-      "matchReason": "projet_indirect",
-      "screeningReason": null,
-      "officialSources": [
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/9b2d4ca1-90f1-48ea-95dd-0383fdb60adc/general"
-        }
-      ],
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
         "capacityStatus": "not_assessed"
       }
     },
@@ -3094,7 +3267,7 @@
           "versionId": "ddf24280-7180-4af0-9cc3-c050455a2c18",
           "documentId": "6c1fd0d8-3f25-4764-8e27-9bb907ccf665",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "DE,FR",
+          "language": "FR,DE",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -3107,14 +3280,14 @@
           "versionId": "41c1dfd3-e395-4b17-9583-72b8baeacc90",
           "documentId": "815fd779-551d-48fc-a533-f11b9a86434c",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "DE,FR",
+          "language": "FR,DE",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-27T10:43:01.334Z",
+      "documentsCheckedAt": "2026-10-29T11:40:17.216Z",
       "matchReason": "mission_architecturale_a_qualifier",
       "screeningReason": null,
       "officialSources": [
@@ -3710,6 +3883,57 @@
       }
     },
     {
+      "id": "ted:717330-2026",
+      "publicationNumber": "717330-2026",
+      "procedureIdentifier": "3c606183-05e2-464b-b8e3-f494c24e5bd9",
+      "title": "Belgique – Services d'inventaire forestier – Marché de services de géolocalisation des arbres d’alignement et isolés situés sur le réseau non structurant du SPW-MI",
+      "buyer": "Service public de wallonie",
+      "region": "Belgique",
+      "sector": "Foncier",
+      "sectors": [
+        "Foncier",
+        "VRD"
+      ],
+      "score": 74,
+      "screening": "review",
+      "publication": "2026-10-16",
+      "deadline": "2026-11-16",
+      "cpv": [
+        "77231400"
+      ],
+      "description": "Le présent marché a pour objet la géolocalisation des arbres d’alignement et isolés situés le long des réseaux non-structurant (routes, voies hydrauliques et RAVEL) du SPW Mobilité Infrastructures afin de simplifier la gestion du patrimoine arboré du SPWMI par un inventaire utilisable par les agents du SPW, des communes et les usagers.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/717330-2026",
+      "publicationWorkspaceId": "a6667091-0de6-4513-af35-59ddba7d548b",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/717330-2026",
+          "publicationNumber": "717330-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/a6667091-0de6-4513-af35-59ddba7d548b/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ],
+      "matchReason": "projet_indirect",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "717330-2026"
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      }
+    },
+    {
       "id": "bosa:20ca3de5-db3f-4387-901d-8c11180c06c3",
       "publicationWorkspaceId": "20ca3de5-db3f-4387-901d-8c11180c06c3",
       "noticeId": "544b5f50-7d86-4cda-9e97-8b391beef476",
@@ -3823,57 +4047,6 @@
         "kind": "services",
         "route": "scope",
         "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
-      "id": "ted:717330-2026",
-      "publicationNumber": "717330-2026",
-      "procedureIdentifier": "3c606183-05e2-464b-b8e3-f494c24e5bd9",
-      "title": "Belgique – Services d'inventaire forestier – Marché de services de géolocalisation des arbres d’alignement et isolés situés sur le réseau non structurant du SPW-MI",
-      "buyer": "Service public de wallonie",
-      "region": "Belgique",
-      "sector": "Foncier",
-      "sectors": [
-        "Foncier",
-        "VRD"
-      ],
-      "score": 74,
-      "screening": "review",
-      "publication": "2026-10-16",
-      "deadline": "2026-11-16",
-      "cpv": [
-        "77231400"
-      ],
-      "description": "Le présent marché a pour objet la géolocalisation des arbres d’alignement et isolés situés le long des réseaux non-structurant (routes, voies hydrauliques et RAVEL) du SPW Mobilité Infrastructures afin de simplifier la gestion du patrimoine arboré du SPWMI par un inventaire utilisable par les agents du SPW, des communes et les usagers.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/717330-2026",
-      "publicationWorkspaceId": "a6667091-0de6-4513-af35-59ddba7d548b",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/717330-2026",
-          "publicationNumber": "717330-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/a6667091-0de6-4513-af35-59ddba7d548b/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        }
-      ],
-      "matchReason": "projet_indirect",
-      "screeningReason": null,
-      "noticeNumbers": [
-        "717330-2026"
-      ],
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
         "capacityStatus": "not_assessed"
       }
     },
@@ -4045,126 +4218,6 @@
         "kind": "services",
         "route": "service",
         "explanation": "Prestation métier repérée dans l’objet. Les conditions de participation et les moyens KDRIX restent à vérifier.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
-      "id": "bosa:e25fa7d0-3794-4e34-9ff5-7ee044eda4ad",
-      "publicationWorkspaceId": "e25fa7d0-3794-4e34-9ff5-7ee044eda4ad",
-      "noticeId": "623ac2ac-c5e9-4533-97eb-01954ba96d4c",
-      "procedureIdentifier": "e42dd730-feb3-4cb2-8d2e-bd868aeea74c",
-      "internalReference": "PPP093-3289/6187/MS-PNSPP/26-3289_002",
-      "title": "Désignation d'un auteur de projet pour la réfection de la rue de Kleinbettingen et la création d'un trottoir",
-      "buyer": "Administration Communale de la Ville d'Arlon",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "publication": "2026-10-15",
-      "deadline": "",
-      "cpv": [
-        "71000000"
-      ],
-      "description": "Désignation d'un auteur de projet pour la réfection de la rue de Kleinbettingen et la création d'un trottoir",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "E4",
-      "noticeKind": "award",
-      "bdaReference": "PPP093-3289/6187/MS-PNSPP/26-3289_002",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/e25fa7d0-3794-4e34-9ff5-7ee044eda4ad/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/e25fa7d0-3794-4e34-9ff5-7ee044eda4ad/documents",
-      "documentsPageSource": "public_api_200",
-      "bosaResults": [
-        {
-          "reference": "PPP093-3289/6187/MS-PNSPP/26-3289_002",
-          "url": "https://www.publicprocurement.be/publication-workspaces/e25fa7d0-3794-4e34-9ff5-7ee044eda4ad/general",
-          "publicationDate": "2026-10-15",
-          "kind": "award"
-        }
-      ],
-      "documentInventory": [],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-15T20:00:03.208Z",
-      "matchReason": "mission_globale_a_qualifier",
-      "screeningReason": null,
-      "officialSources": [
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/e25fa7d0-3794-4e34-9ff5-7ee044eda4ad/general"
-        }
-      ],
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
-      "id": "bosa:111c4331-f6fa-4eca-9a34-b9eaa91c2f33",
-      "publicationWorkspaceId": "111c4331-f6fa-4eca-9a34-b9eaa91c2f33",
-      "noticeId": "ef696dcd-6a4e-4f70-91b2-5625ee476f33",
-      "procedureIdentifier": "12a11b5c-5f5f-4d12-9d5d-f9c0870450ce",
-      "internalReference": "PPP093-3290/6184/MS-PNSPP/26-3290_003",
-      "title": "Désignation d'un auteur de projet pour la réfection de la rue Godefroid Kurth et de ses trottoirs",
-      "buyer": "Administration Communale de la Ville d'Arlon",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "publication": "2026-10-15",
-      "deadline": "",
-      "cpv": [
-        "71000000"
-      ],
-      "description": "Désignation d'un auteur de projet pour la réfection de la rue Godefroid Kurth et de ses trottoirs",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "E4",
-      "noticeKind": "award",
-      "bdaReference": "PPP093-3290/6184/MS-PNSPP/26-3290_003",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/111c4331-f6fa-4eca-9a34-b9eaa91c2f33/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/111c4331-f6fa-4eca-9a34-b9eaa91c2f33/documents",
-      "documentsPageSource": "public_api_200",
-      "bosaResults": [
-        {
-          "reference": "PPP093-3290/6184/MS-PNSPP/26-3290_003",
-          "url": "https://www.publicprocurement.be/publication-workspaces/111c4331-f6fa-4eca-9a34-b9eaa91c2f33/general",
-          "publicationDate": "2026-10-15",
-          "kind": "award"
-        }
-      ],
-      "documentInventory": [],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-15T20:00:06.888Z",
-      "matchReason": "mission_globale_a_qualifier",
-      "screeningReason": null,
-      "officialSources": [
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/111c4331-f6fa-4eca-9a34-b9eaa91c2f33/general"
-        }
-      ],
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
         "capacityStatus": "not_assessed"
       }
     },
@@ -4341,14 +4394,14 @@
       }
     },
     {
-      "id": "bosa:ec030457-eb4a-4988-b9b4-31dfc2c92d5b",
-      "publicationWorkspaceId": "ec030457-eb4a-4988-b9b4-31dfc2c92d5b",
-      "noticeId": "16a4e6d7-62ae-44b6-8b25-244e9323de62",
-      "procedureIdentifier": "8b73c219-a0c4-4da9-a8d1-4ff4ea7115da",
-      "internalReference": "2026 03 27 PNDPP SDC_pub02",
-      "title": "ACCORD-CADRE DE SERVICES POUR L’ELABORATION DU VOLET RELATIF AUX CELLULES ET IMPLANTATIONS COMMERCIALES DANS LE CADRE DE SCHÉMAS DE DÉVELOPPEMENT COMMUNAL",
-      "buyer": "IDELUX Projets publics",
-      "region": "Belgique",
+      "id": "bosa:e25fa7d0-3794-4e34-9ff5-7ee044eda4ad",
+      "publicationWorkspaceId": "e25fa7d0-3794-4e34-9ff5-7ee044eda4ad",
+      "noticeId": "623ac2ac-c5e9-4533-97eb-01954ba96d4c",
+      "procedureIdentifier": "e42dd730-feb3-4cb2-8d2e-bd868aeea74c",
+      "internalReference": "PPP093-3289/6187/MS-PNSPP/26-3289_002",
+      "title": "Désignation d'un auteur de projet pour la réfection de la rue de Kleinbettingen et la création d'un trottoir",
+      "buyer": "Administration Communale de la Ville d'Arlon",
+      "region": "Wallonie",
       "languages": [
         "FR"
       ],
@@ -4356,47 +4409,107 @@
       "sectors": [
         "Qualif"
       ],
-      "score": 46,
+      "score": 55,
       "screening": "review",
       "publication": "2026-10-15",
       "deadline": "",
       "cpv": [
-        "71241000"
+        "71000000"
       ],
-      "description": "L'objet du présent marché de services porte sur la conclusion d’un accord-cadre visant à désigner des prestataires pour des missions d’élaboration du volet commercial dans l’élaboration d’un schéma de développement communal.",
+      "description": "Désignation d'un auteur de projet pour la réfection de la rue de Kleinbettingen et la création d'un trottoir",
       "source": "BOSA",
       "source_status": "bosa_public_browser",
-      "noticeSubType": "29",
+      "noticeSubType": "E4",
       "noticeKind": "award",
-      "bdaReference": "2026 03 27 PNDPP SDC_pub02",
+      "bdaReference": "PPP093-3289/6187/MS-PNSPP/26-3289_002",
       "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/ec030457-eb4a-4988-b9b4-31dfc2c92d5b/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/ec030457-eb4a-4988-b9b4-31dfc2c92d5b/documents",
+      "url": "https://www.publicprocurement.be/publication-workspaces/e25fa7d0-3794-4e34-9ff5-7ee044eda4ad/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/e25fa7d0-3794-4e34-9ff5-7ee044eda4ad/documents",
       "documentsPageSource": "public_api_200",
       "bosaResults": [
         {
-          "reference": "2026 03 27 PNDPP SDC_pub02",
-          "url": "https://www.publicprocurement.be/publication-workspaces/ec030457-eb4a-4988-b9b4-31dfc2c92d5b/general",
+          "reference": "PPP093-3289/6187/MS-PNSPP/26-3289_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/e25fa7d0-3794-4e34-9ff5-7ee044eda4ad/general",
           "publicationDate": "2026-10-15",
           "kind": "award"
         }
       ],
       "documentInventory": [],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-15T20:00:21.620Z",
-      "matchReason": "etude_urbanistique_a_qualifier",
+      "documentsCheckedAt": "2026-10-15T20:00:03.208Z",
+      "matchReason": "mission_globale_a_qualifier",
       "screeningReason": null,
       "officialSources": [
         {
           "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/ec030457-eb4a-4988-b9b4-31dfc2c92d5b/general"
+          "url": "https://www.publicprocurement.be/publication-workspaces/e25fa7d0-3794-4e34-9ff5-7ee044eda4ad/general"
         }
       ],
       "qualification": {
         "version": "2026-10-29",
         "kind": "services",
         "route": "scope",
-        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
+        "capacityStatus": "not_assessed"
+      }
+    },
+    {
+      "id": "bosa:111c4331-f6fa-4eca-9a34-b9eaa91c2f33",
+      "publicationWorkspaceId": "111c4331-f6fa-4eca-9a34-b9eaa91c2f33",
+      "noticeId": "ef696dcd-6a4e-4f70-91b2-5625ee476f33",
+      "procedureIdentifier": "12a11b5c-5f5f-4d12-9d5d-f9c0870450ce",
+      "internalReference": "PPP093-3290/6184/MS-PNSPP/26-3290_003",
+      "title": "Désignation d'un auteur de projet pour la réfection de la rue Godefroid Kurth et de ses trottoirs",
+      "buyer": "Administration Communale de la Ville d'Arlon",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-10-15",
+      "deadline": "",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Désignation d'un auteur de projet pour la réfection de la rue Godefroid Kurth et de ses trottoirs",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP093-3290/6184/MS-PNSPP/26-3290_003",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/111c4331-f6fa-4eca-9a34-b9eaa91c2f33/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/111c4331-f6fa-4eca-9a34-b9eaa91c2f33/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP093-3290/6184/MS-PNSPP/26-3290_003",
+          "url": "https://www.publicprocurement.be/publication-workspaces/111c4331-f6fa-4eca-9a34-b9eaa91c2f33/general",
+          "publicationDate": "2026-10-15",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-15T20:00:06.888Z",
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/111c4331-f6fa-4eca-9a34-b9eaa91c2f33/general"
+        }
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
         "capacityStatus": "not_assessed"
       }
     },
@@ -4540,6 +4653,66 @@
           "url": "https://www.publicprocurement.be/publication-workspaces/4f0b7e0c-743c-4fbd-99d6-0214fdb04768/general"
         }
       ]
+    },
+    {
+      "id": "bosa:ec030457-eb4a-4988-b9b4-31dfc2c92d5b",
+      "publicationWorkspaceId": "ec030457-eb4a-4988-b9b4-31dfc2c92d5b",
+      "noticeId": "16a4e6d7-62ae-44b6-8b25-244e9323de62",
+      "procedureIdentifier": "8b73c219-a0c4-4da9-a8d1-4ff4ea7115da",
+      "internalReference": "2026 03 27 PNDPP SDC_pub02",
+      "title": "ACCORD-CADRE DE SERVICES POUR L’ELABORATION DU VOLET RELATIF AUX CELLULES ET IMPLANTATIONS COMMERCIALES DANS LE CADRE DE SCHÉMAS DE DÉVELOPPEMENT COMMUNAL",
+      "buyer": "IDELUX Projets publics",
+      "region": "Belgique",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 46,
+      "screening": "review",
+      "publication": "2026-10-15",
+      "deadline": "",
+      "cpv": [
+        "71241000"
+      ],
+      "description": "L'objet du présent marché de services porte sur la conclusion d’un accord-cadre visant à désigner des prestataires pour des missions d’élaboration du volet commercial dans l’élaboration d’un schéma de développement communal.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "29",
+      "noticeKind": "award",
+      "bdaReference": "2026 03 27 PNDPP SDC_pub02",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/ec030457-eb4a-4988-b9b4-31dfc2c92d5b/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/ec030457-eb4a-4988-b9b4-31dfc2c92d5b/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "2026 03 27 PNDPP SDC_pub02",
+          "url": "https://www.publicprocurement.be/publication-workspaces/ec030457-eb4a-4988-b9b4-31dfc2c92d5b/general",
+          "publicationDate": "2026-10-15",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-15T20:00:21.620Z",
+      "matchReason": "etude_urbanistique_a_qualifier",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/ec030457-eb4a-4988-b9b4-31dfc2c92d5b/general"
+        }
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      }
     },
     {
       "id": "bosa:bfede479-c5fe-4cc6-a832-375d832f1487",
@@ -5080,58 +5253,6 @@
       }
     },
     {
-      "id": "ted:706983-2026",
-      "publicationNumber": "706983-2026",
-      "procedureIdentifier": "eb0c1baf-9fb6-4dfe-a24f-a6432a701c43",
-      "title": "Belgique – Études de faisabilité, service de conseil, analyse – Programmations culturelle et architecturale de la Maison-musée Salvatore Adamo et encadrement de la mission d'auteur de projet",
-      "buyer": "Ville de Mons",
-      "region": "Belgique",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "publication": "2026-10-13",
-      "deadline": "2026-11-03",
-      "cpv": [
-        "71241000",
-        "71210000",
-        "71240000"
-      ],
-      "description": "Le présent marché a pour objectif de désigner un-e spécialiste des programmations culturelle et architecturale, afin d’accompagner la traduction opérationnelle du projet de la Maison Salvatore Adamo en un lieu muséal et culturel à forte vocation touristique. Il s’agira de définir les orientations, usages et fonctionnalités permettant d’articuler, au sein du bâtiment et de ses abords, une double ambition : la valorisation patrimoniale et la mise en œuvre d’un musée vivant, dont la dynamique repose sur la programmation artistique et l’accueil de créateurs. Les prestations attendues intègreront également une expertise en concertation et en gouvernance collaborative, en vue d’assurer l’ancrage territorial du projet et la valorisation de la création musicale locale. L’équipe doit se composer au minimum de : >un ARCHITECTE ou INGENIEUR CIVIL ARCHITECTE >un EXPERT EN INGENIERIE CULTURELLE >un EXPERT EN INTELLIGENCE COLLECTIVE Le présent marché est divisé en 5 \"volets\" et c'est un marché à tranches ferme et conditionnelles. La tranche ferme porte sur le volet 1, le volet 2, 3, 4 et 5 étant des tranches conditionnelles et sont donc susceptibles de ne pas être commandées par le pouvoir adjudicateur en fonction de l'évolution du projet, de ses possibilités financières ou pour toute autre raison qui lui est propre. Le prestataire de service est avisé que le Pouvoir Adjudicateur est susceptible d’interrompre la mission après chacune des phases pour des raisons qui lui sont propres, sans qu’il en résulte pour lui aucune indemnité.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/706983-2026",
-      "publicationWorkspaceId": "6d712988-8783-48b1-8e45-771248080158",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/706983-2026",
-          "publicationNumber": "706983-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/6d712988-8783-48b1-8e45-771248080158/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        }
-      ],
-      "matchReason": "mission_architecturale_a_qualifier",
-      "screeningReason": null,
-      "noticeNumbers": [
-        "706983-2026"
-      ],
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "partner",
-        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
       "id": "bosa:3b81ba48-e9f4-4d6f-9c05-5ba699c7f209",
       "publicationWorkspaceId": "3b81ba48-e9f4-4d6f-9c05-5ba699c7f209",
       "noticeId": "01fc4a1d-8029-40a8-90bd-1deb009b7e14",
@@ -5254,6 +5375,58 @@
         "kind": "unknown",
         "route": "scope",
         "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      }
+    },
+    {
+      "id": "ted:706983-2026",
+      "publicationNumber": "706983-2026",
+      "procedureIdentifier": "eb0c1baf-9fb6-4dfe-a24f-a6432a701c43",
+      "title": "Belgique – Études de faisabilité, service de conseil, analyse – Programmations culturelle et architecturale de la Maison-musée Salvatore Adamo et encadrement de la mission d'auteur de projet",
+      "buyer": "Ville de Mons",
+      "region": "Belgique",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-10-13",
+      "deadline": "2026-11-03",
+      "cpv": [
+        "71241000",
+        "71210000",
+        "71240000"
+      ],
+      "description": "Le présent marché a pour objectif de désigner un-e spécialiste des programmations culturelle et architecturale, afin d’accompagner la traduction opérationnelle du projet de la Maison Salvatore Adamo en un lieu muséal et culturel à forte vocation touristique. Il s’agira de définir les orientations, usages et fonctionnalités permettant d’articuler, au sein du bâtiment et de ses abords, une double ambition : la valorisation patrimoniale et la mise en œuvre d’un musée vivant, dont la dynamique repose sur la programmation artistique et l’accueil de créateurs. Les prestations attendues intègreront également une expertise en concertation et en gouvernance collaborative, en vue d’assurer l’ancrage territorial du projet et la valorisation de la création musicale locale. L’équipe doit se composer au minimum de : >un ARCHITECTE ou INGENIEUR CIVIL ARCHITECTE >un EXPERT EN INGENIERIE CULTURELLE >un EXPERT EN INTELLIGENCE COLLECTIVE Le présent marché est divisé en 5 \"volets\" et c'est un marché à tranches ferme et conditionnelles. La tranche ferme porte sur le volet 1, le volet 2, 3, 4 et 5 étant des tranches conditionnelles et sont donc susceptibles de ne pas être commandées par le pouvoir adjudicateur en fonction de l'évolution du projet, de ses possibilités financières ou pour toute autre raison qui lui est propre. Le prestataire de service est avisé que le Pouvoir Adjudicateur est susceptible d’interrompre la mission après chacune des phases pour des raisons qui lui sont propres, sans qu’il en résulte pour lui aucune indemnité.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/706983-2026",
+      "publicationWorkspaceId": "6d712988-8783-48b1-8e45-771248080158",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/706983-2026",
+          "publicationNumber": "706983-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/6d712988-8783-48b1-8e45-771248080158/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ],
+      "matchReason": "mission_architecturale_a_qualifier",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "706983-2026"
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "partner",
+        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
         "capacityStatus": "not_assessed"
       }
     },
@@ -6244,6 +6417,49 @@
       }
     },
     {
+      "id": "ted:699276-2026",
+      "publicationNumber": "699276-2026",
+      "procedureIdentifier": "650b00f9-1e29-4cd7-9f20-bfc9fcde766c",
+      "title": "Belgique – Services prestés par les médecins spécialistes – Cahier spécial des charges relatif à l’assistance spécialisée à la Direction Générale Transport Aérien en matière d’application de la règlementation européenne EC 1178 /2011, 805/2011, 2015/340 concernant l’aptitude médicale des pilotes, des contrôleurs aériens et du personnel de cabine pour le compte du Service Public Fédéral Mobilité et Transports",
+      "buyer": "SPF Mobilité et Transports",
+      "region": "Belgique",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 62,
+      "screening": "excluded",
+      "publication": "2026-10-09",
+      "deadline": "2026-10-19",
+      "cpv": [
+        "85121200"
+      ],
+      "description": "Le présent marché porte sur une assistance spécialisée à la Direction générale Transport aérien et plus particulièrement au service expertise médicale pour le compte du Service public fédéral Mobilité et Transports en matière d’application de la réglementation européenne concernant l’aptitude médicale des pilotes, des contrôleurs aériens et du personnel de cabine et plus précisément : - de la règlementation européenne EC 1178/2011 qui détermine, entre autres, les conditions pour la délivrance des certificats des médecins évaluateurs ainsi que la délivrance des certificats médicaux des pilotes et des rapports médicaux du personnel de cabine ; - des règlementations européennes EC 805/2011 et 2015/340 qui déterminent les conditions pour la délivrance des certificats des médecins évaluateurs ainsi que la délivrance des certificats médicaux des contrôleurs aériens ; - de l’Arrêté Royal du 12 juillet 2013 organisant la vérification des conditions d’aptitude physique et mentale des membres d’équipage de conduite et de cabine des aéronefs civils, ainsi que des contrôleurs aériens ; - de l’Arrêté Royal du 25 octobre 2013 fixant les redevances annuelles auxquelles est soumise l’utilisation de services publics intéressant la navigation aérienne. Dans ce cadre, la Direction générale du Transport aérien vise à la conclusion d’un marché public avec 2 experts médicaux qui seront en charge : - de l’évaluation des dossiers médicaux ; - des décisions dans le cadre des dossiers soumis à la commission de recours (secondary review) ; - de l’agrément des AeMC’s et AME’s ; - de la supervision des AeMC’s et AME’s. Le pouvoir adjudicateur choisit la procédure ouverte. Le marché ne comporte pas de lots. Il s’agit d’un marché à bordereau de prix (A.R. 18 avril 2017, art. 2, 4°). Des variantes ne sont pas autorisées. Des options ne sont pas autorisées.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/699276-2026",
+      "publicationWorkspaceId": "5fe7b3e7-15d5-4ce7-b375-818c6d56f7c8",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/699276-2026",
+          "publicationNumber": "699276-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/5fe7b3e7-15d5-4ce7-b375-818c6d56f7c8/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ],
+      "matchReason": "projet_indirect",
+      "screeningReason": "formule_administrative_sans_signal_metier",
+      "noticeNumbers": [
+        "699276-2026"
+      ]
+    },
+    {
       "id": "bosa:faefd75f-ef0f-424b-9c3d-c0ec345ad48a",
       "publicationWorkspaceId": "faefd75f-ef0f-424b-9c3d-c0ec345ad48a",
       "noticeId": "6a59db15-8d7a-4dcf-98ba-d684adc182c7",
@@ -6389,49 +6605,6 @@
       }
     },
     {
-      "id": "ted:699276-2026",
-      "publicationNumber": "699276-2026",
-      "procedureIdentifier": "650b00f9-1e29-4cd7-9f20-bfc9fcde766c",
-      "title": "Belgique – Services prestés par les médecins spécialistes – Cahier spécial des charges relatif à l’assistance spécialisée à la Direction Générale Transport Aérien en matière d’application de la règlementation européenne EC 1178 /2011, 805/2011, 2015/340 concernant l’aptitude médicale des pilotes, des contrôleurs aériens et du personnel de cabine pour le compte du Service Public Fédéral Mobilité et Transports",
-      "buyer": "SPF Mobilité et Transports",
-      "region": "Belgique",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 62,
-      "screening": "excluded",
-      "publication": "2026-10-09",
-      "deadline": "2026-10-19",
-      "cpv": [
-        "85121200"
-      ],
-      "description": "Le présent marché porte sur une assistance spécialisée à la Direction générale Transport aérien et plus particulièrement au service expertise médicale pour le compte du Service public fédéral Mobilité et Transports en matière d’application de la réglementation européenne concernant l’aptitude médicale des pilotes, des contrôleurs aériens et du personnel de cabine et plus précisément : - de la règlementation européenne EC 1178/2011 qui détermine, entre autres, les conditions pour la délivrance des certificats des médecins évaluateurs ainsi que la délivrance des certificats médicaux des pilotes et des rapports médicaux du personnel de cabine ; - des règlementations européennes EC 805/2011 et 2015/340 qui déterminent les conditions pour la délivrance des certificats des médecins évaluateurs ainsi que la délivrance des certificats médicaux des contrôleurs aériens ; - de l’Arrêté Royal du 12 juillet 2013 organisant la vérification des conditions d’aptitude physique et mentale des membres d’équipage de conduite et de cabine des aéronefs civils, ainsi que des contrôleurs aériens ; - de l’Arrêté Royal du 25 octobre 2013 fixant les redevances annuelles auxquelles est soumise l’utilisation de services publics intéressant la navigation aérienne. Dans ce cadre, la Direction générale du Transport aérien vise à la conclusion d’un marché public avec 2 experts médicaux qui seront en charge : - de l’évaluation des dossiers médicaux ; - des décisions dans le cadre des dossiers soumis à la commission de recours (secondary review) ; - de l’agrément des AeMC’s et AME’s ; - de la supervision des AeMC’s et AME’s. Le pouvoir adjudicateur choisit la procédure ouverte. Le marché ne comporte pas de lots. Il s’agit d’un marché à bordereau de prix (A.R. 18 avril 2017, art. 2, 4°). Des variantes ne sont pas autorisées. Des options ne sont pas autorisées.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/699276-2026",
-      "publicationWorkspaceId": "5fe7b3e7-15d5-4ce7-b375-818c6d56f7c8",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/699276-2026",
-          "publicationNumber": "699276-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/5fe7b3e7-15d5-4ce7-b375-818c6d56f7c8/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        }
-      ],
-      "matchReason": "projet_indirect",
-      "screeningReason": "formule_administrative_sans_signal_metier",
-      "noticeNumbers": [
-        "699276-2026"
-      ]
-    },
-    {
       "id": "bosa:b1464bc6-d603-4836-8eb2-ec8fa36c5942",
       "publicationWorkspaceId": "b1464bc6-d603-4836-8eb2-ec8fa36c5942",
       "noticeId": "1ffa21f0-7d84-43a0-aa41-aa40a951c834",
@@ -6485,67 +6658,6 @@
         "kind": "services",
         "route": "scope",
         "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
-      "id": "bosa:da5bde7e-0592-4bfd-a936-a091712802dc",
-      "publicationWorkspaceId": "da5bde7e-0592-4bfd-a936-a091712802dc",
-      "noticeId": "a8bc413b-749f-4567-9d8e-b2df8666337b",
-      "procedureIdentifier": "c78c6b71-9c99-4104-a747-38e4814bf417",
-      "internalReference": "DIDU-EV_COURTRAI_001-CDC26.001_pub02",
-      "title": "Marché de services relatif à la mission complète d’auteur de projet concernant la démolition d’un ensemble de bâtiments industriels et l’aménagement d’un jardin public en intérieur d’îlot avec trois entrées, sises rue de Courtrai 47 à 51, rue d’Ostende 74 et rue d’Ostende 92, à 1080 Molenbeek-Saint-Jean dans le cadre de l’opération 3.1.3 « Jardin Vivant »",
-      "buyer": "Molenbeek-Saint-Jean",
-      "region": "Bruxelles",
-      "languages": [
-        "NL",
-        "FR"
-      ],
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "publication": "2026-10-08",
-      "deadline": "",
-      "cpv": [
-        "71000000"
-      ],
-      "description": "Le présent marché a pour objet la mission complète d’auteur de projet concernant la démolition d’un ensemble de bâtiments industriels et l’aménagement d’un jardin public en intérieur d’îlot avec trois entrées, sises rue de Courtrai 47 à 51, rue d’Ostende 74 et rue d’Ostende 92, à 1080 Molenbeek-Saint-Jean dans le cadre de l’opération 3.1.3 « Jardin Vivant » du Contrat d’Axe et d’Îlot « Courtrai-Ostende ».",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "29",
-      "noticeKind": "award",
-      "bdaReference": "DIDU-EV_COURTRAI_001-CDC26.001_pub02",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/da5bde7e-0592-4bfd-a936-a091712802dc/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/da5bde7e-0592-4bfd-a936-a091712802dc/documents",
-      "documentsPageSource": "public_api_200",
-      "bosaResults": [
-        {
-          "reference": "DIDU-EV_COURTRAI_001-CDC26.001_pub02",
-          "url": "https://www.publicprocurement.be/publication-workspaces/da5bde7e-0592-4bfd-a936-a091712802dc/general",
-          "publicationDate": "2026-10-08",
-          "kind": "award"
-        }
-      ],
-      "documentInventory": [],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-15T20:01:02.403Z",
-      "matchReason": "mission_architecturale_a_qualifier",
-      "screeningReason": null,
-      "officialSources": [
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/da5bde7e-0592-4bfd-a936-a091712802dc/general"
-        }
-      ],
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "partner",
-        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
         "capacityStatus": "not_assessed"
       }
     },
@@ -6795,6 +6907,67 @@
       "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/701ccecb-d0c3-40ee-a001-6b3f31284990/general",
       "deadlineSourceEvidence": "Date limite de soumission\n03/11/2026 12:15 CET",
       "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
+    },
+    {
+      "id": "bosa:da5bde7e-0592-4bfd-a936-a091712802dc",
+      "publicationWorkspaceId": "da5bde7e-0592-4bfd-a936-a091712802dc",
+      "noticeId": "a8bc413b-749f-4567-9d8e-b2df8666337b",
+      "procedureIdentifier": "c78c6b71-9c99-4104-a747-38e4814bf417",
+      "internalReference": "DIDU-EV_COURTRAI_001-CDC26.001_pub02",
+      "title": "Marché de services relatif à la mission complète d’auteur de projet concernant la démolition d’un ensemble de bâtiments industriels et l’aménagement d’un jardin public en intérieur d’îlot avec trois entrées, sises rue de Courtrai 47 à 51, rue d’Ostende 74 et rue d’Ostende 92, à 1080 Molenbeek-Saint-Jean dans le cadre de l’opération 3.1.3 « Jardin Vivant »",
+      "buyer": "Molenbeek-Saint-Jean",
+      "region": "Bruxelles",
+      "languages": [
+        "NL",
+        "FR"
+      ],
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-10-08",
+      "deadline": "",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Le présent marché a pour objet la mission complète d’auteur de projet concernant la démolition d’un ensemble de bâtiments industriels et l’aménagement d’un jardin public en intérieur d’îlot avec trois entrées, sises rue de Courtrai 47 à 51, rue d’Ostende 74 et rue d’Ostende 92, à 1080 Molenbeek-Saint-Jean dans le cadre de l’opération 3.1.3 « Jardin Vivant » du Contrat d’Axe et d’Îlot « Courtrai-Ostende ».",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "29",
+      "noticeKind": "award",
+      "bdaReference": "DIDU-EV_COURTRAI_001-CDC26.001_pub02",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/da5bde7e-0592-4bfd-a936-a091712802dc/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/da5bde7e-0592-4bfd-a936-a091712802dc/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "DIDU-EV_COURTRAI_001-CDC26.001_pub02",
+          "url": "https://www.publicprocurement.be/publication-workspaces/da5bde7e-0592-4bfd-a936-a091712802dc/general",
+          "publicationDate": "2026-10-08",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-15T20:01:02.403Z",
+      "matchReason": "mission_architecturale_a_qualifier",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/da5bde7e-0592-4bfd-a936-a091712802dc/general"
+        }
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "partner",
+        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
+        "capacityStatus": "not_assessed"
+      }
     },
     {
       "id": "bosa:9d0ec06d-a008-4d61-b1a2-914f5e0bc153",
@@ -7140,6 +7313,72 @@
       }
     },
     {
+      "id": "bosa:01509819-f5c0-415f-8117-7aa3ba361605",
+      "publicationWorkspaceId": "01509819-f5c0-415f-8117-7aa3ba361605",
+      "noticeId": "20a96145-4519-4118-88c6-8be08e5042b4",
+      "procedureIdentifier": "a5d06597-d53a-45a8-97a2-efa1523b0d56",
+      "internalReference": "PPP0A2-1051/6122/20260013_001",
+      "title": "Mission de conception réalisation pour le remplacement de la cabine Haute Tension de l'espace Magnum",
+      "buyer": "Colfontaine",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 60,
+      "screening": "review",
+      "publication": "2026-10-06",
+      "deadline": "2026-11-06T11:00:00+01:00",
+      "cpv": [
+        "45315400"
+      ],
+      "description": "Mission de conception réalisation pour le remplacement de la cabine Haute Tension de l'espace Magnum",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "PPP0A2-1051/6122/20260013_001",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/01509819-f5c0-415f-8117-7aa3ba361605/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/01509819-f5c0-415f-8117-7aa3ba361605/documents",
+      "documentsPageSource": "public_api_200",
+      "matchReason": "prestation_dans_marche_de_travaux",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/01509819-f5c0-415f-8117-7aa3ba361605/general"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [
+        {
+          "url": "https://cloud.3p.eu/Downloads/1/1051/A2/2026",
+          "type": "officially_referenced_external_documents",
+          "access": "destination_not_download_verified",
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/01509819-f5c0-415f-8117-7aa3ba361605/urls?full=false",
+          "activatedAt": "2026-10-06T12:58:45.015167"
+        }
+      ],
+      "documentsCheckedAt": "2026-10-16T15:29:45.714Z",
+      "deadlineTime": "11:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/01509819-f5c0-415f-8117-7aa3ba361605/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n06/11/2026 11:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "mixed",
+        "route": "ancillary",
+        "explanation": "Marché de travaux ou contrat mixte : la prestation KDRIX peut être accessoire. Vérifier un lot distinct ou une intervention en sous-traitance.",
+        "capacityStatus": "not_assessed"
+      }
+    },
+    {
       "id": "bosa:dc91d29f-1949-4ab7-8b6f-a8fbb4cf251b",
       "publicationWorkspaceId": "dc91d29f-1949-4ab7-8b6f-a8fbb4cf251b",
       "noticeId": "3516e726-1b9a-45f1-b039-6dc45cbd38ed",
@@ -7221,72 +7460,6 @@
         "kind": "unknown",
         "route": "scope",
         "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
-      "id": "bosa:01509819-f5c0-415f-8117-7aa3ba361605",
-      "publicationWorkspaceId": "01509819-f5c0-415f-8117-7aa3ba361605",
-      "noticeId": "20a96145-4519-4118-88c6-8be08e5042b4",
-      "procedureIdentifier": "a5d06597-d53a-45a8-97a2-efa1523b0d56",
-      "internalReference": "PPP0A2-1051/6122/20260013_001",
-      "title": "Mission de conception réalisation pour le remplacement de la cabine Haute Tension de l'espace Magnum",
-      "buyer": "Colfontaine",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 60,
-      "screening": "review",
-      "publication": "2026-10-06",
-      "deadline": "2026-11-06T11:00:00+01:00",
-      "cpv": [
-        "45315400"
-      ],
-      "description": "Mission de conception réalisation pour le remplacement de la cabine Haute Tension de l'espace Magnum",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "16",
-      "noticeKind": "competition",
-      "bdaReference": "PPP0A2-1051/6122/20260013_001",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/01509819-f5c0-415f-8117-7aa3ba361605/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/01509819-f5c0-415f-8117-7aa3ba361605/documents",
-      "documentsPageSource": "public_api_200",
-      "matchReason": "prestation_dans_marche_de_travaux",
-      "screeningReason": null,
-      "officialSources": [
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/01509819-f5c0-415f-8117-7aa3ba361605/general"
-        }
-      ],
-      "documentInventory": [],
-      "consultationUrls": [
-        {
-          "url": "https://cloud.3p.eu/Downloads/1/1051/A2/2026",
-          "type": "officially_referenced_external_documents",
-          "access": "destination_not_download_verified",
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/01509819-f5c0-415f-8117-7aa3ba361605/urls?full=false",
-          "activatedAt": "2026-10-06T12:58:45.015167"
-        }
-      ],
-      "documentsCheckedAt": "2026-10-16T15:29:45.714Z",
-      "deadlineTime": "11:00",
-      "deadlineTimeZone": "Europe/Brussels",
-      "deadlineSourceKind": "bosa_verified_public",
-      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/01509819-f5c0-415f-8117-7aa3ba361605/general",
-      "deadlineSourceEvidence": "Date limite de soumission\n06/11/2026 11:00 CET",
-      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "mixed",
-        "route": "ancillary",
-        "explanation": "Marché de travaux ou contrat mixte : la prestation KDRIX peut être accessoire. Vérifier un lot distinct ou une intervention en sous-traitance.",
         "capacityStatus": "not_assessed"
       }
     },
@@ -7533,6 +7706,60 @@
       }
     },
     {
+      "id": "ted:682034-2026",
+      "publicationNumber": "682034-2026",
+      "procedureIdentifier": "07f53028-6212-4143-8dfe-a3a52a5d1719",
+      "title": "Belgique – Services topographiques – 7.1.7.2. Topographie et Quantity Survey 2027-2030 - Marché de services - Procédure ouverte",
+      "buyer": "SPF Mobilité et Transports",
+      "region": "Belgique",
+      "sector": "Topo",
+      "sectors": [
+        "Topo"
+      ],
+      "score": 95,
+      "publication": "2026-10-05",
+      "deadline": "2026-11-05",
+      "cpv": [
+        "71351810"
+      ],
+      "description": "La mission comprend : • des levés topographiques de différentes natures, caractérisés par type de site de chantier et/ou les conditions dans lesquelles ils doivent être exécutés • des prestations de Quantity Survey ; • des prestations de modélisation BIM ; • l’exécution de diverses prestations en régie ou à remboursement des frais encourus ; Les prestations porteront sur des bâtiments, des espaces publics, des ouvrages d’art, des tunnels... (cette liste est indicative) en phase programme, étude, exécution et As-Built. Les surfaces à lever et les travaux à métrer se situent exclusivement en région de Bruxelles – Capitale.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/682034-2026",
+      "relatedNoticeNumbers": [
+        "636498-2026"
+      ],
+      "noticeNumbers": [
+        "636498-2026",
+        "682034-2026"
+      ],
+      "screening": "main",
+      "publicationWorkspaceId": "f3981a2f-a3f4-4d65-a293-2643b8ee0311",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/682034-2026",
+          "publicationNumber": "682034-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/f3981a2f-a3f4-4d65-a293-2643b8ee0311/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ],
+      "screeningReason": null,
+      "matchReason": "prestation_decrite",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "service",
+        "explanation": "Prestation métier repérée dans l’objet. Les conditions de participation et les moyens KDRIX restent à vérifier.",
+        "capacityStatus": "not_assessed"
+      }
+    },
+    {
       "id": "bosa:aa328366-aa3b-415b-b666-2d59752bf12f",
       "publicationWorkspaceId": "aa328366-aa3b-415b-b666-2d59752bf12f",
       "noticeId": "e4d9c42d-7d36-46e6-b578-58907c727c2c",
@@ -7586,60 +7813,6 @@
         "kind": "services",
         "route": "scope",
         "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
-      "id": "ted:682034-2026",
-      "publicationNumber": "682034-2026",
-      "procedureIdentifier": "07f53028-6212-4143-8dfe-a3a52a5d1719",
-      "title": "Belgique – Services topographiques – 7.1.7.2. Topographie et Quantity Survey 2027-2030 - Marché de services - Procédure ouverte",
-      "buyer": "SPF Mobilité et Transports",
-      "region": "Belgique",
-      "sector": "Topo",
-      "sectors": [
-        "Topo"
-      ],
-      "score": 95,
-      "publication": "2026-10-05",
-      "deadline": "2026-11-05",
-      "cpv": [
-        "71351810"
-      ],
-      "description": "La mission comprend : • des levés topographiques de différentes natures, caractérisés par type de site de chantier et/ou les conditions dans lesquelles ils doivent être exécutés • des prestations de Quantity Survey ; • des prestations de modélisation BIM ; • l’exécution de diverses prestations en régie ou à remboursement des frais encourus ; Les prestations porteront sur des bâtiments, des espaces publics, des ouvrages d’art, des tunnels... (cette liste est indicative) en phase programme, étude, exécution et As-Built. Les surfaces à lever et les travaux à métrer se situent exclusivement en région de Bruxelles – Capitale.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/682034-2026",
-      "relatedNoticeNumbers": [
-        "636498-2026"
-      ],
-      "noticeNumbers": [
-        "636498-2026",
-        "682034-2026"
-      ],
-      "screening": "main",
-      "publicationWorkspaceId": "f3981a2f-a3f4-4d65-a293-2643b8ee0311",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/682034-2026",
-          "publicationNumber": "682034-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/f3981a2f-a3f4-4d65-a293-2643b8ee0311/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        }
-      ],
-      "screeningReason": null,
-      "matchReason": "prestation_decrite",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "service",
-        "explanation": "Prestation métier repérée dans l’objet. Les conditions de participation et les moyens KDRIX restent à vérifier.",
         "capacityStatus": "not_assessed"
       }
     },
@@ -8677,45 +8850,6 @@
       }
     },
     {
-      "id": "local:1431ffeb0c9cf374730",
-      "title": "Prospection à vérifier — Article 2. – Toutes les obligations susceptibles d’être mises à charge du bénéficiaire en exécution des dispositions impérative…",
-      "buyer": "Province de Liège",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou projet à vérifier",
-      "sourceDocument": "https://www.provincedeliege.be/conseillers/doc/pva/20251103.pdf",
-      "url": "https://www.provincedeliege.be/conseillers/doc/pva/20251103.pdf",
-      "dateSource": "",
-      "publication": "",
-      "deadline": "",
-      "cpv": [],
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "description": "Extrait du document public « Province de Liège — PV et comptes rendus » : Article 2. – Toutes les obligations susceptibles d’être mises à charge du bénéficiaire en exécution des dispositions impératives du livre IV, titre III du Code de la Démocratie locale et de la Décentralisation sont applicables à l’exécution de la présente décision. Article 3. – Le bénéficiaire devra produire les factures liées aux missions d’auteur de projets et de réalisation des aménagements. PV - Conseil provincial du 3 novembre 2025 Page 13 sur 41 Article 4. – Le Collège provincial procédera à l'engagement de la dépense. Ensuite, dès réception des déclarations de créance, des délibérations du Collège communal approuvant les justificatifs de la\nVérifier le texte complet et l’état du projet avant toute démarche commerciale.",
-      "officialSources": [
-        {
-          "source": "Conseil provincial",
-          "url": "https://www.provincedeliege.be/conseillers/doc/pva/20251103.pdf"
-        }
-      ],
-      "evidence": "Article 2. – Toutes les obligations susceptibles d’être mises à charge du bénéficiaire en exécution des dispositions impératives du livre IV, titre III du Code de la Démocratie locale et de la Décentralisation sont applicables à l’exécution de la présente décision. Article 3. – Le bénéficiaire devra produire les factures liées aux missions d’auteur de projets et de réalisation des aménagements. PV - Conseil provincial du 3 novembre 2025 Page 13 sur 41 Article 4. – Le Collège provincial procédera à l'engagement de la dépense. Ensuite, dès réception des déclarations de créance, des délibérations du Collège communal approuvant les justificatifs de la",
-      "source_status": "extrait_pdf_non_validé_humainement",
-      "matchReason": "mission_globale_a_qualifier",
-      "screeningReason": null,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
       "id": "communal:7092b8f35c924d8b04e4",
       "title": "Prospection · Beyne-Heusay · des différents paysages énoncés précédemment, mais aussi favorables pour la biodiversité, les luttes Attendu que l’étu…",
       "buyer": "Commune de Beyne-Heusay",
@@ -9511,6 +9645,45 @@
       "screeningReason": "verification_locale_navigation_ou_information_generale"
     },
     {
+      "id": "local:1431ffeb0c9cf374730",
+      "title": "Prospection à vérifier — Article 2. – Toutes les obligations susceptibles d’être mises à charge du bénéficiaire en exécution des dispositions impérative…",
+      "buyer": "Province de Liège",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou projet à vérifier",
+      "sourceDocument": "https://www.provincedeliege.be/conseillers/doc/pva/20251103.pdf",
+      "url": "https://www.provincedeliege.be/conseillers/doc/pva/20251103.pdf",
+      "dateSource": "",
+      "publication": "",
+      "deadline": "",
+      "cpv": [],
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "description": "Extrait du document public « Province de Liège — PV et comptes rendus » : Article 2. – Toutes les obligations susceptibles d’être mises à charge du bénéficiaire en exécution des dispositions impératives du livre IV, titre III du Code de la Démocratie locale et de la Décentralisation sont applicables à l’exécution de la présente décision. Article 3. – Le bénéficiaire devra produire les factures liées aux missions d’auteur de projets et de réalisation des aménagements. PV - Conseil provincial du 3 novembre 2025 Page 13 sur 41 Article 4. – Le Collège provincial procédera à l'engagement de la dépense. Ensuite, dès réception des déclarations de créance, des délibérations du Collège communal approuvant les justificatifs de la\nVérifier le texte complet et l’état du projet avant toute démarche commerciale.",
+      "officialSources": [
+        {
+          "source": "Conseil provincial",
+          "url": "https://www.provincedeliege.be/conseillers/doc/pva/20251103.pdf"
+        }
+      ],
+      "evidence": "Article 2. – Toutes les obligations susceptibles d’être mises à charge du bénéficiaire en exécution des dispositions impératives du livre IV, titre III du Code de la Démocratie locale et de la Décentralisation sont applicables à l’exécution de la présente décision. Article 3. – Le bénéficiaire devra produire les factures liées aux missions d’auteur de projets et de réalisation des aménagements. PV - Conseil provincial du 3 novembre 2025 Page 13 sur 41 Article 4. – Le Collège provincial procédera à l'engagement de la dépense. Ensuite, dès réception des déclarations de créance, des délibérations du Collège communal approuvant les justificatifs de la",
+      "source_status": "extrait_pdf_non_validé_humainement",
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      }
+    },
+    {
       "id": "communal:c3599ff87890bfb78368",
       "title": "Prospection · Beyne-Heusay · 17) Règlement complémentaire de roulage - Création d’un emplacement de stationnement pour personnes handicapées - Plac…",
       "buyer": "Commune de Beyne-Heusay",
@@ -9850,63 +10023,84 @@
       "screeningReason": "verification_locale_intention_de_mission_non_etablie"
     },
     {
-      "id": "bosa:b421ef8a-d870-48cc-89a7-91bb1489e278",
-      "publicationWorkspaceId": "b421ef8a-d870-48cc-89a7-91bb1489e278",
-      "noticeId": "bf9ae459-1d13-467a-a418-65544af9d2ca",
-      "procedureIdentifier": "560c293f-0c8f-44ed-9e1a-a62fd377ed1c",
-      "internalReference": "PPP0KC-2881/6941/AC2026-089 CB_001",
-      "title": "Services d'Assistance à Maîtrise d'Ouvrage (AMO) et de Pilotage de Projet",
-      "buyer": "CHU Brugmann - Association Hospitalière de Bruxelles et de Schaerbeek",
+      "id": "bosa:af5b161f-7ca2-4748-9872-35ddc4870980",
+      "publicationWorkspaceId": "af5b161f-7ca2-4748-9872-35ddc4870980",
+      "noticeId": "c39cb1cd-6959-4811-a558-5f80e13f3d6a",
+      "procedureIdentifier": "6bd2e57c-3ef4-4b8e-a3d0-e2c27713e5b1",
+      "internalReference": "PPP0UM-20023/6505/2026B0259_001",
+      "title": "Facilitateur Eaux pluviales",
+      "buyer": "Bruxelles Environnement",
       "region": "Bruxelles",
       "languages": [
         "NL",
         "FR"
       ],
-      "sector": "VRD",
+      "sector": "Hydraulique",
       "sectors": [
+        "Hydraulique",
         "VRD"
       ],
       "score": 62,
       "screening": "review",
-      "publication": "2026-10-28",
-      "deadline": "2026-11-17T11:00:00+01:00",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "projet_indirect",
+      "publication": "2026-10-29",
+      "deadline": "2026-11-19T10:00:00+01:00",
       "cpv": [
-        "71541000"
+        "71313000"
       ],
-      "description": "Services d'Assistance à Maîtrise d'Ouvrage (AMO) et de Pilotage de Projet",
+      "description": "La mission de ce marché vise à encourager les investissements, la prise de mesures préventives de plusieurs risques environnentaux en milieu urbain et une gestion durable de l’eau dans les bâtiments et dans l’ espace public, en Région de Bruxelles-Capitale à travers la mise à disposition d’une expertise technique et méthodologique en matière de gestion de l’eau qui vise à épauler Bruxelles-Environnement dans son rôle de :  • stimulation et (in)formation permanente du secteur du bâtiment et de l’aménagement du territoire; • soutien aux secteurs professionnels pour améliorer leurs performances; • soutien au démarrage et à la réalisation de projets, avec une facilitation pour l’accès aux permis et démarches urbanistiques.",
       "source": "BOSA",
       "source_status": "bosa_public_browser",
       "noticeSubType": "16",
       "noticeKind": "competition",
-      "bdaReference": "PPP0KC-2881/6941/AC2026-089 CB_001",
+      "bdaReference": "PPP0UM-20023/6505/2026B0259_001",
       "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/documents",
+      "url": "https://www.publicprocurement.be/publication-workspaces/af5b161f-7ca2-4748-9872-35ddc4870980/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/af5b161f-7ca2-4748-9872-35ddc4870980/documents",
       "documentsPageSource": "public_api_200",
       "documentInventory": [],
       "consultationUrls": [
         {
-          "url": "https://cloud.3p.eu/Downloads/1/2881/KC/2026",
+          "url": "https://cloud.3p.eu/Downloads/1/20023/UM/2026",
           "type": "officially_referenced_external_documents",
           "access": "destination_not_download_verified",
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/urls?full=false",
-          "activatedAt": "2026-10-28T15:20:46.016102"
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/af5b161f-7ca2-4748-9872-35ddc4870980/urls?full=false",
+          "activatedAt": "2026-10-29T12:12:46.015837"
         }
       ],
-      "documentsCheckedAt": "2026-10-28T21:16:21.283Z",
-      "deadlineTime": "11:00",
+      "documentsCheckedAt": "2026-10-29T11:43:41.140Z",
+      "deadlineTime": "10:00",
       "deadlineTimeZone": "Europe/Brussels",
       "deadlineSourceKind": "bosa_verified_public",
-      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/general",
-      "deadlineSourceEvidence": "Date limite de soumission\n17/11/2026 11:00 CET",
-      "deadlineVerifiedAt": "2026-10-28T21:16:21.724Z",
-      "matchReason": "projet_indirect",
-      "officialSources": [
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/general"
-        }
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/af5b161f-7ca2-4748-9872-35ddc4870980/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n19/11/2026 10:00 CET",
+      "deadlineVerifiedAt": "2026-10-29T11:43:45.213Z"
+    },
+    {
+      "id": "bosa:a65b6e91-155d-471d-ba9d-73e8ff4c0d13",
+      "publicationWorkspaceId": "a65b6e91-155d-471d-ba9d-73e8ff4c0d13",
+      "noticeId": "cbf53eb3-f22c-4ac5-a77d-4b3230e4ecde",
+      "procedureIdentifier": "f7f095e0-32f9-4826-a597-d545200e12ed",
+      "internalReference": "PPP0MG-843/6052/2026008_002",
+      "title": "Marché de services relatifs à l’élaboration d’un schéma de développement communal global conformément à la législation relative à l’aménagement du territoire",
+      "buyer": "Sivry-Rance",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
       ],
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 46,
+      "screening": "review",
       "qualification": {
         "version": "2026-10-29",
         "kind": "services",
@@ -9914,102 +10108,33 @@
         "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
         "capacityStatus": "not_assessed"
       },
-      "screeningReason": null
-    },
-    {
-      "id": "bosa:7fbc278d-2757-4e84-9536-b7b0f060a75d",
-      "publicationWorkspaceId": "7fbc278d-2757-4e84-9536-b7b0f060a75d",
-      "noticeId": "c3b9332f-2668-47de-97cf-35ef64b89991",
-      "procedureIdentifier": "a4c7376f-98a2-44d8-ae53-fea166f08c45",
-      "internalReference": "PPP05K-1908/6316/2026/3P/1908_002",
-      "title": "Étude et dimensionnement de dispositifs de lutte contre les inondations au sud de Neufvilles",
-      "buyer": "Soignies",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Hydraulique",
-      "sectors": [
-        "Hydraulique"
-      ],
-      "score": 74,
-      "screening": "review",
-      "publication": "2026-10-29",
+      "matchReason": "etude_urbanistique_a_qualifier",
+      "publication": "2026-10-15",
       "deadline": "",
       "cpv": [
-        "71241000"
+        "71410000"
       ],
-      "description": "Étude et dimensionnement de dispositifs de lutte contre les inondations au sud de Neufvilles",
+      "description": "Marché de services relatifs à l’élaboration d’un schéma de développement communal global conformément à la législation relative à l’aménagement du territoire",
       "source": "BOSA",
       "source_status": "bosa_public_browser",
       "noticeSubType": "E4",
       "noticeKind": "award",
-      "bdaReference": "PPP05K-1908/6316/2026/3P/1908_002",
+      "bdaReference": "PPP0MG-843/6052/2026008_002",
       "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/7fbc278d-2757-4e84-9536-b7b0f060a75d/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/7fbc278d-2757-4e84-9536-b7b0f060a75d/documents",
-      "documentsPageSource": "official_workspace_route_not_download_verified",
+      "url": "https://www.publicprocurement.be/publication-workspaces/a65b6e91-155d-471d-ba9d-73e8ff4c0d13/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/a65b6e91-155d-471d-ba9d-73e8ff4c0d13/documents",
+      "documentsPageSource": "public_api_200",
       "bosaResults": [
         {
-          "reference": "PPP05K-1908/6316/2026/3P/1908_002",
-          "url": "https://www.publicprocurement.be/publication-workspaces/7fbc278d-2757-4e84-9536-b7b0f060a75d/general",
-          "publicationDate": "2026-10-29",
+          "reference": "PPP0MG-843/6052/2026008_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/a65b6e91-155d-471d-ba9d-73e8ff4c0d13/general",
+          "publicationDate": "2026-10-15",
           "kind": "award"
         }
       ],
-      "matchReason": "projet_indirect",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
-        "capacityStatus": "not_assessed"
-      },
-      "screeningReason": null
-    },
-    {
-      "id": "bosa:a896ecc8-7aee-4a3a-81e9-94aa0d6a67c9",
-      "publicationWorkspaceId": "a896ecc8-7aee-4a3a-81e9-94aa0d6a67c9",
-      "noticeId": "e46b4ff4-e171-4e1b-9d3b-b3ac4422e049",
-      "procedureIdentifier": "d28a62b0-22ac-4d0d-b0b3-a25c6daccc68",
-      "internalReference": "Maintenance HT DEP Step_pub01",
-      "title": "Maintenance et entretien des installations haute tension des ouvrages d'assainissement et de production d'eau potable d'in BW en collaboration avec le constructeur",
-      "buyer": "in BW Association Intercommunale",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Reseaux",
-      "sectors": [
-        "Reseaux"
-      ],
-      "score": 52,
-      "screening": "review",
-      "publication": "2026-10-29",
-      "deadline": "",
-      "cpv": [
-        "50532400",
-        "50000000"
-      ],
-      "description": "Le marché consiste en la maintenance et l’entretien des installations Haute Tension de l’ensemble des ouvrages d'in BW selon les recommandations et prescriptions du constructeur.  Les services seront à effectuer sur les stations d'épuration et de pompages des ouvrages du département Assainissement d’in BW ainsi que pour les sites de production et le siège administratif du Département Eau potable.   Ce marché est prévu pour une durée de 4 ans (1 an renouvelable 3x 1 an).  Les prestations à réaliser sont les nettoyages et les entretiens des installations HT par une société habilitée et spécialisée dans le domaine de la HT ainsi que le constructeur pour permettre de : • assurer la sécurité des intervenants ; • assurer le bon fonctionnement des installations et réduire le risque de panne ; • réaliser les maintenances suivant les règlementations du constructeur ; • conserver la conformité suite au contrôle périodique annuel électrique ; • obtenir des rapports d’entretien, de contrôle thermographie et d’analyse d’huile pour chaque installation ; • etc.  La maintenance de chaque installation sera réalisée sur l’ensemble des appareillages et protections HT, ainsi que sur le transformateur HT/BT.  En collaboration avec in BW, l’attributaire interviendra avec le constructeur (fabricant de l’installation HT) et le gestionnaire de réseau pour permettre un travail HORS tension et en sécurité.  Pour chaque installation, les prestations suivantes seront à réaliser : • coupures et remises en service de l’installation HT, tests de coupure de l’alimentation HT et minima de tension, etc. • nettoyage des locaux, des cabines (cellules et ses composants), des parties électriques, etc. • contrôles visuels de l’aspect général de l’installation HT, des accès, des règlementations, des différents risques, du bon état de l’installation, etc. • entretiens, maintenances et travaux des installations et disjoncteurs par le constructeur suivant ses recommandations, prescriptions d’obligation et règles, ainsi que les législations et sécurité légale en vigueur • réalisation d’un contrôle par caméra thermographie.  Le présent CSC prend en compte tous les travaux non prévus dus à des réparations éventuelles de pièces déficientes et défectueuses, des levées des remarques listées par un organisme agréé non liées à l’exécution des travaux précités ou une éventuelle obligation du constructeur, des réparations pour chaque anomalie détectée, ou la mise en conformité éventuelle de l’installation ou des propositions d’amélioration.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "16",
-      "noticeKind": "competition",
-      "bdaReference": "",
-      "tedReference": "Maintenance HT DEP Step_pub01",
-      "url": "https://www.publicprocurement.be/publication-workspaces/a896ecc8-7aee-4a3a-81e9-94aa0d6a67c9/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/a896ecc8-7aee-4a3a-81e9-94aa0d6a67c9/documents",
-      "documentsPageSource": "official_workspace_route_not_download_verified",
-      "matchReason": "description_ou_contexte",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "unknown",
-        "route": "scope",
-        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
-        "capacityStatus": "not_assessed"
-      },
-      "screeningReason": null
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-29T11:43:44.824Z"
     },
     {
       "id": "local:c9795ed3ebb7dc137cf4",
