@@ -43,7 +43,7 @@ jobs:
         run: node marcheradar/tools/bosa-browser.cjs
       - name: "Publier uniquement en cas de données réellement recueillies"
         id: publish
-        if: steps.bosa.outcome == 'success'
+        if: steps.bosa.outcome == 'success' || steps.bosa.outcome == 'failure'
         continue-on-error: true
         shell: bash
         run: |

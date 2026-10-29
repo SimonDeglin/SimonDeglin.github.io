@@ -43,7 +43,7 @@ Object.assign(fixtures[2],{source:'LOCALE',noticeType:null,evidence:'Ancien extr
   await page.locator('.mr2-source-changes summary').click();
   assert.match(await page.locator('.mr2-source-changes').innerText(),/rattachement à ce marché n’est pas confirmé/);
   await page.screenshot({path:path.join(__dirname,'municipal-document-versions.png'),animations:'disabled'});
-  await page.locator('#closeDrawer').click();await page.locator('[data-view="irrelevant"]').click();await page.locator('#quickDismissTender').click();
+  await page.locator('#closeDrawer').click();await page.locator('[data-view="irrelevant"]').click();await page.locator('article[data-id="t1"] .open-tender').click();await page.locator('#quickDismissTender').click();
   assert.equal((await read()).statuses.t1,'inbox','Une réintégration est une décision explicite à sauvegarder');
   await page.locator('#settingsBtn').click();assert.equal((await exportFile('#backupExport')).state.statuses.t1,'inbox');
   await choose(incoming);await page.locator('#backupCancel').click();assert.equal((await read()).statuses.t1,'inbox');

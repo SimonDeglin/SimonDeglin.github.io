@@ -35,6 +35,8 @@ jobs:
         run: |
           node --check marcheradar/cockpit-v4.js
           node --check marcheradar/followup-backup.js
+          node --check marcheradar/source-health.js
+          node --check marcheradar/sources-dashboard.js
           node --check marcheradar/tests/cockpit-v4-browser.cjs
           node --test marcheradar/tests/*.test.cjs
           node marcheradar/tools/test-collector.cjs
@@ -47,6 +49,8 @@ jobs:
           npx playwright install chromium
       - name: "Tester le cockpit et la navigation réelle"
         run: node marcheradar/tests/cockpit-v4-browser.cjs
+      - name: "Tester le panneau au 25e marché et les sources par province"
+        run: node marcheradar/tests/ux-sources-browser.cjs
       - name: "Tester la sauvegarde et la restauration du suivi"
         run: node marcheradar/tests/followup-backup-browser.cjs
       - name: "Tester le suivi des marchés existant"
@@ -65,6 +69,8 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
           path: |
+            marcheradar/tests/ux-preview-25th.png
+            marcheradar/tests/sources-dashboard.png
             marcheradar/tests/cockpit-v4-desktop.png
             marcheradar/tests/cockpit-v4-mobile.png
             marcheradar/tests/cockpit-v4b-mobile.png

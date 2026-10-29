@@ -112,7 +112,7 @@ jobs:
 
       - name: "Publier uniquement les données valides"
         id: publish
-        if: steps.collect.outcome == 'success' || steps.bosa.outcome == 'success' || steps.local.outcome == 'success' || steps.documents.outcome == 'success' || steps.deadlines.outcome == 'success'
+        if: steps.collect.outcome == 'success' || steps.bosa.outcome == 'success' || steps.bosa.outcome == 'failure' || steps.local.outcome == 'success' || steps.documents.outcome == 'success' || steps.deadlines.outcome == 'success'
         shell: bash
         run: |
           if git diff --quiet -- marcheradar/data.json; then

@@ -5,6 +5,7 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),cp=require('node:child_process'),crypto=require('node:crypto');
 const profile=require('./kdrix-profile.cjs');
+const {selection}=require('./communes-scope.cjs');
 const INVENTORY=path.resolve(__dirname,'../communes.json'),DATA=path.resolve(__dirname,'../data.json');
 const MAX_COMMUNES=Math.min(8,Math.max(1,Number(process.env.COMMUNES_DOC_BATCH||4)));
 const MATCH=/(?:topograph|g[eé]om[eè]tr|bornage|division parcell|bathym[eé]tr|jaugeag|limnim[eé]tr|[eé]tude hydraulique|bureau d.[eé]tudes|auteur de projet|d[eé]tection de r[eé]seaux|scanner laser|photogramm[eé]tr|certificat PEB|certification [eé]nerg[eé]tique|lev[eé] de terrain|[eé]valuation immobili[eè]re|relev[eé] de cours d.eau)/i;
@@ -13,13 +14,25 @@ function textOnly(h){return String(h||'').replace(/<script\b[^>]*>[\s\S]*?<\/scr
 function fileLinks(html,base){
  const out=[];
  for(const a of String(html).matchAll(/<a\b[^>]*href\s*=\s*["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)){
-  let uri;try{uri=new URL(a[1],base)}catch(e){continue}
+  let uri;try{uri=new URL(a[1].replace(/&amp;/g,'&'),base)}catch(e){continue}
   if(!/^https?:$/.test(uri.protocol))continue;
-  if(!/\.pdf(?:$|\?)/i.test(uri.href))continue;
+  if(!/\.pdf(?:$|[?#])/i.test(uri.href))continue;
+  uri.hash='';
   if(!out.some(x=>x.url===uri.href))out.push({url:uri.href,title:textOnly(a[2]).slice(0,90)});
  }
  return out.slice(0,12);
 }
+function childPages(html,base){
+ const parent=new URL(base),out=[];
+ for(const a of String(html).matchAll(/<a\b[^>]*href\s*=\s*["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)){
+  let u;try{u=new URL(a[1].replace(/&amp;/g,'&'),base)}catch(e){continue}
+  u.hash='';
+  if(u.origin!==parent.origin||u.pathname===parent.pathname||!u.pathname.startsWith(parent.pathname.replace(/\/$/,'')+'/'))continue;
+  if(/\.pdf(?:$|[?#])/i.test(u.href)||!/conseil|deliber|d[eé]lib[eé]r|proces|proc[eè]s|ordre|seance|s[eé]ance|pv-|march[eé]s|20\d{2}/i.test(u.pathname+' '+textOnly(a[2])))continue;
+  if(!out.includes(u.href))out.push(u.href);
+ }return out.slice(0,2);
+}
+function readableSource(s){return s.status==='page_accessible'||s.status==='document_pdf_a_analyser'}
 async function download(url,type,max,options={}){
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);
  try{
@@ -136,16 +149,33 @@ async function run(options={}){
  const inventory=JSON.parse(fs.readFileSync(inventoryPath,'utf8')),data=JSON.parse(fs.readFileSync(dataPath,'utf8'));
  if(!Array.isArray(inventory.communes)||!Array.isArray(data.items))throw Error('Inventaire communal ou historique invalide');
  const now=options.now||new Date().toISOString(),limit=options.maxCommunes||MAX_COMMUNES;
- const ready=inventory.communes.filter(m=>m.deliberationSources?.some(s=>s.status==='page_accessible'))
+ const ready=selection(inventory.communes,options).filter(m=>m.deliberationSources?.some(readableSource))
   .sort((a,b)=>(a.lastDocumentCheck||'').localeCompare(b.lastDocumentCheck||''))
   .slice(0,limit);
  let documents=0,checked=0,unchanged=0,modified=0,created=0,reviewCandidates=0,errors=[];
  for(const m of ready){
   const attempted=new Set();
-  for(const src of m.deliberationSources.filter(s=>s.status==='page_accessible').slice(0,3)){
+  const before={checked,errors:errors.length};
+  const sources=m.deliberationSources.filter(readableSource).sort((a,b)=>(m.documentSourceChecks?.[documentId(a.url)]?.lastAttempt||'').localeCompare(m.documentSourceChecks?.[documentId(b.url)]?.lastAttempt||'')).slice(0,3);
+  for(const src of sources){
+   const sourceKey=documentId(src.url),oldSource=m.documentSourceChecks?.[sourceKey]||{};
+   const sourceErrorStart=errors.length;
    try{
-    const page=await download(src.url,'text/html',1200000,{fetchFn:options.fetchFn});
-    for(const pdf of fileLinks(page.bytes.toString('utf8'),page.finalUrl)){
+    let files=[];
+    if(/\.pdf(?:$|[?#])/i.test(src.url))files=[{url:src.url,title:src.title||''}];
+    else{
+     const page=await download(src.url,'text/html',1200000,{fetchFn:options.fetchFn});
+     const html=page.bytes.toString('utf8');files=fileLinks(html,page.finalUrl);
+     for(const url of childPages(html,page.finalUrl)){
+      try{const child=await download(url,'text/html',1200000,{fetchFn:options.fetchFn});files.push(...fileLinks(child.bytes.toString('utf8'),child.finalUrl));}
+      catch(e){errors.push({site:m.name,link:url,error:String(e.message||e).slice(0,160)})}
+     }
+    }
+    // Les versions les moins récemment contrôlées passent en premier. Le lot
+    // reste borné, même si une page énumère des années entières d'archives.
+    files.sort((a,b)=>(m.documentChecks?.[documentId(a.url)]?.lastAttempt||'').localeCompare(m.documentChecks?.[documentId(b.url)]?.lastAttempt||''));
+    for(const pdf of files){
+     if(attempted.size>=12)break;
      const id=documentId(pdf.url);if(attempted.has(id))continue;attempted.add(id);
      try{
       const file=await download(pdf.url,'application/pdf',9000000,{fetchFn:options.fetchFn,previous:m.documentChecks?.[id],now});
@@ -159,9 +189,18 @@ async function run(options={}){
       errors.push({site:m.name,link:pdf.url,error:message});
      }
     }
-   }catch(e){errors.push({site:m.name,link:src.url,error:String(e.message||e).slice(0,160)})}
+    m.documentSourceChecks={...(m.documentSourceChecks||{}),[sourceKey]:errors.length>sourceErrorStart?
+     {...oldSource,url:src.url,lastAttempt:now,lastError:errors[sourceErrorStart].error}:
+     {url:src.url,lastAttempt:now,lastSuccess:now,lastError:null}};
+   }catch(e){
+    const message=String(e.message||e).slice(0,160);
+    m.documentSourceChecks={...(m.documentSourceChecks||{}),[sourceKey]:{...oldSource,url:src.url,lastAttempt:now,lastError:message}};
+    errors.push({site:m.name,link:src.url,error:message});
+   }
   }
   m.lastDocumentCheck=now;
+  m.lastDocumentResult={checked:checked-before.checked,errors:errors.length-before.errors,attempted:attempted.size};
+  if(checked>before.checked)m.lastDocumentSuccess=now;
  }
  inventory.lastMunicipalDocumentPass=now;
  inventory.counts={...(inventory.counts||{}),documentsRead:inventory.communes.reduce((n,x)=>n+(x.documentsRead||0),0),opportunities:inventory.communes.reduce((n,x)=>n+(x.opportunities||0),0)};
@@ -177,5 +216,5 @@ async function run(options={}){
  if(!options.quiet)console.log('COMMUNES_DOCUMENTS',JSON.stringify(summary));
  return summary;
 }
-module.exports={fileLinks,evidence,passages,pdfText,documentId,download,processDocument,run};
+module.exports={fileLinks,childPages,evidence,passages,pdfText,documentId,download,processDocument,run};
 if(require.main===module)run().catch(e=>{console.warn('COMMUNES_DOCUMENT_READ_ERROR',e.message);process.exitCode=1});
