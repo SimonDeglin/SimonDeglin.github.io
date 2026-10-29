@@ -7,15 +7,18 @@
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-28T21:09:57.263Z",
-      "scanned": 2650,
-      "retained": 46,
-      "period_from": "2026-10-14",
-      "period_to": "2026-10-28",
-      "pages": 106,
+      "last_success": "2026-10-29T08:42:04.350Z",
+      "scanned": 2550,
+      "retained": 45,
+      "period_from": "2026-10-15",
+      "period_to": "2026-10-29",
+      "pages": 102,
       "complete": true,
-      "raw_candidates": 2630,
-      "oldest_seen": "2026-10-13"
+      "raw_candidates": 2539,
+      "oldest_seen": "2026-10-14",
+      "last_attempt": "2026-10-29T08:42:04.350Z",
+      "last_error": null,
+      "last_complete_success": "2026-10-29T08:42:04.350Z"
     },
     "LOCALE": {
       "status": "partial",
@@ -75,13 +78,13 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 106 page(s) parcourue(s) depuis 2026-10-14.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 102 page(s) parcourue(s) depuis 2026-10-15.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
     "scanned": 1412,
     "matched_current_run": 12,
-    "records": 159,
+    "records": 161,
     "review_count": 46,
     "award_notice_count": 367,
     "awarded_market_matches": 2,
@@ -123,9 +126,9 @@
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2650,
-    "bosa_imported": 46,
-    "bosa_pages": 106,
+    "bosa_scanned": 2550,
+    "bosa_imported": 45,
+    "bosa_pages": 102,
     "local_documents": 34,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -9261,7 +9264,91 @@
       "deadlineSourceKind": "bosa_verified_public",
       "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/general",
       "deadlineSourceEvidence": "Date limite de soumission\n17/11/2026 11:00 CET",
-      "deadlineVerifiedAt": "2026-10-28T21:16:21.724Z"
+      "deadlineVerifiedAt": "2026-10-28T21:16:21.724Z",
+      "matchReason": "projet_indirect",
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/general"
+        }
+      ]
+    },
+    {
+      "id": "bosa:7fbc278d-2757-4e84-9536-b7b0f060a75d",
+      "publicationWorkspaceId": "7fbc278d-2757-4e84-9536-b7b0f060a75d",
+      "noticeId": "c3b9332f-2668-47de-97cf-35ef64b89991",
+      "procedureIdentifier": "a4c7376f-98a2-44d8-ae53-fea166f08c45",
+      "internalReference": "PPP05K-1908/6316/2026/3P/1908_002",
+      "title": "Étude et dimensionnement de dispositifs de lutte contre les inondations au sud de Neufvilles",
+      "buyer": "Soignies",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Hydraulique",
+      "sectors": [
+        "Hydraulique"
+      ],
+      "score": 74,
+      "screening": "review",
+      "publication": "2026-10-29",
+      "deadline": "",
+      "cpv": [
+        "71241000"
+      ],
+      "description": "Étude et dimensionnement de dispositifs de lutte contre les inondations au sud de Neufvilles",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP05K-1908/6316/2026/3P/1908_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/7fbc278d-2757-4e84-9536-b7b0f060a75d/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/7fbc278d-2757-4e84-9536-b7b0f060a75d/documents",
+      "documentsPageSource": "official_workspace_route_not_download_verified",
+      "bosaResults": [
+        {
+          "reference": "PPP05K-1908/6316/2026/3P/1908_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/7fbc278d-2757-4e84-9536-b7b0f060a75d/general",
+          "publicationDate": "2026-10-29",
+          "kind": "award"
+        }
+      ]
+    },
+    {
+      "id": "bosa:a896ecc8-7aee-4a3a-81e9-94aa0d6a67c9",
+      "publicationWorkspaceId": "a896ecc8-7aee-4a3a-81e9-94aa0d6a67c9",
+      "noticeId": "e46b4ff4-e171-4e1b-9d3b-b3ac4422e049",
+      "procedureIdentifier": "d28a62b0-22ac-4d0d-b0b3-a25c6daccc68",
+      "internalReference": "Maintenance HT DEP Step_pub01",
+      "title": "Maintenance et entretien des installations haute tension des ouvrages d'assainissement et de production d'eau potable d'in BW en collaboration avec le constructeur",
+      "buyer": "in BW Association Intercommunale",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Reseaux",
+      "sectors": [
+        "Reseaux"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-10-29",
+      "deadline": "",
+      "cpv": [
+        "50532400",
+        "50000000"
+      ],
+      "description": "Le marché consiste en la maintenance et l’entretien des installations Haute Tension de l’ensemble des ouvrages d'in BW selon les recommandations et prescriptions du constructeur.  Les services seront à effectuer sur les stations d'épuration et de pompages des ouvrages du département Assainissement d’in BW ainsi que pour les sites de production et le siège administratif du Département Eau potable.   Ce marché est prévu pour une durée de 4 ans (1 an renouvelable 3x 1 an).  Les prestations à réaliser sont les nettoyages et les entretiens des installations HT par une société habilitée et spécialisée dans le domaine de la HT ainsi que le constructeur pour permettre de : • assurer la sécurité des intervenants ; • assurer le bon fonctionnement des installations et réduire le risque de panne ; • réaliser les maintenances suivant les règlementations du constructeur ; • conserver la conformité suite au contrôle périodique annuel électrique ; • obtenir des rapports d’entretien, de contrôle thermographie et d’analyse d’huile pour chaque installation ; • etc.  La maintenance de chaque installation sera réalisée sur l’ensemble des appareillages et protections HT, ainsi que sur le transformateur HT/BT.  En collaboration avec in BW, l’attributaire interviendra avec le constructeur (fabricant de l’installation HT) et le gestionnaire de réseau pour permettre un travail HORS tension et en sécurité.  Pour chaque installation, les prestations suivantes seront à réaliser : • coupures et remises en service de l’installation HT, tests de coupure de l’alimentation HT et minima de tension, etc. • nettoyage des locaux, des cabines (cellules et ses composants), des parties électriques, etc. • contrôles visuels de l’aspect général de l’installation HT, des accès, des règlementations, des différents risques, du bon état de l’installation, etc. • entretiens, maintenances et travaux des installations et disjoncteurs par le constructeur suivant ses recommandations, prescriptions d’obligation et règles, ainsi que les législations et sécurité légale en vigueur • réalisation d’un contrôle par caméra thermographie.  Le présent CSC prend en compte tous les travaux non prévus dus à des réparations éventuelles de pièces déficientes et défectueuses, des levées des remarques listées par un organisme agréé non liées à l’exécution des travaux précités ou une éventuelle obligation du constructeur, des réparations pour chaque anomalie détectée, ou la mise en conformité éventuelle de l’installation ou des propositions d’amélioration.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "",
+      "tedReference": "Maintenance HT DEP Step_pub01",
+      "url": "https://www.publicprocurement.be/publication-workspaces/a896ecc8-7aee-4a3a-81e9-94aa0d6a67c9/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/a896ecc8-7aee-4a3a-81e9-94aa0d6a67c9/documents",
+      "documentsPageSource": "official_workspace_route_not_download_verified"
     }
   ]
 }
