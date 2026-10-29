@@ -156,6 +156,8 @@ function fixture(id,changes){
   const broken=await resilient.newPage();attach(broken);
   await broken.route('**/marcheradar/detail-phase2.js*',route=>route.abort('failed'));
   await broken.goto(address,{waitUntil:'domcontentloaded'});
+  await broken.waitForSelector('article.tender');
+  await broken.locator('[data-view="catalogue"]').click();
   await ready(broken,visibleMarkets);
   await broken.locator('article.tender .v5-full-open').first().click();
   assert.match(await broken.locator('#drawerBody').innerText(),/Module documentaire temporairement indisponible/);
