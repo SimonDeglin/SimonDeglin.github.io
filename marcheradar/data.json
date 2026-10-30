@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-30T11:26:05.100Z",
+  "generated_at": "2026-10-30T20:50:45.207Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
   "note": "TED interrogé le 2026-10-30 : 1780 avis lus, 2 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-30T11:28:28.769Z",
-      "scanned": 2600,
+      "last_success": "2026-10-30T20:52:37.012Z",
+      "scanned": 2650,
       "retained": 39,
       "period_from": "2026-10-16",
       "period_to": "2026-10-30",
-      "pages": 104,
+      "pages": 106,
       "complete": true,
-      "raw_candidates": 2592,
+      "raw_candidates": 2642,
       "oldest_seen": "2026-10-15",
-      "last_attempt": "2026-10-30T11:28:28.769Z",
+      "last_attempt": "2026-10-30T20:52:37.012Z",
       "last_error": null,
-      "last_complete_success": "2026-10-30T11:28:28.769Z"
+      "last_complete_success": "2026-10-30T20:52:37.012Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-10-30T11:30:53.299Z",
+      "last_success": "2026-10-30T20:54:55.760Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -97,15 +97,15 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 104 page(s) parcourue(s) depuis 2026-10-16.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 106 page(s) parcourue(s) depuis 2026-10-16.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
     "scanned": 1780,
     "matched_current_run": 13,
-    "records": 203,
-    "review_count": 98,
-    "award_notice_count": 470,
+    "records": 204,
+    "review_count": 109,
+    "award_notice_count": 468,
     "awarded_market_matches": 2,
     "award_fields_requested": false,
     "retained_as_excluded": 36,
@@ -146,9 +146,9 @@
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2600,
+    "bosa_scanned": 2650,
     "bosa_imported": 39,
-    "bosa_pages": 104,
+    "bosa_pages": 106,
     "local_documents": 34,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -164,15 +164,15 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "objet_hors_domaine": 89,
-      "aucun_signal_metier": 566,
-      "acheteur_flamand": 202,
+      "aucun_signal_metier": 568,
       "avis_neerlandais": 177,
       "fournitures_et_location": 68,
+      "acheteur_flamand": 204,
+      "objet_hors_domaine": 89,
+      "avis_attribution_analyse_separement": 468,
       "travaux_execution": 132,
-      "avis_attribution_analyse_separement": 470,
-      "assurance_ou_nettoyage": 27,
       "qualifie_review": 21,
+      "assurance_ou_nettoyage": 25,
       "formule_administrative_sans_signal_metier": 24,
       "qualifie_main": 4
     }
@@ -3498,7 +3498,7 @@
           "versionId": "ddf24280-7180-4af0-9cc3-c050455a2c18",
           "documentId": "6c1fd0d8-3f25-4764-8e27-9bb907ccf665",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "DE,FR",
+          "language": "FR,DE",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -3511,14 +3511,14 @@
           "versionId": "41c1dfd3-e395-4b17-9583-72b8baeacc90",
           "documentId": "815fd779-551d-48fc-a533-f11b9a86434c",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "DE,FR",
+          "language": "FR,DE",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-30T11:32:30.800Z",
+      "documentsCheckedAt": "2026-10-30T20:56:33.862Z",
       "matchReason": "mission_architecturale_a_qualifier",
       "screeningReason": null,
       "officialSources": [
@@ -5234,7 +5234,7 @@
           "versionId": "36488d00-f30c-407b-abf7-ea1924b6b999",
           "documentId": "917f42c5-0419-4611-8398-5561fefe4efc",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5260,7 +5260,7 @@
           "versionId": "26b15544-17fc-43c0-826c-1322f33b9850",
           "documentId": "20364704-82a0-4eb0-a213-7965e3328061",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5312,7 +5312,7 @@
           "versionId": "f5ff3774-83d7-49c0-abe1-28e026816900",
           "documentId": "ff53ea2a-b24f-4586-b315-523295f56f5c",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5325,7 +5325,7 @@
           "versionId": "8228202b-2303-4eba-8e13-0fe820c5023d",
           "documentId": "ac74d28e-0bfa-4c78-af2b-da7f05b117dd",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5358,7 +5358,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-29T21:16:39.985Z",
+      "documentsCheckedAt": "2026-10-30T20:57:36.456Z",
       "documentAnalyses": [
         {
           "documentId": "7259aed6-32b5-4e0b-88c0-ffa7fa606658",
@@ -12310,6 +12310,462 @@
       "screeningReason": null
     },
     {
+      "id": "local:b1a26fb6e64345edac26",
+      "title": "Conseil communal — opportunité à vérifier : Beloeil",
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "de le créer le long du n° 21 afin d’assurer l’accessibilité et la sécurité des personnes à mobilité réduite ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité de",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+        "page": 13,
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+        "session": {
+          "date": "2026-03-18",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 18 MARS 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : de le créer le long du n° 21 afin d’assurer l’accessibilité et la sécurité des personnes à mobilité réduite ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, l’emplacement réservé aux personnes handicapées, côté impair, le",
+      "evidence": "de le créer le long du n° 21 afin d’assurer l’accessibilité et la sécurité des personnes à mobilité réduite ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, l’emplacement réservé aux personnes handicapées, côté impair, le",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 13,
+          "excerpt": "de le créer le long du n° 21 afin d’assurer l’accessibilité et la sécurité des personnes à mobilité réduite ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, l’emplacement réservé aux personnes handicapées, côté impair, le"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 13,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:5c5a76c4342cebddad",
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+        "checkedAt": "2026-10-30T16:16:56.366Z",
+        "changedAt": null
+      },
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null
+    },
+    {
+      "id": "local:b9ab4d4da443263af5e9",
+      "title": "Conseil communal — opportunité à vérifier : Beloeil",
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Vu que le Collège communal a remis un avis favorable, en sa séance du 3 mars 2026, pour l’abrogation de cet emplacement ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+        "page": 14,
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+        "session": {
+          "date": "2026-03-18",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 18 MARS 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Vu que le Collège communal a remis un avis favorable, en sa séance du 3 mars 2026, pour l’abrogation de cet emplacement ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, Place de la Victoire, l’emplacement de stationnement réservé aux",
+      "evidence": "Vu que le Collège communal a remis un avis favorable, en sa séance du 3 mars 2026, pour l’abrogation de cet emplacement ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, Place de la Victoire, l’emplacement de stationnement réservé aux",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 14,
+          "excerpt": "Vu que le Collège communal a remis un avis favorable, en sa séance du 3 mars 2026, pour l’abrogation de cet emplacement ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, Place de la Victoire, l’emplacement de stationnement réservé aux"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 14,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:5c5a76c4342cebddad",
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+        "checkedAt": "2026-10-30T16:16:56.366Z",
+        "changedAt": null
+      },
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null
+    },
+    {
+      "id": "local:1615808b394cbf8c5a6e",
+      "title": "Conseil communal — opportunité à vérifier : Beloeil",
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "personnes handicapées et d’une flèche de réglementation sur courte distance avec la mention « 12m » ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membre",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+        "page": 15,
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+        "session": {
+          "date": "2026-03-18",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 18 MARS 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : personnes handicapées et d’une flèche de réglementation sur courte distance avec la mention « 12m » ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Belœil, section de Belœil, rue des Viviers au Bois, le stationnement est réservé aux personnes",
+      "evidence": "personnes handicapées et d’une flèche de réglementation sur courte distance avec la mention « 12m » ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Belœil, section de Belœil, rue des Viviers au Bois, le stationnement est réservé aux personnes",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 15,
+          "excerpt": "personnes handicapées et d’une flèche de réglementation sur courte distance avec la mention « 12m » ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Belœil, section de Belœil, rue des Viviers au Bois, le stationnement est réservé aux personnes"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 15,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:5c5a76c4342cebddad",
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+        "checkedAt": "2026-10-30T16:16:56.366Z",
+        "changedAt": null
+      },
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null
+    },
+    {
+      "id": "local:2bfe887646468b65fba7",
+      "title": "Conseil communal — opportunité à vérifier : Beloeil",
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routièr",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+        "page": 9,
+        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313",
+        "session": {
+          "date": "2026-04-15",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 15 AVRIL 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section d'Aubechies, rue de Blicquy :",
+      "evidence": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section d'Aubechies, rue de Blicquy :",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 9,
+          "excerpt": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section d'Aubechies, rue de Blicquy :"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 9,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:c25d300ff91a768a7b",
+        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313",
+        "checkedAt": "2026-10-30T16:16:56.366Z",
+        "changedAt": null
+      },
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null
+    },
+    {
+      "id": "local:19231fe929b9f238db70",
+      "title": "Conseil communal — opportunité à vérifier : Beloeil",
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service Communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routièr",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+        "page": 14,
+        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313",
+        "session": {
+          "date": "2026-04-15",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 15 AVRIL 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service Communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents : Article 1er : A Beloeil, section de Quevaucamps, rue de Stambruges :",
+      "evidence": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service Communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents : Article 1er : A Beloeil, section de Quevaucamps, rue de Stambruges :",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 14,
+          "excerpt": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service Communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents : Article 1er : A Beloeil, section de Quevaucamps, rue de Stambruges :"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 14,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:c25d300ff91a768a7b",
+        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313",
+        "checkedAt": "2026-10-30T16:16:56.366Z",
+        "changedAt": null
+      },
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null
+    },
+    {
+      "id": "local:f981f712a99c60a5ca62",
+      "title": "Conseil communal — opportunité à vérifier : Beloeil",
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "2026-131901 ; Vu l'avis de la CCATM du 09 avril 2026 ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des mem",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
+        "page": 19,
+        "sha256": "71b910ac920b23dafd63061eb9455659a8320c55197cfe787bbea8bde828ec8f"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
+        "sha256": "71b910ac920b23dafd63061eb9455659a8320c55197cfe787bbea8bde828ec8f",
+        "session": {
+          "date": "2026-05-20",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 20 MAI 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 2026-131901 ; Vu l'avis de la CCATM du 09 avril 2026 ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, rue Porte-à-Camp :",
+      "evidence": "2026-131901 ; Vu l'avis de la CCATM du 09 avril 2026 ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, rue Porte-à-Camp :",
+      "municipalReference": null,
+      "municipalSection": "4. à promouvoir les services rendus par la Province de Hainaut par une publicité adéquate :",
+      "municipalEvidence": [
+        {
+          "page": 19,
+          "excerpt": "2026-131901 ; Vu l'avis de la CCATM du 09 avril 2026 ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, rue Porte-à-Camp :"
+        },
+        {
+          "page": 20,
+          "excerpt": "Vu l'avis de la CCATM du 09 avril 2026 ; Vu l'avis du Service communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, Résidence des Marbriers :"
+        },
+        {
+          "page": 21,
+          "excerpt": "Vu l'avis de la CCATM du 09 avril 2026 ; Vu l'avis du Service Communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de Circulation Routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, Section de Thumaide, rue Sainte-Brigitte :"
+        },
+        {
+          "page": 25,
+          "excerpt": "Considérant qu’au regard du respect des objectifs visés à l’article 1er du décret du 6 février 2014 relatif à la voirie communale, il y a lieu d’accorder la demande d’élargissement du chemin n°3, tel qu’identifié sur le plan dressé par le Géomètre-Expert, en date du 15/07/2025 ; Attendu que la superficie de 30 ca à intégrer au domaine public le sera à titre gracieux ; Vu les dispositions légales et réglementaires en la matière ; Pour les motifs précités ; DECIDE à l'unanimité des membres présents"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 19,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:d1269dcfac3ee75607",
+        "sha256": "71b910ac920b23dafd63061eb9455659a8320c55197cfe787bbea8bde828ec8f",
+        "checkedAt": "2026-10-30T16:16:56.366Z",
+        "changedAt": null
+      },
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null
+    },
+    {
       "id": "local:20c9f5a442bb49018409",
       "title": "Conseil communal — opportunité à vérifier : Hannut",
       "buyer": "Commune de Hannut",
@@ -12934,7 +13390,9 @@
         "sha256": "115777707847299f46dabad6e8add2e93ffd12c2ce34d69dc4a854b3c67dcfb6",
         "checkedAt": "2026-10-30T16:16:56.366Z",
         "changedAt": null
-      }
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
     },
     {
       "id": "local:c03e265080462b1b7469",
@@ -13014,7 +13472,9 @@
         "sha256": "115777707847299f46dabad6e8add2e93ffd12c2ce34d69dc4a854b3c67dcfb6",
         "checkedAt": "2026-10-30T16:16:56.366Z",
         "changedAt": null
-      }
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
     },
     {
       "id": "local:e36446ef9d00c7baf52a",
@@ -13090,7 +13550,9 @@
         "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
         "checkedAt": "2026-10-30T16:16:56.366Z",
         "changedAt": null
-      }
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
     },
     {
       "id": "local:cc55adc27162a012194a",
@@ -13166,367 +13628,9 @@
         "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
         "checkedAt": "2026-10-30T16:16:56.366Z",
         "changedAt": null
-      }
-    },
-    {
-      "id": "local:b1a26fb6e64345edac26",
-      "title": "Conseil communal — opportunité à vérifier : Beloeil",
-      "buyer": "Commune de Beloeil",
-      "municipalityINS": "51008",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "de le créer le long du n° 21 afin d’assurer l’accessibilité et la sécurité des personnes à mobilité réduite ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité de",
-        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
-        "page": 13,
-        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0"
       },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 60,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
-        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
-        "session": {
-          "date": "2026-03-18",
-          "kind": "session",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "SEANCE DU 18 MARS 2026",
-          "confidence": "explicit"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : de le créer le long du n° 21 afin d’assurer l’accessibilité et la sécurité des personnes à mobilité réduite ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, l’emplacement réservé aux personnes handicapées, côté impair, le",
-      "evidence": "de le créer le long du n° 21 afin d’assurer l’accessibilité et la sécurité des personnes à mobilité réduite ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, l’emplacement réservé aux personnes handicapées, côté impair, le",
-      "municipalReference": null,
-      "municipalSection": null,
-      "municipalEvidence": [
-        {
-          "page": 13,
-          "excerpt": "de le créer le long du n° 21 afin d’assurer l’accessibilité et la sécurité des personnes à mobilité réduite ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, l’emplacement réservé aux personnes handicapées, côté impair, le"
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 13,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:5c5a76c4342cebddad",
-        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
-        "checkedAt": "2026-10-30T16:16:56.366Z",
-        "changedAt": null
-      }
-    },
-    {
-      "id": "local:b9ab4d4da443263af5e9",
-      "title": "Conseil communal — opportunité à vérifier : Beloeil",
-      "buyer": "Commune de Beloeil",
-      "municipalityINS": "51008",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "Vu que le Collège communal a remis un avis favorable, en sa séance du 3 mars 2026, pour l’abrogation de cet emplacement ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'",
-        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
-        "page": 14,
-        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 60,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
-        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
-        "session": {
-          "date": "2026-03-18",
-          "kind": "session",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "SEANCE DU 18 MARS 2026",
-          "confidence": "explicit"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : Vu que le Collège communal a remis un avis favorable, en sa séance du 3 mars 2026, pour l’abrogation de cet emplacement ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, Place de la Victoire, l’emplacement de stationnement réservé aux",
-      "evidence": "Vu que le Collège communal a remis un avis favorable, en sa séance du 3 mars 2026, pour l’abrogation de cet emplacement ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, Place de la Victoire, l’emplacement de stationnement réservé aux",
-      "municipalReference": null,
-      "municipalSection": null,
-      "municipalEvidence": [
-        {
-          "page": 14,
-          "excerpt": "Vu que le Collège communal a remis un avis favorable, en sa séance du 3 mars 2026, pour l’abrogation de cet emplacement ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, Place de la Victoire, l’emplacement de stationnement réservé aux"
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 14,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:5c5a76c4342cebddad",
-        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
-        "checkedAt": "2026-10-30T16:16:56.366Z",
-        "changedAt": null
-      }
-    },
-    {
-      "id": "local:1615808b394cbf8c5a6e",
-      "title": "Conseil communal — opportunité à vérifier : Beloeil",
-      "buyer": "Commune de Beloeil",
-      "municipalityINS": "51008",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "personnes handicapées et d’une flèche de réglementation sur courte distance avec la mention « 12m » ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membre",
-        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
-        "page": 15,
-        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 60,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
-        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
-        "session": {
-          "date": "2026-03-18",
-          "kind": "session",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "SEANCE DU 18 MARS 2026",
-          "confidence": "explicit"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : personnes handicapées et d’une flèche de réglementation sur courte distance avec la mention « 12m » ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Belœil, section de Belœil, rue des Viviers au Bois, le stationnement est réservé aux personnes",
-      "evidence": "personnes handicapées et d’une flèche de réglementation sur courte distance avec la mention « 12m » ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Belœil, section de Belœil, rue des Viviers au Bois, le stationnement est réservé aux personnes",
-      "municipalReference": null,
-      "municipalSection": null,
-      "municipalEvidence": [
-        {
-          "page": 15,
-          "excerpt": "personnes handicapées et d’une flèche de réglementation sur courte distance avec la mention « 12m » ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Belœil, section de Belœil, rue des Viviers au Bois, le stationnement est réservé aux personnes"
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 15,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:5c5a76c4342cebddad",
-        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
-        "checkedAt": "2026-10-30T16:16:56.366Z",
-        "changedAt": null
-      }
-    },
-    {
-      "id": "local:2bfe887646468b65fba7",
-      "title": "Conseil communal — opportunité à vérifier : Beloeil",
-      "buyer": "Commune de Beloeil",
-      "municipalityINS": "51008",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routièr",
-        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
-        "page": 9,
-        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 60,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
-        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313",
-        "session": {
-          "date": "2026-04-15",
-          "kind": "session",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "SEANCE DU 15 AVRIL 2026",
-          "confidence": "explicit"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section d'Aubechies, rue de Blicquy :",
-      "evidence": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section d'Aubechies, rue de Blicquy :",
-      "municipalReference": null,
-      "municipalSection": null,
-      "municipalEvidence": [
-        {
-          "page": 9,
-          "excerpt": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section d'Aubechies, rue de Blicquy :"
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 9,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:c25d300ff91a768a7b",
-        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313",
-        "checkedAt": "2026-10-30T16:16:56.366Z",
-        "changedAt": null
-      }
-    },
-    {
-      "id": "local:19231fe929b9f238db70",
-      "title": "Conseil communal — opportunité à vérifier : Beloeil",
-      "buyer": "Commune de Beloeil",
-      "municipalityINS": "51008",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service Communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routièr",
-        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
-        "page": 14,
-        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 60,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
-        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313",
-        "session": {
-          "date": "2026-04-15",
-          "kind": "session",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "SEANCE DU 15 AVRIL 2026",
-          "confidence": "explicit"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service Communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents : Article 1er : A Beloeil, section de Quevaucamps, rue de Stambruges :",
-      "evidence": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service Communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents : Article 1er : A Beloeil, section de Quevaucamps, rue de Stambruges :",
-      "municipalReference": null,
-      "municipalSection": null,
-      "municipalEvidence": [
-        {
-          "page": 14,
-          "excerpt": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service Communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents : Article 1er : A Beloeil, section de Quevaucamps, rue de Stambruges :"
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 14,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:c25d300ff91a768a7b",
-        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313",
-        "checkedAt": "2026-10-30T16:16:56.366Z",
-        "changedAt": null
-      }
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
     },
     {
       "id": "local:4fea0711a4e77664fd56",
@@ -13602,91 +13706,69 @@
         "sha256": "71b910ac920b23dafd63061eb9455659a8320c55197cfe787bbea8bde828ec8f",
         "checkedAt": "2026-10-30T16:16:56.366Z",
         "changedAt": null
-      }
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
     },
     {
-      "id": "local:f981f712a99c60a5ca62",
-      "title": "Conseil communal — opportunité à vérifier : Beloeil",
-      "buyer": "Commune de Beloeil",
-      "municipalityINS": "51008",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "2026-131901 ; Vu l'avis de la CCATM du 09 avril 2026 ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des mem",
-        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
-        "page": 19,
-        "sha256": "71b910ac920b23dafd63061eb9455659a8320c55197cfe787bbea8bde828ec8f"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
+      "id": "bosa:cefdcfe8-e6b1-4fa3-b311-d8675c79f5af",
+      "publicationWorkspaceId": "cefdcfe8-e6b1-4fa3-b311-d8675c79f5af",
+      "noticeId": "4b8da9b0-7250-4fd3-81be-48adb5820978",
+      "procedureIdentifier": "8af96378-f374-4b2e-968b-a0ad4dd5507e",
+      "internalReference": "BFA24001-10056_pub01",
+      "title": "Recrutement d’un opérateur économique (cabinet, bureau d'études, consortium ou consultant individuel disposant des capacités requises) pour la réalisation d'une étude de référence (Baseline) sur l'utilisation des services de droits et de santé sexuelle et reproductive (DSSR) par les adolescent·es et les jeunes dans les États membres de la CEDEAO",
+      "buyer": "Enabel",
+      "region": "Belgique",
+      "languages": [
+        "FR"
       ],
-      "score": 60,
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
       "screening": "review",
       "qualification": {
         "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
         "capacityStatus": "not_assessed"
       },
-      "publication": "",
+      "matchReason": "mission_globale_a_qualifier",
+      "publication": "2026-10-30",
       "deadline": "",
-      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
-        "sha256": "71b910ac920b23dafd63061eb9455659a8320c55197cfe787bbea8bde828ec8f",
-        "session": {
-          "date": "2026-05-20",
-          "kind": "session",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "SEANCE DU 20 MAI 2026",
-          "confidence": "explicit"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : 2026-131901 ; Vu l'avis de la CCATM du 09 avril 2026 ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, rue Porte-à-Camp :",
-      "evidence": "2026-131901 ; Vu l'avis de la CCATM du 09 avril 2026 ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, rue Porte-à-Camp :",
-      "municipalReference": null,
-      "municipalSection": "4. à promouvoir les services rendus par la Province de Hainaut par une publicité adéquate :",
-      "municipalEvidence": [
+      "cpv": [
+        "79300000",
+        "73000000"
+      ],
+      "description": "Recrutement d’un opérateur économique (cabinet, bureau d'études, consortium ou consultant individuel disposant des capacités requises) pour la réalisation d'une étude de référence (Baseline) sur l'utilisation des services de droits et de santé sexuelle et reproductive (DSSR) par les adolescent·es et les jeunes dans les États membres de la CEDEAO",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E3",
+      "noticeKind": "competition",
+      "bdaReference": "BFA24001-10056_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/cefdcfe8-e6b1-4fa3-b311-d8675c79f5af/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/cefdcfe8-e6b1-4fa3-b311-d8675c79f5af/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
         {
-          "page": 19,
-          "excerpt": "2026-131901 ; Vu l'avis de la CCATM du 09 avril 2026 ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, rue Porte-à-Camp :"
-        },
-        {
-          "page": 20,
-          "excerpt": "Vu l'avis de la CCATM du 09 avril 2026 ; Vu l'avis du Service communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, Résidence des Marbriers :"
-        },
-        {
-          "page": 21,
-          "excerpt": "Vu l'avis de la CCATM du 09 avril 2026 ; Vu l'avis du Service Communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de Circulation Routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, Section de Thumaide, rue Sainte-Brigitte :"
-        },
-        {
-          "page": 25,
-          "excerpt": "Considérant qu’au regard du respect des objectifs visés à l’article 1er du décret du 6 février 2014 relatif à la voirie communale, il y a lieu d’accorder la demande d’élargissement du chemin n°3, tel qu’identifié sur le plan dressé par le Géomètre-Expert, en date du 15/07/2025 ; Attendu que la superficie de 30 ca à intégrer au domaine public le sera à titre gracieux ; Vu les dispositions légales et réglementaires en la matière ; Pour les motifs précités ; DECIDE à l'unanimité des membres présents"
+          "id": "e47cc8d2-5c03-4102-81bc-6176b61edf41",
+          "title": "BFA24001-10056_Cahier des charges.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "e782fe4b-46b0-46d8-933f-6695e74f2074",
+          "documentId": "75d9673d-c814-400c-a30c-b414d897f538",
+          "activatedAt": "2026-10-30T17:00:45.08984",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/cefdcfe8-e6b1-4fa3-b311-d8675c79f5af/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 19,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:d1269dcfac3ee75607",
-        "sha256": "71b910ac920b23dafd63061eb9455659a8320c55197cfe787bbea8bde828ec8f",
-        "checkedAt": "2026-10-30T16:16:56.366Z",
-        "changedAt": null
-      }
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-10-30T21:00:00.202Z"
     }
   ]
 }
