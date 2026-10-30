@@ -13,19 +13,19 @@
   "counts": {
     "total": 261,
     "sitesRepertories": 261,
-    "sitesVerifies": 205,
-    "deliberationsConnectees": 26,
+    "sitesVerifies": 217,
+    "deliberationsConnectees": 28,
     "zones": {
       "principale": 196,
       "exterieure_provisoire": 26,
       "peripherique": 39
     },
     "checkedWithErrors": 3,
-    "documentsRead": 146,
+    "documentsRead": 148,
     "opportunities": 67,
-    "sitesChecked": 205,
-    "candidatePages": 160,
-    "sourceErrors": 21
+    "sitesChecked": 217,
+    "candidatePages": 171,
+    "sourceErrors": 22
   },
   "communes": [
     {
@@ -1121,14 +1121,264 @@
       "estimatedMinutes": 87,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.anhee.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.anhee.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.anhee.be/ma-commune/vie-politique/programmetrategiquetransversal",
+          "title": "Programme Stratégique Transversal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.anhee.be/ma-commune/vie-politique/conseil-communal/archives/2021-1/comptes-rendus-2021",
+          "title": "Comptes rendus 2021",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.anhee.be/actualites/convocation-conseil-communal-28-octobre-2026",
+          "title": "Convocation Conseil Communal - 28 octobre 2026",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T07:44:02.508Z",
+      "lastDocumentCheck": "2026-10-30T07:45:03.990Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 1,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.anhee.be/",
+        "checkedAt": "2026-10-30T07:44:02.508Z"
+      },
+      "documentSourceChecks": {
+        "municipal-doc:56ccbd89e862582568": {
+          "url": "https://www.anhee.be/ma-commune/vie-politique/college-communal",
+          "lastAttempt": "2026-10-30T07:45:03.990Z",
+          "lastSuccess": "2026-10-30T07:45:03.990Z",
+          "lastError": null
+        },
+        "municipal-doc:1eb8e2876fac9967a6": {
+          "url": "https://www.anhee.be/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-30T07:45:03.990Z",
+          "lastSuccess": "2026-10-30T07:45:03.990Z",
+          "lastError": null
+        },
+        "municipal-doc:a10252998a0ac3c55a": {
+          "url": "https://www.anhee.be/ma-commune/vie-politique/programmetrategiquetransversal",
+          "lastAttempt": "2026-10-30T07:45:03.990Z",
+          "lastSuccess": "2026-10-30T07:45:03.990Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:66ed153c058e791464": {
+          "url": "https://www.anhee.be/ma-commune/vie-politique/programmetrategiquetransversal/programme-strategique-transversal-commune-et-cpas.pdf",
+          "finalUrl": "https://www.anhee.be/ma-commune/vie-politique/programmetrategiquetransversal/programme-strategique-transversal-commune-et-cpas.pdf",
+          "lastAttempt": "2026-10-30T07:45:03.990Z",
+          "lastChecked": "2026-10-30T07:45:03.990Z",
+          "lastSuccess": "2026-10-30T07:45:03.990Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Thu, 15 Jan 2026 14:15:19 GMT",
+          "contentCheckedAt": "2026-10-30T07:45:03.990Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.anhee.be/ma-commune/vie-politique/programmetrategiquetransversal/programme-strategique-transversal-commune-et-cpas.pdf",
+            "sha256": "b61e75f68967748e80a406672650068c4ce8f42ee76a088b3f65f502d765f87c",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T07:45:03.990Z",
+          "sha256": "b61e75f68967748e80a406672650068c4ce8f42ee76a088b3f65f502d765f87c",
+          "firstSeenAt": "2026-10-30T07:45:03.990Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:eb23201e86abd502ce": {
+          "url": "https://www.anhee.be/ma-commune/vie-politique/programmetrategiquetransversal/25-10-01-delibe-conseil-prise-dacte-pst.pdf",
+          "lastAttempt": "2026-10-30T07:45:03.990Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-30T13:45:03.990Z"
+        },
+        "municipal-doc:da45b470e27eaf39eb": {
+          "url": "https://www.anhee.be/ma-commune/vie-politique/programmetrategiquetransversal/decision-pst-cpas-14-octobre-2025.pdf",
+          "lastAttempt": "2026-10-30T07:45:03.990Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-30T13:45:03.990Z"
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:66ed153c058e791464"
+      ],
+      "documentVersionsRead": 1,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:56ccbd89e862582568": {
+            "url": "https://www.anhee.be/ma-commune/vie-politique/college-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T07:45:03.990Z",
+            "lastSuccess": "2026-10-30T07:45:03.990Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:1eb8e2876fac9967a6": {
+            "url": "https://www.anhee.be/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T07:45:03.990Z",
+            "lastSuccess": "2026-10-30T07:45:03.990Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:a10252998a0ac3c55a": {
+            "url": "https://www.anhee.be/ma-commune/vie-politique/programmetrategiquetransversal",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T07:45:03.990Z",
+            "lastSuccess": "2026-10-30T07:45:03.990Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:ed660c5b91b5f7e9f5": {
+            "url": "https://www.anhee.be/ma-commune/vie-politique/conseil-communal/archives/2021-1/comptes-rendus-2021",
+            "depth": 0,
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:b3959f4b0f203dd3b1": {
+            "url": "https://www.anhee.be/actualites/convocation-conseil-communal-28-octobre-2026",
+            "depth": 0,
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:fb75bc303bac06ec65": {
+            "url": "https://www.anhee.be/ma-commune/vie-politique/conseil-communal/composition-1/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.anhee.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:523fb2fad453d9e837": {
+            "url": "https://www.anhee.be/ma-commune/vie-politique/conseil-communal/archives",
+            "depth": 1,
+            "sourceUrl": "https://www.anhee.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:e720cb580570485ae8": {
+            "url": "https://www.anhee.be/ma-commune/vie-politique/conseil-communal/ordres-du-jour-2026",
+            "depth": 1,
+            "sourceUrl": "https://www.anhee.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:4abce26b04eaac5d17": {
+            "url": "https://www.anhee.be/ma-commune/vie-politique/conseil-communal/comptes-rendus-2026",
+            "depth": 1,
+            "sourceUrl": "https://www.anhee.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:a978d361bc279996a3": {
+            "url": "https://www.anhee.be/ma-commune/vie-politique/conseil-communal/projets-de-deliberations",
+            "depth": 1,
+            "sourceUrl": "https://www.anhee.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:e1886a327cc077e418": {
+            "url": "https://www.anhee.be/ma-commune/vie-politique/conseil-communal/reglement-dordre-interieur",
+            "depth": 1,
+            "sourceUrl": "https://www.anhee.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 10
+          }
+        },
+        "documents": {
+          "municipal-doc:66ed153c058e791464": {
+            "url": "https://www.anhee.be/ma-commune/vie-politique/programmetrategiquetransversal/programme-strategique-transversal-commune-et-cpas.pdf",
+            "title": "Programme Stratégique Transversal 2025-2030",
+            "sourceUrl": "https://www.anhee.be/ma-commune/vie-politique/programmetrategiquetransversal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:eb23201e86abd502ce": {
+            "url": "https://www.anhee.be/ma-commune/vie-politique/programmetrategiquetransversal/25-10-01-delibe-conseil-prise-dacte-pst.pdf",
+            "title": "Délibération du Conseil communal - 1er octobre 2025",
+            "sourceUrl": "https://www.anhee.be/ma-commune/vie-politique/programmetrategiquetransversal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 1
+          },
+          "municipal-doc:da45b470e27eaf39eb": {
+            "url": "https://www.anhee.be/ma-commune/vie-politique/programmetrategiquetransversal/decision-pst-cpas-14-octobre-2025.pdf",
+            "title": "Délibération du Conseil du CPAS - 14 octobre 2025",
+            "sourceUrl": "https://www.anhee.be/ma-commune/vie-politique/programmetrategiquetransversal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 2
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 11,
+        "pagesPending": 8,
+        "documentsKnown": 3,
+        "documentsPending": 2,
+        "errors": 2,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 1,
+        "errors": 2,
+        "attempted": 3,
+        "pagesAttempted": 3
+      },
+      "lastDocumentSuccess": "2026-10-30T07:45:03.990Z"
     },
     {
       "ins": "62003",
@@ -4227,11 +4477,230 @@
         }
       ],
       "lastSiteCheck": "2026-10-25T11:57:46.472Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-30T07:45:03.990Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:9bdcc76e98463c147d": {
+          "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-30T07:45:03.990Z",
+          "lastSuccess": "2026-10-30T07:45:03.990Z",
+          "lastError": null
+        },
+        "municipal-doc:7f4ab206ee45e32b35": {
+          "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale-2024-2030",
+          "lastAttempt": "2026-10-30T07:45:03.990Z",
+          "lastSuccess": "2026-10-30T07:45:03.990Z",
+          "lastError": null
+        },
+        "municipal-doc:f7cf56704088c901b7": {
+          "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil",
+          "lastAttempt": "2026-10-30T07:45:03.990Z",
+          "lastSuccess": "2026-10-30T07:45:03.990Z",
+          "lastError": null
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:9bdcc76e98463c147d": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T07:45:03.990Z",
+            "lastSuccess": "2026-10-30T07:45:03.990Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:7f4ab206ee45e32b35": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale-2024-2030",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T07:45:03.990Z",
+            "lastSuccess": "2026-10-30T07:45:03.990Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:f7cf56704088c901b7": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T07:45:03.990Z",
+            "lastSuccess": "2026-10-30T07:45:03.990Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:4145e7149e18206e62": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/conseil-communal/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:fd2cc3da8f725d2a73": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/membres",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:4b711cf051820b3474": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/ordre-du-jour",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:8154d3e1c55d8e3ddc": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/droit-dinterpeller-le-college-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:d464b79c2dddd2e6c2": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/commissions-du-conseil-communal-1",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:e93ea8c42c36c1d6be": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale-du-logement-2024-2030",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:a8e3b4bb9b6e53cfd6": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/missions-du-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:61b8fc1ddd0debed61": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale-2024-2030/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale-2024-2030",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:c16f9da86178903dda": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil/2026",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:2e10d44dd3f6e5c491": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil/2025",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:daddb110361940a81f": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil/2024",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:743736ca1188139dbf": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil/2023",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 14
+          },
+          "municipal-doc:ab8ed2db9e49df7bc3": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil/2022",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 15
+          },
+          "municipal-doc:933d6279de8d7ba7d2": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil/2021",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 16
+          },
+          "municipal-doc:9eb6bcc831b476abc5": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil/2020",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 17
+          },
+          "municipal-doc:eb54eb37002dd0e8b2": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil/2019",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 18
+          },
+          "municipal-doc:d0a4084f6c9e0ba9d5": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil/2018",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 19
+          },
+          "municipal-doc:50b3e18afb2d414bd0": {
+            "url": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.aywaille.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 20
+          }
+        },
+        "documents": {},
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 21,
+        "pagesPending": 18,
+        "documentsKnown": 0,
+        "documentsPending": 0,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 0,
+        "errors": 0,
+        "attempted": 0,
+        "pagesAttempted": 3
+      }
     },
     {
       "ins": "63004",
@@ -4258,11 +4727,272 @@
         }
       ],
       "lastSiteCheck": "2026-10-25T11:57:46.472Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-30T07:45:03.990Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:93a6537ca3379adc3a": {
+          "url": "https://www.baelen.be/commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-30T07:45:03.990Z",
+          "lastSuccess": "2026-10-30T07:45:03.990Z",
+          "lastError": null
+        },
+        "municipal-doc:5458878ec5f6118cca": {
+          "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+          "lastAttempt": "2026-10-30T07:45:03.990Z",
+          "lastSuccess": "2026-10-30T07:45:03.990Z",
+          "lastError": null
+        },
+        "municipal-doc:bb5d1354bd04395507": {
+          "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/ordre-du-jour-du-prochain-conseil-communal",
+          "lastAttempt": "2026-10-30T07:45:03.990Z",
+          "lastSuccess": "2026-10-30T07:45:03.990Z",
+          "lastError": null
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:93a6537ca3379adc3a": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T07:45:03.990Z",
+            "lastSuccess": "2026-10-30T07:45:03.990Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:5458878ec5f6118cca": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "depth": 1,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 1,
+            "lastAttempt": "2026-10-30T07:45:03.990Z",
+            "lastSuccess": "2026-10-30T07:45:03.990Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:bb5d1354bd04395507": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/ordre-du-jour-du-prochain-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 2,
+            "lastAttempt": "2026-10-30T07:45:03.990Z",
+            "lastSuccess": "2026-10-30T07:45:03.990Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:2a5efcfb39f88da741": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/procedure-dinterpellation",
+            "depth": 1,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:b8b59fdebf5f7f4764": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/deliberation.be",
+            "depth": 1,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:2c62acff7a4038b0fd": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/retrouvez-les-videos-du-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:fbb8a0309c0f72c3a8": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendus-2025",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:e5f492c62dbdba0a11": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendus-2024",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:845a9ebeb10ac92a58": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/compte-rendu-2023",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:a4e9ce0db0dff84a36": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendus-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:fcf3ed0c6513dd1027": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendus-2021",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:13b59b198fc29369fb": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendus-2020",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:678c3d8d1feaee4056": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendus-2019",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:60551b7cfd4ce12256": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendus-2018",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:57e4509358c23ffa1c": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendus-2017",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 14
+          },
+          "municipal-doc:bd5b0a9403dab10a05": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendus-2016",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 15
+          },
+          "municipal-doc:d7b83cc1f8e1d1a1b6": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendus-2015",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 16
+          },
+          "municipal-doc:6d9517f39bdae145f1": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendus-2014",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 17
+          },
+          "municipal-doc:e9c825d8337f934fbf": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendus-2013",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 18
+          },
+          "municipal-doc:f15e7e7d687ce18d0b": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendus-2012",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 19
+          },
+          "municipal-doc:173f297e6f3a06db0a": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendus-2011",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 20
+          },
+          "municipal-doc:3c4dabf899ce6346b6": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendu-2010",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 21
+          },
+          "municipal-doc:0250b2137dbf13de14": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendu-2009",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 22
+          },
+          "municipal-doc:1c57e1d19c09f1a0fd": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendus-2008",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 23
+          },
+          "municipal-doc:8d15b13d9ceea3c25e": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/comptes-rendu-2007",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 24
+          },
+          "municipal-doc:08dfdb2c1549b20881": {
+            "url": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus/2021-12-13-pv-cm.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.baelen.be/commune/vie-politique/conseil-communal/comptes-rendus",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 25
+          }
+        },
+        "documents": {},
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 26,
+        "pagesPending": 23,
+        "documentsKnown": 0,
+        "documentsPending": 0,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 0,
+        "errors": 0,
+        "attempted": 0,
+        "pagesAttempted": 3
+      }
     },
     {
       "ins": "62011",
@@ -4431,11 +5161,795 @@
         }
       ],
       "lastSiteCheck": "2026-10-16T11:52:21.470Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-30T07:45:03.990Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 1,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:d0f70552c9790e48b7": {
+          "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+          "lastAttempt": "2026-10-30T07:45:03.990Z",
+          "lastSuccess": "2026-10-30T07:45:03.990Z",
+          "lastError": null
+        },
+        "municipal-doc:11ac338387880cef66": {
+          "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/documents",
+          "lastAttempt": "2026-10-30T07:45:03.990Z",
+          "lastSuccess": "2026-10-30T07:45:03.990Z",
+          "lastError": null
+        },
+        "municipal-doc:9b2d91279223c8ac19": {
+          "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+          "lastAttempt": "2026-10-30T07:45:03.990Z",
+          "lastSuccess": "2026-10-30T07:45:03.990Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:67c56cfc8cd7895623": {
+          "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/documents/roi-conseil-communal-renumerote-definitif.pdf/@@download/file/ROI%20Conseil%20communal%20-%20RENUMEROTE-DEFINITIF.pdf",
+          "finalUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/documents/roi-conseil-communal-renumerote-definitif.pdf/@@download/file/ROI%20Conseil%20communal%20-%20RENUMEROTE-DEFINITIF.pdf",
+          "lastAttempt": "2026-10-30T07:45:03.990Z",
+          "lastChecked": "2026-10-30T07:45:03.990Z",
+          "lastSuccess": "2026-10-30T07:45:03.990Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Fri, 23 Jun 2023 11:46:29 GMT",
+          "contentCheckedAt": "2026-10-30T07:45:03.990Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/documents/roi-conseil-communal-renumerote-definitif.pdf/@@download/file/ROI%20Conseil%20communal%20-%20RENUMEROTE-DEFINITIF.pdf",
+            "sha256": "4553076a1c9742f13bf417930dc43d5d9c14a2ad8b1c8dfb874f33765b36c279",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T07:45:03.990Z",
+          "sha256": "4553076a1c9742f13bf417930dc43d5d9c14a2ad8b1c8dfb874f33765b36c279",
+          "firstSeenAt": "2026-10-30T07:45:03.990Z",
+          "nextAttemptAt": null
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:67c56cfc8cd7895623"
+      ],
+      "documentVersionsRead": 1,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:d0f70552c9790e48b7": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T07:45:03.990Z",
+            "lastSuccess": "2026-10-30T07:45:03.990Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:11ac338387880cef66": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/documents",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T07:45:03.990Z",
+            "lastSuccess": "2026-10-30T07:45:03.990Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:9b2d91279223c8ac19": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T07:45:03.990Z",
+            "lastSuccess": "2026-10-30T07:45:03.990Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:505896c8094e4e9a82": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/comptes-rendus-des-conseils-communaux/decisions-du-conseil-communal-du-13-octobre-2026",
+            "depth": 0,
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:db3366d34bde16890b": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/comptes-rendus-des-conseils-communaux/decision-du-conseil-communal-du-14-septembre-2026",
+            "depth": 0,
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:53aca8747165ec8996": {
+            "url": "https://photos.google.com/share/AF1QipM8rVwVIDK_8I6rR-yFczP8CGAKFmgT55FIzE33GVU27EZYFO8QJgizRm7auv-pUg?key=Q0JkSEhHMXo1aXVjTzdTVmF3QU5kVTdzOGZvSE9B",
+            "depth": 0,
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:ccdf52c24168102911": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/carole-ghiot-bourgmestre",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:d598869d5e0373d7ea": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/carole-ghiot-bourgmestre/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:44af72b638a58c27af": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/brigitte-wiaux/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:c53efdb81728fd067c": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/copy_of_moustapha-nassiri/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:6effd37a1e345773ed": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/alain-jacques-echevin/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:81748a9888931e3b60": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/valentin-de-vos/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:3d1509c2916e5a67c1": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/monique-lemaire-noel-presidente-du-cpas/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:4ca1256086f6add24a": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/lionel-rouget-echevin/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:d1edfda46484f0f062": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/freddy-gilson-conseiller/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 14
+          },
+          "municipal-doc:d53db5ecf6062e2d8d": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/marie-jose-frix/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 15
+          },
+          "municipal-doc:33caafa4595dfb60e1": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/anne-marie-vancaster/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 16
+          },
+          "municipal-doc:8402b98d1e21b499f4": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/claude-snaps-conseiller-bav/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 17
+          },
+          "municipal-doc:dfc532a93dfececc55": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/bruno-van-de-casteele-conseiller/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 18
+          },
+          "municipal-doc:983e35d1760bc2d254": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/mary-van-overbeke-conseillere-ecolo/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 19
+          },
+          "municipal-doc:2fad30a6bd65b51850": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/louise-arbalestrie-conseillere/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 20
+          },
+          "municipal-doc:930e18356021f2917a": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/aurelien-hennebel-conseiller/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 21
+          },
+          "municipal-doc:ed2b685e33c2bd1323": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/quentin-franchimont-conseiller-b-a-v/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 22
+          },
+          "municipal-doc:5532a9dc222764126e": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/marie-gendebien-heger-b-a-v/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 23
+          },
+          "municipal-doc:03ff0bd964d969d807": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/jerome-cogels-conseiller-b-a-v/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 24
+          },
+          "municipal-doc:9fc7d34677a03e04d5": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/chloe-evrard-conseillere-b-ensemble/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 25
+          },
+          "municipal-doc:7fdd06e88ca1768582": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 26
+          },
+          "municipal-doc:04c6a49b65393f310c": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/brigitte-wiaux",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 27
+          },
+          "municipal-doc:3ce0e3da4b3c646e5d": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/copy_of_moustapha-nassiri",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 28
+          },
+          "municipal-doc:0e859baa52f6f69ef1": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/alain-jacques-echevin",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 29
+          },
+          "municipal-doc:e0afef9fe64f80b5e6": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/valentin-de-vos",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 30
+          },
+          "municipal-doc:98f64f8fc81ce463f7": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/monique-lemaire-noel-presidente-du-cpas",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 31
+          },
+          "municipal-doc:46fdce0fe43d22555d": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/lionel-rouget-echevin",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 32
+          },
+          "municipal-doc:ceee37ecd14e192d09": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/freddy-gilson-conseiller",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 33
+          },
+          "municipal-doc:c709af5127620dc868": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/marie-jose-frix",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 34
+          },
+          "municipal-doc:acfb12c9da2730f703": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/anne-marie-vancaster",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 35
+          },
+          "municipal-doc:5cd72bda4f822a6ce0": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/claude-snaps-conseiller-bav",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 36
+          },
+          "municipal-doc:42ceea2c16835f4c6b": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/bruno-van-de-casteele-conseiller",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 37
+          },
+          "municipal-doc:1c9752945d5a30549e": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/mary-van-overbeke-conseillere-ecolo",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 38
+          },
+          "municipal-doc:019f01b7ea2e71fc36": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/louise-arbalestrie-conseillere",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 39
+          },
+          "municipal-doc:d04bfc864d1234f33a": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/aurelien-hennebel-conseiller",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 40
+          },
+          "municipal-doc:c563f067c0bddd36ca": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/quentin-franchimont-conseiller-b-a-v",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 41
+          },
+          "municipal-doc:826226056b34a7fe81": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/marie-gendebien-heger-b-a-v",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 42
+          },
+          "municipal-doc:83900fc6b7ad328f62": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/jerome-cogels-conseiller-b-a-v",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 43
+          },
+          "municipal-doc:d130ebeda779f7e73f": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1/chloe-evrard-conseillere-b-ensemble",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 44
+          },
+          "municipal-doc:a69557e1d663e91734": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/documents/roi-conseil-communal-renumerote-definitif.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/documents",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 45
+          },
+          "municipal-doc:6ae8802dfe6a131d21": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/documents/roi-conseil-communal-renumerote-definitif.pdf/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/documents",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 46
+          },
+          "municipal-doc:6bc3a5eea0404961e9": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/documents/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/documents",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 47
+          },
+          "municipal-doc:1198df1c14655565b9": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/les-projets-de-decisions-du-conseil-communal-a-votre-disposition",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 48
+          },
+          "municipal-doc:679a7b77fd5735dd4c": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/seances-passees",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 49
+          },
+          "municipal-doc:9bb9fa74a5b1549b40": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-09-novembre-2026",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 50
+          },
+          "municipal-doc:7b56cdba2f9ab4ddf9": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-13-octobre-2026",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 51
+          },
+          "municipal-doc:913e103d65dddcb6f4": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-14-septembre-2026",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 52
+          },
+          "municipal-doc:5a70bec5f1e37718e3": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-24-aout-2026",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 53
+          },
+          "municipal-doc:48e809f9a6ba96822b": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-22-juin-2026",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 54
+          },
+          "municipal-doc:d9f61e86c4b4a82ff3": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-26-mai-2026",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 55
+          },
+          "municipal-doc:9f79bc3f779efb9fc7": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-27-avril-2026",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 56
+          },
+          "municipal-doc:7408437cf03f14fe0e": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-30-mars-2026",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 57
+          },
+          "municipal-doc:be4f2c99ba9c5b2c44": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-23-fevrier-2026",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 58
+          },
+          "municipal-doc:9d64f0904a3a10ba46": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-26-janvier-2026",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 59
+          },
+          "municipal-doc:4e16dd0eb4063742bf": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-15-decembre-2025",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 60
+          },
+          "municipal-doc:3326a1b88103084919": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-12-novembre-2025",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 61
+          },
+          "municipal-doc:2b4e9a0fa8239f46f2": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-6-octobre-2025",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 62
+          },
+          "municipal-doc:07b898d27ade0a1df8": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-25-aout-2025",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 63
+          },
+          "municipal-doc:170dcaba1abb800d20": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-30-juin-2025",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 64
+          },
+          "municipal-doc:b11261bd9106427417": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-26-mai-2025",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 65
+          },
+          "municipal-doc:806abf37055a403a7c": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-28-avril-2025",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 66
+          },
+          "municipal-doc:79d06affbbdb49730d": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-31-mars-2025",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 67
+          },
+          "municipal-doc:52e58c5368eb0fcf9c": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-24-fevrier-2025",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 68
+          },
+          "municipal-doc:7552f236b884fdd8bc": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-27-janvier-2025",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 69
+          },
+          "municipal-doc:55d0ba96abb0030269": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-16-decembre-2024",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 70
+          },
+          "municipal-doc:a2c0ebab2173ee6f29": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-2-decembre-2024",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 71
+          },
+          "municipal-doc:13ba50f286f19eb76e": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-12-novembre-2024",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 72
+          },
+          "municipal-doc:3b18b714b62e479f27": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-26-aout-2024",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 73
+          },
+          "municipal-doc:b562f149f3af997045": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-8-juillet-2024",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 74
+          },
+          "municipal-doc:dd9e1c77ad86bd0ff2": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-24-juin-2024",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 75
+          },
+          "municipal-doc:a6312789dbd987b2f5": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-27-mai-2024",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 76
+          },
+          "municipal-doc:88d3cbf054725227fc": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-22-avril-2024",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 77
+          },
+          "municipal-doc:dceaa711362288e73e": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-25-mars-2024",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 78
+          },
+          "municipal-doc:698a08b25971f5aab3": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-26-fevrier-2024",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 79
+          },
+          "municipal-doc:b156b3eae3f7c1aef9": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-29-janvier-2024",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 80
+          },
+          "municipal-doc:7ea4bb5834a01d1197": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/copy2_of_conseil-du-16-octobre-2023-1",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 81
+          },
+          "municipal-doc:93e84c9f0195e5a9dc": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-27-novembre",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 82
+          },
+          "municipal-doc:570f8241b07b5bee41": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-6-novembre-2023",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 83
+          },
+          "municipal-doc:8f472d0d4317cac333": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-du-16-octobre-2023-1",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 84
+          },
+          "municipal-doc:613ba2d8715a68fcb3": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/conseil-de-police",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 85
+          },
+          "municipal-doc:2f0184290267ef384b": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 86
+          }
+        },
+        "documents": {
+          "municipal-doc:67c56cfc8cd7895623": {
+            "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/documents/roi-conseil-communal-renumerote-definitif.pdf/@@download/file/ROI%20Conseil%20communal%20-%20RENUMEROTE-DEFINITIF.pdf",
+            "title": "ROI Conseil communal - RENUMEROTE-DEFINITIF.pdf",
+            "sourceUrl": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/documents",
+            "discoveredAt": "2026-10-30T07:45:03.990Z",
+            "lastSeen": "2026-10-30T07:45:03.990Z",
+            "discoveryOrder": 0
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 87,
+        "pagesPending": 84,
+        "documentsKnown": 1,
+        "documentsPending": 0,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 1,
+        "errors": 0,
+        "attempted": 1,
+        "pagesAttempted": 3
+      },
+      "lastDocumentSuccess": "2026-10-30T07:45:03.990Z"
     },
     {
       "ins": "51008",
@@ -6312,14 +7826,27 @@
       "estimatedMinutes": 89,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.dinant.be/conseil-communal/",
+          "title": "Le Conseil",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T07:44:02.508Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.dinant.be/",
+        "checkedAt": "2026-10-30T07:44:02.508Z"
+      }
     },
     {
       "ins": "63020",
@@ -7639,14 +9166,51 @@
       "estimatedMinutes": 87,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.floreffe.be/ma-commune/vie-politique/college-communal/",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.floreffe.be/ma-commune/vie-politique/conseil-communal/",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.floreffe.be/ma-commune/vie-politique/programme-strategique-transversal/",
+          "title": "Programme Stratégique Transversal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.floreffe.be/suivez-le-conseil-communal-du-28-septembre-en-direct-a-19h30/",
+          "title": "",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T07:44:02.508Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.floreffe.be/",
+        "checkedAt": "2026-10-30T07:44:02.508Z"
+      }
     },
     {
       "ins": "93022",
@@ -7772,14 +9336,64 @@
       "estimatedMinutes": 95,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.fosses-la-ville.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.fosses-la-ville.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.fosses-la-ville.be/ma-commune/vie-politique/conseil-communal/publications/pv-des-conseils-communaux",
+          "title": "PV des Conseils communaux",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.fosses-la-ville.be/ma-commune/vie-politique/conseil-communal/publications/convocation-et-ordre-du-jour-pour-le-prochain-conseil-communal",
+          "title": "Prochain Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.fosses-la-ville.be/ma-commune/pole-supports/service-juridique-marche-publics",
+          "title": "Service Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.fosses-la-ville.be/actualites/seance-publique-du-conseil-dadministration-de-ores?u=1f6b553985b743899899a91fff2dc7b6",
+          "title": "Publié Séance publique du Conseil d'Administration de ORES Assets",
+          "status": "lien_public_repere_non_analyse"
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T07:44:02.508Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.fosses-la-ville.be/",
+        "checkedAt": "2026-10-30T07:44:02.508Z"
+      }
     },
     {
       "ins": "53028",
@@ -8015,14 +9629,72 @@
       "estimatedMinutes": 88,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.gembloux.be/ma-commune/vie-politique/composition-du-college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.gembloux.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.gembloux.be/ma-commune/vie-politique/comptes-rendus-des-conseils-communaux",
+          "title": "Procès-verbaux des séances du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.gembloux.be/actualites/adoption-du-programme-strategique-transversal-2025?u=dd730138edf349bb889151bc3f053f92",
+          "title": "Programme Stratégique Transversal 2025-2030",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.deliberations.be/gembloux/decisions",
+          "title": "Séances du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.gembloux.be/actualites/visionnez-la-seance-publique-du-conseil-communal?u=bbe0e8b4a66648eb8e3d7b7851d6e5b5",
+          "title": "Politique Publié Visionnez la séance publique du Conseil communal de mardi 13 octobre",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.gembloux.be/actualites/convocations-aux-seances-publiques-des-conseils?u=01bef9621d5842229c608c0670073908",
+          "title": "Publié Convocations aux séances publiques des Conseils d'administration des intercommunales",
+          "status": "lien_public_repere_non_analyse"
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T07:44:02.508Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.gembloux.be/",
+        "checkedAt": "2026-10-30T07:44:02.508Z"
+      }
     },
     {
       "ins": "25031",
@@ -9722,14 +11394,77 @@
       "estimatedMinutes": 91,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://houyet.be/vie-politique/le-college-communal/la-bourgmestre/",
+          "title": "La bourgmestre",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://houyet.be/vie-politique/le-college-communal/",
+          "title": "Le collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://houyet.be/",
+          "title": "Le conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://houyet.be/vie-politique/le-conseil-communal/composition-du-conseil/",
+          "title": "Composition du conseil",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://houyet.be/vie-politique/le-conseil-communal/seances/",
+          "title": "Les séances du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://houyet.be/vie-politique/le-conseil-communal/reglement-dordre-interieur/",
+          "title": "R.O.I. du conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://houyet.be/vie-politique/budget-communal/",
+          "title": "Budgets et comptes",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://houyet.be/prochaine-seance-du-conseil-communal/",
+          "title": "",
+          "status": "lien_public_repere_non_analyse"
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T07:44:02.508Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://houyet.be/",
+        "checkedAt": "2026-10-30T07:44:02.508Z"
+      }
     },
     {
       "ins": "61031",
@@ -9983,14 +11718,51 @@
       "estimatedMinutes": 94,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.jemeppe-sur-sambre.be/lecoll%C3%A8gecommunal",
+          "title": "Le Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.jemeppe-sur-sambre.be/leconseilcommunal",
+          "title": "Le Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.jemeppe-sur-sambre.be/interpellerleconseilcommunal",
+          "title": "Interpeller le Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.jemeppe-sur-sambre.be/post/conseil-communal-s%C3%A9ance-du-lundi-2-novembre-2026",
+          "title": "Conseil communal : séance du lundi 2 novembre 2026",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T07:44:02.508Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.jemeppe-sur-sambre.be/",
+        "checkedAt": "2026-10-30T07:44:02.508Z"
+      }
     },
     {
       "ins": "25048",
@@ -12301,14 +14073,51 @@
       "estimatedMinutes": 96,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.onhaye.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.onhaye.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.onhaye.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil",
+          "title": "Ordre du jour",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.onhaye.be/ma-commune/vie-politique/conseil-communal/proces-verbaux-des-assemblees",
+          "title": "Procès-verbaux",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T07:44:02.508Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.onhaye.be/",
+        "checkedAt": "2026-10-30T07:44:02.508Z"
+      }
     },
     {
       "ins": "64056",
@@ -13674,14 +15483,51 @@
       "estimatedMinutes": 95,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.sainte-ode.be/ma-commune/vie-politique/conseil-communal-page",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.sainte-ode.be/ma-commune/vie-politique/college-communal-page",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.deliberations.be/sainte-ode/decisions",
+          "title": "Délibérations du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.sainte-ode.be/actualites/conseil-communal-du-8-octobre-2026?u=72ba1d0a87ec4cf589d5a8344d7d0014",
+          "title": "Publié Conseil communal du 8 octobre 2026",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T07:44:02.508Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.sainte-ode.be/",
+        "checkedAt": "2026-10-30T07:44:02.508Z"
+      }
     },
     {
       "ins": "92137",
@@ -14260,14 +16106,51 @@
       "estimatedMinutes": 94,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.tellin.be/commune/vie-politique/college-communal",
+          "title": "Collège Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.tellin.be/commune/vie-politique/conseil-communal",
+          "title": "Conseil Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.deliberations.be/tellin/decisions",
+          "title": "Ordres du jour et PV des Conseils Communaux",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.tellin.be/commune/vie-politique/programme-strategique-transversal-pst",
+          "title": "Programme Stratégique Transversal (PST)",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T07:44:02.508Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.tellin.be/",
+        "checkedAt": "2026-10-30T07:44:02.508Z"
+      }
     },
     {
       "ins": "83049",
@@ -14284,14 +16167,18 @@
       "estimatedMinutes": 87,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_lu_sources_non_localisees",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-30T07:44:02.508Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.tenneville.be/",
+        "checkedAt": "2026-10-30T07:44:02.508Z"
+      }
     },
     {
       "ins": "63076",
@@ -15617,16 +17504,53 @@
       "estimatedMinutes": 86,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.yvoir.be/ma-commune/services-communaux/marches-publics",
+          "title": "Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.yvoir.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.yvoir.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.deliberations.be/yvoir/publications",
+          "title": "Règlements et ordonnances Tous les nouveaux règlements et ordonnances seront publiés et accessible via le lien suivant :",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T07:44:02.508Z",
+          "last_success": "2026-10-30T07:44:02.508Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T07:44:02.508Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.yvoir.be/",
+        "checkedAt": "2026-10-30T07:44:02.508Z"
+      }
     }
   ],
-  "lastMunicipalPass": "2026-10-29T22:01:43.925Z",
-  "lastMunicipalDocumentPass": "2026-10-29T22:03:14.944Z"
+  "lastMunicipalPass": "2026-10-30T07:44:02.508Z",
+  "lastMunicipalDocumentPass": "2026-10-30T07:45:03.990Z"
 }
