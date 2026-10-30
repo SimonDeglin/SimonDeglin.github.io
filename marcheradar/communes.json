@@ -13,19 +13,19 @@
   "counts": {
     "total": 261,
     "sitesRepertories": 261,
-    "sitesVerifies": 217,
-    "deliberationsConnectees": 28,
+    "sitesVerifies": 229,
+    "deliberationsConnectees": 30,
     "zones": {
       "principale": 196,
       "exterieure_provisoire": 26,
       "peripherique": 39
     },
     "checkedWithErrors": 3,
-    "documentsRead": 148,
-    "opportunities": 67,
-    "sitesChecked": 217,
-    "candidatePages": 171,
-    "sourceErrors": 22
+    "documentsRead": 156,
+    "opportunities": 78,
+    "sitesChecked": 229,
+    "candidatePages": 182,
+    "sourceErrors": 24
   },
   "communes": [
     {
@@ -5037,14 +5037,172 @@
       "estimatedMinutes": 100,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.bastogne.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.bastogne.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.bastogne.be/ma-commune/vie-politique/budget-communal",
+          "title": "Budget communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.bastogne.be/ma-commune/vie-politique/reglement-dordre-interieur-du-conseil-communal",
+          "title": "Règlement d'Ordre Intérieur du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.bastogne.be/ma-commune/vie-politique/conseil-communal/seances-du-conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T16:15:40.939Z",
+      "lastDocumentCheck": "2026-10-30T16:16:56.366Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.bastogne.be/",
+        "checkedAt": "2026-10-30T16:15:40.939Z"
+      },
+      "documentSourceChecks": {
+        "municipal-doc:2e02faac0c61860116": {
+          "url": "https://www.bastogne.be/ma-commune/vie-politique/college-communal",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null
+        },
+        "municipal-doc:8a95422ae47be9747b": {
+          "url": "https://www.bastogne.be/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null
+        },
+        "municipal-doc:5f5274406fefb36c3d": {
+          "url": "https://www.bastogne.be/ma-commune/vie-politique/budget-communal",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:2e02faac0c61860116": {
+            "url": "https://www.bastogne.be/ma-commune/vie-politique/college-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T16:16:56.366Z",
+            "lastSuccess": "2026-10-30T16:16:56.366Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:8a95422ae47be9747b": {
+            "url": "https://www.bastogne.be/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T16:16:56.366Z",
+            "lastSuccess": "2026-10-30T16:16:56.366Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:5f5274406fefb36c3d": {
+            "url": "https://www.bastogne.be/ma-commune/vie-politique/budget-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T16:16:56.366Z",
+            "lastSuccess": "2026-10-30T16:16:56.366Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:98390f9f3d486e1289": {
+            "url": "https://www.bastogne.be/ma-commune/vie-politique/reglement-dordre-interieur-du-conseil-communal",
+            "depth": 0,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:4947f2daf6c8b15799": {
+            "url": "https://www.bastogne.be/ma-commune/vie-politique/conseil-communal/seances-du-conseil-communal",
+            "depth": 0,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:9c587f4b040639437a": {
+            "url": "https://www.bastogne.be/ma-commune/vie-politique/conseil-communal/seances-du-conseil-communal/archives",
+            "depth": 1,
+            "sourceUrl": "https://www.bastogne.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:7d9132c111125c4766": {
+            "url": "https://www.bastogne.be/ma-commune/vie-politique/conseil-communal/avis-du-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.bastogne.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:0362de78cd60cfa97e": {
+            "url": "https://www.bastogne.be/ma-commune/vie-politique/conseil-communal/documents",
+            "depth": 1,
+            "sourceUrl": "https://www.bastogne.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 7
+          }
+        },
+        "documents": {},
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 8,
+        "pagesPending": 5,
+        "documentsKnown": 0,
+        "documentsPending": 0,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 0,
+        "errors": 0,
+        "attempted": 0,
+        "pagesAttempted": 3
+      }
     },
     {
       "ins": "56005",
@@ -5085,14 +5243,254 @@
       "estimatedMinutes": 102,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.beauraing.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+          "title": "Procès verbaux",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T16:15:40.939Z",
+      "lastDocumentCheck": "2026-10-30T16:16:56.366Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.beauraing.be/",
+        "checkedAt": "2026-10-30T16:15:40.939Z"
+      },
+      "documentSourceChecks": {
+        "municipal-doc:b2aedf64a0f8e9f5ba": {
+          "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null
+        },
+        "municipal-doc:a6a2a068b09489cd20": {
+          "url": "https://www.beauraing.be/ma-commune/vie-politique/college-communal",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null
+        },
+        "municipal-doc:14460111ec300b095b": {
+          "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:b2aedf64a0f8e9f5ba": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T16:16:56.366Z",
+            "lastSuccess": "2026-10-30T16:16:56.366Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:a6a2a068b09489cd20": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/college-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T16:16:56.366Z",
+            "lastSuccess": "2026-10-30T16:16:56.366Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:14460111ec300b095b": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T16:16:56.366Z",
+            "lastSuccess": "2026-10-30T16:16:56.366Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:24e514b983bcea8b34": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/conseil-communal/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:cd6bdadb9f212dc442": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/composition",
+            "depth": 1,
+            "sourceUrl": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:368dd94fae28efeda8": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/mandats-derives",
+            "depth": 1,
+            "sourceUrl": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:9bf114af4e46a35e72": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/programme-strategique-transversal-2018-2024",
+            "depth": 1,
+            "sourceUrl": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:d4c4487ca2d6a550e7": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/interpellation-des-habitants",
+            "depth": 1,
+            "sourceUrl": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:07aab2b0ae5d696a65": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale-2024-2030",
+            "depth": 1,
+            "sourceUrl": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:393698c29f8e5cfec5": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:8c648e39f386b25e90": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/conseils-2023",
+            "depth": 1,
+            "sourceUrl": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:4f9bdce60403f2468d": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/conseils-communaux-2022",
+            "depth": 1,
+            "sourceUrl": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:457596351da656b89a": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/conseils-communaux-2021",
+            "depth": 1,
+            "sourceUrl": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:9e8e5b46e0b166d73d": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/conseils-communaux-2020",
+            "depth": 1,
+            "sourceUrl": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:4c253c4240d3a47032": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/conseils-communaux-2019",
+            "depth": 1,
+            "sourceUrl": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 14
+          },
+          "municipal-doc:d4802597c135cf4167": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/conseils-communaux-2018",
+            "depth": 1,
+            "sourceUrl": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 15
+          },
+          "municipal-doc:0e951af48f40c744f2": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/Conseils%20communaux%202017",
+            "depth": 1,
+            "sourceUrl": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 16
+          },
+          "municipal-doc:5ad626c51fa45224b6": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/conseils-communaux-2024",
+            "depth": 1,
+            "sourceUrl": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 17
+          },
+          "municipal-doc:2e286a4b113effc4d4": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/conseils-communaux-2025",
+            "depth": 1,
+            "sourceUrl": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 18
+          },
+          "municipal-doc:b86a37e1715c3fcec7": {
+            "url": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/conseils-communaux-2026",
+            "depth": 1,
+            "sourceUrl": "https://www.beauraing.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 19
+          }
+        },
+        "documents": {},
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 20,
+        "pagesPending": 17,
+        "documentsKnown": 0,
+        "documentsPending": 0,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 0,
+        "errors": 0,
+        "attempted": 0,
+        "pagesAttempted": 3
+      }
     },
     {
       "ins": "25005",
@@ -6042,11 +6440,469 @@
         }
       ],
       "lastSiteCheck": "2026-10-18T11:39:57.049Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-30T16:16:56.366Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
-      "opportunities": 0,
-      "errors": []
+      "documentsRead": 6,
+      "opportunities": 11,
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:d15af3df52b886910e": {
+          "url": "https://www.beloeil.be/ma-commune/vie-politique/reglement-d-ordre-interieur-du-conseil-communal.html",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null
+        },
+        "municipal-doc:3b92259cc82d00b2e9": {
+          "url": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal.html",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null
+        },
+        "municipal-doc:ef1d83884a1d7be709": {
+          "url": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2026.html",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:a357da17df4a8fb450": {
+          "url": "https://www.beloeil.be/images/pdf/viepolitique/ROI-Conseil-communal-2025.pdf",
+          "finalUrl": "https://www.beloeil.be/images/pdf/viepolitique/ROI-Conseil-communal-2025.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastChecked": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null,
+          "etag": "\"67ff76f5-ac36b\"",
+          "lastModified": "Wed, 16 Apr 2025 09:23:01 GMT",
+          "contentCheckedAt": "2026-10-30T16:16:56.366Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.beloeil.be/images/pdf/viepolitique/ROI-Conseil-communal-2025.pdf",
+            "sha256": "3c7c785494157eafd072fa50caeaebd6d7d215807f9506083c7a877a42f8a587",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T16:16:56.366Z",
+          "sha256": "3c7c785494157eafd072fa50caeaebd6d7d215807f9506083c7a877a42f8a587",
+          "firstSeenAt": "2026-10-30T16:16:56.366Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:01149b7c9351513e00": {
+          "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.01.28-Convocation-sans-huis-clos.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-30T22:16:56.366Z"
+        },
+        "municipal-doc:f66603b4fa9f98a14c": {
+          "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-28-janvier-2026.pdf",
+          "finalUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-28-janvier-2026.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastChecked": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null,
+          "etag": "\"69bea821-faf36\"",
+          "lastModified": "Sat, 21 Mar 2026 14:16:01 GMT",
+          "contentCheckedAt": "2026-10-30T16:16:56.366Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-28-janvier-2026.pdf",
+            "sha256": "115777707847299f46dabad6e8add2e93ffd12c2ce34d69dc4a854b3c67dcfb6",
+            "session": {
+              "date": "2026-01-28",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 28 JANVIER 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T16:16:56.366Z",
+          "sha256": "115777707847299f46dabad6e8add2e93ffd12c2ce34d69dc4a854b3c67dcfb6",
+          "firstSeenAt": "2026-10-30T16:16:56.366Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:a1656b17441521d886": {
+          "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.03.18-Convocation-sans-huis-clos.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-30T22:16:56.366Z"
+        },
+        "municipal-doc:5c5a76c4342cebddad": {
+          "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+          "finalUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastChecked": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null,
+          "etag": "\"6a426b22-1126e6\"",
+          "lastModified": "Mon, 29 Jun 2026 12:54:58 GMT",
+          "contentCheckedAt": "2026-10-30T16:16:56.366Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+            "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+            "session": {
+              "date": "2026-03-18",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 18 MARS 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T16:16:56.366Z",
+          "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+          "firstSeenAt": "2026-10-30T16:16:56.366Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:56a2cc64ad517a69d2": {
+          "url": "https://www.beloeil.be/images/pdf/viepolitique/CC-2026.04.15-Convocation-sans-huis-clos.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-30T22:16:56.366Z"
+        },
+        "municipal-doc:c25d300ff91a768a7b": {
+          "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+          "finalUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastChecked": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null,
+          "etag": "\"6a1074dc-bbcb1\"",
+          "lastModified": "Fri, 22 May 2026 15:23:08 GMT",
+          "contentCheckedAt": "2026-10-30T16:16:56.366Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+            "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313",
+            "session": {
+              "date": "2026-04-15",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 15 AVRIL 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T16:16:56.366Z",
+          "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313",
+          "firstSeenAt": "2026-10-30T16:16:56.366Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:1d78040622f33785fe": {
+          "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.05.20-Convocation-sans-huis-clos.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-30T22:16:56.366Z"
+        },
+        "municipal-doc:d1269dcfac3ee75607": {
+          "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
+          "finalUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastChecked": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null,
+          "etag": "\"6a3e4fcf-a217a\"",
+          "lastModified": "Fri, 26 Jun 2026 10:09:19 GMT",
+          "contentCheckedAt": "2026-10-30T16:16:56.366Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
+            "sha256": "71b910ac920b23dafd63061eb9455659a8320c55197cfe787bbea8bde828ec8f",
+            "session": {
+              "date": "2026-05-20",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 20 MAI 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T16:16:56.366Z",
+          "sha256": "71b910ac920b23dafd63061eb9455659a8320c55197cfe787bbea8bde828ec8f",
+          "firstSeenAt": "2026-10-30T16:16:56.366Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:abf06b023b744c2235": {
+          "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.06.17-Ordre-du-jour-sans-huis-clos.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-30T22:16:56.366Z"
+        },
+        "municipal-doc:a99e8d98b47b6c803b": {
+          "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-17-juin-2026_compressed-1.pdf",
+          "finalUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-17-juin-2026_compressed-1.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastChecked": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null,
+          "etag": "\"6a9002cf-17fbac\"",
+          "lastModified": "Thu, 27 Aug 2026 09:26:39 GMT",
+          "contentCheckedAt": "2026-10-30T16:16:56.366Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-17-juin-2026_compressed-1.pdf",
+            "sha256": "7449b57a8da38a6d9e870771ff0e1ff4cb9d38a7778d1a1d84b2f5919eacd84b",
+            "session": {
+              "date": "2026-06-17",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 17 JUIN 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T16:16:56.366Z",
+          "sha256": "7449b57a8da38a6d9e870771ff0e1ff4cb9d38a7778d1a1d84b2f5919eacd84b",
+          "firstSeenAt": "2026-10-30T16:16:56.366Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:4c69293f54b6efe8df": {
+          "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.08.26-ordre-du-jour.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-30T22:16:56.366Z"
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:a357da17df4a8fb450",
+        "municipal-doc:f66603b4fa9f98a14c",
+        "municipal-doc:5c5a76c4342cebddad",
+        "municipal-doc:c25d300ff91a768a7b",
+        "municipal-doc:d1269dcfac3ee75607",
+        "municipal-doc:a99e8d98b47b6c803b"
+      ],
+      "documentVersionsRead": 6,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:d15af3df52b886910e": {
+            "url": "https://www.beloeil.be/ma-commune/vie-politique/reglement-d-ordre-interieur-du-conseil-communal.html",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T16:16:56.366Z",
+            "lastSuccess": "2026-10-30T16:16:56.366Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:3b92259cc82d00b2e9": {
+            "url": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal.html",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T16:16:56.366Z",
+            "lastSuccess": "2026-10-30T16:16:56.366Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:ef1d83884a1d7be709": {
+            "url": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2026.html",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T16:16:56.366Z",
+            "lastSuccess": "2026-10-30T16:16:56.366Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:0b7a41fab13732276a": {
+            "url": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-conseil-communal-2025.html",
+            "depth": 0,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:01be5c9723ab25706e": {
+            "url": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2024.html",
+            "depth": 0,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:ead3b6e0303c7f411c": {
+            "url": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seanceduconseil.html",
+            "depth": 0,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:07acd0ba3c56985c80": {
+            "url": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2021.html",
+            "depth": 0,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:b5c91a3b9c51de6abc": {
+            "url": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-conseil-communal-2023.html",
+            "depth": 0,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 7
+          }
+        },
+        "documents": {
+          "municipal-doc:a357da17df4a8fb450": {
+            "url": "https://www.beloeil.be/images/pdf/viepolitique/ROI-Conseil-communal-2025.pdf",
+            "title": "Cliquer ici",
+            "sourceUrl": "https://www.beloeil.be/ma-commune/vie-politique/reglement-d-ordre-interieur-du-conseil-communal.html",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:01149b7c9351513e00": {
+            "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.01.28-Convocation-sans-huis-clos.pdf",
+            "title": "Convocation",
+            "sourceUrl": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2026.html",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 1
+          },
+          "municipal-doc:f66603b4fa9f98a14c": {
+            "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-28-janvier-2026.pdf",
+            "title": "Proc&egrave;s-verbal",
+            "sourceUrl": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2026.html",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 2
+          },
+          "municipal-doc:a1656b17441521d886": {
+            "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.03.18-Convocation-sans-huis-clos.pdf",
+            "title": "Convocation",
+            "sourceUrl": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2026.html",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:5c5a76c4342cebddad": {
+            "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+            "title": "Proc&egrave;s-verbal",
+            "sourceUrl": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2026.html",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:56a2cc64ad517a69d2": {
+            "url": "https://www.beloeil.be/images/pdf/viepolitique/CC-2026.04.15-Convocation-sans-huis-clos.pdf",
+            "title": "Convocation",
+            "sourceUrl": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2026.html",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:c25d300ff91a768a7b": {
+            "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+            "title": "Proc&egrave;s-verbal",
+            "sourceUrl": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2026.html",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:1d78040622f33785fe": {
+            "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.05.20-Convocation-sans-huis-clos.pdf",
+            "title": "Convocation",
+            "sourceUrl": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2026.html",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:d1269dcfac3ee75607": {
+            "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
+            "title": "Proc&egrave;s-verbal",
+            "sourceUrl": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2026.html",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:abf06b023b744c2235": {
+            "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.06.17-Ordre-du-jour-sans-huis-clos.pdf",
+            "title": "Convocation",
+            "sourceUrl": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2026.html",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:a99e8d98b47b6c803b": {
+            "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-17-juin-2026_compressed-1.pdf",
+            "title": "Proc&egrave;s-verbal",
+            "sourceUrl": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2026.html",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:4c69293f54b6efe8df": {
+            "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.08.26-ordre-du-jour.pdf",
+            "title": "Convocation",
+            "sourceUrl": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2026.html",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:2478b8a712e05c8bd0": {
+            "url": "https://www.beloeil.be/images/pdf/arrete-bourgmestre-festivites/PV-du-26-aout_compressed-1.pdf",
+            "title": "Proc&egrave;s-verbal",
+            "sourceUrl": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2026.html",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:99ad567f2cb81670d0": {
+            "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.09.30-ordre-du-jour-sans-huis-clos.pdf",
+            "title": "Convocation",
+            "sourceUrl": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2026.html",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:c954a0ec20c0a4c0f6": {
+            "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.10.21-ordre-du-jour-sans-huis-clos.pdf",
+            "title": "Convocation",
+            "sourceUrl": "https://www.beloeil.be/ma-commune/vie-politique/conseil-communal/seance-du-conseil-communal-2026.html",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 14
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 8,
+        "pagesPending": 5,
+        "documentsKnown": 15,
+        "documentsPending": 9,
+        "errors": 6,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 6,
+        "errors": 6,
+        "attempted": 12,
+        "pagesAttempted": 3
+      },
+      "lastDocumentSuccess": "2026-10-30T16:16:56.366Z"
     },
     {
       "ins": "64008",
@@ -6097,11 +6953,1299 @@
         }
       ],
       "lastSiteCheck": "2026-10-28T13:29:37.963Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-30T16:16:56.366Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 2,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:cceb9c8a8d9cb22ee4": {
+          "url": "https://www.berloz.be/commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null
+        },
+        "municipal-doc:532e4b0bd5fa2173ac": {
+          "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null
+        },
+        "municipal-doc:cba423059aea1b5a93": {
+          "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:65d8f724cc56c2d930": {
+          "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/declaration-de-politique-generale-vdef.pdf",
+          "finalUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/declaration-de-politique-generale-vdef.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastChecked": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Thu, 27 Feb 2025 13:34:59 GMT",
+          "contentCheckedAt": "2026-10-30T16:16:56.366Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/declaration-de-politique-generale-vdef.pdf",
+            "sha256": "81b1e6b8d4007a64c231ead3b311129c8aef05ba6aca6d3941826095ef1ff4b4",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T16:16:56.366Z",
+          "sha256": "81b1e6b8d4007a64c231ead3b311129c8aef05ba6aca6d3941826095ef1ff4b4",
+          "firstSeenAt": "2026-10-30T16:16:56.366Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:26518d9141e953b558": {
+          "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/declaration-de-politique-generale-version.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastError": "Fichier supérieur à la limite",
+          "nextAttemptAt": "2026-10-30T22:16:56.366Z"
+        },
+        "municipal-doc:2cdd0dea2c924b2286": {
+          "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/berloz_pst-2024-2030_full.pdf",
+          "finalUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/berloz_pst-2024-2030_full.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastChecked": "2026-10-30T16:16:56.366Z",
+          "lastSuccess": "2026-10-30T16:16:56.366Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Wed, 01 Oct 2025 08:00:52 GMT",
+          "contentCheckedAt": "2026-10-30T16:16:56.366Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/berloz_pst-2024-2030_full.pdf",
+            "sha256": "9db79c0389324aa28c5a7f5ab0db14c0d8c94a6ca26fc9814a421058cc7e5396",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T16:16:56.366Z",
+          "sha256": "9db79c0389324aa28c5a7f5ab0db14c0d8c94a6ca26fc9814a421058cc7e5396",
+          "firstSeenAt": "2026-10-30T16:16:56.366Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:f9d5a589432950a58d": {
+          "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-25-fevrier-2025-pv-web.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-30T22:16:56.366Z"
+        },
+        "municipal-doc:b7e3b14a7234745f89": {
+          "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-28-janvier-2025-pv-web.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-30T22:16:56.366Z"
+        },
+        "municipal-doc:f74dd0adbea9255b43": {
+          "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-25-mars-2025-pv-web.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-30T22:16:56.366Z"
+        },
+        "municipal-doc:2bd1ace60badadd2f8": {
+          "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-29-avril-2025-pv-web.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-30T22:16:56.366Z"
+        },
+        "municipal-doc:89d2ad60458f43ae54": {
+          "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-3-juin-2025-pv-web.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-30T22:16:56.366Z"
+        },
+        "municipal-doc:3e6c54731ca826e4ae": {
+          "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-24-juin-2025-pv-web.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-30T22:16:56.366Z"
+        },
+        "municipal-doc:98a747268c915749c9": {
+          "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-25-septembre-2025-pv-web.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-30T22:16:56.366Z"
+        },
+        "municipal-doc:4d61d6345f69e9141e": {
+          "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-28-octobre-2025-pv-web.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-30T22:16:56.366Z"
+        },
+        "municipal-doc:fd42d634e9aff40e18": {
+          "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-25-novembre-2025-pv-web.pdf",
+          "lastAttempt": "2026-10-30T16:16:56.366Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-30T22:16:56.366Z"
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:65d8f724cc56c2d930",
+        "municipal-doc:2cdd0dea2c924b2286"
+      ],
+      "documentVersionsRead": 2,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:cceb9c8a8d9cb22ee4": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T16:16:56.366Z",
+            "lastSuccess": "2026-10-30T16:16:56.366Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:532e4b0bd5fa2173ac": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T16:16:56.366Z",
+            "lastSuccess": "2026-10-30T16:16:56.366Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:cba423059aea1b5a93": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T16:16:56.366Z",
+            "lastSuccess": "2026-10-30T16:16:56.366Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:d2217a635455037c4c": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/conseil-communal/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:b9a21dee36dd7c0ef3": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/procedure-dinterpellation-du-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:369f8aa66de24339dc": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/diffusion-du-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:95d70ebbb4adeff2b0": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:f7c4c9acb0a904d88d": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/ordre-du-jour-du-conseil-communal-1",
+            "depth": 1,
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:01c31e692d38cf81cf": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/2019-04-23-roi-du-conseil-communal.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:575585eeef3df64dcd": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/comptes-rendus-anterieurs-du-conseil-communal/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 9
+          }
+        },
+        "documents": {
+          "municipal-doc:65d8f724cc56c2d930": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/declaration-de-politique-generale-vdef.pdf",
+            "title": "Déclaration de Politique générale",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:26518d9141e953b558": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/declaration-de-politique-generale-version.pdf",
+            "title": "Version Imprimable",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 1
+          },
+          "municipal-doc:2cdd0dea2c924b2286": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/berloz_pst-2024-2030_full.pdf",
+            "title": "PST",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 2
+          },
+          "municipal-doc:f9d5a589432950a58d": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-25-fevrier-2025-pv-web.pdf",
+            "title": "CR du 25 février 2025",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:b7e3b14a7234745f89": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-28-janvier-2025-pv-web.pdf",
+            "title": "CR du 28 janvier 2025",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:f74dd0adbea9255b43": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-25-mars-2025-pv-web.pdf",
+            "title": "CR du 25 mars 2025",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:2bd1ace60badadd2f8": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-29-avril-2025-pv-web.pdf",
+            "title": "CR du 29 avril 2025",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:89d2ad60458f43ae54": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-3-juin-2025-pv-web.pdf",
+            "title": "CR du 3 juin 2025",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:3e6c54731ca826e4ae": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-24-juin-2025-pv-web.pdf",
+            "title": "CR du 24 juin 2025",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:98a747268c915749c9": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-25-septembre-2025-pv-web.pdf",
+            "title": "CR du 25 septembre 2025",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:4d61d6345f69e9141e": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-28-octobre-2025-pv-web.pdf",
+            "title": "CR du 28 octobre 2025",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:fd42d634e9aff40e18": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-25-novembre-2025-pv-web.pdf",
+            "title": "CR du 25 novembre 2025",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:4f0cb161f4365e8a9d": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-16-decembre-2025-pv-web.pdf",
+            "title": "CR du 16 décembre 2025",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:685d9bc90e8c135bb2": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-17-decembre-2024-pv-web.pdf",
+            "title": "CR du 17 décembre 2024",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:257b7810b00956c1c9": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-2-decembre-2024-pv-web.pdf",
+            "title": "CR du 2 décembre 2024",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 14
+          },
+          "municipal-doc:23fce8ec8c0acf44b6": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-26-novembre-2024-pv-web.pdf",
+            "title": "CR du 26 novembre 2024",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 15
+          },
+          "municipal-doc:50d86c45e076ca211e": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-29-octobre-2024-pv-web.pdf",
+            "title": "CR du 29 octobre 2024",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 16
+          },
+          "municipal-doc:61b133ecce76383366": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-18-septembre-2024-pv-web.pdf",
+            "title": "CR du 18 septembre 2024",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 17
+          },
+          "municipal-doc:cb1f49c8c8a3b34e9d": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-27-juin-2024-pv-web.pdf",
+            "title": "CR du 27 juin 2024",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 18
+          },
+          "municipal-doc:961a00e38b6497d555": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-30-mai-2024-pv-web.pdf",
+            "title": "CR du 30 mai 2024",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 19
+          },
+          "municipal-doc:a8a75da3b4bbe73cb7": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-23-avril-2024-pv-web.pdf",
+            "title": "CR du 23 avril 2024",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 20
+          },
+          "municipal-doc:0ee568381d98b4c37c": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-26-mars-2024-pv-web.pdf",
+            "title": "CR du 26 mars 2024",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 21
+          },
+          "municipal-doc:dd4934344b3d98a92d": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-26-fevrier-2024-pv-web.pdf",
+            "title": "CR du 26 février 2024",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 22
+          },
+          "municipal-doc:2e7334a420e0d5c9b4": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-30-janvier-2024-pv-web.pdf",
+            "title": "CR du 30 janvier 2024",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 23
+          },
+          "municipal-doc:30fa455afe549ac7df": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-19-decembre-2023-pv-web.pdf",
+            "title": "CR du 19 décembre 2023",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 24
+          },
+          "municipal-doc:25d281946e397438f2": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/proces-verbal-du-30-novembre-2023-sans-huis-clos.pdf",
+            "title": "CR du 30 novembre 2023",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 25
+          },
+          "municipal-doc:836001c0084562c6a1": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-25-octobre-2023-pv.pdf",
+            "title": "CR du 25 octobre 2023",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 26
+          },
+          "municipal-doc:3ecf0b4c185a4a084c": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-26-septembre-2023-pv.pdf",
+            "title": "CR du 26 septembre 2023",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 27
+          },
+          "municipal-doc:f5ebe191c8d4fc86e1": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-26-juin-2023-pv.pdf",
+            "title": "CR du 26 juin 2023",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 28
+          },
+          "municipal-doc:1fe1369a74c1880b40": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-23-mai-2023-pv.pdf",
+            "title": "CR du 23 mai 2023",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 29
+          },
+          "municipal-doc:26faa35baa6b5af5d3": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-18-avril-2023-pv.pdf",
+            "title": "CR du 18 avril 2023",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 30
+          },
+          "municipal-doc:b777b8e94821b4a7ca": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-26-mars-2023-pv.pdf",
+            "title": "CR du 26 mars 2023",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 31
+          },
+          "municipal-doc:96d6ad7fe4c3c43496": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-23-mars-2023-pv.pdf",
+            "title": "CR du 23 mars 2023",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 32
+          },
+          "municipal-doc:c808e4bf46ecb5ef8a": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-28-fevrier-2023-pv.pdf",
+            "title": "CR du 28 février 2023",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 33
+          },
+          "municipal-doc:70ad7e8808bd0fc68b": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-24-janvier-2023-pv.pdf",
+            "title": "CR du 24 janvier 2023",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 34
+          },
+          "municipal-doc:efa779a1fb04d54647": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-22-decembre-2022-pv.pdf",
+            "title": "CR du 22 décembre 2022",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 35
+          },
+          "municipal-doc:d7d49ad2f4d061e3ce": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-15-novembre-2022-pv.pdf",
+            "title": "CR du 15 novembre 2022",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 36
+          },
+          "municipal-doc:ad08465bcf9858cb46": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-3-octobre-2022-pv.pdf",
+            "title": "CR du 3 octobre 2022",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 37
+          },
+          "municipal-doc:c5051b728e059b96ac": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/cc-13-septembre-2022-pv.pdf",
+            "title": "CR du 13 septembre 2022",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 38
+          },
+          "municipal-doc:0ec8b529a24e888d63": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/proces-verbal-30-juin-2022-site-internet-1.pdf",
+            "title": "CR du 30 juin 2022",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 39
+          },
+          "municipal-doc:e4e04f954233366efc": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2022-05-24-pv-cc.pdf",
+            "title": "CR du 24 mai 2022",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 40
+          },
+          "municipal-doc:e85f816eba72a98924": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/proces-verbal-26-avril-2022-v3-site-internet.pdf",
+            "title": "CR du 26 avril 2022",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 41
+          },
+          "municipal-doc:6186ed270540e6663f": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/pv-cc-29-mars-2022.pdf",
+            "title": "CR du 29 mars 2022",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 42
+          },
+          "municipal-doc:95bcd2101843dd58b5": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/pv-cc-22-fevrier-2022.pdf",
+            "title": "CR du 22 février 2022",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 43
+          },
+          "municipal-doc:920d81000a541ec110": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2022-01-31-pv-cc.pdf",
+            "title": "CR du 31 janvier 2022",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 44
+          },
+          "municipal-doc:a3ee4ddd6fb5deea44": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2021-12-21-pv-cc.pdf",
+            "title": "CR du 21 décembre 2021",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 45
+          },
+          "municipal-doc:bec502c1066604f31a": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2021-11-25-cc-pv.pdf",
+            "title": "CR du 25 novembre 2021",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 46
+          },
+          "municipal-doc:c2a9d28312147ae19a": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2021-10-26-cc-pv.pdf",
+            "title": "CR du 26 octobre 2021",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 47
+          },
+          "municipal-doc:f0e11063faea0546f8": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/proces-verbal-28-septembre-2021-sans-huis-clos.pdf",
+            "title": "CR du 28 septembre 2021",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 48
+          },
+          "municipal-doc:87348b54236a4b2846": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/pv-29-juin-sans-huis-clos.pdf",
+            "title": "CR du 29 juin 2021",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 49
+          },
+          "municipal-doc:acdf3ae8543b0669ad": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/proces-verbal-03-juin-2021.pdf",
+            "title": "CR du 3 juin 2021",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 50
+          },
+          "municipal-doc:c06ed2a082fcecfdda": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/proces-verbal-28-avril-2021-210521.pdf",
+            "title": "CR du 28 avril 2021",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 51
+          },
+          "municipal-doc:e9fe40efd887a3e101": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/proces-verbal-12-avril-2021.pdf",
+            "title": "CR du 12 avril 2021",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 52
+          },
+          "municipal-doc:919b3a991d5e373df8": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/proces-verbal-17-mars-2021-sp.pdf",
+            "title": "CR du 17 mars 2021",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 53
+          },
+          "municipal-doc:5f2f200b5210bd469a": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/proces-verbal-23-fevrier-2021-sp.pdf",
+            "title": "CR du 23 février 2021",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 54
+          },
+          "municipal-doc:11e52d9347d24106a9": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2021-01-27-conseil-pv.pdf",
+            "title": "CR du 27 janvier 2021",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 55
+          },
+          "municipal-doc:e795e292bb01f2cd95": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2020-12-21-conseil-pv-seance-publique.pdf",
+            "title": "CR du 21 décembre 2020",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 56
+          },
+          "municipal-doc:326a4cafaf66ac1353": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2020-12-21-conseil-cpas-pv.pdf",
+            "title": "CR du 21 décembre 2020 (séance conjointe avec le CPAS)",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 57
+          },
+          "municipal-doc:1a4a37f3ff7abbbed2": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2020-11-26-conseil-pv-1.pdf",
+            "title": "CR du 26 novembre 2020",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 58
+          },
+          "municipal-doc:02e5d1d526315b482b": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2020-11-12-conseil-pv-1.pdf",
+            "title": "CR du 12 novembre 2020",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 59
+          },
+          "municipal-doc:0bb43d2f6ac3af9f3c": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2020-10-13-pv-sans-huis-clos.pdf",
+            "title": "CR du 13 octobre 2020",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 60
+          },
+          "municipal-doc:1e97637abb828b9ef8": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2020-09-15-pv-sans-huis-clos.pdf",
+            "title": "CR du 15 septembre 2020",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 61
+          },
+          "municipal-doc:d1f4fd5ea9be106fec": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2020-06-30-pv-sans-huis-clos.pdf",
+            "title": "CR du 30 juin 2020",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 62
+          },
+          "municipal-doc:286aec02bfb442c8da": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2020-06-02-pv-sans-huis-clos.pdf",
+            "title": "CR du 2 juin 2020",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 63
+          },
+          "municipal-doc:373775383a4fa01722": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2020-02-18-pv-sans-huis-clos.pdf",
+            "title": "CR du 18 février 2020",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 64
+          },
+          "municipal-doc:ab76f2e03e077324c7": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2020-01-28-pv-sans-huis-clos.pdf",
+            "title": "CR du 28 janvier 2020",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 65
+          },
+          "municipal-doc:f7fc5b0eb55dc92b25": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2019-12-18-pv-seance-publique.pdf",
+            "title": "CR du 18 décembre 2019",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 66
+          },
+          "municipal-doc:9b5f56d2f4190dbd8e": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2019-12-18-conseil-cpas-pv.pdf",
+            "title": "CR du 18 décembre 2019 (conjoint avec le CPAS)",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 67
+          },
+          "municipal-doc:eeb20500ffc7819a9c": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2019-11-26-pv-seance-publique.pdf",
+            "title": "CR du 26 novembre 2019",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 68
+          },
+          "municipal-doc:2a7275d3869da83460": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2019-11-14-pv-seance-publique.pdf",
+            "title": "CR du 14 novembre 2019",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 69
+          },
+          "municipal-doc:902b5a3b132160ace1": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2019-10-22-pv-seance-publique.pdf",
+            "title": "CR du 22 octobre 2019",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 70
+          },
+          "municipal-doc:9ecdea28364e7075f8": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2019-09-24-pv-seance-publique.pdf",
+            "title": "CR du 24 septembre 2019",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 71
+          },
+          "municipal-doc:56feae4d8c8ab453b2": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2019-08-27-pv-seance-publique.pdf",
+            "title": "CR du 27 août 2019",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 72
+          },
+          "municipal-doc:9eec5c81fd57ad9029": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2019-06-25-pv-seance-publique.pdf",
+            "title": "CR du 25 juin 2019",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 73
+          },
+          "municipal-doc:3cf21cc8124da605f0": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2019-05-21-pv-seance-publique.pdf",
+            "title": "CR du 21 mai 2019",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 74
+          },
+          "municipal-doc:e6056fdb58df1ee78b": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2019-04-23-pv-seance-publique.pdf",
+            "title": "CR du 23 avril 2019",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 75
+          },
+          "municipal-doc:cc767f6b6c8a7a916b": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2019-04-13-pv-seance-publique.pdf",
+            "title": "CR du 13 avril 2019",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 76
+          },
+          "municipal-doc:d06bad1d1211dbf4d1": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2019-04-04-pv-seance-publique-quorum-pas-atteint.pdf",
+            "title": "CR du 4 avril 2019",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 77
+          },
+          "municipal-doc:c10b31578f242f96aa": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2019-03-13-pv-seance-publique.pdf",
+            "title": "CR du 13 mars 2019",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 78
+          },
+          "municipal-doc:ebce725aae014e1d5e": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2019-01-30-pv-seance-publique.pdf",
+            "title": "CR du 30 janvier 2019",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 79
+          },
+          "municipal-doc:f157960ffc4cf39ad4": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2018-12-17-pv-seance-publique.pdf",
+            "title": "CR du 17 décembre 2018",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 80
+          },
+          "municipal-doc:a28c6b829c4167f29b": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2018-12-17-conseil-cpas-pv.pdf",
+            "title": "CR du 17 décembre 2018 (conjoint avec le CPAS)",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 81
+          },
+          "municipal-doc:0c0f130ca5135bfa1b": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2018-12-03-pv-seance-publique.pdf",
+            "title": "CR du 3 décembre 2018",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 82
+          },
+          "municipal-doc:b7bda060f722ad5a42": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2018-11-14-pv-seance-publique.pdf",
+            "title": "CR du 14 novembre 2018",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 83
+          },
+          "municipal-doc:24b4c2d4418c4df3c7": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2018-10-10-pv-seance-publique.pdf",
+            "title": "CR du 10 octobre 2018",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 84
+          },
+          "municipal-doc:77233563627ac24913": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2018-09-12-pv-seance-publique.pdf",
+            "title": "CR du 12 septembre 2018",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 85
+          },
+          "municipal-doc:d0a7a1d8cb71622145": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2018-07-02-pv-seance-publique.pdf",
+            "title": "CR du 2 juillet 2018",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 86
+          },
+          "municipal-doc:9a5434ea847b7a67e2": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2018-06-06-pv-seance-publique.pdf",
+            "title": "CR du 6 juin 2018",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 87
+          },
+          "municipal-doc:7f75a717ef4240840a": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2018-05-02-pv-seance-publique.pdf",
+            "title": "CR du 2 mai 2018",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 88
+          },
+          "municipal-doc:0898f9263727eaf086": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2018-03-20-pv-seance-publique.pdf",
+            "title": "CR du 20 mars 2018",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 89
+          },
+          "municipal-doc:a6a58241621035a9a1": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2018-02-21-pv-seance-publique.pdf",
+            "title": "CR du 21 février 2018",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 90
+          },
+          "municipal-doc:c58ba2d61654b6abf1": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2018-01-10-pv-seance-publique.pdf",
+            "title": "CR du 10 janvier 2018",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 91
+          },
+          "municipal-doc:ed1485b8e96b640ca3": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2017-12-18-pv-cc-seance-publique.pdf",
+            "title": "CR du 18 décembre 2017",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 92
+          },
+          "municipal-doc:d2e92a4b5f29cb439f": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2017-12-18-pv-cc-seance-conjointe-cpas.pdf",
+            "title": "CR du 18 décembre 2017 (conjoint avec le CPAS)",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 93
+          },
+          "municipal-doc:534664088a2bb818e7": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2017-11-13-pv-cc-seance-publique.pdf",
+            "title": "CR du 13 novembre 2017",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 94
+          },
+          "municipal-doc:58b5cea8558e61aaca": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2017-10-18-pv-cc-seance-publique.pdf",
+            "title": "CR du 18 octobre 2017",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 95
+          },
+          "municipal-doc:ab983b9b3f1fd0215a": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2017-09-20-pv-cc-seance-publique.pdf",
+            "title": "CR du 20 septembre 2017",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 96
+          },
+          "municipal-doc:d1142f42a21b31f188": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2017-07-12-pv-cc-seance-publique.pdf",
+            "title": "CR du 12 juillet 2017",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 97
+          },
+          "municipal-doc:ea732037b977d9eb45": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2017-06-21-pv-cc-seance-publique.pdf",
+            "title": "CR du 21 juin 2017",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 98
+          },
+          "municipal-doc:790e1564cd3515f1ef": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2017-05-17-pv-cc-seance-publique.pdf",
+            "title": "CR du 17 mai 2017",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 99
+          },
+          "municipal-doc:d1c01e4e912bf6d4cf": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2017-04-19-pv-cc-seance-publique.pdf",
+            "title": "CR du 19 avril 2017",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 100
+          },
+          "municipal-doc:ea5a21e37db38ca958": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2017-03-15-pv-cc-seance-publique.pdf",
+            "title": "CR du 15 mars 2017",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 101
+          },
+          "municipal-doc:39b0ac3e55e3748819": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2017-02-15-pv-cc-seance-publique.pdf",
+            "title": "CR du 15 février 2017",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 102
+          },
+          "municipal-doc:29d05f63a2b44c4e87": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2017-01-25-conseil-pv.pdf",
+            "title": "",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 103
+          },
+          "municipal-doc:8b57369c20ecb78cef": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2017-01-25-pv-cc-seance-publique.pdf",
+            "title": "CR du 25 janvier 2017",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 104
+          },
+          "municipal-doc:b6028ae275ea008c1d": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2015-12-14-conseil-pv.pdf",
+            "title": "CR du 14 décembre 2016",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 105
+          },
+          "municipal-doc:65ffd0812f6bbf5bf9": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2016-12-14-pv-cc-seance-conjointe-cpas.pdf",
+            "title": "CR du 14 décembre 2016 (conjoint avec le CPAS)",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 106
+          },
+          "municipal-doc:2882ec4dbbb09dff27": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2016-11-09-pv-cc-seance-publique.pdf",
+            "title": "CR du 9 novembre 2016",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 107
+          },
+          "municipal-doc:cac970b54ff1036506": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2016-10-12-pv-cc-seance-publique.pdf",
+            "title": "CR du 12 octobre 2016",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 108
+          },
+          "municipal-doc:cf406908006c83abc8": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2016-09-26-pv-cc-seance-publique.pdf",
+            "title": "CR du 26 septembre 2016",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 109
+          },
+          "municipal-doc:459740d6b64bd34af1": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2016-07-11-pv-cc-seance-publique.pdf",
+            "title": "CR du 11 juillet 2016",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 110
+          },
+          "municipal-doc:785523a8fff059a7e4": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2016-06-13-pv-cc-seance-publique.pdf",
+            "title": "CR du 13 juin 2016",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 111
+          },
+          "municipal-doc:f5ef71bc7d1b88cd7f": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2016-05-09-pv-cc-seance-publique.pdf",
+            "title": "CR du 9 mai 2016",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 112
+          },
+          "municipal-doc:d1c55d3bbb1afffc1e": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2016-04-13-pv-cc-seance-publique.pdf",
+            "title": "CR du 13 avril 2016",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 113
+          },
+          "municipal-doc:a9f1538fecea0f1d9e": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2016-03-23-pv-cc-seance-publique.pdf",
+            "title": "CR du 23 mars 2016",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 114
+          },
+          "municipal-doc:4290bac25ed672cefc": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2016-02-24-pv-cc-seance-publique.pdf",
+            "title": "CR du 24 février 2016",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 115
+          },
+          "municipal-doc:a97418bf65839f78c3": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/budget-2016-apres-reformation.pdf",
+            "title": "Budget 2016 après réformation",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 116
+          },
+          "municipal-doc:50fecb3819712ca7be": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2016-01-25-conseil-pv-projet.pdf",
+            "title": "CR du 25 janvier 2016",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 117
+          },
+          "municipal-doc:37000665621e9ef4a4": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2015-12-14-pv-cc-seance-publique.pdf",
+            "title": "CR du 14 décembre 2015",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 118
+          },
+          "municipal-doc:dbaa6864d00afd4f6a": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2015-12-14-pv-cc-seance-conjointe-cpas.pdf",
+            "title": "CR du 14 décembre 2015",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 119
+          },
+          "municipal-doc:f4911b9c4a2a2edcf9": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2015-11-09-pv-cc-seance-publique.pdf",
+            "title": "CR du 9 novembre 2015",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 120
+          },
+          "municipal-doc:501fbe708668dbc52a": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2015-10-14-pv-cc-seance-publique.pdf",
+            "title": "CR du 14 octobre 2015",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 121
+          },
+          "municipal-doc:e6cad2733f3220d131": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2015-09-09-conseil-pv-projet.pdf",
+            "title": "",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 122
+          },
+          "municipal-doc:1b44ab6404226644ae": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2015-09-09-pv-cc-seance-publique.pdf",
+            "title": "CR du 9 septembre 2015",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 123
+          },
+          "municipal-doc:4a4c71c0efae1cd006": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2015-07-08-pv-cc-seance-publique.pdf",
+            "title": "CR du 8 juillet 2015",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 124
+          },
+          "municipal-doc:4a0197af17bc102d4c": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2015-06-17-pv-cc-seance-publique.pdf",
+            "title": "CR du 17 juin 2015",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 125
+          },
+          "municipal-doc:06465bfbfa5c6e7332": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2015-05-20-pv-cc-seance-publique.pdf",
+            "title": "CR du 20 mai 2015",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 126
+          },
+          "municipal-doc:e648b92cb26c5a222d": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2015-04-20-pv-cc-seance-publique.pdf",
+            "title": "CR du 20 avril 2015",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 127
+          },
+          "municipal-doc:526483b1a532efad8a": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2015-03-09-pv-cc-seance-publique.pdf",
+            "title": "CR du 9 mars 2015",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 128
+          },
+          "municipal-doc:87f893b1689efc34b4": {
+            "url": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1/2015-02-02-pv-cc-seance-publique.pdf",
+            "title": "CR du 2 février 2015",
+            "sourceUrl": "https://www.berloz.be/commune/vie-politique/conseil-communal/decisions-du-conseil/comptes-rendus-anterieurs-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T16:16:56.366Z",
+            "lastSeen": "2026-10-30T16:16:56.366Z",
+            "discoveryOrder": 129
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 10,
+        "pagesPending": 7,
+        "documentsKnown": 130,
+        "documentsPending": 128,
+        "errors": 10,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 2,
+        "errors": 10,
+        "attempted": 12,
+        "pagesAttempted": 3
+      },
+      "lastDocumentSuccess": "2026-10-30T16:16:56.366Z"
     },
     {
       "ins": "51009",
@@ -7802,14 +9946,51 @@
       "estimatedMinutes": 112,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.daverdisse.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal (ordre du jour - PV)",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.daverdisse.be/ma-commune/vie-politique/collge-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.daverdisse.be/ma-commune/programmes/programme-stratgique-transversal",
+          "title": "Programme stratégique transversal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.daverdisse.be/actualites/conseil-communal-du-14-octobre-2021",
+          "title": "Conseil communal du 10 novembre 2026",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T16:15:40.939Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.daverdisse.be/",
+        "checkedAt": "2026-10-30T16:15:40.939Z"
+      }
     },
     {
       "ins": "91034",
@@ -7906,14 +10087,106 @@
       "estimatedMinutes": 112,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.doische.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.doische.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.doische.be/ma-commune/vie-politique/conseil-communal/droit-dinterpellation-des-citoyens",
+          "title": "Droit d'interpellation des citoyens",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.doische.be/ma-commune/vie-politique/conseil-communal/Ordre%20du%20jour%20des%20seances",
+          "title": "Ordre du jour des séances du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.doische.be/ma-commune/vie-politique/conseil-communal/proces-verbal%20des%20seances",
+          "title": "Procès-verbal des séances du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.doische.be/ma-commune/vie-politique/college-communal/reglement-dordre-interieur-du-college-communal",
+          "title": "Règlement d'ordre intérieur du Collège communal",
+          "status": "lien_public_repere_non_analyse",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_error": "HTTP 500"
+        },
+        {
+          "url": "https://www.doische.be/ma-commune/services-communaux/directeur-general/reglement-dordre-interieur-du-conseil-communal",
+          "title": "Règlement d'ordre intérieur du Conseil communal",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.doische.be/je-trouve/publications/1-ordre-du-jour",
+          "title": "Ordre du jour des séances du Conseil communal",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.doische.be/je-trouve/publications/2-proces-verbal",
+          "title": "Procès-verbal des séances du Conseil communal",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.doische.be/ma-commune/vie-politique/conseil-communal/Ordre%20du%20jour%20des%20seances/2026/08-08-octobre-2026",
+          "title": "",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.doische.be/ma-commune/vie-politique/conseil-communal/Ordre%20du%20jour%20des%20seances/2026/07-27-aout-2026",
+          "title": "",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.doische.be/ma-commune/vie-politique/conseil-communal/Ordre%20du%20jour%20des%20seances/2026/06-02-juillet-2026",
+          "title": "",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.doische.be/ma-commune/vie-politique/conseil-communal/reglement-dordre-interieur-du-conseil-communal",
+          "title": "Règlement d'ordre intérieur du Conseil communal 2024-2030",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.doische.be/ma-commune/vie-politique/conseil-communal/Ordre%20du%20jour%20des%20seances/2026/03-26-mars-2026",
+          "title": "03 - 26 mars 2026",
+          "status": "lien_public_repere_non_analyse"
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T16:15:40.939Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.doische.be/",
+        "checkedAt": "2026-10-30T16:15:40.939Z"
+      }
     },
     {
       "ins": "64023",
@@ -10951,14 +13224,18 @@
       "estimatedMinutes": 100,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_lu_sources_non_localisees",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-30T16:15:40.939Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.hastiere.be/",
+        "checkedAt": "2026-10-30T16:15:40.939Z"
+      }
     },
     {
       "ins": "91064",
@@ -12394,14 +14671,43 @@
       "estimatedMinutes": 106,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.libin.be/college-et-conseil-communal",
+          "title": "Collège et conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.libin.be/ordre-du-jour-du-conseil-communal",
+          "title": "Ordre du jour du prochain conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.libin.be/pv-du-conseil-communal",
+          "title": "Procès-verbaux des conseils communaux",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T16:15:40.939Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.libin.be/",
+        "checkedAt": "2026-10-30T16:15:40.939Z"
+      }
     },
     {
       "ins": "84077",
@@ -13073,14 +15379,43 @@
       "estimatedMinutes": 103,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.mettet.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.mettet.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.mettet.be/ma-commune/social/social",
+          "title": "Conseil Communal des Aînés de Mettet (CCAM)",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T16:15:40.939Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.mettet.be/",
+        "checkedAt": "2026-10-30T16:15:40.939Z"
+      }
     },
     {
       "ins": "61041",
@@ -15382,14 +17717,51 @@
       "estimatedMinutes": 98,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.saint-hubert.be/college-communal/",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.saint-hubert.be/conseil-communal/",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.saint-hubert.be/2026/10/30/ordre-du-jour-du-conseil-communal-du-jeudi-5-novembre-2026/",
+          "title": "",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.saint-hubert.be/2023/12/08/conseil-communal-du-jeudi-14-decembre-2023/",
+          "title": "",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T16:15:40.939Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.saint-hubert.be/",
+        "checkedAt": "2026-10-30T16:15:40.939Z"
+      }
     },
     {
       "ins": "85034",
@@ -15544,14 +17916,43 @@
       "estimatedMinutes": 97,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.sambreville.be/ma-ville/vie-politique/le-college-communal",
+          "title": "Le Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.sambreville.be/ma-ville/vie-politique/le-conseil-communal",
+          "title": "Le Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.deliberations.be/sambreville/decisions",
+          "title": "Conseil communal et publications",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T16:15:40.939Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.sambreville.be/",
+        "checkedAt": "2026-10-30T16:15:40.939Z"
+      }
     },
     {
       "ins": "63067",
@@ -15800,14 +18201,59 @@
       "estimatedMinutes": 98,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.sombreffe.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.sombreffe.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.sombreffe.be/ma-commune/vie-politique/conseil-communal/ordres-du-jour-du-conseil",
+          "title": "Ordres du jour du Conseil",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.sombreffe.be/ma-commune/vie-politique/conseil-communal/proces-verbaux-du-conseil",
+          "title": "Procès-verbaux du Conseil",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.sombreffe.be/ma-commune/vie-politique/conseil-communal/projets-de-decision-du-conseil",
+          "title": "Projets de décision du Conseil",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T16:15:40.939Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.sombreffe.be/",
+        "checkedAt": "2026-10-30T16:15:40.939Z"
+      }
     },
     {
       "ins": "91120",
@@ -16579,14 +19025,51 @@
       "estimatedMinutes": 112,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.vaux-sur-sure.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Le Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.vaux-sur-sure.be/ma-commune/vie-politique/college-communal",
+          "title": "Le Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.vaux-sur-sure.be/actualites/compte-rendu-du-conseil-communal-du-27-octobre?u=56dbae7b9f55417cbb8f1d20c6679f2a",
+          "title": "Publié Compte-rendu du Conseil communal du 27 octobre 2026 Vous souhaitez connaître les décisions qui ont été prises lor",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.vaux-sur-sure.be/actualites/compte-rendu-du-conseil-communal-du-22-septembre?u=2d447d5d997a407dad0f1afe7bacaf98",
+          "title": "Publié Compte-rendu du Conseil communal du 22 septembre 2026 Vous souhaitez connaître les décisions qui ont été prises l",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T16:15:40.939Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.vaux-sur-sure.be/",
+        "checkedAt": "2026-10-30T16:15:40.939Z"
+      }
     },
     {
       "ins": "61063",
@@ -17480,14 +19963,59 @@
       "estimatedMinutes": 98,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.wellin.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.wellin.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.wellin.be/ma-commune/vie-politique/college-communal/declaration-de-politique-generale",
+          "title": "Déclaration de politique générale",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.wellin.be/ma-commune/vie-politique/college-communal/pst",
+          "title": "Programme Stratégique Transversal (PST)",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.wellin.be/actualites/conseil-communal-du-5-novembre-2026-a-20h00?u=1f1939d5849441e6a8734f0bae9c66f1",
+          "title": "Publié Conseil Communal du 5 novembre 2026 à 20h00",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T16:15:40.939Z",
+          "last_success": "2026-10-30T16:15:40.939Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T16:15:40.939Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.wellin.be/",
+        "checkedAt": "2026-10-30T16:15:40.939Z"
+      }
     },
     {
       "ins": "91141",
@@ -17551,6 +20079,6 @@
       }
     }
   ],
-  "lastMunicipalPass": "2026-10-30T07:44:02.508Z",
-  "lastMunicipalDocumentPass": "2026-10-30T07:45:03.990Z"
+  "lastMunicipalPass": "2026-10-30T16:15:40.939Z",
+  "lastMunicipalDocumentPass": "2026-10-30T16:16:56.366Z"
 }

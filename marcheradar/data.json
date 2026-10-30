@@ -58,40 +58,40 @@
     },
     "COMMUNES": {
       "status": "inventory_not_document_collection",
-      "updatedAt": "2026-10-30T07:44:02.508Z",
-      "last_attempt": "2026-10-30T07:44:02.508Z",
+      "updatedAt": "2026-10-30T16:15:40.939Z",
+      "last_attempt": "2026-10-30T16:15:40.939Z",
       "scope": {
         "province": "all",
         "ins": ""
       },
       "total": 261,
       "sitesRepertories": 261,
-      "sitesVerifies": 217,
-      "deliberationsConnectees": 28,
+      "sitesVerifies": 229,
+      "deliberationsConnectees": 30,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 148,
-      "opportunities": 67,
-      "sitesChecked": 217,
-      "candidatePages": 171,
-      "sourceErrors": 22
+      "documentsRead": 156,
+      "opportunities": 78,
+      "sitesChecked": 229,
+      "candidatePages": 182,
+      "sourceErrors": 24
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-10-30T07:45:03.990Z",
-      "last_success": "2026-10-30T07:45:03.990Z",
+      "last_attempt": "2026-10-30T16:16:56.366Z",
+      "last_success": "2026-10-30T16:16:56.366Z",
       "last_batch": 4,
-      "documents_checked": 2,
-      "documents_read": 2,
+      "documents_checked": 8,
+      "documents_read": 8,
       "documents_unchanged": 0,
       "documents_modified": 0,
-      "opportunities_found": 0,
+      "opportunities_found": 11,
       "review_candidates": 0,
-      "errors_count": 2,
+      "errors_count": 16,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel."
     }
   },
@@ -103,7 +103,7 @@
   "metrics": {
     "scanned": 1780,
     "matched_current_run": 13,
-    "records": 192,
+    "records": 203,
     "review_count": 98,
     "award_notice_count": 470,
     "awarded_market_matches": 2,
@@ -12863,6 +12863,830 @@
       },
       "matchReason": "mission_globale_a_qualifier",
       "screeningReason": null
+    },
+    {
+      "id": "local:88873780e301b830979a",
+      "title": "Conseil communal — opportunité à vérifier : Beloeil",
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "De transmettre copie de la présente délibération - Au directeur financier. - Au Bureau d’Études.\" ;",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-28-janvier-2026.pdf",
+        "page": 32,
+        "sha256": "115777707847299f46dabad6e8add2e93ffd12c2ce34d69dc4a854b3c67dcfb6"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-28-janvier-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-28-janvier-2026.pdf",
+        "sha256": "115777707847299f46dabad6e8add2e93ffd12c2ce34d69dc4a854b3c67dcfb6",
+        "session": {
+          "date": "2026-01-28",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 28 JANVIER 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-28-janvier-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : De transmettre copie de la présente délibération - Au directeur financier. - Au Bureau d’Études.\" ;",
+      "evidence": "De transmettre copie de la présente délibération - Au directeur financier. - Au Bureau d’Études.\" ;",
+      "municipalReference": null,
+      "municipalSection": "1.    Cartes d’identité, titres de séjour, passeports, permis de conduire",
+      "municipalEvidence": [
+        {
+          "page": 32,
+          "excerpt": "De transmettre copie de la présente délibération - Au directeur financier. - Au Bureau d’Études.\" ;"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 32,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:f66603b4fa9f98a14c",
+        "sha256": "115777707847299f46dabad6e8add2e93ffd12c2ce34d69dc4a854b3c67dcfb6",
+        "checkedAt": "2026-10-30T16:16:56.366Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:c03e265080462b1b7469",
+      "title": "Conseil communal — opportunité à vérifier : Beloeil",
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "De transmettre la présente délibération : - Au Directeur financier. - Au Bureau d’Études (BEST). ********** Remplacement de la chaudière semi-industrielle du Gymnase de Stambruges - Approbation conditions et mode de pass",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-28-janvier-2026.pdf",
+        "page": 33,
+        "sha256": "115777707847299f46dabad6e8add2e93ffd12c2ce34d69dc4a854b3c67dcfb6"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-28-janvier-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-28-janvier-2026.pdf",
+        "sha256": "115777707847299f46dabad6e8add2e93ffd12c2ce34d69dc4a854b3c67dcfb6",
+        "session": {
+          "date": "2026-01-28",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 28 JANVIER 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-28-janvier-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : De transmettre la présente délibération : - Au Directeur financier. - Au Bureau d’Études (BEST). ********** Remplacement de la chaudière semi-industrielle du Gymnase de Stambruges - Approbation conditions et mode de passation du marché de travaux. Examen. Décision. Délibération :",
+      "evidence": "De transmettre la présente délibération : - Au Directeur financier. - Au Bureau d’Études (BEST). ********** Remplacement de la chaudière semi-industrielle du Gymnase de Stambruges - Approbation conditions et mode de passation du marché de travaux. Examen. Décision. Délibération :",
+      "municipalReference": "20260003",
+      "municipalSection": "1.    Cartes d’identité, titres de séjour, passeports, permis de conduire",
+      "municipalEvidence": [
+        {
+          "page": 33,
+          "excerpt": "De transmettre la présente délibération : - Au Directeur financier. - Au Bureau d’Études (BEST). ********** Remplacement de la chaudière semi-industrielle du Gymnase de Stambruges - Approbation conditions et mode de passation du marché de travaux. Examen. Décision. Délibération :"
+        },
+        {
+          "page": 34,
+          "excerpt": "Considérant le cahier des charges N° 20260003 (HC/PH/2026-634) relatif au marché “Remplacement de la chaudière semi-industrielle du Gymnase de Stambruges” établi par le Service Travaux (Bureau d'Etudes) ; Considérant que le montant estimé de ce marché s'élève à 72.600,00 € (incl. 21% TVA) (12.600,00 € TVA cocontractant) ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ;"
+        },
+        {
+          "page": 34,
+          "excerpt": "D'approuver le cahier des charges N° 20260003 (HC/PH/2026-634) et le montant estimé du marché “Remplacement de la chaudière semi-industrielle du Gymnase de Stambruges”, établis par le Service Travaux (Bureau d'Etudes). Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 72.600,00 € (incl. 21% TVA) (12.600,00 € TVA cocontractant). Art. 2: De passer le marché par la procédure négociée sans publication préalable."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 33,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:f66603b4fa9f98a14c",
+        "sha256": "115777707847299f46dabad6e8add2e93ffd12c2ce34d69dc4a854b3c67dcfb6",
+        "checkedAt": "2026-10-30T16:16:56.366Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:e36446ef9d00c7baf52a",
+      "title": "Conseil communal — opportunité à vérifier : Beloeil",
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Considérant le cahier des charges N° 20230011 (HC/PH/2026-640) relatif au marché “Remplacement des menuiseries de l’Académie de musique de Quevaucamps” établi par le Service Travaux (Bureau d'Etudes) ; Considérant que le",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+        "page": 10,
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+        "session": {
+          "date": "2026-03-18",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 18 MARS 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Considérant le cahier des charges N° 20230011 (HC/PH/2026-640) relatif au marché “Remplacement des menuiseries de l’Académie de musique de Quevaucamps” établi par le Service Travaux (Bureau d'Etudes) ; Considérant que le montant estimé de ce marché s'élève à 172.886,00 € (incl. 6% TVA) (9.786,00 € TVA cocontractant) ; Considérant qu'il est proposé de passer le marché par procédure négociée directe avec publication préalable ;",
+      "evidence": "Considérant le cahier des charges N° 20230011 (HC/PH/2026-640) relatif au marché “Remplacement des menuiseries de l’Académie de musique de Quevaucamps” établi par le Service Travaux (Bureau d'Etudes) ; Considérant que le montant estimé de ce marché s'élève à 172.886,00 € (incl. 6% TVA) (9.786,00 € TVA cocontractant) ; Considérant qu'il est proposé de passer le marché par procédure négociée directe avec publication préalable ;",
+      "municipalReference": "20230011",
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 10,
+          "excerpt": "Considérant le cahier des charges N° 20230011 (HC/PH/2026-640) relatif au marché “Remplacement des menuiseries de l’Académie de musique de Quevaucamps” établi par le Service Travaux (Bureau d'Etudes) ; Considérant que le montant estimé de ce marché s'élève à 172.886,00 € (incl. 6% TVA) (9.786,00 € TVA cocontractant) ; Considérant qu'il est proposé de passer le marché par procédure négociée directe avec publication préalable ;"
+        },
+        {
+          "page": 11,
+          "excerpt": "D'approuver le cahier des charges N° 20230011 (HC/PH/2026-640) et le montant estimé du marché “Remplacement des menuiseries de l’Académie de musique de Quevaucamps”, établis par le Service Travaux (Bureau d'Etudes). Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 172.886,00 € (incl. 6% TVA). Art. 2 : De passer le marché par la procédure négociée directe avec publication préalable."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 10,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:5c5a76c4342cebddad",
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+        "checkedAt": "2026-10-30T16:16:56.366Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:cc55adc27162a012194a",
+      "title": "Conseil communal — opportunité à vérifier : Beloeil",
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 20260013 (CV/PH/2026-644) relatif au marché “Réfection de la toiture de l'église de Beloeil” établi par le Se",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+        "page": 12,
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+        "session": {
+          "date": "2026-03-18",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 18 MARS 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 20260013 (CV/PH/2026-644) relatif au marché “Réfection de la toiture de l'église de Beloeil” établi par le Service Travaux (Bureau d'Etudes) ; Considérant que le montant estimé de ce marché s'élève à 97.260,53 € (incl. 21% TVA) ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de",
+      "evidence": "classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 20260013 (CV/PH/2026-644) relatif au marché “Réfection de la toiture de l'église de Beloeil” établi par le Service Travaux (Bureau d'Etudes) ; Considérant que le montant estimé de ce marché s'élève à 97.260,53 € (incl. 21% TVA) ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de",
+      "municipalReference": "20260013",
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 12,
+          "excerpt": "classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 20260013 (CV/PH/2026-644) relatif au marché “Réfection de la toiture de l'église de Beloeil” établi par le Service Travaux (Bureau d'Etudes) ; Considérant que le montant estimé de ce marché s'élève à 97.260,53 € (incl. 21% TVA) ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de"
+        },
+        {
+          "page": 12,
+          "excerpt": "Article 1er: D'approuver le cahier des charges N° 20260013 (CV/PH/2026-644) et le montant estimé du marché “Réfection de la toiture de l'église de Beloeil”, établis par le Service Travaux (Bureau d'Etudes). Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 97.260,53 € (incl. 21% TVA). Art. 2: De passer le marché par la procédure négociée sans publication préalable."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 12,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:5c5a76c4342cebddad",
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+        "checkedAt": "2026-10-30T16:16:56.366Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:b1a26fb6e64345edac26",
+      "title": "Conseil communal — opportunité à vérifier : Beloeil",
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "de le créer le long du n° 21 afin d’assurer l’accessibilité et la sécurité des personnes à mobilité réduite ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité de",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+        "page": 13,
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+        "session": {
+          "date": "2026-03-18",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 18 MARS 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : de le créer le long du n° 21 afin d’assurer l’accessibilité et la sécurité des personnes à mobilité réduite ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, l’emplacement réservé aux personnes handicapées, côté impair, le",
+      "evidence": "de le créer le long du n° 21 afin d’assurer l’accessibilité et la sécurité des personnes à mobilité réduite ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, l’emplacement réservé aux personnes handicapées, côté impair, le",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 13,
+          "excerpt": "de le créer le long du n° 21 afin d’assurer l’accessibilité et la sécurité des personnes à mobilité réduite ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, l’emplacement réservé aux personnes handicapées, côté impair, le"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 13,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:5c5a76c4342cebddad",
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+        "checkedAt": "2026-10-30T16:16:56.366Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:b9ab4d4da443263af5e9",
+      "title": "Conseil communal — opportunité à vérifier : Beloeil",
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Vu que le Collège communal a remis un avis favorable, en sa séance du 3 mars 2026, pour l’abrogation de cet emplacement ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+        "page": 14,
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+        "session": {
+          "date": "2026-03-18",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 18 MARS 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Vu que le Collège communal a remis un avis favorable, en sa séance du 3 mars 2026, pour l’abrogation de cet emplacement ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, Place de la Victoire, l’emplacement de stationnement réservé aux",
+      "evidence": "Vu que le Collège communal a remis un avis favorable, en sa séance du 3 mars 2026, pour l’abrogation de cet emplacement ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, Place de la Victoire, l’emplacement de stationnement réservé aux",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 14,
+          "excerpt": "Vu que le Collège communal a remis un avis favorable, en sa séance du 3 mars 2026, pour l’abrogation de cet emplacement ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, Place de la Victoire, l’emplacement de stationnement réservé aux"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 14,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:5c5a76c4342cebddad",
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+        "checkedAt": "2026-10-30T16:16:56.366Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:1615808b394cbf8c5a6e",
+      "title": "Conseil communal — opportunité à vérifier : Beloeil",
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "personnes handicapées et d’une flèche de réglementation sur courte distance avec la mention « 12m » ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membre",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+        "page": 15,
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+        "session": {
+          "date": "2026-03-18",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 18 MARS 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-18-mars-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : personnes handicapées et d’une flèche de réglementation sur courte distance avec la mention « 12m » ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Belœil, section de Belœil, rue des Viviers au Bois, le stationnement est réservé aux personnes",
+      "evidence": "personnes handicapées et d’une flèche de réglementation sur courte distance avec la mention « 12m » ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Belœil, section de Belœil, rue des Viviers au Bois, le stationnement est réservé aux personnes",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 15,
+          "excerpt": "personnes handicapées et d’une flèche de réglementation sur courte distance avec la mention « 12m » ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Belœil, section de Belœil, rue des Viviers au Bois, le stationnement est réservé aux personnes"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 15,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:5c5a76c4342cebddad",
+        "sha256": "ab68726ece990221aeabb1daf2dadd998cbcd4bba1744da6be161acfcdd9bee0",
+        "checkedAt": "2026-10-30T16:16:56.366Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:2bfe887646468b65fba7",
+      "title": "Conseil communal — opportunité à vérifier : Beloeil",
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routièr",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+        "page": 9,
+        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313",
+        "session": {
+          "date": "2026-04-15",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 15 AVRIL 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section d'Aubechies, rue de Blicquy :",
+      "evidence": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section d'Aubechies, rue de Blicquy :",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 9,
+          "excerpt": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section d'Aubechies, rue de Blicquy :"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 9,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:c25d300ff91a768a7b",
+        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313",
+        "checkedAt": "2026-10-30T16:16:56.366Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:19231fe929b9f238db70",
+      "title": "Conseil communal — opportunité à vérifier : Beloeil",
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service Communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routièr",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+        "page": 14,
+        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313",
+        "session": {
+          "date": "2026-04-15",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 15 AVRIL 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/pv-15-avril-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service Communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents : Article 1er : A Beloeil, section de Quevaucamps, rue de Stambruges :",
+      "evidence": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service Communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents : Article 1er : A Beloeil, section de Quevaucamps, rue de Stambruges :",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 14,
+          "excerpt": "Vu l'avis de la CCATM du 12 mars 2026 ; Vu l'avis du Service Communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents : Article 1er : A Beloeil, section de Quevaucamps, rue de Stambruges :"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 14,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:c25d300ff91a768a7b",
+        "sha256": "3c3cd0c6c2415a4aceef413274c798bfd869273da1ba1aabfbf6b0b0a1214313",
+        "checkedAt": "2026-10-30T16:16:56.366Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:4fea0711a4e77664fd56",
+      "title": "Conseil communal — opportunité à vérifier : Beloeil",
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "classiques et ses modifications ultérieures ; Considérant le cahier des charges N° 2026001 (CV/PH/2026-664) relatif au marché “Réfection de la toiture de l'église de Beloeil” établi par le Service Travaux (Bureau d'Etude",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
+        "page": 13,
+        "sha256": "71b910ac920b23dafd63061eb9455659a8320c55197cfe787bbea8bde828ec8f"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
+        "sha256": "71b910ac920b23dafd63061eb9455659a8320c55197cfe787bbea8bde828ec8f",
+        "session": {
+          "date": "2026-05-20",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 20 MAI 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : classiques et ses modifications ultérieures ; Considérant le cahier des charges N° 2026001 (CV/PH/2026-664) relatif au marché “Réfection de la toiture de l'église de Beloeil” établi par le Service Travaux (Bureau d'Etudes) ; Considérant que le montant estimé de ce marché s'élève à 97.260,53 € (incl. 21% TVA) ; Considérant qu'il est proposé de passer le marché par procédure négociée directe avec publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de",
+      "evidence": "classiques et ses modifications ultérieures ; Considérant le cahier des charges N° 2026001 (CV/PH/2026-664) relatif au marché “Réfection de la toiture de l'église de Beloeil” établi par le Service Travaux (Bureau d'Etudes) ; Considérant que le montant estimé de ce marché s'élève à 97.260,53 € (incl. 21% TVA) ; Considérant qu'il est proposé de passer le marché par procédure négociée directe avec publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de",
+      "municipalReference": "2026001",
+      "municipalSection": "4. à promouvoir les services rendus par la Province de Hainaut par une publicité adéquate :",
+      "municipalEvidence": [
+        {
+          "page": 13,
+          "excerpt": "classiques et ses modifications ultérieures ; Considérant le cahier des charges N° 2026001 (CV/PH/2026-664) relatif au marché “Réfection de la toiture de l'église de Beloeil” établi par le Service Travaux (Bureau d'Etudes) ; Considérant que le montant estimé de ce marché s'élève à 97.260,53 € (incl. 21% TVA) ; Considérant qu'il est proposé de passer le marché par procédure négociée directe avec publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de"
+        },
+        {
+          "page": 13,
+          "excerpt": "Article 1er : D'approuver le cahier des charges N° 2026001 (CV/PH/2026-664) et le montant estimé du marché “Réfection de la toiture de l'église de Beloeil”, établis par le Service Travaux (Bureau d'Etudes). Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 97.260,53 € (incl. 21% TVA). 13"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 13,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:d1269dcfac3ee75607",
+        "sha256": "71b910ac920b23dafd63061eb9455659a8320c55197cfe787bbea8bde828ec8f",
+        "checkedAt": "2026-10-30T16:16:56.366Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:f981f712a99c60a5ca62",
+      "title": "Conseil communal — opportunité à vérifier : Beloeil",
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "2026-131901 ; Vu l'avis de la CCATM du 09 avril 2026 ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des mem",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
+        "page": 19,
+        "sha256": "71b910ac920b23dafd63061eb9455659a8320c55197cfe787bbea8bde828ec8f"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
+        "sha256": "71b910ac920b23dafd63061eb9455659a8320c55197cfe787bbea8bde828ec8f",
+        "session": {
+          "date": "2026-05-20",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 20 MAI 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/PV-du-20-mai-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 2026-131901 ; Vu l'avis de la CCATM du 09 avril 2026 ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, rue Porte-à-Camp :",
+      "evidence": "2026-131901 ; Vu l'avis de la CCATM du 09 avril 2026 ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, rue Porte-à-Camp :",
+      "municipalReference": null,
+      "municipalSection": "4. à promouvoir les services rendus par la Province de Hainaut par une publicité adéquate :",
+      "municipalEvidence": [
+        {
+          "page": 19,
+          "excerpt": "2026-131901 ; Vu l'avis de la CCATM du 09 avril 2026 ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, rue Porte-à-Camp :"
+        },
+        {
+          "page": 20,
+          "excerpt": "Vu l'avis de la CCATM du 09 avril 2026 ; Vu l'avis du Service communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de circulation routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, Résidence des Marbriers :"
+        },
+        {
+          "page": 21,
+          "excerpt": "Vu l'avis de la CCATM du 09 avril 2026 ; Vu l'avis du Service Communal de la Mobilité ; Considérant que la mesure s'applique à la voirie communale et nécessite la prise d'un Règlement Complémentaire de Circulation Routière ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, Section de Thumaide, rue Sainte-Brigitte :"
+        },
+        {
+          "page": 25,
+          "excerpt": "Considérant qu’au regard du respect des objectifs visés à l’article 1er du décret du 6 février 2014 relatif à la voirie communale, il y a lieu d’accorder la demande d’élargissement du chemin n°3, tel qu’identifié sur le plan dressé par le Géomètre-Expert, en date du 15/07/2025 ; Attendu que la superficie de 30 ca à intégrer au domaine public le sera à titre gracieux ; Vu les dispositions légales et réglementaires en la matière ; Pour les motifs précités ; DECIDE à l'unanimité des membres présents"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 19,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:d1269dcfac3ee75607",
+        "sha256": "71b910ac920b23dafd63061eb9455659a8320c55197cfe787bbea8bde828ec8f",
+        "checkedAt": "2026-10-30T16:16:56.366Z",
+        "changedAt": null
+      }
     }
   ]
 }
