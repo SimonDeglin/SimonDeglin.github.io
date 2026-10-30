@@ -13,19 +13,19 @@
   "counts": {
     "total": 261,
     "sitesRepertories": 261,
-    "sitesVerifies": 229,
-    "deliberationsConnectees": 30,
+    "sitesVerifies": 241,
+    "deliberationsConnectees": 34,
     "zones": {
       "principale": 196,
       "exterieure_provisoire": 26,
       "peripherique": 39
     },
     "checkedWithErrors": 3,
-    "documentsRead": 156,
-    "opportunities": 78,
-    "sitesChecked": 229,
-    "candidatePages": 182,
-    "sourceErrors": 24
+    "documentsRead": 182,
+    "opportunities": 83,
+    "sitesChecked": 241,
+    "candidatePages": 190,
+    "sourceErrors": 27
   },
   "communes": [
     {
@@ -8272,11 +8272,903 @@
         }
       ],
       "lastSiteCheck": "2026-10-18T11:39:57.049Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-30T21:42:44.950Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
-      "opportunities": 0,
-      "errors": []
+      "documentsRead": 10,
+      "opportunities": 5,
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:70b19e03c2ff9b245b": {
+          "url": "https://www.bernissart.be/le-conseil-communal/",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:646d553b9e87c34214": {
+          "url": "https://www.bernissart.be/wp-content/uploads/2026/01/ROI-cc-12-11-2025.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T03:42:44.950Z"
+        },
+        "municipal-doc:d86b6f795698cd4a47": {
+          "url": "https://www.bernissart.be/wp-content/uploads/2025/11/delibe-apparentement-cc-12-02-2025-commune-de-Bernissart.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T03:42:44.950Z"
+        },
+        "municipal-doc:cefb2880675137e13b": {
+          "url": "https://www.bernissart.be/wp-content/uploads/2026/10/pv-cc-24-06-2026.pdf",
+          "finalUrl": "https://www.bernissart.be/wp-content/uploads/2026/10/pv-cc-24-06-2026.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"73a98-6ac5f6ee-362ca197e7d23ea9;;;\"",
+          "lastModified": "Wed, 07 Oct 2026 07:38:22 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2026/10/pv-cc-24-06-2026.pdf",
+            "sha256": "54a4b92274df0761ed423e94c994e09f7bd9b86902906211af52abf49689eb7a",
+            "session": {
+              "date": "2026-06-24",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 24 JUIN 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "54a4b92274df0761ed423e94c994e09f7bd9b86902906211af52abf49689eb7a",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:ea5eda52f8e146e36f": {
+          "url": "https://www.bernissart.be/wp-content/uploads/2026/06/pv-cc-07-05-2026.pdf",
+          "finalUrl": "https://www.bernissart.be/wp-content/uploads/2026/06/pv-cc-07-05-2026.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"59e80-6a422196-16909d94051c8a8f;;;\"",
+          "lastModified": "Mon, 29 Jun 2026 07:41:10 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2026/06/pv-cc-07-05-2026.pdf",
+            "sha256": "fd90df4f4e9514836ff45eaa402b1a9d3ce96b32c67b7e708b4a7b55035a4a41",
+            "session": {
+              "date": "2026-05-07",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 07 MAI 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "fd90df4f4e9514836ff45eaa402b1a9d3ce96b32c67b7e708b4a7b55035a4a41",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:6bbf843012219ea2f5": {
+          "url": "https://www.bernissart.be/wp-content/uploads/2026/06/PV-INTERNET-29-01-2026.pdf",
+          "finalUrl": "https://www.bernissart.be/wp-content/uploads/2026/06/PV-INTERNET-29-01-2026.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"4eddd-6a1ed697-5e63247742214ef0;;;\"",
+          "lastModified": "Tue, 02 Jun 2026 13:11:51 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2026/06/PV-INTERNET-29-01-2026.pdf",
+            "sha256": "d38e3bfdf50460038c345f1b8e70d53d22542c67693ddced557f46fab51f011d",
+            "session": {
+              "date": "2026-01-29",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 29 JANVIER 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "d38e3bfdf50460038c345f1b8e70d53d22542c67693ddced557f46fab51f011d",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:6e0be1e70d68c4b128": {
+          "url": "https://www.bernissart.be/wp-content/uploads/2026/02/PV-internet-10-12-2025.pdf",
+          "finalUrl": "https://www.bernissart.be/wp-content/uploads/2026/02/PV-internet-10-12-2025.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"cdc20-699709d7-91b4ab9368897b74;;;\"",
+          "lastModified": "Thu, 19 Feb 2026 13:02:15 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2026/02/PV-internet-10-12-2025.pdf",
+            "sha256": "0d3bcd9e6d072d3e518ef8723c05577fbbfed645444a1db5453476a6ff4235ec",
+            "session": {
+              "date": "2025-12-10",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 10 DECEMBRE 2025",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "0d3bcd9e6d072d3e518ef8723c05577fbbfed645444a1db5453476a6ff4235ec",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:3b4b0eabef91a5e479": {
+          "url": "https://www.bernissart.be/wp-content/uploads/2025/12/pv-cc-12-11-2025.pdf",
+          "finalUrl": "https://www.bernissart.be/wp-content/uploads/2025/12/pv-cc-12-11-2025.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"152a26-69400d8e-a1046736478fcf73;;;\"",
+          "lastModified": "Mon, 15 Dec 2025 13:30:54 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2025/12/pv-cc-12-11-2025.pdf",
+            "sha256": "ee27267b5ed03ac71d5f37925fbf2a655b97d4faf4a1ae02e29407094b37f4b2",
+            "session": {
+              "date": "2025-11-12",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 12 NOVEMBRE 2025",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "ee27267b5ed03ac71d5f37925fbf2a655b97d4faf4a1ae02e29407094b37f4b2",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:b0a75a8be6e02f3e26": {
+          "url": "https://www.bernissart.be/wp-content/uploads/2025/12/pv-cc-cpas-29-10-25.pdf",
+          "finalUrl": "https://www.bernissart.be/wp-content/uploads/2025/12/pv-cc-cpas-29-10-25.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"108b2-69427220-c67b0381dc7e6d95;;;\"",
+          "lastModified": "Wed, 17 Dec 2025 09:04:32 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2025/12/pv-cc-cpas-29-10-25.pdf",
+            "sha256": "b7e4515e88d7bc6c040a742ecc58835b9c1758cdd366536466a05d3e492abc85",
+            "session": {
+              "date": "2025-10-29",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 29 OCTOBRE 2025",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "b7e4515e88d7bc6c040a742ecc58835b9c1758cdd366536466a05d3e492abc85",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:b73538b978b6c75f28": {
+          "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-24-09-2025.pdf",
+          "finalUrl": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-24-09-2025.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"6d4ba-69146525-f9a77a326027eb97;;;\"",
+          "lastModified": "Wed, 12 Nov 2025 10:44:53 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-24-09-2025.pdf",
+            "sha256": "53962075a6f17f152d72c186c15ba488620f7b38a2c8cefcd387d2492f83c6a6",
+            "session": {
+              "date": "2025-09-24",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 24 SEPTEMBRE 2025",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "53962075a6f17f152d72c186c15ba488620f7b38a2c8cefcd387d2492f83c6a6",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:7feb98bc2fee749a5c": {
+          "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-25-06-2025.pdf",
+          "finalUrl": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-25-06-2025.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"48323-691464d2-f901675250389028;;;\"",
+          "lastModified": "Wed, 12 Nov 2025 10:43:30 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-25-06-2025.pdf",
+            "sha256": "898c8dcb80cda9c983a19a8d75122ad6e142d53c5c026c80b19a5fe431b2984d",
+            "session": {
+              "date": "2025-06-25",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 25 JUIN 2025",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "898c8dcb80cda9c983a19a8d75122ad6e142d53c5c026c80b19a5fe431b2984d",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:216b53b6e049c1c21b": {
+          "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-28-05-2025.pdf",
+          "finalUrl": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-28-05-2025.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"31119-690deda6-6e4e65133ae5523f;;;\"",
+          "lastModified": "Fri, 07 Nov 2025 13:01:26 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-28-05-2025.pdf",
+            "sha256": "7c120c4bb7e6f29b31b7740d5488d2b3e6ac5e8a1e1275b49712f0126751104e",
+            "session": {
+              "date": "2025-05-28",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 28 MAI 2025",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "7c120c4bb7e6f29b31b7740d5488d2b3e6ac5e8a1e1275b49712f0126751104e",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:d1df623488d64d235d": {
+          "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-conseil-30-04-25.pdf",
+          "finalUrl": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-conseil-30-04-25.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"37e45-690deda7-3783ffdbc16be031;;;\"",
+          "lastModified": "Fri, 07 Nov 2025 13:01:27 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-conseil-30-04-25.pdf",
+            "sha256": "2cc561d3c577e22583fdf5c4e7d76f61705d034b73d2e8a32acf4ebb59f8fa4e",
+            "session": {
+              "date": "2025-04-30",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 30 AVRIL 2025",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "2cc561d3c577e22583fdf5c4e7d76f61705d034b73d2e8a32acf4ebb59f8fa4e",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:cefb2880675137e13b",
+        "municipal-doc:ea5eda52f8e146e36f",
+        "municipal-doc:6bbf843012219ea2f5",
+        "municipal-doc:6e0be1e70d68c4b128",
+        "municipal-doc:3b4b0eabef91a5e479",
+        "municipal-doc:b0a75a8be6e02f3e26",
+        "municipal-doc:b73538b978b6c75f28",
+        "municipal-doc:7feb98bc2fee749a5c",
+        "municipal-doc:216b53b6e049c1c21b",
+        "municipal-doc:d1df623488d64d235d"
+      ],
+      "documentVersionsRead": 10,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:70b19e03c2ff9b245b": {
+            "url": "https://www.bernissart.be/le-conseil-communal/",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T21:42:44.950Z",
+            "lastSuccess": "2026-10-30T21:42:44.950Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          }
+        },
+        "documents": {
+          "municipal-doc:646d553b9e87c34214": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2026/01/ROI-cc-12-11-2025.pdf",
+            "title": "",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:d86b6f795698cd4a47": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/delibe-apparentement-cc-12-02-2025-commune-de-Bernissart.pdf",
+            "title": "Déclarations d’apparentement/de regroupement",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 1
+          },
+          "municipal-doc:cefb2880675137e13b": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2026/10/pv-cc-24-06-2026.pdf",
+            "title": "Juin 2026 (24/06/2026)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 2
+          },
+          "municipal-doc:ea5eda52f8e146e36f": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2026/06/pv-cc-07-05-2026.pdf",
+            "title": "Mai 2026 (07/05/2026)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:6bbf843012219ea2f5": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2026/06/PV-INTERNET-29-01-2026.pdf",
+            "title": "Janvier 2026 (29/01/2026)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:6e0be1e70d68c4b128": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2026/02/PV-internet-10-12-2025.pdf",
+            "title": "Décembre 2025 (10/12/2025)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:3b4b0eabef91a5e479": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/12/pv-cc-12-11-2025.pdf",
+            "title": "Novembre 2025 (12/11/2025)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:b0a75a8be6e02f3e26": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/12/pv-cc-cpas-29-10-25.pdf",
+            "title": "Octobre 2025 (29/10/2025)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:b73538b978b6c75f28": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-24-09-2025.pdf",
+            "title": "Septembre 2025 (24/09/2025)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:7feb98bc2fee749a5c": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-25-06-2025.pdf",
+            "title": "Juin 2025 (25/06/2025)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:216b53b6e049c1c21b": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-28-05-2025.pdf",
+            "title": "Mai 2025 (28/05/2025)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:d1df623488d64d235d": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-conseil-30-04-25.pdf",
+            "title": "Avril 2025 (30/04/2025)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:b5b08e5573c7572892": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-09-04-2025.pdf",
+            "title": "Avril 2025 (09/04/2025)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:d8796df7e7f0610315": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-12-02-2025.pdf",
+            "title": "Février 2025 (12/02/2025)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:09d751e0c7c80ae14f": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/reunion-conjointe-29-01-2025.pdf",
+            "title": "Janvier 2025 (29/01/2025) Commune-CPAS",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 14
+          },
+          "municipal-doc:7d63c8d2ad03193d90": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-27-12-2024.pdf",
+            "title": "Décembre 2024 (27/12/2024)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 15
+          },
+          "municipal-doc:b3d82f9862e2d901fc": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-02-12-2024.pdf",
+            "title": "Décembre 2024 (02/12/2024)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 16
+          },
+          "municipal-doc:33738700dbac085a37": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-12-11-2024.pdf",
+            "title": "Novembre 2024 (12/11/2024)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 17
+          },
+          "municipal-doc:ea0aaafc41fcda236e": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-18-06-2024.pdf",
+            "title": "Juin 2024 (18/06/2024)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 18
+          },
+          "municipal-doc:9868c285b769ff202a": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-28-05-2024.pdf",
+            "title": "Mai 2024 (28/05/2024)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 19
+          },
+          "municipal-doc:e1b6b9e5f940c60c3e": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-23-04-2024.pdf",
+            "title": "Avril 2024 (23/04/2024)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 20
+          },
+          "municipal-doc:78f8f68b03e5aa84b5": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-29-03-2024.pdf",
+            "title": "Mars 2024 (29/03/2024)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 21
+          },
+          "municipal-doc:100d5ce90b20843164": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-12-03-2024.pdf",
+            "title": "Mars 2024 (12/03/2024)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 22
+          },
+          "municipal-doc:b1e87fdf936f86aecf": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-20-12-2023.pdf",
+            "title": "Décembre 2023 (20/12/2023)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 23
+          },
+          "municipal-doc:0d1cd7650a942a9bd7": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-05-12-2023.pdf",
+            "title": "Décembre 2023 (05/12/2023) Commune-CPAS",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 24
+          },
+          "municipal-doc:cb7453a2643448666c": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-14-11-2023.pdf",
+            "title": "Novembre 2023 (14/11/2023)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 25
+          },
+          "municipal-doc:af1860a75a51586a1a": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-26-09-2023.pdf",
+            "title": "Septembre 2023 (26/09/2023)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 26
+          },
+          "municipal-doc:49c9b5024713a92740": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-27-06-2023.pdf",
+            "title": "Juin 2023 (27/06/2023)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 27
+          },
+          "municipal-doc:ef9aeafe0d6056b5b1": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-30-05-2023.pdf",
+            "title": "Mai 2023 (30/05/2023)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 28
+          },
+          "municipal-doc:a513a7cda1fcade893": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-28-04-2023.pdf",
+            "title": "Avril 2023 (28/04/2023)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 29
+          },
+          "municipal-doc:6af043cccc7d38b950": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-28-03-2023.pdf",
+            "title": "Mars 2023(28/03/2023)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 30
+          },
+          "municipal-doc:7bbbb5c3c0700000c2": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-31-01-2023.pdf",
+            "title": "Janvier 2023 (31/01/2023)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 31
+          },
+          "municipal-doc:cafb93f0fcaa476c86": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-04-01-2023.pdf",
+            "title": "Janvier 2023 (04/01/2023)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 32
+          },
+          "municipal-doc:22daf04909cdfe5031": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-13-12-2022.pdf",
+            "title": "Décembre 2022 (13/12/2022)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 33
+          },
+          "municipal-doc:c4b1cb776cb850900c": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-commune-cpas-22-11.pdf",
+            "title": "Novembre 2022 (22/11/2022) Commune-CPAS",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 34
+          },
+          "municipal-doc:533d0eb1549ad3fcc4": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2026/06/pv-conseil-14-11-22.pdf",
+            "title": "Novembre 2022 (14/11/2022)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 35
+          },
+          "municipal-doc:26b7858246fbb7af03": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-28-10-2022.pdf",
+            "title": "Octobre 2022 (28/10/2022)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 36
+          },
+          "municipal-doc:26d348170612776d4f": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-13-09-2022.pdf",
+            "title": "Septembre 2022 (13/09/2022)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 37
+          },
+          "municipal-doc:004b1ce3763862681e": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-19-07-2022.pdf",
+            "title": "Juillet 2022 (19/07/2022)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 38
+          },
+          "municipal-doc:fddddbcd0fc07420d8": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-14-07-2022.pdf",
+            "title": "Juillet 2022 (14/07/2022)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 39
+          },
+          "municipal-doc:51791f4ec076c44fe7": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-07-06-2022.pdf",
+            "title": "Juin 2022 (07/06/2022)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 40
+          },
+          "municipal-doc:5c9047332692e6e2b9": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-03-05-2022.pdf",
+            "title": "Mai 2022 (03/05/2022)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 41
+          },
+          "municipal-doc:60d93a6c4aaa656a8b": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-21-03-2022.pdf",
+            "title": "Mars 2022 (22/03/2022)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 42
+          },
+          "municipal-doc:d3852a5ab349904e8d": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-21-12-2021.pdf",
+            "title": "Décembre 2021 (21/12/2021)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 43
+          },
+          "municipal-doc:11f3d4cf419ab6c42c": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-09-11-2021.pdf",
+            "title": "Novembre 2021 (09/11/2021)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 44
+          },
+          "municipal-doc:15c5fb8e73c725af3f": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-cpas-26-10-2021.pdf",
+            "title": "Octobre 2021 (26/10/2021) Commune-CPAS",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 45
+          },
+          "municipal-doc:c376196d6f1e91a32c": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-28-09-2021.pdf",
+            "title": "Septembre 2021 (28/09/2021)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 46
+          },
+          "municipal-doc:a7c76a1ebf2df44615": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-25-06-2021.pdf",
+            "title": "Juin 2021 (25/06/2021)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 47
+          },
+          "municipal-doc:904dfac62eba46d18c": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-31-05-2021.pdf",
+            "title": "Mai 2021 (31/05/2021)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 48
+          },
+          "municipal-doc:4525e777aa198ee980": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-26-04-2021.pdf",
+            "title": "Avril 2021 (26/04/2021)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 49
+          },
+          "municipal-doc:804df834c9e041aac3": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-29-03-2021.pdf",
+            "title": "Mars 2021 (29/03/2021)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 50
+          },
+          "municipal-doc:aade11e85deaed91a3": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-08-03-2021.pdf",
+            "title": "Mars 2021 (08/03/2021)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 51
+          },
+          "municipal-doc:c1b61f71699f48decd": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-22-02-2021.pdf",
+            "title": "Février 2021 (22/02/2021)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 52
+          },
+          "municipal-doc:7ce4fcd12c682513b3": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-01-02-2021.pdf",
+            "title": "Février 2021 (01/02/2021)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 53
+          },
+          "municipal-doc:0da9abfe3c7622f8c7": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-04-01-2021.pdf",
+            "title": "Janvier 2021 (04/01/2021)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 54
+          },
+          "municipal-doc:a9bf3803746e0088ca": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-14-12-2020.pdf",
+            "title": "Décembre 2020 (14/12/2020)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 55
+          },
+          "municipal-doc:34f064876074dc8299": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-12-11-2020.pdf",
+            "title": "Novembre 2020 (12/11/2020)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 56
+          },
+          "municipal-doc:8799e4afc0b39c469d": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-cpas-21-10-2020.pdf",
+            "title": "Octobre 2020 (21/10/2020) Commune CPAS",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 57
+          },
+          "municipal-doc:4c8e102180078b80db": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-01-10-2020.pdf",
+            "title": "Octobre 2020 (01/10/2020)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 58
+          },
+          "municipal-doc:4056c0ca932db9c049": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-15-09-2020.pdf",
+            "title": "Septembre 2020 (15/09/2020)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 59
+          },
+          "municipal-doc:41d66033d40b665153": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-24-08-2020.pdf",
+            "title": "Août 2020 (24/08/2020)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 60
+          },
+          "municipal-doc:a47ac72c7390331637": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-29-06-2020.pdf",
+            "title": "Juin 2020 (29/06/2020)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 61
+          },
+          "municipal-doc:cf63efd92e01f9ab30": {
+            "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-24-02-2020.pdf",
+            "title": "Février 2020 (24/02/2020)",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 62
+          },
+          "municipal-doc:e8cb32728957e4404e": {
+            "url": "https://ipalle.be/wp-content/uploads/2025/12/Ipalle-Cal2026-BERNISSART.pdf",
+            "title": "Calendrier complet 2026 ici",
+            "sourceUrl": "https://www.bernissart.be/le-conseil-communal/",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 63
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 1,
+        "pagesPending": 0,
+        "documentsKnown": 64,
+        "documentsPending": 54,
+        "errors": 2,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 10,
+        "errors": 2,
+        "attempted": 12,
+        "pagesAttempted": 1
+      },
+      "lastDocumentSuccess": "2026-10-30T21:42:44.950Z"
     },
     {
       "ins": "84009",
@@ -8293,14 +9185,18 @@
       "estimatedMinutes": 124,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_lu_sources_non_localisees",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-30T21:41:55.948Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.bertrix.be/",
+        "checkedAt": "2026-10-30T21:41:55.948Z"
+      }
     },
     {
       "ins": "62015",
@@ -8377,14 +9273,18 @@
       "estimatedMinutes": 120,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_lu_sources_non_localisees",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-30T21:41:55.948Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.bievre.be/",
+        "checkedAt": "2026-10-30T21:41:55.948Z"
+      }
     },
     {
       "ins": "58002",
@@ -8440,11 +9340,445 @@
         }
       ],
       "lastSiteCheck": "2026-10-23T12:02:43.322Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-30T21:42:44.950Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 2,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:88b3da4c68d812be4d": {
+          "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null
+        },
+        "municipal-doc:22df7a67aa91b127cc": {
+          "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null
+        },
+        "municipal-doc:ad2cd817389ca1fd52": {
+          "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:107c61f183307bd2be": {
+          "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/reglement-dordre-interieur-du-conseil-communal.pdf",
+          "finalUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/reglement-dordre-interieur-du-conseil-communal.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Wed, 09 Nov 2022 08:18:07 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/reglement-dordre-interieur-du-conseil-communal.pdf",
+            "sha256": "13abb250f1c2b5310b3c9b7295130fb395fecb77f2b22c7ec58d32a8c957670d",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "13abb250f1c2b5310b3c9b7295130fb395fecb77f2b22c7ec58d32a8c957670d",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:9a5b140d66cb1aec9a": {
+          "url": "https://www.binche.be/fr/ma-ville/vie-politique/dpc-2024-2030.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastError": "Fichier supérieur à la limite",
+          "nextAttemptAt": "2026-10-31T03:42:44.950Z"
+        },
+        "municipal-doc:b6db55e4671afafc67": {
+          "url": "https://www.binche.be/fr/ma-ville/citoyennete/reglement-communal-en-matiere-de-delinquance.pdf",
+          "finalUrl": "https://www.binche.be/fr/ma-ville/citoyennete/reglement-communal-en-matiere-de-delinquance.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Wed, 26 Oct 2022 07:00:51 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/citoyennete/reglement-communal-en-matiere-de-delinquance.pdf",
+            "sha256": "f82dc935472802234e4114c6723f33653a065453c0dbe1c2b6612c8708b9b618",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "f82dc935472802234e4114c6723f33653a065453c0dbe1c2b6612c8708b9b618",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:107c61f183307bd2be",
+        "municipal-doc:b6db55e4671afafc67"
+      ],
+      "documentVersionsRead": 2,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:88b3da4c68d812be4d": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T21:42:44.950Z",
+            "lastSuccess": "2026-10-30T21:42:44.950Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:22df7a67aa91b127cc": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T21:42:44.950Z",
+            "lastSuccess": "2026-10-30T21:42:44.950Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:ad2cd817389ca1fd52": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T21:42:44.950Z",
+            "lastSuccess": "2026-10-30T21:42:44.950Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:4ce840d76f3dcde622": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/composition-du-conseil-communal/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:6ece7d01a02c02caba": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/principales-missions",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:28bd2748a74a3c77a5": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal/les-travaux-du-conseil-en-ligne",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:3603a00de7f98414e1": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal/titres-huis-clos-26-mai-2026-19-30.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:554999aa46e83c4667": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal/ordre-du-jour-26-05-26-seance-publique.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:de35bba4e8ec5f6466": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal/titres-huis-clos-25-juin-2026-19-30.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:92215b8807dd74c47d": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal/ordre-du-jour-25-juin-2026-19-30-seance-publique.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:a1ece21e8796fa4141": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal/titres-seance-publique-25-juin-2026-19-30.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:9754962bf3e852eb2f": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal/ordre-du-jour-25-aout-2026-seance-publique.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:90d37107bab37f53a8": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal/titres-huis-clos-25-aout-2026-19-00.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:933c484224547f2444": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal/titres-huis-clos-13-octobre-2026-19-00.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:db9374b02221f716ed": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal/ordre-du-jour-13-octobre-2026-seance-publique.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 14
+          },
+          "municipal-doc:52b760ffdf30e0a305": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 15
+          },
+          "municipal-doc:f0fcc229b7d0c76f3a": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/sdirection-21051810140.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 16
+          },
+          "municipal-doc:6a83cf26457bbe4788": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/sdirection-21061413590.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 17
+          },
+          "municipal-doc:92042a0e5972319eaa": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/pv-approuve-du-cc-du-10-juin-2021.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 18
+          },
+          "municipal-doc:88a3b455b06ef54c05": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/PV%20-%2028%20SEPTEMBRE%202021/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 19
+          },
+          "municipal-doc:e685f0e3efb72fe9a7": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/proces-verbal-de-la-seance-du-conseil-communal-du.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 20
+          },
+          "municipal-doc:769587e318a2c59ae0": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/proces-verbal-du-cc-du-16-decembre-2021.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 21
+          },
+          "municipal-doc:abecd3c875a3cf15f5": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/titres-huis-clos-16-decembre-2021-19-30-1.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 22
+          },
+          "municipal-doc:778cd9702cca7957a3": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/pv-approuve-du-cc-du-17-fevrier-2022.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 23
+          },
+          "municipal-doc:2d156c9d3aaba3298b": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/pv-approuve-du-cc-du-31-mars-2022.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 24
+          },
+          "municipal-doc:0b51484e96762255e6": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/pv-approuve-du-cc-du-19-mai-2022-site-ville.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 25
+          },
+          "municipal-doc:bba6f9548c879cca8a": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/pv-approuve-cc-du-21-juin-2022.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 26
+          },
+          "municipal-doc:4bacec4ac956bf90c6": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/pv-approuve-du-cc-du-29-09-2022.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 27
+          },
+          "municipal-doc:0d4a282058322bb481": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/pv-approuve-du-cc-du-24-octobre-2022.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 28
+          },
+          "municipal-doc:1c086c490fc0433827": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/pv-approuve-du-cc-du-12-decembre-2022.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 29
+          },
+          "municipal-doc:0fd1c4a11b20621514": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/pv-approuve-du-cc-du-09-fevrier-2023.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 30
+          },
+          "municipal-doc:15efcc7b8baa939752": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/pv-approuve-du-cc-du-03-avril-2023.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 31
+          },
+          "municipal-doc:7c4b312ea48227c0a7": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/00206b46e14c230623112256.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 32
+          },
+          "municipal-doc:dcd7a22b4bf109a8b9": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/00206b46e14c230905101959.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 33
+          },
+          "municipal-doc:7f78c124ee17447901": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/00206b46e14c231109092145.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 34
+          },
+          "municipal-doc:a0dbebf862495267e0": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/00206b46e14c231211135350.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 35
+          },
+          "municipal-doc:2252d38c7f82bab845": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/proces-verbaux-du-conseil-communal-1",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 36
+          }
+        },
+        "documents": {
+          "municipal-doc:107c61f183307bd2be": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/reglement-dordre-interieur-du-conseil-communal.pdf",
+            "title": "Règlement d'ordre intérieur du Conseil Communal",
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal/reglement-dordre-interieur-du-conseil-communal.pdf",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:9a5b140d66cb1aec9a": {
+            "url": "https://www.binche.be/fr/ma-ville/vie-politique/dpc-2024-2030.pdf",
+            "title": "Déclaration de Politique Communale 2024 2030",
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 1
+          },
+          "municipal-doc:b6db55e4671afafc67": {
+            "url": "https://www.binche.be/fr/ma-ville/citoyennete/reglement-communal-en-matiere-de-delinquance.pdf",
+            "title": "Règlement communal en matière de délinquance environnementale",
+            "sourceUrl": "https://www.binche.be/fr/ma-ville/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 2
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 37,
+        "pagesPending": 34,
+        "documentsKnown": 3,
+        "documentsPending": 1,
+        "errors": 1,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 2,
+        "errors": 1,
+        "attempted": 3,
+        "pagesAttempted": 3
+      },
+      "lastDocumentSuccess": "2026-10-30T21:42:44.950Z"
     },
     {
       "ins": "62119",
@@ -8578,11 +9912,225 @@
         }
       ],
       "lastSiteCheck": "2026-10-20T12:05:04.430Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-30T21:42:44.950Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 2,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:0841dfe9c7862efcc7": {
+          "url": "https://www.boussu.be/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null
+        },
+        "municipal-doc:c334e91f418edb0ce4": {
+          "url": "https://www.boussu.be/ma-commune/vie-politique/seances",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null
+        },
+        "municipal-doc:d2e58f1b36ada5de3c": {
+          "url": "https://www.boussu.be/ma-commune/vie-politique/conseil-communal/note-de-politique-generale",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:1006cd2d5a08572511": {
+          "url": "https://www.boussu.be/ma-commune/vie-politique/conseil-communal/copy2_of_composition/reglement/deliberation-modification-du-reglement-dordre-interieur-relatif-au-fonctionnement-du-conseil-communal-14-11-2022.pdf",
+          "finalUrl": "https://www.boussu.be/ma-commune/vie-politique/conseil-communal/copy2_of_composition/reglement/deliberation-modification-du-reglement-dordre-interieur-relatif-au-fonctionnement-du-conseil-communal-14-11-2022.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"|1769158218.0||Anonymous|1793153103.6277978|1793358096.771299\"",
+          "lastModified": "Fri, 23 Jan 2026 09:50:18 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.boussu.be/ma-commune/vie-politique/conseil-communal/copy2_of_composition/reglement/deliberation-modification-du-reglement-dordre-interieur-relatif-au-fonctionnement-du-conseil-communal-14-11-2022.pdf",
+            "sha256": "9430e29d68493c0446dce288774cb95643c92d0c22429dc4272f2cef7260df47",
+            "session": {
+              "date": "2025-04-18",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 18 AVRIL 2025",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "9430e29d68493c0446dce288774cb95643c92d0c22429dc4272f2cef7260df47",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:8ff71564600bdda5b0": {
+          "url": "https://www.boussu.be/ma-commune/vie-politique/conseil-communal/note-de-politique-generale/note-de-politique-generale-2018-2024/declaration-de-politique-communale-mandature-2024-2030.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T03:42:44.950Z"
+        },
+        "municipal-doc:2f8f20f10f7fae42d7": {
+          "url": "https://www.boussu.be/ma-commune/vie-politique/conseil-communal/note-de-politique-generale/note-de-politique-generale-2018-2024/2018-2024.pdf",
+          "finalUrl": "https://www.boussu.be/ma-commune/vie-politique/conseil-communal/note-de-politique-generale/note-de-politique-generale-2018-2024/2018-2024.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"|1737452927.0||Anonymous|1793153103.6277978|1793358096.771299\"",
+          "lastModified": "Tue, 21 Jan 2025 10:48:47 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.boussu.be/ma-commune/vie-politique/conseil-communal/note-de-politique-generale/note-de-politique-generale-2018-2024/2018-2024.pdf",
+            "sha256": "84f5f494f7a17f2d2fdfb41996848af3aeb43d2d5e1d14bc0f712198750e67f4",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "84f5f494f7a17f2d2fdfb41996848af3aeb43d2d5e1d14bc0f712198750e67f4",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:1006cd2d5a08572511",
+        "municipal-doc:2f8f20f10f7fae42d7"
+      ],
+      "documentVersionsRead": 2,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:0841dfe9c7862efcc7": {
+            "url": "https://www.boussu.be/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T21:42:44.950Z",
+            "lastSuccess": "2026-10-30T21:42:44.950Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:c334e91f418edb0ce4": {
+            "url": "https://www.boussu.be/ma-commune/vie-politique/seances",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T21:42:44.950Z",
+            "lastSuccess": "2026-10-30T21:42:44.950Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:d2e58f1b36ada5de3c": {
+            "url": "https://www.boussu.be/ma-commune/vie-politique/conseil-communal/note-de-politique-generale",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T21:42:44.950Z",
+            "lastSuccess": "2026-10-30T21:42:44.950Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:3b829fa59343ac65a9": {
+            "url": "https://www.boussu.be/ma-commune/publications-reglements/deliberation-sur-le-reglement-taxe-sur-la-force-motrice-exercices-2026-a-2031",
+            "depth": 0,
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:44e3d0f7b9ae182fc4": {
+            "url": "https://www.boussu.be/ma-commune/publications-reglements/avis-de-publication-conseil-communal-du-22-mai-2026",
+            "depth": 0,
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:f79848ac6b6f467891": {
+            "url": "https://www.deliberations.be/boussu/decisions",
+            "depth": 0,
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:2706ebef786782dcc3": {
+            "url": "https://www.boussu.be/ma-commune/vie-politique/seances/videos-des-seances",
+            "depth": 1,
+            "sourceUrl": "https://www.boussu.be/ma-commune/vie-politique/seances",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:df13b45697341658ce": {
+            "url": "https://www.boussu.be/ma-commune/vie-politique/seances/ordres-du-jour",
+            "depth": 1,
+            "sourceUrl": "https://www.boussu.be/ma-commune/vie-politique/seances",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:ed98dd690f47d69b2b": {
+            "url": "https://www.boussu.be/ma-commune/vie-politique/seances/proces-verbaux",
+            "depth": 1,
+            "sourceUrl": "https://www.boussu.be/ma-commune/vie-politique/seances",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 8
+          }
+        },
+        "documents": {
+          "municipal-doc:1006cd2d5a08572511": {
+            "url": "https://www.boussu.be/ma-commune/vie-politique/conseil-communal/copy2_of_composition/reglement/deliberation-modification-du-reglement-dordre-interieur-relatif-au-fonctionnement-du-conseil-communal-14-11-2022.pdf",
+            "title": "Règlement d'ordre intérieur du Conseil communal 250.3 KB",
+            "sourceUrl": "https://www.boussu.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:8ff71564600bdda5b0": {
+            "url": "https://www.boussu.be/ma-commune/vie-politique/conseil-communal/note-de-politique-generale/note-de-politique-generale-2018-2024/declaration-de-politique-communale-mandature-2024-2030.pdf",
+            "title": "Déclaration de Politique Communale Mandature 2024-2030.pdf 7.0 MB",
+            "sourceUrl": "https://www.boussu.be/ma-commune/vie-politique/conseil-communal/note-de-politique-generale",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 1
+          },
+          "municipal-doc:2f8f20f10f7fae42d7": {
+            "url": "https://www.boussu.be/ma-commune/vie-politique/conseil-communal/note-de-politique-generale/note-de-politique-generale-2018-2024/2018-2024.pdf",
+            "title": "2018-2024.pdf 157.0 KB",
+            "sourceUrl": "https://www.boussu.be/ma-commune/vie-politique/conseil-communal/note-de-politique-generale",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 2
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 9,
+        "pagesPending": 6,
+        "documentsKnown": 3,
+        "documentsPending": 1,
+        "errors": 1,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 2,
+        "errors": 1,
+        "attempted": 3,
+        "pagesAttempted": 3
+      },
+      "lastDocumentSuccess": "2026-10-30T21:42:44.950Z"
     },
     {
       "ins": "25014",
@@ -8633,11 +10181,916 @@
         }
       ],
       "lastSiteCheck": "2026-10-16T11:52:21.470Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-30T21:42:44.950Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 12,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:9fa7672a757e30f3b9": {
+          "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null
+        },
+        "municipal-doc:4c5a26f01934d0604a": {
+          "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null
+        },
+        "municipal-doc:dfa4c33ea528c210ef": {
+          "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:98600413475f0885a5": {
+          "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-26-01-2026-seance-publique.pdf",
+          "finalUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-26-01-2026-seance-publique.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"|1778500807.0||Anonymous|1793153144.00661|1793353312.2148287\"",
+          "lastModified": "Mon, 11 May 2026 13:00:07 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-26-01-2026-seance-publique.pdf",
+            "sha256": "4acd53838e59db2758f912170831295ef38a1fc3573ebf63569ae83f4b2b13be",
+            "session": {
+              "date": "2026-01-26",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "CONSEIL COMMUNAL DU 26.01.2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "4acd53838e59db2758f912170831295ef38a1fc3573ebf63569ae83f4b2b13be",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:1e8b005008e9727b5d": {
+          "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-20-04-2026-seance-publique.pdf",
+          "finalUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-20-04-2026-seance-publique.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"|1778500886.0||Anonymous|1793153144.00661|1793353312.2148287\"",
+          "lastModified": "Mon, 11 May 2026 13:01:26 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-20-04-2026-seance-publique.pdf",
+            "sha256": "bc4378885abba3ada87527da67e4efa1782318e18fdb170a37f7e18dc3d5f750",
+            "session": {
+              "date": "2026-04-20",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "CONSEIL COMMUNAL DU 20.04.2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "bc4378885abba3ada87527da67e4efa1782318e18fdb170a37f7e18dc3d5f750",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:48a30a3b7c450567d9": {
+          "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-du-18-05-2026-seance-publique.pdf",
+          "finalUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-du-18-05-2026-seance-publique.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"|1778500936.0||Anonymous|1793153144.00661|1793353312.2148287\"",
+          "lastModified": "Mon, 11 May 2026 13:02:16 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-du-18-05-2026-seance-publique.pdf",
+            "sha256": "38867d6d87094c2e17d556d52b6c747d76e68d624fa35a0d59c451bc471f8dd3",
+            "session": {
+              "date": "2026-05-18",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "CONSEIL COMMUNAL DU 18.05.2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "38867d6d87094c2e17d556d52b6c747d76e68d624fa35a0d59c451bc471f8dd3",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:219fa66023ff833458": {
+          "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-du-29-06-2026-seance-publique.pdf",
+          "finalUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-du-29-06-2026-seance-publique.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"|1782720556.0||Anonymous|1793153144.00661|1793353312.2148287\"",
+          "lastModified": "Mon, 29 Jun 2026 09:09:16 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-du-29-06-2026-seance-publique.pdf",
+            "sha256": "f74220954a00f2442fd4b96f29ad8a307445a1bfad2a6994a103f2eeef5a27a2",
+            "session": {
+              "date": "2026-06-29",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "CONSEIL COMMUNAL DU 29.06.2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "f74220954a00f2442fd4b96f29ad8a307445a1bfad2a6994a103f2eeef5a27a2",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:4af4e1fc69286ad173": {
+          "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-du-07-09-2026-seance-publique.pdf",
+          "finalUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-du-07-09-2026-seance-publique.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"|1788759913.0||Anonymous|1793153144.00661|1793353312.2148287\"",
+          "lastModified": "Mon, 07 Sep 2026 06:45:13 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-du-07-09-2026-seance-publique.pdf",
+            "sha256": "b9ecab625c51e6f1ab78062411a1d01e3374272ee4f4e665f2ce4d8f449043f3",
+            "session": {
+              "date": "2026-09-07",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "CONSEIL COMMUNAL DU 07.09.2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "b9ecab625c51e6f1ab78062411a1d01e3374272ee4f4e665f2ce4d8f449043f3",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:4e7f0a9e0623e43acb": {
+          "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-27-01-2025-seance-publique.pdf",
+          "finalUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-27-01-2025-seance-publique.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"|1741856569.0||Anonymous|1793153144.00661|1793353312.2148287\"",
+          "lastModified": "Thu, 13 Mar 2025 10:02:49 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-27-01-2025-seance-publique.pdf",
+            "sha256": "97113a20d893d90ae4de8d06ef1ff56586bab2e0d0828b79f0f18b59e4b81462",
+            "session": {
+              "date": "2025-01-27",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "CONSEIL COMMUNAL DU 27.01.2025",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "97113a20d893d90ae4de8d06ef1ff56586bab2e0d0828b79f0f18b59e4b81462",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:7ec58ed7a6ed04887b": {
+          "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-17-02-2025-seance-publique.pdf",
+          "finalUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-17-02-2025-seance-publique.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"|1741856591.0||Anonymous|1793153144.00661|1793353312.2148287\"",
+          "lastModified": "Thu, 13 Mar 2025 10:03:11 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-17-02-2025-seance-publique.pdf",
+            "sha256": "4b5e6820257da5a6832496d228934c0fec18d30fe357353f0dad914ae5386e86",
+            "session": {
+              "date": "2025-02-17",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "CONSEIL COMMUNAL DU 17.02.2025",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "4b5e6820257da5a6832496d228934c0fec18d30fe357353f0dad914ae5386e86",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:b9d0eba642952ca579": {
+          "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-24-03-2025-seance-publique.pdf",
+          "finalUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-24-03-2025-seance-publique.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"|1742197921.0||Anonymous|1793153144.00661|1793353312.2148287\"",
+          "lastModified": "Mon, 17 Mar 2025 08:52:01 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-24-03-2025-seance-publique.pdf",
+            "sha256": "07472cb71876a260d9f2db193a10f2b0aa38cd527bd9a60fac169558782304b1",
+            "session": {
+              "date": "2025-03-24",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "CONSEIL COMMUNAL DU 24.03.2025",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "07472cb71876a260d9f2db193a10f2b0aa38cd527bd9a60fac169558782304b1",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:c272e57a891a3d996c": {
+          "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-26-05-2025-seance-publique.pdf",
+          "finalUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-26-05-2025-seance-publique.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"|1747636062.0||Anonymous|1793153144.00661|1793353312.2148287\"",
+          "lastModified": "Mon, 19 May 2025 07:27:42 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-26-05-2025-seance-publique.pdf",
+            "sha256": "39160b4b9fdb2ac006825f3b654f1b682ac61f90f0340759b8f87de07c63cdf6",
+            "session": {
+              "date": "2025-05-26",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "CONSEIL COMMUNAL DU 26.05.2025",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "39160b4b9fdb2ac006825f3b654f1b682ac61f90f0340759b8f87de07c63cdf6",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:79b401587db066e605": {
+          "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-25-08-2025-seance-publique.pdf",
+          "finalUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-25-08-2025-seance-publique.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"|1755513867.0||Anonymous|1793153144.00661|1793353312.2148287\"",
+          "lastModified": "Mon, 18 Aug 2025 11:44:27 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-25-08-2025-seance-publique.pdf",
+            "sha256": "154056915f0cfba456e81c4d5f230c59cd9fc05106b0017dbd122e97a879cee1",
+            "session": null,
+            "document": {
+              "date": "2025-08-25",
+              "kind": "document",
+              "page": null,
+              "source": "link_title",
+              "excerpt": "25 août 2025",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "154056915f0cfba456e81c4d5f230c59cd9fc05106b0017dbd122e97a879cee1",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:99ea17ef5bbf1da8ae": {
+          "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-29-09-2025-seance-publique.pdf",
+          "finalUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-29-09-2025-seance-publique.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"|1758520881.0||Anonymous|1793153144.00661|1793353312.2148287\"",
+          "lastModified": "Mon, 22 Sep 2025 07:01:21 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-29-09-2025-seance-publique.pdf",
+            "sha256": "1d4a5e704290e616e032c27002a235d2424198abae656166558095fa74650a0c",
+            "session": {
+              "date": "2025-09-29",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "CONSEIL COMMUNAL DU 29.09.2025",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "1d4a5e704290e616e032c27002a235d2424198abae656166558095fa74650a0c",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:c0426fdbd9e9ab2ec4": {
+          "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-03-11-2025-seance-publique.pdf",
+          "finalUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-03-11-2025-seance-publique.pdf",
+          "lastAttempt": "2026-10-30T21:42:44.950Z",
+          "lastChecked": "2026-10-30T21:42:44.950Z",
+          "lastSuccess": "2026-10-30T21:42:44.950Z",
+          "lastError": null,
+          "etag": "\"|1761558012.0||Anonymous|1793153144.00661|1793353312.2148287\"",
+          "lastModified": "Mon, 27 Oct 2025 10:40:12 GMT",
+          "contentCheckedAt": "2026-10-30T21:42:44.950Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-03-11-2025-seance-publique.pdf",
+            "sha256": "26434daaca5d7dabdfee539fa327a523397e1fdb382557137e837281254376b5",
+            "session": {
+              "date": "2025-11-03",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "CONSEIL COMMUNAL DU 03.11.2025",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-30T21:42:44.950Z",
+          "sha256": "26434daaca5d7dabdfee539fa327a523397e1fdb382557137e837281254376b5",
+          "firstSeenAt": "2026-10-30T21:42:44.950Z",
+          "nextAttemptAt": null
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:98600413475f0885a5",
+        "municipal-doc:1e8b005008e9727b5d",
+        "municipal-doc:48a30a3b7c450567d9",
+        "municipal-doc:219fa66023ff833458",
+        "municipal-doc:4af4e1fc69286ad173",
+        "municipal-doc:4e7f0a9e0623e43acb",
+        "municipal-doc:7ec58ed7a6ed04887b",
+        "municipal-doc:b9d0eba642952ca579",
+        "municipal-doc:c272e57a891a3d996c",
+        "municipal-doc:79b401587db066e605",
+        "municipal-doc:99ea17ef5bbf1da8ae",
+        "municipal-doc:c0426fdbd9e9ab2ec4"
+      ],
+      "documentVersionsRead": 12,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:9fa7672a757e30f3b9": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T21:42:44.950Z",
+            "lastSuccess": "2026-10-30T21:42:44.950Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:4c5a26f01934d0604a": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T21:42:44.950Z",
+            "lastSuccess": "2026-10-30T21:42:44.950Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:dfa4c33ea528c210ef": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale",
+            "depth": 0,
+            "lastAttempt": "2026-10-30T21:42:44.950Z",
+            "lastSuccess": "2026-10-30T21:42:44.950Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:b67ed1233f61aa3ffb": {
+            "url": "https://www.braine-lalleud.be/vivre-a-bla/participation-citoyenne/conseil-communal-des-aines",
+            "depth": 0,
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:a35b5a091e8754974b": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/competences",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:0da70123b3418046b9": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:5e05b99d8af23ee712": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2021",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:26fee4cfe0ad4c0d4f": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2022",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:ad40f91c7cfc5be552": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2023",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:363ac987555df35036": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2024",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:217eb87e6fc378188f": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2025",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:36fcb63690429bb8e5": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/copy_of_2025",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 11
+          }
+        },
+        "documents": {
+          "municipal-doc:98600413475f0885a5": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-26-01-2026-seance-publique.pdf",
+            "title": "OJ du 26 janvier 2026 73.6 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:1e8b005008e9727b5d": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-20-04-2026-seance-publique.pdf",
+            "title": "OJ du 20 avril 2026 167.0 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 1
+          },
+          "municipal-doc:48a30a3b7c450567d9": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-du-18-05-2026-seance-publique.pdf",
+            "title": "OJ du 18 mai 2026 151.5 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 2
+          },
+          "municipal-doc:219fa66023ff833458": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-du-29-06-2026-seance-publique.pdf",
+            "title": "OJ du 29 juin 2026 115.3 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:4af4e1fc69286ad173": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/copy_of_2025/oj-du-07-09-2026-seance-publique.pdf",
+            "title": "OJ du 07 septembre 2026 132.8 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:4e7f0a9e0623e43acb": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-27-01-2025-seance-publique.pdf",
+            "title": "OJ du 27 janvier 2025 80.2 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:7ec58ed7a6ed04887b": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-17-02-2025-seance-publique.pdf",
+            "title": "OJ du 17 février 2025 141.8 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:b9d0eba642952ca579": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-24-03-2025-seance-publique.pdf",
+            "title": "OJ du 24 mars 2025 151.9 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:c272e57a891a3d996c": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-26-05-2025-seance-publique.pdf",
+            "title": "OJ du 26 mai 2025 211.9 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:79b401587db066e605": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-25-08-2025-seance-publique.pdf",
+            "title": "OJ du 25 août 2025 301.6 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:99ea17ef5bbf1da8ae": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-29-09-2025-seance-publique.pdf",
+            "title": "OJ du 29 septembre 2025 144.5 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:c0426fdbd9e9ab2ec4": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-03-11-2025-seance-publique.pdf",
+            "title": "OJ du 03 novembre 2025 287.9 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:ead9def48023106ae9": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2025/oj-du-15-12-2025-seance-publique.pdf",
+            "title": "OJ du 15 décembre 2025 197.4 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:573d032454bd2c5098": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2024/oj-seance-publique-29-01-2024.pdf",
+            "title": "OJ du 29 janvier 2024 48.8 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:db47413ecdad1c930c": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2024/oj-seance-publique-25-03-2024.pdf",
+            "title": "OJ du 25 mars 2024 65.3 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 14
+          },
+          "municipal-doc:3c32dc80ea883b0e0a": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2024/oj-seance-publique-22-04-2024.pdf",
+            "title": "OJ du 22 avril 2024 67.7 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 15
+          },
+          "municipal-doc:01eb5cbd8a243b77b5": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2024/oj-du-27-05-2024-seance-publique.pdf",
+            "title": "OJ du 27 mai 2024 96.8 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 16
+          },
+          "municipal-doc:fd2a6680b14c311d97": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2024/oj-du-26-08-2024-seance-publique.pdf",
+            "title": "OJ du 26 août 2024 100.4 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 17
+          },
+          "municipal-doc:bd33d7ccdc9e6da345": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2024/oj-du-04-11-2024-seance-publique.pdf",
+            "title": "OJ du 04 novembre 2024 66.4 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 18
+          },
+          "municipal-doc:1b6d3f504b4a55cdfa": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2024/oj-du-16-12-2024-seance-publique.pdf",
+            "title": "OJ du 16 décembre 2024 137.5 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 19
+          },
+          "municipal-doc:8232476e4eb0977290": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2023/oj-seance-publique-30-01-2023.pdf",
+            "title": "OJ du 30 janvier 2023 88.7 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 20
+          },
+          "municipal-doc:743f2bfab1ac0a587b": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2023/oj-seance-publique-27-03-2023.pdf",
+            "title": "OJ du 27 mars 2023 108.3 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 21
+          },
+          "municipal-doc:fcc36abbfeadca2e58": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2023/oj-seance-publique-22-05-2023.pdf",
+            "title": "OJ du 22 mai 2023 116.1 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 22
+          },
+          "municipal-doc:738ae039284812de66": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2023/oj-seance-publique-03-07-2023.pdf",
+            "title": "OJ du 03 juillet 2023 127.3 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 23
+          },
+          "municipal-doc:e9c2bcb617b6f7c2bc": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2023/oj-seance-publique-28-08-2023.pdf",
+            "title": "OJ du 28 août 2023 87.8 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 24
+          },
+          "municipal-doc:8c34f577f46537dcb5": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2023/oj-seance-publique-25-09-2023.pdf",
+            "title": "OJ du 25 septembre 2023 73.6 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 25
+          },
+          "municipal-doc:85223de61dba4118d4": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2023/oj-seance-publique-06-11-2023.pdf",
+            "title": "OJ du 06 novembre 2023 62.2 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 26
+          },
+          "municipal-doc:ff50398f473af91bf3": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2023/oj-seance-publique-18-12-2023.pdf",
+            "title": "OJ du 18 décembre 2023 82.8 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 27
+          },
+          "municipal-doc:0c39df3f7c8492038a": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2022/oj-de-la-seance-publique-du-31-01-2022.pdf",
+            "title": "OJ du 31 janvier 2022 87.7 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 28
+          },
+          "municipal-doc:ea75401169bc20fb4e": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2022/oj-seance-publique-28-03-2022.pdf",
+            "title": "OJ du 28 mars 2022 111.0 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 29
+          },
+          "municipal-doc:9f091b922fc3cdc0f2": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2022/oj-seance-publique-25-04-2022.pdf",
+            "title": "OJ du 25 avril 2022 70.9 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 30
+          },
+          "municipal-doc:8ad168f2b36cea7e9b": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2022/oj-seance-publique-30-05-2022.pdf",
+            "title": "OJ du 30 mai 2022 90.3 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 31
+          },
+          "municipal-doc:22cbf7756dfeca66f4": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2022/oj-seance-publique-27-06-2022.pdf",
+            "title": "OJ du 27 juin 2022 68.1 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 32
+          },
+          "municipal-doc:52ee482f9d3d2c725d": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2022/oj-seance-publique-29-08-2022.pdf",
+            "title": "OJ du 29 août 2022 90.5 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 33
+          },
+          "municipal-doc:3bc7f20752143d6851": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2022/oj-seance-publique-10-10-2022.pdf",
+            "title": "OJ du 10 octobre 2022 72.4 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 34
+          },
+          "municipal-doc:9b81bbb22543c7692f": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2022/oj-seance-publique-28-11-2022.pdf",
+            "title": "OJ du 28 novembre 2022 81.1 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 35
+          },
+          "municipal-doc:12912dbacad4627752": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2022/oj-seance-publique-19-12-2022.pdf",
+            "title": "OJ du 19 décembre 2022 92.1 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 36
+          },
+          "municipal-doc:83834c0a61eb855628": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2021/oj-du-22-fevrier-2021-seance-publique.pdf",
+            "title": "OJ du 22 février 2021 108.8 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 37
+          },
+          "municipal-doc:785ab5a3568fc2dfd6": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2021/oj-du-12-04-2021.pdf",
+            "title": "OJ du 12 avril 2021 124.7 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 38
+          },
+          "municipal-doc:1ea938d936a250048b": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2021/oj-du-31-05-2021.pdf",
+            "title": "OJ du 31 mai 2021 101.3 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 39
+          },
+          "municipal-doc:7eea66323e900eebe2": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2021/oj-du-28-06-2021-seance-publique.pdf",
+            "title": "OJ du 28 juin 2021 93.3 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 40
+          },
+          "municipal-doc:78b823569852fd778e": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2021/oj-du-30-08-2021.pdf",
+            "title": "OJ du 30 août 2021 119.2 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 41
+          },
+          "municipal-doc:2a512c917a158fa7fc": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2021/oj-seance-publique-du-27-09-2021.pdf",
+            "title": "OJ 27 septembre 2021 97.3 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 42
+          },
+          "municipal-doc:b6d1c93f49ff6446e6": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2021/oj-seance-publique-du-25-10-2021.pdf",
+            "title": "OJ du 25 octobre 2021 101.8 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 43
+          },
+          "municipal-doc:6be37cac7a8721e9d5": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/calendrier-et-ordre-du-jour/2021/oj-du-20-12-2021-seance-publique.pdf",
+            "title": "OJ du 20 décembre 2021 114.9 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 44
+          },
+          "municipal-doc:ffcb5754e5f5fd7ed0": {
+            "url": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale/declaration-de-politique-communale/declaration-de-politique-generale-2018-2024/declaration-de-politique-generale-2018-2024.pdf",
+            "title": "Déclaration de Politique communale 2024-2030 267.7 KB",
+            "sourceUrl": "https://www.braine-lalleud.be/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale",
+            "discoveredAt": "2026-10-30T21:42:44.950Z",
+            "lastSeen": "2026-10-30T21:42:44.950Z",
+            "discoveryOrder": 45
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 12,
+        "pagesPending": 9,
+        "documentsKnown": 46,
+        "documentsPending": 34,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 12,
+        "errors": 0,
+        "attempted": 12,
+        "pagesAttempted": 3
+      },
+      "lastDocumentSuccess": "2026-10-30T21:42:44.950Z"
     },
     {
       "ins": "25015",
@@ -11023,14 +13476,18 @@
       "estimatedMinutes": 121,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_lu_sources_non_localisees",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-30T21:41:55.948Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.fauvillers.be/",
+        "checkedAt": "2026-10-30T21:41:55.948Z"
+      }
     },
     {
       "ins": "92138",
@@ -11500,14 +13957,43 @@
       "estimatedMinutes": 112,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.florennes.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.florennes.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.deliberations.be/florennes/decisions",
+          "title": "deliberations.be",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T21:41:55.948Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.florennes.be/",
+        "checkedAt": "2026-10-30T21:41:55.948Z"
+      }
     },
     {
       "ins": "85011",
@@ -11818,14 +14304,18 @@
       "estimatedMinutes": 118,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_lu_sources_non_localisees",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-30T21:41:55.948Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.gedinne.be/",
+        "checkedAt": "2026-10-30T21:41:55.948Z"
+      }
     },
     {
       "ins": "64029",
@@ -14445,14 +16935,51 @@
       "estimatedMinutes": 128,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.communeleglise.be/marches-publics/",
+          "title": "Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.communeleglise.be/college-communal/",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.communeleglise.be/conseil-communal/",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.deliberations.be/leglise/decisions",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T21:41:55.948Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.communeleglise.be/",
+        "checkedAt": "2026-10-30T21:41:55.948Z"
+      }
     },
     {
       "ins": "53046",
@@ -14724,14 +17251,56 @@
       "estimatedMinutes": 113,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.libramontchevigny.be/mon-administration-communale/service-communaux/marches-publiques",
+          "title": "Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.libramontchevigny.be/mon-administration-communale/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.libramontchevigny.be/mon-administration-communale/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.libramontchevigny.be/actualites/compte-rendu-du-conseil-communal?u=466285a1ca6441c7b8e8c0942b234ed9",
+          "title": "Publié Compte-rendu du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.libramontchevigny.be/mon-administration-communale/service-communaux/finances/taxes-et-redevances/taxes-et-redevances-liees-a-limmobilier/documents-taxes-et-redevances-liees-a-limmobilier/deliberation-signee-fixation-des-centimes-additionnels-au-precompte-immobilier-pour-2026.pdf",
+          "title": "Publié Fixation des centimes additionnels au précompte immobilier pour 2026.",
+          "status": "document_pdf_a_analyser"
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T21:41:55.948Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.libramontchevigny.be/",
+        "checkedAt": "2026-10-30T21:41:55.948Z"
+      }
     },
     {
       "ins": "62063",
@@ -15264,14 +17833,43 @@
       "estimatedMinutes": 124,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.martelange.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.martelange.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.martelange.be/ma-commune/services-communaux/marches-publics",
+          "title": "Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T21:41:55.948Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.martelange.be/",
+        "checkedAt": "2026-10-30T21:41:55.948Z"
+      }
     },
     {
       "ins": "85024",
@@ -16189,14 +18787,43 @@
       "estimatedMinutes": 123,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.neufchateau.be/ma-commune/services-communaux/marches-publics",
+          "title": "Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.neufchateau.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.neufchateau.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T21:41:55.948Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.neufchateau.be/",
+        "checkedAt": "2026-10-30T21:41:55.948Z"
+      }
     },
     {
       "ins": "62121",
@@ -16694,14 +19321,72 @@
       "estimatedMinutes": 120,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.paliseul.be/ma-commune/vie-politique/copy_of_college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.paliseul.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.paliseul.be/ma-commune/vie-politique/programme-strategique-transversal",
+          "title": "Programme Stratégique Transversal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.paliseul.be/ma-commune/vie-politique/conseil-communal/ordres-du-jour",
+          "title": "Ordres du jour",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.paliseul.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+          "title": "Procès verbaux conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.paliseul.be/ma-commune/services_communaux/marches-publics",
+          "title": "Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.paliseul.be/ma-commune/vie-politique/conseil-communal/ordres-du-jour/2026/copy_of_convocation-conseil-20260714.pdf",
+          "title": "02 septembre 2026 Ordre du jour du conseil communal du 02 septembre 2026",
+          "status": "document_pdf_a_analyser"
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T21:41:55.948Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.paliseul.be/",
+        "checkedAt": "2026-10-30T21:41:55.948Z"
+      }
     },
     {
       "ins": "57062",
@@ -16884,14 +19569,43 @@
       "estimatedMinutes": 121,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.philippeville.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.philippeville.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.philippeville.be/ma-commune/vie-politique/programme-strategique-transversal",
+          "title": "Programme Stratégique Transversal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T21:41:55.948Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.philippeville.be/",
+        "checkedAt": "2026-10-30T21:41:55.948Z"
+      }
     },
     {
       "ins": "63088",
@@ -19472,14 +22186,69 @@
       "estimatedMinutes": 125,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.walcourt.be/le-budget-communal/",
+          "title": "Le budget communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.walcourt.be/mandataires_cat/college-communal/",
+          "title": "Collège Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.walcourt.be/mandataires_cat/conseil-communal/",
+          "title": "Conseil Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.walcourt.be/wp-content/uploads/2022/04/roi-conseil-190826.pdf",
+          "title": "Règlement d’Ordre Intérieur du Conseil Communal",
+          "status": "document_pdf_a_analyser"
+        },
+        {
+          "url": "https://www.walcourt.be/les-breves-des-seances-du-conseil-communal/",
+          "title": "Les ordres du jour et les brèves des séances du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.walcourt.be/budget-communal-2/",
+          "title": "Budgets et comptes",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-30T21:41:55.948Z",
+          "last_success": "2026-10-30T21:41:55.948Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.walcourt.be/wp-content/uploads/2026/10/Ordre-du-Jour-du-Conseil-communal-du-lundi-26-octobre-2026-a-19h30.pdf",
+          "title": "Consulter",
+          "status": "document_pdf_a_analyser"
+        }
+      ],
+      "lastSiteCheck": "2026-10-30T21:41:55.948Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.walcourt.be/",
+        "checkedAt": "2026-10-30T21:41:55.948Z"
+      }
     },
     {
       "ins": "25124",
@@ -20079,6 +22848,6 @@
       }
     }
   ],
-  "lastMunicipalPass": "2026-10-30T16:15:40.939Z",
-  "lastMunicipalDocumentPass": "2026-10-30T16:16:56.366Z"
+  "lastMunicipalPass": "2026-10-30T21:41:55.948Z",
+  "lastMunicipalDocumentPass": "2026-10-30T21:42:44.950Z"
 }

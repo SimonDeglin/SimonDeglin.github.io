@@ -58,40 +58,40 @@
     },
     "COMMUNES": {
       "status": "inventory_not_document_collection",
-      "updatedAt": "2026-10-30T16:15:40.939Z",
-      "last_attempt": "2026-10-30T16:15:40.939Z",
+      "updatedAt": "2026-10-30T21:41:55.948Z",
+      "last_attempt": "2026-10-30T21:41:55.948Z",
       "scope": {
         "province": "all",
         "ins": ""
       },
       "total": 261,
       "sitesRepertories": 261,
-      "sitesVerifies": 229,
-      "deliberationsConnectees": 30,
+      "sitesVerifies": 241,
+      "deliberationsConnectees": 34,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 156,
-      "opportunities": 78,
-      "sitesChecked": 229,
-      "candidatePages": 182,
-      "sourceErrors": 24
+      "documentsRead": 182,
+      "opportunities": 83,
+      "sitesChecked": 241,
+      "candidatePages": 190,
+      "sourceErrors": 27
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-10-30T16:16:56.366Z",
-      "last_success": "2026-10-30T16:16:56.366Z",
+      "last_attempt": "2026-10-30T21:42:44.950Z",
+      "last_success": "2026-10-30T21:42:44.950Z",
       "last_batch": 4,
-      "documents_checked": 8,
-      "documents_read": 8,
+      "documents_checked": 26,
+      "documents_read": 26,
       "documents_unchanged": 0,
       "documents_modified": 0,
-      "opportunities_found": 11,
+      "opportunities_found": 5,
       "review_candidates": 0,
-      "errors_count": 16,
+      "errors_count": 4,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel."
     }
   },
@@ -103,7 +103,7 @@
   "metrics": {
     "scanned": 1780,
     "matched_current_run": 13,
-    "records": 204,
+    "records": 209,
     "review_count": 109,
     "award_notice_count": 468,
     "awarded_market_matches": 2,
@@ -13769,6 +13769,372 @@
       ],
       "consultationUrls": [],
       "documentsCheckedAt": "2026-10-30T21:00:00.202Z"
+    },
+    {
+      "id": "local:ed3561f2909b5574b103",
+      "title": "Conseil communal — opportunité à vérifier : Bernissart",
+      "buyer": "Commune de Bernissart",
+      "municipalityINS": "51009",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "CAHIER SPECIAL DES CHARGES – EGOUTTAGE ET TRAVAUX DE ------------------------------------------------------------------------------------------------ VOIRIE CITE EMILE ROYER ------------------------------------------- Re",
+        "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2026/06/pv-cc-07-05-2026.pdf",
+        "page": 17,
+        "sha256": "fd90df4f4e9514836ff45eaa402b1a9d3ce96b32c67b7e708b4a7b55035a4a41"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD",
+        "Reseaux"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.bernissart.be/wp-content/uploads/2026/06/pv-cc-07-05-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2026/06/pv-cc-07-05-2026.pdf",
+        "sha256": "fd90df4f4e9514836ff45eaa402b1a9d3ce96b32c67b7e708b4a7b55035a4a41",
+        "session": {
+          "date": "2026-05-07",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 07 MAI 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.bernissart.be/wp-content/uploads/2026/06/pv-cc-07-05-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : CAHIER SPECIAL DES CHARGES – EGOUTTAGE ET TRAVAUX DE ------------------------------------------------------------------------------------------------ VOIRIE CITE EMILE ROYER ------------------------------------------- Revu sa délibération du 10 décembre 2025 décidant de solliciter IPALLE , dans le cadre des services in house offerts aux associés, en vue d’obtenir un devis pour une mission d’assistance à maîtrise",
+      "evidence": "CAHIER SPECIAL DES CHARGES – EGOUTTAGE ET TRAVAUX DE ------------------------------------------------------------------------------------------------ VOIRIE CITE EMILE ROYER ------------------------------------------- Revu sa délibération du 10 décembre 2025 décidant de solliciter IPALLE , dans le cadre des services in house offerts aux associés, en vue d’obtenir un devis pour une mission d’assistance à maîtrise",
+      "municipalReference": null,
+      "municipalSection": "11) Les dix (10) premiers kilowatts de la somme des puissances du ou",
+      "municipalEvidence": [
+        {
+          "page": 17,
+          "excerpt": "CAHIER SPECIAL DES CHARGES – EGOUTTAGE ET TRAVAUX DE ------------------------------------------------------------------------------------------------ VOIRIE CITE EMILE ROYER ------------------------------------------- Revu sa délibération du 10 décembre 2025 décidant de solliciter IPALLE , dans le cadre des services in house offerts aux associés, en vue d’obtenir un devis pour une mission d’assistance à maîtrise"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 17,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:ea5eda52f8e146e36f",
+        "sha256": "fd90df4f4e9514836ff45eaa402b1a9d3ce96b32c67b7e708b4a7b55035a4a41",
+        "checkedAt": "2026-10-30T21:42:44.950Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:19bdb36e637e2a6cf554",
+      "title": "Conseil communal — opportunité à vérifier : Bernissart",
+      "buyer": "Commune de Bernissart",
+      "municipalityINS": "51009",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "initialement été programmée pour une adjudication en 2024, celle-ci ayant connu quelques retards liés à l'étude technique menée par un bureau d'études externe. Cette étude est désormais finalisée et l'ouverture des offre",
+        "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2026/06/PV-INTERNET-29-01-2026.pdf",
+        "page": 9,
+        "sha256": "d38e3bfdf50460038c345f1b8e70d53d22542c67693ddced557f46fab51f011d"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.bernissart.be/wp-content/uploads/2026/06/PV-INTERNET-29-01-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2026/06/PV-INTERNET-29-01-2026.pdf",
+        "sha256": "d38e3bfdf50460038c345f1b8e70d53d22542c67693ddced557f46fab51f011d",
+        "session": {
+          "date": "2026-01-29",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 29 JANVIER 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.bernissart.be/wp-content/uploads/2026/06/PV-INTERNET-29-01-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : initialement été programmée pour une adjudication en 2024, celle-ci ayant connu quelques retards liés à l'étude technique menée par un bureau d'études externe. Cette étude est désormais finalisée et l'ouverture des offres a eu lieu en avril 2025. Après analyse des prix et échanges avec les soumissionnaires, la proposition de décision d'attribution du marché est en cours de finalisation. L'adjudicataire du marché sera désigné dans les prochaines semaines. Le démarrage des",
+      "evidence": "initialement été programmée pour une adjudication en 2024, celle-ci ayant connu quelques retards liés à l'étude technique menée par un bureau d'études externe. Cette étude est désormais finalisée et l'ouverture des offres a eu lieu en avril 2025. Après analyse des prix et échanges avec les soumissionnaires, la proposition de décision d'attribution du marché est en cours de finalisation. L'adjudicataire du marché sera désigné dans les prochaines semaines. Le démarrage des",
+      "municipalReference": null,
+      "municipalSection": "3)   79002/72460     Projet 2022/42        Travaux de rénovation de l’église                6.370,67 €",
+      "municipalEvidence": [
+        {
+          "page": 9,
+          "excerpt": "initialement été programmée pour une adjudication en 2024, celle-ci ayant connu quelques retards liés à l'étude technique menée par un bureau d'études externe. Cette étude est désormais finalisée et l'ouverture des offres a eu lieu en avril 2025. Après analyse des prix et échanges avec les soumissionnaires, la proposition de décision d'attribution du marché est en cours de finalisation. L'adjudicataire du marché sera désigné dans les prochaines semaines. Le démarrage des"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 9,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6bbf843012219ea2f5",
+        "sha256": "d38e3bfdf50460038c345f1b8e70d53d22542c67693ddced557f46fab51f011d",
+        "checkedAt": "2026-10-30T21:42:44.950Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:940dac2b9043ae30d063",
+      "title": "Conseil communal — opportunité à vérifier : Bernissart",
+      "buyer": "Commune de Bernissart",
+      "municipalityINS": "51009",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "TRAVAUX DE REFECTION DE L’EGOUTTAGE CITE CARLIER --------------------------------------------------------------------------------------- MISSION D’AUTEUR DE PROJET – DEMANDE DE DEVIS A IPALLE ----------------------------",
+        "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2026/02/PV-internet-10-12-2025.pdf",
+        "page": 65,
+        "sha256": "0d3bcd9e6d072d3e518ef8723c05577fbbfed645444a1db5453476a6ff4235ec"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD",
+        "Reseaux"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.bernissart.be/wp-content/uploads/2026/02/PV-internet-10-12-2025.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2026/02/PV-internet-10-12-2025.pdf",
+        "sha256": "0d3bcd9e6d072d3e518ef8723c05577fbbfed645444a1db5453476a6ff4235ec",
+        "session": {
+          "date": "2025-12-10",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 10 DECEMBRE 2025",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.bernissart.be/wp-content/uploads/2026/02/PV-internet-10-12-2025.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : TRAVAUX DE REFECTION DE L’EGOUTTAGE CITE CARLIER --------------------------------------------------------------------------------------- MISSION D’AUTEUR DE PROJET – DEMANDE DE DEVIS A IPALLE ----------------------------------------------------------------------------------------------- DANS LE CADRE D’UNE RELATION IN HOUSE ---------------------------------------------------------------------- Attendu qu’à la suite de plusieurs signalements de problèmes",
+      "evidence": "TRAVAUX DE REFECTION DE L’EGOUTTAGE CITE CARLIER --------------------------------------------------------------------------------------- MISSION D’AUTEUR DE PROJET – DEMANDE DE DEVIS A IPALLE ----------------------------------------------------------------------------------------------- DANS LE CADRE D’UNE RELATION IN HOUSE ---------------------------------------------------------------------- Attendu qu’à la suite de plusieurs signalements de problèmes",
+      "municipalReference": null,
+      "municipalSection": "10) Le moteur de rechange, c’est-à-dire celui qui est exclusivement",
+      "municipalEvidence": [
+        {
+          "page": 65,
+          "excerpt": "TRAVAUX DE REFECTION DE L’EGOUTTAGE CITE CARLIER --------------------------------------------------------------------------------------- MISSION D’AUTEUR DE PROJET – DEMANDE DE DEVIS A IPALLE ----------------------------------------------------------------------------------------------- DANS LE CADRE D’UNE RELATION IN HOUSE ---------------------------------------------------------------------- Attendu qu’à la suite de plusieurs signalements de problèmes"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 65,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6e0be1e70d68c4b128",
+        "sha256": "0d3bcd9e6d072d3e518ef8723c05577fbbfed645444a1db5453476a6ff4235ec",
+        "checkedAt": "2026-10-30T21:42:44.950Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:f18def4df5d892365526",
+      "title": "Conseil communal — opportunité à vérifier : Bernissart",
+      "buyer": "Commune de Bernissart",
+      "municipalityINS": "51009",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Etat des lieux La commune de Bernissart compte 4 passages à niveau. En avril 2019, Infrabel a mandaté un bureau d’études externe pour analyser les options de substitution ou de suppression des infrastructures. L’étude a",
+        "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-28-05-2025.pdf",
+        "page": 39,
+        "sha256": "7c120c4bb7e6f29b31b7740d5488d2b3e6ac5e8a1e1275b49712f0126751104e"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-28-05-2025.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-28-05-2025.pdf",
+        "sha256": "7c120c4bb7e6f29b31b7740d5488d2b3e6ac5e8a1e1275b49712f0126751104e",
+        "session": {
+          "date": "2025-05-28",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 28 MAI 2025",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-cc-28-05-2025.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Etat des lieux La commune de Bernissart compte 4 passages à niveau. En avril 2019, Infrabel a mandaté un bureau d’études externe pour analyser les options de substitution ou de suppression des infrastructures. L’étude a été présentée au collège communal en avril 2019. Les premières propositions ont reçu un accueil contrasté. Certaines solutions ont été jugées acceptables et favorables, d’autres ont fait",
+      "evidence": "Etat des lieux La commune de Bernissart compte 4 passages à niveau. En avril 2019, Infrabel a mandaté un bureau d’études externe pour analyser les options de substitution ou de suppression des infrastructures. L’étude a été présentée au collège communal en avril 2019. Les premières propositions ont reçu un accueil contrasté. Certaines solutions ont été jugées acceptables et favorables, d’autres ont fait",
+      "municipalReference": null,
+      "municipalSection": "10. Installation du nouveau conseil d’administration",
+      "municipalEvidence": [
+        {
+          "page": 39,
+          "excerpt": "Etat des lieux La commune de Bernissart compte 4 passages à niveau. En avril 2019, Infrabel a mandaté un bureau d’études externe pour analyser les options de substitution ou de suppression des infrastructures. L’étude a été présentée au collège communal en avril 2019. Les premières propositions ont reçu un accueil contrasté. Certaines solutions ont été jugées acceptables et favorables, d’autres ont fait"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 39,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:216b53b6e049c1c21b",
+        "sha256": "7c120c4bb7e6f29b31b7740d5488d2b3e6ac5e8a1e1275b49712f0126751104e",
+        "checkedAt": "2026-10-30T21:42:44.950Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:9cc565949f0c4b3632e4",
+      "title": "Conseil communal — opportunité à vérifier : Bernissart",
+      "buyer": "Commune de Bernissart",
+      "municipalityINS": "51009",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Démocratie Locale et de la Décentralisation. ====================================== CAHIER SPECIAL DES CHARGES D’AUTEUR DE PROJET POUR LES TRAVAUX DU FUTUR COMMISSARIAT DE POLICE Revu sa délibération du 27 décembre 2024",
+        "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-conseil-30-04-25.pdf",
+        "page": 23,
+        "sha256": "2cc561d3c577e22583fdf5c4e7d76f61705d034b73d2e8a32acf4ebb59f8fa4e"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-conseil-30-04-25.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-conseil-30-04-25.pdf",
+        "sha256": "2cc561d3c577e22583fdf5c4e7d76f61705d034b73d2e8a32acf4ebb59f8fa4e",
+        "session": {
+          "date": "2025-04-30",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 30 AVRIL 2025",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.bernissart.be/wp-content/uploads/2025/11/pv-conseil-30-04-25.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Démocratie Locale et de la Décentralisation. ====================================== CAHIER SPECIAL DES CHARGES D’AUTEUR DE PROJET POUR LES TRAVAUX DU FUTUR COMMISSARIAT DE POLICE Revu sa délibération du 27 décembre 2024 décidant : - d’envisager l’utilisation de la procédure négociée directe avec publication préalable pour le marché de service d’auteur de projet relatif",
+      "evidence": "Démocratie Locale et de la Décentralisation. ====================================== CAHIER SPECIAL DES CHARGES D’AUTEUR DE PROJET POUR LES TRAVAUX DU FUTUR COMMISSARIAT DE POLICE Revu sa délibération du 27 décembre 2024 décidant : - d’envisager l’utilisation de la procédure négociée directe avec publication préalable pour le marché de service d’auteur de projet relatif",
+      "municipalReference": null,
+      "municipalSection": "5) Aux députés fédéraux et régionaux issus de la province",
+      "municipalEvidence": [
+        {
+          "page": 23,
+          "excerpt": "Démocratie Locale et de la Décentralisation. ====================================== CAHIER SPECIAL DES CHARGES D’AUTEUR DE PROJET POUR LES TRAVAUX DU FUTUR COMMISSARIAT DE POLICE Revu sa délibération du 27 décembre 2024 décidant : - d’envisager l’utilisation de la procédure négociée directe avec publication préalable pour le marché de service d’auteur de projet relatif"
+        },
+        {
+          "page": 24,
+          "excerpt": "Delguste, Ameline Lienard) Article 1 : d’approuver le cahier spécial des charges concernant le marché de service d’auteur de projet relatif à l’aménagement d’un commissariat de police dans un bâtiment existant ; Article 2 : de retenir la procédure négociée directe avec publication préalable conformément à l’article 41, par. 1er, 1° de la loi du 17 juin"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 23,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:d1df623488d64d235d",
+        "sha256": "2cc561d3c577e22583fdf5c4e7d76f61705d034b73d2e8a32acf4ebb59f8fa4e",
+        "checkedAt": "2026-10-30T21:42:44.950Z",
+        "changedAt": null
+      }
     }
   ]
 }
