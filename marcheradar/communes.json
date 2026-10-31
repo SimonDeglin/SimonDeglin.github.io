@@ -13,7 +13,7 @@
   "counts": {
     "total": 261,
     "sitesRepertories": 261,
-    "sitesVerifies": 253,
+    "sitesVerifies": 261,
     "deliberationsConnectees": 37,
     "zones": {
       "principale": 196,
@@ -23,9 +23,9 @@
     "checkedWithErrors": 3,
     "documentsRead": 203,
     "opportunities": 91,
-    "sitesChecked": 253,
-    "candidatePages": 200,
-    "sourceErrors": 29
+    "sitesChecked": 261,
+    "candidatePages": 210,
+    "sourceErrors": 31
   },
   "communes": [
     {
@@ -1395,43 +1395,90 @@
       "estimatedMinutes": 17,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.ans-ville.be/ma-ville/vie-politique",
           "title": "Vie politique",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:30.144Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_error": null
         },
         {
           "url": "https://www.ans-ville.be/ma-ville/vie-politique/college-communal",
           "title": "Collège communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:31.111Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_error": null
         },
         {
           "url": "https://www.ans-ville.be/ma-ville/vie-politique/conseil-communal",
           "title": "Conseil communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:31.943Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_error": null
         },
         {
           "url": "https://www.ans-ville.be/ma-ville/vie-politique/conseil-du-cpas",
           "title": "Conseil du CPAS",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:32.776Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.ans-ville.be/ma-ville/services-communaux/service-juridique",
+          "title": "Service juridique - Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.ans-ville.be/ma-ville/vie-politique/programme-strategique-transversal",
+          "title": "Programme stratégique transversal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.ans-ville.be/ma-ville/vie-politique/conseil-communal/ordre-du-jour",
+          "title": "Ordre du jour du Conseil communal",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.ans-ville.be/ma-ville/vie-politique/conseil-communal/proces-verbaux",
+          "title": "Procès verbaux du Conseil communal",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.ans-ville.be/actualites/invitation-au-conseil-communal-du-28-octobre-2026?u=ed6bbcac07f6468fbd620b07f4ac0e74",
+          "title": "Publié Invitation au Conseil communal du 28 octobre 2026.",
+          "status": "lien_public_repere_non_analyse"
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:35:29.317Z",
+      "lastSiteCheck": "2026-10-31T07:31:25.201Z",
       "lastDocumentCheck": "2026-10-15T08:35:32.777Z",
       "latestCouncilDate": null,
       "documentsRead": 4,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.ans-ville.be/",
+        "checkedAt": "2026-10-31T07:31:25.201Z"
+      }
     },
     {
       "ins": "61079",
@@ -2646,14 +2693,190 @@
       "estimatedMinutes": 146,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "peripherique",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.arlon.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.deliberations.be/arlon/decisions",
+          "title": "Délibérations",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-31T07:31:25.201Z",
+      "lastDocumentCheck": "2026-10-31T07:32:12.802Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.arlon.be/",
+        "checkedAt": "2026-10-31T07:31:25.201Z"
+      },
+      "documentSourceChecks": {
+        "municipal-doc:47b866d5c3e9da6b3c": {
+          "url": "https://www.arlon.be/ma-commune/vie-politique/college-communal",
+          "lastAttempt": "2026-10-31T07:32:12.802Z",
+          "lastSuccess": "2026-10-31T07:32:12.802Z",
+          "lastError": null
+        },
+        "municipal-doc:7e2afb098f698f8d3e": {
+          "url": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-31T07:32:12.802Z",
+          "lastSuccess": "2026-10-31T07:32:12.802Z",
+          "lastError": null
+        },
+        "municipal-doc:bf02bc7dda34037f3d": {
+          "url": "https://www.deliberations.be/arlon/decisions",
+          "lastAttempt": "2026-10-31T07:32:12.802Z",
+          "lastSuccess": "2026-10-31T07:32:12.802Z",
+          "lastError": null
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:47b866d5c3e9da6b3c": {
+            "url": "https://www.arlon.be/ma-commune/vie-politique/college-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T07:32:12.802Z",
+            "lastSuccess": "2026-10-31T07:32:12.802Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:7e2afb098f698f8d3e": {
+            "url": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T07:32:12.802Z",
+            "lastSuccess": "2026-10-31T07:32:12.802Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:bf02bc7dda34037f3d": {
+            "url": "https://www.deliberations.be/arlon/decisions",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T07:32:12.802Z",
+            "lastSuccess": "2026-10-31T07:32:12.802Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:558ac85211a7acb8dc": {
+            "url": "https://www.arlon.be/ma-commune/vie-politique/college-communal/ordres-du-jour",
+            "depth": 1,
+            "sourceUrl": "https://www.arlon.be/ma-commune/vie-politique/college-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:f5bc2027f051f14b45": {
+            "url": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/presentation",
+            "depth": 1,
+            "sourceUrl": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:9125c6421c116fd8ab": {
+            "url": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/presentation/majorite-arlon-2030",
+            "depth": 1,
+            "sourceUrl": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:23e3efcaa4f3f771e7": {
+            "url": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/presentation/majorite-mr-mc",
+            "depth": 1,
+            "sourceUrl": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:30335ef2d404627413": {
+            "url": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/presentation/opposition-ecolo",
+            "depth": 1,
+            "sourceUrl": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:cac35b55de0a9e58e5": {
+            "url": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/presentation/opposition-ps-citoyens",
+            "depth": 1,
+            "sourceUrl": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:56e50863ad76e35c3c": {
+            "url": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour",
+            "depth": 1,
+            "sourceUrl": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:0c415c2bcdd056b2b3": {
+            "url": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "depth": 1,
+            "sourceUrl": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:03584cdd059ce1ea6f": {
+            "url": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/reglement-dordre-interieur",
+            "depth": 1,
+            "sourceUrl": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 11
+          }
+        },
+        "documents": {},
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 12,
+        "pagesPending": 9,
+        "documentsKnown": 0,
+        "documentsPending": 0,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 0,
+        "errors": 0,
+        "attempted": 0,
+        "pagesAttempted": 3
+      }
     },
     {
       "ins": "92006",
@@ -3367,14 +3590,16 @@
       "estimatedMinutes": 163,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "peripherique",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_indisponible",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-31T07:31:25.201Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [
+        "HTTP 429"
+      ]
     },
     {
       "ins": "63003",
@@ -13500,11 +13725,112 @@
         }
       ],
       "lastSiteCheck": "2026-10-28T13:29:37.963Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-31T07:32:12.802Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:be8c9df3aa2a012d37": {
+          "url": "https://www.braives.be/ma-commune/vie-politique/conseil-communal-1",
+          "lastAttempt": "2026-10-31T07:32:12.802Z",
+          "lastSuccess": "2026-10-31T07:32:12.802Z",
+          "lastError": null
+        },
+        "municipal-doc:af99d1f2bbcdd77fea": {
+          "url": "https://www.braives.be/ma-commune/vie-politique/conseil-communal-1/missions",
+          "lastAttempt": "2026-10-31T07:32:12.802Z",
+          "lastSuccess": "2026-10-31T07:32:12.802Z",
+          "lastError": null
+        },
+        "municipal-doc:dbbd46e4175d8173b8": {
+          "url": "https://www.braives.be/ma-commune/vie-politique/conseil-communal-1/ordre-du-jour",
+          "lastAttempt": "2026-10-31T07:32:12.802Z",
+          "lastSuccess": "2026-10-31T07:32:12.802Z",
+          "lastError": null
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:be8c9df3aa2a012d37": {
+            "url": "https://www.braives.be/ma-commune/vie-politique/conseil-communal-1",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T07:32:12.802Z",
+            "lastSuccess": "2026-10-31T07:32:12.802Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:af99d1f2bbcdd77fea": {
+            "url": "https://www.braives.be/ma-commune/vie-politique/conseil-communal-1/missions",
+            "depth": 1,
+            "sourceUrl": "https://www.braives.be/ma-commune/vie-politique/conseil-communal-1",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 1,
+            "lastAttempt": "2026-10-31T07:32:12.802Z",
+            "lastSuccess": "2026-10-31T07:32:12.802Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:dbbd46e4175d8173b8": {
+            "url": "https://www.braives.be/ma-commune/vie-politique/conseil-communal-1/ordre-du-jour",
+            "depth": 1,
+            "sourceUrl": "https://www.braives.be/ma-commune/vie-politique/conseil-communal-1",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 2,
+            "lastAttempt": "2026-10-31T07:32:12.802Z",
+            "lastSuccess": "2026-10-31T07:32:12.802Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:7f51d961ef0bc01504": {
+            "url": "https://www.braives.be/ma-commune/vie-politique/conseil-communal-1/proces-verbaux",
+            "depth": 1,
+            "sourceUrl": "https://www.braives.be/ma-commune/vie-politique/conseil-communal-1",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:ae84cf6e710c0abda5": {
+            "url": "https://www.braives.be/ma-commune/vie-politique/conseil-communal-1/groupes-politiques-apparentements",
+            "depth": 1,
+            "sourceUrl": "https://www.braives.be/ma-commune/vie-politique/conseil-communal-1",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:e8c935cef2b8496be6": {
+            "url": "https://www.braives.be/ma-commune/vie-politique/conseil-communal-1/roi",
+            "depth": 1,
+            "sourceUrl": "https://www.braives.be/ma-commune/vie-politique/conseil-communal-1",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 5
+          }
+        },
+        "documents": {},
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 6,
+        "pagesPending": 3,
+        "documentsKnown": 0,
+        "documentsPending": 0,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 0,
+        "errors": 0,
+        "attempted": 0,
+        "pagesAttempted": 3
+      }
     },
     {
       "ins": "51012",
@@ -13585,11 +13911,316 @@
         }
       ],
       "lastSiteCheck": "2026-10-18T11:39:57.049Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-31T07:32:12.802Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:df730e1469b6805493": {
+          "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-31T07:32:12.802Z",
+          "lastSuccess": "2026-10-31T07:32:12.802Z",
+          "lastError": null
+        },
+        "municipal-doc:ac5a0e1936762899ec": {
+          "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+          "lastAttempt": "2026-10-31T07:32:12.802Z",
+          "lastSuccess": "2026-10-31T07:32:12.802Z",
+          "lastError": null
+        },
+        "municipal-doc:e01a355eb2c8d4d7cf": {
+          "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/interpellation",
+          "lastAttempt": "2026-10-31T07:32:12.802Z",
+          "lastSuccess": "2026-10-31T07:32:12.802Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:0606af7c7de66c9fc6": {
+          "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/boucle-du-hainaut-motion-conseil-communal.pdf",
+          "lastAttempt": "2026-10-31T07:32:12.802Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T13:32:12.802Z"
+        },
+        "municipal-doc:932a43f30f2544bafa": {
+          "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/boucle-du-hainaut-motion-du-conseil-communal-de.pdf",
+          "lastAttempt": "2026-10-31T07:32:12.802Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T13:32:12.802Z"
+        },
+        "municipal-doc:6f662210ae1e7dd4b0": {
+          "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/roi-du-conseil-communal-mandature-2018-a-2024.pdf",
+          "lastAttempt": "2026-10-31T07:32:12.802Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T13:32:12.802Z"
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:df730e1469b6805493": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T07:32:12.802Z",
+            "lastSuccess": "2026-10-31T07:32:12.802Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:ac5a0e1936762899ec": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T07:32:12.802Z",
+            "lastSuccess": "2026-10-31T07:32:12.802Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:e01a355eb2c8d4d7cf": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/interpellation",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T07:32:12.802Z",
+            "lastSuccess": "2026-10-31T07:32:12.802Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:6eda4d6e28afb687a8": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/conseillers-communaux",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:addfa31f16875aa25f": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/declarations-dapparentement-des-conseillers-communaux-de-brugelette",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:6f1938b745d2ee9de9": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/projets-de-deliberations-du-conseil-communal",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:e5baff2aa93650f320": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/voir-ou-revoir-les-conseils-communaux",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:b7eac1adb37056e83e": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/roi-du-conseil",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:20eb6edf91e933a566": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/seance-publique",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:dc3cffc7cc70bf224b": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/seance-publique/seance-publique",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:3227f7d34f7c834d5d": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/quest-ce-que-le-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:958d11ebc18e0c5e90": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:34402aa2f17b283abb": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/2026",
+            "depth": 1,
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:21d0fd1190639ce001": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/2023/2023",
+            "depth": 1,
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:60759bfa5e432602c0": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/2022/2022",
+            "depth": 1,
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 14
+          },
+          "municipal-doc:02e911e46b2ac007f7": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/2021/2021",
+            "depth": 1,
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 15
+          },
+          "municipal-doc:9ebe881cde9452b94e": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/2020/2020-1",
+            "depth": 1,
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 16
+          },
+          "municipal-doc:0abc1ed328ab4260fe": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/2019/2019",
+            "depth": 1,
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 17
+          },
+          "municipal-doc:54367af0d4d39b10b1": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/avis-de-publication/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 18
+          },
+          "municipal-doc:2bb4a5fdca75290e00": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/2025",
+            "depth": 1,
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 19
+          },
+          "municipal-doc:bb8cabf7451cd9134b": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/2024",
+            "depth": 1,
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 20
+          },
+          "municipal-doc:fe7ce780935df368f2": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/2023",
+            "depth": 1,
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 21
+          },
+          "municipal-doc:ec4c3933350393d142": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/2022",
+            "depth": 1,
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 22
+          },
+          "municipal-doc:a037d2c6a9121751de": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/2021",
+            "depth": 1,
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 23
+          },
+          "municipal-doc:5cf237b512b8cb1d22": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/2020",
+            "depth": 1,
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 24
+          },
+          "municipal-doc:ba1075c34f59b8c838": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/2019",
+            "depth": 1,
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 25
+          },
+          "municipal-doc:fef0cbb1e45cb45115": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/interpellation/interpellation/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/interpellation",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 26
+          }
+        },
+        "documents": {
+          "municipal-doc:0606af7c7de66c9fc6": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/boucle-du-hainaut-motion-conseil-communal.pdf",
+            "title": "Boucle-du-hainaut-motion-du-conseil-communal-de-Brugelette-28-04-2022",
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:932a43f30f2544bafa": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/boucle-du-hainaut-motion-du-conseil-communal-de.pdf",
+            "title": "Boucle-du-hainaut-motion-du-conseil-communal-de-Brugelette-28-01-2021",
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 1
+          },
+          "municipal-doc:6f662210ae1e7dd4b0": {
+            "url": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal/roi-du-conseil-communal-mandature-2018-a-2024.pdf",
+            "title": "Roi-du-conseil-communal-mandature-2018-a-2024",
+            "sourceUrl": "https://www.brugelette.be/ma-commune/vie-politique/conseil-communal/avis-de-publication-et-deliberations-du-conseil-communal",
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 2
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 27,
+        "pagesPending": 24,
+        "documentsKnown": 3,
+        "documentsPending": 3,
+        "errors": 3,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 0,
+        "errors": 3,
+        "attempted": 3,
+        "pagesAttempted": 3
+      }
     },
     {
       "ins": "57093",
@@ -13616,11 +14247,52 @@
         }
       ],
       "lastSiteCheck": "2026-10-23T12:02:43.322Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-31T07:32:12.802Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:f55b1d86e586b146ec": {
+          "url": "https://brunehaut.be/conseil-communal-2/",
+          "lastAttempt": "2026-10-31T07:32:12.802Z",
+          "lastSuccess": "2026-10-31T07:32:12.802Z",
+          "lastError": null
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:f55b1d86e586b146ec": {
+            "url": "https://brunehaut.be/conseil-communal-2/",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T07:32:12.802Z",
+            "lastSuccess": "2026-10-31T07:32:12.802Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T07:32:12.802Z",
+            "lastSeen": "2026-10-31T07:32:12.802Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          }
+        },
+        "documents": {},
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 1,
+        "pagesPending": 0,
+        "documentsKnown": 0,
+        "documentsPending": 0,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 0,
+        "errors": 0,
+        "attempted": 0,
+        "pagesAttempted": 1
+      }
     },
     {
       "ins": "63012",
@@ -18401,43 +19073,80 @@
       "estimatedMinutes": 16,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.herstal.be/ma-ville/vie-politique",
           "title": "Vie politique",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:23.886Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_error": null
         },
         {
           "url": "https://www.herstal.be/ma-ville/vie-politique/le-college-communal",
           "title": "Le collège communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:24.831Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_error": null
         },
         {
           "url": "https://www.herstal.be/ma-ville/vie-politique/conseil-communal",
           "title": "Conseil communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:25.991Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_error": null
         },
         {
           "url": "https://www.herstal.be/ma-ville/vie-politique/transparence",
           "title": "Transparence",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:27.155Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.herstal.be/ma-ville/vie-politique/conseil-communal/ordre-du-jour",
+          "title": "Ordre du jour",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.herstal.be/ma-ville/vie-politique/conseil-communal/proces-verbaux",
+          "title": "Procès-verbaux",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.herstal.be/actualites/nouveau-conseiller-communal?u=c9ab6d5f721a4fb7ab0a4cc6518dfc94",
+          "title": "Publié Nouveau Conseiller communal",
+          "status": "lien_public_repere_non_analyse"
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:35:21.856Z",
+      "lastSiteCheck": "2026-10-31T07:31:25.201Z",
       "lastDocumentCheck": "2026-10-15T08:35:27.157Z",
       "latestCouncilDate": null,
       "documentsRead": 4,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.herstal.be/",
+        "checkedAt": "2026-10-31T07:31:25.201Z"
+      }
     },
     {
       "ins": "63035",
@@ -19757,43 +20466,97 @@
       "estimatedMinutes": 10,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.liege.be/mes-services/bien-etre-animal/publications",
           "title": "Publications",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:06.424Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_error": null
         },
         {
           "url": "https://www.liege.be/mes-services/communication/publications",
           "title": "Publications",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:09.127Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_error": null
         },
         {
           "url": "https://www.liege.be/mes-services/sante/publications",
           "title": "Publications",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:11.922Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_error": null
         },
         {
           "url": "https://www.liege.be/mes-services/seniors/conseil-communal-consultatif-des-aines-c-c-c-a",
           "title": "Conseil communal consultatif des Aînés (CCCA)",
           "type": "site_communal",
           "last_success": "2026-10-15T08:35:14.490Z",
-          "documentsRead": 1
+          "documentsRead": 1,
+          "scopeStatus": "non_documentary",
+          "scopeReason": "instance_ou_demande_hors_collecte"
+        },
+        {
+          "url": "https://www.liege.be/mes-services/marches-publics",
+          "title": "Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.liege.be/mon-institution/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.liege.be/mon-institution/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.liege.be/mon-institution/vie-politique/college-communal/communiques-du-college-communal",
+          "title": "Communiqués du Collège communal",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.liege.be/mon-institution/vie-politique/conseil-communal/apparentement",
+          "title": "Apparentement",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.liege.be/resolveuid/cf261368ff2646d0aa9dde18500de99b",
+          "title": "Marchés publics",
+          "status": "lien_public_repere_non_analyse"
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:35:04.131Z",
+      "lastSiteCheck": "2026-10-31T07:31:25.201Z",
       "lastDocumentCheck": "2026-10-15T08:35:14.494Z",
       "latestCouncilDate": null,
       "documentsRead": 4,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.liege.be/",
+        "checkedAt": "2026-10-31T07:31:25.201Z"
+      }
     },
     {
       "ins": "63045",
@@ -20326,14 +21089,59 @@
       "estimatedMinutes": 155,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "peripherique",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.meix-devant-virton.be/ma-commune/services-communaux/marche-publics",
+          "title": "Marchés Publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.meix-devant-virton.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.meix-devant-virton.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.meix-devant-virton.be/ma-commune/vie-politique/conseil-communal/ordres-du-jour",
+          "title": "Ordres du jour du Conseil Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.meix-devant-virton.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+          "title": "PV du Conseil Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-31T07:31:25.201Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.meix-devant-virton.be/",
+        "checkedAt": "2026-10-31T07:31:25.201Z"
+      }
     },
     {
       "ins": "56049",
@@ -20393,14 +21201,18 @@
       "estimatedMinutes": 158,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "peripherique",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_lu_sources_non_localisees",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-31T07:31:25.201Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.messancy.be/",
+        "checkedAt": "2026-10-31T07:31:25.201Z"
+      }
     },
     {
       "ins": "92087",
@@ -20820,14 +21632,51 @@
       "estimatedMinutes": 162,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "peripherique",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.musson.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.musson.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.musson.be/ma-commune/services-communaux/marches-publics",
+          "title": "Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.musson.be/ma-commune/valves-communales/ordre-du-jour-et-proces-verbaux-du-conseil-communal",
+          "title": "Ordre du jour et procès-verbaux du Conseil Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-31T07:31:25.201Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.musson.be/",
+        "checkedAt": "2026-10-31T07:31:25.201Z"
+      }
     },
     {
       "ins": "92094",
@@ -22688,14 +23537,51 @@
       "estimatedMinutes": 162,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "peripherique",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.rouvroy.be/ma-commune/vie-politique/le-college-communal-1",
+          "title": "Le Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.rouvroy.be/ma-commune/vie-politique/le-conseil-communal",
+          "title": "Le Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.rouvroy.be/ma-commune/services-communaux/marches-publics",
+          "title": "Marchés Publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.rouvroy.be/actualites/qualite-de-leau-a-lamorteau-mise-a-disposition-du?u=4292b974890c42638a853aec9d003227",
+          "title": "Publié 💧 Qualité de l’eau à Lamorteau – Mise à disposition du procès-verbal de la séance d’information",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-31T07:31:25.201Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.rouvroy.be/",
+        "checkedAt": "2026-10-31T07:31:25.201Z"
+      }
     },
     {
       "ins": "57072",
@@ -22932,14 +23818,51 @@
       "estimatedMinutes": 154,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "peripherique",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.saint-leger.be/vivre-a-saint-leger/services-communaux/marches-publics",
+          "title": "Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.saint-leger.be/vivre-a-saint-leger/vie-politique/College-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.saint-leger.be/vivre-a-saint-leger/vie-politique/Conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.saint-leger.be/vivre-a-saint-leger/vie-politique/programme-strategique-transversal",
+          "title": "Programme Stratégique Transversal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-31T07:31:25.201Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.saint-leger.be/",
+        "checkedAt": "2026-10-31T07:31:25.201Z"
+      }
     },
     {
       "ins": "62093",
@@ -22956,43 +23879,67 @@
       "estimatedMinutes": 13,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.saint-nicolas.be/ma-commune/vie-politique",
           "title": "Vie politique",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:17.073Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_error": null
         },
         {
           "url": "https://www.saint-nicolas.be/ma-commune/vie-politique/conseil-communal",
           "title": "Conseil communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:18.003Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_error": null
         },
         {
           "url": "https://www.saint-nicolas.be/ma-commune/vie-politique/college-communal",
           "title": "Collège communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:18.944Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_error": null
         },
         {
           "url": "https://www.saint-nicolas.be/ma-commune/vie-politique/imaginer-demain",
           "title": "Imaginer demain",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:20.276Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.deliberations.be/saint-nicolas/decisions",
+          "title": "Délibérations",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:35:16.117Z",
+      "lastSiteCheck": "2026-10-31T07:31:25.201Z",
       "lastDocumentCheck": "2026-10-15T08:35:20.278Z",
       "latestCouncilDate": null,
       "documentsRead": 4,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.saint-nicolas.be/",
+        "checkedAt": "2026-10-31T07:31:25.201Z"
+      }
     },
     {
       "ins": "82038",
@@ -24616,14 +25563,59 @@
       "estimatedMinutes": 160,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "peripherique",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.virton.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.virton.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.deliberations.be/virton/decisions",
+          "title": "Deliberations.be",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.virton.be/ma-commune/vie-politique/ordres-du-jour-du-conseil-communal",
+          "title": "Ordres du jour du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.virton.be/ma-commune/vie-politique/proces-verbaux-des-seances-publiques-du-conseil-communal",
+          "title": "Procès-verbaux des séances publiques du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T07:31:25.201Z",
+          "last_success": "2026-10-31T07:31:25.201Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-31T07:31:25.201Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.virton.be/",
+        "checkedAt": "2026-10-31T07:31:25.201Z"
+      }
     },
     {
       "ins": "62108",
@@ -25419,6 +26411,6 @@
       }
     }
   ],
-  "lastMunicipalPass": "2026-10-31T01:05:47.552Z",
-  "lastMunicipalDocumentPass": "2026-10-31T01:06:54.821Z"
+  "lastMunicipalPass": "2026-10-31T07:31:25.201Z",
+  "lastMunicipalDocumentPass": "2026-10-31T07:32:12.802Z"
 }
