@@ -14,18 +14,18 @@
     "total": 261,
     "sitesRepertories": 261,
     "sitesVerifies": 261,
-    "deliberationsConnectees": 39,
+    "deliberationsConnectees": 41,
     "zones": {
       "principale": 196,
       "exterieure_provisoire": 26,
       "peripherique": 39
     },
     "checkedWithErrors": 3,
-    "documentsRead": 221,
-    "opportunities": 93,
+    "documentsRead": 228,
+    "opportunities": 94,
     "sitesChecked": 261,
-    "candidatePages": 222,
-    "sourceErrors": 29
+    "candidatePages": 227,
+    "sourceErrors": 27
   },
   "communes": [
     {
@@ -5463,18 +5463,18 @@
       "estimatedMinutes": 26,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_en_erreur",
+      "sourceStatus": "site_lu_sources_non_localisees",
       "deliberationSources": [],
-      "lastSiteCheck": "2026-10-15T08:38:03.005Z",
+      "lastSiteCheck": "2026-10-31T20:41:28.556Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": [
-        {
-          "reason": "fetch failed"
-        }
-      ]
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.bassenge.be/",
+        "checkedAt": "2026-10-31T20:41:28.556Z"
+      }
     },
     {
       "ins": "82039",
@@ -5967,7 +5967,9 @@
           "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
           "title": "Conseil communal",
           "status": "page_accessible",
-          "last_success": "2026-10-16T11:52:21.470Z"
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/documents",
@@ -5977,21 +5979,11 @@
         },
         {
           "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
-          "title": "Séances du Conseil",
-          "status": "page_accessible",
-          "last_success": "2026-10-16T11:52:21.470Z"
-        },
-        {
-          "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/composition-1",
           "title": "Conseil communal",
           "status": "page_accessible",
-          "last_success": "2026-10-16T11:52:21.470Z"
-        },
-        {
-          "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/seances-du-conseil",
-          "title": "Conseil communal",
-          "status": "page_accessible",
-          "last_success": "2026-10-16T11:52:21.470Z"
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.beauvechain.eu/ma-commune/vie-politique/conseil-communal/comptes-rendus-des-conseils-communaux/decisions-du-conseil-communal-du-13-octobre-2026",
@@ -6009,10 +6001,28 @@
           "url": "https://photos.google.com/share/AF1QipM8rVwVIDK_8I6rR-yFczP8CGAKFmgT55FIzE33GVU27EZYFO8QJgizRm7auv-pUg?key=Q0JkSEhHMXo1aXVjTzdTVmF3QU5kVTdzOGZvSE9B",
           "title": "",
           "status": "page_accessible",
-          "last_success": "2026-10-16T11:52:21.470Z"
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.beauvechain.eu/ma-commune/vie-politique/college-communal/composition-et-attributions-1",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.beauvechain.eu/ma-commune/vie-politique/programme-strategique-transversal",
+          "title": "Programme stratégique transversal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         }
       ],
-      "lastSiteCheck": "2026-10-16T11:52:21.470Z",
+      "lastSiteCheck": "2026-10-31T20:41:28.556Z",
       "lastDocumentCheck": "2026-10-30T07:45:03.990Z",
       "latestCouncilDate": null,
       "documentsRead": 1,
@@ -6801,7 +6811,11 @@
         "attempted": 1,
         "pagesAttempted": 3
       },
-      "lastDocumentSuccess": "2026-10-30T07:45:03.990Z"
+      "lastDocumentSuccess": "2026-10-30T07:45:03.990Z",
+      "verifiedSite": {
+        "url": "https://www.beauvechain.eu/",
+        "checkedAt": "2026-10-31T20:41:28.556Z"
+      }
     },
     {
       "ins": "51008",
@@ -16823,11 +16837,194 @@
         }
       ],
       "lastSiteCheck": "2026-10-17T11:08:39.814Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-31T20:42:20.499Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 1,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:0d690c0ea3f708fa22": {
+          "url": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null
+        },
+        "municipal-doc:970b5d323fec27934c": {
+          "url": "https://www.chastre.be/agenda/conseil-communal-consultez-ici-lordre-du-jour-de?u=41e65faa8d1b47a4bbbce61990a86cb8",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null
+        },
+        "municipal-doc:48294df2c7337637bb": {
+          "url": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/publications",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:9ddfbd73f8e5af47af": {
+          "url": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/conseil-communal/declaration-dapparentement-commune/apparentement-commune.pdf",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-11-01T02:42:20.499Z"
+        },
+        "municipal-doc:5be6f477d2b1b72e2a": {
+          "url": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/conseil-communal/reglement-dordre-interieur-du-conseil-communal-2025/roi-conseil-communal-2025.pdf",
+          "finalUrl": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/conseil-communal/reglement-dordre-interieur-du-conseil-communal-2025/roi-conseil-communal-2025.pdf",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastChecked": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null,
+          "etag": "\"|1783054297.0||Anonymous|1792631204.0300975\"",
+          "lastModified": "Fri, 03 Jul 2026 05:51:37 GMT",
+          "contentCheckedAt": "2026-10-31T20:42:20.499Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/conseil-communal/reglement-dordre-interieur-du-conseil-communal-2025/roi-conseil-communal-2025.pdf",
+            "sha256": "046e67eadbd779b93611d1d3dd3b47dc4c4c9f6d920186e756153035b9a7fc6b",
+            "session": {
+              "date": "2025-02-27",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "CONSEIL DU 27 février 2025",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T20:42:20.499Z",
+          "sha256": "046e67eadbd779b93611d1d3dd3b47dc4c4c9f6d920186e756153035b9a7fc6b",
+          "firstSeenAt": "2026-10-31T20:42:20.499Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:8b545a49cb66fe3c41": {
+          "url": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/conseil-communal/rapport-de-remuneration/rapport-de-remuneration-2026-ex2025.pdf",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-11-01T02:42:20.499Z"
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:5be6f477d2b1b72e2a"
+      ],
+      "documentVersionsRead": 1,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:0d690c0ea3f708fa22": {
+            "url": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T20:42:20.499Z",
+            "lastSuccess": "2026-10-31T20:42:20.499Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:970b5d323fec27934c": {
+            "url": "https://www.chastre.be/agenda/conseil-communal-consultez-ici-lordre-du-jour-de?u=41e65faa8d1b47a4bbbce61990a86cb8",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T20:42:20.499Z",
+            "lastSuccess": "2026-10-31T20:42:20.499Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:48294df2c7337637bb": {
+            "url": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/publications",
+            "depth": 1,
+            "sourceUrl": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 2,
+            "lastAttempt": "2026-10-31T20:42:20.499Z",
+            "lastSuccess": "2026-10-31T20:42:20.499Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:179d7eb8d2ed776df8": {
+            "url": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/publications/ordre-du-jour-du-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:4f049895cbad23f98c": {
+            "url": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/publications/proces-verbaux",
+            "depth": 1,
+            "sourceUrl": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:e96e91ba87ec45f281": {
+            "url": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/publications/rapports-de-remuneration",
+            "depth": 1,
+            "sourceUrl": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:cd3096e9e344ec3f6b": {
+            "url": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/publications/deliberations",
+            "depth": 1,
+            "sourceUrl": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 6
+          }
+        },
+        "documents": {
+          "municipal-doc:9ddfbd73f8e5af47af": {
+            "url": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/conseil-communal/declaration-dapparentement-commune/apparentement-commune.pdf",
+            "title": "Déclaration d'apparentement Commune 2024-2030 254.4 KB",
+            "sourceUrl": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:5be6f477d2b1b72e2a": {
+            "url": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/conseil-communal/reglement-dordre-interieur-du-conseil-communal-2025/roi-conseil-communal-2025.pdf",
+            "title": "ROI Conseil communal 2025 1.4 MB",
+            "sourceUrl": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 1
+          },
+          "municipal-doc:8b545a49cb66fe3c41": {
+            "url": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/conseil-communal/rapport-de-remuneration/rapport-de-remuneration-2026-ex2025.pdf",
+            "title": "Rapport de rémunération 2026 (Ex2025) 1.1 MB",
+            "sourceUrl": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 2
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 7,
+        "pagesPending": 4,
+        "documentsKnown": 3,
+        "documentsPending": 2,
+        "errors": 2,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 1,
+        "errors": 2,
+        "attempted": 3,
+        "pagesAttempted": 3
+      },
+      "lastDocumentSuccess": "2026-10-31T20:42:20.499Z"
     },
     {
       "ins": "52012",
@@ -16878,11 +17075,117 @@
         }
       ],
       "lastSiteCheck": "2026-10-19T13:54:03.241Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-31T20:42:20.499Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:6349c067665a4e2f5e": {
+          "url": "https://www.chatelet.be/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null
+        },
+        "municipal-doc:f1af5c3770d16c50aa": {
+          "url": "https://www.deliberations.be/chatelet/decisions",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null
+        },
+        "municipal-doc:d70eca3cc9c750da4b": {
+          "url": "https://www.chatelet.be/avis-a-la-population/conseil-communal-decouvrez-les-prochaines-dates?u=d30e735d63df45f692749bf4e0560f84",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:6349c067665a4e2f5e": {
+            "url": "https://www.chatelet.be/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T20:42:20.499Z",
+            "lastSuccess": "2026-10-31T20:42:20.499Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:f1af5c3770d16c50aa": {
+            "url": "https://www.deliberations.be/chatelet/decisions",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T20:42:20.499Z",
+            "lastSuccess": "2026-10-31T20:42:20.499Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:d70eca3cc9c750da4b": {
+            "url": "https://www.chatelet.be/avis-a-la-population/conseil-communal-decouvrez-les-prochaines-dates?u=d30e735d63df45f692749bf4e0560f84",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T20:42:20.499Z",
+            "lastSuccess": "2026-10-31T20:42:20.499Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:b9e68aa4625d5254f6": {
+            "url": "https://www.chatelet.be/actualites/prime-a-lembellissement-des-facades-prolongation?u=029a93fa3adb4d9fbd0573ec7b821b72",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:91a3189f04ce4360bb": {
+            "url": "https://www.chatelet.be/ma-commune/vie-politique/conseil-communal/publications",
+            "depth": 1,
+            "sourceUrl": "https://www.chatelet.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:70c0bdece014e6b670": {
+            "url": "https://www.chatelet.be/ma-commune/vie-politique/conseil-communal/publications/proces-verbaux-du-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.chatelet.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:d4dac363689f221732": {
+            "url": "https://www.chatelet.be/ma-commune/vie-politique/conseil-communal/publications/declaration-dapparentement",
+            "depth": 1,
+            "sourceUrl": "https://www.chatelet.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 6
+          }
+        },
+        "documents": {},
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 7,
+        "pagesPending": 4,
+        "documentsKnown": 0,
+        "documentsPending": 0,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 0,
+        "errors": 0,
+        "attempted": 0,
+        "pagesAttempted": 3
+      }
     },
     {
       "ins": "62022",
@@ -17096,14 +17399,563 @@
           "title": "Conseil communal",
           "status": "page_accessible",
           "last_success": "2026-10-16T11:52:21.470Z"
+        },
+        {
+          "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         }
       ],
-      "lastSiteCheck": "2026-10-16T11:52:21.470Z",
-      "lastDocumentCheck": null,
+      "lastSiteCheck": "2026-10-31T20:41:28.556Z",
+      "lastDocumentCheck": "2026-10-31T20:42:20.499Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
-      "opportunities": 0,
-      "errors": []
+      "documentsRead": 6,
+      "opportunities": 1,
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.chaumont-gistoux.be/",
+        "checkedAt": "2026-10-31T20:41:28.556Z"
+      },
+      "documentSourceChecks": {
+        "municipal-doc:35e7803a938f8ee2df": {
+          "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null
+        },
+        "municipal-doc:401d993fe75c621154": {
+          "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/college-communal",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null
+        },
+        "municipal-doc:4cfd0d2d3e91219c96": {
+          "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:3f17f055a8dcf413d4": {
+          "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-26-janvier.pdf",
+          "finalUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-26-janvier.pdf",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastChecked": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Mon, 19 Jan 2026 15:47:05 GMT",
+          "contentCheckedAt": "2026-10-31T20:42:20.499Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-26-janvier.pdf",
+            "sha256": "fd4727978aee8806ddb2214510f338ac518d9035da43181ba62fa37edc590e95",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T20:42:20.499Z",
+          "sha256": "fd4727978aee8806ddb2214510f338ac518d9035da43181ba62fa37edc590e95",
+          "firstSeenAt": "2026-10-31T20:42:20.499Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:8267509e024b7b5d6f": {
+          "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-2-mars-2026.pdf",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-11-01T02:42:20.499Z"
+        },
+        "municipal-doc:a8588bf479e39412a1": {
+          "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-30-mars-2026.pdf",
+          "finalUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-30-mars-2026.pdf",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastChecked": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Mon, 23 Mar 2026 14:14:10 GMT",
+          "contentCheckedAt": "2026-10-31T20:42:20.499Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-30-mars-2026.pdf",
+            "sha256": "fde88be5b12db9215b5975affa18e8e539922cabff1a175cd40c16370c503a38",
+            "session": null,
+            "document": {
+              "date": "2026-03-30",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "-30-mars-2026",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T20:42:20.499Z",
+          "sha256": "fde88be5b12db9215b5975affa18e8e539922cabff1a175cd40c16370c503a38",
+          "firstSeenAt": "2026-10-31T20:42:20.499Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:2f69c210eb7ce32915": {
+          "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-20-avril-2026.pdf",
+          "finalUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-20-avril-2026.pdf",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastChecked": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Tue, 14 Apr 2026 08:10:16 GMT",
+          "contentCheckedAt": "2026-10-31T20:42:20.499Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-20-avril-2026.pdf",
+            "sha256": "675aa0377bc0473d62d7f11227184f19d9aa068e6b133d66d2c526c54d01a710",
+            "session": null,
+            "document": {
+              "date": "2026-04-20",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "-20-avril-2026",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T20:42:20.499Z",
+          "sha256": "675aa0377bc0473d62d7f11227184f19d9aa068e6b133d66d2c526c54d01a710",
+          "firstSeenAt": "2026-10-31T20:42:20.499Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:cf2a933761985ee353": {
+          "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-18-mai-2026.pdf",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-11-01T02:42:20.499Z"
+        },
+        "municipal-doc:990d267c81f87c530f": {
+          "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-29-juin-2026.pdf",
+          "finalUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-29-juin-2026.pdf",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastChecked": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Mon, 22 Jun 2026 12:27:18 GMT",
+          "contentCheckedAt": "2026-10-31T20:42:20.499Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-29-juin-2026.pdf",
+            "sha256": "28b9d2e05672a99bc05be467afae5a11024ee484de39bb7e99ad4131de0852fe",
+            "session": null,
+            "document": {
+              "date": "2026-06-29",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "-29-juin-2026",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T20:42:20.499Z",
+          "sha256": "28b9d2e05672a99bc05be467afae5a11024ee484de39bb7e99ad4131de0852fe",
+          "firstSeenAt": "2026-10-31T20:42:20.499Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:d8bfb5f06ee7f55836": {
+          "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-31-aout-2026.pdf",
+          "finalUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-31-aout-2026.pdf",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastChecked": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Mon, 24 Aug 2026 12:22:14 GMT",
+          "contentCheckedAt": "2026-10-31T20:42:20.499Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-31-aout-2026.pdf",
+            "sha256": "49b06796d41debd7b1f76a0865da515c82ef435995a341fc74359fdbe2fa656d",
+            "session": null,
+            "document": {
+              "date": "2026-08-31",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "-31-aout-2026",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T20:42:20.499Z",
+          "sha256": "49b06796d41debd7b1f76a0865da515c82ef435995a341fc74359fdbe2fa656d",
+          "firstSeenAt": "2026-10-31T20:42:20.499Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:46567cbe8b451cc6ad": {
+          "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-5-octobre-1.pdf",
+          "finalUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-5-octobre-1.pdf",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastChecked": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Mon, 05 Oct 2026 07:31:03 GMT",
+          "contentCheckedAt": "2026-10-31T20:42:20.499Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-5-octobre-1.pdf",
+            "sha256": "134ad85a44cb5cef492f500a6db233a2b6ad6664932a044ce729751462a08244",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T20:42:20.499Z",
+          "sha256": "134ad85a44cb5cef492f500a6db233a2b6ad6664932a044ce729751462a08244",
+          "firstSeenAt": "2026-10-31T20:42:20.499Z",
+          "nextAttemptAt": null
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:3f17f055a8dcf413d4",
+        "municipal-doc:a8588bf479e39412a1",
+        "municipal-doc:2f69c210eb7ce32915",
+        "municipal-doc:990d267c81f87c530f",
+        "municipal-doc:d8bfb5f06ee7f55836",
+        "municipal-doc:46567cbe8b451cc6ad"
+      ],
+      "documentVersionsRead": 6,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:35e7803a938f8ee2df": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T20:42:20.499Z",
+            "lastSuccess": "2026-10-31T20:42:20.499Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:401d993fe75c621154": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/college-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T20:42:20.499Z",
+            "lastSuccess": "2026-10-31T20:42:20.499Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:4cfd0d2d3e91219c96": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "depth": 1,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 2,
+            "lastAttempt": "2026-10-31T20:42:20.499Z",
+            "lastSuccess": "2026-10-31T20:42:20.499Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:1ab7088476cd77779d": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/projets-de-deliberations-du-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:7b179a6d00c839c835": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/conseillers-communaux",
+            "depth": 1,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:78421c94034515c12a": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/consultation-des-proces-verbaux-sur-deliberations.be",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:69684f9cdb742ca728": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:11e057b582b6c277e5": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-conseil-communal-26-janvier-2026.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:eaadee7d352221cc5d": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-du-conseil-communal-02-mars-2026.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:f9c3c86488e696fc4f": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-du-conseil-communal-30-mars-2026.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:69036be919a18640ec": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-du-conseil-communal-du-20-avril-2026.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:40f677645999fddecf": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-du-conseil-communal-du-18-mai-2026.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:9bef254825250ff909": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-du-conseil-communal-du-29-juin-2026.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:634ab3ef2e3ec605c5": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-du-conseil-communal-du-31-aout-2026.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:2274169de0006dae4c": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2025",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 14
+          },
+          "municipal-doc:aa589ba2aac5636ae7": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2025/proces-verbal-du-conseil-communal-du-27-janvier.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 15
+          },
+          "municipal-doc:97bce88b32ef9d3b2f": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2025/proces-verbal-du-conseil-communal-du-17-fevrier.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 16
+          },
+          "municipal-doc:323431c5205d84a3fb": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2025/proces-verbal-du-conseil-communal-du-24-mars-2025.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 17
+          },
+          "municipal-doc:f0e35c830c5e51731c": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2025/proces-verbal-du-conseil-communal-du-14-avril-2025.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 18
+          },
+          "municipal-doc:dbf69a89173f392be1": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2025/proces-verbal-du-conseil-communal-du-26-mai-2025.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 19
+          },
+          "municipal-doc:6111f3373bdfed8601": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2025/proces-verbal-du-conseil-communal-du-30-juin-2025.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 20
+          },
+          "municipal-doc:b18a35bb85613677af": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2025/proces-verbal-du-conseil-communal-du-1er-septembre.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 21
+          },
+          "municipal-doc:10f11c513a0680c8ec": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2025/proces-verbal-du-conseil-communal-13-octobre-2025.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 22
+          },
+          "municipal-doc:9370a327fa6a8e0008": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2025/proces-verbal-du-conseil-communal-du-03-novembre.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 23
+          },
+          "municipal-doc:7ef200d1084ea8c0bc": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2025/proces-verbal-conseil-communal-15-decembre-2025.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 24
+          },
+          "municipal-doc:9c6898dd495f0d3905": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2024",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 25
+          },
+          "municipal-doc:08c3359b9fce2f9c71": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2024/proces-verbal-du-conseil-communal-du-2-decembre.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 26
+          },
+          "municipal-doc:8f6565582403d6bda7": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2024/proces-verbal-du-conseil-communal-du-16-decembre.pdf/view",
+            "depth": 2,
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 27
+          }
+        },
+        "documents": {
+          "municipal-doc:3f17f055a8dcf413d4": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-26-janvier.pdf",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:8267509e024b7b5d6f": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-2-mars-2026.pdf",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 1
+          },
+          "municipal-doc:a8588bf479e39412a1": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-30-mars-2026.pdf",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 2
+          },
+          "municipal-doc:2f69c210eb7ce32915": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-20-avril-2026.pdf",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:cf2a933761985ee353": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-18-mai-2026.pdf",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:990d267c81f87c530f": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-29-juin-2026.pdf",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:d8bfb5f06ee7f55836": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-31-aout-2026.pdf",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:46567cbe8b451cc6ad": {
+            "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-5-octobre-1.pdf",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 7
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 28,
+        "pagesPending": 25,
+        "documentsKnown": 8,
+        "documentsPending": 2,
+        "errors": 2,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 6,
+        "errors": 2,
+        "attempted": 8,
+        "pagesAttempted": 3
+      },
+      "lastDocumentSuccess": "2026-10-31T20:42:20.499Z"
     },
     {
       "ins": "51014",
@@ -17148,11 +18000,230 @@
         }
       ],
       "lastSiteCheck": "2026-10-18T11:39:57.049Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-31T20:42:20.499Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:5c945d327e8903c6e6": {
+          "url": "https://www.chievres.be/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null
+        },
+        "municipal-doc:04eacf4792705d3ce4": {
+          "url": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null
+        },
+        "municipal-doc:34a3e2ebfc5472884f": {
+          "url": "https://www.chievres.be/actualites/conseil-communal-du-30-09-2026-ordre-du-jour",
+          "lastAttempt": "2026-10-31T20:42:20.499Z",
+          "lastSuccess": "2026-10-31T20:42:20.499Z",
+          "lastError": null
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:5c945d327e8903c6e6": {
+            "url": "https://www.chievres.be/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T20:42:20.499Z",
+            "lastSuccess": "2026-10-31T20:42:20.499Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:04eacf4792705d3ce4": {
+            "url": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T20:42:20.499Z",
+            "lastSuccess": "2026-10-31T20:42:20.499Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:34a3e2ebfc5472884f": {
+            "url": "https://www.chievres.be/actualites/conseil-communal-du-30-09-2026-ordre-du-jour",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T20:42:20.499Z",
+            "lastSuccess": "2026-10-31T20:42:20.499Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:ff0c50bda09b88eec8": {
+            "url": "https://www.chievres.be/ma-commune/vie-politique/conseil-communal/conseil-communal/reglementordonnance.jpg",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:e5330ebcea9473e432": {
+            "url": "https://www.chievres.be/ma-commune/vie-politique/conseil-communal/conseil-communal/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:9bb6f071b10f099d1e": {
+            "url": "https://www.chievres.be/ma-commune/vie-politique/conseil-communal/conseil-communal/reglementordonnance.jpg/view",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:2800d77a5151641be9": {
+            "url": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal/ordre-du-jour-du-conseil-communal/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:ecd7e1cbb250d2d22e": {
+            "url": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal/ordre-du-jour-du-conseil-communal/ordre-du-jour-2016",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:d7c37daba2aacfc7d4": {
+            "url": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal/ordre-du-jour-du-conseil-communal/ordre-du-jour-2017",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:79d87ea38a79f11727": {
+            "url": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal/ordre-du-jour-du-conseil-communal/ordre-du-jour-2018",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:bf0021d9266e4f3454": {
+            "url": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal/ordre-du-jour-du-conseil-communal/ordre-du-jour-2020",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:8fbd3041e5756f103a": {
+            "url": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal/ordre-du-jour-du-conseil-communal/ordre-du-jour-2021",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:171d617a4b969ab8ff": {
+            "url": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal/ordre-du-jour-du-conseil-communal/ordre-du-jour-2022",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:fd344aa4fcde9396dd": {
+            "url": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal/ordre-du-jour-du-conseil-communal/2023",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:757a6b05d3fed29d19": {
+            "url": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal/ordre-du-jour-du-conseil-communal/ordre-du-jour-2024",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 14
+          },
+          "municipal-doc:c0ac52ff15c0fe7dcd": {
+            "url": "https://www.chievres.be/actualites/conseil-communal-du-30-09-2026-ordre-du-jour/@@images/5af730be-7021-42eb-9049-5096bbe04e19.png",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/actualites/conseil-communal-du-30-09-2026-ordre-du-jour",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 15
+          },
+          "municipal-doc:06ae438ee08525ff83": {
+            "url": "https://www.chievres.be/actualites/conseil-communal-du-30-09-2026-ordre-du-jour/oj-seance-publique-page-0001.jpg",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/actualites/conseil-communal-du-30-09-2026-ordre-du-jour",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 16
+          },
+          "municipal-doc:3fe272019596339d88": {
+            "url": "https://www.chievres.be/actualites/conseil-communal-du-30-09-2026-ordre-du-jour/oj-seance-publique-page-0002.jpg",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/actualites/conseil-communal-du-30-09-2026-ordre-du-jour",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 17
+          },
+          "municipal-doc:a3a520d0806ba92d3f": {
+            "url": "https://www.chievres.be/actualites/conseil-communal-du-30-09-2026-ordre-du-jour/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/actualites/conseil-communal-du-30-09-2026-ordre-du-jour",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 18
+          },
+          "municipal-doc:8929d90aa986ae2aac": {
+            "url": "https://www.chievres.be/actualites/conseil-communal-du-30-09-2026-ordre-du-jour/oj-seance-publique-page-0002.jpg/view",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/actualites/conseil-communal-du-30-09-2026-ordre-du-jour",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 19
+          },
+          "municipal-doc:f30018d7ac585c018f": {
+            "url": "https://www.chievres.be/actualites/conseil-communal-du-30-09-2026-ordre-du-jour/oj-seance-publique-page-0001.jpg/view",
+            "depth": 1,
+            "sourceUrl": "https://www.chievres.be/actualites/conseil-communal-du-30-09-2026-ordre-du-jour",
+            "discoveredAt": "2026-10-31T20:42:20.499Z",
+            "lastSeen": "2026-10-31T20:42:20.499Z",
+            "discoveryOrder": 20
+          }
+        },
+        "documents": {},
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 21,
+        "pagesPending": 18,
+        "documentsKnown": 0,
+        "documentsPending": 0,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 0,
+        "errors": 0,
+        "attempted": 0,
+        "pagesAttempted": 3
+      }
     },
     {
       "ins": "56016",
@@ -17616,43 +18687,75 @@
       "estimatedMinutes": 27,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.crisnee.be/politique/conseil-communal",
           "title": "Conseil communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:38:18.643Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.crisnee.be/politique/conseil-communal/ordre-du-jour",
           "title": "Ordre du jour",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:38:20.996Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.crisnee.be/politique/conseil-communal/pv-du-conseil-communal",
           "title": "PV du Conseil Communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:38:22.059Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.crisnee.be/politique/videos-du-conseil-communal",
           "title": "Vidéos du conseil communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:38:26.031Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.crisnee.be/politique/budget-communal",
+          "title": "Budget communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.crisnee.be/politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:38:17.712Z",
+      "lastSiteCheck": "2026-10-31T20:41:28.556Z",
       "lastDocumentCheck": "2026-10-15T08:38:26.033Z",
       "latestCouncilDate": null,
       "documentsRead": 7,
       "opportunities": 4,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.crisnee.be/",
+        "checkedAt": "2026-10-31T20:41:28.556Z"
+      }
     },
     {
       "ins": "62027",
@@ -18300,43 +19403,80 @@
       "estimatedMinutes": 27,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.engis.be/ma-commune/vie-politique",
           "title": "Vie politique",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:38:28.924Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.engis.be/ma-commune/vie-politique/cabinet-du-Bourgmestre",
           "title": "Cabinet du Bourgmestre",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:38:30.440Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.engis.be/ma-commune/vie-politique/conseil-communal",
           "title": "Conseil communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:38:31.870Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.engis.be/ma-commune/vie-politique/transparence-gouvernance",
           "title": "Transparence Gouvernance",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:38:33.238Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.engis.be/ma-commune/vie-politique/programme-strategique-transversal-pst",
+          "title": "Programme Stratégique Transversal (PST)",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.engis.be/ma-commune/vie-politique/college-communal-1",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.engis.be/ma-commune/communication/proces-verbaux-du-conseil-communal",
+          "title": "Procès-verbaux du Conseil communal",
+          "status": "lien_public_repere_non_analyse"
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:38:27.598Z",
+      "lastSiteCheck": "2026-10-31T20:41:28.556Z",
       "lastDocumentCheck": "2026-10-15T08:38:33.240Z",
       "latestCouncilDate": null,
       "documentsRead": 4,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.engis.be/",
+        "checkedAt": "2026-10-31T20:41:28.556Z"
+      }
     },
     {
       "ins": "83013",
@@ -18942,43 +20082,75 @@
       "estimatedMinutes": 26,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.fexhe-le-haut-clocher.be/ma-commune/vie-politique",
           "title": "Vie politique",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:38:06.034Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.fexhe-le-haut-clocher.be/ma-commune/vie-politique/college-communal",
           "title": "Collège communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:38:07.425Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.fexhe-le-haut-clocher.be/ma-commune/vie-politique/conseil-communal",
           "title": "Conseil communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:38:08.810Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.fexhe-le-haut-clocher.be/ma-commune/vie-politique/conseil-communal/seances-du-conseil/ordres-du-jour-conseil-communal",
           "title": "Ordres du jour du Conseil communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:38:10.392Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.fexhe-le-haut-clocher.be/ma-commune/vie-politique/conseil-communal/seances-du-conseil/proces-verbaux",
+          "title": "Procès-verbaux du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.fexhe-le-haut-clocher.be/ma-commune/vie-politique/conseil-communal/seances-du-conseil/calendrier-indicatif-des-seances-du-conseil-communal",
+          "title": "Calendrier indicatif des séances du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:38:04.739Z",
+      "lastSiteCheck": "2026-10-31T20:41:28.556Z",
       "lastDocumentCheck": "2026-10-15T08:38:14.744Z",
       "latestCouncilDate": null,
       "documentsRead": 6,
       "opportunities": 1,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.fexhe-le-haut-clocher.be/",
+        "checkedAt": "2026-10-31T20:41:28.556Z"
+      }
     },
     {
       "ins": "62120",
@@ -21914,21 +23086,37 @@
           "url": "https://www.incourt.be/ma-commune/vie-politique/conseil-communal/decisions",
           "title": "Décisions du Conseil communal",
           "status": "page_accessible",
-          "last_success": "2026-10-16T11:52:21.470Z"
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.incourt.be/ma-commune/vie-politique/conseil-communal/ordres-du-jour",
           "title": "Ordres du jour du Conseil Communal",
           "status": "page_accessible",
-          "last_success": "2026-10-16T11:52:21.470Z"
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.incourt.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         }
       ],
-      "lastSiteCheck": "2026-10-16T11:52:21.470Z",
+      "lastSiteCheck": "2026-10-31T20:41:28.556Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.incourt.be/",
+        "checkedAt": "2026-10-31T20:41:28.556Z"
+      }
     },
     {
       "ins": "25044",
@@ -22158,20 +23346,17 @@
       "estimatedMinutes": 73,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_indisponible",
+      "sourceStatus": "site_lu_sources_non_localisees",
       "deliberationSources": [],
-      "lastSiteCheck": "2026-10-16T11:52:21.470Z",
+      "lastSiteCheck": "2026-10-31T20:41:28.556Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": [
-        "fetch failed"
-      ],
+      "errors": [],
       "verifiedSite": {
-        "url": "https://www.jodoigne.be",
-        "checkedAt": "2026-10-29T09:58:58.639Z",
-        "method": "redirect_http_observed"
+        "url": "https://www.jodoigne.be/",
+        "checkedAt": "2026-10-31T20:41:28.556Z"
       }
     },
     {
@@ -24599,18 +25784,18 @@
       "estimatedMinutes": 27,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_en_erreur",
+      "sourceStatus": "site_lu_sources_non_localisees",
       "deliberationSources": [],
-      "lastSiteCheck": "2026-10-15T08:38:34.553Z",
+      "lastSiteCheck": "2026-10-31T20:41:28.556Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": [
-        {
-          "reason": "fetch failed"
-        }
-      ]
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.neupre.be/",
+        "checkedAt": "2026-10-31T20:41:28.556Z"
+      }
     },
     {
       "ins": "25072",
@@ -24741,43 +25926,75 @@
       "estimatedMinutes": 27,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.olne.be/vie-politique",
           "title": "Vie politique",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:38:37.417Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.olne.be/vie-politique/declaration-de-politique-generale",
           "title": "Déclaration de politique communale",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:38:38.329Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.olne.be/vie-politique/college-communal",
           "title": "Collège communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:38:39.393Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.olne.be/vie-politique/conseil-communal",
           "title": "Conseil communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:38:40.434Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.olne.be/vie-politique/budget-citoyen",
+          "title": "Budget communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.olne.be/news/5011-epidemie-de-coronavirus-covid-19-mesures-du-college-communal-d-olne",
+          "title": "Pandémie de Coronavirus Covid-19 : mesures communales et vaccination",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:38:36.502Z",
+      "lastSiteCheck": "2026-10-31T20:41:28.556Z",
       "lastDocumentCheck": "2026-10-15T08:38:40.436Z",
       "latestCouncilDate": null,
       "documentsRead": 4,
       "opportunities": 4,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.olne.be/",
+        "checkedAt": "2026-10-31T20:41:28.556Z"
+      }
     },
     {
       "ins": "91103",
@@ -25020,50 +26237,98 @@
       "estimatedMinutes": 25,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.oupeye.be/ma-commune/vie-politique",
           "title": "Vie politique",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:37:38.530Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.oupeye.be/ma-commune/vie-politique/le-college-communal",
           "title": "Le Collège communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:37:40.565Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.oupeye.be/ma-commune/vie-politique/le-conseil-communal",
           "title": "Le Conseil communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:37:42.857Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.oupeye.be/ma-commune/vie-politique/elections-2024-1",
           "title": "Elections communales et provinciales 2024",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:37:44.763Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_error": null
         },
         {
           "url": "https://www.oupeye.be/ma-commune/services-communaux/environnement/avis-et-enquetes-1/reunion-dinformation-demande-de-permis-denvironnement-classe-1-et-etude-dincidences-societe-heidelberg-materials-lixhe/fichiers/hmlixhe-avis_rip_fr_20260916-ok.pdf",
           "title": "Publié Réunion d'information - Demande de permis d'environnement Classe 1 et étude d'incidences -société Heidelberg Materials Lixhe Concerna",
           "type": "site_communal",
           "last_success": "2026-10-15T08:37:50.103Z",
-          "documentsRead": 1
+          "documentsRead": 1,
+          "status": "document_pdf_a_analyser"
+        },
+        {
+          "url": "https://www.oupeye.be/ma-commune/services-communaux/marches-publics-dossiers-subsidies-1",
+          "title": "Marchés publics - Dossiers subsidiés",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.oupeye.be/ma-commune/vie-politique/le-conseil-communal/ordres-du-jour-du-conseil",
+          "title": "Ordre du jour du Conseil",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T20:41:28.556Z",
+          "last_success": "2026-10-31T20:41:28.556Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.oupeye.be/ma-commune/vie-politique/le-conseil-communal/comptes-rendus",
+          "title": "Procès verbaux et projets de délibération du Conseil",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.oupeye.be/ma-commune/vie-politique/le-conseil-communal/le-conseil-communal-filme",
+          "title": "Le Conseil communal filmé",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.oupeye.be/ma-commune/services-communaux/urbanisme/avis-et-enquetes/patrimoine-expropriation-dune-partie-de-la-parcelle-cadastree-oupeye-2eme-division-haccourt-section-a-ndeg251-a/patrimoine-expropriation-dune-partie-de-la-parcelle-cadastree-oupeye-2eme-division-haccourt-section-a-ndeg251-a/deliberation-expropriation.pdf",
+          "title": "Publié Patrimoine - Expropriation d’une partie de la parcelle cadastrée OUPEYE – 2ème Division – HACCOURT – Section A n°",
+          "status": "document_pdf_a_analyser"
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:37:37.369Z",
+      "lastSiteCheck": "2026-10-31T20:41:28.556Z",
       "lastDocumentCheck": "2026-10-15T08:37:51.863Z",
       "latestCouncilDate": null,
       "documentsRead": 7,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.oupeye.be/",
+        "checkedAt": "2026-10-31T20:41:28.556Z"
+      }
     },
     {
       "ins": "84050",
@@ -28298,18 +29563,18 @@
       "estimatedMinutes": 27,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_en_erreur",
+      "sourceStatus": "site_lu_sources_non_localisees",
       "deliberationSources": [],
-      "lastSiteCheck": "2026-10-15T08:38:51.577Z",
+      "lastSiteCheck": "2026-10-31T20:41:28.556Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": [
-        {
-          "reason": "fetch failed"
-        }
-      ]
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.vise.be/",
+        "checkedAt": "2026-10-31T20:41:28.556Z"
+      }
     },
     {
       "ins": "91143",
@@ -29077,6 +30342,6 @@
       }
     }
   ],
-  "lastMunicipalPass": "2026-10-31T15:30:08.115Z",
-  "lastMunicipalDocumentPass": "2026-10-31T15:31:30.638Z"
+  "lastMunicipalPass": "2026-10-31T20:41:28.556Z",
+  "lastMunicipalDocumentPass": "2026-10-31T20:42:20.499Z"
 }

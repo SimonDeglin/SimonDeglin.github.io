@@ -58,8 +58,8 @@
     },
     "COMMUNES": {
       "status": "inventory_not_document_collection",
-      "updatedAt": "2026-10-31T15:30:08.115Z",
-      "last_attempt": "2026-10-31T15:30:08.115Z",
+      "updatedAt": "2026-10-31T20:41:28.556Z",
+      "last_attempt": "2026-10-31T20:41:28.556Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -67,31 +67,31 @@
       "total": 261,
       "sitesRepertories": 261,
       "sitesVerifies": 261,
-      "deliberationsConnectees": 39,
+      "deliberationsConnectees": 41,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 221,
-      "opportunities": 93,
+      "documentsRead": 228,
+      "opportunities": 94,
       "sitesChecked": 261,
-      "candidatePages": 222,
-      "sourceErrors": 29
+      "candidatePages": 227,
+      "sourceErrors": 27
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-10-31T15:31:30.638Z",
-      "last_success": "2026-10-31T15:31:30.638Z",
+      "last_attempt": "2026-10-31T20:42:20.499Z",
+      "last_success": "2026-10-31T20:42:20.499Z",
       "last_batch": 4,
-      "documents_checked": 18,
-      "documents_read": 18,
+      "documents_checked": 7,
+      "documents_read": 7,
       "documents_unchanged": 0,
       "documents_modified": 0,
-      "opportunities_found": 2,
+      "opportunities_found": 1,
       "review_candidates": 0,
-      "errors_count": 13,
+      "errors_count": 4,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel."
     }
   },
@@ -103,7 +103,7 @@
   "metrics": {
     "scanned": 1594,
     "matched_current_run": 13,
-    "records": 219,
+    "records": 220,
     "review_count": 125,
     "award_notice_count": 411,
     "awarded_market_matches": 0,
@@ -14944,6 +14944,71 @@
       },
       "matchReason": "mission_globale_a_qualifier",
       "screeningReason": null
+    },
+    {
+      "id": "local:cee59e5f9fcc8c4d339c",
+      "title": "Conseil communal — opportunité à vérifier : Chaumont-Gistoux",
+      "buyer": "Commune de Chaumont-Gistoux",
+      "municipalityINS": "25018",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "9. Désignation d'un auteur de projet pour la réalisation d'un audit de mobilité sur le territoire de Chaumont-Gistoux - Approbation des conditions et du mode de passation ENVIRONNEMENT - MOBILITÉ",
+        "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-26-janvier.pdf",
+        "page": 2,
+        "sha256": "fd4727978aee8806ddb2214510f338ac518d9035da43181ba62fa37edc590e95"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-26-janvier.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-26-janvier.pdf",
+        "sha256": "fd4727978aee8806ddb2214510f338ac518d9035da43181ba62fa37edc590e95",
+        "session": null,
+        "document": null,
+        "status": "unknown"
+      },
+      "url": "https://www.chaumont-gistoux.be/ma-commune/vie-politique/conseil-communal/presentation-du-conseil-communal/ordre-du-jour-du-conseil-communal-du-26-janvier.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 9. Désignation d'un auteur de projet pour la réalisation d'un audit de mobilité sur le territoire de Chaumont-Gistoux - Approbation des conditions et du mode de passation ENVIRONNEMENT - MOBILITÉ",
+      "evidence": "9. Désignation d'un auteur de projet pour la réalisation d'un audit de mobilité sur le territoire de Chaumont-Gistoux - Approbation des conditions et du mode de passation ENVIRONNEMENT - MOBILITÉ",
+      "municipalReference": null,
+      "municipalSection": "9. Désignation d'un auteur de projet pour la réalisation d'un audit de mobilité sur le territoire de",
+      "municipalEvidence": [
+        {
+          "page": 2,
+          "excerpt": "9. Désignation d'un auteur de projet pour la réalisation d'un audit de mobilité sur le territoire de Chaumont-Gistoux - Approbation des conditions et du mode de passation ENVIRONNEMENT - MOBILITÉ"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 2,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:3f17f055a8dcf413d4",
+        "sha256": "fd4727978aee8806ddb2214510f338ac518d9035da43181ba62fa37edc590e95",
+        "checkedAt": "2026-10-31T20:42:20.499Z",
+        "changedAt": null
+      }
     }
   ]
 }
