@@ -14,18 +14,18 @@
     "total": 261,
     "sitesRepertories": 261,
     "sitesVerifies": 261,
-    "deliberationsConnectees": 37,
+    "deliberationsConnectees": 39,
     "zones": {
       "principale": 196,
       "exterieure_provisoire": 26,
       "peripherique": 39
     },
     "checkedWithErrors": 3,
-    "documentsRead": 203,
-    "opportunities": 91,
+    "documentsRead": 221,
+    "opportunities": 93,
     "sitesChecked": 261,
-    "candidatePages": 210,
-    "sourceErrors": 31
+    "candidatePages": 222,
+    "sourceErrors": 29
   },
   "communes": [
     {
@@ -4809,43 +4809,90 @@
       "estimatedMinutes": 20,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.awans.be/ma-commune/vie-politique",
           "title": "Vie politique",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:09.676Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.awans.be/ma-commune/vie-politique/vie-politique",
           "title": "Vie politique",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:10.497Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.awans.be/ma-commune/vie-politique/carte-didentite-de-la-commune-dawans",
           "title": "Carte d'identité de la commune d'Awans",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:11.324Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.awans.be/ma-commune/vie-politique/declaration-de-politique-generale",
           "title": "Déclaration de politique générale",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:13.693Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.awans.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.awans.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.awans.be/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal",
+          "title": "Ordre du jour du Conseil communal",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.awans.be/ma-commune/vie-politique/pv-du-conseil-communal",
+          "title": "PV du Conseil communal",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.awans.be/resolveuid/4096a44da93f4ada9e908b0cc802e9b6",
+          "title": "Collège communal",
+          "status": "lien_public_repere_non_analyse"
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:36:08.851Z",
+      "lastSiteCheck": "2026-10-31T15:30:08.115Z",
       "lastDocumentCheck": "2026-10-15T08:36:15.401Z",
       "latestCouncilDate": null,
       "documentsRead": 6,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.awans.be/",
+        "checkedAt": "2026-10-31T15:30:08.115Z"
+      }
     },
     {
       "ins": "62009",
@@ -9620,50 +9667,83 @@
       "estimatedMinutes": 18,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.beyne-heusay.be/ma-commune",
           "title": "Vie politique",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:38.320Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.beyne-heusay.be/conseil-communal",
           "title": "Le conseil communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:39.115Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.beyne-heusay.be/proces-verbaux-cc",
           "title": "Conseil communal - Procès verbaux",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:39.912Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.beyne-heusay.be/ordre-du-jour-cc",
           "title": "Conseil communal - Ordre du jour",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:44.176Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.beyne-heusay.be/sites/default/files/documents/urbanisme/Avis-d-Annonce-de-Projet-rue-de-Clecy-93.pdf",
           "title": "Rue de Clécy 93 - Avis d'…",
           "type": "site_communal",
           "last_success": "2026-10-15T08:35:45.531Z",
-          "documentsRead": 1
+          "documentsRead": 1,
+          "status": "document_pdf_a_analyser"
+        },
+        {
+          "url": "https://www.beyne-heusay.be/college-communal",
+          "title": "Le collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.beyne-heusay.be/marche-public",
+          "title": "Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:35:37.525Z",
+      "lastSiteCheck": "2026-10-31T15:30:08.115Z",
       "lastDocumentCheck": "2026-10-15T08:35:45.531Z",
       "latestCouncilDate": null,
       "documentsRead": 7,
       "opportunities": 5,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.beyne-heusay.be/",
+        "checkedAt": "2026-10-31T15:30:08.115Z"
+      }
     },
     {
       "ins": "91015",
@@ -10202,43 +10282,100 @@
       "estimatedMinutes": 23,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.blegny.be/ma-commune/vie-politique",
           "title": "Vie politique",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:50.374Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.blegny.be/ma-commune/vie-politique/college-communal",
           "title": "Collège communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:52.351Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.blegny.be/ma-commune/vie-politique/conseil-communal",
           "title": "Conseil communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:54.813Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.blegny.be/ma-commune/vie-politique/conseil-de-laction-sociale",
           "title": "Conseil de l'action sociale",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:57.472Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.blegny.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour",
+          "title": "Ordre du jour du conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.blegny.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+          "title": "Procès-verbaux du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.blegny.be/ma-commune/vie-politique/conseil-communal/videos/blegnytv/blegnytv",
+          "title": "Vidéos du Conseil communal",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.blegny.be/ma-commune/administration/administration-reglements/copy10_of_reglement-communal",
+          "title": "Règlement d'Ordre Intérieur du Conseil communal - Modifications",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.blegny.be/ma-commune/publicite-active-projets-de-deliberations-du-conseil-communal",
+          "title": "Publicité active - Projets de délibérations du Conseil communal",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.deliberations.be/blegny/publications#b_start=0",
+          "title": "Délibérations.be",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.blegny.be/actualites/deliberations?u=b29eb677d74840c5ba73b090936380f9",
+          "title": "Publié Délibérations",
+          "status": "lien_public_repere_non_analyse"
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:36:48.841Z",
+      "lastSiteCheck": "2026-10-31T15:30:08.115Z",
       "lastDocumentCheck": "2026-10-15T08:36:57.474Z",
       "latestCouncilDate": null,
       "documentsRead": 4,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.blegny.be/",
+        "checkedAt": "2026-10-31T15:30:08.115Z"
+      }
     },
     {
       "ins": "84010",
@@ -14421,11 +14558,715 @@
         }
       ],
       "lastSiteCheck": "2026-10-22T12:20:45.865Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-31T15:31:30.638Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:b862f13de8521c6d01": {
+          "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null
+        },
+        "municipal-doc:1ce9b0d5b16504fad9": {
+          "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null
+        },
+        "municipal-doc:4ee3419e1cba3f5b8e": {
+          "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:70278bdeeb79face42": {
+          "url": "https://www.deliberations.be/celles/publications/ordre-du-jour-conseil-communal-du-16-mars-2026/@@download/file",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T21:31:30.638Z"
+        },
+        "municipal-doc:d788839f243d82ba42": {
+          "url": "https://www.deliberations.be/celles/publications/ordre-du-jour-du-conseil-communal-seance-du-25-juin-2026/@@download/file",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T21:31:30.638Z"
+        },
+        "municipal-doc:a8a89ad182472d2b86": {
+          "url": "https://www.deliberations.be/celles/publications/ordre-du-jour-du-conseil-communal-du-1e-juin-2026/@@download/file",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T21:31:30.638Z"
+        },
+        "municipal-doc:684f1b493e438b7a2f": {
+          "url": "https://www.deliberations.be/celles/publications/ordre-du-jour-du-conseil-communal-du-05-mars-2026-1/@@download/file",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T21:31:30.638Z"
+        },
+        "municipal-doc:a7fb9730aafc143b3d": {
+          "url": "https://www.deliberations.be/celles/publications/ordre-du-jour-du-conseil-communal-du-5-novembre-2026/@@download/file",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T21:31:30.638Z"
+        },
+        "municipal-doc:c2cf8be5b3ea6e0d6c": {
+          "url": "https://www.deliberations.be/celles/publications/ordre-du-jour-du-conseil-communal-du-23-septembre-2026/@@download/file",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T21:31:30.638Z"
+        },
+        "municipal-doc:cd2c8b2f84060135dd": {
+          "url": "https://www.deliberations.be/celles/publications/ordre-du-jour-du-conseil-communal-du-27-aout-2026/@@download/file",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T21:31:30.638Z"
+        },
+        "municipal-doc:a8e897c7c24458c63f": {
+          "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2026/oj-public-conseil-communal-du-20-04-2026.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T21:31:30.638Z"
+        },
+        "municipal-doc:bb1de8885f1cec15dd": {
+          "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2026/oj-public-conseil-communal-du-16-03-2026.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T21:31:30.638Z"
+        },
+        "municipal-doc:ab455be8cf0b0c159d": {
+          "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2026/oj-public-conseil-communal-du-05-03-2026.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T21:31:30.638Z"
+        },
+        "municipal-doc:46613f2ad5514525cc": {
+          "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2026/oj-public-conseil-communal-du-29-01-26.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T21:31:30.638Z"
+        },
+        "municipal-doc:f92b52afca86e77d30": {
+          "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2025/oj-conseil-communal-18-12-25.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T21:31:30.638Z"
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:b862f13de8521c6d01": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T15:31:30.638Z",
+            "lastSuccess": "2026-10-31T15:31:30.638Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:1ce9b0d5b16504fad9": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications",
+            "depth": 1,
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 1,
+            "lastAttempt": "2026-10-31T15:31:30.638Z",
+            "lastSuccess": "2026-10-31T15:31:30.638Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:4ee3419e1cba3f5b8e": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "depth": 1,
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 2,
+            "lastAttempt": "2026-10-31T15:31:30.638Z",
+            "lastSuccess": "2026-10-31T15:31:30.638Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:7473a9181173deb6ce": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/proces-verbaux",
+            "depth": 1,
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:3eb270540121effc7e": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/declaration-de-politique-generale",
+            "depth": 1,
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:2efdbb1e97410c4132": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/declaration-de-politique-sociale",
+            "depth": 1,
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:b5b3ccdd59c03c748c": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/plan-strategique-transversal",
+            "depth": 1,
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:f0bb41a6c4535b1edb": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/budget-et-compte",
+            "depth": 1,
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:3f24c39b78a9929656": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/taxes-redevances",
+            "depth": 1,
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:3e7ef2714bdb8bb875": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/pacte-de-majorite",
+            "depth": 1,
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 9
+          }
+        },
+        "documents": {
+          "municipal-doc:70278bdeeb79face42": {
+            "url": "https://www.deliberations.be/celles/publications/ordre-du-jour-conseil-communal-du-16-mars-2026/@@download/file",
+            "title": "Ordre du jour Conseil communal du 16 mars 2026 (PDF – 89.7 KB – Nouvelle fenêtre)",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:d788839f243d82ba42": {
+            "url": "https://www.deliberations.be/celles/publications/ordre-du-jour-du-conseil-communal-seance-du-25-juin-2026/@@download/file",
+            "title": "Ordre du jour du Conseil communal - Séance du 25 juin 2026 (PDF – 79.0 KB – Nouvelle fenêt",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 1
+          },
+          "municipal-doc:a8a89ad182472d2b86": {
+            "url": "https://www.deliberations.be/celles/publications/ordre-du-jour-du-conseil-communal-du-1e-juin-2026/@@download/file",
+            "title": "Ordre du jour du Conseil communal du 1e juin 2026 (PDF – 1.3 MB – Nouvelle fenêtre)",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 2
+          },
+          "municipal-doc:684f1b493e438b7a2f": {
+            "url": "https://www.deliberations.be/celles/publications/ordre-du-jour-du-conseil-communal-du-05-mars-2026-1/@@download/file",
+            "title": "Ordre du jour du Conseil communal du 05 mars 2026 (PDF – 88.7 KB – Nouvelle fenêtre)",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:a7fb9730aafc143b3d": {
+            "url": "https://www.deliberations.be/celles/publications/ordre-du-jour-du-conseil-communal-du-5-novembre-2026/@@download/file",
+            "title": "Ordre du jour du Conseil communal du 5 novembre 2026 (PDF – 418.3 KB – Nouvelle fenêtre)",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:c2cf8be5b3ea6e0d6c": {
+            "url": "https://www.deliberations.be/celles/publications/ordre-du-jour-du-conseil-communal-du-23-septembre-2026/@@download/file",
+            "title": "Ordre du jour du Conseil communal du 23 septembre 2026 (PDF – 79.9 KB – Nouvelle fenêtre)",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:cd2c8b2f84060135dd": {
+            "url": "https://www.deliberations.be/celles/publications/ordre-du-jour-du-conseil-communal-du-27-aout-2026/@@download/file",
+            "title": "Ordre du jour du Conseil communal du 27 août 2026 (PDF – 1.0 MB – Nouvelle fenêtre)",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:a8e897c7c24458c63f": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2026/oj-public-conseil-communal-du-20-04-2026.pdf",
+            "title": "OJ Public Conseil communal du 20 04 2026.pdf 238.1 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:bb1de8885f1cec15dd": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2026/oj-public-conseil-communal-du-16-03-2026.pdf",
+            "title": "OJ public - Conseil communal du 16 03 2026.pdf 89.7 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:ab455be8cf0b0c159d": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2026/oj-public-conseil-communal-du-05-03-2026.pdf",
+            "title": "OJ Public - Conseil communal du 05 03 2026.pdf 88.7 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:46613f2ad5514525cc": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2026/oj-public-conseil-communal-du-29-01-26.pdf",
+            "title": "OJ Public - Conseil communal du 29 01 26.pdf 75.7 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:f92b52afca86e77d30": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2025/oj-conseil-communal-18-12-25.pdf",
+            "title": "OJ Conseil communal 18 12 25.pdf 233.8 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:404cba9f637d835196": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2025/oj-conseil-public-du-27-11-25.pdf",
+            "title": "OJ Conseil public du 27 11 25.pdf 88.4 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:e6f8a1d8b40aa7203f": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2025/oj-public-conseil-03-11-25.pdf",
+            "title": "OJ public Conseil 03.11.25.pdf 128.5 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:a13412521e52b5d4f3": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2025/oj-sans-huis-clos-conseil-du-25-09-2025.pdf",
+            "title": "OJ sans huis clos - Conseil du 25.09.2025.pdf 82.8 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 14
+          },
+          "municipal-doc:232dc3864a4ae800f8": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2025/oj-public-conseil-communal-du-28-08-2025.pdf",
+            "title": "OJ Public Conseil communal du 28 08 2025.pdf 1.8 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 15
+          },
+          "municipal-doc:775d992eadee0c872b": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2025/oj-public-conseil-30-06-2025.pdf",
+            "title": "OJ public Conseil 30 06 2025.pdf 1.1 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 16
+          },
+          "municipal-doc:d477178166903bfb08": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2025/oj-conseil-conjoint-commune-cpas-30-06-25.pdf",
+            "title": "OJ Conseil conjoint commune-cpas 30 06 25.pdf 655.1 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 17
+          },
+          "municipal-doc:9fc430539e66f6aebb": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2025/oj-public-conseil-communal-du-27-mai-2025.pdf",
+            "title": "OJ Public - Conseil communal du 27 mai 2025.pdf 776.1 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 18
+          },
+          "municipal-doc:ea71d4f42f48479ce2": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2025/oj-public-conseil-22-04-2025.pdf",
+            "title": "OJ Conseil communal 22/04/25 1.8 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 19
+          },
+          "municipal-doc:347cedd2b7cf37a1c5": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2025/oj-public-27-03-2025.pdf",
+            "title": "OJ Conseil communal 27/03/2025 136.7 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 20
+          },
+          "municipal-doc:a3794cbe5675b3b876": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2025/oj-public-conseil-du-03-03-25.pdf",
+            "title": "OJ Conseil communal 03/03/2025 2.1 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 21
+          },
+          "municipal-doc:d5c50848d722b46a83": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2025/oj-public-conseil-du-28-01-25.pdf",
+            "title": "OJ Conseil communal 28/01/2025 1.9 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 22
+          },
+          "municipal-doc:ba67b70e86ce7e4430": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2024/oj-conseil-public-du-19-12-24.pdf",
+            "title": "OJ conseil communal 19/12/2024 1.7 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 23
+          },
+          "municipal-doc:749eb56aa702e3523d": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2024/ordre-du-jour-public.pdf",
+            "title": "OJ conseil communal 02/12/2024 1.9 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 24
+          },
+          "municipal-doc:2aa98feccc83eeb53f": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2024/oj-public-conseil-communal-31-10-24-1.pdf",
+            "title": "OJ Conseil communal 31/10/2024 460.6 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 25
+          },
+          "municipal-doc:2cee6e01f3fbc9ce37": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2024/oj-conseil-communal-040924.pdf",
+            "title": "OJ Conseil communal 04/09/2024 1.2 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 26
+          },
+          "municipal-doc:c25648998a10bd8c56": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2024/oj-public-04-07-2024.pdf",
+            "title": "OJ conseil communal 04/07/2024 2.1 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 27
+          },
+          "municipal-doc:afab9eb48f0f4cd7e2": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2024/oj-public-30-05-24.pdf",
+            "title": "OJ conseil communal 30/05/2024 141.6 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 28
+          },
+          "municipal-doc:7eb5ecb4f8ac2f6c20": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2024/oj-conseil-communal-25-04-24-public.pdf",
+            "title": "OJ conseil communal 25/04/2024 81.4 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 29
+          },
+          "municipal-doc:aaea497b60f30c7b88": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2024/oj-public-28-03-24.pdf",
+            "title": "OJ Conseil communal 28/03/2024 1.9 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 30
+          },
+          "municipal-doc:be0cf6c50bb62f6401": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/odj-conseil-2024/oj-conseil-communal-28022024.pdf",
+            "title": "OJ Conseil communal 28/02/2024 2.3 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 31
+          },
+          "municipal-doc:cbe29ce4f9a4f6532c": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2023/oj-conseil-communal-271223.pdf",
+            "title": "OJ conseil communal 27/12/2023 76.5 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 32
+          },
+          "municipal-doc:c5b75d27f405a49a65": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2023/ordre-du-jour-public.pdf",
+            "title": "OJ conseil communal 14/12/2023 2.0 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 33
+          },
+          "municipal-doc:73f078964dbdf1e28b": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2023/oj-conseil-communal-091123.pdf",
+            "title": "OJ conseil communal 09/11/2023 583.3 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 34
+          },
+          "municipal-doc:e96efac15c660811fd": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2023/oj-conseil-communal-27092023.pdf",
+            "title": "OJ conseil communal 27/09/2023 98.7 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 35
+          },
+          "municipal-doc:b861bc92d604bd1578": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2023/oj-conseil-310823.pdf",
+            "title": "OJ conseil communal 31/08/2023 2.1 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 36
+          },
+          "municipal-doc:e647124ee212c044c6": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2023/20230706-oj-signe-sans-huis-clos.pdf",
+            "title": "OJ conseil communal 06/07/2023 2.3 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 37
+          },
+          "municipal-doc:ccd244a76f99f646a8": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2022/oj-conseil-27102022.pdf",
+            "title": "OJ du Conseil du 27 octobre 2022 66.0 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 38
+          },
+          "municipal-doc:390361383caefa31a6": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2022/oj-29-septembre-2022-sans-huis-clos.pdf",
+            "title": "OJ du Conseil du 29 septembre 2022 83.7 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 39
+          },
+          "municipal-doc:2cf9c3bfdaad1586a4": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2022/oj-25-aout-2022.pdf",
+            "title": "OJ 25 août 2022.pdf 103.5 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 40
+          },
+          "municipal-doc:e8895164955d3d91e7": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2022/oj-23-juin-2022.pdf",
+            "title": "OJ 23 juin 2022.pdf 97.5 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 41
+          },
+          "municipal-doc:96f251f6b5f458e75c": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2022/oj-19-mai-2022.pdf",
+            "title": "OJ 19 mai 2022.pdf 2.3 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 42
+          },
+          "municipal-doc:539c672ed43c136033": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2022/oj-31-mars-2022.pdf",
+            "title": "OJ 31 mars 2022.pdf 96.2 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 43
+          },
+          "municipal-doc:950bec2c6130073a2c": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2022/oj-24-fevrier-2022.pdf",
+            "title": "OJ 24 février 2022.pdf 1.9 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 44
+          },
+          "municipal-doc:f9c893c38e766298d9": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2022/oj-27-janvier-2021.pdf",
+            "title": "OJ 27 janvier 2022.pdf 1.9 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 45
+          },
+          "municipal-doc:bcf4a5626bcbf9f85d": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2021/oj-6-mai-2021.pdf",
+            "title": "OJ 6 mai 2021.pdf 2.2 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 46
+          },
+          "municipal-doc:b90e33094f22545502": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2021/oj-9-novembre-2021.pdf",
+            "title": "OJ 9 novembre 2021.pdf 2.3 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 47
+          },
+          "municipal-doc:673fbdc26ad2a4647b": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2021/oj-15-juillet-2021.pdf",
+            "title": "OJ 15 juillet 2021.pdf 2.1 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 48
+          },
+          "municipal-doc:2f3c5b2adbba0f187d": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2021/oj-15-juin-2021.pdf",
+            "title": "OJ 15 juin 2021.pdf 99.3 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 49
+          },
+          "municipal-doc:c04fafc29c44c5ca23": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2021/oj-20-decembre-2021-conseil-conjoint-commune-cpas.pdf",
+            "title": "OJ 20 décembre 2021 - Conseil conjoint commune CPAS.pdf 194.7 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 50
+          },
+          "municipal-doc:3d27d53d3e5c5afa08": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2021/oj-20-decembre-2021.pdf",
+            "title": "OJ 20 décembre 2021.pdf 619.4 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 51
+          },
+          "municipal-doc:8eb65206ba6e8ca4de": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2021/oj-25-fevrier-2021.pdf",
+            "title": "OJ 25 février 2021.pdf 2.0 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 52
+          },
+          "municipal-doc:f4dfa64c005d58bf44": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2021/oj-25-mars-2021.pdf",
+            "title": "OJ 25 mars 2021.pdf 2.3 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 53
+          },
+          "municipal-doc:df83e39f87a14c42eb": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2021/oj-26-aout-2021.pdf",
+            "title": "OJ 26 août 2021.pdf 78.3 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 54
+          },
+          "municipal-doc:80545f189c8a3c9579": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2021/oj-28-janvier-2021.pdf",
+            "title": "OJ 28 janvier 2021.pdf 605.1 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 55
+          },
+          "municipal-doc:72d9bb502f3a812b80": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2021/oj-30-septembre-2021.pdf",
+            "title": "OJ 30 septembre 2021.pdf 2.1 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 56
+          },
+          "municipal-doc:352d1f8eb08d09fbe8": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2020/oj-7-septembre-2020.pdf",
+            "title": "OJ 7 septembre 2020.pdf 60.6 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 57
+          },
+          "municipal-doc:a50be3a51826c32425": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2020/oj-10-decembre-2020.pdf",
+            "title": "OJ 10 décembre 2020.pdf 2.4 MB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 58
+          },
+          "municipal-doc:e1a2efdf21efa2ed1b": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2020/oj-12-novembre-2020.pdf",
+            "title": "OJ 12 novembre 2020.pdf 547.8 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 59
+          },
+          "municipal-doc:ea84821dfaa036793d": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2020/oj-14-octobre-2020.pdf",
+            "title": "OJ 14 octobre 2020.pdf 667.0 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 60
+          },
+          "municipal-doc:ce257475669eaec48c": {
+            "url": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour/2020/oj-29-septembre-2020.pdf",
+            "title": "OJ 29 septembre 2020.pdf 386.9 KB",
+            "sourceUrl": "https://www.celles.be/ma-commune/vie-politique/conseil-communal/publications/ordres-du-jour",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 61
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 10,
+        "pagesPending": 7,
+        "documentsKnown": 62,
+        "documentsPending": 62,
+        "errors": 12,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 0,
+        "errors": 12,
+        "attempted": 12,
+        "pagesAttempted": 3
+      }
     },
     {
       "ins": "93010",
@@ -14470,15 +15311,924 @@
         }
       ],
       "lastSiteCheck": "2026-10-31T01:05:47.552Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-31T15:31:30.638Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
-      "opportunities": 0,
+      "documentsRead": 11,
+      "opportunities": 2,
       "errors": [],
       "verifiedSite": {
         "url": "https://www.cerfontaine.be/",
         "checkedAt": "2026-10-31T01:05:47.552Z"
-      }
+      },
+      "documentSourceChecks": {
+        "municipal-doc:6ea793b2a0a25bb378": {
+          "url": "https://www.cerfontaine.be/ma-commune/politique/le-college-communal",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null
+        },
+        "municipal-doc:4ef001d66bc2cef671": {
+          "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null
+        },
+        "municipal-doc:ada2999c946f3a65b1": {
+          "url": "https://www.deliberations.be/cerfontaine/publications",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:c1a9bc284649978fca": {
+          "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/politique-generale/programme-politique-generale-2019-2024.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T21:31:30.638Z"
+        },
+        "municipal-doc:7d76dd15f9fa920f03": {
+          "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/politique-generale/roi-conseil-31-03-25.pdf",
+          "finalUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/politique-generale/roi-conseil-31-03-25.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"|1748412693.0||Anonymous|1793153203.513896|1793458381.7124898\"",
+          "lastModified": "Wed, 28 May 2025 07:11:33 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/politique-generale/roi-conseil-31-03-25.pdf",
+            "sha256": "7d1109e576f66b2c0e0cff7340916d1c2ca7895ef600f594214bf1be8ca49d2a",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "7d1109e576f66b2c0e0cff7340916d1c2ca7895ef600f594214bf1be8ca49d2a",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:4f540e7394cccc769a": {
+          "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/politique-generale/pst-cerfontaine-24-30-1-2.pdf",
+          "finalUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/politique-generale/pst-cerfontaine-24-30-1-2.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"|1764173013.0||Anonymous|1793153203.513896|1793458381.7124898\"",
+          "lastModified": "Wed, 26 Nov 2025 17:03:33 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/politique-generale/pst-cerfontaine-24-30-1-2.pdf",
+            "sha256": "df2b915d0f09e17612e184ea20d9367c27bfd47bddb389833ba304f7dc4ae39b",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "df2b915d0f09e17612e184ea20d9367c27bfd47bddb389833ba304f7dc4ae39b",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:f105abe350c35a09c0": {
+          "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-27-10-25.pdf",
+          "finalUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-27-10-25.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"|1793100551.0||Anonymous|1793153203.513896|1793458381.7124898\"",
+          "lastModified": "Tue, 27 Oct 2026 12:29:11 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-27-10-25.pdf",
+            "sha256": "9638e79e80e43a2d818828ba4ddb3c316224b7e95df6406db251346ffc1da56c",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "9638e79e80e43a2d818828ba4ddb3c316224b7e95df6406db251346ffc1da56c",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:2032513d09bc3e4c38": {
+          "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-22-09-25.pdf",
+          "finalUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-22-09-25.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"|1763552027.0||Anonymous|1793153203.513896|1793458381.7124898\"",
+          "lastModified": "Wed, 19 Nov 2025 12:33:47 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-22-09-25.pdf",
+            "sha256": "1da795f537bd571288118c19adfbc172f7adaf9a8b10fe6c7339ba7624d1efc8",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "1da795f537bd571288118c19adfbc172f7adaf9a8b10fe6c7339ba7624d1efc8",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:70fed2aafc52e04610": {
+          "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-2025-07-01.pdf",
+          "finalUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-2025-07-01.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"|1763552028.0||Anonymous|1793153203.513896|1793458381.7124898\"",
+          "lastModified": "Wed, 19 Nov 2025 12:33:48 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-2025-07-01.pdf",
+            "sha256": "fe4a72de776b9978e277b334ebb4710c4f80800675eb00732fdcf4d782dbaf28",
+            "session": null,
+            "document": {
+              "date": "2025-07-01",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "-2025-07-01",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "fe4a72de776b9978e277b334ebb4710c4f80800675eb00732fdcf4d782dbaf28",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:0e13f898c1860395d1": {
+          "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-05-26.pdf",
+          "finalUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-05-26.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"|1763552028.0||Anonymous|1793153203.513896|1793458381.7124898\"",
+          "lastModified": "Wed, 19 Nov 2025 12:33:48 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-05-26.pdf",
+            "sha256": "4112658811e32ea06bf87c450c784362abc21d9c06d710cb16407554bb7a0444",
+            "session": null,
+            "document": {
+              "date": "2025-05-26",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "-2025-05-26",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "4112658811e32ea06bf87c450c784362abc21d9c06d710cb16407554bb7a0444",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:7d3b0b4a3d52c97d68": {
+          "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-04-28.pdf",
+          "finalUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-04-28.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"|1763552029.0||Anonymous|1793153203.513896|1793458381.7124898\"",
+          "lastModified": "Wed, 19 Nov 2025 12:33:49 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-04-28.pdf",
+            "sha256": "dd0bc4a65db2cd0cf9ab25d38699d38503a1dd863c7ab81994c553028a6c93c4",
+            "session": null,
+            "document": {
+              "date": "2025-04-28",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "-2025-04-28",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "dd0bc4a65db2cd0cf9ab25d38699d38503a1dd863c7ab81994c553028a6c93c4",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:0f64e690f92df42bb4": {
+          "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-03-31.pdf",
+          "finalUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-03-31.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"|1763552029.0||Anonymous|1793153203.513896|1793458381.7124898\"",
+          "lastModified": "Wed, 19 Nov 2025 12:33:49 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-03-31.pdf",
+            "sha256": "0a5a0affde2eb145270423229dd454451c40bcbeffbdb6d8ae8a5af57eb6b475",
+            "session": null,
+            "document": {
+              "date": "2025-03-31",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "-2025-03-31",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "0a5a0affde2eb145270423229dd454451c40bcbeffbdb6d8ae8a5af57eb6b475",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:d99f194e883af56804": {
+          "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-02-24.pdf",
+          "finalUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-02-24.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"|1763552030.0||Anonymous|1793153203.513896|1793458381.7124898\"",
+          "lastModified": "Wed, 19 Nov 2025 12:33:50 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-02-24.pdf",
+            "sha256": "145d835989781c843abc02f3f4020ce5821e52c5d582a181e2e42e155796a577",
+            "session": null,
+            "document": {
+              "date": "2025-02-24",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "-2025-02-24",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "145d835989781c843abc02f3f4020ce5821e52c5d582a181e2e42e155796a577",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:4a429015e44b0eb9d6": {
+          "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-01-27.pdf",
+          "finalUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-01-27.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"|1763552030.0||Anonymous|1793153203.513896|1793458381.7124898\"",
+          "lastModified": "Wed, 19 Nov 2025 12:33:50 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-01-27.pdf",
+            "sha256": "384f2e29cc6cdbe0c092c088528114a3f246ec3254a96e4d3ae8dbff389eb48c",
+            "session": null,
+            "document": {
+              "date": "2025-01-27",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "-2025-01-27",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "384f2e29cc6cdbe0c092c088528114a3f246ec3254a96e4d3ae8dbff389eb48c",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:a1d4cd5fc95a8bdf64": {
+          "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-17-12-24.pdf",
+          "finalUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-17-12-24.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"|1763552030.0||Anonymous|1793153203.513896|1793458381.7124898\"",
+          "lastModified": "Wed, 19 Nov 2025 12:33:50 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-17-12-24.pdf",
+            "sha256": "e8e1c77fd18c0424a6a117ddb1145de3b380af006dd5642aa32d086b82c7b89b",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "e8e1c77fd18c0424a6a117ddb1145de3b380af006dd5642aa32d086b82c7b89b",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:7d76dd15f9fa920f03",
+        "municipal-doc:4f540e7394cccc769a",
+        "municipal-doc:f105abe350c35a09c0",
+        "municipal-doc:2032513d09bc3e4c38",
+        "municipal-doc:70fed2aafc52e04610",
+        "municipal-doc:0e13f898c1860395d1",
+        "municipal-doc:7d3b0b4a3d52c97d68",
+        "municipal-doc:0f64e690f92df42bb4",
+        "municipal-doc:d99f194e883af56804",
+        "municipal-doc:4a429015e44b0eb9d6",
+        "municipal-doc:a1d4cd5fc95a8bdf64"
+      ],
+      "documentVersionsRead": 11,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:6ea793b2a0a25bb378": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-college-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T15:31:30.638Z",
+            "lastSuccess": "2026-10-31T15:31:30.638Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:4ef001d66bc2cef671": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T15:31:30.638Z",
+            "lastSuccess": "2026-10-31T15:31:30.638Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:ada2999c946f3a65b1": {
+            "url": "https://www.deliberations.be/cerfontaine/publications",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T15:31:30.638Z",
+            "lastSuccess": "2026-10-31T15:31:30.638Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          }
+        },
+        "documents": {
+          "municipal-doc:c1a9bc284649978fca": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/politique-generale/programme-politique-generale-2019-2024.pdf",
+            "title": "Déclaration de politique générale 2024-2030 2.5 MB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:7d76dd15f9fa920f03": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/politique-generale/roi-conseil-31-03-25.pdf",
+            "title": "Règlement d'ordre intérieur du Conseil Communal 686.5 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 1
+          },
+          "municipal-doc:4f540e7394cccc769a": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/politique-generale/pst-cerfontaine-24-30-1-2.pdf",
+            "title": "Plan stratégique transversal (PST) 2024-2030 963.9 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 2
+          },
+          "municipal-doc:f105abe350c35a09c0": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-27-10-25.pdf",
+            "title": "PV 27.10.25 1.1 MB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:2032513d09bc3e4c38": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-22-09-25.pdf",
+            "title": "PV 22.09.25 441.1 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:70fed2aafc52e04610": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-2025-07-01.pdf",
+            "title": "PV 01.07.25 361.0 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:0e13f898c1860395d1": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-05-26.pdf",
+            "title": "PV 26.05.25 529.2 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:7d3b0b4a3d52c97d68": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-04-28.pdf",
+            "title": "PV 28.04.25 365.3 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:0f64e690f92df42bb4": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-03-31.pdf",
+            "title": "PV 31.03.25 604.6 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:d99f194e883af56804": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-02-24.pdf",
+            "title": "PV 24.02.25 278.1 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:4a429015e44b0eb9d6": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-01-27.pdf",
+            "title": "PV 27.01.25 330.7 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:a1d4cd5fc95a8bdf64": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-17-12-24.pdf",
+            "title": "pv-17.12.24 354.7 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:00f2bc541f7b949d25": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2024-12-02.pdf",
+            "title": "PV 02.12.24 319.9 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:8ac36b93c9fcde8ff1": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-05-11-24.pdf",
+            "title": "PV 05.11.24 378.9 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:65457e02b0cdf3fad0": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2024-09-24.pdf",
+            "title": "PV 24.09.24 395.5 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 14
+          },
+          "municipal-doc:d04fbf72d8c54f7036": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2024-06-25.pdf",
+            "title": "PV 25.06.24 304.6 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 15
+          },
+          "municipal-doc:ae3465b53ca73079f0": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-28-05-24.pdf",
+            "title": "PV 28.05.24 1007.0 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 16
+          },
+          "municipal-doc:c207b9d7c1b1148860": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-30-04-24.pdf",
+            "title": "PV 30.04.24 1.3 MB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 17
+          },
+          "municipal-doc:749fc51ca82ff01a62": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2024-03-26.pdf",
+            "title": "PV 26-03-24 163.1 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 18
+          },
+          "municipal-doc:b17bae8f5d37c9d533": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-27-02-24.pdf",
+            "title": "PV 27.02.24 379.7 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 19
+          },
+          "municipal-doc:20a96b80e6da47f183": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-30-01-24.pdf",
+            "title": "PV 30.01.24 405.5 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 20
+          },
+          "municipal-doc:b99bdfd8a798be2d33": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-19-12-23.pdf",
+            "title": "PV 19.12.23 793.6 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 21
+          },
+          "municipal-doc:fad27de4d0767011fd": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-28-11-23.pdf",
+            "title": "PV 28.11.23 976.6 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 22
+          },
+          "municipal-doc:deb7567bb3e200a81c": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-24-10-23.pdf",
+            "title": "PV 24.10.23 1.1 MB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 23
+          },
+          "municipal-doc:8e1b1e403c0b8344a7": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2023-09-19.pdf",
+            "title": "PV 19.09.23 198.6 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 24
+          },
+          "municipal-doc:1acdede3f9ad12f510": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2023-07-27.pdf",
+            "title": "PV 27.07.23 355.2 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 25
+          },
+          "municipal-doc:9a6ecd870ad6dba345": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2023-06-19.pdf",
+            "title": "PV 19.06.23 232.1 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 26
+          },
+          "municipal-doc:48b54154c70260bfa9": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2023-05-22.pdf",
+            "title": "PV 22.05.23 537.1 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 27
+          },
+          "municipal-doc:f2982c582e04778119": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2023-04-24.pdf",
+            "title": "PV 24.04.23 178.5 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 28
+          },
+          "municipal-doc:261802dd9d02071d90": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2023-03-27.pdf",
+            "title": "PV 27.03.23 197.4 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 29
+          },
+          "municipal-doc:8db8af171e38364a23": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2023-02-20.pdf",
+            "title": "PV 20.02.23 171.2 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 30
+          },
+          "municipal-doc:86f9cd07f756fdd00b": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2023-01-30.pdf",
+            "title": "PV 30.01.23 170.3 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 31
+          },
+          "municipal-doc:cdd456312d36115e5c": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2022-12-19.pdf",
+            "title": "PV 19.12.22 321.3 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 32
+          },
+          "municipal-doc:a91289840bd0525923": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2022-11-21.pdf",
+            "title": "PV 21.11.22 531.8 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 33
+          },
+          "municipal-doc:c80c754262297c689e": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2022-10-24.pdf",
+            "title": "PV 24.10.22 405.1 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 34
+          },
+          "municipal-doc:0f0b5371136de99781": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2022-09-19.pdf",
+            "title": "PV 19.09.22 283.3 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 35
+          },
+          "municipal-doc:cfecb1eb72a2e0ca33": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2022-06-17.pdf",
+            "title": "PV 17.06.22 298.7 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 36
+          },
+          "municipal-doc:da6f14e5b06695496c": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2022-05-16.pdf",
+            "title": "PV 16.05.22 282.0 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 37
+          },
+          "municipal-doc:a271ace57c2bab01e5": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2022-03-28.pdf",
+            "title": "PV 28.03.22 347.1 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 38
+          },
+          "municipal-doc:9bccf18bd195beba50": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2022-02-14.pdf",
+            "title": "PV 14.02.22 206.7 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 39
+          },
+          "municipal-doc:536d92fd725617a460": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2021-12-20.pdf",
+            "title": "PV 20.12.21 404.9 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 40
+          },
+          "municipal-doc:4395573e38b39f87bb": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2021-11-08.pdf",
+            "title": "PV 08.11.21 239.5 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 41
+          },
+          "municipal-doc:5965ceb9deed7be7d9": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2021-10-18.pdf",
+            "title": "PV 18.10.21 319.0 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 42
+          },
+          "municipal-doc:e43b2681db850a8910": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2021-09-06.pdf",
+            "title": "PV 06.09.21 309.8 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 43
+          },
+          "municipal-doc:996161c28912ce08a2": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2021-06-28.pdf",
+            "title": "PV 28.06.21 289.7 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 44
+          },
+          "municipal-doc:6cbd4d2f9e3dbe2c30": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2021-05-17.pdf",
+            "title": "PV 17.05.21 584.1 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 45
+          },
+          "municipal-doc:9620d794a41f2d8bf0": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2021-04-06.pdf",
+            "title": "PV 06.04.21 548.8 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 46
+          },
+          "municipal-doc:07ea9904307d548bab": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2021-01-25.pdf",
+            "title": "PV 25.01.21 191.8 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 47
+          },
+          "municipal-doc:dbddb180386ddd0d36": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2020-12-21.pdf",
+            "title": "PV 21.12.20 337.2 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 48
+          },
+          "municipal-doc:9daaf7c7980a740c53": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2020-11-09.pdf",
+            "title": "PV 09.11.20 297.5 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 49
+          },
+          "municipal-doc:2ed6ea312290496a26": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2020-09-14.pdf",
+            "title": "PV 14.09.20 408.1 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 50
+          },
+          "municipal-doc:47392c7b2ab59d3f86": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2020-06-29.pdf",
+            "title": "PV 29.06.20 281.1 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 51
+          },
+          "municipal-doc:f3a7597eb0d57f30f6": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2020-05-25.pdf",
+            "title": "PV 25.05.20 410.1 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 52
+          },
+          "municipal-doc:6417560f71ff318012": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2020-02-03.pdf",
+            "title": "PV 03.02.20 234.2 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 53
+          },
+          "municipal-doc:e8adec08a39bda59f0": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2019-12-16.pdf",
+            "title": "PV 16.12.19 1.1 MB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 54
+          },
+          "municipal-doc:6c05376552b8e66d8e": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2019-11-04.pdf",
+            "title": "PV 04.11.19 1.1 MB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 55
+          },
+          "municipal-doc:94fd6b9c43e22f6b70": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2019-09-25.pdf",
+            "title": "PV 25.09.19 591.0 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 56
+          },
+          "municipal-doc:32cbbd6321205ece5e": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2019-07-01.pdf",
+            "title": "PV 01.07.19 619.9 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 57
+          },
+          "municipal-doc:9f7f4a6b1185fccc7d": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2019-05-27.pdf",
+            "title": "PV 27.05.19 1.3 MB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 58
+          },
+          "municipal-doc:925e00cfa614b2248e": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2019-04-01.pdf",
+            "title": "PV 01.04.19 1.2 MB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 59
+          },
+          "municipal-doc:6ec3d9b3f3f19655a4": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2019-02-04.pdf",
+            "title": "PV 04.02.19 950.9 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 60
+          },
+          "municipal-doc:48c306af3a4f135dfd": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2018-12-19.pdf",
+            "title": "PV 19.12.18 729.6 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 61
+          },
+          "municipal-doc:cf8dd57e3219331dee": {
+            "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2018-12-03.pdf",
+            "title": "PV 03.12.18 592.2 KB",
+            "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 62
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 3,
+        "pagesPending": 0,
+        "documentsKnown": 63,
+        "documentsPending": 52,
+        "errors": 1,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 11,
+        "errors": 1,
+        "attempted": 12,
+        "pagesAttempted": 3
+      },
+      "lastDocumentSuccess": "2026-10-31T15:31:30.638Z"
     },
     {
       "ins": "52010",
@@ -14511,11 +16261,127 @@
         }
       ],
       "lastSiteCheck": "2026-10-19T13:54:03.241Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-31T15:31:30.638Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:a47d3743d365791257": {
+          "url": "https://chapelle-lez-herlaimont.be/commune/politique/conseil",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null
+        },
+        "municipal-doc:806f4c82542176b76c": {
+          "url": "https://www.deliberations.be/chapelle-lez-herlaimont/decisions",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null
+        },
+        "municipal-doc:246cd1779a9f3fbf88": {
+          "url": "https://chapelle-lez-herlaimont.be/commune/politique/conseil/plateforme-deliberation",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:a47d3743d365791257": {
+            "url": "https://chapelle-lez-herlaimont.be/commune/politique/conseil",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T15:31:30.638Z",
+            "lastSuccess": "2026-10-31T15:31:30.638Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:806f4c82542176b76c": {
+            "url": "https://www.deliberations.be/chapelle-lez-herlaimont/decisions",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T15:31:30.638Z",
+            "lastSuccess": "2026-10-31T15:31:30.638Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:246cd1779a9f3fbf88": {
+            "url": "https://chapelle-lez-herlaimont.be/commune/politique/conseil/plateforme-deliberation",
+            "depth": 1,
+            "sourceUrl": "https://chapelle-lez-herlaimont.be/commune/politique/conseil",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 2,
+            "lastAttempt": "2026-10-31T15:31:30.638Z",
+            "lastSuccess": "2026-10-31T15:31:30.638Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:e214d60de7a6eda081": {
+            "url": "https://chapelle-lez-herlaimont.be/commune/politique/conseil/ordre-du-jour-et-pv",
+            "depth": 1,
+            "sourceUrl": "https://chapelle-lez-herlaimont.be/commune/politique/conseil",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:611b546fc4ed6646a4": {
+            "url": "https://chapelle-lez-herlaimont.be/commune/politique/conseil/ordre-du-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://chapelle-lez-herlaimont.be/commune/politique/conseil",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:47b28340cadcaa4436": {
+            "url": "https://chapelle-lez-herlaimont.be/commune/politique/conseil/dates-du-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://chapelle-lez-herlaimont.be/commune/politique/conseil",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:6972cc8ef1f826d204": {
+            "url": "https://chapelle-lez-herlaimont.be/commune/politique/conseil/roi-2025-cc-chapelle-lez-herlaimont.pdf/view",
+            "depth": 1,
+            "sourceUrl": "https://chapelle-lez-herlaimont.be/commune/politique/conseil",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:4585edf14368d4ec6e": {
+            "url": "https://chapelle-lez-herlaimont.be/commune/politique/conseil/interpeller-le-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://chapelle-lez-herlaimont.be/commune/politique/conseil",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 7
+          }
+        },
+        "documents": {},
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 8,
+        "pagesPending": 5,
+        "documentsKnown": 0,
+        "documentsPending": 0,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 0,
+        "errors": 0,
+        "attempted": 0,
+        "pagesAttempted": 3
+      }
     },
     {
       "ins": "52011",
@@ -14572,11 +16438,359 @@
         }
       ],
       "lastSiteCheck": "2026-10-19T13:54:03.241Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-31T15:31:30.638Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 7,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:ee6a50297adecd8d58": {
+          "url": "https://www.charleroi.be/vie-communale/conseil-communal",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null
+        },
+        "municipal-doc:96d67c270ebd0525c6": {
+          "url": "https://www.charleroi.be/vie-communale/conseil-communal/le-conseil-en-video-annee-2024-2",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null
+        },
+        "municipal-doc:20ea7ed3854b7b1b10": {
+          "url": "https://www.charleroi.be/vie-communale/conseil-communal/le-conseil-en-video-annee-2024",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:513ba9d9cdac8d974a": {
+          "url": "https://www.charleroi.be/assets/files/2026/2024-2030-Liste-Conseillers-Internet-19.01.2026.pdf",
+          "finalUrl": "https://www.charleroi.be/assets/files/2026/2024-2030-Liste-Conseillers-Internet-19.01.2026.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"e953-648e378e51b26\"",
+          "lastModified": "Wed, 21 Jan 2026 10:34:43 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.charleroi.be/assets/files/2026/2024-2030-Liste-Conseillers-Internet-19.01.2026.pdf",
+            "sha256": "f693d6a38ab13ca5c120a692c63f5fa409b84ba6efae588aa5a177aa1933bd83",
+            "session": null,
+            "document": {
+              "date": "2026-01-19",
+              "kind": "document",
+              "page": null,
+              "source": "link_title",
+              "excerpt": "19 01 2026",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "f693d6a38ab13ca5c120a692c63f5fa409b84ba6efae588aa5a177aa1933bd83",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:0a5050ad8a2ad6c63e": {
+          "url": "https://www.charleroi.be/assets/files/2025.05.19-R.O.I.-Bureau.pdf",
+          "finalUrl": "https://www.charleroi.be/assets/files/2025.05.19-R.O.I.-Bureau.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"1e591-63b22332840e1\"",
+          "lastModified": "Wed, 30 Jul 2025 09:32:13 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.charleroi.be/assets/files/2025.05.19-R.O.I.-Bureau.pdf",
+            "sha256": "62c112c23139f6105705672e61a8b9ddca40e69182694694f24d7f605a4564e2",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "62c112c23139f6105705672e61a8b9ddca40e69182694694f24d7f605a4564e2",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:35d011fa1e56b8ef60": {
+          "url": "https://www.charleroi.be/assets/files/2025.05.19-R.O.I.-Conseil.pdf",
+          "finalUrl": "https://www.charleroi.be/assets/files/2025.05.19-R.O.I.-Conseil.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"42fe2-63b2233544220\"",
+          "lastModified": "Wed, 30 Jul 2025 09:32:16 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.charleroi.be/assets/files/2025.05.19-R.O.I.-Conseil.pdf",
+            "sha256": "a8d9f6a51c9d11b06bccb326f1c62668593b5caaaca6b767b43a1d23e70f37fa",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "a8d9f6a51c9d11b06bccb326f1c62668593b5caaaca6b767b43a1d23e70f37fa",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:a0b24076f808b08809": {
+          "url": "https://www.charleroi.be/assets/files/2022/Code-ethique-et-de-deontologie.pdf",
+          "finalUrl": "https://www.charleroi.be/assets/files/2022/Code-ethique-et-de-deontologie.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"22f39-5e27b84f6c223\"",
+          "lastModified": "Tue, 28 Jun 2022 05:43:43 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.charleroi.be/assets/files/2022/Code-ethique-et-de-deontologie.pdf",
+            "sha256": "d0c61cbbd68f57344375803009d583ecaa702ed94c37b220aa338cf0fc676e19",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "d0c61cbbd68f57344375803009d583ecaa702ed94c37b220aa338cf0fc676e19",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:214023a94bae89f553": {
+          "url": "https://www.charleroi.be/assets/files/2024-2030-2026.06.22-Composition-des-Commissions.pdf",
+          "finalUrl": "https://www.charleroi.be/assets/files/2024-2030-2026.06.22-Composition-des-Commissions.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"7832-65619db397cf4\"",
+          "lastModified": "Wed, 08 Jul 2026 13:55:12 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.charleroi.be/assets/files/2024-2030-2026.06.22-Composition-des-Commissions.pdf",
+            "sha256": "6971ee26f6b66ee0881f987509014feaea9e6a6d5021641de5ca2869503e128c",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "6971ee26f6b66ee0881f987509014feaea9e6a6d5021641de5ca2869503e128c",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:c0924efadae9c42747": {
+          "url": "https://www.charleroi.be/assets/files/2026-1er-semerstre-AG-Interco-pour-site-internet.pdf",
+          "finalUrl": "https://www.charleroi.be/assets/files/2026-1er-semerstre-AG-Interco-pour-site-internet.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"e6ab-6545a76c71d31\"",
+          "lastModified": "Tue, 16 Jun 2026 08:09:36 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.charleroi.be/assets/files/2026-1er-semerstre-AG-Interco-pour-site-internet.pdf",
+            "sha256": "ff218b2256d74bb689a3721e92ce088124334c91c2eba2ec3fa16e78b2d0eea1",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "ff218b2256d74bb689a3721e92ce088124334c91c2eba2ec3fa16e78b2d0eea1",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:217a6232aa4d05b20e": {
+          "url": "https://www.charleroi.be/assets/files/ORES-Assets-Invitation-au-Conseil-dadministration-public-du-16-septembre-2026.pdf",
+          "finalUrl": "https://www.charleroi.be/assets/files/ORES-Assets-Invitation-au-Conseil-dadministration-public-du-16-septembre-2026.pdf",
+          "lastAttempt": "2026-10-31T15:31:30.638Z",
+          "lastChecked": "2026-10-31T15:31:30.638Z",
+          "lastSuccess": "2026-10-31T15:31:30.638Z",
+          "lastError": null,
+          "etag": "\"6d76b-656b51962fd52\"",
+          "lastModified": "Thu, 16 Jul 2026 07:07:55 GMT",
+          "contentCheckedAt": "2026-10-31T15:31:30.638Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.charleroi.be/assets/files/ORES-Assets-Invitation-au-Conseil-dadministration-public-du-16-septembre-2026.pdf",
+            "sha256": "b59342641fe7ec52f20bf127a69f01fece7a761ee54867d77571a26abdb09b05",
+            "session": null,
+            "document": {
+              "date": "2026-07-06",
+              "kind": "document",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Gosselies, le 6 juillet 2026",
+              "confidence": "explicit"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T15:31:30.638Z",
+          "sha256": "b59342641fe7ec52f20bf127a69f01fece7a761ee54867d77571a26abdb09b05",
+          "firstSeenAt": "2026-10-31T15:31:30.638Z",
+          "nextAttemptAt": null
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:513ba9d9cdac8d974a",
+        "municipal-doc:0a5050ad8a2ad6c63e",
+        "municipal-doc:35d011fa1e56b8ef60",
+        "municipal-doc:a0b24076f808b08809",
+        "municipal-doc:214023a94bae89f553",
+        "municipal-doc:c0924efadae9c42747",
+        "municipal-doc:217a6232aa4d05b20e"
+      ],
+      "documentVersionsRead": 7,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:ee6a50297adecd8d58": {
+            "url": "https://www.charleroi.be/vie-communale/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T15:31:30.638Z",
+            "lastSuccess": "2026-10-31T15:31:30.638Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:96d67c270ebd0525c6": {
+            "url": "https://www.charleroi.be/vie-communale/conseil-communal/le-conseil-en-video-annee-2024-2",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T15:31:30.638Z",
+            "lastSuccess": "2026-10-31T15:31:30.638Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:20ea7ed3854b7b1b10": {
+            "url": "https://www.charleroi.be/vie-communale/conseil-communal/le-conseil-en-video-annee-2024",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T15:31:30.638Z",
+            "lastSuccess": "2026-10-31T15:31:30.638Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:c6b525536f0ef8ea0a": {
+            "url": "https://www.charleroi.be/vie-communale/conseil-communal/le-conseil-en-video-annee-2023",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:089d60f1242fd89da0": {
+            "url": "https://www.charleroi.be/vie-communale/conseil-communal/le-conseil-en-video-annee-2022",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:3f328941a1da9b53de": {
+            "url": "https://www.charleroi.be/agenda/conseil-communal-doctobre",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 5
+          }
+        },
+        "documents": {
+          "municipal-doc:513ba9d9cdac8d974a": {
+            "url": "https://www.charleroi.be/assets/files/2026/2024-2030-Liste-Conseillers-Internet-19.01.2026.pdf",
+            "title": "2024 2030 Liste Conseillers Internet 19 01 2026 PDF 60 KO",
+            "sourceUrl": "https://www.charleroi.be/vie-communale/conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:0a5050ad8a2ad6c63e": {
+            "url": "https://www.charleroi.be/assets/files/2025.05.19-R.O.I.-Bureau.pdf",
+            "title": "ROI Bureau PDF 124 KO",
+            "sourceUrl": "https://www.charleroi.be/vie-communale/conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 1
+          },
+          "municipal-doc:35d011fa1e56b8ef60": {
+            "url": "https://www.charleroi.be/assets/files/2025.05.19-R.O.I.-Conseil.pdf",
+            "title": "ROI Conseil PDF 274 KO",
+            "sourceUrl": "https://www.charleroi.be/vie-communale/conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 2
+          },
+          "municipal-doc:a0b24076f808b08809": {
+            "url": "https://www.charleroi.be/assets/files/2022/Code-ethique-et-de-deontologie.pdf",
+            "title": "Code ethique et de deontologie PDF 143 KO",
+            "sourceUrl": "https://www.charleroi.be/vie-communale/conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:214023a94bae89f553": {
+            "url": "https://www.charleroi.be/assets/files/2024-2030-2026.06.22-Composition-des-Commissions.pdf",
+            "title": "2024 2030 2026 06 22 Composition des Commissions PDF 31 KO",
+            "sourceUrl": "https://www.charleroi.be/vie-communale/conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:c0924efadae9c42747": {
+            "url": "https://www.charleroi.be/assets/files/2026-1er-semerstre-AG-Interco-pour-site-internet.pdf",
+            "title": "2026 1er semerstre AG Interco PDF 59 KO",
+            "sourceUrl": "https://www.charleroi.be/vie-communale/conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:217a6232aa4d05b20e": {
+            "url": "https://www.charleroi.be/assets/files/ORES-Assets-Invitation-au-Conseil-dadministration-public-du-16-septembre-2026.pdf",
+            "title": "ORES Invitation au Conseil dadministration public du 16 septembre 2026 PDF 448 KO",
+            "sourceUrl": "https://www.charleroi.be/vie-communale/conseil-communal",
+            "discoveredAt": "2026-10-31T15:31:30.638Z",
+            "lastSeen": "2026-10-31T15:31:30.638Z",
+            "discoveryOrder": 6
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 6,
+        "pagesPending": 3,
+        "documentsKnown": 7,
+        "documentsPending": 0,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 7,
+        "errors": 0,
+        "attempted": 7,
+        "pagesAttempted": 3
+      },
+      "lastDocumentSuccess": "2026-10-31T15:31:30.638Z"
     },
     {
       "ins": "25117",
@@ -14685,48 +16899,180 @@
       "estimatedMinutes": 18,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.chaudfontaine.be/ma-commune/vie-politique-participation/",
           "title": "Vie politique &#038; participation",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:49.568Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.chaudfontaine.be/ma-commune/vie-politique-participation/le-bourgmestre-les-elu%c2%b7e%c2%b7s/",
           "title": "Le Bourgmestre &#038; les élu·e·s",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:50.931Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.chaudfontaine.be/ma-commune/vie-politique-participation/chaudfontaine-demain/",
           "title": "Chaudfontaine demain",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:52.428Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.chaudfontaine.be/ma-commune/vie-politique-participation/representations-citoyennes/",
           "title": "Représentations citoyennes",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:53.848Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.chaudfontaine.be/les-news-du-conseil-communal-du-30-08-23/",
+          "title": " les news du conseil communal du 30 08 23 ",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.chaudfontaine.be/les-news-du-conseil-communal-du-27-09-23/",
+          "title": " les news du conseil communal du 27 09 23 ",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.chaudfontaine.be/les-news-du-conseil-communal-du-25-10-23/",
+          "title": " les news du conseil communal du 25 10 23 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/les-news-du-conseil-communal-du-29-11-23/",
+          "title": " les news du conseil communal du 29 11 23 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/les-news-du-conseil-communal-du-20-12-23/",
+          "title": " les news du conseil communal du 20 12 23 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/les-news-du-conseil-communal-du-31-01-24/",
+          "title": " les news du conseil communal du 31 01 24 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/les-news-du-conseil-communal-du-28-02-24/",
+          "title": " les news du conseil communal du 28 02 24 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/les-news-du-conseil-communal-du-27-03-24/",
+          "title": " les news du conseil communal du 27 03 24 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/seance-publique-du-conseil-communal-du-24-avril-2024/",
+          "title": " seance publique du conseil communal du 24 avril 2024 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/les-news-du-conseil-communal-du-29-mai-24/",
+          "title": " les news du conseil communal du 29 mai 24 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/seance-publique-du-conseil-communal-du-26-juin-2024/",
+          "title": " seance publique du conseil communal du 26 juin 2024 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/les-news-du-conseil-communal-du-26-juin-24/",
+          "title": " les news du conseil communal du 26 juin 24 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/seance-publique-du-conseil-communal-du-28-aout-2024/",
+          "title": " seance publique du conseil communal du 28 aout 2024 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/les-news-du-conseil-communal-du-28-aout-24/",
+          "title": " les news du conseil communal du 28 aout 24 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/seance-publique-du-conseil-communal-du-23-octobre-2024/",
+          "title": " seance publique du conseil communal du 23 octobre 2024 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/seance-publique-dinstallation-du-conseil-communal/",
+          "title": " seance publique dinstallation du conseil communal ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/seance-publique-du-conseil-communal/",
+          "title": " seance publique du conseil communal ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/appel-a-candidatures-concessions-pour-marches-publics-alimentaires/",
+          "title": " appel a candidatures concessions pour marches publics alimentaires ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/seance-publique-du-conseil-communal-du-26-novembre2025/",
+          "title": " seance publique du conseil communal du 26 novembre2025 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/seance-publique-du-conseil-communal-du-17-decembre-2025/",
+          "title": " seance publique du conseil communal du 17 decembre 2025 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/seance-publique-du-conseil-communal-du-25-fevrier-2026/",
+          "title": " seance publique du conseil communal du 25 fevrier 2026 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/les-news-du-conseil-communal-du-25-02-2026/",
+          "title": " les news du conseil communal du 25 02 2026 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.chaudfontaine.be/seance-publique-du-conseil-communal-du-29-avril-2026/",
+          "title": " seance publique du conseil communal du 29 avril 2026 ",
+          "status": "lien_public_repere_non_analyse"
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:35:48.187Z",
+      "lastSiteCheck": "2026-10-31T15:30:08.115Z",
       "lastDocumentCheck": "2026-10-15T08:35:55.716Z",
       "latestCouncilDate": null,
       "documentsRead": 4,
       "opportunities": 2,
-      "errors": [
-        {
-          "url": "https://www.chaudfontaine.be/wp-content/uploads/2026/10/VAC-217-WEB.pdf",
-          "reason": "Document trop volumineux"
-        }
-      ]
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.chaudfontaine.be/",
+        "checkedAt": "2026-10-31T15:30:08.115Z"
+      }
     },
     {
       "ins": "25018",
@@ -16139,50 +18485,75 @@
       "estimatedMinutes": 25,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.esneux.be/vie-politique.html?lg=FR",
           "title": "Vie politique",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:37:28.246Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.esneux.be/vie-politique/pacte-de-majorite.html?lg=FR",
           "title": "Pacte de majorité",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:37:29.295Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.esneux.be/vie-politique/college-communal.html?lg=FR",
           "title": "Collège communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:37:32.490Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.esneux.be/vie-politique/conseil-communal.html?lg=FR",
           "title": "Conseil communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:37:33.867Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.esneux.be/uploads/files_/PDFgeneral/RAVeL_regle_RAVeL_002.pdf",
           "title": "Cliquez ici",
           "type": "site_communal",
           "last_success": "2026-10-15T08:37:35.603Z",
-          "documentsRead": 1
+          "documentsRead": 1,
+          "status": "document_pdf_a_analyser"
+        },
+        {
+          "url": "https://www.esneux.be/vie-politique/conseil-communal/les-breves-du-conseil-communal.html?lg=FR",
+          "title": "les brèves du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:37:27.192Z",
+      "lastSiteCheck": "2026-10-31T15:30:08.115Z",
       "lastDocumentCheck": "2026-10-15T08:37:35.603Z",
       "latestCouncilDate": null,
       "documentsRead": 7,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.esneux.be/",
+        "checkedAt": "2026-10-31T15:30:08.115Z"
+      }
     },
     {
       "ins": "57027",
@@ -16624,43 +18995,75 @@
       "estimatedMinutes": 21,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.flemalle.be/ma-commune/vie-politique",
           "title": "Vie politique",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:42.518Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.flemalle.be/ma-commune/vie-politique/cabinet-de-la-bourgmestre",
           "title": "Cabinet de la Bourgmestre",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:44.056Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.flemalle.be/ma-commune/vie-politique/college-communal",
           "title": "Collège communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:46.206Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal",
           "title": "Conseil communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:47.135Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+          "title": "Calendrier et ordre du jour",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochaine-seance-du-conseil-communal",
+          "title": "Prochain Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:36:41.212Z",
+      "lastSiteCheck": "2026-10-31T15:30:08.115Z",
       "lastDocumentCheck": "2026-10-15T08:36:47.137Z",
       "latestCouncilDate": null,
       "documentsRead": 4,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.flemalle.be/",
+        "checkedAt": "2026-10-31T15:30:08.115Z"
+      }
     },
     {
       "ins": "62038",
@@ -16677,52 +19080,80 @@
       "estimatedMinutes": 20,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.fleron.be/ma-commune/vie-politique",
           "title": "Vie politique",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:18.448Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.fleron.be/ma-commune/vie-politique/college-communal",
           "title": "Collège communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:19.639Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.fleron.be/ma-commune/vie-politique/conseil-communal",
           "title": "Conseil communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:20.839Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.fleron.be/ma-commune/vie-politique/declaration-de-politique-generale",
           "title": "Déclaration de Politique Communale (DPC) 2024 - 2030",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:22.176Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.fleron.be/ma-commune/vie-politique/plan-strategique-transversal-2018-2024",
+          "title": "Programme Stratégique Transversal (PST) 2018 - 2024",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.fleron.be/ma-commune/vie-politique/college-communal/college-communal",
+          "title": "Le Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.fleron.be/ma-commune/vie-politique/conseil-communal/composition/composition-du-conseil-communal",
+          "title": "Le Conseil communal",
+          "status": "lien_public_repere_non_analyse"
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:36:16.995Z",
+      "lastSiteCheck": "2026-10-31T15:30:08.115Z",
       "lastDocumentCheck": "2026-10-15T08:36:25.449Z",
       "latestCouncilDate": null,
       "documentsRead": 4,
       "opportunities": 0,
-      "errors": [
-        {
-          "url": "https://www.fleron.be/ma-commune/vie-politique/declaration-de-politique-generale/declaration-de-politique-communale-2024-2030.pdf",
-          "reason": "Document trop volumineux"
-        },
-        {
-          "url": "https://www.fleron.be/bulletin-communal/le-mag-107.pdf",
-          "reason": "Document trop volumineux"
-        }
-      ]
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.fleron.be/",
+        "checkedAt": "2026-10-31T15:30:08.115Z"
+      }
     },
     {
       "ins": "52021",
@@ -17704,43 +20135,75 @@
       "estimatedMinutes": 19,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.grace-hollogne.be/ma-commune/vie-politique",
           "title": "Vie politique",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:35:58.639Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.grace-hollogne.be/ma-commune/vie-politique/conseil-communal",
           "title": "Conseil communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:00.096Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.grace-hollogne.be/ma-commune/vie-politique/college-communal",
           "title": "Collège communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:02.678Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.grace-hollogne.be/ma-commune/vie-politique/conseil-de-laction-sociale",
           "title": "Conseil de l'Action Sociale",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:05.716Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.grace-hollogne.be/ma-commune/vie-politique/seances-publiques-des-conseils-dadministration-des-associations-intercommunales",
+          "title": "Associations intercommunales",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.grace-hollogne.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+          "title": "Procès-verbaux des séances du Conseil",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:35:57.237Z",
+      "lastSiteCheck": "2026-10-31T15:30:08.115Z",
       "lastDocumentCheck": "2026-10-15T08:36:07.157Z",
       "latestCouncilDate": null,
       "documentsRead": 6,
       "opportunities": 10,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.grace-hollogne.be/",
+        "checkedAt": "2026-10-31T15:30:08.115Z"
+      }
     },
     {
       "ins": "25037",
@@ -19726,52 +22189,59 @@
       "estimatedMinutes": 20,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.juprelle.be/ma-commune/vie-politique-1",
           "title": "Vie politique",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:29.178Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.juprelle.be/publications",
           "title": "Publications",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:30.334Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.juprelle.be/publications/publications-diverses",
           "title": "Publications diverses (avant le 1/07/2025)",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:31.605Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
-          "url": "https://www.juprelle.be/publications/test-horodatage-recette",
+          "url": "https://www.deliberations.be/juprelle/publications",
           "title": "Publications générales",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:36:36.273Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:36:27.621Z",
+      "lastSiteCheck": "2026-10-31T15:30:08.115Z",
       "lastDocumentCheck": "2026-10-15T08:36:39.704Z",
       "latestCouncilDate": null,
       "documentsRead": 6,
       "opportunities": 0,
-      "errors": [
-        {
-          "url": "https://www.juprelle.be/ma-commune/nos-brochures/brochures/juprelle-info-54.pdf",
-          "reason": "Document trop volumineux"
-        },
-        {
-          "url": "https://www.juprelle.be/ma-commune/nos-brochures/brochures/juprelle-info-53.pdf",
-          "reason": "Document trop volumineux"
-        }
-      ]
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.juprelle.be/",
+        "checkedAt": "2026-10-31T15:30:08.115Z"
+      }
     },
     {
       "ins": "53044",
@@ -24137,14 +26607,167 @@
       "estimatedMinutes": 17,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_verifie_sans_document",
-      "deliberationSources": [],
-      "lastSiteCheck": "2026-10-15T08:35:34.889Z",
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.seraing.be/coronavirus-le-college-communal-interseniors-le-chba-la-police-locale-et-le-cpas-creent-une-task-force-covid-19/",
+          "title": " coronavirus le college communal interseniors le chba la police locale et le cpas creent une task force covid 19 ",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.seraing.be/consultez-la-decision-du-conseil-communal-sur-la-demande-durbanisme-introduite-par-la-s-a-des-charbonnages-de-gosson-kessales/",
+          "title": " consultez la decision du conseil communal sur la demande durbanisme introduite par la s a des charbonnages de gosson ke",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.seraing.be/pas-de-seance-publique-du-conseil-dadministration-de-la-cile/",
+          "title": " pas de seance publique du conseil dadministration de la cile ",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.seraing.be/seance-publique-du-conseil-dadministration-de-laide-posez-vos-questions-par-mail-avant-le-31-octobre/",
+          "title": " seance publique du conseil dadministration de laide posez vos questions par mail avant le 31 octobre ",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.seraing.be/le-conseil-communal-du-19-janvier-en-visioconference/",
+          "title": " le conseil communal du 19 janvier en visioconference ",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.seraing.be/le-conseil-communal-de-seraing-adopte-a-lunanimite-une-motion-pour-lutter-contre-les-licenciements-programmes-de-fedex-tnt/",
+          "title": " le conseil communal de seraing adopte a lunanimite une motion pour lutter contre les licenciements programmes de fedex ",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.seraing.be/le-conseil-communal-de-seraing-adopte-a-lunanimite-une-motion-pour-demander-a-la-direction-de-liberty-steel-de-maintenir-la-perennite-de-lactivite/",
+          "title": " le conseil communal de seraing adopte a lunanimite une motion pour demander a la direction de liberty steel de mainteni",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/modifications-de-voiries-communales-a-ougree-decouvrez-la-decision-du-conseil-communal/",
+          "title": " modifications de voiries communales a ougree decouvrez la decision du conseil communal ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/les-conseils-communal-et-de-police-du-6-septembre-en-visioconference/",
+          "title": " les conseils communal et de police du 6 septembre en visioconference ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/assistez-a-la-seance-publique-du-conseil-dadministration-du-chba/",
+          "title": " assistez a la seance publique du conseil dadministration du chba ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/assistez-a-la-seance-publique-du-conseil-dadministration-de-resa/",
+          "title": " assistez a la seance publique du conseil dadministration de resa ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/assistez-aux-conseils-de-police-et-communal-du-13-decembre-en-visioconference/",
+          "title": " assistez aux conseils de police et communal du 13 decembre en visioconference ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/cristal-park-commission-du-conseil-communal/",
+          "title": " cristal park commission du conseil communal ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/cristal-park-college-communal-3-decisions/",
+          "title": " cristal park college communal 3 decisions ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/assistez-a-la-seance-publique-du-conseil-dadministration-de-laide-2022/",
+          "title": " assistez a la seance publique du conseil dadministration de laide 2022 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/conseil-communal-12-decembre-2022/",
+          "title": " conseil communal 12 decembre 2022 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/conseil-communal-16-janvier-2023/",
+          "title": " conseil communal 16 janvier 2023 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/nouveau-college-communal-a-seraing-les-competences-scabinales-sont-connues/",
+          "title": " nouveau college communal a seraing les competences scabinales sont connues ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/le-conseil-communal-vote-une-motion-en-faveur-du-maintien-des-distributeurs-de-billets/",
+          "title": " le conseil communal vote une motion en faveur du maintien des distributeurs de billets ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/consultez-la-decision-du-conseil-communal-24-avril-2023-sur-la-demande-de-modification-de-voirie-introduite-par-loperateur-de-transport-de-wallonie-sa_dpu/",
+          "title": " consultez la decision du conseil communal 24 avril 2023 sur la demande de modification de voirie introduite par loperat",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/conseil-communal-12-juin-2023/",
+          "title": " conseil communal 12 juin 2023 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/le-conseil-communal-vote-une-motion-en-faveur-de-halo-steerlings/",
+          "title": " le conseil communal vote une motion en faveur de halo steerlings ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/decision-du-conseil-communal-demande-de-la-societe-depa/",
+          "title": " decision du conseil communal demande de la societe depa ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/assistez-a-la-seance-publique-du-conseil-dadministration-de-resa-2/",
+          "title": " assistez a la seance publique du conseil dadministration de resa 2 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/conseil-communal-enfants-2024/",
+          "title": " conseil communal enfants 2024 ",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.seraing.be/avis-du-conseil-communal-sur-lagrandissement-de-parc-dactivite-economique-du-site-ld/",
+          "title": " avis du conseil communal sur lagrandissement de parc dactivite economique du site ld ",
+          "status": "lien_public_repere_non_analyse"
+        }
+      ],
+      "lastSiteCheck": "2026-10-31T15:30:08.115Z",
       "lastDocumentCheck": "2026-10-15T08:35:35.778Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.seraing.be/",
+        "checkedAt": "2026-10-31T15:30:08.115Z"
+      }
     },
     {
       "ins": "51068",
@@ -24424,59 +27047,70 @@
       "estimatedMinutes": 24,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
-          "url": "http://www.soumagne.be/index.php?pg=122",
+          "url": "https://www.soumagne.be/index.php?pg=122",
           "title": "Conseil communal",
-          "type": "site_communal",
-          "last_success": "2026-10-15T08:36:59.572Z",
-          "documentsRead": 1
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
-          "url": "http://www.soumagne.be/index.php?pg=186",
+          "url": "https://www.soumagne.be/index.php?pg=186",
           "title": "S�ances du Conseil communal",
-          "type": "site_communal",
-          "last_success": "2026-10-15T08:37:02.893Z",
-          "documentsRead": 1
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
-          "url": "http://www.soumagne.be/index.php?pg=200",
+          "url": "https://www.soumagne.be/index.php?pg=200",
           "title": "Ecouter le conseil communal",
-          "type": "site_communal",
-          "last_success": "2026-10-15T08:37:04.872Z",
-          "documentsRead": 1
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "http://www.soumagne.be/index.php?pg=52",
           "title": "Conseil communal des enfants",
           "type": "site_communal",
           "last_success": "2026-10-15T08:37:07.343Z",
-          "documentsRead": 1
+          "documentsRead": 1,
+          "scopeStatus": "non_documentary",
+          "scopeReason": "instance_ou_demande_hors_collecte"
         },
         {
           "url": "http://www.soumagne.be/manager/upload/files/PDF/odd/objectifs_developpement_durable.pdf",
           "title": "Feuille de route vers les objectifs de d�veloppement durable",
           "type": "site_communal",
           "last_success": "2026-10-15T08:37:08.295Z",
-          "documentsRead": 1
+          "documentsRead": 1,
+          "status": "document_pdf_a_analyser"
+        },
+        {
+          "url": "https://www.soumagne.be/index.php?pg=384",
+          "title": "Budget communal",
+          "status": "lien_public_repere_non_analyse"
+        },
+        {
+          "url": "https://www.soumagne.be/index.php?pg=30&id_agenda=1222",
+          "title": "S�ance du Conseil communal...",
+          "status": "lien_public_repere_non_analyse"
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:36:58.668Z",
+      "lastSiteCheck": "2026-10-31T15:30:08.115Z",
       "lastDocumentCheck": "2026-10-15T08:37:09.340Z",
       "latestCouncilDate": null,
       "documentsRead": 8,
       "opportunities": 10,
-      "errors": [
-        {
-          "url": "http://www.soumagne.be/manager/upload/files/PDF/jeunesse/guide_atl_2026_2027.pdf",
-          "reason": "Document trop volumineux"
-        },
-        {
-          "url": "http://www.soumagne.be/manager/upload/files/PDF/jeunesse/guide_atl_2026_2027.pdf",
-          "reason": "Document trop volumineux"
-        }
-      ]
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.soumagne.be/",
+        "checkedAt": "2026-10-31T15:30:08.115Z"
+      }
     },
     {
       "ins": "63072",
@@ -25057,43 +27691,75 @@
       "estimatedMinutes": 24,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "sources_documents_lus",
+      "sourceStatus": "pages_conseils_verifiees",
       "deliberationSources": [
         {
           "url": "https://www.trooz.be/ma-commune/vie-politique",
           "title": "Vie politique",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:37:12.323Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.trooz.be/ma-commune/vie-politique/copy_of_college-communal",
           "title": "Collège communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:37:14.253Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.trooz.be/ma-commune/vie-politique/conseil-communal",
           "title": "Conseil communal",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:37:21.956Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         },
         {
           "url": "https://www.trooz.be/ma-commune/vie-politique/fichier",
           "title": "Pv et ordres du jour du Conseil",
           "type": "site_communal",
-          "last_success": "2026-10-15T08:37:24.882Z",
-          "documentsRead": 1
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "documentsRead": 1,
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.trooz.be/ma-commune/services-communaux/marches-publics",
+          "title": "Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.trooz.be/ma-commune/vie-politique/programme-strategique-transversale-2024-2030",
+          "title": "Programme Stratégique Transversale 2024-2030",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T15:30:08.115Z",
+          "last_success": "2026-10-31T15:30:08.115Z",
+          "last_error": null
         }
       ],
-      "lastSiteCheck": "2026-10-15T08:37:10.973Z",
+      "lastSiteCheck": "2026-10-31T15:30:08.115Z",
       "lastDocumentCheck": "2026-10-15T08:37:24.883Z",
       "latestCouncilDate": null,
       "documentsRead": 6,
       "opportunities": 3,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.trooz.be/",
+        "checkedAt": "2026-10-31T15:30:08.115Z"
+      }
     },
     {
       "ins": "25105",
@@ -26411,6 +29077,6 @@
       }
     }
   ],
-  "lastMunicipalPass": "2026-10-31T07:31:25.201Z",
-  "lastMunicipalDocumentPass": "2026-10-31T07:32:12.802Z"
+  "lastMunicipalPass": "2026-10-31T15:30:08.115Z",
+  "lastMunicipalDocumentPass": "2026-10-31T15:31:30.638Z"
 }
