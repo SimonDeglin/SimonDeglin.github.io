@@ -58,38 +58,38 @@
     },
     "COMMUNES": {
       "status": "inventory_not_document_collection",
-      "updatedAt": "2026-10-30T21:41:55.948Z",
-      "last_attempt": "2026-10-30T21:41:55.948Z",
+      "updatedAt": "2026-10-31T01:05:47.552Z",
+      "last_attempt": "2026-10-31T01:05:47.552Z",
       "scope": {
         "province": "all",
         "ins": ""
       },
       "total": 261,
       "sitesRepertories": 261,
-      "sitesVerifies": 241,
-      "deliberationsConnectees": 34,
+      "sitesVerifies": 253,
+      "deliberationsConnectees": 37,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 182,
-      "opportunities": 83,
-      "sitesChecked": 241,
-      "candidatePages": 190,
-      "sourceErrors": 27
+      "documentsRead": 203,
+      "opportunities": 91,
+      "sitesChecked": 253,
+      "candidatePages": 200,
+      "sourceErrors": 29
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-10-30T21:42:44.950Z",
-      "last_success": "2026-10-30T21:42:44.950Z",
+      "last_attempt": "2026-10-31T01:06:54.821Z",
+      "last_success": "2026-10-31T01:06:54.821Z",
       "last_batch": 4,
-      "documents_checked": 26,
-      "documents_read": 26,
+      "documents_checked": 21,
+      "documents_read": 21,
       "documents_unchanged": 0,
       "documents_modified": 0,
-      "opportunities_found": 5,
+      "opportunities_found": 8,
       "review_candidates": 0,
       "errors_count": 4,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel."
@@ -103,7 +103,7 @@
   "metrics": {
     "scanned": 1780,
     "matched_current_run": 13,
-    "records": 209,
+    "records": 217,
     "review_count": 109,
     "award_notice_count": 468,
     "awarded_market_matches": 2,
@@ -14133,6 +14133,625 @@
         "documentId": "municipal-doc:d1df623488d64d235d",
         "sha256": "2cc561d3c577e22583fdf5c4e7d76f61705d034b73d2e8a32acf4ebb59f8fa4e",
         "checkedAt": "2026-10-30T21:42:44.950Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:0bd920ef9482e1599737",
+      "title": "Conseil communal — opportunité à vérifier : Bouillon",
+      "buyer": "Commune de Bouillon",
+      "municipalityINS": "84010",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "- D’atteintes à l'environnement conformément aux dispositions applicables du Code de l'environnement ; - D’atteintes à la voirie conformément aux dispositions applicables en matière de voirie communale ; Considérant",
+        "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-de-deliberation-commune-designations-fs.pdf",
+        "page": 2,
+        "sha256": "425ec90b058ec84bd703f77ade368338cdeb22a508dc92f9ce217616aeb3e55d"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-de-deliberation-commune-designations-fs.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-de-deliberation-commune-designations-fs.pdf",
+        "sha256": "425ec90b058ec84bd703f77ade368338cdeb22a508dc92f9ce217616aeb3e55d",
+        "session": {
+          "date": "2026-11-05",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "Séance du 05.11.2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-de-deliberation-commune-designations-fs.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : -   D’atteintes à l'environnement conformément aux dispositions applicables du Code de l'environnement ; -   D’atteintes à la voirie conformément aux dispositions applicables en matière de voirie communale ; Considérant que ces agents disposent des qualifications requises et ont obtenus les autorisations, avis ou certifications nécessaires à l'exercice de cette fonction ; Considérant qu'afin de n’avoir d’une seule désignation commune, il convient également de réitérer la",
+      "evidence": "-   D’atteintes à l'environnement conformément aux dispositions applicables du Code de l'environnement ; -   D’atteintes à la voirie conformément aux dispositions applicables en matière de voirie communale ; Considérant que ces agents disposent des qualifications requises et ont obtenus les autorisations, avis ou certifications nécessaires à l'exercice de cette fonction ; Considérant qu'afin de n’avoir d’une seule désignation commune, il convient également de réitérer la",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 2,
+          "excerpt": "-   D’atteintes à l'environnement conformément aux dispositions applicables du Code de l'environnement ; -   D’atteintes à la voirie conformément aux dispositions applicables en matière de voirie communale ; Considérant que ces agents disposent des qualifications requises et ont obtenus les autorisations, avis ou certifications nécessaires à l'exercice de cette fonction ; Considérant qu'afin de n’avoir d’une seule désignation commune, il convient également de réitérer la"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 2,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:cc5883812015dcf413",
+        "sha256": "425ec90b058ec84bd703f77ade368338cdeb22a508dc92f9ce217616aeb3e55d",
+        "checkedAt": "2026-10-31T01:06:54.821Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:16bf24dbad62e7036048",
+      "title": "Conseil communal — opportunité à vérifier : Braine-le-Château",
+      "buyer": "Commune de Braine-le-Château",
+      "municipalityINS": "25015",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "par procédure négociée sans publication préalable en application de l'article 42, §1er, 1° a) de la Loi du 17 juin 2016 relative aux marchés publics, peut être passé ; Vu le dossier établi par l'auteur de projet en vue d",
+        "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250514-vp.pdf",
+        "page": 5,
+        "sha256": "324106f05c62a696b20670b8bc0111b64f7970c321036f16779d86cc57c5dfa3"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250514-vp.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250514-vp.pdf",
+        "sha256": "324106f05c62a696b20670b8bc0111b64f7970c321036f16779d86cc57c5dfa3",
+        "session": null,
+        "document": {
+          "date": "2025-05-14",
+          "kind": "document",
+          "page": null,
+          "source": "filename",
+          "excerpt": "cc20250514-vp.pdf",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250514-vp.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : par procédure négociée sans publication préalable en application de l'article 42, §1er, 1° a) de la Loi du 17 juin 2016 relative aux marchés publics, peut être passé ; Vu le dossier établi par l'auteur de projet en vue de la passation du marché et comprenant les documents suivants : - les métrés estimatif et récapitulatif au montant de 68.629,32 EUR hors T.V.A. + 14.412,16 EUR T.V.A. 21% = 83.041,48 EUR T.V.A. comprise ; - le cahier spécial des charges ;",
+      "evidence": "par procédure négociée sans publication préalable en application de l'article 42, §1er, 1° a) de la Loi du 17 juin 2016 relative aux marchés publics, peut être passé ; Vu le dossier établi par l'auteur de projet en vue de la passation du marché et comprenant les documents suivants : - les métrés estimatif et récapitulatif au montant de 68.629,32 EUR hors T.V.A. + 14.412,16 EUR T.V.A. 21% = 83.041,48 EUR T.V.A. comprise ; - le cahier spécial des charges ;",
+      "municipalReference": null,
+      "municipalSection": "6.        Mobilité. Aménagement d’une liaison au niveau de la rue Robert Ledecq dans le cadre du Pré-",
+      "municipalEvidence": [
+        {
+          "page": 5,
+          "excerpt": "par procédure négociée sans publication préalable en application de l'article 42, §1er, 1° a) de la Loi du 17 juin 2016 relative aux marchés publics, peut être passé ; Vu le dossier établi par l'auteur de projet en vue de la passation du marché et comprenant les documents suivants : - les métrés estimatif et récapitulatif au montant de 68.629,32 EUR hors T.V.A. + 14.412,16 EUR T.V.A. 21% = 83.041,48 EUR T.V.A. comprise ; - le cahier spécial des charges ;"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 5,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:e2a4fe2dffc0b406c5",
+        "sha256": "324106f05c62a696b20670b8bc0111b64f7970c321036f16779d86cc57c5dfa3",
+        "checkedAt": "2026-10-31T01:06:54.821Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:e6500944e98c3dee02c7",
+      "title": "Conseil communal — opportunité à vérifier : Braine-le-Château",
+      "buyer": "Commune de Braine-le-Château",
+      "municipalityINS": "25015",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "décision du Conseil communal du 30 décembre 2024. Revu sa délibération du 30 décembre 2024 portant décision d'APPROUVER LA MODIFICATION de la voirie communale, telle que sollicitée par M. Jean-Pierre LAMBERT, Géomètre-ex",
+        "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250416-vp.pdf",
+        "page": 2,
+        "sha256": "6b05cc00fda9530c15cfbb352f0c4e6327a33beb809931b8b4c483574c63ff9a"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Topo",
+      "sectors": [
+        "Topo",
+        "Foncier",
+        "VRD"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250416-vp.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250416-vp.pdf",
+        "sha256": "6b05cc00fda9530c15cfbb352f0c4e6327a33beb809931b8b4c483574c63ff9a",
+        "session": null,
+        "document": {
+          "date": "2025-04-16",
+          "kind": "document",
+          "page": null,
+          "source": "filename",
+          "excerpt": "cc20250416-vp.pdf",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250416-vp.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : décision du Conseil communal du 30 décembre 2024. Revu sa délibération du 30 décembre 2024 portant décision d'APPROUVER LA MODIFICATION de la voirie communale, telle que sollicitée par M. Jean-Pierre LAMBERT, Géomètre-expert, dont les bureaux sont établis rue de Tubize 1/C à 1440 Braine-le-Château, portant sur la modification du tracé du sentier n° 119 dit \"sentier du Bois Madame\", conformément aux plans de la requête. L’assemblée PREND CONNAISSANCE de la lettre du 14 mars 2025 (réf. : RECDUA- PV/25015/2025/1/2411915) du Service public de Wallonie – Territoire, Logement, Patrimoine et",
+      "evidence": "décision du Conseil communal du 30 décembre 2024. Revu sa délibération du 30 décembre 2024 portant décision d'APPROUVER LA MODIFICATION de la voirie communale, telle que sollicitée par M. Jean-Pierre LAMBERT, Géomètre-expert, dont les bureaux sont établis rue de Tubize 1/C à 1440 Braine-le-Château, portant sur la modification du tracé du sentier n° 119 dit \"sentier du Bois Madame\", conformément aux plans de la requête. L’assemblée PREND CONNAISSANCE de la lettre du 14 mars 2025 (réf. : RECDUA- PV/25015/2025/1/2411915) du Service public de Wallonie – Territoire, Logement, Patrimoine et",
+      "municipalReference": null,
+      "municipalSection": "3. Décisions prises par le Collège communal sur base de la délégation octroyée par le Conseil communal",
+      "municipalEvidence": [
+        {
+          "page": 2,
+          "excerpt": "décision du Conseil communal du 30 décembre 2024. Revu sa délibération du 30 décembre 2024 portant décision d'APPROUVER LA MODIFICATION de la voirie communale, telle que sollicitée par M. Jean-Pierre LAMBERT, Géomètre-expert, dont les bureaux sont établis rue de Tubize 1/C à 1440 Braine-le-Château, portant sur la modification du tracé du sentier n° 119 dit \"sentier du Bois Madame\", conformément aux plans de la requête. L’assemblée PREND CONNAISSANCE de la lettre du 14 mars 2025 (réf. : RECDUA- PV/25015/2025/1/2411915) du Service public de Wallonie – Territoire, Logement, Patrimoine et"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 2,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:3f9bcca6b28d33db88",
+        "sha256": "6b05cc00fda9530c15cfbb352f0c4e6327a33beb809931b8b4c483574c63ff9a",
+        "checkedAt": "2026-10-31T01:06:54.821Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:a66e3aa48988636661b9",
+      "title": "Conseil communal — opportunité à vérifier : Braine-le-Château",
+      "buyer": "Commune de Braine-le-Château",
+      "municipalityINS": "25015",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "sont les citoyens qui en ont payé l’aménagement. Devront-ils les payer une nouvelle fois par leurs locations ? De plus, vous dites rester « attentifs à bénéficier d’un maximum de subsides », et mais vous prévoyez de réal",
+        "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250129-vp.pdf",
+        "page": 7,
+        "sha256": "b2da6ca535be37f10187b6c2f41f009f65b99cbbb79809e81a94b6f933b8830e"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Foncier",
+      "sectors": [
+        "Foncier"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250129-vp.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250129-vp.pdf",
+        "sha256": "b2da6ca535be37f10187b6c2f41f009f65b99cbbb79809e81a94b6f933b8830e",
+        "session": null,
+        "document": {
+          "date": "2025-01-29",
+          "kind": "document",
+          "page": null,
+          "source": "filename",
+          "excerpt": "cc20250129-vp.pdf",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250129-vp.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : sont les citoyens qui en ont payé l’aménagement. Devront-ils les payer une nouvelle fois par leurs locations ? De plus, vous dites rester « attentifs à bénéficier d’un maximum de subsides », et mais vous prévoyez de réaliser l’asphaltage de voiries, sur fonds propres, sans avoir semble-t-il cherché à en obtenir. En matière d’urbanisme et d’aménagement du territoire, la révision du schéma de développement communal en fonction du schéma de développent territorial wallon est en effet un enjeu primordial. Primo, quand vous déciderez-vous à lancer un marché pour enrôler un bureau agréé ? Vous auriez pu vous y mettre depuis un an et demi. Lorsque vous le ferez, il y aura file des Collèges communaux pour en obtenir un.",
+      "evidence": "sont les citoyens qui en ont payé l’aménagement. Devront-ils les payer une nouvelle fois par leurs locations ? De plus, vous dites rester « attentifs à bénéficier d’un maximum de subsides », et mais vous prévoyez de réaliser l’asphaltage de voiries, sur fonds propres, sans avoir semble-t-il cherché à en obtenir. En matière d’urbanisme et d’aménagement du territoire, la révision du schéma de développement communal en fonction du schéma de développent territorial wallon est en effet un enjeu primordial. Primo, quand vous déciderez-vous à lancer un marché pour enrôler un bureau agréé ? Vous auriez pu vous y mettre depuis un an et demi. Lorsque vous le ferez, il y aura file des Collèges communaux pour en obtenir un.",
+      "municipalReference": null,
+      "municipalSection": "20. SOLIDARITÉ AU-DELÀ DES FRONTIÈRES",
+      "municipalEvidence": [
+        {
+          "page": 7,
+          "excerpt": "sont les citoyens qui en ont payé l’aménagement. Devront-ils les payer une nouvelle fois par leurs locations ? De plus, vous dites rester « attentifs à bénéficier d’un maximum de subsides », et mais vous prévoyez de réaliser l’asphaltage de voiries, sur fonds propres, sans avoir semble-t-il cherché à en obtenir. En matière d’urbanisme et d’aménagement du territoire, la révision du schéma de développement communal en fonction du schéma de développent territorial wallon est en effet un enjeu primordial. Primo, quand vous déciderez-vous à lancer un marché pour enrôler un bureau agréé ? Vous auriez pu vous y mettre depuis un an et demi. Lorsque vous le ferez, il y aura file des Collèges communaux pour en obtenir un."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 7,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:19629cdba1bcca4cac",
+        "sha256": "b2da6ca535be37f10187b6c2f41f009f65b99cbbb79809e81a94b6f933b8830e",
+        "checkedAt": "2026-10-31T01:06:54.821Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:afb3958ec2c9656acd68",
+      "title": "Conseil communal — opportunité à vérifier : Braine-le-Château",
+      "buyer": "Commune de Braine-le-Château",
+      "municipalityINS": "25015",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Considérant le rapport du service ; À l’unanimité, DÉCIDE : Article 1er : d'approuver la modification de la voirie communale telle que sollicitée par M. et M me Tom et Aurélie SMEYERS-LAPRAILLE, domiciliés Bronstraat 24",
+        "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250709-vp.pdf",
+        "page": 11,
+        "sha256": "67740699ca647c095041c545dd471b34b3f5f1f08c35e2a1886e7df7fff1eaad"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250709-vp.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250709-vp.pdf",
+        "sha256": "67740699ca647c095041c545dd471b34b3f5f1f08c35e2a1886e7df7fff1eaad",
+        "session": null,
+        "document": {
+          "date": "2025-07-09",
+          "kind": "document",
+          "page": null,
+          "source": "filename",
+          "excerpt": "cc20250709-vp.pdf",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250709-vp.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Considérant le rapport du service ; À l’unanimité, DÉCIDE : Article 1er : d'approuver la modification de la voirie communale telle que sollicitée par M. et M me Tom et Aurélie SMEYERS-LAPRAILLE, domiciliés Bronstraat 24 /bus 6 à 1601 SINT-PIETERS-LEEUW, et portant sur la « modification du tracé du sentier n°124, dit \"sentier des Hautes Terres\" », conformément aux plans de la requête, lesquels font partie intégrante de la présente décision. Le public sera informé de la présente décision suivant les modes visés à l'article L1133-1 du Code wallon de la",
+      "evidence": "Considérant le rapport du service ; À l’unanimité, DÉCIDE : Article 1er : d'approuver la modification de la voirie communale telle que sollicitée par M. et M me Tom et Aurélie SMEYERS-LAPRAILLE, domiciliés Bronstraat 24 /bus 6 à 1601 SINT-PIETERS-LEEUW, et portant sur la « modification du tracé du sentier n°124, dit \"sentier des Hautes Terres\" », conformément aux plans de la requête, lesquels font partie intégrante de la présente décision. Le public sera informé de la présente décision suivant les modes visés à l'article L1133-1 du Code wallon de la",
+      "municipalReference": null,
+      "municipalSection": "12. Modification de voirie. Demande introduite par Monsieur et Madame Tom et Aurélie SMEYERS-",
+      "municipalEvidence": [
+        {
+          "page": 11,
+          "excerpt": "Considérant le rapport du service ; À l’unanimité, DÉCIDE : Article 1er : d'approuver la modification de la voirie communale telle que sollicitée par M. et M me Tom et Aurélie SMEYERS-LAPRAILLE, domiciliés Bronstraat 24 /bus 6 à 1601 SINT-PIETERS-LEEUW, et portant sur la « modification du tracé du sentier n°124, dit \"sentier des Hautes Terres\" », conformément aux plans de la requête, lesquels font partie intégrante de la présente décision. Le public sera informé de la présente décision suivant les modes visés à l'article L1133-1 du Code wallon de la"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 11,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:4413fbaab793006de0",
+        "sha256": "67740699ca647c095041c545dd471b34b3f5f1f08c35e2a1886e7df7fff1eaad",
+        "checkedAt": "2026-10-31T01:06:54.821Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:0929369ba8743b3cc91b",
+      "title": "Conseil communal — opportunité à vérifier : Braine-le-Château",
+      "buyer": "Commune de Braine-le-Château",
+      "municipalityINS": "25015",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Le projet, tel que développé, nécessite une emprise de 46 m² sur votre parcelle cadastrée 2ème division, Section A/2 sous le numéro 602m2 afin de permettre l'implantation du trottoir. Le rapport d'estimation établi par l",
+        "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241230-vp.pdf",
+        "page": 19,
+        "sha256": "0a5e1fcfb9368de6b696860504440216a768398cf4a57b1b22e8dba6cc93e083"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Topo",
+      "sectors": [
+        "Topo",
+        "Foncier"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241230-vp.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241230-vp.pdf",
+        "sha256": "0a5e1fcfb9368de6b696860504440216a768398cf4a57b1b22e8dba6cc93e083",
+        "session": null,
+        "document": {
+          "date": "2024-12-30",
+          "kind": "document",
+          "page": null,
+          "source": "filename",
+          "excerpt": "cc20241230-vp.pdf",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241230-vp.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Le projet, tel que développé, nécessite une emprise de 46 m² sur votre parcelle cadastrée 2ème division, Section A/2 sous le numéro 602m2 afin de permettre l'implantation du trottoir. Le rapport d'estimation établi par le géomètre expert Nicolas JACQUES a en outre estimé la valeur de cette emprise à 1.380,00 euros. De plus, nous vous confirmons que la commune prendra à sa charge, si le Conseil communal le décide : -         la remise en état des abords; -         le remplacement de la clôture en bois ceinturant votre terrasse;",
+      "evidence": "Le projet, tel que développé, nécessite une emprise de 46 m² sur votre parcelle cadastrée 2ème division, Section A/2 sous le numéro 602m2 afin de permettre l'implantation du trottoir. Le rapport d'estimation établi par le géomètre expert Nicolas JACQUES a en outre estimé la valeur de cette emprise à 1.380,00 euros. De plus, nous vous confirmons que la commune prendra à sa charge, si le Conseil communal le décide : -         la remise en état des abords; -         le remplacement de la clôture en bois ceinturant votre terrasse;",
+      "municipalReference": null,
+      "municipalSection": "2. Tableau de synthèse (partie centrale)",
+      "municipalEvidence": [
+        {
+          "page": 19,
+          "excerpt": "Le projet, tel que développé, nécessite une emprise de 46 m² sur votre parcelle cadastrée 2ème division, Section A/2 sous le numéro 602m2 afin de permettre l'implantation du trottoir. Le rapport d'estimation établi par le géomètre expert Nicolas JACQUES a en outre estimé la valeur de cette emprise à 1.380,00 euros. De plus, nous vous confirmons que la commune prendra à sa charge, si le Conseil communal le décide : -         la remise en état des abords; -         le remplacement de la clôture en bois ceinturant votre terrasse;"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 19,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6ea764fdf117c3aa2a",
+        "sha256": "0a5e1fcfb9368de6b696860504440216a768398cf4a57b1b22e8dba6cc93e083",
+        "checkedAt": "2026-10-31T01:06:54.821Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:70ac9a1c4508d1d9c778",
+      "title": "Conseil communal — opportunité à vérifier : Braine-le-Château",
+      "buyer": "Commune de Braine-le-Château",
+      "municipalityINS": "25015",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Article 2 : Une expédition de la présente délibération sera adressée à l'intercommunale concernée. Article 3 : Le Collège communal est chargé de l'exécution de la présente décision. Article 23 : Modification de v",
+        "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241230-vp.pdf",
+        "page": 24,
+        "sha256": "0a5e1fcfb9368de6b696860504440216a768398cf4a57b1b22e8dba6cc93e083"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241230-vp.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241230-vp.pdf",
+        "sha256": "0a5e1fcfb9368de6b696860504440216a768398cf4a57b1b22e8dba6cc93e083",
+        "session": null,
+        "document": {
+          "date": "2024-12-30",
+          "kind": "document",
+          "page": null,
+          "source": "filename",
+          "excerpt": "cc20241230-vp.pdf",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241230-vp.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Article 2 : Une expédition de la présente délibération sera adressée à l'intercommunale concernée. Article 3 : Le Collège communal est chargé de l'exécution de la présente décision. Article 23 :         Modification de voirie. Demande introduite par la Commune de Braine-le-Château relative à la création d'une liaison entre l’ancienne ligne de chemin de fer (aménagée en « Pré-RAVeL ») et la rue Robert Ledecq à Wauthier-Braine : approbation. Le Conseil communal, réuni en séance publique, Revu sa délibération du 25 juin 2024 par laquelle il décide d’approuver le dossier à introduire auprès",
+      "evidence": "Article 2 : Une expédition de la présente délibération sera adressée à l'intercommunale concernée. Article 3 : Le Collège communal est chargé de l'exécution de la présente décision. Article 23 :         Modification de voirie. Demande introduite par la Commune de Braine-le-Château relative à la création d'une liaison entre l’ancienne ligne de chemin de fer (aménagée en « Pré-RAVeL ») et la rue Robert Ledecq à Wauthier-Braine : approbation. Le Conseil communal, réuni en séance publique, Revu sa délibération du 25 juin 2024 par laquelle il décide d’approuver le dossier à introduire auprès",
+      "municipalReference": null,
+      "municipalSection": "3)        Le procès-verbal de la commission communale de l’accueil du 19 novembre 2024 (document en",
+      "municipalEvidence": [
+        {
+          "page": 24,
+          "excerpt": "Article 2 : Une expédition de la présente délibération sera adressée à l'intercommunale concernée. Article 3 : Le Collège communal est chargé de l'exécution de la présente décision. Article 23 :         Modification de voirie. Demande introduite par la Commune de Braine-le-Château relative à la création d'une liaison entre l’ancienne ligne de chemin de fer (aménagée en « Pré-RAVeL ») et la rue Robert Ledecq à Wauthier-Braine : approbation. Le Conseil communal, réuni en séance publique, Revu sa délibération du 25 juin 2024 par laquelle il décide d’approuver le dossier à introduire auprès"
+        },
+        {
+          "page": 25,
+          "excerpt": "Ouï Monsieur Nicolas TAMIGNIAU, Bourgmestre, en son rapport ; À l’unanimité, DÉCIDE : Article unique : d’APPROUVER LA MODIFICATION de la voirie communale telle que sollicitée par la Commune de Braine-le-Château, dont les bureaux sont situés rue de la Libération 9 à 1440 Braine-le-Château, et portant sur la création d'une liaison entre l’ancienne ligne de chemin de fer (aménagée en « Pré-RAVeL ») et la rue Robert Ledecq à Wauthier-Braine, conformément aux plans de la requête, lesquels font partie intégrante de la présente décision."
+        },
+        {
+          "page": 26,
+          "excerpt": "À l’unanimité, DÉCIDE : Article unique : d'APPROUVER LA MODIFICATION de la voirie communale, telle que sollicitée par M. Jean-Pierre LAMBERT, Géomètre-expert, dont les bureaux sont établis rue de Tubize 1/C à 1440 Braine-le- Château, portant sur la modification du tracé du sentier n° 119 dit \"sentier du Bois Madame\", conformément aux plans de la requête, lesquels font partie intégrante de la présente décision sous réserve de : - modifier le matériau choisi pour le revêtement du sentier afin de mettre en œuvre un matériau plus perméable, - mettre en œuvre une butte le long du chemin longeant le bois afin d’orienter les eaux de pluie vers le trop-plein"
+        },
+        {
+          "page": 26,
+          "excerpt": "sociales du Roman Païs, dont le siège social est établi allée des Aubépines 2 à 1400 Nivelles, un permis d'urbanisme pour la construction de neuf logements sociaux et une habitation ; Considérant que le projet prévoit la création d’une nouvelle voirie perpendiculaire à la rue de la Scaillée puis une seconde voirie en «cul-de-sac» perpendiculaire à cette dernière ; Revu sa délibération du 25 mai 2019, portant notamment décision d'approuver le tracé de la nouvelle voirie reprise aux plans de la demande de permis d'urbanisme introduite par la S.c.r.l. Habitations sociales du Roman Païs, dressés par le Bureau THEMA Architecture [référencés « dossier n°15-685 », en 7 plans numérotés"
+        },
+        {
+          "page": 26,
+          "excerpt": "d'urbanisme pour la construction de neuf logements sociaux et une habitation ; Considérant que le projet prévoit la création d’une nouvelle voirie perpendiculaire à la rue de la Scaillée puis une seconde voirie en «cul-de-sac» perpendiculaire à cette dernière ; Revu sa délibération du 25 mai 2019, portant notamment décision d'approuver le tracé de la nouvelle voirie reprise aux plans de la demande de permis d'urbanisme introduite par la S.c.r.l. Habitations sociales du Roman Païs, dressés par le Bureau THEMA Architecture [référencés « dossier n°15-685 », en 7 plans numérotés \"1/7\" à \"7/7\" et datés du 3 septembre 2018 (modifications « D7 »)] ;"
+        },
+        {
+          "page": 26,
+          "excerpt": "Scaillée puis une seconde voirie en «cul-de-sac» perpendiculaire à cette dernière ; Revu sa délibération du 25 mai 2019, portant notamment décision d'approuver le tracé de la nouvelle voirie reprise aux plans de la demande de permis d'urbanisme introduite par la S.c.r.l. Habitations sociales du Roman Païs, dressés par le Bureau THEMA Architecture [référencés « dossier n°15-685 », en 7 plans numérotés \"1/7\" à \"7/7\" et datés du 3 septembre 2018 (modifications « D7 »)] ; Vu le plan de situation annexé à la présente délibération ; Vu le plan extrait du dossier de projet de la S.r.l. Habitations sociales du Roman Païs, tel qu'annexé à la"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 24,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6ea764fdf117c3aa2a",
+        "sha256": "0a5e1fcfb9368de6b696860504440216a768398cf4a57b1b22e8dba6cc93e083",
+        "checkedAt": "2026-10-31T01:06:54.821Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:7562c8d99d72ba6b9893",
+      "title": "Conseil communal — opportunité à vérifier : Braine-le-Château",
+      "buyer": "Commune de Braine-le-Château",
+      "municipalityINS": "25015",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "prochaine séance, de chaque désignation effectuée sur base de la délégation ainsi reçue. Article 13 : Redynamisation du Parc d’Activités Économiques de la Vallée du Hain. Réfection de la voirie et création d’une pi",
+        "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20240911-vp.pdf",
+        "page": 13,
+        "sha256": "7ec264a512d767d9435b601324ac6b8919aefc5b6b90998ccfb33bdcdfb566d6"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20240911-vp.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20240911-vp.pdf",
+        "sha256": "7ec264a512d767d9435b601324ac6b8919aefc5b6b90998ccfb33bdcdfb566d6",
+        "session": null,
+        "document": {
+          "date": "2024-09-11",
+          "kind": "document",
+          "page": null,
+          "source": "filename",
+          "excerpt": "cc20240911-vp.pdf",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20240911-vp.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : prochaine séance, de chaque désignation effectuée sur base de la délégation ainsi reçue. Article 13 :       Redynamisation du Parc d’Activités Économiques de la Vallée du Hain. Réfection de la voirie et création d’une piste cyclo-piétonne (sur le territoire des communes de Braine-le- Château et de Braine-l’Alleud). Proposition de l’intercommunale in BW pour un projet subventionné par la Wallonie : accord de principe [865:581. 1:485]. Le Conseil communal, réuni en séance publique, Vu la lettre du 27 juin 2024 de l’intercommunale in BW (réf. : VK/AH/JS/LSA/049 – document en 2",
+      "evidence": "prochaine séance, de chaque désignation effectuée sur base de la délégation ainsi reçue. Article 13 :       Redynamisation du Parc d’Activités Économiques de la Vallée du Hain. Réfection de la voirie et création d’une piste cyclo-piétonne (sur le territoire des communes de Braine-le- Château et de Braine-l’Alleud). Proposition de l’intercommunale in BW pour un projet subventionné par la Wallonie : accord de principe [865:581. 1:485]. Le Conseil communal, réuni en séance publique, Vu la lettre du 27 juin 2024 de l’intercommunale in BW (réf. : VK/AH/JS/LSA/049 – document en 2",
+      "municipalReference": null,
+      "municipalSection": "6. Arrêté du 2 septembre 2024 de M. François DESQUESNES, Vice-Président du Gouvernement wallon",
+      "municipalEvidence": [
+        {
+          "page": 13,
+          "excerpt": "prochaine séance, de chaque désignation effectuée sur base de la délégation ainsi reçue. Article 13 :       Redynamisation du Parc d’Activités Économiques de la Vallée du Hain. Réfection de la voirie et création d’une piste cyclo-piétonne (sur le territoire des communes de Braine-le- Château et de Braine-l’Alleud). Proposition de l’intercommunale in BW pour un projet subventionné par la Wallonie : accord de principe [865:581. 1:485]. Le Conseil communal, réuni en séance publique, Vu la lettre du 27 juin 2024 de l’intercommunale in BW (réf. : VK/AH/JS/LSA/049 – document en 2"
+        },
+        {
+          "page": 13,
+          "excerpt": "À l’unanimité, DÉCIDE : Article 1er : de marquer son accord de principe sur la poursuite des procédures technico-administratives pour le \"revamping\" à mener par l’intercommunale in BW, lequel consiste en la réfection de la voirie et la création d’une piste cyclo-piétonne (sur le territoire des communes de Braine-le-Château et de Braine-l’Alleud) dans le cadre de la redynamisation du Parc d’Activités Économiques de la Vallée du Hain. Article 2 : Une expédition de la présente délibération sera transmise à ° l’intercommunale in BW – Département Économique – Service Aménagement du Territoire – rue de la"
+        },
+        {
+          "page": 22,
+          "excerpt": "proposée par l’Opérateur de Transport de Wallonie (O.T.W.) et de laquelle il ressort plus spécialement qu’un subventionnement des travaux d’aménagement de l’arrêt « Quatre Bras » (référence : Bbch4br6), en voirie pour 18m, à hauteur de 11.000,00 EUR, y est fixé ; Ouï Monsieur Vincent PEETROONS, Échevin des Travaux, en son rapport ; À l'unanimité, DÉCIDE : Article 1er : d’approuver la convention de subventionnement forfaitaire des travaux d’aménagements de l’arrêt de bus TEC, « Quatre Bras » sis à la rue de Nivelles, telle que proposée par l’O.T.W. (document en 5 pages et"
+        },
+        {
+          "page": 23,
+          "excerpt": "Article 1er : de passer un marché de travaux ayant pour objet l'amélioration de la rue Courte de la Station à Braine-le-Château au montant estimatif de 61.065,00 EUR (travaux d’égouttage) + 468.373,35 EUR (travaux de voirie) = 529.438,35 EUR hors T.V.A. + 111.182,05 EUR (T.V.A. 21% sur les travaux de voirie) = 640.620,40 EUR (six cent quarante mille six cent vingt euros et quarante eurocents) T.V.A. comprise. Article 2 : Le marché dont il est question à l'article 1 er sera passé par procédure ouverte (électronique de bout en bout). Article 3 : Le cahier spécial des charges régissant le marché avec le modèle de soumission, les métrés"
+        },
+        {
+          "page": 24,
+          "excerpt": "à Braine-le-Château au montant estimatif de 252.645,62 EUR (travaux d’égouttage à charge de la S.P.G.E.) + 466.165,00 EUR (travaux de voirie) = 718.810,62 EUR hors T.V.A. + 97.894,65 EUR (T.V.A. 21% sur les travaux de voirie) = 816.705,27 EUR (huit cent seize mille sept cent cinq euros et vingt-sept eurocents) T.V.A. comprise. Article 2 : Le marché dont il est question à l'article 1 er sera passé par procédure ouverte (électronique de bout en bout). Article 3 : Le cahier spécial des charges régissant le marché avec le modèle de soumission, les métrés"
+        },
+        {
+          "page": 25,
+          "excerpt": "Braine-le-Château au montant estimatif de 146.045,40 EUR (travaux d’égouttage à charge de la S.P.G.E.) + 642.102,65 EUR (travaux de voirie) = 788.148,05 EUR hors T.V.A. + 134.841,56 EUR (T.V.A. 21% sur les travaux de voirie) = 922.989,61 EUR (neuf cent vingt-deux mille neuf cent quatre-vingt-neuf euros et soixante et un eurocents) T.V.A. comprise. Article 2 : Le marché dont il est question à l'article 1 er sera passé par procédure ouverte (électronique de bout en bout). Article 3 : Le cahier spécial des charges régissant le marché avec le modèle de soumission, les métrés"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 13,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:5d1401746402f97987",
+        "sha256": "7ec264a512d767d9435b601324ac6b8919aefc5b6b90998ccfb33bdcdfb566d6",
+        "checkedAt": "2026-10-31T01:06:54.821Z",
         "changedAt": null
       }
     }

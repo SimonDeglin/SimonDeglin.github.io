@@ -13,19 +13,19 @@
   "counts": {
     "total": 261,
     "sitesRepertories": 261,
-    "sitesVerifies": 241,
-    "deliberationsConnectees": 34,
+    "sitesVerifies": 253,
+    "deliberationsConnectees": 37,
     "zones": {
       "principale": 196,
       "exterieure_provisoire": 26,
       "peripherique": 39
     },
     "checkedWithErrors": 3,
-    "documentsRead": 182,
-    "opportunities": 83,
-    "sitesChecked": 241,
-    "candidatePages": 190,
-    "sourceErrors": 27
+    "documentsRead": 203,
+    "opportunities": 91,
+    "sitesChecked": 253,
+    "candidatePages": 200,
+    "sourceErrors": 29
   },
   "communes": [
     {
@@ -3161,14 +3161,196 @@
       "estimatedMinutes": 136,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "peripherique",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.attert.be/notre-commune/services-communaux/marches-publics",
+          "title": "Marchés Publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.attert.be/notre-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.attert.be/notre-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.attert.be/notre-commune/vie-politique/conseil-communal/seances-du-conseil-communal",
+          "title": "Ordre du jour du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.attert.be/agenda/conseil-communal?u=37145a9c503d406e925087b53f355e63",
+          "title": "Administration communale Le 19 11 Conseil communal La séance du Conseil communal a lieu en la Maison communale, salle Ro",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-31T01:05:47.552Z",
+      "lastDocumentCheck": "2026-10-31T01:06:54.821Z",
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.attert.be/",
+        "checkedAt": "2026-10-31T01:05:47.552Z"
+      },
+      "documentSourceChecks": {
+        "municipal-doc:5ce008295e6316af3d": {
+          "url": "https://www.attert.be/notre-commune/services-communaux/marches-publics",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null
+        },
+        "municipal-doc:2638416a27d6977b89": {
+          "url": "https://www.attert.be/notre-commune/vie-politique/college-communal",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null
+        },
+        "municipal-doc:db4f3447a882726828": {
+          "url": "https://www.attert.be/notre-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:5ce008295e6316af3d": {
+            "url": "https://www.attert.be/notre-commune/services-communaux/marches-publics",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T01:06:54.821Z",
+            "lastSuccess": "2026-10-31T01:06:54.821Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:2638416a27d6977b89": {
+            "url": "https://www.attert.be/notre-commune/vie-politique/college-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T01:06:54.821Z",
+            "lastSuccess": "2026-10-31T01:06:54.821Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:db4f3447a882726828": {
+            "url": "https://www.attert.be/notre-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T01:06:54.821Z",
+            "lastSuccess": "2026-10-31T01:06:54.821Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:d7175e6032dffa56dd": {
+            "url": "https://www.attert.be/notre-commune/vie-politique/conseil-communal/seances-du-conseil-communal",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:eb5c89d3fa14ea35af": {
+            "url": "https://www.attert.be/agenda/conseil-communal?u=37145a9c503d406e925087b53f355e63",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:4c62d7cb9a9f421c98": {
+            "url": "https://www.attert.be/notre-commune/vie-politique/conseil-communal/conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.attert.be/notre-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:56d72bf772f7e569d1": {
+            "url": "https://www.attert.be/notre-commune/vie-politique/conseil-communal/reglement-dordre-interieur-du-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.attert.be/notre-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:b071a73b158785afc8": {
+            "url": "https://www.attert.be/notre-commune/vie-politique/conseil-communal/seances-du-conseil-communal/ordres-du-jour-du-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.attert.be/notre-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:a64de6a633ba1eb213": {
+            "url": "https://www.attert.be/notre-commune/vie-politique/conseil-communal/seances-du-conseil-communal/projets-de-decisions-du-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.attert.be/notre-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:38c831a65fc2d9df09": {
+            "url": "https://www.attert.be/notre-commune/vie-politique/conseil-communal/seances-du-conseil-communal/proces-verbaux-du-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.attert.be/notre-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:3e7c80a366c0e6a0bc": {
+            "url": "https://www.attert.be/notre-commune/vie-politique/conseil-communal/seances-du-conseil-communal/deliberations.be",
+            "depth": 1,
+            "sourceUrl": "https://www.attert.be/notre-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 10
+          }
+        },
+        "documents": {},
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 11,
+        "pagesPending": 8,
+        "documentsKnown": 0,
+        "documentsPending": 0,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 0,
+        "errors": 0,
+        "attempted": 0,
+        "pagesAttempted": 3
+      }
     },
     {
       "ins": "81004",
@@ -9848,14 +10030,850 @@
       "estimatedMinutes": 137,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "peripherique",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
-      "lastDocumentCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+          "title": "Ordre du jour du Conseil",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/proces-verbal",
+          "title": "Procès-verbal du Conseil",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/programme-strategique-transversal",
+          "title": "Programme Stratégique Transversal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.bouillon.be/actualites/nouvelle-organisation-au-college-communal",
+          "title": "Nouvelle organisation au Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-31T01:05:47.552Z",
+      "lastDocumentCheck": "2026-10-31T01:06:54.821Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
-      "opportunities": 0,
-      "errors": []
+      "documentsRead": 8,
+      "opportunities": 1,
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.bouillon.be/",
+        "checkedAt": "2026-10-31T01:05:47.552Z"
+      },
+      "documentSourceChecks": {
+        "municipal-doc:7e4ef088043709edfc": {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null
+        },
+        "municipal-doc:4eeb8a2acfdae18509": {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/college-communal",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null
+        },
+        "municipal-doc:c096e45fe8525ed0ac": {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:c8dbfde7541caa93c7": {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/oj-05-11-2026-sans-huis-clos.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T07:06:54.821Z"
+        },
+        "municipal-doc:2d32dc4c2e0baafcf2": {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-mb2-service-ordinaire-exercice.pdf",
+          "finalUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-mb2-service-ordinaire-exercice.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Wed, 28 Oct 2026 08:35:48 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-mb2-service-ordinaire-exercice.pdf",
+            "sha256": "05fdbe102b6565c14635928589cbe1a2386dad9982c1434e019a5a84dee85926",
+            "session": {
+              "date": "2026-11-05",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Séance du 05 novembre 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "05fdbe102b6565c14635928589cbe1a2386dad9982c1434e019a5a84dee85926",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:f8629378de972dd5a9": {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-mb1-service-extraordinaire.pdf",
+          "finalUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-mb1-service-extraordinaire.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Wed, 28 Oct 2026 08:36:25 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-mb1-service-extraordinaire.pdf",
+            "sha256": "45b12608faff78d26bad5c438aabd91cf934246acb1b32e6e6ec65ff100560bb",
+            "session": {
+              "date": "2026-11-05",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Séance du 05 novembre 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "45b12608faff78d26bad5c438aabd91cf934246acb1b32e6e6ec65ff100560bb",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:0e1dabe88fbda4eb95": {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/mb2-2026-projet-deliberation-cc-051126.pdf",
+          "finalUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/mb2-2026-projet-deliberation-cc-051126.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Wed, 28 Oct 2026 08:36:58 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/mb2-2026-projet-deliberation-cc-051126.pdf",
+            "sha256": "4294b70f53c1bdf1cb503ff9fbff2f0ad235cc5690f739fbd5dccf7c7113fcd8",
+            "session": {
+              "date": "2026-11-05",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE PUBLIQUE DU 05-11-2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "4294b70f53c1bdf1cb503ff9fbff2f0ad235cc5690f739fbd5dccf7c7113fcd8",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:13b95917d4fe2b8c43": {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-reglement-taxe-sur-la-collecte-et-le.pdf",
+          "finalUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-reglement-taxe-sur-la-collecte-et-le.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Wed, 28 Oct 2026 08:38:39 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-reglement-taxe-sur-la-collecte-et-le.pdf",
+            "sha256": "6353dcc9dfe57522804e342138ff087466bccc8f22a8f45cb915084ad879bc2a",
+            "session": {
+              "date": "2026-11-05",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Séance publique du 5 novembre 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "6353dcc9dfe57522804e342138ff087466bccc8f22a8f45cb915084ad879bc2a",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:fbfbc982be8523deb7": {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-centimes-additionnels-ipp-2027.pdf",
+          "finalUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-centimes-additionnels-ipp-2027.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Wed, 28 Oct 2026 08:39:09 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-centimes-additionnels-ipp-2027.pdf",
+            "sha256": "4bf6949e345033921e53d625c9897a17109a2b9e49bff1b4b97b8a5653fbe738",
+            "session": {
+              "date": "2026-11-05",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Séance publique du 5 novembre 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "4bf6949e345033921e53d625c9897a17109a2b9e49bff1b4b97b8a5653fbe738",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:c06c3412c58fbcb8d8": {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-centimes-additionnels-pri-2027.pdf",
+          "finalUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-centimes-additionnels-pri-2027.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Wed, 28 Oct 2026 08:39:39 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-centimes-additionnels-pri-2027.pdf",
+            "sha256": "f909e843921bf008c43cc0c5262754efadb53d7b6c6bdd105fef6155a681eae5",
+            "session": {
+              "date": "2026-11-05",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Séance publique du 5 novembre 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "f909e843921bf008c43cc0c5262754efadb53d7b6c6bdd105fef6155a681eae5",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:cc5883812015dcf413": {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-de-deliberation-commune-designations-fs.pdf",
+          "finalUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-de-deliberation-commune-designations-fs.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Wed, 28 Oct 2026 08:40:12 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-de-deliberation-commune-designations-fs.pdf",
+            "sha256": "425ec90b058ec84bd703f77ade368338cdeb22a508dc92f9ce217616aeb3e55d",
+            "session": {
+              "date": "2026-11-05",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Séance du 05.11.2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "425ec90b058ec84bd703f77ade368338cdeb22a508dc92f9ce217616aeb3e55d",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:ea6cea8b86a469ca46": {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/sac-05-11-2026.pdf",
+          "finalUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/sac-05-11-2026.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Wed, 28 Oct 2026 08:48:23 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/sac-05-11-2026.pdf",
+            "sha256": "decfb830484162ccf340f104eb9b7d486a256c900dad8c41533124ad87506a23",
+            "session": {
+              "date": "2026-11-05",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Séance du 05.11.2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "decfb830484162ccf340f104eb9b7d486a256c900dad8c41533124ad87506a23",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:28ba4b867bb60aa036": {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-missions-auteur-de-projet.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T07:06:54.821Z"
+        },
+        "municipal-doc:e756ef15442a05973f": {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-de-deliberation-auteur-de-projet-mission.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T07:06:54.821Z"
+        },
+        "municipal-doc:bac7b884c40ff5e7ca": {
+          "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/accord-cadre-combustibles-2027.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastError": "PDF sans texte exploitable ; version antérieure conservée",
+          "nextAttemptAt": "2026-10-31T07:06:54.821Z"
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:2d32dc4c2e0baafcf2",
+        "municipal-doc:f8629378de972dd5a9",
+        "municipal-doc:0e1dabe88fbda4eb95",
+        "municipal-doc:13b95917d4fe2b8c43",
+        "municipal-doc:fbfbc982be8523deb7",
+        "municipal-doc:c06c3412c58fbcb8d8",
+        "municipal-doc:cc5883812015dcf413",
+        "municipal-doc:ea6cea8b86a469ca46"
+      ],
+      "documentVersionsRead": 8,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:7e4ef088043709edfc": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T01:06:54.821Z",
+            "lastSuccess": "2026-10-31T01:06:54.821Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:4eeb8a2acfdae18509": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/college-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T01:06:54.821Z",
+            "lastSuccess": "2026-10-31T01:06:54.821Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:c096e45fe8525ed0ac": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T01:06:54.821Z",
+            "lastSuccess": "2026-10-31T01:06:54.821Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:2bc6cb922ef8159943": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/proces-verbal",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:ace3a71963ec13151d": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/programme-strategique-transversal",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:8e48ee882a2fce9bb9": {
+            "url": "https://www.bouillon.be/actualites/nouvelle-organisation-au-college-communal",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:90e75e368868c8bb7f": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/willy-noizet-president-du-conseil",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:5eb847cc362acef18d": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/willy-noizet-president-du-conseil/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:7f82fa0ba0289dc742": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/bourgmestre/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:b56a44896751cc833c": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/julie-maqua-ensemble/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:54b998522ad50f6026": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/frank-istace-3eme-echevin/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:0a2416947c355f9e51": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/aurelie-pochet-4eme-echevine/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:504df79f3b4d5d013f": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/dominique-adam-conseiller/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:bf9b1350d4a6920406": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/premier-echevin/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:9c569a7ae50034d2d3": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/philippe-arnould-president-du-cpas/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 14
+          },
+          "municipal-doc:51c34a3c7fb2fb165b": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/alain-albert-conseiller/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 15
+          },
+          "municipal-doc:2af620b6ea6cf1d4cd": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/florian-dabe-conseiller/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 16
+          },
+          "municipal-doc:de7676c8858bcbae20": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/pauline-maziers-conseillere/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 17
+          },
+          "municipal-doc:e55d816795998280d7": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/fabien-dachy-conseiller/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 18
+          },
+          "municipal-doc:ac5eebc5acf5863602": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/pascal-brouillon-conseiller/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 19
+          },
+          "municipal-doc:8e59ac5616e6dd0966": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/andre-defat-conseiller/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 20
+          },
+          "municipal-doc:c30d122b30801c77b5": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/guy-denis-conseiller/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 21
+          },
+          "municipal-doc:7a7258a3de15a7767c": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/liste-c-p-citoyens/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 22
+          },
+          "municipal-doc:c2ae54d553d093f094": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/marie-julie-nemery-conseillere/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 23
+          },
+          "municipal-doc:bce588b5467529a566": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 24
+          },
+          "municipal-doc:b4d699c2bd2a781808": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/bourgmestre",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 25
+          },
+          "municipal-doc:bdf4c945ba2fa210f9": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/julie-maqua-ensemble",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 26
+          },
+          "municipal-doc:db250b0c6c7161396a": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/frank-istace-3eme-echevin",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 27
+          },
+          "municipal-doc:eaa631e680235bc57c": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/aurelie-pochet-4eme-echevine",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 28
+          },
+          "municipal-doc:c8984d41b971acec43": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/dominique-adam-conseiller",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 29
+          },
+          "municipal-doc:f15880d5ca83d85578": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/premier-echevin",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 30
+          },
+          "municipal-doc:abf0f1c7fe3e74f98c": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/philippe-arnould-president-du-cpas",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 31
+          },
+          "municipal-doc:048276c56d223561a1": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/alain-albert-conseiller",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 32
+          },
+          "municipal-doc:092ae9ba7612cc812a": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/florian-dabe-conseiller",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 33
+          },
+          "municipal-doc:4ebcebeb84af670f98": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/pauline-maziers-conseillere",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 34
+          },
+          "municipal-doc:99bfac42c2770b688d": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/fabien-dachy-conseiller",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 35
+          },
+          "municipal-doc:a0b8d6b2c852fa80b5": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/pascal-brouillon-conseiller",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 36
+          },
+          "municipal-doc:e36d26b160ca7bb2bd": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/andre-defat-conseiller",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 37
+          },
+          "municipal-doc:3aa38b1c8581ce8b29": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/guy-denis-conseiller",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 38
+          },
+          "municipal-doc:f545af3f9a1f5fa4b1": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/liste-c-p-citoyens",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 39
+          },
+          "municipal-doc:d5a1ac279e589780c8": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal/marie-julie-nemery-conseillere",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 40
+          },
+          "municipal-doc:7c9a0b3dfa5beb060e": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/copy2_of_ordre-du-jour/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 41
+          },
+          "municipal-doc:6a807e0fe19936efeb": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projets-de-deliberations",
+            "depth": 1,
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 42
+          }
+        },
+        "documents": {
+          "municipal-doc:c8dbfde7541caa93c7": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/oj-05-11-2026-sans-huis-clos.pdf",
+            "title": "Télécharger l'ordre du jour du Conseil communal du 05.11.2026",
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:2d32dc4c2e0baafcf2": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-mb2-service-ordinaire-exercice.pdf",
+            "title": "2.1 Modification n°2 - Service ordinaire – exercice 2026 – approbation",
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 1
+          },
+          "municipal-doc:f8629378de972dd5a9": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-mb1-service-extraordinaire.pdf",
+            "title": "2.2 Modification n°1 - Service extraordinaire – exercice 2026 - approbation",
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 2
+          },
+          "municipal-doc:0e1dabe88fbda4eb95": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/mb2-2026-projet-deliberation-cc-051126.pdf",
+            "title": "3.1 Modification budgétaire n°2 - Services ordinaire et extraordinaire – exercice 2026 – a",
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:13b95917d4fe2b8c43": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-reglement-taxe-sur-la-collecte-et-le.pdf",
+            "title": "3.3 Règlement taxe sur la collecte et le traitement des déchets dans le cadre du service o",
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:fbfbc982be8523deb7": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-centimes-additionnels-ipp-2027.pdf",
+            "title": "3.4 Taxe additionnelle à l'Impôt des Personnes physiques (IPP) - exercice 2027 – approbati",
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:c06c3412c58fbcb8d8": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-centimes-additionnels-pri-2027.pdf",
+            "title": "3.5 Centimes additionnels au précompte immobilier – exercice 2027 - approbation",
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:cc5883812015dcf413": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-de-deliberation-commune-designations-fs.pdf",
+            "title": "5.1 Désignation des fonctionnaires sanctionnateurs provinciaux – approbation",
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:ea6cea8b86a469ca46": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/sac-05-11-2026.pdf",
+            "title": "5.2 Nouvelle convention unique de mise à disposition de fonctionnaires sanctionnateurs pro",
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:28ba4b867bb60aa036": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-missions-auteur-de-projet.pdf",
+            "title": "6.1 Marché public de services - accord-cadre pour des missions d'auteur de projet - années",
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:e756ef15442a05973f": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-de-deliberation-auteur-de-projet-mission.pdf",
+            "title": "6.2 Marché public de services - accord-cadre pour des missions d'auteur de projet pour des",
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:bac7b884c40ff5e7ca": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/accord-cadre-combustibles-2027.pdf",
+            "title": "6.3 Accord-cadre - fourniture de combustible pour 2027 - marché conjoint Ville de Bouillon",
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:e5eb7e15bb4a25d969": {
+            "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/projet-deliberation-ag-ordinaire-imio.pdf",
+            "title": "Convocation à l'Assemblée générale d'IMIO du 08 décembre 2026 - approbation des points por",
+            "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 12
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 43,
+        "pagesPending": 40,
+        "documentsKnown": 13,
+        "documentsPending": 5,
+        "errors": 4,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 8,
+        "errors": 4,
+        "attempted": 12,
+        "pagesAttempted": 3
+      },
+      "lastDocumentSuccess": "2026-10-31T01:06:54.821Z"
     },
     {
       "ins": "53014",
@@ -11135,11 +12153,1044 @@
         }
       ],
       "lastSiteCheck": "2026-10-16T11:52:21.470Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-31T01:06:54.821Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
-      "opportunities": 0,
-      "errors": []
+      "documentsRead": 12,
+      "opportunities": 7,
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:e699e92083f6b8ac4f": {
+          "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null
+        },
+        "municipal-doc:5dd61d8f24793cd37d": {
+          "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null
+        },
+        "municipal-doc:f5cb665e8be4181010": {
+          "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:cdb68064c11fa6d14a": {
+          "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250611-vp.pdf",
+          "finalUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250611-vp.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "\"|1753865389.0||Anonymous|1793153183.247998|1793354419.5828834\"",
+          "lastModified": "Wed, 30 Jul 2025 09:49:49 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250611-vp.pdf",
+            "sha256": "a54863471b997a31cf26af6ff51a886d75a8997d124036d0c9d777d2bddbeb12",
+            "session": null,
+            "document": {
+              "date": "2025-06-11",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "cc20250611-vp.pdf",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "a54863471b997a31cf26af6ff51a886d75a8997d124036d0c9d777d2bddbeb12",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:e2a4fe2dffc0b406c5": {
+          "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250514-vp.pdf",
+          "finalUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250514-vp.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "\"|1753865339.0||Anonymous|1793153183.247998|1793354419.5828834\"",
+          "lastModified": "Wed, 30 Jul 2025 09:48:59 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250514-vp.pdf",
+            "sha256": "324106f05c62a696b20670b8bc0111b64f7970c321036f16779d86cc57c5dfa3",
+            "session": null,
+            "document": {
+              "date": "2025-05-14",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "cc20250514-vp.pdf",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "324106f05c62a696b20670b8bc0111b64f7970c321036f16779d86cc57c5dfa3",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:3f9bcca6b28d33db88": {
+          "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250416-vp.pdf",
+          "finalUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250416-vp.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "\"|1747374289.0||Anonymous|1793153183.247998|1793354419.5828834\"",
+          "lastModified": "Fri, 16 May 2025 06:44:49 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250416-vp.pdf",
+            "sha256": "6b05cc00fda9530c15cfbb352f0c4e6327a33beb809931b8b4c483574c63ff9a",
+            "session": null,
+            "document": {
+              "date": "2025-04-16",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "cc20250416-vp.pdf",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "6b05cc00fda9530c15cfbb352f0c4e6327a33beb809931b8b4c483574c63ff9a",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:a41a4f4d31de3f1414": {
+          "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250312-vp.pdf",
+          "finalUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250312-vp.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "\"|1745913825.0||Anonymous|1793153183.247998|1793354419.5828834\"",
+          "lastModified": "Tue, 29 Apr 2025 09:03:45 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250312-vp.pdf",
+            "sha256": "e23e26546585d5755a036c72be5a2177f35a27e7e7fc090bb6b15b3bffb2935f",
+            "session": null,
+            "document": {
+              "date": "2025-03-12",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "cc20250312-vp.pdf",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "e23e26546585d5755a036c72be5a2177f35a27e7e7fc090bb6b15b3bffb2935f",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:19629cdba1bcca4cac": {
+          "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250129-vp.pdf",
+          "finalUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250129-vp.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "\"|1742886634.0||Anonymous|1793153183.247998|1793354419.5828834\"",
+          "lastModified": "Tue, 25 Mar 2025 08:10:34 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250129-vp.pdf",
+            "sha256": "b2da6ca535be37f10187b6c2f41f009f65b99cbbb79809e81a94b6f933b8830e",
+            "session": null,
+            "document": {
+              "date": "2025-01-29",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "cc20250129-vp.pdf",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "b2da6ca535be37f10187b6c2f41f009f65b99cbbb79809e81a94b6f933b8830e",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:4413fbaab793006de0": {
+          "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250709-vp.pdf",
+          "finalUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250709-vp.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "\"|1778571132.0||Anonymous|1793153183.247998|1793354419.5828834\"",
+          "lastModified": "Tue, 12 May 2026 08:32:12 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250709-vp.pdf",
+            "sha256": "67740699ca647c095041c545dd471b34b3f5f1f08c35e2a1886e7df7fff1eaad",
+            "session": null,
+            "document": {
+              "date": "2025-07-09",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "cc20250709-vp.pdf",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "67740699ca647c095041c545dd471b34b3f5f1f08c35e2a1886e7df7fff1eaad",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:6ea764fdf117c3aa2a": {
+          "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241230-vp.pdf",
+          "finalUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241230-vp.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "\"|1739947764.0||Anonymous|1793153183.247998|1793354419.5828834\"",
+          "lastModified": "Wed, 19 Feb 2025 07:49:24 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241230-vp.pdf",
+            "sha256": "0a5e1fcfb9368de6b696860504440216a768398cf4a57b1b22e8dba6cc93e083",
+            "session": null,
+            "document": {
+              "date": "2024-12-30",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "cc20241230-vp.pdf",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "0a5e1fcfb9368de6b696860504440216a768398cf4a57b1b22e8dba6cc93e083",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:f6d628da2830350d53": {
+          "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241210.pdf",
+          "finalUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241210.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "\"|1739947600.0||Anonymous|1793153183.247998|1793354419.5828834\"",
+          "lastModified": "Wed, 19 Feb 2025 07:46:40 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241210.pdf",
+            "sha256": "7e3fbbc8a0cf4613a66e75ce96429c6be929d4f6bf48af649c62d51ce0646342",
+            "session": null,
+            "document": {
+              "date": "2024-12-10",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "cc20241210.pdf",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "7e3fbbc8a0cf4613a66e75ce96429c6be929d4f6bf48af649c62d51ce0646342",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:c5356359cf220b04ec": {
+          "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241202.pdf",
+          "finalUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241202.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "\"|1734509092.0||Anonymous|1793153183.247998|1793354419.5828834\"",
+          "lastModified": "Wed, 18 Dec 2024 09:04:52 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241202.pdf",
+            "sha256": "1a7ddf56a5bd04c3ba9c2b023aa2df8f36de99e7a1afbdaa180ee38c22d2b947",
+            "session": null,
+            "document": {
+              "date": "2024-12-02",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "cc20241202.pdf",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "1a7ddf56a5bd04c3ba9c2b023aa2df8f36de99e7a1afbdaa180ee38c22d2b947",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:7ba127c33dbfccc754": {
+          "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc-cas-20241104.pdf",
+          "finalUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc-cas-20241104.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "\"|1734509310.0||Anonymous|1793153183.247998|1793354419.5828834\"",
+          "lastModified": "Wed, 18 Dec 2024 09:08:30 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc-cas-20241104.pdf",
+            "sha256": "5dd36448730aa001a8d5fad81d07397e0f2e4e8b4bed60d4d4c9ce96ffa483e5",
+            "session": null,
+            "document": {
+              "date": "2024-11-04",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "cc-cas-20241104.pdf",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "5dd36448730aa001a8d5fad81d07397e0f2e4e8b4bed60d4d4c9ce96ffa483e5",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:fb9ec6c40fad2a32e9": {
+          "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241104-vp.pdf",
+          "finalUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241104-vp.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "\"|1734509104.0||Anonymous|1793153183.247998|1793354419.5828834\"",
+          "lastModified": "Wed, 18 Dec 2024 09:05:04 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241104-vp.pdf",
+            "sha256": "defc484f75f01362affe12edd12e9a34774f82cd42595d0b0d2bdfa22b89fb36",
+            "session": null,
+            "document": {
+              "date": "2024-11-04",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "cc20241104-vp.pdf",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "defc484f75f01362affe12edd12e9a34774f82cd42595d0b0d2bdfa22b89fb36",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        },
+        "municipal-doc:5d1401746402f97987": {
+          "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20240911-vp.pdf",
+          "finalUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20240911-vp.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "\"|1734509215.0||Anonymous|1793153183.247998|1793354419.5828834\"",
+          "lastModified": "Wed, 18 Dec 2024 09:06:55 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20240911-vp.pdf",
+            "sha256": "7ec264a512d767d9435b601324ac6b8919aefc5b6b90998ccfb33bdcdfb566d6",
+            "session": null,
+            "document": {
+              "date": "2024-09-11",
+              "kind": "document",
+              "page": null,
+              "source": "filename",
+              "excerpt": "cc20240911-vp.pdf",
+              "confidence": "inferred"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "7ec264a512d767d9435b601324ac6b8919aefc5b6b90998ccfb33bdcdfb566d6",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:cdb68064c11fa6d14a",
+        "municipal-doc:e2a4fe2dffc0b406c5",
+        "municipal-doc:3f9bcca6b28d33db88",
+        "municipal-doc:a41a4f4d31de3f1414",
+        "municipal-doc:19629cdba1bcca4cac",
+        "municipal-doc:4413fbaab793006de0",
+        "municipal-doc:6ea764fdf117c3aa2a",
+        "municipal-doc:f6d628da2830350d53",
+        "municipal-doc:c5356359cf220b04ec",
+        "municipal-doc:7ba127c33dbfccc754",
+        "municipal-doc:fb9ec6c40fad2a32e9",
+        "municipal-doc:5d1401746402f97987"
+      ],
+      "documentVersionsRead": 12,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:e699e92083f6b8ac4f": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T01:06:54.821Z",
+            "lastSuccess": "2026-10-31T01:06:54.821Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:5dd61d8f24793cd37d": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T01:06:54.821Z",
+            "lastSuccess": "2026-10-31T01:06:54.821Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:f5cb665e8be4181010": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T01:06:54.821Z",
+            "lastSuccess": "2026-10-31T01:06:54.821Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:1bdaa6c680cc28e838": {
+            "url": "https://www.deliberations.be/braine-le-chateau/decisions",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:2dc8f5345e7be2a0c4": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale/declaration-de-politique-communale-2018-2024",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:ccea413bbf9a593385": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/declaration-de-politique-communale/declaration-de-politique-communale-2024-2030",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:8da54ef00b2bef99fc": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:d4ac5ee9b36148794b": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/procedure-interpellation-conseil-communal",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 7
+          }
+        },
+        "documents": {
+          "municipal-doc:cdb68064c11fa6d14a": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250611-vp.pdf",
+            "title": "CC20250611 VP.pdf 444.9 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:e2a4fe2dffc0b406c5": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250514-vp.pdf",
+            "title": "CC20250514 VP.pdf 408.3 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 1
+          },
+          "municipal-doc:3f9bcca6b28d33db88": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250416-vp.pdf",
+            "title": "CC20250416 VP.pdf 479.5 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 2
+          },
+          "municipal-doc:a41a4f4d31de3f1414": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250312-vp.pdf",
+            "title": "CC20250312 - VP.pdf 521.7 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:19629cdba1bcca4cac": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250129-vp.pdf",
+            "title": "CC20250129 - VP.pdf 576.4 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:4413fbaab793006de0": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2025/cc20250709-vp.pdf",
+            "title": "CC20250709 VP .pdf 395.5 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:6ea764fdf117c3aa2a": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241230-vp.pdf",
+            "title": "CC20241230 - VP.pdf 688.1 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:f6d628da2830350d53": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241210.pdf",
+            "title": "CC20241210.pdf 255.2 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:c5356359cf220b04ec": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241202.pdf",
+            "title": "CC20241202.pdf 320.9 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:7ba127c33dbfccc754": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc-cas-20241104.pdf",
+            "title": "CC+CAS-20241104.pdf 248.5 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:fb9ec6c40fad2a32e9": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20241104-vp.pdf",
+            "title": "CC20241104 VP.pdf 975.5 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:5d1401746402f97987": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20240911-vp.pdf",
+            "title": "CC20240911 - vp.pdf 712.9 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:bd92c7c984c28e1998": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20240625-vp.pdf",
+            "title": "CC20240625 VP.pdf 749.6 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:566dd4642ddefbfd66": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20240529-vp-doc.pdf",
+            "title": "CC20240529 - VP.doc.pdf 414.0 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:a28576b53a12c7bd53": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20240424-vp.pdf",
+            "title": "CC20240424 - vp.pdf 472.4 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 14
+          },
+          "municipal-doc:13e12bb78d7be015c5": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20240327-vp.pdf",
+            "title": "CC20240327 - VP.pdf 389.7 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 15
+          },
+          "municipal-doc:c774355058582b2804": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2024/cc20240221-vp.pdf",
+            "title": "CC20240221 - VP.pdf 368.2 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 16
+          },
+          "municipal-doc:08c6b9dedcce4337f4": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2023/cc20231227-vp.pdf",
+            "title": "CC20231227 - VP.pdf 646.9 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 17
+          },
+          "municipal-doc:2148c39fd1b768c6b1": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2023/cc20231129-vp.pdf",
+            "title": "CC20231129-VP.pdf 913.5 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 18
+          },
+          "municipal-doc:c67728dc3e49a4ff2c": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2023/cc20231025-vp.pdf",
+            "title": "CC20231025- vp.pdf 500.9 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 19
+          },
+          "municipal-doc:f1a8d12b5d2bfcbda5": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2023/cc20230927-vp.pdf",
+            "title": "CC20230927 - VP 367.5 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 20
+          },
+          "municipal-doc:5414b6507e5884ddcb": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2023/cc20230830-vp.pdf",
+            "title": "CC20230830 - VP 473.5 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 21
+          },
+          "municipal-doc:656e337e9c173b01ed": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2023/cc20230726-vp.pdf",
+            "title": "CC20230726 - VP 549.7 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 22
+          },
+          "municipal-doc:f47a404c3b78c6eb97": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2023/cc20230222-vp.pdf",
+            "title": "CC20230222 - VP 460.3 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 23
+          },
+          "municipal-doc:6341c6e3cb7cd05710": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2023/cc20230628-vp.pdf",
+            "title": "CC20230628 - VP 504.2 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 24
+          },
+          "municipal-doc:15b381c1be09301cd6": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2023/cc20230531-vp.pdf",
+            "title": "CC20230531 - VP 653.4 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 25
+          },
+          "municipal-doc:1f56e71909c38542ca": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2023/cc20230426-vp.pdf",
+            "title": "CC20230426 - VP 447.8 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 26
+          },
+          "municipal-doc:6107a734a727057818": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2023/cc20230329-vp.pdf",
+            "title": "CC20230329 - VP 435.1 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 27
+          },
+          "municipal-doc:3bf54e962e15296d48": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2022/cc20221228-vp.pdf",
+            "title": "CC20221228 -VP.pdf 795.6 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 28
+          },
+          "municipal-doc:9372bc5d12599c7ff0": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2022/cc-cas-20221123.pdf",
+            "title": "CC+CAS-20221123.pdf 255.0 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 29
+          },
+          "municipal-doc:cc1f115c49d29d2d9c": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2022/cc20221123-vp.pdf",
+            "title": "CC20221123 - VP.pdf 697.6 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 30
+          },
+          "municipal-doc:14f035764504544106": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2022/cc20221019-vp.pdf",
+            "title": "CC20221019 - VP.pdf 731.4 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 31
+          },
+          "municipal-doc:48e63067363a3cdcfc": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2022/cc20220914-vp.pdf",
+            "title": "CC20220914 - VP.pdf 665.3 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 32
+          },
+          "municipal-doc:dc7dc3024934282e79": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2022/cc20220629-vp.pdf",
+            "title": "CC20220629 - VP.pdf 750.5 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 33
+          },
+          "municipal-doc:a4e60d67af52da70bd": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2022/cc20220524-vp.pdf",
+            "title": "CC20220524- VP.pdf 723.6 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 34
+          },
+          "municipal-doc:2a2669d09526e1cc0a": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2022/cc20220427-vp.pdf",
+            "title": "CC20220427 -VP.pdf 555.2 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 35
+          },
+          "municipal-doc:e609208980309c4652": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2022/cc20220323-vp.pdf",
+            "title": "CC20220323 -VP.pdf 1.1 MB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 36
+          },
+          "municipal-doc:5d553911f2971abc76": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2022/cc20220216-vp.pdf",
+            "title": "CC20220216-VP.pdf 489.5 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 37
+          },
+          "municipal-doc:5d1d3fb311de0d3b9d": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/pv/cc20210224-version-publique.pdf",
+            "title": "CC20210224-version publique.pdf 615.9 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 38
+          },
+          "municipal-doc:1f88e9f93d561032b9": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/pv/cc-cas-20211124.pdf",
+            "title": "CC+CAS-20211124.pdf 156.6 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 39
+          },
+          "municipal-doc:885b92ae1aff447fdc": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/pv/cc20210324-vp.pdf",
+            "title": "CC20210324 - VP.pdf 599.1 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 40
+          },
+          "municipal-doc:25ef1b0549efa2e01c": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/pv/cc20210428-vp.pdf",
+            "title": "CC20210428 -vp.pdf 644.9 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 41
+          },
+          "municipal-doc:489e8f3743f5e06fc8": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/pv/cc20210527-vp.pdf",
+            "title": "CC20210527 -VP.pdf 826.6 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 42
+          },
+          "municipal-doc:aa5a9a5761a75d7aa8": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/pv/cc20210630-vp.pdf",
+            "title": "CC20210630 VP.pdf 1019.5 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 43
+          },
+          "municipal-doc:c7736c8683fca6038c": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/pv/cc20210922-pub-1.pdf",
+            "title": "CC20210922 vp.pdf 1019.7 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 44
+          },
+          "municipal-doc:6da24a8e65700070ea": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/pv/cc20211027-vp.pdf",
+            "title": "CC20211027-VP.pdf 1.1 MB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 45
+          },
+          "municipal-doc:2ce07cf8f98b912bab": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/pv/cc20211222-vp.pdf",
+            "title": "CC20211222 - VP.pdf 1.4 MB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 46
+          },
+          "municipal-doc:1af7f6485653ab9822": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/pv/cc20211124vp.pdf",
+            "title": "CC20211124VP.pdf 795.7 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 47
+          },
+          "municipal-doc:f1d9f1242f823c919b": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2020/cc-cas-20201125-version-publique.pdf",
+            "title": "CC+CAS-20201125-version publique.pdf 837.8 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 48
+          },
+          "municipal-doc:b323ba3f529e3ebb6b": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2020/cc20200205-version-publique.pdf",
+            "title": "CC20200205-version publique.pdf 469.6 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 49
+          },
+          "municipal-doc:6b1080fdbf63799e69": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2020/cc20200325-version-publique.pdf",
+            "title": "CC20200325-version publique.pdf 591.2 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 50
+          },
+          "municipal-doc:1042bf45ec1dea20d3": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2020/cc20200520-version-publique.pdf",
+            "title": "CC20200520-version publique.pdf 584.7 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 51
+          },
+          "municipal-doc:7c3e191927594e0866": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2020/cc20200624-version-publique.pdf",
+            "title": "CC20200624-version publique.pdf 923.1 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 52
+          },
+          "municipal-doc:21a6be61c6f5394122": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2020/cc20200909-version-publique.pdf",
+            "title": "CC20200909-version publique.pdf 861.2 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 53
+          },
+          "municipal-doc:98bcd2e80ab95fcdad": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2020/cc20200923-version-publique.pdf",
+            "title": "CC20200923-version publique.pdf 433.7 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 54
+          },
+          "municipal-doc:156c0e481ebcd1a399": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2020/cc20201021-version-publique.pdf",
+            "title": "CC20201021-version publique.pdf 687.1 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 55
+          },
+          "municipal-doc:744c9e8b8341ae5d9b": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2020/cc20201223-version-publique.pdf",
+            "title": "CC20201223-version publique.pdf 607.7 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 56
+          },
+          "municipal-doc:e849ae9635fde3c8ac": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2019/cc20190130-version-publique.pdf",
+            "title": "CC20190130 - version publique.pdf 929.3 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 57
+          },
+          "municipal-doc:7c2f8c421e5c2b21c1": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2019/cc20190306-version-publique.pdf",
+            "title": "CC20190306 - version publique.pdf 853.4 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 58
+          },
+          "municipal-doc:346d6adc6df41d4b2a": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2019/cc20190424-version-publique.pdf",
+            "title": "CC20190424 - version publique.pdf 984.8 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 59
+          },
+          "municipal-doc:8c9aa43e6be18c7e98": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2019/cc20190529-version-publique.pdf",
+            "title": "CC20190529 - version publique.pdf 882.5 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 60
+          },
+          "municipal-doc:7b2ee3aa62d225b688": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2019/cc20190626-version-publique.pdf",
+            "title": "CC20190626 - version publique.pdf 675.6 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 61
+          },
+          "municipal-doc:32cdc5019f4ddc9f58": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2019/cc20190925-version-publique.pdf",
+            "title": "CC20190925-version publique.pdf 807.6 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 62
+          },
+          "municipal-doc:1c7fa37195c4b38826": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2019/cc20191030-vp.pdf",
+            "title": "CC20191030- vp.pdf 423.3 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 63
+          },
+          "municipal-doc:a353f9049b4267ced0": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2019/cc20191127-vp.pdf",
+            "title": "CC20191127 -VP.pdf 496.8 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 64
+          },
+          "municipal-doc:50c3db03cfc23c15bc": {
+            "url": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal/pv-du-conseil-communal/2019/cc20191218-vp.pdf",
+            "title": "CC20191218 - VP.pdf 518.0 KB",
+            "sourceUrl": "https://www.braine-le-chateau.be/ma-commune/vie-politique/conseil-communal/pv-du-conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 65
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 8,
+        "pagesPending": 5,
+        "documentsKnown": 66,
+        "documentsPending": 54,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 12,
+        "errors": 0,
+        "attempted": 12,
+        "pagesAttempted": 3
+      },
+      "lastDocumentSuccess": "2026-10-31T01:06:54.821Z"
     },
     {
       "ins": "55004",
@@ -11214,11 +13265,209 @@
         }
       ],
       "lastSiteCheck": "2026-10-21T12:19:29.071Z",
-      "lastDocumentCheck": null,
+      "lastDocumentCheck": "2026-10-31T01:06:54.821Z",
       "latestCouncilDate": null,
-      "documentsRead": 0,
+      "documentsRead": 1,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "documentSourceChecks": {
+        "municipal-doc:3aa17f56e30f7a6517": {
+          "url": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null
+        },
+        "municipal-doc:46705755488c95e1b7": {
+          "url": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null
+        },
+        "municipal-doc:f4643cd084932a4cc3": {
+          "url": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal/conseil-communal-en-direct",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null
+        }
+      },
+      "documentChecks": {
+        "municipal-doc:570ead0f226e7c87f6": {
+          "url": "https://www.braine-le-comte.be/administration/vie-politique/fichiers-pdf-vie-politique/pv-et-odj-2026/conseilcommunal-od-2026oct19.pdf",
+          "finalUrl": "https://www.braine-le-comte.be/administration/vie-politique/fichiers-pdf-vie-politique/pv-et-odj-2026/conseilcommunal-od-2026oct19.pdf",
+          "lastAttempt": "2026-10-31T01:06:54.821Z",
+          "lastChecked": "2026-10-31T01:06:54.821Z",
+          "lastSuccess": "2026-10-31T01:06:54.821Z",
+          "lastError": null,
+          "etag": "",
+          "lastModified": "Fri, 09 Oct 2026 13:51:25 GMT",
+          "contentCheckedAt": "2026-10-31T01:06:54.821Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.braine-le-comte.be/administration/vie-politique/fichiers-pdf-vie-politique/pv-et-odj-2026/conseilcommunal-od-2026oct19.pdf",
+            "sha256": "cb7ba21573ce753efdb71eb15e68fc9cd8cc9b1068cd1de7592ce7c9abe8f7d2",
+            "session": {
+              "date": "2026-10-19",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Séance du 19 octobre 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "extractorVersion": "2026-10-29-document-dates-v5",
+          "textExtractedAt": "2026-10-31T01:06:54.821Z",
+          "sha256": "cb7ba21573ce753efdb71eb15e68fc9cd8cc9b1068cd1de7592ce7c9abe8f7d2",
+          "firstSeenAt": "2026-10-31T01:06:54.821Z",
+          "nextAttemptAt": null
+        }
+      },
+      "readDocuments": [
+        "municipal-doc:570ead0f226e7c87f6"
+      ],
+      "documentVersionsRead": 1,
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:3aa17f56e30f7a6517": {
+            "url": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T01:06:54.821Z",
+            "lastSuccess": "2026-10-31T01:06:54.821Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:46705755488c95e1b7": {
+            "url": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T01:06:54.821Z",
+            "lastSuccess": "2026-10-31T01:06:54.821Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:f4643cd084932a4cc3": {
+            "url": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal/conseil-communal-en-direct",
+            "depth": 0,
+            "lastAttempt": "2026-10-31T01:06:54.821Z",
+            "lastSuccess": "2026-10-31T01:06:54.821Z",
+            "lastError": null,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:a6815096fc4fdfeeb9": {
+            "url": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal/declaration-de-politique-communale-2024-2030",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 3
+          },
+          "municipal-doc:c46992b776768756ea": {
+            "url": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal/proces-verbaux-1",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 4
+          },
+          "municipal-doc:07eed5ea97a7d89648": {
+            "url": "https://www.braine-le-comte.be/territoire/urbanisme/amenagement-du-territoire/boucle-du-hainaut-quel-trace-est-envisage-a-braine-le-comte",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 5
+          },
+          "municipal-doc:93707e9f90ef684686": {
+            "url": "https://www.braine-le-comte.be/evenements/conseil-communal-novembre-2026",
+            "depth": 0,
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 6
+          },
+          "municipal-doc:4b8393ec408ca39933": {
+            "url": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal/le-conseil-communal/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 7
+          },
+          "municipal-doc:85488c0053db6757e6": {
+            "url": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal/les-conseillers-communaux-1",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 8
+          },
+          "municipal-doc:c1c56dc17198a943f2": {
+            "url": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal/plan-strategique-transversal-pst",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 9
+          },
+          "municipal-doc:48b7dc02c83db8f12c": {
+            "url": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal/deliberations.be-vers-plus-de-simplification-administrative",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 10
+          },
+          "municipal-doc:d29a361a2bcb75b3ea": {
+            "url": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:0340b3d64d127960d9": {
+            "url": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal/conseil-communal-en-direct/conseil-communal-du-18-mars-2024/sendtomanager_form",
+            "depth": 1,
+            "sourceUrl": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal/conseil-communal-en-direct",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 12
+          }
+        },
+        "documents": {
+          "municipal-doc:570ead0f226e7c87f6": {
+            "url": "https://www.braine-le-comte.be/administration/vie-politique/fichiers-pdf-vie-politique/pv-et-odj-2026/conseilcommunal-od-2026oct19.pdf",
+            "title": "Ordre du jour (pdf)",
+            "sourceUrl": "https://www.braine-le-comte.be/administration/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-10-31T01:06:54.821Z",
+            "lastSeen": "2026-10-31T01:06:54.821Z",
+            "discoveryOrder": 0
+          }
+        },
+        "limits": {}
+      },
+      "documentProgress": {
+        "pagesKnown": 13,
+        "pagesPending": 10,
+        "documentsKnown": 1,
+        "documentsPending": 0,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 1,
+        "errors": 0,
+        "attempted": 1,
+        "pagesAttempted": 3
+      },
+      "lastDocumentSuccess": "2026-10-31T01:06:54.821Z"
     },
     {
       "ins": "64015",
@@ -11521,14 +13770,43 @@
       "estimatedMinutes": 132,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.cerfontaine.be/ma-commune/politique/le-college-communal",
+          "title": "Le Collège Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal",
+          "title": "Le Conseil Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.deliberations.be/cerfontaine/publications",
+          "title": "Publication des règlements et ordonnances",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-31T01:05:47.552Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.cerfontaine.be/",
+        "checkedAt": "2026-10-31T01:05:47.552Z"
+      }
     },
     {
       "ins": "52010",
@@ -11910,14 +14188,16 @@
       "estimatedMinutes": 143,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "peripherique",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_indisponible",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-31T01:05:47.552Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [
+        "HTTP 403"
+      ]
     },
     {
       "ins": "91030",
@@ -12273,14 +14553,35 @@
       "estimatedMinutes": 136,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "peripherique",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.couvin.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.couvin.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-31T01:05:47.552Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.couvin.be/",
+        "checkedAt": "2026-10-31T01:05:47.552Z"
+      }
     },
     {
       "ins": "64021",
@@ -13324,14 +15625,18 @@
       "estimatedMinutes": 145,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "peripherique",
-      "sourceStatus": "site_repertorie_non_verifie",
+      "sourceStatus": "site_lu_sources_non_localisees",
       "deliberationSources": [],
-      "lastSiteCheck": null,
+      "lastSiteCheck": "2026-10-31T01:05:47.552Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.etalle.be/",
+        "checkedAt": "2026-10-31T01:05:47.552Z"
+      }
     },
     {
       "ins": "63023",
@@ -14010,14 +16315,59 @@
       "estimatedMinutes": 143,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "peripherique",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.florenville.be/ma-ville/services-communaux/marches-publics",
+          "title": "Marchés Publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.florenville.be/ma-ville/vie-politique/college-communal-1",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.florenville.be/ma-ville/vie-politique/conseil-communal-1",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.florenville.be/ma-ville/vie-politique/conseil-communal-1/ordres-du-jour",
+          "title": "Conseil: Ordres du jour",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.florenville.be/actualites/conseil-communal-du-22-10-2026-sur-youtube",
+          "title": "23/10/2026 [En ligne]Conseil communal du 22.10.2026 sur notre chaine YouTube",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-31T01:05:47.552Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.florenville.be/",
+        "checkedAt": "2026-10-31T01:05:47.552Z"
+      }
     },
     {
       "ins": "52022",
@@ -14802,14 +17152,67 @@
       "estimatedMinutes": 137,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "peripherique",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.habay.be/ma-commune/vie-politique/conseil-communal",
+          "title": "CONSEIL COMMUNAL",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.habay.be/ma-commune/vie-politique/plan-strategique-transversal-pst",
+          "title": "Programme Stratégique Transversal (PST)",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.habay.be/ma-commune/vie-politique/college-communal",
+          "title": "COLLEGE COMMUNAL",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.habay.be/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+          "title": "Procès-verbaux du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.habay.be/ma-commune/services-communaux/marches-publics-gestion-de-projets",
+          "title": "Service Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.deliberations.be/habay/publications",
+          "title": "Ordre du jour du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-31T01:05:47.552Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.habay.be/",
+        "checkedAt": "2026-10-31T01:05:47.552Z"
+      }
     },
     {
       "ins": "56086",
@@ -15888,14 +18291,51 @@
       "estimatedMinutes": 134,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.herbeumont.be/ma-commune/vie-politique/le-college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.herbeumont.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.herbeumont.be/ma-commune/vie-politique/conseil-communal/seances-du-conseil-communal",
+          "title": "Prochain Conseil Communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.herbeumont.be/ma-commune/services-communaux/marches-publics",
+          "title": "Marchés Publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-31T01:05:47.552Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.herbeumont.be/",
+        "checkedAt": "2026-10-31T01:05:47.552Z"
+      }
     },
     {
       "ins": "61028",
@@ -21533,14 +23973,59 @@
       "estimatedMinutes": 144,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "peripherique",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.tintigny.be/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.tintigny.be/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.tintigny.be/ma-commune/reglements-et-deliberations",
+          "title": "Règlements et Délibérations",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.tintigny.be/ma-commune/reglements-et-deliberations/reglements",
+          "title": "Règlements",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.tintigny.be/ma-commune/reglements-et-deliberations/copy_of_reglements",
+          "title": "Délibérations",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-31T01:05:47.552Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.tintigny.be/",
+        "checkedAt": "2026-10-31T01:05:47.552Z"
+      }
     },
     {
       "ins": "57081",
@@ -22049,14 +24534,72 @@
       "estimatedMinutes": 131,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.viroinval.be/fr/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.viroinval.be/fr/ma-commune/vie-politique/college-communal",
+          "title": "Collège communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.viroinval.be/fr/ma-commune/vie-politique/college-communal/programme-de-politique-generale",
+          "title": "Déclaration de Politique Communale",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.viroinval.be/fr/ma-commune/vie-politique/conseil-communal/proces-verbaux",
+          "title": "Procès-verbaux du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.viroinval.be/fr/ma-commune/vie-politique/conseil-communal/programme-strategique-transversal",
+          "title": "Programme Stratégique Transversal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.viroinval.be/fr/ma-commune/services-communaux/marches-publics",
+          "title": "Marchés publics",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.viroinval.be/fr/actualites/conseil-communal-du-04-novembre-2026-ordre-du-jour",
+          "title": "27/10/2026 Conseil communal du 04 novembre 2026 - Ordre du jour",
+          "status": "lien_public_repere_non_analyse"
+        }
+      ],
+      "lastSiteCheck": "2026-10-31T01:05:47.552Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.viroinval.be/fr",
+        "checkedAt": "2026-10-31T01:05:47.552Z"
+      }
     },
     {
       "ins": "85045",
@@ -22125,14 +24668,42 @@
       "estimatedMinutes": 132,
       "travelMethod": "estimation_geographique_non_routiere",
       "zone": "principale",
-      "sourceStatus": "site_repertorie_non_verifie",
-      "deliberationSources": [],
-      "lastSiteCheck": null,
+      "sourceStatus": "pages_conseils_verifiees",
+      "deliberationSources": [
+        {
+          "url": "https://www.vresse-sur-semois.be/fr/ma-commune/vie-politique/conseil-communal",
+          "title": "Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        },
+        {
+          "url": "https://www.vresse-sur-semois.be/fr/ma-commune/vie-politique/conseil-communal/ecd-programme-de-politique-generale",
+          "title": "ECD - Programme de politique générale",
+          "status": "lien_public_repere_non_analyse",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_error": "Contenu non textuel"
+        },
+        {
+          "url": "https://www.deliberations.be/vresse-sur-semois/decisions",
+          "title": "Séance et pv du Conseil communal",
+          "status": "page_accessible",
+          "last_attempt": "2026-10-31T01:05:47.552Z",
+          "last_success": "2026-10-31T01:05:47.552Z",
+          "last_error": null
+        }
+      ],
+      "lastSiteCheck": "2026-10-31T01:05:47.552Z",
       "lastDocumentCheck": null,
       "latestCouncilDate": null,
       "documentsRead": 0,
       "opportunities": 0,
-      "errors": []
+      "errors": [],
+      "verifiedSite": {
+        "url": "https://www.vresse-sur-semois.be/fr",
+        "checkedAt": "2026-10-31T01:05:47.552Z"
+      }
     },
     {
       "ins": "63080",
@@ -22848,6 +25419,6 @@
       }
     }
   ],
-  "lastMunicipalPass": "2026-10-30T21:41:55.948Z",
-  "lastMunicipalDocumentPass": "2026-10-30T21:42:44.950Z"
+  "lastMunicipalPass": "2026-10-31T01:05:47.552Z",
+  "lastMunicipalDocumentPass": "2026-10-31T01:06:54.821Z"
 }
