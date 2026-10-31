@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-31T10:57:06.051Z",
+  "generated_at": "2026-10-31T16:08:17.675Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
   "note": "TED interrogé le 2026-10-31 : 1594 avis lus, 0 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-10-31T10:59:02.684Z",
+      "last_success": "2026-10-31T16:09:58.312Z",
       "scanned": 2425,
       "retained": 35,
       "period_from": "2026-10-17",
       "period_to": "2026-10-31",
       "pages": 97,
       "complete": true,
-      "raw_candidates": 2421,
+      "raw_candidates": 2423,
       "oldest_seen": "2026-10-16",
-      "last_attempt": "2026-10-31T10:59:02.684Z",
+      "last_attempt": "2026-10-31T16:09:58.312Z",
       "last_error": null,
-      "last_complete_success": "2026-10-31T10:59:02.684Z"
+      "last_complete_success": "2026-10-31T16:09:58.312Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-10-31T11:01:28.624Z",
+      "last_success": "2026-10-31T16:11:41.130Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -104,7 +104,7 @@
     "scanned": 1594,
     "matched_current_run": 13,
     "records": 219,
-    "review_count": 123,
+    "review_count": 125,
     "award_notice_count": 411,
     "awarded_market_matches": 0,
     "award_fields_requested": false,
@@ -164,15 +164,15 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
+      "aucun_signal_metier": 500,
       "avis_attribution_analyse_separement": 411,
-      "acheteur_flamand": 191,
-      "aucun_signal_metier": 501,
       "formule_administrative_sans_signal_metier": 20,
-      "travaux_execution": 121,
-      "objet_hors_domaine": 77,
-      "fournitures_et_location": 63,
-      "avis_neerlandais": 159,
-      "qualifie_review": 21,
+      "acheteur_flamand": 188,
+      "travaux_execution": 124,
+      "objet_hors_domaine": 78,
+      "fournitures_et_location": 62,
+      "avis_neerlandais": 161,
+      "qualifie_review": 20,
       "assurance_ou_nettoyage": 26,
       "qualifie_main": 4
     }
@@ -3565,7 +3565,7 @@
           "versionId": "ddf24280-7180-4af0-9cc3-c050455a2c18",
           "documentId": "6c1fd0d8-3f25-4764-8e27-9bb907ccf665",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "FR,DE",
+          "language": "DE,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -3578,14 +3578,14 @@
           "versionId": "41c1dfd3-e395-4b17-9583-72b8baeacc90",
           "documentId": "815fd779-551d-48fc-a533-f11b9a86434c",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "FR,DE",
+          "language": "DE,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-30T20:56:33.862Z",
+      "documentsCheckedAt": "2026-10-31T16:13:22.823Z",
       "matchReason": "mission_architecturale_a_qualifier",
       "screeningReason": null,
       "officialSources": [
@@ -5301,7 +5301,7 @@
           "versionId": "36488d00-f30c-407b-abf7-ea1924b6b999",
           "documentId": "917f42c5-0419-4611-8398-5561fefe4efc",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5327,7 +5327,7 @@
           "versionId": "26b15544-17fc-43c0-826c-1322f33b9850",
           "documentId": "20364704-82a0-4eb0-a213-7965e3328061",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5379,7 +5379,7 @@
           "versionId": "f5ff3774-83d7-49c0-abe1-28e026816900",
           "documentId": "ff53ea2a-b24f-4586-b315-523295f56f5c",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5392,7 +5392,7 @@
           "versionId": "8228202b-2303-4eba-8e13-0fe820c5023d",
           "documentId": "ac74d28e-0bfa-4c78-af2b-da7f05b117dd",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5425,7 +5425,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-30T20:57:36.456Z",
+      "documentsCheckedAt": "2026-10-31T16:14:25.444Z",
       "documentAnalyses": [
         {
           "documentId": "7259aed6-32b5-4e0b-88c0-ffa7fa606658",
@@ -12144,6 +12144,77 @@
       "screeningReason": null
     },
     {
+      "id": "local:c720fc312e6d7a04a7ca",
+      "title": "Conseil communal — opportunité à vérifier : Cerfontaine",
+      "buyer": "Commune de Cerfontaine",
+      "municipalityINS": "93010",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "classiques et ses modifications ultérieures ; Vu la délibération du Collège Communal du 24 février 2024 décidant notamment : - d’approuver et d’attribuer la mission d’auteur de projet relative à la réfection de la toitur",
+        "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-27-10-25.pdf",
+        "page": 7,
+        "sha256": "9638e79e80e43a2d818828ba4ddb3c316224b7e95df6406db251346ffc1da56c"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-27-10-25.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-27-10-25.pdf",
+        "sha256": "9638e79e80e43a2d818828ba4ddb3c316224b7e95df6406db251346ffc1da56c",
+        "session": null,
+        "document": null,
+        "status": "unknown"
+      },
+      "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-27-10-25.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : classiques et ses modifications ultérieures ; Vu la délibération du Collège Communal du 24 février 2024 décidant notamment : - d’approuver et d’attribuer la mission d’auteur de projet relative à la réfection de la toiture de l’école et de l’administration communale de Cerfontaine à IGRETEC, association de communes, société coopérative, Boulevard Mayence, 1 à 6000 Charleroi, dans le cadre de la relation « in house », pour le montant estimé de 20.320,00 € HTVA, soit 24.588,02 € TVAC ; - d’approuver et de signer le contrat intitulé « Contrat d’architecture avec coordination",
+      "evidence": "classiques et ses modifications ultérieures ; Vu la délibération du Collège Communal du 24 février 2024 décidant notamment : - d’approuver et d’attribuer la mission d’auteur de projet relative à la réfection de la toiture de l’école et de l’administration communale de Cerfontaine à IGRETEC, association de communes, société coopérative, Boulevard Mayence, 1 à 6000 Charleroi, dans le cadre de la relation « in house », pour le montant estimé de 20.320,00 € HTVA, soit 24.588,02 € TVAC ; - d’approuver et de signer le contrat intitulé « Contrat d’architecture avec coordination",
+      "municipalReference": null,
+      "municipalSection": "2. Présentation et approbation du budget et de la grille tarifaire 2026.",
+      "municipalEvidence": [
+        {
+          "page": 7,
+          "excerpt": "classiques et ses modifications ultérieures ; Vu la délibération du Collège Communal du 24 février 2024 décidant notamment : - d’approuver et d’attribuer la mission d’auteur de projet relative à la réfection de la toiture de l’école et de l’administration communale de Cerfontaine à IGRETEC, association de communes, société coopérative, Boulevard Mayence, 1 à 6000 Charleroi, dans le cadre de la relation « in house », pour le montant estimé de 20.320,00 € HTVA, soit 24.588,02 € TVAC ; - d’approuver et de signer le contrat intitulé « Contrat d’architecture avec coordination"
+        },
+        {
+          "page": 8,
+          "excerpt": "préalable ; Article 3: d’approuver les clauses et conditions du cahier spécial des charges et ses annexes établis par l’auteur de projet, I.G.R.E.T.E.C., Bd. Mayence 1 à 6000 Charleroi ; Article 4: de financer cette dépense par les crédits inscrits au budget 2025 article 722/723- 60/20250004, service extraordinaire ; Article 5: de charger le Collège Communal de l’exécution de la présente délibération ; Article 6: de transmettre copie de la présente décision et ses annexes à l’auteur de projet,"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 7,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:f105abe350c35a09c0",
+        "sha256": "9638e79e80e43a2d818828ba4ddb3c316224b7e95df6406db251346ffc1da56c",
+        "checkedAt": "2026-10-31T15:31:30.638Z",
+        "changedAt": null
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
       "id": "communal:c3599ff87890bfb78368",
       "title": "Prospection · Beyne-Heusay · 17) Règlement complémentaire de roulage - Création d’un emplacement de stationnement pour personnes handicapées - Plac…",
       "buyer": "Commune de Beyne-Heusay",
@@ -13696,6 +13767,92 @@
       "screeningReason": null
     },
     {
+      "id": "local:ddd178bdf3a75ed2ab77",
+      "title": "Conseil communal — opportunité à vérifier : Cerfontaine",
+      "buyer": "Commune de Cerfontaine",
+      "municipalityINS": "93010",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Article 5 : la présente délibération sera transmise à Monsieur le Directeur Financier. -=-=-=-=-=-=-=- OBJET : Investissements prévus en matière de travaux de voiries, d’acquisition, d’entretien et d’aménagements d’im",
+        "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-03-31.pdf",
+        "page": 28,
+        "sha256": "0a5a0affde2eb145270423229dd454451c40bcbeffbdb6d8ae8a5af57eb6b475"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-03-31.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-03-31.pdf",
+        "sha256": "0a5a0affde2eb145270423229dd454451c40bcbeffbdb6d8ae8a5af57eb6b475",
+        "session": null,
+        "document": {
+          "date": "2025-03-31",
+          "kind": "document",
+          "page": null,
+          "source": "filename",
+          "excerpt": "-2025-03-31",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-03-31.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Article 5 : la présente délibération sera transmise à Monsieur le Directeur Financier. -=-=-=-=-=-=-=- OBJET :    Investissements prévus en matière de travaux de voiries, d’acquisition, d’entretien et d’aménagements d’immeubles communaux, d’acquisition de véhicule, de matériel de voirie et informatique - Crédit de 4.253.100,00 € - Consultation du marché – Règlement de consultation n°02/2025,- LE CONSEIL, en séance publique,",
+      "evidence": "Article 5 : la présente délibération sera transmise à Monsieur le Directeur Financier. -=-=-=-=-=-=-=- OBJET :    Investissements prévus en matière de travaux de voiries, d’acquisition, d’entretien et d’aménagements d’immeubles communaux, d’acquisition de véhicule, de matériel de voirie et informatique - Crédit de 4.253.100,00 € - Consultation du marché – Règlement de consultation n°02/2025,- LE CONSEIL, en séance publique,",
+      "municipalReference": null,
+      "municipalSection": "18. respecter les principes fondamentaux tenant à la dignité humaine.",
+      "municipalEvidence": [
+        {
+          "page": 28,
+          "excerpt": "Article 5 : la présente délibération sera transmise à Monsieur le Directeur Financier. -=-=-=-=-=-=-=- OBJET :    Investissements prévus en matière de travaux de voiries, d’acquisition, d’entretien et d’aménagements d’immeubles communaux, d’acquisition de véhicule, de matériel de voirie et informatique - Crédit de 4.253.100,00 € - Consultation du marché – Règlement de consultation n°02/2025,- LE CONSEIL, en séance publique,"
+        },
+        {
+          "page": 28,
+          "excerpt": "OBJET :    Investissements prévus en matière de travaux de voiries, d’acquisition, d’entretien et d’aménagements d’immeubles communaux, d’acquisition de véhicule, de matériel de voirie et informatique - Crédit de 4.253.100,00 € - Consultation du marché – Règlement de consultation n°02/2025,- LE CONSEIL, en séance publique, Vu la première partie du Code de la Démocratie Locale et de la Décentralisation et notamment l’article L1122-30 ;"
+        },
+        {
+          "page": 29,
+          "excerpt": "Considérant les divers investissements prévus en matière de travaux de voiries, d’acquisition, d’entretien et d’aménagements d’immeubles communaux, d’acquisition de véhicule, de matériel de voirie et informatique ; Considérant qu’il y a lieu de recourir à un crédit couvrant cet investissement ; Vu le règlement de consultation n° 01/2025, ci-annexé ;"
+        },
+        {
+          "page": 29,
+          "excerpt": "A l’unanimité des membres présents ; DECIDE : Article 1 : il sera passé un marché de crédit pour le financement de travaux de voiries, d’acquisition, d’entretien et d’aménagements d’immeubles communaux, d’acquisition de véhicule, de matériel de voirie et informatique. Le montant du crédit à solliciter est de : • 3.413.100,00 € pour une durée de 20 ans"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 28,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:0f64e690f92df42bb4",
+        "sha256": "0a5a0affde2eb145270423229dd454451c40bcbeffbdb6d8ae8a5af57eb6b475",
+        "checkedAt": "2026-10-31T15:31:30.638Z",
+        "changedAt": null
+      },
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null
+    },
+    {
       "id": "local:20c9f5a442bb49018409",
       "title": "Conseil communal — opportunité à vérifier : Hannut",
       "buyer": "Commune de Hannut",
@@ -14787,159 +14944,6 @@
       },
       "matchReason": "mission_globale_a_qualifier",
       "screeningReason": null
-    },
-    {
-      "id": "local:c720fc312e6d7a04a7ca",
-      "title": "Conseil communal — opportunité à vérifier : Cerfontaine",
-      "buyer": "Commune de Cerfontaine",
-      "municipalityINS": "93010",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "classiques et ses modifications ultérieures ; Vu la délibération du Collège Communal du 24 février 2024 décidant notamment : - d’approuver et d’attribuer la mission d’auteur de projet relative à la réfection de la toitur",
-        "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-27-10-25.pdf",
-        "page": 7,
-        "sha256": "9638e79e80e43a2d818828ba4ddb3c316224b7e95df6406db251346ffc1da56c"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-27-10-25.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-27-10-25.pdf",
-        "sha256": "9638e79e80e43a2d818828ba4ddb3c316224b7e95df6406db251346ffc1da56c",
-        "session": null,
-        "document": null,
-        "status": "unknown"
-      },
-      "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-27-10-25.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : classiques et ses modifications ultérieures ; Vu la délibération du Collège Communal du 24 février 2024 décidant notamment : - d’approuver et d’attribuer la mission d’auteur de projet relative à la réfection de la toiture de l’école et de l’administration communale de Cerfontaine à IGRETEC, association de communes, société coopérative, Boulevard Mayence, 1 à 6000 Charleroi, dans le cadre de la relation « in house », pour le montant estimé de 20.320,00 € HTVA, soit 24.588,02 € TVAC ; - d’approuver et de signer le contrat intitulé « Contrat d’architecture avec coordination",
-      "evidence": "classiques et ses modifications ultérieures ; Vu la délibération du Collège Communal du 24 février 2024 décidant notamment : - d’approuver et d’attribuer la mission d’auteur de projet relative à la réfection de la toiture de l’école et de l’administration communale de Cerfontaine à IGRETEC, association de communes, société coopérative, Boulevard Mayence, 1 à 6000 Charleroi, dans le cadre de la relation « in house », pour le montant estimé de 20.320,00 € HTVA, soit 24.588,02 € TVAC ; - d’approuver et de signer le contrat intitulé « Contrat d’architecture avec coordination",
-      "municipalReference": null,
-      "municipalSection": "2. Présentation et approbation du budget et de la grille tarifaire 2026.",
-      "municipalEvidence": [
-        {
-          "page": 7,
-          "excerpt": "classiques et ses modifications ultérieures ; Vu la délibération du Collège Communal du 24 février 2024 décidant notamment : - d’approuver et d’attribuer la mission d’auteur de projet relative à la réfection de la toiture de l’école et de l’administration communale de Cerfontaine à IGRETEC, association de communes, société coopérative, Boulevard Mayence, 1 à 6000 Charleroi, dans le cadre de la relation « in house », pour le montant estimé de 20.320,00 € HTVA, soit 24.588,02 € TVAC ; - d’approuver et de signer le contrat intitulé « Contrat d’architecture avec coordination"
-        },
-        {
-          "page": 8,
-          "excerpt": "préalable ; Article 3: d’approuver les clauses et conditions du cahier spécial des charges et ses annexes établis par l’auteur de projet, I.G.R.E.T.E.C., Bd. Mayence 1 à 6000 Charleroi ; Article 4: de financer cette dépense par les crédits inscrits au budget 2025 article 722/723- 60/20250004, service extraordinaire ; Article 5: de charger le Collège Communal de l’exécution de la présente délibération ; Article 6: de transmettre copie de la présente décision et ses annexes à l’auteur de projet,"
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 7,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:f105abe350c35a09c0",
-        "sha256": "9638e79e80e43a2d818828ba4ddb3c316224b7e95df6406db251346ffc1da56c",
-        "checkedAt": "2026-10-31T15:31:30.638Z",
-        "changedAt": null
-      }
-    },
-    {
-      "id": "local:ddd178bdf3a75ed2ab77",
-      "title": "Conseil communal — opportunité à vérifier : Cerfontaine",
-      "buyer": "Commune de Cerfontaine",
-      "municipalityINS": "93010",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "Article 5 : la présente délibération sera transmise à Monsieur le Directeur Financier. -=-=-=-=-=-=-=- OBJET : Investissements prévus en matière de travaux de voiries, d’acquisition, d’entretien et d’aménagements d’im",
-        "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-03-31.pdf",
-        "page": 28,
-        "sha256": "0a5a0affde2eb145270423229dd454451c40bcbeffbdb6d8ae8a5af57eb6b475"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 60,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-03-31.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-03-31.pdf",
-        "sha256": "0a5a0affde2eb145270423229dd454451c40bcbeffbdb6d8ae8a5af57eb6b475",
-        "session": null,
-        "document": {
-          "date": "2025-03-31",
-          "kind": "document",
-          "page": null,
-          "source": "filename",
-          "excerpt": "-2025-03-31",
-          "confidence": "inferred"
-        },
-        "status": "identified"
-      },
-      "url": "https://www.cerfontaine.be/ma-commune/politique/le-conseil-communal/pv-approuves-des-dernieres-seances-du-conseil-communal/pv-cc-2025-03-31.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : Article 5 : la présente délibération sera transmise à Monsieur le Directeur Financier. -=-=-=-=-=-=-=- OBJET :    Investissements prévus en matière de travaux de voiries, d’acquisition, d’entretien et d’aménagements d’immeubles communaux, d’acquisition de véhicule, de matériel de voirie et informatique - Crédit de 4.253.100,00 € - Consultation du marché – Règlement de consultation n°02/2025,- LE CONSEIL, en séance publique,",
-      "evidence": "Article 5 : la présente délibération sera transmise à Monsieur le Directeur Financier. -=-=-=-=-=-=-=- OBJET :    Investissements prévus en matière de travaux de voiries, d’acquisition, d’entretien et d’aménagements d’immeubles communaux, d’acquisition de véhicule, de matériel de voirie et informatique - Crédit de 4.253.100,00 € - Consultation du marché – Règlement de consultation n°02/2025,- LE CONSEIL, en séance publique,",
-      "municipalReference": null,
-      "municipalSection": "18. respecter les principes fondamentaux tenant à la dignité humaine.",
-      "municipalEvidence": [
-        {
-          "page": 28,
-          "excerpt": "Article 5 : la présente délibération sera transmise à Monsieur le Directeur Financier. -=-=-=-=-=-=-=- OBJET :    Investissements prévus en matière de travaux de voiries, d’acquisition, d’entretien et d’aménagements d’immeubles communaux, d’acquisition de véhicule, de matériel de voirie et informatique - Crédit de 4.253.100,00 € - Consultation du marché – Règlement de consultation n°02/2025,- LE CONSEIL, en séance publique,"
-        },
-        {
-          "page": 28,
-          "excerpt": "OBJET :    Investissements prévus en matière de travaux de voiries, d’acquisition, d’entretien et d’aménagements d’immeubles communaux, d’acquisition de véhicule, de matériel de voirie et informatique - Crédit de 4.253.100,00 € - Consultation du marché – Règlement de consultation n°02/2025,- LE CONSEIL, en séance publique, Vu la première partie du Code de la Démocratie Locale et de la Décentralisation et notamment l’article L1122-30 ;"
-        },
-        {
-          "page": 29,
-          "excerpt": "Considérant les divers investissements prévus en matière de travaux de voiries, d’acquisition, d’entretien et d’aménagements d’immeubles communaux, d’acquisition de véhicule, de matériel de voirie et informatique ; Considérant qu’il y a lieu de recourir à un crédit couvrant cet investissement ; Vu le règlement de consultation n° 01/2025, ci-annexé ;"
-        },
-        {
-          "page": 29,
-          "excerpt": "A l’unanimité des membres présents ; DECIDE : Article 1 : il sera passé un marché de crédit pour le financement de travaux de voiries, d’acquisition, d’entretien et d’aménagements d’immeubles communaux, d’acquisition de véhicule, de matériel de voirie et informatique. Le montant du crédit à solliciter est de : • 3.413.100,00 € pour une durée de 20 ans"
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 28,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:0f64e690f92df42bb4",
-        "sha256": "0a5a0affde2eb145270423229dd454451c40bcbeffbdb6d8ae8a5af57eb6b475",
-        "checkedAt": "2026-10-31T15:31:30.638Z",
-        "changedAt": null
-      }
     }
   ]
 }
