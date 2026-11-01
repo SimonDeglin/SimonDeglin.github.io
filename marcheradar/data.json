@@ -58,8 +58,8 @@
     },
     "COMMUNES": {
       "status": "inventory_not_document_collection",
-      "updatedAt": "2026-11-01T16:24:53.018Z",
-      "last_attempt": "2026-11-01T16:24:53.018Z",
+      "updatedAt": "2026-11-01T21:22:47.590Z",
+      "last_attempt": "2026-11-01T21:22:47.590Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -67,31 +67,31 @@
       "total": 261,
       "sitesRepertories": 261,
       "sitesVerifies": 261,
-      "deliberationsConnectees": 46,
+      "deliberationsConnectees": 47,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 238,
-      "opportunities": 98,
+      "documentsRead": 246,
+      "opportunities": 101,
       "sitesChecked": 261,
       "candidatePages": 227,
       "sourceErrors": 30
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-01T16:25:44.595Z",
-      "last_success": "2026-11-01T16:25:44.595Z",
+      "last_attempt": "2026-11-01T21:23:40.839Z",
+      "last_success": "2026-11-01T21:23:40.839Z",
       "last_batch": 4,
-      "documents_checked": 6,
-      "documents_read": 6,
+      "documents_checked": 8,
+      "documents_read": 8,
       "documents_unchanged": 0,
       "documents_modified": 0,
-      "opportunities_found": 0,
+      "opportunities_found": 3,
       "review_candidates": 0,
-      "errors_count": 9,
+      "errors_count": 4,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel."
     }
   },
@@ -103,7 +103,7 @@
   "metrics": {
     "scanned": 1375,
     "matched_current_run": 10,
-    "records": 224,
+    "records": 227,
     "review_count": 130,
     "award_notice_count": 352,
     "awarded_market_matches": 0,
@@ -15279,6 +15279,246 @@
       },
       "matchReason": "mission_globale_a_qualifier",
       "screeningReason": null
+    },
+    {
+      "id": "local:35c28756b636eb24f5f4",
+      "title": "Conseil communal — opportunité à vérifier : Donceel",
+      "buyer": "Commune de Donceel",
+      "municipalityINS": "64023",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 2022165 relatif au marché “MPS Désignation d'un auteur de projet dans le cadre du PIC 2022-2024” établi par l",
+        "sourceUrl": "https://www.donceel.be/uploads/odjs/2022/PV%20DU%2031%20MARS%202022.pdf",
+        "page": 5,
+        "sha256": "858b810af7108f53c7ab04b215f2b248697f4a20c276f73a5f64d3fd657d570f"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.donceel.be/uploads/odjs/2022/PV%20DU%2031%20MARS%202022.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.donceel.be/uploads/odjs/2022/PV%20DU%2031%20MARS%202022.pdf",
+        "sha256": "858b810af7108f53c7ab04b215f2b248697f4a20c276f73a5f64d3fd657d570f",
+        "session": null,
+        "document": {
+          "date": "2022-03-31",
+          "kind": "document",
+          "page": null,
+          "source": "filename",
+          "excerpt": "31 MARS 2022",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.donceel.be/uploads/odjs/2022/PV%20DU%2031%20MARS%202022.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 2022165 relatif au marché “MPS Désignation d'un auteur de projet dans le cadre du PIC 2022-2024” établi par l'AC DONCEEL ;",
+      "evidence": "classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 2022165 relatif au marché “MPS Désignation d'un auteur de projet dans le cadre du PIC 2022-2024” établi par l'AC DONCEEL ;",
+      "municipalReference": "2022165",
+      "municipalSection": "05. ASSOCIATION MUCO.BE – OCTROI D’UNE SUBVENTION POUR L’ANNEE",
+      "municipalEvidence": [
+        {
+          "page": 5,
+          "excerpt": "classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 2022165 relatif au marché “MPS Désignation d'un auteur de projet dans le cadre du PIC 2022-2024” établi par l'AC DONCEEL ;"
+        },
+        {
+          "page": 6,
+          "excerpt": "Article 1er : D'approuver le cahier des charges N° 2022165 et le montant estimé du marché “MPS Désignation d'un auteur de projet dans le cadre du PIC 2022-2024”, établis par l'AC DONCEEL. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 16.528,93 € hors TVA ou 20.000,00 €, 21% TVA comprise. Article 2 :"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 5,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:7d52da0c1d13c645cd",
+        "sha256": "858b810af7108f53c7ab04b215f2b248697f4a20c276f73a5f64d3fd657d570f",
+        "checkedAt": "2026-11-01T21:23:40.839Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:849e1d346265ce0b7de1",
+      "title": "Conseil communal — opportunité à vérifier : Donceel",
+      "buyer": "Commune de Donceel",
+      "municipalityINS": "64023",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "article 421/735-60 via la 1ère modification. 07 - MARCHE PUBLIC DE SERVICES – MPS - PCDR - DESIGNATION D'UN AUTEUR DE PROJET - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION Vu le Code de la démocratie locale et de l",
+        "sourceUrl": "https://www.donceel.be/uploads/odjs/2022/PV%20DU%2031%20MARS%202022.pdf",
+        "page": 6,
+        "sha256": "858b810af7108f53c7ab04b215f2b248697f4a20c276f73a5f64d3fd657d570f"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.donceel.be/uploads/odjs/2022/PV%20DU%2031%20MARS%202022.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.donceel.be/uploads/odjs/2022/PV%20DU%2031%20MARS%202022.pdf",
+        "sha256": "858b810af7108f53c7ab04b215f2b248697f4a20c276f73a5f64d3fd657d570f",
+        "session": null,
+        "document": {
+          "date": "2022-03-31",
+          "kind": "document",
+          "page": null,
+          "source": "filename",
+          "excerpt": "31 MARS 2022",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "url": "https://www.donceel.be/uploads/odjs/2022/PV%20DU%2031%20MARS%202022.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : article 421/735-60 via la 1ère modification. 07 - MARCHE PUBLIC DE SERVICES – MPS - PCDR - DESIGNATION D'UN AUTEUR DE PROJET - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ;",
+      "evidence": "article 421/735-60 via la 1ère modification. 07 - MARCHE PUBLIC DE SERVICES – MPS - PCDR - DESIGNATION D'UN AUTEUR DE PROJET - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ;",
+      "municipalReference": "20220009",
+      "municipalSection": "05. ASSOCIATION MUCO.BE – OCTROI D’UNE SUBVENTION POUR L’ANNEE",
+      "municipalEvidence": [
+        {
+          "page": 6,
+          "excerpt": "article 421/735-60 via la 1ère modification. 07 - MARCHE PUBLIC DE SERVICES – MPS - PCDR - DESIGNATION D'UN AUTEUR DE PROJET - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ;"
+        },
+        {
+          "page": 7,
+          "excerpt": "classiques et ses modifications ultérieures ; Considérant le cahier des charges N° 20220009 relatif au marché “MPS - PCDR - DESIGNATION D'UN AUTEUR DE PROJET” établi par le Service travaux administratifs ; Considérant que le montant estimé de ce marché s'élève à 61.983,47 € hors TVA ou 75.000,00 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ;"
+        },
+        {
+          "page": 7,
+          "excerpt": "Article 1er : D'approuver le cahier des charges N° 20220009 et le montant estimé du marché “MPS - PCDR - DESIGNATION D'UN AUTEUR DE PROJET”, établis par le Service travaux administratifs. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 61.983,47 € hors TVA ou 75.000,00 €, 21% TVA comprise. Article 2 :"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 6,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:7d52da0c1d13c645cd",
+        "sha256": "858b810af7108f53c7ab04b215f2b248697f4a20c276f73a5f64d3fd657d570f",
+        "checkedAt": "2026-11-01T21:23:40.839Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:a59c8aeb4713fd3260a2",
+      "title": "Conseil communal — opportunité à vérifier : Donceel",
+      "buyer": "Commune de Donceel",
+      "municipalityINS": "64023",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "- COMMUNIQUE la présente à la SPI, Atrium Vertbois, rue du Vertbois, 11 à 4000 Liège. 09 -MPS - DÉSIGNATION D'UN AUTEUR DE PROJET POUR LA RÉFECTION DE DIVERSES VOIRIES COMMUNALES - APPROBATION DES CONDITIONS ET DU MODE",
+        "sourceUrl": "https://www.donceel.be/uploads/odjs/2023/PV%20registre%20public.pdf",
+        "page": 23,
+        "sha256": "097ad1f5cc7d6f4398e0ae83b8eb736eae16cdc9c31192e15b1da4a0fbfcb649"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.donceel.be/uploads/odjs/2023/PV%20registre%20public.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.donceel.be/uploads/odjs/2023/PV%20registre%20public.pdf",
+        "sha256": "097ad1f5cc7d6f4398e0ae83b8eb736eae16cdc9c31192e15b1da4a0fbfcb649",
+        "session": {
+          "date": "2023-01-26",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "Séance publique du 26 janvier 2023",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "url": "https://www.donceel.be/uploads/odjs/2023/PV%20registre%20public.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : -   COMMUNIQUE la présente à la SPI, Atrium Vertbois, rue du Vertbois, 11 à 4000 Liège. 09 -MPS - DÉSIGNATION D'UN AUTEUR DE PROJET POUR LA RÉFECTION DE DIVERSES VOIRIES COMMUNALES - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION Monsieur DELVAUX présente le point. Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures,",
+      "evidence": "-   COMMUNIQUE la présente à la SPI, Atrium Vertbois, rue du Vertbois, 11 à 4000 Liège. 09 -MPS - DÉSIGNATION D'UN AUTEUR DE PROJET POUR LA RÉFECTION DE DIVERSES VOIRIES COMMUNALES - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION Monsieur DELVAUX présente le point. Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures,",
+      "municipalReference": "2023185",
+      "municipalSection": "2. Modifications statutaires ( articles 3,4,8, 9, 21 et 35)",
+      "municipalEvidence": [
+        {
+          "page": 23,
+          "excerpt": "-   COMMUNIQUE la présente à la SPI, Atrium Vertbois, rue du Vertbois, 11 à 4000 Liège. 09 -MPS - DÉSIGNATION D'UN AUTEUR DE PROJET POUR LA RÉFECTION DE DIVERSES VOIRIES COMMUNALES - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION Monsieur DELVAUX présente le point. Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures,"
+        },
+        {
+          "page": 23,
+          "excerpt": "4000 Liège. 09 -MPS - DÉSIGNATION D'UN AUTEUR DE PROJET POUR LA RÉFECTION DE DIVERSES VOIRIES COMMUNALES - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION Monsieur DELVAUX présente le point. Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles"
+        },
+        {
+          "page": 24,
+          "excerpt": "classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 2023185 relatif au marché “MPS - Désignation d'un auteur de projet pour la réfection de diverses voiries communales” établi par l'AC DONCEEL ; Considérant que le montant estimé de ce marché s'élève à 16.528,93 € hors TVA ou 20.000,00 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication"
+        },
+        {
+          "page": 24,
+          "excerpt": "Article 1er : D'approuver le cahier des charges N° 2023185 et le montant estimé du marché “MPS - Désignation d'un auteur de projet pour la réfection de diverses voiries communales”, établis par l'AC DONCEEL. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 16.528,93 € hors TVA ou 20.000,00 €, 21% TVA comprise. Article 2 :"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 23,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:09d58a718d3c97a4bc",
+        "sha256": "097ad1f5cc7d6f4398e0ae83b8eb736eae16cdc9c31192e15b1da4a0fbfcb649",
+        "checkedAt": "2026-11-01T21:23:40.839Z",
+        "changedAt": null
+      }
     }
   ]
 }
