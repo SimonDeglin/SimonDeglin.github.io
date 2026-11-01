@@ -58,8 +58,8 @@
     },
     "COMMUNES": {
       "status": "inventory_not_document_collection",
-      "updatedAt": "2026-10-31T20:41:28.556Z",
-      "last_attempt": "2026-10-31T20:41:28.556Z",
+      "updatedAt": "2026-11-01T00:26:27.737Z",
+      "last_attempt": "2026-11-01T00:26:27.737Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -67,31 +67,31 @@
       "total": 261,
       "sitesRepertories": 261,
       "sitesVerifies": 261,
-      "deliberationsConnectees": 41,
+      "deliberationsConnectees": 43,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 228,
-      "opportunities": 94,
+      "documentsRead": 232,
+      "opportunities": 98,
       "sitesChecked": 261,
       "candidatePages": 227,
-      "sourceErrors": 27
+      "sourceErrors": 28
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-10-31T20:42:20.499Z",
-      "last_success": "2026-10-31T20:42:20.499Z",
+      "last_attempt": "2026-11-01T00:27:34.499Z",
+      "last_success": "2026-11-01T00:27:34.499Z",
       "last_batch": 4,
-      "documents_checked": 7,
-      "documents_read": 7,
+      "documents_checked": 4,
+      "documents_read": 4,
       "documents_unchanged": 0,
       "documents_modified": 0,
-      "opportunities_found": 1,
+      "opportunities_found": 4,
       "review_candidates": 0,
-      "errors_count": 4,
+      "errors_count": 2,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel."
     }
   },
@@ -103,7 +103,7 @@
   "metrics": {
     "scanned": 1594,
     "matched_current_run": 13,
-    "records": 220,
+    "records": 224,
     "review_count": 125,
     "award_notice_count": 411,
     "awarded_market_matches": 0,
@@ -15007,6 +15007,266 @@
         "documentId": "municipal-doc:3f17f055a8dcf413d4",
         "sha256": "fd4727978aee8806ddb2214510f338ac518d9035da43181ba62fa37edc590e95",
         "checkedAt": "2026-10-31T20:42:20.499Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:ba7485179119b4ad5369",
+      "title": "Conseil communal — opportunité à vérifier : Ciney",
+      "buyer": "Commune de Ciney",
+      "municipalityINS": "91030",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "2024 et dénommé « Végétalisation à l’échelle du quartier » un subside. La Ville a mandaté le Bureau Économique dans le cadre de l’exception in house comme bureau d’études pour la végétalisation de ce parking. Action n° 1",
+        "sourceUrl": "https://www.ciney.be/vie-communale/vie-politique/pst.pdf",
+        "page": 54,
+        "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.ciney.be/vie-communale/vie-politique/pst.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.ciney.be/vie-communale/vie-politique/pst.pdf",
+        "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d",
+        "session": null,
+        "document": null,
+        "status": "unknown"
+      },
+      "url": "https://www.ciney.be/vie-communale/vie-politique/pst.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 2024 et dénommé « Végétalisation à l’échelle du quartier » un subside. La Ville a mandaté le Bureau Économique dans le cadre de l’exception in house comme bureau d’études pour la végétalisation de ce parking. Action n° 11 : Poursuite du projet « Arbres de naissance » Budget estimé : 1.000 € / an Cellule référente : Environnement - Energie Partenaire : A déterminer",
+      "evidence": "2024 et dénommé « Végétalisation à l’échelle du quartier » un subside. La Ville a mandaté le Bureau Économique dans le cadre de l’exception in house comme bureau d’études pour la végétalisation de ce parking. Action n° 11 : Poursuite du projet « Arbres de naissance » Budget estimé : 1.000 € / an Cellule référente : Environnement - Energie Partenaire : A déterminer",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 54,
+          "excerpt": "2024 et dénommé « Végétalisation à l’échelle du quartier » un subside. La Ville a mandaté le Bureau Économique dans le cadre de l’exception in house comme bureau d’études pour la végétalisation de ce parking. Action n° 11 : Poursuite du projet « Arbres de naissance » Budget estimé : 1.000 € / an Cellule référente : Environnement - Energie Partenaire : A déterminer"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 54,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:90fb6d669372a8e425",
+        "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d",
+        "checkedAt": "2026-11-01T00:27:34.499Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:53f02bf0c368cf0ee03f",
+      "title": "Conseil communal — opportunité à vérifier : Ciney",
+      "buyer": "Commune de Ciney",
+      "municipalityINS": "91030",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "faisabilité sur la manière la plus appropriée de réaffecter ponctuellement ou de manière permanente ces édifices. Un marché public ayant pour objet la désignation d’un bureau d’études pourra ensuite être lancé. Action n°",
+        "sourceUrl": "https://www.ciney.be/vie-communale/vie-politique/pst.pdf",
+        "page": 76,
+        "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.ciney.be/vie-communale/vie-politique/pst.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.ciney.be/vie-communale/vie-politique/pst.pdf",
+        "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d",
+        "session": null,
+        "document": null,
+        "status": "unknown"
+      },
+      "url": "https://www.ciney.be/vie-communale/vie-politique/pst.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : faisabilité sur la manière la plus appropriée de réaffecter ponctuellement ou de manière permanente ces édifices. Un marché public ayant pour objet la désignation d’un bureau d’études pourra ensuite être lancé. Action n° 2 : Aménager la Place d’Ychippe Budget estimé : 469.102,48 € (fonds propres : 93.820,50 € - subside régional : 375.281,98 €)",
+      "evidence": "faisabilité sur la manière la plus appropriée de réaffecter ponctuellement ou de manière permanente ces édifices. Un marché public ayant pour objet la désignation d’un bureau d’études pourra ensuite être lancé. Action n° 2 : Aménager la Place d’Ychippe Budget estimé : 469.102,48 € (fonds propres : 93.820,50 € - subside régional : 375.281,98 €)",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 76,
+          "excerpt": "faisabilité sur la manière la plus appropriée de réaffecter ponctuellement ou de manière permanente ces édifices. Un marché public ayant pour objet la désignation d’un bureau d’études pourra ensuite être lancé. Action n° 2 : Aménager la Place d’Ychippe Budget estimé : 469.102,48 € (fonds propres : 93.820,50 € - subside régional : 375.281,98 €)"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 76,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:90fb6d669372a8e425",
+        "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d",
+        "checkedAt": "2026-11-01T00:27:34.499Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:9dd0774abf1c586caa39",
+      "title": "Conseil communal — opportunité à vérifier : Ciney",
+      "buyer": "Commune de Ciney",
+      "municipalityINS": "91030",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "La convention de faisabilité a déjà été approuvée par le Conseil Communal au mois d’août 2025. Elle doit encore être signée par Madame la Ministre. Une fois signée, le marché relatif à la désignation d’un auteur de proje",
+        "sourceUrl": "https://www.ciney.be/vie-communale/vie-politique/pst.pdf",
+        "page": 76,
+        "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.ciney.be/vie-communale/vie-politique/pst.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.ciney.be/vie-communale/vie-politique/pst.pdf",
+        "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d",
+        "session": null,
+        "document": null,
+        "status": "unknown"
+      },
+      "url": "https://www.ciney.be/vie-communale/vie-politique/pst.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : La convention de faisabilité a déjà été approuvée par le Conseil Communal au mois d’août 2025. Elle doit encore être signée par Madame la Ministre. Une fois signée, le marché relatif à la désignation d’un auteur de projets pourra être lancé. Action n° 3 : Aménagement des abords de l’ancienne gare de Braibant Budget estimé : 401.473 € (fonds propres : 121.827,77 € - subvention régionale : 279.645,23 €) Cellule référente : Travaux",
+      "evidence": "La convention de faisabilité a déjà été approuvée par le Conseil Communal au mois d’août 2025. Elle doit encore être signée par Madame la Ministre. Une fois signée, le marché relatif à la désignation d’un auteur de projets pourra être lancé. Action n° 3 : Aménagement des abords de l’ancienne gare de Braibant Budget estimé : 401.473 € (fonds propres : 121.827,77 € - subvention régionale : 279.645,23 €) Cellule référente : Travaux",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 76,
+          "excerpt": "La convention de faisabilité a déjà été approuvée par le Conseil Communal au mois d’août 2025. Elle doit encore être signée par Madame la Ministre. Une fois signée, le marché relatif à la désignation d’un auteur de projets pourra être lancé. Action n° 3 : Aménagement des abords de l’ancienne gare de Braibant Budget estimé : 401.473 € (fonds propres : 121.827,77 € - subvention régionale : 279.645,23 €) Cellule référente : Travaux"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 76,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:90fb6d669372a8e425",
+        "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d",
+        "checkedAt": "2026-11-01T00:27:34.499Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:401cf150faca1d2723ed",
+      "title": "Conseil communal — opportunité à vérifier : Ciney",
+      "buyer": "Commune de Ciney",
+      "municipalityINS": "91030",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Le but est de veiller à la mise en valeur des produits locaux et productions locales. Il s’agira d’un espace dédié à l’entraide et ouvert pour la culture et l’art. L’auteur de projet a été désigné. Le cahier spécial des",
+        "sourceUrl": "https://www.ciney.be/vie-communale/vie-politique/pst.pdf",
+        "page": 78,
+        "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.ciney.be/vie-communale/vie-politique/pst.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.ciney.be/vie-communale/vie-politique/pst.pdf",
+        "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d",
+        "session": null,
+        "document": null,
+        "status": "unknown"
+      },
+      "url": "https://www.ciney.be/vie-communale/vie-politique/pst.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Le but est de veiller à la mise en valeur des produits locaux et productions locales. Il s’agira d’un espace dédié à l’entraide et ouvert pour la culture et l’art. L’auteur de projet a été désigné. Le cahier spécial des charges a été approuvé par le Conseil Communal en juin 2025. La Commune est dans l’attente de l’approbation ministérielle.           Une fois cette approbation obtenue, le marché public pourra être lancé. Action n° 2 : Créer des fiches touristiques",
+      "evidence": "Le but est de veiller à la mise en valeur des produits locaux et productions locales. Il s’agira d’un espace dédié à l’entraide et ouvert pour la culture et l’art. L’auteur de projet a été désigné. Le cahier spécial des charges a été approuvé par le Conseil Communal en juin 2025. La Commune est dans l’attente de l’approbation ministérielle.           Une fois cette approbation obtenue, le marché public pourra être lancé. Action n° 2 : Créer des fiches touristiques",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 78,
+          "excerpt": "Le but est de veiller à la mise en valeur des produits locaux et productions locales. Il s’agira d’un espace dédié à l’entraide et ouvert pour la culture et l’art. L’auteur de projet a été désigné. Le cahier spécial des charges a été approuvé par le Conseil Communal en juin 2025. La Commune est dans l’attente de l’approbation ministérielle.           Une fois cette approbation obtenue, le marché public pourra être lancé. Action n° 2 : Créer des fiches touristiques"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 78,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:90fb6d669372a8e425",
+        "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d",
+        "checkedAt": "2026-11-01T00:27:34.499Z",
         "changedAt": null
       }
     }
