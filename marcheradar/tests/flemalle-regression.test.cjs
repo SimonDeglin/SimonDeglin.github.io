@@ -31,6 +31,6 @@ test('collecte de bout en bout : page communale → séance → décision, PDF l
  fs.writeFileSync(dataPath,JSON.stringify({items:[]}));fs.writeFileSync(inventoryPath,JSON.stringify({communes:[{ins:'62120',name:'Flémalle',officialSite:root,deliberationSources:[{url:root,status:'page_accessible'}]}]}));
  try{
   const r=await reader.run({ins:'62120',dataPath,inventoryPath,quiet:true,now,maxPages:8,maxDocuments:2,extract:()=>fixture('flemalle-20261019-oj.txt'),fetchFn:async u=>{assert(pages.has(u),'URL inattendue '+u);return new Response(pages.get(u))}});
-  assert.equal(r.opportunities,1);assert.equal(r.errors,0);const items=JSON.parse(fs.readFileSync(dataPath)).items;assert.equal(items.length,1);assert.equal(items[0].municipalNotices.length,1);assert.equal(items[0].municipalNotices[0].sourceDocumentDates.document.date,'2026-10-14');
+  assert.equal(r.opportunities,1);assert.equal(r.errors,0);const items=JSON.parse(fs.readFileSync(dataPath)).items;assert.equal(items.length,1);assert.equal(items[0].municipalNotices.length,1);assert.equal(items[0].municipalNotices[0].sourceDocumentDates.document.date,'2026-10-14');assert.match(require('../detail-phase2.js').sources(items[0]).find(x=>x.url===pdf).meta,/14\/10\/2026/);
  }finally{fs.rmSync(dir,{recursive:true,force:true})}
 });

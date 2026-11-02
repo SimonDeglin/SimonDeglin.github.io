@@ -95,7 +95,10 @@
    var text=council?'Consulter le document communal':origin.includes('bosa')?'Ouvrir le dossier e-Procurement':origin.includes('ted')?'Ouvrir l’avis TED':'Consulter la publication source';
    add(url,text,council?'council':'notice',council?'Document source référencé':'Portail officiel — annexes à consulter sur place');
   });
-  for(const n of m.municipalNotices||[])if(n.sourceDocument)add(n.sourceDocument,'Consulter la publication communale','council','Même dossier : référence explicite ou objet, commune et séance identiques');
+  for(const n of m.municipalNotices||[])if(n.sourceDocument){
+   const date=documentDates&&documentDates.view(n);
+   add(n.sourceDocument,'Consulter la publication communale','council',(date?date.summary+' · ':'')+'Même dossier : référence explicite ou objet, commune et séance identiques');
+  }
   if(m.sourceDocument)add(m.sourceDocument,'Consulter le document communal','council','Document source référencé');
   if(m.url){
    var text=m.source==='TED'?'Ouvrir l’avis TED':m.source==='BOSA'?'Ouvrir le dossier e-Procurement':m.source==='LOCALE'?(publications&&publications.source(m)==='other'?'Consulter le document public':'Consulter le document communal'):'Consulter la publication';
