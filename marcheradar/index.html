@@ -185,7 +185,7 @@ body{background:#f7f7f7;color:#303339}
 .coverage-detail-link:hover{text-decoration:underline}
 </style>
 <link rel="stylesheet" href="detail-phase2.css">
-<link rel="stylesheet" href="cockpit-v4.css?v=20261029-document-dates">
+<link rel="stylesheet" href="cockpit-v4.css?v=20261029-recent-communes">
 </head>
 <body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -254,6 +254,7 @@ body{background:#f7f7f7;color:#303339}
     <div class="source-coverage-strip" id="coverageStrip" aria-label="État des sources"></div>
     <div class="section-head"><h2 id="sectionTitle">Listing complet</h2><div class="section-right"><button id="reviewBtn" class="review-btn" type="button">À vérifier <span id="reviewCount">0</span></button><small id="lastSync"></small></div></div>
     <div id="listDescription" class="list-description">Marchés à trier, non encore classés. Glissez une ligne vers un dossier à gauche.</div>
+    <p class="v4-facet-note">Sites communaux : pistes des 3 derniers mois dans le listing actif. Les documents plus anciens ou sans date identifiable restent dans l’historique ; vos dossiers classés sont conservés.</p>
     <div class="v4-kind-filter" aria-label="Filtrer par source"><span class="v4-kind-filter-label">Source</span><div id="sourceFilters" class="v4-type-buttons" role="group" aria-label="Source de publication"></div></div>
     <div class="v4-kind-filter" aria-label="Filtrer les publications"><span class="v4-kind-filter-label">Type de publication</span><div id="publicationFilters" class="v4-type-buttons" role="group" aria-label="Type de publication"></div></div>
     <section class="filter-panel">
@@ -263,7 +264,7 @@ body{background:#f7f7f7;color:#303339}
         <select class="filter-select" id="dueFilter" aria-label="Filtrer par échéance"><option value="all">Toutes les échéances</option><option value="open">Marchés ouverts</option><option value="closed">Marchés clôturés</option><option value="unknown">Échéance à vérifier</option></select>
         <select class="filter-select" id="sort" aria-label="Trier les marchés"><option value="deadline">Échéances à venir</option><option value="score">Plus pertinents</option><option value="recent">Plus récents</option></select>
       </div>
-      
+
     </section>
     <div class="workspace">
       <section class="results" aria-label="Liste des marchés"><div class="result-head"><div class="result-title" id="resultTitle">Listing complet <span class="result-count" id="resultCount">0</span></div><div class="table-meta" id="listMeta">Classés pour KDRIX</div></div><div id="resultsList"></div></section>
@@ -276,12 +277,12 @@ body{background:#f7f7f7;color:#303339}
 <div class="overlay" id="overlay"></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Détails et préférences"><div class="drawer-head"><div><small id="drawerEyebrow">DÉTAIL DU MARCHÉ</small><h2 id="drawerHeader">Consulter un marché</h2></div><button class="close" id="closeDrawer" aria-label="Fermer"><svg class="ico"><use href="#i-x"/></svg></button></div><div class="drawer-content" id="drawerBody"></div><div class="drawer-footer" id="drawerFooter"></div></aside>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="document-dates.js?v=20261029-dates-1"></script>
-<script src="publication-filters.js?v=20261029-1"></script>
-<script src="detail-phase2.js?v=20261029-document-dates"></script>
-<script src="cockpit-v4.js?v=20261029-document-dates"></script>
+<script src="document-dates.js?v=20261029-recent-2"></script>
+<script src="publication-filters.js?v=20261029-recent-2"></script>
+<script src="detail-phase2.js?v=20261029-recent-communes"></script>
+<script src="cockpit-v4.js?v=20261029-recent-communes-2"></script>
 <script src="followup-backup.js?v=20261028-1"></script>
-<script src="source-health.js?v=20261029-1"></script>
+<script src="source-health.js?v=20261029-recent-communes"></script>
 <script src="qualification.js?v=20261029-1"></script>
 <script>
 (function(){
@@ -399,7 +400,7 @@ function renderList(){
   var col=m.score>=85?'#4fa786':m.score>=65?'#d6a65f':'#9ab1c6';
   return '<article class="tender" data-id="'+esc(m.id)+'"><div class="score-ring" style="--score:'+Math.max(0,Math.min(100,Number(m.score)||0))+';--ring:'+col+'" title="Score de pertinence indicatif"><strong>'+esc(m.score||0)+'</strong></div>'+
   '<div class="tender-body"><div class="tender-top"><span class="micro-tag sector">'+esc(SECTORS.find(function(s){return s.id===m.sector})?.label||m.sector||'Autre')+'</span><span class="micro-tag">'+esc(m.source==='Démo'?'FICTIF':(window.MRPublications?MRPublications.labels(m,state.sourceFilter):(m.source||'TED')))+'</span>'+(saved.statuses[m.id]?'<span class="micro-tag danger">'+esc(saved.statuses[m.id])+'</span>':'')+'</div>'+
-  '<h3 class="open-tender" role="button" tabindex="0">'+esc(m.title)+'</h3><div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+(window.MRDocumentDates&&m.source==='LOCALE'?esc(MRDocumentDates.view(m).summary):'Publié le '+fmtShort(m.publication))+'</span></div></div>'+
+  '<h3 class="open-tender" role="button" tabindex="0">'+esc(m.title)+'</h3><div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+(window.MRDocumentDates&&(m.source==='LOCALE'||state.sourceFilter==='municipal')?esc(MRDocumentDates.view(MRDocumentDates.forSource(m,state.sourceFilter))?.summary||'Date du document non identifiée'):'Publié le '+fmtShort(m.publication))+'</span></div></div>'+
   '<div class="tender-end"><button class="star'+(saved.favorites[m.id]?' on':'')+'" aria-label="Ajouter aux favoris" title="Favori" data-star="'+esc(m.id)+'">'+svg('star',true)+'</button><div class="end-date">'+(m.deadline?'Éch. '+fmtShort(m.deadline):'Échéance —')+'</div><span class="days'+daysCls+'">'+esc(label)+'</span></div></article>';
  }).join('');
  el('resultsList').querySelectorAll('.open-tender').forEach(function(node){node.addEventListener('click',function(){openTender(node.closest('[data-id]').dataset.id)});node.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openTender(node.closest('[data-id]').dataset.id)}})});
@@ -633,9 +634,10 @@ function matchesGeneralFilters(m){
  var q=norm(state.query).trim();
  return !q||norm([m.title,m.description,m.buyer,m.region,tags.join(' '),(m.cpv||[]).join(' ')].join(' ')).includes(q);
 }
+function municipalActive(m){return m.source!=='LOCALE'||(window.MRPublications&&MRPublications.source(m)!=='municipal')||isStage(saved.statuses[m.id])||!window.MRDocumentDates||MRDocumentDates.freshness(m).active}
 function matchesFolder(m,view){
  var folder=view||state.view,actual=stageOf(m.id);
- if(isStage(folder))return actual===folder&&(folder!=='inbox'||!autoExcluded(m));
+ if(isStage(folder))return actual===folder&&(folder!=='inbox'||(!autoExcluded(m)&&municipalActive(m)));
  if(folder==='screened')return autoExcluded(m)&&actual!=='irrelevant';
  // Un marché explicitement écarté ne réapparaît pas dans les vues de travail,
  // même après une nouvelle collecte automatique.
@@ -670,7 +672,7 @@ function renderPublicationFilters(){
 }
 function renderCockpitV4(){
  var box=el('cockpit');if(!box||!window.MRCockpit)return;
- var counts=MRCockpit.metrics(allMarkets(),stageOf,marketDueStatus,daysLeft,autoExcluded);
+ var counts=MRCockpit.metrics(allMarkets().filter(municipalActive),stageOf,marketDueStatus,daysLeft,autoExcluded);
  box.innerHTML=MRCockpit.renderCockpit(counts);
  box.querySelectorAll('[data-cockpit]').forEach(function(b){
   b.addEventListener('click',function(){
@@ -782,9 +784,9 @@ function renderStats(){
  el('kpiTracked').textContent=stageNumber('await');
  el('kpiUrgent').textContent=stageNumber('won');
  el('heroCount').textContent=allMarkets().length;
- 
- 
- 
+
+
+
  document.querySelectorAll('[data-count]').forEach(function(b){
   var code=b.dataset.count;
   b.textContent=allMarkets().filter(function(m){return matchesGeneralFilters(m)&&matchesPublicationType(m)&&matchesFolder(m,code)}).length;
@@ -837,7 +839,7 @@ function renderList(){
    '<div class="tender-body"><div class="tender-top"><div class="tag-group">'+tags+'</div>'+(window.MRCockpit?MRCockpit.typeBadge(m,state.sourceFilter,state.publication):'')+'<span class="micro-tag">'+esc(m.source==='Démo'?'FICTIF':(window.MRPublications?MRPublications.labels(m,state.sourceFilter):(m.source||'TED')))+'</span>'+
    (current!=='inbox'?'<span class="status-tag '+current+'">'+esc(stageName(current))+'</span>':'')+(m.screening==='review'?'<span class="micro-tag">À vérifier</span>':m.screening==='excluded'?'<span class="micro-tag">'+(autoExcluded(m)?'Écarté par le filtre':current==='inbox'?'Réintégré manuellement':'Classement manuel conservé')+'</span>':'')+(m.awards&&m.awards.length?'<span class="micro-tag result-published">Résultat publié</span>':'')+'</div>'+
    '<h3 class="open-tender" role="button" tabindex="0" title="Afficher en lecture rapide" aria-label="Lire rapidement : '+esc(m.title)+'">'+esc(m.title)+'</h3>'+
-   '<div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+(window.MRDocumentDates&&m.source==='LOCALE'?esc(MRDocumentDates.view(m).summary):'Publié le '+fmtShort(m.publication))+'</span></div>'+(window.MRDetailV2&&typeof MRDetailV2.listHints==='function'?MRDetailV2.listHints(m):'')+'</div>'+
+   '<div class="tender-sub"><span>'+svg('building',true)+esc(m.buyer||'Acheteur non précisé')+'</span><span>'+svg('pin',true)+esc(m.region||'Belgique')+'</span><span>'+svg('calendar',true)+(window.MRDocumentDates&&(m.source==='LOCALE'||state.sourceFilter==='municipal')?esc(MRDocumentDates.view(MRDocumentDates.forSource(m,state.sourceFilter))?.summary||'Date du document non identifiée'):'Publié le '+fmtShort(m.publication))+'</span></div>'+(window.MRDetailV2&&typeof MRDetailV2.listHints==='function'?MRDetailV2.listHints(m):'')+'</div>'+
    '<div class="tender-end"><div class="end-meta"><button class="star'+(saved.favorites[m.id]?' on':'')+'" title="Favori" aria-label="Favori" data-star="'+esc(m.id)+'">'+svg('star',true)+'</button><span class="end-date">'+(m.deadline?'Éch. '+fmtShort(m.deadline):m.source==='LOCALE'&&m.screening!=='excluded'?'Prospection — échéance non publiée':'Échéance non publiée')+'</span><span class="days'+dc+'">'+esc(label)+'</span></div>'+
    '<div class="v5-row-actions"><button type="button" class="v5-full-open" data-open-full="'+esc(m.id)+'" aria-label="Ouvrir la fiche complète : '+esc(m.title)+'">Fiche complète ↗</button><button type="button" class="v5-reject" data-irrelevant="'+esc(m.id)+'" aria-label="'+(current==='irrelevant'||autoExcluded(m)?'Réintégrer le marché':'Classer ce marché hors sujet')+'">'+((current==='irrelevant'||autoExcluded(m))?'Réintégrer':'Hors sujet')+'</button></div>'+
    '<select class="move-select" data-move="'+esc(m.id)+'" aria-label="Dossier de suivi">'+WORKFLOW.map(function(s){return '<option value="'+esc(s.id)+'"'+(s.id===current?' selected':'')+'>'+esc(s.label)+'</option>'}).join('')+'</select></div></article>';

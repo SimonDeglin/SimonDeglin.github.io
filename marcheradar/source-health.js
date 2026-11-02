@@ -31,8 +31,8 @@
   const errors=[...(c.errors||[]),...checks.filter(x=>x.lastError).map(x=>x.lastError)];
   if(['site_indisponible','site_en_erreur'].includes(c.sourceStatus)&&!errors.length)errors.push('Site inaccessible au dernier contrôle');
   if(c.lastDocumentResult?.errors&&!errors.length)errors.push('Dernier lot documentaire : '+c.lastDocumentResult.errors+' erreur(s)');
-  if(errors.length)return {key:'error',label:docs(c)>0?'Dernier contrôle en erreur · lectures antérieures conservées':'Dernier contrôle en erreur',errors};
-  if(docs(c)>0)return {key:'read',label:'Documents lus · couverture partielle',errors};
+  if(errors.length)return {key:'error',label:(docs(c)>0||(c.htmlDocumentsRead||0)>0)?'Dernier contrôle en erreur · lectures antérieures conservées':'Dernier contrôle en erreur',errors};
+  if(docs(c)>0||(c.htmlDocumentsRead||0)>0)return {key:'read',label:'Documents lus · couverture partielle',errors};
   if((c.deliberationSources||[]).some(s=>s.status==='page_accessible'&&s.scopeStatus!=='non_documentary'))return {key:'pages',label:'Pages repérées · documents non confirmés',errors};
   if(c.lastSiteCheck)return {key:'checked',label:'Site consulté · documents non confirmés',errors};
   return {key:'pending',label:c.officialSite?'Pas encore contrôlée':'Adresse manquante',errors};
@@ -41,7 +41,7 @@
   const r={total:0,sites:0,pages:0,read:0,documents:0,errors:0};
   for(const c of list||[]){r.total++;if(c.lastSiteCheck)r.sites++;
    if((c.deliberationSources||[]).some(s=>s.status==='page_accessible'&&s.scopeStatus!=='non_documentary'))r.pages++;
-   const n=docs(c);if(n>0)r.read++;r.documents+=n;
+   const n=docs(c);if(n>0||(c.htmlDocumentsRead||0)>0)r.read++;r.documents+=n;
    if(communeState(c).key==='error')r.errors++;
   }return r;
  }

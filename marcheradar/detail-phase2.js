@@ -95,6 +95,7 @@
    var text=council?'Consulter le document communal':origin.includes('bosa')?'Ouvrir le dossier e-Procurement':origin.includes('ted')?'Ouvrir l’avis TED':'Consulter la publication source';
    add(url,text,council?'council':'notice',council?'Document source référencé':'Portail officiel — annexes à consulter sur place');
   });
+  for(const n of m.municipalNotices||[])if(n.sourceDocument)add(n.sourceDocument,'Consulter la décision communale','council','Décision rattachée sur une référence et un acheteur identiques');
   if(m.sourceDocument)add(m.sourceDocument,'Consulter le document communal','council','Document source référencé');
   if(m.url){
    var text=m.source==='TED'?'Ouvrir l’avis TED':m.source==='BOSA'?'Ouvrir le dossier e-Procurement':m.source==='LOCALE'?(publications&&publications.source(m)==='other'?'Consulter le document public':'Consulter le document communal'):'Consulter la publication';
@@ -145,7 +146,7 @@
    '<h3 class="mr2-title">'+esc(m.title||'Marché sans intitulé')+'</h3>'+
    '<div class="mr2-pills">'+pill(due.label,due.tone)+pill(noticeType,'muted')+(m.screening==='review'?pill('Correspondance à vérifier','unknown'):m.screening==='excluded'?pill('Correspondance écartée à examiner','unknown'):'')+'</div>'+
    '<p class="mr2-summary">'+esc(m.description||'Résumé non renseigné dans les données collectées.')+'</p></div>';
-  var dated=documentDates&&documentDates.view(m);
+  var dated=documentDates&&documentDates.view(documentDates.forSource(m,selectedSource));
   var summary=section('Informations principales','<div class="mr2-fields">'+
    field('Pouvoir adjudicateur',m.buyer||'Non communiqué')+field('Référence',reference(m))+
    field('Zone',m.region||'Non localisée')+(dated?field(dated.label,dated.value,dated.proof)+(m.sourceDocumentDates?.session&&m.sourceDocumentDates?.document?field('Date du document',documentDates.format(m.sourceDocumentDates.document.date),'Date distincte de la séance et de la collecte.'):'' ):field('Date de publication',formattedDate(m.publication)))+
@@ -232,12 +233,12 @@
   var v=m.sourceDocumentVersion;
   if(!v||!str(v.sha256))return '';
   var date=Number.isFinite(Date.parse(v.checkedAt))?new Intl.DateTimeFormat('fr-BE',{timeZone:'Europe/Brussels',dateStyle:'short',timeStyle:'short'}).format(new Date(v.checkedAt)):'date non renseignée';
-  var html='<div class="mr2-highlight mr2-caution"><strong>'+(v.changedAt?'Modification du fichier PDF détectée':'Version du PDF contrôlée')+'</strong>'+
+  var html='<div class="mr2-highlight mr2-caution"><strong>'+(v.changedAt?'Modification du document détectée':v.format==='html'?'Version de la page officielle contrôlée':'Version du PDF contrôlée')+'</strong>'+
    '<p>Dernier contrôle : '+esc(date)+' (Bruxelles). Empreinte '+esc(str(v.sha256).slice(0,16))+'…</p>'+
    (v.changedAt?'<p>Une modification du fichier ne constitue pas, à elle seule, un rectificatif officiel du marché.</p>':'')+
    (m.sourceEvidenceStatus==='not_found'?'<p><strong>L’extrait historique n’a pas été retrouvé dans la version contrôlée. Sa validité actuelle doit être vérifiée.</strong></p>':'')+'</div>';
   if(Array.isArray(m.municipalEvidence)&&m.municipalEvidence.length>1){
-   html+='<details class="mr2-source-passages"><summary>Passages regroupés du même document ('+m.municipalEvidence.length+')</summary>'+(m.municipalReference?'<p>Référence explicitement repérée : '+esc(m.municipalReference)+'</p>':'<p>Passages du même point communal, à vérifier.</p>')+m.municipalEvidence.slice(0,6).map(function(p){return '<div class="mr2-evidence"><strong>Page '+esc(p.page)+'</strong><p>'+esc(p.excerpt)+'</p></div>'}).join('')+'</details>';
+   html+='<details class="mr2-source-passages"><summary>Passages regroupés du même document ('+m.municipalEvidence.length+')</summary>'+(m.municipalReference?'<p>Référence explicitement repérée : '+esc(m.municipalReference)+'</p>':'<p>Passages du même point communal, à vérifier.</p>')+m.municipalEvidence.slice(0,6).map(function(p){return '<div class="mr2-evidence"><strong>'+(p.page?'Page '+esc(p.page):'Passage HTML')+'</strong><p>'+esc(p.excerpt)+'</p></div>'}).join('')+'</details>';
   }
   var review=m.sourceDocumentReview;
   if(review&&review.sha256===v.sha256&&Array.isArray(review.candidates)&&review.candidates.length){

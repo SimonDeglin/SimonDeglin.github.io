@@ -1,6 +1,6 @@
 /* Un dossier peut réunir plusieurs avis : croiser source et type sur le même
    avis connu, sans dupliquer le dossier ni inventer le type d'un lien secondaire. */
-(function(root,factory){'use strict';const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.MRPublications=api})(typeof globalThis!=='undefined'?globalThis:this,function(){
+(function(root,factory){'use strict';const api=factory(typeof module==='object'&&module.exports?require('./document-dates.js'):root.MRDocumentDates);if(typeof module==='object'&&module.exports)module.exports=api;else root.MRPublications=api})(typeof globalThis!=='undefined'?globalThis:this,function(documentDates){
  'use strict';
  const txt=v=>String(v||'').trim();
  const sources=[{id:'all',label:'Toutes les sources'},{id:'BOSA',label:'BOSA'},{id:'TED',label:'TED'},{id:'municipal',label:'Site web communal'},{id:'other',label:'Autres sites publics'}];
@@ -26,6 +26,7 @@
    const s=source({...m,...item});const hasKind=item.noticeKind||item.noticeType||item.noticeSubType;
    add(s,hasKind?kind(item):s===primarySource?primaryKind:'unknown',item.url);
   }
+  for(const item of Array.isArray(m.municipalNotices)?m.municipalNotices:[]){if(!documentDates||documentDates.freshness(item).active)add('municipal',kind(item),item.sourceDocument||item.url);}
   for(const item of Array.isArray(m.bosaResults)?m.bosaResults:[])add('BOSA',kind({...item,noticeKind:'award'}),item.url);
   // Les attributions TED sont rattachées par le collecteur au dossier initial.
   for(const item of Array.isArray(m.awards)?m.awards:[]){if(item.source==='TED')add('TED','result',item.url);else if(item.source==='BOSA')add('BOSA','result',item.url)}

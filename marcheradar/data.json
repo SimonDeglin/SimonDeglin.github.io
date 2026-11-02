@@ -57,7 +57,7 @@
       "added": 0
     },
     "COMMUNES": {
-      "status": "inventory_not_document_collection",
+      "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
       "last_attempt": "2026-11-02T08:19:51.939Z",
       "scope": {
@@ -67,43 +67,49 @@
       "total": 261,
       "sitesRepertories": 261,
       "sitesVerifies": 261,
-      "deliberationsConnectees": 52,
+      "deliberationsConnectees": 85,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 270,
+      "documentsRead": 343,
       "opportunities": 101,
       "sitesChecked": 261,
       "candidatePages": 227,
-      "sourceErrors": 34
+      "sourceErrors": 51,
+      "htmlDocumentsRead": 151
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-02T08:20:42.765Z",
-      "last_success": "2026-11-02T08:20:42.765Z",
-      "last_batch": 4,
-      "documents_checked": 18,
-      "documents_read": 18,
+      "last_attempt": "2026-10-29T14:29:25.319Z",
+      "last_success": "2026-10-29T14:29:25.319Z",
+      "last_batch": 52,
+      "documents_checked": 81,
+      "documents_read": 81,
       "documents_unchanged": 0,
       "documents_modified": 0,
-      "opportunities_found": 0,
+      "opportunities_found": 5,
       "review_candidates": 0,
-      "errors_count": 6,
-      "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel."
+      "errors_count": 49,
+      "warning": "Pistes des trois derniers mois ; décisions HTML et PDF, OCR borné à vérifier. Couverture non exhaustive.",
+      "html_documents_read": 151,
+      "ocr_documents_read": 8,
+      "recent_municipal_signals": 7,
+      "communes_with_errors": 51,
+      "notices_linked": 1
     }
   },
   "coverage": {
     "TED": "collecte automatique active",
     "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 97 page(s) parcourue(s) depuis 2026-10-18.",
-    "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
+    "communal": "Collecte communale progressive : 85 communes avec lectures, 343 PDF et 151 documents HTML cumulés. Fenêtre active de trois mois ; couverture partielle."
   },
   "metrics": {
     "scanned": 1375,
     "matched_current_run": 10,
-    "records": 227,
+    "records": 232,
     "review_count": 130,
     "award_notice_count": 352,
     "awarded_market_matches": 0,
@@ -3762,7 +3768,92 @@
         "route": "service",
         "explanation": "Prestation métier repérée dans l’objet. Les conditions de participation et les moyens KDRIX restent à vérifier.",
         "capacityStatus": "not_assessed"
-      }
+      },
+      "municipalNotices": [
+        {
+          "id": "local-html:a350a4a987a0cc0ed4f8",
+          "title": "2026.1625 3P - Marché annuel 2026-2030: Désignation d'un géomètre pour diverses missions. Approbation des conditions et du mode de passation",
+          "buyer": "Commune de Amay",
+          "municipalityINS": "61003",
+          "region": "Wallonie",
+          "source": "LOCALE",
+          "webSourceType": "municipal",
+          "sourceDocumentFormat": "html",
+          "municipalAssessment": {
+            "eligible": true,
+            "reason": "mission_de_services_explicitement_annoncee"
+          },
+          "noticeKind": "prospection",
+          "opportunityType": "prospection",
+          "opportunityStage": "décision ou besoin à vérifier",
+          "sector": "Foncier",
+          "sectors": [
+            "Foncier",
+            "Topo"
+          ],
+          "screening": "review",
+          "score": 60,
+          "qualification": {
+            "version": "2026-10-29",
+            "kind": "prospect",
+            "route": "local_signal",
+            "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+            "capacityStatus": "not_assessed"
+          },
+          "publication": "",
+          "deadline": "",
+          "url": "https://www.deliberations.be/amay/decisions/15-octobre-2026-20-00/2026-1625-3p-marche-annuel-2026-2030-designation-dun-geometre-pour-diverses-missions-approbation-des-conditions-et-du-mode-de-passation",
+          "sourceDocument": "https://www.deliberations.be/amay/decisions/15-octobre-2026-20-00/2026-1625-3p-marche-annuel-2026-2030-designation-dun-geometre-pour-diverses-missions-approbation-des-conditions-et-du-mode-de-passation",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.deliberations.be/amay/decisions/15-octobre-2026-20-00/2026-1625-3p-marche-annuel-2026-2030-designation-dun-geometre-pour-diverses-missions-approbation-des-conditions-et-du-mode-de-passation",
+            "sha256": "0faaaf27a600737f49b70c91b807af894492fd339df0b58dac4863cef845ffdb",
+            "session": {
+              "date": "2026-10-15",
+              "kind": "session",
+              "page": null,
+              "source": "html_text",
+              "excerpt": "Séance publique du Conseil : 15 octobre 2026 (20:00)",
+              "confidence": "explicit",
+              "sourceUrl": "https://www.deliberations.be/amay/decisions/15-octobre-2026-20-00/2026-1625-3p-marche-annuel-2026-2030-designation-dun-geometre-pour-diverses-missions-approbation-des-conditions-et-du-mode-de-passation"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "sourceDocumentVersion": {
+            "documentId": "municipal-doc:39044061a3672c4cf5",
+            "sha256": "0faaaf27a600737f49b70c91b807af894492fd339df0b58dac4863cef845ffdb",
+            "format": "html",
+            "checkedAt": "2026-10-29T14:24:46.130Z"
+          },
+          "webTypeEvidence": {
+            "kind": "prospection",
+            "reason": "ordre_du_jour_ou_projet_non_adopte",
+            "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans le",
+            "sourceUrl": "https://www.deliberations.be/amay/decisions/15-octobre-2026-20-00/2026-1625-3p-marche-annuel-2026-2030-designation-dun-geometre-pour-diverses-missions-approbation-des-conditions-et-du-mode-de-passation",
+            "page": null,
+            "sha256": "0faaaf27a600737f49b70c91b807af894492fd339df0b58dac4863cef845ffdb"
+          },
+          "description": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Considérant la nécessité de désigner un géomètre pour effectuer les contrôles d'implantation ; Attendu qu'il s'avère nécessaire de faire appel à un géomètre pour diverses missions afin de mener à bien entre autre des dossiers de location et/ou vente de terrains communaux, de prestation de bornage… ; Considérant que le marché sera conclu pour une durée de 12 mois à dater de la notification de l'attribution ; Que deux reconductions tacites sont prévues aux mêmes conditions ; Considérant le cahier des charges N° 2026.1625 3P relatif au marché “Marché annuel 2026-2030: Désignation d'un géomètre pour diverses missions” établi par les Marchés publics en collaboration avec le service Urbanisme;",
+          "evidence": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Considérant la nécessité de désigner un géomètre pour effectuer les contrôles d'implantation ; Attendu qu'il s'avère nécessaire de faire appel à un géomètre pour diverses missions afin de mener à bien entre autre des dossiers de location et/ou vente de terrains communaux, de prestation de bornage… ; Considérant que le marché sera conclu pour une durée de 12 mois à dater de la notification de l'attribution ; Que deux reconductions tacites sont prévues aux mêmes conditions ; Considérant le cahier des charges N° 2026.1625 3P relatif au marché “Marché annuel 2026-2030: Désignation d'un géomètre pour diverses missions” établi par les Marchés publics en collaboration avec le service Urbanisme;",
+          "municipalEvidence": [
+            {
+              "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Considérant la nécessité de désigner un géomètre pour effectuer les contrôles d'implantation ; Attendu qu'il s'avère nécessaire de faire appel à un géomètre pour diverses missions afin de mener à bien entre autre des dossiers de location et/ou vente de terrains communaux, de prestation de bornage… ; Considérant que le marché sera conclu pour une durée de 12 mois à dater de la notification de l'attribution ; Que deux reconductions tacites sont prévues aux mêmes conditions ; Considérant le cahier des charges N° 2026.1625 3P relatif au marché “Marché annuel 2026-2030: Désignation d'un géomètre pour diverses missions” établi par les Marchés publics en collaboration avec le service Urbanisme;",
+              "page": null
+            },
+            {
+              "excerpt": "2026.1625 3P - Marché annuel 2026-2030: Désignation d'un géomètre pour diverses missions. Approbation des conditions et du mode de passation 15 Séance publique du Conseil 15 octobre 2026 (20:00) Point N°",
+              "page": null
+            },
+            {
+              "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. 2026.1625 3P - Marché annuel 2026-2030: Désignation d'un géomètre pour diverses missions. Approbation des conditions et du mode de passation Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 41, §1, 1° (le montant estimé HTVA n'atteint pas le seuil de 216.000,00 €) et l'article 57 ; Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures",
+              "page": null
+            }
+          ],
+          "sourceEvidenceStatus": "found",
+          "municipalReference": null
+        }
+      ]
     },
     {
       "id": "bosa:01585054-3e27-4d0e-bb3c-ea614119d7b4",
@@ -15517,6 +15608,397 @@
         "documentId": "municipal-doc:09d58a718d3c97a4bc",
         "sha256": "097ad1f5cc7d6f4398e0ae83b8eb736eae16cdc9c31192e15b1da4a0fbfcb649",
         "checkedAt": "2026-11-01T21:23:40.839Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local-html:7b27384b692da4502a09",
+      "title": "MARCHÉS PUBLICS - Désignation d’un auteur de projet chargé de l’élaboration du Plan communal de mobilité de la commune d'Ittre – Approbation des conditions et du mode de passation - Décision",
+      "buyer": "Commune de Ittre",
+      "municipalityINS": "25044",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/ittre/decisions/20-octobre-2026-19-00/marches-publics-designation-dun-auteur-de-projet-charge-de-lelaboration-du-plan-communal-de-mobilite-de-la-commune-dittre-approbation-des-conditions-et-du-mode-de-passation-decision",
+      "sourceDocument": "https://www.deliberations.be/ittre/decisions/20-octobre-2026-19-00/marches-publics-designation-dun-auteur-de-projet-charge-de-lelaboration-du-plan-communal-de-mobilite-de-la-commune-dittre-approbation-des-conditions-et-du-mode-de-passation-decision",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/ittre/decisions/20-octobre-2026-19-00/marches-publics-designation-dun-auteur-de-projet-charge-de-lelaboration-du-plan-communal-de-mobilite-de-la-commune-dittre-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "sha256": "64e68460f31605669d30f496437780dab2172ffae25727be5deb10c99684774f",
+        "session": {
+          "date": "2026-10-20",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 20 octobre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/ittre/decisions/20-octobre-2026-19-00/marches-publics-designation-dun-auteur-de-projet-charge-de-lelaboration-du-plan-communal-de-mobilite-de-la-commune-dittre-approbation-des-conditions-et-du-mode-de-passation-decision"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:02230c5002c076d46f",
+        "sha256": "64e68460f31605669d30f496437780dab2172ffae25727be5deb10c99684774f",
+        "format": "html",
+        "checkedAt": "2026-10-29T14:24:46.130Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "MARCHÉS PUBLICS - Désignation d’un auteur de projet chargé de l’élaboration du Plan communal de mobilité de la commune d'Ittre – Approbation des conditions et du mode de passation - Décision 20 Séance publique du Conseil",
+        "sourceUrl": "https://www.deliberations.be/ittre/decisions/20-octobre-2026-19-00/marches-publics-designation-dun-auteur-de-projet-charge-de-lelaboration-du-plan-communal-de-mobilite-de-la-commune-dittre-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "page": null,
+        "sha256": "64e68460f31605669d30f496437780dab2172ffae25727be5deb10c99684774f"
+      },
+      "description": "MARCHÉS PUBLICS - Désignation d’un auteur de projet chargé de l’élaboration du Plan communal de mobilité de la commune d'Ittre – Approbation des conditions et du mode de passation - Décision 20 Séance publique du Conseil 20 octobre 2026 (19:00) Point N°",
+      "evidence": "MARCHÉS PUBLICS - Désignation d’un auteur de projet chargé de l’élaboration du Plan communal de mobilité de la commune d'Ittre – Approbation des conditions et du mode de passation - Décision 20 Séance publique du Conseil 20 octobre 2026 (19:00) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "MARCHÉS PUBLICS - Désignation d’un auteur de projet chargé de l’élaboration du Plan communal de mobilité de la commune d'Ittre – Approbation des conditions et du mode de passation - Décision 20 Séance publique du Conseil 20 octobre 2026 (19:00) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. MARCHÉS PUBLICS - Désignation d’un auteur de projet chargé de l’élaboration du Plan communal de mobilité de la commune d'Ittre – Approbation des conditions et du mode de passation - Décision Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 41, §1, 1° (le montant estimé HTVA n'atteint pas le seuil de 216.000,00 €) ; Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ;",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Considérant le cahier des charges N° CMP-TD/MPS-946 relatif au marché “Désignation d’un auteur de projet chargé de l’élaboration du Plan communal de mobilité de la commune d'Ittre” établi par le Service Marchés Publics ; Considérant que le montant estimé de ce marché s'élève à 123.966,90 € hors TVA ou 149.999,95 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée directe avec publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 410/73360:20260020.2026 et sera financé par fonds propres ; Considérant qu'une demande afin d’obtenir l'avis de légalité obligatoire a été soumise le 8 octobre 2026, le directeur financier n’a pas encore rendu d'avis de légalité ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local-html:51bd79063a9c6a882635",
+      "title": "Aménagement du Territoire - Schéma de Développement Communal - Élaboration - Décision de principe",
+      "buyer": "Commune de Quévy",
+      "municipalityINS": "53084",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Carto",
+      "sectors": [
+        "Carto"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/quevy/decisions/02-septembre-2026-19-00/amenagement-du-territoire-schema-de-developpement-communal-elaboration-decision-de-principe",
+      "sourceDocument": "https://www.deliberations.be/quevy/decisions/02-septembre-2026-19-00/amenagement-du-territoire-schema-de-developpement-communal-elaboration-decision-de-principe",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/quevy/decisions/02-septembre-2026-19-00/amenagement-du-territoire-schema-de-developpement-communal-elaboration-decision-de-principe",
+        "sha256": "73da2e5370c5b213563bada382377fa8e7517ab6f426cdaa10a475f8a2107bb9",
+        "session": {
+          "date": "2026-09-02",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 02 septembre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/quevy/decisions/02-septembre-2026-19-00/amenagement-du-territoire-schema-de-developpement-communal-elaboration-decision-de-principe"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:4f590846348d5503a5",
+        "sha256": "73da2e5370c5b213563bada382377fa8e7517ab6f426cdaa10a475f8a2107bb9",
+        "format": "html",
+        "checkedAt": "2026-10-29T14:24:46.130Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Considérant qu'il relève de l’intérêt communal de réaliser un Schéma de développement Communal (SDC) Global traduisant la perspective de développement du territoire communal à l'horizon 2050 ; Considérant que cette matiè",
+        "sourceUrl": "https://www.deliberations.be/quevy/decisions/02-septembre-2026-19-00/amenagement-du-territoire-schema-de-developpement-communal-elaboration-decision-de-principe",
+        "page": null,
+        "sha256": "73da2e5370c5b213563bada382377fa8e7517ab6f426cdaa10a475f8a2107bb9"
+      },
+      "description": "Considérant qu'il relève de l’intérêt communal de réaliser un Schéma de développement Communal (SDC) Global traduisant la perspective de développement du territoire communal à l'horizon 2050 ; Considérant que cette matière relève de la compétence du Conseil communal en application de l'article D.II.12 du Code du Développement Territorial ; Considérant que l’élaboration d'un Schéma de Développement Communal peut faire l'objet d'un subside allant jusqu'à 75 % du montant des honoraires de l'auteur de projet, montant plafonné à 75% ; Pour ces motifs ; Sur proposition du Collège communal, DÉCIDE (à l'unanimité des membres présents) : Art. 1. De prendre acte de l'entrée en vigueur du Schéma de Développement Territorial au 01/08/2024 et de prendre connaissance des principes guidant l'urbanisation ainsi que de la cartographie des centralités et ses implications futures au niveau communal.",
+      "evidence": "Considérant qu'il relève de l’intérêt communal de réaliser un Schéma de développement Communal (SDC) Global traduisant la perspective de développement du territoire communal à l'horizon 2050 ; Considérant que cette matière relève de la compétence du Conseil communal en application de l'article D.II.12 du Code du Développement Territorial ; Considérant que l’élaboration d'un Schéma de Développement Communal peut faire l'objet d'un subside allant jusqu'à 75 % du montant des honoraires de l'auteur de projet, montant plafonné à 75% ; Pour ces motifs ; Sur proposition du Collège communal, DÉCIDE (à l'unanimité des membres présents) : Art. 1. De prendre acte de l'entrée en vigueur du Schéma de Développement Territorial au 01/08/2024 et de prendre connaissance des principes guidant l'urbanisation ainsi que de la cartographie des centralités et ses implications futures au niveau communal.",
+      "municipalEvidence": [
+        {
+          "excerpt": "Considérant qu'il relève de l’intérêt communal de réaliser un Schéma de développement Communal (SDC) Global traduisant la perspective de développement du territoire communal à l'horizon 2050 ; Considérant que cette matière relève de la compétence du Conseil communal en application de l'article D.II.12 du Code du Développement Territorial ; Considérant que l’élaboration d'un Schéma de Développement Communal peut faire l'objet d'un subside allant jusqu'à 75 % du montant des honoraires de l'auteur de projet, montant plafonné à 75% ; Pour ces motifs ; Sur proposition du Collège communal, DÉCIDE (à l'unanimité des membres présents) : Art. 1. De prendre acte de l'entrée en vigueur du Schéma de Développement Territorial au 01/08/2024 et de prendre connaissance des principes guidant l'urbanisation ainsi que de la cartographie des centralités et ses implications futures au niveau communal.",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local-html:8f5f12afec4a8003fef6",
+      "title": "Mission d'auteur de projet : Étude de réaménagement d'une aile (transformation et/ou démolition reconstruction) de l'école Jules Brouwir à Heure-Le-Romain - Approbation des conditions du marché et du mode de passation",
+      "buyer": "Commune de Oupeye",
+      "municipalityINS": "62079",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/oupeye/decisions/12-octobre-2026-20-00/mission-dauteur-de-projet-etude-de-reamenagement-dune-aile-transformation-et-ou-demolition-reconstruction-de-lecole-jules-brouwir-a-heure-le-romain-approbation-des-conditions-du-marche-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/oupeye/decisions/12-octobre-2026-20-00/mission-dauteur-de-projet-etude-de-reamenagement-dune-aile-transformation-et-ou-demolition-reconstruction-de-lecole-jules-brouwir-a-heure-le-romain-approbation-des-conditions-du-marche-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/oupeye/decisions/12-octobre-2026-20-00/mission-dauteur-de-projet-etude-de-reamenagement-dune-aile-transformation-et-ou-demolition-reconstruction-de-lecole-jules-brouwir-a-heure-le-romain-approbation-des-conditions-du-marche-et-du-mode-de-passation",
+        "sha256": "ee396d40005f554be145abe91be4806e01fe4f38d9a4219f2e1ddda432199c8f",
+        "session": {
+          "date": "2026-10-12",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 12 octobre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/oupeye/decisions/12-octobre-2026-20-00/mission-dauteur-de-projet-etude-de-reamenagement-dune-aile-transformation-et-ou-demolition-reconstruction-de-lecole-jules-brouwir-a-heure-le-romain-approbation-des-conditions-du-marche-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:a75baa3ad7065dd263",
+        "sha256": "ee396d40005f554be145abe91be4806e01fe4f38d9a4219f2e1ddda432199c8f",
+        "format": "html",
+        "checkedAt": "2026-10-29T14:24:46.130Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Considérant que l’implantation scolaire sise rue Baronhaie, 57 à Heure-le-Romain manque de locaux de type classes / réfectoire ; que le réféctoire préexistant a été transformé en 3 classes afin de permettre l’inscription",
+        "sourceUrl": "https://www.deliberations.be/oupeye/decisions/12-octobre-2026-20-00/mission-dauteur-de-projet-etude-de-reamenagement-dune-aile-transformation-et-ou-demolition-reconstruction-de-lecole-jules-brouwir-a-heure-le-romain-approbation-des-conditions-du-marche-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "ee396d40005f554be145abe91be4806e01fe4f38d9a4219f2e1ddda432199c8f"
+      },
+      "description": "Considérant que l’implantation scolaire sise rue Baronhaie, 57 à Heure-le-Romain manque de locaux de type classes / réfectoire ; que le réféctoire préexistant a été transformé en 3 classes afin de permettre l’inscription de nouveaux élèves ; Considérant que cette école propose une pédagogie immersive en néerlandais ; que, dès lors, le programme scolaire est spécifique ; que certaines matières sont dispensées dans une des langues et pas dans l’autre et empêche le rassemblement de différentes entités scolaires ; Considérant le cahier des charges n° SMP/EV/LM/26-047 relatif au marché “Mission d'auteur de projet : Étude de réaménagement d'une aile (transformation et/ou démolition reconstruction) de l'école Jules Brouwir à Heure-Le-Romain” établi par la Commune d’Oupeye ; Considérant que ce marché est divisé en tranches : Tranche ferme : Établissement d’un avant-projet à soumettre au Collège communal (présentation) + détermination d'une enveloppe budgétaire + recherche de financement (Estimé à : € 19.500,00 hors TVA ou € 23.595,00, 21% TVA comprise) - Cette tranche comprend : Élaboration d’un avant-projet sur base des recommandations reprises dans le descriptif technique, les réunions et visites préparatoires ; Détermination d’une enveloppe budgétaire pour la réalisation des travaux ;",
+      "evidence": "Considérant que l’implantation scolaire sise rue Baronhaie, 57 à Heure-le-Romain manque de locaux de type classes / réfectoire ; que le réféctoire préexistant a été transformé en 3 classes afin de permettre l’inscription de nouveaux élèves ; Considérant que cette école propose une pédagogie immersive en néerlandais ; que, dès lors, le programme scolaire est spécifique ; que certaines matières sont dispensées dans une des langues et pas dans l’autre et empêche le rassemblement de différentes entités scolaires ; Considérant le cahier des charges n° SMP/EV/LM/26-047 relatif au marché “Mission d'auteur de projet : Étude de réaménagement d'une aile (transformation et/ou démolition reconstruction) de l'école Jules Brouwir à Heure-Le-Romain” établi par la Commune d’Oupeye ; Considérant que ce marché est divisé en tranches : Tranche ferme : Établissement d’un avant-projet à soumettre au Collège communal (présentation) + détermination d'une enveloppe budgétaire + recherche de financement (Estimé à : € 19.500,00 hors TVA ou € 23.595,00, 21% TVA comprise) - Cette tranche comprend : Élaboration d’un avant-projet sur base des recommandations reprises dans le descriptif technique, les réunions et visites préparatoires ; Détermination d’une enveloppe budgétaire pour la réalisation des travaux ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "Considérant que l’implantation scolaire sise rue Baronhaie, 57 à Heure-le-Romain manque de locaux de type classes / réfectoire ; que le réféctoire préexistant a été transformé en 3 classes afin de permettre l’inscription de nouveaux élèves ; Considérant que cette école propose une pédagogie immersive en néerlandais ; que, dès lors, le programme scolaire est spécifique ; que certaines matières sont dispensées dans une des langues et pas dans l’autre et empêche le rassemblement de différentes entités scolaires ; Considérant le cahier des charges n° SMP/EV/LM/26-047 relatif au marché “Mission d'auteur de projet : Étude de réaménagement d'une aile (transformation et/ou démolition reconstruction) de l'école Jules Brouwir à Heure-Le-Romain” établi par la Commune d’Oupeye ; Considérant que ce marché est divisé en tranches : Tranche ferme : Établissement d’un avant-projet à soumettre au Collège communal (présentation) + détermination d'une enveloppe budgétaire + recherche de financement (Estimé à : € 19.500,00 hors TVA ou € 23.595,00, 21% TVA comprise) - Cette tranche comprend : Élaboration d’un avant-projet sur base des recommandations reprises dans le descriptif technique, les réunions et visites préparatoires ; Détermination d’une enveloppe budgétaire pour la réalisation des travaux ;",
+          "page": null
+        },
+        {
+          "excerpt": "Mission d'auteur de projet : Étude de réaménagement d'une aile (transformation et/ou démolition reconstruction) de l'école Jules Brouwir à Heure-Le-Romain - Approbation des conditions du marché et du mode de passation 12 Séance publique du Conseil 12 octobre 2026 (20:00) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Matière Bâtiments communaux Mission d'auteur de projet : Étude de réaménagement d'une aile (transformation et/ou démolition reconstruction) de l'école Jules Brouwir à Heure-Le-Romain - Approbation des conditions du marché et du mode de passation LE CONSEIL, Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de € 140.000,00) et l'article 57 ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local-html:79b107ea6e58b021b2b0",
+      "title": "Désignation d'un auteur de projet pour dossiers multiples - Approbation des conditions et du mode de passation",
+      "buyer": "Commune de Theux",
+      "municipalityINS": "63076",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/theux/decisions/08-septembre-2026-20-00/designation-dun-auteur-de-projet-pour-dossiers-multiples-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/theux/decisions/08-septembre-2026-20-00/designation-dun-auteur-de-projet-pour-dossiers-multiples-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/theux/decisions/08-septembre-2026-20-00/designation-dun-auteur-de-projet-pour-dossiers-multiples-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "b9f29869c623f671f864e8acd9d340cc9cbc0c20f36b4cffa6e29f0755776bec",
+        "session": {
+          "date": "2026-09-08",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 08 septembre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/theux/decisions/08-septembre-2026-20-00/designation-dun-auteur-de-projet-pour-dossiers-multiples-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:d68f0b4903de71d6eb",
+        "sha256": "b9f29869c623f671f864e8acd9d340cc9cbc0c20f36b4cffa6e29f0755776bec",
+        "format": "html",
+        "checkedAt": "2026-10-29T14:24:46.130Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Désignation d'un auteur de projet pour dossiers multiples - Approbation des conditions et du mode de passation 8 Séance publique du Conseil 08 septembre 2026 (20:00) Point N°",
+        "sourceUrl": "https://www.deliberations.be/theux/decisions/08-septembre-2026-20-00/designation-dun-auteur-de-projet-pour-dossiers-multiples-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "b9f29869c623f671f864e8acd9d340cc9cbc0c20f36b4cffa6e29f0755776bec"
+      },
+      "description": "Désignation d'un auteur de projet pour dossiers multiples - Approbation des conditions et du mode de passation 8 Séance publique du Conseil 08 septembre 2026 (20:00) Point N°",
+      "evidence": "Désignation d'un auteur de projet pour dossiers multiples - Approbation des conditions et du mode de passation 8 Séance publique du Conseil 08 septembre 2026 (20:00) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "Désignation d'un auteur de projet pour dossiers multiples - Approbation des conditions et du mode de passation 8 Séance publique du Conseil 08 septembre 2026 (20:00) Point N°",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-080"
+    },
+    {
+      "id": "local:ad878823958e5db322e6",
+      "title": "MS.A26.12 Schéma de développement communal (SDC) — Désignation d’un auteur",
+      "buyer": "Commune de Engis",
+      "municipalityINS": "61080",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "MS.A26.12 Schéma de développement communal (SDC) — Désignation d’un auteur de projet : Approbation des conditions, du mode de passation et des firmes a consulter ;",
+        "sourceUrl": "https://www.engis.be/ma-commune/communication/ordres-du-jour-du-conseil-communal/avis-conseil-communal-27-octobre-2026.pdf",
+        "page": 2,
+        "sha256": "07f286a132fdab72bdaeda197fe3178dbf46a9c43fad973e1156959198c63e4d"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.engis.be/ma-commune/communication/ordres-du-jour-du-conseil-communal/avis-conseil-communal-27-octobre-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.engis.be/ma-commune/communication/ordres-du-jour-du-conseil-communal/avis-conseil-communal-27-octobre-2026.pdf",
+        "sha256": "07f286a132fdab72bdaeda197fe3178dbf46a9c43fad973e1156959198c63e4d",
+        "session": null,
+        "document": {
+          "date": "2026-10-27",
+          "kind": "document",
+          "page": null,
+          "source": "filename",
+          "excerpt": "-27-octobre-2026",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "ocr",
+        "language": "eng",
+        "pagesRead": 2,
+        "totalPages": 2,
+        "partial": false
+      },
+      "url": "https://www.engis.be/ma-commune/communication/ordres-du-jour-du-conseil-communal/avis-conseil-communal-27-octobre-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : MS.A26.12 Schéma de développement communal (SDC) — Désignation d’un auteur de projet : Approbation des conditions, du mode de passation et des firmes a consulter ;",
+      "evidence": "MS.A26.12 Schéma de développement communal (SDC) — Désignation d’un auteur de projet : Approbation des conditions, du mode de passation et des firmes a consulter ;",
+      "municipalReference": null,
+      "municipalSection": "MS.A26.12 Schéma de développement communal (SDC) — Désignation d’un auteur",
+      "municipalEvidence": [
+        {
+          "page": 2,
+          "excerpt": "MS.A26.12 Schéma de développement communal (SDC) — Désignation d’un auteur de projet : Approbation des conditions, du mode de passation et des firmes a consulter ;"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 2,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:7159d4fc074cf528b4",
+        "sha256": "07f286a132fdab72bdaeda197fe3178dbf46a9c43fad973e1156959198c63e4d",
+        "checkedAt": "2026-10-29T14:36:37.033Z",
         "changedAt": null
       }
     }

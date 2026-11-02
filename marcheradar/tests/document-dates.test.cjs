@@ -30,6 +30,6 @@ test('preuve d’une autre version ou URL rejetée et texte tiers échappé',()=
 });
 test('collecteur : date mise à jour sans changer identifiant, extrait, statut ni nombre de documents',()=>{
  const c={ins:'64034',name:'Test',documentsRead:0},quote='Le conseil approuve une mission de bornage et division parcellaire avec designation du geometre.';
- const run=(items,c,day)=>collector.processDocument(items,c,{url,title:'PV'},{bytes:Buffer.from('%PDF-1.7\nSéance du '+day+' mai 2026\n'+quote)},'2026-10-29T12:00:00Z',b=>b.toString().slice(9));
- const a=run([],c,21);assert.equal(a.items[0].sourceDocumentDates.session.date,'2026-05-21');a.items[0].customNote='Suivi';const b=run(a.items,a.commune,22);assert.equal(b.items.length,1);assert.equal(b.items[0].id,a.items[0].id);assert.equal(b.items[0].customNote,'Suivi');assert.equal(b.items[0].sourceDocumentDates.session.date,'2026-05-22');assert.equal(b.commune.documentsRead,1);
+ const run=(items,c,day)=>collector.processDocument(items,c,{url,title:'PV'},{bytes:Buffer.from('%PDF-1.7\nSéance du '+day+' octobre 2026\n'+quote)},'2026-10-29T12:00:00Z',b=>b.toString().slice(9));
+ const a=run([],c,21);assert.equal(a.items[0].sourceDocumentDates.session.date,'2026-10-21');a.items[0].customNote='Suivi';const b=run(a.items,a.commune,22);assert.equal(b.items.length,1);assert.equal(b.items[0].id,a.items[0].id);assert.equal(b.items[0].customNote,'Suivi');assert.equal(b.items[0].sourceDocumentDates.session.date,'2026-10-22');assert.equal(b.commune.documentsRead,1);
 });
