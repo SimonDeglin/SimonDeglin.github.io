@@ -19,24 +19,25 @@ function init(commune){
 function remember(queue,type,entry,now){
  let u;try{u=new URL(entry.url);if(!/^https?:$/.test(u.protocol))return false;u.hash=''}catch(e){return false}
  const url=u.href,id=key(url),old=queue[type][id];
- if(old){queue[type][id]={...old,lastSeen:now,title:entry.title&&entry.title!=='PDF déjà suivi'?entry.title:old.title,sessionProof:entry.sessionProof||old.sessionProof};return true}
+ if(old){queue[type][id]={...old,lastSeen:now,title:entry.title&&entry.title!=='PDF déjà suivi'?entry.title:old.title,sessionProof:entry.sessionProof||old.sessionProof,documentCandidate:entry.documentCandidate||old.documentCandidate};return true}
  if(Object.keys(queue[type]).length>=CAPS[type]){queue.limits[type]=true;return false}
  if(type==='pages'&&(entry.depth||0)>CAPS.depth){queue.limits.depth=true;return false}
  queue[type][id]={...entry,url,discoveredAt:now,lastSeen:now,discoveryOrder:Object.keys(queue[type]).length};return true;
 }
-function pendingPages(queue,attempted,now){
+function pendingPages(queue,attempted,now,options={}){
  return Object.entries(queue.pages).filter(([id,p])=>!p.scopeExcluded&&!policy.excluded(p)&&priority(p,now)!==9&&!attempted.has(id)&&(!p.nextAttemptAt||p.nextAttemptAt<=now))
- .sort(([,a],[,b])=>priority(a,now)-priority(b,now)||(a.lastAttempt||'').localeCompare(b.lastAttempt||'')||(Number(/deliberations\.be\/[^/]+\/decisions\/[^/]+\/[^/?]+/.test(b.url)&&!b.url.includes('@@'))-Number(/deliberations\.be\/[^/]+\/decisions\/[^/]+\/[^/?]+/.test(a.url)&&!a.url.includes('@@')))||dateHint(b).localeCompare(dateHint(a))||(a.depth||0)-(b.depth||0)||(a.discoveryOrder??999999)-(b.discoveryOrder??999999)||a.url.localeCompare(b.url));
+ .sort(([,a],[,b])=>Number(!!a.lastSuccess&&(!options.version||a.pipelineVersion===options.version))-Number(!!b.lastSuccess&&(!options.version||b.pipelineVersion===options.version))||priority(a,now)-priority(b,now)||(a.lastAttempt||'').localeCompare(b.lastAttempt||'')||(Number(/deliberations\.be\/[^/]+\/decisions\/[^/]+\/[^/?]+/.test(b.url)&&!b.url.includes('@@'))-Number(/deliberations\.be\/[^/]+\/decisions\/[^/]+\/[^/?]+/.test(a.url)&&!a.url.includes('@@')))||dateHint(b).localeCompare(dateHint(a))||(a.depth||0)-(b.depth||0)||(a.discoveryOrder??999999)-(b.discoveryOrder??999999)||a.url.localeCompare(b.url));
 }
-function pendingDocuments(queue,checks,now){
+function pendingDocuments(queue,checks,now,options={}){
  return Object.entries(queue.documents).filter(([id,p])=>!policy.excluded(p)&&priority(p,now)!==9&&!outside(p,checks[id],now)&&(!checks[id]?.nextAttemptAt||checks[id].nextAttemptAt<=now))
- .sort(([ia,a],[ib,b])=>priority(a,now)-priority(b,now)||dateHint(b).localeCompare(dateHint(a))||(checks[ia]?.lastAttempt||'').localeCompare(checks[ib]?.lastAttempt||'')||a.discoveredAt.localeCompare(b.discoveredAt)||(a.discoveryOrder??999999)-(b.discoveryOrder??999999)||a.url.localeCompare(b.url));
+ .sort(([ia,a],[ib,b])=>Number(!!checks[ia]?.lastSuccess&&(!options.version||checks[ia].extractorVersion===options.version))-Number(!!checks[ib]?.lastSuccess&&(!options.version||checks[ib].extractorVersion===options.version))||priority(a,now)-priority(b,now)||dateHint(b).localeCompare(dateHint(a))||(checks[ia]?.lastAttempt||'').localeCompare(checks[ib]?.lastAttempt||'')||a.discoveredAt.localeCompare(b.discoveredAt)||(a.discoveryOrder??999999)-(b.discoveryOrder??999999)||a.url.localeCompare(b.url));
 }
-function progress(queue,checks,now=new Date().toISOString()){
+function progress(queue,checks,now=new Date().toISOString(),options={}){
  const pages=Object.values(queue.pages),documents=Object.keys(queue.documents);
  const eligiblePages=pages.filter(p=>!p.scopeExcluded&&!policy.excluded(p)&&priority(p,now)!==9),eligibleDocs=documents.filter(id=>!policy.excluded(queue.documents[id])&&priority(queue.documents[id],now)!==9&&!outside(queue.documents[id],checks[id],now));
  const pagesPending=eligiblePages.filter(p=>!p.lastSuccess).length,documentsPending=eligibleDocs.filter(id=>!checks[id]?.sha256||!checks[id]?.lastSuccess).length;
- return {pagesKnown:pages.length,pagesPending,documentsKnown:documents.length,documentsPending,pagesOutOfScope:pages.length-eligiblePages.length,documentsOutOfScope:documents.length-eligibleDocs.length,
+ const analysis=options.version?{analysisVersion:options.version,pagesPendingAnalysis:eligiblePages.filter(p=>!p.lastSuccess||p.pipelineVersion!==options.version).length,documentsPendingAnalysis:eligibleDocs.filter(id=>!checks[id]?.lastSuccess||checks[id]?.extractorVersion!==options.version).length}:{};
+ return {...analysis,pagesKnown:pages.length,pagesPending,documentsKnown:documents.length,documentsPending,pagesOutOfScope:pages.length-eligiblePages.length,documentsOutOfScope:documents.length-eligibleDocs.length,
   errors:pages.filter(p=>p.lastError).length+documents.filter(id=>checks[id]?.lastError).length,
   limited:Object.values(queue.limits).some(Boolean),limits:{...queue.limits}};
 }

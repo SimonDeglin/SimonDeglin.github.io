@@ -1,7 +1,6 @@
 /* Adaptateur public Délibérations.be : mêmes requêtes GET que l'interface. */
 'use strict';
-const dates=require('../document-dates.js'),policy=require('./communal-source-policy.cjs'),opportunity=require('./municipal-opportunity.cjs');
-const business=/topograph|g[eé]om[eè]tr|bornage|parcell|bathy|hydrauli|bureau.{0,12}[eé]tudes|auteur.{0,10}projet|voirie|imp[eé]trant|[eé]tudes?|PEB|acquisition.{0,25}terrain|vente.{0,25}terrain|march[eé].{0,20}services|am[eé]nagement/i;
+const dates=require('../document-dates.js'),policy=require('./communal-source-policy.cjs');
 function decode(s){return String(s||'').replace(/&amp;/g,'&').replace(/&nbsp;|&#160;/g,' ').replace(/&quot;/g,'"').replace(/&#39;|&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&#x([a-f0-9]+);/gi,(_,n)=>String.fromCodePoint(parseInt(n,16))).replace(/&#(\d+);/g,(_,n)=>String.fromCodePoint(Math.min(Number(n),0x10ffff)));}
 const plain=s=>decode(String(s||'').replace(/<[^>]+>/g,' ')).replace(/\s+/g,' ').trim();
 function core(html){
@@ -24,14 +23,14 @@ function links(html,base,now,context={}){
   for(const card of String(html).split(/(?=<div\b[^>]*class=["']item-card\b)/i)){
    if(!/^<div\b[^>]*class=["']item-card\b/i.test(card))continue;
    const href=(card.match(/<a\b[^>]*href=["']([^"']+)["']/i)||[])[1],title=plain((card.match(/<h3\b[^>]*class=["']card-title["'][^>]*>([\s\S]*?)<\/h3>/i)||[])[1]);
-   if(!href||!business.test(title)||!opportunity.assess({title}).eligible)continue;let link;try{link=new URL(decode(href),base)}catch(e){continue}
+   if(!href)continue;let link;try{link=new URL(decode(href),base)}catch(e){continue}
    if(link.origin===u.origin&&link.pathname.startsWith(u.pathname.replace(/@@faceted_query$/,''))&&!policy.excluded({url:link.href,title}))out.push({url:link.href,title,sessionProof:context.sessionProof,depth:(context.depth||1)+1});
   }
   for(const a of String(html).matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)){
    let link;try{link=new URL(decode(a[1]),base)}catch(e){continue}const title=plain(a[2]);
    if(link.origin!==u.origin||!link.pathname.startsWith(u.pathname.replace(/@@faceted_query$/,'')))continue;
    if(link.pathname.endsWith('/@@faceted_query')){if(!/suivants?/i.test(title)||!link.searchParams.get('seance'))continue;out.push({url:link.href,title:'Suite des décisions de la séance',sessionProof:context.sessionProof,depth:context.depth||1});continue;}
-   if(business.test(title)&&opportunity.assess({title}).eligible&&!policy.excluded({url:link.href,title}))out.push({url:link.href,title,sessionProof:context.sessionProof,depth:(context.depth||1)+1});
+   if(title&&!policy.excluded({url:link.href,title}))out.push({url:link.href,title,sessionProof:context.sessionProof,depth:(context.depth||1)+1});
   }
  }
  return out;
@@ -43,7 +42,8 @@ function read(html,url,context={}){
  const text=decode(body.replace(/<[^>]*>/g,' ')).split('\n').map(s=>s.replace(/\s+/g,' ').trim()).filter(Boolean).join('\n');
  const platform=/^https:\/\/(?:www\.)?deliberations\.be\/[^/]+\/decisions\/[^/]+\/[^/]+/.test(url)&&!url.includes('@@');
  const doc=/ordre.{0,12}jour|proc[eè]s.verbal|compte.rendu|avis.{0,12}march[eé]|appel.d.offres|conseil.{0,18}communal.{0,12}(?:du|de ce)\s+\d{1,2}|r[eé]sum[eé].{0,30}conseil/i.test(title);
- if(!platform&&!doc)return null;
+ const listing=/@@faceted_query/.test(url)||/<select\b[^>]*name=["']seance["']/i.test(html);
+ if(listing||(!platform&&!doc&&!context.documentCandidate))return null;
  const result=dates.extract({text,title,url});
  if(!platform&&/conseil|s[eé]ance/i.test(title)){const d=dates.extract({title});if(d.document){result.session={...d.document,kind:'session',source:'html_text',confidence:'explicit',sourceUrl:url,excerpt:'Titre de la page : '+title};if(result.document?.date===d.document.date)result.document=null;}}
  if(!platform&&!result.session&&(!result.document||result.document.confidence!=='explicit')){
@@ -59,4 +59,4 @@ function read(html,url,context={}){
  const procedure=text.match(/(?:De passer|D[eé]cide de passer|Passer) (?:ce|le) march[eé] par (?:la |une )?proc[eé]dure n[eé]goci[eé]e sans publication pr[eé]alable/i);
  return {text:title+'\n'+text,title,dates:result,platform,procedure:procedure?{label:'Procédure négociée sans publication préalable',excerpt:procedure[0]}:null,project:/projet de d[eé]cision/i.test(text.slice(0,1000))};
 }
-module.exports={links,read,core,plain,business};
+module.exports={links,read,core,plain};

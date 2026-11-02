@@ -28,9 +28,10 @@
   const communes=card('Documents communaux','Couverture progressive · non exhaustive',false);
   line(communes,'Dernière tentative documentaire',local.last_attempt);
   line(communes,'Dernier passage avec lecture ou contrôle réussi',local.last_success);
-  if(local.html_documents_read)communes.append(node('p',local.html_documents_read+' documents HTML lus dans le dernier lot.'));
+  if(local.content_analysis_version)communes.append(node('p','Dernier contrôle du contenu : '+(local.html_documents_read||0)+' documents HTML et '+(local.documents_checked||0)+' PDF. Les lectures partielles et les signaux non classés restent à contrôler.'));
+  if(local.html_documents_read&&!local.content_analysis_version)communes.append(node('p',local.html_documents_read+' documents HTML lus dans le dernier lot.'));
   if(local.last_attempt)communes.append(node('p','Dernier lot : '+(local.last_batch||0)+' communes · '+(local.documents_checked||0)+' PDF contrôlés · '+(local.documents_modified||0)+' versions modifiées · '+(local.errors_count||0)+' erreurs.'));
-  communes.append(node('p','Consulter les dates de chaque commune ci-dessous. Une page accessible ne prouve pas que ses délibérations ont été lues. PDF textuels, OCR borné des scans et décisions HTML publiques. Les lectures OCR sont à vérifier. Pistes actives limitées aux 3 derniers mois.','muted'));
+  communes.append(node('p','Consulter les dates de chaque commune ci-dessous. Une page accessible ne prouve pas que ses délibérations ont été lues. Les documents récents sont lus avant qualification métier, même si leur titre est générique. PDF textuels, OCR borné des scans et décisions HTML publiques. Les lectures OCR sont à vérifier. Pistes actives limitées aux 3 derniers mois.','muted'));
   box.append(ted,bosa,communes);
  }
  function renderProvinces(){
@@ -58,7 +59,7 @@
    const successful=c.lastDocumentSuccess||Object.values(c.documentChecks||{}).map(v=>v.lastSuccess).filter(Boolean).sort().at(-1);
    if(successful)when.append(node('small','Dernier PDF contrôlé : '+api.date(successful)));
    const read=node('td',api.docs(c)+' PDF avec preuve de lecture');if(api.legacyDocs(c))read.append(node('small',api.legacyDocs(c)+' anciennes lectures non vérifiables, hors compteur')); if(c.recentOpportunities!==undefined)read.append(node('small',c.recentOpportunities+' piste(s) des 3 derniers mois'));if(c.latestDocumentDate)read.append(node('small','Document le plus récent : '+c.latestDocumentDate.split('-').reverse().join('/')));if(api.htmlDocs(c))read.append(node('small',api.htmlDocs(c)+' décisions / documents HTML'));
-   if(c.documentProgress){const p=c.documentProgress;read.append(node('small','À traiter : '+p.pagesPending+' pages · '+p.documentsPending+' PDF'));if(p.documentsOutOfScope)read.append(node('small',p.documentsOutOfScope+' PDF anciens ou hors périmètre, hors file active'));if(p.limited)read.append(node('small','Limite d’exploration atteinte : contrôle complémentaire nécessaire.'));}
+   if(c.documentProgress){const p=c.documentProgress;read.append(node('small','À analyser : '+(p.pagesPendingAnalysis??p.pagesPending)+' pages · '+(p.documentsPendingAnalysis??p.documentsPending)+' PDF'));if(p.documentsOutOfScope)read.append(node('small',p.documentsOutOfScope+' PDF anciens ou hors périmètre, hors file active'));if(p.limited)read.append(node('small','Limite d’exploration atteinte : contrôle complémentaire nécessaire.'));}
    else read.append(node('small','Exploration restante non encore mesurée.'));
    if(c.lastDocumentResult)read.append(node('small','Dernier lot : '+c.lastDocumentResult.checked+' contrôlés, '+c.lastDocumentResult.errors+' erreurs'));
    const actions=node('td'),details=node('details'),sources=c.deliberationSources||[];details.append(node('summary',sources.length+' source(s) repérée(s)'));

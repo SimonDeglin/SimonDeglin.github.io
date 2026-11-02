@@ -16,7 +16,7 @@ test('pages sœurs documentaires suivies, menu général et domaines tiers ignor
 test('les fiches métier précèdent la pagination des séances sous un budget borné',()=>{
  const q=queue.init({}),base='https://www.deliberations.be/test/decisions/';for(const url of [base+'@@faceted_query?seance=a&b_start=20',base+'19-octobre-2026/etude'])queue.remember(q,'pages',{url,sessionProof:{date:'2026-10-19'}},now);
  assert.match(queue.pendingPages(q,new Set(),now)[0][1].url,/\/etude$/);
- assert.equal(adapter.links('<div class="item-card"><a href="'+base+'19-octobre-2026/travaux"></a><h3 class="card-title">Marché public de travaux de voirie - approbation des conditions</h3></div>',base+'@@faceted_query?seance=a',now).length,0);
+ assert.equal(adapter.links('<div class="item-card"><a href="'+base+'19-octobre-2026/travaux"></a><h3 class="card-title">Marché public de travaux de voirie - approbation des conditions</h3></div>',base+'@@faceted_query?seance=a',now).length,1);
 });
 test('la file active ne comprend pas les archives datées et ne masque pas les dates inconnues',()=>{
  const q=queue.init({});for(const date of ['2022-01-01','2026-10-19','inconnue'])queue.remember(q,'documents',{url:'https://commune.test/pv-'+date+'.pdf'},now);const p=queue.progress(q,{},now);assert.equal(p.documentsPending,2);assert.equal(p.documentsOutOfScope,1);assert.equal(p.documentsKnown,3);

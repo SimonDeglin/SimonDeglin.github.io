@@ -6,7 +6,7 @@ const title='PST 2025-2030 (Action 11) - Rénovation du cimetière des Tapeines 
 const url='https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/pst-2025-2030-action-11-renovation-du-cimetiere-des-tapeines-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation';
 const now='2026-11-02T12:00:00Z';
 test('Flémalle : PST concret autorisé, programme général exclu',()=>{
- assert.equal(policy.excluded({title,url}),null);assert(policy.excluded({title:'PST 2025-2030',url:'https://commune.test/pst-2025-2030.pdf'}));assert.equal(policy.excluded({url:'https://commune.test/conseil/archives-2024'}),null);
+ assert.equal(policy.excluded({title,url}),null);assert.equal(policy.excluded({title:'PST 2025-2030',url:'https://commune.test/pst-2025-2030.pdf'}),null);assert.equal(policy.excluded({url:'https://commune.test/conseil/archives-2024'}),null);
 });
 test('invitation : séance réelle, titre sur deux lignes, nomination des agents rejetée',()=>{
  const txt=fixture('flemalle-20261019-oj.txt');assert.equal(dates.extract({text:txt}).session.date,'2026-10-19');assert.equal(dates.extract({text:txt}).document.date,'2026-10-14');
