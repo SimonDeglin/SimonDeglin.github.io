@@ -34,3 +34,12 @@ test('collecte de bout en bout : page communale → séance → décision, PDF l
   assert.equal(r.opportunities,1);assert.equal(r.errors,0);const items=JSON.parse(fs.readFileSync(dataPath)).items;assert.equal(items.length,1);assert.equal(items[0].municipalNotices.length,1);assert.equal(items[0].municipalNotices[0].sourceDocumentDates.document.date,'2026-10-14');assert.match(require('../detail-phase2.js').sources(items[0]).find(x=>x.url===pdf).meta,/14\/10\/2026/);
  }finally{fs.rmSync(dir,{recursive:true,force:true})}
 });
+test('variantes réelles : étude de tronçons de route et honoraires d’auteur de projet',()=>{
+ for(const name of ['grandroute','ramet']){
+  const url='https://www.deliberations.be/flemalle/decisions/21-septembre-2026/'+name;
+  const r=reader.processHTML([],{ins:'62120',name:'Flémalle'},fixture('flemalle-'+name+'.html'),url,{},now);assert.equal(r.created,1,name);assert.equal(r.items[0].screening,'review');
+ }
+ const assess=require('../tools/municipal-opportunity.cjs').assess;
+ assert.equal(assess({title:'Réfection de tronçons de route - Marché public de travaux - Fixation des conditions'}).eligible,false);
+ assert.equal(assess({title:'Honoraires supplémentaires - Marché public de services d’études'}).eligible,false);
+});
