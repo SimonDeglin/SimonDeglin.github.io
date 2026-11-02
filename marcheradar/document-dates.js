@@ -14,7 +14,8 @@
   const sessionPattern=new RegExp('(?:^|\\n| {3,})\\s*(?:[= *-]+\\s*)?(?:(?:proces[ -]verbal|pv)\\s+de\\s+la\\s+)?(?:seance(?:\\s+(?:publique|ordinaire|extraordinaire))?|conseil(?:\\s+(?:communal|provincial))?)\\s+(?:du|en date du)\\s*:?\\s*'+weekday+'('+token+')','i');
   let session=evidence(lines,sessionPattern,'session',1,'pdf_text');
   if(!session)session=evidence(header,new RegExp('(?:prochain\\s+)?conseil\\s+(?:communal|provincial)\\s+qui\\s+se\\s+deroulera\\s+le\\s+'+weekday+'('+token+')','i'),'session',1,'pdf_text');
-  const issued=new RegExp('(?:^|\\n)\\s*(?:(?:fait\\s+a\\s+)?[a-z][a-z .’\x27-]{1,55},\\s*le|date\\s+du\\s+document\\s*[:：]?|publie(?:e)?\\s+le)\\s*('+token+')','i');
+  if(!session)session=evidence(header,new RegExp('seance(?:\\s+publique)?\\s+du\\s+conseil(?:\\s+communal)?\\s+qui\\s+se\\s+tiendra\\s+le\\s+'+weekday+'('+token+')','i'),'session',1,'pdf_text');
+  const issued=new RegExp('(?:^|\\n| {3,})\\s*(?:(?:fait\\s+a\\s+)?[a-z][a-z .’\x27-]{1,55},\\s*le|date\\s+du\\s+document\\s*[:：]?|publie(?:e)?\\s+le)\\s*('+token+')','i');
   let document=evidence(lines,issued,'document',1,'pdf_text');
   let fallback=null;
   if(!session&&!document){

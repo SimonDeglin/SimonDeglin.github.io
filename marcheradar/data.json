@@ -67,33 +67,33 @@
       "total": 261,
       "sitesRepertories": 261,
       "sitesVerifies": 261,
-      "deliberationsConnectees": 85,
+      "deliberationsConnectees": 64,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 343,
-      "opportunities": 101,
+      "documentsRead": 242,
+      "opportunities": 105,
       "sitesChecked": 261,
       "candidatePages": 227,
       "sourceErrors": 51,
-      "htmlDocumentsRead": 151
+      "htmlDocumentsRead": 91
     },
     "COMMUNES_DOCUMENTS": {
-      "status": "partial",
-      "last_attempt": "2026-10-29T14:29:25.319Z",
-      "last_success": "2026-10-29T14:29:25.319Z",
-      "last_batch": 52,
-      "documents_checked": 81,
-      "documents_read": 81,
+      "status": "pilot",
+      "last_attempt": "2026-11-02T09:02:55.910Z",
+      "last_success": "2026-11-02T09:02:55.910Z",
+      "last_batch": 1,
+      "documents_checked": 1,
+      "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
-      "opportunities_found": 5,
+      "opportunities_found": 1,
       "review_candidates": 0,
-      "errors_count": 49,
-      "warning": "Pistes des trois derniers mois ; décisions HTML et PDF, OCR borné à vérifier. Couverture non exhaustive.",
+      "errors_count": 0,
+      "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
       "html_documents_read": 151,
       "ocr_documents_read": 8,
       "recent_municipal_signals": 7,
@@ -109,7 +109,7 @@
   "metrics": {
     "scanned": 1375,
     "matched_current_run": 10,
-    "records": 232,
+    "records": 233,
     "review_count": 130,
     "award_notice_count": 352,
     "awarded_market_matches": 0,
@@ -16001,6 +16001,184 @@
         "checkedAt": "2026-10-29T14:36:37.033Z",
         "changedAt": null
       }
+    },
+    {
+      "id": "local-html:4fa57242e02ff0c4c4b3",
+      "title": "PST 2025-2030 (Action 11) - Rénovation du cimetière des Tapeines - Étude - Marché public de services - Fixation des conditions et choix du mode de passation.",
+      "buyer": "Commune de Flémalle",
+      "municipalityINS": "62120",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "De passer ce marché par la procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/pst-2025-2030-action-11-renovation-du-cimetiere-des-tapeines-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation",
+        "sha256": "3f846bea5bd8d1b18ccd5a33bfece29be8fd22ac751958be7d7d11a04764d366",
+        "stage": "project"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 48,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/pst-2025-2030-action-11-renovation-du-cimetiere-des-tapeines-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/pst-2025-2030-action-11-renovation-du-cimetiere-des-tapeines-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/pst-2025-2030-action-11-renovation-du-cimetiere-des-tapeines-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation",
+        "sha256": "3f846bea5bd8d1b18ccd5a33bfece29be8fd22ac751958be7d7d11a04764d366",
+        "session": {
+          "date": "2026-10-19",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 19 octobre 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/pst-2025-2030-action-11-renovation-du-cimetiere-des-tapeines-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:37967b0802deb8f241",
+        "sha256": "3f846bea5bd8d1b18ccd5a33bfece29be8fd22ac751958be7d7d11a04764d366",
+        "format": "html",
+        "checkedAt": "2026-11-02T09:02:55.910Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Vu le Programme stratégique transversal 2025-2030 (adopté par le Collège communal en séance du 22 aout 2025), et plus particulièrement l'action 11 relative à l'embellissement et la valorisation des cimetières pour en fai",
+        "sourceUrl": "https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/pst-2025-2030-action-11-renovation-du-cimetiere-des-tapeines-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation",
+        "page": null,
+        "sha256": "3f846bea5bd8d1b18ccd5a33bfece29be8fd22ac751958be7d7d11a04764d366"
+      },
+      "description": "Vu le Programme stratégique transversal 2025-2030 (adopté par le Collège communal en séance du 22 aout 2025), et plus particulièrement l'action 11 relative à l'embellissement et la valorisation des cimetières pour en faire des espaces de recueillement apaisants ; Que cette action met la priorité sur le cimetière des Tapeines vu sa vétusté avancée, spécialement au niveau de ses cheminements ; Que des esquisses relatives à la réfection de ses cheminements et au réaménagement des espaces funéraires ont été rédigées respectivement par un bureau d'étude spécialisé en voirie et par le Service Public de Wallonie (Cellule de gestion du patrimoine funéraire) ; Qu'il convient dès à présent de traduire ces esquisses dans un projet de travaux globalisé intégrant ces réflexions, mais également la végétalisation intégrale du cimetière afin de satisfaire aux enjeux écologiques, paysagers, économiques et sociaux ; Vu le projet de cahier des charges (n° 2026/1147), établi par le service \"Cadre de vie\" en collaboration avec le service \"Sépultures\", relatif au marché public de services pour l'étude de rénovation du cimetière des Tapeines ; Attendu que le service \"Cadre de vie\" estime le montant des travaux à 500 000,00 € HTVA et le pourcentage d'honoraires de ce marché d'étude à 8%, soit un montant estimé de 40 000,00 € HTVA, soit 48 400,00 € TVAC, répartis de la manière suivante : Tranche ferme ",
+      "evidence": "Vu le Programme stratégique transversal 2025-2030 (adopté par le Collège communal en séance du 22 aout 2025), et plus particulièrement l'action 11 relative à l'embellissement et la valorisation des cimetières pour en faire des espaces de recueillement apaisants ; Que cette action met la priorité sur le cimetière des Tapeines vu sa vétusté avancée, spécialement au niveau de ses cheminements ; Que des esquisses relatives à la réfection de ses cheminements et au réaménagement des espaces funéraires ont été rédigées respectivement par un bureau d'étude spécialisé en voirie et par le Service Public de Wallonie (Cellule de gestion du patrimoine funéraire) ; Qu'il convient dès à présent de traduire ces esquisses dans un projet de travaux globalisé intégrant ces réflexions, mais également la végétalisation intégrale du cimetière afin de satisfaire aux enjeux écologiques, paysagers, économiques et sociaux ; Vu le projet de cahier des charges (n° 2026/1147), établi par le service \"Cadre de vie\" en collaboration avec le service \"Sépultures\", relatif au marché public de services pour l'étude de rénovation du cimetière des Tapeines ; Attendu que le service \"Cadre de vie\" estime le montant des travaux à 500 000,00 € HTVA et le pourcentage d'honoraires de ce marché d'étude à 8%, soit un montant estimé de 40 000,00 € HTVA, soit 48 400,00 € TVAC, répartis de la manière suivante : Tranche ferme ",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu le Programme stratégique transversal 2025-2030 (adopté par le Collège communal en séance du 22 aout 2025), et plus particulièrement l'action 11 relative à l'embellissement et la valorisation des cimetières pour en faire des espaces de recueillement apaisants ; Que cette action met la priorité sur le cimetière des Tapeines vu sa vétusté avancée, spécialement au niveau de ses cheminements ; Que des esquisses relatives à la réfection de ses cheminements et au réaménagement des espaces funéraires ont été rédigées respectivement par un bureau d'étude spécialisé en voirie et par le Service Public de Wallonie (Cellule de gestion du patrimoine funéraire) ; Qu'il convient dès à présent de traduire ces esquisses dans un projet de travaux globalisé intégrant ces réflexions, mais également la végétalisation intégrale du cimetière afin de satisfaire aux enjeux écologiques, paysagers, économiques et sociaux ; Vu le projet de cahier des charges (n° 2026/1147), établi par le service \"Cadre de vie\" en collaboration avec le service \"Sépultures\", relatif au marché public de services pour l'étude de rénovation du cimetière des Tapeines ; Attendu que le service \"Cadre de vie\" estime le montant des travaux à 500 000,00 € HTVA et le pourcentage d'honoraires de ce marché d'étude à 8%, soit un montant estimé de 40 000,00 € HTVA, soit 48 400,00 € TVAC, répartis de la manière suivante : Tranche ferme ",
+          "page": null
+        },
+        {
+          "excerpt": "Que des esquisses relatives à la réfection de ses cheminements et au réaménagement des espaces funéraires ont été rédigées respectivement par un bureau d'étude spécialisé en voirie et par le Service Public de Wallonie (Cellule de gestion du patrimoine funéraire) ; Qu'il convient dès à présent de traduire ces esquisses dans un projet de travaux globalisé intégrant ces réflexions, mais également la végétalisation intégrale du cimetière afin de satisfaire aux enjeux écologiques, paysagers, économiques et sociaux ; Vu le projet de cahier des charges (n° 2026/1147), établi par le service \"Cadre de vie\" en collaboration avec le service \"Sépultures\", relatif au marché public de services pour l'étude de rénovation du cimetière des Tapeines ; Attendu que le service \"Cadre de vie\" estime le montant des travaux à 500 000,00 € HTVA et le pourcentage d'honoraires de ce marché d'étude à 8%, soit un montant estimé de 40 000,00 € HTVA, soit 48 400,00 € TVAC, répartis de la manière suivante : Tranche ferme \"Avant-projet\" : 25% de la valeur du marché, soit un montant estimé de 10 000,00 € HTVA, soit 12 100,00 € TVAC ; Tranche conditionnelle \"Projet\" : 60% de la valeur du marché, soit un montant estimé de 24 000,00 € HTVA, soit 29 040,00 € TVAC ; Tranche conditionnelle \"Suivi de l'exécution des travaux\" : 15% de la valeur du marché, soit un montant estimé de 6 000,00 € HTVA, soit 7 260,00 € TVAC ",
+          "page": null
+        },
+        {
+          "excerpt": "Qu'il convient dès à présent de traduire ces esquisses dans un projet de travaux globalisé intégrant ces réflexions, mais également la végétalisation intégrale du cimetière afin de satisfaire aux enjeux écologiques, paysagers, économiques et sociaux ; Vu le projet de cahier des charges (n° 2026/1147), établi par le service \"Cadre de vie\" en collaboration avec le service \"Sépultures\", relatif au marché public de services pour l'étude de rénovation du cimetière des Tapeines ; Attendu que le service \"Cadre de vie\" estime le montant des travaux à 500 000,00 € HTVA et le pourcentage d'honoraires de ce marché d'étude à 8%, soit un montant estimé de 40 000,00 € HTVA, soit 48 400,00 € TVAC, répartis de la manière suivante : Tranche ferme \"Avant-projet\" : 25% de la valeur du marché, soit un montant estimé de 10 000,00 € HTVA, soit 12 100,00 € TVAC ; Tranche conditionnelle \"Projet\" : 60% de la valeur du marché, soit un montant estimé de 24 000,00 € HTVA, soit 29 040,00 € TVAC ; Tranche conditionnelle \"Suivi de l'exécution des travaux\" : 15% de la valeur du marché, soit un montant estimé de 6 000,00 € HTVA, soit 7 260,00 € TVAC ; Attendu que le crédit disponible sur l'article 878/733-60 du budget extraordinaire (n° de projet : 20262102) permettant de financer ces dépenses s'élève à 15 000,00 € ;",
+          "page": null
+        },
+        {
+          "excerpt": "PST 2025-2030 (Action 11) - Rénovation du cimetière des Tapeines - Étude - Marché public de services - Fixation des conditions et choix du mode de passation. 19 Séance publique du Conseil 19 octobre 2026 (19:30) Point N°",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "municipalNotices": [
+        {
+          "id": "local:d45d195acc809558623d",
+          "title": "13. PST 2025-2030 (Action 11) - Rénovation du cimetière des Tapeines - Étude - Marché public de services - Fixation des conditions et choix du mode de passation.",
+          "buyer": "Commune de Flémalle",
+          "municipalityINS": "62120",
+          "region": "Wallonie",
+          "source": "LOCALE",
+          "webSourceType": "municipal",
+          "opportunityType": "prospection",
+          "noticeKind": "prospection",
+          "webTypeEvidence": {
+            "kind": "prospection",
+            "reason": "ordre_du_jour_ou_projet_non_adopte",
+            "excerpt": "13. PST 2025-2030 (Action 11) - Rénovation du cimetière des Tapeines - Étude - Marché public de services - Fixation des conditions et choix du mode de passation.",
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochaine-seance-du-conseil-communal/ordre-du-jour/convocation-oj-19-octobre-2026-arrete-par-college-09-10-2026.pdf",
+            "page": 1,
+            "sha256": "6c9baa5c460969c80b7ab70ef8c5af10c12d86cdca0e5d77ea78a17316137266"
+          },
+          "opportunityStage": "décision ou besoin à vérifier",
+          "sector": "Qualif",
+          "sectors": [
+            "Qualif"
+          ],
+          "score": 48,
+          "screening": "review",
+          "qualification": {
+            "version": "2026-10-29",
+            "kind": "prospect",
+            "route": "local_signal",
+            "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+            "capacityStatus": "not_assessed"
+          },
+          "publication": "",
+          "deadline": "",
+          "sourceDocument": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochaine-seance-du-conseil-communal/ordre-du-jour/convocation-oj-19-octobre-2026-arrete-par-college-09-10-2026.pdf",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochaine-seance-du-conseil-communal/ordre-du-jour/convocation-oj-19-octobre-2026-arrete-par-college-09-10-2026.pdf",
+            "sha256": "6c9baa5c460969c80b7ab70ef8c5af10c12d86cdca0e5d77ea78a17316137266",
+            "session": {
+              "date": "2026-10-19",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "séance du Conseil Communal qui se tiendra le LUNDI 19 OCTOBRE 2026",
+              "confidence": "explicit"
+            },
+            "document": {
+              "date": "2026-10-14",
+              "kind": "document",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Flémalle, le 14 octobre 2026",
+              "confidence": "explicit"
+            },
+            "status": "identified"
+          },
+          "sourceExtraction": {
+            "method": "pdf_text",
+            "partial": false
+          },
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochaine-seance-du-conseil-communal/ordre-du-jour/convocation-oj-19-octobre-2026-arrete-par-college-09-10-2026.pdf",
+          "cpv": [],
+          "description": "Document communal public. Extrait nécessitant une lecture de validation : 13. PST 2025-2030 (Action 11) - Rénovation du cimetière des Tapeines - Étude - Marché public de services - Fixation des conditions et choix du mode de passation.",
+          "evidence": "13. PST 2025-2030 (Action 11) - Rénovation du cimetière des Tapeines - Étude - Marché public de services - Fixation des conditions et choix du mode de passation.",
+          "municipalReference": null,
+          "municipalSection": "13. PST 2025-2030 (Action 11) - Rénovation du cimetière des Tapeines - Étude - Marché public de services - Fixation des conditions et choix du mode de passation.",
+          "municipalEvidence": [
+            {
+              "page": 1,
+              "excerpt": "13. PST 2025-2030 (Action 11) - Rénovation du cimetière des Tapeines - Étude - Marché public de services - Fixation des conditions et choix du mode de passation."
+            }
+          ],
+          "source_status": "extrait_pdf_a_verifier",
+          "sourceEvidencePage": 1,
+          "sourceEvidenceStatus": "found",
+          "sourceDocumentVersion": {
+            "documentId": "municipal-doc:e9f8c5fe3326dfb890",
+            "sha256": "6c9baa5c460969c80b7ab70ef8c5af10c12d86cdca0e5d77ea78a17316137266",
+            "checkedAt": "2026-11-02T09:02:55.910Z",
+            "changedAt": null
+          }
+        }
+      ]
     }
   ]
 }

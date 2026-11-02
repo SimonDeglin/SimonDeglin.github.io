@@ -22,8 +22,8 @@ test('province issue du code INS et compteurs dérivés des communes plutôt que
  {ins:'82001',documentChecks:{a:{sha256:'a',lastSuccess:'2026-10-28',lastError:'HTTP 503'}}},
  {ins:'92001',sourceStatus:'site_indisponible',lastSiteCheck:'2026-10-28'}];
  assert.deepEqual(list.map(api.provinceOf),['brabant_wallon','hainaut','liege','luxembourg','namur']);
- assert.deepEqual(api.counts(list),{total:5,sites:3,pages:1,read:2,documents:4,errors:2});
+ assert.deepEqual(api.counts(list),{total:5,sites:3,pages:1,read:1,documents:1,errors:2});
  assert.equal(api.communeState(list[0]).key,'pages');assert.equal(api.communeState(list[1]).key,'pending');
- assert.equal(api.communeState(list[3]).key,'error');
- assert.equal(api.docs({documentsRead:2,documentChecks:{a:{sha256:'a',lastSuccess:'2026-10-28'}}}),2,'Ne pas compter deux fois un PDF historique');
+ assert.equal(api.communeState(list[3]).key,'error');assert.notEqual(api.communeState(list[2]).key,'read');assert.equal(api.legacyDocs(list[2]),3);
+ assert.equal(api.docs({documentsRead:2,documentChecks:{a:{sha256:'a',lastSuccess:'2026-10-28'}}}),1,'Le compteur historique sans preuve ne complète pas les PDF vérifiés');
 });

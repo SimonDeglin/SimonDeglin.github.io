@@ -3,7 +3,8 @@ const fold=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLo
 function excluded(source){
  const text=fold((source.title||'')+' '+(source.url||''));
  if(/conseil.{0,35}(?:des[ /_-]+enfants|des[ /_-]+jeunes|consultatif)|interpellation[ /_-]+citoyenne|demande.{0,15}interpellation/.test(text))return 'instance_ou_demande_hors_collecte';
- if(/sendtomanager|sendto_form|print_view|@@images|\.(?:jpe?g|png|docx?)(?:$|[?#])|(?:^|[\/_-])(?:composition|membres|archives)(?:[\/_-]|$)|youtube|youtu\.be|facebook|instagram|videos?[-_/ ]|competences[-_ ]scabinales|declaration[-_ ]de[-_ ]politique|plan[-_ ]strategique|pst[-_ ]20|confidentialit|protection.des.donnees|reglement.{0,15}(?:police|interieur)|roi[-_ ]conseil|elections?|imperiali/.test(text))return 'navigation_ou_reglement_hors_collecte';
+ if(/sendtomanager|sendto_form|print_view|@@images|\.(?:jpe?g|png|docx?)(?:$|[?#])|(?:^|[\/_-])(?:composition|membres)(?:[\/_-]|$)|youtube|youtu\.be|facebook|instagram|videos?[-_/ ]|competences[-_ ]scabinales|declaration[-_ ]de[-_ ]politique|confidentialit|protection.des.donnees|reglement.{0,15}(?:police|interieur)|roi[-_ ]conseil|elections?|imperiali/.test(text))return 'navigation_ou_reglement_hors_collecte';
+ if(/plan[-_ ]strategique|pst[-_ ]20/.test(text)&&!/(?:etude|services?|auteur|geometre|cahier|mode[-_ ]de[-_ ]passation)/.test(text))return 'programme_general_sans_publication_de_mission';
  return null;
 }
 function trusted(url,base){

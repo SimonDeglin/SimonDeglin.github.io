@@ -88,6 +88,8 @@ function detect(m){
  if(little)hits.push({id:'PetitsTravaux',score:99,explicit:true,head:true});
  if(!hits.length){
   const both=title+' '+detail;
+  if(STUDY.test(title)&&/cimetiere|patrimoine funeraire/.test(title)&&/renovation|reamenagement|amenagement|inventaire|releve/.test(title))
+   return {reason:null,classification:{sector:'Qualif',sectors:['Qualif'],score:48,screening:'review',matchReason:'etude_amenagement_funeraire_a_qualifier'}};
   // Un schéma communal constitue une étude potentielle à qualifier ; le mot
   // « implantations commerciales » ne doit pas devenir de l'implantation topo.
   if(/schema(?:s)? de developpement (?:communal|pluricommunal|territorial)|plan communal d'amenagement/.test(title)&&/etude|services|elaboration|mission/.test(both))

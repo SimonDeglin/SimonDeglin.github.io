@@ -51,6 +51,7 @@ function read(html,url,context={}){
  // Le contenu est HTML : aucun numéro de page PDF n'est attribué.
  for(const p of [result.session,result.document])if(p&&p.confidence==='explicit'){p.source='html_text';p.page=null;}
  result.status=result.session||result.document?'identified':'unknown';
- return {text:title+'\n'+text,title,dates:result,platform,project:/projet de d[eé]cision/i.test(text.slice(0,1000))};
+ const procedure=text.match(/(?:De passer|D[eé]cide de passer|Passer) (?:ce|le) march[eé] par (?:la |une )?proc[eé]dure n[eé]goci[eé]e sans publication pr[eé]alable/i);
+ return {text:title+'\n'+text,title,dates:result,platform,procedure:procedure?{label:'Procédure négociée sans publication préalable',excerpt:procedure[0]}:null,project:/projet de d[eé]cision/i.test(text.slice(0,1000))};
 }
 module.exports={links,read,core,plain,business};
