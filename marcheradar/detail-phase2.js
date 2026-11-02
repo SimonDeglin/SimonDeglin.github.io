@@ -95,7 +95,10 @@
    var text=council?'Consulter le document communal':origin.includes('bosa')?'Ouvrir le dossier e-Procurement':origin.includes('ted')?'Ouvrir l’avis TED':'Consulter la publication source';
    add(url,text,council?'council':'notice',council?'Document source référencé':'Portail officiel — annexes à consulter sur place');
   });
-  for(const n of m.municipalNotices||[])if(n.sourceDocument)add(n.sourceDocument,'Consulter la décision communale','council','Décision rattachée sur une référence et un acheteur identiques');
+  for(const n of m.municipalNotices||[])if(n.sourceDocument){
+   const date=documentDates&&documentDates.view(n);
+   add(n.sourceDocument,'Consulter la publication communale','council',(date?date.summary+' · ':'')+'Même dossier : référence explicite ou objet, commune et séance identiques');
+  }
   if(m.sourceDocument)add(m.sourceDocument,'Consulter le document communal','council','Document source référencé');
   if(m.url){
    var text=m.source==='TED'?'Ouvrir l’avis TED':m.source==='BOSA'?'Ouvrir le dossier e-Procurement':m.source==='LOCALE'?(publications&&publications.source(m)==='other'?'Consulter le document public':'Consulter le document communal'):'Consulter la publication';
@@ -153,7 +156,7 @@
    field(selectedType==='result'&&focused?'Date limite de l’appel d’offres du dossier':'Date limite de remise',dateTime(m.deadline)+(m.deadlineTime&&!/T\d{2}:\d{2}/.test(str(m.deadline))?' · heure signalée '+str(m.deadlineTime)+' (à confirmer)':''),m.deadlineSourceKind==='bosa_verified_public'&&m.deadlineSourceUrl?'Date et heure vérifiées dans le dossier officiel e-Procurement. Vérifier les éventuels rectificatifs.':!m.deadline?'Consulter la publication officielle avant d’engager une offre.':/^\d{4}-\d{2}-\d{2}$/.test(str(m.deadline))?'L’heure limite n’est pas présente dans les données.':'Horodatage issu des données de collecte.')+
    field('CPV',Array.isArray(m.cpv)&&m.cpv.length?m.cpv.join(' · '):'Non renseigné')+
    field('Délai d’exécution',m.executionDuration||'Non renseigné')+
-   field('Procédure',noticeType)+
+   field('Procédure',noticeType)+(m.municipalProcedure?field('Procédure communale',m.municipalProcedure.label,(m.municipalProcedure.stage==='project'?'Projet de décision, adoption et consultation à vérifier. ':'')+m.municipalProcedure.excerpt):'')+
    '</div>'+
    '<p class="mr2-footnote">Le classement des échéances est indicatif si l’heure de remise n’est pas publiée. Une date dépassée ne constitue pas une preuve de clôture administrative de la procédure.</p>');
   var visitBody='<div class="mr2-highlight '+(visit.kind==='required'?'mr2-risk':visit.kind==='review'?'mr2-caution':'')+'">'+

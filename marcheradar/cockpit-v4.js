@@ -144,7 +144,7 @@
    field('Dossier KDRIX',stage)+
    field('Domaine(s)',sectors.join(' · '))+
    field('Échéance',type==='competition'?displayedDeadline:'Pas de date de remise associée')+
-   field('Documents',docText)+
+   field('Documents',docText)+(m.municipalProcedure?field('Procédure communale',m.municipalProcedure.label+(m.municipalProcedure.stage==='project'?' · projet de décision':'')):'')+
    field('Source et zone',(publications?publications.labels(m,options.sourceFilter||'all'):(m.source||'Source non renseignée'))+' · '+(m.region||'Région non précisée'))+
    '</div>'+
    (verifiedDate?'<div class="v5-deadline-proof"><strong>Échéance vérifiée dans e-Procurement</strong><a href="'+esc(m.deadlineSourceUrl)+'" target="_blank" rel="noopener noreferrer">Contrôler l’heure et les éventuels rectificatifs ↗</a></div>':'')+

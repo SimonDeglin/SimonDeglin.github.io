@@ -14,19 +14,19 @@
     "total": 261,
     "sitesRepertories": 261,
     "sitesVerifies": 261,
-    "deliberationsConnectees": 85,
+    "deliberationsConnectees": 64,
     "zones": {
       "principale": 196,
       "exterieure_provisoire": 26,
       "peripherique": 39
     },
     "checkedWithErrors": 3,
-    "documentsRead": 343,
-    "opportunities": 101,
+    "documentsRead": 242,
+    "opportunities": 107,
     "sitesChecked": 261,
     "candidatePages": 227,
     "sourceErrors": 51,
-    "htmlDocumentsRead": 151
+    "htmlDocumentsRead": 91
   },
   "communes": [
     {
@@ -44045,25 +44045,1027 @@
         }
       ],
       "lastSiteCheck": "2026-10-15T08:36:41.212Z",
-      "lastDocumentCheck": "2026-10-15T08:36:47.137Z",
+      "lastDocumentCheck": "2026-11-02T09:02:55.910Z",
       "latestCouncilDate": null,
-      "documentsRead": 4,
-      "opportunities": 0,
+      "documentsRead": 5,
+      "opportunities": 3,
       "errors": [],
       "verifiedSite": {
         "url": "https://www.flemalle.be/",
         "checkedAt": "2026-10-31T15:30:08.115Z"
       },
-      "recentOpportunities": 0,
-      "documentChecks": {},
-      "documentSourceChecks": {},
-      "htmlDocumentChecks": {},
-      "documentQueue": {
-        "pages": {},
-        "documents": {}
+      "recentOpportunities": 3,
+      "documentChecks": {
+        "municipal-doc:e9f8c5fe3326dfb890": {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochaine-seance-du-conseil-communal/ordre-du-jour/convocation-oj-19-octobre-2026-arrete-par-college-09-10-2026.pdf",
+          "finalUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochaine-seance-du-conseil-communal/ordre-du-jour/convocation-oj-19-octobre-2026-arrete-par-college-09-10-2026.pdf",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastChecked": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null,
+          "extraction": {
+            "method": "pdf_text",
+            "partial": false
+          },
+          "etag": "",
+          "lastModified": "",
+          "contentCheckedAt": "2026-11-02T09:02:55.910Z",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochaine-seance-du-conseil-communal/ordre-du-jour/convocation-oj-19-octobre-2026-arrete-par-college-09-10-2026.pdf",
+            "sha256": "6c9baa5c460969c80b7ab70ef8c5af10c12d86cdca0e5d77ea78a17316137266",
+            "session": {
+              "date": "2026-10-19",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "séance du Conseil Communal qui se tiendra le LUNDI 19 OCTOBRE 2026",
+              "confidence": "explicit"
+            },
+            "document": {
+              "date": "2026-10-14",
+              "kind": "document",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Flémalle, le 14 octobre 2026",
+              "confidence": "explicit"
+            },
+            "status": "identified"
+          },
+          "extractorVersion": "2026-11-02-explicit-studies-v8",
+          "textExtractedAt": "2026-11-02T09:02:55.910Z",
+          "sha256": "6c9baa5c460969c80b7ab70ef8c5af10c12d86cdca0e5d77ea78a17316137266",
+          "firstSeenAt": "2026-11-02T09:02:55.910Z",
+          "nextAttemptAt": null
+        }
       },
-      "readDocuments": [],
-      "htmlDocumentsRead": 0
+      "documentSourceChecks": {
+        "municipal-doc:f83dd787b5e347ad65": {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:0306faf4ef8e727e85": {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochaine-seance-du-conseil-communal",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:fc9c638575d7b28e75": {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2024",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:475bef2c96543df40b": {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:9bb78464e9b4de69f1": {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:45cbcd4965e92e7936": {
+          "url": "https://www.deliberations.be/flemalle",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:6b1d1974b58f24e5fe": {
+          "url": "https://www.deliberations.be/flemalle/decisions/@@faceted_query?seance=1b8cacb42cb945e698ca17d1705fbe22&b_start=0",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:b2c605eb4b3cbe5c95": {
+          "url": "https://www.deliberations.be/flemalle/decisions/@@faceted_query?seance=f6e904c6ab854b82b97fb59ca5b2b8ca&b_start=0",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:d18c861316e101a9f5": {
+          "url": "https://www.deliberations.be/flemalle/decisions/@@faceted_query?seance=1b8cacb42cb945e698ca17d1705fbe22&b_start:int=20",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:4baecbeb8cf41297cc": {
+          "url": "https://www.deliberations.be/flemalle/decisions/@@faceted_query?seance=f6e904c6ab854b82b97fb59ca5b2b8ca&b_start:int=20",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:038da02bc7d0c01161": {
+          "url": "https://www.deliberations.be/flemalle/decisions/@@faceted_query?seance=f6e904c6ab854b82b97fb59ca5b2b8ca&b_start:int=40",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:37967b0802deb8f241": {
+          "url": "https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/pst-2025-2030-action-11-renovation-du-cimetiere-des-tapeines-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:309801cd823ddf2ee3": {
+          "url": "https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/marche-public-de-services-honoraires-pour-la-deconstruction-du-batiment-a-ramet-ancienne-croix-rouge-lamenagement-dun-parking-paysager-et-la-refection-de-la-cour-de-recreation-de-lecole-de-ramet-fixation-des-conditions-et-choix-du-mode-de-passation",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:6864e024f634e28f94": {
+          "url": "https://www.deliberations.be/flemalle/decisions/21-septembre-2026-19-30/pst-2025-2030-action-3-refection-de-troncons-de-la-grandroute-troncon-entre-la-rue-marechal-foch-et-la-rue-marihaye-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:c2a9bb1afd8fd81c68": {
+          "url": "https://www.deliberations.be/flemalle/decisions/21-septembre-2026-19-30/question-posee-par-madame-stephanie-monfort-conseillere-communale-en-application-de-larticle-1122-10-ss-3-du-cdld-grandroute-rond-point-des-italiens-insecurite-routiere-etat-de-la-voirie-nuisances-et-degradations-a-repetition",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:3e99a98ed8748c80ea": {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2024/archives-2024",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:4785dc876a4c315f2f": {
+          "url": "https://www.deliberations.be/flemalle/decisions/RSS",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:6a0446330471f4da1b": {
+          "url": "https://www.deliberations.be/flemalle/decisions",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:8804765e42edf5c5c8": {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:f0caa491ca746e43e2": {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/cabinet-de-la-bourgmestre",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:deaab8b0ee45e102f7": {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/college-communal",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:ac850327526ad0a42c": {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:8bf852e0762bd03bd2": {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-de-laction-sociale",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        },
+        "municipal-doc:33a7c4e3c27a38227d": {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-de-police",
+          "lastAttempt": "2026-11-02T09:02:55.910Z",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "lastError": null
+        }
+      },
+      "htmlDocumentChecks": {
+        "municipal-doc:f83dd787b5e347ad65": {
+          "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "sha256": "8cb30f8bb2d1b8dc79085ca0bf3c4f8d7459d0a35cbee4c6de3559736d1cc085",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "sha256": "8cb30f8bb2d1b8dc79085ca0bf3c4f8d7459d0a35cbee4c6de3559736d1cc085",
+            "session": null,
+            "document": null,
+            "status": "unknown"
+          }
+        },
+        "municipal-doc:37967b0802deb8f241": {
+          "url": "https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/pst-2025-2030-action-11-renovation-du-cimetiere-des-tapeines-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "sha256": "3f846bea5bd8d1b18ccd5a33bfece29be8fd22ac751958be7d7d11a04764d366",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/pst-2025-2030-action-11-renovation-du-cimetiere-des-tapeines-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation",
+            "sha256": "3f846bea5bd8d1b18ccd5a33bfece29be8fd22ac751958be7d7d11a04764d366",
+            "session": {
+              "date": "2026-10-19",
+              "kind": "session",
+              "page": null,
+              "source": "html_text",
+              "excerpt": "Séance publique du Conseil : 19 octobre 2026 (19:30)",
+              "confidence": "explicit",
+              "sourceUrl": "https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/pst-2025-2030-action-11-renovation-du-cimetiere-des-tapeines-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation"
+            },
+            "document": null,
+            "status": "identified"
+          }
+        },
+        "municipal-doc:309801cd823ddf2ee3": {
+          "url": "https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/marche-public-de-services-honoraires-pour-la-deconstruction-du-batiment-a-ramet-ancienne-croix-rouge-lamenagement-dun-parking-paysager-et-la-refection-de-la-cour-de-recreation-de-lecole-de-ramet-fixation-des-conditions-et-choix-du-mode-de-passation",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "sha256": "3300895b7530c1c13d712af56168d492170949e26dfc27d0b11f624e25742914",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/marche-public-de-services-honoraires-pour-la-deconstruction-du-batiment-a-ramet-ancienne-croix-rouge-lamenagement-dun-parking-paysager-et-la-refection-de-la-cour-de-recreation-de-lecole-de-ramet-fixation-des-conditions-et-choix-du-mode-de-passation",
+            "sha256": "3300895b7530c1c13d712af56168d492170949e26dfc27d0b11f624e25742914",
+            "session": {
+              "date": "2026-10-19",
+              "kind": "session",
+              "page": null,
+              "source": "html_text",
+              "excerpt": "Séance publique du Conseil : 19 octobre 2026 (19:30)",
+              "confidence": "explicit",
+              "sourceUrl": "https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/marche-public-de-services-honoraires-pour-la-deconstruction-du-batiment-a-ramet-ancienne-croix-rouge-lamenagement-dun-parking-paysager-et-la-refection-de-la-cour-de-recreation-de-lecole-de-ramet-fixation-des-conditions-et-choix-du-mode-de-passation"
+            },
+            "document": null,
+            "status": "identified"
+          }
+        },
+        "municipal-doc:6864e024f634e28f94": {
+          "url": "https://www.deliberations.be/flemalle/decisions/21-septembre-2026-19-30/pst-2025-2030-action-3-refection-de-troncons-de-la-grandroute-troncon-entre-la-rue-marechal-foch-et-la-rue-marihaye-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "sha256": "6a7da38fcc8483e32fdba5fb7feeb4ee433e5dafae02cfcc644b064ad5b7fba4",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.deliberations.be/flemalle/decisions/21-septembre-2026-19-30/pst-2025-2030-action-3-refection-de-troncons-de-la-grandroute-troncon-entre-la-rue-marechal-foch-et-la-rue-marihaye-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation",
+            "sha256": "6a7da38fcc8483e32fdba5fb7feeb4ee433e5dafae02cfcc644b064ad5b7fba4",
+            "session": {
+              "date": "2026-09-21",
+              "kind": "session",
+              "page": null,
+              "source": "html_text",
+              "excerpt": "Séance publique du Conseil : 21 septembre 2026 (19:30)",
+              "confidence": "explicit",
+              "sourceUrl": "https://www.deliberations.be/flemalle/decisions/21-septembre-2026-19-30/pst-2025-2030-action-3-refection-de-troncons-de-la-grandroute-troncon-entre-la-rue-marechal-foch-et-la-rue-marihaye-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation"
+            },
+            "document": null,
+            "status": "identified"
+          }
+        },
+        "municipal-doc:c2a9bb1afd8fd81c68": {
+          "url": "https://www.deliberations.be/flemalle/decisions/21-septembre-2026-19-30/question-posee-par-madame-stephanie-monfort-conseillere-communale-en-application-de-larticle-1122-10-ss-3-du-cdld-grandroute-rond-point-des-italiens-insecurite-routiere-etat-de-la-voirie-nuisances-et-degradations-a-repetition",
+          "lastSuccess": "2026-11-02T09:02:55.910Z",
+          "sha256": "76b618c0faa416283db470387b6dba4e69405455cf15b61bbd8cafe9c66efbcd",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.deliberations.be/flemalle/decisions/21-septembre-2026-19-30/question-posee-par-madame-stephanie-monfort-conseillere-communale-en-application-de-larticle-1122-10-ss-3-du-cdld-grandroute-rond-point-des-italiens-insecurite-routiere-etat-de-la-voirie-nuisances-et-degradations-a-repetition",
+            "sha256": "76b618c0faa416283db470387b6dba4e69405455cf15b61bbd8cafe9c66efbcd",
+            "session": {
+              "date": "2026-09-21",
+              "kind": "session",
+              "page": null,
+              "source": "html_text",
+              "excerpt": "Séance publique du Conseil : 21 septembre 2026 (19:30)",
+              "confidence": "explicit",
+              "sourceUrl": "https://www.deliberations.be/flemalle/decisions/21-septembre-2026-19-30/question-posee-par-madame-stephanie-monfort-conseillere-communale-en-application-de-larticle-1122-10-ss-3-du-cdld-grandroute-rond-point-des-italiens-insecurite-routiere-etat-de-la-voirie-nuisances-et-degradations-a-repetition"
+            },
+            "document": null,
+            "status": "identified"
+          }
+        }
+      },
+      "documentQueue": {
+        "version": 1,
+        "pages": {
+          "municipal-doc:8804765e42edf5c5c8": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique",
+            "depth": 0,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 0,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:f0caa491ca746e43e2": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/cabinet-de-la-bourgmestre",
+            "depth": 0,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 1,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:deaab8b0ee45e102f7": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/college-communal",
+            "depth": 0,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 2,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:ac850327526ad0a42c": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 3,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:f83dd787b5e347ad65": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "depth": 0,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 4,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:0306faf4ef8e727e85": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochaine-seance-du-conseil-communal",
+            "depth": 0,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 5,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:fc9c638575d7b28e75": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2024",
+            "depth": 1,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 6,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:475bef2c96543df40b": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+            "depth": 1,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 7,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:9bb78464e9b4de69f1": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "depth": 1,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 8,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:45cbcd4965e92e7936": {
+            "url": "https://www.deliberations.be/flemalle",
+            "depth": 1,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochaine-seance-du-conseil-communal",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 9,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:3e99a98ed8748c80ea": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2024/archives-2024",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2024",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 10,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:1af66e135b4c7cc326": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023/seance-du-30-janvier-2024",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 11
+          },
+          "municipal-doc:4b94c3c9944e5d0a34": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023/p-v-de-la-seance-publique-du-30-01-2023",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 12
+          },
+          "municipal-doc:cd6ab9d8862c584a22": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023/seance-du-06-mars-2023",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 13
+          },
+          "municipal-doc:67580946a6a85c1bdd": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023/p-v-de-la-seance-publique-du-06-03-2023",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 14
+          },
+          "municipal-doc:55193f199405bdf282": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023/seance-du-03-avril-2023",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 15
+          },
+          "municipal-doc:b9a5c95184ece9e04e": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023/p-v-de-la-seance-publique-du-03-04-2023",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 16
+          },
+          "municipal-doc:c7dce8ec85359eef25": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023/seance-du-24-avril-2023",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 17
+          },
+          "municipal-doc:d0c5334d2a75d3f9bd": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023/p-v-de-la-seance-publique-du-24-04-2023",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 18
+          },
+          "municipal-doc:66506a2b8fe7dcad53": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023/seance-du-22-mai-2023",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 19
+          },
+          "municipal-doc:0b2fd3e07eb310d1bd": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023/p-v-de-la-seance-publique-du-22-05-2023",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 20
+          },
+          "municipal-doc:5bb0aa81e603ab14d0": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023/seance-du-26-juin-2023",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 21
+          },
+          "municipal-doc:62ae1c5ea0493bb122": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023/p-v-de-la-seance-publique-du-26-06-2023",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 22
+          },
+          "municipal-doc:0252aec90e59ae6662": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023/seance-du-18-septembre-2023",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 23
+          },
+          "municipal-doc:398836e6aaff7a17f3": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023/seance-du-16-octobre-2023",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 24
+          },
+          "municipal-doc:5064578da36f0f3e71": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023/seance-du-27-novembre-2023",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 25
+          },
+          "municipal-doc:97dcbfbc18fb69fc15": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023/seance-du-18-decembre-2023",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/archives-2023",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 26
+          },
+          "municipal-doc:563a72740117f88509": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/seance-du-24-janvier-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 27
+          },
+          "municipal-doc:7f70da2bfb753f8c91": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/p-v-de-la-seance-publique-du-24-01-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 28
+          },
+          "municipal-doc:068c58de1e329ca0d8": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/seance-du-21-fevrier-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 29
+          },
+          "municipal-doc:313bb8268110272e17": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/p-v-de-la-seance-publique-du-21-02-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 30
+          },
+          "municipal-doc:6bc52be58543a63a21": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/seance-du-21-mars-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 31
+          },
+          "municipal-doc:034ad05dc718cb4b55": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/p-v-de-la-seance-publique-du-21-03-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 32
+          },
+          "municipal-doc:1c1b046ef0143f5480": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/seance-du-25-avril-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 33
+          },
+          "municipal-doc:808a78ab349fa00471": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/p-v-de-la-seance-publique-du-25-04-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 34
+          },
+          "municipal-doc:61c7254e958848ea09": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/seance-du-23-mai-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 35
+          },
+          "municipal-doc:ce258b482421cf4b66": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/p-v-de-la-seance-publique-du-23-05-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 36
+          },
+          "municipal-doc:31fcccca7c35d8f5a5": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/seance-du-27-juin-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 37
+          },
+          "municipal-doc:b18fee8cf2d691bcef": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/p-v-de-la-seance-publique-du-27-06-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 38
+          },
+          "municipal-doc:f39ff906521f538cd6": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/seance-du-05-septembre-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 39
+          },
+          "municipal-doc:520ac517e80305d12e": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/p-v-de-la-seance-publique-du-05-09-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 40
+          },
+          "municipal-doc:343f72778e750fb03f": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/seance-du-19-septembre-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 41
+          },
+          "municipal-doc:d8dfc226703ebff6e2": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/p-v-de-la-seance-publique-du-19-09-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 42
+          },
+          "municipal-doc:ec5cc9ed97b16b6842": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/seance-du-24-octobre-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 43
+          },
+          "municipal-doc:473314b91484119ac8": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/p-v-de-la-seance-publique-du-24-10-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 44
+          },
+          "municipal-doc:ba7cbef435f4fba4c9": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/seance-du-21-novembre-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 45
+          },
+          "municipal-doc:80ca9ed56fcb08c1fc": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022/p-v-de-la-seance-publique-du-21-11-2022",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/annee-2022",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 46
+          },
+          "municipal-doc:4785dc876a4c315f2f": {
+            "url": "https://www.deliberations.be/flemalle/decisions/RSS",
+            "depth": 2,
+            "sourceUrl": "https://www.deliberations.be/flemalle",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 47,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:6b1d1974b58f24e5fe": {
+            "url": "https://www.deliberations.be/flemalle/decisions/@@faceted_query?seance=1b8cacb42cb945e698ca17d1705fbe22&b_start=0",
+            "title": "Décisions du 19 Octobre 2026 (19:30) — Projet de décision",
+            "sessionProof": {
+              "date": "2026-10-19",
+              "kind": "session",
+              "page": null,
+              "source": "html_text",
+              "excerpt": "Date de la séance : 19 Octobre 2026 (19:30) — Projet de décision",
+              "confidence": "explicit",
+              "sourceUrl": "https://www.deliberations.be/flemalle/decisions"
+            },
+            "depth": 1,
+            "sourceUrl": "https://www.deliberations.be/flemalle",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 48,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:b2c605eb4b3cbe5c95": {
+            "url": "https://www.deliberations.be/flemalle/decisions/@@faceted_query?seance=f6e904c6ab854b82b97fb59ca5b2b8ca&b_start=0",
+            "title": "Décisions du 21 Septembre 2026 (19:30) — Décision",
+            "sessionProof": {
+              "date": "2026-09-21",
+              "kind": "session",
+              "page": null,
+              "source": "html_text",
+              "excerpt": "Date de la séance : 21 Septembre 2026 (19:30) — Décision",
+              "confidence": "explicit",
+              "sourceUrl": "https://www.deliberations.be/flemalle/decisions"
+            },
+            "depth": 1,
+            "sourceUrl": "https://www.deliberations.be/flemalle",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 49,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:37967b0802deb8f241": {
+            "url": "https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/pst-2025-2030-action-11-renovation-du-cimetiere-des-tapeines-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation",
+            "title": "PST 2025-2030 (Action 11) - Rénovation du cimetière des Tapeines - Étude - Marché public de services - Fixation des conditions et choix du mode de passation.",
+            "sessionProof": {
+              "date": "2026-10-19",
+              "kind": "session",
+              "page": null,
+              "source": "html_text",
+              "excerpt": "Date de la séance : 19 Octobre 2026 (19:30) — Projet de décision",
+              "confidence": "explicit",
+              "sourceUrl": "https://www.deliberations.be/flemalle/decisions"
+            },
+            "depth": 2,
+            "sourceUrl": "https://www.deliberations.be/flemalle/decisions/@@faceted_query?seance=1b8cacb42cb945e698ca17d1705fbe22&b_start=0",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 50,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:309801cd823ddf2ee3": {
+            "url": "https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/marche-public-de-services-honoraires-pour-la-deconstruction-du-batiment-a-ramet-ancienne-croix-rouge-lamenagement-dun-parking-paysager-et-la-refection-de-la-cour-de-recreation-de-lecole-de-ramet-fixation-des-conditions-et-choix-du-mode-de-passation",
+            "title": "Marché public de services - Honoraires pour la déconstruction du bâtiment à Ramet (ancienne croix rouge), l'aménagement d'un parking paysager et la réfection de la cour de récréation de l'école de Ramet - Fixation des conditions et choix du mode de passation.",
+            "sessionProof": {
+              "date": "2026-10-19",
+              "kind": "session",
+              "page": null,
+              "source": "html_text",
+              "excerpt": "Date de la séance : 19 Octobre 2026 (19:30) — Projet de décision",
+              "confidence": "explicit",
+              "sourceUrl": "https://www.deliberations.be/flemalle/decisions"
+            },
+            "depth": 2,
+            "sourceUrl": "https://www.deliberations.be/flemalle/decisions/@@faceted_query?seance=1b8cacb42cb945e698ca17d1705fbe22&b_start=0",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 51,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:d18c861316e101a9f5": {
+            "url": "https://www.deliberations.be/flemalle/decisions/@@faceted_query?seance=1b8cacb42cb945e698ca17d1705fbe22&b_start:int=20",
+            "title": "Suite des décisions de la séance",
+            "sessionProof": {
+              "date": "2026-10-19",
+              "kind": "session",
+              "page": null,
+              "source": "html_text",
+              "excerpt": "Date de la séance : 19 Octobre 2026 (19:30) — Projet de décision",
+              "confidence": "explicit",
+              "sourceUrl": "https://www.deliberations.be/flemalle/decisions"
+            },
+            "depth": 1,
+            "sourceUrl": "https://www.deliberations.be/flemalle/decisions/@@faceted_query?seance=1b8cacb42cb945e698ca17d1705fbe22&b_start=0",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 52,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:4baecbeb8cf41297cc": {
+            "url": "https://www.deliberations.be/flemalle/decisions/@@faceted_query?seance=f6e904c6ab854b82b97fb59ca5b2b8ca&b_start:int=20",
+            "title": "Suite des décisions de la séance",
+            "sessionProof": {
+              "date": "2026-09-21",
+              "kind": "session",
+              "page": null,
+              "source": "html_text",
+              "excerpt": "Date de la séance : 21 Septembre 2026 (19:30) — Décision",
+              "confidence": "explicit",
+              "sourceUrl": "https://www.deliberations.be/flemalle/decisions"
+            },
+            "depth": 1,
+            "sourceUrl": "https://www.deliberations.be/flemalle/decisions/@@faceted_query?seance=f6e904c6ab854b82b97fb59ca5b2b8ca&b_start=0",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 53,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:6864e024f634e28f94": {
+            "url": "https://www.deliberations.be/flemalle/decisions/21-septembre-2026-19-30/pst-2025-2030-action-3-refection-de-troncons-de-la-grandroute-troncon-entre-la-rue-marechal-foch-et-la-rue-marihaye-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation",
+            "title": "PST 2025-2030 (Action 3). Réfection de tronçons de la Grand'Route - Tronçon entre la rue Maréchal Foch et la rue Marihaye - Étude - Marché public de services - Fixation des conditions et choix du mode de passation.",
+            "sessionProof": {
+              "date": "2026-09-21",
+              "kind": "session",
+              "page": null,
+              "source": "html_text",
+              "excerpt": "Date de la séance : 21 Septembre 2026 (19:30) — Décision",
+              "confidence": "explicit",
+              "sourceUrl": "https://www.deliberations.be/flemalle/decisions"
+            },
+            "depth": 2,
+            "sourceUrl": "https://www.deliberations.be/flemalle/decisions/@@faceted_query?seance=f6e904c6ab854b82b97fb59ca5b2b8ca&b_start:int=20",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 54,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:038da02bc7d0c01161": {
+            "url": "https://www.deliberations.be/flemalle/decisions/@@faceted_query?seance=f6e904c6ab854b82b97fb59ca5b2b8ca&b_start:int=40",
+            "title": "Suite des décisions de la séance",
+            "sessionProof": {
+              "date": "2026-09-21",
+              "kind": "session",
+              "page": null,
+              "source": "html_text",
+              "excerpt": "Date de la séance : 21 Septembre 2026 (19:30) — Décision",
+              "confidence": "explicit",
+              "sourceUrl": "https://www.deliberations.be/flemalle/decisions"
+            },
+            "depth": 1,
+            "sourceUrl": "https://www.deliberations.be/flemalle/decisions/@@faceted_query?seance=f6e904c6ab854b82b97fb59ca5b2b8ca&b_start:int=20",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 55,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:c2a9bb1afd8fd81c68": {
+            "url": "https://www.deliberations.be/flemalle/decisions/21-septembre-2026-19-30/question-posee-par-madame-stephanie-monfort-conseillere-communale-en-application-de-larticle-1122-10-ss-3-du-cdld-grandroute-rond-point-des-italiens-insecurite-routiere-etat-de-la-voirie-nuisances-et-degradations-a-repetition",
+            "title": "Question posée par Madame Stéphanie MONFORT, Conseillère communale, en application de l'article 1122-10 § 3 du CDLD – Grand’Route (Rond-point des Italiens) – Insécurité routière, état de la voirie, nuisances et dégradations à répétition.",
+            "sessionProof": {
+              "date": "2026-09-21",
+              "kind": "session",
+              "page": null,
+              "source": "html_text",
+              "excerpt": "Date de la séance : 21 Septembre 2026 (19:30) — Décision",
+              "confidence": "explicit",
+              "sourceUrl": "https://www.deliberations.be/flemalle/decisions"
+            },
+            "depth": 2,
+            "sourceUrl": "https://www.deliberations.be/flemalle/decisions/@@faceted_query?seance=f6e904c6ab854b82b97fb59ca5b2b8ca&b_start:int=40",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 56,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:6a0446330471f4da1b": {
+            "url": "https://www.deliberations.be/flemalle/decisions",
+            "depth": 3,
+            "sourceUrl": "https://www.deliberations.be/flemalle/decisions/19-octobre-2026-19-30/pst-2025-2030-action-11-renovation-du-cimetiere-des-tapeines-etude-marche-public-de-services-fixation-des-conditions-et-choix-du-mode-de-passation",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 57,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:8bf852e0762bd03bd2": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-de-laction-sociale",
+            "depth": 1,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 58,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:33a7c4e3c27a38227d": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-de-police",
+            "depth": 1,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 59,
+            "lastAttempt": "2026-11-02T09:02:55.910Z",
+            "lastSuccess": "2026-11-02T09:02:55.910Z",
+            "lastError": null,
+            "nextAttemptAt": null
+          },
+          "municipal-doc:74988fe4988ea62986": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/missions",
+            "depth": 1,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 60
+          },
+          "municipal-doc:4d0e43ccaeac9f4517": {
+            "url": "https://www.flemalle.be/vie-a-flemalle/securite/zone-de-police/conseil-de-police/conseil-de",
+            "depth": 2,
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-de-police",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 61
+          }
+        },
+        "documents": {
+          "municipal-doc:3d7a556cc82e77a6ac": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochaine-seance-du-conseil-communal/ordre-du-jour/convocation-oj-13-octobre-2025-1-arrete-par-le-college-du-03-10-2025.pdf",
+            "title": "Ordre du jour",
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochaine-seance-du-conseil-communal",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 0
+          },
+          "municipal-doc:e9f8c5fe3326dfb890": {
+            "url": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochaine-seance-du-conseil-communal/ordre-du-jour/convocation-oj-19-octobre-2026-arrete-par-college-09-10-2026.pdf",
+            "title": "Ordre du jour 164.0 KB",
+            "sourceUrl": "https://www.flemalle.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochaine-seance-du-conseil-communal",
+            "discoveredAt": "2026-11-02T09:02:55.910Z",
+            "lastSeen": "2026-11-02T09:02:55.910Z",
+            "discoveryOrder": 1
+          }
+        },
+        "limits": {}
+      },
+      "readDocuments": [
+        "municipal-doc:e9f8c5fe3326dfb890"
+      ],
+      "htmlDocumentsRead": 5,
+      "lastDocumentSuccess": "2026-11-02T09:02:55.910Z",
+      "documentVersionsRead": 1,
+      "documentProgress": {
+        "pagesKnown": 62,
+        "pagesPending": 38,
+        "documentsKnown": 2,
+        "documentsPending": 1,
+        "errors": 0,
+        "limited": false,
+        "limits": {}
+      },
+      "lastDocumentResult": {
+        "checked": 1,
+        "errors": 0,
+        "attempted": 1,
+        "pagesAttempted": 24
+      },
+      "latestDocumentDate": "2026-10-19"
     },
     {
       "ins": "62038",
@@ -78150,5 +79152,5 @@
     }
   ],
   "lastMunicipalPass": "2026-11-02T08:19:51.939Z",
-  "lastMunicipalDocumentPass": "2026-11-02T08:20:42.765Z"
+  "lastMunicipalDocumentPass": "2026-11-02T09:02:55.910Z"
 }
