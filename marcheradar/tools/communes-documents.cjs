@@ -18,9 +18,9 @@ const {fetchPublic}=require('./communal-http.cjs');
 const pdfReader=require('./communal-pdf.cjs');
 const sourceHealth=require('../source-health.js');
 const INVENTORY=path.resolve(__dirname,'../communes.json'),DATA=path.resolve(__dirname,'../data.json');
-const EXTRACTION_VERSION='2026-11-02-coverage-v10';
+const EXTRACTION_VERSION='2026-11-02-content-v11';
 const MAX_COMMUNES=Math.min(8,Math.max(1,Number(process.env.COMMUNES_DOC_BATCH||4)));
-const MATCH=/(?:[eé]tudes?|topograph|g[eé]om[eè]tr|bornage|division parcell|bathym[eé]tr|jaugeag|limnim[eé]tr|[eé]tude hydraulique|bureau d.[eé]tudes|auteur de projet|d[eé]tection de r[eé]seaux|scanner laser|photogramm[eé]tr|certificat PEB|certification [eé]nerg[eé]tique|lev[eé] de terrain|[eé]valuation immobili[eè]re|relev[eé] de cours d.eau|voirie|espace public|am[eé]nagement.{0,15}place|bassin d.orage|acquisition.{0,15}parcelle|vente.{0,15}terrain)/i;
+const MATCH=/(?:prestataire|mission|march[eé](?: public)? de services|[eé]tudes?|mesurage|arpentage|implantation|inventaire|audit [eé]nerg[eé]tique|scan(?:ner)? 3D|topograph|g[eé]om[eè]tr|bornage|division parcell|bathym[eé]tr|jaugeag|limnim[eé]tr|[eé]tude hydraulique|bureau d.[eé]tudes|auteur de projet|d[eé]tection de r[eé]seaux|scanner laser|photogramm[eé]tr|certificat PEB|certification [eé]nerg[eé]tique|lev[eé] de terrain|[eé]valuation immobili[eè]re|relev[eé] de cours d.eau|voirie|espace public|am[eé]nagement.{0,15}place|bassin d.orage|acquisition.{0,15}parcelle|vente.{0,15}terrain)/i;
 const INTENT=/(?:d[eé]cide|approuve|d[eé]lib[eè]re|march[eé](?: public)? de services?|d[eé]signation|consultation|cahier sp[eé]cial des charges|lancement d.un march[eé]|mise en concurrence|bureau d.[eé]tudes|mission d.auteur de projet|budget d.[eé]tudes?)/i;
 function textOnly(h){return String(h||'').replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,' ').replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi,' ').replace(/<[^>]*>/g,' ').replace(/&(?:amp|nbsp|quot|#39);/gi,' ').replace(/\s+/g,' ').trim()}
 function fileLinks(html,base){
@@ -41,7 +41,7 @@ function fileLinks(html,base){
  return out;
 }
 function childPages(html,base){
- const parent=new URL(base),out=[];
+ const parent=new URL(base),out=[],content=htmlSource.core(html).replace(/<(nav|aside|header|footer)\b[^>]*>[\s\S]*?<\/\1>/gi,'');
  for(const a of String(html).matchAll(/<a\b[^>]*href\s*=\s*["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)){
   let u;try{u=new URL(a[1].replace(/&amp;/g,'&'),base)}catch(e){continue}
   u.hash='';
@@ -50,10 +50,11 @@ function childPages(html,base){
   if(platform&&/@@faceted_query/.test(parent.pathname))continue;
   // Les fiches de décision passent par l'adaptateur : séance prouvée et objet métier.
   if(platform&&/\/decisions\/[^/]+\/[^/]+/.test(u.pathname))continue;
+  const inContent=content.includes(a[0])&&u.pathname!=='/'&&!parent.pathname.startsWith(u.pathname.replace(/\/$/,'')+'/');
   const siblingDocument=/ordre.{0,12}jour|proc[eè]s.verbal|comptes?.rendus?|d[eé]lib[eé]rations?|s[eé]ances? du conseil/i.test(textOnly(a[2]));
-  if((u.origin!==parent.origin&&!platform)||u.href===parent.href||(!platform&&!u.pathname.startsWith(parent.pathname.replace(/\/$/,'')+'/')&&!siblingDocument))continue;
-  if(/\.pdf(?:$|[?#])/i.test(u.href)||!/conseil|deliber|d[eé]lib[eé]r|d[eé]cision|proces|proc[eè]s|ordre|seance|s[eé]ance|pv-|march[eé]s|20\d{2}/i.test(u.pathname+' '+textOnly(a[2])))continue;
-  if(!sourcePolicy.excluded({url:u.href,title:textOnly(a[2])})&&!out.includes(u.href))out.push(u.href);
+  if((u.origin!==parent.origin&&!platform)||u.href===parent.href||(!platform&&!u.pathname.startsWith(parent.pathname.replace(/\/$/,'')+'/')&&!siblingDocument&&!inContent))continue;
+  if(/\.pdf(?:$|[?#])/i.test(u.href)||!/conseil|deliber|d[eé]lib[eé]r|d[eé]cision|proces|proc[eè]s|ordre|seance|s[eé]ance|pv-|march[eé]s|20\d{2}/i.test(u.pathname+' '+textOnly(a[2]))&&!inContent)continue;
+  if(!sourcePolicy.excluded({url:u.href,title:textOnly(a[2]),documentCandidate:inContent})&&!out.includes(u.href))out.push(u.href);
  }return out;
 }
 function readableSource(s){return s.scopeStatus!=='non_documentary'&&!sourcePolicy.excluded(s)&&(s.status==='page_accessible'||s.status==='document_pdf_a_analyser')}
@@ -87,11 +88,11 @@ function pdfText(bytes){return pdfReader.extract(bytes).text}
 
 function agendaHeading(line){return /^(?:\d{1,3}(?:[.)]\s+|\s+(?=[A-ZÀ-ÖØ-Þ]))|[A-Z]{2,6}\.[A-Z]?\d{2}\.\d+\s+|[A-Z][A-Z0-9 -]{1,16}\s*:)/.test(line)}
 function passages(text){
- const out=[];let sectionHeading=null;
+ const out=[],seen=new Set();let sectionHeading=null;
  for(const [pageNo,page] of String(text||'').split('\f').entries()){
   const lines=page.split('\n').map(x=>x.trim()).filter(Boolean);
   for(let i=0;i<lines.length;i++){
-   if(agendaHeading(lines[i])&&lines[i].length>30){const title=[lines[i]];for(let k=i+1;k<Math.min(lines.length,i+4);k++){if(/[.;:]$/.test(title.at(-1))||agendaHeading(lines[k])||/^(?:C\.?P\.?A\.?S\.?|Finances communales|Travaux communaux|Administration g[eé]n[eé]rale|Personnel communal|Zone de police)\b/i.test(lines[k])||/^(?:Vu|Consid[eé]rant|Attendu|Le conseil|Pr[eé]sents|Article|D[eé]cide)\b/i.test(lines[k]))break;title.push(lines[k]);}sectionHeading=title.join(' ').slice(0,350);}
+   if(agendaHeading(lines[i])){const title=[lines[i]];for(let k=i+1;k<Math.min(lines.length,i+4);k++){if(/[.;:]$/.test(title.at(-1))||agendaHeading(lines[k])||/^(?:C\.?P\.?A\.?S\.?|Finances communales|Travaux communaux|Administration g[eé]n[eé]rale|Personnel communal|Zone de police)\b/i.test(lines[k])||/^(?:Vu|Consid[eé]rant|Attendu|Le conseil|Pr[eé]sents|Article|D[eé]cide)\b/i.test(lines[k]))break;title.push(lines[k]);}sectionHeading=title.join(' ').slice(0,350);}
    const wrapped=/(?:auteur|bureau(?:\s+d[’']))\s*$/i.test(lines[i])&&MATCH.test(lines[i]+' '+(lines[i+1]||''));
    if((!MATCH.test(lines[i])&&!wrapped)||/agent constatateur|assermentation|d[eé]signation.{0,35}(?:conseiller|d[eé]l[eé]gu[eé]|membre du conseil)/i.test(lines[i]))continue;
    let lo=Math.max(0,i-2),hi=Math.min(lines.length,i+5);
@@ -99,11 +100,10 @@ function passages(text){
    for(let j=i+1;j<hi;j++)if(agendaHeading(lines[j])){hi=j;break}
    const quote=lines.slice(lo,hi).join(' ').slice(0,1400);
    if(/d[eé]signation.{0,30}agents?.{0,120}(?:constatation|infractions?)/i.test(quote))continue;
-   if(INTENT.test(quote)&&!out.some(x=>x.excerpt.slice(0,100)===quote.slice(0,100)))out.push({excerpt:quote,page:pageNo+1,sectionHeading});
-   if(out.length>=36)return signals.group(out).slice(0,6);
+   if(INTENT.test(quote)&&!seen.has(quote.slice(0,100))){seen.add(quote.slice(0,100));out.push({excerpt:quote,page:pageNo+1,sectionHeading});}
   }
  }
- return signals.group(out).slice(0,6);
+ return signals.group(out);
 }
 function evidence(text){return passages(text).map(x=>x.excerpt)}
 function digest(value){return crypto.createHash('sha256').update(value).digest('hex')}
@@ -116,19 +116,20 @@ function processHTML(items,commune,html,url,context,now){
  const sha=digest(html);parsed.dates.sha256=sha;
  if(!documentDates.freshness({source:'LOCALE',sourceDocument:url,sourceDocumentDates:parsed.dates},now).active)return {items,created:0,read:true,dates:parsed.dates};
  const linked=items.filter(m=>belongs(m,commune,url)),out=items.map(m=>belongs(m,commune,url)?{...m,sourceDocumentDates:parsed.dates,sourceDocumentVersion:{documentId:documentId(url),sha256:sha,format:'html',checkedAt:now},sourceEvidenceStatus:normalized(parsed.text).includes(normalized(m.evidence))?'found':'not_found'}:m);
- let created=0;const unclassified=[];
+ let created=0;const unclassified=[];let rejected=0;
  const extractedPassages=passages(parsed.text).sort((a,b)=>Number(/n[eé]cessit[eé]|afin de|mission consiste|d.approuver le cahier|objet du march[eé]/i.test(b.excerpt))-Number(/n[eé]cessit[eé]|afin de|mission consiste|d.approuver le cahier|objet du march[eé]/i.test(a.excerpt)));
- if(!linked.length)for(const p of (parsed.platform?extractedPassages.slice(0,1):extractedPassages)){
+ if(!linked.length)for(const p of extractedPassages){
   const subject=parsed.platform?parsed.title:(p.sectionHeading||p.excerpt.slice(0,350));
   const type=webType.classify((parsed.project?'Projet de délibération ':'')+parsed.title,parsed.text,p.excerpt);
-  const assessment=opportunity.assess({title:subject,text:parsed.platform?parsed.text:p.excerpt,kind:type.kind});if(!assessment.eligible)continue;
-  const screening=profile.screen({title:subject,description:p.excerpt,buyer:'Commune de '+commune.name,region:'Wallonie',source:'LOCALE',opportunityType:'prospection'}),rating=screening.classification;
+  const assessment=opportunity.assess({title:subject,text:parsed.platform?parsed.text:p.excerpt,kind:type.kind});if(!assessment.eligible){rejected++;continue;}
+  const screening=profile.screen({title:assessment.mission||subject,description:p.excerpt,buyer:'Commune de '+commune.name,region:'Wallonie',source:'LOCALE',opportunityType:'prospection'}),rating=screening.classification;
   if(!rating||rating.screening==='excluded'){unclassified.push({title:subject,url,date:(parsed.dates.session||parsed.dates.document)?.date||null,excerpt:p.excerpt,reason:screening.reason||'metier_exclu'});continue;}
   const id='local-html:'+digest(url+'|'+p.excerpt.slice(0,170)).slice(0,20);if(out.some(m=>m.id===id))continue;
-  out.push({id,title:parsed.platform?parsed.title:(p.sectionHeading||p.excerpt.slice(0,220)),buyer:'Commune de '+commune.name,municipalityINS:commune.ins,region:'Wallonie',source:'LOCALE',webSourceType:'municipal',sourceDocumentFormat:'html',municipalProcedure:parsed.procedure?{...parsed.procedure,sourceUrl:url,sha256:sha,stage:parsed.project?'project':'decision_to_verify'}:null,municipalAssessment:assessment,noticeKind:type.kind,opportunityType:'prospection',opportunityStage:'décision ou besoin à vérifier',sector:rating.sector,sectors:rating.sectors,screening:'review',score:Math.min(60,rating.score),qualification:rating.qualification,publication:'',deadline:'',url,sourceDocument:url,sourceDocumentDates:parsed.dates,sourceDocumentVersion:{documentId:documentId(url),sha256:sha,format:'html',checkedAt:now},webTypeEvidence:{...type,sourceUrl:url,page:null,sha256:sha},description:p.excerpt,evidence:p.excerpt,municipalEvidence:extractedPassages.slice(0,4).map(p=>({excerpt:p.excerpt,page:null})),sourceEvidenceStatus:'found',municipalReference:p.explicitReference||null});created++;
+  const descriptiveTitle=assessment.basis==='document_body'&&!opportunity.assess({title:subject}).eligible?(signals.title(parsed.text)||assessment.mission):subject;
+  out.push({id,title:descriptiveTitle,sourceDocumentTitle:parsed.title,missionEvidence:assessment.basis==='document_body'?{excerpt:assessment.excerpt,sourceUrl:url,page:null,sha256:sha}:null,buyer:'Commune de '+commune.name,municipalityINS:commune.ins,region:'Wallonie',source:'LOCALE',webSourceType:'municipal',sourceDocumentFormat:'html',municipalProcedure:parsed.procedure?{...parsed.procedure,sourceUrl:url,sha256:sha,stage:parsed.project?'project':'decision_to_verify'}:null,municipalAssessment:assessment,noticeKind:type.kind,opportunityType:'prospection',opportunityStage:'décision ou besoin à vérifier',sector:rating.sector,sectors:rating.sectors,screening:'review',score:Math.min(60,rating.score),qualification:rating.qualification,publication:'',deadline:'',url,sourceDocument:url,sourceDocumentDates:parsed.dates,sourceDocumentVersion:{documentId:documentId(url),sha256:sha,format:'html',checkedAt:now},webTypeEvidence:{...type,sourceUrl:url,page:null,sha256:sha},description:p.excerpt,evidence:p.excerpt,municipalEvidence:extractedPassages.slice(0,4).map(p=>({excerpt:p.excerpt,page:null})),sourceEvidenceStatus:'found',municipalReference:p.explicitReference||signals.reference(parsed.text)||null});created++;if(parsed.platform)break;
  }
  let merged=out.slice(0,items.length);let linkedNotices=0;for(const m of out.slice(items.length)){const r=municipalMerge.insert(merged,m);merged=r.items;if(r.linked)linkedNotices++;}
- return {items:merged,created:created-linkedNotices,linkedNotices,read:true,dates:parsed.dates,unclassified};
+ return {items:merged,created:created-linkedNotices,linkedNotices,read:true,dates:parsed.dates,unclassified,analysis:{version:EXTRACTION_VERSION,basis:'document_content',passagesExamined:extractedPassages.length,rejectedSignals:rejected,unclassifiedSignals:unclassified.length,textComplete:true}};
 }
 function processDocument(items,commune,pdf,file,now,extract=pdfText){
  const id=documentId(pdf.url),prior=commune.documentChecks?.[id]||{};
@@ -153,7 +154,9 @@ function processDocument(items,commune,pdf,file,now,extract=pdfText){
  nextCommune.readDocuments=[...new Set([...(commune.readDocuments||[]),id])];
  nextCommune.documentsRead=(commune.documentsRead||0)+(wasRead?0:1);
  nextCommune.documentVersionsRead=(commune.documentVersionsRead||0)+(parsed&&sha!==prior.sha256?1:0);
- const candidates=text===null?[]:passages(text).map(p=>({...p,rating:profile.screen({title:p.excerpt.slice(0,180),description:p.excerpt,buyer:'Commune de '+commune.name,region:'Wallonie',source:'LOCALE',opportunityType:'prospection'}).classification})).filter(p=>p.rating);
+ const allCandidates=text===null?[]:passages(text).map(p=>({...p,rating:profile.screen({title:opportunity.needEvidence(p.excerpt)?.mission||p.excerpt.slice(0,180),description:p.excerpt,buyer:'Commune de '+commune.name,region:'Wallonie',source:'LOCALE',opportunityType:'prospection'}).classification}));
+ const candidates=allCandidates.filter(p=>p.rating);
+ if(parsed){check.analysis={version:EXTRACTION_VERSION,basis:'document_content',passagesExamined:allCandidates.length,textComplete:!check.extraction?.partial};nextCommune.unclassifiedSignals={...(commune.unclassifiedSignals||{}),[id]:allCandidates.filter(p=>!p.rating&&opportunity.assess({title:p.sectionHeading||'',text:p.excerpt}).eligible).map(p=>({title:p.sectionHeading||'Mission à qualifier',url:pdf.url,date:(check.sourceDocumentDates?.session||check.sourceDocumentDates?.document)?.date||null,excerpt:p.excerpt,reason:'metier_non_classe'}))};}
  // Les passages nouveaux d'un document déjà suivi ne deviennent pas silencieusement
  // de nouveaux dossiers : cela ressusciterait une décision Hors sujet après correction du PDF.
  // Les signaler comme passages du DOCUMENT, sans inventer leur rattachement au marché.
@@ -183,7 +186,8 @@ function processDocument(items,commune,pdf,file,now,extract=pdfText){
    const marketId='local:'+digest(pdf.url+'|'+p.excerpt.slice(0,170)).slice(0,20);
    if(known.has(marketId))continue;
    known.add(marketId);created++;
-   result.push({id:marketId,title:p.sectionHeading||('Conseil communal — opportunité à vérifier : '+commune.name),buyer:'Commune de '+commune.name,
+   const originalTitle=p.sectionHeading||pdf.title||('Conseil communal — opportunité à vérifier : '+commune.name),descriptiveTitle=assessment.basis==='document_body'&&!opportunity.assess({title:originalTitle}).eligible?(signals.title(p.excerpt)||assessment.mission):originalTitle;
+   result.push({id:marketId,title:descriptiveTitle,sourceDocumentTitle:pdf.title||null,municipalAssessment:assessment,missionEvidence:assessment.basis==='document_body'?{excerpt:assessment.excerpt,sourceUrl:pdf.url,page:p.page,sha256:sha}:null,buyer:'Commune de '+commune.name,
     municipalityINS:commune.ins,region:'Wallonie',source:'LOCALE',webSourceType:'municipal',opportunityType:'prospection',
     noticeKind:webType.classify((pdf.title||'')+' '+pdf.url.replace(/[\/_-]/g,' '),text,p.excerpt).kind,
     webTypeEvidence:{...webType.classify((pdf.title||'')+' '+pdf.url.replace(/[\/_-]/g,' '),text,p.excerpt),sourceUrl:pdf.url,page:p.page,sha256:sha},
@@ -213,7 +217,7 @@ async function run(options={}){
  let documentsRead=0,checked=0,unchanged=0,modified=0,created=0,reviewCandidates=0,htmlChecked=0,errors=[];
  for(const m of ready){
   const before={checked,errors:errors.length},queue=queueApi.init(m),allowedBase=m.verifiedSite?.url||m.officialSite||m.deliberationSources[0]?.url;
-  for(const entry of Object.values(queue.pages))entry.scopeExcluded=sourcePolicy.excluded(entry)||(entry.title&&/deliberations\.be\/[^/]+\/decisions\/[^/]+\/[^/?]+/.test(entry.url)&&!entry.url.includes('@@')&&!opportunity.assess({title:entry.title}).eligible?'decision_sans_nouvelle_mission':null)||(!sourcePolicy.trusted(entry.url,allowedBase)?'domaine_externe_hors_collecte':null);
+  for(const entry of Object.values(queue.pages))entry.scopeExcluded=sourcePolicy.excluded(entry)||(!sourcePolicy.trusted(entry.url,allowedBase)?'domaine_externe_hors_collecte':null);
   for(const src of m.deliberationSources.filter(s=>readableSource(s)&&sourcePolicy.trusted(s.url,allowedBase))){
    if(/\.pdf(?:$|[?#])/i.test(src.url))queueApi.remember(queue,'documents',{url:src.url,title:src.title||'',sourceUrl:src.url},now);
    else{
@@ -226,15 +230,18 @@ async function run(options={}){
   const attemptedPages=new Set(),maxPages=Math.min(24,Math.max(1,Number(options.maxPages)||8));
   for(let count=0;count<maxPages;count++){
    if(options.deadlineAt&&Date.now()>=options.deadlineAt)break;
-   const candidate=queueApi.pendingPages(queue,attemptedPages,now)[0];if(!candidate)break;
+   const pending=queueApi.pendingPages(queue,attemptedPages,now,{version:EXTRACTION_VERSION});
+   // Rafraîchir deux entrées du site, puis donner la priorité aux contenus non analysés.
+   const roots=count<2?pending.filter(([,p])=>(p.depth||0)===0).sort(([,a],[,b])=>queueApi.priority(a,now)-queueApi.priority(b,now)):[];
+   const candidate=roots[0]||pending[0];if(!candidate)break;
    const [id,pageEntry]=candidate;attemptedPages.add(id);
    try{
     const page=await download(pageEntry.url,'text/html',1200000,{fetchFn:options.fetchFn}),html=page.bytes.toString('utf8');
     for(const pdf of fileLinks(html,page.finalUrl))queueApi.remember(queue,'documents',{...pdf,sourceUrl:pageEntry.url},now);
-    for(const url of childPages(html,page.finalUrl))queueApi.remember(queue,'pages',{url,depth:(pageEntry.depth||0)+1,sourceUrl:pageEntry.url},now);
+    for(const url of childPages(html,page.finalUrl))queueApi.remember(queue,'pages',{url,documentCandidate:true,depth:(pageEntry.depth||0)+1,sourceUrl:pageEntry.url},now);
     for(const entry of htmlSource.links(html,page.finalUrl,now,pageEntry))queueApi.remember(queue,'pages',{...entry,sourceUrl:pageEntry.url},now);
-    const extracted=processHTML(data.items,m,html,page.finalUrl,pageEntry,now);data.items=extracted.items;if(extracted.read)m.unclassifiedSignals={...(m.unclassifiedSignals||{}),[id]:extracted.unclassified||[]};created+=extracted.created;m.opportunities=(m.opportunities||0)+extracted.created;if(extracted.read){htmlChecked++;m.lastDocumentSuccess=now;}if(extracted.read)m.htmlDocumentsRead=(m.htmlDocumentsRead||0)+(m.htmlDocumentChecks?.[id]?0:1);if(extracted.read)m.htmlDocumentChecks={...(m.htmlDocumentChecks||{}),[id]:{url:page.finalUrl,lastSuccess:now,sha256:digest(html),sourceDocumentDates:extracted.dates||null}};
-    queue.pages[id]={...pageEntry,lastAttempt:now,lastSuccess:now,lastError:null,nextAttemptAt:null};
+    const extracted=processHTML(data.items,m,html,page.finalUrl,pageEntry,now);data.items=extracted.items;if(extracted.read)m.unclassifiedSignals={...(m.unclassifiedSignals||{}),[id]:extracted.unclassified||[]};created+=extracted.created;m.opportunities=(m.opportunities||0)+extracted.created;if(extracted.read){htmlChecked++;m.lastDocumentSuccess=now;}if(extracted.read)m.htmlDocumentsRead=(m.htmlDocumentsRead||0)+(m.htmlDocumentChecks?.[id]?0:1);if(extracted.read)m.htmlDocumentChecks={...(m.htmlDocumentChecks||{}),[id]:{url:page.finalUrl,lastSuccess:now,sha256:digest(html),sourceDocumentDates:extracted.dates||null,analysis:extracted.analysis||null}};
+    queue.pages[id]={...pageEntry,pipelineVersion:EXTRACTION_VERSION,lastAttempt:now,lastSuccess:now,lastError:null,nextAttemptAt:null};
     m.documentSourceChecks={...(m.documentSourceChecks||{}),[id]:{url:pageEntry.url,lastAttempt:now,lastSuccess:now,lastError:null}};
    }catch(e){
     const message=String(e.message||e).slice(0,160),nextAttemptAt=new Date(Date.parse(now)+6*3600000).toISOString();
@@ -244,7 +251,7 @@ async function run(options={}){
    }
   }
   const maxDocuments=Math.min(12,Math.max(1,Number(options.maxDocuments)||12));
-  const documents=queueApi.pendingDocuments(queue,m.documentChecks||{},now).filter(([,pdf])=>sourcePolicy.trusted(pdf.url,allowedBase)).filter(([,pdf])=>!options.documentURLs||options.documentURLs.includes(pdf.url)).slice(0,maxDocuments);
+  const documents=queueApi.pendingDocuments(queue,m.documentChecks||{},now,{version:EXTRACTION_VERSION}).filter(([,pdf])=>sourcePolicy.trusted(pdf.url,allowedBase)).filter(([,pdf])=>!options.documentURLs||options.documentURLs.includes(pdf.url)).slice(0,maxDocuments);
   for(const [id,pdf] of documents){
    if(options.deadlineAt&&Date.now()>=options.deadlineAt)break;
    try{
@@ -260,7 +267,7 @@ async function run(options={}){
     errors.push({site:m.name,link:pdf.url,error:message});
    }
   }
-  m.documentQueue=queue;m.documentProgress=queueApi.progress(queue,m.documentChecks||{},now);
+  m.documentQueue=queue;m.documentProgress=queueApi.progress(queue,m.documentChecks||{},now,{version:EXTRACTION_VERSION});
   m.lastDocumentCheck=now;
   const localItems=data.items.filter(x=>(x.municipalityINS===m.ins&&x.source==='LOCALE')||(x.municipalNotices||[]).some(n=>n.municipalityINS===m.ins));
   m.recentOpportunities=localItems.filter(x=>documentDates.freshness(x,now).active||(x.municipalNotices||[]).some(n=>n.municipalityINS===m.ins&&documentDates.freshness(n,now).active)).length;

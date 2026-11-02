@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-02T09:44:26.318Z",
+      "last_attempt": "2026-11-02T10:57:36.096Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -79,26 +79,27 @@
       "sitesChecked": 261,
       "candidatePages": 227,
       "sourceErrors": 52,
-      "htmlDocumentsRead": 109
+      "htmlDocumentsRead": 166
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-02T09:44:26.318Z",
-      "last_success": "2026-11-02T09:44:26.318Z",
-      "last_batch": 10,
-      "documents_checked": 21,
+      "last_attempt": "2026-11-02T10:57:36.096Z",
+      "last_success": "2026-11-02T10:57:36.096Z",
+      "last_batch": 3,
+      "documents_checked": 4,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
-      "opportunities_found": 5,
+      "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 5,
+      "errors_count": 0,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 21,
+      "html_documents_read": 68,
       "ocr_documents_read": 8,
       "recent_municipal_signals": 14,
       "communes_with_errors": 51,
-      "notices_linked": 1
+      "notices_linked": 1,
+      "content_analysis_version": "2026-11-02-content-v11"
     }
   },
   "coverage": {
@@ -16465,7 +16466,7 @@
       "sourceDocumentDates": {
         "version": 1,
         "sourceUrl": "https://www.deliberations.be/arlon/decisions/15-octobre-2026-19-00/marche-de-services-designation-dun-auteur-de-projet-pour-lentretien-extraordinaire-de-trottoirs-en-2027-2028-approbation-des-conditions-et-du-mode-de-passation",
-        "sha256": "e01359555b8b2270fc31cee0d9bb6489259a48e8cdc231df2d4b0558b26d1f66",
+        "sha256": "a7bc5e70c9d73deb8e6e0c5f64f285cf7583f36adb0eef5fc11d508c18d11097",
         "session": {
           "date": "2026-10-15",
           "kind": "session",
@@ -16480,9 +16481,9 @@
       },
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:f4800eb90ed097c75e",
-        "sha256": "e01359555b8b2270fc31cee0d9bb6489259a48e8cdc231df2d4b0558b26d1f66",
+        "sha256": "a7bc5e70c9d73deb8e6e0c5f64f285cf7583f36adb0eef5fc11d508c18d11097",
         "format": "html",
-        "checkedAt": "2026-11-02T09:44:26.318Z"
+        "checkedAt": "2026-11-02T10:57:36.096Z"
       },
       "webTypeEvidence": {
         "kind": "prospection",
@@ -16518,6 +16519,12 @@
         {
           "id": "local:f8478f6a07286aaf5ec5",
           "title": "11 Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de trottoirs en 2027 (2028)   - Approbation des conditions et du mode de passation",
+          "sourceDocumentTitle": "OJ 15/10/2026 970.6 KB",
+          "municipalAssessment": {
+            "eligible": true,
+            "reason": "mission_de_services_explicitement_annoncee"
+          },
+          "missionEvidence": null,
           "buyer": "Commune de Arlon",
           "municipalityINS": "81001",
           "region": "Wallonie",
@@ -16594,7 +16601,7 @@
           "sourceDocumentVersion": {
             "documentId": "municipal-doc:72c6d6940390c23db7",
             "sha256": "9f33a9a13c2f5ecec2189ff7946a9169e66bf97b8800ade8260653529309dad6",
-            "checkedAt": "2026-11-02T09:44:26.318Z",
+            "checkedAt": "2026-11-02T10:57:36.096Z",
             "changedAt": null
           }
         }
@@ -16643,7 +16650,7 @@
       "sourceDocumentDates": {
         "version": 1,
         "sourceUrl": "https://www.deliberations.be/arlon/decisions/15-octobre-2026-19-00/marche-de-services-designation-dun-auteur-de-projet-pour-lentretien-extraordinaire-de-voiries-et-voies-de-liaison-en-2027-2028-approbation-des-conditions-et-du-mode-de-passation",
-        "sha256": "3afcfe22a151b6a4f123e9d37e8f897a260752840e571ede2c3ce62f2ebcaaf5",
+        "sha256": "96250f3746f8282a171f1388488cdd9d6fc98c119a4c739de9aee4ec823d9863",
         "session": {
           "date": "2026-10-15",
           "kind": "session",
@@ -16658,9 +16665,9 @@
       },
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:b2404fb94ce9b82b84",
-        "sha256": "3afcfe22a151b6a4f123e9d37e8f897a260752840e571ede2c3ce62f2ebcaaf5",
+        "sha256": "96250f3746f8282a171f1388488cdd9d6fc98c119a4c739de9aee4ec823d9863",
         "format": "html",
-        "checkedAt": "2026-11-02T09:44:26.318Z"
+        "checkedAt": "2026-11-02T10:57:36.096Z"
       },
       "webTypeEvidence": {
         "kind": "prospection",
@@ -16696,6 +16703,12 @@
         {
           "id": "local:faa89cec4833951a76f9",
           "title": "13 Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de voiries et voies de liaison en 2027 (2028)   - Approbation des conditions et du mode de passation",
+          "sourceDocumentTitle": "OJ 15/10/2026 970.6 KB",
+          "municipalAssessment": {
+            "eligible": true,
+            "reason": "mission_de_services_explicitement_annoncee"
+          },
+          "missionEvidence": null,
           "buyer": "Commune de Arlon",
           "municipalityINS": "81001",
           "region": "Wallonie",
@@ -16772,7 +16785,7 @@
           "sourceDocumentVersion": {
             "documentId": "municipal-doc:72c6d6940390c23db7",
             "sha256": "9f33a9a13c2f5ecec2189ff7946a9169e66bf97b8800ade8260653529309dad6",
-            "checkedAt": "2026-11-02T09:44:26.318Z",
+            "checkedAt": "2026-11-02T10:57:36.096Z",
             "changedAt": null
           }
         }
@@ -16815,7 +16828,7 @@
       "sourceDocumentDates": {
         "version": 1,
         "sourceUrl": "https://www.deliberations.be/arlon/decisions/23-septembre-2026-19-00/marche-de-services-convention-relative-aux-modalites-dexecution-des-missions-confiees-a-idelux-eau-etude-hydraulique-et-hydrologique-fouches-approbation-du-marche-in-house",
-        "sha256": "04f7ac99634cffce8e04f68b9315b909bc1010a2c2080cb04694e76eaf2aa254",
+        "sha256": "e4413c6d9a08c9ee44d5ee1ab6776275c084e23e950913b3cb6f609eba198d81",
         "session": {
           "date": "2026-09-23",
           "kind": "session",
@@ -16830,9 +16843,9 @@
       },
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:ba0304d80b5a0cdad9",
-        "sha256": "04f7ac99634cffce8e04f68b9315b909bc1010a2c2080cb04694e76eaf2aa254",
+        "sha256": "e4413c6d9a08c9ee44d5ee1ab6776275c084e23e950913b3cb6f609eba198d81",
         "format": "html",
-        "checkedAt": "2026-11-02T09:44:26.318Z"
+        "checkedAt": "2026-11-02T10:57:36.096Z"
       },
       "webTypeEvidence": {
         "kind": "other",
@@ -16868,6 +16881,12 @@
         {
           "id": "local:03adbc0d7e24daaa608e",
           "title": "7   Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX - EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\"",
+          "sourceDocumentTitle": "Oj 23/09/2026 564.1 KB",
+          "municipalAssessment": {
+            "eligible": true,
+            "reason": "attribution_de_services_pour_la_veille"
+          },
+          "missionEvidence": null,
           "buyer": "Commune de Arlon",
           "municipalityINS": "81001",
           "region": "Wallonie",
@@ -16928,14 +16947,14 @@
           },
           "url": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/2026/oj-23092026.pdf",
           "cpv": [],
-          "description": "Document communal public. Extrait nécessitant une lecture de validation : 7   Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX - EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\" C.P.A.S. d'Arlon 8    Modifications du Statut Pécuniaire - Annexe 2 fixant les conditions de recrutement, d'évolution de carrière et de promotion du personnel",
-          "evidence": "7   Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX - EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\" C.P.A.S. d'Arlon 8    Modifications du Statut Pécuniaire - Annexe 2 fixant les conditions de recrutement, d'évolution de carrière et de promotion du personnel",
+          "description": "Document communal public. Extrait nécessitant une lecture de validation : 7   Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX - EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\" C.P.A.S. d'Arlon 8    Modifications du Statut Pécuniaire - Annexe 2 fixant les conditions de",
+          "evidence": "7   Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX - EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\" C.P.A.S. d'Arlon 8    Modifications du Statut Pécuniaire - Annexe 2 fixant les conditions de",
           "municipalReference": null,
           "municipalSection": "7   Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX - EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\"",
           "municipalEvidence": [
             {
               "page": 2,
-              "excerpt": "7   Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX - EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\" C.P.A.S. d'Arlon 8    Modifications du Statut Pécuniaire - Annexe 2 fixant les conditions de recrutement, d'évolution de carrière et de promotion du personnel"
+              "excerpt": "7   Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX - EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\" C.P.A.S. d'Arlon 8    Modifications du Statut Pécuniaire - Annexe 2 fixant les conditions de"
             }
           ],
           "source_status": "extrait_pdf_a_verifier",
@@ -16944,7 +16963,7 @@
           "sourceDocumentVersion": {
             "documentId": "municipal-doc:b85740a31d9a802f76",
             "sha256": "bdbbbebce0a26bfa1cd10cf69fe970a200af132b17a37a9239372c690235178a",
-            "checkedAt": "2026-11-02T09:44:26.318Z",
+            "checkedAt": "2026-11-02T10:57:36.096Z",
             "changedAt": null
           }
         }
@@ -16993,7 +17012,7 @@
       "sourceDocumentDates": {
         "version": 1,
         "sourceUrl": "https://www.deliberations.be/nivelles/decisions/24-aout-2026-20-00/designation-dun-bureau-detudes-en-techniques-speciales-en-charge-de-la-preparation-du-renouvellement-du-contrat-de-maintenance-et-dexploitation-des-installations-techniques-du-centre-culturel-de-nivelles-le-waux-hall-approbation-des-conditions-et-du-mode",
-        "sha256": "fc5301c110fbb738a77394867a3feebb85f3dd14433a450472063740c6e0f384",
+        "sha256": "776e3394fce2b8f5cbb2af7e0ae1dfa574e6c1fb03444554b6902dcc4d69c62c",
         "session": {
           "date": "2026-08-24",
           "kind": "session",
@@ -17008,9 +17027,9 @@
       },
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:9ec4cc8baf56aded95",
-        "sha256": "fc5301c110fbb738a77394867a3feebb85f3dd14433a450472063740c6e0f384",
+        "sha256": "776e3394fce2b8f5cbb2af7e0ae1dfa574e6c1fb03444554b6902dcc4d69c62c",
         "format": "html",
-        "checkedAt": "2026-11-02T09:44:26.318Z"
+        "checkedAt": "2026-11-02T10:57:36.096Z"
       },
       "webTypeEvidence": {
         "kind": "prospection",
@@ -17068,7 +17087,7 @@
       "sourceDocumentDates": {
         "version": 1,
         "sourceUrl": "https://www.deliberations.be/tournai/decisions/28-septembre-2026-19-30/etude-de-mobilite-complementaire-a-lactualisation-du-plan-de-mobilite-pcm-de-la-ville-de-tournai-mode-et-des-conditions-de-passation-du-marche-approbation",
-        "sha256": "d88203a0ced40aea74ca41ad030bb9c716acf3748a0b29de92599eae15736e22",
+        "sha256": "6889e6585d900908e59955447a1df5d56f751601ec4617992511e3de615bcadc",
         "session": {
           "date": "2026-09-28",
           "kind": "session",
@@ -17083,9 +17102,9 @@
       },
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:df0ea2afa440e2f679",
-        "sha256": "d88203a0ced40aea74ca41ad030bb9c716acf3748a0b29de92599eae15736e22",
+        "sha256": "6889e6585d900908e59955447a1df5d56f751601ec4617992511e3de615bcadc",
         "format": "html",
-        "checkedAt": "2026-11-02T09:44:26.318Z"
+        "checkedAt": "2026-11-02T10:57:36.096Z"
       },
       "webTypeEvidence": {
         "kind": "prospection",

@@ -151,7 +151,7 @@
    '<p class="mr2-summary">'+esc(m.description||'Résumé non renseigné dans les données collectées.')+'</p></div>';
   var dated=documentDates&&documentDates.view(documentDates.forSource(m,selectedSource));
   var summary=section('Informations principales','<div class="mr2-fields">'+
-   field('Pouvoir adjudicateur',m.buyer||'Non communiqué')+field('Référence',reference(m))+
+   field('Pouvoir adjudicateur',m.buyer||'Non communiqué')+(m.sourceDocumentTitle&&m.sourceDocumentTitle!==m.title?field('Intitulé du document source',m.sourceDocumentTitle,'La mission affichée a été repérée dans le contenu du document.'):'' )+field('Référence',reference(m))+
    field('Zone',m.region||'Non localisée')+(dated?field(dated.label,dated.value,dated.proof)+(m.sourceDocumentDates?.session&&m.sourceDocumentDates?.document?field('Date du document',documentDates.format(m.sourceDocumentDates.document.date),'Date distincte de la séance et de la collecte.'):'' ):field('Date de publication',formattedDate(m.publication)))+
    field(selectedType==='result'&&focused?'Date limite de l’appel d’offres du dossier':'Date limite de remise',dateTime(m.deadline)+(m.deadlineTime&&!/T\d{2}:\d{2}/.test(str(m.deadline))?' · heure signalée '+str(m.deadlineTime)+' (à confirmer)':''),m.deadlineSourceKind==='bosa_verified_public'&&m.deadlineSourceUrl?'Date et heure vérifiées dans le dossier officiel e-Procurement. Vérifier les éventuels rectificatifs.':!m.deadline?'Consulter la publication officielle avant d’engager une offre.':/^\d{4}-\d{2}-\d{2}$/.test(str(m.deadline))?'L’heure limite n’est pas présente dans les données.':'Horodatage issu des données de collecte.')+
    field('CPV',Array.isArray(m.cpv)&&m.cpv.length?m.cpv.join(' · '):'Non renseigné')+

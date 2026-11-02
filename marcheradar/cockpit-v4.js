@@ -139,7 +139,7 @@
    (typeof globalThis.MRQualification!=='undefined'?globalThis.MRQualification.render(m,{manualOverride:m.screening==='excluded'&&options.autoExcluded===false&&!options.horsSujet}):'')+
    '<div class="v5-preview-summary"><strong>Objet de la mission</strong><p>'+esc(shortDescription||'Aucun descriptif suffisamment précis dans les données collectées. Consulter la source officielle.')+'</p></div>'+
    '<div class="v4-preview-fields">'+
-   field('Acheteur',m.buyer||'Non renseigné')+
+   field('Acheteur',m.buyer||'Non renseigné')+(m.missionEvidence?field('Détection','Besoin repéré dans le contenu du document'):'' )+
    field('Référence',m.internalReference||m.publicationNumber||m.bdaReference||'Non renseignée')+
    field('Dossier KDRIX',stage)+
    field('Domaine(s)',sectors.join(' · '))+

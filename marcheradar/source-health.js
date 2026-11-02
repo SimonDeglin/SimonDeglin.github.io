@@ -34,7 +34,8 @@
   if(!sources.length)return {key:'missing_sources',label:'Source documentaire à localiser ; aucune absence de marché ne peut être conclue.'};
   if(!p)return {key:'not_traversed',label:'Parcours documentaire non mesuré.'};
   if(p.limited)return {key:'limited',label:'Exploration limitée ; des publications peuvent manquer.'};
-  if(p.pagesPending||p.documentsPending)return {key:'pending',label:'Parcours à poursuivre : '+p.pagesPending+' pages et '+p.documentsPending+' PDF dans le périmètre.'};
+  const pages=p.pagesPendingAnalysis??p.pagesPending,documents=p.documentsPendingAnalysis??p.documentsPending;
+  if(pages||documents)return {key:'pending',label:'Parcours à poursuivre : '+pages+' pages et '+documents+' PDF dans le périmètre.'};
   if(!read)return {key:'no_read',label:'Aucun document exploitable lu ; contrôle des sources nécessaire.'};
   return {key:'partial',label:'Lectures réalisées ; couverture toujours partielle.'};
  }
