@@ -121,7 +121,7 @@
    type==='prospect'?'Vérifier que le projet communal correspond à une opportunité d’étude réelle.':
    type==='result'?'Résultat utile pour la veille concurrentielle et les renouvellements.':
    'Vérifier le type de publication et les documents.';
-  const docText=m.source==='LOCALE'&&m.sourceDocumentVersion?.sha256?'PDF communal contrôlé — voir la fiche':sources.read?sources.read+' PDF lu(s) automatiquement':
+  const docText=m.sourceDocumentFormat==='html'?'Décision HTML lue sur le site officiel':m.source==='LOCALE'&&m.sourceDocumentVersion?.sha256?(m.sourceExtraction?.method==='ocr'?'PDF scanné · OCR à vérifier'+(m.sourceExtraction.partial?' · lecture partielle':''):'PDF communal contrôlé — voir la fiche'):sources.read?sources.read+' PDF lu(s) automatiquement':
    sources.indexed?sources.indexed+' pièce(s) répertoriée(s), lecture à vérifier':
    sources.linked?sources.linked+' fichier(s) lié(s)':'Aucune pièce indexée';
   const sectors=Array.isArray(m.sectors)&&m.sectors.length?m.sectors:[m.sector||'À déterminer'];
@@ -131,7 +131,7 @@
   const firstEvidence=analyses.flatMap(a=>(a.evidence||[]).slice(0,1).map(e=>({file:a.fileName,page:e.page,excerpt:e.excerpt}))).slice(0,2);
   const passages=firstEvidence.length?'<div class="v5-preview-evidence"><strong>Passages repérés automatiquement — à vérifier</strong>'+
    firstEvidence.map(e=>'<p><span>'+esc(e.file||'PDF')+' · p. '+esc(e.page)+'</span>'+esc(e.excerpt||'')+'</p>').join('')+'</div>':'';
-  const dated=documentDates&&documentDates.view(m);
+  const dated=documentDates&&documentDates.view(documentDates.forSource(m,options.sourceFilter));
   const notes=txt(options.notes).replace(/\s+/g,' ');
   return '<div class="v4-preview-head"><span class="v4-eyebrow">LECTURE RAPIDE · MARCHÉ SÉLECTIONNÉ</span><h3>'+esc(m.title||'Publication sans titre')+'</h3>'+
    '<div>'+typeBadge(m,options.sourceFilter||'all',options.publicationType||'all')+'</div></div>'+

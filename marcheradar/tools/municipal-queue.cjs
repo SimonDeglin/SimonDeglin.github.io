@@ -6,7 +6,7 @@ const crypto=require('node:crypto');
 const dates=require('../document-dates.js');
 const policy=require('./communal-source-policy.cjs');
 function dateHint(p){if(p.sessionProof?.date)return p.sessionProof.date;const d=dates.extract({url:p.url,title:p.title});return (d.session||d.document)?.date||''}
-function priority(p,now){const hint=dateHint(p),year=new Date(now).getUTCFullYear();if(hint)return hint>=dates.cutoff(now)?0:9;const text=p.url+' '+(p.title||'');return new RegExp('(?:annee[-/ ]?)?'+year).test(text)?1:/RSS|deliberations\.be|ordre|proces|verbaux|seances|d[eé]cision|march[eé]s/i.test(text)?2:4}
+function priority(p,now){const hint=dateHint(p),year=new Date(now).getUTCFullYear();if(hint)return hint>=dates.cutoff(now)?0:9;const text=p.url+' '+(p.title||'');const years=[...String(p.url).matchAll(/\/(20\d{2})(?:\/|[-_])/g)].map(m=>Number(m[1]));if(years.length&&years.every(y=>y<Number(dates.cutoff(now).slice(0,4))))return 9;return new RegExp('(?:annee[-/ ]?)?'+year).test(text)?1:/RSS|deliberations\.be|ordre|proces|verbaux|seances|d[eé]cision|march[eé]s/i.test(text)?2:4}
 function outside(p,check,now){const date=(check?.sourceDocumentDates?.session||check?.sourceDocumentDates?.document)?.date||dateHint(p);return date&&date<dates.cutoff(now)}
 const key=url=>'municipal-doc:'+crypto.createHash('sha256').update(url).digest('hex').slice(0,18);
 const CAPS={pages:600,documents:4000,depth:3};
@@ -29,7 +29,7 @@ function pendingPages(queue,attempted,now){
  .sort(([,a],[,b])=>priority(a,now)-priority(b,now)||(a.lastAttempt||'').localeCompare(b.lastAttempt||'')||(a.depth||0)-(b.depth||0)||(a.discoveryOrder??999999)-(b.discoveryOrder??999999)||a.url.localeCompare(b.url));
 }
 function pendingDocuments(queue,checks,now){
- return Object.entries(queue.documents).filter(([id,p])=>!policy.excluded(p)&&!outside(p,checks[id],now)&&(!checks[id]?.nextAttemptAt||checks[id].nextAttemptAt<=now))
+ return Object.entries(queue.documents).filter(([id,p])=>!policy.excluded(p)&&priority(p,now)!==9&&!outside(p,checks[id],now)&&(!checks[id]?.nextAttemptAt||checks[id].nextAttemptAt<=now))
  .sort(([ia,a],[ib,b])=>priority(a,now)-priority(b,now)||dateHint(b).localeCompare(dateHint(a))||(checks[ia]?.lastAttempt||'').localeCompare(checks[ib]?.lastAttempt||'')||a.discoveredAt.localeCompare(b.discoveredAt)||(a.discoveryOrder??999999)-(b.discoveryOrder??999999)||a.url.localeCompare(b.url));
 }
 function progress(queue,checks){

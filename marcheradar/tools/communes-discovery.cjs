@@ -8,6 +8,7 @@ const fs=require('node:fs'),path=require('node:path');
 const {selection}=require('./communes-scope.cjs');
 const health=require('../source-health.js');
 const policy=require('./communal-source-policy.cjs');
+const {fetchPublic}=require('./communal-http.cjs');
 const INVENTORY=path.resolve(__dirname,'../communes.json');
 const DATA=path.resolve(__dirname,'../data.json');
 const LIMIT=Math.max(1,Math.min(25,Number(process.env.COMMUNES_BATCH||10)));
@@ -30,7 +31,7 @@ async function getHtml(url){
  for(const target of candidates){
   const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),18000);
   try{
-   const r=await fetch(target,{redirect:'follow',signal:controller.signal,headers:{Accept:'text/html,application/xml,text/plain','User-Agent':'KDRIX-PublicCouncilDiscovery/1.1'}});
+   const r=await fetchPublic(target,{signal:controller.signal,headers:{Accept:'text/html,application/xml,text/plain','User-Agent':'KDRIX-PublicCouncilDiscovery/1.1'}});
    if(!r.ok)throw Error('HTTP '+r.status);
    if(!/html|text|xml/.test(r.headers.get('content-type')||''))throw Error('Contenu non textuel');
    return {url:r.url,content:(await r.text()).slice(0,1200000)};
@@ -76,7 +77,7 @@ async function run(options={}){
    // enregistrés et sont prioritaires lors des passes suivantes.
    let verifiedCount=0;
    for(const x of merged.values())if(policy.excluded(x))merged.set(x.url,{...x,scopeStatus:'non_documentary',scopeReason:policy.excluded(x)});
-   const pending=[...merged.values(),...found].filter(x=>x.scopeStatus!=='non_documentary').filter((x,i,a)=>a.findIndex(y=>y.url===x.url)===i)
+   const pending=[...merged.values(),...found].filter(x=>x.scopeStatus!=='non_documentary'&&policy.trusted(x.url,site.url)).filter((x,i,a)=>a.findIndex(y=>y.url===x.url)===i)
     .sort((a,b)=>(a.last_attempt||'').localeCompare(b.last_attempt||''));
    for(const x of pending){
     const previous=merged.get(x.url);
