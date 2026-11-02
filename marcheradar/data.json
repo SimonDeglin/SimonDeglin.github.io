@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-02T13:33:21.813Z",
+  "generated_at": "2026-11-02T23:34:39.361Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-11-02 : 1410 avis lus, 0 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-11-02 : 1410 avis lus, 1 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-11-02T13:35:16.612Z",
-      "scanned": 2550,
-      "retained": 36,
+      "last_success": "2026-11-02T23:36:10.926Z",
+      "scanned": 2575,
+      "retained": 37,
       "period_from": "2026-10-19",
       "period_to": "2026-11-02",
-      "pages": 102,
+      "pages": 103,
       "complete": true,
-      "raw_candidates": 2538,
+      "raw_candidates": 2554,
       "oldest_seen": "2026-10-16",
-      "last_attempt": "2026-11-02T13:35:16.612Z",
+      "last_attempt": "2026-11-02T23:36:10.926Z",
       "last_error": null,
-      "last_complete_success": "2026-11-02T13:35:16.612Z"
+      "last_complete_success": "2026-11-02T23:36:10.926Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-11-02T13:36:51.927Z",
+      "last_success": "2026-11-02T23:37:58.579Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -104,16 +104,16 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 102 page(s) parcourue(s) depuis 2026-10-19.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 103 page(s) parcourue(s) depuis 2026-10-19.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
     "scanned": 1410,
     "matched_current_run": 10,
-    "records": 243,
-    "review_count": 146,
-    "award_notice_count": 348,
-    "awarded_market_matches": 0,
+    "records": 244,
+    "review_count": 149,
+    "award_notice_count": 347,
+    "awarded_market_matches": 1,
     "award_fields_requested": false,
     "retained_as_excluded": 36,
     "excluded_reasons": {
@@ -153,9 +153,9 @@
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2550,
-    "bosa_imported": 36,
-    "bosa_pages": 102,
+    "bosa_scanned": 2575,
+    "bosa_imported": 37,
+    "bosa_pages": 103,
     "local_documents": 34,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -171,20 +171,214 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "assurance_ou_nettoyage": 18,
-      "formule_administrative_sans_signal_metier": 20,
-      "avis_attribution_analyse_separement": 348,
+      "avis_attribution_analyse_separement": 347,
+      "travaux_execution": 116,
+      "acheteur_flamand": 173,
       "aucun_signal_metier": 442,
-      "avis_neerlandais": 151,
-      "travaux_execution": 114,
-      "acheteur_flamand": 175,
-      "fournitures_et_location": 54,
+      "avis_neerlandais": 152,
       "objet_hors_domaine": 70,
-      "qualifie_review": 16,
+      "fournitures_et_location": 54,
+      "formule_administrative_sans_signal_metier": 19,
+      "assurance_ou_nettoyage": 18,
+      "qualifie_review": 17,
       "qualifie_main": 2
     }
   },
   "items": [
+    {
+      "id": "bosa:c06df4e8-ca24-4680-bae2-745e5550a33f",
+      "publicationWorkspaceId": "c06df4e8-ca24-4680-bae2-745e5550a33f",
+      "noticeId": "5e2b73c6-b81c-4be6-956c-59fc6f6ba797",
+      "procedureIdentifier": "2ca619ad-7017-4a12-b334-fa2d8c0da0bf",
+      "internalReference": "0000830588-LMU_Q_pub01",
+      "title": "Emarket 1059 - Solution & Integration Architect (Azure, SAP, GIS, API's)",
+      "buyer": "Infrabel - Goods & Services",
+      "region": "Bruxelles",
+      "languages": [
+        "NL",
+        "FR"
+      ],
+      "sector": "Carto",
+      "sectors": [
+        "Carto"
+      ],
+      "score": 62,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "unknown",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "projet_indirect",
+      "publication": "2026-11-02",
+      "deadline": "",
+      "cpv": [
+        "72000000"
+      ],
+      "description": "Emarket 1059 - Solution & Integration Architect (Azure, SAP, GIS, API's) - basé sur l’existence d’un système de qualification Y15Bis, I-46 publié aux niveaux belge et européen: https://www.publicprocurement.be/publication-workspaces/d5aa281d-f0b8-4143-a93e-c9cfbc8b9759/general conformément aux articles 11, 15 – 3° et 18 de l’AR du 18 juin 2017.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "30",
+      "noticeKind": "award",
+      "bdaReference": "",
+      "tedReference": "0000830588-LMU_Q_pub01",
+      "url": "https://www.publicprocurement.be/publication-workspaces/c06df4e8-ca24-4680-bae2-745e5550a33f/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/c06df4e8-ca24-4680-bae2-745e5550a33f/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "0000830588-LMU_Q_pub01",
+          "url": "https://www.publicprocurement.be/publication-workspaces/c06df4e8-ca24-4680-bae2-745e5550a33f/general",
+          "publicationDate": "2026-11-02",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-02T13:42:00.081Z",
+      "screeningReason": null,
+      "awards": [
+        {
+          "publicationNumber": "757157-2026",
+          "procedureIdentifier": "2ca619ad-7017-4a12-b334-fa2d8c0da0bf",
+          "publicationDate": "2026-11-02",
+          "decisionDate": "",
+          "conclusionDate": "",
+          "noticeType": "can-standard",
+          "source": "TED",
+          "sourceUrl": "https://ted.europa.eu/fr/notice/-/detail/757157-2026",
+          "selectedWinner": false,
+          "winners": [],
+          "winnerIdentifiers": [],
+          "mentionedTenderers": [],
+          "lotIdentifiers": [],
+          "offerCount": null,
+          "offerCountsByLotUnassigned": [],
+          "submissionTypes": [],
+          "winnerSelectionStatuses": [],
+          "notAwardedReasons": [],
+          "tenderValues": [],
+          "lowestTenderValues": [],
+          "highestTenderValues": [],
+          "totalAwardValues": [],
+          "caveat": "Valeurs et soumissionnaires peuvent concerner plusieurs lots. Ne pas apparier les tableaux sans preuve dans l’avis officiel."
+        }
+      ],
+      "lastPublicResultAt": "2026-11-02",
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/c06df4e8-ca24-4680-bae2-745e5550a33f/general"
+        }
+      ]
+    },
+    {
+      "id": "bosa:aa503fa1-8c7e-4bf4-aca0-7b78c0b36369",
+      "publicationWorkspaceId": "aa503fa1-8c7e-4bf4-aca0-7b78c0b36369",
+      "noticeId": "1129f6eb-3cbd-426b-9b69-7b1e716a2dee",
+      "procedureIdentifier": "94220a6b-c8be-456e-a510-585fcec0e160",
+      "internalReference": "022-2026 PO_pub01",
+      "title": "FEDER - Florenville - Rénovation énergétique - Désignation AP",
+      "buyer": "IDELUX Projets publics",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-11-02",
+      "deadline": "2026-12-02T11:00:00+01:00",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Il s'agit d'un marché conjoint (IDELUX Projets publics - Commune de Florenville) portant sur la désignation d'un auteur de projet dans le cadre d'une importante rénovation énergétique du bâtiment de l'Administration communale de Florenville et de son \"Espace Florenville\" (rue du Château, 5 à 6820 Florenville) dans le cadre de la programmation « FEDER 2021-2027 – Mesure 8 ».       Le soumissionnaire a l’obligation de visiter les lieux concernés afin d’appréhender toutes les conditions particulières d’exécution du présent marché.  Les dates de visite sont fixées :   • Jeudi 5 novembre 2026 à 13h30  • Jeudi 12 novembre 2026 à 13h30  • Mardi 17 novembre 2026 à 13h30    Ces dates pourraient être amenées à évoluer selon les besoins.      Dans tous les cas, pour la bonne organisation des visites, chaque soumissionnaire doit obligatoirement prendre rendez-vous par mail ou par téléphone avec Richard CONSTANT – 0496 549 516 – richard.constant@idelux.be",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "022-2026 PO_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "650ee356-0d82-4f9a-9054-7c55193df11f",
+          "title": "Annexe 7 - Candidature FEDER.pdf",
+          "kind": "annex",
+          "fileType": "pdf",
+          "versionId": "42cade26-24b0-432b-af41-42b9e970d80b",
+          "documentId": "d5603421-39f8-491c-b6a2-cf2055744552",
+          "activatedAt": "2026-10-20T07:58:45.043749",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "7f25d99e-96da-4fa2-85b7-a083373a9893",
+          "title": "CSC Services - Auteur de projet - Florenville VF - Avis rectificatif A.pdf",
+          "kind": "csc",
+          "fileType": "pdf",
+          "versionId": "cb8deec1-e039-438a-8c44-e7b710e1e8ef",
+          "documentId": "5ca0ba54-fed5-49f7-bfd6-7e72b8070eda",
+          "activatedAt": "2026-11-02T07:46:45.015297",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "ed73fee1-c63c-4e47-87a6-f6c35b5cfbdc",
+          "title": "Annexe 2 - Documentations techniques.zip",
+          "kind": "annex",
+          "fileType": "zip",
+          "versionId": "6e3ddb29-89d9-4d3b-ac02-0200df20de6e",
+          "documentId": "6eb701f6-db72-4d03-bbe6-e5daf9157e2b",
+          "activatedAt": "2026-10-20T07:58:45.043749",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-02T13:38:22.332Z",
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/general"
+        }
+      ],
+      "deadlineTime": "11:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n02/12/2026 11:00 CET",
+      "deadlineVerifiedAt": "2026-11-02T13:42:00.486Z",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
+        "capacityStatus": "not_assessed"
+      },
+      "deadlineHistory": [
+        {
+          "value": "2026-11-25T12:00:00+01:00",
+          "sourceUrl": "https://www.publicprocurement.be/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/general",
+          "notedAt": "2026-10-28T11:31:20.383Z"
+        }
+      ]
+    },
     {
       "id": "ted:703599-2026",
       "publicationNumber": "754492-2026",
@@ -3002,111 +3196,6 @@
         "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
         "capacityStatus": "not_assessed"
       }
-    },
-    {
-      "id": "bosa:aa503fa1-8c7e-4bf4-aca0-7b78c0b36369",
-      "publicationWorkspaceId": "aa503fa1-8c7e-4bf4-aca0-7b78c0b36369",
-      "noticeId": "1129f6eb-3cbd-426b-9b69-7b1e716a2dee",
-      "procedureIdentifier": "94220a6b-c8be-456e-a510-585fcec0e160",
-      "internalReference": "022-2026 PO_pub01",
-      "title": "FEDER - Florenville - Rénovation énergétique - Désignation AP",
-      "buyer": "IDELUX Projets publics",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "publication": "2026-11-02",
-      "deadline": "2026-12-02T11:00:00+01:00",
-      "cpv": [
-        "71000000"
-      ],
-      "description": "Il s'agit d'un marché conjoint (IDELUX Projets publics - Commune de Florenville) portant sur la désignation d'un auteur de projet dans le cadre d'une importante rénovation énergétique du bâtiment de l'Administration communale de Florenville et de son \"Espace Florenville\" (rue du Château, 5 à 6820 Florenville) dans le cadre de la programmation « FEDER 2021-2027 – Mesure 8 ».       Le soumissionnaire a l’obligation de visiter les lieux concernés afin d’appréhender toutes les conditions particulières d’exécution du présent marché.  Les dates de visite sont fixées :   • Jeudi 5 novembre 2026 à 13h30  • Jeudi 12 novembre 2026 à 13h30  • Mardi 17 novembre 2026 à 13h30    Ces dates pourraient être amenées à évoluer selon les besoins.      Dans tous les cas, pour la bonne organisation des visites, chaque soumissionnaire doit obligatoirement prendre rendez-vous par mail ou par téléphone avec Richard CONSTANT – 0496 549 516 – richard.constant@idelux.be",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "16",
-      "noticeKind": "competition",
-      "bdaReference": "022-2026 PO_pub01",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [
-        {
-          "id": "650ee356-0d82-4f9a-9054-7c55193df11f",
-          "title": "Annexe 7 - Candidature FEDER.pdf",
-          "kind": "annex",
-          "fileType": "pdf",
-          "versionId": "42cade26-24b0-432b-af41-42b9e970d80b",
-          "documentId": "d5603421-39f8-491c-b6a2-cf2055744552",
-          "activatedAt": "2026-10-20T07:58:45.043749",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "7f25d99e-96da-4fa2-85b7-a083373a9893",
-          "title": "CSC Services - Auteur de projet - Florenville VF - Avis rectificatif A.pdf",
-          "kind": "csc",
-          "fileType": "pdf",
-          "versionId": "cb8deec1-e039-438a-8c44-e7b710e1e8ef",
-          "documentId": "5ca0ba54-fed5-49f7-bfd6-7e72b8070eda",
-          "activatedAt": "2026-11-02T07:46:45.015297",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "ed73fee1-c63c-4e47-87a6-f6c35b5cfbdc",
-          "title": "Annexe 2 - Documentations techniques.zip",
-          "kind": "annex",
-          "fileType": "zip",
-          "versionId": "6e3ddb29-89d9-4d3b-ac02-0200df20de6e",
-          "documentId": "6eb701f6-db72-4d03-bbe6-e5daf9157e2b",
-          "activatedAt": "2026-10-20T07:58:45.043749",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        }
-      ],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-02T13:38:22.332Z",
-      "matchReason": "mission_globale_a_qualifier",
-      "screeningReason": null,
-      "officialSources": [
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/general"
-        }
-      ],
-      "deadlineTime": "11:00",
-      "deadlineTimeZone": "Europe/Brussels",
-      "deadlineSourceKind": "bosa_verified_public",
-      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/general",
-      "deadlineSourceEvidence": "Date limite de soumission\n02/12/2026 11:00 CET",
-      "deadlineVerifiedAt": "2026-11-02T13:42:00.486Z",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
-        "capacityStatus": "not_assessed"
-      },
-      "deadlineHistory": [
-        {
-          "value": "2026-11-25T12:00:00+01:00",
-          "sourceUrl": "https://www.publicprocurement.be/publication-workspaces/aa503fa1-8c7e-4bf4-aca0-7b78c0b36369/general",
-          "notedAt": "2026-10-28T11:31:20.383Z"
-        }
-      ]
     },
     {
       "id": "ted:725331-2026",
@@ -8507,7 +8596,7 @@
           "versionId": "22cc83b1-d599-4416-96d9-c1a354861889",
           "documentId": "425d5ba1-de86-4335-b68e-3b58107c5b6d",
           "activatedAt": "2026-09-29T15:00:45.021111",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8520,14 +8609,14 @@
           "versionId": "354fbb7b-5f90-4703-9d8e-dae76f7aa72f",
           "documentId": "3b9e3ed1-8163-4041-a26c-eb15668ce044",
           "activatedAt": "2026-10-05T15:31:45.185664",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-01T12:00:23.545Z",
+      "documentsCheckedAt": "2026-11-02T23:42:38.727Z",
       "matchReason": "prestation_dans_marche_de_travaux",
       "screeningReason": null,
       "officialSources": [
@@ -13837,6 +13926,194 @@
       "screeningReason": null
     },
     {
+      "id": "local-html:f0d7d0b94a80dfec093a",
+      "title": "Mission d'étude - Rénovation du toit de l'église de Froidthier - Approbation des conditions et du mode de passation – Décision",
+      "sourceDocumentTitle": "Mission d'étude - Rénovation du toit de l'église de Froidthier - Approbation des conditions et du mode de passation – Décision",
+      "missionEvidence": null,
+      "buyer": "Commune de Thimister-Clermont",
+      "municipalityINS": "63089",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/thimister-clermont/decisions/12-octobre-2026-20-30/mission-detude-renovation-du-toit-de-leglise-de-froidthier-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "sha256": "a71905b82af62dfb39d03303ce73f14d09a8a1cbd8512f6c888db51546f501a0",
+        "stage": "project"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "other",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/thimister-clermont/decisions/12-octobre-2026-20-30/mission-detude-renovation-du-toit-de-leglise-de-froidthier-approbation-des-conditions-et-du-mode-de-passation-decision",
+      "sourceDocument": "https://www.deliberations.be/thimister-clermont/decisions/12-octobre-2026-20-30/mission-detude-renovation-du-toit-de-leglise-de-froidthier-approbation-des-conditions-et-du-mode-de-passation-decision",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/thimister-clermont/decisions/12-octobre-2026-20-30/mission-detude-renovation-du-toit-de-leglise-de-froidthier-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "sha256": "a71905b82af62dfb39d03303ce73f14d09a8a1cbd8512f6c888db51546f501a0",
+        "session": {
+          "date": "2026-10-12",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 12 octobre 2026 (20:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/thimister-clermont/decisions/12-octobre-2026-20-30/mission-detude-renovation-du-toit-de-leglise-de-froidthier-approbation-des-conditions-et-du-mode-de-passation-decision"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:c7481ecf76ec067bf3",
+        "sha256": "a71905b82af62dfb39d03303ce73f14d09a8a1cbd8512f6c888db51546f501a0",
+        "format": "html",
+        "checkedAt": "2026-11-02T19:49:06.728Z"
+      },
+      "webTypeEvidence": {
+        "kind": "other",
+        "reason": "projet_de_mission_a_operateur_determine",
+        "excerpt": "Considérant que le marché de services est divisé en tranches, dont la première est une tranche ferme et consiste en le diagnostic complet de l’état sanitaire et structurel de la toiture et de la voûte ; Qu'à l’issue de c",
+        "sourceUrl": "https://www.deliberations.be/thimister-clermont/decisions/12-octobre-2026-20-30/mission-detude-renovation-du-toit-de-leglise-de-froidthier-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "page": null,
+        "sha256": "a71905b82af62dfb39d03303ce73f14d09a8a1cbd8512f6c888db51546f501a0"
+      },
+      "description": "Considérant que le marché de services est divisé en tranches, dont la première est une tranche ferme et consiste en le diagnostic complet de l’état sanitaire et structurel de la toiture et de la voûte ; Qu'à l’issue de ce diagnostic, le Collège communal se prononcera, au vu des conclusions de l’étude, sur l’opportunité de réaliser les travaux préconisés ainsi que sur la poursuite de la mission confiée à l’auteur de projet ; Qu’en cas de décision favorable, la mission pourrait notamment porter, outre la rénovation de la couverture, sur la remise en état ou la rénovation de certains éléments de la charpente, de certaines menuiseries extérieures, des maçonneries intérieures dégradées par des infiltrations ou désordres constructifs, ainsi que sur les éventuels travaux de stabilité rendus nécessaires par l’état du bâtiment ; Qu'il n'y a pas lieu, à ce stade, de prévoir l'extension de la mission d'étude mais que le Service Marchés publics suggère d'en anticiper l'éventuelle nécessité suivant les résultats du diagnostic sanitaire à venir ; Que les tranches suivantes (conditionnelles) comprennent les prestations suivantes : L'établissement de l’avant-projet ; L'élaboration du projet définitif de mise en soumission ;",
+      "evidence": "Considérant que le marché de services est divisé en tranches, dont la première est une tranche ferme et consiste en le diagnostic complet de l’état sanitaire et structurel de la toiture et de la voûte ; Qu'à l’issue de ce diagnostic, le Collège communal se prononcera, au vu des conclusions de l’étude, sur l’opportunité de réaliser les travaux préconisés ainsi que sur la poursuite de la mission confiée à l’auteur de projet ; Qu’en cas de décision favorable, la mission pourrait notamment porter, outre la rénovation de la couverture, sur la remise en état ou la rénovation de certains éléments de la charpente, de certaines menuiseries extérieures, des maçonneries intérieures dégradées par des infiltrations ou désordres constructifs, ainsi que sur les éventuels travaux de stabilité rendus nécessaires par l’état du bâtiment ; Qu'il n'y a pas lieu, à ce stade, de prévoir l'extension de la mission d'étude mais que le Service Marchés publics suggère d'en anticiper l'éventuelle nécessité suivant les résultats du diagnostic sanitaire à venir ; Que les tranches suivantes (conditionnelles) comprennent les prestations suivantes : L'établissement de l’avant-projet ; L'élaboration du projet définitif de mise en soumission ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "Considérant que le marché de services est divisé en tranches, dont la première est une tranche ferme et consiste en le diagnostic complet de l’état sanitaire et structurel de la toiture et de la voûte ; Qu'à l’issue de ce diagnostic, le Collège communal se prononcera, au vu des conclusions de l’étude, sur l’opportunité de réaliser les travaux préconisés ainsi que sur la poursuite de la mission confiée à l’auteur de projet ; Qu’en cas de décision favorable, la mission pourrait notamment porter, outre la rénovation de la couverture, sur la remise en état ou la rénovation de certains éléments de la charpente, de certaines menuiseries extérieures, des maçonneries intérieures dégradées par des infiltrations ou désordres constructifs, ainsi que sur les éventuels travaux de stabilité rendus nécessaires par l’état du bâtiment ; Qu'il n'y a pas lieu, à ce stade, de prévoir l'extension de la mission d'étude mais que le Service Marchés publics suggère d'en anticiper l'éventuelle nécessité suivant les résultats du diagnostic sanitaire à venir ; Que les tranches suivantes (conditionnelles) comprennent les prestations suivantes : L'établissement de l’avant-projet ; L'élaboration du projet définitif de mise en soumission ;",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. Mission d'étude - Rénovation du toit de l'église de Froidthier - Approbation des conditions et du mode de passation – Décision Le Conseil communal, réuni en séance publique, Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) et l'article 57 et l'article 43 ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-021",
+      "matchReason": "mission_architecturale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:252f8d81447a92d6ac41",
+      "title": "Désignation d’un.e auteur∙e de projet pour une mission d’élaboration d’une stratégie d’intervention suivie de l’étude et du suivi de l’exécution des travaux de rénovation et d’extension des écoles communales de Surlemez et Waret-l'Evêque - Approbation des conditions et du mode de passation",
+      "sourceDocumentTitle": "Désignation d’un.e auteur∙e de projet pour une mission d’élaboration d’une stratégie d’intervention suivie de l’étude et du suivi de l’exécution des travaux de rénovation et d’extension des écoles communales de Surlemez et Waret-l'Evêque - Approbation des conditions et du mode de passation",
+      "missionEvidence": {
+        "excerpt": "entaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour :",
+        "sourceUrl": "https://www.deliberations.be/heron/decisions/24-septembre-2026-19-30/designation-dun-e-auteure-de-projet-pour-une-mission-delaboration-dune-strategie-dintervention-suivie-de-letude-et-du-suivi-de-lexecution-des-travaux-de-renovation-et-dextension-des-ecoles-communales-de-surlemez-et-waret-leveque-approbation-des-conditions",
+        "page": null,
+        "sha256": "8f7a30886c6cc32f76ec907a66f36c98c62c07dadd1be470a8103ec6b6b2592a"
+      },
+      "buyer": "Commune de Héron",
+      "municipalityINS": "61028",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "entaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour :",
+        "mission": "lancement d’un marché de services afin qu’un auteur de projet soit désigné pour :",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/heron/decisions/24-septembre-2026-19-30/designation-dun-e-auteure-de-projet-pour-une-mission-delaboration-dune-strategie-dintervention-suivie-de-letude-et-du-suivi-de-lexecution-des-travaux-de-renovation-et-dextension-des-ecoles-communales-de-surlemez-et-waret-leveque-approbation-des-conditions",
+      "sourceDocument": "https://www.deliberations.be/heron/decisions/24-septembre-2026-19-30/designation-dun-e-auteure-de-projet-pour-une-mission-delaboration-dune-strategie-dintervention-suivie-de-letude-et-du-suivi-de-lexecution-des-travaux-de-renovation-et-dextension-des-ecoles-communales-de-surlemez-et-waret-leveque-approbation-des-conditions",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/heron/decisions/24-septembre-2026-19-30/designation-dun-e-auteure-de-projet-pour-une-mission-delaboration-dune-strategie-dintervention-suivie-de-letude-et-du-suivi-de-lexecution-des-travaux-de-renovation-et-dextension-des-ecoles-communales-de-surlemez-et-waret-leveque-approbation-des-conditions",
+        "sha256": "8f7a30886c6cc32f76ec907a66f36c98c62c07dadd1be470a8103ec6b6b2592a",
+        "session": {
+          "date": "2026-09-24",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 24 septembre 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/heron/decisions/24-septembre-2026-19-30/designation-dun-e-auteure-de-projet-pour-une-mission-delaboration-dune-strategie-dintervention-suivie-de-letude-et-du-suivi-de-lexecution-des-travaux-de-renovation-et-dextension-des-ecoles-communales-de-surlemez-et-waret-leveque-approbation-des-conditions"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:29e6a6450dbedc7e97",
+        "sha256": "8f7a30886c6cc32f76ec907a66f36c98c62c07dadd1be470a8103ec6b6b2592a",
+        "format": "html",
+        "checkedAt": "2026-11-02T19:49:06.728Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Considérant que les interventions entreprises par la Commune pour accueillir les élèves sur ces deux implantations a permis d’apporter des solutions provisoires, mais que la qualité d’accueil des élèves reste largement p",
+        "sourceUrl": "https://www.deliberations.be/heron/decisions/24-septembre-2026-19-30/designation-dun-e-auteure-de-projet-pour-une-mission-delaboration-dune-strategie-dintervention-suivie-de-letude-et-du-suivi-de-lexecution-des-travaux-de-renovation-et-dextension-des-ecoles-communales-de-surlemez-et-waret-leveque-approbation-des-conditions",
+        "page": null,
+        "sha256": "8f7a30886c6cc32f76ec907a66f36c98c62c07dadd1be470a8103ec6b6b2592a"
+      },
+      "description": "Considérant que les interventions entreprises par la Commune pour accueillir les élèves sur ces deux implantations a permis d’apporter des solutions provisoires, mais que la qualité d’accueil des élèves reste largement précaire, les infrastructures étant par ailleurs vieillissantes, témoignant de nombreux problèmes fonctionnels, sécuritaires, de confort, etc. ; Considérant que, pour apporter une réponse aux problèmes et objectifs précités, il s’avère nécessaire de réaliser, pour chacune des implantations scolaires, des travaux de rénovation des bâtiments existants assortie de la construction d’extensions ainsi que du réaménagement des abords, afin de disposer d’infrastructures pérennes répondant pleinement aux besoins de la communauté scolaire tout comme aux exigences énergétiques et environnementales ; Considérant que les implantations de Waret-l’Evêque et Surlemez présentent des besoins similaires, nécessitant pour la Commune de se doter d’une vision long terme des travaux à entreprendre en priorisant ceux-ci de manière cohérente ; Considérant qu'une telle vision permettra de programmer ces travaux de manière progressive en tenant compte des disponibilités sur fonds propres et d’entreprendre les démarches pour lever les moyens complémentaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné",
+      "evidence": "Considérant que les interventions entreprises par la Commune pour accueillir les élèves sur ces deux implantations a permis d’apporter des solutions provisoires, mais que la qualité d’accueil des élèves reste largement précaire, les infrastructures étant par ailleurs vieillissantes, témoignant de nombreux problèmes fonctionnels, sécuritaires, de confort, etc. ; Considérant que, pour apporter une réponse aux problèmes et objectifs précités, il s’avère nécessaire de réaliser, pour chacune des implantations scolaires, des travaux de rénovation des bâtiments existants assortie de la construction d’extensions ainsi que du réaménagement des abords, afin de disposer d’infrastructures pérennes répondant pleinement aux besoins de la communauté scolaire tout comme aux exigences énergétiques et environnementales ; Considérant que les implantations de Waret-l’Evêque et Surlemez présentent des besoins similaires, nécessitant pour la Commune de se doter d’une vision long terme des travaux à entreprendre en priorisant ceux-ci de manière cohérente ; Considérant qu'une telle vision permettra de programmer ces travaux de manière progressive en tenant compte des disponibilités sur fonds propres et d’entreprendre les démarches pour lever les moyens complémentaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné",
+      "municipalEvidence": [
+        {
+          "excerpt": "Considérant que les interventions entreprises par la Commune pour accueillir les élèves sur ces deux implantations a permis d’apporter des solutions provisoires, mais que la qualité d’accueil des élèves reste largement précaire, les infrastructures étant par ailleurs vieillissantes, témoignant de nombreux problèmes fonctionnels, sécuritaires, de confort, etc. ; Considérant que, pour apporter une réponse aux problèmes et objectifs précités, il s’avère nécessaire de réaliser, pour chacune des implantations scolaires, des travaux de rénovation des bâtiments existants assortie de la construction d’extensions ainsi que du réaménagement des abords, afin de disposer d’infrastructures pérennes répondant pleinement aux besoins de la communauté scolaire tout comme aux exigences énergétiques et environnementales ; Considérant que les implantations de Waret-l’Evêque et Surlemez présentent des besoins similaires, nécessitant pour la Commune de se doter d’une vision long terme des travaux à entreprendre en priorisant ceux-ci de manière cohérente ; Considérant qu'une telle vision permettra de programmer ces travaux de manière progressive en tenant compte des disponibilités sur fonds propres et d’entreprendre les démarches pour lever les moyens complémentaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant que les implantations de Waret-l’Evêque et Surlemez présentent des besoins similaires, nécessitant pour la Commune de se doter d’une vision long terme des travaux à entreprendre en priorisant ceux-ci de manière cohérente ; Considérant qu'une telle vision permettra de programmer ces travaux de manière progressive en tenant compte des disponibilités sur fonds propres et d’entreprendre les démarches pour lever les moyens complémentaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : Élaborer une stratégie globale d’intervention sur les deux implantations communales ; Assurer, ensuite et une fois les moyens budgétaires confirmés, les études et le suivi de l’exécution de tout ou partie des travaux tels qu’identifiés au terme de la stratégie ; Considérant qu’à ce stade, les montants des travaux des projets sont estimés à 3.000.000,00€ HTVA pour l’implantation de Surlemez et 4.280.000,00€ HTVA pour l’implantation de Waret-l'Evêque ; Considérant que la réalisation des travaux est conditionnée à l’allocation de moyens financiers supplémentaires et qu’à ce titre, le maître d’ouvrage envisage d’introduire des demandes de subventions ;",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant qu'une telle vision permettra de programmer ces travaux de manière progressive en tenant compte des disponibilités sur fonds propres et d’entreprendre les démarches pour lever les moyens complémentaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : Élaborer une stratégie globale d’intervention sur les deux implantations communales ; Assurer, ensuite et une fois les moyens budgétaires confirmés, les études et le suivi de l’exécution de tout ou partie des travaux tels qu’identifiés au terme de la stratégie ; Considérant qu’à ce stade, les montants des travaux des projets sont estimés à 3.000.000,00€ HTVA pour l’implantation de Surlemez et 4.280.000,00€ HTVA pour l’implantation de Waret-l'Evêque ; Considérant que la réalisation des travaux est conditionnée à l’allocation de moyens financiers supplémentaires et qu’à ce titre, le maître d’ouvrage envisage d’introduire des demandes de subventions ; Considérant, qu’à ce stade, le maître d’ouvrage ne peut pas s’engager à la réalisation des travaux, qui est par ailleurs conditionnée à la levée des moyens financiers supplémentaires précités ;",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : Élaborer une stratégie globale d’intervention sur les deux implantations communales ; Assurer, ensuite et une fois les moyens budgétaires confirmés, les études et le suivi de l’exécution de tout ou partie des travaux tels qu’identifiés au terme de la stratégie ; Considérant qu’à ce stade, les montants des travaux des projets sont estimés à 3.000.000,00€ HTVA pour l’implantation de Surlemez et 4.280.000,00€ HTVA pour l’implantation de Waret-l'Evêque ; Considérant que la réalisation des travaux est conditionnée à l’allocation de moyens financiers supplémentaires et qu’à ce titre, le maître d’ouvrage envisage d’introduire des demandes de subventions ; Considérant, qu’à ce stade, le maître d’ouvrage ne peut pas s’engager à la réalisation des travaux, qui est par ailleurs conditionnée à la levée des moyens financiers supplémentaires précités ; Considérant que le marché de service d’auteur de projet proposé permet un engagement progressif du maître d’ouvrage : seule la première tranche de la mission de service relative à l’élaboration de la stratégie est ferme, les autres sont conditionnelles ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "mission_architecturale_a_qualifier",
+      "screeningReason": null
+    },
+    {
       "id": "communal:c3599ff87890bfb78368",
       "title": "Prospection · Beyne-Heusay · 17) Règlement complémentaire de roulage - Création d’un emplacement de stationnement pour personnes handicapées - Plac…",
       "buyer": "Commune de Beyne-Heusay",
@@ -17165,21 +17442,21 @@
       "screeningReason": null
     },
     {
-      "id": "bosa:c06df4e8-ca24-4680-bae2-745e5550a33f",
-      "publicationWorkspaceId": "c06df4e8-ca24-4680-bae2-745e5550a33f",
-      "noticeId": "5e2b73c6-b81c-4be6-956c-59fc6f6ba797",
-      "procedureIdentifier": "2ca619ad-7017-4a12-b334-fa2d8c0da0bf",
-      "internalReference": "0000830588-LMU_Q_pub01",
-      "title": "Emarket 1059 - Solution & Integration Architect (Azure, SAP, GIS, API's)",
-      "buyer": "Infrabel - Goods & Services",
+      "id": "bosa:4dd389d4-af5f-4380-a9f0-a5e997ab8b36",
+      "publicationWorkspaceId": "4dd389d4-af5f-4380-a9f0-a5e997ab8b36",
+      "noticeId": "3390b37f-69f5-48e2-a894-a509854c4ce4",
+      "procedureIdentifier": "de06be4d-05d3-4947-96d1-95214417f420",
+      "internalReference": "2026-141_pub01",
+      "title": "Prestations de modélisation 3D et réalisation de rendus photoréalistes d'un projet d'aménagement d'espace public chaussée de Boondael.",
+      "buyer": "Commune d'Ixelles - Gemeente Elsene",
       "region": "Bruxelles",
       "languages": [
         "NL",
         "FR"
       ],
-      "sector": "Carto",
+      "sector": "VRD",
       "sectors": [
-        "Carto"
+        "VRD"
       ],
       "score": 62,
       "screening": "review",
@@ -17194,213 +17471,29 @@
       "publication": "2026-11-02",
       "deadline": "",
       "cpv": [
-        "72000000"
+        "72242000"
       ],
-      "description": "Emarket 1059 - Solution & Integration Architect (Azure, SAP, GIS, API's) - basé sur l’existence d’un système de qualification Y15Bis, I-46 publié aux niveaux belge et européen: https://www.publicprocurement.be/publication-workspaces/d5aa281d-f0b8-4143-a93e-c9cfbc8b9759/general conformément aux articles 11, 15 – 3° et 18 de l’AR du 18 juin 2017.",
+      "description": "Prestations de modélisation 3D et réalisation de rendus photoréalistes d'un projet d'aménagement d'espace public chaussée de Boondael.",
       "source": "BOSA",
       "source_status": "bosa_public_browser",
-      "noticeSubType": "30",
+      "noticeSubType": "E4",
       "noticeKind": "award",
-      "bdaReference": "",
-      "tedReference": "0000830588-LMU_Q_pub01",
-      "url": "https://www.publicprocurement.be/publication-workspaces/c06df4e8-ca24-4680-bae2-745e5550a33f/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/c06df4e8-ca24-4680-bae2-745e5550a33f/documents",
+      "bdaReference": "2026-141_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/4dd389d4-af5f-4380-a9f0-a5e997ab8b36/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/4dd389d4-af5f-4380-a9f0-a5e997ab8b36/documents",
       "documentsPageSource": "public_api_200",
       "bosaResults": [
         {
-          "reference": "0000830588-LMU_Q_pub01",
-          "url": "https://www.publicprocurement.be/publication-workspaces/c06df4e8-ca24-4680-bae2-745e5550a33f/general",
+          "reference": "2026-141_pub01",
+          "url": "https://www.publicprocurement.be/publication-workspaces/4dd389d4-af5f-4380-a9f0-a5e997ab8b36/general",
           "publicationDate": "2026-11-02",
           "kind": "award"
         }
       ],
       "documentInventory": [],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-02T13:42:00.081Z"
-    },
-    {
-      "id": "local-html:f0d7d0b94a80dfec093a",
-      "title": "Mission d'étude - Rénovation du toit de l'église de Froidthier - Approbation des conditions et du mode de passation – Décision",
-      "sourceDocumentTitle": "Mission d'étude - Rénovation du toit de l'église de Froidthier - Approbation des conditions et du mode de passation – Décision",
-      "missionEvidence": null,
-      "buyer": "Commune de Thimister-Clermont",
-      "municipalityINS": "63089",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": {
-        "label": "Procédure négociée sans publication préalable",
-        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
-        "sourceUrl": "https://www.deliberations.be/thimister-clermont/decisions/12-octobre-2026-20-30/mission-detude-renovation-du-toit-de-leglise-de-froidthier-approbation-des-conditions-et-du-mode-de-passation-decision",
-        "sha256": "a71905b82af62dfb39d03303ce73f14d09a8a1cbd8512f6c888db51546f501a0",
-        "stage": "project"
-      },
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "noticeKind": "other",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/thimister-clermont/decisions/12-octobre-2026-20-30/mission-detude-renovation-du-toit-de-leglise-de-froidthier-approbation-des-conditions-et-du-mode-de-passation-decision",
-      "sourceDocument": "https://www.deliberations.be/thimister-clermont/decisions/12-octobre-2026-20-30/mission-detude-renovation-du-toit-de-leglise-de-froidthier-approbation-des-conditions-et-du-mode-de-passation-decision",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/thimister-clermont/decisions/12-octobre-2026-20-30/mission-detude-renovation-du-toit-de-leglise-de-froidthier-approbation-des-conditions-et-du-mode-de-passation-decision",
-        "sha256": "a71905b82af62dfb39d03303ce73f14d09a8a1cbd8512f6c888db51546f501a0",
-        "session": {
-          "date": "2026-10-12",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 12 octobre 2026 (20:30)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/thimister-clermont/decisions/12-octobre-2026-20-30/mission-detude-renovation-du-toit-de-leglise-de-froidthier-approbation-des-conditions-et-du-mode-de-passation-decision"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:c7481ecf76ec067bf3",
-        "sha256": "a71905b82af62dfb39d03303ce73f14d09a8a1cbd8512f6c888db51546f501a0",
-        "format": "html",
-        "checkedAt": "2026-11-02T19:49:06.728Z"
-      },
-      "webTypeEvidence": {
-        "kind": "other",
-        "reason": "projet_de_mission_a_operateur_determine",
-        "excerpt": "Considérant que le marché de services est divisé en tranches, dont la première est une tranche ferme et consiste en le diagnostic complet de l’état sanitaire et structurel de la toiture et de la voûte ; Qu'à l’issue de c",
-        "sourceUrl": "https://www.deliberations.be/thimister-clermont/decisions/12-octobre-2026-20-30/mission-detude-renovation-du-toit-de-leglise-de-froidthier-approbation-des-conditions-et-du-mode-de-passation-decision",
-        "page": null,
-        "sha256": "a71905b82af62dfb39d03303ce73f14d09a8a1cbd8512f6c888db51546f501a0"
-      },
-      "description": "Considérant que le marché de services est divisé en tranches, dont la première est une tranche ferme et consiste en le diagnostic complet de l’état sanitaire et structurel de la toiture et de la voûte ; Qu'à l’issue de ce diagnostic, le Collège communal se prononcera, au vu des conclusions de l’étude, sur l’opportunité de réaliser les travaux préconisés ainsi que sur la poursuite de la mission confiée à l’auteur de projet ; Qu’en cas de décision favorable, la mission pourrait notamment porter, outre la rénovation de la couverture, sur la remise en état ou la rénovation de certains éléments de la charpente, de certaines menuiseries extérieures, des maçonneries intérieures dégradées par des infiltrations ou désordres constructifs, ainsi que sur les éventuels travaux de stabilité rendus nécessaires par l’état du bâtiment ; Qu'il n'y a pas lieu, à ce stade, de prévoir l'extension de la mission d'étude mais que le Service Marchés publics suggère d'en anticiper l'éventuelle nécessité suivant les résultats du diagnostic sanitaire à venir ; Que les tranches suivantes (conditionnelles) comprennent les prestations suivantes : L'établissement de l’avant-projet ; L'élaboration du projet définitif de mise en soumission ;",
-      "evidence": "Considérant que le marché de services est divisé en tranches, dont la première est une tranche ferme et consiste en le diagnostic complet de l’état sanitaire et structurel de la toiture et de la voûte ; Qu'à l’issue de ce diagnostic, le Collège communal se prononcera, au vu des conclusions de l’étude, sur l’opportunité de réaliser les travaux préconisés ainsi que sur la poursuite de la mission confiée à l’auteur de projet ; Qu’en cas de décision favorable, la mission pourrait notamment porter, outre la rénovation de la couverture, sur la remise en état ou la rénovation de certains éléments de la charpente, de certaines menuiseries extérieures, des maçonneries intérieures dégradées par des infiltrations ou désordres constructifs, ainsi que sur les éventuels travaux de stabilité rendus nécessaires par l’état du bâtiment ; Qu'il n'y a pas lieu, à ce stade, de prévoir l'extension de la mission d'étude mais que le Service Marchés publics suggère d'en anticiper l'éventuelle nécessité suivant les résultats du diagnostic sanitaire à venir ; Que les tranches suivantes (conditionnelles) comprennent les prestations suivantes : L'établissement de l’avant-projet ; L'élaboration du projet définitif de mise en soumission ;",
-      "municipalEvidence": [
-        {
-          "excerpt": "Considérant que le marché de services est divisé en tranches, dont la première est une tranche ferme et consiste en le diagnostic complet de l’état sanitaire et structurel de la toiture et de la voûte ; Qu'à l’issue de ce diagnostic, le Collège communal se prononcera, au vu des conclusions de l’étude, sur l’opportunité de réaliser les travaux préconisés ainsi que sur la poursuite de la mission confiée à l’auteur de projet ; Qu’en cas de décision favorable, la mission pourrait notamment porter, outre la rénovation de la couverture, sur la remise en état ou la rénovation de certains éléments de la charpente, de certaines menuiseries extérieures, des maçonneries intérieures dégradées par des infiltrations ou désordres constructifs, ainsi que sur les éventuels travaux de stabilité rendus nécessaires par l’état du bâtiment ; Qu'il n'y a pas lieu, à ce stade, de prévoir l'extension de la mission d'étude mais que le Service Marchés publics suggère d'en anticiper l'éventuelle nécessité suivant les résultats du diagnostic sanitaire à venir ; Que les tranches suivantes (conditionnelles) comprennent les prestations suivantes : L'établissement de l’avant-projet ; L'élaboration du projet définitif de mise en soumission ;",
-          "page": null
-        },
-        {
-          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. Mission d'étude - Rénovation du toit de l'église de Froidthier - Approbation des conditions et du mode de passation – Décision Le Conseil communal, réuni en séance publique, Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) et l'article 57 et l'article 43 ;",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": "2026-021"
-    },
-    {
-      "id": "local-html:252f8d81447a92d6ac41",
-      "title": "Désignation d’un.e auteur∙e de projet pour une mission d’élaboration d’une stratégie d’intervention suivie de l’étude et du suivi de l’exécution des travaux de rénovation et d’extension des écoles communales de Surlemez et Waret-l'Evêque - Approbation des conditions et du mode de passation",
-      "sourceDocumentTitle": "Désignation d’un.e auteur∙e de projet pour une mission d’élaboration d’une stratégie d’intervention suivie de l’étude et du suivi de l’exécution des travaux de rénovation et d’extension des écoles communales de Surlemez et Waret-l'Evêque - Approbation des conditions et du mode de passation",
-      "missionEvidence": {
-        "excerpt": "entaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour :",
-        "sourceUrl": "https://www.deliberations.be/heron/decisions/24-septembre-2026-19-30/designation-dun-e-auteure-de-projet-pour-une-mission-delaboration-dune-strategie-dintervention-suivie-de-letude-et-du-suivi-de-lexecution-des-travaux-de-renovation-et-dextension-des-ecoles-communales-de-surlemez-et-waret-leveque-approbation-des-conditions",
-        "page": null,
-        "sha256": "8f7a30886c6cc32f76ec907a66f36c98c62c07dadd1be470a8103ec6b6b2592a"
-      },
-      "buyer": "Commune de Héron",
-      "municipalityINS": "61028",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "entaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour :",
-        "mission": "lancement d’un marché de services afin qu’un auteur de projet soit désigné pour :",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/heron/decisions/24-septembre-2026-19-30/designation-dun-e-auteure-de-projet-pour-une-mission-delaboration-dune-strategie-dintervention-suivie-de-letude-et-du-suivi-de-lexecution-des-travaux-de-renovation-et-dextension-des-ecoles-communales-de-surlemez-et-waret-leveque-approbation-des-conditions",
-      "sourceDocument": "https://www.deliberations.be/heron/decisions/24-septembre-2026-19-30/designation-dun-e-auteure-de-projet-pour-une-mission-delaboration-dune-strategie-dintervention-suivie-de-letude-et-du-suivi-de-lexecution-des-travaux-de-renovation-et-dextension-des-ecoles-communales-de-surlemez-et-waret-leveque-approbation-des-conditions",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/heron/decisions/24-septembre-2026-19-30/designation-dun-e-auteure-de-projet-pour-une-mission-delaboration-dune-strategie-dintervention-suivie-de-letude-et-du-suivi-de-lexecution-des-travaux-de-renovation-et-dextension-des-ecoles-communales-de-surlemez-et-waret-leveque-approbation-des-conditions",
-        "sha256": "8f7a30886c6cc32f76ec907a66f36c98c62c07dadd1be470a8103ec6b6b2592a",
-        "session": {
-          "date": "2026-09-24",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 24 septembre 2026 (19:30)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/heron/decisions/24-septembre-2026-19-30/designation-dun-e-auteure-de-projet-pour-une-mission-delaboration-dune-strategie-dintervention-suivie-de-letude-et-du-suivi-de-lexecution-des-travaux-de-renovation-et-dextension-des-ecoles-communales-de-surlemez-et-waret-leveque-approbation-des-conditions"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:29e6a6450dbedc7e97",
-        "sha256": "8f7a30886c6cc32f76ec907a66f36c98c62c07dadd1be470a8103ec6b6b2592a",
-        "format": "html",
-        "checkedAt": "2026-11-02T19:49:06.728Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Considérant que les interventions entreprises par la Commune pour accueillir les élèves sur ces deux implantations a permis d’apporter des solutions provisoires, mais que la qualité d’accueil des élèves reste largement p",
-        "sourceUrl": "https://www.deliberations.be/heron/decisions/24-septembre-2026-19-30/designation-dun-e-auteure-de-projet-pour-une-mission-delaboration-dune-strategie-dintervention-suivie-de-letude-et-du-suivi-de-lexecution-des-travaux-de-renovation-et-dextension-des-ecoles-communales-de-surlemez-et-waret-leveque-approbation-des-conditions",
-        "page": null,
-        "sha256": "8f7a30886c6cc32f76ec907a66f36c98c62c07dadd1be470a8103ec6b6b2592a"
-      },
-      "description": "Considérant que les interventions entreprises par la Commune pour accueillir les élèves sur ces deux implantations a permis d’apporter des solutions provisoires, mais que la qualité d’accueil des élèves reste largement précaire, les infrastructures étant par ailleurs vieillissantes, témoignant de nombreux problèmes fonctionnels, sécuritaires, de confort, etc. ; Considérant que, pour apporter une réponse aux problèmes et objectifs précités, il s’avère nécessaire de réaliser, pour chacune des implantations scolaires, des travaux de rénovation des bâtiments existants assortie de la construction d’extensions ainsi que du réaménagement des abords, afin de disposer d’infrastructures pérennes répondant pleinement aux besoins de la communauté scolaire tout comme aux exigences énergétiques et environnementales ; Considérant que les implantations de Waret-l’Evêque et Surlemez présentent des besoins similaires, nécessitant pour la Commune de se doter d’une vision long terme des travaux à entreprendre en priorisant ceux-ci de manière cohérente ; Considérant qu'une telle vision permettra de programmer ces travaux de manière progressive en tenant compte des disponibilités sur fonds propres et d’entreprendre les démarches pour lever les moyens complémentaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné",
-      "evidence": "Considérant que les interventions entreprises par la Commune pour accueillir les élèves sur ces deux implantations a permis d’apporter des solutions provisoires, mais que la qualité d’accueil des élèves reste largement précaire, les infrastructures étant par ailleurs vieillissantes, témoignant de nombreux problèmes fonctionnels, sécuritaires, de confort, etc. ; Considérant que, pour apporter une réponse aux problèmes et objectifs précités, il s’avère nécessaire de réaliser, pour chacune des implantations scolaires, des travaux de rénovation des bâtiments existants assortie de la construction d’extensions ainsi que du réaménagement des abords, afin de disposer d’infrastructures pérennes répondant pleinement aux besoins de la communauté scolaire tout comme aux exigences énergétiques et environnementales ; Considérant que les implantations de Waret-l’Evêque et Surlemez présentent des besoins similaires, nécessitant pour la Commune de se doter d’une vision long terme des travaux à entreprendre en priorisant ceux-ci de manière cohérente ; Considérant qu'une telle vision permettra de programmer ces travaux de manière progressive en tenant compte des disponibilités sur fonds propres et d’entreprendre les démarches pour lever les moyens complémentaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné",
-      "municipalEvidence": [
-        {
-          "excerpt": "Considérant que les interventions entreprises par la Commune pour accueillir les élèves sur ces deux implantations a permis d’apporter des solutions provisoires, mais que la qualité d’accueil des élèves reste largement précaire, les infrastructures étant par ailleurs vieillissantes, témoignant de nombreux problèmes fonctionnels, sécuritaires, de confort, etc. ; Considérant que, pour apporter une réponse aux problèmes et objectifs précités, il s’avère nécessaire de réaliser, pour chacune des implantations scolaires, des travaux de rénovation des bâtiments existants assortie de la construction d’extensions ainsi que du réaménagement des abords, afin de disposer d’infrastructures pérennes répondant pleinement aux besoins de la communauté scolaire tout comme aux exigences énergétiques et environnementales ; Considérant que les implantations de Waret-l’Evêque et Surlemez présentent des besoins similaires, nécessitant pour la Commune de se doter d’une vision long terme des travaux à entreprendre en priorisant ceux-ci de manière cohérente ; Considérant qu'une telle vision permettra de programmer ces travaux de manière progressive en tenant compte des disponibilités sur fonds propres et d’entreprendre les démarches pour lever les moyens complémentaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné",
-          "page": null
-        },
-        {
-          "excerpt": "Considérant que les implantations de Waret-l’Evêque et Surlemez présentent des besoins similaires, nécessitant pour la Commune de se doter d’une vision long terme des travaux à entreprendre en priorisant ceux-ci de manière cohérente ; Considérant qu'une telle vision permettra de programmer ces travaux de manière progressive en tenant compte des disponibilités sur fonds propres et d’entreprendre les démarches pour lever les moyens complémentaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : Élaborer une stratégie globale d’intervention sur les deux implantations communales ; Assurer, ensuite et une fois les moyens budgétaires confirmés, les études et le suivi de l’exécution de tout ou partie des travaux tels qu’identifiés au terme de la stratégie ; Considérant qu’à ce stade, les montants des travaux des projets sont estimés à 3.000.000,00€ HTVA pour l’implantation de Surlemez et 4.280.000,00€ HTVA pour l’implantation de Waret-l'Evêque ; Considérant que la réalisation des travaux est conditionnée à l’allocation de moyens financiers supplémentaires et qu’à ce titre, le maître d’ouvrage envisage d’introduire des demandes de subventions ;",
-          "page": null
-        },
-        {
-          "excerpt": "Considérant qu'une telle vision permettra de programmer ces travaux de manière progressive en tenant compte des disponibilités sur fonds propres et d’entreprendre les démarches pour lever les moyens complémentaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : Élaborer une stratégie globale d’intervention sur les deux implantations communales ; Assurer, ensuite et une fois les moyens budgétaires confirmés, les études et le suivi de l’exécution de tout ou partie des travaux tels qu’identifiés au terme de la stratégie ; Considérant qu’à ce stade, les montants des travaux des projets sont estimés à 3.000.000,00€ HTVA pour l’implantation de Surlemez et 4.280.000,00€ HTVA pour l’implantation de Waret-l'Evêque ; Considérant que la réalisation des travaux est conditionnée à l’allocation de moyens financiers supplémentaires et qu’à ce titre, le maître d’ouvrage envisage d’introduire des demandes de subventions ; Considérant, qu’à ce stade, le maître d’ouvrage ne peut pas s’engager à la réalisation des travaux, qui est par ailleurs conditionnée à la levée des moyens financiers supplémentaires précités ;",
-          "page": null
-        },
-        {
-          "excerpt": "Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : Élaborer une stratégie globale d’intervention sur les deux implantations communales ; Assurer, ensuite et une fois les moyens budgétaires confirmés, les études et le suivi de l’exécution de tout ou partie des travaux tels qu’identifiés au terme de la stratégie ; Considérant qu’à ce stade, les montants des travaux des projets sont estimés à 3.000.000,00€ HTVA pour l’implantation de Surlemez et 4.280.000,00€ HTVA pour l’implantation de Waret-l'Evêque ; Considérant que la réalisation des travaux est conditionnée à l’allocation de moyens financiers supplémentaires et qu’à ce titre, le maître d’ouvrage envisage d’introduire des demandes de subventions ; Considérant, qu’à ce stade, le maître d’ouvrage ne peut pas s’engager à la réalisation des travaux, qui est par ailleurs conditionnée à la levée des moyens financiers supplémentaires précités ; Considérant que le marché de service d’auteur de projet proposé permet un engagement progressif du maître d’ouvrage : seule la première tranche de la mission de service relative à l’élaboration de la stratégie est ferme, les autres sont conditionnelles ;",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
+      "documentsCheckedAt": "2026-11-02T23:43:06.821Z"
     }
   ]
 }
