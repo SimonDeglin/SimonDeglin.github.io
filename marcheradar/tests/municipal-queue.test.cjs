@@ -30,7 +30,7 @@ test('les pages au-delà de la deuxième sont conservées et parcourues aux pass
  }finally{fs.rmSync(dir,{recursive:true,force:true})}
 });
 test('une limite de profondeur est déclarée et les erreurs gardent un délai de reprise',()=>{
- const queue=q.init({});assert.equal(q.remember(queue,'pages',{url:root+'/2026',depth:4},'2026-10-29'),false);assert.equal(q.progress(queue,{}).limited,true);
+ const queue=q.init({});assert.equal(q.remember(queue,'pages',{url:root+'/2026',depth:6},'2026-10-29'),false);assert.equal(q.progress(queue,{}).limited,true);
  q.remember(queue,'pages',{url:root,depth:0,nextAttemptAt:'2026-10-30T08:00:00Z'},'2026-10-29');
  assert.equal(q.pendingPages(queue,new Set(),'2026-10-29T08:00:00Z').length,0);
  assert.equal(q.pendingPages(queue,new Set(),'2026-10-31T08:00:00Z').length,1);

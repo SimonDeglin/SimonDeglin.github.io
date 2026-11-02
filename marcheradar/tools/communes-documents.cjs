@@ -18,7 +18,7 @@ const {fetchPublic}=require('./communal-http.cjs');
 const pdfReader=require('./communal-pdf.cjs');
 const sourceHealth=require('../source-health.js');
 const INVENTORY=path.resolve(__dirname,'../communes.json'),DATA=path.resolve(__dirname,'../data.json');
-const EXTRACTION_VERSION='2026-11-02-explicit-studies-v8';
+const EXTRACTION_VERSION='2026-11-02-coverage-v10';
 const MAX_COMMUNES=Math.min(8,Math.max(1,Number(process.env.COMMUNES_DOC_BATCH||4)));
 const MATCH=/(?:[eé]tudes?|topograph|g[eé]om[eè]tr|bornage|division parcell|bathym[eé]tr|jaugeag|limnim[eé]tr|[eé]tude hydraulique|bureau d.[eé]tudes|auteur de projet|d[eé]tection de r[eé]seaux|scanner laser|photogramm[eé]tr|certificat PEB|certification [eé]nerg[eé]tique|lev[eé] de terrain|[eé]valuation immobili[eè]re|relev[eé] de cours d.eau|voirie|espace public|am[eé]nagement.{0,15}place|bassin d.orage|acquisition.{0,15}parcelle|vente.{0,15}terrain)/i;
 const INTENT=/(?:d[eé]cide|approuve|d[eé]lib[eè]re|march[eé](?: public)? de services?|d[eé]signation|consultation|cahier sp[eé]cial des charges|lancement d.un march[eé]|mise en concurrence|bureau d.[eé]tudes|mission d.auteur de projet|budget d.[eé]tudes?)/i;
@@ -50,7 +50,8 @@ function childPages(html,base){
   if(platform&&/@@faceted_query/.test(parent.pathname))continue;
   // Les fiches de décision passent par l'adaptateur : séance prouvée et objet métier.
   if(platform&&/\/decisions\/[^/]+\/[^/]+/.test(u.pathname))continue;
-  if((u.origin!==parent.origin&&!platform)||u.href===parent.href||(!platform&&!u.pathname.startsWith(parent.pathname.replace(/\/$/,'')+'/')))continue;
+  const siblingDocument=/ordre.{0,12}jour|proc[eè]s.verbal|comptes?.rendus?|d[eé]lib[eé]rations?|s[eé]ances? du conseil/i.test(textOnly(a[2]));
+  if((u.origin!==parent.origin&&!platform)||u.href===parent.href||(!platform&&!u.pathname.startsWith(parent.pathname.replace(/\/$/,'')+'/')&&!siblingDocument))continue;
   if(/\.pdf(?:$|[?#])/i.test(u.href)||!/conseil|deliber|d[eé]lib[eé]r|d[eé]cision|proces|proc[eè]s|ordre|seance|s[eé]ance|pv-|march[eé]s|20\d{2}/i.test(u.pathname+' '+textOnly(a[2])))continue;
   if(!sourcePolicy.excluded({url:u.href,title:textOnly(a[2])})&&!out.includes(u.href))out.push(u.href);
  }return out;
@@ -84,13 +85,13 @@ async function download(url,type,max,options={}){
 }
 function pdfText(bytes){return pdfReader.extract(bytes).text}
 
-function agendaHeading(line){return /^(?:\d{1,3}[.)]\s+|[A-Z]{2,6}\.[A-Z]?\d{2}\.\d+\s+|[A-Z][A-Z0-9 -]{1,16}\s*:)/.test(line)}
+function agendaHeading(line){return /^(?:\d{1,3}(?:[.)]\s+|\s+(?=[A-ZÀ-ÖØ-Þ]))|[A-Z]{2,6}\.[A-Z]?\d{2}\.\d+\s+|[A-Z][A-Z0-9 -]{1,16}\s*:)/.test(line)}
 function passages(text){
  const out=[];let sectionHeading=null;
  for(const [pageNo,page] of String(text||'').split('\f').entries()){
   const lines=page.split('\n').map(x=>x.trim()).filter(Boolean);
   for(let i=0;i<lines.length;i++){
-   if(agendaHeading(lines[i])&&lines[i].length>30){const title=[lines[i]];for(let k=i+1;k<Math.min(lines.length,i+4);k++){if(/[.;:]$/.test(title.at(-1))||agendaHeading(lines[k])||/^(?:Vu|Consid[eé]rant|Attendu|Le conseil|Pr[eé]sents|Article|D[eé]cide)\b/i.test(lines[k]))break;title.push(lines[k]);}sectionHeading=title.join(' ').slice(0,350);}
+   if(agendaHeading(lines[i])&&lines[i].length>30){const title=[lines[i]];for(let k=i+1;k<Math.min(lines.length,i+4);k++){if(/[.;:]$/.test(title.at(-1))||agendaHeading(lines[k])||/^(?:C\.?P\.?A\.?S\.?|Finances communales|Travaux communaux|Administration g[eé]n[eé]rale|Personnel communal|Zone de police)\b/i.test(lines[k])||/^(?:Vu|Consid[eé]rant|Attendu|Le conseil|Pr[eé]sents|Article|D[eé]cide)\b/i.test(lines[k]))break;title.push(lines[k]);}sectionHeading=title.join(' ').slice(0,350);}
    const wrapped=/(?:auteur|bureau(?:\s+d[’']))\s*$/i.test(lines[i])&&MATCH.test(lines[i]+' '+(lines[i+1]||''));
    if((!MATCH.test(lines[i])&&!wrapped)||/agent constatateur|assermentation|d[eé]signation.{0,35}(?:conseiller|d[eé]l[eé]gu[eé]|membre du conseil)/i.test(lines[i]))continue;
    let lo=Math.max(0,i-2),hi=Math.min(lines.length,i+5);
@@ -115,18 +116,19 @@ function processHTML(items,commune,html,url,context,now){
  const sha=digest(html);parsed.dates.sha256=sha;
  if(!documentDates.freshness({source:'LOCALE',sourceDocument:url,sourceDocumentDates:parsed.dates},now).active)return {items,created:0,read:true,dates:parsed.dates};
  const linked=items.filter(m=>belongs(m,commune,url)),out=items.map(m=>belongs(m,commune,url)?{...m,sourceDocumentDates:parsed.dates,sourceDocumentVersion:{documentId:documentId(url),sha256:sha,format:'html',checkedAt:now},sourceEvidenceStatus:normalized(parsed.text).includes(normalized(m.evidence))?'found':'not_found'}:m);
- let created=0;
+ let created=0;const unclassified=[];
  const extractedPassages=passages(parsed.text).sort((a,b)=>Number(/n[eé]cessit[eé]|afin de|mission consiste|d.approuver le cahier|objet du march[eé]/i.test(b.excerpt))-Number(/n[eé]cessit[eé]|afin de|mission consiste|d.approuver le cahier|objet du march[eé]/i.test(a.excerpt)));
  if(!linked.length)for(const p of (parsed.platform?extractedPassages.slice(0,1):extractedPassages)){
-  const rating=profile.screen({title:parsed.title,description:p.excerpt,buyer:'Commune de '+commune.name,region:'Wallonie',source:'LOCALE',opportunityType:'prospection'}).classification;
-  if(!rating||rating.screening==='excluded')continue;
+  const subject=parsed.platform?parsed.title:(p.sectionHeading||p.excerpt.slice(0,350));
   const type=webType.classify((parsed.project?'Projet de délibération ':'')+parsed.title,parsed.text,p.excerpt);
-  const assessment=opportunity.assess({title:parsed.title,text:parsed.text,kind:type.kind});if(!assessment.eligible)continue;
+  const assessment=opportunity.assess({title:subject,text:parsed.platform?parsed.text:p.excerpt,kind:type.kind});if(!assessment.eligible)continue;
+  const screening=profile.screen({title:subject,description:p.excerpt,buyer:'Commune de '+commune.name,region:'Wallonie',source:'LOCALE',opportunityType:'prospection'}),rating=screening.classification;
+  if(!rating||rating.screening==='excluded'){unclassified.push({title:subject,url,date:(parsed.dates.session||parsed.dates.document)?.date||null,excerpt:p.excerpt,reason:screening.reason||'metier_exclu'});continue;}
   const id='local-html:'+digest(url+'|'+p.excerpt.slice(0,170)).slice(0,20);if(out.some(m=>m.id===id))continue;
-  out.push({id,title:parsed.title,buyer:'Commune de '+commune.name,municipalityINS:commune.ins,region:'Wallonie',source:'LOCALE',webSourceType:'municipal',sourceDocumentFormat:'html',municipalProcedure:parsed.procedure?{...parsed.procedure,sourceUrl:url,sha256:sha,stage:parsed.project?'project':'decision_to_verify'}:null,municipalAssessment:assessment,noticeKind:type.kind,opportunityType:'prospection',opportunityStage:'décision ou besoin à vérifier',sector:rating.sector,sectors:rating.sectors,screening:'review',score:Math.min(60,rating.score),qualification:rating.qualification,publication:'',deadline:'',url,sourceDocument:url,sourceDocumentDates:parsed.dates,sourceDocumentVersion:{documentId:documentId(url),sha256:sha,format:'html',checkedAt:now},webTypeEvidence:{...type,sourceUrl:url,page:null,sha256:sha},description:p.excerpt,evidence:p.excerpt,municipalEvidence:extractedPassages.slice(0,4).map(p=>({excerpt:p.excerpt,page:null})),sourceEvidenceStatus:'found',municipalReference:p.explicitReference||null});created++;
+  out.push({id,title:parsed.platform?parsed.title:(p.sectionHeading||p.excerpt.slice(0,220)),buyer:'Commune de '+commune.name,municipalityINS:commune.ins,region:'Wallonie',source:'LOCALE',webSourceType:'municipal',sourceDocumentFormat:'html',municipalProcedure:parsed.procedure?{...parsed.procedure,sourceUrl:url,sha256:sha,stage:parsed.project?'project':'decision_to_verify'}:null,municipalAssessment:assessment,noticeKind:type.kind,opportunityType:'prospection',opportunityStage:'décision ou besoin à vérifier',sector:rating.sector,sectors:rating.sectors,screening:'review',score:Math.min(60,rating.score),qualification:rating.qualification,publication:'',deadline:'',url,sourceDocument:url,sourceDocumentDates:parsed.dates,sourceDocumentVersion:{documentId:documentId(url),sha256:sha,format:'html',checkedAt:now},webTypeEvidence:{...type,sourceUrl:url,page:null,sha256:sha},description:p.excerpt,evidence:p.excerpt,municipalEvidence:extractedPassages.slice(0,4).map(p=>({excerpt:p.excerpt,page:null})),sourceEvidenceStatus:'found',municipalReference:p.explicitReference||null});created++;
  }
  let merged=out.slice(0,items.length);let linkedNotices=0;for(const m of out.slice(items.length)){const r=municipalMerge.insert(merged,m);merged=r.items;if(r.linked)linkedNotices++;}
- return {items:merged,created:created-linkedNotices,linkedNotices,read:true,dates:parsed.dates};
+ return {items:merged,created:created-linkedNotices,linkedNotices,read:true,dates:parsed.dates,unclassified};
 }
 function processDocument(items,commune,pdf,file,now,extract=pdfText){
  const id=documentId(pdf.url),prior=commune.documentChecks?.[id]||{};
@@ -172,7 +174,8 @@ function processDocument(items,commune,pdf,file,now,extract=pdfText){
   return next;
  });
  let created=0;
- if(!linked.length&&(!check.sourceDocumentDates?.session&&!check.sourceDocumentDates?.document||documentDates.freshness({source:'LOCALE',sourceDocument:pdf.url,sourceDocumentDates:check.sourceDocumentDates},now).active)){
+ if(parsed&&check.sourceDocumentDates?.status==='unknown')nextCommune.unclassifiedSignals={...(nextCommune.unclassifiedSignals||{}),[id]:candidates.slice(0,6).map(p=>({title:p.sectionHeading||'Signal PDF sans date identifiée',url:pdf.url,date:null,excerpt:p.excerpt,reason:'date_unknown'}))};
+ if(!linked.length&&documentDates.freshness({source:'LOCALE',sourceDocument:pdf.url,sourceDocumentDates:check.sourceDocumentDates},now).active){
   const known=new Set(items.map(x=>x.id));
   for(const p of candidates){
    const assessment=opportunity.assess({title:p.sectionHeading||p.excerpt.slice(0,300),text:p.excerpt,kind:webType.classify(pdf.title,text,p.excerpt).kind});if(!assessment.eligible&&check.sourceDocumentDates?.status==='identified')continue;
@@ -210,7 +213,7 @@ async function run(options={}){
  let documentsRead=0,checked=0,unchanged=0,modified=0,created=0,reviewCandidates=0,htmlChecked=0,errors=[];
  for(const m of ready){
   const before={checked,errors:errors.length},queue=queueApi.init(m),allowedBase=m.verifiedSite?.url||m.officialSite||m.deliberationSources[0]?.url;
-  for(const entry of Object.values(queue.pages))entry.scopeExcluded=sourcePolicy.excluded(entry)||(!sourcePolicy.trusted(entry.url,allowedBase)?'domaine_externe_hors_collecte':null);
+  for(const entry of Object.values(queue.pages))entry.scopeExcluded=sourcePolicy.excluded(entry)||(entry.title&&/deliberations\.be\/[^/]+\/decisions\/[^/]+\/[^/?]+/.test(entry.url)&&!entry.url.includes('@@')&&!opportunity.assess({title:entry.title}).eligible?'decision_sans_nouvelle_mission':null)||(!sourcePolicy.trusted(entry.url,allowedBase)?'domaine_externe_hors_collecte':null);
   for(const src of m.deliberationSources.filter(s=>readableSource(s)&&sourcePolicy.trusted(s.url,allowedBase))){
    if(/\.pdf(?:$|[?#])/i.test(src.url))queueApi.remember(queue,'documents',{url:src.url,title:src.title||'',sourceUrl:src.url},now);
    else{
@@ -222,6 +225,7 @@ async function run(options={}){
   for(const prior of Object.values(m.documentChecks||{}))if(prior.url)queueApi.remember(queue,'documents',{url:prior.url,title:'PDF déjà suivi',sourceUrl:prior.url},now);
   const attemptedPages=new Set(),maxPages=Math.min(24,Math.max(1,Number(options.maxPages)||8));
   for(let count=0;count<maxPages;count++){
+   if(options.deadlineAt&&Date.now()>=options.deadlineAt)break;
    const candidate=queueApi.pendingPages(queue,attemptedPages,now)[0];if(!candidate)break;
    const [id,pageEntry]=candidate;attemptedPages.add(id);
    try{
@@ -229,7 +233,7 @@ async function run(options={}){
     for(const pdf of fileLinks(html,page.finalUrl))queueApi.remember(queue,'documents',{...pdf,sourceUrl:pageEntry.url},now);
     for(const url of childPages(html,page.finalUrl))queueApi.remember(queue,'pages',{url,depth:(pageEntry.depth||0)+1,sourceUrl:pageEntry.url},now);
     for(const entry of htmlSource.links(html,page.finalUrl,now,pageEntry))queueApi.remember(queue,'pages',{...entry,sourceUrl:pageEntry.url},now);
-    const extracted=processHTML(data.items,m,html,page.finalUrl,pageEntry,now);data.items=extracted.items;created+=extracted.created;m.opportunities=(m.opportunities||0)+extracted.created;if(extracted.read){htmlChecked++;m.lastDocumentSuccess=now;}if(extracted.read)m.htmlDocumentsRead=(m.htmlDocumentsRead||0)+(m.htmlDocumentChecks?.[id]?0:1);if(extracted.read)m.htmlDocumentChecks={...(m.htmlDocumentChecks||{}),[id]:{url:page.finalUrl,lastSuccess:now,sha256:digest(html),sourceDocumentDates:extracted.dates||null}};
+    const extracted=processHTML(data.items,m,html,page.finalUrl,pageEntry,now);data.items=extracted.items;if(extracted.read)m.unclassifiedSignals={...(m.unclassifiedSignals||{}),[id]:extracted.unclassified||[]};created+=extracted.created;m.opportunities=(m.opportunities||0)+extracted.created;if(extracted.read){htmlChecked++;m.lastDocumentSuccess=now;}if(extracted.read)m.htmlDocumentsRead=(m.htmlDocumentsRead||0)+(m.htmlDocumentChecks?.[id]?0:1);if(extracted.read)m.htmlDocumentChecks={...(m.htmlDocumentChecks||{}),[id]:{url:page.finalUrl,lastSuccess:now,sha256:digest(html),sourceDocumentDates:extracted.dates||null}};
     queue.pages[id]={...pageEntry,lastAttempt:now,lastSuccess:now,lastError:null,nextAttemptAt:null};
     m.documentSourceChecks={...(m.documentSourceChecks||{}),[id]:{url:pageEntry.url,lastAttempt:now,lastSuccess:now,lastError:null}};
    }catch(e){
@@ -242,6 +246,7 @@ async function run(options={}){
   const maxDocuments=Math.min(12,Math.max(1,Number(options.maxDocuments)||12));
   const documents=queueApi.pendingDocuments(queue,m.documentChecks||{},now).filter(([,pdf])=>sourcePolicy.trusted(pdf.url,allowedBase)).filter(([,pdf])=>!options.documentURLs||options.documentURLs.includes(pdf.url)).slice(0,maxDocuments);
   for(const [id,pdf] of documents){
+   if(options.deadlineAt&&Date.now()>=options.deadlineAt)break;
    try{
     const file=await download(pdf.url,'application/pdf',9000000,{fetchFn:options.fetchFn,previous:m.documentChecks?.[id]?.extractorVersion===EXTRACTION_VERSION?m.documentChecks[id]:undefined,now});
     const next=processDocument(data.items,m,pdf,file,now,options.extract||pdfText);
@@ -255,8 +260,11 @@ async function run(options={}){
     errors.push({site:m.name,link:pdf.url,error:message});
    }
   }
-  m.documentQueue=queue;m.documentProgress=queueApi.progress(queue,m.documentChecks||{});
+  m.documentQueue=queue;m.documentProgress=queueApi.progress(queue,m.documentChecks||{},now);
   m.lastDocumentCheck=now;
+  const localItems=data.items.filter(x=>(x.municipalityINS===m.ins&&x.source==='LOCALE')||(x.municipalNotices||[]).some(n=>n.municipalityINS===m.ins));
+  m.recentOpportunities=localItems.filter(x=>documentDates.freshness(x,now).active||(x.municipalNotices||[]).some(n=>n.municipalityINS===m.ins&&documentDates.freshness(n,now).active)).length;
+  m.latestDocumentDate=[...Object.values(m.documentChecks||{}),...Object.values(m.htmlDocumentChecks||{})].map(x=>(x.sourceDocumentDates?.session||x.sourceDocumentDates?.document)?.date).filter(Boolean).sort().at(-1)||null;
   m.lastDocumentResult={checked:checked-before.checked,errors:errors.length-before.errors,attempted:documents.length,pagesAttempted:attemptedPages.size};
   if(checked>before.checked)m.lastDocumentSuccess=now;
  }

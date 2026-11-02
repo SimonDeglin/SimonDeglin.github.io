@@ -43,8 +43,9 @@ async function sitemapCandidates(base,fetchPage){
  const roots=new Set([new URL('/sitemap.xml',base).href]),found=[];
  try{const robots=await fetchPage(new URL('/robots.txt',base).href);for(const m of robots.content.matchAll(/^Sitemap:\s*(\S+)/gim))if(policy.trusted(m[1],base))roots.add(m[1])}catch(e){}
  const attempted=new Set();
- for(const url of roots){
-  if(attempted.size>=3)break;attempted.add(url);
+ while(attempted.size<3){
+  const rank=u=>/sitemap[^/]*page|sitemap-posts-page/.test(u)?0:/sitemap.*(?:post|news|article)/.test(u)?2:1;
+  const url=[...roots].filter(u=>!attempted.has(u)).sort((a,b)=>rank(a)-rank(b)||a.localeCompare(b))[0];if(!url)break;attempted.add(url);
   try{
    const page=await fetchPage(url);
    for(const m of page.content.matchAll(/<loc>\s*([^<]+)\s*<\/loc>/gi)){
@@ -80,6 +81,7 @@ async function run(options={}){
    const pending=[...merged.values(),...found].filter(x=>x.scopeStatus!=='non_documentary'&&policy.trusted(x.url,site.url)).filter((x,i,a)=>a.findIndex(y=>y.url===x.url)===i)
     .sort((a,b)=>(a.last_attempt||'').localeCompare(b.last_attempt||''));
    for(const x of pending){
+    if(options.deadlineAt&&Date.now()>=options.deadlineAt)break;
     const previous=merged.get(x.url);
     if(previous?.status==='page_accessible'){merged.set(x.url,previous);continue;}
     // Une page de délibérations n'est exploitable qu'après lecture HTML effective.

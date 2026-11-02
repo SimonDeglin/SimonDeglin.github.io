@@ -92,6 +92,8 @@ function detect(m){
    return {reason:null,classification:{sector:'Qualif',sectors:['Qualif'],score:48,screening:'review',matchReason:'etude_amenagement_funeraire_a_qualifier'}};
   if(STUDY.test(title)&&/marche(?: public)? de services?/.test(title)&&/refection|renovation|amenagement|rehabilitation/.test(title)&&/voirie|troncon|chaussee|reseau|espace public|parking|cour de recreation/.test(title))
    return {reason:null,classification:{sector:'VRD',sectors:['VRD'],score:50,screening:'review',matchReason:'etude_infrastructure_a_qualifier'}};
+  if(STUDY.test(title)&&/etude de mobilite|plan (?:communal )?de mobilite/.test(title))
+   return {reason:null,classification:{sector:'Qualif',sectors:['Qualif'],score:48,screening:'review',matchReason:'etude_mobilite_a_qualifier'}};
   // Un schéma communal constitue une étude potentielle à qualifier ; le mot
   // « implantations commerciales » ne doit pas devenir de l'implantation topo.
   if(/schema(?:s)? de developpement (?:communal|pluricommunal|territorial)|plan communal d'amenagement/.test(title)&&/etude|services|elaboration|mission/.test(both))

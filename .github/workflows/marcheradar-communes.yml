@@ -38,7 +38,7 @@ jobs:
       - name: "Collecter les publications récentes par lots de communes"
         id: collect
         env:
-          COMMUNES_BATCH: "12"
+          COMMUNES_BATCH: "24"
           COMMUNES_PROVINCE: ${{ inputs.province || 'all' }}
           COMMUNES_INS: ${{ inputs.commune || '' }}
         run: node marcheradar/tools/communal-batch.cjs
@@ -57,4 +57,4 @@ jobs:
         if: always()
         run: |
           node -e "const d=require('./marcheradar/data.json');console.log(JSON.stringify(d.sources.COMMUNES_DOCUMENTS,null,2))" >> "$GITHUB_STEP_SUMMARY"
-          echo "Rotation : 12 communes, 3 en parallèle ; priorité aux documents des 3 derniers mois. Couverture non exhaustive, erreurs conservées." >> "$GITHUB_STEP_SUMMARY"
+          echo "Rotation : 24 communes au maximum, 3 en parallèle ; priorité aux documents des 3 derniers mois. Couverture non exhaustive, erreurs conservées." >> "$GITHUB_STEP_SUMMARY"

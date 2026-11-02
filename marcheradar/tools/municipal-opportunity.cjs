@@ -3,6 +3,7 @@
 const fold=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’‘]/g,"'").toLowerCase();
 function assess({title='',text='',kind='prospection'}={}){
  const t=fold(title),body=fold(text);
+ if(/^approbation (?:d.un |du )?plan de (?:bornage|mesurage)/.test(t))return {eligible:false,reason:'plan_deja_etabli_sans_nouvelle_mission'};
  if(/transfert du domaine|acte d.acquisition|acte authentique|offre recue|commodat|declassement|reglement|roulage|circulation routiere|incorporation|prise en gestion|demande de retrait|permis d.urbanisme|modification de la voirie/.test(t))return {eligible:false,reason:'acte_administratif_sans_mission_a_commander'};
  const service=(/marche(?: public)? de services?/.test(t)&&/etude|auteur|conception|geometre|ingenierie|topograph|peb|honoraires/.test(t))||/schema de developpement.{0,30}(?:communal|elaboration)|plan communal de mobilite|designation.{0,80}(?:geometre|bureau|auteur de projet)|marche.{0,30}services.{0,120}(?:etude|geometre|topograph|auteur|peb)|mission.{0,80}(?:etude|geometre|auteur de projet)|etude.{0,60}(?:hydrauli|voirie|mobilite)|leve.{0,20}topograph|certificat.{0,15}peb|bathymetr/.test(t);
  if(/avenant|prestations complementaires|decompte|honoraires supplementaires/.test(t))return {eligible:false,reason:'mission_existante_avenant_ou_decompte'};

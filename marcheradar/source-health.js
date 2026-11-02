@@ -28,6 +28,16 @@
  function docs(c){return Object.values(c.documentChecks||{}).filter(x=>x.sha256&&x.lastSuccess).length}
  function htmlDocs(c){return Object.values(c.htmlDocumentChecks||{}).filter(x=>x.sha256&&x.lastSuccess).length}
  function legacyDocs(c){return Math.max(0,(Number(c.documentsRead)||0)-docs(c))}
+ function coverage(c){
+  const p=c.documentProgress,read=docs(c)+htmlDocs(c),sources=(c.deliberationSources||[]).filter(s=>s.scopeStatus!=='non_documentary');
+  if(c.lastMunicipalError)return {key:'error',label:'Collecte interrompue : '+c.lastMunicipalError};
+  if(!sources.length)return {key:'missing_sources',label:'Source documentaire à localiser ; aucune absence de marché ne peut être conclue.'};
+  if(!p)return {key:'not_traversed',label:'Parcours documentaire non mesuré.'};
+  if(p.limited)return {key:'limited',label:'Exploration limitée ; des publications peuvent manquer.'};
+  if(p.pagesPending||p.documentsPending)return {key:'pending',label:'Parcours à poursuivre : '+p.pagesPending+' pages et '+p.documentsPending+' PDF dans le périmètre.'};
+  if(!read)return {key:'no_read',label:'Aucun document exploitable lu ; contrôle des sources nécessaire.'};
+  return {key:'partial',label:'Lectures réalisées ; couverture toujours partielle.'};
+ }
  function communeState(c){
   const checks=[...Object.values(c.documentChecks||{}),...Object.values(c.documentSourceChecks||{})];
   const errors=[...(c.errors||[]),...checks.filter(x=>x.lastError).map(x=>x.lastError)];
@@ -47,5 +57,5 @@
    if(communeState(c).key==='error')r.errors++;
   }return r;
  }
- return {provinces,provinceOf,date,health,docs,htmlDocs,legacyDocs,communeState,counts};
+ return {provinces,provinceOf,date,health,docs,htmlDocs,legacyDocs,coverage,communeState,counts};
 });
