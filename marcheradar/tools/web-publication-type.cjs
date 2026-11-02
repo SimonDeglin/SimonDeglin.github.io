@@ -3,12 +3,13 @@
 const fold=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’‘]/g,"'").toLowerCase();
 function classify(title,text,excerpt){
  const body=String(excerpt||text||''),f=fold(body),heading=fold(title);
+ if(/ordre du jour|projet de deliberation|projet d'attribution/.test(heading)&&/in[ -]house|missions? confiees? a/.test(heading+' '+f))return {kind:'other',reason:'projet_de_mission_a_operateur_determine',excerpt:body.slice(0,220).replace(/\s+/g,' ').trim()};
  if(/ordre du jour|odre du jour|\bodj\b|projet de deliberation|projet d'attribution/.test(heading))return {kind:'prospection',reason:'ordre_du_jour_ou_projet_non_adopte',excerpt:body.slice(0,220).replace(/\s+/g,' ').trim()};
  let kind='prospection',reason='besoin_ou_decision_a_verifier',match;
  const withdrawn=/\b(?:sans suite|infructueux|annule|annulation|renonce|retrait de l'attribution)\b/.exec(f);
  if(withdrawn){kind='other';reason='suite_de_procedure_a_verifier';match=withdrawn;}
  else{
-  const award=/avis d'attribution|(?:decide|decision).{0,45}d'attribuer|marche.{0,45}(?:est|a ete) attribue/.exec(f);
+  const award=/marche.{0,60}in[ -]house|missions? confiees? a|avis d'attribution|(?:decide|decision).{0,45}d'attribuer|marche.{0,45}(?:est|a ete) attribue/.exec(f);
   if(award){kind='award';reason='attribution_explicitement_mentionnee';match=award;}
   else if(/avis de marche|appel d'offres|invitation a remettre (?:une|offre)/.test(heading)){
    const competition=/date limite|depot des offres|remise des offres|les offres doivent|soumission/.exec(fold(String(text||body)));

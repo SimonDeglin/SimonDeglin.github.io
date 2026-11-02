@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-02T08:19:51.939Z",
+      "last_attempt": "2026-11-02T09:44:26.318Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -67,36 +67,36 @@
       "total": 261,
       "sitesRepertories": 261,
       "sitesVerifies": 261,
-      "deliberationsConnectees": 64,
+      "deliberationsConnectees": 69,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 242,
-      "opportunities": 107,
+      "documentsRead": 255,
+      "opportunities": 112,
       "sitesChecked": 261,
       "candidatePages": 227,
-      "sourceErrors": 51,
-      "htmlDocumentsRead": 91
+      "sourceErrors": 52,
+      "htmlDocumentsRead": 109
     },
     "COMMUNES_DOCUMENTS": {
-      "status": "pilot",
-      "last_attempt": "2026-11-02T09:02:55.910Z",
-      "last_success": "2026-11-02T09:02:55.910Z",
-      "last_batch": 1,
-      "documents_checked": 1,
+      "status": "partial",
+      "last_attempt": "2026-11-02T09:44:26.318Z",
+      "last_success": "2026-11-02T09:44:26.318Z",
+      "last_batch": 10,
+      "documents_checked": 21,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
-      "opportunities_found": 3,
+      "opportunities_found": 5,
       "review_candidates": 0,
-      "errors_count": 0,
+      "errors_count": 5,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 151,
+      "html_documents_read": 21,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 7,
+      "recent_municipal_signals": 14,
       "communes_with_errors": 51,
       "notices_linked": 1
     }
@@ -109,7 +109,7 @@
   "metrics": {
     "scanned": 1375,
     "matched_current_run": 10,
-    "records": 235,
+    "records": 240,
     "review_count": 130,
     "award_notice_count": 352,
     "awarded_market_matches": 0,
@@ -12433,11 +12433,25 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:90fb6d669372a8e425",
         "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d",
-        "checkedAt": "2026-11-01T00:27:34.499Z",
+        "checkedAt": "2026-11-02T09:44:26.318Z",
         "changedAt": null
       },
       "matchReason": "mission_globale_a_qualifier",
-      "screeningReason": null
+      "screeningReason": null,
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "sourceDocumentReview": {
+        "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d",
+        "checkedAt": "2026-11-02T09:44:26.318Z",
+        "candidates": [
+          {
+            "excerpt": "acteurs concernés par la réaffectation et l’utilisation des édifices religieux à des fins socioculturelles. Il sera chargé d’initier la réflexion de manière participative et de réaliser une étude de faisabilité sur la manière la plus appropriée de réaffecter ponctuellement ou de manière permanente ces édifices. Un marché public ayant pour objet la désignation d’un bureau d’études pourra ensuite être lancé.",
+            "page": 76
+          }
+        ]
+      }
     },
     {
       "id": "local:401cf150faca1d2723ed",
@@ -12500,11 +12514,25 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:90fb6d669372a8e425",
         "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d",
-        "checkedAt": "2026-11-01T00:27:34.499Z",
+        "checkedAt": "2026-11-02T09:44:26.318Z",
         "changedAt": null
       },
       "matchReason": "mission_globale_a_qualifier",
-      "screeningReason": null
+      "screeningReason": null,
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "sourceDocumentReview": {
+        "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d",
+        "checkedAt": "2026-11-02T09:44:26.318Z",
+        "candidates": [
+          {
+            "excerpt": "acteurs concernés par la réaffectation et l’utilisation des édifices religieux à des fins socioculturelles. Il sera chargé d’initier la réflexion de manière participative et de réaliser une étude de faisabilité sur la manière la plus appropriée de réaffecter ponctuellement ou de manière permanente ces édifices. Un marché public ayant pour objet la désignation d’un bureau d’études pourra ensuite être lancé.",
+            "page": 76
+          }
+        ]
+      }
     },
     {
       "id": "communal:c3599ff87890bfb78368",
@@ -15298,11 +15326,25 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:90fb6d669372a8e425",
         "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d",
-        "checkedAt": "2026-11-01T00:27:34.499Z",
+        "checkedAt": "2026-11-02T09:44:26.318Z",
         "changedAt": null
       },
       "matchReason": "mission_globale_a_qualifier",
-      "screeningReason": null
+      "screeningReason": null,
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "sourceDocumentReview": {
+        "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d",
+        "checkedAt": "2026-11-02T09:44:26.318Z",
+        "candidates": [
+          {
+            "excerpt": "acteurs concernés par la réaffectation et l’utilisation des édifices religieux à des fins socioculturelles. Il sera chargé d’initier la réflexion de manière participative et de réaliser une étude de faisabilité sur la manière la plus appropriée de réaffecter ponctuellement ou de manière permanente ces édifices. Un marché public ayant pour objet la désignation d’un bureau d’études pourra ensuite être lancé.",
+            "page": 76
+          }
+        ]
+      }
     },
     {
       "id": "local:53f02bf0c368cf0ee03f",
@@ -15365,11 +15407,25 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:90fb6d669372a8e425",
         "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d",
-        "checkedAt": "2026-11-01T00:27:34.499Z",
+        "checkedAt": "2026-11-02T09:44:26.318Z",
         "changedAt": null
       },
       "matchReason": "mission_globale_a_qualifier",
-      "screeningReason": null
+      "screeningReason": null,
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "sourceDocumentReview": {
+        "sha256": "69d18d715b4ed10ba43ad251fe5e06d2342b657eed6ab40d9f1e87b20411644d",
+        "checkedAt": "2026-11-02T09:44:26.318Z",
+        "candidates": [
+          {
+            "excerpt": "acteurs concernés par la réaffectation et l’utilisation des édifices religieux à des fins socioculturelles. Il sera chargé d’initier la réflexion de manière participative et de réaliser une étude de faisabilité sur la manière la plus appropriée de réaffecter ponctuellement ou de manière permanente ces édifices. Un marché public ayant pour objet la désignation d’un bureau d’études pourra ensuite être lancé.",
+            "page": 76
+          }
+        ]
+      }
     },
     {
       "id": "local:35c28756b636eb24f5f4",
@@ -16360,6 +16416,690 @@
         },
         {
           "excerpt": "Mobilité PST 2025-2030 (Action 3). Réfection de tronçons de la Grand'Route - Tronçon entre la rue Maréchal Foch et la rue Marihaye - Étude - Marché public de services - Fixation des conditions et choix du mode de passation. Approbation des conditions du marché de services pour l'étude de la réfection de la Grand'Route dans sa portion entre la rue Maréchal Foch et la rue Marihaye (Fiche PST n° 3) Article budgétaire : 42105/733-60 (extaordinaire) Estimation actuelle des travaux : 1 250 000 € HTVA (1 512 500 € TVAC) Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 relatif aux compétences du Conseil communal en matière de marchés publics ; Vu la Loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local-html:05eef71afd1d630c32f5",
+      "title": "Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de trottoirs en 2027 (2028) - Approbation des conditions et du mode de passation",
+      "buyer": "Commune de Arlon",
+      "municipalityINS": "81001",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/arlon/decisions/15-octobre-2026-19-00/marche-de-services-designation-dun-auteur-de-projet-pour-lentretien-extraordinaire-de-trottoirs-en-2027-2028-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "e01359555b8b2270fc31cee0d9bb6489259a48e8cdc231df2d4b0558b26d1f66",
+        "stage": "project"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/arlon/decisions/15-octobre-2026-19-00/marche-de-services-designation-dun-auteur-de-projet-pour-lentretien-extraordinaire-de-trottoirs-en-2027-2028-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/arlon/decisions/15-octobre-2026-19-00/marche-de-services-designation-dun-auteur-de-projet-pour-lentretien-extraordinaire-de-trottoirs-en-2027-2028-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/arlon/decisions/15-octobre-2026-19-00/marche-de-services-designation-dun-auteur-de-projet-pour-lentretien-extraordinaire-de-trottoirs-en-2027-2028-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "e01359555b8b2270fc31cee0d9bb6489259a48e8cdc231df2d4b0558b26d1f66",
+        "session": {
+          "date": "2026-10-15",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 15 octobre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/arlon/decisions/15-octobre-2026-19-00/marche-de-services-designation-dun-auteur-de-projet-pour-lentretien-extraordinaire-de-trottoirs-en-2027-2028-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:f4800eb90ed097c75e",
+        "sha256": "e01359555b8b2270fc31cee0d9bb6489259a48e8cdc231df2d4b0558b26d1f66",
+        "format": "html",
+        "checkedAt": "2026-11-02T09:44:26.318Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Considérant que le montant annuel estimé des travaux s’élève à +/- 600.000,00 € TVAC ; Considérant qu’une liste de priorités, à approuver par le Collège communal, sera établie par le Département Technique afin de détermi",
+        "sourceUrl": "https://www.deliberations.be/arlon/decisions/15-octobre-2026-19-00/marche-de-services-designation-dun-auteur-de-projet-pour-lentretien-extraordinaire-de-trottoirs-en-2027-2028-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "e01359555b8b2270fc31cee0d9bb6489259a48e8cdc231df2d4b0558b26d1f66"
+      },
+      "description": "Considérant que le montant annuel estimé des travaux s’élève à +/- 600.000,00 € TVAC ; Considérant qu’une liste de priorités, à approuver par le Collège communal, sera établie par le Département Technique afin de déterminer les trottoirs qui seront concernés par ces travaux d’entretien en 2027 et en 2028 ; Considérant que la mission d’auteur de projet intègre également : la coordination sécurité-santé (conception et réalisation) ; la surveillance globale du chantier. les investigations préalables à l’élaboration du cahier des charges de travaux ; Considérant que le marché est prévu pour une période d’un an reconductible 1 fois une période d’un an ;",
+      "evidence": "Considérant que le montant annuel estimé des travaux s’élève à +/- 600.000,00 € TVAC ; Considérant qu’une liste de priorités, à approuver par le Collège communal, sera établie par le Département Technique afin de déterminer les trottoirs qui seront concernés par ces travaux d’entretien en 2027 et en 2028 ; Considérant que la mission d’auteur de projet intègre également : la coordination sécurité-santé (conception et réalisation) ; la surveillance globale du chantier. les investigations préalables à l’élaboration du cahier des charges de travaux ; Considérant que le marché est prévu pour une période d’un an reconductible 1 fois une période d’un an ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "Considérant que le montant annuel estimé des travaux s’élève à +/- 600.000,00 € TVAC ; Considérant qu’une liste de priorités, à approuver par le Collège communal, sera établie par le Département Technique afin de déterminer les trottoirs qui seront concernés par ces travaux d’entretien en 2027 et en 2028 ; Considérant que la mission d’auteur de projet intègre également : la coordination sécurité-santé (conception et réalisation) ; la surveillance globale du chantier. les investigations préalables à l’élaboration du cahier des charges de travaux ; Considérant que le marché est prévu pour une période d’un an reconductible 1 fois une période d’un an ;",
+          "page": null
+        },
+        {
+          "excerpt": "Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de trottoirs en 2027 (2028) - Approbation des conditions et du mode de passation 15 Séance publique du Conseil 15 octobre 2026 (19:00) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de trottoirs en 2027 (2028) - Approbation des conditions et du mode de passation Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) et l'article 57 ; Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ;",
+          "page": null
+        },
+        {
+          "excerpt": "les investigations préalables à l’élaboration du cahier des charges de travaux ; Considérant que le marché est prévu pour une période d’un an reconductible 1 fois une période d’un an ; Considérant le cahier des charges N° MS-PNSPP/26-3363 relatif au marché “Désignation d'un auteur de projet pour l'entretien extraordinaire de trottoirs en 2027 (2028)” dont le montant global estimé (2 ans) s'élève à 49.586,78 € hors TVA ou 60.000,00 € TVA 21% comprise, soit un montant de 24.793,39 € hors TVA ou 30.000 € TVAC pour le marché de base (honoraires estimés à 5% du montant estimé HTVA des travaux) ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable avec consultation d’au moins 3 opérateurs économiques ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2027, article 421/731-60/20274008 et qu’il devra être prévu au même article de l’exercice 2028 ; Attendu que la présente décision a une incidence financière d’un montant global pour 2 ans de 49.586,78 € HTVA, soit un montant annuel de 24.793,39 € HTVA et que, conformément à l’article L 1124-40 §1,3° du Code de la démocratie locale et de la décentralisation, l’avis de la Directrice financière est obligatoirement sollicité ; Vu la demande d’avis de légalité adressée à la Directrice financière en date du 29 septembre 2026 ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "municipalNotices": [
+        {
+          "id": "local:f8478f6a07286aaf5ec5",
+          "title": "11 Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de trottoirs en 2027 (2028)   - Approbation des conditions et du mode de passation",
+          "buyer": "Commune de Arlon",
+          "municipalityINS": "81001",
+          "region": "Wallonie",
+          "source": "LOCALE",
+          "webSourceType": "municipal",
+          "opportunityType": "prospection",
+          "noticeKind": "prospection",
+          "webTypeEvidence": {
+            "kind": "prospection",
+            "reason": "ordre_du_jour_ou_projet_non_adopte",
+            "excerpt": "11 Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de trottoirs en 2027 (2028) - Approbation des conditions et du mode de passation",
+            "sourceUrl": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/2026/ordre-du-jour-261015.pdf",
+            "page": 2,
+            "sha256": "9f33a9a13c2f5ecec2189ff7946a9169e66bf97b8800ade8260653529309dad6"
+          },
+          "opportunityStage": "décision ou besoin à vérifier",
+          "sector": "Qualif",
+          "sectors": [
+            "Qualif"
+          ],
+          "score": 55,
+          "screening": "review",
+          "qualification": {
+            "version": "2026-10-29",
+            "kind": "prospect",
+            "route": "local_signal",
+            "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+            "capacityStatus": "not_assessed"
+          },
+          "publication": "",
+          "deadline": "",
+          "sourceDocument": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/2026/ordre-du-jour-261015.pdf",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/2026/ordre-du-jour-261015.pdf",
+            "sha256": "9f33a9a13c2f5ecec2189ff7946a9169e66bf97b8800ade8260653529309dad6",
+            "session": {
+              "date": "2026-10-15",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Ordre du jour du Conseil du 15 octobre 2026",
+              "confidence": "explicit"
+            },
+            "document": {
+              "date": "2026-10-07",
+              "kind": "document",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Arlon, le 7 octobre 2026",
+              "confidence": "explicit"
+            },
+            "status": "identified"
+          },
+          "sourceExtraction": {
+            "method": "pdf_text",
+            "partial": false
+          },
+          "url": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/2026/ordre-du-jour-261015.pdf",
+          "cpv": [],
+          "description": "Document communal public. Extrait nécessitant une lecture de validation : 11 Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de trottoirs en 2027 (2028)   - Approbation des conditions et du mode de passation",
+          "evidence": "11 Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de trottoirs en 2027 (2028)   - Approbation des conditions et du mode de passation",
+          "municipalReference": null,
+          "municipalSection": "11 Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de trottoirs en 2027 (2028)   - Approbation des conditions et du mode de passation",
+          "municipalEvidence": [
+            {
+              "page": 2,
+              "excerpt": "11 Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de trottoirs en 2027 (2028)   - Approbation des conditions et du mode de passation"
+            }
+          ],
+          "source_status": "extrait_pdf_a_verifier",
+          "sourceEvidencePage": 2,
+          "sourceEvidenceStatus": "found",
+          "sourceDocumentVersion": {
+            "documentId": "municipal-doc:72c6d6940390c23db7",
+            "sha256": "9f33a9a13c2f5ecec2189ff7946a9169e66bf97b8800ade8260653529309dad6",
+            "checkedAt": "2026-11-02T09:44:26.318Z",
+            "changedAt": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "local-html:a6cb7c89fc426daffab9",
+      "title": "Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de voiries et voies de liaison en 2027 (2028) - Approbation des conditions et du mode de passation",
+      "buyer": "Commune de Arlon",
+      "municipalityINS": "81001",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/arlon/decisions/15-octobre-2026-19-00/marche-de-services-designation-dun-auteur-de-projet-pour-lentretien-extraordinaire-de-voiries-et-voies-de-liaison-en-2027-2028-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "3afcfe22a151b6a4f123e9d37e8f897a260752840e571ede2c3ce62f2ebcaaf5",
+        "stage": "project"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "screening": "review",
+      "score": 60,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/arlon/decisions/15-octobre-2026-19-00/marche-de-services-designation-dun-auteur-de-projet-pour-lentretien-extraordinaire-de-voiries-et-voies-de-liaison-en-2027-2028-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/arlon/decisions/15-octobre-2026-19-00/marche-de-services-designation-dun-auteur-de-projet-pour-lentretien-extraordinaire-de-voiries-et-voies-de-liaison-en-2027-2028-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/arlon/decisions/15-octobre-2026-19-00/marche-de-services-designation-dun-auteur-de-projet-pour-lentretien-extraordinaire-de-voiries-et-voies-de-liaison-en-2027-2028-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "3afcfe22a151b6a4f123e9d37e8f897a260752840e571ede2c3ce62f2ebcaaf5",
+        "session": {
+          "date": "2026-10-15",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 15 octobre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/arlon/decisions/15-octobre-2026-19-00/marche-de-services-designation-dun-auteur-de-projet-pour-lentretien-extraordinaire-de-voiries-et-voies-de-liaison-en-2027-2028-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:b2404fb94ce9b82b84",
+        "sha256": "3afcfe22a151b6a4f123e9d37e8f897a260752840e571ede2c3ce62f2ebcaaf5",
+        "format": "html",
+        "checkedAt": "2026-11-02T09:44:26.318Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant que le montant annuel estimé des trava",
+        "sourceUrl": "https://www.deliberations.be/arlon/decisions/15-octobre-2026-19-00/marche-de-services-designation-dun-auteur-de-projet-pour-lentretien-extraordinaire-de-voiries-et-voies-de-liaison-en-2027-2028-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "3afcfe22a151b6a4f123e9d37e8f897a260752840e571ede2c3ce62f2ebcaaf5"
+      },
+      "description": "Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant que le montant annuel estimé des travaux s’élève à +/- 1.200.000,00 € TVAC ; Considérant qu’une liste de priorités, à approuver par le Collège communal, sera établie par le Département Technique afin de déterminer les voiries et voies de liaison qui seront concernées par ces travaux d’entretien en 2027 et en 2028 ; Considérant que la mission d’auteur de projet intègre également : la coordination sécurité-santé (conception et réalisation) ; la surveillance globale du chantier. les investigations préalables à l’élaboration du cahier des charges de travaux ;",
+      "evidence": "Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant que le montant annuel estimé des travaux s’élève à +/- 1.200.000,00 € TVAC ; Considérant qu’une liste de priorités, à approuver par le Collège communal, sera établie par le Département Technique afin de déterminer les voiries et voies de liaison qui seront concernées par ces travaux d’entretien en 2027 et en 2028 ; Considérant que la mission d’auteur de projet intègre également : la coordination sécurité-santé (conception et réalisation) ; la surveillance globale du chantier. les investigations préalables à l’élaboration du cahier des charges de travaux ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant que le montant annuel estimé des travaux s’élève à +/- 1.200.000,00 € TVAC ; Considérant qu’une liste de priorités, à approuver par le Collège communal, sera établie par le Département Technique afin de déterminer les voiries et voies de liaison qui seront concernées par ces travaux d’entretien en 2027 et en 2028 ; Considérant que la mission d’auteur de projet intègre également : la coordination sécurité-santé (conception et réalisation) ; la surveillance globale du chantier. les investigations préalables à l’élaboration du cahier des charges de travaux ;",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant que le montant annuel estimé des travaux s’élève à +/- 1.200.000,00 € TVAC ; Considérant qu’une liste de priorités, à approuver par le Collège communal, sera établie par le Département Technique afin de déterminer les voiries et voies de liaison qui seront concernées par ces travaux d’entretien en 2027 et en 2028 ; Considérant que la mission d’auteur de projet intègre également : la coordination sécurité-santé (conception et réalisation) ; la surveillance globale du chantier. les investigations préalables à l’élaboration du cahier des charges de travaux ; Considérant que le marché est prévu pour une période d’un an reconductible 1 fois une période d’un an ;",
+          "page": null
+        },
+        {
+          "excerpt": "Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de voiries et voies de liaison en 2027 (2028) - Approbation des conditions et du mode de passation 15 Séance publique du Conseil 15 octobre 2026 (19:00) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de voiries et voies de liaison en 2027 (2028) - Approbation des conditions et du mode de passation Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) et l'article 57 ; Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "municipalNotices": [
+        {
+          "id": "local:faa89cec4833951a76f9",
+          "title": "13 Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de voiries et voies de liaison en 2027 (2028)   - Approbation des conditions et du mode de passation",
+          "buyer": "Commune de Arlon",
+          "municipalityINS": "81001",
+          "region": "Wallonie",
+          "source": "LOCALE",
+          "webSourceType": "municipal",
+          "opportunityType": "prospection",
+          "noticeKind": "prospection",
+          "webTypeEvidence": {
+            "kind": "prospection",
+            "reason": "ordre_du_jour_ou_projet_non_adopte",
+            "excerpt": "13 Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de voiries et voies de liaison en 2027 (2028) - Approbation des conditions et du mode de passation",
+            "sourceUrl": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/2026/ordre-du-jour-261015.pdf",
+            "page": 2,
+            "sha256": "9f33a9a13c2f5ecec2189ff7946a9169e66bf97b8800ade8260653529309dad6"
+          },
+          "opportunityStage": "décision ou besoin à vérifier",
+          "sector": "VRD",
+          "sectors": [
+            "VRD"
+          ],
+          "score": 60,
+          "screening": "review",
+          "qualification": {
+            "version": "2026-10-29",
+            "kind": "prospect",
+            "route": "local_signal",
+            "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+            "capacityStatus": "not_assessed"
+          },
+          "publication": "",
+          "deadline": "",
+          "sourceDocument": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/2026/ordre-du-jour-261015.pdf",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/2026/ordre-du-jour-261015.pdf",
+            "sha256": "9f33a9a13c2f5ecec2189ff7946a9169e66bf97b8800ade8260653529309dad6",
+            "session": {
+              "date": "2026-10-15",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Ordre du jour du Conseil du 15 octobre 2026",
+              "confidence": "explicit"
+            },
+            "document": {
+              "date": "2026-10-07",
+              "kind": "document",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Arlon, le 7 octobre 2026",
+              "confidence": "explicit"
+            },
+            "status": "identified"
+          },
+          "sourceExtraction": {
+            "method": "pdf_text",
+            "partial": false
+          },
+          "url": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/2026/ordre-du-jour-261015.pdf",
+          "cpv": [],
+          "description": "Document communal public. Extrait nécessitant une lecture de validation : 13 Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de voiries et voies de liaison en 2027 (2028)   - Approbation des conditions et du mode de passation",
+          "evidence": "13 Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de voiries et voies de liaison en 2027 (2028)   - Approbation des conditions et du mode de passation",
+          "municipalReference": null,
+          "municipalSection": "13 Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de voiries et voies de liaison en 2027 (2028)   - Approbation des conditions et du mode de passation",
+          "municipalEvidence": [
+            {
+              "page": 2,
+              "excerpt": "13 Marché de Services : Désignation d'un auteur de projet pour l'entretien extraordinaire de voiries et voies de liaison en 2027 (2028)   - Approbation des conditions et du mode de passation"
+            }
+          ],
+          "source_status": "extrait_pdf_a_verifier",
+          "sourceEvidencePage": 2,
+          "sourceEvidenceStatus": "found",
+          "sourceDocumentVersion": {
+            "documentId": "municipal-doc:72c6d6940390c23db7",
+            "sha256": "9f33a9a13c2f5ecec2189ff7946a9169e66bf97b8800ade8260653529309dad6",
+            "checkedAt": "2026-11-02T09:44:26.318Z",
+            "changedAt": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "local-html:12db5ef323e5da8c63d6",
+      "title": "Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX-EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\"",
+      "buyer": "Commune de Arlon",
+      "municipalityINS": "81001",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "other",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Hydraulique",
+      "sectors": [
+        "Hydraulique"
+      ],
+      "screening": "review",
+      "score": 60,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/arlon/decisions/23-septembre-2026-19-00/marche-de-services-convention-relative-aux-modalites-dexecution-des-missions-confiees-a-idelux-eau-etude-hydraulique-et-hydrologique-fouches-approbation-du-marche-in-house",
+      "sourceDocument": "https://www.deliberations.be/arlon/decisions/23-septembre-2026-19-00/marche-de-services-convention-relative-aux-modalites-dexecution-des-missions-confiees-a-idelux-eau-etude-hydraulique-et-hydrologique-fouches-approbation-du-marche-in-house",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/arlon/decisions/23-septembre-2026-19-00/marche-de-services-convention-relative-aux-modalites-dexecution-des-missions-confiees-a-idelux-eau-etude-hydraulique-et-hydrologique-fouches-approbation-du-marche-in-house",
+        "sha256": "04f7ac99634cffce8e04f68b9315b909bc1010a2c2080cb04694e76eaf2aa254",
+        "session": {
+          "date": "2026-09-23",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 23 septembre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/arlon/decisions/23-septembre-2026-19-00/marche-de-services-convention-relative-aux-modalites-dexecution-des-missions-confiees-a-idelux-eau-etude-hydraulique-et-hydrologique-fouches-approbation-du-marche-in-house"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:ba0304d80b5a0cdad9",
+        "sha256": "04f7ac99634cffce8e04f68b9315b909bc1010a2c2080cb04694e76eaf2aa254",
+        "format": "html",
+        "checkedAt": "2026-11-02T09:44:26.318Z"
+      },
+      "webTypeEvidence": {
+        "kind": "other",
+        "reason": "projet_de_mission_a_operateur_determine",
+        "excerpt": "Vu l’avis favorable rendu par la Directrice financière en date du 4 septembre 2026 ; décide, Article 1er : De passer un marché public afin de faire réaliser une mission d’études hydrologique et hydraulique sur Fouches po",
+        "sourceUrl": "https://www.deliberations.be/arlon/decisions/23-septembre-2026-19-00/marche-de-services-convention-relative-aux-modalites-dexecution-des-missions-confiees-a-idelux-eau-etude-hydraulique-et-hydrologique-fouches-approbation-du-marche-in-house",
+        "page": null,
+        "sha256": "04f7ac99634cffce8e04f68b9315b909bc1010a2c2080cb04694e76eaf2aa254"
+      },
+      "description": "Vu l’avis favorable rendu par la Directrice financière en date du 4 septembre 2026 ; décide, Article 1er : De passer un marché public afin de faire réaliser une mission d’études hydrologique et hydraulique sur Fouches pour un montant estimé à 32.760,00 € hors TVA ou 39.639,60 € TVA 21% comprise. Article 2 : De consulter à cette fin l’Intercommunale IDELUX EAU en application de l’exception du “contrôle in house”. Article 3 : D’approuver le projet de convention relative aux modalités d’exécution des missions confiées à IDELUX EAU au montant global estimé de 32.760,00 € hors TVA ou 39.639,60 € TVA 21% comprise. Article 4 : De financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, à l’article général 482/731-60 pour lequel un numéro de projet spécifique sera créé en modification budgétaire n°2. Article 5 : De charger le Collège communal d’assurer le suivi des modalités pratiques d’exécution des missions confiées à IDELUX EAU.",
+      "evidence": "Vu l’avis favorable rendu par la Directrice financière en date du 4 septembre 2026 ; décide, Article 1er : De passer un marché public afin de faire réaliser une mission d’études hydrologique et hydraulique sur Fouches pour un montant estimé à 32.760,00 € hors TVA ou 39.639,60 € TVA 21% comprise. Article 2 : De consulter à cette fin l’Intercommunale IDELUX EAU en application de l’exception du “contrôle in house”. Article 3 : D’approuver le projet de convention relative aux modalités d’exécution des missions confiées à IDELUX EAU au montant global estimé de 32.760,00 € hors TVA ou 39.639,60 € TVA 21% comprise. Article 4 : De financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, à l’article général 482/731-60 pour lequel un numéro de projet spécifique sera créé en modification budgétaire n°2. Article 5 : De charger le Collège communal d’assurer le suivi des modalités pratiques d’exécution des missions confiées à IDELUX EAU.",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu l’avis favorable rendu par la Directrice financière en date du 4 septembre 2026 ; décide, Article 1er : De passer un marché public afin de faire réaliser une mission d’études hydrologique et hydraulique sur Fouches pour un montant estimé à 32.760,00 € hors TVA ou 39.639,60 € TVA 21% comprise. Article 2 : De consulter à cette fin l’Intercommunale IDELUX EAU en application de l’exception du “contrôle in house”. Article 3 : D’approuver le projet de convention relative aux modalités d’exécution des missions confiées à IDELUX EAU au montant global estimé de 32.760,00 € hors TVA ou 39.639,60 € TVA 21% comprise. Article 4 : De financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, à l’article général 482/731-60 pour lequel un numéro de projet spécifique sera créé en modification budgétaire n°2. Article 5 : De charger le Collège communal d’assurer le suivi des modalités pratiques d’exécution des missions confiées à IDELUX EAU.",
+          "page": null
+        },
+        {
+          "excerpt": "Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX-EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\" 23 Séance publique du Conseil 23 septembre 2026 (19:00) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX-EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\" Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2016 relative aux marchés publics, notamment l’article 30 ; Considérant que la commune est associée à l’intercommunale IDELUX Eau ; Considérant qu’IDELUX EAU est une société coopérative intercommunale qui ne comporte pas de participation directe de capitaux privés ;",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant par conséquent qu’il n’y a pas lieu d’appliquer la loi relative aux marchés publics du 17 juin 2016 et partant qu’il n’y a pas lieu de procéder à une mise en concurrence ; Considérant qu'il est proposé de passer le marché par le biais de l’exception du “contrôle in house” ; Considérant que depuis plusieurs années, lors de fortes précipitations, les eaux du cours d’eau de la Semois, les eaux de ruissellement agricoles et coulées boueuses générées par le bassin versant contributif, ainsi que les eaux reprises dans les réseaux de collecte des eaux claires et des eaux usées convergent vers le centre du village de Fouches en occasionnant, de façon récurrente, des dommages importants chez les habitants (eaux dans les habitations) et mettant sous eaux certains tronçons de voiries ; Considérant que la Ville d’Arlon souhaite appréhender le fonctionnement hydrologique et hydraulique d’une partie du bassin versant contributif de la Semois combiné au fonctionnement hydraulique des réseaux de collecte et apporter des solutions pérennes à ces problèmes hydrauliques ; Considérant que pour ce faire, il est envisagé de faire réaliser une misson d’étude afin d’établir le fonctionnnement hydraulique de la Semois et des réseaux de collecte et le fonctionnement hydrologique du bassin versant contributif ainsi qu’à identifier les solutions à mettre en œuvre ; Considérant qu’il est envisa",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "municipalNotices": [
+        {
+          "id": "local:03adbc0d7e24daaa608e",
+          "title": "7   Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX - EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\"",
+          "buyer": "Commune de Arlon",
+          "municipalityINS": "81001",
+          "region": "Wallonie",
+          "source": "LOCALE",
+          "webSourceType": "municipal",
+          "opportunityType": "prospection",
+          "noticeKind": "other",
+          "webTypeEvidence": {
+            "kind": "other",
+            "reason": "projet_de_mission_a_operateur_determine",
+            "excerpt": "7 Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX - EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\" C.P.A.S. d'Arlon 8  Modifica",
+            "sourceUrl": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/2026/oj-23092026.pdf",
+            "page": 2,
+            "sha256": "bdbbbebce0a26bfa1cd10cf69fe970a200af132b17a37a9239372c690235178a"
+          },
+          "opportunityStage": "décision ou besoin à vérifier",
+          "sector": "Hydraulique",
+          "sectors": [
+            "Hydraulique"
+          ],
+          "score": 60,
+          "screening": "review",
+          "qualification": {
+            "version": "2026-10-29",
+            "kind": "prospect",
+            "route": "local_signal",
+            "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+            "capacityStatus": "not_assessed"
+          },
+          "publication": "",
+          "deadline": "",
+          "sourceDocument": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/2026/oj-23092026.pdf",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/2026/oj-23092026.pdf",
+            "sha256": "bdbbbebce0a26bfa1cd10cf69fe970a200af132b17a37a9239372c690235178a",
+            "session": {
+              "date": "2026-09-23",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Ordre du jour du Conseil du 23 septembre 2026",
+              "confidence": "explicit"
+            },
+            "document": {
+              "date": "2026-09-16",
+              "kind": "document",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Arlon, le 16 septembre 2026",
+              "confidence": "explicit"
+            },
+            "status": "identified"
+          },
+          "sourceExtraction": {
+            "method": "pdf_text",
+            "partial": false
+          },
+          "url": "https://www.arlon.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/2026/oj-23092026.pdf",
+          "cpv": [],
+          "description": "Document communal public. Extrait nécessitant une lecture de validation : 7   Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX - EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\" C.P.A.S. d'Arlon 8    Modifications du Statut Pécuniaire - Annexe 2 fixant les conditions de recrutement, d'évolution de carrière et de promotion du personnel",
+          "evidence": "7   Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX - EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\" C.P.A.S. d'Arlon 8    Modifications du Statut Pécuniaire - Annexe 2 fixant les conditions de recrutement, d'évolution de carrière et de promotion du personnel",
+          "municipalReference": null,
+          "municipalSection": "7   Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX - EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\"",
+          "municipalEvidence": [
+            {
+              "page": 2,
+              "excerpt": "7   Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX - EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\" C.P.A.S. d'Arlon 8    Modifications du Statut Pécuniaire - Annexe 2 fixant les conditions de recrutement, d'évolution de carrière et de promotion du personnel"
+            }
+          ],
+          "source_status": "extrait_pdf_a_verifier",
+          "sourceEvidencePage": 2,
+          "sourceEvidenceStatus": "found",
+          "sourceDocumentVersion": {
+            "documentId": "municipal-doc:b85740a31d9a802f76",
+            "sha256": "bdbbbebce0a26bfa1cd10cf69fe970a200af132b17a37a9239372c690235178a",
+            "checkedAt": "2026-11-02T09:44:26.318Z",
+            "changedAt": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "local-html:d1c016d61f5109b7d4dc",
+      "title": "Désignation d'un bureau d'études en techniques spéciales en charge de la préparation du renouvellement du contrat de maintenance et d'exploitation des installations techniques du centre culturel de Nivelles le Waux-Hall - Approbation des conditions et du mode de passation",
+      "buyer": "Commune de Nivelles",
+      "municipalityINS": "25072",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/nivelles/decisions/24-aout-2026-20-00/designation-dun-bureau-detudes-en-techniques-speciales-en-charge-de-la-preparation-du-renouvellement-du-contrat-de-maintenance-et-dexploitation-des-installations-techniques-du-centre-culturel-de-nivelles-le-waux-hall-approbation-des-conditions-et-du-mode",
+        "sha256": "fc5301c110fbb738a77394867a3feebb85f3dd14433a450472063740c6e0f384",
+        "stage": "decision_to_verify"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 49,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/nivelles/decisions/24-aout-2026-20-00/designation-dun-bureau-detudes-en-techniques-speciales-en-charge-de-la-preparation-du-renouvellement-du-contrat-de-maintenance-et-dexploitation-des-installations-techniques-du-centre-culturel-de-nivelles-le-waux-hall-approbation-des-conditions-et-du-mode",
+      "sourceDocument": "https://www.deliberations.be/nivelles/decisions/24-aout-2026-20-00/designation-dun-bureau-detudes-en-techniques-speciales-en-charge-de-la-preparation-du-renouvellement-du-contrat-de-maintenance-et-dexploitation-des-installations-techniques-du-centre-culturel-de-nivelles-le-waux-hall-approbation-des-conditions-et-du-mode",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/nivelles/decisions/24-aout-2026-20-00/designation-dun-bureau-detudes-en-techniques-speciales-en-charge-de-la-preparation-du-renouvellement-du-contrat-de-maintenance-et-dexploitation-des-installations-techniques-du-centre-culturel-de-nivelles-le-waux-hall-approbation-des-conditions-et-du-mode",
+        "sha256": "fc5301c110fbb738a77394867a3feebb85f3dd14433a450472063740c6e0f384",
+        "session": {
+          "date": "2026-08-24",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 24 août 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/nivelles/decisions/24-aout-2026-20-00/designation-dun-bureau-detudes-en-techniques-speciales-en-charge-de-la-preparation-du-renouvellement-du-contrat-de-maintenance-et-dexploitation-des-installations-techniques-du-centre-culturel-de-nivelles-le-waux-hall-approbation-des-conditions-et-du-mode"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:9ec4cc8baf56aded95",
+        "sha256": "fc5301c110fbb738a77394867a3feebb85f3dd14433a450472063740c6e0f384",
+        "format": "html",
+        "checkedAt": "2026-11-02T09:44:26.318Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Désignation d'un bureau d'études en techniques spéciales en charge de la préparation du renouvellement du contrat de maintenance et d'exploitation des installations techniques du centre culturel de Nivelles le Waux-Hall",
+        "sourceUrl": "https://www.deliberations.be/nivelles/decisions/24-aout-2026-20-00/designation-dun-bureau-detudes-en-techniques-speciales-en-charge-de-la-preparation-du-renouvellement-du-contrat-de-maintenance-et-dexploitation-des-installations-techniques-du-centre-culturel-de-nivelles-le-waux-hall-approbation-des-conditions-et-du-mode",
+        "page": null,
+        "sha256": "fc5301c110fbb738a77394867a3feebb85f3dd14433a450472063740c6e0f384"
+      },
+      "description": "Désignation d'un bureau d'études en techniques spéciales en charge de la préparation du renouvellement du contrat de maintenance et d'exploitation des installations techniques du centre culturel de Nivelles le Waux-Hall - Approbation des conditions et du mode de passation 24 Séance publique du Conseil 24 août 2026 (20:00) Point N°",
+      "evidence": "Désignation d'un bureau d'études en techniques spéciales en charge de la préparation du renouvellement du contrat de maintenance et d'exploitation des installations techniques du centre culturel de Nivelles le Waux-Hall - Approbation des conditions et du mode de passation 24 Séance publique du Conseil 24 août 2026 (20:00) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "Désignation d'un bureau d'études en techniques spéciales en charge de la préparation du renouvellement du contrat de maintenance et d'exploitation des installations techniques du centre culturel de Nivelles le Waux-Hall - Approbation des conditions et du mode de passation 24 Séance publique du Conseil 24 août 2026 (20:00) Point N°",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-1522"
+    },
+    {
+      "id": "local-html:0a9b1e18843dbaae64b2",
+      "title": "Étude de mobilité complémentaire à l'actualisation du Plan de mobilité (PCM) de la Ville de Tournai. Mode et des conditions de passation du marché. Approbation.",
+      "buyer": "Commune de Tournai",
+      "municipalityINS": "57081",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 48,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/tournai/decisions/28-septembre-2026-19-30/etude-de-mobilite-complementaire-a-lactualisation-du-plan-de-mobilite-pcm-de-la-ville-de-tournai-mode-et-des-conditions-de-passation-du-marche-approbation",
+      "sourceDocument": "https://www.deliberations.be/tournai/decisions/28-septembre-2026-19-30/etude-de-mobilite-complementaire-a-lactualisation-du-plan-de-mobilite-pcm-de-la-ville-de-tournai-mode-et-des-conditions-de-passation-du-marche-approbation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/tournai/decisions/28-septembre-2026-19-30/etude-de-mobilite-complementaire-a-lactualisation-du-plan-de-mobilite-pcm-de-la-ville-de-tournai-mode-et-des-conditions-de-passation-du-marche-approbation",
+        "sha256": "d88203a0ced40aea74ca41ad030bb9c716acf3748a0b29de92599eae15736e22",
+        "session": {
+          "date": "2026-09-28",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 28 septembre 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/tournai/decisions/28-septembre-2026-19-30/etude-de-mobilite-complementaire-a-lactualisation-du-plan-de-mobilite-pcm-de-la-ville-de-tournai-mode-et-des-conditions-de-passation-du-marche-approbation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:df0ea2afa440e2f679",
+        "sha256": "d88203a0ced40aea74ca41ad030bb9c716acf3748a0b29de92599eae15736e22",
+        "format": "html",
+        "checkedAt": "2026-11-02T09:44:26.318Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "À l'unanimité; DÉCIDE : Article 1er : d'approuver le cahier des charges N° 2026/PCM et le montant estimé du marché “Etude de mobilité complémentaire à l'actualisation du Plan de mobilité (PCM) de la Ville de Tournai”, ét",
+        "sourceUrl": "https://www.deliberations.be/tournai/decisions/28-septembre-2026-19-30/etude-de-mobilite-complementaire-a-lactualisation-du-plan-de-mobilite-pcm-de-la-ville-de-tournai-mode-et-des-conditions-de-passation-du-marche-approbation",
+        "page": null,
+        "sha256": "d88203a0ced40aea74ca41ad030bb9c716acf3748a0b29de92599eae15736e22"
+      },
+      "description": "À l'unanimité; DÉCIDE : Article 1er : d'approuver le cahier des charges N° 2026/PCM et le montant estimé du marché “Etude de mobilité complémentaire à l'actualisation du Plan de mobilité (PCM) de la Ville de Tournai”, établis par la Division voirie-mobilité. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 123.400,00 € hors TVA ou 149.314,00 €, 21% TVA comprise. Article 2 : de passer le marché par la procédure négociée directe avec publication préalable. Article 3 : de compléter, d'approuver et d'envoyer l'avis de marché au niveau national. Article 4 : de financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, article 930/733-60 (n° de projet 20260020).",
+      "evidence": "À l'unanimité; DÉCIDE : Article 1er : d'approuver le cahier des charges N° 2026/PCM et le montant estimé du marché “Etude de mobilité complémentaire à l'actualisation du Plan de mobilité (PCM) de la Ville de Tournai”, établis par la Division voirie-mobilité. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 123.400,00 € hors TVA ou 149.314,00 €, 21% TVA comprise. Article 2 : de passer le marché par la procédure négociée directe avec publication préalable. Article 3 : de compléter, d'approuver et d'envoyer l'avis de marché au niveau national. Article 4 : de financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, article 930/733-60 (n° de projet 20260020).",
+      "municipalEvidence": [
+        {
+          "excerpt": "À l'unanimité; DÉCIDE : Article 1er : d'approuver le cahier des charges N° 2026/PCM et le montant estimé du marché “Etude de mobilité complémentaire à l'actualisation du Plan de mobilité (PCM) de la Ville de Tournai”, établis par la Division voirie-mobilité. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 123.400,00 € hors TVA ou 149.314,00 €, 21% TVA comprise. Article 2 : de passer le marché par la procédure négociée directe avec publication préalable. Article 3 : de compléter, d'approuver et d'envoyer l'avis de marché au niveau national. Article 4 : de financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, article 930/733-60 (n° de projet 20260020).",
           "page": null
         }
       ],

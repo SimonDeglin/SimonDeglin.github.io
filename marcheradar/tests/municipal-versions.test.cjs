@@ -2,7 +2,7 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
 const api=require('../tools/communes-documents.cjs'),detail=require('../detail-phase2.js');
 const url='https://www.commune-test.be/conseil/pv.pdf';
-const pdf={url,title:'PV public'};
+const pdf={url,title:'PV public du 28 octobre 2026'};
 const commune={ins:'62001',name:'Test',readDocuments:[],documentsRead:0,opportunities:0,deliberationSources:[{url:'https://www.commune-test.be/conseil/',status:'page_accessible'}]};
 const quote='Le conseil decide de lancer un marche de services pour un bureau d etudes avec leves topographiques de la place communale.';
 const other='Le conseil approuve une mission de bornage et division parcellaire avec designation du geometre pour les terrains communaux.';
@@ -71,7 +71,7 @@ test('collecte intégrée : modification, réponse 304 et panne conservent les d
  fs.writeFileSync(inventoryPath,JSON.stringify({communes:[commune]}));fs.writeFileSync(dataPath,JSON.stringify({items:[],sources:{}}));
  let version=1,extractions=0;
  const fetchFn=async(u,o)=>{
-  if(u.endsWith('/conseil/'))return new Response('<a href="/conseil/pv.pdf">PV public</a>');
+  if(u.endsWith('/conseil/'))return new Response('<a href="/conseil/pv.pdf">PV public du 28 octobre 2026</a>');
   if(version===3)return new Response(null,{status:503});
   if(version===4){assert.equal(o.headers['If-None-Match'],'"v2"');return new Response(null,{status:304});}
   return new Response(file(version===1?quote:other).bytes,{headers:{etag:'"v'+version+'"'}});

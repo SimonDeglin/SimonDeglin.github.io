@@ -3,7 +3,7 @@
 'use strict';
 const fold=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[’']/g,' ').replace(/\b(?:administration|communale|commune|ville|de|d|du)\b/g,' ').replace(/[^a-z0-9]/g,' ').replace(/\s+/g,' ').trim();
 const refs=s=>[...new Set([...String(s||'').matchAll(/\b(20\d{2})[./-](\d{2,6})\b/g)].map(m=>m[1]+'.'+m[2]))];
-function canonicalTitle(title){return fold(String(title||'').replace(/^\s*\d{1,3}[.)]\s+/,''))}
+function canonicalTitle(title){return fold(String(title||'').replace(/^\s*\d{1,3}(?:[.)]\s+|\s+)/,''))}
 function insert(items,notice){
  const name=canonicalTitle(notice.title),session=notice.sourceDocumentDates?.session?.date;
  if(name.length>=45&&!/opportunite a verifier/.test(name)&&session){const same=items.filter(m=>m.source==='LOCALE'&&fold(m.buyer)===fold(notice.buyer)&&canonicalTitle(m.title)===name&&m.sourceDocumentDates?.session?.date===session);if(same.length===1)return {items:items.map(m=>m.id!==same[0].id?m:{...m,municipalProcedure:m.municipalProcedure||notice.municipalProcedure||null,municipalNotices:[...(m.municipalNotices||[]).filter(n=>n.sourceDocument!==notice.sourceDocument),notice]}),linked:true};}
