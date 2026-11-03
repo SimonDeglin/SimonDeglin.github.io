@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-03T03:05:41.869Z",
+      "last_attempt": "2026-11-03T20:18:09.416Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -67,24 +67,24 @@
       "total": 261,
       "sitesRepertories": 261,
       "sitesVerifies": 261,
-      "deliberationsConnectees": 96,
+      "deliberationsConnectees": 111,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 337,
-      "opportunities": 115,
+      "documentsRead": 370,
+      "opportunities": 117,
       "sitesChecked": 261,
       "candidatePages": 227,
-      "sourceErrors": 56,
-      "htmlDocumentsRead": 519
+      "sourceErrors": 61,
+      "htmlDocumentsRead": 740
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-03T03:05:41.869Z",
-      "last_success": "2026-11-03T03:05:41.869Z",
+      "last_attempt": "2026-11-03T20:18:09.416Z",
+      "last_success": "2026-11-03T20:18:09.416Z",
       "last_batch": 24,
       "documents_checked": 39,
       "documents_read": 1,
@@ -92,11 +92,11 @@
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 10,
+      "errors_count": 13,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 195,
+      "html_documents_read": 222,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 18,
+      "recent_municipal_signals": 20,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1363,
     "matched_current_run": 8,
-    "records": 247,
+    "records": 249,
     "review_count": 151,
     "award_notice_count": 338,
     "awarded_market_matches": 1,
@@ -17844,6 +17844,187 @@
       "documentInventory": [],
       "consultationUrls": [],
       "documentsCheckedAt": "2026-11-03T13:00:00.605Z"
+    },
+    {
+      "id": "local:dcebb34a9dc098f73b46",
+      "title": "22. Marché public : Désignation d' un auteur de projet en vue de la réhabilitation climatique de la crèche « Les P'tites Chouettes » à Masbourg - Approbation des conditions et du mode de passation",
+      "sourceDocumentTitle": "Ordre du jour du Conseil communal du 26 octobre 2026 (.pdf) 500.9 KB",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Nassogne",
+      "municipalityINS": "83040",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "22. Marché public : Désignation d' un auteur de projet en vue de la réhabilitation climatique de la crèche « Les P'tites Chouettes » à Masbourg - Approbation des conditions et du mode de passation",
+        "sourceUrl": "https://www.nassogne.be/fr/ma-commune/vie-politique/conseil-communal/publications/ordres-jour/2025/cc_20261026_convocation.pdf",
+        "page": 1,
+        "sha256": "d8be053e7b03fbe122c814fda9ce4f5e2351291cfb7188b87f1b3a95501878d6"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.nassogne.be/fr/ma-commune/vie-politique/conseil-communal/publications/ordres-jour/2025/cc_20261026_convocation.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.nassogne.be/fr/ma-commune/vie-politique/conseil-communal/publications/ordres-jour/2025/cc_20261026_convocation.pdf",
+        "sha256": "d8be053e7b03fbe122c814fda9ce4f5e2351291cfb7188b87f1b3a95501878d6",
+        "session": null,
+        "document": {
+          "date": "2026-10-26",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "26 octobre 2026",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.nassogne.be/fr/ma-commune/vie-politique/conseil-communal/publications/ordres-jour/2025/cc_20261026_convocation.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 22. Marché public : Désignation d' un auteur de projet en vue de la réhabilitation climatique de la crèche « Les P'tites Chouettes » à Masbourg - Approbation des conditions et du mode de passation",
+      "evidence": "22. Marché public : Désignation d' un auteur de projet en vue de la réhabilitation climatique de la crèche « Les P'tites Chouettes » à Masbourg - Approbation des conditions et du mode de passation",
+      "municipalReference": null,
+      "municipalSection": "22. Marché public : Désignation d' un auteur de projet en vue de la réhabilitation climatique de la crèche « Les P'tites Chouettes » à Masbourg - Approbation des conditions et du mode de passation",
+      "municipalEvidence": [
+        {
+          "page": 1,
+          "excerpt": "22. Marché public : Désignation d' un auteur de projet en vue de la réhabilitation climatique de la crèche « Les P'tites Chouettes » à Masbourg - Approbation des conditions et du mode de passation"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 1,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6aacf9fc5a7ef34704",
+        "sha256": "d8be053e7b03fbe122c814fda9ce4f5e2351291cfb7188b87f1b3a95501878d6",
+        "checkedAt": "2026-11-03T20:18:09.416Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local-html:616327487477edf2bc29",
+      "title": "624.13 – MARCHE PUBLIC DE SERVICES D'AUTEUR DE PROJET POUR L'AMENAGEMENT D'UNE PARTIE DE L'ETAGE DU BATIMENT POLYVALENT EN SERVICE DE MINI-ACCUEIL - Approbation des conditions et du mode de passation.",
+      "sourceDocumentTitle": "624.13 – MARCHE PUBLIC DE SERVICES D'AUTEUR DE PROJET POUR L'AMENAGEMENT D'UNE PARTIE DE L'ETAGE DU BATIMENT POLYVALENT EN SERVICE DE MINI-ACCUEIL - Approbation des conditions et du mode de passation.",
+      "missionEvidence": {
+        "excerpt": "endu un avis de légalité positif avec remarques le 3 septembre 2026 ; DECIDE à l’unanimité Article 1er : D'approuver le cahier des charges N° SC-2026/624.13 (version corrigée) et le montant estimé du marché “MARCHE PUBLIC DE SERVICES D'AUTEUR DE PROJET POUR L'AMENAGEMENT D'UNE PARTIE DE L'ETAGE DU BATIMENT POLYVALENT EN SERVICE DE MINI-ACCUEIL”, établis par l'Administration Communale de Tellin. Les conditions ",
+        "sourceUrl": "https://www.deliberations.be/tellin/decisions/15-septembre-2026-20-00/624-13-marche-public-de-services-dauteur-de-projet-pour-lamenagement-dune-partie-de-letage-du-batiment-polyvalent-en-service-de-mini-accueil-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "76f33a8d4869f4e2d042737b83ca3f96ca7482743275d8876f6004d47dd18f60"
+      },
+      "buyer": "Commune de Tellin",
+      "municipalityINS": "84068",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/tellin/decisions/15-septembre-2026-20-00/624-13-marche-public-de-services-dauteur-de-projet-pour-lamenagement-dune-partie-de-letage-du-batiment-polyvalent-en-service-de-mini-accueil-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "76f33a8d4869f4e2d042737b83ca3f96ca7482743275d8876f6004d47dd18f60",
+        "stage": "decision_to_verify"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "endu un avis de légalité positif avec remarques le 3 septembre 2026 ; DECIDE à l’unanimité Article 1er : D'approuver le cahier des charges N° SC-2026/624.13 (version corrigée) et le montant estimé du marché “MARCHE PUBLIC DE SERVICES D'AUTEUR DE PROJET POUR L'AMENAGEMENT D'UNE PARTIE DE L'ETAGE DU BATIMENT POLYVALENT EN SERVICE DE MINI-ACCUEIL”, établis par l'Administration Communale de Tellin. Les conditions ",
+        "mission": "DECIDE à l’unanimité Article 1er : D'approuver le cahier des charges N° SC-2026/624.13 (version corrigée) et le montant estimé du marché “MARCHE PUBLIC DE SERVICES D'AUTEUR DE PROJET POUR L'AMENAGEMENT D'UNE PARTIE DE L'ETAGE DU BATIMENT POLYVALENT EN SERVICE ",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/tellin/decisions/15-septembre-2026-20-00/624-13-marche-public-de-services-dauteur-de-projet-pour-lamenagement-dune-partie-de-letage-du-batiment-polyvalent-en-service-de-mini-accueil-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/tellin/decisions/15-septembre-2026-20-00/624-13-marche-public-de-services-dauteur-de-projet-pour-lamenagement-dune-partie-de-letage-du-batiment-polyvalent-en-service-de-mini-accueil-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/tellin/decisions/15-septembre-2026-20-00/624-13-marche-public-de-services-dauteur-de-projet-pour-lamenagement-dune-partie-de-letage-du-batiment-polyvalent-en-service-de-mini-accueil-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "76f33a8d4869f4e2d042737b83ca3f96ca7482743275d8876f6004d47dd18f60",
+        "session": {
+          "date": "2026-09-15",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 15 septembre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/tellin/decisions/15-septembre-2026-20-00/624-13-marche-public-de-services-dauteur-de-projet-pour-lamenagement-dune-partie-de-letage-du-batiment-polyvalent-en-service-de-mini-accueil-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:4e7a9433c02fe59b0d",
+        "sha256": "76f33a8d4869f4e2d042737b83ca3f96ca7482743275d8876f6004d47dd18f60",
+        "format": "html",
+        "checkedAt": "2026-11-03T20:18:09.416Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "624.13 – MARCHE PUBLIC DE SERVICES D'AUTEUR DE PROJET POUR L'AMENAGEMENT D'UNE PARTIE DE L'ETAGE DU BATIMENT POLYVALENT EN SERVICE DE MINI-ACCUEIL - Approbation des conditions et du mode de passation. 15 Séance publique",
+        "sourceUrl": "https://www.deliberations.be/tellin/decisions/15-septembre-2026-20-00/624-13-marche-public-de-services-dauteur-de-projet-pour-lamenagement-dune-partie-de-letage-du-batiment-polyvalent-en-service-de-mini-accueil-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "76f33a8d4869f4e2d042737b83ca3f96ca7482743275d8876f6004d47dd18f60"
+      },
+      "description": "624.13 – MARCHE PUBLIC DE SERVICES D'AUTEUR DE PROJET POUR L'AMENAGEMENT D'UNE PARTIE DE L'ETAGE DU BATIMENT POLYVALENT EN SERVICE DE MINI-ACCUEIL - Approbation des conditions et du mode de passation. 15 Séance publique du Conseil 15 septembre 2026 (20:00) Point N°",
+      "evidence": "624.13 – MARCHE PUBLIC DE SERVICES D'AUTEUR DE PROJET POUR L'AMENAGEMENT D'UNE PARTIE DE L'ETAGE DU BATIMENT POLYVALENT EN SERVICE DE MINI-ACCUEIL - Approbation des conditions et du mode de passation. 15 Séance publique du Conseil 15 septembre 2026 (20:00) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "624.13 – MARCHE PUBLIC DE SERVICES D'AUTEUR DE PROJET POUR L'AMENAGEMENT D'UNE PARTIE DE L'ETAGE DU BATIMENT POLYVALENT EN SERVICE DE MINI-ACCUEIL - Approbation des conditions et du mode de passation. 15 Séance publique du Conseil 15 septembre 2026 (20:00) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Matière Administration générale 624.13 – MARCHE PUBLIC DE SERVICES D'AUTEUR DE PROJET POUR L'AMENAGEMENT D'UNE PARTIE DE L'ETAGE DU BATIMENT POLYVALENT EN SERVICE DE MINI-ACCUEIL - Approbation des conditions et du mode de passation. - Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; - Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; - Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) ; - Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ;",
+          "page": null
+        },
+        {
+          "excerpt": "- Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; - Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; - Considérant le cahier des charges N° SC-2026/624.13 (version corrigée) relatif au marché “MARCHE PUBLIC DE SERVICES D'AUTEUR DE PROJET POUR L'AMENAGEMENT D'UNE PARTIE DE L'ETAGE DU BATIMENT POLYVALENT EN SERVICE DE MINI-ACCUEIL” établi par l'Administration Communale de Tellin ; - Considérant que le montant estimé de ce marché s'élève à 12.396,69 € hors TVA ou 14.999,99 €, 21% TVA comprise ; - Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; - Considérant qu’il n’y a pas de crédit permettant cette dépense inscrit au budget 2026 ; - Considérant que, sous réserve d'approbation du budget, le crédit sera inscrit lors de la prochaine modification budgétaire ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
     }
   ]
 }
