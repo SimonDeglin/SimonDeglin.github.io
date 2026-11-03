@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-02T23:34:39.361Z",
+  "generated_at": "2026-11-03T12:49:40.171Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-11-02 : 1410 avis lus, 1 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-11-03 : 1363 avis lus, 1 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-11-02T23:36:10.926Z",
-      "scanned": 2575,
-      "retained": 37,
-      "period_from": "2026-10-19",
-      "period_to": "2026-11-02",
-      "pages": 103,
+      "last_success": "2026-11-03T12:51:41.585Z",
+      "scanned": 2475,
+      "retained": 36,
+      "period_from": "2026-10-20",
+      "period_to": "2026-11-03",
+      "pages": 99,
       "complete": true,
-      "raw_candidates": 2554,
-      "oldest_seen": "2026-10-16",
-      "last_attempt": "2026-11-02T23:36:10.926Z",
+      "raw_candidates": 2448,
+      "oldest_seen": "2026-10-19",
+      "last_attempt": "2026-11-03T12:51:41.585Z",
       "last_error": null,
-      "last_complete_success": "2026-11-02T23:36:10.926Z"
+      "last_complete_success": "2026-11-03T12:51:41.585Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-11-02T23:37:58.579Z",
+      "last_success": "2026-11-03T12:54:38.221Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -104,15 +104,15 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 103 page(s) parcourue(s) depuis 2026-10-19.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 99 page(s) parcourue(s) depuis 2026-10-20.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
-    "scanned": 1410,
-    "matched_current_run": 10,
-    "records": 245,
-    "review_count": 149,
-    "award_notice_count": 347,
+    "scanned": 1363,
+    "matched_current_run": 8,
+    "records": 247,
+    "review_count": 151,
+    "award_notice_count": 338,
     "awarded_market_matches": 1,
     "award_fields_requested": false,
     "retained_as_excluded": 36,
@@ -125,37 +125,37 @@
     "queries": [
       {
         "source": "Acheteurs belges",
-        "from": "20261022",
-        "to": "20261028",
-        "found": 426,
-        "reported": 426
+        "from": "20261023",
+        "to": "20261029",
+        "found": 435,
+        "reported": 435
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261022",
-        "to": "20261028",
-        "found": 409,
-        "reported": 409
+        "from": "20261023",
+        "to": "20261029",
+        "found": 418,
+        "reported": 418
       },
       {
         "source": "Acheteurs belges",
-        "from": "20261029",
-        "to": "20261102",
-        "found": 292,
-        "reported": 292
+        "from": "20261030",
+        "to": "20261103",
+        "found": 257,
+        "reported": 257
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261029",
-        "to": "20261102",
-        "found": 283,
-        "reported": 283
+        "from": "20261030",
+        "to": "20261103",
+        "found": 253,
+        "reported": 253
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2575,
-    "bosa_imported": 37,
-    "bosa_pages": 103,
+    "bosa_scanned": 2475,
+    "bosa_imported": 36,
+    "bosa_pages": 99,
     "local_documents": 34,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -171,16 +171,16 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "avis_attribution_analyse_separement": 347,
-      "travaux_execution": 116,
-      "acheteur_flamand": 173,
-      "aucun_signal_metier": 442,
-      "avis_neerlandais": 152,
-      "objet_hors_domaine": 70,
-      "fournitures_et_location": 54,
-      "formule_administrative_sans_signal_metier": 19,
-      "assurance_ou_nettoyage": 18,
-      "qualifie_review": 17,
+      "travaux_execution": 111,
+      "avis_attribution_analyse_separement": 338,
+      "avis_neerlandais": 150,
+      "aucun_signal_metier": 429,
+      "acheteur_flamand": 182,
+      "objet_hors_domaine": 58,
+      "assurance_ou_nettoyage": 16,
+      "fournitures_et_location": 45,
+      "formule_administrative_sans_signal_metier": 18,
+      "qualifie_review": 14,
       "qualifie_main": 2
     }
   },
@@ -271,6 +271,67 @@
         {
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/c06df4e8-ca24-4680-bae2-745e5550a33f/general"
+        }
+      ]
+    },
+    {
+      "id": "bosa:4dd389d4-af5f-4380-a9f0-a5e997ab8b36",
+      "publicationWorkspaceId": "4dd389d4-af5f-4380-a9f0-a5e997ab8b36",
+      "noticeId": "3390b37f-69f5-48e2-a894-a509854c4ce4",
+      "procedureIdentifier": "de06be4d-05d3-4947-96d1-95214417f420",
+      "internalReference": "2026-141_pub01",
+      "title": "Prestations de modélisation 3D et réalisation de rendus photoréalistes d'un projet d'aménagement d'espace public chaussée de Boondael.",
+      "buyer": "Commune d'Ixelles - Gemeente Elsene",
+      "region": "Bruxelles",
+      "languages": [
+        "NL",
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 62,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "unknown",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "projet_indirect",
+      "publication": "2026-11-02",
+      "deadline": "",
+      "cpv": [
+        "72242000"
+      ],
+      "description": "Prestations de modélisation 3D et réalisation de rendus photoréalistes d'un projet d'aménagement d'espace public chaussée de Boondael.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "2026-141_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/4dd389d4-af5f-4380-a9f0-a5e997ab8b36/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/4dd389d4-af5f-4380-a9f0-a5e997ab8b36/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "2026-141_pub01",
+          "url": "https://www.publicprocurement.be/publication-workspaces/4dd389d4-af5f-4380-a9f0-a5e997ab8b36/general",
+          "publicationDate": "2026-11-02",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-02T23:43:06.821Z",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/4dd389d4-af5f-4380-a9f0-a5e997ab8b36/general"
         }
       ]
     },
@@ -5489,7 +5550,7 @@
           "versionId": "36488d00-f30c-407b-abf7-ea1924b6b999",
           "documentId": "917f42c5-0419-4611-8398-5561fefe4efc",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5515,7 +5576,7 @@
           "versionId": "26b15544-17fc-43c0-826c-1322f33b9850",
           "documentId": "20364704-82a0-4eb0-a213-7965e3328061",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5567,7 +5628,7 @@
           "versionId": "f5ff3774-83d7-49c0-abe1-28e026816900",
           "documentId": "ff53ea2a-b24f-4586-b315-523295f56f5c",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5580,7 +5641,7 @@
           "versionId": "8228202b-2303-4eba-8e13-0fe820c5023d",
           "documentId": "ac74d28e-0bfa-4c78-af2b-da7f05b117dd",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5613,7 +5674,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-02T13:39:36.111Z",
+      "documentsCheckedAt": "2026-11-03T12:57:31.909Z",
       "documentAnalyses": [
         {
           "documentId": "7259aed6-32b5-4e0b-88c0-ffa7fa606658",
@@ -7712,7 +7773,7 @@
       ],
       "score": 62,
       "screening": "review",
-      "publication": "2026-10-07",
+      "publication": "2026-11-03",
       "deadline": "",
       "cpv": [
         "73220000",
@@ -7729,6 +7790,19 @@
       "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/89cf5bb4-298c-469e-a617-808e4dd53e0a/documents",
       "documentsPageSource": "public_api_200",
       "documentInventory": [
+        {
+          "id": "0115f3b0-00b1-4ff6-84f2-fdb1a386a1e4",
+          "title": "ADDENDUM N 01 to the Teander document BEL23010-10032.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "efbb5e5d-0d42-4d69-99a3-e7bcfb502609",
+          "documentId": "eb0bbab4-5b42-4747-910c-72b2656c693d",
+          "activatedAt": "2026-11-03T12:17:45.014335",
+          "language": "EN",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/89cf5bb4-298c-469e-a617-808e4dd53e0a/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
         {
           "id": "8a60620d-002e-43b9-931f-b69d5cd21b59",
           "title": "TD_Consultancy for Mapping and Analysis of NAtional Policies and Strategies on Agroecology in Rwanda_BEL23010-10032_Final.pdf",
@@ -7752,7 +7826,7 @@
           "activatedAt": "2026-10-07T14:03:45.017283"
         }
       ],
-      "documentsCheckedAt": "2026-10-15T20:01:13.467Z",
+      "documentsCheckedAt": "2026-11-03T12:58:50.055Z",
       "matchReason": "projet_indirect",
       "screeningReason": null,
       "officialSources": [
@@ -14114,6 +14188,99 @@
       "screeningReason": null
     },
     {
+      "id": "local-html:dbb5276a5057d5c3aff0",
+      "title": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation",
+      "sourceDocumentTitle": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation",
+      "missionEvidence": {
+        "excerpt": "Après en avoir délibéré ; DECIDE : Art. 1er : D'approuver le cahier des charges n° 2026-844 et le montant estimé du marché “Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux”, établis par le Service Marchés publics. Les conditions sont fi",
+        "sourceUrl": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "ddc76b07a936bfe68e13d29e9d107692e18f22a330b00131926850a995903fba"
+      },
+      "buyer": "Commune de Rendeux",
+      "municipalityINS": "83044",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "ddc76b07a936bfe68e13d29e9d107692e18f22a330b00131926850a995903fba",
+        "stage": "project"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "Après en avoir délibéré ; DECIDE : Art. 1er : D'approuver le cahier des charges n° 2026-844 et le montant estimé du marché “Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux”, établis par le Service Marchés publics. Les conditions sont fi",
+        "mission": "DECIDE : Art. 1er : D'approuver le cahier des charges n° 2026-844 et le montant estimé du marché “Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux”, établis par",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "ddc76b07a936bfe68e13d29e9d107692e18f22a330b00131926850a995903fba",
+        "session": {
+          "date": "2026-11-09",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 09 novembre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:055b9b2941601c2511",
+        "sha256": "ddc76b07a936bfe68e13d29e9d107692e18f22a330b00131926850a995903fba",
+        "format": "html",
+        "checkedAt": "2026-11-03T03:05:41.869Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation 9 Séance publique",
+        "sourceUrl": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "ddc76b07a936bfe68e13d29e9d107692e18f22a330b00131926850a995903fba"
+      },
+      "description": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation 9 Séance publique du Conseil 09 novembre 2026 (20:00) Point N°",
+      "evidence": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation 9 Séance publique du Conseil 09 novembre 2026 (20:00) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation 9 Séance publique du Conseil 09 novembre 2026 (20:00) Point N°",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-844",
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
       "id": "communal:c3599ff87890bfb78368",
       "title": "Prospection · Beyne-Heusay · 17) Règlement complémentaire de roulage - Création d’un emplacement de stationnement pour personnes handicapées - Plac…",
       "buyer": "Commune de Beyne-Heusay",
@@ -17442,149 +17609,241 @@
       "screeningReason": null
     },
     {
-      "id": "bosa:4dd389d4-af5f-4380-a9f0-a5e997ab8b36",
-      "publicationWorkspaceId": "4dd389d4-af5f-4380-a9f0-a5e997ab8b36",
-      "noticeId": "3390b37f-69f5-48e2-a894-a509854c4ce4",
-      "procedureIdentifier": "de06be4d-05d3-4947-96d1-95214417f420",
-      "internalReference": "2026-141_pub01",
-      "title": "Prestations de modélisation 3D et réalisation de rendus photoréalistes d'un projet d'aménagement d'espace public chaussée de Boondael.",
-      "buyer": "Commune d'Ixelles - Gemeente Elsene",
+      "id": "bosa:5e50b6fb-30a8-4f08-9d0c-f42ec414aae1",
+      "publicationWorkspaceId": "5e50b6fb-30a8-4f08-9d0c-f42ec414aae1",
+      "noticeId": "d5587049-64f2-4e3c-8feb-8fa728602e5b",
+      "procedureIdentifier": "ba27d43e-2bf8-487b-a2c3-7383ac93c58e",
+      "internalReference": "FAC-3454_pub01",
+      "title": "Suivi des travaux de restauration de la Ferme du Rouge-Cloître  située à 1160 Bruxelles",
+      "buyer": "Service Facilities",
       "region": "Bruxelles",
       "languages": [
         "NL",
         "FR"
       ],
-      "sector": "VRD",
+      "sector": "Qualif",
       "sectors": [
-        "VRD"
+        "Qualif"
       ],
-      "score": 62,
+      "score": 55,
       "screening": "review",
       "qualification": {
         "version": "2026-10-29",
-        "kind": "unknown",
+        "kind": "services",
         "route": "scope",
-        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
         "capacityStatus": "not_assessed"
       },
-      "matchReason": "projet_indirect",
-      "publication": "2026-11-02",
+      "matchReason": "mission_globale_a_qualifier",
+      "publication": "2026-11-03",
+      "deadline": "2026-11-26T11:00:00+01:00",
+      "cpv": [
+        "71200000"
+      ],
+      "description": "Le présent marché a dès lors pour objet de désigner un nouvel auteur de projet chargé exclusivement du suivi de l’exécution des travaux de restauration, dont le coût est actuellement estimé à 2.147.432,29 € HTVA.  Le marché comporte les prestations ordinaires incombant aux services d’architectures et autres services de la catégorie 12 en terme de suivi des travaux, d’assistance au maître de l’ouvrage, vérification des états d’avancement et suivi administratif, technique et financier du chantier.  aux fins de la restauration du bien.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "FAC-3454_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "0badf0f8-f99a-45bf-9236-99a759487991",
+          "title": "FAC_3454_Inventaire à compléter_NL.xls",
+          "kind": "bill_of_quantities",
+          "fileType": "xls",
+          "versionId": "8b590e52-44d2-4616-b2cd-82fd63a5de43",
+          "documentId": "e860e75c-b841-4db2-ade8-2abe61b721a4",
+          "activatedAt": "2026-11-03T10:12:45.019251",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "4e49ae2f-fd1f-4aba-97f7-30b280020264",
+          "title": "FAC_3454_CSC_NL.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "ce8e9634-ae25-402b-a450-b63a7cbe73e3",
+          "documentId": "478024b9-9e2e-4a11-953b-2d55ad9e8310",
+          "activatedAt": "2026-11-03T10:12:45.019251",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "6ee7f691-93a7-4b27-bc97-fb9cc7d78be0",
+          "title": "FAC_3454_Inventaire à compléter_FR.xls",
+          "kind": "bill_of_quantities",
+          "fileType": "xls",
+          "versionId": "9ebb4fc7-7c80-40ad-beb8-84a2d25b349f",
+          "documentId": "8331dd1c-3045-474a-b0c0-dcdc17b2a016",
+          "activatedAt": "2026-11-03T10:12:45.019251",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "74a2eb28-e95e-4545-b410-7e6c87a32e99",
+          "title": "FAC_3454_Formulaire de soumission_NL.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "ca3daa76-b5ef-4d7d-b8c6-6d7cbf38261e",
+          "documentId": "2c63019f-b8f3-469b-83c8-6c0fb8ddf9ee",
+          "activatedAt": "2026-11-03T10:12:45.019251",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "78c46616-88cb-4b33-9102-7d6e615a9c36",
+          "title": "FAC_3454_Formulaire de soumission_FR.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "7e4808d8-fc0e-4193-9488-2c600999fef3",
+          "documentId": "df5c1a1a-79a8-4a97-956c-446a8a049e3e",
+          "activatedAt": "2026-11-03T10:12:45.019251",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "8e087f83-dac4-4901-bf25-18bae8b34d1b",
+          "title": "FAC_3454 - Annexe transparence_FR.pdf",
+          "kind": "annex",
+          "fileType": "pdf",
+          "versionId": "aac3bbfc-eb6d-4c5f-aef5-889576928688",
+          "documentId": "160d71b4-8fae-435f-825f-b76cd159ea61",
+          "activatedAt": "2026-11-03T10:12:45.019251",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "bd750307-166a-40a3-8766-0ec92c47ffbf",
+          "title": "FAC_3454_Déclaration_honneur_Russie_FR.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "e71bdd30-dc0e-474a-b18d-7583abd597c3",
+          "documentId": "46d03208-871d-4a59-ab9e-d9a4bc384f4b",
+          "activatedAt": "2026-11-03T10:12:45.019251",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "c0859ecd-9237-4c53-9e5a-d035c62e1b8d",
+          "title": "FAC_3454_CSC_FR.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "c141c43a-6289-4466-9f19-c6a5257c47a1",
+          "documentId": "0e666dc4-eb6f-4590-8b54-860d55f92857",
+          "activatedAt": "2026-11-03T10:12:45.019251",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "fab10c75-b5e1-4469-9140-12e59474c356",
+          "title": "FAC_3454_Déclaration_honneur_Russie_NL.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "115017ab-d47c-49d6-ab76-cd389fd101be",
+          "documentId": "d0ed6009-387a-4f1f-a072-e527f10e13b4",
+          "activatedAt": "2026-11-03T10:12:45.019251",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "ff321388-7c5b-4a2f-8b4d-134907fb2ff0",
+          "title": "FAC_3454 - Annexe transparence_NL.pdf",
+          "kind": "annex",
+          "fileType": "pdf",
+          "versionId": "0acdea8e-8ea0-470f-90f2-3d794e5e5e19",
+          "documentId": "72839045-c9d6-4747-b0fb-60c679c87401",
+          "activatedAt": "2026-11-03T10:12:45.019251",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-03T12:59:56.867Z",
+      "deadlineTime": "11:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n26/11/2026 11:00 CET",
+      "deadlineVerifiedAt": "2026-11-03T13:00:01.011Z"
+    },
+    {
+      "id": "bosa:e8290d18-093c-4d62-9035-c87c19fb8cf1",
+      "publicationWorkspaceId": "e8290d18-093c-4d62-9035-c87c19fb8cf1",
+      "noticeId": "b2435319-9ae7-4fdf-a3a2-3a6fed09764b",
+      "procedureIdentifier": "94fdc822-c330-4a72-800f-fda4aacf8594",
+      "internalReference": "20260507_pub01",
+      "title": "Désignation d'un auteur de projet en vue de la construction d'un terrain de football synthétique et de vestiaires préfabriqués au complexe sportif de Somzée",
+      "buyer": "Somzée Loisirs",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "publication": "2026-11-03",
       "deadline": "",
       "cpv": [
-        "72242000"
+        "71240000",
+        "71000000"
       ],
-      "description": "Prestations de modélisation 3D et réalisation de rendus photoréalistes d'un projet d'aménagement d'espace public chaussée de Boondael.",
+      "description": "Marché de service d'architecture visant à la désignation d'un auteur de projet en vue de la construction d'un terrain de football synthétique et de vestiaires préfabriqués au complexe sportif de Somzée",
       "source": "BOSA",
       "source_status": "bosa_public_browser",
       "noticeSubType": "E4",
       "noticeKind": "award",
-      "bdaReference": "2026-141_pub01",
+      "bdaReference": "20260507_pub01",
       "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/4dd389d4-af5f-4380-a9f0-a5e997ab8b36/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/4dd389d4-af5f-4380-a9f0-a5e997ab8b36/documents",
+      "url": "https://www.publicprocurement.be/publication-workspaces/e8290d18-093c-4d62-9035-c87c19fb8cf1/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/e8290d18-093c-4d62-9035-c87c19fb8cf1/documents",
       "documentsPageSource": "public_api_200",
       "bosaResults": [
         {
-          "reference": "2026-141_pub01",
-          "url": "https://www.publicprocurement.be/publication-workspaces/4dd389d4-af5f-4380-a9f0-a5e997ab8b36/general",
-          "publicationDate": "2026-11-02",
+          "reference": "20260507_pub01",
+          "url": "https://www.publicprocurement.be/publication-workspaces/e8290d18-093c-4d62-9035-c87c19fb8cf1/general",
+          "publicationDate": "2026-11-03",
           "kind": "award"
         }
       ],
       "documentInventory": [],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-02T23:43:06.821Z"
-    },
-    {
-      "id": "local-html:dbb5276a5057d5c3aff0",
-      "title": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation",
-      "sourceDocumentTitle": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation",
-      "missionEvidence": {
-        "excerpt": "Après en avoir délibéré ; DECIDE : Art. 1er : D'approuver le cahier des charges n° 2026-844 et le montant estimé du marché “Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux”, établis par le Service Marchés publics. Les conditions sont fi",
-        "sourceUrl": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
-        "page": null,
-        "sha256": "ddc76b07a936bfe68e13d29e9d107692e18f22a330b00131926850a995903fba"
-      },
-      "buyer": "Commune de Rendeux",
-      "municipalityINS": "83044",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": {
-        "label": "Procédure négociée sans publication préalable",
-        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
-        "sourceUrl": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
-        "sha256": "ddc76b07a936bfe68e13d29e9d107692e18f22a330b00131926850a995903fba",
-        "stage": "project"
-      },
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "Après en avoir délibéré ; DECIDE : Art. 1er : D'approuver le cahier des charges n° 2026-844 et le montant estimé du marché “Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux”, établis par le Service Marchés publics. Les conditions sont fi",
-        "mission": "DECIDE : Art. 1er : D'approuver le cahier des charges n° 2026-844 et le montant estimé du marché “Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux”, établis par",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
-      "sourceDocument": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
-        "sha256": "ddc76b07a936bfe68e13d29e9d107692e18f22a330b00131926850a995903fba",
-        "session": {
-          "date": "2026-11-09",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 09 novembre 2026 (20:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:055b9b2941601c2511",
-        "sha256": "ddc76b07a936bfe68e13d29e9d107692e18f22a330b00131926850a995903fba",
-        "format": "html",
-        "checkedAt": "2026-11-03T03:05:41.869Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation 9 Séance publique",
-        "sourceUrl": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
-        "page": null,
-        "sha256": "ddc76b07a936bfe68e13d29e9d107692e18f22a330b00131926850a995903fba"
-      },
-      "description": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation 9 Séance publique du Conseil 09 novembre 2026 (20:00) Point N°",
-      "evidence": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation 9 Séance publique du Conseil 09 novembre 2026 (20:00) Point N°",
-      "municipalEvidence": [
-        {
-          "excerpt": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation 9 Séance publique du Conseil 09 novembre 2026 (20:00) Point N°",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": "2026-844"
+      "documentsCheckedAt": "2026-11-03T13:00:00.605Z"
     }
   ]
 }
