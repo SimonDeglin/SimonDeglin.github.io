@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-02T19:49:06.728Z",
+      "last_attempt": "2026-11-03T03:05:41.869Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -67,36 +67,36 @@
       "total": 261,
       "sitesRepertories": 261,
       "sitesVerifies": 261,
-      "deliberationsConnectees": 83,
+      "deliberationsConnectees": 96,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 303,
-      "opportunities": 114,
+      "documentsRead": 337,
+      "opportunities": 115,
       "sitesChecked": 261,
       "candidatePages": 227,
-      "sourceErrors": 55,
-      "htmlDocumentsRead": 329
+      "sourceErrors": 56,
+      "htmlDocumentsRead": 519
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-02T19:49:06.728Z",
-      "last_success": "2026-11-02T19:49:06.728Z",
+      "last_attempt": "2026-11-03T03:05:41.869Z",
+      "last_success": "2026-11-03T03:05:41.869Z",
       "last_batch": 24,
-      "documents_checked": 48,
+      "documents_checked": 39,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 6,
+      "errors_count": 10,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 163,
+      "html_documents_read": 195,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 17,
+      "recent_municipal_signals": 18,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1410,
     "matched_current_run": 10,
-    "records": 244,
+    "records": 245,
     "review_count": 149,
     "award_notice_count": 347,
     "awarded_market_matches": 1,
@@ -17494,6 +17494,97 @@
       "documentInventory": [],
       "consultationUrls": [],
       "documentsCheckedAt": "2026-11-02T23:43:06.821Z"
+    },
+    {
+      "id": "local-html:dbb5276a5057d5c3aff0",
+      "title": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation",
+      "sourceDocumentTitle": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation",
+      "missionEvidence": {
+        "excerpt": "Après en avoir délibéré ; DECIDE : Art. 1er : D'approuver le cahier des charges n° 2026-844 et le montant estimé du marché “Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux”, établis par le Service Marchés publics. Les conditions sont fi",
+        "sourceUrl": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "ddc76b07a936bfe68e13d29e9d107692e18f22a330b00131926850a995903fba"
+      },
+      "buyer": "Commune de Rendeux",
+      "municipalityINS": "83044",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "ddc76b07a936bfe68e13d29e9d107692e18f22a330b00131926850a995903fba",
+        "stage": "project"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "Après en avoir délibéré ; DECIDE : Art. 1er : D'approuver le cahier des charges n° 2026-844 et le montant estimé du marché “Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux”, établis par le Service Marchés publics. Les conditions sont fi",
+        "mission": "DECIDE : Art. 1er : D'approuver le cahier des charges n° 2026-844 et le montant estimé du marché “Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux”, établis par",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "ddc76b07a936bfe68e13d29e9d107692e18f22a330b00131926850a995903fba",
+        "session": {
+          "date": "2026-11-09",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 09 novembre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:055b9b2941601c2511",
+        "sha256": "ddc76b07a936bfe68e13d29e9d107692e18f22a330b00131926850a995903fba",
+        "format": "html",
+        "checkedAt": "2026-11-03T03:05:41.869Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation 9 Séance publique",
+        "sourceUrl": "https://www.deliberations.be/rendeux/decisions/09-novembre-2026-20-00/designation-dun-auteur-de-projet-pour-letude-et-le-controle-des-travaux-de-rehabilitation-et-reamenagement-du-site-de-lancienne-laiterie-a-cheoux-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "ddc76b07a936bfe68e13d29e9d107692e18f22a330b00131926850a995903fba"
+      },
+      "description": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation 9 Séance publique du Conseil 09 novembre 2026 (20:00) Point N°",
+      "evidence": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation 9 Séance publique du Conseil 09 novembre 2026 (20:00) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "Désignation d'un auteur de projet pour l'étude et le contrôle des travaux de réhabilitation et réaménagement du site de l'ancienne laiterie à Chéoux - Approbation des conditions et du mode de passation 9 Séance publique du Conseil 09 novembre 2026 (20:00) Point N°",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-844"
     }
   ]
 }
