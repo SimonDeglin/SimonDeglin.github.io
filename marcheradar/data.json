@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-04T17:35:02.976Z",
+      "last_attempt": "2026-11-04T22:54:08.940Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -67,36 +67,36 @@
       "total": 261,
       "sitesRepertories": 261,
       "sitesVerifies": 261,
-      "deliberationsConnectees": 171,
+      "deliberationsConnectees": 192,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 536,
-      "opportunities": 133,
+      "documentsRead": 592,
+      "opportunities": 138,
       "sitesChecked": 261,
       "candidatePages": 228,
-      "sourceErrors": 73,
-      "htmlDocumentsRead": 1497
+      "sourceErrors": 81,
+      "htmlDocumentsRead": 1749
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-04T17:35:02.976Z",
-      "last_success": "2026-11-04T17:35:02.976Z",
+      "last_attempt": "2026-11-04T22:54:08.940Z",
+      "last_success": "2026-11-04T22:54:08.940Z",
       "last_batch": 24,
-      "documents_checked": 44,
+      "documents_checked": 56,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 1,
+      "errors_count": 20,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 255,
+      "html_documents_read": 252,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 36,
+      "recent_municipal_signals": 41,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1347,
     "matched_current_run": 8,
-    "records": 268,
+    "records": 273,
     "review_count": 173,
     "award_notice_count": 341,
     "awarded_market_matches": 1,
@@ -11137,8 +11137,23 @@
           "confidence": "explicit"
         },
         "document": null,
-        "status": "identified",
-        "extractedAt": "2026-10-29T13:06:44.902Z"
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6c5b85922ffd9372d7",
+        "sha256": "c45c44c816a05a521c38733e34cce0d3c53b4eb75beaa6099b91df6a64aa6791",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "changedAt": null
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "sourceEvidenceStatus": "not_found",
+      "sourceDocumentReview": {
+        "sha256": "c45c44c816a05a521c38733e34cce0d3c53b4eb75beaa6099b91df6a64aa6791",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "candidates": []
       }
     },
     {
@@ -11187,8 +11202,28 @@
           "confidence": "explicit"
         },
         "document": null,
-        "status": "identified",
-        "extractedAt": "2026-10-29T13:06:45.194Z"
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:735e2a76cd4eb4edd1",
+        "sha256": "aa54e281e5f078b140ef2f8eee4a8c48db59e2d0deead4571cf410b5ebee0f28",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "changedAt": null
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "sourceEvidenceStatus": "not_found",
+      "sourceDocumentReview": {
+        "sha256": "aa54e281e5f078b140ef2f8eee4a8c48db59e2d0deead4571cf410b5ebee0f28",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "candidates": [
+          {
+            "excerpt": "DECIDE : - de confirmer la modification de la voirie par usage trentenaire du public Rue Joseph Leclercq à 4610 BEYNE- HEUSAY à hauteur de la parcelle cadastrée 1ère Division Section A 485 E, telle que délimitée sur le plan annexe, dressé par la géomètre Lucie LEBOS en date du 23 juin 2022 ; - de confirmer l’acquisition par les autorités communale de l’assiette de la voirie, actuellement cadastrée 1ère division, section A 485F ;",
+            "page": 12
+          }
+        ]
       }
     },
     {
@@ -11320,8 +11355,28 @@
           "confidence": "explicit"
         },
         "document": null,
-        "status": "identified",
-        "extractedAt": "2026-10-29T13:06:45.486Z"
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:735e2a76cd4eb4edd1",
+        "sha256": "aa54e281e5f078b140ef2f8eee4a8c48db59e2d0deead4571cf410b5ebee0f28",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "changedAt": null
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "sourceEvidenceStatus": "not_found",
+      "sourceDocumentReview": {
+        "sha256": "aa54e281e5f078b140ef2f8eee4a8c48db59e2d0deead4571cf410b5ebee0f28",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "candidates": [
+          {
+            "excerpt": "DECIDE : - de confirmer la modification de la voirie par usage trentenaire du public Rue Joseph Leclercq à 4610 BEYNE- HEUSAY à hauteur de la parcelle cadastrée 1ère Division Section A 485 E, telle que délimitée sur le plan annexe, dressé par la géomètre Lucie LEBOS en date du 23 juin 2022 ; - de confirmer l’acquisition par les autorités communale de l’assiette de la voirie, actuellement cadastrée 1ère division, section A 485F ;",
+            "page": 12
+          }
+        ]
       }
     },
     {
@@ -11369,8 +11424,38 @@
           "confidence": "explicit"
         },
         "document": null,
-        "status": "identified",
-        "extractedAt": "2026-10-29T13:06:45.746Z"
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:735e2a76cd4eb4edd1",
+        "sha256": "aa54e281e5f078b140ef2f8eee4a8c48db59e2d0deead4571cf410b5ebee0f28",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "changedAt": null
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentReview": {
+        "sha256": "aa54e281e5f078b140ef2f8eee4a8c48db59e2d0deead4571cf410b5ebee0f28",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "candidates": [
+          {
+            "excerpt": "DECIDE : - de confirmer la modification de la voirie par usage trentenaire du public Rue Joseph Leclercq à 4610 BEYNE- HEUSAY à hauteur de la parcelle cadastrée 1ère Division Section A 485 E, telle que délimitée sur le plan annexe, dressé par la géomètre Lucie LEBOS en date du 23 juin 2022 ; - de confirmer l’acquisition par les autorités communale de l’assiette de la voirie, actuellement cadastrée 1ère division, section A 485F ;",
+            "page": 12
+          }
+        ]
+      },
+      "noticeKind": "prospection",
+      "webSourceType": "municipal",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Considérant que lorsque l'assiette d’une voirie est une propriété privée, s'il s'ajoute à l'usage du public des actes d'appropriation posés par la commune, l’assiette de la voirie communale peut lui être acquise à l'expi",
+        "sourceUrl": "https://www.beyne-heusay.be/sites/default/files/pv-conseil/Pv-cc-221201.pdf",
+        "page": null,
+        "sha256": "aa54e281e5f078b140ef2f8eee4a8c48db59e2d0deead4571cf410b5ebee0f28"
       }
     },
     {
@@ -11706,8 +11791,33 @@
         "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
         "session": null,
         "document": null,
-        "status": "unknown",
-        "extractedAt": "2026-10-29T13:06:45.747Z"
+        "status": "unknown"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:b98a77ec0b8cf98fad",
+        "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "changedAt": null
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentReview": {
+        "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "candidates": []
+      },
+      "noticeKind": "prospection",
+      "webSourceType": "municipal",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "ODD 11 : Lutte contre les dépôts d’immondices ; Action commune \"zéro déchets\", Participation à Wallonie Cyclable ; Création d’un stationnement PMR ; Police du logement ODD 12 : Audit énergétique ; Sensibilisation à l’uti",
+        "sourceUrl": "http://www.soumagne.be/manager/upload/files/PDF/odd/objectifs_developpement_durable.pdf",
+        "page": null,
+        "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1"
       }
     },
     {
@@ -11749,8 +11859,23 @@
         "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
         "session": null,
         "document": null,
-        "status": "unknown",
-        "extractedAt": "2026-10-29T13:06:45.747Z"
+        "status": "unknown"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:b98a77ec0b8cf98fad",
+        "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "changedAt": null
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "sourceEvidenceStatus": "not_found",
+      "sourceDocumentReview": {
+        "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "candidates": []
       }
     },
     {
@@ -15865,8 +15990,28 @@
           "confidence": "explicit"
         },
         "document": null,
-        "status": "identified",
-        "extractedAt": "2026-10-29T13:06:46.010Z"
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:735e2a76cd4eb4edd1",
+        "sha256": "aa54e281e5f078b140ef2f8eee4a8c48db59e2d0deead4571cf410b5ebee0f28",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "changedAt": null
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "sourceEvidenceStatus": "not_found",
+      "sourceDocumentReview": {
+        "sha256": "aa54e281e5f078b140ef2f8eee4a8c48db59e2d0deead4571cf410b5ebee0f28",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "candidates": [
+          {
+            "excerpt": "DECIDE : - de confirmer la modification de la voirie par usage trentenaire du public Rue Joseph Leclercq à 4610 BEYNE- HEUSAY à hauteur de la parcelle cadastrée 1ère Division Section A 485 E, telle que délimitée sur le plan annexe, dressé par la géomètre Lucie LEBOS en date du 23 juin 2022 ; - de confirmer l’acquisition par les autorités communale de l’assiette de la voirie, actuellement cadastrée 1ère division, section A 485F ;",
+            "page": 12
+          }
+        ]
       }
     },
     {
@@ -16033,8 +16178,33 @@
         "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
         "session": null,
         "document": null,
-        "status": "unknown",
-        "extractedAt": "2026-10-29T13:06:46.010Z"
+        "status": "unknown"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:b98a77ec0b8cf98fad",
+        "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "changedAt": null
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentReview": {
+        "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "candidates": []
+      },
+      "noticeKind": "prospection",
+      "webSourceType": "municipal",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "de piscine sous fonds communaux ODD 5 : Salaire identique ; Non-discrimination dans le processus de recrutement ; Mixité du CODIR ODD 6 : Amélioration du réseau d’égouttage ; Entretien des stations d’épuration ; Distribu",
+        "sourceUrl": "http://www.soumagne.be/manager/upload/files/PDF/odd/objectifs_developpement_durable.pdf",
+        "page": null,
+        "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1"
       }
     },
     {
@@ -16075,8 +16245,33 @@
         "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
         "session": null,
         "document": null,
-        "status": "unknown",
-        "extractedAt": "2026-10-29T13:06:46.010Z"
+        "status": "unknown"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:b98a77ec0b8cf98fad",
+        "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "changedAt": null
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentReview": {
+        "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "candidates": []
+      },
+      "noticeKind": "prospection",
+      "webSourceType": "municipal",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "ODD 5 : Salaire identique ; Non-discrimination dans le processus de recrutement ; Mixité du CODIR ODD 6 : Amélioration du réseau d’égouttage ; Entretien des stations d’épuration ; Distribution en cas de pénurie ODD 7 : R",
+        "sourceUrl": "http://www.soumagne.be/manager/upload/files/PDF/odd/objectifs_developpement_durable.pdf",
+        "page": null,
+        "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1"
       }
     },
     {
@@ -16117,8 +16312,23 @@
         "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
         "session": null,
         "document": null,
-        "status": "unknown",
-        "extractedAt": "2026-10-29T13:06:46.010Z"
+        "status": "unknown"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:b98a77ec0b8cf98fad",
+        "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "changedAt": null
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "sourceEvidenceStatus": "not_found",
+      "sourceDocumentReview": {
+        "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "candidates": []
       }
     },
     {
@@ -20588,6 +20798,656 @@
       "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/general",
       "deadlineSourceEvidence": "Date limite de soumission\n24/11/2026 12:00 CET",
       "deadlineVerifiedAt": "2026-11-04T22:04:21.071Z"
+    },
+    {
+      "id": "local:e373042b0bc2f199247a",
+      "title": "11. MARCHE PUBLIC EXTRAORDINAIRE (PROJET N° 20260041) : MISSION D'AUTEUR DE PROJET POUR L’EXTENSION DU BATIMENT DU CPAS SITUE DANS LE PARC DE BAUDOUR - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION :",
+      "sourceDocumentTitle": "22/9 716.3 KB",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Saint-Ghislain",
+      "municipalityINS": "53070",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "11. MARCHE PUBLIC EXTRAORDINAIRE (PROJET N° 20260041) : MISSION D'AUTEUR DE PROJET POUR L’EXTENSION DU BATIMENT DU CPAS SITUE DANS LE PARC DE BAUDOUR - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATI",
+        "sourceUrl": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-du-conseil-communal-du-22-septembre-2026.pdf",
+        "page": 10,
+        "sha256": "00990f9c09df55dfdddf1a9a8bc52dc62ca56bf8a278b7ad2f189faea3237a56"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-du-conseil-communal-du-22-septembre-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-du-conseil-communal-du-22-septembre-2026.pdf",
+        "sha256": "00990f9c09df55dfdddf1a9a8bc52dc62ca56bf8a278b7ad2f189faea3237a56",
+        "session": {
+          "date": "2026-09-22",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "Séance du 22 septembre 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-du-conseil-communal-du-22-septembre-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 11. MARCHE PUBLIC EXTRAORDINAIRE (PROJET N° 20260041) : MISSION D'AUTEUR DE PROJET POUR L’EXTENSION DU BATIMENT DU CPAS SITUE DANS LE PARC DE BAUDOUR - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION : Le Conseil communal, réuni en séance publique,",
+      "evidence": "11. MARCHE PUBLIC EXTRAORDINAIRE (PROJET N° 20260041) : MISSION D'AUTEUR DE PROJET POUR L’EXTENSION DU BATIMENT DU CPAS SITUE DANS LE PARC DE BAUDOUR - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION : Le Conseil communal, réuni en séance publique,",
+      "municipalReference": null,
+      "municipalSection": "11. MARCHE PUBLIC EXTRAORDINAIRE (PROJET N° 20260041) : MISSION D'AUTEUR DE PROJET POUR L’EXTENSION DU BATIMENT DU CPAS SITUE DANS LE PARC DE BAUDOUR - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION :",
+      "municipalEvidence": [
+        {
+          "page": 10,
+          "excerpt": "11. MARCHE PUBLIC EXTRAORDINAIRE (PROJET N° 20260041) : MISSION D'AUTEUR DE PROJET POUR L’EXTENSION DU BATIMENT DU CPAS SITUE DANS LE PARC DE BAUDOUR - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION : Le Conseil communal, réuni en séance publique,"
+        },
+        {
+          "page": 11,
+          "excerpt": "- et plus de 80 % du chiffres d’affaires 2024 d’I.G.R.E.T.E.C. ayant été réalisé dans le cadre de l’exécution de tâches pour ses associés ; Considérant qu’il est nécessaire de confier à un Bureau d’Etudes, une mission relative à l’extension du bâtiment du CPAS situé Parc de Baudour ; Considérant que la mission de base comprend des études en architecture, stabilité, techniques spéciales et PEB ; Considérant que, conformément à la Circulaire du 15 juillet 2008 relative aux relations contractuelles entre communes et intercommunales de Monsieur le Ministre Courard, l’Assemblée Générale d’I.G.R.E.T.E.C. a approuvé"
+        },
+        {
+          "page": 11,
+          "excerpt": "Considérant qu’il est nécessaire de confier à un Bureau d’Etudes, une mission relative à l’extension du bâtiment du CPAS situé Parc de Baudour ; Considérant que la mission de base comprend des études en architecture, stabilité, techniques spéciales et PEB ; Considérant que, conformément à la Circulaire du 15 juillet 2008 relative aux relations contractuelles entre communes et intercommunales de Monsieur le Ministre Courard, l’Assemblée Générale d’I.G.R.E.T.E.C. a approuvé les conditions générales et les tarifs applicables aux missions : •     d’architecture le 24/01/2011, modifiés par délibérations des 27/06/2013, 16/12/2013, 24/06/2014,"
+        },
+        {
+          "page": 11,
+          "excerpt": "25/06/2015, 16/12/2015, 26/06/2019 et 15/12/2022 ; Considérant la proposition de contrat sollicitée par la Ville de Saint-Ghislain et transmise par I.G.R.E.T.E.C. et reprenant pour la mission : l’objet de la mission, la description de la mission, les délais entre la commande de la Ville et le début de la mission et les taux d’honoraires ; Considérant que le montant de base des honoraires en Bureau d’Etude (architecture, stabilité, techniques spéciales et PEB) d’I.G.R.E.T.E.C. est estimé à 164 957,10 EUR HTVA, soit 199 598,09 EUR TVAC ; Considérant que ce montant des honoraires pour le Bureau d’Etudes IGRETEC représente 12 % du montant total"
+        },
+        {
+          "page": 11,
+          "excerpt": "Considérant la proposition de contrat sollicitée par la Ville de Saint-Ghislain et transmise par I.G.R.E.T.E.C. et reprenant pour la mission : l’objet de la mission, la description de la mission, les délais entre la commande de la Ville et le début de la mission et les taux d’honoraires ; Considérant que le montant de base des honoraires en Bureau d’Etude (architecture, stabilité, techniques spéciales et PEB) d’I.G.R.E.T.E.C. est estimé à 164 957,10 EUR HTVA, soit 199 598,09 EUR TVAC ; Considérant que ce montant des honoraires pour le Bureau d’Etudes IGRETEC représente 12 % du montant total estimé des travaux;"
+        },
+        {
+          "page": 11,
+          "excerpt": "reprenant pour la mission : l’objet de la mission, la description de la mission, les délais entre la commande de la Ville et le début de la mission et les taux d’honoraires ; Considérant que le montant de base des honoraires en Bureau d’Etude (architecture, stabilité, techniques spéciales et PEB) d’I.G.R.E.T.E.C. est estimé à 164 957,10 EUR HTVA, soit 199 598,09 EUR TVAC ; Considérant que ce montant des honoraires pour le Bureau d’Etudes IGRETEC représente 12 % du montant total estimé des travaux; Considérant que la Ville de Saint-Ghislain peut donc, en toute légalité, recourir aux services de son intercommunale"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 10,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:769d0f014254516bb5",
+        "sha256": "00990f9c09df55dfdddf1a9a8bc52dc62ca56bf8a278b7ad2f189faea3237a56",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "changedAt": null
+      },
+      "municipalProcedure": null,
+      "municipalNotices": [
+        {
+          "id": "local:25f18d20f22043512579",
+          "title": "11.   MARCHE PUBLIC EXTRAORDINAIRE (PROJET N° 20260041) : MISSION D'AUTEUR DE PROJET POUR L’EXTENSION DU BATIMENT DU CPAS SITUE DANS LE PARC DE BAUDOUR - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION :",
+          "sourceDocumentTitle": "22/9 - Notes de synthèse 377.6 KB",
+          "municipalAssessment": {
+            "eligible": true,
+            "reason": "mission_explicitement_demandee_dans_le_document",
+            "excerpt": " LES RELATIONS \"IN HOUSE\" : APPROBATION : Il est proposé au Conseil d’approuver le marché de mission d'auteur de projet pour l'extension du",
+            "mission": "approuver le marché de mission d'auteur de projet pour l'extension du",
+            "basis": "document_body"
+          },
+          "missionEvidence": {
+            "excerpt": " LES RELATIONS \"IN HOUSE\" : APPROBATION : Il est proposé au Conseil d’approuver le marché de mission d'auteur de projet pour l'extension du",
+            "sourceUrl": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/notes-de-synthese-du-conseil-communal-du-22-septembre-2026.pdf",
+            "page": 3,
+            "sha256": "5a09def738487ded3439bc0bf6be37575d2b478914fa32ee288f3f8e6dc73b3c"
+          },
+          "buyer": "Commune de Saint-Ghislain",
+          "municipalityINS": "53070",
+          "region": "Wallonie",
+          "source": "LOCALE",
+          "webSourceType": "municipal",
+          "opportunityType": "prospection",
+          "noticeKind": "prospection",
+          "webTypeEvidence": {
+            "kind": "prospection",
+            "reason": "besoin_ou_decision_a_verifier",
+            "excerpt": "11. MARCHE PUBLIC EXTRAORDINAIRE (PROJET N° 20260041) : MISSION D'AUTEUR DE PROJET POUR L’EXTENSION DU BATIMENT DU CPAS SITUE DANS LE PARC DE BAUDOUR - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELA",
+            "sourceUrl": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/notes-de-synthese-du-conseil-communal-du-22-septembre-2026.pdf",
+            "page": 3,
+            "sha256": "5a09def738487ded3439bc0bf6be37575d2b478914fa32ee288f3f8e6dc73b3c"
+          },
+          "opportunityStage": "décision ou besoin à vérifier",
+          "sector": "Qualif",
+          "sectors": [
+            "Qualif"
+          ],
+          "score": 55,
+          "screening": "review",
+          "qualification": {
+            "version": "2026-10-29",
+            "kind": "prospect",
+            "route": "local_signal",
+            "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+            "capacityStatus": "not_assessed"
+          },
+          "publication": "",
+          "deadline": "",
+          "sourceDocument": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/notes-de-synthese-du-conseil-communal-du-22-septembre-2026.pdf",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/notes-de-synthese-du-conseil-communal-du-22-septembre-2026.pdf",
+            "sha256": "5a09def738487ded3439bc0bf6be37575d2b478914fa32ee288f3f8e6dc73b3c",
+            "session": {
+              "date": "2026-09-22",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Conseil communal du 22 septembre 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "sourceExtraction": {
+            "method": "pdf_text",
+            "partial": false
+          },
+          "url": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/notes-de-synthese-du-conseil-communal-du-22-septembre-2026.pdf",
+          "cpv": [],
+          "description": "Document communal public. Extrait nécessitant une lecture de validation : 11.   MARCHE PUBLIC EXTRAORDINAIRE (PROJET N° 20260041) : MISSION D'AUTEUR DE PROJET POUR L’EXTENSION DU BATIMENT DU CPAS SITUE DANS LE PARC DE BAUDOUR - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION : Il est proposé au Conseil d’approuver le marché de mission d'auteur de projet pour l'extension du",
+          "evidence": "11.   MARCHE PUBLIC EXTRAORDINAIRE (PROJET N° 20260041) : MISSION D'AUTEUR DE PROJET POUR L’EXTENSION DU BATIMENT DU CPAS SITUE DANS LE PARC DE BAUDOUR - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION : Il est proposé au Conseil d’approuver le marché de mission d'auteur de projet pour l'extension du",
+          "municipalReference": null,
+          "municipalSection": "11.   MARCHE PUBLIC EXTRAORDINAIRE (PROJET N° 20260041) : MISSION D'AUTEUR DE PROJET POUR L’EXTENSION DU BATIMENT DU CPAS SITUE DANS LE PARC DE BAUDOUR - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION :",
+          "municipalEvidence": [
+            {
+              "page": 3,
+              "excerpt": "11.   MARCHE PUBLIC EXTRAORDINAIRE (PROJET N° 20260041) : MISSION D'AUTEUR DE PROJET POUR L’EXTENSION DU BATIMENT DU CPAS SITUE DANS LE PARC DE BAUDOUR - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION : Il est proposé au Conseil d’approuver le marché de mission d'auteur de projet pour l'extension du"
+            },
+            {
+              "page": 3,
+              "excerpt": "RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION : Il est proposé au Conseil d’approuver le marché de mission d'auteur de projet pour l'extension du bâtiment du CPAS situé dans le parc de Baudour."
+            }
+          ],
+          "source_status": "extrait_pdf_a_verifier",
+          "sourceEvidencePage": 3,
+          "sourceEvidenceStatus": "found",
+          "sourceDocumentVersion": {
+            "documentId": "municipal-doc:6bea135f5ac9b7b96d",
+            "sha256": "5a09def738487ded3439bc0bf6be37575d2b478914fa32ee288f3f8e6dc73b3c",
+            "checkedAt": "2026-11-04T22:54:08.940Z",
+            "changedAt": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "local:8fcb72fe9e10ef2ee370",
+      "title": "12. MARCHE PUBLIC EXTRAORDINAIRE (PROJET N°20260061) : MISSION D'AUTEUR DE PROJETS POUR L’AMÉNAGEMENT DES RUES DU SAS ET DU PORT - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION :",
+      "sourceDocumentTitle": "22/9 716.3 KB",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Saint-Ghislain",
+      "municipalityINS": "53070",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "12. MARCHE PUBLIC EXTRAORDINAIRE (PROJET N°20260061) : MISSION D'AUTEUR DE PROJETS POUR L’AMÉNAGEMENT DES RUES DU SAS ET DU PORT - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLIC",
+        "sourceUrl": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-du-conseil-communal-du-22-septembre-2026.pdf",
+        "page": 12,
+        "sha256": "00990f9c09df55dfdddf1a9a8bc52dc62ca56bf8a278b7ad2f189faea3237a56"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-du-conseil-communal-du-22-septembre-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-du-conseil-communal-du-22-septembre-2026.pdf",
+        "sha256": "00990f9c09df55dfdddf1a9a8bc52dc62ca56bf8a278b7ad2f189faea3237a56",
+        "session": {
+          "date": "2026-09-22",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "Séance du 22 septembre 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-du-conseil-communal-du-22-septembre-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 12. MARCHE PUBLIC EXTRAORDINAIRE (PROJET N°20260061) : MISSION D'AUTEUR DE PROJETS POUR L’AMÉNAGEMENT DES RUES DU SAS ET DU PORT - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION : Le Conseil communal, réuni en séance publique,",
+      "evidence": "12. MARCHE PUBLIC EXTRAORDINAIRE (PROJET N°20260061) : MISSION D'AUTEUR DE PROJETS POUR L’AMÉNAGEMENT DES RUES DU SAS ET DU PORT - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION : Le Conseil communal, réuni en séance publique,",
+      "municipalReference": null,
+      "municipalSection": "12. MARCHE PUBLIC EXTRAORDINAIRE (PROJET N°20260061) : MISSION D'AUTEUR DE PROJETS POUR L’AMÉNAGEMENT DES RUES DU SAS ET DU PORT - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION :",
+      "municipalEvidence": [
+        {
+          "page": 12,
+          "excerpt": "12. MARCHE PUBLIC EXTRAORDINAIRE (PROJET N°20260061) : MISSION D'AUTEUR DE PROJETS POUR L’AMÉNAGEMENT DES RUES DU SAS ET DU PORT - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION : Le Conseil communal, réuni en séance publique,"
+        },
+        {
+          "page": 12,
+          "excerpt": "Considérant que, conformément à la Circulaire du 15 juillet 2008 relative aux relations contractuelles entre communes et intercommunales de Monsieur le Ministre Courard, l’Assemblée Générale d’I.G.R.E.T.E.C. a approuvé les conditions générales et les tarifs applicables aux missions : - de voirie et égouttage le 24/01/2011, modifiés par délibérations des 27/06/2013, 16/12/2013, 24/06/2014, 16/12/2014, 25/06/2015, 16/12/2015, 26/06/2019, 15/12/2022, 28/11/2024 et 25/06/2026 ; Considérant qu’il est nécessaire de confier à un Bureau d’Etudes une mission d’étude en voirie relative à la mission d'études relative à l'aménagement de la rue du Sas et rue du Port ;"
+        },
+        {
+          "page": 12,
+          "excerpt": "communes et intercommunales de Monsieur le Ministre Courard, l’Assemblée Générale d’I.G.R.E.T.E.C. a approuvé les conditions générales et les tarifs applicables aux missions : - de voirie et égouttage le 24/01/2011, modifiés par délibérations des 27/06/2013, 16/12/2013, 24/06/2014, 16/12/2014, 25/06/2015, 16/12/2015, 26/06/2019, 15/12/2022, 28/11/2024 et 25/06/2026 ; Considérant qu’il est nécessaire de confier à un Bureau d’Etudes une mission d’étude en voirie relative à la mission d'études relative à l'aménagement de la rue du Sas et rue du Port ; Conseil communal                         Séance du 22 septembre 2026                   12"
+        },
+        {
+          "page": 12,
+          "excerpt": "- de voirie et égouttage le 24/01/2011, modifiés par délibérations des 27/06/2013, 16/12/2013, 24/06/2014, 16/12/2014, 25/06/2015, 16/12/2015, 26/06/2019, 15/12/2022, 28/11/2024 et 25/06/2026 ; Considérant qu’il est nécessaire de confier à un Bureau d’Etudes une mission d’étude en voirie relative à la mission d'études relative à l'aménagement de la rue du Sas et rue du Port ; Conseil communal                         Séance du 22 septembre 2026                   12"
+        },
+        {
+          "page": 12,
+          "excerpt": "16/12/2014, 25/06/2015, 16/12/2015, 26/06/2019, 15/12/2022, 28/11/2024 et 25/06/2026 ; Considérant qu’il est nécessaire de confier à un Bureau d’Etudes une mission d’étude en voirie relative à la mission d'études relative à l'aménagement de la rue du Sas et rue du Port ; Conseil communal                         Séance du 22 septembre 2026                   12"
+        },
+        {
+          "page": 13,
+          "excerpt": "commande de la Ville de Saint-Ghislain et le début de la mission et les taux d’honoraires ; Considérant que l’esquisse intitulée « Aménagement Rue du Sas et rue du Port - dossier n° 68160 », établie par l’auteur de projet a donné divers estimatifs quant à la mise en œuvre du projet et que la Ville de Saint-Ghislain a décidé lors du Collège communal du 16 juin 2026, de choisir le scénario n° 2 ; Considérant que le scénario n° 2 estime les montant des travaux d’une fourchette allant de 2 686 000,00 EUR HTVA à 3 004 000,00 EUR HTVA ; Considérant que le montant des honoraires du Bureau d’Etudes est calculé sur une estimation intermédiaire de 2"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 12,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:769d0f014254516bb5",
+        "sha256": "00990f9c09df55dfdddf1a9a8bc52dc62ca56bf8a278b7ad2f189faea3237a56",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "changedAt": null
+      },
+      "municipalProcedure": null,
+      "municipalNotices": [
+        {
+          "id": "local:375b18c67b51e2ce6657",
+          "title": "12.   MARCHE PUBLIC EXTRAORDINAIRE (PROJET N°20260061) : MISSION D'AUTEUR DE PROJETS POUR L’AMÉNAGEMENT DES RUES DU SAS ET DU PORT - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION :",
+          "sourceDocumentTitle": "22/9 - Notes de synthèse 377.6 KB",
+          "municipalAssessment": {
+            "eligible": true,
+            "reason": "mission_explicitement_demandee_dans_le_document",
+            "excerpt": " LES RELATIONS \"IN HOUSE\" : APPROBATION : Il est proposé au Conseil d’approuver le marché de mission d'auteur de projet pour",
+            "mission": "approuver le marché de mission d'auteur de projet pour",
+            "basis": "document_body"
+          },
+          "missionEvidence": {
+            "excerpt": " LES RELATIONS \"IN HOUSE\" : APPROBATION : Il est proposé au Conseil d’approuver le marché de mission d'auteur de projet pour",
+            "sourceUrl": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/notes-de-synthese-du-conseil-communal-du-22-septembre-2026.pdf",
+            "page": 3,
+            "sha256": "5a09def738487ded3439bc0bf6be37575d2b478914fa32ee288f3f8e6dc73b3c"
+          },
+          "buyer": "Commune de Saint-Ghislain",
+          "municipalityINS": "53070",
+          "region": "Wallonie",
+          "source": "LOCALE",
+          "webSourceType": "municipal",
+          "opportunityType": "prospection",
+          "noticeKind": "prospection",
+          "webTypeEvidence": {
+            "kind": "prospection",
+            "reason": "besoin_ou_decision_a_verifier",
+            "excerpt": "12. MARCHE PUBLIC EXTRAORDINAIRE (PROJET N°20260061) : MISSION D'AUTEUR DE PROJETS POUR L’AMÉNAGEMENT DES RUES DU SAS ET DU PORT - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBL",
+            "sourceUrl": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/notes-de-synthese-du-conseil-communal-du-22-septembre-2026.pdf",
+            "page": 3,
+            "sha256": "5a09def738487ded3439bc0bf6be37575d2b478914fa32ee288f3f8e6dc73b3c"
+          },
+          "opportunityStage": "décision ou besoin à vérifier",
+          "sector": "Qualif",
+          "sectors": [
+            "Qualif"
+          ],
+          "score": 55,
+          "screening": "review",
+          "qualification": {
+            "version": "2026-10-29",
+            "kind": "prospect",
+            "route": "local_signal",
+            "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+            "capacityStatus": "not_assessed"
+          },
+          "publication": "",
+          "deadline": "",
+          "sourceDocument": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/notes-de-synthese-du-conseil-communal-du-22-septembre-2026.pdf",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/notes-de-synthese-du-conseil-communal-du-22-septembre-2026.pdf",
+            "sha256": "5a09def738487ded3439bc0bf6be37575d2b478914fa32ee288f3f8e6dc73b3c",
+            "session": {
+              "date": "2026-09-22",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Conseil communal du 22 septembre 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "sourceExtraction": {
+            "method": "pdf_text",
+            "partial": false
+          },
+          "url": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/notes-de-synthese-du-conseil-communal-du-22-septembre-2026.pdf",
+          "cpv": [],
+          "description": "Document communal public. Extrait nécessitant une lecture de validation : 12.   MARCHE PUBLIC EXTRAORDINAIRE (PROJET N°20260061) : MISSION D'AUTEUR DE PROJETS POUR L’AMÉNAGEMENT DES RUES DU SAS ET DU PORT - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION : Il est proposé au Conseil d’approuver le marché de mission d'auteur de projet pour",
+          "evidence": "12.   MARCHE PUBLIC EXTRAORDINAIRE (PROJET N°20260061) : MISSION D'AUTEUR DE PROJETS POUR L’AMÉNAGEMENT DES RUES DU SAS ET DU PORT - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION : Il est proposé au Conseil d’approuver le marché de mission d'auteur de projet pour",
+          "municipalReference": null,
+          "municipalSection": "12.   MARCHE PUBLIC EXTRAORDINAIRE (PROJET N°20260061) : MISSION D'AUTEUR DE PROJETS POUR L’AMÉNAGEMENT DES RUES DU SAS ET DU PORT - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION :",
+          "municipalEvidence": [
+            {
+              "page": 3,
+              "excerpt": "12.   MARCHE PUBLIC EXTRAORDINAIRE (PROJET N°20260061) : MISSION D'AUTEUR DE PROJETS POUR L’AMÉNAGEMENT DES RUES DU SAS ET DU PORT - DECISION DE RECOURIR A L’ARTICLE 30 DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION : Il est proposé au Conseil d’approuver le marché de mission d'auteur de projet pour"
+            },
+            {
+              "page": 3,
+              "excerpt": "DE LA LOI DU 17 JUIN 2016 RELATIVE AUX MARCHES PUBLICS ET SES MODIFICATIONS ULTERIEURES, CONCERNANT LES RELATIONS \"IN HOUSE\" : APPROBATION : Il est proposé au Conseil d’approuver le marché de mission d'auteur de projet pour l'aménagement de la rue du Sas et de la rue du Port."
+            }
+          ],
+          "source_status": "extrait_pdf_a_verifier",
+          "sourceEvidencePage": 3,
+          "sourceEvidenceStatus": "found",
+          "sourceDocumentVersion": {
+            "documentId": "municipal-doc:6bea135f5ac9b7b96d",
+            "sha256": "5a09def738487ded3439bc0bf6be37575d2b478914fa32ee288f3f8e6dc73b3c",
+            "checkedAt": "2026-11-04T22:54:08.940Z",
+            "changedAt": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "local:d686023e4787490fd95e",
+      "title": "22/9 - Ordre du jour 702.8 KB",
+      "sourceDocumentTitle": "22/9 - Ordre du jour 702.8 KB",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Saint-Ghislain",
+      "municipalityINS": "53070",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "other",
+      "webTypeEvidence": {
+        "kind": "other",
+        "reason": "projet_de_mission_a_operateur_determine",
+        "excerpt": "Politique d'accessibilité au territoire : projet de schéma régional structurant de mobilité collective - validation. e Marché public extraordinaire (projet n° 20260041) : mission d'auteur de projet pour l'extension du bâ",
+        "sourceUrl": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/ordre-du-jour-du-conseil-communal-du-22-septembre-2026.pdf",
+        "page": 1,
+        "sha256": "bd5ad131a5202737b404d81ff5bd41acfe1f8491ee4f3ad783d18e4d9964b6be"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/ordre-du-jour-du-conseil-communal-du-22-septembre-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/ordre-du-jour-du-conseil-communal-du-22-septembre-2026.pdf",
+        "sha256": "bd5ad131a5202737b404d81ff5bd41acfe1f8491ee4f3ad783d18e4d9964b6be",
+        "session": {
+          "date": "2026-09-22",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "CONSEIL COMMUNAL DU 22 SEPTEMBRE 2026",
+          "confidence": "ocr"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "ocr",
+        "language": "fra+eng",
+        "pagesRead": 1,
+        "totalPages": 1,
+        "partial": false
+      },
+      "url": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/ordre-du-jour-du-conseil-communal-du-22-septembre-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Politique d'accessibilité au territoire : projet de schéma régional structurant de mobilité collective - validation. e Marché public extraordinaire (projet n° 20260041) : mission d'auteur de projet pour l'extension du bâtiment du CPAS situé dans le parc de Baudour - décision de recourir à l’article 30 de la Loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, concernant les relations \"In House\" : approbation. e Marché public extraordinaire (projet n°20260061) : mission d'auteur de projets pour l'aménagement",
+      "evidence": "Politique d'accessibilité au territoire : projet de schéma régional structurant de mobilité collective - validation. e Marché public extraordinaire (projet n° 20260041) : mission d'auteur de projet pour l'extension du bâtiment du CPAS situé dans le parc de Baudour - décision de recourir à l’article 30 de la Loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, concernant les relations \"In House\" : approbation. e Marché public extraordinaire (projet n°20260061) : mission d'auteur de projets pour l'aménagement",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 1,
+          "excerpt": "Politique d'accessibilité au territoire : projet de schéma régional structurant de mobilité collective - validation. e Marché public extraordinaire (projet n° 20260041) : mission d'auteur de projet pour l'extension du bâtiment du CPAS situé dans le parc de Baudour - décision de recourir à l’article 30 de la Loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, concernant les relations \"In House\" : approbation. e Marché public extraordinaire (projet n°20260061) : mission d'auteur de projets pour l'aménagement"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 1,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:45c34ef397d5af0bf3",
+        "sha256": "bd5ad131a5202737b404d81ff5bd41acfe1f8491ee4f3ad783d18e4d9964b6be",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:8e4f45ea4f0da4f58e2f",
+      "title": "22/9 - Ordre du jour 702.8 KB",
+      "sourceDocumentTitle": "22/9 - Ordre du jour 702.8 KB",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Saint-Ghislain",
+      "municipalityINS": "53070",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "other",
+      "webTypeEvidence": {
+        "kind": "other",
+        "reason": "projet_de_mission_a_operateur_determine",
+        "excerpt": "2016 relative aux marchés publics et ses modifications ultérieures, concernant les relations \"In House\" : approbation. e Marché public extraordinaire (projet n°20260061) : mission d'auteur de projets pour l'aménagement d",
+        "sourceUrl": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/ordre-du-jour-du-conseil-communal-du-22-septembre-2026.pdf",
+        "page": 1,
+        "sha256": "bd5ad131a5202737b404d81ff5bd41acfe1f8491ee4f3ad783d18e4d9964b6be"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/ordre-du-jour-du-conseil-communal-du-22-septembre-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/ordre-du-jour-du-conseil-communal-du-22-septembre-2026.pdf",
+        "sha256": "bd5ad131a5202737b404d81ff5bd41acfe1f8491ee4f3ad783d18e4d9964b6be",
+        "session": {
+          "date": "2026-09-22",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "CONSEIL COMMUNAL DU 22 SEPTEMBRE 2026",
+          "confidence": "ocr"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "ocr",
+        "language": "fra+eng",
+        "pagesRead": 1,
+        "totalPages": 1,
+        "partial": false
+      },
+      "url": "https://www.saint-ghislain.be/ma-ville/vie-politique/conseil-communal/ordres-du-jour/2026/ordre-du-jour-du-conseil-communal-du-22-septembre-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 2016 relative aux marchés publics et ses modifications ultérieures, concernant les relations \"In House\" : approbation. e Marché public extraordinaire (projet n°20260061) : mission d'auteur de projets pour l'aménagement des rues du Sas et du Port - décision de recourir à l’article 30 de la Loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, concernant les relations \"In House\" : approbation. e Marchés publics extraordinaires : approbation des conditions et des modes de passation. e Marché public extraordinaire (projet n° 20260003) : remplacement de la solution de téléphonie",
+      "evidence": "2016 relative aux marchés publics et ses modifications ultérieures, concernant les relations \"In House\" : approbation. e Marché public extraordinaire (projet n°20260061) : mission d'auteur de projets pour l'aménagement des rues du Sas et du Port - décision de recourir à l’article 30 de la Loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, concernant les relations \"In House\" : approbation. e Marchés publics extraordinaires : approbation des conditions et des modes de passation. e Marché public extraordinaire (projet n° 20260003) : remplacement de la solution de téléphonie",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 1,
+          "excerpt": "2016 relative aux marchés publics et ses modifications ultérieures, concernant les relations \"In House\" : approbation. e Marché public extraordinaire (projet n°20260061) : mission d'auteur de projets pour l'aménagement des rues du Sas et du Port - décision de recourir à l’article 30 de la Loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, concernant les relations \"In House\" : approbation. e Marchés publics extraordinaires : approbation des conditions et des modes de passation. e Marché public extraordinaire (projet n° 20260003) : remplacement de la solution de téléphonie"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 1,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:45c34ef397d5af0bf3",
+        "sha256": "bd5ad131a5202737b404d81ff5bd41acfe1f8491ee4f3ad783d18e4d9964b6be",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:2cfa8765eb18ff66aa75",
+      "title": "10.   DA2 - Marché de services - Désignation d'une équipe d'auteur(e)s de projet pour une mission d'étude et de suivi, gestion et coordination des travaux de création d'espaces verts et de réaménagement de voiries et d'espaces publics dans le quartier du Mont- à-Leux (périmètre rue du Chalet/rue de la Plaquette/rue des Tailleurs/rue du Riez/rue",
+      "sourceDocumentTitle": "Octobre",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Mouscron",
+      "municipalityINS": "57096",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "10. DA2 - Marché de services - Désignation d'une équipe d'auteur(e)s de projet pour une mission d'étude et de suivi, gestion et coordination des travaux de création d'espaces verts et de réaménagement de voiries et d'e",
+        "sourceUrl": "https://www.mouscron.be/fr/ma-commune/vie-politique/conseil-communal/conseil-communal-pdf/conseil-pdf-2026/oj-2026-10-12-pt-complementaire.pdf",
+        "page": 1,
+        "sha256": "a558442ecfc58a03074f8bf9228194e3bd9da07916143e0641cfe6fc6c54abd1"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.mouscron.be/fr/ma-commune/vie-politique/conseil-communal/conseil-communal-pdf/conseil-pdf-2026/oj-2026-10-12-pt-complementaire.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.mouscron.be/fr/ma-commune/vie-politique/conseil-communal/conseil-communal-pdf/conseil-pdf-2026/oj-2026-10-12-pt-complementaire.pdf",
+        "sha256": "a558442ecfc58a03074f8bf9228194e3bd9da07916143e0641cfe6fc6c54abd1",
+        "session": null,
+        "document": {
+          "date": "2026-10-07",
+          "kind": "document",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "Mouscron, le 7 octobre 2026",
+          "confidence": "explicit"
+        },
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.mouscron.be/fr/ma-commune/vie-politique/conseil-communal/conseil-communal-pdf/conseil-pdf-2026/oj-2026-10-12-pt-complementaire.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 10.   DA2 - Marché de services - Désignation d'une équipe d'auteur(e)s de projet pour une mission d'étude et de suivi, gestion et coordination des travaux de création d'espaces verts et de réaménagement de voiries et d'espaces publics dans le quartier du Mont- à-Leux (périmètre rue du Chalet/rue de la Plaquette/rue des Tailleurs/rue du Riez/rue des Cordonniers/Grand-Rue/rue Henri Dunant) - Approbation des conditions et du",
+      "evidence": "10.   DA2 - Marché de services - Désignation d'une équipe d'auteur(e)s de projet pour une mission d'étude et de suivi, gestion et coordination des travaux de création d'espaces verts et de réaménagement de voiries et d'espaces publics dans le quartier du Mont- à-Leux (périmètre rue du Chalet/rue de la Plaquette/rue des Tailleurs/rue du Riez/rue des Cordonniers/Grand-Rue/rue Henri Dunant) - Approbation des conditions et du",
+      "municipalReference": null,
+      "municipalSection": "10.   DA2 - Marché de services - Désignation d'une équipe d'auteur(e)s de projet pour une mission d'étude et de suivi, gestion et coordination des travaux de création d'espaces verts et de réaménagement de voiries et d'espaces publics dans le quartier du Mont- à-Leux (périmètre rue du Chalet/rue de la Plaquette/rue des Tailleurs/rue du Riez/rue",
+      "municipalEvidence": [
+        {
+          "page": 1,
+          "excerpt": "10.   DA2 - Marché de services - Désignation d'une équipe d'auteur(e)s de projet pour une mission d'étude et de suivi, gestion et coordination des travaux de création d'espaces verts et de réaménagement de voiries et d'espaces publics dans le quartier du Mont- à-Leux (périmètre rue du Chalet/rue de la Plaquette/rue des Tailleurs/rue du Riez/rue des Cordonniers/Grand-Rue/rue Henri Dunant) - Approbation des conditions et du"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 1,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:e1cfb7b515464fb797",
+        "sha256": "a558442ecfc58a03074f8bf9228194e3bd9da07916143e0641cfe6fc6c54abd1",
+        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "changedAt": null
+      }
     }
   ]
 }
