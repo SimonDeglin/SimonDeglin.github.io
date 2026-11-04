@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-04T13:01:48.411Z",
+  "generated_at": "2026-11-04T21:55:09.451Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
   "note": "TED interrogé le 2026-11-04 : 1347 avis lus, 1 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-11-04T13:03:31.364Z",
-      "scanned": 2375,
-      "retained": 33,
+      "last_success": "2026-11-04T21:57:03.721Z",
+      "scanned": 2425,
+      "retained": 35,
       "period_from": "2026-10-21",
       "period_to": "2026-11-04",
-      "pages": 95,
+      "pages": 97,
       "complete": true,
-      "raw_candidates": 2360,
+      "raw_candidates": 2409,
       "oldest_seen": "2026-10-20",
-      "last_attempt": "2026-11-04T13:03:31.364Z",
+      "last_attempt": "2026-11-04T21:57:03.721Z",
       "last_error": null,
-      "last_complete_success": "2026-11-04T13:03:31.364Z"
+      "last_complete_success": "2026-11-04T21:57:03.721Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-11-04T13:05:43.473Z",
+      "last_success": "2026-11-04T21:59:00.230Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -104,15 +104,15 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 95 page(s) parcourue(s) depuis 2026-10-21.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 97 page(s) parcourue(s) depuis 2026-10-21.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
     "scanned": 1347,
     "matched_current_run": 8,
-    "records": 267,
-    "review_count": 167,
-    "award_notice_count": 338,
+    "records": 268,
+    "review_count": 173,
+    "award_notice_count": 341,
     "awarded_market_matches": 1,
     "award_fields_requested": false,
     "retained_as_excluded": 36,
@@ -153,9 +153,9 @@
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2375,
-    "bosa_imported": 33,
-    "bosa_pages": 95,
+    "bosa_scanned": 2425,
+    "bosa_imported": 35,
+    "bosa_pages": 97,
     "local_documents": 34,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -172,10 +172,10 @@
     },
     "raw_screening": {
       "avis_neerlandais": 161,
-      "aucun_signal_metier": 411,
-      "avis_attribution_analyse_separement": 338,
+      "acheteur_flamand": 168,
+      "avis_attribution_analyse_separement": 341,
+      "aucun_signal_metier": 407,
       "travaux_execution": 114,
-      "acheteur_flamand": 167,
       "objet_hors_domaine": 62,
       "assurance_ou_nettoyage": 16,
       "fournitures_et_location": 44,
@@ -185,6 +185,126 @@
     }
   },
   "items": [
+    {
+      "id": "bosa:81d87d11-8b12-4292-a6d0-0ec14100d46a",
+      "publicationWorkspaceId": "81d87d11-8b12-4292-a6d0-0ec14100d46a",
+      "noticeId": "eae3e7cd-df38-4044-9a19-1107baad95a6",
+      "procedureIdentifier": "b2c3e5f9-67d1-4134-b7d6-df4c049dccd6",
+      "internalReference": "PPP0EX-4507/5977/BE.2025/421.065.00/AJ_002",
+      "title": "Balisage du Réseau de Cheminement Piéton",
+      "buyer": "Mons",
+      "region": "Bruxelles",
+      "languages": [
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 62,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "unknown",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "projet_indirect",
+      "publication": "2026-11-04",
+      "deadline": "",
+      "cpv": [
+        "63724310"
+      ],
+      "description": "Balisage du Réseau de Cheminement Piéton",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0EX-4507/5977/BE.2025/421.065.00/AJ_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/81d87d11-8b12-4292-a6d0-0ec14100d46a/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/81d87d11-8b12-4292-a6d0-0ec14100d46a/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP0EX-4507/5977/BE.2025/421.065.00/AJ_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/81d87d11-8b12-4292-a6d0-0ec14100d46a/general",
+          "publicationDate": "2026-11-04",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-04T13:11:12.530Z",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/81d87d11-8b12-4292-a6d0-0ec14100d46a/general"
+        }
+      ]
+    },
+    {
+      "id": "bosa:04e0b00d-f962-4343-bfba-3d81f13ec7bb",
+      "publicationWorkspaceId": "04e0b00d-f962-4343-bfba-3d81f13ec7bb",
+      "noticeId": "e91fd7bf-8f83-40d2-a4f5-1bd42cc88816",
+      "procedureIdentifier": "890dc425-58cf-406d-8c1b-e4bb4809b4bf",
+      "internalReference": "PPP0CN-825/6027/2026297_002",
+      "title": "Désignation d'un auteur de projet afin d'élaborer un schéma de développement communal conformément à la législation relative à l'aménagement du territoire",
+      "buyer": "Fauvillers",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "publication": "2026-11-04",
+      "deadline": "",
+      "cpv": [
+        "71410000"
+      ],
+      "description": "L’objet du marché porte sur la prestation de services relatifs à l’élaboration d’un schéma de développement communal global conformément à la législation relative à l’aménagement du territoire, notamment les articles D.II.9 et D.II.10 du Code du développement territorial. Un schéma de la procédure d’élaboration d’un SDC est repris en annexe 10. Description des services à exécuter : Elaboration du SDC : • Phase 1 : analyse contextuelle • Phase 2 :  a) Établissement de l'avant-projet du SDC ; b) Proposition de révision du GCU en fonction de l’avant-projet ; c) Identification des propositions de révision et/ou abrogation des SOL ; d) Identification des propositions de révision et/ou abrogation du plan de Secteur ; • Phase 3 : rapport sur les incidences environnementales (cette phase fait l’objet d’un marché public distinct) •• Phase 4 :   a) Établissement du projet de schéma de développement communal (y compris, le cas échéant, la révision du GCU et les éventuelles révisions ou abrogations des SOL) ; • Phase 5 : établissement du schéma de développement communal définitif et déclaration environnementale.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0CN-825/6027/2026297_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/04e0b00d-f962-4343-bfba-3d81f13ec7bb/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/04e0b00d-f962-4343-bfba-3d81f13ec7bb/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP0CN-825/6027/2026297_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/04e0b00d-f962-4343-bfba-3d81f13ec7bb/general",
+          "publicationDate": "2026-11-04",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-04T13:11:08.836Z",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/04e0b00d-f962-4343-bfba-3d81f13ec7bb/general"
+        }
+      ]
+    },
     {
       "id": "bosa:89cf5bb4-298c-469e-a617-808e4dd53e0a",
       "publicationWorkspaceId": "89cf5bb4-298c-469e-a617-808e4dd53e0a",
@@ -2802,7 +2922,7 @@
           "versionId": "3d46e999-b274-4751-b79c-f99dcda226c2",
           "documentId": "08e8ec6d-f48b-4d1c-96da-c1bdc6ebc276",
           "activatedAt": "2026-10-22T11:14:46.014445",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/3ab3ec25-78b5-4c2f-af13-1cb572590b1c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -2861,7 +2981,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-01T20:36:44.795Z",
+      "documentsCheckedAt": "2026-11-04T22:00:27.953Z",
       "matchReason": "description_ou_contexte",
       "screeningReason": null,
       "officialSources": [
@@ -5890,7 +6010,7 @@
           "versionId": "36488d00-f30c-407b-abf7-ea1924b6b999",
           "documentId": "917f42c5-0419-4611-8398-5561fefe4efc",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5916,7 +6036,7 @@
           "versionId": "26b15544-17fc-43c0-826c-1322f33b9850",
           "documentId": "20364704-82a0-4eb0-a213-7965e3328061",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5968,7 +6088,7 @@
           "versionId": "f5ff3774-83d7-49c0-abe1-28e026816900",
           "documentId": "ff53ea2a-b24f-4586-b315-523295f56f5c",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5981,7 +6101,7 @@
           "versionId": "8228202b-2303-4eba-8e13-0fe820c5023d",
           "documentId": "ac74d28e-0bfa-4c78-af2b-da7f05b117dd",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -6014,7 +6134,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-04T13:08:48.166Z",
+      "documentsCheckedAt": "2026-11-04T22:02:04.753Z",
       "documentAnalyses": [
         {
           "documentId": "7259aed6-32b5-4e0b-88c0-ffa7fa606658",
@@ -6670,8 +6790,8 @@
       ],
       "score": 98,
       "screening": "main",
-      "publication": "2026-10-12",
-      "deadline": "2026-11-10T11:00:00+01:00",
+      "publication": "2026-11-04",
+      "deadline": "2026-11-16T11:00:00+01:00",
       "cpv": [
         "71353000"
       ],
@@ -6708,15 +6828,22 @@
       "deadlineTimeZone": "Europe/Brussels",
       "deadlineSourceKind": "bosa_verified_public",
       "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/834b6f23-3906-4589-a0e7-afae9c91d26a/general",
-      "deadlineSourceEvidence": "Date limite de soumission\n10/11/2026 11:00 CET",
-      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z",
+      "deadlineSourceEvidence": "Date limite de soumission\n16/11/2026 11:00 CET",
+      "deadlineVerifiedAt": "2026-11-04T22:04:21.071Z",
       "qualification": {
         "version": "2026-10-29",
         "kind": "services",
         "route": "service",
         "explanation": "Prestation métier repérée dans l’objet. Les conditions de participation et les moyens KDRIX restent à vérifier.",
         "capacityStatus": "not_assessed"
-      }
+      },
+      "deadlineHistory": [
+        {
+          "value": "2026-11-10T11:00:00+01:00",
+          "sourceUrl": "https://www.publicprocurement.be/publication-workspaces/834b6f23-3906-4589-a0e7-afae9c91d26a/general",
+          "notedAt": "2026-10-28T11:31:20.383Z"
+        }
+      ]
     },
     {
       "id": "ted:702319-2026",
@@ -8921,7 +9048,7 @@
           "versionId": "22cc83b1-d599-4416-96d9-c1a354861889",
           "documentId": "425d5ba1-de86-4335-b68e-3b58107c5b6d",
           "activatedAt": "2026-09-29T15:00:45.021111",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8934,14 +9061,14 @@
           "versionId": "354fbb7b-5f90-4703-9d8e-dae76f7aa72f",
           "documentId": "3b9e3ed1-8163-4041-a26c-eb15668ce044",
           "activatedAt": "2026-10-05T15:31:45.185664",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-04T13:10:39.203Z",
+      "documentsCheckedAt": "2026-11-04T22:03:52.237Z",
       "matchReason": "prestation_dans_marche_de_travaux",
       "screeningReason": null,
       "officialSources": [
@@ -10879,6 +11006,93 @@
       "screeningReason": null
     },
     {
+      "id": "local:345ce7c6bd6dd845bbde",
+      "title": "Ordre du jour du Conseil communal du mercredi 4 novembre 2026 3.5 MB",
+      "sourceDocumentTitle": "Ordre du jour du Conseil communal du mercredi 4 novembre 2026 3.5 MB",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Frameries",
+      "municipalityINS": "53028",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Service Lumière - Renouvellement de l'adhésion à la Charte Éclairage Public et inscription budgétaire pour 2027 Mission d'auteur de projet ayant pour objet l'obtention d'un permis unique pour le Hall de maintenance commu",
+        "sourceUrl": "https://www.frameries.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal-1/ordre-du-jour-du-conseil-communal/2026/frameries-cc-20261104.pdf",
+        "page": 1,
+        "sha256": "dd72a4aea80d6762314a26aaea1a9195f183bd4e6b36cc3c71586506a8b3cafc"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 71,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.frameries.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal-1/ordre-du-jour-du-conseil-communal/2026/frameries-cc-20261104.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.frameries.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal-1/ordre-du-jour-du-conseil-communal/2026/frameries-cc-20261104.pdf",
+        "sha256": "dd72a4aea80d6762314a26aaea1a9195f183bd4e6b36cc3c71586506a8b3cafc",
+        "session": null,
+        "document": {
+          "date": "2026-11-04",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "4 novembre 2026",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "ocr",
+        "language": "fra+eng",
+        "pagesRead": 6,
+        "totalPages": 72,
+        "partial": true
+      },
+      "url": "https://www.frameries.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal-1/ordre-du-jour-du-conseil-communal/2026/frameries-cc-20261104.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Service Lumière - Renouvellement de l'adhésion à la Charte Éclairage Public et inscription budgétaire pour 2027 Mission d'auteur de projet ayant pour objet l'obtention d'un permis unique pour le Hall de maintenance communal - Approbation des conditions et du mode de passation Acquisition matériel voirie - Approbation des conditions, du mode de passation et de l'estimation du marché public.",
+      "evidence": "Service Lumière - Renouvellement de l'adhésion à la Charte Éclairage Public et inscription budgétaire pour 2027 Mission d'auteur de projet ayant pour objet l'obtention d'un permis unique pour le Hall de maintenance communal - Approbation des conditions et du mode de passation Acquisition matériel voirie - Approbation des conditions, du mode de passation et de l'estimation du marché public.",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 1,
+          "excerpt": "Service Lumière - Renouvellement de l'adhésion à la Charte Éclairage Public et inscription budgétaire pour 2027 Mission d'auteur de projet ayant pour objet l'obtention d'un permis unique pour le Hall de maintenance communal - Approbation des conditions et du mode de passation Acquisition matériel voirie - Approbation des conditions, du mode de passation et de l'estimation du marché public."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 1,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:7e257e4ef572a6908b",
+        "sha256": "dd72a4aea80d6762314a26aaea1a9195f183bd4e6b36cc3c71586506a8b3cafc",
+        "checkedAt": "2026-11-04T17:35:02.976Z",
+        "changedAt": null
+      },
+      "matchReason": "prestation_decrite",
+      "screeningReason": null
+    },
+    {
       "id": "communal:7092b8f35c924d8b04e4",
       "title": "Prospection · Beyne-Heusay · des différents paysages énoncés précédemment, mais aussi favorables pour la biodiversité, les luttes Attendu que l’étu…",
       "buyer": "Commune de Beyne-Heusay",
@@ -11951,6 +12165,97 @@
         "status": "unknown",
         "extractedAt": "2026-10-29T13:06:45.748Z"
       }
+    },
+    {
+      "id": "local-html:4a3744fa1b174f076847",
+      "title": "Entretien extraordinaire de la rue de Longuyon à Ruette",
+      "sourceDocumentTitle": "Entretien extraordinaire de la rue de Longuyon à Ruette - Approbation des conditions et du mode de passation.",
+      "missionEvidence": {
+        "excerpt": "Après en avoir délibéré, DECIDE : D'approuver le cahier des charges et le montant estimé du marché “Entretien extraordinaire de la rue de Longuyon à Ruette”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 333.427,",
+        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "4ce6a7e7dd1b33718bb08f57c38d7d36f6b21d242128a041aa85b89484668eea"
+      },
+      "buyer": "Commune de Virton",
+      "municipalityINS": "85045",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "Après en avoir délibéré, DECIDE : D'approuver le cahier des charges et le montant estimé du marché “Entretien extraordinaire de la rue de Longuyon à Ruette”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 333.427,",
+        "mission": "DECIDE : D'approuver le cahier des charges et le montant estimé du marché “Entretien extraordinaire de la rue de Longuyon à Ruette”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD Les conditions sont fixées comme prévu au cahier des charges et par les règ",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Reseaux",
+      "sectors": [
+        "Reseaux"
+      ],
+      "screening": "review",
+      "score": 58,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "4ce6a7e7dd1b33718bb08f57c38d7d36f6b21d242128a041aa85b89484668eea",
+        "session": {
+          "date": "2026-10-08",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 08 octobre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:3ada090cb2acdbbe35",
+        "sha256": "4ce6a7e7dd1b33718bb08f57c38d7d36f6b21d242128a041aa85b89484668eea",
+        "format": "html",
+        "checkedAt": "2026-11-04T17:35:02.976Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu le Code de la démocratie locale et de la décentralisation et ses modificati",
+        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "4ce6a7e7dd1b33718bb08f57c38d7d36f6b21d242128a041aa85b89484668eea"
+      },
+      "description": "Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu le cahier des charges relatif au marché “Entretien extraordinaire de la rue de Longuyon à Ruette” établi par le Bureau d'études, TEXTE MASQUÉ | RGPD ; Considérant que le montant estimé de ce marché s'élève à 333.427,60 € hors TVA, détaillé comme suit : - Tranche ferme : rénovation de la voirie : 310.264,80 € HTVA. - Tranche conditionnelle 1 : extension d’égout : 18.000,00 € HTVA. - Tranche conditionnelle 2 : extension de distribution d’eau : 5.162,80 € HTVA ;",
+      "evidence": "Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu le cahier des charges relatif au marché “Entretien extraordinaire de la rue de Longuyon à Ruette” établi par le Bureau d'études, TEXTE MASQUÉ | RGPD ; Considérant que le montant estimé de ce marché s'élève à 333.427,60 € hors TVA, détaillé comme suit : - Tranche ferme : rénovation de la voirie : 310.264,80 € HTVA. - Tranche conditionnelle 1 : extension d’égout : 18.000,00 € HTVA. - Tranche conditionnelle 2 : extension de distribution d’eau : 5.162,80 € HTVA ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu le cahier des charges relatif au marché “Entretien extraordinaire de la rue de Longuyon à Ruette” établi par le Bureau d'études, TEXTE MASQUÉ | RGPD ; Considérant que le montant estimé de ce marché s'élève à 333.427,60 € hors TVA, détaillé comme suit : - Tranche ferme : rénovation de la voirie : 310.264,80 € HTVA. - Tranche conditionnelle 1 : extension d’égout : 18.000,00 € HTVA. - Tranche conditionnelle 2 : extension de distribution d’eau : 5.162,80 € HTVA ;",
+          "page": null
+        },
+        {
+          "excerpt": "De passer le marché par la procédure ouverte. D’approuver l’avis de marché établi à cet effet. De financer cette dépense par les crédits inscrits au budget extraordinaire de l’exercice 2026, articles 421/731-60 (n° de projet 20260016) pour les travaux de voirie, 877/735-51 (n° de projet 20260018) pour les travaux d’extension d’égout et 874/732-60 (n° de projet 20260020) pour les travaux de distribution d’eau, sous réserve de l’approbation de la Tutelle Financière pour la modification budgétaire de l’article 421/731-60 (n° de projet 20260016).",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null
     },
     {
       "id": "local:1431ffeb0c9cf374730",
@@ -19102,112 +19407,6 @@
       "screeningReason": null
     },
     {
-      "id": "bosa:04e0b00d-f962-4343-bfba-3d81f13ec7bb",
-      "publicationWorkspaceId": "04e0b00d-f962-4343-bfba-3d81f13ec7bb",
-      "noticeId": "e91fd7bf-8f83-40d2-a4f5-1bd42cc88816",
-      "procedureIdentifier": "890dc425-58cf-406d-8c1b-e4bb4809b4bf",
-      "internalReference": "PPP0CN-825/6027/2026297_002",
-      "title": "Désignation d'un auteur de projet afin d'élaborer un schéma de développement communal conformément à la législation relative à l'aménagement du territoire",
-      "buyer": "Fauvillers",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
-        "capacityStatus": "not_assessed"
-      },
-      "matchReason": "mission_globale_a_qualifier",
-      "publication": "2026-11-04",
-      "deadline": "",
-      "cpv": [
-        "71410000"
-      ],
-      "description": "L’objet du marché porte sur la prestation de services relatifs à l’élaboration d’un schéma de développement communal global conformément à la législation relative à l’aménagement du territoire, notamment les articles D.II.9 et D.II.10 du Code du développement territorial. Un schéma de la procédure d’élaboration d’un SDC est repris en annexe 10. Description des services à exécuter : Elaboration du SDC : • Phase 1 : analyse contextuelle • Phase 2 :  a) Établissement de l'avant-projet du SDC ; b) Proposition de révision du GCU en fonction de l’avant-projet ; c) Identification des propositions de révision et/ou abrogation des SOL ; d) Identification des propositions de révision et/ou abrogation du plan de Secteur ; • Phase 3 : rapport sur les incidences environnementales (cette phase fait l’objet d’un marché public distinct) •• Phase 4 :   a) Établissement du projet de schéma de développement communal (y compris, le cas échéant, la révision du GCU et les éventuelles révisions ou abrogations des SOL) ; • Phase 5 : établissement du schéma de développement communal définitif et déclaration environnementale.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "E4",
-      "noticeKind": "award",
-      "bdaReference": "PPP0CN-825/6027/2026297_002",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/04e0b00d-f962-4343-bfba-3d81f13ec7bb/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/04e0b00d-f962-4343-bfba-3d81f13ec7bb/documents",
-      "documentsPageSource": "public_api_200",
-      "bosaResults": [
-        {
-          "reference": "PPP0CN-825/6027/2026297_002",
-          "url": "https://www.publicprocurement.be/publication-workspaces/04e0b00d-f962-4343-bfba-3d81f13ec7bb/general",
-          "publicationDate": "2026-11-04",
-          "kind": "award"
-        }
-      ],
-      "documentInventory": [],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-04T13:11:08.836Z"
-    },
-    {
-      "id": "bosa:81d87d11-8b12-4292-a6d0-0ec14100d46a",
-      "publicationWorkspaceId": "81d87d11-8b12-4292-a6d0-0ec14100d46a",
-      "noticeId": "eae3e7cd-df38-4044-9a19-1107baad95a6",
-      "procedureIdentifier": "b2c3e5f9-67d1-4134-b7d6-df4c049dccd6",
-      "internalReference": "PPP0EX-4507/5977/BE.2025/421.065.00/AJ_002",
-      "title": "Balisage du Réseau de Cheminement Piéton",
-      "buyer": "Mons",
-      "region": "Bruxelles",
-      "languages": [
-        "FR"
-      ],
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 62,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "unknown",
-        "route": "scope",
-        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
-        "capacityStatus": "not_assessed"
-      },
-      "matchReason": "projet_indirect",
-      "publication": "2026-11-04",
-      "deadline": "",
-      "cpv": [
-        "63724310"
-      ],
-      "description": "Balisage du Réseau de Cheminement Piéton",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "E4",
-      "noticeKind": "award",
-      "bdaReference": "PPP0EX-4507/5977/BE.2025/421.065.00/AJ_002",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/81d87d11-8b12-4292-a6d0-0ec14100d46a/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/81d87d11-8b12-4292-a6d0-0ec14100d46a/documents",
-      "documentsPageSource": "public_api_200",
-      "bosaResults": [
-        {
-          "reference": "PPP0EX-4507/5977/BE.2025/421.065.00/AJ_002",
-          "url": "https://www.publicprocurement.be/publication-workspaces/81d87d11-8b12-4292-a6d0-0ec14100d46a/general",
-          "publicationDate": "2026-11-04",
-          "kind": "award"
-        }
-      ],
-      "documentInventory": [],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-04T13:11:12.530Z"
-    },
-    {
       "id": "local:611e00341bddccb3fc5d",
       "title": "2. 1.777.51. : -AMENAGEMENT DU TERRITOIRE : DESIGNATION D'UN BUREAU D'ETUDES DANS LE CADRE DE L'ELABORATION DU SCHEMA DE DEVELOPPEMENT COMMUNAL - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION IN HOUSE - ANNULATION DE LA DELIBERATION DU 6",
       "sourceDocumentTitle": "Ordre du jour",
@@ -19287,7 +19486,9 @@
         "sha256": "778d49d27e50faa363e9fcff5b7a1b11fb4802e1e37e5d3ac165f8ba3f3b3c3d",
         "checkedAt": "2026-11-04T17:35:02.976Z",
         "changedAt": null
-      }
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
     },
     {
       "id": "local-html:736ecc5491d19332818d",
@@ -19368,181 +19569,1025 @@
         }
       ],
       "sourceEvidenceStatus": "found",
-      "municipalReference": "2025-24"
+      "municipalReference": "2025-24",
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
     },
     {
-      "id": "local-html:4a3744fa1b174f076847",
-      "title": "Entretien extraordinaire de la rue de Longuyon à Ruette",
-      "sourceDocumentTitle": "Entretien extraordinaire de la rue de Longuyon à Ruette - Approbation des conditions et du mode de passation.",
-      "missionEvidence": {
-        "excerpt": "Après en avoir délibéré, DECIDE : D'approuver le cahier des charges et le montant estimé du marché “Entretien extraordinaire de la rue de Longuyon à Ruette”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 333.427,",
-        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation",
-        "page": null,
-        "sha256": "4ce6a7e7dd1b33718bb08f57c38d7d36f6b21d242128a041aa85b89484668eea"
-      },
-      "buyer": "Commune de Virton",
-      "municipalityINS": "85045",
+      "id": "bosa:2a9f763d-cdda-499e-abe0-4d64d60ade4e",
+      "publicationWorkspaceId": "2a9f763d-cdda-499e-abe0-4d64d60ade4e",
+      "noticeId": "16d91137-88d8-4baa-b0f5-6110af4e641f",
+      "procedureIdentifier": "87eae18d-9a31-4c14-bc5c-8ffa6f2cba5c",
+      "internalReference": "2026-S2300000-078_pub01",
+      "title": "M175 - Marché de services visant à la mise à jour par digitalisation manuelle des éléments structurants du paysage ligneux 2025",
+      "buyer": "S2.22.03 - Direction des Solutions logicielles et des Projets",
       "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "Après en avoir délibéré, DECIDE : D'approuver le cahier des charges et le montant estimé du marché “Entretien extraordinaire de la rue de Longuyon à Ruette”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 333.427,",
-        "mission": "DECIDE : D'approuver le cahier des charges et le montant estimé du marché “Entretien extraordinaire de la rue de Longuyon à Ruette”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD Les conditions sont fixées comme prévu au cahier des charges et par les règ",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Reseaux",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Drone",
       "sectors": [
-        "Reseaux"
+        "Drone",
+        "Carto"
       ],
-      "screening": "review",
-      "score": 58,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation",
-      "sourceDocument": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation",
-        "sha256": "4ce6a7e7dd1b33718bb08f57c38d7d36f6b21d242128a041aa85b89484668eea",
-        "session": {
-          "date": "2026-10-08",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 08 octobre 2026 (19:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:3ada090cb2acdbbe35",
-        "sha256": "4ce6a7e7dd1b33718bb08f57c38d7d36f6b21d242128a041aa85b89484668eea",
-        "format": "html",
-        "checkedAt": "2026-11-04T17:35:02.976Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu le Code de la démocratie locale et de la décentralisation et ses modificati",
-        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation",
-        "page": null,
-        "sha256": "4ce6a7e7dd1b33718bb08f57c38d7d36f6b21d242128a041aa85b89484668eea"
-      },
-      "description": "Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu le cahier des charges relatif au marché “Entretien extraordinaire de la rue de Longuyon à Ruette” établi par le Bureau d'études, TEXTE MASQUÉ | RGPD ; Considérant que le montant estimé de ce marché s'élève à 333.427,60 € hors TVA, détaillé comme suit : - Tranche ferme : rénovation de la voirie : 310.264,80 € HTVA. - Tranche conditionnelle 1 : extension d’égout : 18.000,00 € HTVA. - Tranche conditionnelle 2 : extension de distribution d’eau : 5.162,80 € HTVA ;",
-      "evidence": "Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu le cahier des charges relatif au marché “Entretien extraordinaire de la rue de Longuyon à Ruette” établi par le Bureau d'études, TEXTE MASQUÉ | RGPD ; Considérant que le montant estimé de ce marché s'élève à 333.427,60 € hors TVA, détaillé comme suit : - Tranche ferme : rénovation de la voirie : 310.264,80 € HTVA. - Tranche conditionnelle 1 : extension d’égout : 18.000,00 € HTVA. - Tranche conditionnelle 2 : extension de distribution d’eau : 5.162,80 € HTVA ;",
-      "municipalEvidence": [
-        {
-          "excerpt": "Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu le cahier des charges relatif au marché “Entretien extraordinaire de la rue de Longuyon à Ruette” établi par le Bureau d'études, TEXTE MASQUÉ | RGPD ; Considérant que le montant estimé de ce marché s'élève à 333.427,60 € hors TVA, détaillé comme suit : - Tranche ferme : rénovation de la voirie : 310.264,80 € HTVA. - Tranche conditionnelle 1 : extension d’égout : 18.000,00 € HTVA. - Tranche conditionnelle 2 : extension de distribution d’eau : 5.162,80 € HTVA ;",
-          "page": null
-        },
-        {
-          "excerpt": "De passer le marché par la procédure ouverte. D’approuver l’avis de marché établi à cet effet. De financer cette dépense par les crédits inscrits au budget extraordinaire de l’exercice 2026, articles 421/731-60 (n° de projet 20260016) pour les travaux de voirie, 877/735-51 (n° de projet 20260018) pour les travaux d’extension d’égout et 874/732-60 (n° de projet 20260020) pour les travaux de distribution d’eau, sous réserve de l’approbation de la Tutelle Financière pour la modification budgétaire de l’article 421/731-60 (n° de projet 20260016).",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local:345ce7c6bd6dd845bbde",
-      "title": "Ordre du jour du Conseil communal du mercredi 4 novembre 2026 3.5 MB",
-      "sourceDocumentTitle": "Ordre du jour du Conseil communal du mercredi 4 novembre 2026 3.5 MB",
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "missionEvidence": null,
-      "buyer": "Commune de Frameries",
-      "municipalityINS": "53028",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Service Lumière - Renouvellement de l'adhésion à la Charte Éclairage Public et inscription budgétaire pour 2027 Mission d'auteur de projet ayant pour objet l'obtention d'un permis unique pour le Hall de maintenance commu",
-        "sourceUrl": "https://www.frameries.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal-1/ordre-du-jour-du-conseil-communal/2026/frameries-cc-20261104.pdf",
-        "page": 1,
-        "sha256": "dd72a4aea80d6762314a26aaea1a9195f183bd4e6b36cc3c71586506a8b3cafc"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 60,
+      "score": 71,
       "screening": "review",
       "qualification": {
         "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
         "capacityStatus": "not_assessed"
       },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.frameries.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal-1/ordre-du-jour-du-conseil-communal/2026/frameries-cc-20261104.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.frameries.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal-1/ordre-du-jour-du-conseil-communal/2026/frameries-cc-20261104.pdf",
-        "sha256": "dd72a4aea80d6762314a26aaea1a9195f183bd4e6b36cc3c71586506a8b3cafc",
-        "session": null,
-        "document": {
-          "date": "2026-11-04",
-          "kind": "document",
-          "page": null,
-          "source": "link_title",
-          "excerpt": "4 novembre 2026",
-          "confidence": "inferred"
-        },
-        "status": "identified"
-      },
-      "sourceExtraction": {
-        "method": "ocr",
-        "language": "fra+eng",
-        "pagesRead": 6,
-        "totalPages": 72,
-        "partial": true
-      },
-      "url": "https://www.frameries.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal-1/ordre-du-jour-du-conseil-communal/2026/frameries-cc-20261104.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : Service Lumière - Renouvellement de l'adhésion à la Charte Éclairage Public et inscription budgétaire pour 2027 Mission d'auteur de projet ayant pour objet l'obtention d'un permis unique pour le Hall de maintenance communal - Approbation des conditions et du mode de passation Acquisition matériel voirie - Approbation des conditions, du mode de passation et de l'estimation du marché public.",
-      "evidence": "Service Lumière - Renouvellement de l'adhésion à la Charte Éclairage Public et inscription budgétaire pour 2027 Mission d'auteur de projet ayant pour objet l'obtention d'un permis unique pour le Hall de maintenance communal - Approbation des conditions et du mode de passation Acquisition matériel voirie - Approbation des conditions, du mode de passation et de l'estimation du marché public.",
-      "municipalReference": null,
-      "municipalSection": null,
-      "municipalEvidence": [
+      "matchReason": "prestation_decrite",
+      "publication": "2026-11-04",
+      "deadline": "2026-11-24T12:00:00+01:00",
+      "cpv": [
+        "71354100",
+        "71351810"
+      ],
+      "description": "L’objet du marché est la prestation de services relatifs à a réalisation de la mise à jour de la cartographie par digitalisation manuelle des éléments structurants du paysage ligneux sur base des orthophotoplans 2025. Cette cartographie des éléments structurants du paysage ligneux pour l’année 2025 permettra de mettre à jour le référentiel des éléments datant de 2021 et de détecter les changements intervenus sur l’ensemble de la Wallonie pour accomplir ses missions d’intérêt général. Ces missions d’intérêt général sont entre autres : o Mise en évidence de la politique de plantation liée à l’opération « Yes We Plant » du Gouvernement wallon ; o Contribution au système d'identification des parcelles agricoles dans le cadre de la Politique Agricole Commune ; o Mise en place d’une infrastructure wallonne d’information géographique qui comprend les géodonnées et les services de géodonnées correspondant aux thèmes figurant aux Annexes de la Directive Inspire 2007/2/CE du Parlement européen et du Conseil du 14 mars 2007, établissant une infrastructure d'information géographique dans la Communauté européenne (INSPIRE), et de son décret de transposition du 22 décembre 2010 relatif à l’infrastructure d’information géographique wallonne. Description des services à exécuter : Mise à jour de la cartographie par digitalisation manuelle des éléments structurants du paysage ligneux sur base des orthophotoplans 2025.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "2026-S2300000-078_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
         {
-          "page": 1,
-          "excerpt": "Service Lumière - Renouvellement de l'adhésion à la Charte Éclairage Public et inscription budgétaire pour 2027 Mission d'auteur de projet ayant pour objet l'obtention d'un permis unique pour le Hall de maintenance communal - Approbation des conditions et du mode de passation Acquisition matériel voirie - Approbation des conditions, du mode de passation et de l'estimation du marché public."
+          "id": "02fe77f0-eb57-472b-b808-aa9dbe1af2e4",
+          "title": "a00000007.CatRelTypesByOriginItemTypeID.atx",
+          "kind": "other",
+          "fileType": "atx",
+          "versionId": "50136374-004a-4900-821e-4d7b56159634",
+          "documentId": "4d765137-e127-4d3b-980a-1e3697f11404",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "038d5f15-9ddc-4b52-93f0-babbf3dc6828",
+          "title": "a00000001.gdbtablx",
+          "kind": "other",
+          "fileType": "gdbtablx",
+          "versionId": "ce40a56e-427d-49da-9324-033c404ebd8f",
+          "documentId": "d411ec56-e760-473e-95c2-9efde263ed15",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "0748efce-5819-428f-a4b2-691ff58dbd57",
+          "title": "a00000004.CatItemsByType.atx",
+          "kind": "other",
+          "fileType": "atx",
+          "versionId": "33ba5968-f207-4cac-bbbf-e32993c5fa92",
+          "documentId": "5ab59178-7f31-4332-8e79-c13e221ec27d",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "0bd3d50a-229b-43b2-8e7d-10ac60ae6de5",
+          "title": "a00000007.CatRelTypesByUUID.atx",
+          "kind": "other",
+          "fileType": "atx",
+          "versionId": "d25a080d-fcf4-4781-8fb4-9958dea50852",
+          "documentId": "8abe4747-91b3-4155-ae9d-7b6729fa3973",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "0e761fe5-58fc-432f-ae59-3697e8e8f5b5",
+          "title": "a00000009.horizon",
+          "kind": "other",
+          "fileType": "horizon",
+          "versionId": "7b450dac-7290-4cf2-a0e5-7298565987c3",
+          "documentId": "54b1965c-bf5f-46a8-923e-a1e62dceb572",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "0eca3680-20f2-457f-875a-46ff1855c093",
+          "title": "a00000007.CatRelTypesByForwardLabel.atx",
+          "kind": "other",
+          "fileType": "atx",
+          "versionId": "ff2891d1-4ebe-4c5b-a119-47bb1b1c3c49",
+          "documentId": "ebe90205-2155-4573-a036-b557602ccbb8",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "108fa68e-a5dc-484d-afdd-239ab70dba67",
+          "title": "a00000006.CatRelsByOriginID.atx",
+          "kind": "other",
+          "fileType": "atx",
+          "versionId": "524dcb8a-f0a0-40c5-b3fc-af0473ce7b0a",
+          "documentId": "9fe4e7ae-6923-4914-8dbd-2a2d0db09cf9",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "18c96540-8f21-4863-b593-7d3c267db919",
+          "title": "a00000005.CatItemTypesByName.atx",
+          "kind": "other",
+          "fileType": "atx",
+          "versionId": "7e57c3c5-c18e-41d8-9130-8ef054342e5d",
+          "documentId": "edcdf7a9-a711-4c46-adba-b12999997e03",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "1b94a743-f00a-4323-b33c-c71e685ee703",
+          "title": "a0000000d.gdbtablx",
+          "kind": "other",
+          "fileType": "gdbtablx",
+          "versionId": "ffea81e1-2621-4c56-8c18-3a820f207b84",
+          "documentId": "3c08c3a4-6260-41c4-8c78-3896614f8c0f",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "1ccb37b4-5d57-4cf9-b7fa-9d44e423469a",
+          "title": "a00000007.CatRelTypesByDestItemTypeID.atx",
+          "kind": "other",
+          "fileType": "atx",
+          "versionId": "3820d95f-f4d2-4d3b-b303-00fb89907dc3",
+          "documentId": "d6ffd487-f173-4a47-a022-cbf1ce0f4a32",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "1e8430a2-64d7-43d1-9f07-12b4fdb217f7",
+          "title": "Annexe 1 - Comment soumettre une offre.docx",
+          "kind": "annex",
+          "fileType": "docx",
+          "versionId": "81b96dd9-62d7-41ea-871f-2a88270bc98b",
+          "documentId": "c81a88a8-8838-4752-83ca-f2d632ac68af",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "32a8f905-a215-4889-9e77-653e12a269e9",
+          "title": "a00000004.horizon",
+          "kind": "other",
+          "fileType": "horizon",
+          "versionId": "7e46c326-ecf3-4129-9ee3-76effe442294",
+          "documentId": "c29d2180-48f7-4c37-a1e4-15fdc5bcf8e3",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "3acef8a3-127b-4249-ba43-579e1e12e2a3",
+          "title": "a00000006.CatRelsByDestinationID.atx",
+          "kind": "other",
+          "fileType": "atx",
+          "versionId": "89284738-0ad4-4f7e-b06b-c66e75c519e9",
+          "documentId": "cdfba1d1-dd0b-4752-af75-69ec19021d0c",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "3f8c4b50-a739-4e32-b784-50eaf7156fd2",
+          "title": "a0000000a.horizon",
+          "kind": "other",
+          "fileType": "horizon",
+          "versionId": "bf27d19f-59d9-4047-a386-9548aa18e10c",
+          "documentId": "c0c0325b-6d7e-4d34-9255-d2551c810cd5",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "445749d0-51a9-48f9-8893-323745b479a3",
+          "title": "a0000000b.horizon",
+          "kind": "other",
+          "fileType": "horizon",
+          "versionId": "28b3e8ba-94c0-4640-8c8a-ef46a7bf558c",
+          "documentId": "85911f77-2237-4ecf-8b18-eec79c9d1942",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "4718ec98-7af3-41a0-aaaa-16acd54b10ad",
+          "title": "a0000000e.horizon",
+          "kind": "other",
+          "fileType": "horizon",
+          "versionId": "86f28c2d-28e3-4477-a11d-933412f00dea",
+          "documentId": "f39532f4-e4d9-4bc2-ae49-1fccc081af63",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "48e383d9-8c2e-452a-966c-4a018d4d4717",
+          "title": "a00000006.CatRelsByType.atx",
+          "kind": "other",
+          "fileType": "atx",
+          "versionId": "04ad1224-dd46-4c1d-be90-76bb08bc222e",
+          "documentId": "848a1834-44fa-42bb-8b0a-c174b1288697",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "51273e26-8598-402f-b1d9-7b66f721a21f",
+          "title": "a00000006.gdbtable",
+          "kind": "other",
+          "fileType": "gdbtable",
+          "versionId": "242637c5-e49b-43f4-9905-c623bea0676b",
+          "documentId": "78d34e4a-2ff1-4f8d-b2bd-970a62ad7cbf",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "5191a690-47cc-427e-bc46-3040c2d42ca9",
+          "title": "a0000000e.gdbindexes",
+          "kind": "other",
+          "fileType": "",
+          "versionId": "91e9dc03-c4ad-4e91-944e-6f20a2993846",
+          "documentId": "b9c74340-b939-48ec-914a-5e24c807b9f6",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "612225cc-c657-4871-b468-a42d1330d3b1",
+          "title": "timestamps",
+          "kind": "other",
+          "fileType": "",
+          "versionId": "8e8369d9-94cd-4574-8a6d-9733bb6ec3e3",
+          "documentId": "3f94865b-1950-48cc-b7c1-a120e78c64ec",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "6186253c-ad8e-4861-bde0-67efc0b7bc03",
+          "title": "a00000003.gdbindexes",
+          "kind": "other",
+          "fileType": "",
+          "versionId": "425683de-82e7-4820-a01e-39d22dc3884a",
+          "documentId": "eacfcc73-d8c6-412e-94cb-d44d7f05d966",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "61cca49b-ff75-427c-b4d1-de99501a5a6f",
+          "title": "1 CSC_M175_ESP_v5.pdf",
+          "kind": "csc",
+          "fileType": "pdf",
+          "versionId": "0ca1a8b9-2239-458c-bb97-32c18494e5a1",
+          "documentId": "4969496f-58d4-4b36-8834-ffe2c0a0e2d8",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "647f1499-7033-42a8-9e4d-7d878749d58d",
+          "title": "a00000004.FDO_UUID.atx",
+          "kind": "other",
+          "fileType": "atx",
+          "versionId": "38f56497-f4f0-446a-bb50-eb040d8c8882",
+          "documentId": "649ddd24-1623-4e48-8c6d-44b8d8bb5f54",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "64a67250-ad44-4c87-ae93-fe7b91794368",
+          "title": "ORTHO_2025__00590110_Echantillon.tif",
+          "kind": "other",
+          "fileType": "tif",
+          "versionId": "39c818b4-f508-4aab-8507-884a7936f0b5",
+          "documentId": "9d14ff53-4afe-40b1-ac52-efaef18fec57",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "657d2ba0-d4d7-4800-b856-a41b1f19b891",
+          "title": "a00000004.gdbtable",
+          "kind": "other",
+          "fileType": "gdbtable",
+          "versionId": "cae72627-ed67-401c-8616-22d02deb7849",
+          "documentId": "b07caddf-80a4-4cf1-973f-6da05daa4396",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "6bd49f62-5664-47b0-b4f9-53a8263319da",
+          "title": "a0000000b.spx",
+          "kind": "other",
+          "fileType": "spx",
+          "versionId": "18366286-43bf-4f5f-937a-f79f0c288d72",
+          "documentId": "7ab01b7d-6f75-43f8-a1c4-12bea31809d6",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "6c0cc959-c524-4e87-8ec7-488f8c8bbaa1",
+          "title": "a00000001.TablesByName.atx",
+          "kind": "other",
+          "fileType": "atx",
+          "versionId": "48fc85ca-9d43-4b7b-9519-347781183442",
+          "documentId": "1928d32d-a48f-4da4-8d10-e33aee641364",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "7245b6d9-e36a-4c5b-8d3f-220843ca9963",
+          "title": "a00000004.CatItemsByPhysicalName.atx",
+          "kind": "other",
+          "fileType": "atx",
+          "versionId": "96222cc7-624d-44eb-bbf3-03354a2a8fba",
+          "documentId": "e1f3a8e5-5d22-4867-ad71-eeec99e2324e",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "72592040-b158-4bdc-8f72-a3bcfe8c6eab",
+          "title": "a00000001.gdbindexes",
+          "kind": "other",
+          "fileType": "",
+          "versionId": "61b74943-230d-4cf7-855e-710aac0e1b2c",
+          "documentId": "919d7722-5c23-485c-9980-c559d22b1373",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "73c7daed-a260-42f7-bcc8-d5f4e779c864",
+          "title": "a00000007.gdbtablx",
+          "kind": "other",
+          "fileType": "gdbtablx",
+          "versionId": "b6d4f963-14f9-43b6-bacc-b70c900874f7",
+          "documentId": "6fb062c0-9da4-4fe5-8b01-bb6417f6614c",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "76127011-fc66-4e2f-a34e-d21888619ed1",
+          "title": "a00000002.gdbtable",
+          "kind": "other",
+          "fileType": "gdbtable",
+          "versionId": "6816dd59-21fb-4d70-a3f0-ac22a01ab746",
+          "documentId": "7078564b-1ed1-4364-b811-ddf89abba26f",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "77a8cbb3-1e91-41c2-870c-c7bc0f63a9bb",
+          "title": "a0000000e.spx",
+          "kind": "other",
+          "fileType": "spx",
+          "versionId": "9ce5081b-8d03-4aae-a5c5-5867e3cf1153",
+          "documentId": "2575ca2b-0f2b-4b98-b4b2-f732ca7f3381",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "7a6f7dbe-96cc-42a5-ab5c-f0adbc78e04d",
+          "title": "a00000005.gdbtablx",
+          "kind": "other",
+          "fileType": "gdbtablx",
+          "versionId": "cc14db58-15aa-44eb-bd58-371ce18d9e80",
+          "documentId": "c6839309-4b38-42b1-bc52-54d184acc804",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "7ba98908-7436-43e9-82ec-eaa3d1bb2532",
+          "title": "Annexe 2 - Voies de recours.pdf",
+          "kind": "annex",
+          "fileType": "pdf",
+          "versionId": "17dd5fa0-6015-43c7-b151-d9fff11120fd",
+          "documentId": "3bb119fe-6f44-44d4-bafd-9b93508d7541",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "7bef5ec2-698b-4f91-9100-7f85e69afa4e",
+          "title": "a00000005.CatItemTypesByUUID.atx",
+          "kind": "other",
+          "fileType": "atx",
+          "versionId": "9dfd65f3-9015-4bf9-b2bb-4d4d7db01814",
+          "documentId": "3f52e889-6cfc-474f-80fe-e7613aad8ed4",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "7c25ddf0-b70d-45e0-9d88-50131b7b7cbd",
+          "title": "a00000007.CatRelTypesByBackwardLabel.atx",
+          "kind": "other",
+          "fileType": "atx",
+          "versionId": "c2c2958b-2611-48a8-8a93-41fa87a677df",
+          "documentId": "8f899c67-4878-47da-a5a8-5a51578deb18",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "7d04193d-c779-45be-978e-38144c5c72f8",
+          "title": "a00000004.spx",
+          "kind": "other",
+          "fileType": "spx",
+          "versionId": "fd9b28c4-3287-4047-bc5b-c507b1287ccd",
+          "documentId": "8fca5a70-0f21-4091-be0a-72b36242b6c3",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "7d444f70-1e47-44d7-ab0f-22b69242621c",
+          "title": "a00000009.spx",
+          "kind": "other",
+          "fileType": "spx",
+          "versionId": "780d486e-0c12-4e03-a499-87c7e1730c9a",
+          "documentId": "08750f49-a2c7-4452-96d8-fb605a740b84",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "7df43e7a-d1c2-41fa-972b-c46484e8ddd6",
+          "title": "a0000000d.spx",
+          "kind": "other",
+          "fileType": "spx",
+          "versionId": "21c7dec3-9fd3-4eae-8cf3-f080a254e41e",
+          "documentId": "a0ccc7d4-9e1d-4143-b04f-23ba349f61bb",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "81be5e76-9567-47fa-aa66-c66f4fb9ba74",
+          "title": "a00000009.gdbindexes",
+          "kind": "other",
+          "fileType": "",
+          "versionId": "276c7cd1-e93d-4137-a242-245c10b24310",
+          "documentId": "65f57be5-6720-473f-9286-643073780e97",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "857ac1a7-9ff3-4e3b-b668-ff411652fa6e",
+          "title": "a00000004.gdbindexes",
+          "kind": "other",
+          "fileType": "",
+          "versionId": "8c79ce78-3108-4bf6-833f-e56b08bb411d",
+          "documentId": "72a1bd66-31a6-4388-ab48-ba75083fdd78",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "89ea24fc-7f22-48e0-b643-af8f73b59499",
+          "title": "a00000006.FDO_UUID.atx",
+          "kind": "other",
+          "fileType": "atx",
+          "versionId": "676e8abe-2b75-47a2-9688-3be42a9abbd1",
+          "documentId": "67ce0413-157e-4da5-9c38-af76c76290dc",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "8ead6df4-1ca1-4214-b10a-63748138391d",
+          "title": "a0000000e.gdbtable",
+          "kind": "other",
+          "fileType": "gdbtable",
+          "versionId": "fda483da-6267-4003-8a4a-1ca05de3266b",
+          "documentId": "38e8db89-7c9a-4222-a04f-81d363dc16d3",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "940b4c4a-0a73-44c5-ac71-a7f085333511",
+          "title": "a00000005.CatItemTypesByParentTypeID.atx",
+          "kind": "other",
+          "fileType": "atx",
+          "versionId": "809531f8-600a-4e52-a516-4e8897eb5c3a",
+          "documentId": "bcb72d0b-287d-4abf-87ec-8c51c5b54114",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "99dfcc4b-08c7-4694-b4b1-6eff40cc0be1",
+          "title": "a0000000a.gdbtable",
+          "kind": "other",
+          "fileType": "gdbtable",
+          "versionId": "c4e05153-f733-4fac-90d7-47124fdda21b",
+          "documentId": "8b67663c-61fb-4370-a302-6a02210672b7",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "9c2c8fca-3115-48eb-ba82-1aef1f5036b7",
+          "title": "a00000001.gdbtable",
+          "kind": "other",
+          "fileType": "gdbtable",
+          "versionId": "8b839bce-710f-4221-ad71-7e24077e2edc",
+          "documentId": "43046dd9-3867-466d-acfc-7bafdb070cd4",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "a4d1b9a8-0b96-4bcf-a40a-0f453c04fe39",
+          "title": "a00000002.gdbtablx",
+          "kind": "other",
+          "fileType": "gdbtablx",
+          "versionId": "5b53e704-3c73-4c65-9b64-e45d36096188",
+          "documentId": "a3e71f22-5cc7-4ba6-989a-15ca28d0ccf7",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "a6f47893-4c6a-4c04-a9f2-757c483d63bd",
+          "title": "a00000004.freelist",
+          "kind": "other",
+          "fileType": "freelist",
+          "versionId": "8e6598ab-33d9-4b20-8237-3978c3b02412",
+          "documentId": "ce3403bb-8751-4517-bbd3-659c1c0b99e7",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "a85aed3e-c251-4ecb-9f5e-e86bf020c72c",
+          "title": "a0000000d.gdbtable",
+          "kind": "other",
+          "fileType": "gdbtable",
+          "versionId": "5af4ae6a-eb4e-4bd7-a761-eaf335f4c562",
+          "documentId": "496180d6-e193-4425-a40a-cdfa9043d202",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "a86210fd-f375-4bd8-a8f5-33cc68c0f3cd",
+          "title": "a00000007.CatRelTypesByName.atx",
+          "kind": "other",
+          "fileType": "atx",
+          "versionId": "18e87dee-2ff5-4693-97cc-c4ecce8b3473",
+          "documentId": "b266a156-2709-44ce-b820-5e7464f7baa9",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "aba57273-5e50-44a1-b6b5-5624c74a4e4b",
+          "title": "a0000000b.gdbtablx",
+          "kind": "other",
+          "fileType": "gdbtablx",
+          "versionId": "5cc4142e-0a3d-4bed-88d7-bb7ddd217956",
+          "documentId": "bd5293de-1018-4474-8af9-92f83ec437a5",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "ac89371a-f498-4420-a745-f90cff914055",
+          "title": "a00000005.gdbindexes",
+          "kind": "other",
+          "fileType": "",
+          "versionId": "994bbe6c-7cb8-44fd-921b-20c6969e0106",
+          "documentId": "3f42ce87-99a5-426d-8aae-502acefc7f04",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "adecc65b-8b84-4cec-bf56-04da193e23ea",
+          "title": "a00000009.gdbtablx",
+          "kind": "other",
+          "fileType": "gdbtablx",
+          "versionId": "5ce6a33d-8ad1-4208-9ac1-168f6d33f8d6",
+          "documentId": "c2b26c85-d2f9-438c-aa4c-def97b50009c",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "b0f2b2ac-5f55-4f65-b39f-5928ef3c0858",
+          "title": "a00000006.gdbtablx",
+          "kind": "other",
+          "fileType": "gdbtablx",
+          "versionId": "c48827d4-7daf-4ee1-94cc-6150d4094a4c",
+          "documentId": "5afca001-0509-48da-a5c2-9c7827e61dcb",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "bcd45b6f-c53a-4dee-9a5f-ab2a027f3d1f",
+          "title": "a0000000e.gdbtablx",
+          "kind": "other",
+          "fileType": "gdbtablx",
+          "versionId": "fef86b16-2c94-4e07-8ae7-f0e7497fae8e",
+          "documentId": "51ec87a8-4c15-495c-8385-f2ed490ed493",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "be4d7e3a-a3b1-44b4-8a51-e9554eeaa230",
+          "title": "a00000003.gdbtablx",
+          "kind": "other",
+          "fileType": "gdbtablx",
+          "versionId": "77143957-cdad-4a0b-8a38-be8479bd37f3",
+          "documentId": "10fab7af-08db-43af-b494-44e9330b36c5",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "bea618ae-8f7c-4cf6-b669-855667fb00d3",
+          "title": "a00000007.gdbindexes",
+          "kind": "other",
+          "fileType": "",
+          "versionId": "a5264157-cf76-4341-99c8-503f2703f107",
+          "documentId": "abd0e814-9a2a-4304-bdaa-1d004c84c5ff",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "c29c788e-c98d-4ce8-a361-9ae6bbd88b18",
+          "title": "a00000004.gdbtablx",
+          "kind": "other",
+          "fileType": "gdbtablx",
+          "versionId": "0fddf731-1b14-475a-9b4c-678d02821fd7",
+          "documentId": "3b29a599-44f9-47b8-8c56-b2f1b5508b97",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "c545e3cd-e811-412b-9853-2ed59fd33def",
+          "title": "a00000006.freelist",
+          "kind": "other",
+          "fileType": "freelist",
+          "versionId": "4d48266c-fe5b-40fd-97c2-9f710961650e",
+          "documentId": "5cc11772-39fb-44aa-9ebb-2bd778011611",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "c672d868-1475-4599-9a39-82daf93900a2",
+          "title": "a0000000a.spx",
+          "kind": "other",
+          "fileType": "spx",
+          "versionId": "8e1be128-eff5-4960-9db9-7a97616a2603",
+          "documentId": "3013afa5-f9fc-46c2-94a4-11b2f8e9ec9a",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "ca09447e-d78a-47c9-8630-774201d8bf58",
+          "title": "a0000000a.gdbtablx",
+          "kind": "other",
+          "fileType": "gdbtablx",
+          "versionId": "92b0246e-9741-4693-9c21-c343fd824e76",
+          "documentId": "e34eecbe-fc87-477c-bc71-27404cd3c20a",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "cc86006b-7a32-4304-8dc0-2bf26da323e6",
+          "title": "a00000001.freelist",
+          "kind": "other",
+          "fileType": "freelist",
+          "versionId": "5661efde-ba2d-48e3-8fa3-16d4070b69b4",
+          "documentId": "f12d7ca5-8e5b-45db-8a83-2571f3691335",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "d120d884-ff55-4adc-b5fd-49b281d8b9ee",
+          "title": "1 CSC_M175_ESP_v5.docx",
+          "kind": "csc",
+          "fileType": "docx",
+          "versionId": "6a140511-8598-4052-b6f4-297e7542fc84",
+          "documentId": "899c91f5-90ae-42e1-a660-4cc7366384a0",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "d67c79ba-d43f-464a-a67f-87dc0b245f00",
+          "title": "a0000000a.gdbindexes",
+          "kind": "other",
+          "fileType": "",
+          "versionId": "b42ec9e3-b4b3-4cb4-924d-d30dc7f5bf43",
+          "documentId": "b6e130af-d59b-4019-8f14-cf10598e39de",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "de9fe072-02a5-418a-b16c-c500da7e2ac9",
+          "title": "a00000003.gdbtable",
+          "kind": "other",
+          "fileType": "gdbtable",
+          "versionId": "5dbf0f87-afd0-428c-a309-ecee292e4b64",
+          "documentId": "cc3c873c-3d0f-4817-ac76-d3fbbfd782f8",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "dfe12fe5-9d88-4894-8aac-ed8a4a2b949a",
+          "title": "a00000005.gdbtable",
+          "kind": "other",
+          "fileType": "gdbtable",
+          "versionId": "407d5e9d-48e5-4f05-ad05-f2529798e7c6",
+          "documentId": "00c632d5-86f9-4b54-8f79-ca55c7ab81c2",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "e7e0f868-6df2-4fbf-9c3b-dcdae5a0e3f0",
+          "title": "a0000000d.gdbindexes",
+          "kind": "other",
+          "fileType": "",
+          "versionId": "d1a29f3d-98d3-44fe-bb80-4424b3c12d4b",
+          "documentId": "651f3352-f33e-4464-bae3-528b7d3198d4",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "ec5489a2-ce1e-4440-ada0-43b20b46f95b",
+          "title": "a0000000b.gdbtable",
+          "kind": "other",
+          "fileType": "gdbtable",
+          "versionId": "37a01599-81bb-42b8-bf27-08e76f0ff257",
+          "documentId": "92196471-dd53-404e-8588-53ee81ee6edf",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "f1fec956-e845-4072-af98-b0bad9e70d8e",
+          "title": "gdb",
+          "kind": "other",
+          "fileType": "",
+          "versionId": "3c5112a4-fa98-4974-b693-9742e0e44041",
+          "documentId": "748463cb-f22d-4959-9c11-8733a36f0398",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "f34a9f54-0db0-4ea3-af93-1697f93632a0",
+          "title": "a0000000b.gdbindexes",
+          "kind": "other",
+          "fileType": "",
+          "versionId": "f91d36a3-068b-4873-ae63-51b2d005d888",
+          "documentId": "5e53bb59-dfbd-4ee9-8dd3-9064f8645dbe",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "f9ad1f12-9028-4773-8ee2-f216457f73c5",
+          "title": "a00000007.gdbtable",
+          "kind": "other",
+          "fileType": "gdbtable",
+          "versionId": "59c207f3-c009-4b46-acb9-11cea1a22a07",
+          "documentId": "2b58ecfa-bec8-4727-b5f8-c6197d63c048",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "f9ffb5f4-3158-4298-9577-5e1fbcc5eabb",
+          "title": "a00000006.gdbindexes",
+          "kind": "other",
+          "fileType": "",
+          "versionId": "c09cab73-d641-45a3-8ada-b8b32f74ecc3",
+          "documentId": "ac3269f4-0269-4e7d-903c-ae8f1e82fb9c",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "ffa869d1-0b6e-45fc-888a-6152ef4e0477",
+          "title": "a0000000d.horizon",
+          "kind": "other",
+          "fileType": "horizon",
+          "versionId": "1b5ea2c7-1133-4a87-bd83-615ab9c268f5",
+          "documentId": "ca6c29b1-3884-4f2e-8d13-d4a1909a1b6d",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "ffcede9c-fced-4944-9a42-1d0a00fe110c",
+          "title": "a00000009.gdbtable",
+          "kind": "other",
+          "fileType": "gdbtable",
+          "versionId": "6f15a0af-7f7d-4151-b57f-8941f9a70de2",
+          "documentId": "e07dc22e-e0cb-4db6-96f9-bd80ee54c042",
+          "activatedAt": "2026-11-04T14:36:45.22653",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 1,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:7e257e4ef572a6908b",
-        "sha256": "dd72a4aea80d6762314a26aaea1a9195f183bd4e6b36cc3c71586506a8b3cafc",
-        "checkedAt": "2026-11-04T17:35:02.976Z",
-        "changedAt": null
-      }
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-04T22:04:20.779Z",
+      "deadlineTime": "12:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/2a9f763d-cdda-499e-abe0-4d64d60ade4e/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n24/11/2026 12:00 CET",
+      "deadlineVerifiedAt": "2026-11-04T22:04:21.071Z"
     }
   ]
 }
