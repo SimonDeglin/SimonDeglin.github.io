@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-03T21:49:12.939Z",
+  "generated_at": "2026-11-04T13:01:48.411Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-11-03 : 1363 avis lus, 1 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-11-04 : 1347 avis lus, 1 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-11-03T21:51:10.224Z",
-      "scanned": 2525,
-      "retained": 36,
-      "period_from": "2026-10-20",
-      "period_to": "2026-11-03",
-      "pages": 101,
+      "last_success": "2026-11-04T13:03:31.364Z",
+      "scanned": 2375,
+      "retained": 33,
+      "period_from": "2026-10-21",
+      "period_to": "2026-11-04",
+      "pages": 95,
       "complete": true,
-      "raw_candidates": 2506,
-      "oldest_seen": "2026-10-19",
-      "last_attempt": "2026-11-03T21:51:10.224Z",
+      "raw_candidates": 2360,
+      "oldest_seen": "2026-10-20",
+      "last_attempt": "2026-11-04T13:03:31.364Z",
       "last_error": null,
-      "last_complete_success": "2026-11-03T21:51:10.224Z"
+      "last_complete_success": "2026-11-04T13:03:31.364Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-11-03T21:53:41.253Z",
+      "last_success": "2026-11-04T13:05:43.473Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -50,7 +50,7 @@
           "source": "Province de Liège — PV et comptes rendus",
           "documents_seen": 12,
           "documents_read": 9,
-          "signals_detected": 1
+          "signals_detected": 0
         }
       ],
       "errors_count": 9,
@@ -104,14 +104,14 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 101 page(s) parcourue(s) depuis 2026-10-20.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 95 page(s) parcourue(s) depuis 2026-10-21.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
-    "scanned": 1363,
+    "scanned": 1347,
     "matched_current_run": 8,
-    "records": 261,
-    "review_count": 155,
+    "records": 263,
+    "review_count": 167,
     "award_notice_count": 338,
     "awarded_market_matches": 1,
     "award_fields_requested": false,
@@ -125,37 +125,37 @@
     "queries": [
       {
         "source": "Acheteurs belges",
-        "from": "20261023",
-        "to": "20261029",
-        "found": 435,
-        "reported": 435
+        "from": "20261024",
+        "to": "20261030",
+        "found": 450,
+        "reported": 450
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261023",
-        "to": "20261029",
-        "found": 418,
-        "reported": 418
+        "from": "20261024",
+        "to": "20261030",
+        "found": 433,
+        "reported": 433
       },
       {
         "source": "Acheteurs belges",
-        "from": "20261030",
-        "to": "20261103",
-        "found": 257,
-        "reported": 257
+        "from": "20261031",
+        "to": "20261104",
+        "found": 235,
+        "reported": 235
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261030",
-        "to": "20261103",
-        "found": 253,
-        "reported": 253
+        "from": "20261031",
+        "to": "20261104",
+        "found": 229,
+        "reported": 229
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2525,
-    "bosa_imported": 36,
-    "bosa_pages": 101,
+    "bosa_scanned": 2375,
+    "bosa_imported": 33,
+    "bosa_pages": 95,
     "local_documents": 34,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -171,16 +171,16 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "travaux_execution": 116,
+      "avis_neerlandais": 161,
+      "aucun_signal_metier": 411,
       "avis_attribution_analyse_separement": 338,
-      "avis_neerlandais": 146,
-      "aucun_signal_metier": 431,
-      "acheteur_flamand": 178,
-      "objet_hors_domaine": 59,
+      "travaux_execution": 114,
+      "acheteur_flamand": 167,
+      "objet_hors_domaine": 62,
       "assurance_ou_nettoyage": 16,
       "fournitures_et_location": 44,
+      "qualifie_review": 14,
       "formule_administrative_sans_signal_metier": 18,
-      "qualifie_review": 15,
       "qualifie_main": 2
     }
   },
@@ -273,6 +273,73 @@
         "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
         "capacityStatus": "not_assessed"
       }
+    },
+    {
+      "id": "bosa:b421ef8a-d870-48cc-89a7-91bb1489e278",
+      "publicationWorkspaceId": "b421ef8a-d870-48cc-89a7-91bb1489e278",
+      "noticeId": "bf9ae459-1d13-467a-a418-65544af9d2ca",
+      "procedureIdentifier": "560c293f-0c8f-44ed-9e1a-a62fd377ed1c",
+      "internalReference": "PPP0KC-2881/6941/AC2026-089 CB_001",
+      "title": "Services d'Assistance à Maîtrise d'Ouvrage (AMO) et de Pilotage de Projet",
+      "buyer": "CHU Brugmann - Association Hospitalière de Bruxelles et de Schaerbeek",
+      "region": "Bruxelles",
+      "languages": [
+        "NL",
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 62,
+      "screening": "review",
+      "publication": "2026-11-03",
+      "deadline": "2026-11-17T11:00:00+01:00",
+      "cpv": [
+        "71541000"
+      ],
+      "description": "Services d'Assistance à Maîtrise d'Ouvrage (AMO) et de Pilotage de Projet",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "PPP0KC-2881/6941/AC2026-089 CB_001",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [],
+      "consultationUrls": [
+        {
+          "url": "https://cloud.3p.eu/Downloads/1/2881/KC/2026",
+          "type": "officially_referenced_external_documents",
+          "access": "destination_not_download_verified",
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/urls?full=false",
+          "activatedAt": "2026-10-28T15:20:46.016102"
+        }
+      ],
+      "documentsCheckedAt": "2026-10-28T21:16:21.283Z",
+      "deadlineTime": "11:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n17/11/2026 11:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T21:16:21.724Z",
+      "matchReason": "projet_indirect",
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/general"
+        }
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "screeningReason": null
     },
     {
       "id": "bosa:5e50b6fb-30a8-4f08-9d0c-f42ec414aae1",
@@ -1400,73 +1467,6 @@
         "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
         "capacityStatus": "not_assessed"
       }
-    },
-    {
-      "id": "bosa:b421ef8a-d870-48cc-89a7-91bb1489e278",
-      "publicationWorkspaceId": "b421ef8a-d870-48cc-89a7-91bb1489e278",
-      "noticeId": "bf9ae459-1d13-467a-a418-65544af9d2ca",
-      "procedureIdentifier": "560c293f-0c8f-44ed-9e1a-a62fd377ed1c",
-      "internalReference": "PPP0KC-2881/6941/AC2026-089 CB_001",
-      "title": "Services d'Assistance à Maîtrise d'Ouvrage (AMO) et de Pilotage de Projet",
-      "buyer": "CHU Brugmann - Association Hospitalière de Bruxelles et de Schaerbeek",
-      "region": "Bruxelles",
-      "languages": [
-        "NL",
-        "FR"
-      ],
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 62,
-      "screening": "review",
-      "publication": "2026-11-03",
-      "deadline": "2026-11-17T11:00:00+01:00",
-      "cpv": [
-        "71541000"
-      ],
-      "description": "Services d'Assistance à Maîtrise d'Ouvrage (AMO) et de Pilotage de Projet",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "16",
-      "noticeKind": "competition",
-      "bdaReference": "PPP0KC-2881/6941/AC2026-089 CB_001",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [],
-      "consultationUrls": [
-        {
-          "url": "https://cloud.3p.eu/Downloads/1/2881/KC/2026",
-          "type": "officially_referenced_external_documents",
-          "access": "destination_not_download_verified",
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/urls?full=false",
-          "activatedAt": "2026-10-28T15:20:46.016102"
-        }
-      ],
-      "documentsCheckedAt": "2026-10-28T21:16:21.283Z",
-      "deadlineTime": "11:00",
-      "deadlineTimeZone": "Europe/Brussels",
-      "deadlineSourceKind": "bosa_verified_public",
-      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/general",
-      "deadlineSourceEvidence": "Date limite de soumission\n17/11/2026 11:00 CET",
-      "deadlineVerifiedAt": "2026-10-28T21:16:21.724Z",
-      "matchReason": "projet_indirect",
-      "officialSources": [
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/general"
-        }
-      ],
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
-        "capacityStatus": "not_assessed"
-      },
-      "screeningReason": null
     },
     {
       "id": "ted:748312-2026",
@@ -4586,7 +4586,7 @@
           "versionId": "bcdca6d0-d13f-4138-99c5-6e122da4dde8",
           "documentId": "17848170-0136-4662-8b9a-69f321d687c5",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -4599,7 +4599,7 @@
           "versionId": "7a672143-498d-40bf-85d2-1a0ccd6c89b8",
           "documentId": "338ce9a3-7ba9-4ed9-99b8-3bd5f1ce416e",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -4612,7 +4612,7 @@
           "versionId": "5a3371af-caf1-41b9-89e6-e6eade671b0a",
           "documentId": "23b3699b-6288-4049-922c-146ae89c1eb4",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -4625,7 +4625,7 @@
           "versionId": "6dabd106-495c-4884-b407-a9d35ae4800b",
           "documentId": "d182b6fc-7127-4669-95f9-5b81310dc8c6",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -4638,7 +4638,7 @@
           "versionId": "62dd41f2-e318-42b1-b772-46e8d5633836",
           "documentId": "5ebc8928-f728-45bd-8c0d-992a55d8ce01",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -4651,14 +4651,14 @@
           "versionId": "1b6ff5ed-8135-422d-81f1-ab428d851133",
           "documentId": "f7b3b39c-0bec-4f55-8e29-844c0e81c6b6",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "FR,EN",
+          "language": "EN,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-03T21:55:56.684Z",
+      "documentsCheckedAt": "2026-11-04T13:08:00.050Z",
       "matchReason": "description_ou_contexte",
       "screeningReason": null,
       "officialSources": [
@@ -5890,7 +5890,7 @@
           "versionId": "36488d00-f30c-407b-abf7-ea1924b6b999",
           "documentId": "917f42c5-0419-4611-8398-5561fefe4efc",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5916,7 +5916,7 @@
           "versionId": "26b15544-17fc-43c0-826c-1322f33b9850",
           "documentId": "20364704-82a0-4eb0-a213-7965e3328061",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5968,7 +5968,7 @@
           "versionId": "f5ff3774-83d7-49c0-abe1-28e026816900",
           "documentId": "ff53ea2a-b24f-4586-b315-523295f56f5c",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5981,7 +5981,7 @@
           "versionId": "8228202b-2303-4eba-8e13-0fe820c5023d",
           "documentId": "ac74d28e-0bfa-4c78-af2b-da7f05b117dd",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -6014,7 +6014,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-03T21:56:44.550Z",
+      "documentsCheckedAt": "2026-11-04T13:08:48.166Z",
       "documentAnalyses": [
         {
           "documentId": "7259aed6-32b5-4e0b-88c0-ffa7fa606658",
@@ -8921,7 +8921,7 @@
           "versionId": "22cc83b1-d599-4416-96d9-c1a354861889",
           "documentId": "425d5ba1-de86-4335-b68e-3b58107c5b6d",
           "activatedAt": "2026-09-29T15:00:45.021111",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8934,14 +8934,14 @@
           "versionId": "354fbb7b-5f90-4703-9d8e-dae76f7aa72f",
           "documentId": "3b9e3ed1-8163-4041-a26c-eb15668ce044",
           "activatedAt": "2026-10-05T15:31:45.185664",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-02T23:42:38.727Z",
+      "documentsCheckedAt": "2026-11-04T13:10:39.203Z",
       "matchReason": "prestation_dans_marche_de_travaux",
       "screeningReason": null,
       "officialSources": [
@@ -9903,6 +9903,174 @@
           }
         }
       ],
+      "matchReason": "prestation_decrite",
+      "screeningReason": null
+    },
+    {
+      "id": "local:ac0ca00e701f13053beb",
+      "title": "22.   Programme Communal de Développement Rural - F.P.1.1. « Réaménagement de la place de Gourdinne » : désignation d’un auteur de projet - Marché",
+      "sourceDocumentTitle": "Consulter",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Walcourt",
+      "municipalityINS": "93088",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "22. Programme Communal de Développement Rural - F.P.1.1. « Réaménagement de la place de Gourdinne » : désignation d’un auteur de projet - Marché",
+        "sourceUrl": "https://www.walcourt.be/wp-content/uploads/2026/10/Ordre-du-Jour-du-Conseil-communal-du-lundi-26-octobre-2026-a-19h30.pdf",
+        "page": 1,
+        "sha256": "79476554ed850f72f21aa59283607567f455f8c491df5d0932657cbc9f4665c8"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 95,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.walcourt.be/wp-content/uploads/2026/10/Ordre-du-Jour-du-Conseil-communal-du-lundi-26-octobre-2026-a-19h30.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.walcourt.be/wp-content/uploads/2026/10/Ordre-du-Jour-du-Conseil-communal-du-lundi-26-octobre-2026-a-19h30.pdf",
+        "sha256": "79476554ed850f72f21aa59283607567f455f8c491df5d0932657cbc9f4665c8",
+        "session": {
+          "date": "2026-09-28",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "Procès-verbal de la séance du 28/09/2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.walcourt.be/wp-content/uploads/2026/10/Ordre-du-Jour-du-Conseil-communal-du-lundi-26-octobre-2026-a-19h30.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 22.   Programme Communal de Développement Rural - F.P.1.1. « Réaménagement de la place de Gourdinne » : désignation d’un auteur de projet - Marché",
+      "evidence": "22.   Programme Communal de Développement Rural - F.P.1.1. « Réaménagement de la place de Gourdinne » : désignation d’un auteur de projet - Marché",
+      "municipalReference": null,
+      "municipalSection": "22.   Programme Communal de Développement Rural - F.P.1.1. « Réaménagement de la place de Gourdinne » : désignation d’un auteur de projet - Marché",
+      "municipalEvidence": [
+        {
+          "page": 1,
+          "excerpt": "22.   Programme Communal de Développement Rural - F.P.1.1. « Réaménagement de la place de Gourdinne » : désignation d’un auteur de projet - Marché"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 1,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:3f6d3bf1bf70698fcf",
+        "sha256": "79476554ed850f72f21aa59283607567f455f8c491df5d0932657cbc9f4665c8",
+        "checkedAt": "2026-11-04T08:05:36.866Z",
+        "changedAt": null
+      },
+      "matchReason": "prestation_decrite",
+      "screeningReason": null
+    },
+    {
+      "id": "local:9b2556cb2c9005e9d5bd",
+      "title": "4.   Certification PEB Marché de services du SPW IAS ou subventionnement de coût de la certification PEB",
+      "sourceDocumentTitle": "PV Conseil 22.09.2026.pdf 1.6 MB",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de La Louvière",
+      "municipalityINS": "58001",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "4. Certification PEB Marché de services du SPW IAS ou subventionnement de coût de la certification PEB",
+        "sourceUrl": "https://www.lalouviere.be/ma-ville/vie-politique/conseil-communal/ordre-du-jour-et-pv-des-conseils/2026/pv-conseil-22-09-2026.pdf",
+        "page": 192,
+        "sha256": "0b290c1788c6c5469e73b7dc7a1873df1744f2a10bd12a802f92330cbbd8cf0d"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "score": 95,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.lalouviere.be/ma-ville/vie-politique/conseil-communal/ordre-du-jour-et-pv-des-conseils/2026/pv-conseil-22-09-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.lalouviere.be/ma-ville/vie-politique/conseil-communal/ordre-du-jour-et-pv-des-conseils/2026/pv-conseil-22-09-2026.pdf",
+        "sha256": "0b290c1788c6c5469e73b7dc7a1873df1744f2a10bd12a802f92330cbbd8cf0d",
+        "session": {
+          "date": "2026-09-22",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "Séance du 22 septembre 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.lalouviere.be/ma-ville/vie-politique/conseil-communal/ordre-du-jour-et-pv-des-conseils/2026/pv-conseil-22-09-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 4.   Certification PEB Marché de services du SPW IAS ou subventionnement de coût de la certification PEB",
+      "evidence": "4.   Certification PEB Marché de services du SPW IAS ou subventionnement de coût de la certification PEB",
+      "municipalReference": null,
+      "municipalSection": "4.   Certification PEB Marché de services du SPW IAS ou subventionnement de coût de la certification PEB",
+      "municipalEvidence": [
+        {
+          "page": 192,
+          "excerpt": "4.   Certification PEB Marché de services du SPW IAS ou subventionnement de coût de la certification PEB"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 192,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:f406dc1b862f976ce0",
+        "sha256": "0b290c1788c6c5469e73b7dc7a1873df1744f2a10bd12a802f92330cbbd8cf0d",
+        "checkedAt": "2026-11-04T08:05:36.866Z",
+        "changedAt": null
+      },
       "matchReason": "prestation_decrite",
       "screeningReason": null
     },
@@ -14717,6 +14885,637 @@
       "screeningReason": null
     },
     {
+      "id": "local-html:0ef5f9bde80a50d4e943",
+      "title": "approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,",
+      "sourceDocumentTitle": "Projet de végétalisation de la Place de la Jeunesse à Sambreville – Approbation des conditions et du mode de passation",
+      "missionEvidence": {
+        "excerpt": "D’approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,76 € HTVA, soit 25.760,50 € TVAC D’approuver les conditions du contrat sol",
+        "sourceUrl": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/projet-de-vegetalisation-de-la-place-de-la-jeunesse-a-sambreville-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "79c65a2373657a864ddb26375bcef2f87245ec95335db09504a6d7ff867a935c"
+      },
+      "buyer": "Commune de Sambreville",
+      "municipalityINS": "92137",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "D’approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,76 € HTVA, soit 25.760,50 € TVAC D’approuver les conditions du contrat sol",
+        "mission": "approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,",
+        "basis": "document_body"
+      },
+      "noticeKind": "other",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/projet-de-vegetalisation-de-la-place-de-la-jeunesse-a-sambreville-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/projet-de-vegetalisation-de-la-place-de-la-jeunesse-a-sambreville-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/projet-de-vegetalisation-de-la-place-de-la-jeunesse-a-sambreville-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "79c65a2373657a864ddb26375bcef2f87245ec95335db09504a6d7ff867a935c",
+        "session": {
+          "date": "2026-10-19",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 19 octobre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/projet-de-vegetalisation-de-la-place-de-la-jeunesse-a-sambreville-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:05395abb66f510c153",
+        "sha256": "79c65a2373657a864ddb26375bcef2f87245ec95335db09504a6d7ff867a935c",
+        "format": "html",
+        "checkedAt": "2026-11-04T01:40:57.400Z"
+      },
+      "webTypeEvidence": {
+        "kind": "other",
+        "reason": "projet_de_mission_a_operateur_determine",
+        "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans",
+        "sourceUrl": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/projet-de-vegetalisation-de-la-place-de-la-jeunesse-a-sambreville-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "79c65a2373657a864ddb26375bcef2f87245ec95335db09504a6d7ff867a935c"
+      },
+      "description": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu la délibération du Conseil Communal du 26 mai 2015 décidant notamment de conclure avec IGRETEC un contrat cadre visant des missions ponctuelles de coordination sécurité santé phases Projet et Réalisation sur divers projets à venir en fonction des besoins de la Commune, d’approuver le contrat cadre de coordination sécurité santé phase projet/réalisation, de charger le Collège communal des ordres de mission en fonction des projets à venir ainsi que de l’exécution et du suivi de ladite convention ; Vu la décision du Conseil Communal du 1 er septembre 2025 décidant notamment : D’approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,76 € HTVA, soit 25.760,50 € TVAC D’approuver les conditions du contrat sollicité par la Commune de Sambreville et transmis par I.G.R.E.T.E.C. et reprenant pour la mission : l’objet de la mission, le montant des honoraires du bureau d’études, la réalisation du permis d’urbanis",
+      "evidence": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu la délibération du Conseil Communal du 26 mai 2015 décidant notamment de conclure avec IGRETEC un contrat cadre visant des missions ponctuelles de coordination sécurité santé phases Projet et Réalisation sur divers projets à venir en fonction des besoins de la Commune, d’approuver le contrat cadre de coordination sécurité santé phase projet/réalisation, de charger le Collège communal des ordres de mission en fonction des projets à venir ainsi que de l’exécution et du suivi de ladite convention ; Vu la décision du Conseil Communal du 1 er septembre 2025 décidant notamment : D’approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,76 € HTVA, soit 25.760,50 € TVAC D’approuver les conditions du contrat sollicité par la Commune de Sambreville et transmis par I.G.R.E.T.E.C. et reprenant pour la mission : l’objet de la mission, le montant des honoraires du bureau d’études, la réalisation du permis d’urbanis",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu la délibération du Conseil Communal du 26 mai 2015 décidant notamment de conclure avec IGRETEC un contrat cadre visant des missions ponctuelles de coordination sécurité santé phases Projet et Réalisation sur divers projets à venir en fonction des besoins de la Commune, d’approuver le contrat cadre de coordination sécurité santé phase projet/réalisation, de charger le Collège communal des ordres de mission en fonction des projets à venir ainsi que de l’exécution et du suivi de ladite convention ; Vu la décision du Conseil Communal du 1 er septembre 2025 décidant notamment : D’approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,76 € HTVA, soit 25.760,50 € TVAC D’approuver les conditions du contrat sollicité par la Commune de Sambreville et transmis par I.G.R.E.T.E.C. et reprenant pour la mission : l’objet de la mission, le montant des honoraires du bureau d’études, la réalisation du permis d’urbanis",
+          "page": null
+        },
+        {
+          "excerpt": "Vu la délibération du Conseil Communal du 26 mai 2015 décidant notamment de conclure avec IGRETEC un contrat cadre visant des missions ponctuelles de coordination sécurité santé phases Projet et Réalisation sur divers projets à venir en fonction des besoins de la Commune, d’approuver le contrat cadre de coordination sécurité santé phase projet/réalisation, de charger le Collège communal des ordres de mission en fonction des projets à venir ainsi que de l’exécution et du suivi de ladite convention ; Vu la décision du Conseil Communal du 1 er septembre 2025 décidant notamment : D’approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,76 € HTVA, soit 25.760,50 € TVAC D’approuver les conditions du contrat sollicité par la Commune de Sambreville et transmis par I.G.R.E.T.E.C. et reprenant pour la mission : l’objet de la mission, le montant des honoraires du bureau d’études, la réalisation du permis d’urbanisme, l’organisation de marchés complémentaires (essais de sols et essais infiltrométrie), maîtrise d’usage et coordination sécurité santé ; De charger le Collège communal de la signature du contrat spécifique au projet à mettre en œuvre, de l’exécution de la présente délibération",
+          "page": null
+        },
+        {
+          "excerpt": "Vu la décision du Conseil Communal du 1 er septembre 2025 décidant notamment : D’approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,76 € HTVA, soit 25.760,50 € TVAC D’approuver les conditions du contrat sollicité par la Commune de Sambreville et transmis par I.G.R.E.T.E.C. et reprenant pour la mission : l’objet de la mission, le montant des honoraires du bureau d’études, la réalisation du permis d’urbanisme, l’organisation de marchés complémentaires (essais de sols et essais infiltrométrie), maîtrise d’usage et coordination sécurité santé ; De charger le Collège communal de la signature du contrat spécifique au projet à mettre en œuvre, de l’exécution de la présente délibération, du suivi et des ordres de mission à délivrer ainsi que de la budgétisation des dépenses afférentes aux missions confiées à I.G.R.E.T.E.C. ; Vu la décision du Collège Communal du 04 septembre 2025 décidant notamment : D’approuver et d’attribuer la mission d’auteur de projet relative à la déminéralisation de la Place de la Jeunesse de Seuris (Auvelais), à I.G.R.E.T.E.C., association de communes, société coopérative, Boulevard Mayence,1 à 6000 Charleroi dans le cadre de la relation « in house », pour",
+          "page": null
+        },
+        {
+          "excerpt": "D’approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,76 € HTVA, soit 25.760,50 € TVAC D’approuver les conditions du contrat sollicité par la Commune de Sambreville et transmis par I.G.R.E.T.E.C. et reprenant pour la mission : l’objet de la mission, le montant des honoraires du bureau d’études, la réalisation du permis d’urbanisme, l’organisation de marchés complémentaires (essais de sols et essais infiltrométrie), maîtrise d’usage et coordination sécurité santé ; De charger le Collège communal de la signature du contrat spécifique au projet à mettre en œuvre, de l’exécution de la présente délibération, du suivi et des ordres de mission à délivrer ainsi que de la budgétisation des dépenses afférentes aux missions confiées à I.G.R.E.T.E.C. ; Vu la décision du Collège Communal du 04 septembre 2025 décidant notamment : D’approuver et d’attribuer la mission d’auteur de projet relative à la déminéralisation de la Place de la Jeunesse de Seuris (Auvelais), à I.G.R.E.T.E.C., association de communes, société coopérative, Boulevard Mayence,1 à 6000 Charleroi dans le cadre de la relation « in house », pour le montant estimé de 21.289,76€ HTVA, soit 25.760,50€ TVAC ; D’engager la (les",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:def0a727e82107c40fcc",
+      "title": "Mission d'auteur de projet relative à l’Élaboration du Schéma de Développement Communal global (SDC) - Approbation des modes et conditions de la relation « in house » avec IGRETEC.",
+      "sourceDocumentTitle": "Mission d'auteur de projet relative à l’Élaboration du Schéma de Développement Communal global (SDC) - Approbation des modes et conditions de la relation « in house » avec IGRETEC.",
+      "missionEvidence": null,
+      "buyer": "Commune de Ham-sur-Heure-Nalinnes",
+      "municipalityINS": "56086",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "other",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/05-novembre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-du-schema-de-developpement-communal-global-sdc-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec",
+      "sourceDocument": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/05-novembre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-du-schema-de-developpement-communal-global-sdc-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/05-novembre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-du-schema-de-developpement-communal-global-sdc-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec",
+        "sha256": "0ebc1c22829ba6108a515abb5561b8475d2cc4e0e66b94b565565b9121655720",
+        "session": {
+          "date": "2026-11-05",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 05 novembre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/05-novembre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-du-schema-de-developpement-communal-global-sdc-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6b60882780dd4d2806",
+        "sha256": "0ebc1c22829ba6108a515abb5561b8475d2cc4e0e66b94b565565b9121655720",
+        "format": "html",
+        "checkedAt": "2026-11-04T08:05:36.866Z"
+      },
+      "webTypeEvidence": {
+        "kind": "other",
+        "reason": "projet_de_mission_a_operateur_determine",
+        "excerpt": "Mission d'auteur de projet relative à l’Élaboration du Schéma de Développement Communal global (SDC) - Approbation des modes et conditions de la relation « in house » avec IGRETEC. 5 Séance publique du Conseil 05 novembr",
+        "sourceUrl": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/05-novembre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-du-schema-de-developpement-communal-global-sdc-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec",
+        "page": null,
+        "sha256": "0ebc1c22829ba6108a515abb5561b8475d2cc4e0e66b94b565565b9121655720"
+      },
+      "description": "Mission d'auteur de projet relative à l’Élaboration du Schéma de Développement Communal global (SDC) - Approbation des modes et conditions de la relation « in house » avec IGRETEC. 5 Séance publique du Conseil 05 novembre 2026 (19:00) Point N°",
+      "evidence": "Mission d'auteur de projet relative à l’Élaboration du Schéma de Développement Communal global (SDC) - Approbation des modes et conditions de la relation « in house » avec IGRETEC. 5 Séance publique du Conseil 05 novembre 2026 (19:00) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "Mission d'auteur de projet relative à l’Élaboration du Schéma de Développement Communal global (SDC) - Approbation des modes et conditions de la relation « in house » avec IGRETEC. 5 Séance publique du Conseil 05 novembre 2026 (19:00) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. Mission d'auteur de projet relative à l’Élaboration du Schéma de Développement Communal global (SDC) - Approbation des modes et conditions de la relation « in house » avec IGRETEC. Vu le Code de la démocratie locale et de la décentralisation, notamment l'article L1122-30 ; Vu le §3 de l’article 30 de la loi du 17 juin 2016 relative aux marchés publics qui précise qu’un pouvoir adjudicateur qui n'exerce pas de contrôle sur une personne morale régie par le droit privé ou le droit public au sens du paragraphe 1 er de ce même article, peut passer un marché public avec cette personne morale sans appliquer la présente loi, lorsque toutes les conditions suivantes sont réunies : - le pouvoir adjudicateur exerce, conjointement avec d'autres pouvoirs adjudicateurs, un contrôle sur la personne morale concernée, analogue à celui qu'ils exercent sur leurs propres services ; - plus de 80% des activités de cette personne morale sont exercées dans le cadre de l'exécution des tâches qui lui sont confiées par les pouvoirs adjudicateurs qui la contrôlent ou par d'autres personnes morales contrôlées par les mê",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l’affiliation de la Commune de Ham-sur-Heure-Nalinnes à IGRETEC, Association de Communes, Société Coopérative ; Vu la délibération du Conseil communal du 28 mai 2026 par laquelle il décide de charger le Collège communal d’amorcer la procédure d’élaboration d'un Schéma de Développement Communal global (SDC), en y incluant le rapport sur les incidences environnementales (RIE) ; Vu la proposition de contrat sollicitée par la Commune de Ham-sur-Heure-Nalinnes, intitulée « Contrat d’études - missions en urbanisme / environnement avec en option, maitrise d’usage » et transmise par IGRETEC, et reprenant l’objet de la mission, la description de la mission, les délais en jour calendrier entre la commande de la Commune de Ham-sur-Heure-Nalinnes et le début de la mission et les taux d’honoraires ; Considérant qu’il est nécessaire de confier à un bureau d’études agréé en la matière, la mission d’auteur de projet relative à l’élaboration d’un Schéma de Développement Communal global (SDC) ; Considérant l’octroi, en date du 15 mars 2023, de l’agrément de type 1 pour l’élaboration ou la révision du schéma de développement pluricommunal et du schéma de développement communal au Bureau d’études IGRETEC ; Considérant que la relation entre la Commune de Ham-sur-Heure-Nalinnes et IGRETEC remplit les conditions prévues à l’article 30 de la loi du 17 juin 2016 : - la Commune exerçant son contrôle,",
+          "page": null
+        },
+        {
+          "excerpt": "Vu la délibération du Conseil communal du 28 mai 2026 par laquelle il décide de charger le Collège communal d’amorcer la procédure d’élaboration d'un Schéma de Développement Communal global (SDC), en y incluant le rapport sur les incidences environnementales (RIE) ; Vu la proposition de contrat sollicitée par la Commune de Ham-sur-Heure-Nalinnes, intitulée « Contrat d’études - missions en urbanisme / environnement avec en option, maitrise d’usage » et transmise par IGRETEC, et reprenant l’objet de la mission, la description de la mission, les délais en jour calendrier entre la commande de la Commune de Ham-sur-Heure-Nalinnes et le début de la mission et les taux d’honoraires ; Considérant qu’il est nécessaire de confier à un bureau d’études agréé en la matière, la mission d’auteur de projet relative à l’élaboration d’un Schéma de Développement Communal global (SDC) ; Considérant l’octroi, en date du 15 mars 2023, de l’agrément de type 1 pour l’élaboration ou la révision du schéma de développement pluricommunal et du schéma de développement communal au Bureau d’études IGRETEC ; Considérant que la relation entre la Commune de Ham-sur-Heure-Nalinnes et IGRETEC remplit les conditions prévues à l’article 30 de la loi du 17 juin 2016 : - la Commune exerçant son contrôle, collectivement avec les autres associés à l’Assemblée Générale d’IGRETEC ; - IGRETEC ne comportant pas de formes d",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local:e05fcfb2d5aaef784509",
+      "title": "14.     Approbation des conditions et du mode de passation du marché relatif à la désignation d'un auteur de projet pour la finalisation de la rénovation du Moulin Banal et ses extensions",
+      "sourceDocumentTitle": "OJ Conseil (011026).pdf 112.3 KB",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Neufchâteau",
+      "municipalityINS": "84043",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "14. Approbation des conditions et du mode de passation du marché relatif à la désignation d'un auteur de projet pour la finalisation de la rénovation du Moulin Banal et ses extensions",
+        "sourceUrl": "https://www.neufchateau.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil/ordre-du-jour-du-conseil/oj-conseil-011026.pdf",
+        "page": 1,
+        "sha256": "09c11bb1aed21c96245f094661937acd5fdd7ee040c8e705e74928ccf3b6bc6a"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.neufchateau.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil/ordre-du-jour-du-conseil/oj-conseil-011026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.neufchateau.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil/ordre-du-jour-du-conseil/oj-conseil-011026.pdf",
+        "sha256": "09c11bb1aed21c96245f094661937acd5fdd7ee040c8e705e74928ccf3b6bc6a",
+        "session": null,
+        "document": {
+          "date": "2026-09-22",
+          "kind": "document",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "Neufchâteau, le 22/09/2026",
+          "confidence": "explicit"
+        },
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.neufchateau.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil/ordre-du-jour-du-conseil/oj-conseil-011026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 14.     Approbation des conditions et du mode de passation du marché relatif à la désignation d'un auteur de projet pour la finalisation de la rénovation du Moulin Banal et ses extensions",
+      "evidence": "14.     Approbation des conditions et du mode de passation du marché relatif à la désignation d'un auteur de projet pour la finalisation de la rénovation du Moulin Banal et ses extensions",
+      "municipalReference": null,
+      "municipalSection": "14.     Approbation des conditions et du mode de passation du marché relatif à la désignation d'un auteur de projet pour la finalisation de la rénovation du Moulin Banal et ses extensions",
+      "municipalEvidence": [
+        {
+          "page": 1,
+          "excerpt": "14.     Approbation des conditions et du mode de passation du marché relatif à la désignation d'un auteur de projet pour la finalisation de la rénovation du Moulin Banal et ses extensions"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 1,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:5a2911c83259ce93d9",
+        "sha256": "09c11bb1aed21c96245f094661937acd5fdd7ee040c8e705e74928ccf3b6bc6a",
+        "checkedAt": "2026-11-04T08:05:36.866Z",
+        "changedAt": null
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:f989ade05e4edb1f184f",
+      "title": "Démolition du local des ouvriers et division de la parcelle en terrains à bâtir – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation",
+      "sourceDocumentTitle": "Démolition du local des ouvriers et division de la parcelle en terrains à bâtir – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation",
+      "missionEvidence": null,
+      "buyer": "Commune de Martelange",
+      "municipalityINS": "81013",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/demolition-du-local-des-ouvriers-et-division-de-la-parcelle-en-terrains-a-batir-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
+        "sha256": "55a99816d86b08f539c558e24199c714b882c5c8b15d2acbca73c7d8e8176336",
+        "stage": "project"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/demolition-du-local-des-ouvriers-et-division-de-la-parcelle-en-terrains-a-batir-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
+      "sourceDocument": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/demolition-du-local-des-ouvriers-et-division-de-la-parcelle-en-terrains-a-batir-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/demolition-du-local-des-ouvriers-et-division-de-la-parcelle-en-terrains-a-batir-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
+        "sha256": "55a99816d86b08f539c558e24199c714b882c5c8b15d2acbca73c7d8e8176336",
+        "session": {
+          "date": "2026-09-24",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 24 septembre 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/demolition-du-local-des-ouvriers-et-division-de-la-parcelle-en-terrains-a-batir-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:3c9540251af2cf8f48",
+        "sha256": "55a99816d86b08f539c558e24199c714b882c5c8b15d2acbca73c7d8e8176336",
+        "format": "html",
+        "checkedAt": "2026-11-04T08:05:36.866Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Démolition du local des ouvriers et division de la parcelle en terrains à bâtir – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation 24 Séance publique du Conseil 24 septembre 20",
+        "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/demolition-du-local-des-ouvriers-et-division-de-la-parcelle-en-terrains-a-batir-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
+        "page": null,
+        "sha256": "55a99816d86b08f539c558e24199c714b882c5c8b15d2acbca73c7d8e8176336"
+      },
+      "description": "Démolition du local des ouvriers et division de la parcelle en terrains à bâtir – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation 24 Séance publique du Conseil 24 septembre 2026 (19:30) Point N°",
+      "evidence": "Démolition du local des ouvriers et division de la parcelle en terrains à bâtir – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation 24 Séance publique du Conseil 24 septembre 2026 (19:30) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "Démolition du local des ouvriers et division de la parcelle en terrains à bâtir – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation 24 Séance publique du Conseil 24 septembre 2026 (19:30) Point N°",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-221",
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:0c20c168152279f5b7c9",
+      "title": "Bâtiment « La Folie » à Martelange – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation",
+      "sourceDocumentTitle": "Bâtiment « La Folie » à Martelange – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation",
+      "missionEvidence": {
+        "excerpt": "mettre son avis de légalité, soit au plus tard le 21 septembre 2026 ; DECIDE Art.1er: D'approuver le cahier des charges N° 2026-220 et le montant estimé du marché “Désignation d'un auteur de projet pour le bâtiment \" La Folie\" à Martelange”, établis par le Service des marchés publics. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'",
+        "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/batiment-la-folie-a-martelange-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
+        "page": null,
+        "sha256": "0a171adff51e43441fdd201b2162ee7ce40ac41eed1ce47e36328786545ec651"
+      },
+      "buyer": "Commune de Martelange",
+      "municipalityINS": "81013",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/batiment-la-folie-a-martelange-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
+        "sha256": "0a171adff51e43441fdd201b2162ee7ce40ac41eed1ce47e36328786545ec651",
+        "stage": "project"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "mettre son avis de légalité, soit au plus tard le 21 septembre 2026 ; DECIDE Art.1er: D'approuver le cahier des charges N° 2026-220 et le montant estimé du marché “Désignation d'un auteur de projet pour le bâtiment \" La Folie\" à Martelange”, établis par le Service des marchés publics. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'",
+        "mission": "DECIDE Art.1er: D'approuver le cahier des charges N° 2026-220 et le montant estimé du marché “Désignation d'un auteur de projet pour le bâtiment \" La Folie\" à Martelange”, établis par le Service des marchés publics.",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/batiment-la-folie-a-martelange-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
+      "sourceDocument": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/batiment-la-folie-a-martelange-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/batiment-la-folie-a-martelange-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
+        "sha256": "0a171adff51e43441fdd201b2162ee7ce40ac41eed1ce47e36328786545ec651",
+        "session": {
+          "date": "2026-09-24",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 24 septembre 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/batiment-la-folie-a-martelange-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6e1ae03a523fac4175",
+        "sha256": "0a171adff51e43441fdd201b2162ee7ce40ac41eed1ce47e36328786545ec651",
+        "format": "html",
+        "checkedAt": "2026-11-04T08:05:36.866Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Bâtiment « La Folie » à Martelange – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation 24 Séance publique du Conseil 24 septembre 2026 (19:30) Point N°",
+        "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/batiment-la-folie-a-martelange-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
+        "page": null,
+        "sha256": "0a171adff51e43441fdd201b2162ee7ce40ac41eed1ce47e36328786545ec651"
+      },
+      "description": "Bâtiment « La Folie » à Martelange – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation 24 Séance publique du Conseil 24 septembre 2026 (19:30) Point N°",
+      "evidence": "Bâtiment « La Folie » à Martelange – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation 24 Séance publique du Conseil 24 septembre 2026 (19:30) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "Bâtiment « La Folie » à Martelange – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation 24 Séance publique du Conseil 24 septembre 2026 (19:30) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. Bâtiment « La Folie » à Martelange – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) ; Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ;",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant le bâtiment « La Folie » et sa position stratégique le long de la N4 ; Considérant la volonté du collège de l’aménager et d’y développer une structure Horeca, une halte touristique ainsi que des aménagements destinés aux petits et grands ; Considérant le cahier des charges N° 2026-220 relatif au marché “Désignation d'un auteur de projet pour le bâtiment \"La Folie\" à Martelange” établi par le Service des marchés publics ; Considérant que le montant estimé de ce marché s'élève à 41.322,31 € hors TVA ou 50.000,00 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, à l’article 124/733-60 (n° de projet 20260032) ; Considérant que le site est actuellement en procédure de reconnaissance de site à réaménager ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-220",
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local:c6d87e47ba880233763e",
+      "title": "14.   Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation Ce marché a pour objet la désignation d’un auteur de projet chargé de l’étude et de l’accompagnement de la rénovation des vestiaires et de la buvette de l’USR (Union Sportive Rebecquoise), situés Ruelle du Gobard 5",
+      "sourceDocumentTitle": "20/10/2026 - Note de présentation 217.5 KB",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Rebecq",
+      "municipalityINS": "25123",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "14. Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation Ce marché a pour objet la désignation d’un auteur de projet chargé de l’étude et de l’accompa",
+        "sourceUrl": "https://www.rebecq.be/vie-administrative-politique/vie-politique/le-conseil-communal/le-conseil-communal-en-ligne/note-de-presentation-20-octobre-2026.pdf",
+        "page": 5,
+        "sha256": "6e6da2d4ff4b13ccf14a08f1cf27a9d369b74c6e4bc1d3674d3b52aa8384c14d"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.rebecq.be/vie-administrative-politique/vie-politique/le-conseil-communal/le-conseil-communal-en-ligne/note-de-presentation-20-octobre-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.rebecq.be/vie-administrative-politique/vie-politique/le-conseil-communal/le-conseil-communal-en-ligne/note-de-presentation-20-octobre-2026.pdf",
+        "sha256": "6e6da2d4ff4b13ccf14a08f1cf27a9d369b74c6e4bc1d3674d3b52aa8384c14d",
+        "session": null,
+        "document": {
+          "date": "2026-10-12",
+          "kind": "document",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "Rebecq, le 12 octobre 2026",
+          "confidence": "explicit"
+        },
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.rebecq.be/vie-administrative-politique/vie-politique/le-conseil-communal/le-conseil-communal-en-ligne/note-de-presentation-20-octobre-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 14.   Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation Ce marché a pour objet la désignation d’un auteur de projet chargé de l’étude et de l’accompagnement de la rénovation des vestiaires et de la buvette de l’USR (Union Sportive Rebecquoise), situés Ruelle du Gobard 5 à 1430 Rebecq.",
+      "evidence": "14.   Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation Ce marché a pour objet la désignation d’un auteur de projet chargé de l’étude et de l’accompagnement de la rénovation des vestiaires et de la buvette de l’USR (Union Sportive Rebecquoise), situés Ruelle du Gobard 5 à 1430 Rebecq.",
+      "municipalReference": null,
+      "municipalSection": "14.   Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation Ce marché a pour objet la désignation d’un auteur de projet chargé de l’étude et de l’accompagnement de la rénovation des vestiaires et de la buvette de l’USR (Union Sportive Rebecquoise), situés Ruelle du Gobard 5",
+      "municipalEvidence": [
+        {
+          "page": 5,
+          "excerpt": "14.   Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation Ce marché a pour objet la désignation d’un auteur de projet chargé de l’étude et de l’accompagnement de la rénovation des vestiaires et de la buvette de l’USR (Union Sportive Rebecquoise), situés Ruelle du Gobard 5 à 1430 Rebecq."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 5,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:89b46c6818b2c8ead4",
+        "sha256": "6e6da2d4ff4b13ccf14a08f1cf27a9d369b74c6e4bc1d3674d3b52aa8384c14d",
+        "checkedAt": "2026-11-04T08:05:36.866Z",
+        "changedAt": null
+      },
+      "matchReason": "mission_architecturale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local:340307ef0bebff44ec69",
+      "title": "14. Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation",
+      "sourceDocumentTitle": "20/10/2026 - Ordre du jour 932.2 KB",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Rebecq",
+      "municipalityINS": "25123",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "14. Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation",
+        "sourceUrl": "https://www.rebecq.be/vie-administrative-politique/vie-politique/le-conseil-communal/le-conseil-communal-en-ligne/convocation-oj-20-octobre-2026-sans-huis-clos.pdf",
+        "page": 1,
+        "sha256": "e377aa1f39efdda3e2e5f92f70f61ee5653eda35750e8178eef804a2779e0ca9"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.rebecq.be/vie-administrative-politique/vie-politique/le-conseil-communal/le-conseil-communal-en-ligne/convocation-oj-20-octobre-2026-sans-huis-clos.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.rebecq.be/vie-administrative-politique/vie-politique/le-conseil-communal/le-conseil-communal-en-ligne/convocation-oj-20-octobre-2026-sans-huis-clos.pdf",
+        "sha256": "e377aa1f39efdda3e2e5f92f70f61ee5653eda35750e8178eef804a2779e0ca9",
+        "session": null,
+        "document": {
+          "date": "2026-10-12",
+          "kind": "document",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "Rebecq, le 12 octobre 2026",
+          "confidence": "ocr"
+        },
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "ocr",
+        "language": "fra+eng",
+        "pagesRead": 1,
+        "totalPages": 1,
+        "partial": false
+      },
+      "url": "https://www.rebecq.be/vie-administrative-politique/vie-politique/le-conseil-communal/le-conseil-communal-en-ligne/convocation-oj-20-octobre-2026-sans-huis-clos.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 14. Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation",
+      "evidence": "14. Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation",
+      "municipalReference": null,
+      "municipalSection": "14. Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation",
+      "municipalEvidence": [
+        {
+          "page": 1,
+          "excerpt": "14. Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 1,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:58f7633fff5bdc8429",
+        "sha256": "e377aa1f39efdda3e2e5f92f70f61ee5653eda35750e8178eef804a2779e0ca9",
+        "checkedAt": "2026-11-04T08:05:36.866Z",
+        "changedAt": null
+      },
+      "matchReason": "mission_architecturale_a_qualifier",
+      "screeningReason": null
+    },
+    {
       "id": "communal:c3599ff87890bfb78368",
       "title": "Prospection · Beyne-Heusay · 17) Règlement complémentaire de roulage - Création d’un emplacement de stationnement pour personnes handicapées - Plac…",
       "buyer": "Commune de Beyne-Heusay",
@@ -16355,6 +17154,93 @@
       "screeningReason": null
     },
     {
+      "id": "local:bc33566466efb9f8428f",
+      "title": "Ordre du jour du Conseil communal du 25 août 2026",
+      "sourceDocumentTitle": "Ordre du jour du Conseil communal du 25 août 2026",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Villers-la-Ville",
+      "municipalityINS": "25107",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Propriété communale. Désaffectation et mise en vente du presbytère de Mellery - Parcelle cadastrée sous Mellery. Section B n° 3E pie. Avis de principe. Marche de services: élaboration d’un schéma de développement communa",
+        "sourceUrl": "https://www.villers-la-ville.be/administration/vie-politique/conseil/ordre-du-jour-du-conseil-communal-1/convocation-cc-du-25-08-2026.pdf",
+        "page": 1,
+        "sha256": "a99aa2e471801cca88365059807761f92444c67791122836c26f660d1a64a797"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.villers-la-ville.be/administration/vie-politique/conseil/ordre-du-jour-du-conseil-communal-1/convocation-cc-du-25-08-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.villers-la-ville.be/administration/vie-politique/conseil/ordre-du-jour-du-conseil-communal-1/convocation-cc-du-25-08-2026.pdf",
+        "sha256": "a99aa2e471801cca88365059807761f92444c67791122836c26f660d1a64a797",
+        "session": null,
+        "document": {
+          "date": "2026-08-25",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "25 août 2026",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "ocr",
+        "language": "fra+eng",
+        "pagesRead": 3,
+        "totalPages": 3,
+        "partial": false
+      },
+      "url": "https://www.villers-la-ville.be/administration/vie-politique/conseil/ordre-du-jour-du-conseil-communal-1/convocation-cc-du-25-08-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Propriété communale. Désaffectation et mise en vente du presbytère de Mellery - Parcelle cadastrée sous Mellery. Section B n° 3E pie. Avis de principe. Marche de services: élaboration d’un schéma de développement communal thématique «optimisation spatiale » avec rapport sur les incidences environnementales conformément à la législation relative à l’aménagement du territoire — Procédure ouverte - Approbation des conditions et mode de passation. Modification d’une voirie communale sur le territoire de Genappe. Création d’une liaison pédestre :",
+      "evidence": "Propriété communale. Désaffectation et mise en vente du presbytère de Mellery - Parcelle cadastrée sous Mellery. Section B n° 3E pie. Avis de principe. Marche de services: élaboration d’un schéma de développement communal thématique «optimisation spatiale » avec rapport sur les incidences environnementales conformément à la législation relative à l’aménagement du territoire — Procédure ouverte - Approbation des conditions et mode de passation. Modification d’une voirie communale sur le territoire de Genappe. Création d’une liaison pédestre :",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 1,
+          "excerpt": "Propriété communale. Désaffectation et mise en vente du presbytère de Mellery - Parcelle cadastrée sous Mellery. Section B n° 3E pie. Avis de principe. Marche de services: élaboration d’un schéma de développement communal thématique «optimisation spatiale » avec rapport sur les incidences environnementales conformément à la législation relative à l’aménagement du territoire — Procédure ouverte - Approbation des conditions et mode de passation. Modification d’une voirie communale sur le territoire de Genappe. Création d’une liaison pédestre :"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 1,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:5a857906124180e773",
+        "sha256": "a99aa2e471801cca88365059807761f92444c67791122836c26f660d1a64a797",
+        "checkedAt": "2026-11-04T01:40:57.400Z",
+        "changedAt": null
+      },
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null
+    },
+    {
       "id": "local-html:d5925ecd2187f5cd6fd9",
       "title": "PST 2025-2030 (Action 3). Réfection de tronçons de la Grand'Route - Tronçon entre la rue Maréchal Foch et la rue Marihaye - Étude - Marché public de services - Fixation des conditions et choix du mode de passation.",
       "buyer": "Commune de Flémalle",
@@ -17788,6 +18674,93 @@
       "screeningReason": null
     },
     {
+      "id": "local:c370d436ed6573ded94c",
+      "title": "OBJET 9: SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision.",
+      "sourceDocumentTitle": "Convocation du conseil n°08/2026 1.2 MB",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Philippeville",
+      "municipalityINS": "93056",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "OBJET 9: SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'é",
+        "sourceUrl": "https://www.philippeville.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochain-conseil/ordre-du-jour/telechargez-le-prochain-ordre-du-jour/20260818091733940.pdf",
+        "page": 2,
+        "sha256": "480ee0cc4f9a0cd5555f67d3369cd84b766fbcada495fa8341326a38f95e670e"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 49,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.philippeville.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochain-conseil/ordre-du-jour/telechargez-le-prochain-ordre-du-jour/20260818091733940.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.philippeville.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochain-conseil/ordre-du-jour/telechargez-le-prochain-ordre-du-jour/20260818091733940.pdf",
+        "sha256": "480ee0cc4f9a0cd5555f67d3369cd84b766fbcada495fa8341326a38f95e670e",
+        "session": null,
+        "document": {
+          "date": "2026-08-18",
+          "kind": "document",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "Philippeville, le 18 août 2026",
+          "confidence": "ocr"
+        },
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "ocr",
+        "language": "fra+eng",
+        "pagesRead": 2,
+        "totalPages": 2,
+        "partial": false
+      },
+      "url": "https://www.philippeville.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochain-conseil/ordre-du-jour/telechargez-le-prochain-ordre-du-jour/20260818091733940.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : OBJET 9: SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision.",
+      "evidence": "OBJET 9: SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision.",
+      "municipalReference": null,
+      "municipalSection": "OBJET 9: SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision.",
+      "municipalEvidence": [
+        {
+          "page": 2,
+          "excerpt": "OBJET 9: SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 2,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:76a0deddaadc6b691e",
+        "sha256": "480ee0cc4f9a0cd5555f67d3369cd84b766fbcada495fa8341326a38f95e670e",
+        "checkedAt": "2026-11-04T08:05:36.866Z",
+        "changedAt": null
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
       "id": "local-html:4fa57242e02ff0c4c4b3",
       "title": "PST 2025-2030 (Action 11) - Rénovation du cimetière des Tapeines - Étude - Marché public de services - Fixation des conditions et choix du mode de passation.",
       "buyer": "Commune de Flémalle",
@@ -18045,188 +19018,6 @@
       "screeningReason": null
     },
     {
-      "id": "local-html:0ef5f9bde80a50d4e943",
-      "title": "approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,",
-      "sourceDocumentTitle": "Projet de végétalisation de la Place de la Jeunesse à Sambreville – Approbation des conditions et du mode de passation",
-      "missionEvidence": {
-        "excerpt": "D’approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,76 € HTVA, soit 25.760,50 € TVAC D’approuver les conditions du contrat sol",
-        "sourceUrl": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/projet-de-vegetalisation-de-la-place-de-la-jeunesse-a-sambreville-approbation-des-conditions-et-du-mode-de-passation",
-        "page": null,
-        "sha256": "79c65a2373657a864ddb26375bcef2f87245ec95335db09504a6d7ff867a935c"
-      },
-      "buyer": "Commune de Sambreville",
-      "municipalityINS": "92137",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "D’approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,76 € HTVA, soit 25.760,50 € TVAC D’approuver les conditions du contrat sol",
-        "mission": "approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,",
-        "basis": "document_body"
-      },
-      "noticeKind": "other",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/projet-de-vegetalisation-de-la-place-de-la-jeunesse-a-sambreville-approbation-des-conditions-et-du-mode-de-passation",
-      "sourceDocument": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/projet-de-vegetalisation-de-la-place-de-la-jeunesse-a-sambreville-approbation-des-conditions-et-du-mode-de-passation",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/projet-de-vegetalisation-de-la-place-de-la-jeunesse-a-sambreville-approbation-des-conditions-et-du-mode-de-passation",
-        "sha256": "79c65a2373657a864ddb26375bcef2f87245ec95335db09504a6d7ff867a935c",
-        "session": {
-          "date": "2026-10-19",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 19 octobre 2026 (19:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/projet-de-vegetalisation-de-la-place-de-la-jeunesse-a-sambreville-approbation-des-conditions-et-du-mode-de-passation"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:05395abb66f510c153",
-        "sha256": "79c65a2373657a864ddb26375bcef2f87245ec95335db09504a6d7ff867a935c",
-        "format": "html",
-        "checkedAt": "2026-11-04T01:40:57.400Z"
-      },
-      "webTypeEvidence": {
-        "kind": "other",
-        "reason": "projet_de_mission_a_operateur_determine",
-        "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans",
-        "sourceUrl": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/projet-de-vegetalisation-de-la-place-de-la-jeunesse-a-sambreville-approbation-des-conditions-et-du-mode-de-passation",
-        "page": null,
-        "sha256": "79c65a2373657a864ddb26375bcef2f87245ec95335db09504a6d7ff867a935c"
-      },
-      "description": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu la délibération du Conseil Communal du 26 mai 2015 décidant notamment de conclure avec IGRETEC un contrat cadre visant des missions ponctuelles de coordination sécurité santé phases Projet et Réalisation sur divers projets à venir en fonction des besoins de la Commune, d’approuver le contrat cadre de coordination sécurité santé phase projet/réalisation, de charger le Collège communal des ordres de mission en fonction des projets à venir ainsi que de l’exécution et du suivi de ladite convention ; Vu la décision du Conseil Communal du 1 er septembre 2025 décidant notamment : D’approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,76 € HTVA, soit 25.760,50 € TVAC D’approuver les conditions du contrat sollicité par la Commune de Sambreville et transmis par I.G.R.E.T.E.C. et reprenant pour la mission : l’objet de la mission, le montant des honoraires du bureau d’études, la réalisation du permis d’urbanis",
-      "evidence": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu la délibération du Conseil Communal du 26 mai 2015 décidant notamment de conclure avec IGRETEC un contrat cadre visant des missions ponctuelles de coordination sécurité santé phases Projet et Réalisation sur divers projets à venir en fonction des besoins de la Commune, d’approuver le contrat cadre de coordination sécurité santé phase projet/réalisation, de charger le Collège communal des ordres de mission en fonction des projets à venir ainsi que de l’exécution et du suivi de ladite convention ; Vu la décision du Conseil Communal du 1 er septembre 2025 décidant notamment : D’approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,76 € HTVA, soit 25.760,50 € TVAC D’approuver les conditions du contrat sollicité par la Commune de Sambreville et transmis par I.G.R.E.T.E.C. et reprenant pour la mission : l’objet de la mission, le montant des honoraires du bureau d’études, la réalisation du permis d’urbanis",
-      "municipalEvidence": [
-        {
-          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu la délibération du Conseil Communal du 26 mai 2015 décidant notamment de conclure avec IGRETEC un contrat cadre visant des missions ponctuelles de coordination sécurité santé phases Projet et Réalisation sur divers projets à venir en fonction des besoins de la Commune, d’approuver le contrat cadre de coordination sécurité santé phase projet/réalisation, de charger le Collège communal des ordres de mission en fonction des projets à venir ainsi que de l’exécution et du suivi de ladite convention ; Vu la décision du Conseil Communal du 1 er septembre 2025 décidant notamment : D’approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,76 € HTVA, soit 25.760,50 € TVAC D’approuver les conditions du contrat sollicité par la Commune de Sambreville et transmis par I.G.R.E.T.E.C. et reprenant pour la mission : l’objet de la mission, le montant des honoraires du bureau d’études, la réalisation du permis d’urbanis",
-          "page": null
-        },
-        {
-          "excerpt": "Vu la délibération du Conseil Communal du 26 mai 2015 décidant notamment de conclure avec IGRETEC un contrat cadre visant des missions ponctuelles de coordination sécurité santé phases Projet et Réalisation sur divers projets à venir en fonction des besoins de la Commune, d’approuver le contrat cadre de coordination sécurité santé phase projet/réalisation, de charger le Collège communal des ordres de mission en fonction des projets à venir ainsi que de l’exécution et du suivi de ladite convention ; Vu la décision du Conseil Communal du 1 er septembre 2025 décidant notamment : D’approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,76 € HTVA, soit 25.760,50 € TVAC D’approuver les conditions du contrat sollicité par la Commune de Sambreville et transmis par I.G.R.E.T.E.C. et reprenant pour la mission : l’objet de la mission, le montant des honoraires du bureau d’études, la réalisation du permis d’urbanisme, l’organisation de marchés complémentaires (essais de sols et essais infiltrométrie), maîtrise d’usage et coordination sécurité santé ; De charger le Collège communal de la signature du contrat spécifique au projet à mettre en œuvre, de l’exécution de la présente délibération",
-          "page": null
-        },
-        {
-          "excerpt": "Vu la décision du Conseil Communal du 1 er septembre 2025 décidant notamment : D’approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,76 € HTVA, soit 25.760,50 € TVAC D’approuver les conditions du contrat sollicité par la Commune de Sambreville et transmis par I.G.R.E.T.E.C. et reprenant pour la mission : l’objet de la mission, le montant des honoraires du bureau d’études, la réalisation du permis d’urbanisme, l’organisation de marchés complémentaires (essais de sols et essais infiltrométrie), maîtrise d’usage et coordination sécurité santé ; De charger le Collège communal de la signature du contrat spécifique au projet à mettre en œuvre, de l’exécution de la présente délibération, du suivi et des ordres de mission à délivrer ainsi que de la budgétisation des dépenses afférentes aux missions confiées à I.G.R.E.T.E.C. ; Vu la décision du Collège Communal du 04 septembre 2025 décidant notamment : D’approuver et d’attribuer la mission d’auteur de projet relative à la déminéralisation de la Place de la Jeunesse de Seuris (Auvelais), à I.G.R.E.T.E.C., association de communes, société coopérative, Boulevard Mayence,1 à 6000 Charleroi dans le cadre de la relation « in house », pour",
-          "page": null
-        },
-        {
-          "excerpt": "D’approuver le principe de l’engagement d’une procédure in house, pour une mission complète d’auteur de projet, avec options, relative à la Mission d’études pour la déminéralisation de la Place de la Jeunesse à Seuris (Auvelais) dont le coût est estimé à 21.289,76 € HTVA, soit 25.760,50 € TVAC D’approuver les conditions du contrat sollicité par la Commune de Sambreville et transmis par I.G.R.E.T.E.C. et reprenant pour la mission : l’objet de la mission, le montant des honoraires du bureau d’études, la réalisation du permis d’urbanisme, l’organisation de marchés complémentaires (essais de sols et essais infiltrométrie), maîtrise d’usage et coordination sécurité santé ; De charger le Collège communal de la signature du contrat spécifique au projet à mettre en œuvre, de l’exécution de la présente délibération, du suivi et des ordres de mission à délivrer ainsi que de la budgétisation des dépenses afférentes aux missions confiées à I.G.R.E.T.E.C. ; Vu la décision du Collège Communal du 04 septembre 2025 décidant notamment : D’approuver et d’attribuer la mission d’auteur de projet relative à la déminéralisation de la Place de la Jeunesse de Seuris (Auvelais), à I.G.R.E.T.E.C., association de communes, société coopérative, Boulevard Mayence,1 à 6000 Charleroi dans le cadre de la relation « in house », pour le montant estimé de 21.289,76€ HTVA, soit 25.760,50€ TVAC ; D’engager la (les",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local:bc33566466efb9f8428f",
-      "title": "Ordre du jour du Conseil communal du 25 août 2026",
-      "sourceDocumentTitle": "Ordre du jour du Conseil communal du 25 août 2026",
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "missionEvidence": null,
-      "buyer": "Commune de Villers-la-Ville",
-      "municipalityINS": "25107",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Propriété communale. Désaffectation et mise en vente du presbytère de Mellery - Parcelle cadastrée sous Mellery. Section B n° 3E pie. Avis de principe. Marche de services: élaboration d’un schéma de développement communa",
-        "sourceUrl": "https://www.villers-la-ville.be/administration/vie-politique/conseil/ordre-du-jour-du-conseil-communal-1/convocation-cc-du-25-08-2026.pdf",
-        "page": 1,
-        "sha256": "a99aa2e471801cca88365059807761f92444c67791122836c26f660d1a64a797"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 52,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.villers-la-ville.be/administration/vie-politique/conseil/ordre-du-jour-du-conseil-communal-1/convocation-cc-du-25-08-2026.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.villers-la-ville.be/administration/vie-politique/conseil/ordre-du-jour-du-conseil-communal-1/convocation-cc-du-25-08-2026.pdf",
-        "sha256": "a99aa2e471801cca88365059807761f92444c67791122836c26f660d1a64a797",
-        "session": null,
-        "document": {
-          "date": "2026-08-25",
-          "kind": "document",
-          "page": null,
-          "source": "link_title",
-          "excerpt": "25 août 2026",
-          "confidence": "inferred"
-        },
-        "status": "identified"
-      },
-      "sourceExtraction": {
-        "method": "ocr",
-        "language": "fra+eng",
-        "pagesRead": 3,
-        "totalPages": 3,
-        "partial": false
-      },
-      "url": "https://www.villers-la-ville.be/administration/vie-politique/conseil/ordre-du-jour-du-conseil-communal-1/convocation-cc-du-25-08-2026.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : Propriété communale. Désaffectation et mise en vente du presbytère de Mellery - Parcelle cadastrée sous Mellery. Section B n° 3E pie. Avis de principe. Marche de services: élaboration d’un schéma de développement communal thématique «optimisation spatiale » avec rapport sur les incidences environnementales conformément à la législation relative à l’aménagement du territoire — Procédure ouverte - Approbation des conditions et mode de passation. Modification d’une voirie communale sur le territoire de Genappe. Création d’une liaison pédestre :",
-      "evidence": "Propriété communale. Désaffectation et mise en vente du presbytère de Mellery - Parcelle cadastrée sous Mellery. Section B n° 3E pie. Avis de principe. Marche de services: élaboration d’un schéma de développement communal thématique «optimisation spatiale » avec rapport sur les incidences environnementales conformément à la législation relative à l’aménagement du territoire — Procédure ouverte - Approbation des conditions et mode de passation. Modification d’une voirie communale sur le territoire de Genappe. Création d’une liaison pédestre :",
-      "municipalReference": null,
-      "municipalSection": null,
-      "municipalEvidence": [
-        {
-          "page": 1,
-          "excerpt": "Propriété communale. Désaffectation et mise en vente du presbytère de Mellery - Parcelle cadastrée sous Mellery. Section B n° 3E pie. Avis de principe. Marche de services: élaboration d’un schéma de développement communal thématique «optimisation spatiale » avec rapport sur les incidences environnementales conformément à la législation relative à l’aménagement du territoire — Procédure ouverte - Approbation des conditions et mode de passation. Modification d’une voirie communale sur le territoire de Genappe. Création d’une liaison pédestre :"
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 1,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:5a857906124180e773",
-        "sha256": "a99aa2e471801cca88365059807761f92444c67791122836c26f660d1a64a797",
-        "checkedAt": "2026-11-04T01:40:57.400Z",
-        "changedAt": null
-      }
-    },
-    {
       "id": "local:3e6067f53b1136cb5387",
       "title": "4. Pour le point 12 => Marchés publics, Désignation d'un bureau d'études pour le Schéma de développement communal global • Madame Delphine DI MARIA, Conseillère communale du groupe \"PS\" => \"Le groupe PS soutient les objectifs de préservation du territoire et de développement durable, mais",
       "sourceDocumentTitle": "CC 2026 08 18 471.0 KB",
@@ -18306,207 +19097,22 @@
         "sha256": "96cee1c0cd0c4d891360378f875d7e87b170051324bacdfda5c761a995ae95d0",
         "checkedAt": "2026-11-04T01:40:57.400Z",
         "changedAt": null
-      }
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
     },
     {
-      "id": "local:c370d436ed6573ded94c",
-      "title": "OBJET 9: SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision.",
-      "sourceDocumentTitle": "Convocation du conseil n°08/2026 1.2 MB",
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "missionEvidence": null,
-      "buyer": "Commune de Philippeville",
-      "municipalityINS": "93056",
+      "id": "bosa:04e0b00d-f962-4343-bfba-3d81f13ec7bb",
+      "publicationWorkspaceId": "04e0b00d-f962-4343-bfba-3d81f13ec7bb",
+      "noticeId": "e91fd7bf-8f83-40d2-a4f5-1bd42cc88816",
+      "procedureIdentifier": "890dc425-58cf-406d-8c1b-e4bb4809b4bf",
+      "internalReference": "PPP0CN-825/6027/2026297_002",
+      "title": "Désignation d'un auteur de projet afin d'élaborer un schéma de développement communal conformément à la législation relative à l'aménagement du territoire",
+      "buyer": "Fauvillers",
       "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "OBJET 9: SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'é",
-        "sourceUrl": "https://www.philippeville.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochain-conseil/ordre-du-jour/telechargez-le-prochain-ordre-du-jour/20260818091733940.pdf",
-        "page": 2,
-        "sha256": "480ee0cc4f9a0cd5555f67d3369cd84b766fbcada495fa8341326a38f95e670e"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
+      "languages": [
+        "FR"
       ],
-      "score": 49,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.philippeville.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochain-conseil/ordre-du-jour/telechargez-le-prochain-ordre-du-jour/20260818091733940.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.philippeville.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochain-conseil/ordre-du-jour/telechargez-le-prochain-ordre-du-jour/20260818091733940.pdf",
-        "sha256": "480ee0cc4f9a0cd5555f67d3369cd84b766fbcada495fa8341326a38f95e670e",
-        "session": null,
-        "document": {
-          "date": "2026-08-18",
-          "kind": "document",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "Philippeville, le 18 août 2026",
-          "confidence": "ocr"
-        },
-        "status": "identified"
-      },
-      "sourceExtraction": {
-        "method": "ocr",
-        "language": "fra+eng",
-        "pagesRead": 2,
-        "totalPages": 2,
-        "partial": false
-      },
-      "url": "https://www.philippeville.be/ma-commune/vie-politique/conseil-communal/calendrier-et-ordre-du-jour/prochain-conseil/ordre-du-jour/telechargez-le-prochain-ordre-du-jour/20260818091733940.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : OBJET 9: SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision.",
-      "evidence": "OBJET 9: SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision.",
-      "municipalReference": null,
-      "municipalSection": "OBJET 9: SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision.",
-      "municipalEvidence": [
-        {
-          "page": 2,
-          "excerpt": "OBJET 9: SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision."
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 2,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:76a0deddaadc6b691e",
-        "sha256": "480ee0cc4f9a0cd5555f67d3369cd84b766fbcada495fa8341326a38f95e670e",
-        "checkedAt": "2026-11-04T08:05:36.866Z",
-        "changedAt": null
-      }
-    },
-    {
-      "id": "local-html:def0a727e82107c40fcc",
-      "title": "Mission d'auteur de projet relative à l’Élaboration du Schéma de Développement Communal global (SDC) - Approbation des modes et conditions de la relation « in house » avec IGRETEC.",
-      "sourceDocumentTitle": "Mission d'auteur de projet relative à l’Élaboration du Schéma de Développement Communal global (SDC) - Approbation des modes et conditions de la relation « in house » avec IGRETEC.",
-      "missionEvidence": null,
-      "buyer": "Commune de Ham-sur-Heure-Nalinnes",
-      "municipalityINS": "56086",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "noticeKind": "other",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/05-novembre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-du-schema-de-developpement-communal-global-sdc-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec",
-      "sourceDocument": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/05-novembre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-du-schema-de-developpement-communal-global-sdc-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/05-novembre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-du-schema-de-developpement-communal-global-sdc-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec",
-        "sha256": "0ebc1c22829ba6108a515abb5561b8475d2cc4e0e66b94b565565b9121655720",
-        "session": {
-          "date": "2026-11-05",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 05 novembre 2026 (19:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/05-novembre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-du-schema-de-developpement-communal-global-sdc-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:6b60882780dd4d2806",
-        "sha256": "0ebc1c22829ba6108a515abb5561b8475d2cc4e0e66b94b565565b9121655720",
-        "format": "html",
-        "checkedAt": "2026-11-04T08:05:36.866Z"
-      },
-      "webTypeEvidence": {
-        "kind": "other",
-        "reason": "projet_de_mission_a_operateur_determine",
-        "excerpt": "Mission d'auteur de projet relative à l’Élaboration du Schéma de Développement Communal global (SDC) - Approbation des modes et conditions de la relation « in house » avec IGRETEC. 5 Séance publique du Conseil 05 novembr",
-        "sourceUrl": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/05-novembre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-du-schema-de-developpement-communal-global-sdc-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec",
-        "page": null,
-        "sha256": "0ebc1c22829ba6108a515abb5561b8475d2cc4e0e66b94b565565b9121655720"
-      },
-      "description": "Mission d'auteur de projet relative à l’Élaboration du Schéma de Développement Communal global (SDC) - Approbation des modes et conditions de la relation « in house » avec IGRETEC. 5 Séance publique du Conseil 05 novembre 2026 (19:00) Point N°",
-      "evidence": "Mission d'auteur de projet relative à l’Élaboration du Schéma de Développement Communal global (SDC) - Approbation des modes et conditions de la relation « in house » avec IGRETEC. 5 Séance publique du Conseil 05 novembre 2026 (19:00) Point N°",
-      "municipalEvidence": [
-        {
-          "excerpt": "Mission d'auteur de projet relative à l’Élaboration du Schéma de Développement Communal global (SDC) - Approbation des modes et conditions de la relation « in house » avec IGRETEC. 5 Séance publique du Conseil 05 novembre 2026 (19:00) Point N°",
-          "page": null
-        },
-        {
-          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. Mission d'auteur de projet relative à l’Élaboration du Schéma de Développement Communal global (SDC) - Approbation des modes et conditions de la relation « in house » avec IGRETEC. Vu le Code de la démocratie locale et de la décentralisation, notamment l'article L1122-30 ; Vu le §3 de l’article 30 de la loi du 17 juin 2016 relative aux marchés publics qui précise qu’un pouvoir adjudicateur qui n'exerce pas de contrôle sur une personne morale régie par le droit privé ou le droit public au sens du paragraphe 1 er de ce même article, peut passer un marché public avec cette personne morale sans appliquer la présente loi, lorsque toutes les conditions suivantes sont réunies : - le pouvoir adjudicateur exerce, conjointement avec d'autres pouvoirs adjudicateurs, un contrôle sur la personne morale concernée, analogue à celui qu'ils exercent sur leurs propres services ; - plus de 80% des activités de cette personne morale sont exercées dans le cadre de l'exécution des tâches qui lui sont confiées par les pouvoirs adjudicateurs qui la contrôlent ou par d'autres personnes morales contrôlées par les mê",
-          "page": null
-        },
-        {
-          "excerpt": "Vu l’affiliation de la Commune de Ham-sur-Heure-Nalinnes à IGRETEC, Association de Communes, Société Coopérative ; Vu la délibération du Conseil communal du 28 mai 2026 par laquelle il décide de charger le Collège communal d’amorcer la procédure d’élaboration d'un Schéma de Développement Communal global (SDC), en y incluant le rapport sur les incidences environnementales (RIE) ; Vu la proposition de contrat sollicitée par la Commune de Ham-sur-Heure-Nalinnes, intitulée « Contrat d’études - missions en urbanisme / environnement avec en option, maitrise d’usage » et transmise par IGRETEC, et reprenant l’objet de la mission, la description de la mission, les délais en jour calendrier entre la commande de la Commune de Ham-sur-Heure-Nalinnes et le début de la mission et les taux d’honoraires ; Considérant qu’il est nécessaire de confier à un bureau d’études agréé en la matière, la mission d’auteur de projet relative à l’élaboration d’un Schéma de Développement Communal global (SDC) ; Considérant l’octroi, en date du 15 mars 2023, de l’agrément de type 1 pour l’élaboration ou la révision du schéma de développement pluricommunal et du schéma de développement communal au Bureau d’études IGRETEC ; Considérant que la relation entre la Commune de Ham-sur-Heure-Nalinnes et IGRETEC remplit les conditions prévues à l’article 30 de la loi du 17 juin 2016 : - la Commune exerçant son contrôle,",
-          "page": null
-        },
-        {
-          "excerpt": "Vu la délibération du Conseil communal du 28 mai 2026 par laquelle il décide de charger le Collège communal d’amorcer la procédure d’élaboration d'un Schéma de Développement Communal global (SDC), en y incluant le rapport sur les incidences environnementales (RIE) ; Vu la proposition de contrat sollicitée par la Commune de Ham-sur-Heure-Nalinnes, intitulée « Contrat d’études - missions en urbanisme / environnement avec en option, maitrise d’usage » et transmise par IGRETEC, et reprenant l’objet de la mission, la description de la mission, les délais en jour calendrier entre la commande de la Commune de Ham-sur-Heure-Nalinnes et le début de la mission et les taux d’honoraires ; Considérant qu’il est nécessaire de confier à un bureau d’études agréé en la matière, la mission d’auteur de projet relative à l’élaboration d’un Schéma de Développement Communal global (SDC) ; Considérant l’octroi, en date du 15 mars 2023, de l’agrément de type 1 pour l’élaboration ou la révision du schéma de développement pluricommunal et du schéma de développement communal au Bureau d’études IGRETEC ; Considérant que la relation entre la Commune de Ham-sur-Heure-Nalinnes et IGRETEC remplit les conditions prévues à l’article 30 de la loi du 17 juin 2016 : - la Commune exerçant son contrôle, collectivement avec les autres associés à l’Assemblée Générale d’IGRETEC ; - IGRETEC ne comportant pas de formes d",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local:e05fcfb2d5aaef784509",
-      "title": "14.     Approbation des conditions et du mode de passation du marché relatif à la désignation d'un auteur de projet pour la finalisation de la rénovation du Moulin Banal et ses extensions",
-      "sourceDocumentTitle": "OJ Conseil (011026).pdf 112.3 KB",
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "missionEvidence": null,
-      "buyer": "Commune de Neufchâteau",
-      "municipalityINS": "84043",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "14. Approbation des conditions et du mode de passation du marché relatif à la désignation d'un auteur de projet pour la finalisation de la rénovation du Moulin Banal et ses extensions",
-        "sourceUrl": "https://www.neufchateau.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil/ordre-du-jour-du-conseil/oj-conseil-011026.pdf",
-        "page": 1,
-        "sha256": "09c11bb1aed21c96245f094661937acd5fdd7ee040c8e705e74928ccf3b6bc6a"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
       "sector": "Qualif",
       "sectors": [
         "Qualif"
@@ -18515,567 +19121,91 @@
       "screening": "review",
       "qualification": {
         "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
         "capacityStatus": "not_assessed"
       },
-      "publication": "",
+      "matchReason": "mission_globale_a_qualifier",
+      "publication": "2026-11-04",
       "deadline": "",
-      "sourceDocument": "https://www.neufchateau.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil/ordre-du-jour-du-conseil/oj-conseil-011026.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.neufchateau.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil/ordre-du-jour-du-conseil/oj-conseil-011026.pdf",
-        "sha256": "09c11bb1aed21c96245f094661937acd5fdd7ee040c8e705e74928ccf3b6bc6a",
-        "session": null,
-        "document": {
-          "date": "2026-09-22",
-          "kind": "document",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "Neufchâteau, le 22/09/2026",
-          "confidence": "explicit"
-        },
-        "status": "identified"
-      },
-      "sourceExtraction": {
-        "method": "pdf_text",
-        "partial": false
-      },
-      "url": "https://www.neufchateau.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil/ordre-du-jour-du-conseil/oj-conseil-011026.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : 14.     Approbation des conditions et du mode de passation du marché relatif à la désignation d'un auteur de projet pour la finalisation de la rénovation du Moulin Banal et ses extensions",
-      "evidence": "14.     Approbation des conditions et du mode de passation du marché relatif à la désignation d'un auteur de projet pour la finalisation de la rénovation du Moulin Banal et ses extensions",
-      "municipalReference": null,
-      "municipalSection": "14.     Approbation des conditions et du mode de passation du marché relatif à la désignation d'un auteur de projet pour la finalisation de la rénovation du Moulin Banal et ses extensions",
-      "municipalEvidence": [
+      "cpv": [
+        "71410000"
+      ],
+      "description": "L’objet du marché porte sur la prestation de services relatifs à l’élaboration d’un schéma de développement communal global conformément à la législation relative à l’aménagement du territoire, notamment les articles D.II.9 et D.II.10 du Code du développement territorial. Un schéma de la procédure d’élaboration d’un SDC est repris en annexe 10. Description des services à exécuter : Elaboration du SDC : • Phase 1 : analyse contextuelle • Phase 2 :  a) Établissement de l'avant-projet du SDC ; b) Proposition de révision du GCU en fonction de l’avant-projet ; c) Identification des propositions de révision et/ou abrogation des SOL ; d) Identification des propositions de révision et/ou abrogation du plan de Secteur ; • Phase 3 : rapport sur les incidences environnementales (cette phase fait l’objet d’un marché public distinct) •• Phase 4 :   a) Établissement du projet de schéma de développement communal (y compris, le cas échéant, la révision du GCU et les éventuelles révisions ou abrogations des SOL) ; • Phase 5 : établissement du schéma de développement communal définitif et déclaration environnementale.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0CN-825/6027/2026297_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/04e0b00d-f962-4343-bfba-3d81f13ec7bb/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/04e0b00d-f962-4343-bfba-3d81f13ec7bb/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
         {
-          "page": 1,
-          "excerpt": "14.     Approbation des conditions et du mode de passation du marché relatif à la désignation d'un auteur de projet pour la finalisation de la rénovation du Moulin Banal et ses extensions"
+          "reference": "PPP0CN-825/6027/2026297_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/04e0b00d-f962-4343-bfba-3d81f13ec7bb/general",
+          "publicationDate": "2026-11-04",
+          "kind": "award"
         }
       ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 1,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:5a2911c83259ce93d9",
-        "sha256": "09c11bb1aed21c96245f094661937acd5fdd7ee040c8e705e74928ccf3b6bc6a",
-        "checkedAt": "2026-11-04T08:05:36.866Z",
-        "changedAt": null
-      }
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-04T13:11:08.836Z"
     },
     {
-      "id": "local-html:f989ade05e4edb1f184f",
-      "title": "Démolition du local des ouvriers et division de la parcelle en terrains à bâtir – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation",
-      "sourceDocumentTitle": "Démolition du local des ouvriers et division de la parcelle en terrains à bâtir – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation",
-      "missionEvidence": null,
-      "buyer": "Commune de Martelange",
-      "municipalityINS": "81013",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": {
-        "label": "Procédure négociée sans publication préalable",
-        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
-        "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/demolition-du-local-des-ouvriers-et-division-de-la-parcelle-en-terrains-a-batir-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
-        "sha256": "55a99816d86b08f539c558e24199c714b882c5c8b15d2acbca73c7d8e8176336",
-        "stage": "project"
-      },
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
+      "id": "bosa:81d87d11-8b12-4292-a6d0-0ec14100d46a",
+      "publicationWorkspaceId": "81d87d11-8b12-4292-a6d0-0ec14100d46a",
+      "noticeId": "eae3e7cd-df38-4044-9a19-1107baad95a6",
+      "procedureIdentifier": "b2c3e5f9-67d1-4134-b7d6-df4c049dccd6",
+      "internalReference": "PPP0EX-4507/5977/BE.2025/421.065.00/AJ_002",
+      "title": "Balisage du Réseau de Cheminement Piéton",
+      "buyer": "Mons",
+      "region": "Bruxelles",
+      "languages": [
+        "FR"
       ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/demolition-du-local-des-ouvriers-et-division-de-la-parcelle-en-terrains-a-batir-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
-      "sourceDocument": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/demolition-du-local-des-ouvriers-et-division-de-la-parcelle-en-terrains-a-batir-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/demolition-du-local-des-ouvriers-et-division-de-la-parcelle-en-terrains-a-batir-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
-        "sha256": "55a99816d86b08f539c558e24199c714b882c5c8b15d2acbca73c7d8e8176336",
-        "session": {
-          "date": "2026-09-24",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 24 septembre 2026 (19:30)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/demolition-du-local-des-ouvriers-et-division-de-la-parcelle-en-terrains-a-batir-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:3c9540251af2cf8f48",
-        "sha256": "55a99816d86b08f539c558e24199c714b882c5c8b15d2acbca73c7d8e8176336",
-        "format": "html",
-        "checkedAt": "2026-11-04T08:05:36.866Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Démolition du local des ouvriers et division de la parcelle en terrains à bâtir – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation 24 Séance publique du Conseil 24 septembre 20",
-        "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/demolition-du-local-des-ouvriers-et-division-de-la-parcelle-en-terrains-a-batir-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
-        "page": null,
-        "sha256": "55a99816d86b08f539c558e24199c714b882c5c8b15d2acbca73c7d8e8176336"
-      },
-      "description": "Démolition du local des ouvriers et division de la parcelle en terrains à bâtir – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation 24 Séance publique du Conseil 24 septembre 2026 (19:30) Point N°",
-      "evidence": "Démolition du local des ouvriers et division de la parcelle en terrains à bâtir – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation 24 Séance publique du Conseil 24 septembre 2026 (19:30) Point N°",
-      "municipalEvidence": [
-        {
-          "excerpt": "Démolition du local des ouvriers et division de la parcelle en terrains à bâtir – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation 24 Séance publique du Conseil 24 septembre 2026 (19:30) Point N°",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": "2026-221"
-    },
-    {
-      "id": "local-html:0c20c168152279f5b7c9",
-      "title": "Bâtiment « La Folie » à Martelange – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation",
-      "sourceDocumentTitle": "Bâtiment « La Folie » à Martelange – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation",
-      "missionEvidence": {
-        "excerpt": "mettre son avis de légalité, soit au plus tard le 21 septembre 2026 ; DECIDE Art.1er: D'approuver le cahier des charges N° 2026-220 et le montant estimé du marché “Désignation d'un auteur de projet pour le bâtiment \" La Folie\" à Martelange”, établis par le Service des marchés publics. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'",
-        "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/batiment-la-folie-a-martelange-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
-        "page": null,
-        "sha256": "0a171adff51e43441fdd201b2162ee7ce40ac41eed1ce47e36328786545ec651"
-      },
-      "buyer": "Commune de Martelange",
-      "municipalityINS": "81013",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": {
-        "label": "Procédure négociée sans publication préalable",
-        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
-        "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/batiment-la-folie-a-martelange-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
-        "sha256": "0a171adff51e43441fdd201b2162ee7ce40ac41eed1ce47e36328786545ec651",
-        "stage": "project"
-      },
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "mettre son avis de légalité, soit au plus tard le 21 septembre 2026 ; DECIDE Art.1er: D'approuver le cahier des charges N° 2026-220 et le montant estimé du marché “Désignation d'un auteur de projet pour le bâtiment \" La Folie\" à Martelange”, établis par le Service des marchés publics. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'",
-        "mission": "DECIDE Art.1er: D'approuver le cahier des charges N° 2026-220 et le montant estimé du marché “Désignation d'un auteur de projet pour le bâtiment \" La Folie\" à Martelange”, établis par le Service des marchés publics.",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/batiment-la-folie-a-martelange-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
-      "sourceDocument": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/batiment-la-folie-a-martelange-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/batiment-la-folie-a-martelange-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
-        "sha256": "0a171adff51e43441fdd201b2162ee7ce40ac41eed1ce47e36328786545ec651",
-        "session": {
-          "date": "2026-09-24",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 24 septembre 2026 (19:30)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/batiment-la-folie-a-martelange-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:6e1ae03a523fac4175",
-        "sha256": "0a171adff51e43441fdd201b2162ee7ce40ac41eed1ce47e36328786545ec651",
-        "format": "html",
-        "checkedAt": "2026-11-04T08:05:36.866Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Bâtiment « La Folie » à Martelange – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation 24 Séance publique du Conseil 24 septembre 2026 (19:30) Point N°",
-        "sourceUrl": "https://www.deliberations.be/martelange/decisions/24-septembre-2026-19-30/batiment-la-folie-a-martelange-designation-dun-auteur-de-projet-cahier-des-charges-et-conditions-du-marche-approbation",
-        "page": null,
-        "sha256": "0a171adff51e43441fdd201b2162ee7ce40ac41eed1ce47e36328786545ec651"
-      },
-      "description": "Bâtiment « La Folie » à Martelange – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation 24 Séance publique du Conseil 24 septembre 2026 (19:30) Point N°",
-      "evidence": "Bâtiment « La Folie » à Martelange – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation 24 Séance publique du Conseil 24 septembre 2026 (19:30) Point N°",
-      "municipalEvidence": [
-        {
-          "excerpt": "Bâtiment « La Folie » à Martelange – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation 24 Séance publique du Conseil 24 septembre 2026 (19:30) Point N°",
-          "page": null
-        },
-        {
-          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. Bâtiment « La Folie » à Martelange – Désignation d’un auteur de projet – Cahier des charges et conditions du marché – Approbation Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) ; Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ;",
-          "page": null
-        },
-        {
-          "excerpt": "Considérant le bâtiment « La Folie » et sa position stratégique le long de la N4 ; Considérant la volonté du collège de l’aménager et d’y développer une structure Horeca, une halte touristique ainsi que des aménagements destinés aux petits et grands ; Considérant le cahier des charges N° 2026-220 relatif au marché “Désignation d'un auteur de projet pour le bâtiment \"La Folie\" à Martelange” établi par le Service des marchés publics ; Considérant que le montant estimé de ce marché s'élève à 41.322,31 € hors TVA ou 50.000,00 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, à l’article 124/733-60 (n° de projet 20260032) ; Considérant que le site est actuellement en procédure de reconnaissance de site à réaménager ;",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": "2026-220"
-    },
-    {
-      "id": "local:ac0ca00e701f13053beb",
-      "title": "22.   Programme Communal de Développement Rural - F.P.1.1. « Réaménagement de la place de Gourdinne » : désignation d’un auteur de projet - Marché",
-      "sourceDocumentTitle": "Consulter",
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "missionEvidence": null,
-      "buyer": "Commune de Walcourt",
-      "municipalityINS": "93088",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "22. Programme Communal de Développement Rural - F.P.1.1. « Réaménagement de la place de Gourdinne » : désignation d’un auteur de projet - Marché",
-        "sourceUrl": "https://www.walcourt.be/wp-content/uploads/2026/10/Ordre-du-Jour-du-Conseil-communal-du-lundi-26-octobre-2026-a-19h30.pdf",
-        "page": 1,
-        "sha256": "79476554ed850f72f21aa59283607567f455f8c491df5d0932657cbc9f4665c8"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
       "sector": "VRD",
       "sectors": [
         "VRD"
       ],
-      "score": 60,
+      "score": 62,
       "screening": "review",
       "qualification": {
         "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "kind": "unknown",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
         "capacityStatus": "not_assessed"
       },
-      "publication": "",
+      "matchReason": "projet_indirect",
+      "publication": "2026-11-04",
       "deadline": "",
-      "sourceDocument": "https://www.walcourt.be/wp-content/uploads/2026/10/Ordre-du-Jour-du-Conseil-communal-du-lundi-26-octobre-2026-a-19h30.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.walcourt.be/wp-content/uploads/2026/10/Ordre-du-Jour-du-Conseil-communal-du-lundi-26-octobre-2026-a-19h30.pdf",
-        "sha256": "79476554ed850f72f21aa59283607567f455f8c491df5d0932657cbc9f4665c8",
-        "session": {
-          "date": "2026-09-28",
-          "kind": "session",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "Procès-verbal de la séance du 28/09/2026",
-          "confidence": "explicit"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceExtraction": {
-        "method": "pdf_text",
-        "partial": false
-      },
-      "url": "https://www.walcourt.be/wp-content/uploads/2026/10/Ordre-du-Jour-du-Conseil-communal-du-lundi-26-octobre-2026-a-19h30.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : 22.   Programme Communal de Développement Rural - F.P.1.1. « Réaménagement de la place de Gourdinne » : désignation d’un auteur de projet - Marché",
-      "evidence": "22.   Programme Communal de Développement Rural - F.P.1.1. « Réaménagement de la place de Gourdinne » : désignation d’un auteur de projet - Marché",
-      "municipalReference": null,
-      "municipalSection": "22.   Programme Communal de Développement Rural - F.P.1.1. « Réaménagement de la place de Gourdinne » : désignation d’un auteur de projet - Marché",
-      "municipalEvidence": [
+      "cpv": [
+        "63724310"
+      ],
+      "description": "Balisage du Réseau de Cheminement Piéton",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0EX-4507/5977/BE.2025/421.065.00/AJ_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/81d87d11-8b12-4292-a6d0-0ec14100d46a/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/81d87d11-8b12-4292-a6d0-0ec14100d46a/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
         {
-          "page": 1,
-          "excerpt": "22.   Programme Communal de Développement Rural - F.P.1.1. « Réaménagement de la place de Gourdinne » : désignation d’un auteur de projet - Marché"
+          "reference": "PPP0EX-4507/5977/BE.2025/421.065.00/AJ_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/81d87d11-8b12-4292-a6d0-0ec14100d46a/general",
+          "publicationDate": "2026-11-04",
+          "kind": "award"
         }
       ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 1,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:3f6d3bf1bf70698fcf",
-        "sha256": "79476554ed850f72f21aa59283607567f455f8c491df5d0932657cbc9f4665c8",
-        "checkedAt": "2026-11-04T08:05:36.866Z",
-        "changedAt": null
-      }
-    },
-    {
-      "id": "local:9b2556cb2c9005e9d5bd",
-      "title": "4.   Certification PEB Marché de services du SPW IAS ou subventionnement de coût de la certification PEB",
-      "sourceDocumentTitle": "PV Conseil 22.09.2026.pdf 1.6 MB",
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "missionEvidence": null,
-      "buyer": "Commune de La Louvière",
-      "municipalityINS": "58001",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "4. Certification PEB Marché de services du SPW IAS ou subventionnement de coût de la certification PEB",
-        "sourceUrl": "https://www.lalouviere.be/ma-ville/vie-politique/conseil-communal/ordre-du-jour-et-pv-des-conseils/2026/pv-conseil-22-09-2026.pdf",
-        "page": 192,
-        "sha256": "0b290c1788c6c5469e73b7dc7a1873df1744f2a10bd12a802f92330cbbd8cf0d"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "PEB",
-      "sectors": [
-        "PEB"
-      ],
-      "score": 60,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.lalouviere.be/ma-ville/vie-politique/conseil-communal/ordre-du-jour-et-pv-des-conseils/2026/pv-conseil-22-09-2026.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.lalouviere.be/ma-ville/vie-politique/conseil-communal/ordre-du-jour-et-pv-des-conseils/2026/pv-conseil-22-09-2026.pdf",
-        "sha256": "0b290c1788c6c5469e73b7dc7a1873df1744f2a10bd12a802f92330cbbd8cf0d",
-        "session": {
-          "date": "2026-09-22",
-          "kind": "session",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "Séance du 22 septembre 2026",
-          "confidence": "explicit"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceExtraction": {
-        "method": "pdf_text",
-        "partial": false
-      },
-      "url": "https://www.lalouviere.be/ma-ville/vie-politique/conseil-communal/ordre-du-jour-et-pv-des-conseils/2026/pv-conseil-22-09-2026.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : 4.   Certification PEB Marché de services du SPW IAS ou subventionnement de coût de la certification PEB",
-      "evidence": "4.   Certification PEB Marché de services du SPW IAS ou subventionnement de coût de la certification PEB",
-      "municipalReference": null,
-      "municipalSection": "4.   Certification PEB Marché de services du SPW IAS ou subventionnement de coût de la certification PEB",
-      "municipalEvidence": [
-        {
-          "page": 192,
-          "excerpt": "4.   Certification PEB Marché de services du SPW IAS ou subventionnement de coût de la certification PEB"
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 192,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:f406dc1b862f976ce0",
-        "sha256": "0b290c1788c6c5469e73b7dc7a1873df1744f2a10bd12a802f92330cbbd8cf0d",
-        "checkedAt": "2026-11-04T08:05:36.866Z",
-        "changedAt": null
-      }
-    },
-    {
-      "id": "local:c6d87e47ba880233763e",
-      "title": "14.   Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation Ce marché a pour objet la désignation d’un auteur de projet chargé de l’étude et de l’accompagnement de la rénovation des vestiaires et de la buvette de l’USR (Union Sportive Rebecquoise), situés Ruelle du Gobard 5",
-      "sourceDocumentTitle": "20/10/2026 - Note de présentation 217.5 KB",
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "missionEvidence": null,
-      "buyer": "Commune de Rebecq",
-      "municipalityINS": "25123",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "14. Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation Ce marché a pour objet la désignation d’un auteur de projet chargé de l’étude et de l’accompa",
-        "sourceUrl": "https://www.rebecq.be/vie-administrative-politique/vie-politique/le-conseil-communal/le-conseil-communal-en-ligne/note-de-presentation-20-octobre-2026.pdf",
-        "page": 5,
-        "sha256": "6e6da2d4ff4b13ccf14a08f1cf27a9d369b74c6e4bc1d3674d3b52aa8384c14d"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.rebecq.be/vie-administrative-politique/vie-politique/le-conseil-communal/le-conseil-communal-en-ligne/note-de-presentation-20-octobre-2026.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.rebecq.be/vie-administrative-politique/vie-politique/le-conseil-communal/le-conseil-communal-en-ligne/note-de-presentation-20-octobre-2026.pdf",
-        "sha256": "6e6da2d4ff4b13ccf14a08f1cf27a9d369b74c6e4bc1d3674d3b52aa8384c14d",
-        "session": null,
-        "document": {
-          "date": "2026-10-12",
-          "kind": "document",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "Rebecq, le 12 octobre 2026",
-          "confidence": "explicit"
-        },
-        "status": "identified"
-      },
-      "sourceExtraction": {
-        "method": "pdf_text",
-        "partial": false
-      },
-      "url": "https://www.rebecq.be/vie-administrative-politique/vie-politique/le-conseil-communal/le-conseil-communal-en-ligne/note-de-presentation-20-octobre-2026.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : 14.   Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation Ce marché a pour objet la désignation d’un auteur de projet chargé de l’étude et de l’accompagnement de la rénovation des vestiaires et de la buvette de l’USR (Union Sportive Rebecquoise), situés Ruelle du Gobard 5 à 1430 Rebecq.",
-      "evidence": "14.   Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation Ce marché a pour objet la désignation d’un auteur de projet chargé de l’étude et de l’accompagnement de la rénovation des vestiaires et de la buvette de l’USR (Union Sportive Rebecquoise), situés Ruelle du Gobard 5 à 1430 Rebecq.",
-      "municipalReference": null,
-      "municipalSection": "14.   Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation Ce marché a pour objet la désignation d’un auteur de projet chargé de l’étude et de l’accompagnement de la rénovation des vestiaires et de la buvette de l’USR (Union Sportive Rebecquoise), situés Ruelle du Gobard 5",
-      "municipalEvidence": [
-        {
-          "page": 5,
-          "excerpt": "14.   Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation Ce marché a pour objet la désignation d’un auteur de projet chargé de l’étude et de l’accompagnement de la rénovation des vestiaires et de la buvette de l’USR (Union Sportive Rebecquoise), situés Ruelle du Gobard 5 à 1430 Rebecq."
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 5,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:89b46c6818b2c8ead4",
-        "sha256": "6e6da2d4ff4b13ccf14a08f1cf27a9d369b74c6e4bc1d3674d3b52aa8384c14d",
-        "checkedAt": "2026-11-04T08:05:36.866Z",
-        "changedAt": null
-      }
-    },
-    {
-      "id": "local:340307ef0bebff44ec69",
-      "title": "14. Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation",
-      "sourceDocumentTitle": "20/10/2026 - Ordre du jour 932.2 KB",
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "missionEvidence": null,
-      "buyer": "Commune de Rebecq",
-      "municipalityINS": "25123",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "14. Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation",
-        "sourceUrl": "https://www.rebecq.be/vie-administrative-politique/vie-politique/le-conseil-communal/le-conseil-communal-en-ligne/convocation-oj-20-octobre-2026-sans-huis-clos.pdf",
-        "page": 1,
-        "sha256": "e377aa1f39efdda3e2e5f92f70f61ee5653eda35750e8178eef804a2779e0ca9"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.rebecq.be/vie-administrative-politique/vie-politique/le-conseil-communal/le-conseil-communal-en-ligne/convocation-oj-20-octobre-2026-sans-huis-clos.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.rebecq.be/vie-administrative-politique/vie-politique/le-conseil-communal/le-conseil-communal-en-ligne/convocation-oj-20-octobre-2026-sans-huis-clos.pdf",
-        "sha256": "e377aa1f39efdda3e2e5f92f70f61ee5653eda35750e8178eef804a2779e0ca9",
-        "session": null,
-        "document": {
-          "date": "2026-10-12",
-          "kind": "document",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "Rebecq, le 12 octobre 2026",
-          "confidence": "ocr"
-        },
-        "status": "identified"
-      },
-      "sourceExtraction": {
-        "method": "ocr",
-        "language": "fra+eng",
-        "pagesRead": 1,
-        "totalPages": 1,
-        "partial": false
-      },
-      "url": "https://www.rebecq.be/vie-administrative-politique/vie-politique/le-conseil-communal/le-conseil-communal-en-ligne/convocation-oj-20-octobre-2026-sans-huis-clos.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : 14. Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation",
-      "evidence": "14. Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation",
-      "municipalReference": null,
-      "municipalSection": "14. Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation",
-      "municipalEvidence": [
-        {
-          "page": 1,
-          "excerpt": "14. Marché de services - auteur de projet : étude USR vestiaire buvette - approbation des conditions et du mode de passation"
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 1,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:58f7633fff5bdc8429",
-        "sha256": "e377aa1f39efdda3e2e5f92f70f61ee5653eda35750e8178eef804a2779e0ca9",
-        "checkedAt": "2026-11-04T08:05:36.866Z",
-        "changedAt": null
-      }
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-04T13:11:12.530Z"
     }
   ]
 }
