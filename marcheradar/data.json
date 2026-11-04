@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-04T08:05:36.866Z",
+      "last_attempt": "2026-11-04T17:35:02.976Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -67,36 +67,36 @@
       "total": 261,
       "sitesRepertories": 261,
       "sitesVerifies": 261,
-      "deliberationsConnectees": 151,
+      "deliberationsConnectees": 171,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 492,
-      "opportunities": 129,
+      "documentsRead": 536,
+      "opportunities": 133,
       "sitesChecked": 261,
       "candidatePages": 228,
-      "sourceErrors": 72,
-      "htmlDocumentsRead": 1242
+      "sourceErrors": 73,
+      "htmlDocumentsRead": 1497
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-04T08:05:36.866Z",
-      "last_success": "2026-11-04T08:05:36.866Z",
+      "last_attempt": "2026-11-04T17:35:02.976Z",
+      "last_success": "2026-11-04T17:35:02.976Z",
       "last_batch": 24,
-      "documents_checked": 80,
+      "documents_checked": 44,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 8,
+      "errors_count": 1,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 254,
+      "html_documents_read": 255,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 32,
+      "recent_municipal_signals": 36,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1347,
     "matched_current_run": 8,
-    "records": 263,
+    "records": 267,
     "review_count": 167,
     "award_notice_count": 338,
     "awarded_market_matches": 1,
@@ -19206,6 +19206,343 @@
       "documentInventory": [],
       "consultationUrls": [],
       "documentsCheckedAt": "2026-11-04T13:11:12.530Z"
+    },
+    {
+      "id": "local:611e00341bddccb3fc5d",
+      "title": "2. 1.777.51. : -AMENAGEMENT DU TERRITOIRE : DESIGNATION D'UN BUREAU D'ETUDES DANS LE CADRE DE L'ELABORATION DU SCHEMA DE DEVELOPPEMENT COMMUNAL - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION IN HOUSE - ANNULATION DE LA DELIBERATION DU 6",
+      "sourceDocumentTitle": "Ordre du jour",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Froidchapelle",
+      "municipalityINS": "56029",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "other",
+      "webTypeEvidence": {
+        "kind": "other",
+        "reason": "projet_de_mission_a_operateur_determine",
+        "excerpt": "2. 1.777.51. : -AMENAGEMENT DU TERRITOIRE : DESIGNATION D'UN BUREAU D'ETUDES DANS LE CADRE DE L'ELABORATION DU SCHEMA DE DEVELOPPEMENT COMMUNAL - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION IN HOUSE - ANNULATION D",
+        "sourceUrl": "https://www.froidchapelle.be/ma-commune/vie-politique/conseil-communal/ordres-du-jour/oj-cc-07-09-2026.pdf",
+        "page": 1,
+        "sha256": "778d49d27e50faa363e9fcff5b7a1b11fb4802e1e37e5d3ac165f8ba3f3b3c3d"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 46,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.froidchapelle.be/ma-commune/vie-politique/conseil-communal/ordres-du-jour/oj-cc-07-09-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.froidchapelle.be/ma-commune/vie-politique/conseil-communal/ordres-du-jour/oj-cc-07-09-2026.pdf",
+        "sha256": "778d49d27e50faa363e9fcff5b7a1b11fb4802e1e37e5d3ac165f8ba3f3b3c3d",
+        "session": {
+          "date": "2026-09-07",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "ORDRE DU JOUR DU CONSEIL COMMUNAL DU 07 SEPTEMBRE 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.froidchapelle.be/ma-commune/vie-politique/conseil-communal/ordres-du-jour/oj-cc-07-09-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 2. 1.777.51. : -AMENAGEMENT DU TERRITOIRE : DESIGNATION D'UN BUREAU D'ETUDES DANS LE CADRE DE L'ELABORATION DU SCHEMA DE DEVELOPPEMENT COMMUNAL - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION IN HOUSE - ANNULATION DE LA DELIBERATION DU 6 JUILLET 2026 ETAPPROBATION DE LA CONVENTION",
+      "evidence": "2. 1.777.51. : -AMENAGEMENT DU TERRITOIRE : DESIGNATION D'UN BUREAU D'ETUDES DANS LE CADRE DE L'ELABORATION DU SCHEMA DE DEVELOPPEMENT COMMUNAL - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION IN HOUSE - ANNULATION DE LA DELIBERATION DU 6 JUILLET 2026 ETAPPROBATION DE LA CONVENTION",
+      "municipalReference": null,
+      "municipalSection": "2. 1.777.51. : -AMENAGEMENT DU TERRITOIRE : DESIGNATION D'UN BUREAU D'ETUDES DANS LE CADRE DE L'ELABORATION DU SCHEMA DE DEVELOPPEMENT COMMUNAL - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION IN HOUSE - ANNULATION DE LA DELIBERATION DU 6",
+      "municipalEvidence": [
+        {
+          "page": 1,
+          "excerpt": "2. 1.777.51. : -AMENAGEMENT DU TERRITOIRE : DESIGNATION D'UN BUREAU D'ETUDES DANS LE CADRE DE L'ELABORATION DU SCHEMA DE DEVELOPPEMENT COMMUNAL - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION IN HOUSE - ANNULATION DE LA DELIBERATION DU 6 JUILLET 2026 ETAPPROBATION DE LA CONVENTION"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 1,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:43aae1570d18896a46",
+        "sha256": "778d49d27e50faa363e9fcff5b7a1b11fb4802e1e37e5d3ac165f8ba3f3b3c3d",
+        "checkedAt": "2026-11-04T17:35:02.976Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local-html:736ecc5491d19332818d",
+      "title": "Marché public relatif à \" Désignation d'un bureau d'études pour la révision partielle du schéma de développement communal par adoption d'un schéma de développement communal thématique au bénéfice de la Commune de Jurbise\" - Mode de passation, conditions, Csch et liste des firmes à consulter – Approbation",
+      "sourceDocumentTitle": "Marché public relatif à \" Désignation d'un bureau d'études pour la révision partielle du schéma de développement communal par adoption d'un schéma de développement communal thématique au bénéfice de la Commune de Jurbise\" - Mode de passation, conditions, Csch et liste des firmes à consulter – Approbation",
+      "missionEvidence": null,
+      "buyer": "Commune de Jurbise",
+      "municipalityINS": "53044",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 46,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/jurbise/decisions/20-octobre-2026-20-00/marche-public-relatif-a-designation-dun-bureau-detudes-pour-la-revision-partielle-du-schema-de-developpement-communal-par-adoption-dun-schema-de-developpement-communal-thematique-au-benefice-de-la-commune-de-jurbise-mode-de-passation-conditions-csch-et",
+      "sourceDocument": "https://www.deliberations.be/jurbise/decisions/20-octobre-2026-20-00/marche-public-relatif-a-designation-dun-bureau-detudes-pour-la-revision-partielle-du-schema-de-developpement-communal-par-adoption-dun-schema-de-developpement-communal-thematique-au-benefice-de-la-commune-de-jurbise-mode-de-passation-conditions-csch-et",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/jurbise/decisions/20-octobre-2026-20-00/marche-public-relatif-a-designation-dun-bureau-detudes-pour-la-revision-partielle-du-schema-de-developpement-communal-par-adoption-dun-schema-de-developpement-communal-thematique-au-benefice-de-la-commune-de-jurbise-mode-de-passation-conditions-csch-et",
+        "sha256": "a66ca232e0fc380a9006714253ff40b0907b7e7ad7aee0282b0aa87f202c7e64",
+        "session": {
+          "date": "2026-10-20",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 20 octobre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/jurbise/decisions/20-octobre-2026-20-00/marche-public-relatif-a-designation-dun-bureau-detudes-pour-la-revision-partielle-du-schema-de-developpement-communal-par-adoption-dun-schema-de-developpement-communal-thematique-au-benefice-de-la-commune-de-jurbise-mode-de-passation-conditions-csch-et"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6216191304dc401343",
+        "sha256": "a66ca232e0fc380a9006714253ff40b0907b7e7ad7aee0282b0aa87f202c7e64",
+        "format": "html",
+        "checkedAt": "2026-11-04T17:35:02.976Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Marché public relatif à \" Désignation d'un bureau d'études pour la révision partielle du schéma de développement communal par adoption d'un schéma de développement communal thématique au bénéfice de la Commune de Jurbise",
+        "sourceUrl": "https://www.deliberations.be/jurbise/decisions/20-octobre-2026-20-00/marche-public-relatif-a-designation-dun-bureau-detudes-pour-la-revision-partielle-du-schema-de-developpement-communal-par-adoption-dun-schema-de-developpement-communal-thematique-au-benefice-de-la-commune-de-jurbise-mode-de-passation-conditions-csch-et",
+        "page": null,
+        "sha256": "a66ca232e0fc380a9006714253ff40b0907b7e7ad7aee0282b0aa87f202c7e64"
+      },
+      "description": "Marché public relatif à \" Désignation d'un bureau d'études pour la révision partielle du schéma de développement communal par adoption d'un schéma de développement communal thématique au bénéfice de la Commune de Jurbise\" - Mode de passation, conditions, Csch et liste des firmes à consulter – Approbation 20 Séance publique du Conseil 20 octobre 2026 (20:00) Point N°",
+      "evidence": "Marché public relatif à \" Désignation d'un bureau d'études pour la révision partielle du schéma de développement communal par adoption d'un schéma de développement communal thématique au bénéfice de la Commune de Jurbise\" - Mode de passation, conditions, Csch et liste des firmes à consulter – Approbation 20 Séance publique du Conseil 20 octobre 2026 (20:00) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "Marché public relatif à \" Désignation d'un bureau d'études pour la révision partielle du schéma de développement communal par adoption d'un schéma de développement communal thématique au bénéfice de la Commune de Jurbise\" - Mode de passation, conditions, Csch et liste des firmes à consulter – Approbation 20 Séance publique du Conseil 20 octobre 2026 (20:00) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. Marché public relatif à \" Désignation d'un bureau d'études pour la révision partielle du schéma de développement communal par adoption d'un schéma de développement communal thématique au bénéfice de la Commune de Jurbise\" - Mode de passation, conditions, Csch et liste des firmes à consulter – Approbation Vu le Code de la démocratie locale et de la décentralisation, et ses modifications ultérieures, notamment les articles L1222-3 et L1222-4 ; Vu la loi du 29 juillet 1991 relative à la motivation formelle des actes administratifs et ses modifications ultérieures ; Vu la loi du 12 novembre 1997 relative à la publicité de l’administration ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions, et ses modifications ultérieures ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2025-24"
+    },
+    {
+      "id": "local-html:4a3744fa1b174f076847",
+      "title": "Entretien extraordinaire de la rue de Longuyon à Ruette",
+      "sourceDocumentTitle": "Entretien extraordinaire de la rue de Longuyon à Ruette - Approbation des conditions et du mode de passation.",
+      "missionEvidence": {
+        "excerpt": "Après en avoir délibéré, DECIDE : D'approuver le cahier des charges et le montant estimé du marché “Entretien extraordinaire de la rue de Longuyon à Ruette”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 333.427,",
+        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "4ce6a7e7dd1b33718bb08f57c38d7d36f6b21d242128a041aa85b89484668eea"
+      },
+      "buyer": "Commune de Virton",
+      "municipalityINS": "85045",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "Après en avoir délibéré, DECIDE : D'approuver le cahier des charges et le montant estimé du marché “Entretien extraordinaire de la rue de Longuyon à Ruette”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 333.427,",
+        "mission": "DECIDE : D'approuver le cahier des charges et le montant estimé du marché “Entretien extraordinaire de la rue de Longuyon à Ruette”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD Les conditions sont fixées comme prévu au cahier des charges et par les règ",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Reseaux",
+      "sectors": [
+        "Reseaux"
+      ],
+      "screening": "review",
+      "score": 58,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "4ce6a7e7dd1b33718bb08f57c38d7d36f6b21d242128a041aa85b89484668eea",
+        "session": {
+          "date": "2026-10-08",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 08 octobre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:3ada090cb2acdbbe35",
+        "sha256": "4ce6a7e7dd1b33718bb08f57c38d7d36f6b21d242128a041aa85b89484668eea",
+        "format": "html",
+        "checkedAt": "2026-11-04T17:35:02.976Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu le Code de la démocratie locale et de la décentralisation et ses modificati",
+        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/entretien-extraordinaire-de-la-rue-de-longuyon-a-ruette-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "4ce6a7e7dd1b33718bb08f57c38d7d36f6b21d242128a041aa85b89484668eea"
+      },
+      "description": "Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu le cahier des charges relatif au marché “Entretien extraordinaire de la rue de Longuyon à Ruette” établi par le Bureau d'études, TEXTE MASQUÉ | RGPD ; Considérant que le montant estimé de ce marché s'élève à 333.427,60 € hors TVA, détaillé comme suit : - Tranche ferme : rénovation de la voirie : 310.264,80 € HTVA. - Tranche conditionnelle 1 : extension d’égout : 18.000,00 € HTVA. - Tranche conditionnelle 2 : extension de distribution d’eau : 5.162,80 € HTVA ;",
+      "evidence": "Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu le cahier des charges relatif au marché “Entretien extraordinaire de la rue de Longuyon à Ruette” établi par le Bureau d'études, TEXTE MASQUÉ | RGPD ; Considérant que le montant estimé de ce marché s'élève à 333.427,60 € hors TVA, détaillé comme suit : - Tranche ferme : rénovation de la voirie : 310.264,80 € HTVA. - Tranche conditionnelle 1 : extension d’égout : 18.000,00 € HTVA. - Tranche conditionnelle 2 : extension de distribution d’eau : 5.162,80 € HTVA ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu le cahier des charges relatif au marché “Entretien extraordinaire de la rue de Longuyon à Ruette” établi par le Bureau d'études, TEXTE MASQUÉ | RGPD ; Considérant que le montant estimé de ce marché s'élève à 333.427,60 € hors TVA, détaillé comme suit : - Tranche ferme : rénovation de la voirie : 310.264,80 € HTVA. - Tranche conditionnelle 1 : extension d’égout : 18.000,00 € HTVA. - Tranche conditionnelle 2 : extension de distribution d’eau : 5.162,80 € HTVA ;",
+          "page": null
+        },
+        {
+          "excerpt": "De passer le marché par la procédure ouverte. D’approuver l’avis de marché établi à cet effet. De financer cette dépense par les crédits inscrits au budget extraordinaire de l’exercice 2026, articles 421/731-60 (n° de projet 20260016) pour les travaux de voirie, 877/735-51 (n° de projet 20260018) pour les travaux d’extension d’égout et 874/732-60 (n° de projet 20260020) pour les travaux de distribution d’eau, sous réserve de l’approbation de la Tutelle Financière pour la modification budgétaire de l’article 421/731-60 (n° de projet 20260016).",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local:345ce7c6bd6dd845bbde",
+      "title": "Ordre du jour du Conseil communal du mercredi 4 novembre 2026 3.5 MB",
+      "sourceDocumentTitle": "Ordre du jour du Conseil communal du mercredi 4 novembre 2026 3.5 MB",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Frameries",
+      "municipalityINS": "53028",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Service Lumière - Renouvellement de l'adhésion à la Charte Éclairage Public et inscription budgétaire pour 2027 Mission d'auteur de projet ayant pour objet l'obtention d'un permis unique pour le Hall de maintenance commu",
+        "sourceUrl": "https://www.frameries.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal-1/ordre-du-jour-du-conseil-communal/2026/frameries-cc-20261104.pdf",
+        "page": 1,
+        "sha256": "dd72a4aea80d6762314a26aaea1a9195f183bd4e6b36cc3c71586506a8b3cafc"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.frameries.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal-1/ordre-du-jour-du-conseil-communal/2026/frameries-cc-20261104.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.frameries.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal-1/ordre-du-jour-du-conseil-communal/2026/frameries-cc-20261104.pdf",
+        "sha256": "dd72a4aea80d6762314a26aaea1a9195f183bd4e6b36cc3c71586506a8b3cafc",
+        "session": null,
+        "document": {
+          "date": "2026-11-04",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "4 novembre 2026",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "ocr",
+        "language": "fra+eng",
+        "pagesRead": 6,
+        "totalPages": 72,
+        "partial": true
+      },
+      "url": "https://www.frameries.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour-du-conseil-communal-1/ordre-du-jour-du-conseil-communal/2026/frameries-cc-20261104.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Service Lumière - Renouvellement de l'adhésion à la Charte Éclairage Public et inscription budgétaire pour 2027 Mission d'auteur de projet ayant pour objet l'obtention d'un permis unique pour le Hall de maintenance communal - Approbation des conditions et du mode de passation Acquisition matériel voirie - Approbation des conditions, du mode de passation et de l'estimation du marché public.",
+      "evidence": "Service Lumière - Renouvellement de l'adhésion à la Charte Éclairage Public et inscription budgétaire pour 2027 Mission d'auteur de projet ayant pour objet l'obtention d'un permis unique pour le Hall de maintenance communal - Approbation des conditions et du mode de passation Acquisition matériel voirie - Approbation des conditions, du mode de passation et de l'estimation du marché public.",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 1,
+          "excerpt": "Service Lumière - Renouvellement de l'adhésion à la Charte Éclairage Public et inscription budgétaire pour 2027 Mission d'auteur de projet ayant pour objet l'obtention d'un permis unique pour le Hall de maintenance communal - Approbation des conditions et du mode de passation Acquisition matériel voirie - Approbation des conditions, du mode de passation et de l'estimation du marché public."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 1,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:7e257e4ef572a6908b",
+        "sha256": "dd72a4aea80d6762314a26aaea1a9195f183bd4e6b36cc3c71586506a8b3cafc",
+        "checkedAt": "2026-11-04T17:35:02.976Z",
+        "changedAt": null
+      }
     }
   ]
 }
