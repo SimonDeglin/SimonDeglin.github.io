@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-05T08:32:10.843Z",
+      "last_attempt": "2026-11-05T17:40:29.526Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -67,36 +67,36 @@
       "total": 261,
       "sitesRepertories": 261,
       "sitesVerifies": 261,
-      "deliberationsConnectees": 195,
+      "deliberationsConnectees": 202,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 641,
-      "opportunities": 140,
+      "documentsRead": 687,
+      "opportunities": 142,
       "sitesChecked": 261,
       "candidatePages": 228,
-      "sourceErrors": 85,
-      "htmlDocumentsRead": 2031
+      "sourceErrors": 88,
+      "htmlDocumentsRead": 2284
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-05T08:32:10.843Z",
-      "last_success": "2026-11-05T08:32:10.843Z",
+      "last_attempt": "2026-11-05T17:40:29.526Z",
+      "last_success": "2026-11-05T17:40:29.526Z",
       "last_batch": 24,
-      "documents_checked": 68,
+      "documents_checked": 55,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 10,
+      "errors_count": 28,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 302,
+      "html_documents_read": 256,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 43,
+      "recent_municipal_signals": 45,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1485,
     "matched_current_run": 9,
-    "records": 279,
+    "records": 281,
     "review_count": 182,
     "award_notice_count": 393,
     "awarded_market_matches": 1,
@@ -21883,6 +21883,169 @@
       "documentInventory": [],
       "consultationUrls": [],
       "documentsCheckedAt": "2026-11-05T13:25:35.101Z"
+    },
+    {
+      "id": "local:789a47054c2793386239",
+      "title": "4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditions et du mode de passation du marché : examen — décision ;",
+      "sourceDocumentTitle": "23 septembre 2026",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Antoing",
+      "municipalityINS": "57003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditio",
+        "sourceUrl": "https://www.antoing.net/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal-1/ordres-du-jour-en-pdf/oj-conseil-communal-du-23-09-2026.pdf",
+        "page": 1,
+        "sha256": "6cfa2e01f31548fdf93d8d7f1d26591cdda48eb45824dee85b4eb0ed80409942"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.antoing.net/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal-1/ordres-du-jour-en-pdf/oj-conseil-communal-du-23-09-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.antoing.net/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal-1/ordres-du-jour-en-pdf/oj-conseil-communal-du-23-09-2026.pdf",
+        "sha256": "6cfa2e01f31548fdf93d8d7f1d26591cdda48eb45824dee85b4eb0ed80409942",
+        "session": null,
+        "document": {
+          "date": "2026-09-14",
+          "kind": "document",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "g Antoing, le 14 septembre 2026",
+          "confidence": "ocr"
+        },
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "ocr",
+        "language": "fra+eng",
+        "pagesRead": 2,
+        "totalPages": 2,
+        "partial": false
+      },
+      "url": "https://www.antoing.net/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal-1/ordres-du-jour-en-pdf/oj-conseil-communal-du-23-09-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditions et du mode de passation du marché : examen — décision ; b) Marché de travaux — maison communale de Péronnes - remplacement des menuiseries extérieures et isolation du plancher des comble — approbation du CSCH, des conditions et",
+      "evidence": "4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditions et du mode de passation du marché : examen — décision ; b) Marché de travaux — maison communale de Péronnes - remplacement des menuiseries extérieures et isolation du plancher des comble — approbation du CSCH, des conditions et",
+      "municipalReference": null,
+      "municipalSection": "4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditions et du mode de passation du marché : examen — décision ;",
+      "municipalEvidence": [
+        {
+          "page": 1,
+          "excerpt": "4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditions et du mode de passation du marché : examen — décision ; b) Marché de travaux — maison communale de Péronnes - remplacement des menuiseries extérieures et isolation du plancher des comble — approbation du CSCH, des conditions et"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 1,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6acc7a28ab877e03a5",
+        "sha256": "6cfa2e01f31548fdf93d8d7f1d26591cdda48eb45824dee85b4eb0ed80409942",
+        "checkedAt": "2026-11-05T17:40:29.526Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local-html:29a9c1ff897b4b9f7dfb",
+      "title": "506.12:812 - TRAVAUX/PATRIMOINE - PROPRIETE COMMUNALE SISE SQUARE DROUET D'ERLON - ACQUISITION D'UNE PARCELLE DE TERRAIN PAR LA S.C.I. ORES ASSETS POUR Y INSTALLER UNE CABINE HAUTE TENSION HORS-SOL - COMPROMIS DE VENTE",
+      "sourceDocumentTitle": "506.12:812 - TRAVAUX/PATRIMOINE - PROPRIETE COMMUNALE SISE SQUARE DROUET D'ERLON - ACQUISITION D'UNE PARCELLE DE TERRAIN PAR LA S.C.I. ORES ASSETS POUR Y INSTALLER UNE CABINE HAUTE TENSION HORS-SOL - COMPROMIS DE VENTE",
+      "missionEvidence": null,
+      "buyer": "Commune de Braine-l'Alleud",
+      "municipalityINS": "25014",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Topo",
+      "sectors": [
+        "Topo",
+        "Foncier"
+      ],
+      "screening": "review",
+      "score": 60,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/braine-lalleud/decisions/07-septembre-2026-20-00/506-12-812-travaux-patrimoine-propriete-communale-sise-square-drouet-derlon-acquisition-dune-parcelle-de-terrain-par-la-s-c-i-ores-assets-pour-y-installer-une-cabine-haute-tension-hors-sol-compromis-de-vente",
+      "sourceDocument": "https://www.deliberations.be/braine-lalleud/decisions/07-septembre-2026-20-00/506-12-812-travaux-patrimoine-propriete-communale-sise-square-drouet-derlon-acquisition-dune-parcelle-de-terrain-par-la-s-c-i-ores-assets-pour-y-installer-une-cabine-haute-tension-hors-sol-compromis-de-vente",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/braine-lalleud/decisions/07-septembre-2026-20-00/506-12-812-travaux-patrimoine-propriete-communale-sise-square-drouet-derlon-acquisition-dune-parcelle-de-terrain-par-la-s-c-i-ores-assets-pour-y-installer-une-cabine-haute-tension-hors-sol-compromis-de-vente",
+        "sha256": "e3979c9c953dcf4a8d904dd8a8e6f1776600fbe86c6ba8a145a047c4c4b83471",
+        "session": {
+          "date": "2026-09-07",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 07 septembre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/braine-lalleud/decisions/07-septembre-2026-20-00/506-12-812-travaux-patrimoine-propriete-communale-sise-square-drouet-derlon-acquisition-dune-parcelle-de-terrain-par-la-s-c-i-ores-assets-pour-y-installer-une-cabine-haute-tension-hors-sol-compromis-de-vente"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:b7c08187939af10dab",
+        "sha256": "e3979c9c953dcf4a8d904dd8a8e6f1776600fbe86c6ba8a145a047c4c4b83471",
+        "format": "html",
+        "checkedAt": "2026-11-05T17:40:29.526Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "DECIDE : Article 1er : de rapporter la décision du Conseil communal du 25.08.2025 relative à la vente à la Société Coopérative Intercommunale ORES ASSETS de l'emprise initialement destinée à l'implantation d'une cabine h",
+        "sourceUrl": "https://www.deliberations.be/braine-lalleud/decisions/07-septembre-2026-20-00/506-12-812-travaux-patrimoine-propriete-communale-sise-square-drouet-derlon-acquisition-dune-parcelle-de-terrain-par-la-s-c-i-ores-assets-pour-y-installer-une-cabine-haute-tension-hors-sol-compromis-de-vente",
+        "page": null,
+        "sha256": "e3979c9c953dcf4a8d904dd8a8e6f1776600fbe86c6ba8a145a047c4c4b83471"
+      },
+      "description": "DECIDE : Article 1er : de rapporter la décision du Conseil communal du 25.08.2025 relative à la vente à la Société Coopérative Intercommunale ORES ASSETS de l'emprise initialement destinée à l'implantation d'une cabine haute tension au square Drouet d'Erlon et de la remplacer par la présente décision Article 2 : de vendre au prix unique de 1,00 €, à la Société Coopérative Intercommunale ORES ASSETS, la parcelle de terrain communal sise square Drouet d'Erlon, d'une contenance de 25 centiares, cadastrée 4e division, section D, reprise sous le numéro parcellaire réservé 347 A P0000, telle que figurée sous teinte jaune au procès-verbal de mesurage, référencé \"GRD 24179 - C 26967\", dressé en date du 04.06.2026 par Monsieur SIMON Jean-Nicolas, géomètre-expert Article 3 : de marquer son accord sur les termes de la convention établie par la Société Coopérative Intercommunale ORES ASSETS Article 4 : de charger le Collège communal de représenter la Commune lors de la passation de l’acte authentique.",
+      "evidence": "DECIDE : Article 1er : de rapporter la décision du Conseil communal du 25.08.2025 relative à la vente à la Société Coopérative Intercommunale ORES ASSETS de l'emprise initialement destinée à l'implantation d'une cabine haute tension au square Drouet d'Erlon et de la remplacer par la présente décision Article 2 : de vendre au prix unique de 1,00 €, à la Société Coopérative Intercommunale ORES ASSETS, la parcelle de terrain communal sise square Drouet d'Erlon, d'une contenance de 25 centiares, cadastrée 4e division, section D, reprise sous le numéro parcellaire réservé 347 A P0000, telle que figurée sous teinte jaune au procès-verbal de mesurage, référencé \"GRD 24179 - C 26967\", dressé en date du 04.06.2026 par Monsieur SIMON Jean-Nicolas, géomètre-expert Article 3 : de marquer son accord sur les termes de la convention établie par la Société Coopérative Intercommunale ORES ASSETS Article 4 : de charger le Collège communal de représenter la Commune lors de la passation de l’acte authentique.",
+      "municipalEvidence": [
+        {
+          "excerpt": "DECIDE : Article 1er : de rapporter la décision du Conseil communal du 25.08.2025 relative à la vente à la Société Coopérative Intercommunale ORES ASSETS de l'emprise initialement destinée à l'implantation d'une cabine haute tension au square Drouet d'Erlon et de la remplacer par la présente décision Article 2 : de vendre au prix unique de 1,00 €, à la Société Coopérative Intercommunale ORES ASSETS, la parcelle de terrain communal sise square Drouet d'Erlon, d'une contenance de 25 centiares, cadastrée 4e division, section D, reprise sous le numéro parcellaire réservé 347 A P0000, telle que figurée sous teinte jaune au procès-verbal de mesurage, référencé \"GRD 24179 - C 26967\", dressé en date du 04.06.2026 par Monsieur SIMON Jean-Nicolas, géomètre-expert Article 3 : de marquer son accord sur les termes de la convention établie par la Société Coopérative Intercommunale ORES ASSETS Article 4 : de charger le Collège communal de représenter la Commune lors de la passation de l’acte authentique.",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
     }
   ]
 }
