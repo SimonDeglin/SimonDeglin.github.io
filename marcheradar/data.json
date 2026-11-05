@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-05T13:15:09.433Z",
+  "generated_at": "2026-11-05T22:01:56.383Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-11-05 : 1485 avis lus, 1 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-11-05 : 1485 avis lus, 2 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-11-05T13:17:16.868Z",
-      "scanned": 2350,
-      "retained": 36,
+      "last_success": "2026-11-05T22:03:41.538Z",
+      "scanned": 2400,
+      "retained": 38,
       "period_from": "2026-10-22",
       "period_to": "2026-11-05",
-      "pages": 94,
+      "pages": 96,
       "complete": true,
-      "raw_candidates": 2333,
+      "raw_candidates": 2391,
       "oldest_seen": "2026-10-21",
-      "last_attempt": "2026-11-05T13:17:16.868Z",
+      "last_attempt": "2026-11-05T22:03:41.538Z",
       "last_error": null,
-      "last_complete_success": "2026-11-05T13:17:16.868Z"
+      "last_complete_success": "2026-11-05T22:03:41.538Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-11-05T13:19:56.010Z",
+      "last_success": "2026-11-05T22:05:17.191Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -104,16 +104,16 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 94 page(s) parcourue(s) depuis 2026-10-22.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 96 page(s) parcourue(s) depuis 2026-10-22.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
     "scanned": 1485,
     "matched_current_run": 9,
-    "records": 281,
-    "review_count": 182,
-    "award_notice_count": 393,
-    "awarded_market_matches": 1,
+    "records": 282,
+    "review_count": 187,
+    "award_notice_count": 391,
+    "awarded_market_matches": 2,
     "award_fields_requested": false,
     "retained_as_excluded": 36,
     "excluded_reasons": {
@@ -153,9 +153,9 @@
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2350,
-    "bosa_imported": 36,
-    "bosa_pages": 94,
+    "bosa_scanned": 2400,
+    "bosa_imported": 38,
+    "bosa_pages": 96,
     "local_documents": 34,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -171,11 +171,11 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "avis_neerlandais": 179,
-      "acheteur_flamand": 175,
-      "avis_attribution_analyse_separement": 393,
-      "aucun_signal_metier": 438,
-      "travaux_execution": 124,
+      "avis_neerlandais": 180,
+      "acheteur_flamand": 174,
+      "avis_attribution_analyse_separement": 391,
+      "aucun_signal_metier": 439,
+      "travaux_execution": 125,
       "objet_hors_domaine": 72,
       "assurance_ou_nettoyage": 20,
       "fournitures_et_location": 48,
@@ -185,6 +185,297 @@
     }
   },
   "items": [
+    {
+      "id": "bosa:9df9cf0c-d0b8-4535-8b40-bb66fe3a3b76",
+      "publicationWorkspaceId": "9df9cf0c-d0b8-4535-8b40-bb66fe3a3b76",
+      "noticeId": "828b8be1-aff6-4d14-9510-a717ddc000ba",
+      "procedureIdentifier": "738127cb-8f37-45a6-8f0e-ec0555ba00b6",
+      "internalReference": "PPP0FE-5686/6097/BT3-25-4288_002",
+      "title": "Chapelle Saint-Gilles (études préalables des décors) à Assesse",
+      "buyer": "INASEP",
+      "region": "Bruxelles",
+      "languages": [
+        "FR"
+      ],
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 74,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "projet_indirect",
+      "publication": "2026-11-05",
+      "deadline": "",
+      "cpv": [
+        "92522000"
+      ],
+      "description": "Chapelle Saint-Gilles (études préalables des décors) à Assesse",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0FE-5686/6097/BT3-25-4288_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/9df9cf0c-d0b8-4535-8b40-bb66fe3a3b76/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/9df9cf0c-d0b8-4535-8b40-bb66fe3a3b76/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP0FE-5686/6097/BT3-25-4288_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/9df9cf0c-d0b8-4535-8b40-bb66fe3a3b76/general",
+          "publicationDate": "2026-11-05",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-05T13:25:27.795Z",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/9df9cf0c-d0b8-4535-8b40-bb66fe3a3b76/general"
+        }
+      ]
+    },
+    {
+      "id": "bosa:2057ca19-d4bd-43d6-bf36-bbc34ec2f71f",
+      "publicationWorkspaceId": "7a1ab95d-cd44-4358-b69e-8fcb2adff75a",
+      "noticeId": "48bbaab2-caeb-4145-a189-1c8a83d4a2d3",
+      "procedureIdentifier": "3dff5d34-aff6-401a-b94d-2a5baa99edfc",
+      "internalReference": "PPP0EM-3747/6121/2026/4992_001",
+      "title": "Désignation d'un certificateur pour l'établissement des attestations PEB du patrimoine locatif des Propriétés communales",
+      "buyer": "Saint-Josse-ten-Noode",
+      "region": "Bruxelles",
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "score": 71,
+      "screening": "review",
+      "publication": "2026-11-05",
+      "deadline": "2026-10-26T11:00:00+01:00",
+      "cpv": [
+        "79132000"
+      ],
+      "description": "Le patrimoine immobilier communal comprend actuellement 365 logements, destinés à la location. Parmi ceux-ci, environ 300 logements ne disposent pas ou plus d’un certificat de performance énergétique des bâtiments (PEB) valide.   La réalisation de ce marché vise dès lors à procéder à l’établissement ou au renouvellement des certificats PEB pour les logements concernés, conformément à la règlementation applicable en Région de Bruxelles-Capitale.   La disponibilité de certificats PEB valides pour l’ensemble du parc locatif communal constitue un enjeu important, tant du point de vue de la gestion administrative et locative des logements que de celui de leur performance énergétique.   D’une part, les certificats PEB constituent un élément nécessaire à la détermination et à l’application des règles relatives à l’indexation des loyers, conformément aux dispositions en vigueur en Région de Bruxelles-Capitale. D’autre part, les certificats PEB permettront de disposer d’une vision objective et homogène de la performance énergétique du parc de logements communaux.   Les résultats des certificats PEB pourront ainsi servir de base à l’élaboration d’une programmation pluriannuelle des travaux de rénovation et d’amélioration énergétique du patrimoine communal.   Le présent marché s’inscrit ainsi dans une double démarche :assurer la conformité administrative et règlementaire du parc de logements communaux en disposant de certificats PEB valides ; améliorer la connaissance et la performance énergétique du patrimoine communal, en disposant d’informations permettant de cibler et de prioriser les futurs investissements et travaux de rénovation énergétique. La fixation des prix est effectuée en fonction du type de logement concerné (appartement d’une, deux ou trois chambres, maison, etc.).  Une remise sur les prix est demandée pour les bâtiments comprenant plus de 10 logements, à savoir notamment les bâtiments situés à Pacification, Deux-Églises 105-109-133, Saint-François 57 et Union 12.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "20",
+      "noticeKind": "competition",
+      "bdaReference": "PPP0EM-3747/6121/2026/4992_001",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/2057ca19-d4bd-43d6-bf36-bbc34ec2f71f/general",
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/2057ca19-d4bd-43d6-bf36-bbc34ec2f71f/general"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/7a1ab95d-cd44-4358-b69e-8fcb2adff75a/general",
+          "bdaReference": "PPP0EM-3747/6121/2026/4992_002",
+          "noticeKind": "award"
+        }
+      ],
+      "screeningReason": null,
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/7a1ab95d-cd44-4358-b69e-8fcb2adff75a/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [],
+      "consultationUrls": [
+        {
+          "url": "https://cloud.3p.eu/Downloads/1/3747/EM/2026",
+          "type": "officially_referenced_external_documents",
+          "access": "destination_not_download_verified",
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2057ca19-d4bd-43d6-bf36-bbc34ec2f71f/urls?full=false",
+          "activatedAt": "2026-10-07T09:45:45.169953"
+        }
+      ],
+      "documentsCheckedAt": "2026-11-05T13:24:21.716Z",
+      "matchReason": "prestation_decrite",
+      "deadlineTime": "11:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/2057ca19-d4bd-43d6-bf36-bbc34ec2f71f/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n26/10/2026 11:00 CET",
+      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "unknown",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "bosaResults": [
+        {
+          "reference": "PPP0EM-3747/6121/2026/4992_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/7a1ab95d-cd44-4358-b69e-8fcb2adff75a/general",
+          "publicationDate": "2026-11-05",
+          "kind": "award"
+        }
+      ]
+    },
+    {
+      "id": "bosa:8fe832a3-f712-4a9d-8505-9ea16b71c127",
+      "publicationWorkspaceId": "8fe832a3-f712-4a9d-8505-9ea16b71c127",
+      "noticeId": "9ecb91dd-efe8-49ac-ac68-a62b0058c82a",
+      "procedureIdentifier": "15181e99-b616-49fe-b148-a9a16e1d0d10",
+      "internalReference": "PPP0A2-1070/6158/20260025COM_001",
+      "title": "Désignation d'un auteur de projet pour la révision totale du schéma de développement communal global",
+      "buyer": "Colfontaine",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "publication": "2026-11-05",
+      "deadline": "2026-12-04T09:00:00+01:00",
+      "cpv": [
+        "71410000"
+      ],
+      "description": "Désignation d'un auteur de projet pour la révision totale du schéma de développement communal global",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "PPP0A2-1070/6158/20260025COM_001",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/8fe832a3-f712-4a9d-8505-9ea16b71c127/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/8fe832a3-f712-4a9d-8505-9ea16b71c127/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [],
+      "consultationUrls": [
+        {
+          "url": "https://cloud.3p.eu/Downloads/1/1070/A2/2026",
+          "type": "officially_referenced_external_documents",
+          "access": "destination_not_download_verified",
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/8fe832a3-f712-4a9d-8505-9ea16b71c127/urls?full=false",
+          "activatedAt": "2026-11-05T11:50:46.015856"
+        }
+      ],
+      "documentsCheckedAt": "2026-11-05T13:25:31.453Z",
+      "deadlineTime": "09:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/8fe832a3-f712-4a9d-8505-9ea16b71c127/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n04/12/2026 09:00 CET",
+      "deadlineVerifiedAt": "2026-11-05T13:25:35.460Z",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/8fe832a3-f712-4a9d-8505-9ea16b71c127/general"
+        }
+      ]
+    },
+    {
+      "id": "bosa:e71a7eec-a620-4bc8-b244-d8f74836c20c",
+      "publicationWorkspaceId": "e71a7eec-a620-4bc8-b244-d8f74836c20c",
+      "noticeId": "10b9d10a-102c-4e2b-bce8-87bbdbc1923b",
+      "procedureIdentifier": "4665d487-6e17-48a2-934e-2e945ba36203",
+      "internalReference": "PPP0GQ-2093/6246/Accord-cadre 2026.027_002",
+      "title": "Honoraires et prestations diverses d'études travaux - Missions d'auteur de projet - Accord-cadre 2026/2029 N°2026.027",
+      "buyer": "Lasne",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "publication": "2026-11-05",
+      "deadline": "",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Honoraires et prestations diverses d'études travaux - Missions d'auteur de projet - Accord-cadre 2026/2029 N°2026.027",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "29",
+      "noticeKind": "award",
+      "bdaReference": "",
+      "tedReference": "PPP0GQ-2093/6246/Accord-cadre 2026.027_002",
+      "url": "https://www.publicprocurement.be/publication-workspaces/e71a7eec-a620-4bc8-b244-d8f74836c20c/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/e71a7eec-a620-4bc8-b244-d8f74836c20c/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP0GQ-2093/6246/Accord-cadre 2026.027_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/e71a7eec-a620-4bc8-b244-d8f74836c20c/general",
+          "publicationDate": "2026-11-05",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-05T13:25:35.101Z",
+      "screeningReason": null,
+      "awards": [
+        {
+          "publicationNumber": "770430-2026",
+          "procedureIdentifier": "4665d487-6e17-48a2-934e-2e945ba36203",
+          "publicationDate": "2026-11-05",
+          "decisionDate": "",
+          "conclusionDate": "",
+          "noticeType": "can-standard",
+          "source": "TED",
+          "sourceUrl": "https://ted.europa.eu/fr/notice/-/detail/770430-2026",
+          "selectedWinner": false,
+          "winners": [],
+          "winnerIdentifiers": [],
+          "mentionedTenderers": [],
+          "lotIdentifiers": [],
+          "offerCount": null,
+          "offerCountsByLotUnassigned": [],
+          "submissionTypes": [],
+          "winnerSelectionStatuses": [],
+          "notAwardedReasons": [],
+          "tenderValues": [],
+          "lowestTenderValues": [],
+          "highestTenderValues": [],
+          "totalAwardValues": [],
+          "caveat": "Valeurs et soumissionnaires peuvent concerner plusieurs lots. Ne pas apparier les tableaux sans preuve dans l’avis officiel."
+        }
+      ],
+      "lastPublicResultAt": "2026-11-05",
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/e71a7eec-a620-4bc8-b244-d8f74836c20c/general"
+        }
+      ]
+    },
     {
       "id": "ted:771204-2026",
       "publicationNumber": "771204-2026",
@@ -229,6 +520,10 @@
           "bdaReference": "",
           "noticeKind": "competition"
         }
+      ],
+      "screeningReason": null,
+      "noticeNumbers": [
+        "771204-2026"
       ]
     },
     {
@@ -5329,7 +5624,7 @@
           "versionId": "ddf24280-7180-4af0-9cc3-c050455a2c18",
           "documentId": "6c1fd0d8-3f25-4764-8e27-9bb907ccf665",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "DE,FR",
+          "language": "FR,DE",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5342,14 +5637,14 @@
           "versionId": "41c1dfd3-e395-4b17-9583-72b8baeacc90",
           "documentId": "815fd779-551d-48fc-a533-f11b9a86434c",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "DE,FR",
+          "language": "FR,DE",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-05T13:22:09.864Z",
+      "documentsCheckedAt": "2026-11-05T22:07:46.165Z",
       "matchReason": "mission_architecturale_a_qualifier",
       "screeningReason": null,
       "officialSources": [
@@ -5846,7 +6141,7 @@
           "versionId": "bcdca6d0-d13f-4138-99c5-6e122da4dde8",
           "documentId": "17848170-0136-4662-8b9a-69f321d687c5",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5859,7 +6154,7 @@
           "versionId": "7a672143-498d-40bf-85d2-1a0ccd6c89b8",
           "documentId": "338ce9a3-7ba9-4ed9-99b8-3bd5f1ce416e",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5872,7 +6167,7 @@
           "versionId": "5a3371af-caf1-41b9-89e6-e6eade671b0a",
           "documentId": "23b3699b-6288-4049-922c-146ae89c1eb4",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5885,7 +6180,7 @@
           "versionId": "6dabd106-495c-4884-b407-a9d35ae4800b",
           "documentId": "d182b6fc-7127-4669-95f9-5b81310dc8c6",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5898,7 +6193,7 @@
           "versionId": "62dd41f2-e318-42b1-b772-46e8d5633836",
           "documentId": "5ebc8928-f728-45bd-8c0d-992a55d8ce01",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -5911,14 +6206,14 @@
           "versionId": "1b6ff5ed-8135-422d-81f1-ab428d851133",
           "documentId": "f7b3b39c-0bec-4f55-8e29-844c0e81c6b6",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-04T13:08:00.050Z",
+      "documentsCheckedAt": "2026-11-05T22:08:00.863Z",
       "matchReason": "description_ou_contexte",
       "screeningReason": null,
       "officialSources": [
@@ -7150,7 +7445,7 @@
           "versionId": "36488d00-f30c-407b-abf7-ea1924b6b999",
           "documentId": "917f42c5-0419-4611-8398-5561fefe4efc",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -7176,7 +7471,7 @@
           "versionId": "26b15544-17fc-43c0-826c-1322f33b9850",
           "documentId": "20364704-82a0-4eb0-a213-7965e3328061",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -7228,7 +7523,7 @@
           "versionId": "f5ff3774-83d7-49c0-abe1-28e026816900",
           "documentId": "ff53ea2a-b24f-4586-b315-523295f56f5c",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -7241,7 +7536,7 @@
           "versionId": "8228202b-2303-4eba-8e13-0fe820c5023d",
           "documentId": "ac74d28e-0bfa-4c78-af2b-da7f05b117dd",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -7274,7 +7569,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-04T22:02:04.753Z",
+      "documentsCheckedAt": "2026-11-05T22:08:48.604Z",
       "documentAnalyses": [
         {
           "documentId": "7259aed6-32b5-4e0b-88c0-ffa7fa606658",
@@ -9228,83 +9523,6 @@
       }
     },
     {
-      "id": "bosa:2057ca19-d4bd-43d6-bf36-bbc34ec2f71f",
-      "publicationWorkspaceId": "7a1ab95d-cd44-4358-b69e-8fcb2adff75a",
-      "noticeId": "48bbaab2-caeb-4145-a189-1c8a83d4a2d3",
-      "procedureIdentifier": "3dff5d34-aff6-401a-b94d-2a5baa99edfc",
-      "internalReference": "PPP0EM-3747/6121/2026/4992_001",
-      "title": "Désignation d'un certificateur pour l'établissement des attestations PEB du patrimoine locatif des Propriétés communales",
-      "buyer": "Saint-Josse-ten-Noode",
-      "region": "Bruxelles",
-      "sector": "PEB",
-      "sectors": [
-        "PEB"
-      ],
-      "score": 71,
-      "screening": "review",
-      "publication": "2026-11-05",
-      "deadline": "2026-10-26T11:00:00+01:00",
-      "cpv": [
-        "79132000"
-      ],
-      "description": "Le patrimoine immobilier communal comprend actuellement 365 logements, destinés à la location. Parmi ceux-ci, environ 300 logements ne disposent pas ou plus d’un certificat de performance énergétique des bâtiments (PEB) valide.   La réalisation de ce marché vise dès lors à procéder à l’établissement ou au renouvellement des certificats PEB pour les logements concernés, conformément à la règlementation applicable en Région de Bruxelles-Capitale.   La disponibilité de certificats PEB valides pour l’ensemble du parc locatif communal constitue un enjeu important, tant du point de vue de la gestion administrative et locative des logements que de celui de leur performance énergétique.   D’une part, les certificats PEB constituent un élément nécessaire à la détermination et à l’application des règles relatives à l’indexation des loyers, conformément aux dispositions en vigueur en Région de Bruxelles-Capitale. D’autre part, les certificats PEB permettront de disposer d’une vision objective et homogène de la performance énergétique du parc de logements communaux.   Les résultats des certificats PEB pourront ainsi servir de base à l’élaboration d’une programmation pluriannuelle des travaux de rénovation et d’amélioration énergétique du patrimoine communal.   Le présent marché s’inscrit ainsi dans une double démarche :assurer la conformité administrative et règlementaire du parc de logements communaux en disposant de certificats PEB valides ; améliorer la connaissance et la performance énergétique du patrimoine communal, en disposant d’informations permettant de cibler et de prioriser les futurs investissements et travaux de rénovation énergétique. La fixation des prix est effectuée en fonction du type de logement concerné (appartement d’une, deux ou trois chambres, maison, etc.).  Une remise sur les prix est demandée pour les bâtiments comprenant plus de 10 logements, à savoir notamment les bâtiments situés à Pacification, Deux-Églises 105-109-133, Saint-François 57 et Union 12.",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "20",
-      "noticeKind": "competition",
-      "bdaReference": "PPP0EM-3747/6121/2026/4992_001",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/2057ca19-d4bd-43d6-bf36-bbc34ec2f71f/general",
-      "officialSources": [
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/2057ca19-d4bd-43d6-bf36-bbc34ec2f71f/general"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/7a1ab95d-cd44-4358-b69e-8fcb2adff75a/general",
-          "bdaReference": "PPP0EM-3747/6121/2026/4992_002",
-          "noticeKind": "award"
-        }
-      ],
-      "screeningReason": null,
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/7a1ab95d-cd44-4358-b69e-8fcb2adff75a/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [],
-      "consultationUrls": [
-        {
-          "url": "https://cloud.3p.eu/Downloads/1/3747/EM/2026",
-          "type": "officially_referenced_external_documents",
-          "access": "destination_not_download_verified",
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/2057ca19-d4bd-43d6-bf36-bbc34ec2f71f/urls?full=false",
-          "activatedAt": "2026-10-07T09:45:45.169953"
-        }
-      ],
-      "documentsCheckedAt": "2026-11-05T13:24:21.716Z",
-      "matchReason": "prestation_decrite",
-      "deadlineTime": "11:00",
-      "deadlineTimeZone": "Europe/Brussels",
-      "deadlineSourceKind": "bosa_verified_public",
-      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/2057ca19-d4bd-43d6-bf36-bbc34ec2f71f/general",
-      "deadlineSourceEvidence": "Date limite de soumission\n26/10/2026 11:00 CET",
-      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "unknown",
-        "route": "scope",
-        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
-        "capacityStatus": "not_assessed"
-      },
-      "bosaResults": [
-        {
-          "reference": "PPP0EM-3747/6121/2026/4992_002",
-          "url": "https://www.publicprocurement.be/publication-workspaces/7a1ab95d-cd44-4358-b69e-8fcb2adff75a/general",
-          "publicationDate": "2026-11-05",
-          "kind": "award"
-        }
-      ]
-    },
-    {
       "id": "bosa:bbda13b8-33d9-4a26-95fd-8fc691597cc5",
       "publicationWorkspaceId": "bbda13b8-33d9-4a26-95fd-8fc691597cc5",
       "noticeId": "7f8d920e-3eb3-467f-a868-e9848afe090b",
@@ -10903,7 +11121,7 @@
         "Hydraulique"
       ],
       "score": 99,
-      "publication": "",
+      "publication": "2026-11-05",
       "deadline": "2026-10-30",
       "deadlineTime": "09:30",
       "cpv": [
@@ -10928,7 +11146,47 @@
         "route": "small_works",
         "explanation": "Petits travaux techniques liés aux mesures : vérifier l’ampleur, les qualifications et les moyens nécessaires.",
         "capacityStatus": "not_assessed"
-      }
+      },
+      "publicationWorkspaceId": "e777cf80-dfd7-456c-b20b-d601057d6b89",
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/b3502299-990e-444e-8a06-8a220c86c426/documents"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/e777cf80-dfd7-456c-b20b-d601057d6b89/general",
+          "bdaReference": "03.06.04-26-2843_pub02",
+          "noticeKind": "award"
+        }
+      ],
+      "bosaResults": [
+        {
+          "reference": "03.06.04-26-2843_pub02",
+          "url": "https://www.publicprocurement.be/publication-workspaces/e777cf80-dfd7-456c-b20b-d601057d6b89/general",
+          "publicationDate": "2026-11-05",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [
+        {
+          "id": "cea36e9a-0a01-4a8a-ab09-a283badcf53a",
+          "title": "PV ouverture.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "1c9cd894-d74b-4eb4-9cf0-a245f99bc171",
+          "documentId": "abe66d61-f544-4de6-a506-eab8952d8337",
+          "activatedAt": "2026-11-05T14:35:46.02064",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/e777cf80-dfd7-456c-b20b-d601057d6b89/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/e777cf80-dfd7-456c-b20b-d601057d6b89/documents",
+      "documentsPageSource": "public_api_200",
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-05T22:10:57.095Z"
     },
     {
       "id": "local-html:a6cb7c89fc426daffab9",
@@ -12256,6 +12514,173 @@
         "checkedAt": "2026-11-04T17:35:02.976Z",
         "changedAt": null
       },
+      "matchReason": "prestation_decrite",
+      "screeningReason": null
+    },
+    {
+      "id": "local:789a47054c2793386239",
+      "title": "4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditions et du mode de passation du marché : examen — décision ;",
+      "sourceDocumentTitle": "23 septembre 2026",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Antoing",
+      "municipalityINS": "57003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditio",
+        "sourceUrl": "https://www.antoing.net/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal-1/ordres-du-jour-en-pdf/oj-conseil-communal-du-23-09-2026.pdf",
+        "page": 1,
+        "sha256": "6cfa2e01f31548fdf93d8d7f1d26591cdda48eb45824dee85b4eb0ed80409942"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 71,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.antoing.net/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal-1/ordres-du-jour-en-pdf/oj-conseil-communal-du-23-09-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.antoing.net/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal-1/ordres-du-jour-en-pdf/oj-conseil-communal-du-23-09-2026.pdf",
+        "sha256": "6cfa2e01f31548fdf93d8d7f1d26591cdda48eb45824dee85b4eb0ed80409942",
+        "session": null,
+        "document": {
+          "date": "2026-09-14",
+          "kind": "document",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "g Antoing, le 14 septembre 2026",
+          "confidence": "ocr"
+        },
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "ocr",
+        "language": "fra+eng",
+        "pagesRead": 2,
+        "totalPages": 2,
+        "partial": false
+      },
+      "url": "https://www.antoing.net/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal-1/ordres-du-jour-en-pdf/oj-conseil-communal-du-23-09-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditions et du mode de passation du marché : examen — décision ; b) Marché de travaux — maison communale de Péronnes - remplacement des menuiseries extérieures et isolation du plancher des comble — approbation du CSCH, des conditions et",
+      "evidence": "4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditions et du mode de passation du marché : examen — décision ; b) Marché de travaux — maison communale de Péronnes - remplacement des menuiseries extérieures et isolation du plancher des comble — approbation du CSCH, des conditions et",
+      "municipalReference": null,
+      "municipalSection": "4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditions et du mode de passation du marché : examen — décision ;",
+      "municipalEvidence": [
+        {
+          "page": 1,
+          "excerpt": "4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditions et du mode de passation du marché : examen — décision ; b) Marché de travaux — maison communale de Péronnes - remplacement des menuiseries extérieures et isolation du plancher des comble — approbation du CSCH, des conditions et"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 1,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6acc7a28ab877e03a5",
+        "sha256": "6cfa2e01f31548fdf93d8d7f1d26591cdda48eb45824dee85b4eb0ed80409942",
+        "checkedAt": "2026-11-05T17:40:29.526Z",
+        "changedAt": null
+      },
+      "matchReason": "prestation_decrite",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:29a9c1ff897b4b9f7dfb",
+      "title": "506.12:812 - TRAVAUX/PATRIMOINE - PROPRIETE COMMUNALE SISE SQUARE DROUET D'ERLON - ACQUISITION D'UNE PARCELLE DE TERRAIN PAR LA S.C.I. ORES ASSETS POUR Y INSTALLER UNE CABINE HAUTE TENSION HORS-SOL - COMPROMIS DE VENTE",
+      "sourceDocumentTitle": "506.12:812 - TRAVAUX/PATRIMOINE - PROPRIETE COMMUNALE SISE SQUARE DROUET D'ERLON - ACQUISITION D'UNE PARCELLE DE TERRAIN PAR LA S.C.I. ORES ASSETS POUR Y INSTALLER UNE CABINE HAUTE TENSION HORS-SOL - COMPROMIS DE VENTE",
+      "missionEvidence": null,
+      "buyer": "Commune de Braine-l'Alleud",
+      "municipalityINS": "25014",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Topo",
+      "sectors": [
+        "Topo",
+        "Foncier"
+      ],
+      "screening": "review",
+      "score": 71,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/braine-lalleud/decisions/07-septembre-2026-20-00/506-12-812-travaux-patrimoine-propriete-communale-sise-square-drouet-derlon-acquisition-dune-parcelle-de-terrain-par-la-s-c-i-ores-assets-pour-y-installer-une-cabine-haute-tension-hors-sol-compromis-de-vente",
+      "sourceDocument": "https://www.deliberations.be/braine-lalleud/decisions/07-septembre-2026-20-00/506-12-812-travaux-patrimoine-propriete-communale-sise-square-drouet-derlon-acquisition-dune-parcelle-de-terrain-par-la-s-c-i-ores-assets-pour-y-installer-une-cabine-haute-tension-hors-sol-compromis-de-vente",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/braine-lalleud/decisions/07-septembre-2026-20-00/506-12-812-travaux-patrimoine-propriete-communale-sise-square-drouet-derlon-acquisition-dune-parcelle-de-terrain-par-la-s-c-i-ores-assets-pour-y-installer-une-cabine-haute-tension-hors-sol-compromis-de-vente",
+        "sha256": "e3979c9c953dcf4a8d904dd8a8e6f1776600fbe86c6ba8a145a047c4c4b83471",
+        "session": {
+          "date": "2026-09-07",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 07 septembre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/braine-lalleud/decisions/07-septembre-2026-20-00/506-12-812-travaux-patrimoine-propriete-communale-sise-square-drouet-derlon-acquisition-dune-parcelle-de-terrain-par-la-s-c-i-ores-assets-pour-y-installer-une-cabine-haute-tension-hors-sol-compromis-de-vente"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:b7c08187939af10dab",
+        "sha256": "e3979c9c953dcf4a8d904dd8a8e6f1776600fbe86c6ba8a145a047c4c4b83471",
+        "format": "html",
+        "checkedAt": "2026-11-05T17:40:29.526Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "DECIDE : Article 1er : de rapporter la décision du Conseil communal du 25.08.2025 relative à la vente à la Société Coopérative Intercommunale ORES ASSETS de l'emprise initialement destinée à l'implantation d'une cabine h",
+        "sourceUrl": "https://www.deliberations.be/braine-lalleud/decisions/07-septembre-2026-20-00/506-12-812-travaux-patrimoine-propriete-communale-sise-square-drouet-derlon-acquisition-dune-parcelle-de-terrain-par-la-s-c-i-ores-assets-pour-y-installer-une-cabine-haute-tension-hors-sol-compromis-de-vente",
+        "page": null,
+        "sha256": "e3979c9c953dcf4a8d904dd8a8e6f1776600fbe86c6ba8a145a047c4c4b83471"
+      },
+      "description": "DECIDE : Article 1er : de rapporter la décision du Conseil communal du 25.08.2025 relative à la vente à la Société Coopérative Intercommunale ORES ASSETS de l'emprise initialement destinée à l'implantation d'une cabine haute tension au square Drouet d'Erlon et de la remplacer par la présente décision Article 2 : de vendre au prix unique de 1,00 €, à la Société Coopérative Intercommunale ORES ASSETS, la parcelle de terrain communal sise square Drouet d'Erlon, d'une contenance de 25 centiares, cadastrée 4e division, section D, reprise sous le numéro parcellaire réservé 347 A P0000, telle que figurée sous teinte jaune au procès-verbal de mesurage, référencé \"GRD 24179 - C 26967\", dressé en date du 04.06.2026 par Monsieur SIMON Jean-Nicolas, géomètre-expert Article 3 : de marquer son accord sur les termes de la convention établie par la Société Coopérative Intercommunale ORES ASSETS Article 4 : de charger le Collège communal de représenter la Commune lors de la passation de l’acte authentique.",
+      "evidence": "DECIDE : Article 1er : de rapporter la décision du Conseil communal du 25.08.2025 relative à la vente à la Société Coopérative Intercommunale ORES ASSETS de l'emprise initialement destinée à l'implantation d'une cabine haute tension au square Drouet d'Erlon et de la remplacer par la présente décision Article 2 : de vendre au prix unique de 1,00 €, à la Société Coopérative Intercommunale ORES ASSETS, la parcelle de terrain communal sise square Drouet d'Erlon, d'une contenance de 25 centiares, cadastrée 4e division, section D, reprise sous le numéro parcellaire réservé 347 A P0000, telle que figurée sous teinte jaune au procès-verbal de mesurage, référencé \"GRD 24179 - C 26967\", dressé en date du 04.06.2026 par Monsieur SIMON Jean-Nicolas, géomètre-expert Article 3 : de marquer son accord sur les termes de la convention établie par la Société Coopérative Intercommunale ORES ASSETS Article 4 : de charger le Collège communal de représenter la Commune lors de la passation de l’acte authentique.",
+      "municipalEvidence": [
+        {
+          "excerpt": "DECIDE : Article 1er : de rapporter la décision du Conseil communal du 25.08.2025 relative à la vente à la Société Coopérative Intercommunale ORES ASSETS de l'emprise initialement destinée à l'implantation d'une cabine haute tension au square Drouet d'Erlon et de la remplacer par la présente décision Article 2 : de vendre au prix unique de 1,00 €, à la Société Coopérative Intercommunale ORES ASSETS, la parcelle de terrain communal sise square Drouet d'Erlon, d'une contenance de 25 centiares, cadastrée 4e division, section D, reprise sous le numéro parcellaire réservé 347 A P0000, telle que figurée sous teinte jaune au procès-verbal de mesurage, référencé \"GRD 24179 - C 26967\", dressé en date du 04.06.2026 par Monsieur SIMON Jean-Nicolas, géomètre-expert Article 3 : de marquer son accord sur les termes de la convention établie par la Société Coopérative Intercommunale ORES ASSETS Article 4 : de charger le Collège communal de représenter la Commune lors de la passation de l’acte authentique.",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
       "matchReason": "prestation_decrite",
       "screeningReason": null
     },
@@ -21720,332 +22145,57 @@
       "screeningReason": null
     },
     {
-      "id": "bosa:9df9cf0c-d0b8-4535-8b40-bb66fe3a3b76",
-      "publicationWorkspaceId": "9df9cf0c-d0b8-4535-8b40-bb66fe3a3b76",
-      "noticeId": "828b8be1-aff6-4d14-9510-a717ddc000ba",
-      "procedureIdentifier": "738127cb-8f37-45a6-8f0e-ec0555ba00b6",
-      "internalReference": "PPP0FE-5686/6097/BT3-25-4288_002",
-      "title": "Chapelle Saint-Gilles (études préalables des décors) à Assesse",
-      "buyer": "INASEP",
-      "region": "Bruxelles",
+      "id": "bosa:d3c920c4-1cd6-4c87-b5d6-005002ef4c87",
+      "publicationWorkspaceId": "d3c920c4-1cd6-4c87-b5d6-005002ef4c87",
+      "noticeId": "d8777b4b-01b4-43b8-902f-61be3a83ca1e",
+      "procedureIdentifier": "49d501ad-2517-40ea-87eb-8e7491658fc4",
+      "internalReference": "2026/184 (4323)_pub01",
+      "title": "Désignation d’un Auteur de projet pour la réalisation d’un Rapport des Incidences Environnementales (RIE)",
+      "buyer": "La Louvière",
+      "region": "Wallonie",
       "languages": [
         "FR"
       ],
-      "sector": "VRD",
+      "sector": "Qualif",
       "sectors": [
-        "VRD"
+        "Qualif"
       ],
-      "score": 74,
+      "score": 55,
       "screening": "review",
       "qualification": {
         "version": "2026-10-29",
         "kind": "services",
         "route": "scope",
-        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
         "capacityStatus": "not_assessed"
       },
-      "matchReason": "projet_indirect",
+      "matchReason": "mission_globale_a_qualifier",
       "publication": "2026-11-05",
       "deadline": "",
       "cpv": [
-        "92522000"
+        "71200000"
       ],
-      "description": "Chapelle Saint-Gilles (études préalables des décors) à Assesse",
+      "description": "Désignation d’un Auteur de projet pour la réalisation d’un Rapport des Incidences Environnementales (RIE)",
       "source": "BOSA",
       "source_status": "bosa_public_browser",
       "noticeSubType": "E4",
       "noticeKind": "award",
-      "bdaReference": "PPP0FE-5686/6097/BT3-25-4288_002",
+      "bdaReference": "2026/184 (4323)_pub01",
       "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/9df9cf0c-d0b8-4535-8b40-bb66fe3a3b76/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/9df9cf0c-d0b8-4535-8b40-bb66fe3a3b76/documents",
+      "url": "https://www.publicprocurement.be/publication-workspaces/d3c920c4-1cd6-4c87-b5d6-005002ef4c87/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/d3c920c4-1cd6-4c87-b5d6-005002ef4c87/documents",
       "documentsPageSource": "public_api_200",
       "bosaResults": [
         {
-          "reference": "PPP0FE-5686/6097/BT3-25-4288_002",
-          "url": "https://www.publicprocurement.be/publication-workspaces/9df9cf0c-d0b8-4535-8b40-bb66fe3a3b76/general",
+          "reference": "2026/184 (4323)_pub01",
+          "url": "https://www.publicprocurement.be/publication-workspaces/d3c920c4-1cd6-4c87-b5d6-005002ef4c87/general",
           "publicationDate": "2026-11-05",
           "kind": "award"
         }
       ],
       "documentInventory": [],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-05T13:25:27.795Z"
-    },
-    {
-      "id": "bosa:8fe832a3-f712-4a9d-8505-9ea16b71c127",
-      "publicationWorkspaceId": "8fe832a3-f712-4a9d-8505-9ea16b71c127",
-      "noticeId": "9ecb91dd-efe8-49ac-ac68-a62b0058c82a",
-      "procedureIdentifier": "15181e99-b616-49fe-b148-a9a16e1d0d10",
-      "internalReference": "PPP0A2-1070/6158/20260025COM_001",
-      "title": "Désignation d'un auteur de projet pour la révision totale du schéma de développement communal global",
-      "buyer": "Colfontaine",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
-        "capacityStatus": "not_assessed"
-      },
-      "matchReason": "mission_globale_a_qualifier",
-      "publication": "2026-11-05",
-      "deadline": "2026-12-04T09:00:00+01:00",
-      "cpv": [
-        "71410000"
-      ],
-      "description": "Désignation d'un auteur de projet pour la révision totale du schéma de développement communal global",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "16",
-      "noticeKind": "competition",
-      "bdaReference": "PPP0A2-1070/6158/20260025COM_001",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/8fe832a3-f712-4a9d-8505-9ea16b71c127/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/8fe832a3-f712-4a9d-8505-9ea16b71c127/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [],
-      "consultationUrls": [
-        {
-          "url": "https://cloud.3p.eu/Downloads/1/1070/A2/2026",
-          "type": "officially_referenced_external_documents",
-          "access": "destination_not_download_verified",
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/8fe832a3-f712-4a9d-8505-9ea16b71c127/urls?full=false",
-          "activatedAt": "2026-11-05T11:50:46.015856"
-        }
-      ],
-      "documentsCheckedAt": "2026-11-05T13:25:31.453Z",
-      "deadlineTime": "09:00",
-      "deadlineTimeZone": "Europe/Brussels",
-      "deadlineSourceKind": "bosa_verified_public",
-      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/8fe832a3-f712-4a9d-8505-9ea16b71c127/general",
-      "deadlineSourceEvidence": "Date limite de soumission\n04/12/2026 09:00 CET",
-      "deadlineVerifiedAt": "2026-11-05T13:25:35.460Z"
-    },
-    {
-      "id": "bosa:e71a7eec-a620-4bc8-b244-d8f74836c20c",
-      "publicationWorkspaceId": "e71a7eec-a620-4bc8-b244-d8f74836c20c",
-      "noticeId": "10b9d10a-102c-4e2b-bce8-87bbdbc1923b",
-      "procedureIdentifier": "4665d487-6e17-48a2-934e-2e945ba36203",
-      "internalReference": "PPP0GQ-2093/6246/Accord-cadre 2026.027_002",
-      "title": "Honoraires et prestations diverses d'études travaux - Missions d'auteur de projet - Accord-cadre 2026/2029 N°2026.027",
-      "buyer": "Lasne",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
-        "capacityStatus": "not_assessed"
-      },
-      "matchReason": "mission_globale_a_qualifier",
-      "publication": "2026-11-05",
-      "deadline": "",
-      "cpv": [
-        "71000000"
-      ],
-      "description": "Honoraires et prestations diverses d'études travaux - Missions d'auteur de projet - Accord-cadre 2026/2029 N°2026.027",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "29",
-      "noticeKind": "award",
-      "bdaReference": "",
-      "tedReference": "PPP0GQ-2093/6246/Accord-cadre 2026.027_002",
-      "url": "https://www.publicprocurement.be/publication-workspaces/e71a7eec-a620-4bc8-b244-d8f74836c20c/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/e71a7eec-a620-4bc8-b244-d8f74836c20c/documents",
-      "documentsPageSource": "public_api_200",
-      "bosaResults": [
-        {
-          "reference": "PPP0GQ-2093/6246/Accord-cadre 2026.027_002",
-          "url": "https://www.publicprocurement.be/publication-workspaces/e71a7eec-a620-4bc8-b244-d8f74836c20c/general",
-          "publicationDate": "2026-11-05",
-          "kind": "award"
-        }
-      ],
-      "documentInventory": [],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-05T13:25:35.101Z"
-    },
-    {
-      "id": "local:789a47054c2793386239",
-      "title": "4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditions et du mode de passation du marché : examen — décision ;",
-      "sourceDocumentTitle": "23 septembre 2026",
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "missionEvidence": null,
-      "buyer": "Commune de Antoing",
-      "municipalityINS": "57003",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditio",
-        "sourceUrl": "https://www.antoing.net/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal-1/ordres-du-jour-en-pdf/oj-conseil-communal-du-23-09-2026.pdf",
-        "page": 1,
-        "sha256": "6cfa2e01f31548fdf93d8d7f1d26591cdda48eb45824dee85b4eb0ed80409942"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 60,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.antoing.net/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal-1/ordres-du-jour-en-pdf/oj-conseil-communal-du-23-09-2026.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.antoing.net/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal-1/ordres-du-jour-en-pdf/oj-conseil-communal-du-23-09-2026.pdf",
-        "sha256": "6cfa2e01f31548fdf93d8d7f1d26591cdda48eb45824dee85b4eb0ed80409942",
-        "session": null,
-        "document": {
-          "date": "2026-09-14",
-          "kind": "document",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "g Antoing, le 14 septembre 2026",
-          "confidence": "ocr"
-        },
-        "status": "identified"
-      },
-      "sourceExtraction": {
-        "method": "ocr",
-        "language": "fra+eng",
-        "pagesRead": 2,
-        "totalPages": 2,
-        "partial": false
-      },
-      "url": "https://www.antoing.net/ma-commune/vie-politique/ordre-du-jour-du-conseil-communal-1/ordres-du-jour-en-pdf/oj-conseil-communal-du-23-09-2026.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : 4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditions et du mode de passation du marché : examen — décision ; b) Marché de travaux — maison communale de Péronnes - remplacement des menuiseries extérieures et isolation du plancher des comble — approbation du CSCH, des conditions et",
-      "evidence": "4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditions et du mode de passation du marché : examen — décision ; b) Marché de travaux — maison communale de Péronnes - remplacement des menuiseries extérieures et isolation du plancher des comble — approbation du CSCH, des conditions et",
-      "municipalReference": null,
-      "municipalSection": "4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditions et du mode de passation du marché : examen — décision ;",
-      "municipalEvidence": [
-        {
-          "page": 1,
-          "excerpt": "4. Marchés publics a) Marché de service — mission d’auteur de projet — étude et direction de l'exécution de la partie «voirie » des travaux de rénovation de la rue Neuve à 7640 Antoing - approbation du CSCh, des conditions et du mode de passation du marché : examen — décision ; b) Marché de travaux — maison communale de Péronnes - remplacement des menuiseries extérieures et isolation du plancher des comble — approbation du CSCH, des conditions et"
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 1,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:6acc7a28ab877e03a5",
-        "sha256": "6cfa2e01f31548fdf93d8d7f1d26591cdda48eb45824dee85b4eb0ed80409942",
-        "checkedAt": "2026-11-05T17:40:29.526Z",
-        "changedAt": null
-      }
-    },
-    {
-      "id": "local-html:29a9c1ff897b4b9f7dfb",
-      "title": "506.12:812 - TRAVAUX/PATRIMOINE - PROPRIETE COMMUNALE SISE SQUARE DROUET D'ERLON - ACQUISITION D'UNE PARCELLE DE TERRAIN PAR LA S.C.I. ORES ASSETS POUR Y INSTALLER UNE CABINE HAUTE TENSION HORS-SOL - COMPROMIS DE VENTE",
-      "sourceDocumentTitle": "506.12:812 - TRAVAUX/PATRIMOINE - PROPRIETE COMMUNALE SISE SQUARE DROUET D'ERLON - ACQUISITION D'UNE PARCELLE DE TERRAIN PAR LA S.C.I. ORES ASSETS POUR Y INSTALLER UNE CABINE HAUTE TENSION HORS-SOL - COMPROMIS DE VENTE",
-      "missionEvidence": null,
-      "buyer": "Commune de Braine-l'Alleud",
-      "municipalityINS": "25014",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Topo",
-      "sectors": [
-        "Topo",
-        "Foncier"
-      ],
-      "screening": "review",
-      "score": 60,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/braine-lalleud/decisions/07-septembre-2026-20-00/506-12-812-travaux-patrimoine-propriete-communale-sise-square-drouet-derlon-acquisition-dune-parcelle-de-terrain-par-la-s-c-i-ores-assets-pour-y-installer-une-cabine-haute-tension-hors-sol-compromis-de-vente",
-      "sourceDocument": "https://www.deliberations.be/braine-lalleud/decisions/07-septembre-2026-20-00/506-12-812-travaux-patrimoine-propriete-communale-sise-square-drouet-derlon-acquisition-dune-parcelle-de-terrain-par-la-s-c-i-ores-assets-pour-y-installer-une-cabine-haute-tension-hors-sol-compromis-de-vente",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/braine-lalleud/decisions/07-septembre-2026-20-00/506-12-812-travaux-patrimoine-propriete-communale-sise-square-drouet-derlon-acquisition-dune-parcelle-de-terrain-par-la-s-c-i-ores-assets-pour-y-installer-une-cabine-haute-tension-hors-sol-compromis-de-vente",
-        "sha256": "e3979c9c953dcf4a8d904dd8a8e6f1776600fbe86c6ba8a145a047c4c4b83471",
-        "session": {
-          "date": "2026-09-07",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 07 septembre 2026 (20:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/braine-lalleud/decisions/07-septembre-2026-20-00/506-12-812-travaux-patrimoine-propriete-communale-sise-square-drouet-derlon-acquisition-dune-parcelle-de-terrain-par-la-s-c-i-ores-assets-pour-y-installer-une-cabine-haute-tension-hors-sol-compromis-de-vente"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:b7c08187939af10dab",
-        "sha256": "e3979c9c953dcf4a8d904dd8a8e6f1776600fbe86c6ba8a145a047c4c4b83471",
-        "format": "html",
-        "checkedAt": "2026-11-05T17:40:29.526Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "DECIDE : Article 1er : de rapporter la décision du Conseil communal du 25.08.2025 relative à la vente à la Société Coopérative Intercommunale ORES ASSETS de l'emprise initialement destinée à l'implantation d'une cabine h",
-        "sourceUrl": "https://www.deliberations.be/braine-lalleud/decisions/07-septembre-2026-20-00/506-12-812-travaux-patrimoine-propriete-communale-sise-square-drouet-derlon-acquisition-dune-parcelle-de-terrain-par-la-s-c-i-ores-assets-pour-y-installer-une-cabine-haute-tension-hors-sol-compromis-de-vente",
-        "page": null,
-        "sha256": "e3979c9c953dcf4a8d904dd8a8e6f1776600fbe86c6ba8a145a047c4c4b83471"
-      },
-      "description": "DECIDE : Article 1er : de rapporter la décision du Conseil communal du 25.08.2025 relative à la vente à la Société Coopérative Intercommunale ORES ASSETS de l'emprise initialement destinée à l'implantation d'une cabine haute tension au square Drouet d'Erlon et de la remplacer par la présente décision Article 2 : de vendre au prix unique de 1,00 €, à la Société Coopérative Intercommunale ORES ASSETS, la parcelle de terrain communal sise square Drouet d'Erlon, d'une contenance de 25 centiares, cadastrée 4e division, section D, reprise sous le numéro parcellaire réservé 347 A P0000, telle que figurée sous teinte jaune au procès-verbal de mesurage, référencé \"GRD 24179 - C 26967\", dressé en date du 04.06.2026 par Monsieur SIMON Jean-Nicolas, géomètre-expert Article 3 : de marquer son accord sur les termes de la convention établie par la Société Coopérative Intercommunale ORES ASSETS Article 4 : de charger le Collège communal de représenter la Commune lors de la passation de l’acte authentique.",
-      "evidence": "DECIDE : Article 1er : de rapporter la décision du Conseil communal du 25.08.2025 relative à la vente à la Société Coopérative Intercommunale ORES ASSETS de l'emprise initialement destinée à l'implantation d'une cabine haute tension au square Drouet d'Erlon et de la remplacer par la présente décision Article 2 : de vendre au prix unique de 1,00 €, à la Société Coopérative Intercommunale ORES ASSETS, la parcelle de terrain communal sise square Drouet d'Erlon, d'une contenance de 25 centiares, cadastrée 4e division, section D, reprise sous le numéro parcellaire réservé 347 A P0000, telle que figurée sous teinte jaune au procès-verbal de mesurage, référencé \"GRD 24179 - C 26967\", dressé en date du 04.06.2026 par Monsieur SIMON Jean-Nicolas, géomètre-expert Article 3 : de marquer son accord sur les termes de la convention établie par la Société Coopérative Intercommunale ORES ASSETS Article 4 : de charger le Collège communal de représenter la Commune lors de la passation de l’acte authentique.",
-      "municipalEvidence": [
-        {
-          "excerpt": "DECIDE : Article 1er : de rapporter la décision du Conseil communal du 25.08.2025 relative à la vente à la Société Coopérative Intercommunale ORES ASSETS de l'emprise initialement destinée à l'implantation d'une cabine haute tension au square Drouet d'Erlon et de la remplacer par la présente décision Article 2 : de vendre au prix unique de 1,00 €, à la Société Coopérative Intercommunale ORES ASSETS, la parcelle de terrain communal sise square Drouet d'Erlon, d'une contenance de 25 centiares, cadastrée 4e division, section D, reprise sous le numéro parcellaire réservé 347 A P0000, telle que figurée sous teinte jaune au procès-verbal de mesurage, référencé \"GRD 24179 - C 26967\", dressé en date du 04.06.2026 par Monsieur SIMON Jean-Nicolas, géomètre-expert Article 3 : de marquer son accord sur les termes de la convention établie par la Société Coopérative Intercommunale ORES ASSETS Article 4 : de charger le Collège communal de représenter la Commune lors de la passation de l’acte authentique.",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
+      "documentsCheckedAt": "2026-11-05T22:11:00.757Z"
     }
   ]
 }
