@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-05T17:40:29.526Z",
+      "last_attempt": "2026-11-05T22:54:26.035Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -67,36 +67,36 @@
       "total": 261,
       "sitesRepertories": 261,
       "sitesVerifies": 261,
-      "deliberationsConnectees": 202,
+      "deliberationsConnectees": 215,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 687,
-      "opportunities": 142,
+      "documentsRead": 771,
+      "opportunities": 146,
       "sitesChecked": 261,
       "candidatePages": 228,
       "sourceErrors": 88,
-      "htmlDocumentsRead": 2284
+      "htmlDocumentsRead": 2535
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-05T17:40:29.526Z",
-      "last_success": "2026-11-05T17:40:29.526Z",
+      "last_attempt": "2026-11-05T22:54:26.035Z",
+      "last_success": "2026-11-05T22:54:26.035Z",
       "last_batch": 24,
-      "documents_checked": 55,
+      "documents_checked": 92,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 28,
+      "errors_count": 11,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 256,
+      "html_documents_read": 253,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 45,
+      "recent_municipal_signals": 49,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1485,
     "matched_current_run": 9,
-    "records": 282,
+    "records": 286,
     "review_count": 187,
     "award_notice_count": 391,
     "awarded_market_matches": 2,
@@ -15430,11 +15430,20 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:3f17f055a8dcf413d4",
         "sha256": "fd4727978aee8806ddb2214510f338ac518d9035da43181ba62fa37edc590e95",
-        "checkedAt": "2026-10-31T20:42:20.499Z",
+        "checkedAt": "2026-11-05T22:54:26.035Z",
         "changedAt": null
       },
       "matchReason": "mission_globale_a_qualifier",
-      "screeningReason": null
+      "screeningReason": null,
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "sourceDocumentReview": {
+        "sha256": "fd4727978aee8806ddb2214510f338ac518d9035da43181ba62fa37edc590e95",
+        "checkedAt": "2026-11-05T22:54:26.035Z",
+        "candidates": []
+      }
     },
     {
       "id": "local:9dd0774abf1c586caa39",
@@ -22196,6 +22205,351 @@
       "documentInventory": [],
       "consultationUrls": [],
       "documentsCheckedAt": "2026-11-05T22:11:00.757Z"
+    },
+    {
+      "id": "local-html:473f23b81bc259bcd85b",
+      "title": "6. Travaux 6.1 Marché public de services - accord-cadre pour des missions d'auteur de projet - années 2027 et 2028 - approbation des conditions et du mode de passation 6.2 Marché public de services - accord-cadre pour des missions d'auteur de projet pour des travaux de rénovation sur bâtiments communaux - années 2027 et 2028 - approbation des condi",
+      "sourceDocumentTitle": "L'ordre du jour du Conseil est en ligne !",
+      "missionEvidence": null,
+      "buyer": "Commune de Bouillon",
+      "municipalityINS": "84010",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+      "sourceDocument": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+        "sha256": "d47d7bf3e3ae32da23e77c104449ef8106dc7a06ec716d3d26e65928eab5bf90",
+        "session": {
+          "date": "2026-09-24",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "PV de la séance du 24.09.2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:c096e45fe8525ed0ac",
+        "sha256": "d47d7bf3e3ae32da23e77c104449ef8106dc7a06ec716d3d26e65928eab5bf90",
+        "format": "html",
+        "checkedAt": "2026-11-05T22:54:26.035Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "6. Travaux 6.1 Marché public de services - accord-cadre pour des missions d'auteur de projet - années 2027 et 2028 - approbation des conditions et du mode de passation 6.2 Marché public de services - accord-cadre pour de",
+        "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour",
+        "page": null,
+        "sha256": "d47d7bf3e3ae32da23e77c104449ef8106dc7a06ec716d3d26e65928eab5bf90"
+      },
+      "description": "6. Travaux 6.1 Marché public de services - accord-cadre pour des missions d'auteur de projet - années 2027 et 2028 - approbation des conditions et du mode de passation 6.2 Marché public de services - accord-cadre pour des missions d'auteur de projet pour des travaux de rénovation sur bâtiments communaux - années 2027 et 2028 - approbation des conditions et du mode de passation 6.3 Accord-cadre - fourniture de combustible pour 2027 - marché conjoint Ville de Bouillon/Fabriques d'Eglise de l'entité - approbation de la convention",
+      "evidence": "6. Travaux 6.1 Marché public de services - accord-cadre pour des missions d'auteur de projet - années 2027 et 2028 - approbation des conditions et du mode de passation 6.2 Marché public de services - accord-cadre pour des missions d'auteur de projet pour des travaux de rénovation sur bâtiments communaux - années 2027 et 2028 - approbation des conditions et du mode de passation 6.3 Accord-cadre - fourniture de combustible pour 2027 - marché conjoint Ville de Bouillon/Fabriques d'Eglise de l'entité - approbation de la convention",
+      "municipalEvidence": [
+        {
+          "excerpt": "6. Travaux 6.1 Marché public de services - accord-cadre pour des missions d'auteur de projet - années 2027 et 2028 - approbation des conditions et du mode de passation 6.2 Marché public de services - accord-cadre pour des missions d'auteur de projet pour des travaux de rénovation sur bâtiments communaux - années 2027 et 2028 - approbation des conditions et du mode de passation 6.3 Accord-cadre - fourniture de combustible pour 2027 - marché conjoint Ville de Bouillon/Fabriques d'Eglise de l'entité - approbation de la convention",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local:8f9c13a7dd2971706015",
+      "title": "6. Travaux 6.1 Marché public de services - accord-cadre pour des missions d'auteur de projet - années 2027 et 2028 - approbation des conditions et du mode de passation 6.2 Marché public de services - accord-cadre pour des missions d'auteur de projet pour des travaux de",
+      "sourceDocumentTitle": "Télécharger l'ordre du jour du Conseil communal du 05.11.2026",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Bouillon",
+      "municipalityINS": "84010",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "6. Travaux 6.1 Marché public de services - accord-cadre pour des missions d'auteur de projet - années 2027 et 2028 - approbation des conditions et du mode de passation 6.2 Marché public de services - accord-cadre pour de",
+        "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/oj-05-11-2026-sans-huis-clos.pdf",
+        "page": 2,
+        "sha256": "d90c3213c92aad3f212399901ff3a24522242643ea22fa4d328138d945a3cc1f"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/oj-05-11-2026-sans-huis-clos.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/oj-05-11-2026-sans-huis-clos.pdf",
+        "sha256": "d90c3213c92aad3f212399901ff3a24522242643ea22fa4d328138d945a3cc1f",
+        "session": {
+          "date": "2026-11-05",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "Conseil communal du jeudi 05 novembre 2026",
+          "confidence": "ocr"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "ocr",
+        "language": "fra+eng",
+        "pagesRead": 2,
+        "totalPages": 2,
+        "partial": false
+      },
+      "url": "https://www.bouillon.be/ma-commune/vie-politique/ordre-du-jour/oj-05-11-2026-sans-huis-clos.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 6. Travaux 6.1 Marché public de services - accord-cadre pour des missions d'auteur de projet - années 2027 et 2028 - approbation des conditions et du mode de passation 6.2 Marché public de services - accord-cadre pour des missions d'auteur de projet pour des travaux de rénovation sur bâtiments communaux - années 2027 et 2028 - approbation des conditions et du mode de passation",
+      "evidence": "6. Travaux 6.1 Marché public de services - accord-cadre pour des missions d'auteur de projet - années 2027 et 2028 - approbation des conditions et du mode de passation 6.2 Marché public de services - accord-cadre pour des missions d'auteur de projet pour des travaux de rénovation sur bâtiments communaux - années 2027 et 2028 - approbation des conditions et du mode de passation",
+      "municipalReference": null,
+      "municipalSection": "6. Travaux 6.1 Marché public de services - accord-cadre pour des missions d'auteur de projet - années 2027 et 2028 - approbation des conditions et du mode de passation 6.2 Marché public de services - accord-cadre pour des missions d'auteur de projet pour des travaux de",
+      "municipalEvidence": [
+        {
+          "page": 2,
+          "excerpt": "6. Travaux 6.1 Marché public de services - accord-cadre pour des missions d'auteur de projet - années 2027 et 2028 - approbation des conditions et du mode de passation 6.2 Marché public de services - accord-cadre pour des missions d'auteur de projet pour des travaux de rénovation sur bâtiments communaux - années 2027 et 2028 - approbation des conditions et du mode de passation"
+        },
+        {
+          "page": 2,
+          "excerpt": "6.1 Marché public de services - accord-cadre pour des missions d'auteur de projet - années 2027 et 2028 - approbation des conditions et du mode de passation 6.2 Marché public de services - accord-cadre pour des missions d'auteur de projet pour des travaux de rénovation sur bâtiments communaux - années 2027 et 2028 - approbation des conditions et du mode de passation 6.3 Accord-cadre - fourniture de combustible pour 2027 - marché conjoint Ville de Bouillon/Fabriques d'Eglise de l'entité - approbation de la convention"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 2,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:c8dbfde7541caa93c7",
+        "sha256": "d90c3213c92aad3f212399901ff3a24522242643ea22fa4d328138d945a3cc1f",
+        "checkedAt": "2026-11-05T22:54:26.035Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:4fce9866c3da4651cb42",
+      "title": "10. Désignation d'un auteur de projet pour la création de ZIT et de ZEC à Chastre - Approbation des conditions et du mode de passation/agh",
+      "sourceDocumentTitle": "Ordre du jour du Conseil communal du 15 octobre 2026 823.2 KB",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Chastre",
+      "municipalityINS": "25117",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "10. Désignation d'un auteur de projet pour la création de ZIT et de ZEC à Chastre - Approbation des conditions et du mode de passation/agh",
+        "sourceUrl": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/publications/ordre-du-jour-du-conseil-communal/ordres-du-jour-seances-du-conseil-communal-2026/ordre-du-jour-du-conseil-communal-du-15-octobre-2026.pdf",
+        "page": 1,
+        "sha256": "dc558738456b641bd03cb8dd3ad7df9d5ba2c09a66ef885420eca509c1045871"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/publications/ordre-du-jour-du-conseil-communal/ordres-du-jour-seances-du-conseil-communal-2026/ordre-du-jour-du-conseil-communal-du-15-octobre-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/publications/ordre-du-jour-du-conseil-communal/ordres-du-jour-seances-du-conseil-communal-2026/ordre-du-jour-du-conseil-communal-du-15-octobre-2026.pdf",
+        "sha256": "dc558738456b641bd03cb8dd3ad7df9d5ba2c09a66ef885420eca509c1045871",
+        "session": null,
+        "document": {
+          "date": "2026-10-15",
+          "kind": "document",
+          "page": null,
+          "source": "link_title",
+          "excerpt": "15 octobre 2026",
+          "confidence": "inferred"
+        },
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "ocr",
+        "language": "fra+eng",
+        "pagesRead": 1,
+        "totalPages": 1,
+        "partial": false
+      },
+      "url": "https://www.chastre.be/mon-administration-communale/vie-politique/conseil-communal/publications/ordre-du-jour-du-conseil-communal/ordres-du-jour-seances-du-conseil-communal-2026/ordre-du-jour-du-conseil-communal-du-15-octobre-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 10. Désignation d'un auteur de projet pour la création de ZIT et de ZEC à Chastre - Approbation des conditions et du mode de passation/agh",
+      "evidence": "10. Désignation d'un auteur de projet pour la création de ZIT et de ZEC à Chastre - Approbation des conditions et du mode de passation/agh",
+      "municipalReference": null,
+      "municipalSection": "10. Désignation d'un auteur de projet pour la création de ZIT et de ZEC à Chastre - Approbation des conditions et du mode de passation/agh",
+      "municipalEvidence": [
+        {
+          "page": 1,
+          "excerpt": "10. Désignation d'un auteur de projet pour la création de ZIT et de ZEC à Chastre - Approbation des conditions et du mode de passation/agh"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 1,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:f5eb4386865b9e8756",
+        "sha256": "dc558738456b641bd03cb8dd3ad7df9d5ba2c09a66ef885420eca509c1045871",
+        "checkedAt": "2026-11-05T22:54:26.035Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local:28edbf54821d82acd7ef",
+      "title": "approuver les termes du projet d’acte transmis par l’Étude des Notaires associés LELEU, VANSTAEN & PADURE, de la parcelle de terrain cadastrée section A, n° 494h4, pour une contenance de 11a 38ca, telle que figurée au plan de mesurage dressé le 15.11.2024 par ",
+      "sourceDocumentTitle": "Rapport à l’attention de Madame la Bourgmestre, de Mesdames et Messieurs les Échevins et C",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "Délégation. Décision. Il est proposé au Conseil : - d’approuver les termes du projet d’acte transmis par l’Étude des Notaires associés LELEU, VANSTAEN & PADURE, de la parcelle de terrain cadastrée section A, n° 494h4, pour une contenance de 11a 38ca, telle que figurée au plan de mesurage dressé le 15.11.2024 par Monsieur Lieven HUTSEBAUT, géomètre-expert ; 5",
+        "mission": "approuver les termes du projet d’acte transmis par l’Étude des Notaires associés LELEU, VANSTAEN & PADURE, de la parcelle de terrain cadastrée section A, n° 494h4, pour une contenance de 11a 38ca, telle que figurée au plan de mesurage dressé le 15.11.2024 par ",
+        "basis": "document_body"
+      },
+      "missionEvidence": {
+        "excerpt": "Délégation. Décision. Il est proposé au Conseil : - d’approuver les termes du projet d’acte transmis par l’Étude des Notaires associés LELEU, VANSTAEN & PADURE, de la parcelle de terrain cadastrée section A, n° 494h4, pour une contenance de 11a 38ca, telle que figurée au plan de mesurage dressé le 15.11.2024 par Monsieur Lieven HUTSEBAUT, géomètre-expert ; 5",
+        "sourceUrl": "https://www.villedecomines-warneton.be/fr/ma-commune/politique/conseil-communal/conseil-communal-du-9-novembre-2026/telechargement/rapport-a-lattention-de-madame-la-bourgmestre-de-mesdames-et-messieurs-les-echevins-et-conseillers-communaux-du-conseil-communal-du-09-novembre-2026.pdf",
+        "page": 5,
+        "sha256": "af98ac6f68a550da2cd3dac46d3508158b00ace8bc5a389312222433ead92332"
+      },
+      "buyer": "Commune de Comines-Warneton",
+      "municipalityINS": "57097",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Délégation. Décision. Il est proposé au Conseil : - d’approuver les termes du projet d’acte transmis par l’Étude des Notaires associés LELEU, VANSTAEN & PADURE, de la parcelle de terrain cadastrée section A, n° 494h4,",
+        "sourceUrl": "https://www.villedecomines-warneton.be/fr/ma-commune/politique/conseil-communal/conseil-communal-du-9-novembre-2026/telechargement/rapport-a-lattention-de-madame-la-bourgmestre-de-mesdames-et-messieurs-les-echevins-et-conseillers-communaux-du-conseil-communal-du-09-novembre-2026.pdf",
+        "page": 5,
+        "sha256": "af98ac6f68a550da2cd3dac46d3508158b00ace8bc5a389312222433ead92332"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Topo",
+      "sectors": [
+        "Topo",
+        "Foncier"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.villedecomines-warneton.be/fr/ma-commune/politique/conseil-communal/conseil-communal-du-9-novembre-2026/telechargement/rapport-a-lattention-de-madame-la-bourgmestre-de-mesdames-et-messieurs-les-echevins-et-conseillers-communaux-du-conseil-communal-du-09-novembre-2026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.villedecomines-warneton.be/fr/ma-commune/politique/conseil-communal/conseil-communal-du-9-novembre-2026/telechargement/rapport-a-lattention-de-madame-la-bourgmestre-de-mesdames-et-messieurs-les-echevins-et-conseillers-communaux-du-conseil-communal-du-09-novembre-2026.pdf",
+        "sha256": "af98ac6f68a550da2cd3dac46d3508158b00ace8bc5a389312222433ead92332",
+        "session": {
+          "date": "2026-11-09",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "CONSEIL COMMUNAL DU 09.11.2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.villedecomines-warneton.be/fr/ma-commune/politique/conseil-communal/conseil-communal-du-9-novembre-2026/telechargement/rapport-a-lattention-de-madame-la-bourgmestre-de-mesdames-et-messieurs-les-echevins-et-conseillers-communaux-du-conseil-communal-du-09-novembre-2026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Délégation. Décision. Il est proposé au Conseil : -    d’approuver les termes du projet d’acte transmis par l’Étude des Notaires associés LELEU, VANSTAEN & PADURE, de la parcelle de terrain cadastrée section A, n° 494h4, pour une contenance de 11a 38ca, telle que figurée au plan de mesurage dressé le 15.11.2024 par Monsieur Lieven HUTSEBAUT, géomètre-expert ; 5",
+      "evidence": "Délégation. Décision. Il est proposé au Conseil : -    d’approuver les termes du projet d’acte transmis par l’Étude des Notaires associés LELEU, VANSTAEN & PADURE, de la parcelle de terrain cadastrée section A, n° 494h4, pour une contenance de 11a 38ca, telle que figurée au plan de mesurage dressé le 15.11.2024 par Monsieur Lieven HUTSEBAUT, géomètre-expert ; 5",
+      "municipalReference": null,
+      "municipalSection": "18.       Biens immobiliers. Cession à titre gratuit par la S.A. PAUL HUYZENTRUYT d’une parcelle à destination de zone verte sise Clos de Massiet à 7784 Comines-Warneton. Acceptation.",
+      "municipalEvidence": [
+        {
+          "page": 5,
+          "excerpt": "Délégation. Décision. Il est proposé au Conseil : -    d’approuver les termes du projet d’acte transmis par l’Étude des Notaires associés LELEU, VANSTAEN & PADURE, de la parcelle de terrain cadastrée section A, n° 494h4, pour une contenance de 11a 38ca, telle que figurée au plan de mesurage dressé le 15.11.2024 par Monsieur Lieven HUTSEBAUT, géomètre-expert ; 5"
+        },
+        {
+          "page": 5,
+          "excerpt": "-    d’approuver les termes du projet d’acte transmis par l’Étude des Notaires associés LELEU, VANSTAEN & PADURE, de la parcelle de terrain cadastrée section A, n° 494h4, pour une contenance de 11a 38ca, telle que figurée au plan de mesurage dressé le 15.11.2024 par Monsieur Lieven HUTSEBAUT, géomètre-expert ; 5"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 5,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:c3a3f5f94604f24acc",
+        "sha256": "af98ac6f68a550da2cd3dac46d3508158b00ace8bc5a389312222433ead92332",
+        "checkedAt": "2026-11-05T22:54:26.035Z",
+        "changedAt": null
+      }
     }
   ]
 }
