@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-04T22:54:08.940Z",
+      "last_attempt": "2026-11-05T08:32:10.843Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -67,36 +67,36 @@
       "total": 261,
       "sitesRepertories": 261,
       "sitesVerifies": 261,
-      "deliberationsConnectees": 192,
+      "deliberationsConnectees": 195,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 592,
-      "opportunities": 138,
+      "documentsRead": 641,
+      "opportunities": 140,
       "sitesChecked": 261,
       "candidatePages": 228,
-      "sourceErrors": 81,
-      "htmlDocumentsRead": 1749
+      "sourceErrors": 85,
+      "htmlDocumentsRead": 2031
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-04T22:54:08.940Z",
-      "last_success": "2026-11-04T22:54:08.940Z",
+      "last_attempt": "2026-11-05T08:32:10.843Z",
+      "last_success": "2026-11-05T08:32:10.843Z",
       "last_batch": 24,
-      "documents_checked": 56,
+      "documents_checked": 68,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 20,
+      "errors_count": 10,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 252,
+      "html_documents_read": 302,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 41,
+      "recent_municipal_signals": 43,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1347,
     "matched_current_run": 8,
-    "records": 273,
+    "records": 275,
     "review_count": 173,
     "award_notice_count": 341,
     "awarded_market_matches": 1,
@@ -14362,7 +14362,7 @@
       "sourceDocumentDates": {
         "version": 1,
         "sourceUrl": "https://www.deliberations.be/oupeye/decisions/12-octobre-2026-20-00/mission-dauteur-de-projet-etude-de-reamenagement-dune-aile-transformation-et-ou-demolition-reconstruction-de-lecole-jules-brouwir-a-heure-le-romain-approbation-des-conditions-du-marche-et-du-mode-de-passation",
-        "sha256": "ee396d40005f554be145abe91be4806e01fe4f38d9a4219f2e1ddda432199c8f",
+        "sha256": "36529905c5603bf5720c32f1363c792f9ca84e7b84bdd65d7ff12dfffd3f6633",
         "session": {
           "date": "2026-10-12",
           "kind": "session",
@@ -14377,9 +14377,9 @@
       },
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:a75baa3ad7065dd263",
-        "sha256": "ee396d40005f554be145abe91be4806e01fe4f38d9a4219f2e1ddda432199c8f",
+        "sha256": "36529905c5603bf5720c32f1363c792f9ca84e7b84bdd65d7ff12dfffd3f6633",
         "format": "html",
-        "checkedAt": "2026-10-29T14:24:46.130Z"
+        "checkedAt": "2026-11-05T08:32:10.843Z"
       },
       "webTypeEvidence": {
         "kind": "prospection",
@@ -14446,7 +14446,7 @@
       "sourceDocumentDates": {
         "version": 1,
         "sourceUrl": "https://www.deliberations.be/theux/decisions/08-septembre-2026-20-00/designation-dun-auteur-de-projet-pour-dossiers-multiples-approbation-des-conditions-et-du-mode-de-passation",
-        "sha256": "b9f29869c623f671f864e8acd9d340cc9cbc0c20f36b4cffa6e29f0755776bec",
+        "sha256": "3f01970260e33dafb3b7696de9e7f224e9312ed2e3a3c59a4f1f8346d7c7157f",
         "session": {
           "date": "2026-09-08",
           "kind": "session",
@@ -14461,9 +14461,9 @@
       },
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:d68f0b4903de71d6eb",
-        "sha256": "b9f29869c623f671f864e8acd9d340cc9cbc0c20f36b4cffa6e29f0755776bec",
+        "sha256": "3f01970260e33dafb3b7696de9e7f224e9312ed2e3a3c59a4f1f8346d7c7157f",
         "format": "html",
-        "checkedAt": "2026-10-29T14:24:46.130Z"
+        "checkedAt": "2026-11-05T08:32:10.843Z"
       },
       "webTypeEvidence": {
         "kind": "prospection",
@@ -14530,15 +14530,15 @@
           "date": "2026-10-27",
           "kind": "document",
           "page": null,
-          "source": "filename",
-          "excerpt": "-27-octobre-2026",
+          "source": "link_title",
+          "excerpt": "27 octobre 2026",
           "confidence": "inferred"
         },
         "status": "identified"
       },
       "sourceExtraction": {
         "method": "ocr",
-        "language": "eng",
+        "language": "fra+eng",
         "pagesRead": 2,
         "totalPages": 2,
         "partial": false
@@ -14557,15 +14557,25 @@
       ],
       "source_status": "extrait_pdf_a_verifier",
       "sourceEvidencePage": 2,
-      "sourceEvidenceStatus": "found",
+      "sourceEvidenceStatus": "not_found",
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:7159d4fc074cf528b4",
         "sha256": "07f286a132fdab72bdaeda197fe3178dbf46a9c43fad973e1156959198c63e4d",
-        "checkedAt": "2026-10-29T14:36:37.033Z",
+        "checkedAt": "2026-11-05T08:32:10.843Z",
         "changedAt": null
       },
       "matchReason": "mission_globale_a_qualifier",
-      "screeningReason": null
+      "screeningReason": null,
+      "sourceDocumentReview": {
+        "sha256": "07f286a132fdab72bdaeda197fe3178dbf46a9c43fad973e1156959198c63e4d",
+        "checkedAt": "2026-11-05T08:32:10.843Z",
+        "candidates": [
+          {
+            "excerpt": "MS.A26.12 Schéma de développement communal (SDC) — Désignation d'un auteur de projet : Approbation des conditions, du mode de passation et des firmes à consulter ;",
+            "page": 2
+          }
+        ]
+      }
     },
     {
       "id": "local-html:a3eb9aa9dd306685272e",
@@ -21446,6 +21456,185 @@
         "documentId": "municipal-doc:e1cfb7b515464fb797",
         "sha256": "a558442ecfc58a03074f8bf9228194e3bd9da07916143e0641cfe6fc6c54abd1",
         "checkedAt": "2026-11-04T22:54:08.940Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local-html:4030798547d187eda2d8",
+      "title": "RÉVISION D'UN SCHÉMA DE DÉVELOPPEMENT COMMUNAL GLOBAL : ADOPTION DE L'AVANT-PROJET.",
+      "sourceDocumentTitle": "RÉVISION D'UN SCHÉMA DE DÉVELOPPEMENT COMMUNAL GLOBAL : ADOPTION DE L'AVANT-PROJET.",
+      "missionEvidence": null,
+      "buyer": "Commune de Fléron",
+      "municipalityINS": "62038",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/fleron/decisions/20-octobre-2026-20-00/revision-dun-schema-de-developpement-communal-global-adoption-de-lavant-projet",
+      "sourceDocument": "https://www.deliberations.be/fleron/decisions/20-octobre-2026-20-00/revision-dun-schema-de-developpement-communal-global-adoption-de-lavant-projet",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/fleron/decisions/20-octobre-2026-20-00/revision-dun-schema-de-developpement-communal-global-adoption-de-lavant-projet",
+        "sha256": "44b361045189b0693a5507eacd5815b7a8fa44989513043ac68105a5d2ae16c0",
+        "session": {
+          "date": "2026-10-20",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 20 octobre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/fleron/decisions/20-octobre-2026-20-00/revision-dun-schema-de-developpement-communal-global-adoption-de-lavant-projet"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:ec1d308641aaa06e39",
+        "sha256": "44b361045189b0693a5507eacd5815b7a8fa44989513043ac68105a5d2ae16c0",
+        "format": "html",
+        "checkedAt": "2026-11-05T08:32:10.843Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Vu le Schéma de Développement du Territoire (SDT) adopté le 16 mai 2019 par le Gouvernement wallon et publié au Moniteur belge le 12 décembre 2019 et dont la date d’entrée en vigueur n’a jamais été déterminée par le Gouv",
+        "sourceUrl": "https://www.deliberations.be/fleron/decisions/20-octobre-2026-20-00/revision-dun-schema-de-developpement-communal-global-adoption-de-lavant-projet",
+        "page": null,
+        "sha256": "44b361045189b0693a5507eacd5815b7a8fa44989513043ac68105a5d2ae16c0"
+      },
+      "description": "Vu le Schéma de Développement du Territoire (SDT) adopté le 16 mai 2019 par le Gouvernement wallon et publié au Moniteur belge le 12 décembre 2019 et dont la date d’entrée en vigueur n’a jamais été déterminée par le Gouvernement wallon ; Vu la délibération du Conseil communal du 18 février 2020 approuvant le Schéma de Développement de l'Arrondissement de Liège (SDALg) ; Vu la délibération du Conseil communal du 28 mai 2020 relative à l'approbation du cahier des charges, du devis estimatif et du choix du mode de passation du marché en vue de la désignation d'un auteur de projet pour la réalisation d'un Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Collège communal du 13 août 2020 relative à l'attribution d'un auteur de projet en vue de la réalisation d'un Schéma Communal de Développement Commercial, soit le bureau SEGEFA ; Vu la délibération du Conseil communal du 22 février 2022 approuvant l'avant-projet d'un Schéma Communal de Développement Commercial, accordant la poursuite de la procédure dudit Schéma et déterminant le contenu du Rapport sur les Incidences Environnementales (R.I.E.) ; Vu la délibération du Conseil communal du 18 avril 2023 relative à l’approbation de l'avant-projet du Rapport sur les Incidences Environnementales et sur la poursuite de la procédure du Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Conse",
+      "evidence": "Vu le Schéma de Développement du Territoire (SDT) adopté le 16 mai 2019 par le Gouvernement wallon et publié au Moniteur belge le 12 décembre 2019 et dont la date d’entrée en vigueur n’a jamais été déterminée par le Gouvernement wallon ; Vu la délibération du Conseil communal du 18 février 2020 approuvant le Schéma de Développement de l'Arrondissement de Liège (SDALg) ; Vu la délibération du Conseil communal du 28 mai 2020 relative à l'approbation du cahier des charges, du devis estimatif et du choix du mode de passation du marché en vue de la désignation d'un auteur de projet pour la réalisation d'un Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Collège communal du 13 août 2020 relative à l'attribution d'un auteur de projet en vue de la réalisation d'un Schéma Communal de Développement Commercial, soit le bureau SEGEFA ; Vu la délibération du Conseil communal du 22 février 2022 approuvant l'avant-projet d'un Schéma Communal de Développement Commercial, accordant la poursuite de la procédure dudit Schéma et déterminant le contenu du Rapport sur les Incidences Environnementales (R.I.E.) ; Vu la délibération du Conseil communal du 18 avril 2023 relative à l’approbation de l'avant-projet du Rapport sur les Incidences Environnementales et sur la poursuite de la procédure du Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Conse",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu le Schéma de Développement du Territoire (SDT) adopté le 16 mai 2019 par le Gouvernement wallon et publié au Moniteur belge le 12 décembre 2019 et dont la date d’entrée en vigueur n’a jamais été déterminée par le Gouvernement wallon ; Vu la délibération du Conseil communal du 18 février 2020 approuvant le Schéma de Développement de l'Arrondissement de Liège (SDALg) ; Vu la délibération du Conseil communal du 28 mai 2020 relative à l'approbation du cahier des charges, du devis estimatif et du choix du mode de passation du marché en vue de la désignation d'un auteur de projet pour la réalisation d'un Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Collège communal du 13 août 2020 relative à l'attribution d'un auteur de projet en vue de la réalisation d'un Schéma Communal de Développement Commercial, soit le bureau SEGEFA ; Vu la délibération du Conseil communal du 22 février 2022 approuvant l'avant-projet d'un Schéma Communal de Développement Commercial, accordant la poursuite de la procédure dudit Schéma et déterminant le contenu du Rapport sur les Incidences Environnementales (R.I.E.) ; Vu la délibération du Conseil communal du 18 avril 2023 relative à l’approbation de l'avant-projet du Rapport sur les Incidences Environnementales et sur la poursuite de la procédure du Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Conse",
+          "page": null
+        },
+        {
+          "excerpt": "Vu la délibération du Conseil communal du 18 février 2020 approuvant le Schéma de Développement de l'Arrondissement de Liège (SDALg) ; Vu la délibération du Conseil communal du 28 mai 2020 relative à l'approbation du cahier des charges, du devis estimatif et du choix du mode de passation du marché en vue de la désignation d'un auteur de projet pour la réalisation d'un Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Collège communal du 13 août 2020 relative à l'attribution d'un auteur de projet en vue de la réalisation d'un Schéma Communal de Développement Commercial, soit le bureau SEGEFA ; Vu la délibération du Conseil communal du 22 février 2022 approuvant l'avant-projet d'un Schéma Communal de Développement Commercial, accordant la poursuite de la procédure dudit Schéma et déterminant le contenu du Rapport sur les Incidences Environnementales (R.I.E.) ; Vu la délibération du Conseil communal du 18 avril 2023 relative à l’approbation de l'avant-projet du Rapport sur les Incidences Environnementales et sur la poursuite de la procédure du Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Conseil communal du 19 décembre 2023 approuvant définitivement le Schéma Communal de Développement Commercial accompagné de sa déclaration environnementale ; Vu l’Arrêté du Gouvernement wallon du 30 mars 2023 adoptant le projet de Schéma de Dé",
+          "page": null
+        },
+        {
+          "excerpt": "Vu la réforme du Code du Développement Territorial (CoDT) approuvée par le Parlement wallon le 13 décembre 2023 et entrée en vigueur le 1er avril 2024 ; Vu le Schéma de Développement Territorial a été adopté par le Gouvernement wallon le 23 avril 2024 et entré en vigueur le 1er août 2024 ; Vu la décision du Conseil communal du 17 décembre 2024 approuvant les conditions et le mode de passation du \"Marché de services relatifs à la révision d'un Schéma de Développement Communal thématique \"optimisation spatiale\" conformément à la législation relative à l'aménagement du territoire” ; Vu la décision du Collège communal du 19 décembre 2024 approuvant la liste des firmes à consulter dans le cadre de la procédure négociée sans publication préalable ; Vu la délibération du Collège communal du 19 décembre 2024 décidant, malgré d’innombrables sollicitations de promoteurs immobiliers, de ne plus se prononcer favorablement sur tout permis d’urbanisme, d’urbanisation, intégré ou unique pour les projets de plus de 6 logements situés hors du centre urbain de Fléron conformément au périmètre défini dans le SDALg. De plus, tout projet de création de logements devra respecter les densités du Schéma de Développement Communal. Aucun écart ne sera accordé par le Collège communal sur ce point ; Vu la décision du Collège communal du 13 février 2025 de constater, conformément au procès-verbal d'ouvertu",
+          "page": null
+        },
+        {
+          "excerpt": "Vu la délibération du Collège communal du 19 décembre 2024 décidant, malgré d’innombrables sollicitations de promoteurs immobiliers, de ne plus se prononcer favorablement sur tout permis d’urbanisme, d’urbanisation, intégré ou unique pour les projets de plus de 6 logements situés hors du centre urbain de Fléron conformément au périmètre défini dans le SDALg. De plus, tout projet de création de logements devra respecter les densités du Schéma de Développement Communal. Aucun écart ne sera accordé par le Collège communal sur ce point ; Vu la décision du Collège communal du 13 février 2025 de constater, conformément au procès-verbal d'ouverture d'offre, qu'une offre est parvenue ; Vu la décision du Collège communal du 8 mai 2025 relative à l'attribution du marché “Marché de services relatif à la révision d’un Schéma de Développement Communal global intégrant la thématique “optimisation spatiale” conformément à la législation relative à l’aménagement du territoire” à PLURIS SCRL, Rue De Fetinne 85 à 4020 Liege 2 pour le montant d’offre contrôlé de 108.380,40 € hors TVA ou 131.140,28 €, 21% TVA comprise ; Considérant que l'exécution du marché doit répondre aux conditions fixées par le cahier des charges N° 2024-199 ; Vu la délibération du Collège communal du 28 août 2025 approuvant l'avenant 1 du marché “Marché de services relatif à la révision d’un Schéma de Développement Communal ",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2024-199"
+    },
+    {
+      "id": "local:d6e69973401a27fe2daf",
+      "title": "7. Urbanisme et Aménagement du Territoire - Élaboration d’un Schéma de Développement Communal (SDC) - Décision de principe Monsieur le Président cède la parole à Monsieur le Bourgmestre pour qu'il présente ce point.",
+      "sourceDocumentTitle": "conseil 25 août 2026 PV site.pdf 214.4 KB",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "ant d'ériger un cahier des charges pour un marché de services afin de désigner un auteur de projet. Monsieur le Président propose de marquer un accord de principe pour l'élaboration d’un schéma de développement communal global (SDC). À l'unanimité, le Conseil marque son accord ",
+        "mission": "désigner un auteur de projet.",
+        "basis": "document_body"
+      },
+      "missionEvidence": {
+        "excerpt": "ant d'ériger un cahier des charges pour un marché de services afin de désigner un auteur de projet. Monsieur le Président propose de marquer un accord de principe pour l'élaboration d’un schéma de développement communal global (SDC). À l'unanimité, le Conseil marque son accord ",
+        "sourceUrl": "https://www.fexhe-le-haut-clocher.be/ma-commune/vie-politique/conseil-communal/seances-du-conseil/proces-verbaux/proces-verbaux-2026/conseil-25-aout-2026-pv-site.pdf",
+        "page": 5,
+        "sha256": "4e3aa787a7dc6ebe4a8d0dca7e878dee4e621eaf900bc77c76b33f1419307262"
+      },
+      "buyer": "Commune de Fexhe-le-Haut-Clocher",
+      "municipalityINS": "64025",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "de disposer d'un outil planologique permettant de suivre une stratégie territoriale cohérente sur l'ensemble de son territoire. Cette décision de principe est nécessaire avant d'ériger un cahier des charges pour un march",
+        "sourceUrl": "https://www.fexhe-le-haut-clocher.be/ma-commune/vie-politique/conseil-communal/seances-du-conseil/proces-verbaux/proces-verbaux-2026/conseil-25-aout-2026-pv-site.pdf",
+        "page": 5,
+        "sha256": "4e3aa787a7dc6ebe4a8d0dca7e878dee4e621eaf900bc77c76b33f1419307262"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.fexhe-le-haut-clocher.be/ma-commune/vie-politique/conseil-communal/seances-du-conseil/proces-verbaux/proces-verbaux-2026/conseil-25-aout-2026-pv-site.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.fexhe-le-haut-clocher.be/ma-commune/vie-politique/conseil-communal/seances-du-conseil/proces-verbaux/proces-verbaux-2026/conseil-25-aout-2026-pv-site.pdf",
+        "sha256": "4e3aa787a7dc6ebe4a8d0dca7e878dee4e621eaf900bc77c76b33f1419307262",
+        "session": {
+          "date": "2026-08-25",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "CONSEIL COMMUNAL DU 25 AOUT 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.fexhe-le-haut-clocher.be/ma-commune/vie-politique/conseil-communal/seances-du-conseil/proces-verbaux/proces-verbaux-2026/conseil-25-aout-2026-pv-site.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : de disposer d'un outil planologique permettant de suivre une stratégie territoriale cohérente sur l'ensemble de son territoire. Cette décision de principe est nécessaire avant d'ériger un cahier des charges pour un marché de services afin de désigner un auteur de projet. Monsieur le Président propose de marquer un accord de principe pour l'élaboration d’un schéma de développement communal global (SDC). À l'unanimité, le Conseil marque son accord de principe pour l'élaboration d'un schéma de développement communal global (SDC).",
+      "evidence": "de disposer d'un outil planologique permettant de suivre une stratégie territoriale cohérente sur l'ensemble de son territoire. Cette décision de principe est nécessaire avant d'ériger un cahier des charges pour un marché de services afin de désigner un auteur de projet. Monsieur le Président propose de marquer un accord de principe pour l'élaboration d’un schéma de développement communal global (SDC). À l'unanimité, le Conseil marque son accord de principe pour l'élaboration d'un schéma de développement communal global (SDC).",
+      "municipalReference": null,
+      "municipalSection": "7. Urbanisme et Aménagement du Territoire - Élaboration d’un Schéma de Développement Communal (SDC) - Décision de principe Monsieur le Président cède la parole à Monsieur le Bourgmestre pour qu'il présente ce point.",
+      "municipalEvidence": [
+        {
+          "page": 5,
+          "excerpt": "de disposer d'un outil planologique permettant de suivre une stratégie territoriale cohérente sur l'ensemble de son territoire. Cette décision de principe est nécessaire avant d'ériger un cahier des charges pour un marché de services afin de désigner un auteur de projet. Monsieur le Président propose de marquer un accord de principe pour l'élaboration d’un schéma de développement communal global (SDC). À l'unanimité, le Conseil marque son accord de principe pour l'élaboration d'un schéma de développement communal global (SDC)."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 5,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:17e88ce99382ab0c52",
+        "sha256": "4e3aa787a7dc6ebe4a8d0dca7e878dee4e621eaf900bc77c76b33f1419307262",
+        "checkedAt": "2026-11-05T08:32:10.843Z",
         "changedAt": null
       }
     }
