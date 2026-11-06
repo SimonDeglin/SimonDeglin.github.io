@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-06T08:31:02.063Z",
+      "last_attempt": "2026-11-06T16:56:33.929Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -74,29 +74,29 @@
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 803,
-      "opportunities": 156,
+      "documentsRead": 849,
+      "opportunities": 164,
       "sitesChecked": 261,
       "candidatePages": 228,
-      "sourceErrors": 89,
-      "htmlDocumentsRead": 2772
+      "sourceErrors": 91,
+      "htmlDocumentsRead": 2943
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-06T08:31:02.063Z",
-      "last_success": "2026-11-06T08:31:02.063Z",
+      "last_attempt": "2026-11-06T16:56:33.929Z",
+      "last_success": "2026-11-06T16:56:33.929Z",
       "last_batch": 24,
-      "documents_checked": 58,
+      "documents_checked": 56,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 10,
+      "errors_count": 11,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 245,
+      "html_documents_read": 197,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 59,
+      "recent_municipal_signals": 67,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1621,
     "matched_current_run": 9,
-    "records": 297,
+    "records": 305,
     "review_count": 202,
     "award_notice_count": 429,
     "awarded_market_matches": 2,
@@ -23523,6 +23523,882 @@
       "documentInventory": [],
       "consultationUrls": [],
       "documentsCheckedAt": "2026-11-06T13:08:12.947Z"
+    },
+    {
+      "id": "local-html:435218bc9f4c2ab7a9a5",
+      "title": "Mission d'étude - Rénovation de voiries communales - Approbation des conditions et du mode de passation – Décision",
+      "sourceDocumentTitle": "Mission d'étude - Rénovation de voiries communales - Approbation des conditions et du mode de passation – Décision",
+      "missionEvidence": null,
+      "buyer": "Commune de Thimister-Clermont",
+      "municipalityINS": "63089",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/thimister-clermont/decisions/07-septembre-2026-20-30/mission-detude-renovation-de-voiries-communales-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "sha256": "707bd7e887604b49f884569e87ce358452a8d51ace6f3c7303f3ba745ce54614",
+        "stage": "decision_to_verify"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "screening": "review",
+      "score": 52,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/thimister-clermont/decisions/07-septembre-2026-20-30/mission-detude-renovation-de-voiries-communales-approbation-des-conditions-et-du-mode-de-passation-decision",
+      "sourceDocument": "https://www.deliberations.be/thimister-clermont/decisions/07-septembre-2026-20-30/mission-detude-renovation-de-voiries-communales-approbation-des-conditions-et-du-mode-de-passation-decision",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/thimister-clermont/decisions/07-septembre-2026-20-30/mission-detude-renovation-de-voiries-communales-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "sha256": "707bd7e887604b49f884569e87ce358452a8d51ace6f3c7303f3ba745ce54614",
+        "session": {
+          "date": "2026-09-07",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 07 septembre 2026 (20:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/thimister-clermont/decisions/07-septembre-2026-20-30/mission-detude-renovation-de-voiries-communales-approbation-des-conditions-et-du-mode-de-passation-decision"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:d7156082a7cfce60f1",
+        "sha256": "707bd7e887604b49f884569e87ce358452a8d51ace6f3c7303f3ba745ce54614",
+        "format": "html",
+        "checkedAt": "2026-11-06T16:56:33.929Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Matière Aménagement des espaces publics Mission d'étude - Rénovation de voiries communales - Approbation des conditions et du mode de passation – Décision Le Conseil communal, réuni en séance publique, Vu le Code de la D",
+        "sourceUrl": "https://www.deliberations.be/thimister-clermont/decisions/07-septembre-2026-20-30/mission-detude-renovation-de-voiries-communales-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "page": null,
+        "sha256": "707bd7e887604b49f884569e87ce358452a8d51ace6f3c7303f3ba745ce54614"
+      },
+      "description": "Matière Aménagement des espaces publics Mission d'étude - Rénovation de voiries communales - Approbation des conditions et du mode de passation – Décision Le Conseil communal, réuni en séance publique, Vu le Code de la Démocratie locale et de la Décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) et l'article 57 et l'article 43 ;",
+      "evidence": "Matière Aménagement des espaces publics Mission d'étude - Rénovation de voiries communales - Approbation des conditions et du mode de passation – Décision Le Conseil communal, réuni en séance publique, Vu le Code de la Démocratie locale et de la Décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) et l'article 57 et l'article 43 ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "Matière Aménagement des espaces publics Mission d'étude - Rénovation de voiries communales - Approbation des conditions et du mode de passation – Décision Le Conseil communal, réuni en séance publique, Vu le Code de la Démocratie locale et de la Décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) et l'article 57 et l'article 43 ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-019"
+    },
+    {
+      "id": "local-html:12a52fc53aef8128b048",
+      "title": "approuver le cahier des charges N° 2026-016 et le montant estimé du marché “Prolongation de l'égouttage à Crawhez”, établis par l’auteur de projet, S.P.R.L. Bureau d'études RADIAN, Roiseleux 32c à 4890 Thimister-Clermont.",
+      "sourceDocumentTitle": "Prolongation de l'égouttage à Crawhez - Approbation des conditions et du mode de passation – Décision",
+      "missionEvidence": {
+        "excerpt": "À l'unanimité, DÉCIDE 1er. D'approuver le cahier des charges N° 2026-016 et le montant estimé du marché “Prolongation de l'égouttage à Crawhez”, établis par l’auteur de projet, S.P.R.L. Bureau d'études RADIAN, Roiseleux 32c à 4890 Thimister-Clermont. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le monta",
+        "sourceUrl": "https://www.deliberations.be/thimister-clermont/decisions/07-septembre-2026-20-30/prolongation-de-legouttage-a-crawhez-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "page": null,
+        "sha256": "0a872684417032882cc603688d1870b5655d5fec9deea25d530d3a866e7d4e07"
+      },
+      "buyer": "Commune de Thimister-Clermont",
+      "municipalityINS": "63089",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "attribution_de_services_pour_la_veille",
+        "excerpt": "À l'unanimité, DÉCIDE 1er. D'approuver le cahier des charges N° 2026-016 et le montant estimé du marché “Prolongation de l'égouttage à Crawhez”, établis par l’auteur de projet, S.P.R.L. Bureau d'études RADIAN, Roiseleux 32c à 4890 Thimister-Clermont. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le monta",
+        "mission": "approuver le cahier des charges N° 2026-016 et le montant estimé du marché “Prolongation de l'égouttage à Crawhez”, établis par l’auteur de projet, S.P.R.L. Bureau d'études RADIAN, Roiseleux 32c à 4890 Thimister-Clermont.",
+        "basis": "document_body"
+      },
+      "noticeKind": "award",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD",
+        "Reseaux"
+      ],
+      "screening": "review",
+      "score": 60,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/thimister-clermont/decisions/07-septembre-2026-20-30/prolongation-de-legouttage-a-crawhez-approbation-des-conditions-et-du-mode-de-passation-decision",
+      "sourceDocument": "https://www.deliberations.be/thimister-clermont/decisions/07-septembre-2026-20-30/prolongation-de-legouttage-a-crawhez-approbation-des-conditions-et-du-mode-de-passation-decision",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/thimister-clermont/decisions/07-septembre-2026-20-30/prolongation-de-legouttage-a-crawhez-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "sha256": "0a872684417032882cc603688d1870b5655d5fec9deea25d530d3a866e7d4e07",
+        "session": {
+          "date": "2026-09-07",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 07 septembre 2026 (20:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/thimister-clermont/decisions/07-septembre-2026-20-30/prolongation-de-legouttage-a-crawhez-approbation-des-conditions-et-du-mode-de-passation-decision"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:79fe4c721e118248dd",
+        "sha256": "0a872684417032882cc603688d1870b5655d5fec9deea25d530d3a866e7d4e07",
+        "format": "html",
+        "checkedAt": "2026-11-06T16:56:33.929Z"
+      },
+      "webTypeEvidence": {
+        "kind": "award",
+        "reason": "attribution_explicitement_mentionnee",
+        "excerpt": "ant que le marché de conception pour le marché “Prolongation de l'égouttage à Crawhez” a été attribué à S.P.R.L. Bureau d'études RADIAN, Roiseleux 32c à 4890 Thimister-Clermont ; Considérant le cahier des charges N° 2026-016 relatif à ce marché établi par l’au",
+        "sourceUrl": "https://www.deliberations.be/thimister-clermont/decisions/07-septembre-2026-20-30/prolongation-de-legouttage-a-crawhez-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "page": null,
+        "sha256": "0a872684417032882cc603688d1870b5655d5fec9deea25d530d3a866e7d4e07"
+      },
+      "description": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Considérant que le marché de conception pour le marché “Prolongation de l'égouttage à Crawhez” a été attribué à S.P.R.L. Bureau d'études RADIAN, Roiseleux 32c à 4890 Thimister-Clermont ; Considérant le cahier des charges N° 2026-016 relatif à ce marché établi par l’auteur de projet, S.P.R.L. Bureau d'études RADIAN, Roiseleux 32c à 4890 Thimister-Clermont ; Considérant que le montant estimé de ce marché s'élève à 231.793,00 € hors TVA ou 280.469,53 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée directe avec publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, art. 877/73260 (n° de projet : 20260017) ;",
+      "evidence": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Considérant que le marché de conception pour le marché “Prolongation de l'égouttage à Crawhez” a été attribué à S.P.R.L. Bureau d'études RADIAN, Roiseleux 32c à 4890 Thimister-Clermont ; Considérant le cahier des charges N° 2026-016 relatif à ce marché établi par l’auteur de projet, S.P.R.L. Bureau d'études RADIAN, Roiseleux 32c à 4890 Thimister-Clermont ; Considérant que le montant estimé de ce marché s'élève à 231.793,00 € hors TVA ou 280.469,53 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée directe avec publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, art. 877/73260 (n° de projet : 20260017) ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Considérant que le marché de conception pour le marché “Prolongation de l'égouttage à Crawhez” a été attribué à S.P.R.L. Bureau d'études RADIAN, Roiseleux 32c à 4890 Thimister-Clermont ; Considérant le cahier des charges N° 2026-016 relatif à ce marché établi par l’auteur de projet, S.P.R.L. Bureau d'études RADIAN, Roiseleux 32c à 4890 Thimister-Clermont ; Considérant que le montant estimé de ce marché s'élève à 231.793,00 € hors TVA ou 280.469,53 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée directe avec publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, art. 877/73260 (n° de projet : 20260017) ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-016"
+    },
+    {
+      "id": "local-html:335b0cbc2d4c63c462ec",
+      "title": "MARCHE PUBLIC - MARCHE DE SERVICE RELATIF A L’ÉLABORATION D'UN SCHÉMA DE DÉVELOPPEMENT COMMUNAL - ÉLABORATION - DEMANDE DE SUBVENTION",
+      "sourceDocumentTitle": "MARCHE PUBLIC - MARCHE DE SERVICE RELATIF A L’ÉLABORATION D'UN SCHÉMA DE DÉVELOPPEMENT COMMUNAL - ÉLABORATION - DEMANDE DE SUBVENTION",
+      "missionEvidence": null,
+      "buyer": "Commune de Welkenraedt",
+      "municipalityINS": "63084",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Foncier",
+      "sectors": [
+        "Foncier"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/welkenraedt/decisions/24-septembre-2026-20-00/marche-public-marche-de-service-relatif-a-lelaboration-dun-schema-de-developpement-communal-elaboration-demande-de-subvention",
+      "sourceDocument": "https://www.deliberations.be/welkenraedt/decisions/24-septembre-2026-20-00/marche-public-marche-de-service-relatif-a-lelaboration-dun-schema-de-developpement-communal-elaboration-demande-de-subvention",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/welkenraedt/decisions/24-septembre-2026-20-00/marche-public-marche-de-service-relatif-a-lelaboration-dun-schema-de-developpement-communal-elaboration-demande-de-subvention",
+        "sha256": "288b153d5233937b562eba1280377c2a8f93d6e830865a6bf95256f335ad3daf",
+        "session": {
+          "date": "2026-09-24",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 24 septembre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/welkenraedt/decisions/24-septembre-2026-20-00/marche-public-marche-de-service-relatif-a-lelaboration-dun-schema-de-developpement-communal-elaboration-demande-de-subvention"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:2ed4bf8699e144b352",
+        "sha256": "288b153d5233937b562eba1280377c2a8f93d6e830865a6bf95256f335ad3daf",
+        "format": "html",
+        "checkedAt": "2026-11-06T16:56:33.929Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Considérant que le SDC constituera ainsi un document de référence permettant aux autorités communales de disposer d'une vision stratégique et territoriale cohérente lors de l'examen des projets d'aménagement et des diffé",
+        "sourceUrl": "https://www.deliberations.be/welkenraedt/decisions/24-septembre-2026-20-00/marche-public-marche-de-service-relatif-a-lelaboration-dun-schema-de-developpement-communal-elaboration-demande-de-subvention",
+        "page": null,
+        "sha256": "288b153d5233937b562eba1280377c2a8f93d6e830865a6bf95256f335ad3daf"
+      },
+      "description": "Considérant que le SDC constituera ainsi un document de référence permettant aux autorités communales de disposer d'une vision stratégique et territoriale cohérente lors de l'examen des projets d'aménagement et des différentes demandes d'urbanisation ; Considérant que cet outil permettra également de guider l'évolution future du territoire en assurant une meilleure cohérence entre les différentes politiques communales ayant une incidence spatiale ; Considérant que le SDC est élaboré à l'initiative du Conseil communal et doit être établi par un auteur de projet agréé conformément aux dispositions du Code du Développement territorial ; Considérant la complexité de la procédure d'élaboration d'un SDC et la nécessité de disposer de compétences spécialisées dans les domaines de l'aménagement du territoire, de l'urbanisme, de la mobilité, de l'environnement, du paysage et du développement territorial ; Considérant le cahier des charges n° 2025/PC/017 relatif au marché « Marché de services relatifs à l'élaboration d'un Schéma de Développement communal », établi par le service Travaux – Urbanisme – Logement ; Considérant que le montant estimé de ce marché s'élève à 115.500,00 € hors TVA, soit 139.755,00 € TVA comprise ; Vu la décision d'attribution du marché au bureau d'études agréé AUPA, en date du 23 décembre 2025 ;",
+      "evidence": "Considérant que le SDC constituera ainsi un document de référence permettant aux autorités communales de disposer d'une vision stratégique et territoriale cohérente lors de l'examen des projets d'aménagement et des différentes demandes d'urbanisation ; Considérant que cet outil permettra également de guider l'évolution future du territoire en assurant une meilleure cohérence entre les différentes politiques communales ayant une incidence spatiale ; Considérant que le SDC est élaboré à l'initiative du Conseil communal et doit être établi par un auteur de projet agréé conformément aux dispositions du Code du Développement territorial ; Considérant la complexité de la procédure d'élaboration d'un SDC et la nécessité de disposer de compétences spécialisées dans les domaines de l'aménagement du territoire, de l'urbanisme, de la mobilité, de l'environnement, du paysage et du développement territorial ; Considérant le cahier des charges n° 2025/PC/017 relatif au marché « Marché de services relatifs à l'élaboration d'un Schéma de Développement communal », établi par le service Travaux – Urbanisme – Logement ; Considérant que le montant estimé de ce marché s'élève à 115.500,00 € hors TVA, soit 139.755,00 € TVA comprise ; Vu la décision d'attribution du marché au bureau d'études agréé AUPA, en date du 23 décembre 2025 ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "Considérant que le SDC constituera ainsi un document de référence permettant aux autorités communales de disposer d'une vision stratégique et territoriale cohérente lors de l'examen des projets d'aménagement et des différentes demandes d'urbanisation ; Considérant que cet outil permettra également de guider l'évolution future du territoire en assurant une meilleure cohérence entre les différentes politiques communales ayant une incidence spatiale ; Considérant que le SDC est élaboré à l'initiative du Conseil communal et doit être établi par un auteur de projet agréé conformément aux dispositions du Code du Développement territorial ; Considérant la complexité de la procédure d'élaboration d'un SDC et la nécessité de disposer de compétences spécialisées dans les domaines de l'aménagement du territoire, de l'urbanisme, de la mobilité, de l'environnement, du paysage et du développement territorial ; Considérant le cahier des charges n° 2025/PC/017 relatif au marché « Marché de services relatifs à l'élaboration d'un Schéma de Développement communal », établi par le service Travaux – Urbanisme – Logement ; Considérant que le montant estimé de ce marché s'élève à 115.500,00 € hors TVA, soit 139.755,00 € TVA comprise ; Vu la décision d'attribution du marché au bureau d'études agréé AUPA, en date du 23 décembre 2025 ;",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant que, dans le cadre de l'instruction de cette demande, le Service public de Wallonie a demandé que la délibération initiale du 28 août 2025 relative à l'élaboration du SDC soit complétée afin de préciser les motifs justifiant l'élaboration de cet outil ainsi que les principaux enjeux communaux devant être pris en considération ; Considérant qu'il convient dès lors de compléter la délibération du 28 août 2025 afin de préciser les objectifs poursuivis par la Commune de Welkenraedt et les enjeux territoriaux devant être intégrés dans le processus d'élaboration du SDC ; Considérant que le présent complément ne remet pas en cause la décision initiale du Conseil communal relative à l'élaboration du SDC ni l'attribution du marché au bureau d'études AUPA ; Considérant qu'il y a lieu, dès lors, de confirmer la volonté de la Commune de Welkenraedt de disposer d'un Schéma de Développement communal couvrant l'ensemble de son territoire et permettant de définir une stratégie territoriale communale à moyen et à long terme ; Au regard de ces différents éléments,",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local-html:b38e7dee3c60306d1ef8",
+      "title": "Gouvernance - Avant-projet du Schéma de Développement Communal (SDC) - Décision",
+      "sourceDocumentTitle": "Gouvernance - Avant-projet du Schéma de Développement Communal (SDC) - Décision",
+      "missionEvidence": null,
+      "buyer": "Commune de Jalhay",
+      "municipalityINS": "63038",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Foncier",
+      "sectors": [
+        "Foncier"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/jalhay/decisions/07-septembre-2026-20-30/gouvernance-avant-projet-du-schema-de-developpement-communal-sdc-decision",
+      "sourceDocument": "https://www.deliberations.be/jalhay/decisions/07-septembre-2026-20-30/gouvernance-avant-projet-du-schema-de-developpement-communal-sdc-decision",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/jalhay/decisions/07-septembre-2026-20-30/gouvernance-avant-projet-du-schema-de-developpement-communal-sdc-decision",
+        "sha256": "c4c39d558fef8325894906cf1f0f0cbb91177fd9833017f78f7aa8963b442faa",
+        "session": {
+          "date": "2026-09-07",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 07 septembre 2026 (20:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/jalhay/decisions/07-septembre-2026-20-30/gouvernance-avant-projet-du-schema-de-developpement-communal-sdc-decision"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:400b1d0c89d0ed2f0c",
+        "sha256": "c4c39d558fef8325894906cf1f0f0cbb91177fd9833017f78f7aa8963b442faa",
+        "format": "html",
+        "checkedAt": "2026-11-06T16:56:33.929Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Vu le livre Ier du Code de l’environnement; Vu l'article D.II.10 du CoDT définissant le contenu et les objectifs du Schéma de développement communal (ci-après, SDC); Vu la décision du Conseil communal du 4 septembre 2023",
+        "sourceUrl": "https://www.deliberations.be/jalhay/decisions/07-septembre-2026-20-30/gouvernance-avant-projet-du-schema-de-developpement-communal-sdc-decision",
+        "page": null,
+        "sha256": "c4c39d558fef8325894906cf1f0f0cbb91177fd9833017f78f7aa8963b442faa"
+      },
+      "description": "Vu le livre Ier du Code de l’environnement; Vu l'article D.II.10 du CoDT définissant le contenu et les objectifs du Schéma de développement communal (ci-après, SDC); Vu la décision du Conseil communal du 4 septembre 2023 approuvant les conditions, le montant estimé et la procédure de passation (procédure négociée directe avec publication préalable) du marché relatif à la désignation d'un auteur de projet pour l'élaboration d'un schéma de développement communal et d'un guide communal d'urbanisme; Vu la décision du Collège communal du 25 janvier 2024 attribuant le marché relatif à la désignation d'un auteur de projet pour l'élaboration d'un schéma de développement communal et d'un guide communal d'urbanisme à la société PLURIS SRL; Considérant que la société PLURIS SRL dispose de l’agrément dit de type 1 pour l'élaboration ou la révision de schémas de développement communaux; Considérant qu'en établissant son SDC, la Commune de Jalhay entend y traduire sa déclaration de politique communale et mentionne notamment l'insertion de nouveaux principes de développement urbanistique durable, la définition de moyens de lutte contre le réchauffement climatique à intégrer dans les projets de construction et d'aménagement, la recherche de solutions quant au stationnement dans certains quartiers, quant à la mobilité, quant au développement de modes doux de circulation, la définition de l'affe",
+      "evidence": "Vu le livre Ier du Code de l’environnement; Vu l'article D.II.10 du CoDT définissant le contenu et les objectifs du Schéma de développement communal (ci-après, SDC); Vu la décision du Conseil communal du 4 septembre 2023 approuvant les conditions, le montant estimé et la procédure de passation (procédure négociée directe avec publication préalable) du marché relatif à la désignation d'un auteur de projet pour l'élaboration d'un schéma de développement communal et d'un guide communal d'urbanisme; Vu la décision du Collège communal du 25 janvier 2024 attribuant le marché relatif à la désignation d'un auteur de projet pour l'élaboration d'un schéma de développement communal et d'un guide communal d'urbanisme à la société PLURIS SRL; Considérant que la société PLURIS SRL dispose de l’agrément dit de type 1 pour l'élaboration ou la révision de schémas de développement communaux; Considérant qu'en établissant son SDC, la Commune de Jalhay entend y traduire sa déclaration de politique communale et mentionne notamment l'insertion de nouveaux principes de développement urbanistique durable, la définition de moyens de lutte contre le réchauffement climatique à intégrer dans les projets de construction et d'aménagement, la recherche de solutions quant au stationnement dans certains quartiers, quant à la mobilité, quant au développement de modes doux de circulation, la définition de l'affe",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu le livre Ier du Code de l’environnement; Vu l'article D.II.10 du CoDT définissant le contenu et les objectifs du Schéma de développement communal (ci-après, SDC); Vu la décision du Conseil communal du 4 septembre 2023 approuvant les conditions, le montant estimé et la procédure de passation (procédure négociée directe avec publication préalable) du marché relatif à la désignation d'un auteur de projet pour l'élaboration d'un schéma de développement communal et d'un guide communal d'urbanisme; Vu la décision du Collège communal du 25 janvier 2024 attribuant le marché relatif à la désignation d'un auteur de projet pour l'élaboration d'un schéma de développement communal et d'un guide communal d'urbanisme à la société PLURIS SRL; Considérant que la société PLURIS SRL dispose de l’agrément dit de type 1 pour l'élaboration ou la révision de schémas de développement communaux; Considérant qu'en établissant son SDC, la Commune de Jalhay entend y traduire sa déclaration de politique communale et mentionne notamment l'insertion de nouveaux principes de développement urbanistique durable, la définition de moyens de lutte contre le réchauffement climatique à intégrer dans les projets de construction et d'aménagement, la recherche de solutions quant au stationnement dans certains quartiers, quant à la mobilité, quant au développement de modes doux de circulation, la définition de l'affe",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l'article D.II.10 du CoDT définissant le contenu et les objectifs du Schéma de développement communal (ci-après, SDC); Vu la décision du Conseil communal du 4 septembre 2023 approuvant les conditions, le montant estimé et la procédure de passation (procédure négociée directe avec publication préalable) du marché relatif à la désignation d'un auteur de projet pour l'élaboration d'un schéma de développement communal et d'un guide communal d'urbanisme; Vu la décision du Collège communal du 25 janvier 2024 attribuant le marché relatif à la désignation d'un auteur de projet pour l'élaboration d'un schéma de développement communal et d'un guide communal d'urbanisme à la société PLURIS SRL; Considérant que la société PLURIS SRL dispose de l’agrément dit de type 1 pour l'élaboration ou la révision de schémas de développement communaux; Considérant qu'en établissant son SDC, la Commune de Jalhay entend y traduire sa déclaration de politique communale et mentionne notamment l'insertion de nouveaux principes de développement urbanistique durable, la définition de moyens de lutte contre le réchauffement climatique à intégrer dans les projets de construction et d'aménagement, la recherche de solutions quant au stationnement dans certains quartiers, quant à la mobilité, quant au développement de modes doux de circulation, la définition de l'affectation future de zones d’aménagement commun",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant qu'en établissant son SDC, la Commune de Jalhay entend y traduire sa déclaration de politique communale et mentionne notamment l'insertion de nouveaux principes de développement urbanistique durable, la définition de moyens de lutte contre le réchauffement climatique à intégrer dans les projets de construction et d'aménagement, la recherche de solutions quant au stationnement dans certains quartiers, quant à la mobilité, quant au développement de modes doux de circulation, la définition de l'affectation future de zones d’aménagement communal concerté, l'orientation de la conception de grands projets de développement immobilier, la valorisation et le développement d'espaces publics, etc; Considérant que le SDC visera également à orienter le développement communal en rencontrant les objectifs régionaux notamment au regard des dispositions de l’article D.l.1 du CoDT, de celles du Schéma de développement territorial (SDT) ainsi que des orientations de la déclaration de politique régionale; Considérant que la Commune a transmis au bureau d’études toutes les données nécessaires suivant la liste établie par ledit bureau; Considérant la consultation citoyenne organisée du 21 mai 2024 au 13 septembre 2024; Considérant que la société PLURIS a procédé à l’interview de témoins clés (plusieurs personnes représentant différents acteurs/communautés/thématiques rencontrés au mois d",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant que l'analyse contextuelle du SDC complétée sur base des remarques du Collège communal et celles du comité de suivi régional a été communiquée en date du 13 mars 2025; Considérant les ateliers de participation citoyenne organisés en deux soirées, respectivement en date des 18 mars et 1er avril 2025; Considérant qu’en parallèle a eu lieu l’analyse scientifique du bureau d’études spécialisé; Considérant la présentation des résultats des ateliers participatifs et de la première ébauche de la stratégie territoriale au Collège en date du 14 avril 2025; Considérant la réunion de comité de pilotage du 2 juillet 2025 portant sur la présentation des résultats des ateliers de participation réalisés avec le Collège communal et les services ainsi que les ateliers réalisés avec les citoyens, la présentation des grandes plaques foncières identifiées par le Collège communal comme à inscrire ou non en centralité, la présentation d’une première ébauche de structure territoriale à partir de premiers choix émis par le Collège communal, la présentation d’une ébauche du tableau des objectifs, PMO et mesures et le lancement de l’élaboration du Guide communal d’urbanisme par la présentation de la méthodologie et de la philosophie générale; Considérant que l’analyse contextuelle a été présentée aux membres du Conseil communal et à la CCATM en date du 10 septembre 2025; Considérant la réuni",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local:09a82ed04f98e2f50d55",
+      "title": "lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : • Élaborer une stratégie globale d’intervention sur les deux implantations communales ; • Assurer, ensuite et une fois les moyens budgétaires confirmés, les études et le suivi de",
+      "sourceDocumentTitle": "Proces verbal 24 septembre 2026 19 30 158.6 KB",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "entaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : • Élaborer une stratégie globale d’intervention sur les deux implantations communales ; • Assurer, ensuite et une fois les moyens b",
+        "mission": "lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : • Élaborer une stratégie globale d’intervention sur les deux implantations communales ; • Assurer, ensuite et une fois les moyens budgétaires confirmés, les études et le suivi de",
+        "basis": "document_body"
+      },
+      "missionEvidence": {
+        "excerpt": "entaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : • Élaborer une stratégie globale d’intervention sur les deux implantations communales ; • Assurer, ensuite et une fois les moyens b",
+        "sourceUrl": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+        "page": 2,
+        "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f"
+      },
+      "buyer": "Commune de Héron",
+      "municipalityINS": "61028",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "compte des disponibilités sur fonds propres et d’entreprendre les démarches pour lever les moyens complémentaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un",
+        "sourceUrl": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+        "page": 2,
+        "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+        "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f",
+        "session": {
+          "date": "2026-09-24",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 24 SEPTEMBRE 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : compte des disponibilités sur fonds propres et d’entreprendre les démarches pour lever les moyens complémentaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : •     Élaborer une stratégie globale d’intervention sur les deux implantations communales ; •     Assurer, ensuite et une fois les moyens budgétaires confirmés, les études et le suivi de l’exécution de tout ou partie des travaux tels qu’identifiés au terme de la stratégie ;",
+      "evidence": "compte des disponibilités sur fonds propres et d’entreprendre les démarches pour lever les moyens complémentaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : •     Élaborer une stratégie globale d’intervention sur les deux implantations communales ; •     Assurer, ensuite et une fois les moyens budgétaires confirmés, les études et le suivi de l’exécution de tout ou partie des travaux tels qu’identifiés au terme de la stratégie ;",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 2,
+          "excerpt": "compte des disponibilités sur fonds propres et d’entreprendre les démarches pour lever les moyens complémentaires nécessaires ; Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : •     Élaborer une stratégie globale d’intervention sur les deux implantations communales ; •     Assurer, ensuite et une fois les moyens budgétaires confirmés, les études et le suivi de l’exécution de tout ou partie des travaux tels qu’identifiés au terme de la stratégie ;"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 2,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:a6b5af989fc0b79d2e",
+        "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f",
+        "checkedAt": "2026-11-06T16:56:33.929Z",
+        "changedAt": null
+      },
+      "municipalProcedure": null,
+      "municipalNotices": [
+        {
+          "id": "local:ffb678f4fc8803a6bcd8",
+          "title": "lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : • Élaborer une stratégie globale d’intervention sur les deux implantations communales ; • Assurer, ensuite et une fois les moyens budgétaires confirmés, les études et le suivi de",
+          "sourceDocumentTitle": "Proces verbal 24 septembre 2026 19 30 158.6 KB",
+          "municipalAssessment": {
+            "eligible": true,
+            "reason": "mission_explicitement_demandee_dans_le_document",
+            "excerpt": "Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : • Élaborer une stratégie globale d’intervention sur les deux implantations communales ; • Assurer, ensuite et une fois les moyens b",
+            "mission": "lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : • Élaborer une stratégie globale d’intervention sur les deux implantations communales ; • Assurer, ensuite et une fois les moyens budgétaires confirmés, les études et le suivi de",
+            "basis": "document_body"
+          },
+          "missionEvidence": {
+            "excerpt": "Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : • Élaborer une stratégie globale d’intervention sur les deux implantations communales ; • Assurer, ensuite et une fois les moyens b",
+            "sourceUrl": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+            "page": 2,
+            "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f"
+          },
+          "buyer": "Commune de Héron",
+          "municipalityINS": "61028",
+          "region": "Wallonie",
+          "source": "LOCALE",
+          "webSourceType": "municipal",
+          "opportunityType": "prospection",
+          "noticeKind": "prospection",
+          "webTypeEvidence": {
+            "kind": "prospection",
+            "reason": "besoin_ou_decision_a_verifier",
+            "excerpt": "Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : • Élaborer une stratégie globale d’intervention sur les deux implantations communales ;",
+            "sourceUrl": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+            "page": 2,
+            "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f"
+          },
+          "opportunityStage": "décision ou besoin à vérifier",
+          "sector": "Qualif",
+          "sectors": [
+            "Qualif"
+          ],
+          "score": 55,
+          "screening": "review",
+          "qualification": {
+            "version": "2026-10-29",
+            "kind": "prospect",
+            "route": "local_signal",
+            "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+            "capacityStatus": "not_assessed"
+          },
+          "publication": "",
+          "deadline": "",
+          "sourceDocument": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+            "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f",
+            "session": {
+              "date": "2026-09-24",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 24 SEPTEMBRE 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "sourceExtraction": {
+            "method": "pdf_text",
+            "partial": false
+          },
+          "url": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+          "cpv": [],
+          "description": "Document communal public. Extrait nécessitant une lecture de validation : Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : •     Élaborer une stratégie globale d’intervention sur les deux implantations communales ; •     Assurer, ensuite et une fois les moyens budgétaires confirmés, les études et le suivi de l’exécution de tout ou partie des travaux tels qu’identifiés au terme de la stratégie ; Considérant qu’à ce stade, les montants des travaux des projets sont estimés à 3.000.000,00€ HTVA pour l’implantation de Surlemez et 4.280.000,00€ HTVA pour l’implantation de Waret-l'Evêque ;",
+          "evidence": "Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : •     Élaborer une stratégie globale d’intervention sur les deux implantations communales ; •     Assurer, ensuite et une fois les moyens budgétaires confirmés, les études et le suivi de l’exécution de tout ou partie des travaux tels qu’identifiés au terme de la stratégie ; Considérant qu’à ce stade, les montants des travaux des projets sont estimés à 3.000.000,00€ HTVA pour l’implantation de Surlemez et 4.280.000,00€ HTVA pour l’implantation de Waret-l'Evêque ;",
+          "municipalReference": null,
+          "municipalSection": null,
+          "municipalEvidence": [
+            {
+              "page": 2,
+              "excerpt": "Considérant qu’une telle démarche nécessite le lancement d’un marché de services afin qu’un auteur de projet soit désigné pour : •     Élaborer une stratégie globale d’intervention sur les deux implantations communales ; •     Assurer, ensuite et une fois les moyens budgétaires confirmés, les études et le suivi de l’exécution de tout ou partie des travaux tels qu’identifiés au terme de la stratégie ; Considérant qu’à ce stade, les montants des travaux des projets sont estimés à 3.000.000,00€ HTVA pour l’implantation de Surlemez et 4.280.000,00€ HTVA pour l’implantation de Waret-l'Evêque ;"
+            }
+          ],
+          "source_status": "extrait_pdf_a_verifier",
+          "sourceEvidencePage": 2,
+          "sourceEvidenceStatus": "found",
+          "sourceDocumentVersion": {
+            "documentId": "municipal-doc:a6b5af989fc0b79d2e",
+            "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f",
+            "checkedAt": "2026-11-06T16:56:33.929Z",
+            "changedAt": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "local:23f9f1626500165ac042",
+      "title": "Proces verbal 24 septembre 2026 19 30 158.6 KB",
+      "sourceDocumentTitle": "Proces verbal 24 septembre 2026 19 30 158.6 KB",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Héron",
+      "municipalityINS": "61028",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Considérant, qu’à ce stade, le maître d’ouvrage ne peut pas s’engager à la réalisation des travaux, qui est par ailleurs conditionnée à la levée des moyens financiers supplémentaires précités ; Considérant que le marché",
+        "sourceUrl": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+        "page": 2,
+        "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+        "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f",
+        "session": {
+          "date": "2026-09-24",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 24 SEPTEMBRE 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Considérant, qu’à ce stade, le maître d’ouvrage ne peut pas s’engager à la réalisation des travaux, qui est par ailleurs conditionnée à la levée des moyens financiers supplémentaires précités ; Considérant que le marché de service d’auteur de projet proposé permet un engagement progressif du maître d’ouvrage : seule la première tranche de la mission de service relative à l’élaboration de la stratégie est ferme, les autres sont conditionnelles ; Considérant que la charge financière liée à cette première tranche ferme du marché (hors option exigée le cas échéant) est estimée à 60.500, 00 € TVAC ;",
+      "evidence": "Considérant, qu’à ce stade, le maître d’ouvrage ne peut pas s’engager à la réalisation des travaux, qui est par ailleurs conditionnée à la levée des moyens financiers supplémentaires précités ; Considérant que le marché de service d’auteur de projet proposé permet un engagement progressif du maître d’ouvrage : seule la première tranche de la mission de service relative à l’élaboration de la stratégie est ferme, les autres sont conditionnelles ; Considérant que la charge financière liée à cette première tranche ferme du marché (hors option exigée le cas échéant) est estimée à 60.500, 00 € TVAC ;",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 2,
+          "excerpt": "Considérant, qu’à ce stade, le maître d’ouvrage ne peut pas s’engager à la réalisation des travaux, qui est par ailleurs conditionnée à la levée des moyens financiers supplémentaires précités ; Considérant que le marché de service d’auteur de projet proposé permet un engagement progressif du maître d’ouvrage : seule la première tranche de la mission de service relative à l’élaboration de la stratégie est ferme, les autres sont conditionnelles ; Considérant que la charge financière liée à cette première tranche ferme du marché (hors option exigée le cas échéant) est estimée à 60.500, 00 € TVAC ;"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 2,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:a6b5af989fc0b79d2e",
+        "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f",
+        "checkedAt": "2026-11-06T16:56:33.929Z",
+        "changedAt": null
+      },
+      "municipalProcedure": null,
+      "municipalNotices": [
+        {
+          "id": "local:811783ed7e6b5af23fdf",
+          "title": "Proces verbal 24 septembre 2026 19 30 158.6 KB",
+          "sourceDocumentTitle": "Proces verbal 24 septembre 2026 19 30 158.6 KB",
+          "municipalAssessment": {
+            "eligible": true,
+            "reason": "mission_de_services_explicitement_annoncee"
+          },
+          "missionEvidence": null,
+          "buyer": "Commune de Héron",
+          "municipalityINS": "61028",
+          "region": "Wallonie",
+          "source": "LOCALE",
+          "webSourceType": "municipal",
+          "opportunityType": "prospection",
+          "noticeKind": "prospection",
+          "webTypeEvidence": {
+            "kind": "prospection",
+            "reason": "besoin_ou_decision_a_verifier",
+            "excerpt": "• la mission d’auteur de projet suppose la coordination par celui-ci de plusieurs compétences en vue d’assurer la bonne exécution du marché. Si le marché était divisé en lots, l’opérateur chargé de la coordination de",
+            "sourceUrl": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+            "page": 2,
+            "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f"
+          },
+          "opportunityStage": "décision ou besoin à vérifier",
+          "sector": "Qualif",
+          "sectors": [
+            "Qualif"
+          ],
+          "score": 55,
+          "screening": "review",
+          "qualification": {
+            "version": "2026-10-29",
+            "kind": "prospect",
+            "route": "local_signal",
+            "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+            "capacityStatus": "not_assessed"
+          },
+          "publication": "",
+          "deadline": "",
+          "sourceDocument": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+            "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f",
+            "session": {
+              "date": "2026-09-24",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "SEANCE DU 24 SEPTEMBRE 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "sourceExtraction": {
+            "method": "pdf_text",
+            "partial": false
+          },
+          "url": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+          "cpv": [],
+          "description": "Document communal public. Extrait nécessitant une lecture de validation : •     la mission d’auteur de projet suppose la coordination par celui-ci de plusieurs compétences en vue d’assurer la bonne exécution du marché. Si le marché était divisé en lots, l’opérateur chargé de la coordination de ceux-ci verrait sa capacité à agir sur des prestataires tiers et non choisis déforcée ; •     les missions de conception sont rémunérées au pourcentage sur le montant des travaux par discipline. Dans le cadre d’une enveloppe budgétaire globale, il n’est pas rare, en cours d’études, de devoir ajuster le poids relatif de chaque compétence afin de respecter",
+          "evidence": "•     la mission d’auteur de projet suppose la coordination par celui-ci de plusieurs compétences en vue d’assurer la bonne exécution du marché. Si le marché était divisé en lots, l’opérateur chargé de la coordination de ceux-ci verrait sa capacité à agir sur des prestataires tiers et non choisis déforcée ; •     les missions de conception sont rémunérées au pourcentage sur le montant des travaux par discipline. Dans le cadre d’une enveloppe budgétaire globale, il n’est pas rare, en cours d’études, de devoir ajuster le poids relatif de chaque compétence afin de respecter",
+          "municipalReference": null,
+          "municipalSection": null,
+          "municipalEvidence": [
+            {
+              "page": 2,
+              "excerpt": "•     la mission d’auteur de projet suppose la coordination par celui-ci de plusieurs compétences en vue d’assurer la bonne exécution du marché. Si le marché était divisé en lots, l’opérateur chargé de la coordination de ceux-ci verrait sa capacité à agir sur des prestataires tiers et non choisis déforcée ; •     les missions de conception sont rémunérées au pourcentage sur le montant des travaux par discipline. Dans le cadre d’une enveloppe budgétaire globale, il n’est pas rare, en cours d’études, de devoir ajuster le poids relatif de chaque compétence afin de respecter"
+            }
+          ],
+          "source_status": "extrait_pdf_a_verifier",
+          "sourceEvidencePage": 2,
+          "sourceEvidenceStatus": "found",
+          "sourceDocumentVersion": {
+            "documentId": "municipal-doc:a6b5af989fc0b79d2e",
+            "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f",
+            "checkedAt": "2026-11-06T16:56:33.929Z",
+            "changedAt": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "local:499093c946a97c9d6670",
+      "title": "approuver le cahier des charges n° HERON-2026-010 LW et le montant estimé du marché de services relatif à la désignation d’un auteur de projet pour une mission d'élaboration d’une stratégie d’intervention suivie de l’étude et du suivi de l’exécution des travau",
+      "sourceDocumentTitle": "Proces verbal 24 septembre 2026 19 30 158.6 KB",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "Article 1er : d'approuver le cahier des charges n° HERON-2026-010 LW et le montant estimé du marché de services relatif à la désignation d’un auteur de projet pour une mission d'élaboration d’une stratégie d’intervention suivie de l’étude et du suivi de l’exécution des travaux de rénovation",
+        "mission": "approuver le cahier des charges n° HERON-2026-010 LW et le montant estimé du marché de services relatif à la désignation d’un auteur de projet pour une mission d'élaboration d’une stratégie d’intervention suivie de l’étude et du suivi de l’exécution des travau",
+        "basis": "document_body"
+      },
+      "missionEvidence": {
+        "excerpt": "Article 1er : d'approuver le cahier des charges n° HERON-2026-010 LW et le montant estimé du marché de services relatif à la désignation d’un auteur de projet pour une mission d'élaboration d’une stratégie d’intervention suivie de l’étude et du suivi de l’exécution des travaux de rénovation",
+        "sourceUrl": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+        "page": 3,
+        "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f"
+      },
+      "buyer": "Commune de Héron",
+      "municipalityINS": "61028",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "DECIDE: Article 1er : d'approuver le cahier des charges n° HERON-2026-010 LW et le montant estimé du marché de services relatif à la désignation d’un auteur de projet pour une mission d'élaboration d’une stratégie d’inte",
+        "sourceUrl": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+        "page": 3,
+        "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+        "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f",
+        "session": {
+          "date": "2026-09-24",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 24 SEPTEMBRE 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.heron.be/ma-commune/vie-politique/conseil-communal/proces-verbaux/2026/proces-verbal-24-septembre-2026-19-30.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : DECIDE: Article 1er : d'approuver le cahier des charges n° HERON-2026-010 LW et le montant estimé du marché de services relatif à la désignation d’un auteur de projet pour une mission d'élaboration d’une stratégie d’intervention suivie de l’étude et du suivi de l’exécution des travaux de rénovation et d’extension des écoles communales de Surlemez et Waret-l'Evêque. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant d'honoraires estimé à ce stade (toutes tranches incluses, hors option exigée le cas échéant, hors clause",
+      "evidence": "DECIDE: Article 1er : d'approuver le cahier des charges n° HERON-2026-010 LW et le montant estimé du marché de services relatif à la désignation d’un auteur de projet pour une mission d'élaboration d’une stratégie d’intervention suivie de l’étude et du suivi de l’exécution des travaux de rénovation et d’extension des écoles communales de Surlemez et Waret-l'Evêque. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant d'honoraires estimé à ce stade (toutes tranches incluses, hors option exigée le cas échéant, hors clause",
+      "municipalReference": null,
+      "municipalSection": "DECIDE:",
+      "municipalEvidence": [
+        {
+          "page": 3,
+          "excerpt": "DECIDE: Article 1er : d'approuver le cahier des charges n° HERON-2026-010 LW et le montant estimé du marché de services relatif à la désignation d’un auteur de projet pour une mission d'élaboration d’une stratégie d’intervention suivie de l’étude et du suivi de l’exécution des travaux de rénovation et d’extension des écoles communales de Surlemez et Waret-l'Evêque. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant d'honoraires estimé à ce stade (toutes tranches incluses, hors option exigée le cas échéant, hors clause"
+        },
+        {
+          "page": 3,
+          "excerpt": "Article 1er : d'approuver le cahier des charges n° HERON-2026-010 LW et le montant estimé du marché de services relatif à la désignation d’un auteur de projet pour une mission d'élaboration d’une stratégie d’intervention suivie de l’étude et du suivi de l’exécution des travaux de rénovation et d’extension des écoles communales de Surlemez et Waret-l'Evêque. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant d'honoraires estimé à ce stade (toutes tranches incluses, hors option exigée le cas échéant, hors clause de réexamen) s'élève à 1.016.034,00 € TVAC. Le montant d'honoraires de la tranche ferme (hors option"
+        },
+        {
+          "page": 3,
+          "excerpt": "Considérant la centrale de marché par laquelle notamment les 84 communes de la Province de Liège sont autorisées à avoir recours au présent marché dans le cadre de marchés conjoints avec l’A.I.D.E ; Considérant que ce marché de services consiste en la réalisation de prestations de curage des réseaux d'égouttage de l'A.I.D.E. et des communes de la Province de Liège, en vue de l'établissement des FERI et dans le cadre de l'exploitation de leurs réseaux d'égouttage ; Considérant que les prestations de curage comprennent : •    la signalisation et la sécurisation des zones de prestations ;"
+        },
+        {
+          "page": 4,
+          "excerpt": "Considérant que les entités peuvent commander directement, au même titre que l’A.I.D.E., des marchés subséquents à l’accord-cadre ; Considérant que, pendant la durée de l’accord-cadre, le pouvoir adjudicateur attribuera les Missions (les marchés subséquents) aux participants à l’accord-cadre sans remise en concurrence, par un système de cascade ; Considérant le projet de convention d’adhésion à la centrale d’achat ; Considérant que le recours à cette centrale de marché permettrait à la commune de Héron de bénéficier"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 3,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:a6b5af989fc0b79d2e",
+        "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f",
+        "checkedAt": "2026-11-06T16:56:33.929Z",
+        "changedAt": null
+      }
+    },
+    {
+      "id": "local-html:9acfa5eef2284a809aa6",
+      "title": "Travaux. Désignation d'un auteur de projet pour la mise en oeuvre de la fiche-projet n°1 du PATO - réaménagement de la Place Saint-Remacle, de la rue du Vinâve et de la rue Général Jacques. Approbation des conditions et du mode de passation. (Marché passé par procédure négociée directe avec publication préalable)",
+      "sourceDocumentTitle": "Travaux. Désignation d'un auteur de projet pour la mise en oeuvre de la fiche-projet n°1 du PATO - réaménagement de la Place Saint-Remacle, de la rue du Vinâve et de la rue Général Jacques. Approbation des conditions et du mode de passation. (Marché passé par procédure négociée directe avec publication préalable)",
+      "missionEvidence": {
+        "excerpt": ", contre et abstentions, Statuant à l’unanimité des Membres présents. DECIDE : Art.1er : D'approuver le cahier des charges N° 20260023 et le montant estimé du marché “Désignation d'un auteur de projet pour la mise en oeuvre de la fiche-projet n°1 du PATO - réaménagement de la Place Saint-Remacle, de la rue du Vinâve et de la rue Général Jacques”, établis par le Service travaux.",
+        "sourceUrl": "https://www.deliberations.be/stavelot/decisions/22-octobre-2026-20-00/travaux-designation-dun-auteur-de-projet-pour-la-mise-en-oeuvre-de-la-fiche-projet-ndeg1-du-pato-reamenagement-de-la-place-saint-remacle-de-la-rue-du-vinave-et-de-la-rue-general-jacques-approbation-des-conditions-et-du-mode-de-passation-marche-passe-par",
+        "page": null,
+        "sha256": "2032338f5bb6977fb6ba2484d889f423ae14ba2a86d5b18cade58299bd4fe873"
+      },
+      "buyer": "Commune de Stavelot",
+      "municipalityINS": "63073",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": ", contre et abstentions, Statuant à l’unanimité des Membres présents. DECIDE : Art.1er : D'approuver le cahier des charges N° 20260023 et le montant estimé du marché “Désignation d'un auteur de projet pour la mise en oeuvre de la fiche-projet n°1 du PATO - réaménagement de la Place Saint-Remacle, de la rue du Vinâve et de la rue Général Jacques”, établis par le Service travaux.",
+        "mission": "DECIDE : Art.1er : D'approuver le cahier des charges N° 20260023 et le montant estimé du marché “Désignation d'un auteur de projet pour la mise en oeuvre de la fiche-projet n°1 du PATO - réaménagement de la Place Saint-Remacle, de la rue du Vinâve et de la rue",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "screening": "review",
+      "score": 60,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/stavelot/decisions/22-octobre-2026-20-00/travaux-designation-dun-auteur-de-projet-pour-la-mise-en-oeuvre-de-la-fiche-projet-ndeg1-du-pato-reamenagement-de-la-place-saint-remacle-de-la-rue-du-vinave-et-de-la-rue-general-jacques-approbation-des-conditions-et-du-mode-de-passation-marche-passe-par",
+      "sourceDocument": "https://www.deliberations.be/stavelot/decisions/22-octobre-2026-20-00/travaux-designation-dun-auteur-de-projet-pour-la-mise-en-oeuvre-de-la-fiche-projet-ndeg1-du-pato-reamenagement-de-la-place-saint-remacle-de-la-rue-du-vinave-et-de-la-rue-general-jacques-approbation-des-conditions-et-du-mode-de-passation-marche-passe-par",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/stavelot/decisions/22-octobre-2026-20-00/travaux-designation-dun-auteur-de-projet-pour-la-mise-en-oeuvre-de-la-fiche-projet-ndeg1-du-pato-reamenagement-de-la-place-saint-remacle-de-la-rue-du-vinave-et-de-la-rue-general-jacques-approbation-des-conditions-et-du-mode-de-passation-marche-passe-par",
+        "sha256": "2032338f5bb6977fb6ba2484d889f423ae14ba2a86d5b18cade58299bd4fe873",
+        "session": {
+          "date": "2026-10-22",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 22 octobre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/stavelot/decisions/22-octobre-2026-20-00/travaux-designation-dun-auteur-de-projet-pour-la-mise-en-oeuvre-de-la-fiche-projet-ndeg1-du-pato-reamenagement-de-la-place-saint-remacle-de-la-rue-du-vinave-et-de-la-rue-general-jacques-approbation-des-conditions-et-du-mode-de-passation-marche-passe-par"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:af43d8c6cbff3278eb",
+        "sha256": "2032338f5bb6977fb6ba2484d889f423ae14ba2a86d5b18cade58299bd4fe873",
+        "format": "html",
+        "checkedAt": "2026-11-06T16:56:33.929Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Travaux. Désignation d'un auteur de projet pour la mise en oeuvre de la fiche-projet n°1 du PATO - réaménagement de la Place Saint-Remacle, de la rue du Vinâve et de la rue Général Jacques. Approbation des conditions et",
+        "sourceUrl": "https://www.deliberations.be/stavelot/decisions/22-octobre-2026-20-00/travaux-designation-dun-auteur-de-projet-pour-la-mise-en-oeuvre-de-la-fiche-projet-ndeg1-du-pato-reamenagement-de-la-place-saint-remacle-de-la-rue-du-vinave-et-de-la-rue-general-jacques-approbation-des-conditions-et-du-mode-de-passation-marche-passe-par",
+        "page": null,
+        "sha256": "2032338f5bb6977fb6ba2484d889f423ae14ba2a86d5b18cade58299bd4fe873"
+      },
+      "description": "Travaux. Désignation d'un auteur de projet pour la mise en oeuvre de la fiche-projet n°1 du PATO - réaménagement de la Place Saint-Remacle, de la rue du Vinâve et de la rue Général Jacques. Approbation des conditions et du mode de passation. (Marché passé par procédure négociée directe avec publication préalable) 22 Séance publique du Conseil 22 octobre 2026 (20:00) Point N°",
+      "evidence": "Travaux. Désignation d'un auteur de projet pour la mise en oeuvre de la fiche-projet n°1 du PATO - réaménagement de la Place Saint-Remacle, de la rue du Vinâve et de la rue Général Jacques. Approbation des conditions et du mode de passation. (Marché passé par procédure négociée directe avec publication préalable) 22 Séance publique du Conseil 22 octobre 2026 (20:00) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "Travaux. Désignation d'un auteur de projet pour la mise en oeuvre de la fiche-projet n°1 du PATO - réaménagement de la Place Saint-Remacle, de la rue du Vinâve et de la rue Général Jacques. Approbation des conditions et du mode de passation. (Marché passé par procédure négociée directe avec publication préalable) 22 Séance publique du Conseil 22 octobre 2026 (20:00) Point N°",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "20260023"
     }
   ]
 }
