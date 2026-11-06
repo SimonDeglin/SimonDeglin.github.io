@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-06T16:56:33.929Z",
+      "last_attempt": "2026-11-06T22:24:38.524Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -67,36 +67,36 @@
       "total": 261,
       "sitesRepertories": 261,
       "sitesVerifies": 261,
-      "deliberationsConnectees": 221,
+      "deliberationsConnectees": 222,
       "zones": {
         "principale": 196,
         "exterieure_provisoire": 26,
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 849,
-      "opportunities": 164,
+      "documentsRead": 865,
+      "opportunities": 165,
       "sitesChecked": 261,
       "candidatePages": 228,
-      "sourceErrors": 91,
-      "htmlDocumentsRead": 2943
+      "sourceErrors": 94,
+      "htmlDocumentsRead": 3129
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-06T16:56:33.929Z",
-      "last_success": "2026-11-06T16:56:33.929Z",
+      "last_attempt": "2026-11-06T22:24:38.524Z",
+      "last_success": "2026-11-06T22:24:38.524Z",
       "last_batch": 24,
-      "documents_checked": 56,
+      "documents_checked": 39,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 11,
+      "errors_count": 12,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 197,
+      "html_documents_read": 221,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 67,
+      "recent_municipal_signals": 68,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1621,
     "matched_current_run": 9,
-    "records": 305,
+    "records": 306,
     "review_count": 211,
     "award_notice_count": 423,
     "awarded_market_matches": 3,
@@ -24450,6 +24450,93 @@
       },
       "matchReason": "etude_urbanistique_a_qualifier",
       "screeningReason": null
+    },
+    {
+      "id": "local-html:f7e7a9bf2b1a20e0a13a",
+      "title": "marché public de Services – Schéma de Développement Communal - Approbation des conditions et du mode de passation",
+      "sourceDocumentTitle": "marché public de Services – Schéma de Développement Communal - Approbation des conditions et du mode de passation",
+      "missionEvidence": null,
+      "buyer": "Commune de Wasseiges",
+      "municipalityINS": "64075",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/wasseiges/decisions/25-aout-2026-19-30/marche-public-de-services-schema-de-developpement-communal-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "f1b900158c5c6e44bac8a3575d8347a1efd194acdb03c62eabe86dc1133f4eb4",
+        "stage": "decision_to_verify"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 46,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/wasseiges/decisions/25-aout-2026-19-30/marche-public-de-services-schema-de-developpement-communal-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/wasseiges/decisions/25-aout-2026-19-30/marche-public-de-services-schema-de-developpement-communal-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/wasseiges/decisions/25-aout-2026-19-30/marche-public-de-services-schema-de-developpement-communal-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "f1b900158c5c6e44bac8a3575d8347a1efd194acdb03c62eabe86dc1133f4eb4",
+        "session": {
+          "date": "2026-08-25",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 25 août 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/wasseiges/decisions/25-aout-2026-19-30/marche-public-de-services-schema-de-developpement-communal-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:889e566b93d633fd06",
+        "sha256": "f1b900158c5c6e44bac8a3575d8347a1efd194acdb03c62eabe86dc1133f4eb4",
+        "format": "html",
+        "checkedAt": "2026-11-06T22:24:38.524Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "marché public de Services – Schéma de Développement Communal - Approbation des conditions et du mode de passation 25 Séance publique du Conseil 25 août 2026 (19:30) Point N°",
+        "sourceUrl": "https://www.deliberations.be/wasseiges/decisions/25-aout-2026-19-30/marche-public-de-services-schema-de-developpement-communal-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "f1b900158c5c6e44bac8a3575d8347a1efd194acdb03c62eabe86dc1133f4eb4"
+      },
+      "description": "marché public de Services – Schéma de Développement Communal - Approbation des conditions et du mode de passation 25 Séance publique du Conseil 25 août 2026 (19:30) Point N°",
+      "evidence": "marché public de Services – Schéma de Développement Communal - Approbation des conditions et du mode de passation 25 Séance publique du Conseil 25 août 2026 (19:30) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "marché public de Services – Schéma de Développement Communal - Approbation des conditions et du mode de passation 25 Séance publique du Conseil 25 août 2026 (19:30) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Matière Finances marché public de Services – Schéma de Développement Communal - Approbation des conditions et du mode de passation Le Schéma de Développement Territorial (SDT) est entré en vigueur le 1er août 2024. Les communes ont 6 ans pour élaborer leur Schéma de Développement Communal (SDC). Le SDC est un document qui fixe les grandes orientations pour l’aménagement de l’ensemble d'un territoire communal. Il permet aux autorités communales de se doter d’une stratégie territoriale qui tient compte des réalités et des besoins des citoyens et aux citoyens de connaître les intentions de la commune pour le développement et l’aménagement du territoire communal. Il doit être élaboré par des auteurs de projet agréés et donne droit à un subside régional à hauteur de 75 %. Suite à l'adhésion au BEP et à la signature d'une convention pour l'aide à la maîtrise d'ouvrage, le projet de cahier des charges a été complété par les équipes du BEP, il est annexé. Pour toutes informations au sujet du SDC : https://territoire.wallonie.be/fr/page/schema-de-developpement-communal - Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; - Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recou",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026/60"
     }
   ]
 }
