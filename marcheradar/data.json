@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-07T11:45:39.258Z",
+  "generated_at": "2026-11-07T20:15:25.725Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
   "note": "TED interrogé le 2026-11-07 : 1484 avis lus, 3 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-11-07T11:47:29.996Z",
+      "last_success": "2026-11-07T20:16:54.019Z",
       "scanned": 2125,
       "retained": 33,
       "period_from": "2026-10-24",
@@ -16,13 +16,13 @@
       "complete": true,
       "raw_candidates": 2111,
       "oldest_seen": "2026-10-23",
-      "last_attempt": "2026-11-07T11:47:29.996Z",
+      "last_attempt": "2026-11-07T20:16:54.019Z",
       "last_error": null,
-      "last_complete_success": "2026-11-07T11:47:29.996Z"
+      "last_complete_success": "2026-11-07T20:16:54.019Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-11-07T11:49:05.530Z",
+      "last_success": "2026-11-07T20:19:21.015Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -111,7 +111,7 @@
     "scanned": 1484,
     "matched_current_run": 8,
     "records": 317,
-    "review_count": 216,
+    "review_count": 223,
     "award_notice_count": 396,
     "awarded_market_matches": 3,
     "award_fields_requested": false,
@@ -171,15 +171,15 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "acheteur_flamand": 167,
+      "acheteur_flamand": 165,
       "avis_attribution_analyse_separement": 396,
       "avis_neerlandais": 173,
-      "travaux_execution": 121,
-      "aucun_signal_metier": 453,
+      "travaux_execution": 123,
+      "aucun_signal_metier": 454,
       "formule_administrative_sans_signal_metier": 18,
-      "objet_hors_domaine": 68,
-      "fournitures_et_location": 52,
+      "objet_hors_domaine": 67,
       "assurance_ou_nettoyage": 20,
+      "fournitures_et_location": 52,
       "qualifie_review": 14,
       "qualifie_main": 2
     }
@@ -11877,6 +11877,105 @@
       "screeningReason": null
     },
     {
+      "id": "local-html:b32c1d4d2fdebb1dc40a",
+      "title": "IPFBW - Convention de coopération relative à l'organisation d'une centrale d'achat dans le cadre d'un marché de certification PEB et audits énergétiques UREBA, certification CertIBEau, mission responsabilité PEB - Pour approbation",
+      "sourceDocumentTitle": "IPFBW - Convention de coopération relative à l'organisation d'une centrale d'achat dans le cadre d'un marché de certification PEB et audits énergétiques UREBA, certification CertIBEau, mission responsabilité PEB - Pour approbation",
+      "missionEvidence": {
+        "excerpt": "sponsabilité PEB - Pour approbation Description Dans le cadre de la relance du marché de services de l'IPFBW via centrale d'achat concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau et la mission de responsabilité PE",
+        "sourceUrl": "https://www.deliberations.be/ottignies-louvain-la-neuve/decisions/02-novembre-2026-20-15/ipfbw-convention-de-cooperation-relative-a-lorganisation-dune-centrale-dachat-dans-le-cadre-dun-marche-de-certification-peb-et-audits-energetiques-ureba-certification-certibeau-mission-responsabilite-peb-pour-approbation",
+        "page": null,
+        "sha256": "34fc15aead4a454060d80ff921ffce5381837bce77c26e07f8c423e6e161e0e5"
+      },
+      "buyer": "Commune de Ottignies-Louvain-la-Neuve",
+      "municipalityINS": "25121",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "sponsabilité PEB - Pour approbation Description Dans le cadre de la relance du marché de services de l'IPFBW via centrale d'achat concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau et la mission de responsabilité PE",
+        "mission": "lance du marché de services de l'IPFBW via centrale d'achat concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau et la mission de responsabilité PEB, il y a lieu d'approuver la convention de coopérati",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "screening": "review",
+      "score": 95,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/ottignies-louvain-la-neuve/decisions/02-novembre-2026-20-15/ipfbw-convention-de-cooperation-relative-a-lorganisation-dune-centrale-dachat-dans-le-cadre-dun-marche-de-certification-peb-et-audits-energetiques-ureba-certification-certibeau-mission-responsabilite-peb-pour-approbation",
+      "sourceDocument": "https://www.deliberations.be/ottignies-louvain-la-neuve/decisions/02-novembre-2026-20-15/ipfbw-convention-de-cooperation-relative-a-lorganisation-dune-centrale-dachat-dans-le-cadre-dun-marche-de-certification-peb-et-audits-energetiques-ureba-certification-certibeau-mission-responsabilite-peb-pour-approbation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/ottignies-louvain-la-neuve/decisions/02-novembre-2026-20-15/ipfbw-convention-de-cooperation-relative-a-lorganisation-dune-centrale-dachat-dans-le-cadre-dun-marche-de-certification-peb-et-audits-energetiques-ureba-certification-certibeau-mission-responsabilite-peb-pour-approbation",
+        "sha256": "34fc15aead4a454060d80ff921ffce5381837bce77c26e07f8c423e6e161e0e5",
+        "session": {
+          "date": "2026-11-02",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 02 novembre 2026 (20:15)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/ottignies-louvain-la-neuve/decisions/02-novembre-2026-20-15/ipfbw-convention-de-cooperation-relative-a-lorganisation-dune-centrale-dachat-dans-le-cadre-dun-marche-de-certification-peb-et-audits-energetiques-ureba-certification-certibeau-mission-responsabilite-peb-pour-approbation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:485a65ee0548bfa6db",
+        "sha256": "34fc15aead4a454060d80ff921ffce5381837bce77c26e07f8c423e6e161e0e5",
+        "format": "html",
+        "checkedAt": "2026-11-07T15:56:03.513Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Sur proposition du Collège communal, DECIDE A L'UNANIMITE : D'approuver le cahier spécial des charges établi par l'IPFBW relatif à l'organisation d'une centrale d'achats pour le marché concernant la certification PEB des",
+        "sourceUrl": "https://www.deliberations.be/ottignies-louvain-la-neuve/decisions/02-novembre-2026-20-15/ipfbw-convention-de-cooperation-relative-a-lorganisation-dune-centrale-dachat-dans-le-cadre-dun-marche-de-certification-peb-et-audits-energetiques-ureba-certification-certibeau-mission-responsabilite-peb-pour-approbation",
+        "page": null,
+        "sha256": "34fc15aead4a454060d80ff921ffce5381837bce77c26e07f8c423e6e161e0e5"
+      },
+      "description": "Sur proposition du Collège communal, DECIDE A L'UNANIMITE : D'approuver le cahier spécial des charges établi par l'IPFBW relatif à l'organisation d'une centrale d'achats pour le marché concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau ainsi que la mission de responsabilité PEB. D'approuver la convention de coopération entre la S.C.R.L. IPFBW, association intercommunale coopérative, inscrite auprès de la Banque carrefour des entreprises sous le n° 206.041.757, dont le siège social est établi à 1348 Louvain-La-Neuve, avenue Jean Monnet, 2, et la Ville d'Ottignies-Louvain-la-Neuve, inscrite auprès de la Banque carrefour des entreprises sous le numéro 0216.689.98, dont les bureaux sont situés à 1340 Ottignies-Louvain-la-Neuve, avenue des Combattants, 35. Cette convention de coopération, définissant la mission confiée par la Ville à l'IPFBW ainsi que les modalités de la coopération entre la Ville et l'IPFBW dans le cadre de cette mission, est définie ci-dessous : CONVENTION DE COOPÉRATION RELATIVE A L’ORGANISATION D’UN ACHAT GROUPE DANS LE CADRE D’UN MARCHE de certification PEB, audits énergétiques, certification CertIBeau, mission responsabilité PEB",
+      "evidence": "Sur proposition du Collège communal, DECIDE A L'UNANIMITE : D'approuver le cahier spécial des charges établi par l'IPFBW relatif à l'organisation d'une centrale d'achats pour le marché concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau ainsi que la mission de responsabilité PEB. D'approuver la convention de coopération entre la S.C.R.L. IPFBW, association intercommunale coopérative, inscrite auprès de la Banque carrefour des entreprises sous le n° 206.041.757, dont le siège social est établi à 1348 Louvain-La-Neuve, avenue Jean Monnet, 2, et la Ville d'Ottignies-Louvain-la-Neuve, inscrite auprès de la Banque carrefour des entreprises sous le numéro 0216.689.98, dont les bureaux sont situés à 1340 Ottignies-Louvain-la-Neuve, avenue des Combattants, 35. Cette convention de coopération, définissant la mission confiée par la Ville à l'IPFBW ainsi que les modalités de la coopération entre la Ville et l'IPFBW dans le cadre de cette mission, est définie ci-dessous : CONVENTION DE COOPÉRATION RELATIVE A L’ORGANISATION D’UN ACHAT GROUPE DANS LE CADRE D’UN MARCHE de certification PEB, audits énergétiques, certification CertIBeau, mission responsabilité PEB",
+      "municipalEvidence": [
+        {
+          "excerpt": "Sur proposition du Collège communal, DECIDE A L'UNANIMITE : D'approuver le cahier spécial des charges établi par l'IPFBW relatif à l'organisation d'une centrale d'achats pour le marché concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau ainsi que la mission de responsabilité PEB. D'approuver la convention de coopération entre la S.C.R.L. IPFBW, association intercommunale coopérative, inscrite auprès de la Banque carrefour des entreprises sous le n° 206.041.757, dont le siège social est établi à 1348 Louvain-La-Neuve, avenue Jean Monnet, 2, et la Ville d'Ottignies-Louvain-la-Neuve, inscrite auprès de la Banque carrefour des entreprises sous le numéro 0216.689.98, dont les bureaux sont situés à 1340 Ottignies-Louvain-la-Neuve, avenue des Combattants, 35. Cette convention de coopération, définissant la mission confiée par la Ville à l'IPFBW ainsi que les modalités de la coopération entre la Ville et l'IPFBW dans le cadre de cette mission, est définie ci-dessous : CONVENTION DE COOPÉRATION RELATIVE A L’ORGANISATION D’UN ACHAT GROUPE DANS LE CADRE D’UN MARCHE de certification PEB, audits énergétiques, certification CertIBeau, mission responsabilité PEB",
+          "page": null
+        },
+        {
+          "excerpt": "DECIDE A L'UNANIMITE : D'approuver le cahier spécial des charges établi par l'IPFBW relatif à l'organisation d'une centrale d'achats pour le marché concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau ainsi que la mission de responsabilité PEB. D'approuver la convention de coopération entre la S.C.R.L. IPFBW, association intercommunale coopérative, inscrite auprès de la Banque carrefour des entreprises sous le n° 206.041.757, dont le siège social est établi à 1348 Louvain-La-Neuve, avenue Jean Monnet, 2, et la Ville d'Ottignies-Louvain-la-Neuve, inscrite auprès de la Banque carrefour des entreprises sous le numéro 0216.689.98, dont les bureaux sont situés à 1340 Ottignies-Louvain-la-Neuve, avenue des Combattants, 35. Cette convention de coopération, définissant la mission confiée par la Ville à l'IPFBW ainsi que les modalités de la coopération entre la Ville et l'IPFBW dans le cadre de cette mission, est définie ci-dessous : CONVENTION DE COOPÉRATION RELATIVE A L’ORGANISATION D’UN ACHAT GROUPE DANS LE CADRE D’UN MARCHE de certification PEB, audits énergétiques, certification CertIBeau, mission responsabilité PEB",
+          "page": null
+        },
+        {
+          "excerpt": "D'approuver le cahier spécial des charges établi par l'IPFBW relatif à l'organisation d'une centrale d'achats pour le marché concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau ainsi que la mission de responsabilité PEB. D'approuver la convention de coopération entre la S.C.R.L. IPFBW, association intercommunale coopérative, inscrite auprès de la Banque carrefour des entreprises sous le n° 206.041.757, dont le siège social est établi à 1348 Louvain-La-Neuve, avenue Jean Monnet, 2, et la Ville d'Ottignies-Louvain-la-Neuve, inscrite auprès de la Banque carrefour des entreprises sous le numéro 0216.689.98, dont les bureaux sont situés à 1340 Ottignies-Louvain-la-Neuve, avenue des Combattants, 35. Cette convention de coopération, définissant la mission confiée par la Ville à l'IPFBW ainsi que les modalités de la coopération entre la Ville et l'IPFBW dans le cadre de cette mission, est définie ci-dessous : CONVENTION DE COOPÉRATION RELATIVE A L’ORGANISATION D’UN ACHAT GROUPE DANS LE CADRE D’UN MARCHE de certification PEB, audits énergétiques, certification CertIBeau, mission responsabilité PEB",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. IPFBW - Convention de coopération relative à l'organisation d'une centrale d'achat dans le cadre d'un marché de certification PEB et audits énergétiques UREBA, certification CertIBEau, mission responsabilité PEB - Pour approbation Description Dans le cadre de la relance du marché de services de l'IPFBW via centrale d'achat concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau et la mission de responsabilité PEB, il y a lieu d'approuver la convention de coopération pour l'affiliation de la Ville à ce marché Délibération Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment les articles L1122-30 et 1222-7 relatifs aux compétences du Conseil communal,",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "prestation_decrite",
+      "screeningReason": null
+    },
+    {
       "id": "local-html:12db5ef323e5da8c63d6",
       "title": "Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX-EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\"",
       "buyer": "Commune de Arlon",
@@ -20713,6 +20812,276 @@
       "screeningReason": null
     },
     {
+      "id": "local-html:1411020db566fd122044",
+      "title": "APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont",
+      "sourceDocumentTitle": "PROGRAMMATION FEDER 2021-2027.- MESURE 8 : RÉNOVATION ÉNERGÉTIQUE DES BÂTIMENTS PUBLICS RÉGIONAUX ET LOCAUX.- PORTEFEUILLE « ZÉRO CARBONE BY CHARLEROI MÉTROPOLE » RÉHABILITATION DE LA TOUR DU ROTON.- RELANCE DU LOT 2 « TECHNIQUES SPÉCIALES ».- MARCHE DE TRAVAUX.- DÉFINITION DU MODE ET DES CONDITIONS DU MARCHE.- APPROBATION S'IL Y A LIEU.- IMPUTATION DE LA DÉPENSE.- DÉCISIONS À PRENDRE.-",
+      "missionEvidence": {
+        "excerpt": "- D’APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont le coût est estim",
+        "sourceUrl": "https://www.deliberations.be/farciennes/decisions/07-octobre-2026-18-00/programmation-feder-2021-2027-mesure-8-renovation-energetique-des-batiments-publics-regionaux-et-locaux-portefeuille-zero-carbone-by-charleroi-metropole-rehabilitation-de-la-tour-du-roton-relance-du-lot-2-techniques-speciales-marche-de-travaux-definition",
+        "page": null,
+        "sha256": "0731067e6c57dba870e60e2ea23417e7915155df51d6ab3f18d394aa4d11f918"
+      },
+      "buyer": "Commune de Farciennes",
+      "municipalityINS": "52018",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "- D’APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont le coût est estim",
+        "mission": "APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont",
+        "basis": "document_body"
+      },
+      "noticeKind": "other",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/farciennes/decisions/07-octobre-2026-18-00/programmation-feder-2021-2027-mesure-8-renovation-energetique-des-batiments-publics-regionaux-et-locaux-portefeuille-zero-carbone-by-charleroi-metropole-rehabilitation-de-la-tour-du-roton-relance-du-lot-2-techniques-speciales-marche-de-travaux-definition",
+      "sourceDocument": "https://www.deliberations.be/farciennes/decisions/07-octobre-2026-18-00/programmation-feder-2021-2027-mesure-8-renovation-energetique-des-batiments-publics-regionaux-et-locaux-portefeuille-zero-carbone-by-charleroi-metropole-rehabilitation-de-la-tour-du-roton-relance-du-lot-2-techniques-speciales-marche-de-travaux-definition",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/farciennes/decisions/07-octobre-2026-18-00/programmation-feder-2021-2027-mesure-8-renovation-energetique-des-batiments-publics-regionaux-et-locaux-portefeuille-zero-carbone-by-charleroi-metropole-rehabilitation-de-la-tour-du-roton-relance-du-lot-2-techniques-speciales-marche-de-travaux-definition",
+        "sha256": "0731067e6c57dba870e60e2ea23417e7915155df51d6ab3f18d394aa4d11f918",
+        "session": {
+          "date": "2026-11-04",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 04 novembre 2026 (18:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/farciennes/decisions/07-octobre-2026-18-00/programmation-feder-2021-2027-mesure-8-renovation-energetique-des-batiments-publics-regionaux-et-locaux-portefeuille-zero-carbone-by-charleroi-metropole-rehabilitation-de-la-tour-du-roton-relance-du-lot-2-techniques-speciales-marche-de-travaux-definition"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:eec3ff183ee809d88d",
+        "sha256": "0731067e6c57dba870e60e2ea23417e7915155df51d6ab3f18d394aa4d11f918",
+        "format": "html",
+        "checkedAt": "2026-11-07T15:56:03.513Z"
+      },
+      "webTypeEvidence": {
+        "kind": "other",
+        "reason": "projet_de_mission_a_operateur_determine",
+        "excerpt": "VU l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; VU la décision du Conseil Communal du 30 mai 2023 décidant notamment : - D’APP",
+        "sourceUrl": "https://www.deliberations.be/farciennes/decisions/07-octobre-2026-18-00/programmation-feder-2021-2027-mesure-8-renovation-energetique-des-batiments-publics-regionaux-et-locaux-portefeuille-zero-carbone-by-charleroi-metropole-rehabilitation-de-la-tour-du-roton-relance-du-lot-2-techniques-speciales-marche-de-travaux-definition",
+        "page": null,
+        "sha256": "0731067e6c57dba870e60e2ea23417e7915155df51d6ab3f18d394aa4d11f918"
+      },
+      "description": "VU l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; VU la décision du Conseil Communal du 30 mai 2023 décidant notamment : - D’APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont le coût est estimé à 342.230,58 € HTVA, soit 414.099,00 € TVAC hors options ; - D’APPROUVER les conditions du contrat sollicité par la Commune de Farciennes et transmis par I.G.R.E.T.E.C et reprenant pour la mission : l’objet de la mission, la description de la mission, les délais entre la commande du Commune et le début de la mission et les taux d’honoraires ; - DE CHARGER le Collège communal de la signature du(des) contrat(s) spécifique(s) au projet à mettre en œuvre, de l’exécution de la présente délibération, du suivi et des ordres de mission à délivrer ainsi que de la budgétisation des dépenses afférentes aux missions confiées à I.G.R.E.T.E.C. ; VU la décision du Collège Communal du 17 juillet 2023 décidant notamment : - D’APPROUVER et d’attribuer la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux ",
+      "evidence": "VU l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; VU la décision du Conseil Communal du 30 mai 2023 décidant notamment : - D’APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont le coût est estimé à 342.230,58 € HTVA, soit 414.099,00 € TVAC hors options ; - D’APPROUVER les conditions du contrat sollicité par la Commune de Farciennes et transmis par I.G.R.E.T.E.C et reprenant pour la mission : l’objet de la mission, la description de la mission, les délais entre la commande du Commune et le début de la mission et les taux d’honoraires ; - DE CHARGER le Collège communal de la signature du(des) contrat(s) spécifique(s) au projet à mettre en œuvre, de l’exécution de la présente délibération, du suivi et des ordres de mission à délivrer ainsi que de la budgétisation des dépenses afférentes aux missions confiées à I.G.R.E.T.E.C. ; VU la décision du Collège Communal du 17 juillet 2023 décidant notamment : - D’APPROUVER et d’attribuer la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux ",
+      "municipalEvidence": [
+        {
+          "excerpt": "VU l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; VU la décision du Conseil Communal du 30 mai 2023 décidant notamment : - D’APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont le coût est estimé à 342.230,58 € HTVA, soit 414.099,00 € TVAC hors options ; - D’APPROUVER les conditions du contrat sollicité par la Commune de Farciennes et transmis par I.G.R.E.T.E.C et reprenant pour la mission : l’objet de la mission, la description de la mission, les délais entre la commande du Commune et le début de la mission et les taux d’honoraires ; - DE CHARGER le Collège communal de la signature du(des) contrat(s) spécifique(s) au projet à mettre en œuvre, de l’exécution de la présente délibération, du suivi et des ordres de mission à délivrer ainsi que de la budgétisation des dépenses afférentes aux missions confiées à I.G.R.E.T.E.C. ; VU la décision du Collège Communal du 17 juillet 2023 décidant notamment : - D’APPROUVER et d’attribuer la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux ",
+          "page": null
+        },
+        {
+          "excerpt": "VU la décision du Conseil Communal du 30 mai 2023 décidant notamment : - D’APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont le coût est estimé à 342.230,58 € HTVA, soit 414.099,00 € TVAC hors options ; - D’APPROUVER les conditions du contrat sollicité par la Commune de Farciennes et transmis par I.G.R.E.T.E.C et reprenant pour la mission : l’objet de la mission, la description de la mission, les délais entre la commande du Commune et le début de la mission et les taux d’honoraires ; - DE CHARGER le Collège communal de la signature du(des) contrat(s) spécifique(s) au projet à mettre en œuvre, de l’exécution de la présente délibération, du suivi et des ordres de mission à délivrer ainsi que de la budgétisation des dépenses afférentes aux missions confiées à I.G.R.E.T.E.C. ; VU la décision du Collège Communal du 17 juillet 2023 décidant notamment : - D’APPROUVER et d’attribuer la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton à I.G.R.E.T.E.C., association de communes, société coopérative, Boulevard Mayence, 1 à 6000 Charleroi dans le cadr",
+          "page": null
+        },
+        {
+          "excerpt": "- D’APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont le coût est estimé à 342.230,58 € HTVA, soit 414.099,00 € TVAC hors options ; - D’APPROUVER les conditions du contrat sollicité par la Commune de Farciennes et transmis par I.G.R.E.T.E.C et reprenant pour la mission : l’objet de la mission, la description de la mission, les délais entre la commande du Commune et le début de la mission et les taux d’honoraires ; - DE CHARGER le Collège communal de la signature du(des) contrat(s) spécifique(s) au projet à mettre en œuvre, de l’exécution de la présente délibération, du suivi et des ordres de mission à délivrer ainsi que de la budgétisation des dépenses afférentes aux missions confiées à I.G.R.E.T.E.C. ; VU la décision du Collège Communal du 17 juillet 2023 décidant notamment : - D’APPROUVER et d’attribuer la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton à I.G.R.E.T.E.C., association de communes, société coopérative, Boulevard Mayence, 1 à 6000 Charleroi dans le cadre de la relation « in house », pour le montant estimé de 342.230,58 € H",
+          "page": null
+        },
+        {
+          "excerpt": "- DE CHARGER le Collège communal de la signature du(des) contrat(s) spécifique(s) au projet à mettre en œuvre, de l’exécution de la présente délibération, du suivi et des ordres de mission à délivrer ainsi que de la budgétisation des dépenses afférentes aux missions confiées à I.G.R.E.T.E.C. ; VU la décision du Collège Communal du 17 juillet 2023 décidant notamment : - D’APPROUVER et d’attribuer la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton à I.G.R.E.T.E.C., association de communes, société coopérative, Boulevard Mayence, 1 à 6000 Charleroi dans le cadre de la relation « in house », pour le montant estimé de 342.230,58 € HTVA, soit 414.099,00 € TVAC hors options ; - D’APPROUVER et D’ATTRIBUER, dans le cadre de ce dossier, à I.G.R.E.T.E.C. association de communes, société coopérative, Boulevard Mayence, 1 à 6000 Charleroi dans le cadre de la relation « in house », les options suivantes : Encodage FEDER, estimée à 3.000,00 € HTVA soit 3.630,00 € TVAC/trimestre ; Organisation des comités de pilotage, estimée à 3.000,00 € HTVA soit 3.630,00 € TVAC/semestre ; Ce qui représente pour les deux options : 18.000,00 € HTVA – 21.780,00 € TVAC/an ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local:d3f9955c2e0e5f8af38f",
+      "title": "51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre- Dame des Grâces à 6230 Pont-à-Celles - Approbation du choix de mode de passation, du cahier spécial des charges et des conditions - Décision",
+      "sourceDocumentTitle": "12/10/2026",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Pont-à-Celles",
+      "municipalityINS": "52055",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre- Dame des Grâces à 6",
+        "sourceUrl": "https://www.pontacelles.be/wp-content/uploads/2026/10/261012-OJ-CC.pdf",
+        "page": 4,
+        "sha256": "7046e33cf93f8b706591854d2bc59e3c6f8a2481658ce3e47a1f02bdee430678"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.pontacelles.be/wp-content/uploads/2026/10/261012-OJ-CC.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.pontacelles.be/wp-content/uploads/2026/10/261012-OJ-CC.pdf",
+        "sha256": "7046e33cf93f8b706591854d2bc59e3c6f8a2481658ce3e47a1f02bdee430678",
+        "session": {
+          "date": "2026-10-12",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "CONSEIL COMMUNAL DU 12 OCTOBRE 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.pontacelles.be/wp-content/uploads/2026/10/261012-OJ-CC.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre- Dame des Grâces à 6230 Pont-à-Celles - Approbation du choix de mode de passation, du cahier spécial des charges et des conditions - Décision",
+      "evidence": "51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre- Dame des Grâces à 6230 Pont-à-Celles - Approbation du choix de mode de passation, du cahier spécial des charges et des conditions - Décision",
+      "municipalReference": null,
+      "municipalSection": "51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre- Dame des Grâces à 6230 Pont-à-Celles - Approbation du choix de mode de passation, du cahier spécial des charges et des conditions - Décision",
+      "municipalEvidence": [
+        {
+          "page": 4,
+          "excerpt": "51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre- Dame des Grâces à 6230 Pont-à-Celles - Approbation du choix de mode de passation, du cahier spécial des charges et des conditions - Décision"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 4,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:017bb98a96b046bd9d",
+        "sha256": "7046e33cf93f8b706591854d2bc59e3c6f8a2481658ce3e47a1f02bdee430678",
+        "checkedAt": "2026-11-07T15:56:03.513Z",
+        "changedAt": null
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local:186a2d389b4a60da558e",
+      "title": "Consultez l'ordre du jour de la séance du lundi 16 novembre 2026",
+      "sourceDocumentTitle": "Consultez l'ordre du jour de la séance du lundi 16 novembre 2026",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Waterloo",
+      "municipalityINS": "25110",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Approbation. Cellule commandes publiques - Régie Communale Ordinaire (RCO) - Désignation d'un auteur de projet dans le cadre de l'aménagement de terrains synthétiques sur le site de Joli-Bois - Choix du mode de passation",
+        "sourceUrl": "https://www.waterloo.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/oj-conseil-16-11-1.pdf",
+        "page": 1,
+        "sha256": "dd6339af25a56565e33e37ddf0ec0e7ac403b43d8634ff419f900b4ae6e29c76"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.waterloo.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/oj-conseil-16-11-1.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.waterloo.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/oj-conseil-16-11-1.pdf",
+        "sha256": "dd6339af25a56565e33e37ddf0ec0e7ac403b43d8634ff419f900b4ae6e29c76",
+        "session": {
+          "date": "2026-11-16",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "séance du CONSEIL COMMUNAL qui se tiendra le 16/11/2026",
+          "confidence": "ocr"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "ocr",
+        "language": "fra+eng",
+        "pagesRead": 6,
+        "totalPages": 15,
+        "partial": true
+      },
+      "url": "https://www.waterloo.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/oj-conseil-16-11-1.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Approbation. Cellule commandes publiques - Régie Communale Ordinaire (RCO) - Désignation d'un auteur de projet dans le cadre de l'aménagement de terrains synthétiques sur le site de Joli-Bois - Choix du mode de passation et fixation des conditions du marché. Finances - Commune de Waterloo - Modifications",
+      "evidence": "Approbation. Cellule commandes publiques - Régie Communale Ordinaire (RCO) - Désignation d'un auteur de projet dans le cadre de l'aménagement de terrains synthétiques sur le site de Joli-Bois - Choix du mode de passation et fixation des conditions du marché. Finances - Commune de Waterloo - Modifications",
+      "municipalReference": null,
+      "municipalSection": null,
+      "municipalEvidence": [
+        {
+          "page": 1,
+          "excerpt": "Approbation. Cellule commandes publiques - Régie Communale Ordinaire (RCO) - Désignation d'un auteur de projet dans le cadre de l'aménagement de terrains synthétiques sur le site de Joli-Bois - Choix du mode de passation et fixation des conditions du marché. Finances - Commune de Waterloo - Modifications"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 1,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:8bbe33650a8cdfc2a5",
+        "sha256": "dd6339af25a56565e33e37ddf0ec0e7ac403b43d8634ff419f900b4ae6e29c76",
+        "checkedAt": "2026-11-07T15:56:03.513Z",
+        "changedAt": null
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
       "id": "communal:c3599ff87890bfb78368",
       "title": "Prospection · Beyne-Heusay · 17) Règlement complémentaire de roulage - Création d’un emplacement de stationnement pour personnes handicapées - Plac…",
       "buyer": "Commune de Beyne-Heusay",
@@ -24128,6 +24497,279 @@
       "screeningReason": null
     },
     {
+      "id": "local-html:59876981a989094edfde",
+      "title": "Accord-cadre 2026 2027 : Entretien et réparation des égouts communaux",
+      "sourceDocumentTitle": "Marchés publics : Accord-cadre 2026 2027 : Entretien et réparation des égouts communaux (ID1641) APPROBATION DES CONDITIONS ET DU MODE DE PASSATION",
+      "missionEvidence": {
+        "excerpt": "A l’unanimité ; DÉCIDE Article 1er : d'approuver le cahier des charges N° 20261641 et le montant estimé du marché “Accord-cadre 2026 2027 : Entretien et réparation des égouts communaux”, établis par le Bureau d'études. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 86.599,17 € hors TVA ou 104.",
+        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-accord-cadre-2026-2027-entretien-et-reparation-des-egouts-communaux-id1641-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "122a55e06a1313ee836093750190d4d52a47bea186c3921346a3e6334a670986"
+      },
+      "buyer": "Commune de Gerpinnes",
+      "municipalityINS": "52025",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-accord-cadre-2026-2027-entretien-et-reparation-des-egouts-communaux-id1641-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "122a55e06a1313ee836093750190d4d52a47bea186c3921346a3e6334a670986",
+        "stage": "project"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "A l’unanimité ; DÉCIDE Article 1er : d'approuver le cahier des charges N° 20261641 et le montant estimé du marché “Accord-cadre 2026 2027 : Entretien et réparation des égouts communaux”, établis par le Bureau d'études. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 86.599,17 € hors TVA ou 104.",
+        "mission": "approuver le cahier des charges N° 20261641 et le montant estimé du marché “Accord-cadre 2026 2027 : Entretien et réparation des égouts communaux”, établis par le Bureau d'études.",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "screening": "review",
+      "score": 49,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-accord-cadre-2026-2027-entretien-et-reparation-des-egouts-communaux-id1641-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-accord-cadre-2026-2027-entretien-et-reparation-des-egouts-communaux-id1641-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-accord-cadre-2026-2027-entretien-et-reparation-des-egouts-communaux-id1641-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "122a55e06a1313ee836093750190d4d52a47bea186c3921346a3e6334a670986",
+        "session": {
+          "date": "2026-10-20",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 20 octobre 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-accord-cadre-2026-2027-entretien-et-reparation-des-egouts-communaux-id1641-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:0c3c28d7f422dcbd82",
+        "sha256": "122a55e06a1313ee836093750190d4d52a47bea186c3921346a3e6334a670986",
+        "format": "html",
+        "checkedAt": "2026-11-07T15:56:03.513Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Vu l'Arrêté Royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'Arrêté Royal du 18 avril 2017 relatif à la passation des marchés publics dans",
+        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-accord-cadre-2026-2027-entretien-et-reparation-des-egouts-communaux-id1641-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "122a55e06a1313ee836093750190d4d52a47bea186c3921346a3e6334a670986"
+      },
+      "description": "Vu l'Arrêté Royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'Arrêté Royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 20261641 relatif au marché “Accord-cadre 2026 2027 : Entretien et réparation des égouts communaux” établi par le Bureau d'études ; Considérant que le montant estimé de ce marché s'élève à 86.599,17 € hors TVA ou 104.785,00 €, 21% TVA comprise, et que le montant limite de commande s’élève à 139.999,99 € hors TVA ou 169.399,99 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; Considérant qu'au moment de la rédaction des conditions du présent marché, l'administration n'est pas en mesure de définir avec précision les quantités de travaux dont elle aura besoin ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 877/735-60 (n° de projet 20260029) et sera financé par emprunt ;",
+      "evidence": "Vu l'Arrêté Royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'Arrêté Royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 20261641 relatif au marché “Accord-cadre 2026 2027 : Entretien et réparation des égouts communaux” établi par le Bureau d'études ; Considérant que le montant estimé de ce marché s'élève à 86.599,17 € hors TVA ou 104.785,00 €, 21% TVA comprise, et que le montant limite de commande s’élève à 139.999,99 € hors TVA ou 169.399,99 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; Considérant qu'au moment de la rédaction des conditions du présent marché, l'administration n'est pas en mesure de définir avec précision les quantités de travaux dont elle aura besoin ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 877/735-60 (n° de projet 20260029) et sera financé par emprunt ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu l'Arrêté Royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'Arrêté Royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 20261641 relatif au marché “Accord-cadre 2026 2027 : Entretien et réparation des égouts communaux” établi par le Bureau d'études ; Considérant que le montant estimé de ce marché s'élève à 86.599,17 € hors TVA ou 104.785,00 €, 21% TVA comprise, et que le montant limite de commande s’élève à 139.999,99 € hors TVA ou 169.399,99 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; Considérant qu'au moment de la rédaction des conditions du présent marché, l'administration n'est pas en mesure de définir avec précision les quantités de travaux dont elle aura besoin ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 877/735-60 (n° de projet 20260029) et sera financé par emprunt ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "20261641",
+      "matchReason": "mission_technique_generique",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:da8c6955eb1c2fbdf3c2",
+      "title": "Développement de l'aire de jeux Place d'Hymiée",
+      "sourceDocumentTitle": "Marchés publics : Développement de l'aire de jeux Place d'Hymiée (ID1638) APPROBATION DES CONDITIONS ET DU MODE DE PASSATION",
+      "missionEvidence": {
+        "excerpt": "À l’unanimité ; DÉCIDE Article 1er : d'approuver le cahier des charges N° 20261638 et le montant estimé du marché “Développement de l'aire de jeux Place d'Hymiée”, établis par le Bureau d'études. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 73.170,00 € hors TVA ou 88.5",
+        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-developpement-de-laire-de-jeux-place-dhymiee-id1638-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "00a8e1d8a902ca7b169ca12738e84d02531cd7ebd3b6dc0c7ff3e5852dfaa1d9"
+      },
+      "buyer": "Commune de Gerpinnes",
+      "municipalityINS": "52025",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-developpement-de-laire-de-jeux-place-dhymiee-id1638-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "00a8e1d8a902ca7b169ca12738e84d02531cd7ebd3b6dc0c7ff3e5852dfaa1d9",
+        "stage": "project"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "À l’unanimité ; DÉCIDE Article 1er : d'approuver le cahier des charges N° 20261638 et le montant estimé du marché “Développement de l'aire de jeux Place d'Hymiée”, établis par le Bureau d'études. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 73.170,00 € hors TVA ou 88.5",
+        "mission": "DÉCIDE Article 1er : d'approuver le cahier des charges N° 20261638 et le montant estimé du marché “Développement de l'aire de jeux Place d'Hymiée”, établis par le Bureau d'études.",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 49,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-developpement-de-laire-de-jeux-place-dhymiee-id1638-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-developpement-de-laire-de-jeux-place-dhymiee-id1638-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-developpement-de-laire-de-jeux-place-dhymiee-id1638-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "00a8e1d8a902ca7b169ca12738e84d02531cd7ebd3b6dc0c7ff3e5852dfaa1d9",
+        "session": {
+          "date": "2026-10-20",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 20 octobre 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-developpement-de-laire-de-jeux-place-dhymiee-id1638-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:1583feb6588203a03b",
+        "sha256": "00a8e1d8a902ca7b169ca12738e84d02531cd7ebd3b6dc0c7ff3e5852dfaa1d9",
+        "format": "html",
+        "checkedAt": "2026-11-07T15:56:03.513Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Vu l'Arrêté Royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'Arrêté Royal du 18 avril 2017 relatif à la passation des marchés publics dans",
+        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-developpement-de-laire-de-jeux-place-dhymiee-id1638-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "00a8e1d8a902ca7b169ca12738e84d02531cd7ebd3b6dc0c7ff3e5852dfaa1d9"
+      },
+      "description": "Vu l'Arrêté Royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'Arrêté Royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 20261638 relatif au marché “Développement de l'aire de jeux Place d'Hymiée” établi par le Bureau d'études ; Considérant que ce marché est divisé en lots : * Lot 1 (Aire de jeux place d'Hymiée), estimé à 71.970,00 € hors TVA ou 87.083,70 €, 21% TVA comprise ; * Lot 2 (Aire de jeux école de Lausprelle), estimé à 1.200,00 € hors TVA ou 1.452,00 €, 21% TVA comprise ; Considérant que le montant global estimé de ce marché s'élève à 73.170,00 € hors TVA ou 88.535,70 €, 21% TVA comprise ;",
+      "evidence": "Vu l'Arrêté Royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'Arrêté Royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 20261638 relatif au marché “Développement de l'aire de jeux Place d'Hymiée” établi par le Bureau d'études ; Considérant que ce marché est divisé en lots : * Lot 1 (Aire de jeux place d'Hymiée), estimé à 71.970,00 € hors TVA ou 87.083,70 €, 21% TVA comprise ; * Lot 2 (Aire de jeux école de Lausprelle), estimé à 1.200,00 € hors TVA ou 1.452,00 €, 21% TVA comprise ; Considérant que le montant global estimé de ce marché s'élève à 73.170,00 € hors TVA ou 88.535,70 €, 21% TVA comprise ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu l'Arrêté Royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'Arrêté Royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 20261638 relatif au marché “Développement de l'aire de jeux Place d'Hymiée” établi par le Bureau d'études ; Considérant que ce marché est divisé en lots : * Lot 1 (Aire de jeux place d'Hymiée), estimé à 71.970,00 € hors TVA ou 87.083,70 €, 21% TVA comprise ; * Lot 2 (Aire de jeux école de Lausprelle), estimé à 1.200,00 € hors TVA ou 1.452,00 €, 21% TVA comprise ; Considérant que le montant global estimé de ce marché s'élève à 73.170,00 € hors TVA ou 88.535,70 €, 21% TVA comprise ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "20261638",
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:cab1228d83bcc094c148",
+      "title": "Aménagement des abords et de la Place d'Hymiée",
+      "sourceDocumentTitle": "Marchés publics : Aménagement des abords et de la Place d'Hymiée (ID1639) APPROBATION DES CONDITIONS ET DU MODE DE PASSATION",
+      "missionEvidence": {
+        "excerpt": "Après en avoir délibéré ; A l’unanimité ; Article 1er :D'approuver le cahier des charges N° 20261639 et le montant estimé du marché “Aménagement des abords et de la Place d'Hymiée”, établis par le Bureau d'études. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 209.503,22 € hors TVA ou 253",
+        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-amenagement-des-abords-et-de-la-place-dhymiee-id1639-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "c56d766d1f51e94c232b77ad44c1b199827e4fea267c1218fdaa287662a9c1c6"
+      },
+      "buyer": "Commune de Gerpinnes",
+      "municipalityINS": "52025",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "Après en avoir délibéré ; A l’unanimité ; Article 1er :D'approuver le cahier des charges N° 20261639 et le montant estimé du marché “Aménagement des abords et de la Place d'Hymiée”, établis par le Bureau d'études. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 209.503,22 € hors TVA ou 253",
+        "mission": "approuver le cahier des charges N° 20261639 et le montant estimé du marché “Aménagement des abords et de la Place d'Hymiée”, établis par le Bureau d'études.",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 49,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-amenagement-des-abords-et-de-la-place-dhymiee-id1639-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-amenagement-des-abords-et-de-la-place-dhymiee-id1639-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-amenagement-des-abords-et-de-la-place-dhymiee-id1639-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "c56d766d1f51e94c232b77ad44c1b199827e4fea267c1218fdaa287662a9c1c6",
+        "session": {
+          "date": "2026-10-20",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 20 octobre 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-amenagement-des-abords-et-de-la-place-dhymiee-id1639-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:bf4e1f3f445da6f2b4",
+        "sha256": "c56d766d1f51e94c232b77ad44c1b199827e4fea267c1218fdaa287662a9c1c6",
+        "format": "html",
+        "checkedAt": "2026-11-07T15:56:03.513Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Considérant la nécessité d’améliorer l’accessibilité et la sécurité aux abords de l’école et de la maison de village d’Hymiée ; Considérant qu’il est également prévu l’aménagement d’espaces de jeu et de convivialité ; Co",
+        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-amenagement-des-abords-et-de-la-place-dhymiee-id1639-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "c56d766d1f51e94c232b77ad44c1b199827e4fea267c1218fdaa287662a9c1c6"
+      },
+      "description": "Considérant la nécessité d’améliorer l’accessibilité et la sécurité aux abords de l’école et de la maison de village d’Hymiée ; Considérant qu’il est également prévu l’aménagement d’espaces de jeu et de convivialité ; Considérant le cahier des charges N° 20261639 relatif au marché “Aménagement des abords et de la Place d'Hymiée” établi par le Bureau d'études ; Considérant que le montant estimé de ce marché s'élève à 209.503,22 € hors TVA ou 253.498,90 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée directe avec publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 421/731-60 (n° de projet 20260020) et sera financé par emprunt ; Considérant qu'une demande afin d’obtenir l'avis de légalité obligatoire a été soumise le 8 octobre 2026, un avis de légalité favorable a été accordé par le directeur financier le 9 octobre 2026 ;",
+      "evidence": "Considérant la nécessité d’améliorer l’accessibilité et la sécurité aux abords de l’école et de la maison de village d’Hymiée ; Considérant qu’il est également prévu l’aménagement d’espaces de jeu et de convivialité ; Considérant le cahier des charges N° 20261639 relatif au marché “Aménagement des abords et de la Place d'Hymiée” établi par le Bureau d'études ; Considérant que le montant estimé de ce marché s'élève à 209.503,22 € hors TVA ou 253.498,90 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée directe avec publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 421/731-60 (n° de projet 20260020) et sera financé par emprunt ; Considérant qu'une demande afin d’obtenir l'avis de légalité obligatoire a été soumise le 8 octobre 2026, un avis de légalité favorable a été accordé par le directeur financier le 9 octobre 2026 ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "Considérant la nécessité d’améliorer l’accessibilité et la sécurité aux abords de l’école et de la maison de village d’Hymiée ; Considérant qu’il est également prévu l’aménagement d’espaces de jeu et de convivialité ; Considérant le cahier des charges N° 20261639 relatif au marché “Aménagement des abords et de la Place d'Hymiée” établi par le Bureau d'études ; Considérant que le montant estimé de ce marché s'élève à 209.503,22 € hors TVA ou 253.498,90 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée directe avec publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 421/731-60 (n° de projet 20260020) et sera financé par emprunt ; Considérant qu'une demande afin d’obtenir l'avis de légalité obligatoire a été soumise le 8 octobre 2026, un avis de légalité favorable a été accordé par le directeur financier le 9 octobre 2026 ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "20261639",
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
       "id": "local-html:4fa57242e02ff0c4c4b3",
       "title": "PST 2025-2030 (Action 11) - Rénovation du cimetière des Tapeines - Étude - Marché public de services - Fixation des conditions et choix du mode de passation.",
       "buyer": "Commune de Flémalle",
@@ -24897,634 +25539,6 @@
       "municipalReference": "2026/60",
       "matchReason": "etude_urbanistique_a_qualifier",
       "screeningReason": null
-    },
-    {
-      "id": "local-html:b32c1d4d2fdebb1dc40a",
-      "title": "IPFBW - Convention de coopération relative à l'organisation d'une centrale d'achat dans le cadre d'un marché de certification PEB et audits énergétiques UREBA, certification CertIBEau, mission responsabilité PEB - Pour approbation",
-      "sourceDocumentTitle": "IPFBW - Convention de coopération relative à l'organisation d'une centrale d'achat dans le cadre d'un marché de certification PEB et audits énergétiques UREBA, certification CertIBEau, mission responsabilité PEB - Pour approbation",
-      "missionEvidence": {
-        "excerpt": "sponsabilité PEB - Pour approbation Description Dans le cadre de la relance du marché de services de l'IPFBW via centrale d'achat concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau et la mission de responsabilité PE",
-        "sourceUrl": "https://www.deliberations.be/ottignies-louvain-la-neuve/decisions/02-novembre-2026-20-15/ipfbw-convention-de-cooperation-relative-a-lorganisation-dune-centrale-dachat-dans-le-cadre-dun-marche-de-certification-peb-et-audits-energetiques-ureba-certification-certibeau-mission-responsabilite-peb-pour-approbation",
-        "page": null,
-        "sha256": "34fc15aead4a454060d80ff921ffce5381837bce77c26e07f8c423e6e161e0e5"
-      },
-      "buyer": "Commune de Ottignies-Louvain-la-Neuve",
-      "municipalityINS": "25121",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "sponsabilité PEB - Pour approbation Description Dans le cadre de la relance du marché de services de l'IPFBW via centrale d'achat concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau et la mission de responsabilité PE",
-        "mission": "lance du marché de services de l'IPFBW via centrale d'achat concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau et la mission de responsabilité PEB, il y a lieu d'approuver la convention de coopérati",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "PEB",
-      "sectors": [
-        "PEB"
-      ],
-      "screening": "review",
-      "score": 60,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/ottignies-louvain-la-neuve/decisions/02-novembre-2026-20-15/ipfbw-convention-de-cooperation-relative-a-lorganisation-dune-centrale-dachat-dans-le-cadre-dun-marche-de-certification-peb-et-audits-energetiques-ureba-certification-certibeau-mission-responsabilite-peb-pour-approbation",
-      "sourceDocument": "https://www.deliberations.be/ottignies-louvain-la-neuve/decisions/02-novembre-2026-20-15/ipfbw-convention-de-cooperation-relative-a-lorganisation-dune-centrale-dachat-dans-le-cadre-dun-marche-de-certification-peb-et-audits-energetiques-ureba-certification-certibeau-mission-responsabilite-peb-pour-approbation",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/ottignies-louvain-la-neuve/decisions/02-novembre-2026-20-15/ipfbw-convention-de-cooperation-relative-a-lorganisation-dune-centrale-dachat-dans-le-cadre-dun-marche-de-certification-peb-et-audits-energetiques-ureba-certification-certibeau-mission-responsabilite-peb-pour-approbation",
-        "sha256": "34fc15aead4a454060d80ff921ffce5381837bce77c26e07f8c423e6e161e0e5",
-        "session": {
-          "date": "2026-11-02",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 02 novembre 2026 (20:15)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/ottignies-louvain-la-neuve/decisions/02-novembre-2026-20-15/ipfbw-convention-de-cooperation-relative-a-lorganisation-dune-centrale-dachat-dans-le-cadre-dun-marche-de-certification-peb-et-audits-energetiques-ureba-certification-certibeau-mission-responsabilite-peb-pour-approbation"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:485a65ee0548bfa6db",
-        "sha256": "34fc15aead4a454060d80ff921ffce5381837bce77c26e07f8c423e6e161e0e5",
-        "format": "html",
-        "checkedAt": "2026-11-07T15:56:03.513Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Sur proposition du Collège communal, DECIDE A L'UNANIMITE : D'approuver le cahier spécial des charges établi par l'IPFBW relatif à l'organisation d'une centrale d'achats pour le marché concernant la certification PEB des",
-        "sourceUrl": "https://www.deliberations.be/ottignies-louvain-la-neuve/decisions/02-novembre-2026-20-15/ipfbw-convention-de-cooperation-relative-a-lorganisation-dune-centrale-dachat-dans-le-cadre-dun-marche-de-certification-peb-et-audits-energetiques-ureba-certification-certibeau-mission-responsabilite-peb-pour-approbation",
-        "page": null,
-        "sha256": "34fc15aead4a454060d80ff921ffce5381837bce77c26e07f8c423e6e161e0e5"
-      },
-      "description": "Sur proposition du Collège communal, DECIDE A L'UNANIMITE : D'approuver le cahier spécial des charges établi par l'IPFBW relatif à l'organisation d'une centrale d'achats pour le marché concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau ainsi que la mission de responsabilité PEB. D'approuver la convention de coopération entre la S.C.R.L. IPFBW, association intercommunale coopérative, inscrite auprès de la Banque carrefour des entreprises sous le n° 206.041.757, dont le siège social est établi à 1348 Louvain-La-Neuve, avenue Jean Monnet, 2, et la Ville d'Ottignies-Louvain-la-Neuve, inscrite auprès de la Banque carrefour des entreprises sous le numéro 0216.689.98, dont les bureaux sont situés à 1340 Ottignies-Louvain-la-Neuve, avenue des Combattants, 35. Cette convention de coopération, définissant la mission confiée par la Ville à l'IPFBW ainsi que les modalités de la coopération entre la Ville et l'IPFBW dans le cadre de cette mission, est définie ci-dessous : CONVENTION DE COOPÉRATION RELATIVE A L’ORGANISATION D’UN ACHAT GROUPE DANS LE CADRE D’UN MARCHE de certification PEB, audits énergétiques, certification CertIBeau, mission responsabilité PEB",
-      "evidence": "Sur proposition du Collège communal, DECIDE A L'UNANIMITE : D'approuver le cahier spécial des charges établi par l'IPFBW relatif à l'organisation d'une centrale d'achats pour le marché concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau ainsi que la mission de responsabilité PEB. D'approuver la convention de coopération entre la S.C.R.L. IPFBW, association intercommunale coopérative, inscrite auprès de la Banque carrefour des entreprises sous le n° 206.041.757, dont le siège social est établi à 1348 Louvain-La-Neuve, avenue Jean Monnet, 2, et la Ville d'Ottignies-Louvain-la-Neuve, inscrite auprès de la Banque carrefour des entreprises sous le numéro 0216.689.98, dont les bureaux sont situés à 1340 Ottignies-Louvain-la-Neuve, avenue des Combattants, 35. Cette convention de coopération, définissant la mission confiée par la Ville à l'IPFBW ainsi que les modalités de la coopération entre la Ville et l'IPFBW dans le cadre de cette mission, est définie ci-dessous : CONVENTION DE COOPÉRATION RELATIVE A L’ORGANISATION D’UN ACHAT GROUPE DANS LE CADRE D’UN MARCHE de certification PEB, audits énergétiques, certification CertIBeau, mission responsabilité PEB",
-      "municipalEvidence": [
-        {
-          "excerpt": "Sur proposition du Collège communal, DECIDE A L'UNANIMITE : D'approuver le cahier spécial des charges établi par l'IPFBW relatif à l'organisation d'une centrale d'achats pour le marché concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau ainsi que la mission de responsabilité PEB. D'approuver la convention de coopération entre la S.C.R.L. IPFBW, association intercommunale coopérative, inscrite auprès de la Banque carrefour des entreprises sous le n° 206.041.757, dont le siège social est établi à 1348 Louvain-La-Neuve, avenue Jean Monnet, 2, et la Ville d'Ottignies-Louvain-la-Neuve, inscrite auprès de la Banque carrefour des entreprises sous le numéro 0216.689.98, dont les bureaux sont situés à 1340 Ottignies-Louvain-la-Neuve, avenue des Combattants, 35. Cette convention de coopération, définissant la mission confiée par la Ville à l'IPFBW ainsi que les modalités de la coopération entre la Ville et l'IPFBW dans le cadre de cette mission, est définie ci-dessous : CONVENTION DE COOPÉRATION RELATIVE A L’ORGANISATION D’UN ACHAT GROUPE DANS LE CADRE D’UN MARCHE de certification PEB, audits énergétiques, certification CertIBeau, mission responsabilité PEB",
-          "page": null
-        },
-        {
-          "excerpt": "DECIDE A L'UNANIMITE : D'approuver le cahier spécial des charges établi par l'IPFBW relatif à l'organisation d'une centrale d'achats pour le marché concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau ainsi que la mission de responsabilité PEB. D'approuver la convention de coopération entre la S.C.R.L. IPFBW, association intercommunale coopérative, inscrite auprès de la Banque carrefour des entreprises sous le n° 206.041.757, dont le siège social est établi à 1348 Louvain-La-Neuve, avenue Jean Monnet, 2, et la Ville d'Ottignies-Louvain-la-Neuve, inscrite auprès de la Banque carrefour des entreprises sous le numéro 0216.689.98, dont les bureaux sont situés à 1340 Ottignies-Louvain-la-Neuve, avenue des Combattants, 35. Cette convention de coopération, définissant la mission confiée par la Ville à l'IPFBW ainsi que les modalités de la coopération entre la Ville et l'IPFBW dans le cadre de cette mission, est définie ci-dessous : CONVENTION DE COOPÉRATION RELATIVE A L’ORGANISATION D’UN ACHAT GROUPE DANS LE CADRE D’UN MARCHE de certification PEB, audits énergétiques, certification CertIBeau, mission responsabilité PEB",
-          "page": null
-        },
-        {
-          "excerpt": "D'approuver le cahier spécial des charges établi par l'IPFBW relatif à l'organisation d'une centrale d'achats pour le marché concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau ainsi que la mission de responsabilité PEB. D'approuver la convention de coopération entre la S.C.R.L. IPFBW, association intercommunale coopérative, inscrite auprès de la Banque carrefour des entreprises sous le n° 206.041.757, dont le siège social est établi à 1348 Louvain-La-Neuve, avenue Jean Monnet, 2, et la Ville d'Ottignies-Louvain-la-Neuve, inscrite auprès de la Banque carrefour des entreprises sous le numéro 0216.689.98, dont les bureaux sont situés à 1340 Ottignies-Louvain-la-Neuve, avenue des Combattants, 35. Cette convention de coopération, définissant la mission confiée par la Ville à l'IPFBW ainsi que les modalités de la coopération entre la Ville et l'IPFBW dans le cadre de cette mission, est définie ci-dessous : CONVENTION DE COOPÉRATION RELATIVE A L’ORGANISATION D’UN ACHAT GROUPE DANS LE CADRE D’UN MARCHE de certification PEB, audits énergétiques, certification CertIBeau, mission responsabilité PEB",
-          "page": null
-        },
-        {
-          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. IPFBW - Convention de coopération relative à l'organisation d'une centrale d'achat dans le cadre d'un marché de certification PEB et audits énergétiques UREBA, certification CertIBEau, mission responsabilité PEB - Pour approbation Description Dans le cadre de la relance du marché de services de l'IPFBW via centrale d'achat concernant la certification PEB des bâtiments publics, les audits énergétiques UREBA, la certification CertIBEau et la mission de responsabilité PEB, il y a lieu d'approuver la convention de coopération pour l'affiliation de la Ville à ce marché Délibération Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment les articles L1122-30 et 1222-7 relatifs aux compétences du Conseil communal,",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local-html:1411020db566fd122044",
-      "title": "APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont",
-      "sourceDocumentTitle": "PROGRAMMATION FEDER 2021-2027.- MESURE 8 : RÉNOVATION ÉNERGÉTIQUE DES BÂTIMENTS PUBLICS RÉGIONAUX ET LOCAUX.- PORTEFEUILLE « ZÉRO CARBONE BY CHARLEROI MÉTROPOLE » RÉHABILITATION DE LA TOUR DU ROTON.- RELANCE DU LOT 2 « TECHNIQUES SPÉCIALES ».- MARCHE DE TRAVAUX.- DÉFINITION DU MODE ET DES CONDITIONS DU MARCHE.- APPROBATION S'IL Y A LIEU.- IMPUTATION DE LA DÉPENSE.- DÉCISIONS À PRENDRE.-",
-      "missionEvidence": {
-        "excerpt": "- D’APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont le coût est estim",
-        "sourceUrl": "https://www.deliberations.be/farciennes/decisions/07-octobre-2026-18-00/programmation-feder-2021-2027-mesure-8-renovation-energetique-des-batiments-publics-regionaux-et-locaux-portefeuille-zero-carbone-by-charleroi-metropole-rehabilitation-de-la-tour-du-roton-relance-du-lot-2-techniques-speciales-marche-de-travaux-definition",
-        "page": null,
-        "sha256": "0731067e6c57dba870e60e2ea23417e7915155df51d6ab3f18d394aa4d11f918"
-      },
-      "buyer": "Commune de Farciennes",
-      "municipalityINS": "52018",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "- D’APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont le coût est estim",
-        "mission": "APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont",
-        "basis": "document_body"
-      },
-      "noticeKind": "other",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/farciennes/decisions/07-octobre-2026-18-00/programmation-feder-2021-2027-mesure-8-renovation-energetique-des-batiments-publics-regionaux-et-locaux-portefeuille-zero-carbone-by-charleroi-metropole-rehabilitation-de-la-tour-du-roton-relance-du-lot-2-techniques-speciales-marche-de-travaux-definition",
-      "sourceDocument": "https://www.deliberations.be/farciennes/decisions/07-octobre-2026-18-00/programmation-feder-2021-2027-mesure-8-renovation-energetique-des-batiments-publics-regionaux-et-locaux-portefeuille-zero-carbone-by-charleroi-metropole-rehabilitation-de-la-tour-du-roton-relance-du-lot-2-techniques-speciales-marche-de-travaux-definition",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/farciennes/decisions/07-octobre-2026-18-00/programmation-feder-2021-2027-mesure-8-renovation-energetique-des-batiments-publics-regionaux-et-locaux-portefeuille-zero-carbone-by-charleroi-metropole-rehabilitation-de-la-tour-du-roton-relance-du-lot-2-techniques-speciales-marche-de-travaux-definition",
-        "sha256": "0731067e6c57dba870e60e2ea23417e7915155df51d6ab3f18d394aa4d11f918",
-        "session": {
-          "date": "2026-11-04",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 04 novembre 2026 (18:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/farciennes/decisions/07-octobre-2026-18-00/programmation-feder-2021-2027-mesure-8-renovation-energetique-des-batiments-publics-regionaux-et-locaux-portefeuille-zero-carbone-by-charleroi-metropole-rehabilitation-de-la-tour-du-roton-relance-du-lot-2-techniques-speciales-marche-de-travaux-definition"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:eec3ff183ee809d88d",
-        "sha256": "0731067e6c57dba870e60e2ea23417e7915155df51d6ab3f18d394aa4d11f918",
-        "format": "html",
-        "checkedAt": "2026-11-07T15:56:03.513Z"
-      },
-      "webTypeEvidence": {
-        "kind": "other",
-        "reason": "projet_de_mission_a_operateur_determine",
-        "excerpt": "VU l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; VU la décision du Conseil Communal du 30 mai 2023 décidant notamment : - D’APP",
-        "sourceUrl": "https://www.deliberations.be/farciennes/decisions/07-octobre-2026-18-00/programmation-feder-2021-2027-mesure-8-renovation-energetique-des-batiments-publics-regionaux-et-locaux-portefeuille-zero-carbone-by-charleroi-metropole-rehabilitation-de-la-tour-du-roton-relance-du-lot-2-techniques-speciales-marche-de-travaux-definition",
-        "page": null,
-        "sha256": "0731067e6c57dba870e60e2ea23417e7915155df51d6ab3f18d394aa4d11f918"
-      },
-      "description": "VU l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; VU la décision du Conseil Communal du 30 mai 2023 décidant notamment : - D’APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont le coût est estimé à 342.230,58 € HTVA, soit 414.099,00 € TVAC hors options ; - D’APPROUVER les conditions du contrat sollicité par la Commune de Farciennes et transmis par I.G.R.E.T.E.C et reprenant pour la mission : l’objet de la mission, la description de la mission, les délais entre la commande du Commune et le début de la mission et les taux d’honoraires ; - DE CHARGER le Collège communal de la signature du(des) contrat(s) spécifique(s) au projet à mettre en œuvre, de l’exécution de la présente délibération, du suivi et des ordres de mission à délivrer ainsi que de la budgétisation des dépenses afférentes aux missions confiées à I.G.R.E.T.E.C. ; VU la décision du Collège Communal du 17 juillet 2023 décidant notamment : - D’APPROUVER et d’attribuer la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux ",
-      "evidence": "VU l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; VU la décision du Conseil Communal du 30 mai 2023 décidant notamment : - D’APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont le coût est estimé à 342.230,58 € HTVA, soit 414.099,00 € TVAC hors options ; - D’APPROUVER les conditions du contrat sollicité par la Commune de Farciennes et transmis par I.G.R.E.T.E.C et reprenant pour la mission : l’objet de la mission, la description de la mission, les délais entre la commande du Commune et le début de la mission et les taux d’honoraires ; - DE CHARGER le Collège communal de la signature du(des) contrat(s) spécifique(s) au projet à mettre en œuvre, de l’exécution de la présente délibération, du suivi et des ordres de mission à délivrer ainsi que de la budgétisation des dépenses afférentes aux missions confiées à I.G.R.E.T.E.C. ; VU la décision du Collège Communal du 17 juillet 2023 décidant notamment : - D’APPROUVER et d’attribuer la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux ",
-      "municipalEvidence": [
-        {
-          "excerpt": "VU l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; VU la décision du Conseil Communal du 30 mai 2023 décidant notamment : - D’APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont le coût est estimé à 342.230,58 € HTVA, soit 414.099,00 € TVAC hors options ; - D’APPROUVER les conditions du contrat sollicité par la Commune de Farciennes et transmis par I.G.R.E.T.E.C et reprenant pour la mission : l’objet de la mission, la description de la mission, les délais entre la commande du Commune et le début de la mission et les taux d’honoraires ; - DE CHARGER le Collège communal de la signature du(des) contrat(s) spécifique(s) au projet à mettre en œuvre, de l’exécution de la présente délibération, du suivi et des ordres de mission à délivrer ainsi que de la budgétisation des dépenses afférentes aux missions confiées à I.G.R.E.T.E.C. ; VU la décision du Collège Communal du 17 juillet 2023 décidant notamment : - D’APPROUVER et d’attribuer la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux ",
-          "page": null
-        },
-        {
-          "excerpt": "VU la décision du Conseil Communal du 30 mai 2023 décidant notamment : - D’APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont le coût est estimé à 342.230,58 € HTVA, soit 414.099,00 € TVAC hors options ; - D’APPROUVER les conditions du contrat sollicité par la Commune de Farciennes et transmis par I.G.R.E.T.E.C et reprenant pour la mission : l’objet de la mission, la description de la mission, les délais entre la commande du Commune et le début de la mission et les taux d’honoraires ; - DE CHARGER le Collège communal de la signature du(des) contrat(s) spécifique(s) au projet à mettre en œuvre, de l’exécution de la présente délibération, du suivi et des ordres de mission à délivrer ainsi que de la budgétisation des dépenses afférentes aux missions confiées à I.G.R.E.T.E.C. ; VU la décision du Collège Communal du 17 juillet 2023 décidant notamment : - D’APPROUVER et d’attribuer la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton à I.G.R.E.T.E.C., association de communes, société coopérative, Boulevard Mayence, 1 à 6000 Charleroi dans le cadr",
-          "page": null
-        },
-        {
-          "excerpt": "- D’APPROUVER le principe de l’engagement d’une procédure in house, pour la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton dont le coût est estimé à 342.230,58 € HTVA, soit 414.099,00 € TVAC hors options ; - D’APPROUVER les conditions du contrat sollicité par la Commune de Farciennes et transmis par I.G.R.E.T.E.C et reprenant pour la mission : l’objet de la mission, la description de la mission, les délais entre la commande du Commune et le début de la mission et les taux d’honoraires ; - DE CHARGER le Collège communal de la signature du(des) contrat(s) spécifique(s) au projet à mettre en œuvre, de l’exécution de la présente délibération, du suivi et des ordres de mission à délivrer ainsi que de la budgétisation des dépenses afférentes aux missions confiées à I.G.R.E.T.E.C. ; VU la décision du Collège Communal du 17 juillet 2023 décidant notamment : - D’APPROUVER et d’attribuer la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton à I.G.R.E.T.E.C., association de communes, société coopérative, Boulevard Mayence, 1 à 6000 Charleroi dans le cadre de la relation « in house », pour le montant estimé de 342.230,58 € H",
-          "page": null
-        },
-        {
-          "excerpt": "- DE CHARGER le Collège communal de la signature du(des) contrat(s) spécifique(s) au projet à mettre en œuvre, de l’exécution de la présente délibération, du suivi et des ordres de mission à délivrer ainsi que de la budgétisation des dépenses afférentes aux missions confiées à I.G.R.E.T.E.C. ; VU la décision du Collège Communal du 17 juillet 2023 décidant notamment : - D’APPROUVER et d’attribuer la mission d’auteur de projet avec assistance à la maîtrise d’ouvrage, la coordination sécurité santé phases projet/réalisation et la surveillance des travaux relative à la tour du roton à I.G.R.E.T.E.C., association de communes, société coopérative, Boulevard Mayence, 1 à 6000 Charleroi dans le cadre de la relation « in house », pour le montant estimé de 342.230,58 € HTVA, soit 414.099,00 € TVAC hors options ; - D’APPROUVER et D’ATTRIBUER, dans le cadre de ce dossier, à I.G.R.E.T.E.C. association de communes, société coopérative, Boulevard Mayence, 1 à 6000 Charleroi dans le cadre de la relation « in house », les options suivantes : Encodage FEDER, estimée à 3.000,00 € HTVA soit 3.630,00 € TVAC/trimestre ; Organisation des comités de pilotage, estimée à 3.000,00 € HTVA soit 3.630,00 € TVAC/semestre ; Ce qui représente pour les deux options : 18.000,00 € HTVA – 21.780,00 € TVAC/an ;",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local-html:59876981a989094edfde",
-      "title": "Accord-cadre 2026 2027 : Entretien et réparation des égouts communaux",
-      "sourceDocumentTitle": "Marchés publics : Accord-cadre 2026 2027 : Entretien et réparation des égouts communaux (ID1641) APPROBATION DES CONDITIONS ET DU MODE DE PASSATION",
-      "missionEvidence": {
-        "excerpt": "A l’unanimité ; DÉCIDE Article 1er : d'approuver le cahier des charges N° 20261641 et le montant estimé du marché “Accord-cadre 2026 2027 : Entretien et réparation des égouts communaux”, établis par le Bureau d'études. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 86.599,17 € hors TVA ou 104.",
-        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-accord-cadre-2026-2027-entretien-et-reparation-des-egouts-communaux-id1641-approbation-des-conditions-et-du-mode-de-passation",
-        "page": null,
-        "sha256": "122a55e06a1313ee836093750190d4d52a47bea186c3921346a3e6334a670986"
-      },
-      "buyer": "Commune de Gerpinnes",
-      "municipalityINS": "52025",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": {
-        "label": "Procédure négociée sans publication préalable",
-        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
-        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-accord-cadre-2026-2027-entretien-et-reparation-des-egouts-communaux-id1641-approbation-des-conditions-et-du-mode-de-passation",
-        "sha256": "122a55e06a1313ee836093750190d4d52a47bea186c3921346a3e6334a670986",
-        "stage": "project"
-      },
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "A l’unanimité ; DÉCIDE Article 1er : d'approuver le cahier des charges N° 20261641 et le montant estimé du marché “Accord-cadre 2026 2027 : Entretien et réparation des égouts communaux”, établis par le Bureau d'études. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 86.599,17 € hors TVA ou 104.",
-        "mission": "approuver le cahier des charges N° 20261641 et le montant estimé du marché “Accord-cadre 2026 2027 : Entretien et réparation des égouts communaux”, établis par le Bureau d'études.",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "screening": "review",
-      "score": 49,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-accord-cadre-2026-2027-entretien-et-reparation-des-egouts-communaux-id1641-approbation-des-conditions-et-du-mode-de-passation",
-      "sourceDocument": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-accord-cadre-2026-2027-entretien-et-reparation-des-egouts-communaux-id1641-approbation-des-conditions-et-du-mode-de-passation",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-accord-cadre-2026-2027-entretien-et-reparation-des-egouts-communaux-id1641-approbation-des-conditions-et-du-mode-de-passation",
-        "sha256": "122a55e06a1313ee836093750190d4d52a47bea186c3921346a3e6334a670986",
-        "session": {
-          "date": "2026-10-20",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 20 octobre 2026 (19:30)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-accord-cadre-2026-2027-entretien-et-reparation-des-egouts-communaux-id1641-approbation-des-conditions-et-du-mode-de-passation"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:0c3c28d7f422dcbd82",
-        "sha256": "122a55e06a1313ee836093750190d4d52a47bea186c3921346a3e6334a670986",
-        "format": "html",
-        "checkedAt": "2026-11-07T15:56:03.513Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Vu l'Arrêté Royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'Arrêté Royal du 18 avril 2017 relatif à la passation des marchés publics dans",
-        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-accord-cadre-2026-2027-entretien-et-reparation-des-egouts-communaux-id1641-approbation-des-conditions-et-du-mode-de-passation",
-        "page": null,
-        "sha256": "122a55e06a1313ee836093750190d4d52a47bea186c3921346a3e6334a670986"
-      },
-      "description": "Vu l'Arrêté Royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'Arrêté Royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 20261641 relatif au marché “Accord-cadre 2026 2027 : Entretien et réparation des égouts communaux” établi par le Bureau d'études ; Considérant que le montant estimé de ce marché s'élève à 86.599,17 € hors TVA ou 104.785,00 €, 21% TVA comprise, et que le montant limite de commande s’élève à 139.999,99 € hors TVA ou 169.399,99 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; Considérant qu'au moment de la rédaction des conditions du présent marché, l'administration n'est pas en mesure de définir avec précision les quantités de travaux dont elle aura besoin ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 877/735-60 (n° de projet 20260029) et sera financé par emprunt ;",
-      "evidence": "Vu l'Arrêté Royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'Arrêté Royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 20261641 relatif au marché “Accord-cadre 2026 2027 : Entretien et réparation des égouts communaux” établi par le Bureau d'études ; Considérant que le montant estimé de ce marché s'élève à 86.599,17 € hors TVA ou 104.785,00 €, 21% TVA comprise, et que le montant limite de commande s’élève à 139.999,99 € hors TVA ou 169.399,99 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; Considérant qu'au moment de la rédaction des conditions du présent marché, l'administration n'est pas en mesure de définir avec précision les quantités de travaux dont elle aura besoin ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 877/735-60 (n° de projet 20260029) et sera financé par emprunt ;",
-      "municipalEvidence": [
-        {
-          "excerpt": "Vu l'Arrêté Royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'Arrêté Royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 20261641 relatif au marché “Accord-cadre 2026 2027 : Entretien et réparation des égouts communaux” établi par le Bureau d'études ; Considérant que le montant estimé de ce marché s'élève à 86.599,17 € hors TVA ou 104.785,00 €, 21% TVA comprise, et que le montant limite de commande s’élève à 139.999,99 € hors TVA ou 169.399,99 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; Considérant qu'au moment de la rédaction des conditions du présent marché, l'administration n'est pas en mesure de définir avec précision les quantités de travaux dont elle aura besoin ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 877/735-60 (n° de projet 20260029) et sera financé par emprunt ;",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": "20261641"
-    },
-    {
-      "id": "local-html:da8c6955eb1c2fbdf3c2",
-      "title": "Développement de l'aire de jeux Place d'Hymiée",
-      "sourceDocumentTitle": "Marchés publics : Développement de l'aire de jeux Place d'Hymiée (ID1638) APPROBATION DES CONDITIONS ET DU MODE DE PASSATION",
-      "missionEvidence": {
-        "excerpt": "À l’unanimité ; DÉCIDE Article 1er : d'approuver le cahier des charges N° 20261638 et le montant estimé du marché “Développement de l'aire de jeux Place d'Hymiée”, établis par le Bureau d'études. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 73.170,00 € hors TVA ou 88.5",
-        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-developpement-de-laire-de-jeux-place-dhymiee-id1638-approbation-des-conditions-et-du-mode-de-passation",
-        "page": null,
-        "sha256": "00a8e1d8a902ca7b169ca12738e84d02531cd7ebd3b6dc0c7ff3e5852dfaa1d9"
-      },
-      "buyer": "Commune de Gerpinnes",
-      "municipalityINS": "52025",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": {
-        "label": "Procédure négociée sans publication préalable",
-        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
-        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-developpement-de-laire-de-jeux-place-dhymiee-id1638-approbation-des-conditions-et-du-mode-de-passation",
-        "sha256": "00a8e1d8a902ca7b169ca12738e84d02531cd7ebd3b6dc0c7ff3e5852dfaa1d9",
-        "stage": "project"
-      },
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "À l’unanimité ; DÉCIDE Article 1er : d'approuver le cahier des charges N° 20261638 et le montant estimé du marché “Développement de l'aire de jeux Place d'Hymiée”, établis par le Bureau d'études. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 73.170,00 € hors TVA ou 88.5",
-        "mission": "DÉCIDE Article 1er : d'approuver le cahier des charges N° 20261638 et le montant estimé du marché “Développement de l'aire de jeux Place d'Hymiée”, établis par le Bureau d'études.",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 49,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-developpement-de-laire-de-jeux-place-dhymiee-id1638-approbation-des-conditions-et-du-mode-de-passation",
-      "sourceDocument": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-developpement-de-laire-de-jeux-place-dhymiee-id1638-approbation-des-conditions-et-du-mode-de-passation",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-developpement-de-laire-de-jeux-place-dhymiee-id1638-approbation-des-conditions-et-du-mode-de-passation",
-        "sha256": "00a8e1d8a902ca7b169ca12738e84d02531cd7ebd3b6dc0c7ff3e5852dfaa1d9",
-        "session": {
-          "date": "2026-10-20",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 20 octobre 2026 (19:30)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-developpement-de-laire-de-jeux-place-dhymiee-id1638-approbation-des-conditions-et-du-mode-de-passation"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:1583feb6588203a03b",
-        "sha256": "00a8e1d8a902ca7b169ca12738e84d02531cd7ebd3b6dc0c7ff3e5852dfaa1d9",
-        "format": "html",
-        "checkedAt": "2026-11-07T15:56:03.513Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Vu l'Arrêté Royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'Arrêté Royal du 18 avril 2017 relatif à la passation des marchés publics dans",
-        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-developpement-de-laire-de-jeux-place-dhymiee-id1638-approbation-des-conditions-et-du-mode-de-passation",
-        "page": null,
-        "sha256": "00a8e1d8a902ca7b169ca12738e84d02531cd7ebd3b6dc0c7ff3e5852dfaa1d9"
-      },
-      "description": "Vu l'Arrêté Royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'Arrêté Royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 20261638 relatif au marché “Développement de l'aire de jeux Place d'Hymiée” établi par le Bureau d'études ; Considérant que ce marché est divisé en lots : * Lot 1 (Aire de jeux place d'Hymiée), estimé à 71.970,00 € hors TVA ou 87.083,70 €, 21% TVA comprise ; * Lot 2 (Aire de jeux école de Lausprelle), estimé à 1.200,00 € hors TVA ou 1.452,00 €, 21% TVA comprise ; Considérant que le montant global estimé de ce marché s'élève à 73.170,00 € hors TVA ou 88.535,70 €, 21% TVA comprise ;",
-      "evidence": "Vu l'Arrêté Royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'Arrêté Royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 20261638 relatif au marché “Développement de l'aire de jeux Place d'Hymiée” établi par le Bureau d'études ; Considérant que ce marché est divisé en lots : * Lot 1 (Aire de jeux place d'Hymiée), estimé à 71.970,00 € hors TVA ou 87.083,70 €, 21% TVA comprise ; * Lot 2 (Aire de jeux école de Lausprelle), estimé à 1.200,00 € hors TVA ou 1.452,00 €, 21% TVA comprise ; Considérant que le montant global estimé de ce marché s'élève à 73.170,00 € hors TVA ou 88.535,70 €, 21% TVA comprise ;",
-      "municipalEvidence": [
-        {
-          "excerpt": "Vu l'Arrêté Royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'Arrêté Royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 20261638 relatif au marché “Développement de l'aire de jeux Place d'Hymiée” établi par le Bureau d'études ; Considérant que ce marché est divisé en lots : * Lot 1 (Aire de jeux place d'Hymiée), estimé à 71.970,00 € hors TVA ou 87.083,70 €, 21% TVA comprise ; * Lot 2 (Aire de jeux école de Lausprelle), estimé à 1.200,00 € hors TVA ou 1.452,00 €, 21% TVA comprise ; Considérant que le montant global estimé de ce marché s'élève à 73.170,00 € hors TVA ou 88.535,70 €, 21% TVA comprise ;",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": "20261638"
-    },
-    {
-      "id": "local-html:cab1228d83bcc094c148",
-      "title": "Aménagement des abords et de la Place d'Hymiée",
-      "sourceDocumentTitle": "Marchés publics : Aménagement des abords et de la Place d'Hymiée (ID1639) APPROBATION DES CONDITIONS ET DU MODE DE PASSATION",
-      "missionEvidence": {
-        "excerpt": "Après en avoir délibéré ; A l’unanimité ; Article 1er :D'approuver le cahier des charges N° 20261639 et le montant estimé du marché “Aménagement des abords et de la Place d'Hymiée”, établis par le Bureau d'études. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 209.503,22 € hors TVA ou 253",
-        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-amenagement-des-abords-et-de-la-place-dhymiee-id1639-approbation-des-conditions-et-du-mode-de-passation",
-        "page": null,
-        "sha256": "c56d766d1f51e94c232b77ad44c1b199827e4fea267c1218fdaa287662a9c1c6"
-      },
-      "buyer": "Commune de Gerpinnes",
-      "municipalityINS": "52025",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "Après en avoir délibéré ; A l’unanimité ; Article 1er :D'approuver le cahier des charges N° 20261639 et le montant estimé du marché “Aménagement des abords et de la Place d'Hymiée”, établis par le Bureau d'études. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 209.503,22 € hors TVA ou 253",
-        "mission": "approuver le cahier des charges N° 20261639 et le montant estimé du marché “Aménagement des abords et de la Place d'Hymiée”, établis par le Bureau d'études.",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 49,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-amenagement-des-abords-et-de-la-place-dhymiee-id1639-approbation-des-conditions-et-du-mode-de-passation",
-      "sourceDocument": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-amenagement-des-abords-et-de-la-place-dhymiee-id1639-approbation-des-conditions-et-du-mode-de-passation",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-amenagement-des-abords-et-de-la-place-dhymiee-id1639-approbation-des-conditions-et-du-mode-de-passation",
-        "sha256": "c56d766d1f51e94c232b77ad44c1b199827e4fea267c1218fdaa287662a9c1c6",
-        "session": {
-          "date": "2026-10-20",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 20 octobre 2026 (19:30)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-amenagement-des-abords-et-de-la-place-dhymiee-id1639-approbation-des-conditions-et-du-mode-de-passation"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:bf4e1f3f445da6f2b4",
-        "sha256": "c56d766d1f51e94c232b77ad44c1b199827e4fea267c1218fdaa287662a9c1c6",
-        "format": "html",
-        "checkedAt": "2026-11-07T15:56:03.513Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Considérant la nécessité d’améliorer l’accessibilité et la sécurité aux abords de l’école et de la maison de village d’Hymiée ; Considérant qu’il est également prévu l’aménagement d’espaces de jeu et de convivialité ; Co",
-        "sourceUrl": "https://www.deliberations.be/gerpinnes/decisions/20-octobre-2026-19-30/marches-publics-amenagement-des-abords-et-de-la-place-dhymiee-id1639-approbation-des-conditions-et-du-mode-de-passation",
-        "page": null,
-        "sha256": "c56d766d1f51e94c232b77ad44c1b199827e4fea267c1218fdaa287662a9c1c6"
-      },
-      "description": "Considérant la nécessité d’améliorer l’accessibilité et la sécurité aux abords de l’école et de la maison de village d’Hymiée ; Considérant qu’il est également prévu l’aménagement d’espaces de jeu et de convivialité ; Considérant le cahier des charges N° 20261639 relatif au marché “Aménagement des abords et de la Place d'Hymiée” établi par le Bureau d'études ; Considérant que le montant estimé de ce marché s'élève à 209.503,22 € hors TVA ou 253.498,90 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée directe avec publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 421/731-60 (n° de projet 20260020) et sera financé par emprunt ; Considérant qu'une demande afin d’obtenir l'avis de légalité obligatoire a été soumise le 8 octobre 2026, un avis de légalité favorable a été accordé par le directeur financier le 9 octobre 2026 ;",
-      "evidence": "Considérant la nécessité d’améliorer l’accessibilité et la sécurité aux abords de l’école et de la maison de village d’Hymiée ; Considérant qu’il est également prévu l’aménagement d’espaces de jeu et de convivialité ; Considérant le cahier des charges N° 20261639 relatif au marché “Aménagement des abords et de la Place d'Hymiée” établi par le Bureau d'études ; Considérant que le montant estimé de ce marché s'élève à 209.503,22 € hors TVA ou 253.498,90 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée directe avec publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 421/731-60 (n° de projet 20260020) et sera financé par emprunt ; Considérant qu'une demande afin d’obtenir l'avis de légalité obligatoire a été soumise le 8 octobre 2026, un avis de légalité favorable a été accordé par le directeur financier le 9 octobre 2026 ;",
-      "municipalEvidence": [
-        {
-          "excerpt": "Considérant la nécessité d’améliorer l’accessibilité et la sécurité aux abords de l’école et de la maison de village d’Hymiée ; Considérant qu’il est également prévu l’aménagement d’espaces de jeu et de convivialité ; Considérant le cahier des charges N° 20261639 relatif au marché “Aménagement des abords et de la Place d'Hymiée” établi par le Bureau d'études ; Considérant que le montant estimé de ce marché s'élève à 209.503,22 € hors TVA ou 253.498,90 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée directe avec publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 421/731-60 (n° de projet 20260020) et sera financé par emprunt ; Considérant qu'une demande afin d’obtenir l'avis de légalité obligatoire a été soumise le 8 octobre 2026, un avis de légalité favorable a été accordé par le directeur financier le 9 octobre 2026 ;",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": "20261639"
-    },
-    {
-      "id": "local:d3f9955c2e0e5f8af38f",
-      "title": "51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre- Dame des Grâces à 6230 Pont-à-Celles - Approbation du choix de mode de passation, du cahier spécial des charges et des conditions - Décision",
-      "sourceDocumentTitle": "12/10/2026",
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "missionEvidence": null,
-      "buyer": "Commune de Pont-à-Celles",
-      "municipalityINS": "52055",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre- Dame des Grâces à 6",
-        "sourceUrl": "https://www.pontacelles.be/wp-content/uploads/2026/10/261012-OJ-CC.pdf",
-        "page": 4,
-        "sha256": "7046e33cf93f8b706591854d2bc59e3c6f8a2481658ce3e47a1f02bdee430678"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.pontacelles.be/wp-content/uploads/2026/10/261012-OJ-CC.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.pontacelles.be/wp-content/uploads/2026/10/261012-OJ-CC.pdf",
-        "sha256": "7046e33cf93f8b706591854d2bc59e3c6f8a2481658ce3e47a1f02bdee430678",
-        "session": {
-          "date": "2026-10-12",
-          "kind": "session",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "CONSEIL COMMUNAL DU 12 OCTOBRE 2026",
-          "confidence": "explicit"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceExtraction": {
-        "method": "pdf_text",
-        "partial": false
-      },
-      "url": "https://www.pontacelles.be/wp-content/uploads/2026/10/261012-OJ-CC.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : 51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre- Dame des Grâces à 6230 Pont-à-Celles - Approbation du choix de mode de passation, du cahier spécial des charges et des conditions - Décision",
-      "evidence": "51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre- Dame des Grâces à 6230 Pont-à-Celles - Approbation du choix de mode de passation, du cahier spécial des charges et des conditions - Décision",
-      "municipalReference": null,
-      "municipalSection": "51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre- Dame des Grâces à 6230 Pont-à-Celles - Approbation du choix de mode de passation, du cahier spécial des charges et des conditions - Décision",
-      "municipalEvidence": [
-        {
-          "page": 4,
-          "excerpt": "51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre- Dame des Grâces à 6230 Pont-à-Celles - Approbation du choix de mode de passation, du cahier spécial des charges et des conditions - Décision"
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 4,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:017bb98a96b046bd9d",
-        "sha256": "7046e33cf93f8b706591854d2bc59e3c6f8a2481658ce3e47a1f02bdee430678",
-        "checkedAt": "2026-11-07T15:56:03.513Z",
-        "changedAt": null
-      }
-    },
-    {
-      "id": "local:186a2d389b4a60da558e",
-      "title": "Consultez l'ordre du jour de la séance du lundi 16 novembre 2026",
-      "sourceDocumentTitle": "Consultez l'ordre du jour de la séance du lundi 16 novembre 2026",
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "missionEvidence": null,
-      "buyer": "Commune de Waterloo",
-      "municipalityINS": "25110",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Approbation. Cellule commandes publiques - Régie Communale Ordinaire (RCO) - Désignation d'un auteur de projet dans le cadre de l'aménagement de terrains synthétiques sur le site de Joli-Bois - Choix du mode de passation",
-        "sourceUrl": "https://www.waterloo.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/oj-conseil-16-11-1.pdf",
-        "page": 1,
-        "sha256": "dd6339af25a56565e33e37ddf0ec0e7ac403b43d8634ff419f900b4ae6e29c76"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.waterloo.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/oj-conseil-16-11-1.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.waterloo.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/oj-conseil-16-11-1.pdf",
-        "sha256": "dd6339af25a56565e33e37ddf0ec0e7ac403b43d8634ff419f900b4ae6e29c76",
-        "session": {
-          "date": "2026-11-16",
-          "kind": "session",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "séance du CONSEIL COMMUNAL qui se tiendra le 16/11/2026",
-          "confidence": "ocr"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceExtraction": {
-        "method": "ocr",
-        "language": "fra+eng",
-        "pagesRead": 6,
-        "totalPages": 15,
-        "partial": true
-      },
-      "url": "https://www.waterloo.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/oj-conseil-16-11-1.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : Approbation. Cellule commandes publiques - Régie Communale Ordinaire (RCO) - Désignation d'un auteur de projet dans le cadre de l'aménagement de terrains synthétiques sur le site de Joli-Bois - Choix du mode de passation et fixation des conditions du marché. Finances - Commune de Waterloo - Modifications",
-      "evidence": "Approbation. Cellule commandes publiques - Régie Communale Ordinaire (RCO) - Désignation d'un auteur de projet dans le cadre de l'aménagement de terrains synthétiques sur le site de Joli-Bois - Choix du mode de passation et fixation des conditions du marché. Finances - Commune de Waterloo - Modifications",
-      "municipalReference": null,
-      "municipalSection": null,
-      "municipalEvidence": [
-        {
-          "page": 1,
-          "excerpt": "Approbation. Cellule commandes publiques - Régie Communale Ordinaire (RCO) - Désignation d'un auteur de projet dans le cadre de l'aménagement de terrains synthétiques sur le site de Joli-Bois - Choix du mode de passation et fixation des conditions du marché. Finances - Commune de Waterloo - Modifications"
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 1,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:8bbe33650a8cdfc2a5",
-        "sha256": "dd6339af25a56565e33e37ddf0ec0e7ac403b43d8634ff419f900b4ae6e29c76",
-        "checkedAt": "2026-11-07T15:56:03.513Z",
-        "changedAt": null
-      }
     }
   ]
 }
