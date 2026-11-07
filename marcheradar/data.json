@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-06T22:24:38.524Z",
+      "last_attempt": "2026-11-07T07:48:28.687Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -74,29 +74,29 @@
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 865,
-      "opportunities": 165,
+      "documentsRead": 887,
+      "opportunities": 169,
       "sitesChecked": 261,
       "candidatePages": 228,
-      "sourceErrors": 94,
-      "htmlDocumentsRead": 3129
+      "sourceErrors": 96,
+      "htmlDocumentsRead": 3330
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-06T22:24:38.524Z",
-      "last_success": "2026-11-06T22:24:38.524Z",
+      "last_attempt": "2026-11-07T07:48:28.687Z",
+      "last_success": "2026-11-07T07:48:28.687Z",
       "last_batch": 24,
-      "documents_checked": 39,
+      "documents_checked": 35,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 12,
+      "errors_count": 24,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 221,
+      "html_documents_read": 245,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 68,
+      "recent_municipal_signals": 72,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1621,
     "matched_current_run": 9,
-    "records": 306,
+    "records": 310,
     "review_count": 211,
     "award_notice_count": 423,
     "awarded_market_matches": 3,
@@ -17410,7 +17410,7 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:6aacf9fc5a7ef34704",
         "sha256": "d8be053e7b03fbe122c814fda9ce4f5e2351291cfb7188b87f1b3a95501878d6",
-        "checkedAt": "2026-11-03T20:18:09.416Z",
+        "checkedAt": "2026-11-07T07:48:28.687Z",
         "changedAt": null
       },
       "matchReason": "mission_architecturale_a_qualifier",
@@ -24537,6 +24537,356 @@
       ],
       "sourceEvidenceStatus": "found",
       "municipalReference": "2026/60"
+    },
+    {
+      "id": "local-html:5d70693d40d525803a9b",
+      "title": "Marché public : Désignation d’un auteur de projet en vue de la réhabilitation climatique de la crèche « Les P’tites Chouettes » à Masbourg - Approbation des conditions et du mode de passation",
+      "sourceDocumentTitle": "Marché public : Désignation d’un auteur de projet en vue de la réhabilitation climatique de la crèche « Les P’tites Chouettes » à Masbourg - Approbation des conditions et du mode de passation",
+      "missionEvidence": {
+        "excerpt": "A l'unanimité, Décide Article 1er : D'approuver le cahier des charges N° CSC n°862 et le montant estimé du marché “Désignation d’un auteur de projet en vue de la réhabilitation climatique de la crèche « Les P’tites Chouettes » à Masbourg”, établis par le Service travaux. Les conditions sont fixées comme prévu au cahier des cha",
+        "sourceUrl": "https://www.deliberations.be/nassogne/decisions/26-octobre-2026-19-30/marche-public-designation-dun-auteur-de-projet-en-vue-de-la-rehabilitation-climatique-de-la-creche-les-ptites-chouettes-a-masbourg-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "eb98618c4f8b5b5e57c3db9533678a3bc0acb2b502df09f5d0f5b4172bbe130a"
+      },
+      "buyer": "Commune de Nassogne",
+      "municipalityINS": "83040",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/nassogne/decisions/26-octobre-2026-19-30/marche-public-designation-dun-auteur-de-projet-en-vue-de-la-rehabilitation-climatique-de-la-creche-les-ptites-chouettes-a-masbourg-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "eb98618c4f8b5b5e57c3db9533678a3bc0acb2b502df09f5d0f5b4172bbe130a",
+        "stage": "project"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "A l'unanimité, Décide Article 1er : D'approuver le cahier des charges N° CSC n°862 et le montant estimé du marché “Désignation d’un auteur de projet en vue de la réhabilitation climatique de la crèche « Les P’tites Chouettes » à Masbourg”, établis par le Service travaux. Les conditions sont fixées comme prévu au cahier des cha",
+        "mission": "Décide Article 1er : D'approuver le cahier des charges N° CSC n°862 et le montant estimé du marché “Désignation d’un auteur de projet en vue de la réhabilitation climatique de la crèche « Les P’tites Chouettes » à Masbourg”, établis par le Service travaux.",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/nassogne/decisions/26-octobre-2026-19-30/marche-public-designation-dun-auteur-de-projet-en-vue-de-la-rehabilitation-climatique-de-la-creche-les-ptites-chouettes-a-masbourg-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/nassogne/decisions/26-octobre-2026-19-30/marche-public-designation-dun-auteur-de-projet-en-vue-de-la-rehabilitation-climatique-de-la-creche-les-ptites-chouettes-a-masbourg-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/nassogne/decisions/26-octobre-2026-19-30/marche-public-designation-dun-auteur-de-projet-en-vue-de-la-rehabilitation-climatique-de-la-creche-les-ptites-chouettes-a-masbourg-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "eb98618c4f8b5b5e57c3db9533678a3bc0acb2b502df09f5d0f5b4172bbe130a",
+        "session": {
+          "date": "2026-10-26",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 26 octobre 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/nassogne/decisions/26-octobre-2026-19-30/marche-public-designation-dun-auteur-de-projet-en-vue-de-la-rehabilitation-climatique-de-la-creche-les-ptites-chouettes-a-masbourg-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:066b9e99c1477586ec",
+        "sha256": "eb98618c4f8b5b5e57c3db9533678a3bc0acb2b502df09f5d0f5b4172bbe130a",
+        "format": "html",
+        "checkedAt": "2026-11-07T07:48:28.687Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Marché public : Désignation d’un auteur de projet en vue de la réhabilitation climatique de la crèche « Les P’tites Chouettes » à Masbourg - Approbation des conditions et du mode de passation 26 Séance publique du Consei",
+        "sourceUrl": "https://www.deliberations.be/nassogne/decisions/26-octobre-2026-19-30/marche-public-designation-dun-auteur-de-projet-en-vue-de-la-rehabilitation-climatique-de-la-creche-les-ptites-chouettes-a-masbourg-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "eb98618c4f8b5b5e57c3db9533678a3bc0acb2b502df09f5d0f5b4172bbe130a"
+      },
+      "description": "Marché public : Désignation d’un auteur de projet en vue de la réhabilitation climatique de la crèche « Les P’tites Chouettes » à Masbourg - Approbation des conditions et du mode de passation 26 Séance publique du Conseil 26 octobre 2026 (19:30) Point N°",
+      "evidence": "Marché public : Désignation d’un auteur de projet en vue de la réhabilitation climatique de la crèche « Les P’tites Chouettes » à Masbourg - Approbation des conditions et du mode de passation 26 Séance publique du Conseil 26 octobre 2026 (19:30) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "Marché public : Désignation d’un auteur de projet en vue de la réhabilitation climatique de la crèche « Les P’tites Chouettes » à Masbourg - Approbation des conditions et du mode de passation 26 Séance publique du Conseil 26 octobre 2026 (19:30) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. Marché public : Désignation d’un auteur de projet en vue de la réhabilitation climatique de la crèche « Les P’tites Chouettes » à Masbourg - Approbation des conditions et du mode de passation Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) ; Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ;",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° CSC n°862 relatif au marché “Désignation d’un auteur de projet en vue de la réhabilitation climatique de la crèche « Les P’tites Chouettes » à Masbourg” établi par le Service travaux ; Considérant que le montant estimé de ce marché s'élève à 45.454,55 € hors TVA ou 55.000,00 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 8443/733-60 (n° de projet 20260064) ; Considérant la transmission du dossier au Directeur Financier pour avis préalable en date du 08/10/2026,",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local-html:4a7554b24773369df74f",
+      "title": "PATRIMOINE : Projet d’acte relatif à l’acquisition d’une parcelle de terrain agricole d’une contenance de 49 ares 31 centiares en vue de la création d’un bassin de rétention à Walhain-Saint-Paul",
+      "sourceDocumentTitle": "PATRIMOINE : Projet d’acte relatif à l’acquisition d’une parcelle de terrain agricole d’une contenance de 49 ares 31 centiares en vue de la création d’un bassin de rétention à Walhain-Saint-Paul",
+      "missionEvidence": null,
+      "buyer": "Commune de Walhain",
+      "municipalityINS": "25124",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Hydraulique",
+      "sectors": [
+        "Hydraulique"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/walhain/decisions/19-octobre-2026-19-30/patrimoine-projet-dacte-relatif-a-lacquisition-dune-parcelle-de-terrain-agricole-dune-contenance-de-49-ares-31-centiares-en-vue-de-la-creation-dun-bassin-de-retention-a-walhain-saint-paul",
+      "sourceDocument": "https://www.deliberations.be/walhain/decisions/19-octobre-2026-19-30/patrimoine-projet-dacte-relatif-a-lacquisition-dune-parcelle-de-terrain-agricole-dune-contenance-de-49-ares-31-centiares-en-vue-de-la-creation-dun-bassin-de-retention-a-walhain-saint-paul",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/walhain/decisions/19-octobre-2026-19-30/patrimoine-projet-dacte-relatif-a-lacquisition-dune-parcelle-de-terrain-agricole-dune-contenance-de-49-ares-31-centiares-en-vue-de-la-creation-dun-bassin-de-retention-a-walhain-saint-paul",
+        "sha256": "0c9959cd2ea070d5f9a9b5b27d0ff10b52a8a2c33416f4ed0c9b7a09d8eba0c4",
+        "session": {
+          "date": "2026-10-19",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 19 octobre 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/walhain/decisions/19-octobre-2026-19-30/patrimoine-projet-dacte-relatif-a-lacquisition-dune-parcelle-de-terrain-agricole-dune-contenance-de-49-ares-31-centiares-en-vue-de-la-creation-dun-bassin-de-retention-a-walhain-saint-paul"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:524d047648a609583a",
+        "sha256": "0c9959cd2ea070d5f9a9b5b27d0ff10b52a8a2c33416f4ed0c9b7a09d8eba0c4",
+        "format": "html",
+        "checkedAt": "2026-11-07T07:48:28.687Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Vu le courrier du 5 août 2021 du Service Public de Wallonie relatif à la reconnaissance comme calamité naturelle publique des inondations causées par les fortes pluies du 14 au 16 juillet 2021 sur les territoires d’un gr",
+        "sourceUrl": "https://www.deliberations.be/walhain/decisions/19-octobre-2026-19-30/patrimoine-projet-dacte-relatif-a-lacquisition-dune-parcelle-de-terrain-agricole-dune-contenance-de-49-ares-31-centiares-en-vue-de-la-creation-dun-bassin-de-retention-a-walhain-saint-paul",
+        "page": null,
+        "sha256": "0c9959cd2ea070d5f9a9b5b27d0ff10b52a8a2c33416f4ed0c9b7a09d8eba0c4"
+      },
+      "description": "Vu le courrier du 5 août 2021 du Service Public de Wallonie relatif à la reconnaissance comme calamité naturelle publique des inondations causées par les fortes pluies du 14 au 16 juillet 2021 sur les territoires d’un grand nombre de communes wallonnes ; Vu les délibérations du Collège communal en ses séances des 16 septembre 2021 et 16 mai 2024 portant actualisation du Plan communal d’actions en matière de lutte contre les risques d’inondations et de coulées boueuses ; Vu les délibérations du Conseil communal en ses séances des 28 septembre 2021 et 12 septembre 2022 portant approbation de l’adhésion de la Commune à l’accord-cadre de la Province du Brabant wallon relatif à la désignation d’un auteur de projets en vue de la réalisation d’ouvrages de lutte contre les inondations ; Vu le courrier du 19 octobre 2021 du Service Public de Wallonie portant avis circonstancié de sa visite des lieux rues de Spêche, des Deux Hurées et Val d’Alvaux en matière de protection contre l’érosion des terres agricoles et de lutte contre les inondations et les coulées boueuses dues au ruissellement ; Vu le courrier ministériel du 20 décembre 2021 relatif au soutien régional envers les autorités communales pour renforcer la gestion des risques d’inondation ; Vu le courrier du 21 décembre 2021 du Service Public de Wallonie portant octroi à la Commune d’une subvention d’un montant de 56.652,77 € pour",
+      "evidence": "Vu le courrier du 5 août 2021 du Service Public de Wallonie relatif à la reconnaissance comme calamité naturelle publique des inondations causées par les fortes pluies du 14 au 16 juillet 2021 sur les territoires d’un grand nombre de communes wallonnes ; Vu les délibérations du Collège communal en ses séances des 16 septembre 2021 et 16 mai 2024 portant actualisation du Plan communal d’actions en matière de lutte contre les risques d’inondations et de coulées boueuses ; Vu les délibérations du Conseil communal en ses séances des 28 septembre 2021 et 12 septembre 2022 portant approbation de l’adhésion de la Commune à l’accord-cadre de la Province du Brabant wallon relatif à la désignation d’un auteur de projets en vue de la réalisation d’ouvrages de lutte contre les inondations ; Vu le courrier du 19 octobre 2021 du Service Public de Wallonie portant avis circonstancié de sa visite des lieux rues de Spêche, des Deux Hurées et Val d’Alvaux en matière de protection contre l’érosion des terres agricoles et de lutte contre les inondations et les coulées boueuses dues au ruissellement ; Vu le courrier ministériel du 20 décembre 2021 relatif au soutien régional envers les autorités communales pour renforcer la gestion des risques d’inondation ; Vu le courrier du 21 décembre 2021 du Service Public de Wallonie portant octroi à la Commune d’une subvention d’un montant de 56.652,77 € pour",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu le courrier du 5 août 2021 du Service Public de Wallonie relatif à la reconnaissance comme calamité naturelle publique des inondations causées par les fortes pluies du 14 au 16 juillet 2021 sur les territoires d’un grand nombre de communes wallonnes ; Vu les délibérations du Collège communal en ses séances des 16 septembre 2021 et 16 mai 2024 portant actualisation du Plan communal d’actions en matière de lutte contre les risques d’inondations et de coulées boueuses ; Vu les délibérations du Conseil communal en ses séances des 28 septembre 2021 et 12 septembre 2022 portant approbation de l’adhésion de la Commune à l’accord-cadre de la Province du Brabant wallon relatif à la désignation d’un auteur de projets en vue de la réalisation d’ouvrages de lutte contre les inondations ; Vu le courrier du 19 octobre 2021 du Service Public de Wallonie portant avis circonstancié de sa visite des lieux rues de Spêche, des Deux Hurées et Val d’Alvaux en matière de protection contre l’érosion des terres agricoles et de lutte contre les inondations et les coulées boueuses dues au ruissellement ; Vu le courrier ministériel du 20 décembre 2021 relatif au soutien régional envers les autorités communales pour renforcer la gestion des risques d’inondation ; Vu le courrier du 21 décembre 2021 du Service Public de Wallonie portant octroi à la Commune d’une subvention d’un montant de 56.652,77 € pour",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local-html:d2a39a3db7cf3099f927",
+      "title": "PATRIMOINE : Promesse de vente à la Commune d’une partie de terrain agricole d’une contenance de 21 ares 6 centiares en vue de la création d’un bassin de rétention à Saint-Paul",
+      "sourceDocumentTitle": "PATRIMOINE : Promesse de vente à la Commune d’une partie de terrain agricole d’une contenance de 21 ares 6 centiares en vue de la création d’un bassin de rétention à Saint-Paul",
+      "missionEvidence": null,
+      "buyer": "Commune de Walhain",
+      "municipalityINS": "25124",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Hydraulique",
+      "sectors": [
+        "Hydraulique"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/walhain/decisions/19-octobre-2026-19-30/patrimoine-promesse-de-vente-a-la-commune-dune-partie-de-terrain-agricole-dune-contenance-de-21-ares-6-centiares-en-vue-de-la-creation-dun-bassin-de-retention-a-saint-paul",
+      "sourceDocument": "https://www.deliberations.be/walhain/decisions/19-octobre-2026-19-30/patrimoine-promesse-de-vente-a-la-commune-dune-partie-de-terrain-agricole-dune-contenance-de-21-ares-6-centiares-en-vue-de-la-creation-dun-bassin-de-retention-a-saint-paul",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/walhain/decisions/19-octobre-2026-19-30/patrimoine-promesse-de-vente-a-la-commune-dune-partie-de-terrain-agricole-dune-contenance-de-21-ares-6-centiares-en-vue-de-la-creation-dun-bassin-de-retention-a-saint-paul",
+        "sha256": "195825b16520c576f71acfc6d65fbe97868d06793c0fdc5fba4fdb8ed339f117",
+        "session": {
+          "date": "2026-10-19",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 19 octobre 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/walhain/decisions/19-octobre-2026-19-30/patrimoine-promesse-de-vente-a-la-commune-dune-partie-de-terrain-agricole-dune-contenance-de-21-ares-6-centiares-en-vue-de-la-creation-dun-bassin-de-retention-a-saint-paul"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:c921631737abfca4bc",
+        "sha256": "195825b16520c576f71acfc6d65fbe97868d06793c0fdc5fba4fdb8ed339f117",
+        "format": "html",
+        "checkedAt": "2026-11-07T07:48:28.687Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Vu le courrier du 5 août 2021 du Service Public de Wallonie relatif à la reconnaissance comme calamité naturelle publique des inondations causées par les fortes pluies du 14 au 16 juillet 2021 sur les territoires d’un gr",
+        "sourceUrl": "https://www.deliberations.be/walhain/decisions/19-octobre-2026-19-30/patrimoine-promesse-de-vente-a-la-commune-dune-partie-de-terrain-agricole-dune-contenance-de-21-ares-6-centiares-en-vue-de-la-creation-dun-bassin-de-retention-a-saint-paul",
+        "page": null,
+        "sha256": "195825b16520c576f71acfc6d65fbe97868d06793c0fdc5fba4fdb8ed339f117"
+      },
+      "description": "Vu le courrier du 5 août 2021 du Service Public de Wallonie relatif à la reconnaissance comme calamité naturelle publique des inondations causées par les fortes pluies du 14 au 16 juillet 2021 sur les territoires d’un grand nombre de communes wallonnes ; Vu les délibérations du Collège communal en ses séances des 16 septembre 2021 et 16 mai 2024 portant actualisation du Plan communal d’actions en matière de lutte contre les risques d’inondations et de coulées boueuses ; Vu les délibérations du Conseil communal en ses séances des 28 septembre 2021 et 12 septembre 2022 portant approbation de l’adhésion de la Commune à l’accord-cadre de la Province du Brabant wallon relatif à la désignation d’un auteur de projets en vue de la réalisation d’ouvrages de lutte contre les inondations ; Vu le courrier du 19 octobre 2021 du Service Public de Wallonie portant avis circonstancié de sa visite des lieux rues de Spêche, des Deux Hurées et Val d’Alvaux en matière de protection contre l’érosion des terres agricoles et de lutte contre les inondations et les coulées boueuses dues au ruissellement ; Vu le courrier ministériel du 20 décembre 2021 relatif au soutien régional envers les autorités communales pour renforcer la gestion des risques d’inondation ; Vu le courrier du 21 décembre 2021 du Service Public de Wallonie portant octroi à la Commune d’une subvention d’un montant de 56.652,77 € pour",
+      "evidence": "Vu le courrier du 5 août 2021 du Service Public de Wallonie relatif à la reconnaissance comme calamité naturelle publique des inondations causées par les fortes pluies du 14 au 16 juillet 2021 sur les territoires d’un grand nombre de communes wallonnes ; Vu les délibérations du Collège communal en ses séances des 16 septembre 2021 et 16 mai 2024 portant actualisation du Plan communal d’actions en matière de lutte contre les risques d’inondations et de coulées boueuses ; Vu les délibérations du Conseil communal en ses séances des 28 septembre 2021 et 12 septembre 2022 portant approbation de l’adhésion de la Commune à l’accord-cadre de la Province du Brabant wallon relatif à la désignation d’un auteur de projets en vue de la réalisation d’ouvrages de lutte contre les inondations ; Vu le courrier du 19 octobre 2021 du Service Public de Wallonie portant avis circonstancié de sa visite des lieux rues de Spêche, des Deux Hurées et Val d’Alvaux en matière de protection contre l’érosion des terres agricoles et de lutte contre les inondations et les coulées boueuses dues au ruissellement ; Vu le courrier ministériel du 20 décembre 2021 relatif au soutien régional envers les autorités communales pour renforcer la gestion des risques d’inondation ; Vu le courrier du 21 décembre 2021 du Service Public de Wallonie portant octroi à la Commune d’une subvention d’un montant de 56.652,77 € pour",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu le courrier du 5 août 2021 du Service Public de Wallonie relatif à la reconnaissance comme calamité naturelle publique des inondations causées par les fortes pluies du 14 au 16 juillet 2021 sur les territoires d’un grand nombre de communes wallonnes ; Vu les délibérations du Collège communal en ses séances des 16 septembre 2021 et 16 mai 2024 portant actualisation du Plan communal d’actions en matière de lutte contre les risques d’inondations et de coulées boueuses ; Vu les délibérations du Conseil communal en ses séances des 28 septembre 2021 et 12 septembre 2022 portant approbation de l’adhésion de la Commune à l’accord-cadre de la Province du Brabant wallon relatif à la désignation d’un auteur de projets en vue de la réalisation d’ouvrages de lutte contre les inondations ; Vu le courrier du 19 octobre 2021 du Service Public de Wallonie portant avis circonstancié de sa visite des lieux rues de Spêche, des Deux Hurées et Val d’Alvaux en matière de protection contre l’érosion des terres agricoles et de lutte contre les inondations et les coulées boueuses dues au ruissellement ; Vu le courrier ministériel du 20 décembre 2021 relatif au soutien régional envers les autorités communales pour renforcer la gestion des risques d’inondation ; Vu le courrier du 21 décembre 2021 du Service Public de Wallonie portant octroi à la Commune d’une subvention d’un montant de 56.652,77 € pour",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local-html:873e9b725778116645e1",
+      "title": "recourir aux services de l’Intercommunale IGRETEC en application de l’exception dite « In House » pour la mission d’auteur de projet relative à la mise en œuvre d’un parking sur le site de l’ancien Hôtel de Police ;",
+      "sourceDocumentTitle": "Mise en œuvre d’un parking sur le site de l’ancien Hôtel de Police situé 18, rue Saint-Martin à Tamines – Approbation des conditions et du mode de passation",
+      "missionEvidence": {
+        "excerpt": "t : Sur base de la décision du Conseil Communal du 3 novembre 2025 de recourir aux services de l’Intercommunale IGRETEC en application de l’exception dite « In House » pour la mission d’auteur de projet relative à la mise en œuvre d’un parking sur le site de l’ancien Hôtel de Police ;",
+        "sourceUrl": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/mise-en-oeuvre-dun-parking-sur-le-site-de-lancien-hotel-de-police-situe-18-rue-saint-martin-a-tamines-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "3a880c8dcf1a08d7e19f285e3a37c33c8326e649ed7d3c875efe054431e42e6f"
+      },
+      "buyer": "Commune de Sambreville",
+      "municipalityINS": "92137",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "t : Sur base de la décision du Conseil Communal du 3 novembre 2025 de recourir aux services de l’Intercommunale IGRETEC en application de l’exception dite « In House » pour la mission d’auteur de projet relative à la mise en œuvre d’un parking sur le site de l’ancien Hôtel de Police ;",
+        "mission": "recourir aux services de l’Intercommunale IGRETEC en application de l’exception dite « In House » pour la mission d’auteur de projet relative à la mise en œuvre d’un parking sur le site de l’ancien Hôtel de Police ;",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/mise-en-oeuvre-dun-parking-sur-le-site-de-lancien-hotel-de-police-situe-18-rue-saint-martin-a-tamines-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/mise-en-oeuvre-dun-parking-sur-le-site-de-lancien-hotel-de-police-situe-18-rue-saint-martin-a-tamines-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/mise-en-oeuvre-dun-parking-sur-le-site-de-lancien-hotel-de-police-situe-18-rue-saint-martin-a-tamines-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "3a880c8dcf1a08d7e19f285e3a37c33c8326e649ed7d3c875efe054431e42e6f",
+        "session": {
+          "date": "2026-10-19",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 19 octobre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/mise-en-oeuvre-dun-parking-sur-le-site-de-lancien-hotel-de-police-situe-18-rue-saint-martin-a-tamines-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:9bd4b35729bc186b22",
+        "sha256": "3a880c8dcf1a08d7e19f285e3a37c33c8326e649ed7d3c875efe054431e42e6f",
+        "format": "html",
+        "checkedAt": "2026-11-07T07:48:28.687Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Rapport Dans le cadre du plan de développement urbain du centre de Tamines, il est prévu d'aménager un parking sur l'ancien site de l'Hôtel de Police rue Saint-Martin à Tamines. La mission d'auteur de projet pour le doss",
+        "sourceUrl": "https://www.deliberations.be/sambreville/decisions/19-octobre-2026-19-00/mise-en-oeuvre-dun-parking-sur-le-site-de-lancien-hotel-de-police-situe-18-rue-saint-martin-a-tamines-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "3a880c8dcf1a08d7e19f285e3a37c33c8326e649ed7d3c875efe054431e42e6f"
+      },
+      "description": "Rapport Dans le cadre du plan de développement urbain du centre de Tamines, il est prévu d'aménager un parking sur l'ancien site de l'Hôtel de Police rue Saint-Martin à Tamines. La mission d'auteur de projet pour le dossier d'aménagement d'un parking sur l'ancien site de l'Hôtel de Police rue Saint-Martin à Tamines a été confiée à l'Intercommunale IGRETEC. Le projet prévoit la démolition complète du bâtiment de l'ancien Hôtel de Police ainsi que de l'ensemble de ses annexes et des abords existants, en vue de la réalisation du futur parking. qui comprendra : 59 places de stationnement standard 4 places PMR 4 emplacements destinés aux véhicules rechargeables",
+      "evidence": "Rapport Dans le cadre du plan de développement urbain du centre de Tamines, il est prévu d'aménager un parking sur l'ancien site de l'Hôtel de Police rue Saint-Martin à Tamines. La mission d'auteur de projet pour le dossier d'aménagement d'un parking sur l'ancien site de l'Hôtel de Police rue Saint-Martin à Tamines a été confiée à l'Intercommunale IGRETEC. Le projet prévoit la démolition complète du bâtiment de l'ancien Hôtel de Police ainsi que de l'ensemble de ses annexes et des abords existants, en vue de la réalisation du futur parking. qui comprendra : 59 places de stationnement standard 4 places PMR 4 emplacements destinés aux véhicules rechargeables",
+      "municipalEvidence": [
+        {
+          "excerpt": "Rapport Dans le cadre du plan de développement urbain du centre de Tamines, il est prévu d'aménager un parking sur l'ancien site de l'Hôtel de Police rue Saint-Martin à Tamines. La mission d'auteur de projet pour le dossier d'aménagement d'un parking sur l'ancien site de l'Hôtel de Police rue Saint-Martin à Tamines a été confiée à l'Intercommunale IGRETEC. Le projet prévoit la démolition complète du bâtiment de l'ancien Hôtel de Police ainsi que de l'ensemble de ses annexes et des abords existants, en vue de la réalisation du futur parking. qui comprendra : 59 places de stationnement standard 4 places PMR 4 emplacements destinés aux véhicules rechargeables",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu la délibération du Conseil Communal du 26 mai 2015 décidant notamment de conclure avec IGRETEC un contrat cadre visant des missions ponctuelles de coordination sécurité santé phases Projet et Réalisation sur divers projets à venir en fonction des besoins de la Commune, d’approuver le contrat cadre de coordination sécurité santé phase projet/réalisation, de charger le Collège communal des ordres de mission en fonction des projets à venir ainsi que de l’exécution et du suivi de ladite convention ; Vu la décision du Conseil Communal du 3 novembre 2025 décidant notamment : De fixer le montant estimé des honoraires de l’assistance à maîtrise d’ouvrage pour le projet à 99.732,41 € HTVA, soit 120.676,22 € TVAC (hors COO via contrat-cadre) ; De recourir à l’article 30 de la loi du 17 juin 2016 relative aux marchés publics ; Dans ce cadre, de recourir aux services de l’Intercommunale IGRETEC en application de l’exception dite « In House » ;",
+          "page": null
+        },
+        {
+          "excerpt": "De solliciter une offre à conclure entre la Commune de Sambreville et l’Intercommunale IGRETEC ; Vu la décision du Collège Communal du 13 novembre 2025 décidant notamment : Sur base de la décision du Conseil Communal du 3 novembre 2025 de recourir aux services de l’Intercommunale IGRETEC en application de l’exception dite « In House » pour la mission d’auteur de projet relative à la mise en œuvre d’un parking sur le site de l’ancien Hôtel de Police ; De marquer son accord sur la convention à conclure entre la Commune et l’Intercommunale IGRETEC en application de l’exception dite « In House » pour la mission d’auteur de projet relative à la mise en œuvre d’un parking sur le site de l’ancien Hôtel de Police. Cette convention fait partie intégrante de la délibération ; De marquer son accord sur le montant des honoraires de l’assistance à maîtrise d’ouvrage du projet à 99.732,41 € HTVA, soit 120.676,22 € TVAC (hors COO via contrat-cadre) ; Vu la décision du Collège Communal du 18 juin 2026 décidant notamment d’approuver le montant estimé de l’avant-projet – Mise en œuvre d’un parking sur le site de l’ancien Hôtel de Police à Tamines à 1.073.270,00 € TVAC ; Vu la décision du Collège Communal du 24 septembre 2026 décidant notamment d’approuver le fait que le coût des restations relatives à la réalisation des essais, analyses et l’établissement d’un inventaire amiante pour le dossier ",
+          "page": null
+        },
+        {
+          "excerpt": "Vu la décision du Collège Communal du 13 novembre 2025 décidant notamment : Sur base de la décision du Conseil Communal du 3 novembre 2025 de recourir aux services de l’Intercommunale IGRETEC en application de l’exception dite « In House » pour la mission d’auteur de projet relative à la mise en œuvre d’un parking sur le site de l’ancien Hôtel de Police ; De marquer son accord sur la convention à conclure entre la Commune et l’Intercommunale IGRETEC en application de l’exception dite « In House » pour la mission d’auteur de projet relative à la mise en œuvre d’un parking sur le site de l’ancien Hôtel de Police. Cette convention fait partie intégrante de la délibération ; De marquer son accord sur le montant des honoraires de l’assistance à maîtrise d’ouvrage du projet à 99.732,41 € HTVA, soit 120.676,22 € TVAC (hors COO via contrat-cadre) ; Vu la décision du Collège Communal du 18 juin 2026 décidant notamment d’approuver le montant estimé de l’avant-projet – Mise en œuvre d’un parking sur le site de l’ancien Hôtel de Police à Tamines à 1.073.270,00 € TVAC ; Vu la décision du Collège Communal du 24 septembre 2026 décidant notamment d’approuver le fait que le coût des restations relatives à la réalisation des essais, analyses et l’établissement d’un inventaire amiante pour le dossier relatif à la mise en œuvre d’un parking sur le site de l’ancien Hôtel de Police sera pris en char",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
     }
   ]
 }
