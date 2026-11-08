@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-07T20:15:25.725Z",
+  "generated_at": "2026-11-08T11:57:49.650Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-11-07 : 1484 avis lus, 3 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-11-08 : 1314 avis lus, 3 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-11-07T20:16:54.019Z",
+      "last_success": "2026-11-08T11:59:16.313Z",
       "scanned": 2125,
       "retained": 33,
-      "period_from": "2026-10-24",
-      "period_to": "2026-11-07",
+      "period_from": "2026-10-25",
+      "period_to": "2026-11-08",
       "pages": 85,
       "complete": true,
-      "raw_candidates": 2111,
+      "raw_candidates": 2109,
       "oldest_seen": "2026-10-23",
-      "last_attempt": "2026-11-07T20:16:54.019Z",
+      "last_attempt": "2026-11-08T11:59:16.313Z",
       "last_error": null,
-      "last_complete_success": "2026-11-07T20:16:54.019Z"
+      "last_complete_success": "2026-11-08T11:59:16.313Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-11-07T20:19:21.015Z",
+      "last_success": "2026-11-08T12:00:48.564Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -104,15 +104,15 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 85 page(s) parcourue(s) depuis 2026-10-24.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 85 page(s) parcourue(s) depuis 2026-10-25.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
-    "scanned": 1484,
-    "matched_current_run": 8,
+    "scanned": 1314,
+    "matched_current_run": 5,
     "records": 326,
-    "review_count": 223,
-    "award_notice_count": 396,
+    "review_count": 232,
+    "award_notice_count": 360,
     "awarded_market_matches": 3,
     "award_fields_requested": false,
     "retained_as_excluded": 36,
@@ -125,31 +125,31 @@
     "queries": [
       {
         "source": "Acheteurs belges",
-        "from": "20261027",
-        "to": "20261102",
-        "found": 485,
-        "reported": 485
+        "from": "20261028",
+        "to": "20261103",
+        "found": 457,
+        "reported": 457
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261027",
-        "to": "20261102",
-        "found": 468,
-        "reported": 468
+        "from": "20261028",
+        "to": "20261103",
+        "found": 444,
+        "reported": 444
       },
       {
         "source": "Acheteurs belges",
-        "from": "20261103",
-        "to": "20261107",
-        "found": 272,
-        "reported": 272
+        "from": "20261104",
+        "to": "20261108",
+        "found": 213,
+        "reported": 213
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261103",
-        "to": "20261107",
-        "found": 259,
-        "reported": 259
+        "from": "20261104",
+        "to": "20261108",
+        "found": 200,
+        "reported": 200
       }
     ],
     "warnings": [],
@@ -171,17 +171,16 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "acheteur_flamand": 165,
-      "avis_attribution_analyse_separement": 396,
-      "avis_neerlandais": 173,
-      "travaux_execution": 123,
-      "aucun_signal_metier": 454,
+      "avis_attribution_analyse_separement": 360,
+      "aucun_signal_metier": 391,
+      "travaux_execution": 106,
+      "acheteur_flamand": 153,
+      "avis_neerlandais": 158,
+      "objet_hors_domaine": 58,
       "formule_administrative_sans_signal_metier": 18,
-      "objet_hors_domaine": 67,
-      "assurance_ou_nettoyage": 20,
-      "fournitures_et_location": 52,
-      "qualifie_review": 14,
-      "qualifie_main": 2
+      "fournitures_et_location": 45,
+      "assurance_ou_nettoyage": 16,
+      "qualifie_review": 9
     }
   },
   "items": [
@@ -12156,6 +12155,95 @@
       "screeningReason": null
     },
     {
+      "id": "local-html:2eb6e4f3ba0d39213edb",
+      "title": "désigner un géomètre-expert pour :",
+      "sourceDocumentTitle": "Urbanisme - Site du Rieu du Coeur - Terrain privé cadastré Sion D n°1413 d2 - Procédure d'expropriation pour cause d'utilité publique - Approbation",
+      "missionEvidence": {
+        "excerpt": "e, montant ferme et probablement revu à la hausse, il a été décidé de désigner un géomètre-expert pour :",
+        "sourceUrl": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation",
+        "page": null,
+        "sha256": "d8e42f4e7e4395fd202c89aa11e6a3e2986e86d1f467dbdfd0e34c795ad643b2"
+      },
+      "buyer": "Commune de Quaregnon",
+      "municipalityINS": "53065",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "e, montant ferme et probablement revu à la hausse, il a été décidé de désigner un géomètre-expert pour :",
+        "mission": "désigner un géomètre-expert pour :",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Topo",
+      "sectors": [
+        "Topo",
+        "Foncier",
+        "Expert"
+      ],
+      "screening": "review",
+      "score": 88,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation",
+      "sourceDocument": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation",
+        "sha256": "d8e42f4e7e4395fd202c89aa11e6a3e2986e86d1f467dbdfd0e34c795ad643b2",
+        "session": {
+          "date": "2026-10-29",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 29 octobre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:bc2ce4d7cb627f9035",
+        "sha256": "d8e42f4e7e4395fd202c89aa11e6a3e2986e86d1f467dbdfd0e34c795ad643b2",
+        "format": "html",
+        "checkedAt": "2026-11-08T07:59:21.945Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Vu l'arrêté du Ministre Willy BORSUS en date du 06 avril 2022 approuvant le PCA n°5 dit \"Rieu du Coeur\" et permettant d'envisager la procédure d'expropriation ; Vu la décision du Collège Communal, en sa séance du 25 août",
+        "sourceUrl": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation",
+        "page": null,
+        "sha256": "d8e42f4e7e4395fd202c89aa11e6a3e2986e86d1f467dbdfd0e34c795ad643b2"
+      },
+      "description": "Vu l'arrêté du Ministre Willy BORSUS en date du 06 avril 2022 approuvant le PCA n°5 dit \"Rieu du Coeur\" et permettant d'envisager la procédure d'expropriation ; Vu la décision du Collège Communal, en sa séance du 25 août 2026, décidant de présenter pour approbation en prochaine séance du Conseil Communal, la procédure d'expropriation pour cause d'utilité publique du terrain privé cadastré Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Considérant que cette expropriation est pour cause d'utilité publique, ledit terrain se situe dans le périmètre de la future voirie qui va desservir le nouveau quartier ; Vu ce qui précède. Art. 1er : D’approuver l'expropriation pour cause d'utilité publique de la parcelle de terrain privée située sur le site du Rieu du Coeur à 7390 Quaregnon, cadastrée Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Art. 2 : De charger le Collège Communal de l'exécution de la présente décision pour ladite obtention d'autorisation d'expropriation auprès du Gouvernement Wallon.",
+      "evidence": "Vu l'arrêté du Ministre Willy BORSUS en date du 06 avril 2022 approuvant le PCA n°5 dit \"Rieu du Coeur\" et permettant d'envisager la procédure d'expropriation ; Vu la décision du Collège Communal, en sa séance du 25 août 2026, décidant de présenter pour approbation en prochaine séance du Conseil Communal, la procédure d'expropriation pour cause d'utilité publique du terrain privé cadastré Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Considérant que cette expropriation est pour cause d'utilité publique, ledit terrain se situe dans le périmètre de la future voirie qui va desservir le nouveau quartier ; Vu ce qui précède. Art. 1er : D’approuver l'expropriation pour cause d'utilité publique de la parcelle de terrain privée située sur le site du Rieu du Coeur à 7390 Quaregnon, cadastrée Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Art. 2 : De charger le Collège Communal de l'exécution de la présente décision pour ladite obtention d'autorisation d'expropriation auprès du Gouvernement Wallon.",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu l'arrêté du Ministre Willy BORSUS en date du 06 avril 2022 approuvant le PCA n°5 dit \"Rieu du Coeur\" et permettant d'envisager la procédure d'expropriation ; Vu la décision du Collège Communal, en sa séance du 25 août 2026, décidant de présenter pour approbation en prochaine séance du Conseil Communal, la procédure d'expropriation pour cause d'utilité publique du terrain privé cadastré Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Considérant que cette expropriation est pour cause d'utilité publique, ledit terrain se situe dans le périmètre de la future voirie qui va desservir le nouveau quartier ; Vu ce qui précède. Art. 1er : D’approuver l'expropriation pour cause d'utilité publique de la parcelle de terrain privée située sur le site du Rieu du Coeur à 7390 Quaregnon, cadastrée Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Art. 2 : De charger le Collège Communal de l'exécution de la présente décision pour ladite obtention d'autorisation d'expropriation auprès du Gouvernement Wallon.",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "prestation_decrite",
+      "screeningReason": null
+    },
+    {
       "id": "local:2cfa8765eb18ff66aa75",
       "title": "10.   DA2 - Marché de services - Désignation d'une équipe d'auteur(e)s de projet pour une mission d'étude et de suivi, gestion et coordination des travaux de création d'espaces verts et de réaménagement de voiries et d'espaces publics dans le quartier du Mont- à-Leux (périmètre rue du Chalet/rue de la Plaquette/rue des Tailleurs/rue du Riez/rue",
       "sourceDocumentTitle": "Octobre",
@@ -12236,6 +12324,85 @@
         "checkedAt": "2026-11-04T22:54:08.940Z",
         "changedAt": null
       },
+      "matchReason": "projet_indirect",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:5ed0ad1788049930713b",
+      "title": "SERVICE PATRIMOINE - Déclaration de complétude et de recevabilité de la demande de modification de voirie introduite par Monsieur Alain MAIRY tendant à la suppression d'une partie de la voirie communale, anciennement vicinale, numéro 3 à Samart et décision d'imposer une notice d'évaluation des incidences sur l'environnement (et non une étude).",
+      "sourceDocumentTitle": "SERVICE PATRIMOINE - Déclaration de complétude et de recevabilité de la demande de modification de voirie introduite par Monsieur Alain MAIRY tendant à la suppression d'une partie de la voirie communale, anciennement vicinale, numéro 3 à Samart et décision d'imposer une notice d'évaluation des incidences sur l'environnement (et non une étude).",
+      "missionEvidence": null,
+      "buyer": "Commune de Philippeville",
+      "municipalityINS": "93056",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "screening": "review",
+      "score": 74,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/philippeville/decisions/24-septembre-2026-19-30/service-patrimoine-declaration-de-completude-et-de-recevabilite-de-la-demande-de-modification-de-voirie-introduite-par-monsieur-alain-mairy-tendant-a-la-suppression-dune-partie-de-la-voirie-communale-anciennement-vicinale-numero-3-a-samart-et-decision",
+      "sourceDocument": "https://www.deliberations.be/philippeville/decisions/24-septembre-2026-19-30/service-patrimoine-declaration-de-completude-et-de-recevabilite-de-la-demande-de-modification-de-voirie-introduite-par-monsieur-alain-mairy-tendant-a-la-suppression-dune-partie-de-la-voirie-communale-anciennement-vicinale-numero-3-a-samart-et-decision",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/24-septembre-2026-19-30/service-patrimoine-declaration-de-completude-et-de-recevabilite-de-la-demande-de-modification-de-voirie-introduite-par-monsieur-alain-mairy-tendant-a-la-suppression-dune-partie-de-la-voirie-communale-anciennement-vicinale-numero-3-a-samart-et-decision",
+        "sha256": "d734b14eb9c0b231559b69fe0c3f0ac60c1c54d8cc04076ddd8b6ac026390f01",
+        "session": {
+          "date": "2026-09-24",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 24 septembre 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/philippeville/decisions/24-septembre-2026-19-30/service-patrimoine-declaration-de-completude-et-de-recevabilite-de-la-demande-de-modification-de-voirie-introduite-par-monsieur-alain-mairy-tendant-a-la-suppression-dune-partie-de-la-voirie-communale-anciennement-vicinale-numero-3-a-samart-et-decision"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:d8a34c2c9c9b8ed1db",
+        "sha256": "d734b14eb9c0b231559b69fe0c3f0ac60c1c54d8cc04076ddd8b6ac026390f01",
+        "format": "html",
+        "checkedAt": "2026-11-07T21:05:54.943Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "DECIDE à l'unanimité : Article 1er : De déclarer la demande de modification de voirie tendant à la suppression d'une partie de la voirie communale, anciennement vicinale, numéro 16 à Samart introduite par Monsieur TEXTE",
+        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/24-septembre-2026-19-30/service-patrimoine-declaration-de-completude-et-de-recevabilite-de-la-demande-de-modification-de-voirie-introduite-par-monsieur-alain-mairy-tendant-a-la-suppression-dune-partie-de-la-voirie-communale-anciennement-vicinale-numero-3-a-samart-et-decision",
+        "page": null,
+        "sha256": "d734b14eb9c0b231559b69fe0c3f0ac60c1c54d8cc04076ddd8b6ac026390f01"
+      },
+      "description": "DECIDE à l'unanimité : Article 1er : De déclarer la demande de modification de voirie tendant à la suppression d'une partie de la voirie communale, anciennement vicinale, numéro 16 à Samart introduite par Monsieur TEXTE MASQUÉ | RGPD complète et recevable. Article 2 : Sur la base de la notice d'évaluation des incidences sur l'environnement déposée dans le dossier, de constater que le projet n'est pas susceptible d'avoir des incidences notables sur l'environnement et, par conséquent, de ne pas imposer la réalisation d'une étude d'incidences sur l'environnement. Article 3 : De soumettre le présent dossier à enquête publique - comme le prévoit le décret du 6 février 2014 relatif à la voirie communale.",
+      "evidence": "DECIDE à l'unanimité : Article 1er : De déclarer la demande de modification de voirie tendant à la suppression d'une partie de la voirie communale, anciennement vicinale, numéro 16 à Samart introduite par Monsieur TEXTE MASQUÉ | RGPD complète et recevable. Article 2 : Sur la base de la notice d'évaluation des incidences sur l'environnement déposée dans le dossier, de constater que le projet n'est pas susceptible d'avoir des incidences notables sur l'environnement et, par conséquent, de ne pas imposer la réalisation d'une étude d'incidences sur l'environnement. Article 3 : De soumettre le présent dossier à enquête publique - comme le prévoit le décret du 6 février 2014 relatif à la voirie communale.",
+      "municipalEvidence": [
+        {
+          "excerpt": "DECIDE à l'unanimité : Article 1er : De déclarer la demande de modification de voirie tendant à la suppression d'une partie de la voirie communale, anciennement vicinale, numéro 16 à Samart introduite par Monsieur TEXTE MASQUÉ | RGPD complète et recevable. Article 2 : Sur la base de la notice d'évaluation des incidences sur l'environnement déposée dans le dossier, de constater que le projet n'est pas susceptible d'avoir des incidences notables sur l'environnement et, par conséquent, de ne pas imposer la réalisation d'une étude d'incidences sur l'environnement. Article 3 : De soumettre le présent dossier à enquête publique - comme le prévoit le décret du 6 février 2014 relatif à la voirie communale.",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
       "matchReason": "projet_indirect",
       "screeningReason": null
     },
@@ -13193,6 +13360,86 @@
         },
         {
           "excerpt": "Considérant que cette acquisition sera réalisée pour cause d'utilité publique afin d'y créer l'entrée du futur parking du site à réaménager des Fours à Chaux ; Considérant qu'en date du 19 décembre 2025, le Géomètre-Expert Monsieur BARCELLONA Vincent a transmis le plan de division de la partie de parcelle concernée d'une contenance de 06 a 95 ca ; Considérant qu'en date du 16 octobre 2026, l’Étude des Notaires WUILQUOT et NIZET a transmis son projet d'acte ; Sur proposition du Collège communal ; DÉCIDE, à l'unanimité : Article 1er : De marquer sa décision définitive sur l'acquisition d'une partie de la parcelle sise rue de Belle-Vue Cadastrée 4ème Division Dour Section A n°682F appartenant à TEXTE MASQUÉ | RGPD afin d'y créer l'entrée du futur parking du site à réaménager des Fours à Chaux TEXTE MASQUÉ | RGPD plus les frais. Art 2 : De financer cette dépense à l'article 764/711-54 (n° de projet 20200024) du budget extraordinaire de l'année 2026 via un prélèvement sur fonds propres lors de la deuxième modification budgétaire 2026.",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "prestation_decrite",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:ca82a0871f74a25658c2",
+      "title": "Opération patrimoniale - Atelier rural sis rue de la gare à 7604 Wasmes-Audemez-Briffoeil - Parcelle cadastrée 5ème division section A 155f2 - Mise en vente - Fixation des conditions",
+      "sourceDocumentTitle": "Opération patrimoniale - Atelier rural sis rue de la gare à 7604 Wasmes-Audemez-Briffoeil - Parcelle cadastrée 5ème division section A 155f2 - Mise en vente - Fixation des conditions",
+      "missionEvidence": null,
+      "buyer": "Commune de Péruwelz",
+      "municipalityINS": "57064",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Topo",
+      "sectors": [
+        "Topo",
+        "Foncier"
+      ],
+      "screening": "review",
+      "score": 71,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/peruwelz/decisions/28-octobre-2026-19-00/operation-patrimoniale-atelier-rural-sis-rue-de-la-gare-a-7604-wasmes-audemez-briffoeil-parcelle-cadastree-5eme-division-section-a-155f2-mise-en-vente-fixation-des-conditions",
+      "sourceDocument": "https://www.deliberations.be/peruwelz/decisions/28-octobre-2026-19-00/operation-patrimoniale-atelier-rural-sis-rue-de-la-gare-a-7604-wasmes-audemez-briffoeil-parcelle-cadastree-5eme-division-section-a-155f2-mise-en-vente-fixation-des-conditions",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/peruwelz/decisions/28-octobre-2026-19-00/operation-patrimoniale-atelier-rural-sis-rue-de-la-gare-a-7604-wasmes-audemez-briffoeil-parcelle-cadastree-5eme-division-section-a-155f2-mise-en-vente-fixation-des-conditions",
+        "sha256": "838bf0f851ba2723bb1843b9f7906df4dbca9193387a0002efd903f190ed20f6",
+        "session": {
+          "date": "2026-10-28",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 28 octobre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/peruwelz/decisions/28-octobre-2026-19-00/operation-patrimoniale-atelier-rural-sis-rue-de-la-gare-a-7604-wasmes-audemez-briffoeil-parcelle-cadastree-5eme-division-section-a-155f2-mise-en-vente-fixation-des-conditions"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:a0ff03af8e694efa0c",
+        "sha256": "838bf0f851ba2723bb1843b9f7906df4dbca9193387a0002efd903f190ed20f6",
+        "format": "html",
+        "checkedAt": "2026-11-08T07:59:21.945Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Article 4 : de charger le collège communal de l'exécution de la présente délibération et de l'attribution du contrat relatif à cette opération patrimoniale ; Article 5 : de prendre en charge les frais et honoraires de Me",
+        "sourceUrl": "https://www.deliberations.be/peruwelz/decisions/28-octobre-2026-19-00/operation-patrimoniale-atelier-rural-sis-rue-de-la-gare-a-7604-wasmes-audemez-briffoeil-parcelle-cadastree-5eme-division-section-a-155f2-mise-en-vente-fixation-des-conditions",
+        "page": null,
+        "sha256": "838bf0f851ba2723bb1843b9f7906df4dbca9193387a0002efd903f190ed20f6"
+      },
+      "description": "Article 4 : de charger le collège communal de l'exécution de la présente délibération et de l'attribution du contrat relatif à cette opération patrimoniale ; Article 5 : de prendre en charge les frais et honoraires de Me TEXTE MASQUÉ | RGPD dus par la partie venderesse (frais de publicité, honoraires de négociation) par les crédits prévus à l'article 124/12320 du budget ordinaire 2026. Article 6 : de permettre au collège de décider de la prise en charge ou non de frais de géomètre liés, le cas échéant, à la création d'un accès en fonction des discussions avec les candidats acquéreurs ;",
+      "evidence": "Article 4 : de charger le collège communal de l'exécution de la présente délibération et de l'attribution du contrat relatif à cette opération patrimoniale ; Article 5 : de prendre en charge les frais et honoraires de Me TEXTE MASQUÉ | RGPD dus par la partie venderesse (frais de publicité, honoraires de négociation) par les crédits prévus à l'article 124/12320 du budget ordinaire 2026. Article 6 : de permettre au collège de décider de la prise en charge ou non de frais de géomètre liés, le cas échéant, à la création d'un accès en fonction des discussions avec les candidats acquéreurs ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "Article 4 : de charger le collège communal de l'exécution de la présente délibération et de l'attribution du contrat relatif à cette opération patrimoniale ; Article 5 : de prendre en charge les frais et honoraires de Me TEXTE MASQUÉ | RGPD dus par la partie venderesse (frais de publicité, honoraires de négociation) par les crédits prévus à l'article 124/12320 du budget ordinaire 2026. Article 6 : de permettre au collège de décider de la prise en charge ou non de frais de géomètre liés, le cas échéant, à la création d'un accès en fonction des discussions avec les candidats acquéreurs ;",
           "page": null
         }
       ],
@@ -21082,6 +21329,287 @@
       "screeningReason": null
     },
     {
+      "id": "local-html:2ed16c906133782c6d98",
+      "title": "Mission d’auteur de projet relative à l’élaboration d'une Perspective de Développement Urbain (PDU) et du Programme d’Actions Triennal Opérationnel (PATO) – Approbation des modes et conditions de la relation « in house » avec IGRETEC.",
+      "sourceDocumentTitle": "Mission d’auteur de projet relative à l’élaboration d'une Perspective de Développement Urbain (PDU) et du Programme d’Actions Triennal Opérationnel (PATO) – Approbation des modes et conditions de la relation « in house » avec IGRETEC.",
+      "missionEvidence": null,
+      "buyer": "Commune de Ham-sur-Heure-Nalinnes",
+      "municipalityINS": "56086",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "other",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/06-octobre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-dune-perspective-de-developpement-urbain-pdu-et-du-programme-dactions-triennal-operationnel-pato-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec",
+      "sourceDocument": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/06-octobre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-dune-perspective-de-developpement-urbain-pdu-et-du-programme-dactions-triennal-operationnel-pato-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/06-octobre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-dune-perspective-de-developpement-urbain-pdu-et-du-programme-dactions-triennal-operationnel-pato-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec",
+        "sha256": "c5d25f71fa30800eb7c3737876e8129804e8435572475c243d0d6816893670e1",
+        "session": {
+          "date": "2026-10-06",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 06 octobre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/06-octobre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-dune-perspective-de-developpement-urbain-pdu-et-du-programme-dactions-triennal-operationnel-pato-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:b4ffba746a7c5f7da8",
+        "sha256": "c5d25f71fa30800eb7c3737876e8129804e8435572475c243d0d6816893670e1",
+        "format": "html",
+        "checkedAt": "2026-11-07T21:05:54.943Z"
+      },
+      "webTypeEvidence": {
+        "kind": "other",
+        "reason": "projet_de_mission_a_operateur_determine",
+        "excerpt": "Mission d’auteur de projet relative à l’élaboration d'une Perspective de Développement Urbain (PDU) et du Programme d’Actions Triennal Opérationnel (PATO) – Approbation des modes et conditions de la relation « in house »",
+        "sourceUrl": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/06-octobre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-dune-perspective-de-developpement-urbain-pdu-et-du-programme-dactions-triennal-operationnel-pato-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec",
+        "page": null,
+        "sha256": "c5d25f71fa30800eb7c3737876e8129804e8435572475c243d0d6816893670e1"
+      },
+      "description": "Mission d’auteur de projet relative à l’élaboration d'une Perspective de Développement Urbain (PDU) et du Programme d’Actions Triennal Opérationnel (PATO) – Approbation des modes et conditions de la relation « in house » avec IGRETEC. 6 Séance publique du Conseil 06 octobre 2026 (19:00) Point N°",
+      "evidence": "Mission d’auteur de projet relative à l’élaboration d'une Perspective de Développement Urbain (PDU) et du Programme d’Actions Triennal Opérationnel (PATO) – Approbation des modes et conditions de la relation « in house » avec IGRETEC. 6 Séance publique du Conseil 06 octobre 2026 (19:00) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "Mission d’auteur de projet relative à l’élaboration d'une Perspective de Développement Urbain (PDU) et du Programme d’Actions Triennal Opérationnel (PATO) – Approbation des modes et conditions de la relation « in house » avec IGRETEC. 6 Séance publique du Conseil 06 octobre 2026 (19:00) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. Mission d’auteur de projet relative à l’élaboration d'une Perspective de Développement Urbain (PDU) et du Programme d’Actions Triennal Opérationnel (PATO) – Approbation des modes et conditions de la relation « in house » avec IGRETEC. Vu le Code de la démocratie locale et de la décentralisation, notamment l'article L1122-30 ; Vu le §3 de l’article 30 de la loi du 17 juin 2016 relative aux marchés publics qui précise qu’un pouvoir adjudicateur qui n'exerce pas de contrôle sur une personne morale régie par le droit privé ou le droit public au sens du paragraphe 1 er de ce même article, peut passer un marché public avec cette personne morale sans appliquer la présente loi, lorsque toutes les conditions suivantes sont réunies : - le pouvoir adjudicateur exerce, conjointement avec d'autres pouvoirs adjudicateurs, un contrôle sur la personne morale concernée, analogue à celui qu'ils exercent sur leurs propres services ; - plus de 80% des activités de cette personne morale sont exercées dans le cadre de l'exécution des tâches qui lui sont confiées par les pouvoirs adjudicateurs qui la contrôlent o",
+          "page": null
+        },
+        {
+          "excerpt": "- des informations concernant l'estimation du coût global et du financement de l'opération de développement urbain ; - le cas échéant, les liens avec un Schéma de Développement Communal ou Pluricommunal déjà validé ou en cours d'élaboration ou avec les communes limitrophes ; Considérant qu’il est nécessaire de confier à un bureau d’études, la mission d’auteur de projet relative à l’élaboration d'une Perspective de Développement Urbain ; Considérant que la relation entre la Commune de Ham-sur-Heure-Nalinnes et IGRETEC remplit les conditions prévues à l’article 30 de la loi du 17 juin 2016 : - la Commune exerçant son contrôle, collectivement avec les autres associés à l’Assemblée Générale d’IGRETEC ; - IGRETEC ne comportant pas de formes de participation de capitaux privés avec une capacité de contrôle ou de blocage leur permettant d’exercer une influence décisive sur la personne morale contrôlée ; - plus de 80 % du chiffre d’affaires 2025 d’IGRETEC ayant été réalisé dans le cadre de l’exécution de tâches pour ses associés ;",
+          "page": null
+        },
+        {
+          "excerpt": "- d’urbanisme et environnement le 24 janvier 2011, avec modification par délibération des 27 juin 2013, 16 décembre 2013, 16 décembre 2015, 26 juin 2019 et 15 décembre 2022 ; - de maîtrise d’usage le 26 juin 2019, avec modification par délibération du 15 décembre 2022 ; Considérant la proposition de contrat sollicitée par la Commune de Ham-sur-Heure-Nalinnes et transmise par IGRETEC et reprenant pour la mission : l’objet de la mission, la description de la mission, les délais en jour calendrier entre la commande et le début de la mission et les taux d’honoraires ; Considérant que la mission de base comprend des études en aménagement du territoire ; Considérant que le montant de base des honoraires en aménagement du territoire pour la présente mission est estimé à 21.294,24 € HTVA, soit 25.766,03 € TVAC ; Considérant que la Commune de Ham-sur-Heure-Nalinnes peut également confier, en option, au Bureau d’Études, par délibération du Collège communal, les options suivantes : - mission de maîtrise d’usage, au gré des besoins, facturée au taux horaire gestionnaire de projets de 120,99 € HTVA/heure (taux 2026) ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:e8d7dddac618b90d29d7",
+      "title": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE",
+      "sourceDocumentTitle": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE",
+      "missionEvidence": {
+        "excerpt": "TIONS ET DU MODE DE PASSATION - VOTE Le Conseil communal est invité à approuver les conditions et le mode de passation d'un marché de services en vue de la désignation d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
+        "sourceUrl": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote",
+        "page": null,
+        "sha256": "9fc77229997266324c61c2e725f0610c3fe9737d5f5a189f6637eb575f85d9b8"
+      },
+      "buyer": "Commune de Soignies",
+      "municipalityINS": "55040",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "TIONS ET DU MODE DE PASSATION - VOTE Le Conseil communal est invité à approuver les conditions et le mode de passation d'un marché de services en vue de la désignation d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
+        "mission": "approuver les conditions et le mode de passation d'un marché de services en vue de la désignation d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote",
+      "sourceDocument": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote",
+        "sha256": "9fc77229997266324c61c2e725f0610c3fe9737d5f5a189f6637eb575f85d9b8",
+        "session": {
+          "date": "2026-10-13",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 13 octobre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:b75983fa962b4d860f",
+        "sha256": "9fc77229997266324c61c2e725f0610c3fe9737d5f5a189f6637eb575f85d9b8",
+        "format": "html",
+        "checkedAt": "2026-11-08T00:55:07.880Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSAT",
+        "sourceUrl": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote",
+        "page": null,
+        "sha256": "9fc77229997266324c61c2e725f0610c3fe9737d5f5a189f6637eb575f85d9b8"
+      },
+      "description": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE 13 Séance publique du Conseil 13 octobre 2026 (19:00) Point N°",
+      "evidence": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE 13 Séance publique du Conseil 13 octobre 2026 (19:00) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE 13 Séance publique du Conseil 13 octobre 2026 (19:00) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE Le Conseil communal est invité à approuver les conditions et le mode de passation d'un marché de services en vue de la désignation d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux En vertu de l'article L1122-19 du Code de la Démocratie locale et de la Décentralisation, Madame l'Echevine MARCQ quitte la séance. Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ;",
+          "page": null
+        },
+        {
+          "excerpt": "Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE Le Conseil communal est invité à approuver les conditions et le mode de passation d'un marché de services en vue de la désignation d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux En vertu de l'article L1122-19 du Code de la Démocratie locale et de la Décentralisation, Madame l'Echevine MARCQ quitte la séance. Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l'article 36 ;",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Considérant le cahier des charges N° 2026/3P/1878 relatif au marché “Marché de services - Intervention d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux” ; Considérant que le montant estimé de ce marché s'élève à 278.301,15 € hors TVA ou 336.744,39 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure ouverte ; Considérant que cette estimation dépasse les seuils d'application de la publicité européenne ; Considérant que le crédit permettant cette dépense est inscrit à l’article 764/723-60 ( n° de projet 20261011) du budget extraordinaire 2026 qui sera financé par prélèvement sur fonds de réserve ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "mission_architecturale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:f715311647a73f7c82a6",
+      "title": "Schéma de Développement Communal - Désignation de conseillers communaux comme membres du comité d'accompagnement.",
+      "sourceDocumentTitle": "Schéma de Développement Communal - Désignation de conseillers communaux comme membres du comité d'accompagnement.",
+      "missionEvidence": null,
+      "buyer": "Commune de Blegny",
+      "municipalityINS": "62119",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/blegny/decisions/22-octobre-2026-20-00/schema-de-developpement-communal-designation-de-conseillers-communaux-comme-membres-du-comite-daccompagnement",
+      "sourceDocument": "https://www.deliberations.be/blegny/decisions/22-octobre-2026-20-00/schema-de-developpement-communal-designation-de-conseillers-communaux-comme-membres-du-comite-daccompagnement",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/blegny/decisions/22-octobre-2026-20-00/schema-de-developpement-communal-designation-de-conseillers-communaux-comme-membres-du-comite-daccompagnement",
+        "sha256": "4ffb71c48f3fe7c767bd5124f1c379be612a6ce3a6ff06aa0f55407bd6b6ee85",
+        "session": {
+          "date": "2026-10-22",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 22 octobre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/blegny/decisions/22-octobre-2026-20-00/schema-de-developpement-communal-designation-de-conseillers-communaux-comme-membres-du-comite-daccompagnement"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:17cf20cc9d258e3d2f",
+        "sha256": "4ffb71c48f3fe7c767bd5124f1c379be612a6ce3a6ff06aa0f55407bd6b6ee85",
+        "format": "html",
+        "checkedAt": "2026-11-08T07:59:21.945Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Considérant qu'avec l'entrée en vigueur du Code du Développement Territorial (CoDT), le \"Schéma de Structure Communal\" a été rebaptisé \"Schéma de Développement communal\" ; Vu l'article D.II.10 du CoDT, disposant que \"le",
+        "sourceUrl": "https://www.deliberations.be/blegny/decisions/22-octobre-2026-20-00/schema-de-developpement-communal-designation-de-conseillers-communaux-comme-membres-du-comite-daccompagnement",
+        "page": null,
+        "sha256": "4ffb71c48f3fe7c767bd5124f1c379be612a6ce3a6ff06aa0f55407bd6b6ee85"
+      },
+      "description": "Considérant qu'avec l'entrée en vigueur du Code du Développement Territorial (CoDT), le \"Schéma de Structure Communal\" a été rebaptisé \"Schéma de Développement communal\" ; Vu l'article D.II.10 du CoDT, disposant que \"le Schéma de Développement communal définit la stratégie territoriale pour l'ensemble du territoire communal sur la base d'une analyse contextuelle, à l'échelle du territoire communal\" ; Vu sa décision du 30 octobre 2025 de passer un marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global ; Vu la décision du Collège communal du 22 décembre 2025 d'’attribuer le marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global au soumissionnaire ayant remis l’offre unique et régulière, soit PLURIS SCRL, rue de Fétinne, 85 à 4020 LIÈGE ; Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit ",
+      "evidence": "Considérant qu'avec l'entrée en vigueur du Code du Développement Territorial (CoDT), le \"Schéma de Structure Communal\" a été rebaptisé \"Schéma de Développement communal\" ; Vu l'article D.II.10 du CoDT, disposant que \"le Schéma de Développement communal définit la stratégie territoriale pour l'ensemble du territoire communal sur la base d'une analyse contextuelle, à l'échelle du territoire communal\" ; Vu sa décision du 30 octobre 2025 de passer un marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global ; Vu la décision du Collège communal du 22 décembre 2025 d'’attribuer le marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global au soumissionnaire ayant remis l’offre unique et régulière, soit PLURIS SCRL, rue de Fétinne, 85 à 4020 LIÈGE ; Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit ",
+      "municipalEvidence": [
+        {
+          "excerpt": "Considérant qu'avec l'entrée en vigueur du Code du Développement Territorial (CoDT), le \"Schéma de Structure Communal\" a été rebaptisé \"Schéma de Développement communal\" ; Vu l'article D.II.10 du CoDT, disposant que \"le Schéma de Développement communal définit la stratégie territoriale pour l'ensemble du territoire communal sur la base d'une analyse contextuelle, à l'échelle du territoire communal\" ; Vu sa décision du 30 octobre 2025 de passer un marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global ; Vu la décision du Collège communal du 22 décembre 2025 d'’attribuer le marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global au soumissionnaire ayant remis l’offre unique et régulière, soit PLURIS SCRL, rue de Fétinne, 85 à 4020 LIÈGE ; Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit ",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l'article D.II.10 du CoDT, disposant que \"le Schéma de Développement communal définit la stratégie territoriale pour l'ensemble du territoire communal sur la base d'une analyse contextuelle, à l'échelle du territoire communal\" ; Vu sa décision du 30 octobre 2025 de passer un marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global ; Vu la décision du Collège communal du 22 décembre 2025 d'’attribuer le marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global au soumissionnaire ayant remis l’offre unique et régulière, soit PLURIS SCRL, rue de Fétinne, 85 à 4020 LIÈGE ; Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit comité peut convier toute personne ou instance qu’il juge utile d’associer à l’élaboration du schéma ; Considérant que notre Commune ne dispose pas d'une Commission Communa",
+          "page": null
+        },
+        {
+          "excerpt": "Vu sa décision du 30 octobre 2025 de passer un marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global ; Vu la décision du Collège communal du 22 décembre 2025 d'’attribuer le marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global au soumissionnaire ayant remis l’offre unique et régulière, soit PLURIS SCRL, rue de Fétinne, 85 à 4020 LIÈGE ; Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit comité peut convier toute personne ou instance qu’il juge utile d’associer à l’élaboration du schéma ; Considérant que notre Commune ne dispose pas d'une Commission Communale d'Aménagement du Territoire et de la Mobilité (CCATM) ; Considérant la volonté du Collège communal d’associer les 2 groupes politiques du Conseil communal à cette élaboration en proposant au groupe Blegny Plus de désigner 2 repré",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit comité peut convier toute personne ou instance qu’il juge utile d’associer à l’élaboration du schéma ; Considérant que notre Commune ne dispose pas d'une Commission Communale d'Aménagement du Territoire et de la Mobilité (CCATM) ; Considérant la volonté du Collège communal d’associer les 2 groupes politiques du Conseil communal à cette élaboration en proposant au groupe Blegny Plus de désigner 2 représentants et au groupe PS d'en désigner 1 ; Sur proposition du Collège communal et après en avoir délibéré ; DECIDE ................................ : Article unique : de désigner les conseillers communaux suivants comme membres du comité d'accompagnement pour l'élaboration du Schéma de Développement communal :",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
       "id": "communal:c3599ff87890bfb78368",
       "title": "Prospection · Beyne-Heusay · 17) Règlement complémentaire de roulage - Création d’un emplacement de stationnement pour personnes handicapées - Plac…",
       "buyer": "Commune de Beyne-Heusay",
@@ -24770,6 +25298,198 @@
       "screeningReason": null
     },
     {
+      "id": "local-html:6e682290d2d7549800a5",
+      "title": "faire appel à un bureau d’études pour l’assister.",
+      "sourceDocumentTitle": "Opération de Développement Rural - aide de la Fondation Rurale de Wallonie",
+      "missionEvidence": {
+        "excerpt": "nimation de la participation citoyenne des CLDR ; La Ville peut aussi faire appel à un bureau d’études pour l’assister.",
+        "sourceUrl": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/operation-de-developpement-rural-aide-de-la-fondation-rurale-de-wallonie",
+        "page": null,
+        "sha256": "039412d9f9292c0aa24cf5d4e4b191430e1943b79b47c7f8067b090e82186d0f"
+      },
+      "buyer": "Commune de Tubize",
+      "municipalityINS": "25105",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "nimation de la participation citoyenne des CLDR ; La Ville peut aussi faire appel à un bureau d’études pour l’assister.",
+        "mission": "faire appel à un bureau d’études pour l’assister.",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 49,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/operation-de-developpement-rural-aide-de-la-fondation-rurale-de-wallonie",
+      "sourceDocument": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/operation-de-developpement-rural-aide-de-la-fondation-rurale-de-wallonie",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/operation-de-developpement-rural-aide-de-la-fondation-rurale-de-wallonie",
+        "sha256": "039412d9f9292c0aa24cf5d4e4b191430e1943b79b47c7f8067b090e82186d0f",
+        "session": {
+          "date": "2026-11-05",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 05 novembre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/operation-de-developpement-rural-aide-de-la-fondation-rurale-de-wallonie"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:845eb683cbb68b66c0",
+        "sha256": "039412d9f9292c0aa24cf5d4e4b191430e1943b79b47c7f8067b090e82186d0f",
+        "format": "html",
+        "checkedAt": "2026-11-07T21:05:54.943Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Une brochure explicative se trouve dans le dossier SharePoint. Opération de développement rural (ODR) Une commune rurale ou semi-rurale ( la Ville de Tubize étant considérée comme semi-rurale , c’est-à-dire que 60 à 85%",
+        "sourceUrl": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/operation-de-developpement-rural-aide-de-la-fondation-rurale-de-wallonie",
+        "page": null,
+        "sha256": "039412d9f9292c0aa24cf5d4e4b191430e1943b79b47c7f8067b090e82186d0f"
+      },
+      "description": "Une brochure explicative se trouve dans le dossier SharePoint. Opération de développement rural (ODR) Une commune rurale ou semi-rurale ( la Ville de Tubize étant considérée comme semi-rurale , c’est-à-dire que 60 à 85% de la surface est composée de territoires ruraux) peut mener une Opération de développement rural (ODR). Cette opération se concrétise par la rédaction d'un Programme Communal de Développement Rural (PCDR, voir ci-dessous) qui définit des objectifs et des projets subsidiés pour les 10 ans à venir , via un processus participatif menant à la composition d’une Commission Locale de Développement Rural (CLDR, voir ci-dessous), avec pour but l’amélioration des conditions de vie des habitants aux points de vue économique, social, environnemental et culturel . Commission locale de Développement rural (CLDR) Une CLDR compte de 10 à 30 membres qui sont les représentants des différents milieux politique, économique, socioprofessionnel et culturel de la commune ; Un quart des membres peut être désigné au sein du Conseil communal ; Les communes qui disposent d’une CCATM (Commission Consultative d’Aménagement du Territoire et de la Mobilité) et décident de mener une ODR peuvent organiser une seule commission pour les deux matières ;",
+      "evidence": "Une brochure explicative se trouve dans le dossier SharePoint. Opération de développement rural (ODR) Une commune rurale ou semi-rurale ( la Ville de Tubize étant considérée comme semi-rurale , c’est-à-dire que 60 à 85% de la surface est composée de territoires ruraux) peut mener une Opération de développement rural (ODR). Cette opération se concrétise par la rédaction d'un Programme Communal de Développement Rural (PCDR, voir ci-dessous) qui définit des objectifs et des projets subsidiés pour les 10 ans à venir , via un processus participatif menant à la composition d’une Commission Locale de Développement Rural (CLDR, voir ci-dessous), avec pour but l’amélioration des conditions de vie des habitants aux points de vue économique, social, environnemental et culturel . Commission locale de Développement rural (CLDR) Une CLDR compte de 10 à 30 membres qui sont les représentants des différents milieux politique, économique, socioprofessionnel et culturel de la commune ; Un quart des membres peut être désigné au sein du Conseil communal ; Les communes qui disposent d’une CCATM (Commission Consultative d’Aménagement du Territoire et de la Mobilité) et décident de mener une ODR peuvent organiser une seule commission pour les deux matières ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "Une brochure explicative se trouve dans le dossier SharePoint. Opération de développement rural (ODR) Une commune rurale ou semi-rurale ( la Ville de Tubize étant considérée comme semi-rurale , c’est-à-dire que 60 à 85% de la surface est composée de territoires ruraux) peut mener une Opération de développement rural (ODR). Cette opération se concrétise par la rédaction d'un Programme Communal de Développement Rural (PCDR, voir ci-dessous) qui définit des objectifs et des projets subsidiés pour les 10 ans à venir , via un processus participatif menant à la composition d’une Commission Locale de Développement Rural (CLDR, voir ci-dessous), avec pour but l’amélioration des conditions de vie des habitants aux points de vue économique, social, environnemental et culturel . Commission locale de Développement rural (CLDR) Une CLDR compte de 10 à 30 membres qui sont les représentants des différents milieux politique, économique, socioprofessionnel et culturel de la commune ; Un quart des membres peut être désigné au sein du Conseil communal ; Les communes qui disposent d’une CCATM (Commission Consultative d’Aménagement du Territoire et de la Mobilité) et décident de mener une ODR peuvent organiser une seule commission pour les deux matières ;",
+          "page": null
+        },
+        {
+          "excerpt": "Opération de développement rural (ODR) Une commune rurale ou semi-rurale ( la Ville de Tubize étant considérée comme semi-rurale , c’est-à-dire que 60 à 85% de la surface est composée de territoires ruraux) peut mener une Opération de développement rural (ODR). Cette opération se concrétise par la rédaction d'un Programme Communal de Développement Rural (PCDR, voir ci-dessous) qui définit des objectifs et des projets subsidiés pour les 10 ans à venir , via un processus participatif menant à la composition d’une Commission Locale de Développement Rural (CLDR, voir ci-dessous), avec pour but l’amélioration des conditions de vie des habitants aux points de vue économique, social, environnemental et culturel . Commission locale de Développement rural (CLDR) Une CLDR compte de 10 à 30 membres qui sont les représentants des différents milieux politique, économique, socioprofessionnel et culturel de la commune ; Un quart des membres peut être désigné au sein du Conseil communal ; Les communes qui disposent d’une CCATM (Commission Consultative d’Aménagement du Territoire et de la Mobilité) et décident de mener une ODR peuvent organiser une seule commission pour les deux matières ; Sa composition est approuvée par le Conseil communal et son mode de fonctionnement est précisé dans un règlement d’ordre intérieur (ROI) qu’elle élabore elle-même lors de sa création ;",
+          "page": null
+        },
+        {
+          "excerpt": "Une CLDR compte de 10 à 30 membres qui sont les représentants des différents milieux politique, économique, socioprofessionnel et culturel de la commune ; Un quart des membres peut être désigné au sein du Conseil communal ; Les communes qui disposent d’une CCATM (Commission Consultative d’Aménagement du Territoire et de la Mobilité) et décident de mener une ODR peuvent organiser une seule commission pour les deux matières ; Sa composition est approuvée par le Conseil communal et son mode de fonctionnement est précisé dans un règlement d’ordre intérieur (ROI) qu’elle élabore elle-même lors de sa création ; Le bourgmestre assure la présidence, et ce n’est qu’à défaut de pouvoir assurer ladite présidence qu’il désigne une autre personne au sein de la CLDR, élue ou non (simplification du décret-programme) ; La CLDR est obligée de se réunir au moins deux fois par an (simplification du décret-programme). Programme Communal de Développement Rural (PCDR)",
+          "page": null
+        },
+        {
+          "excerpt": "Auteurs de projet de l'ODR La Ville peut, avec ses propres ressources, prendre en charge l’élaboration du document d’analyse socio-économique, la rédaction du programme et l’animation de la participation citoyenne des CLDR ; La Ville peut aussi faire appel à un bureau d’études pour l’assister. Organismes d’accompagnement La Ville, en tant qu'auteur de projet, peut être aidée par des organismes d’accompagnement qui sont subventionnés par la Région Wallonne. La Fondation Rurale de Wallonie (FRW), le Groupement régional économique Ourthe-Vesdre-Amblève (GREOA) et la Société de promotion économique pour l’Est de la Belgique (WFG) ont pour mission l’information des communes désireuses d’entreprendre une ODR et, à la demande du Ministre, mettent à la disposition de certaines communes des agents de développement. Convention avec la FRW",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:d9383ce033b16d4e9535",
+      "title": "Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard",
+      "sourceDocumentTitle": "Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard – Principe et approbation des conditions et du mode de passation.",
+      "missionEvidence": {
+        "excerpt": "’aménagement d’une parcelle des étoiles au cimetière de Saint-Mard. D'approuver le cahier des charges N° 2026-904 et le montant estimé du marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD . Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 39.900",
+        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "6834b4b7847b7902ecd23bd66314c75c99a851420e27eadc67c27adfc2bd614c"
+      },
+      "buyer": "Commune de Virton",
+      "municipalityINS": "85045",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "6834b4b7847b7902ecd23bd66314c75c99a851420e27eadc67c27adfc2bd614c",
+        "stage": "project"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "’aménagement d’une parcelle des étoiles au cimetière de Saint-Mard. D'approuver le cahier des charges N° 2026-904 et le montant estimé du marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD . Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 39.900",
+        "mission": "approuver le cahier des charges N° 2026-904 et le montant estimé du marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD .",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 49,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "6834b4b7847b7902ecd23bd66314c75c99a851420e27eadc67c27adfc2bd614c",
+        "session": {
+          "date": "2026-10-08",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 08 octobre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:613271c99a065aabec",
+        "sha256": "6834b4b7847b7902ecd23bd66314c75c99a851420e27eadc67c27adfc2bd614c",
+        "format": "html",
+        "checkedAt": "2026-11-08T00:55:07.880Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "- Des emplacements pleine terre pour fœtus de 60x60cm ; - Des emplacements pleine terre pour les enfants de moins de 12 ans ; Vu le cahier des charges N° 2026-904 établi par le Bureau d'études, TEXTE MASQUÉ | RGPD , rela",
+        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "6834b4b7847b7902ecd23bd66314c75c99a851420e27eadc67c27adfc2bd614c"
+      },
+      "description": "- Des emplacements pleine terre pour fœtus de 60x60cm ; - Des emplacements pleine terre pour les enfants de moins de 12 ans ; Vu le cahier des charges N° 2026-904 établi par le Bureau d'études, TEXTE MASQUÉ | RGPD , relatif au marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard” ; Considérant le plan de situation et la vue en plan des aménagements réalisés par TEXTE MASQUÉ | RGPD ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Réalisation d'un revêtement en dalle gazon PEHD, d'une aire de dispersion, pose de mobilier urbain (Estimé à : 32.850,00 € hors TVA ou 39.748,50 €, 21% TVA comprise) ; * Tranche conditionnelle : Plantation d'une haie (Estimé à : 7.050,00 € hors TVA ou 8.530,50 €, 21% TVA comprise) ;",
+      "evidence": "- Des emplacements pleine terre pour fœtus de 60x60cm ; - Des emplacements pleine terre pour les enfants de moins de 12 ans ; Vu le cahier des charges N° 2026-904 établi par le Bureau d'études, TEXTE MASQUÉ | RGPD , relatif au marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard” ; Considérant le plan de situation et la vue en plan des aménagements réalisés par TEXTE MASQUÉ | RGPD ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Réalisation d'un revêtement en dalle gazon PEHD, d'une aire de dispersion, pose de mobilier urbain (Estimé à : 32.850,00 € hors TVA ou 39.748,50 €, 21% TVA comprise) ; * Tranche conditionnelle : Plantation d'une haie (Estimé à : 7.050,00 € hors TVA ou 8.530,50 €, 21% TVA comprise) ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "- Des emplacements pleine terre pour fœtus de 60x60cm ; - Des emplacements pleine terre pour les enfants de moins de 12 ans ; Vu le cahier des charges N° 2026-904 établi par le Bureau d'études, TEXTE MASQUÉ | RGPD , relatif au marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard” ; Considérant le plan de situation et la vue en plan des aménagements réalisés par TEXTE MASQUÉ | RGPD ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Réalisation d'un revêtement en dalle gazon PEHD, d'une aire de dispersion, pose de mobilier urbain (Estimé à : 32.850,00 € hors TVA ou 39.748,50 €, 21% TVA comprise) ; * Tranche conditionnelle : Plantation d'une haie (Estimé à : 7.050,00 € hors TVA ou 8.530,50 €, 21% TVA comprise) ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-904",
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
       "id": "local-html:4fa57242e02ff0c4c4b3",
       "title": "PST 2025-2030 (Action 11) - Rénovation du cimetière des Tapeines - Étude - Marché public de services - Fixation des conditions et choix du mode de passation.",
       "buyer": "Commune de Flémalle",
@@ -25541,366 +26261,6 @@
       "screeningReason": null
     },
     {
-      "id": "local-html:5ed0ad1788049930713b",
-      "title": "SERVICE PATRIMOINE - Déclaration de complétude et de recevabilité de la demande de modification de voirie introduite par Monsieur Alain MAIRY tendant à la suppression d'une partie de la voirie communale, anciennement vicinale, numéro 3 à Samart et décision d'imposer une notice d'évaluation des incidences sur l'environnement (et non une étude).",
-      "sourceDocumentTitle": "SERVICE PATRIMOINE - Déclaration de complétude et de recevabilité de la demande de modification de voirie introduite par Monsieur Alain MAIRY tendant à la suppression d'une partie de la voirie communale, anciennement vicinale, numéro 3 à Samart et décision d'imposer une notice d'évaluation des incidences sur l'environnement (et non une étude).",
-      "missionEvidence": null,
-      "buyer": "Commune de Philippeville",
-      "municipalityINS": "93056",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "screening": "review",
-      "score": 60,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/philippeville/decisions/24-septembre-2026-19-30/service-patrimoine-declaration-de-completude-et-de-recevabilite-de-la-demande-de-modification-de-voirie-introduite-par-monsieur-alain-mairy-tendant-a-la-suppression-dune-partie-de-la-voirie-communale-anciennement-vicinale-numero-3-a-samart-et-decision",
-      "sourceDocument": "https://www.deliberations.be/philippeville/decisions/24-septembre-2026-19-30/service-patrimoine-declaration-de-completude-et-de-recevabilite-de-la-demande-de-modification-de-voirie-introduite-par-monsieur-alain-mairy-tendant-a-la-suppression-dune-partie-de-la-voirie-communale-anciennement-vicinale-numero-3-a-samart-et-decision",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/24-septembre-2026-19-30/service-patrimoine-declaration-de-completude-et-de-recevabilite-de-la-demande-de-modification-de-voirie-introduite-par-monsieur-alain-mairy-tendant-a-la-suppression-dune-partie-de-la-voirie-communale-anciennement-vicinale-numero-3-a-samart-et-decision",
-        "sha256": "d734b14eb9c0b231559b69fe0c3f0ac60c1c54d8cc04076ddd8b6ac026390f01",
-        "session": {
-          "date": "2026-09-24",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 24 septembre 2026 (19:30)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/philippeville/decisions/24-septembre-2026-19-30/service-patrimoine-declaration-de-completude-et-de-recevabilite-de-la-demande-de-modification-de-voirie-introduite-par-monsieur-alain-mairy-tendant-a-la-suppression-dune-partie-de-la-voirie-communale-anciennement-vicinale-numero-3-a-samart-et-decision"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:d8a34c2c9c9b8ed1db",
-        "sha256": "d734b14eb9c0b231559b69fe0c3f0ac60c1c54d8cc04076ddd8b6ac026390f01",
-        "format": "html",
-        "checkedAt": "2026-11-07T21:05:54.943Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "DECIDE à l'unanimité : Article 1er : De déclarer la demande de modification de voirie tendant à la suppression d'une partie de la voirie communale, anciennement vicinale, numéro 16 à Samart introduite par Monsieur TEXTE",
-        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/24-septembre-2026-19-30/service-patrimoine-declaration-de-completude-et-de-recevabilite-de-la-demande-de-modification-de-voirie-introduite-par-monsieur-alain-mairy-tendant-a-la-suppression-dune-partie-de-la-voirie-communale-anciennement-vicinale-numero-3-a-samart-et-decision",
-        "page": null,
-        "sha256": "d734b14eb9c0b231559b69fe0c3f0ac60c1c54d8cc04076ddd8b6ac026390f01"
-      },
-      "description": "DECIDE à l'unanimité : Article 1er : De déclarer la demande de modification de voirie tendant à la suppression d'une partie de la voirie communale, anciennement vicinale, numéro 16 à Samart introduite par Monsieur TEXTE MASQUÉ | RGPD complète et recevable. Article 2 : Sur la base de la notice d'évaluation des incidences sur l'environnement déposée dans le dossier, de constater que le projet n'est pas susceptible d'avoir des incidences notables sur l'environnement et, par conséquent, de ne pas imposer la réalisation d'une étude d'incidences sur l'environnement. Article 3 : De soumettre le présent dossier à enquête publique - comme le prévoit le décret du 6 février 2014 relatif à la voirie communale.",
-      "evidence": "DECIDE à l'unanimité : Article 1er : De déclarer la demande de modification de voirie tendant à la suppression d'une partie de la voirie communale, anciennement vicinale, numéro 16 à Samart introduite par Monsieur TEXTE MASQUÉ | RGPD complète et recevable. Article 2 : Sur la base de la notice d'évaluation des incidences sur l'environnement déposée dans le dossier, de constater que le projet n'est pas susceptible d'avoir des incidences notables sur l'environnement et, par conséquent, de ne pas imposer la réalisation d'une étude d'incidences sur l'environnement. Article 3 : De soumettre le présent dossier à enquête publique - comme le prévoit le décret du 6 février 2014 relatif à la voirie communale.",
-      "municipalEvidence": [
-        {
-          "excerpt": "DECIDE à l'unanimité : Article 1er : De déclarer la demande de modification de voirie tendant à la suppression d'une partie de la voirie communale, anciennement vicinale, numéro 16 à Samart introduite par Monsieur TEXTE MASQUÉ | RGPD complète et recevable. Article 2 : Sur la base de la notice d'évaluation des incidences sur l'environnement déposée dans le dossier, de constater que le projet n'est pas susceptible d'avoir des incidences notables sur l'environnement et, par conséquent, de ne pas imposer la réalisation d'une étude d'incidences sur l'environnement. Article 3 : De soumettre le présent dossier à enquête publique - comme le prévoit le décret du 6 février 2014 relatif à la voirie communale.",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local-html:2ed16c906133782c6d98",
-      "title": "Mission d’auteur de projet relative à l’élaboration d'une Perspective de Développement Urbain (PDU) et du Programme d’Actions Triennal Opérationnel (PATO) – Approbation des modes et conditions de la relation « in house » avec IGRETEC.",
-      "sourceDocumentTitle": "Mission d’auteur de projet relative à l’élaboration d'une Perspective de Développement Urbain (PDU) et du Programme d’Actions Triennal Opérationnel (PATO) – Approbation des modes et conditions de la relation « in house » avec IGRETEC.",
-      "missionEvidence": null,
-      "buyer": "Commune de Ham-sur-Heure-Nalinnes",
-      "municipalityINS": "56086",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "noticeKind": "other",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/06-octobre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-dune-perspective-de-developpement-urbain-pdu-et-du-programme-dactions-triennal-operationnel-pato-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec",
-      "sourceDocument": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/06-octobre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-dune-perspective-de-developpement-urbain-pdu-et-du-programme-dactions-triennal-operationnel-pato-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/06-octobre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-dune-perspective-de-developpement-urbain-pdu-et-du-programme-dactions-triennal-operationnel-pato-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec",
-        "sha256": "c5d25f71fa30800eb7c3737876e8129804e8435572475c243d0d6816893670e1",
-        "session": {
-          "date": "2026-10-06",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 06 octobre 2026 (19:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/06-octobre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-dune-perspective-de-developpement-urbain-pdu-et-du-programme-dactions-triennal-operationnel-pato-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:b4ffba746a7c5f7da8",
-        "sha256": "c5d25f71fa30800eb7c3737876e8129804e8435572475c243d0d6816893670e1",
-        "format": "html",
-        "checkedAt": "2026-11-07T21:05:54.943Z"
-      },
-      "webTypeEvidence": {
-        "kind": "other",
-        "reason": "projet_de_mission_a_operateur_determine",
-        "excerpt": "Mission d’auteur de projet relative à l’élaboration d'une Perspective de Développement Urbain (PDU) et du Programme d’Actions Triennal Opérationnel (PATO) – Approbation des modes et conditions de la relation « in house »",
-        "sourceUrl": "https://www.deliberations.be/ham-sur-heure-nalinnes/decisions/06-octobre-2026-19-00/mission-dauteur-de-projet-relative-a-lelaboration-dune-perspective-de-developpement-urbain-pdu-et-du-programme-dactions-triennal-operationnel-pato-approbation-des-modes-et-conditions-de-la-relation-in-house-avec-igretec",
-        "page": null,
-        "sha256": "c5d25f71fa30800eb7c3737876e8129804e8435572475c243d0d6816893670e1"
-      },
-      "description": "Mission d’auteur de projet relative à l’élaboration d'une Perspective de Développement Urbain (PDU) et du Programme d’Actions Triennal Opérationnel (PATO) – Approbation des modes et conditions de la relation « in house » avec IGRETEC. 6 Séance publique du Conseil 06 octobre 2026 (19:00) Point N°",
-      "evidence": "Mission d’auteur de projet relative à l’élaboration d'une Perspective de Développement Urbain (PDU) et du Programme d’Actions Triennal Opérationnel (PATO) – Approbation des modes et conditions de la relation « in house » avec IGRETEC. 6 Séance publique du Conseil 06 octobre 2026 (19:00) Point N°",
-      "municipalEvidence": [
-        {
-          "excerpt": "Mission d’auteur de projet relative à l’élaboration d'une Perspective de Développement Urbain (PDU) et du Programme d’Actions Triennal Opérationnel (PATO) – Approbation des modes et conditions de la relation « in house » avec IGRETEC. 6 Séance publique du Conseil 06 octobre 2026 (19:00) Point N°",
-          "page": null
-        },
-        {
-          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. Mission d’auteur de projet relative à l’élaboration d'une Perspective de Développement Urbain (PDU) et du Programme d’Actions Triennal Opérationnel (PATO) – Approbation des modes et conditions de la relation « in house » avec IGRETEC. Vu le Code de la démocratie locale et de la décentralisation, notamment l'article L1122-30 ; Vu le §3 de l’article 30 de la loi du 17 juin 2016 relative aux marchés publics qui précise qu’un pouvoir adjudicateur qui n'exerce pas de contrôle sur une personne morale régie par le droit privé ou le droit public au sens du paragraphe 1 er de ce même article, peut passer un marché public avec cette personne morale sans appliquer la présente loi, lorsque toutes les conditions suivantes sont réunies : - le pouvoir adjudicateur exerce, conjointement avec d'autres pouvoirs adjudicateurs, un contrôle sur la personne morale concernée, analogue à celui qu'ils exercent sur leurs propres services ; - plus de 80% des activités de cette personne morale sont exercées dans le cadre de l'exécution des tâches qui lui sont confiées par les pouvoirs adjudicateurs qui la contrôlent o",
-          "page": null
-        },
-        {
-          "excerpt": "- des informations concernant l'estimation du coût global et du financement de l'opération de développement urbain ; - le cas échéant, les liens avec un Schéma de Développement Communal ou Pluricommunal déjà validé ou en cours d'élaboration ou avec les communes limitrophes ; Considérant qu’il est nécessaire de confier à un bureau d’études, la mission d’auteur de projet relative à l’élaboration d'une Perspective de Développement Urbain ; Considérant que la relation entre la Commune de Ham-sur-Heure-Nalinnes et IGRETEC remplit les conditions prévues à l’article 30 de la loi du 17 juin 2016 : - la Commune exerçant son contrôle, collectivement avec les autres associés à l’Assemblée Générale d’IGRETEC ; - IGRETEC ne comportant pas de formes de participation de capitaux privés avec une capacité de contrôle ou de blocage leur permettant d’exercer une influence décisive sur la personne morale contrôlée ; - plus de 80 % du chiffre d’affaires 2025 d’IGRETEC ayant été réalisé dans le cadre de l’exécution de tâches pour ses associés ;",
-          "page": null
-        },
-        {
-          "excerpt": "- d’urbanisme et environnement le 24 janvier 2011, avec modification par délibération des 27 juin 2013, 16 décembre 2013, 16 décembre 2015, 26 juin 2019 et 15 décembre 2022 ; - de maîtrise d’usage le 26 juin 2019, avec modification par délibération du 15 décembre 2022 ; Considérant la proposition de contrat sollicitée par la Commune de Ham-sur-Heure-Nalinnes et transmise par IGRETEC et reprenant pour la mission : l’objet de la mission, la description de la mission, les délais en jour calendrier entre la commande et le début de la mission et les taux d’honoraires ; Considérant que la mission de base comprend des études en aménagement du territoire ; Considérant que le montant de base des honoraires en aménagement du territoire pour la présente mission est estimé à 21.294,24 € HTVA, soit 25.766,03 € TVAC ; Considérant que la Commune de Ham-sur-Heure-Nalinnes peut également confier, en option, au Bureau d’Études, par délibération du Collège communal, les options suivantes : - mission de maîtrise d’usage, au gré des besoins, facturée au taux horaire gestionnaire de projets de 120,99 € HTVA/heure (taux 2026) ;",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local-html:6e682290d2d7549800a5",
-      "title": "faire appel à un bureau d’études pour l’assister.",
-      "sourceDocumentTitle": "Opération de Développement Rural - aide de la Fondation Rurale de Wallonie",
-      "missionEvidence": {
-        "excerpt": "nimation de la participation citoyenne des CLDR ; La Ville peut aussi faire appel à un bureau d’études pour l’assister.",
-        "sourceUrl": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/operation-de-developpement-rural-aide-de-la-fondation-rurale-de-wallonie",
-        "page": null,
-        "sha256": "039412d9f9292c0aa24cf5d4e4b191430e1943b79b47c7f8067b090e82186d0f"
-      },
-      "buyer": "Commune de Tubize",
-      "municipalityINS": "25105",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "nimation de la participation citoyenne des CLDR ; La Ville peut aussi faire appel à un bureau d’études pour l’assister.",
-        "mission": "faire appel à un bureau d’études pour l’assister.",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 49,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/operation-de-developpement-rural-aide-de-la-fondation-rurale-de-wallonie",
-      "sourceDocument": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/operation-de-developpement-rural-aide-de-la-fondation-rurale-de-wallonie",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/operation-de-developpement-rural-aide-de-la-fondation-rurale-de-wallonie",
-        "sha256": "039412d9f9292c0aa24cf5d4e4b191430e1943b79b47c7f8067b090e82186d0f",
-        "session": {
-          "date": "2026-11-05",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 05 novembre 2026 (19:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/operation-de-developpement-rural-aide-de-la-fondation-rurale-de-wallonie"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:845eb683cbb68b66c0",
-        "sha256": "039412d9f9292c0aa24cf5d4e4b191430e1943b79b47c7f8067b090e82186d0f",
-        "format": "html",
-        "checkedAt": "2026-11-07T21:05:54.943Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Une brochure explicative se trouve dans le dossier SharePoint. Opération de développement rural (ODR) Une commune rurale ou semi-rurale ( la Ville de Tubize étant considérée comme semi-rurale , c’est-à-dire que 60 à 85%",
-        "sourceUrl": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/operation-de-developpement-rural-aide-de-la-fondation-rurale-de-wallonie",
-        "page": null,
-        "sha256": "039412d9f9292c0aa24cf5d4e4b191430e1943b79b47c7f8067b090e82186d0f"
-      },
-      "description": "Une brochure explicative se trouve dans le dossier SharePoint. Opération de développement rural (ODR) Une commune rurale ou semi-rurale ( la Ville de Tubize étant considérée comme semi-rurale , c’est-à-dire que 60 à 85% de la surface est composée de territoires ruraux) peut mener une Opération de développement rural (ODR). Cette opération se concrétise par la rédaction d'un Programme Communal de Développement Rural (PCDR, voir ci-dessous) qui définit des objectifs et des projets subsidiés pour les 10 ans à venir , via un processus participatif menant à la composition d’une Commission Locale de Développement Rural (CLDR, voir ci-dessous), avec pour but l’amélioration des conditions de vie des habitants aux points de vue économique, social, environnemental et culturel . Commission locale de Développement rural (CLDR) Une CLDR compte de 10 à 30 membres qui sont les représentants des différents milieux politique, économique, socioprofessionnel et culturel de la commune ; Un quart des membres peut être désigné au sein du Conseil communal ; Les communes qui disposent d’une CCATM (Commission Consultative d’Aménagement du Territoire et de la Mobilité) et décident de mener une ODR peuvent organiser une seule commission pour les deux matières ;",
-      "evidence": "Une brochure explicative se trouve dans le dossier SharePoint. Opération de développement rural (ODR) Une commune rurale ou semi-rurale ( la Ville de Tubize étant considérée comme semi-rurale , c’est-à-dire que 60 à 85% de la surface est composée de territoires ruraux) peut mener une Opération de développement rural (ODR). Cette opération se concrétise par la rédaction d'un Programme Communal de Développement Rural (PCDR, voir ci-dessous) qui définit des objectifs et des projets subsidiés pour les 10 ans à venir , via un processus participatif menant à la composition d’une Commission Locale de Développement Rural (CLDR, voir ci-dessous), avec pour but l’amélioration des conditions de vie des habitants aux points de vue économique, social, environnemental et culturel . Commission locale de Développement rural (CLDR) Une CLDR compte de 10 à 30 membres qui sont les représentants des différents milieux politique, économique, socioprofessionnel et culturel de la commune ; Un quart des membres peut être désigné au sein du Conseil communal ; Les communes qui disposent d’une CCATM (Commission Consultative d’Aménagement du Territoire et de la Mobilité) et décident de mener une ODR peuvent organiser une seule commission pour les deux matières ;",
-      "municipalEvidence": [
-        {
-          "excerpt": "Une brochure explicative se trouve dans le dossier SharePoint. Opération de développement rural (ODR) Une commune rurale ou semi-rurale ( la Ville de Tubize étant considérée comme semi-rurale , c’est-à-dire que 60 à 85% de la surface est composée de territoires ruraux) peut mener une Opération de développement rural (ODR). Cette opération se concrétise par la rédaction d'un Programme Communal de Développement Rural (PCDR, voir ci-dessous) qui définit des objectifs et des projets subsidiés pour les 10 ans à venir , via un processus participatif menant à la composition d’une Commission Locale de Développement Rural (CLDR, voir ci-dessous), avec pour but l’amélioration des conditions de vie des habitants aux points de vue économique, social, environnemental et culturel . Commission locale de Développement rural (CLDR) Une CLDR compte de 10 à 30 membres qui sont les représentants des différents milieux politique, économique, socioprofessionnel et culturel de la commune ; Un quart des membres peut être désigné au sein du Conseil communal ; Les communes qui disposent d’une CCATM (Commission Consultative d’Aménagement du Territoire et de la Mobilité) et décident de mener une ODR peuvent organiser une seule commission pour les deux matières ;",
-          "page": null
-        },
-        {
-          "excerpt": "Opération de développement rural (ODR) Une commune rurale ou semi-rurale ( la Ville de Tubize étant considérée comme semi-rurale , c’est-à-dire que 60 à 85% de la surface est composée de territoires ruraux) peut mener une Opération de développement rural (ODR). Cette opération se concrétise par la rédaction d'un Programme Communal de Développement Rural (PCDR, voir ci-dessous) qui définit des objectifs et des projets subsidiés pour les 10 ans à venir , via un processus participatif menant à la composition d’une Commission Locale de Développement Rural (CLDR, voir ci-dessous), avec pour but l’amélioration des conditions de vie des habitants aux points de vue économique, social, environnemental et culturel . Commission locale de Développement rural (CLDR) Une CLDR compte de 10 à 30 membres qui sont les représentants des différents milieux politique, économique, socioprofessionnel et culturel de la commune ; Un quart des membres peut être désigné au sein du Conseil communal ; Les communes qui disposent d’une CCATM (Commission Consultative d’Aménagement du Territoire et de la Mobilité) et décident de mener une ODR peuvent organiser une seule commission pour les deux matières ; Sa composition est approuvée par le Conseil communal et son mode de fonctionnement est précisé dans un règlement d’ordre intérieur (ROI) qu’elle élabore elle-même lors de sa création ;",
-          "page": null
-        },
-        {
-          "excerpt": "Une CLDR compte de 10 à 30 membres qui sont les représentants des différents milieux politique, économique, socioprofessionnel et culturel de la commune ; Un quart des membres peut être désigné au sein du Conseil communal ; Les communes qui disposent d’une CCATM (Commission Consultative d’Aménagement du Territoire et de la Mobilité) et décident de mener une ODR peuvent organiser une seule commission pour les deux matières ; Sa composition est approuvée par le Conseil communal et son mode de fonctionnement est précisé dans un règlement d’ordre intérieur (ROI) qu’elle élabore elle-même lors de sa création ; Le bourgmestre assure la présidence, et ce n’est qu’à défaut de pouvoir assurer ladite présidence qu’il désigne une autre personne au sein de la CLDR, élue ou non (simplification du décret-programme) ; La CLDR est obligée de se réunir au moins deux fois par an (simplification du décret-programme). Programme Communal de Développement Rural (PCDR)",
-          "page": null
-        },
-        {
-          "excerpt": "Auteurs de projet de l'ODR La Ville peut, avec ses propres ressources, prendre en charge l’élaboration du document d’analyse socio-économique, la rédaction du programme et l’animation de la participation citoyenne des CLDR ; La Ville peut aussi faire appel à un bureau d’études pour l’assister. Organismes d’accompagnement La Ville, en tant qu'auteur de projet, peut être aidée par des organismes d’accompagnement qui sont subventionnés par la Région Wallonne. La Fondation Rurale de Wallonie (FRW), le Groupement régional économique Ourthe-Vesdre-Amblève (GREOA) et la Société de promotion économique pour l’Est de la Belgique (WFG) ont pour mission l’information des communes désireuses d’entreprendre une ODR et, à la demande du Ministre, mettent à la disposition de certaines communes des agents de développement. Convention avec la FRW",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local-html:e8d7dddac618b90d29d7",
-      "title": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE",
-      "sourceDocumentTitle": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE",
-      "missionEvidence": {
-        "excerpt": "TIONS ET DU MODE DE PASSATION - VOTE Le Conseil communal est invité à approuver les conditions et le mode de passation d'un marché de services en vue de la désignation d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
-        "sourceUrl": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote",
-        "page": null,
-        "sha256": "9fc77229997266324c61c2e725f0610c3fe9737d5f5a189f6637eb575f85d9b8"
-      },
-      "buyer": "Commune de Soignies",
-      "municipalityINS": "55040",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "TIONS ET DU MODE DE PASSATION - VOTE Le Conseil communal est invité à approuver les conditions et le mode de passation d'un marché de services en vue de la désignation d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
-        "mission": "approuver les conditions et le mode de passation d'un marché de services en vue de la désignation d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote",
-      "sourceDocument": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote",
-        "sha256": "9fc77229997266324c61c2e725f0610c3fe9737d5f5a189f6637eb575f85d9b8",
-        "session": {
-          "date": "2026-10-13",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 13 octobre 2026 (19:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:b75983fa962b4d860f",
-        "sha256": "9fc77229997266324c61c2e725f0610c3fe9737d5f5a189f6637eb575f85d9b8",
-        "format": "html",
-        "checkedAt": "2026-11-08T00:55:07.880Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSAT",
-        "sourceUrl": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote",
-        "page": null,
-        "sha256": "9fc77229997266324c61c2e725f0610c3fe9737d5f5a189f6637eb575f85d9b8"
-      },
-      "description": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE 13 Séance publique du Conseil 13 octobre 2026 (19:00) Point N°",
-      "evidence": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE 13 Séance publique du Conseil 13 octobre 2026 (19:00) Point N°",
-      "municipalEvidence": [
-        {
-          "excerpt": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE 13 Séance publique du Conseil 13 octobre 2026 (19:00) Point N°",
-          "page": null
-        },
-        {
-          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE Le Conseil communal est invité à approuver les conditions et le mode de passation d'un marché de services en vue de la désignation d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux En vertu de l'article L1122-19 du Code de la Démocratie locale et de la Décentralisation, Madame l'Echevine MARCQ quitte la séance. Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ;",
-          "page": null
-        },
-        {
-          "excerpt": "Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE Le Conseil communal est invité à approuver les conditions et le mode de passation d'un marché de services en vue de la désignation d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux En vertu de l'article L1122-19 du Code de la Démocratie locale et de la Décentralisation, Madame l'Echevine MARCQ quitte la séance. Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l'article 36 ;",
-          "page": null
-        },
-        {
-          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Considérant le cahier des charges N° 2026/3P/1878 relatif au marché “Marché de services - Intervention d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux” ; Considérant que le montant estimé de ce marché s'élève à 278.301,15 € hors TVA ou 336.744,39 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure ouverte ; Considérant que cette estimation dépasse les seuils d'application de la publicité européenne ; Considérant que le crédit permettant cette dépense est inscrit à l’article 764/723-60 ( n° de projet 20261011) du budget extraordinaire 2026 qui sera financé par prélèvement sur fonds de réserve ;",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
       "id": "local-html:bfc1a1882f7f85710a39",
       "title": "[-1.777.81] Élaboration d’un cadre communal de réflexion relatif à l’implantation et au développement des projets d’élevage de grande capacité sur le territoire de Sivry-Rance – Saisine de la CCATM et contribution au futur Schéma de Développement Communal.",
       "sourceDocumentTitle": "[-1.777.81] Élaboration d’un cadre communal de réflexion relatif à l’implantation et au développement des projets d’élevage de grande capacité sur le territoire de Sivry-Rance – Saisine de la CCATM et contribution au futur Schéma de Développement Communal.",
@@ -25983,352 +26343,9 @@
         }
       ],
       "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local-html:d9383ce033b16d4e9535",
-      "title": "Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard",
-      "sourceDocumentTitle": "Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard – Principe et approbation des conditions et du mode de passation.",
-      "missionEvidence": {
-        "excerpt": "’aménagement d’une parcelle des étoiles au cimetière de Saint-Mard. D'approuver le cahier des charges N° 2026-904 et le montant estimé du marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD . Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 39.900",
-        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
-        "page": null,
-        "sha256": "6834b4b7847b7902ecd23bd66314c75c99a851420e27eadc67c27adfc2bd614c"
-      },
-      "buyer": "Commune de Virton",
-      "municipalityINS": "85045",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": {
-        "label": "Procédure négociée sans publication préalable",
-        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
-        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
-        "sha256": "6834b4b7847b7902ecd23bd66314c75c99a851420e27eadc67c27adfc2bd614c",
-        "stage": "project"
-      },
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "’aménagement d’une parcelle des étoiles au cimetière de Saint-Mard. D'approuver le cahier des charges N° 2026-904 et le montant estimé du marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD . Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 39.900",
-        "mission": "approuver le cahier des charges N° 2026-904 et le montant estimé du marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD .",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 48,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
-      "sourceDocument": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
-        "sha256": "6834b4b7847b7902ecd23bd66314c75c99a851420e27eadc67c27adfc2bd614c",
-        "session": {
-          "date": "2026-10-08",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 08 octobre 2026 (19:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:613271c99a065aabec",
-        "sha256": "6834b4b7847b7902ecd23bd66314c75c99a851420e27eadc67c27adfc2bd614c",
-        "format": "html",
-        "checkedAt": "2026-11-08T00:55:07.880Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "- Des emplacements pleine terre pour fœtus de 60x60cm ; - Des emplacements pleine terre pour les enfants de moins de 12 ans ; Vu le cahier des charges N° 2026-904 établi par le Bureau d'études, TEXTE MASQUÉ | RGPD , rela",
-        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
-        "page": null,
-        "sha256": "6834b4b7847b7902ecd23bd66314c75c99a851420e27eadc67c27adfc2bd614c"
-      },
-      "description": "- Des emplacements pleine terre pour fœtus de 60x60cm ; - Des emplacements pleine terre pour les enfants de moins de 12 ans ; Vu le cahier des charges N° 2026-904 établi par le Bureau d'études, TEXTE MASQUÉ | RGPD , relatif au marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard” ; Considérant le plan de situation et la vue en plan des aménagements réalisés par TEXTE MASQUÉ | RGPD ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Réalisation d'un revêtement en dalle gazon PEHD, d'une aire de dispersion, pose de mobilier urbain (Estimé à : 32.850,00 € hors TVA ou 39.748,50 €, 21% TVA comprise) ; * Tranche conditionnelle : Plantation d'une haie (Estimé à : 7.050,00 € hors TVA ou 8.530,50 €, 21% TVA comprise) ;",
-      "evidence": "- Des emplacements pleine terre pour fœtus de 60x60cm ; - Des emplacements pleine terre pour les enfants de moins de 12 ans ; Vu le cahier des charges N° 2026-904 établi par le Bureau d'études, TEXTE MASQUÉ | RGPD , relatif au marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard” ; Considérant le plan de situation et la vue en plan des aménagements réalisés par TEXTE MASQUÉ | RGPD ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Réalisation d'un revêtement en dalle gazon PEHD, d'une aire de dispersion, pose de mobilier urbain (Estimé à : 32.850,00 € hors TVA ou 39.748,50 €, 21% TVA comprise) ; * Tranche conditionnelle : Plantation d'une haie (Estimé à : 7.050,00 € hors TVA ou 8.530,50 €, 21% TVA comprise) ;",
-      "municipalEvidence": [
-        {
-          "excerpt": "- Des emplacements pleine terre pour fœtus de 60x60cm ; - Des emplacements pleine terre pour les enfants de moins de 12 ans ; Vu le cahier des charges N° 2026-904 établi par le Bureau d'études, TEXTE MASQUÉ | RGPD , relatif au marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard” ; Considérant le plan de situation et la vue en plan des aménagements réalisés par TEXTE MASQUÉ | RGPD ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Réalisation d'un revêtement en dalle gazon PEHD, d'une aire de dispersion, pose de mobilier urbain (Estimé à : 32.850,00 € hors TVA ou 39.748,50 €, 21% TVA comprise) ; * Tranche conditionnelle : Plantation d'une haie (Estimé à : 7.050,00 € hors TVA ou 8.530,50 €, 21% TVA comprise) ;",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": "2026-904"
-    },
-    {
-      "id": "local-html:f715311647a73f7c82a6",
-      "title": "Schéma de Développement Communal - Désignation de conseillers communaux comme membres du comité d'accompagnement.",
-      "sourceDocumentTitle": "Schéma de Développement Communal - Désignation de conseillers communaux comme membres du comité d'accompagnement.",
-      "missionEvidence": null,
-      "buyer": "Commune de Blegny",
-      "municipalityINS": "62119",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/blegny/decisions/22-octobre-2026-20-00/schema-de-developpement-communal-designation-de-conseillers-communaux-comme-membres-du-comite-daccompagnement",
-      "sourceDocument": "https://www.deliberations.be/blegny/decisions/22-octobre-2026-20-00/schema-de-developpement-communal-designation-de-conseillers-communaux-comme-membres-du-comite-daccompagnement",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/blegny/decisions/22-octobre-2026-20-00/schema-de-developpement-communal-designation-de-conseillers-communaux-comme-membres-du-comite-daccompagnement",
-        "sha256": "4ffb71c48f3fe7c767bd5124f1c379be612a6ce3a6ff06aa0f55407bd6b6ee85",
-        "session": {
-          "date": "2026-10-22",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 22 octobre 2026 (20:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/blegny/decisions/22-octobre-2026-20-00/schema-de-developpement-communal-designation-de-conseillers-communaux-comme-membres-du-comite-daccompagnement"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:17cf20cc9d258e3d2f",
-        "sha256": "4ffb71c48f3fe7c767bd5124f1c379be612a6ce3a6ff06aa0f55407bd6b6ee85",
-        "format": "html",
-        "checkedAt": "2026-11-08T07:59:21.945Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Considérant qu'avec l'entrée en vigueur du Code du Développement Territorial (CoDT), le \"Schéma de Structure Communal\" a été rebaptisé \"Schéma de Développement communal\" ; Vu l'article D.II.10 du CoDT, disposant que \"le",
-        "sourceUrl": "https://www.deliberations.be/blegny/decisions/22-octobre-2026-20-00/schema-de-developpement-communal-designation-de-conseillers-communaux-comme-membres-du-comite-daccompagnement",
-        "page": null,
-        "sha256": "4ffb71c48f3fe7c767bd5124f1c379be612a6ce3a6ff06aa0f55407bd6b6ee85"
-      },
-      "description": "Considérant qu'avec l'entrée en vigueur du Code du Développement Territorial (CoDT), le \"Schéma de Structure Communal\" a été rebaptisé \"Schéma de Développement communal\" ; Vu l'article D.II.10 du CoDT, disposant que \"le Schéma de Développement communal définit la stratégie territoriale pour l'ensemble du territoire communal sur la base d'une analyse contextuelle, à l'échelle du territoire communal\" ; Vu sa décision du 30 octobre 2025 de passer un marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global ; Vu la décision du Collège communal du 22 décembre 2025 d'’attribuer le marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global au soumissionnaire ayant remis l’offre unique et régulière, soit PLURIS SCRL, rue de Fétinne, 85 à 4020 LIÈGE ; Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit ",
-      "evidence": "Considérant qu'avec l'entrée en vigueur du Code du Développement Territorial (CoDT), le \"Schéma de Structure Communal\" a été rebaptisé \"Schéma de Développement communal\" ; Vu l'article D.II.10 du CoDT, disposant que \"le Schéma de Développement communal définit la stratégie territoriale pour l'ensemble du territoire communal sur la base d'une analyse contextuelle, à l'échelle du territoire communal\" ; Vu sa décision du 30 octobre 2025 de passer un marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global ; Vu la décision du Collège communal du 22 décembre 2025 d'’attribuer le marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global au soumissionnaire ayant remis l’offre unique et régulière, soit PLURIS SCRL, rue de Fétinne, 85 à 4020 LIÈGE ; Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit ",
-      "municipalEvidence": [
-        {
-          "excerpt": "Considérant qu'avec l'entrée en vigueur du Code du Développement Territorial (CoDT), le \"Schéma de Structure Communal\" a été rebaptisé \"Schéma de Développement communal\" ; Vu l'article D.II.10 du CoDT, disposant que \"le Schéma de Développement communal définit la stratégie territoriale pour l'ensemble du territoire communal sur la base d'une analyse contextuelle, à l'échelle du territoire communal\" ; Vu sa décision du 30 octobre 2025 de passer un marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global ; Vu la décision du Collège communal du 22 décembre 2025 d'’attribuer le marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global au soumissionnaire ayant remis l’offre unique et régulière, soit PLURIS SCRL, rue de Fétinne, 85 à 4020 LIÈGE ; Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit ",
-          "page": null
-        },
-        {
-          "excerpt": "Vu l'article D.II.10 du CoDT, disposant que \"le Schéma de Développement communal définit la stratégie territoriale pour l'ensemble du territoire communal sur la base d'une analyse contextuelle, à l'échelle du territoire communal\" ; Vu sa décision du 30 octobre 2025 de passer un marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global ; Vu la décision du Collège communal du 22 décembre 2025 d'’attribuer le marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global au soumissionnaire ayant remis l’offre unique et régulière, soit PLURIS SCRL, rue de Fétinne, 85 à 4020 LIÈGE ; Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit comité peut convier toute personne ou instance qu’il juge utile d’associer à l’élaboration du schéma ; Considérant que notre Commune ne dispose pas d'une Commission Communa",
-          "page": null
-        },
-        {
-          "excerpt": "Vu sa décision du 30 octobre 2025 de passer un marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global ; Vu la décision du Collège communal du 22 décembre 2025 d'’attribuer le marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global au soumissionnaire ayant remis l’offre unique et régulière, soit PLURIS SCRL, rue de Fétinne, 85 à 4020 LIÈGE ; Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit comité peut convier toute personne ou instance qu’il juge utile d’associer à l’élaboration du schéma ; Considérant que notre Commune ne dispose pas d'une Commission Communale d'Aménagement du Territoire et de la Mobilité (CCATM) ; Considérant la volonté du Collège communal d’associer les 2 groupes politiques du Conseil communal à cette élaboration en proposant au groupe Blegny Plus de désigner 2 repré",
-          "page": null
-        },
-        {
-          "excerpt": "Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit comité peut convier toute personne ou instance qu’il juge utile d’associer à l’élaboration du schéma ; Considérant que notre Commune ne dispose pas d'une Commission Communale d'Aménagement du Territoire et de la Mobilité (CCATM) ; Considérant la volonté du Collège communal d’associer les 2 groupes politiques du Conseil communal à cette élaboration en proposant au groupe Blegny Plus de désigner 2 représentants et au groupe PS d'en désigner 1 ; Sur proposition du Collège communal et après en avoir délibéré ; DECIDE ................................ : Article unique : de désigner les conseillers communaux suivants comme membres du comité d'accompagnement pour l'élaboration du Schéma de Développement communal :",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local-html:2eb6e4f3ba0d39213edb",
-      "title": "désigner un géomètre-expert pour :",
-      "sourceDocumentTitle": "Urbanisme - Site du Rieu du Coeur - Terrain privé cadastré Sion D n°1413 d2 - Procédure d'expropriation pour cause d'utilité publique - Approbation",
-      "missionEvidence": {
-        "excerpt": "e, montant ferme et probablement revu à la hausse, il a été décidé de désigner un géomètre-expert pour :",
-        "sourceUrl": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation",
-        "page": null,
-        "sha256": "d8e42f4e7e4395fd202c89aa11e6a3e2986e86d1f467dbdfd0e34c795ad643b2"
-      },
-      "buyer": "Commune de Quaregnon",
-      "municipalityINS": "53065",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "e, montant ferme et probablement revu à la hausse, il a été décidé de désigner un géomètre-expert pour :",
-        "mission": "désigner un géomètre-expert pour :",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Topo",
-      "sectors": [
-        "Topo",
-        "Foncier",
-        "Expert"
-      ],
-      "screening": "review",
-      "score": 60,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation",
-      "sourceDocument": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation",
-        "sha256": "d8e42f4e7e4395fd202c89aa11e6a3e2986e86d1f467dbdfd0e34c795ad643b2",
-        "session": {
-          "date": "2026-10-29",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 29 octobre 2026 (19:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:bc2ce4d7cb627f9035",
-        "sha256": "d8e42f4e7e4395fd202c89aa11e6a3e2986e86d1f467dbdfd0e34c795ad643b2",
-        "format": "html",
-        "checkedAt": "2026-11-08T07:59:21.945Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Vu l'arrêté du Ministre Willy BORSUS en date du 06 avril 2022 approuvant le PCA n°5 dit \"Rieu du Coeur\" et permettant d'envisager la procédure d'expropriation ; Vu la décision du Collège Communal, en sa séance du 25 août",
-        "sourceUrl": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation",
-        "page": null,
-        "sha256": "d8e42f4e7e4395fd202c89aa11e6a3e2986e86d1f467dbdfd0e34c795ad643b2"
-      },
-      "description": "Vu l'arrêté du Ministre Willy BORSUS en date du 06 avril 2022 approuvant le PCA n°5 dit \"Rieu du Coeur\" et permettant d'envisager la procédure d'expropriation ; Vu la décision du Collège Communal, en sa séance du 25 août 2026, décidant de présenter pour approbation en prochaine séance du Conseil Communal, la procédure d'expropriation pour cause d'utilité publique du terrain privé cadastré Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Considérant que cette expropriation est pour cause d'utilité publique, ledit terrain se situe dans le périmètre de la future voirie qui va desservir le nouveau quartier ; Vu ce qui précède. Art. 1er : D’approuver l'expropriation pour cause d'utilité publique de la parcelle de terrain privée située sur le site du Rieu du Coeur à 7390 Quaregnon, cadastrée Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Art. 2 : De charger le Collège Communal de l'exécution de la présente décision pour ladite obtention d'autorisation d'expropriation auprès du Gouvernement Wallon.",
-      "evidence": "Vu l'arrêté du Ministre Willy BORSUS en date du 06 avril 2022 approuvant le PCA n°5 dit \"Rieu du Coeur\" et permettant d'envisager la procédure d'expropriation ; Vu la décision du Collège Communal, en sa séance du 25 août 2026, décidant de présenter pour approbation en prochaine séance du Conseil Communal, la procédure d'expropriation pour cause d'utilité publique du terrain privé cadastré Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Considérant que cette expropriation est pour cause d'utilité publique, ledit terrain se situe dans le périmètre de la future voirie qui va desservir le nouveau quartier ; Vu ce qui précède. Art. 1er : D’approuver l'expropriation pour cause d'utilité publique de la parcelle de terrain privée située sur le site du Rieu du Coeur à 7390 Quaregnon, cadastrée Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Art. 2 : De charger le Collège Communal de l'exécution de la présente décision pour ladite obtention d'autorisation d'expropriation auprès du Gouvernement Wallon.",
-      "municipalEvidence": [
-        {
-          "excerpt": "Vu l'arrêté du Ministre Willy BORSUS en date du 06 avril 2022 approuvant le PCA n°5 dit \"Rieu du Coeur\" et permettant d'envisager la procédure d'expropriation ; Vu la décision du Collège Communal, en sa séance du 25 août 2026, décidant de présenter pour approbation en prochaine séance du Conseil Communal, la procédure d'expropriation pour cause d'utilité publique du terrain privé cadastré Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Considérant que cette expropriation est pour cause d'utilité publique, ledit terrain se situe dans le périmètre de la future voirie qui va desservir le nouveau quartier ; Vu ce qui précède. Art. 1er : D’approuver l'expropriation pour cause d'utilité publique de la parcelle de terrain privée située sur le site du Rieu du Coeur à 7390 Quaregnon, cadastrée Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Art. 2 : De charger le Collège Communal de l'exécution de la présente décision pour ladite obtention d'autorisation d'expropriation auprès du Gouvernement Wallon.",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local-html:ca82a0871f74a25658c2",
-      "title": "Opération patrimoniale - Atelier rural sis rue de la gare à 7604 Wasmes-Audemez-Briffoeil - Parcelle cadastrée 5ème division section A 155f2 - Mise en vente - Fixation des conditions",
-      "sourceDocumentTitle": "Opération patrimoniale - Atelier rural sis rue de la gare à 7604 Wasmes-Audemez-Briffoeil - Parcelle cadastrée 5ème division section A 155f2 - Mise en vente - Fixation des conditions",
-      "missionEvidence": null,
-      "buyer": "Commune de Péruwelz",
-      "municipalityINS": "57064",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Topo",
-      "sectors": [
-        "Topo",
-        "Foncier"
-      ],
-      "screening": "review",
-      "score": 60,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/peruwelz/decisions/28-octobre-2026-19-00/operation-patrimoniale-atelier-rural-sis-rue-de-la-gare-a-7604-wasmes-audemez-briffoeil-parcelle-cadastree-5eme-division-section-a-155f2-mise-en-vente-fixation-des-conditions",
-      "sourceDocument": "https://www.deliberations.be/peruwelz/decisions/28-octobre-2026-19-00/operation-patrimoniale-atelier-rural-sis-rue-de-la-gare-a-7604-wasmes-audemez-briffoeil-parcelle-cadastree-5eme-division-section-a-155f2-mise-en-vente-fixation-des-conditions",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/peruwelz/decisions/28-octobre-2026-19-00/operation-patrimoniale-atelier-rural-sis-rue-de-la-gare-a-7604-wasmes-audemez-briffoeil-parcelle-cadastree-5eme-division-section-a-155f2-mise-en-vente-fixation-des-conditions",
-        "sha256": "838bf0f851ba2723bb1843b9f7906df4dbca9193387a0002efd903f190ed20f6",
-        "session": {
-          "date": "2026-10-28",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 28 octobre 2026 (19:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/peruwelz/decisions/28-octobre-2026-19-00/operation-patrimoniale-atelier-rural-sis-rue-de-la-gare-a-7604-wasmes-audemez-briffoeil-parcelle-cadastree-5eme-division-section-a-155f2-mise-en-vente-fixation-des-conditions"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:a0ff03af8e694efa0c",
-        "sha256": "838bf0f851ba2723bb1843b9f7906df4dbca9193387a0002efd903f190ed20f6",
-        "format": "html",
-        "checkedAt": "2026-11-08T07:59:21.945Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Article 4 : de charger le collège communal de l'exécution de la présente délibération et de l'attribution du contrat relatif à cette opération patrimoniale ; Article 5 : de prendre en charge les frais et honoraires de Me",
-        "sourceUrl": "https://www.deliberations.be/peruwelz/decisions/28-octobre-2026-19-00/operation-patrimoniale-atelier-rural-sis-rue-de-la-gare-a-7604-wasmes-audemez-briffoeil-parcelle-cadastree-5eme-division-section-a-155f2-mise-en-vente-fixation-des-conditions",
-        "page": null,
-        "sha256": "838bf0f851ba2723bb1843b9f7906df4dbca9193387a0002efd903f190ed20f6"
-      },
-      "description": "Article 4 : de charger le collège communal de l'exécution de la présente délibération et de l'attribution du contrat relatif à cette opération patrimoniale ; Article 5 : de prendre en charge les frais et honoraires de Me TEXTE MASQUÉ | RGPD dus par la partie venderesse (frais de publicité, honoraires de négociation) par les crédits prévus à l'article 124/12320 du budget ordinaire 2026. Article 6 : de permettre au collège de décider de la prise en charge ou non de frais de géomètre liés, le cas échéant, à la création d'un accès en fonction des discussions avec les candidats acquéreurs ;",
-      "evidence": "Article 4 : de charger le collège communal de l'exécution de la présente délibération et de l'attribution du contrat relatif à cette opération patrimoniale ; Article 5 : de prendre en charge les frais et honoraires de Me TEXTE MASQUÉ | RGPD dus par la partie venderesse (frais de publicité, honoraires de négociation) par les crédits prévus à l'article 124/12320 du budget ordinaire 2026. Article 6 : de permettre au collège de décider de la prise en charge ou non de frais de géomètre liés, le cas échéant, à la création d'un accès en fonction des discussions avec les candidats acquéreurs ;",
-      "municipalEvidence": [
-        {
-          "excerpt": "Article 4 : de charger le collège communal de l'exécution de la présente délibération et de l'attribution du contrat relatif à cette opération patrimoniale ; Article 5 : de prendre en charge les frais et honoraires de Me TEXTE MASQUÉ | RGPD dus par la partie venderesse (frais de publicité, honoraires de négociation) par les crédits prévus à l'article 124/12320 du budget ordinaire 2026. Article 6 : de permettre au collège de décider de la prise en charge ou non de frais de géomètre liés, le cas échéant, à la création d'un accès en fonction des discussions avec les candidats acquéreurs ;",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
+      "municipalReference": null,
+      "matchReason": "etude_urbanistique_a_qualifier",
+      "screeningReason": null
     }
   ]
 }
