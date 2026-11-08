@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-08T00:55:07.880Z",
+      "last_attempt": "2026-11-08T07:59:21.945Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -74,29 +74,29 @@
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 978,
-      "opportunities": 182,
+      "documentsRead": 1025,
+      "opportunities": 185,
       "sitesChecked": 261,
       "candidatePages": 228,
       "sourceErrors": 97,
-      "htmlDocumentsRead": 4050
+      "htmlDocumentsRead": 4270
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-08T00:55:07.880Z",
-      "last_success": "2026-11-08T00:55:07.880Z",
+      "last_attempt": "2026-11-08T07:59:21.945Z",
+      "last_success": "2026-11-08T07:59:21.945Z",
       "last_batch": 24,
-      "documents_checked": 47,
+      "documents_checked": 61,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 3,
+      "errors_count": 17,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 283,
+      "html_documents_read": 296,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 85,
+      "recent_municipal_signals": 88,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1484,
     "matched_current_run": 8,
-    "records": 323,
+    "records": 326,
     "review_count": 223,
     "award_notice_count": 396,
     "awarded_market_matches": 3,
@@ -13905,7 +13905,7 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:b98a77ec0b8cf98fad",
         "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
-        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "checkedAt": "2026-11-08T07:59:21.945Z",
         "changedAt": null
       },
       "sourceExtraction": {
@@ -13973,7 +13973,7 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:b98a77ec0b8cf98fad",
         "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
-        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "checkedAt": "2026-11-08T07:59:21.945Z",
         "changedAt": null
       },
       "sourceExtraction": {
@@ -21319,7 +21319,7 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:b98a77ec0b8cf98fad",
         "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
-        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "checkedAt": "2026-11-08T07:59:21.945Z",
         "changedAt": null
       },
       "sourceExtraction": {
@@ -21386,7 +21386,7 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:b98a77ec0b8cf98fad",
         "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
-        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "checkedAt": "2026-11-08T07:59:21.945Z",
         "changedAt": null
       },
       "sourceExtraction": {
@@ -21453,7 +21453,7 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:b98a77ec0b8cf98fad",
         "sha256": "2c20d912ddc515dc49e0214308b5800b05f061af41bbc787d263c8270a75a8a1",
-        "checkedAt": "2026-11-04T22:54:08.940Z",
+        "checkedAt": "2026-11-08T07:59:21.945Z",
         "changedAt": null
       },
       "sourceExtraction": {
@@ -26075,6 +26075,260 @@
       ],
       "sourceEvidenceStatus": "found",
       "municipalReference": "2026-904"
+    },
+    {
+      "id": "local-html:f715311647a73f7c82a6",
+      "title": "Schéma de Développement Communal - Désignation de conseillers communaux comme membres du comité d'accompagnement.",
+      "sourceDocumentTitle": "Schéma de Développement Communal - Désignation de conseillers communaux comme membres du comité d'accompagnement.",
+      "missionEvidence": null,
+      "buyer": "Commune de Blegny",
+      "municipalityINS": "62119",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/blegny/decisions/22-octobre-2026-20-00/schema-de-developpement-communal-designation-de-conseillers-communaux-comme-membres-du-comite-daccompagnement",
+      "sourceDocument": "https://www.deliberations.be/blegny/decisions/22-octobre-2026-20-00/schema-de-developpement-communal-designation-de-conseillers-communaux-comme-membres-du-comite-daccompagnement",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/blegny/decisions/22-octobre-2026-20-00/schema-de-developpement-communal-designation-de-conseillers-communaux-comme-membres-du-comite-daccompagnement",
+        "sha256": "4ffb71c48f3fe7c767bd5124f1c379be612a6ce3a6ff06aa0f55407bd6b6ee85",
+        "session": {
+          "date": "2026-10-22",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 22 octobre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/blegny/decisions/22-octobre-2026-20-00/schema-de-developpement-communal-designation-de-conseillers-communaux-comme-membres-du-comite-daccompagnement"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:17cf20cc9d258e3d2f",
+        "sha256": "4ffb71c48f3fe7c767bd5124f1c379be612a6ce3a6ff06aa0f55407bd6b6ee85",
+        "format": "html",
+        "checkedAt": "2026-11-08T07:59:21.945Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Considérant qu'avec l'entrée en vigueur du Code du Développement Territorial (CoDT), le \"Schéma de Structure Communal\" a été rebaptisé \"Schéma de Développement communal\" ; Vu l'article D.II.10 du CoDT, disposant que \"le",
+        "sourceUrl": "https://www.deliberations.be/blegny/decisions/22-octobre-2026-20-00/schema-de-developpement-communal-designation-de-conseillers-communaux-comme-membres-du-comite-daccompagnement",
+        "page": null,
+        "sha256": "4ffb71c48f3fe7c767bd5124f1c379be612a6ce3a6ff06aa0f55407bd6b6ee85"
+      },
+      "description": "Considérant qu'avec l'entrée en vigueur du Code du Développement Territorial (CoDT), le \"Schéma de Structure Communal\" a été rebaptisé \"Schéma de Développement communal\" ; Vu l'article D.II.10 du CoDT, disposant que \"le Schéma de Développement communal définit la stratégie territoriale pour l'ensemble du territoire communal sur la base d'une analyse contextuelle, à l'échelle du territoire communal\" ; Vu sa décision du 30 octobre 2025 de passer un marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global ; Vu la décision du Collège communal du 22 décembre 2025 d'’attribuer le marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global au soumissionnaire ayant remis l’offre unique et régulière, soit PLURIS SCRL, rue de Fétinne, 85 à 4020 LIÈGE ; Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit ",
+      "evidence": "Considérant qu'avec l'entrée en vigueur du Code du Développement Territorial (CoDT), le \"Schéma de Structure Communal\" a été rebaptisé \"Schéma de Développement communal\" ; Vu l'article D.II.10 du CoDT, disposant que \"le Schéma de Développement communal définit la stratégie territoriale pour l'ensemble du territoire communal sur la base d'une analyse contextuelle, à l'échelle du territoire communal\" ; Vu sa décision du 30 octobre 2025 de passer un marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global ; Vu la décision du Collège communal du 22 décembre 2025 d'’attribuer le marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global au soumissionnaire ayant remis l’offre unique et régulière, soit PLURIS SCRL, rue de Fétinne, 85 à 4020 LIÈGE ; Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit ",
+      "municipalEvidence": [
+        {
+          "excerpt": "Considérant qu'avec l'entrée en vigueur du Code du Développement Territorial (CoDT), le \"Schéma de Structure Communal\" a été rebaptisé \"Schéma de Développement communal\" ; Vu l'article D.II.10 du CoDT, disposant que \"le Schéma de Développement communal définit la stratégie territoriale pour l'ensemble du territoire communal sur la base d'une analyse contextuelle, à l'échelle du territoire communal\" ; Vu sa décision du 30 octobre 2025 de passer un marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global ; Vu la décision du Collège communal du 22 décembre 2025 d'’attribuer le marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global au soumissionnaire ayant remis l’offre unique et régulière, soit PLURIS SCRL, rue de Fétinne, 85 à 4020 LIÈGE ; Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit ",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l'article D.II.10 du CoDT, disposant que \"le Schéma de Développement communal définit la stratégie territoriale pour l'ensemble du territoire communal sur la base d'une analyse contextuelle, à l'échelle du territoire communal\" ; Vu sa décision du 30 octobre 2025 de passer un marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global ; Vu la décision du Collège communal du 22 décembre 2025 d'’attribuer le marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global au soumissionnaire ayant remis l’offre unique et régulière, soit PLURIS SCRL, rue de Fétinne, 85 à 4020 LIÈGE ; Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit comité peut convier toute personne ou instance qu’il juge utile d’associer à l’élaboration du schéma ; Considérant que notre Commune ne dispose pas d'une Commission Communa",
+          "page": null
+        },
+        {
+          "excerpt": "Vu sa décision du 30 octobre 2025 de passer un marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global ; Vu la décision du Collège communal du 22 décembre 2025 d'’attribuer le marché public de services ayant pour objet la désignation d’un auteur de projet pour l’élaboration d’un Schéma de Développement Communal global au soumissionnaire ayant remis l’offre unique et régulière, soit PLURIS SCRL, rue de Fétinne, 85 à 4020 LIÈGE ; Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit comité peut convier toute personne ou instance qu’il juge utile d’associer à l’élaboration du schéma ; Considérant que notre Commune ne dispose pas d'une Commission Communale d'Aménagement du Territoire et de la Mobilité (CCATM) ; Considérant la volonté du Collège communal d’associer les 2 groupes politiques du Conseil communal à cette élaboration en proposant au groupe Blegny Plus de désigner 2 repré",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant que, conformément à l'article D.II.7, §2 du CoDT, un comité d’accompagnement chargé du suivi de l’élaboration du schéma a été constitué dès la désignation de l’auteur de projet, lequel comité est composé du Fonctionnaire délégué, de la Direction de l'Aménagement local, des membres du Collège communal, de la Direction générale, des représentants des services communaux et de l’auteur de projet ; Considérant que conformément à l'article D.II.7, §2 du CoDT, ledit comité peut convier toute personne ou instance qu’il juge utile d’associer à l’élaboration du schéma ; Considérant que notre Commune ne dispose pas d'une Commission Communale d'Aménagement du Territoire et de la Mobilité (CCATM) ; Considérant la volonté du Collège communal d’associer les 2 groupes politiques du Conseil communal à cette élaboration en proposant au groupe Blegny Plus de désigner 2 représentants et au groupe PS d'en désigner 1 ; Sur proposition du Collège communal et après en avoir délibéré ; DECIDE ................................ : Article unique : de désigner les conseillers communaux suivants comme membres du comité d'accompagnement pour l'élaboration du Schéma de Développement communal :",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local-html:2eb6e4f3ba0d39213edb",
+      "title": "désigner un géomètre-expert pour :",
+      "sourceDocumentTitle": "Urbanisme - Site du Rieu du Coeur - Terrain privé cadastré Sion D n°1413 d2 - Procédure d'expropriation pour cause d'utilité publique - Approbation",
+      "missionEvidence": {
+        "excerpt": "e, montant ferme et probablement revu à la hausse, il a été décidé de désigner un géomètre-expert pour :",
+        "sourceUrl": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation",
+        "page": null,
+        "sha256": "d8e42f4e7e4395fd202c89aa11e6a3e2986e86d1f467dbdfd0e34c795ad643b2"
+      },
+      "buyer": "Commune de Quaregnon",
+      "municipalityINS": "53065",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "e, montant ferme et probablement revu à la hausse, il a été décidé de désigner un géomètre-expert pour :",
+        "mission": "désigner un géomètre-expert pour :",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Topo",
+      "sectors": [
+        "Topo",
+        "Foncier",
+        "Expert"
+      ],
+      "screening": "review",
+      "score": 60,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation",
+      "sourceDocument": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation",
+        "sha256": "d8e42f4e7e4395fd202c89aa11e6a3e2986e86d1f467dbdfd0e34c795ad643b2",
+        "session": {
+          "date": "2026-10-29",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 29 octobre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:bc2ce4d7cb627f9035",
+        "sha256": "d8e42f4e7e4395fd202c89aa11e6a3e2986e86d1f467dbdfd0e34c795ad643b2",
+        "format": "html",
+        "checkedAt": "2026-11-08T07:59:21.945Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Vu l'arrêté du Ministre Willy BORSUS en date du 06 avril 2022 approuvant le PCA n°5 dit \"Rieu du Coeur\" et permettant d'envisager la procédure d'expropriation ; Vu la décision du Collège Communal, en sa séance du 25 août",
+        "sourceUrl": "https://www.deliberations.be/quaregnon/decisions/29-octobre-2026-19-00/urbanisme-site-du-rieu-du-coeur-terrain-prive-cadastre-sion-d-ndeg1413-d2-procedure-dexpropriation-pour-cause-dutilite-publique-approbation",
+        "page": null,
+        "sha256": "d8e42f4e7e4395fd202c89aa11e6a3e2986e86d1f467dbdfd0e34c795ad643b2"
+      },
+      "description": "Vu l'arrêté du Ministre Willy BORSUS en date du 06 avril 2022 approuvant le PCA n°5 dit \"Rieu du Coeur\" et permettant d'envisager la procédure d'expropriation ; Vu la décision du Collège Communal, en sa séance du 25 août 2026, décidant de présenter pour approbation en prochaine séance du Conseil Communal, la procédure d'expropriation pour cause d'utilité publique du terrain privé cadastré Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Considérant que cette expropriation est pour cause d'utilité publique, ledit terrain se situe dans le périmètre de la future voirie qui va desservir le nouveau quartier ; Vu ce qui précède. Art. 1er : D’approuver l'expropriation pour cause d'utilité publique de la parcelle de terrain privée située sur le site du Rieu du Coeur à 7390 Quaregnon, cadastrée Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Art. 2 : De charger le Collège Communal de l'exécution de la présente décision pour ladite obtention d'autorisation d'expropriation auprès du Gouvernement Wallon.",
+      "evidence": "Vu l'arrêté du Ministre Willy BORSUS en date du 06 avril 2022 approuvant le PCA n°5 dit \"Rieu du Coeur\" et permettant d'envisager la procédure d'expropriation ; Vu la décision du Collège Communal, en sa séance du 25 août 2026, décidant de présenter pour approbation en prochaine séance du Conseil Communal, la procédure d'expropriation pour cause d'utilité publique du terrain privé cadastré Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Considérant que cette expropriation est pour cause d'utilité publique, ledit terrain se situe dans le périmètre de la future voirie qui va desservir le nouveau quartier ; Vu ce qui précède. Art. 1er : D’approuver l'expropriation pour cause d'utilité publique de la parcelle de terrain privée située sur le site du Rieu du Coeur à 7390 Quaregnon, cadastrée Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Art. 2 : De charger le Collège Communal de l'exécution de la présente décision pour ladite obtention d'autorisation d'expropriation auprès du Gouvernement Wallon.",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu l'arrêté du Ministre Willy BORSUS en date du 06 avril 2022 approuvant le PCA n°5 dit \"Rieu du Coeur\" et permettant d'envisager la procédure d'expropriation ; Vu la décision du Collège Communal, en sa séance du 25 août 2026, décidant de présenter pour approbation en prochaine séance du Conseil Communal, la procédure d'expropriation pour cause d'utilité publique du terrain privé cadastré Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Considérant que cette expropriation est pour cause d'utilité publique, ledit terrain se situe dans le périmètre de la future voirie qui va desservir le nouveau quartier ; Vu ce qui précède. Art. 1er : D’approuver l'expropriation pour cause d'utilité publique de la parcelle de terrain privée située sur le site du Rieu du Coeur à 7390 Quaregnon, cadastrée Sion D n°1413 d2, appartenant aux TEXTE MASQUÉ | RGPD ; Art. 2 : De charger le Collège Communal de l'exécution de la présente décision pour ladite obtention d'autorisation d'expropriation auprès du Gouvernement Wallon.",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local-html:ca82a0871f74a25658c2",
+      "title": "Opération patrimoniale - Atelier rural sis rue de la gare à 7604 Wasmes-Audemez-Briffoeil - Parcelle cadastrée 5ème division section A 155f2 - Mise en vente - Fixation des conditions",
+      "sourceDocumentTitle": "Opération patrimoniale - Atelier rural sis rue de la gare à 7604 Wasmes-Audemez-Briffoeil - Parcelle cadastrée 5ème division section A 155f2 - Mise en vente - Fixation des conditions",
+      "missionEvidence": null,
+      "buyer": "Commune de Péruwelz",
+      "municipalityINS": "57064",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Topo",
+      "sectors": [
+        "Topo",
+        "Foncier"
+      ],
+      "screening": "review",
+      "score": 60,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/peruwelz/decisions/28-octobre-2026-19-00/operation-patrimoniale-atelier-rural-sis-rue-de-la-gare-a-7604-wasmes-audemez-briffoeil-parcelle-cadastree-5eme-division-section-a-155f2-mise-en-vente-fixation-des-conditions",
+      "sourceDocument": "https://www.deliberations.be/peruwelz/decisions/28-octobre-2026-19-00/operation-patrimoniale-atelier-rural-sis-rue-de-la-gare-a-7604-wasmes-audemez-briffoeil-parcelle-cadastree-5eme-division-section-a-155f2-mise-en-vente-fixation-des-conditions",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/peruwelz/decisions/28-octobre-2026-19-00/operation-patrimoniale-atelier-rural-sis-rue-de-la-gare-a-7604-wasmes-audemez-briffoeil-parcelle-cadastree-5eme-division-section-a-155f2-mise-en-vente-fixation-des-conditions",
+        "sha256": "838bf0f851ba2723bb1843b9f7906df4dbca9193387a0002efd903f190ed20f6",
+        "session": {
+          "date": "2026-10-28",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 28 octobre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/peruwelz/decisions/28-octobre-2026-19-00/operation-patrimoniale-atelier-rural-sis-rue-de-la-gare-a-7604-wasmes-audemez-briffoeil-parcelle-cadastree-5eme-division-section-a-155f2-mise-en-vente-fixation-des-conditions"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:a0ff03af8e694efa0c",
+        "sha256": "838bf0f851ba2723bb1843b9f7906df4dbca9193387a0002efd903f190ed20f6",
+        "format": "html",
+        "checkedAt": "2026-11-08T07:59:21.945Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Article 4 : de charger le collège communal de l'exécution de la présente délibération et de l'attribution du contrat relatif à cette opération patrimoniale ; Article 5 : de prendre en charge les frais et honoraires de Me",
+        "sourceUrl": "https://www.deliberations.be/peruwelz/decisions/28-octobre-2026-19-00/operation-patrimoniale-atelier-rural-sis-rue-de-la-gare-a-7604-wasmes-audemez-briffoeil-parcelle-cadastree-5eme-division-section-a-155f2-mise-en-vente-fixation-des-conditions",
+        "page": null,
+        "sha256": "838bf0f851ba2723bb1843b9f7906df4dbca9193387a0002efd903f190ed20f6"
+      },
+      "description": "Article 4 : de charger le collège communal de l'exécution de la présente délibération et de l'attribution du contrat relatif à cette opération patrimoniale ; Article 5 : de prendre en charge les frais et honoraires de Me TEXTE MASQUÉ | RGPD dus par la partie venderesse (frais de publicité, honoraires de négociation) par les crédits prévus à l'article 124/12320 du budget ordinaire 2026. Article 6 : de permettre au collège de décider de la prise en charge ou non de frais de géomètre liés, le cas échéant, à la création d'un accès en fonction des discussions avec les candidats acquéreurs ;",
+      "evidence": "Article 4 : de charger le collège communal de l'exécution de la présente délibération et de l'attribution du contrat relatif à cette opération patrimoniale ; Article 5 : de prendre en charge les frais et honoraires de Me TEXTE MASQUÉ | RGPD dus par la partie venderesse (frais de publicité, honoraires de négociation) par les crédits prévus à l'article 124/12320 du budget ordinaire 2026. Article 6 : de permettre au collège de décider de la prise en charge ou non de frais de géomètre liés, le cas échéant, à la création d'un accès en fonction des discussions avec les candidats acquéreurs ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "Article 4 : de charger le collège communal de l'exécution de la présente délibération et de l'attribution du contrat relatif à cette opération patrimoniale ; Article 5 : de prendre en charge les frais et honoraires de Me TEXTE MASQUÉ | RGPD dus par la partie venderesse (frais de publicité, honoraires de négociation) par les crédits prévus à l'article 124/12320 du budget ordinaire 2026. Article 6 : de permettre au collège de décider de la prise en charge ou non de frais de géomètre liés, le cas échéant, à la création d'un accès en fonction des discussions avec les candidats acquéreurs ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
     }
   ]
 }
