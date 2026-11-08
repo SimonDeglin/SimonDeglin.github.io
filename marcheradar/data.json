@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-07T21:05:54.943Z",
+      "last_attempt": "2026-11-08T00:55:07.880Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -74,29 +74,29 @@
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 949,
-      "opportunities": 179,
+      "documentsRead": 978,
+      "opportunities": 182,
       "sitesChecked": 261,
       "candidatePages": 228,
-      "sourceErrors": 96,
-      "htmlDocumentsRead": 3792
+      "sourceErrors": 97,
+      "htmlDocumentsRead": 4050
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-07T21:05:54.943Z",
-      "last_success": "2026-11-07T21:05:54.943Z",
+      "last_attempt": "2026-11-08T00:55:07.880Z",
+      "last_success": "2026-11-08T00:55:07.880Z",
       "last_batch": 24,
-      "documents_checked": 83,
+      "documents_checked": 47,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 7,
+      "errors_count": 3,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 308,
+      "html_documents_read": 283,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 82,
+      "recent_municipal_signals": 85,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1484,
     "matched_current_run": 8,
-    "records": 320,
+    "records": 323,
     "review_count": 223,
     "award_notice_count": 396,
     "awarded_market_matches": 3,
@@ -12944,7 +12944,7 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:7e257e4ef572a6908b",
         "sha256": "dd72a4aea80d6762314a26aaea1a9195f183bd4e6b36cc3c71586506a8b3cafc",
-        "checkedAt": "2026-11-04T17:35:02.976Z",
+        "checkedAt": "2026-11-08T00:55:07.880Z",
         "changedAt": null
       },
       "matchReason": "prestation_decrite",
@@ -25802,6 +25802,279 @@
       ],
       "sourceEvidenceStatus": "found",
       "municipalReference": null
+    },
+    {
+      "id": "local-html:e8d7dddac618b90d29d7",
+      "title": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE",
+      "sourceDocumentTitle": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE",
+      "missionEvidence": {
+        "excerpt": "TIONS ET DU MODE DE PASSATION - VOTE Le Conseil communal est invité à approuver les conditions et le mode de passation d'un marché de services en vue de la désignation d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
+        "sourceUrl": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote",
+        "page": null,
+        "sha256": "9fc77229997266324c61c2e725f0610c3fe9737d5f5a189f6637eb575f85d9b8"
+      },
+      "buyer": "Commune de Soignies",
+      "municipalityINS": "55040",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "TIONS ET DU MODE DE PASSATION - VOTE Le Conseil communal est invité à approuver les conditions et le mode de passation d'un marché de services en vue de la désignation d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
+        "mission": "approuver les conditions et le mode de passation d'un marché de services en vue de la désignation d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote",
+      "sourceDocument": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote",
+        "sha256": "9fc77229997266324c61c2e725f0610c3fe9737d5f5a189f6637eb575f85d9b8",
+        "session": {
+          "date": "2026-10-13",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 13 octobre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:b75983fa962b4d860f",
+        "sha256": "9fc77229997266324c61c2e725f0610c3fe9737d5f5a189f6637eb575f85d9b8",
+        "format": "html",
+        "checkedAt": "2026-11-08T00:55:07.880Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSAT",
+        "sourceUrl": "https://www.deliberations.be/soignies/decisions/13-octobre-2026-19-00/dt2-marches-publics-marche-de-services-intervention-dun-auteur-de-projet-pour-la-transformation-dun-batiment-commercial-en-salle-de-gymnastique-et-darts-martiaux-approbation-des-conditions-et-du-mode-de-passation-vote",
+        "page": null,
+        "sha256": "9fc77229997266324c61c2e725f0610c3fe9737d5f5a189f6637eb575f85d9b8"
+      },
+      "description": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE 13 Séance publique du Conseil 13 octobre 2026 (19:00) Point N°",
+      "evidence": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE 13 Séance publique du Conseil 13 octobre 2026 (19:00) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE 13 Séance publique du Conseil 13 octobre 2026 (19:00) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE Le Conseil communal est invité à approuver les conditions et le mode de passation d'un marché de services en vue de la désignation d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux En vertu de l'article L1122-19 du Code de la Démocratie locale et de la Décentralisation, Madame l'Echevine MARCQ quitte la séance. Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ;",
+          "page": null
+        },
+        {
+          "excerpt": "Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. DT2 - MARCHES PUBLICS - MARCHE DE SERVICES - INTERVENTION D'UN AUTEUR DE PROJET POUR LA TRANSFORMATION D'UN BATIMENT COMMERCIAL EN SALLE DE GYMNASTIQUE ET D'ARTS MARTIAUX - APPROBATION DES CONDITIONS ET DU MODE DE PASSATION - VOTE Le Conseil communal est invité à approuver les conditions et le mode de passation d'un marché de services en vue de la désignation d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux En vertu de l'article L1122-19 du Code de la Démocratie locale et de la Décentralisation, Madame l'Echevine MARCQ quitte la séance. Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l'article 36 ;",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Considérant le cahier des charges N° 2026/3P/1878 relatif au marché “Marché de services - Intervention d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux” ; Considérant que le montant estimé de ce marché s'élève à 278.301,15 € hors TVA ou 336.744,39 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure ouverte ; Considérant que cette estimation dépasse les seuils d'application de la publicité européenne ; Considérant que le crédit permettant cette dépense est inscrit à l’article 764/723-60 ( n° de projet 20261011) du budget extraordinaire 2026 qui sera financé par prélèvement sur fonds de réserve ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local-html:bfc1a1882f7f85710a39",
+      "title": "[-1.777.81] Élaboration d’un cadre communal de réflexion relatif à l’implantation et au développement des projets d’élevage de grande capacité sur le territoire de Sivry-Rance – Saisine de la CCATM et contribution au futur Schéma de Développement Communal.",
+      "sourceDocumentTitle": "[-1.777.81] Élaboration d’un cadre communal de réflexion relatif à l’implantation et au développement des projets d’élevage de grande capacité sur le territoire de Sivry-Rance – Saisine de la CCATM et contribution au futur Schéma de Développement Communal.",
+      "missionEvidence": null,
+      "buyer": "Commune de Sivry-Rance",
+      "municipalityINS": "56088",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 46,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/sivry-rance/decisions/12-octobre-2026-20-00/1-777-81-elaboration-dun-cadre-communal-de-reflexion-relatif-a-limplantation-et-au-developpement-des-projets-delevage-de-grande-capacite-sur-le-territoire-de-sivry-rance-saisine-de-la-ccatm-et-contribution-au-futur-schema-de-developpement-communal",
+      "sourceDocument": "https://www.deliberations.be/sivry-rance/decisions/12-octobre-2026-20-00/1-777-81-elaboration-dun-cadre-communal-de-reflexion-relatif-a-limplantation-et-au-developpement-des-projets-delevage-de-grande-capacite-sur-le-territoire-de-sivry-rance-saisine-de-la-ccatm-et-contribution-au-futur-schema-de-developpement-communal",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/sivry-rance/decisions/12-octobre-2026-20-00/1-777-81-elaboration-dun-cadre-communal-de-reflexion-relatif-a-limplantation-et-au-developpement-des-projets-delevage-de-grande-capacite-sur-le-territoire-de-sivry-rance-saisine-de-la-ccatm-et-contribution-au-futur-schema-de-developpement-communal",
+        "sha256": "5c20f972c0fe399abb46fc747d24c5d7b59b3672eb1715126d35cc6089c9d3b8",
+        "session": {
+          "date": "2026-10-12",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 12 octobre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/sivry-rance/decisions/12-octobre-2026-20-00/1-777-81-elaboration-dun-cadre-communal-de-reflexion-relatif-a-limplantation-et-au-developpement-des-projets-delevage-de-grande-capacite-sur-le-territoire-de-sivry-rance-saisine-de-la-ccatm-et-contribution-au-futur-schema-de-developpement-communal"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:116ce013b05c8fbd0a",
+        "sha256": "5c20f972c0fe399abb46fc747d24c5d7b59b3672eb1715126d35cc6089c9d3b8",
+        "format": "html",
+        "checkedAt": "2026-11-08T00:55:07.880Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Considérant que cette démarche n’a pas pour objectif d’instaurer un moratoire ni de préjuger de la décision à intervenir dans le cadre de l’instruction individuelle des demandes d’autorisation, lesquelles demeurent exami",
+        "sourceUrl": "https://www.deliberations.be/sivry-rance/decisions/12-octobre-2026-20-00/1-777-81-elaboration-dun-cadre-communal-de-reflexion-relatif-a-limplantation-et-au-developpement-des-projets-delevage-de-grande-capacite-sur-le-territoire-de-sivry-rance-saisine-de-la-ccatm-et-contribution-au-futur-schema-de-developpement-communal",
+        "page": null,
+        "sha256": "5c20f972c0fe399abb46fc747d24c5d7b59b3672eb1715126d35cc6089c9d3b8"
+      },
+      "description": "Considérant que cette démarche n’a pas pour objectif d’instaurer un moratoire ni de préjuger de la décision à intervenir dans le cadre de l’instruction individuelle des demandes d’autorisation, lesquelles demeurent examinées conformément aux dispositions légales et réglementaires applicables ; Considérant néanmoins qu’il apparaît opportun de définir des orientations communales permettant d’éclairer l’analyse territoriale des futurs projets ; Considérant que la Commission consultative communale d’aménagement du territoire et de mobilité (CCATM), par sa composition pluraliste et sa mission consultative, constitue un lieu particulièrement approprié pour mener cette réflexion ; Considérant enfin que les conclusions de cette démarche pourront utilement alimenter les réflexions relatives au futur Schéma de Développement Communal de Sivry-Rance et contribuer à la définition d’une vision territoriale à moyen et long terme ; DÉCIDE, ... : Article 1er - de lancer une réflexion communale prospective relative aux conditions d’implantation et de développement des projets d’élevage de grande capacité sur le territoire de Sivry-Rance. Article 2 - de saisir la CCATM afin qu’elle examine cette problématique dans une perspective globale d’aménagement du territoire et formule un avis ainsi que des recommandations permettant de concilier notamment :",
+      "evidence": "Considérant que cette démarche n’a pas pour objectif d’instaurer un moratoire ni de préjuger de la décision à intervenir dans le cadre de l’instruction individuelle des demandes d’autorisation, lesquelles demeurent examinées conformément aux dispositions légales et réglementaires applicables ; Considérant néanmoins qu’il apparaît opportun de définir des orientations communales permettant d’éclairer l’analyse territoriale des futurs projets ; Considérant que la Commission consultative communale d’aménagement du territoire et de mobilité (CCATM), par sa composition pluraliste et sa mission consultative, constitue un lieu particulièrement approprié pour mener cette réflexion ; Considérant enfin que les conclusions de cette démarche pourront utilement alimenter les réflexions relatives au futur Schéma de Développement Communal de Sivry-Rance et contribuer à la définition d’une vision territoriale à moyen et long terme ; DÉCIDE, ... : Article 1er - de lancer une réflexion communale prospective relative aux conditions d’implantation et de développement des projets d’élevage de grande capacité sur le territoire de Sivry-Rance. Article 2 - de saisir la CCATM afin qu’elle examine cette problématique dans une perspective globale d’aménagement du territoire et formule un avis ainsi que des recommandations permettant de concilier notamment :",
+      "municipalEvidence": [
+        {
+          "excerpt": "Considérant que cette démarche n’a pas pour objectif d’instaurer un moratoire ni de préjuger de la décision à intervenir dans le cadre de l’instruction individuelle des demandes d’autorisation, lesquelles demeurent examinées conformément aux dispositions légales et réglementaires applicables ; Considérant néanmoins qu’il apparaît opportun de définir des orientations communales permettant d’éclairer l’analyse territoriale des futurs projets ; Considérant que la Commission consultative communale d’aménagement du territoire et de mobilité (CCATM), par sa composition pluraliste et sa mission consultative, constitue un lieu particulièrement approprié pour mener cette réflexion ; Considérant enfin que les conclusions de cette démarche pourront utilement alimenter les réflexions relatives au futur Schéma de Développement Communal de Sivry-Rance et contribuer à la définition d’une vision territoriale à moyen et long terme ; DÉCIDE, ... : Article 1er - de lancer une réflexion communale prospective relative aux conditions d’implantation et de développement des projets d’élevage de grande capacité sur le territoire de Sivry-Rance. Article 2 - de saisir la CCATM afin qu’elle examine cette problématique dans une perspective globale d’aménagement du territoire et formule un avis ainsi que des recommandations permettant de concilier notamment :",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant enfin que les conclusions de cette démarche pourront utilement alimenter les réflexions relatives au futur Schéma de Développement Communal de Sivry-Rance et contribuer à la définition d’une vision territoriale à moyen et long terme ; DÉCIDE, ... : Article 1er - de lancer une réflexion communale prospective relative aux conditions d’implantation et de développement des projets d’élevage de grande capacité sur le territoire de Sivry-Rance. Article 2 - de saisir la CCATM afin qu’elle examine cette problématique dans une perspective globale d’aménagement du territoire et formule un avis ainsi que des recommandations permettant de concilier notamment : la pérennité et le développement économique des exploitations agricoles ; la répartition équilibrée de ces activités sur le territoire communal ; la proximité des habitations et des noyaux villageois ;",
+          "page": null
+        },
+        {
+          "excerpt": "la préservation de la qualité de vie en milieu rural ; et, plus largement, la recherche d’une cohabitation durable entre agriculture moderne et fonction résidentielle du territoire rural. Article 3 - de charger le Collège communal d’élaborer et de transmettre à la CCATM un document de travail comprenant les orientations et critères auxquels le Collège estime devoir porter une attention particulière, afin que ceux-ci puissent être examinés, discutés, complétés ou amendés par la Commission. Article 4 - d’inviter la CCATM, au terme de ses travaux, à remettre au Conseil communal un avis motivé et, si elle le juge opportun, une proposition de grille de critères et d’orientations applicables à l’analyse territoriale de ce type de projets. Article 5 - de prévoir, à l’issue de cette première phase et sur la base notamment de l’avis de la CCATM, l’organisation d’une démarche d’information et/ou de concertation associant les acteurs concernés, notamment le monde agricole et la population. Article 6 - de soumettre les conclusions de cette démarche au Conseil communal afin qu’il puisse déterminer les orientations qu’il entend retenir et décider de leur intégration dans les réflexions préparatoires au futur Schéma de Développement Communal.",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local-html:d9383ce033b16d4e9535",
+      "title": "Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard",
+      "sourceDocumentTitle": "Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard – Principe et approbation des conditions et du mode de passation.",
+      "missionEvidence": {
+        "excerpt": "’aménagement d’une parcelle des étoiles au cimetière de Saint-Mard. D'approuver le cahier des charges N° 2026-904 et le montant estimé du marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD . Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 39.900",
+        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "6834b4b7847b7902ecd23bd66314c75c99a851420e27eadc67c27adfc2bd614c"
+      },
+      "buyer": "Commune de Virton",
+      "municipalityINS": "85045",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "6834b4b7847b7902ecd23bd66314c75c99a851420e27eadc67c27adfc2bd614c",
+        "stage": "project"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "’aménagement d’une parcelle des étoiles au cimetière de Saint-Mard. D'approuver le cahier des charges N° 2026-904 et le montant estimé du marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD . Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 39.900",
+        "mission": "approuver le cahier des charges N° 2026-904 et le montant estimé du marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard”, établis par le Bureau d'études, TEXTE MASQUÉ | RGPD .",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 48,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "6834b4b7847b7902ecd23bd66314c75c99a851420e27eadc67c27adfc2bd614c",
+        "session": {
+          "date": "2026-10-08",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 08 octobre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:613271c99a065aabec",
+        "sha256": "6834b4b7847b7902ecd23bd66314c75c99a851420e27eadc67c27adfc2bd614c",
+        "format": "html",
+        "checkedAt": "2026-11-08T00:55:07.880Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "- Des emplacements pleine terre pour fœtus de 60x60cm ; - Des emplacements pleine terre pour les enfants de moins de 12 ans ; Vu le cahier des charges N° 2026-904 établi par le Bureau d'études, TEXTE MASQUÉ | RGPD , rela",
+        "sourceUrl": "https://www.deliberations.be/virton/decisions/08-octobre-2026-19-00/amenagement-dune-parcelle-des-etoiles-au-cimetiere-de-saint-mard-principe-et-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "6834b4b7847b7902ecd23bd66314c75c99a851420e27eadc67c27adfc2bd614c"
+      },
+      "description": "- Des emplacements pleine terre pour fœtus de 60x60cm ; - Des emplacements pleine terre pour les enfants de moins de 12 ans ; Vu le cahier des charges N° 2026-904 établi par le Bureau d'études, TEXTE MASQUÉ | RGPD , relatif au marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard” ; Considérant le plan de situation et la vue en plan des aménagements réalisés par TEXTE MASQUÉ | RGPD ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Réalisation d'un revêtement en dalle gazon PEHD, d'une aire de dispersion, pose de mobilier urbain (Estimé à : 32.850,00 € hors TVA ou 39.748,50 €, 21% TVA comprise) ; * Tranche conditionnelle : Plantation d'une haie (Estimé à : 7.050,00 € hors TVA ou 8.530,50 €, 21% TVA comprise) ;",
+      "evidence": "- Des emplacements pleine terre pour fœtus de 60x60cm ; - Des emplacements pleine terre pour les enfants de moins de 12 ans ; Vu le cahier des charges N° 2026-904 établi par le Bureau d'études, TEXTE MASQUÉ | RGPD , relatif au marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard” ; Considérant le plan de situation et la vue en plan des aménagements réalisés par TEXTE MASQUÉ | RGPD ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Réalisation d'un revêtement en dalle gazon PEHD, d'une aire de dispersion, pose de mobilier urbain (Estimé à : 32.850,00 € hors TVA ou 39.748,50 €, 21% TVA comprise) ; * Tranche conditionnelle : Plantation d'une haie (Estimé à : 7.050,00 € hors TVA ou 8.530,50 €, 21% TVA comprise) ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "- Des emplacements pleine terre pour fœtus de 60x60cm ; - Des emplacements pleine terre pour les enfants de moins de 12 ans ; Vu le cahier des charges N° 2026-904 établi par le Bureau d'études, TEXTE MASQUÉ | RGPD , relatif au marché “Aménagement d'une parcelle des étoiles au cimetière de Saint-Mard” ; Considérant le plan de situation et la vue en plan des aménagements réalisés par TEXTE MASQUÉ | RGPD ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Réalisation d'un revêtement en dalle gazon PEHD, d'une aire de dispersion, pose de mobilier urbain (Estimé à : 32.850,00 € hors TVA ou 39.748,50 €, 21% TVA comprise) ; * Tranche conditionnelle : Plantation d'une haie (Estimé à : 7.050,00 € hors TVA ou 8.530,50 €, 21% TVA comprise) ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-904"
     }
   ]
 }
