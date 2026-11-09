@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-08T20:30:35.723Z",
+  "generated_at": "2026-11-09T13:57:00.964Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-11-08 : 1314 avis lus, 3 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-11-09 : 1244 avis lus, 3 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-11-08T20:31:53.779Z",
-      "scanned": 2125,
-      "retained": 33,
-      "period_from": "2026-10-25",
-      "period_to": "2026-11-08",
-      "pages": 85,
+      "last_success": "2026-11-09T13:58:44.725Z",
+      "scanned": 2275,
+      "retained": 37,
+      "period_from": "2026-10-26",
+      "period_to": "2026-11-09",
+      "pages": 91,
       "complete": true,
-      "raw_candidates": 2110,
+      "raw_candidates": 2264,
       "oldest_seen": "2026-10-23",
-      "last_attempt": "2026-11-08T20:31:53.779Z",
+      "last_attempt": "2026-11-09T13:58:44.725Z",
       "last_error": null,
-      "last_complete_success": "2026-11-08T20:31:53.779Z"
+      "last_complete_success": "2026-11-09T13:58:44.725Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-11-08T20:33:32.349Z",
+      "last_success": "2026-11-09T14:01:28.882Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -104,15 +104,15 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 85 page(s) parcourue(s) depuis 2026-10-25.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 91 page(s) parcourue(s) depuis 2026-10-26.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
-    "scanned": 1314,
+    "scanned": 1244,
     "matched_current_run": 5,
-    "records": 335,
-    "review_count": 232,
-    "award_notice_count": 360,
+    "records": 338,
+    "review_count": 243,
+    "award_notice_count": 341,
     "awarded_market_matches": 3,
     "award_fields_requested": false,
     "retained_as_excluded": 36,
@@ -125,37 +125,37 @@
     "queries": [
       {
         "source": "Acheteurs belges",
-        "from": "20261028",
-        "to": "20261103",
-        "found": 457,
-        "reported": 457
+        "from": "20261029",
+        "to": "20261104",
+        "found": 421,
+        "reported": 421
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261028",
-        "to": "20261103",
-        "found": 444,
-        "reported": 444
+        "from": "20261029",
+        "to": "20261104",
+        "found": 411,
+        "reported": 411
       },
       {
         "source": "Acheteurs belges",
-        "from": "20261104",
-        "to": "20261108",
+        "from": "20261105",
+        "to": "20261109",
         "found": 213,
         "reported": 213
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261104",
-        "to": "20261108",
-        "found": 200,
-        "reported": 200
+        "from": "20261105",
+        "to": "20261109",
+        "found": 199,
+        "reported": 199
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2125,
-    "bosa_imported": 33,
-    "bosa_pages": 85,
+    "bosa_scanned": 2275,
+    "bosa_imported": 37,
+    "bosa_pages": 91,
     "local_documents": 34,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -171,19 +171,113 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "avis_attribution_analyse_separement": 360,
-      "aucun_signal_metier": 393,
-      "travaux_execution": 108,
-      "acheteur_flamand": 151,
-      "avis_neerlandais": 157,
-      "objet_hors_domaine": 58,
-      "formule_administrative_sans_signal_metier": 18,
-      "assurance_ou_nettoyage": 16,
-      "fournitures_et_location": 44,
-      "qualifie_review": 9
+      "objet_hors_domaine": 66,
+      "travaux_execution": 97,
+      "acheteur_flamand": 147,
+      "avis_attribution_analyse_separement": 341,
+      "aucun_signal_metier": 348,
+      "avis_neerlandais": 164,
+      "fournitures_et_location": 46,
+      "formule_administrative_sans_signal_metier": 11,
+      "assurance_ou_nettoyage": 14,
+      "qualifie_review": 10
     }
   },
   "items": [
+    {
+      "id": "ted:779025-2026",
+      "publicationNumber": "779025-2026",
+      "procedureIdentifier": "d5c45690-3ce8-47da-9240-6fca2de4bd8d",
+      "title": "Belgique – Services de réparation et d'entretien de chauffage central – Marché de services ayant pour objet la maintenance préventive et curative, l'optimisation énergétique et le suivi des installations HVAC",
+      "buyer": "Igretec",
+      "region": "Belgique",
+      "sector": "Reseaux",
+      "sectors": [
+        "Reseaux"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "description_ou_contexte",
+      "publication": "2026-11-09",
+      "deadline": "2027-01-18",
+      "cpv": [
+        "50720000",
+        "50730000",
+        "50800000"
+      ],
+      "description": "Par système HVAC, on entend l’ensemble des dispositifs de production de chaleur, de production de froid, de circulation d’air forcée en ce compris tous les accessoires ou conduites permettant leur fonctionnement et leur pilotage. Est compris dans ce terme, la production et la distribution d’eau chaude ou d’eau sanitaire.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/779025-2026",
+      "publicationWorkspaceId": "df8ddf27-18bb-416a-9cf6-925587790840",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/779025-2026",
+          "publicationNumber": "779025-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/df8ddf27-18bb-416a-9cf6-925587790840/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ]
+    },
+    {
+      "id": "ted:777889-2026",
+      "publicationNumber": "777889-2026",
+      "procedureIdentifier": "bd1b973b-fbfb-4f82-b38f-29697a301680",
+      "title": "Belgique – Services d'architecture, services de construction, services d'ingénierie et services d'inspection – N54-Lobbes-Erquelinnes : Marchés d'études pour la réalisation du chaînon manquant",
+      "buyer": "Service public de wallonie",
+      "region": "Belgique",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "description_ou_contexte",
+      "publication": "2026-11-09",
+      "deadline": "2026-12-08",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Marché global d'études préalables à la mise en oeuvre de la nouvelle voirie N54. Le présent marché est un marché de services, comportant des « tranches fermes » (TF), des « tranches conditionnelles » (TC) . Délai global d'exécution du marché : 4 ans. Durée de validité des offres : 180 JO.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/777889-2026",
+      "publicationWorkspaceId": "63a9f4ba-d8bb-4895-810b-8be303b3b248",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/777889-2026",
+          "publicationNumber": "777889-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/63a9f4ba-d8bb-4895-810b-8be303b3b248/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ]
+    },
     {
       "id": "bosa:83c37a34-f33e-47b2-a836-62e288c4bc9d",
       "publicationWorkspaceId": "83c37a34-f33e-47b2-a836-62e288c4bc9d",
@@ -2076,7 +2170,7 @@
       ],
       "score": 62,
       "screening": "review",
-      "publication": "2026-11-03",
+      "publication": "2026-11-09",
       "deadline": "2026-11-17T11:00:00+01:00",
       "cpv": [
         "71541000"
@@ -2113,6 +2207,12 @@
         {
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/b421ef8a-d870-48cc-89a7-91bb1489e278/general"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/2741b3ba-8388-455c-af11-c06cd205d9ba/general",
+          "bdaReference": "PPP0KC-2881/6941/AC2026-089 CB_003",
+          "noticeKind": "award"
         }
       ],
       "qualification": {
@@ -2122,7 +2222,15 @@
         "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
         "capacityStatus": "not_assessed"
       },
-      "screeningReason": null
+      "screeningReason": null,
+      "bosaResults": [
+        {
+          "reference": "PPP0KC-2881/6941/AC2026-089 CB_003",
+          "url": "https://www.publicprocurement.be/publication-workspaces/2741b3ba-8388-455c-af11-c06cd205d9ba/general",
+          "publicationDate": "2026-11-09",
+          "kind": "award"
+        }
+      ]
     },
     {
       "id": "bosa:5e50b6fb-30a8-4f08-9d0c-f42ec414aae1",
@@ -7673,7 +7781,7 @@
           "versionId": "36488d00-f30c-407b-abf7-ea1924b6b999",
           "documentId": "917f42c5-0419-4611-8398-5561fefe4efc",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -7699,7 +7807,7 @@
           "versionId": "26b15544-17fc-43c0-826c-1322f33b9850",
           "documentId": "20364704-82a0-4eb0-a213-7965e3328061",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -7751,7 +7859,7 @@
           "versionId": "f5ff3774-83d7-49c0-abe1-28e026816900",
           "documentId": "ff53ea2a-b24f-4586-b315-523295f56f5c",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -7764,7 +7872,7 @@
           "versionId": "8228202b-2303-4eba-8e13-0fe820c5023d",
           "documentId": "ac74d28e-0bfa-4c78-af2b-da7f05b117dd",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -7797,7 +7905,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-06T13:06:04.014Z",
+      "documentsCheckedAt": "2026-11-09T14:05:11.081Z",
       "documentAnalyses": [
         {
           "documentId": "7259aed6-32b5-4e0b-88c0-ffa7fa606658",
@@ -8194,6 +8302,19 @@
       "screeningReason": "acheteur_flamand",
       "documentInventory": [
         {
+          "id": "1972cd6e-d22c-44df-887d-849ebbc265ea",
+          "title": "VLAIO-2026-17 Verduidelijking offerteformulier raamovereenkomst BIZGIS fase 3 (002).pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "d641c2d1-5b50-4190-9bb6-f97531cfffab",
+          "documentId": "46b1d821-dbb1-4869-9e2a-57ee06a86f7c",
+          "activatedAt": "2026-11-09T04:08:11.11846",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/dfdf8ed6-f60e-4be6-9024-e608d8bc079a/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
           "id": "412312e6-f41d-4ba9-ac66-c7ece782f4f4",
           "title": "Bijlage 2 VERBINTENIS TERBESCHIKKINGSTELLING MIDDELEN.docx",
           "kind": "annex",
@@ -8314,7 +8435,7 @@
       "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/dfdf8ed6-f60e-4be6-9024-e608d8bc079a/documents",
       "documentsPageSource": "public_api_200",
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-10-28T11:29:06.358Z",
+      "documentsCheckedAt": "2026-11-09T14:05:25.584Z",
       "documentAnalyses": [
         {
           "documentId": "10b78ba2-8404-4eba-a96a-0c4346f29731",
@@ -11975,6 +12096,90 @@
       "screeningReason": null
     },
     {
+      "id": "local:c3efbcd9838dd631a118",
+      "title": "7. Marche de Services - 202600XX - Designation d'un auteur de projet pour des travaux subsidies d'amelioration de voiries agricoles - Approbation du projet, des conditions et du mode de passation.",
+      "sourceDocumentTitle": "Ordre du jour conseil communal 30-09-26.pdf",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Erquelinnes",
+      "municipalityINS": "56022",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "7. Marche de Services - 202600XX - Designation d'un auteur de projet pour des travaux subsidies d'amelioration de voiries agricoles - Approbation du projet, des conditions et du mode de passation.",
+        "sourceUrl": "https://www.erquelinnes.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/ordre-du-jour-conseil-communal-30-09-26.pdf/@@download/file/Ordre%20du%20jour%20conseil%20communal%2030-09-26.pdf",
+        "page": 1,
+        "sha256": "30109516de94d031848ddf577bac12919968ef1c89b46e0f261ac90aceab106b"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 95,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.erquelinnes.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/ordre-du-jour-conseil-communal-30-09-26.pdf/@@download/file/Ordre%20du%20jour%20conseil%20communal%2030-09-26.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.erquelinnes.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/ordre-du-jour-conseil-communal-30-09-26.pdf/@@download/file/Ordre%20du%20jour%20conseil%20communal%2030-09-26.pdf",
+        "sha256": "30109516de94d031848ddf577bac12919968ef1c89b46e0f261ac90aceab106b",
+        "session": null,
+        "document": {
+          "date": "2026-09-22",
+          "kind": "document",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "Fait a Erquelinnes, le 22 septembre 2026",
+          "confidence": "explicit"
+        },
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.erquelinnes.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/ordre-du-jour-conseil-communal-30-09-26.pdf/@@download/file/Ordre%20du%20jour%20conseil%20communal%2030-09-26.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 7. Marche de Services - 202600XX - Designation d'un auteur de projet pour des travaux subsidies d'amelioration de voiries agricoles - Approbation du projet, des conditions et du mode de passation.",
+      "evidence": "7. Marche de Services - 202600XX - Designation d'un auteur de projet pour des travaux subsidies d'amelioration de voiries agricoles - Approbation du projet, des conditions et du mode de passation.",
+      "municipalReference": null,
+      "municipalSection": "7. Marche de Services - 202600XX - Designation d'un auteur de projet pour des travaux subsidies d'amelioration de voiries agricoles - Approbation du projet, des conditions et du mode de passation.",
+      "municipalEvidence": [
+        {
+          "page": 1,
+          "excerpt": "7. Marche de Services - 202600XX - Designation d'un auteur de projet pour des travaux subsidies d'amelioration de voiries agricoles - Approbation du projet, des conditions et du mode de passation."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 1,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:31ef487e729ca5d2a6",
+        "sha256": "30109516de94d031848ddf577bac12919968ef1c89b46e0f261ac90aceab106b",
+        "checkedAt": "2026-11-09T08:41:17.184Z",
+        "changedAt": null
+      },
+      "matchReason": "prestation_decrite",
+      "screeningReason": null
+    },
+    {
       "id": "local-html:12db5ef323e5da8c63d6",
       "title": "Marché de services : Convention relative aux modalités d'exécution des missions confiées à IDELUX-EAU - Étude hydraulique et hydrologique - Fouches - Approbation du marché \"in house\"",
       "buyer": "Commune de Arlon",
@@ -13449,6 +13654,94 @@
       "screeningReason": null
     },
     {
+      "id": "local-html:53a758a60c3d959c8e62",
+      "title": "PATRIMOINE COMMUNAL - Vente d’une parcelle communale destinée à l’installation d’une cabine électrique - Dossier ORES - Place des Martyrs - Projet d’acte",
+      "sourceDocumentTitle": "PATRIMOINE COMMUNAL - Vente d’une parcelle communale destinée à l’installation d’une cabine électrique - Dossier ORES - Place des Martyrs - Projet d’acte",
+      "missionEvidence": null,
+      "buyer": "Commune de Ecaussinnes",
+      "municipalityINS": "55050",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Topo",
+      "sectors": [
+        "Topo",
+        "Foncier"
+      ],
+      "screening": "review",
+      "score": 71,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/ecaussinnes/decisions/17-novembre-2026-19-15/patrimoine-communal-vente-dune-parcelle-communale-destinee-a-linstallation-dune-cabine-electrique-dossier-ores-place-des-martyrs-projet-dacte",
+      "sourceDocument": "https://www.deliberations.be/ecaussinnes/decisions/17-novembre-2026-19-15/patrimoine-communal-vente-dune-parcelle-communale-destinee-a-linstallation-dune-cabine-electrique-dossier-ores-place-des-martyrs-projet-dacte",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/ecaussinnes/decisions/17-novembre-2026-19-15/patrimoine-communal-vente-dune-parcelle-communale-destinee-a-linstallation-dune-cabine-electrique-dossier-ores-place-des-martyrs-projet-dacte",
+        "sha256": "41c0a1a182b3a2cf0fbe31425cdc406b0ff274e1a951b918f4e3d51e1ecaca6c",
+        "session": {
+          "date": "2026-11-17",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 17 novembre 2026 (19:15)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/ecaussinnes/decisions/17-novembre-2026-19-15/patrimoine-communal-vente-dune-parcelle-communale-destinee-a-linstallation-dune-cabine-electrique-dossier-ores-place-des-martyrs-projet-dacte"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6ae46bbc950c96dac8",
+        "sha256": "41c0a1a182b3a2cf0fbe31425cdc406b0ff274e1a951b918f4e3d51e1ecaca6c",
+        "format": "html",
+        "checkedAt": "2026-11-09T08:41:17.184Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Considérant qu’il convient d’approuver le projet d’acte du notaire Marie-Julie DELFORGE, notaire à la résidence de Lasne ; DECIDE, à l’unanimité des membres présents : Article 1 : de désaffecter la partie du domaine publ",
+        "sourceUrl": "https://www.deliberations.be/ecaussinnes/decisions/17-novembre-2026-19-15/patrimoine-communal-vente-dune-parcelle-communale-destinee-a-linstallation-dune-cabine-electrique-dossier-ores-place-des-martyrs-projet-dacte",
+        "page": null,
+        "sha256": "41c0a1a182b3a2cf0fbe31425cdc406b0ff274e1a951b918f4e3d51e1ecaca6c"
+      },
+      "description": "Considérant qu’il convient d’approuver le projet d’acte du notaire Marie-Julie DELFORGE, notaire à la résidence de Lasne ; DECIDE, à l’unanimité des membres présents : Article 1 : de désaffecter la partie du domaine public (voirie publique) correspondante à la parcelle reprise sous teinte jaune au procès-verbal de mesurage dressé par le Géomètre-Expert Jean-Nicolas SIMON en date du 1 er juillet 2025 ci-annexé. Article 2 : d’approuver le projet d’acte du notaire Marie-Julie DELFORGE ci-annexé en vue de la vente d’une parcelle de terrain d’une contenance de 25 m² sise sur le territoire de Ecaussinnes à la Place des Martyrs, faisant partie d’une propriété cadastrée Division 2, section B, portion désaffectée du Domaine public. Article 3 : de donner mandat à l’étude du notaire Marie-Julie DELFORGE (rue de la Gendarmerie 10 à 1380 Lasne) de procéder aux opérations de vente ( passation de l’acte authentique), de recevoir l’acte et d’y représenter la Commune. Article 4 : de transmettre la présente décision au Directeur financier ainsi qu’à l’étude du notaire Marie-Julie DELFORGE.",
+      "evidence": "Considérant qu’il convient d’approuver le projet d’acte du notaire Marie-Julie DELFORGE, notaire à la résidence de Lasne ; DECIDE, à l’unanimité des membres présents : Article 1 : de désaffecter la partie du domaine public (voirie publique) correspondante à la parcelle reprise sous teinte jaune au procès-verbal de mesurage dressé par le Géomètre-Expert Jean-Nicolas SIMON en date du 1 er juillet 2025 ci-annexé. Article 2 : d’approuver le projet d’acte du notaire Marie-Julie DELFORGE ci-annexé en vue de la vente d’une parcelle de terrain d’une contenance de 25 m² sise sur le territoire de Ecaussinnes à la Place des Martyrs, faisant partie d’une propriété cadastrée Division 2, section B, portion désaffectée du Domaine public. Article 3 : de donner mandat à l’étude du notaire Marie-Julie DELFORGE (rue de la Gendarmerie 10 à 1380 Lasne) de procéder aux opérations de vente ( passation de l’acte authentique), de recevoir l’acte et d’y représenter la Commune. Article 4 : de transmettre la présente décision au Directeur financier ainsi qu’à l’étude du notaire Marie-Julie DELFORGE.",
+      "municipalEvidence": [
+        {
+          "excerpt": "Considérant qu’il convient d’approuver le projet d’acte du notaire Marie-Julie DELFORGE, notaire à la résidence de Lasne ; DECIDE, à l’unanimité des membres présents : Article 1 : de désaffecter la partie du domaine public (voirie publique) correspondante à la parcelle reprise sous teinte jaune au procès-verbal de mesurage dressé par le Géomètre-Expert Jean-Nicolas SIMON en date du 1 er juillet 2025 ci-annexé. Article 2 : d’approuver le projet d’acte du notaire Marie-Julie DELFORGE ci-annexé en vue de la vente d’une parcelle de terrain d’une contenance de 25 m² sise sur le territoire de Ecaussinnes à la Place des Martyrs, faisant partie d’une propriété cadastrée Division 2, section B, portion désaffectée du Domaine public. Article 3 : de donner mandat à l’étude du notaire Marie-Julie DELFORGE (rue de la Gendarmerie 10 à 1380 Lasne) de procéder aux opérations de vente ( passation de l’acte authentique), de recevoir l’acte et d’y représenter la Commune. Article 4 : de transmettre la présente décision au Directeur financier ainsi qu’à l’étude du notaire Marie-Julie DELFORGE.",
+          "page": null
+        },
+        {
+          "excerpt": "Article 1 : de désaffecter la partie du domaine public (voirie publique) correspondante à la parcelle reprise sous teinte jaune au procès-verbal de mesurage dressé par le Géomètre-Expert Jean-Nicolas SIMON en date du 1 er juillet 2025 ci-annexé. Article 2 : d’approuver le projet d’acte du notaire Marie-Julie DELFORGE ci-annexé en vue de la vente d’une parcelle de terrain d’une contenance de 25 m² sise sur le territoire de Ecaussinnes à la Place des Martyrs, faisant partie d’une propriété cadastrée Division 2, section B, portion désaffectée du Domaine public. Article 3 : de donner mandat à l’étude du notaire Marie-Julie DELFORGE (rue de la Gendarmerie 10 à 1380 Lasne) de procéder aux opérations de vente ( passation de l’acte authentique), de recevoir l’acte et d’y représenter la Commune. Article 4 : de transmettre la présente décision au Directeur financier ainsi qu’à l’étude du notaire Marie-Julie DELFORGE.",
+          "page": null
+        },
+        {
+          "excerpt": "Article 2 : d’approuver le projet d’acte du notaire Marie-Julie DELFORGE ci-annexé en vue de la vente d’une parcelle de terrain d’une contenance de 25 m² sise sur le territoire de Ecaussinnes à la Place des Martyrs, faisant partie d’une propriété cadastrée Division 2, section B, portion désaffectée du Domaine public. Article 3 : de donner mandat à l’étude du notaire Marie-Julie DELFORGE (rue de la Gendarmerie 10 à 1380 Lasne) de procéder aux opérations de vente ( passation de l’acte authentique), de recevoir l’acte et d’y représenter la Commune. Article 4 : de transmettre la présente décision au Directeur financier ainsi qu’à l’étude du notaire Marie-Julie DELFORGE.",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "prestation_decrite",
+      "screeningReason": null
+    },
+    {
       "id": "communal:7092b8f35c924d8b04e4",
       "title": "Prospection · Beyne-Heusay · des différents paysages énoncés précédemment, mais aussi favorables pour la biodiversité, les luttes Attendu que l’étu…",
       "buyer": "Commune de Beyne-Heusay",
@@ -14818,6 +15111,194 @@
       ],
       "sourceEvidenceStatus": "found",
       "municipalReference": "20260023",
+      "matchReason": "prestation_dans_marche_de_travaux",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:69d002b347d7041cf9c4",
+      "title": "TRAVAUX - Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation.",
+      "sourceDocumentTitle": "TRAVAUX - Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation.",
+      "missionEvidence": {
+        "excerpt": "A l'unanimité, Décide : 1er.D’approuver le cahier des charges n°2026-026 et le montant estimé du marché ayant pour objet “Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet ”. Les conditions sont fixées comme prévu au cahier spécial des charges et par les règles générales d'exécution des marchés publics. Le montant est estimé à 35.000,00 € hors TVA o",
+        "sourceUrl": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-etude-en-vue-de-la-realisation-dune-zone-dimmersion-temporaire-zit-sur-le-dirgaert-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
+        "page": null,
+        "sha256": "514047a236c746cf838f746f7c62d2b8de0e3e6d1ed6c8358eb8bd5414832b96"
+      },
+      "buyer": "Commune de Baelen",
+      "municipalityINS": "63004",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-etude-en-vue-de-la-realisation-dune-zone-dimmersion-temporaire-zit-sur-le-dirgaert-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
+        "sha256": "514047a236c746cf838f746f7c62d2b8de0e3e6d1ed6c8358eb8bd5414832b96",
+        "stage": "project"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "A l'unanimité, Décide : 1er.D’approuver le cahier des charges n°2026-026 et le montant estimé du marché ayant pour objet “Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet ”. Les conditions sont fixées comme prévu au cahier spécial des charges et par les règles générales d'exécution des marchés publics. Le montant est estimé à 35.000,00 € hors TVA o",
+        "mission": "Décide : 1er.D’approuver le cahier des charges n°2026-026 et le montant estimé du marché ayant pour objet “Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet ”.",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 60,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-etude-en-vue-de-la-realisation-dune-zone-dimmersion-temporaire-zit-sur-le-dirgaert-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
+      "sourceDocument": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-etude-en-vue-de-la-realisation-dune-zone-dimmersion-temporaire-zit-sur-le-dirgaert-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-etude-en-vue-de-la-realisation-dune-zone-dimmersion-temporaire-zit-sur-le-dirgaert-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
+        "sha256": "514047a236c746cf838f746f7c62d2b8de0e3e6d1ed6c8358eb8bd5414832b96",
+        "session": {
+          "date": "2026-09-14",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 14 septembre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-etude-en-vue-de-la-realisation-dune-zone-dimmersion-temporaire-zit-sur-le-dirgaert-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:336d060bff66ad99b6",
+        "sha256": "514047a236c746cf838f746f7c62d2b8de0e3e6d1ed6c8358eb8bd5414832b96",
+        "format": "html",
+        "checkedAt": "2026-11-08T21:22:36.404Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "TRAVAUX - Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approba",
+        "sourceUrl": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-etude-en-vue-de-la-realisation-dune-zone-dimmersion-temporaire-zit-sur-le-dirgaert-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
+        "page": null,
+        "sha256": "514047a236c746cf838f746f7c62d2b8de0e3e6d1ed6c8358eb8bd5414832b96"
+      },
+      "description": "TRAVAUX - Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. 14 Séance publique du Conseil 14 septembre 2026 (20:00) Point N°",
+      "evidence": "TRAVAUX - Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. 14 Séance publique du Conseil 14 septembre 2026 (20:00) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "TRAVAUX - Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. 14 Séance publique du Conseil 14 septembre 2026 (20:00) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. TRAVAUX - Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. Le Conseil, Vu le Code de la Démocratie Locale et de la Décentralisation, et ses modifications ultérieures, notamment l’article L1222-3 relatif aux compétences du Conseil communal ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) et l'article 57 ;",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges n°2026-026 pour le marché ayant pour objet “Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet” ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Tranche de marché 1 « Etude de faisabilité », estimée à 17.000,00 € hors TVA ou 20.570,00 €, 21 % TVA comprise ; * Tranche conditionnelle : Tranche de marché 2 « Etude de projet », estimée à 12.000,00 € hors TVA ou 14.520,00 €, 21 % TVA comprise ; * Tranche conditionnelle : Tranche de marché 3 « Exécution des travaux », estimée à 6.000,00 € hors TVA ou 7.260,00 €, 21 % TVA comprise ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-026",
+      "matchReason": "prestation_dans_marche_de_travaux",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:b06be98ab018ab9ee4a0",
+      "title": "TRAVAUX - Rénovation de la façade et des corniches de l'Eglise Saint-Paul de Baelen - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation.",
+      "sourceDocumentTitle": "TRAVAUX - Rénovation de la façade et des corniches de l'Eglise Saint-Paul de Baelen - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation.",
+      "missionEvidence": null,
+      "buyer": "Commune de Baelen",
+      "municipalityINS": "63004",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 60,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-renovation-de-la-facade-et-des-corniches-de-leglise-saint-paul-de-baelen-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
+      "sourceDocument": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-renovation-de-la-facade-et-des-corniches-de-leglise-saint-paul-de-baelen-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-renovation-de-la-facade-et-des-corniches-de-leglise-saint-paul-de-baelen-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
+        "sha256": "ec7a3d70a94e49a8303d9ca4ba31a7f291e366c82d4cac3943b151ea7abacf3a",
+        "session": {
+          "date": "2026-09-14",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 14 septembre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-renovation-de-la-facade-et-des-corniches-de-leglise-saint-paul-de-baelen-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:35e12918616fa09343",
+        "sha256": "ec7a3d70a94e49a8303d9ca4ba31a7f291e366c82d4cac3943b151ea7abacf3a",
+        "format": "html",
+        "checkedAt": "2026-11-08T21:22:36.404Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "TRAVAUX - Rénovation de la façade et des corniches de l'Eglise Saint-Paul de Baelen - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. 14 Séan",
+        "sourceUrl": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-renovation-de-la-facade-et-des-corniches-de-leglise-saint-paul-de-baelen-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
+        "page": null,
+        "sha256": "ec7a3d70a94e49a8303d9ca4ba31a7f291e366c82d4cac3943b151ea7abacf3a"
+      },
+      "description": "TRAVAUX - Rénovation de la façade et des corniches de l'Eglise Saint-Paul de Baelen - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. 14 Séance publique du Conseil 14 septembre 2026 (20:00) Point N°",
+      "evidence": "TRAVAUX - Rénovation de la façade et des corniches de l'Eglise Saint-Paul de Baelen - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. 14 Séance publique du Conseil 14 septembre 2026 (20:00) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "TRAVAUX - Rénovation de la façade et des corniches de l'Eglise Saint-Paul de Baelen - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. 14 Séance publique du Conseil 14 septembre 2026 (20:00) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. TRAVAUX - Rénovation de la façade et des corniches de l'Eglise Saint-Paul de Baelen - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. Le Conseil, Vu le Code de la Démocratie Locale et de la Décentralisation, et ses modifications ultérieures, notamment l’article L1222-3 relatif aux compétences du Conseil communal ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 92 (le montant estimé HTVA n'atteint pas le seuil de 30.000,00 €) ;",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Considérant le cahier des charges n°2026-006 pour le marché ayant pour objet “Rénovation de la façade et des corniches de l'Eglise Saint-Paul de Baelen - Désignation d'un auteur de projet” établi par le Service Travaux ; Considérant que le montant estimé de ce marché s’élève à 10.000,00 € hors TVA ou 12.100,00 €, 21 % TVA comprise ; Considérant qu’il est donc proposé de passer le marché par facture acceptée (marchés publics de faible montant) ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 790/733-51 projet 20260022, et sera financé par fonds propres ; Considérant que l'avis de légalité du directeur financier n’est pas obligatoire, qu’il n’y a pas eu de demande spontanée et qu’aucun avis n’a été donné d’initiative par le directeur financier ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-006",
       "matchReason": "prestation_dans_marche_de_travaux",
       "screeningReason": null
     },
@@ -21624,6 +22105,387 @@
       "screeningReason": null
     },
     {
+      "id": "local:7558131ef5a4a0b0940e",
+      "title": "14. Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision.",
+      "sourceDocumentTitle": "Convocation",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "14. Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. MOBILITÉ 15: BELOEIL — section de Basècles - Place de la Vic",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.08.26-ordre-du-jour.pdf",
+        "page": 2,
+        "sha256": "8004cdfe61cf1c32d7f30beebea9b9c3153be0d062396022d2c5357782e57c1b"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.08.26-ordre-du-jour.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.08.26-ordre-du-jour.pdf",
+        "sha256": "8004cdfe61cf1c32d7f30beebea9b9c3153be0d062396022d2c5357782e57c1b",
+        "session": null,
+        "document": {
+          "date": "2026-08-18",
+          "kind": "document",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "COMMUNE DE Beloeil, le 18 août 2026",
+          "confidence": "ocr"
+        },
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "ocr",
+        "language": "fra+eng",
+        "pagesRead": 2,
+        "totalPages": 2,
+        "partial": false
+      },
+      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.08.26-ordre-du-jour.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : 14. Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. MOBILITÉ 15: BELOEIL — section de Basècles - Place de la Victoire - Mise en place d'un emplacement pour personnes handicapées, du côté pair, le long des n° 14 et 16. Examen. Décision.",
+      "evidence": "14. Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. MOBILITÉ 15: BELOEIL — section de Basècles - Place de la Victoire - Mise en place d'un emplacement pour personnes handicapées, du côté pair, le long des n° 14 et 16. Examen. Décision.",
+      "municipalReference": null,
+      "municipalSection": "14. Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision.",
+      "municipalEvidence": [
+        {
+          "page": 2,
+          "excerpt": "14. Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. MOBILITÉ 15: BELOEIL — section de Basècles - Place de la Victoire - Mise en place d'un emplacement pour personnes handicapées, du côté pair, le long des n° 14 et 16. Examen. Décision."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 2,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:4c69293f54b6efe8df",
+        "sha256": "8004cdfe61cf1c32d7f30beebea9b9c3153be0d062396022d2c5357782e57c1b",
+        "checkedAt": "2026-11-08T21:22:36.404Z",
+        "changedAt": null
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local:5ae652d8611fbd90d6c3",
+      "title": "propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges.",
+      "sourceDocumentTitle": "Proc&egrave;s-verbal",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "dame Alicia VANDENABEELE, 1ère Échevine, présente ce point : \"On vous propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges.",
+        "mission": "propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges.",
+        "basis": "document_body"
+      },
+      "missionEvidence": {
+        "excerpt": "dame Alicia VANDENABEELE, 1ère Échevine, présente ce point : \"On vous propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges.",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/arrete-bourgmestre-festivites/PV-du-26-aout_compressed-1.pdf",
+        "page": 17,
+        "sha256": "f30c2ef40647c36bef15339f7bbda4a2430b8379542506eaa28432857651cfd4"
+      },
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "article 124/724-60. ********** Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. Madame Alicia VANDENABEELE, 1ère",
+        "sourceUrl": "https://www.beloeil.be/images/pdf/arrete-bourgmestre-festivites/PV-du-26-aout_compressed-1.pdf",
+        "page": 17,
+        "sha256": "f30c2ef40647c36bef15339f7bbda4a2430b8379542506eaa28432857651cfd4"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.beloeil.be/images/pdf/arrete-bourgmestre-festivites/PV-du-26-aout_compressed-1.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.beloeil.be/images/pdf/arrete-bourgmestre-festivites/PV-du-26-aout_compressed-1.pdf",
+        "sha256": "f30c2ef40647c36bef15339f7bbda4a2430b8379542506eaa28432857651cfd4",
+        "session": {
+          "date": "2026-08-26",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "SEANCE DU 26 AOÛT 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.beloeil.be/images/pdf/arrete-bourgmestre-festivites/PV-du-26-aout_compressed-1.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : article 124/724-60. ********** Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. Madame Alicia VANDENABEELE, 1ère Échevine, présente ce point : \"On vous propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges.",
+      "evidence": "article 124/724-60. ********** Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. Madame Alicia VANDENABEELE, 1ère Échevine, présente ce point : \"On vous propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges.",
+      "municipalReference": null,
+      "municipalSection": "R17 : Supplément communal : 5.009,34 € (au lieu de 4.973,34 €).\" Cette approbation date donc du 1er juillet 2026.",
+      "municipalEvidence": [
+        {
+          "page": 17,
+          "excerpt": "article 124/724-60. ********** Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. Madame Alicia VANDENABEELE, 1ère Échevine, présente ce point : \"On vous propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges."
+        },
+        {
+          "page": 17,
+          "excerpt": "Approbation des conditions et mode de passation. Examen. Décision. Madame Alicia VANDENABEELE, 1ère Échevine, présente ce point : \"On vous propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges. Plus clairement, c'est une modification de la fiche du PCDR puisque la carrière ne nous appartient pas et que nous n'avons pas su entrer en contact avec les propriétaires."
+        },
+        {
+          "page": 17,
+          "excerpt": "Madame Alicia VANDENABEELE, 1ère Échevine, présente ce point : \"On vous propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges. Plus clairement, c'est une modification de la fiche du PCDR puisque la carrière ne nous appartient pas et que nous n'avons pas su entrer en contact avec les propriétaires."
+        },
+        {
+          "page": 18,
+          "excerpt": "plus-value et donc, on préfère le prévoir dès le départ.\" Après cette présentation, le Conseil communal, unanime, approuve les conditions et mode de passation de ce marché de services. Délibération : Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. Le Conseil Communal, siégeant en séance publique,"
+        },
+        {
+          "page": 18,
+          "excerpt": "passation de ce marché de services. Délibération : Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. Le Conseil Communal, siégeant en séance publique, Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et"
+        },
+        {
+          "page": 21,
+          "excerpt": "pictogramme des personnes handicapées et d’une flèche de réglementation sur courte distance avec la mention « 6m ». ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, Place de la Victoire, le stationnement est réservé aux personnes"
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 17,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:2478b8a712e05c8bd0",
+        "sha256": "f30c2ef40647c36bef15339f7bbda4a2430b8379542506eaa28432857651cfd4",
+        "checkedAt": "2026-11-08T21:22:36.404Z",
+        "changedAt": null
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:99adad8a87746aaace39",
+      "title": "désigner un auteur de projet (1er trimestre 2027) ;",
+      "sourceDocumentTitle": "Projet nouveau hall sportif - Germain DALNE",
+      "missionEvidence": {
+        "excerpt": "nivellois (4e trimestre 2026) ; Passation d'un marché public visant à désigner un auteur de projet (1er trimestre 2027) ;",
+        "sourceUrl": "https://www.deliberations.be/nivelles/decisions/28-septembre-2026-20-00/projet-nouveau-hall-sportif-germain-dalne",
+        "page": null,
+        "sha256": "3ae952638f478a92b550027bb090c1131362a8841d55b84a228872bd23faeee1"
+      },
+      "buyer": "Commune de Nivelles",
+      "municipalityINS": "25072",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "nivellois (4e trimestre 2026) ; Passation d'un marché public visant à désigner un auteur de projet (1er trimestre 2027) ;",
+        "mission": "désigner un auteur de projet (1er trimestre 2027) ;",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/nivelles/decisions/28-septembre-2026-20-00/projet-nouveau-hall-sportif-germain-dalne",
+      "sourceDocument": "https://www.deliberations.be/nivelles/decisions/28-septembre-2026-20-00/projet-nouveau-hall-sportif-germain-dalne",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/nivelles/decisions/28-septembre-2026-20-00/projet-nouveau-hall-sportif-germain-dalne",
+        "sha256": "3ae952638f478a92b550027bb090c1131362a8841d55b84a228872bd23faeee1",
+        "session": {
+          "date": "2026-09-28",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 28 septembre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/nivelles/decisions/28-septembre-2026-20-00/projet-nouveau-hall-sportif-germain-dalne"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:0ed0aa5f12a8d555fc",
+        "sha256": "3ae952638f478a92b550027bb090c1131362a8841d55b84a228872bd23faeee1",
+        "format": "html",
+        "checkedAt": "2026-11-09T08:41:17.184Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "A la page 4 (au point 2.3. Capital) : La Ville pourra également décider de procéder à des augmentations et des diminutions de capital en fonction des besoins spécifiques de la RCA. Celles-ci pourront se faire par apport",
+        "sourceUrl": "https://www.deliberations.be/nivelles/decisions/28-septembre-2026-20-00/projet-nouveau-hall-sportif-germain-dalne",
+        "page": null,
+        "sha256": "3ae952638f478a92b550027bb090c1131362a8841d55b84a228872bd23faeee1"
+      },
+      "description": "A la page 4 (au point 2.3. Capital) : La Ville pourra également décider de procéder à des augmentations et des diminutions de capital en fonction des besoins spécifiques de la RCA. Celles-ci pourront se faire par apport en numéraire ou par apport en nature, dans le respect des dispositions légales et de la doctrine en vigueur. Dans le cadre de la réalisation d'un nouveau hall sportif polyvalent, et conformément aux missions de la RCA (point 1), une intervention en capital de la Ville sera réalisée dans une mesure à définir par le Collège communal pour soutenir la RCA dans ce projet. A la page 7 : Etat d’avancement de la création d’un pôle sportif sur base des étapes suivantes : Identification et prise de décision sur la localisation (4e trimestre 2026) ; Identification des besoins avec les clubs sportifs nivellois (4e trimestre 2026) ;",
+      "evidence": "A la page 4 (au point 2.3. Capital) : La Ville pourra également décider de procéder à des augmentations et des diminutions de capital en fonction des besoins spécifiques de la RCA. Celles-ci pourront se faire par apport en numéraire ou par apport en nature, dans le respect des dispositions légales et de la doctrine en vigueur. Dans le cadre de la réalisation d'un nouveau hall sportif polyvalent, et conformément aux missions de la RCA (point 1), une intervention en capital de la Ville sera réalisée dans une mesure à définir par le Collège communal pour soutenir la RCA dans ce projet. A la page 7 : Etat d’avancement de la création d’un pôle sportif sur base des étapes suivantes : Identification et prise de décision sur la localisation (4e trimestre 2026) ; Identification des besoins avec les clubs sportifs nivellois (4e trimestre 2026) ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "A la page 4 (au point 2.3. Capital) : La Ville pourra également décider de procéder à des augmentations et des diminutions de capital en fonction des besoins spécifiques de la RCA. Celles-ci pourront se faire par apport en numéraire ou par apport en nature, dans le respect des dispositions légales et de la doctrine en vigueur. Dans le cadre de la réalisation d'un nouveau hall sportif polyvalent, et conformément aux missions de la RCA (point 1), une intervention en capital de la Ville sera réalisée dans une mesure à définir par le Collège communal pour soutenir la RCA dans ce projet. A la page 7 : Etat d’avancement de la création d’un pôle sportif sur base des étapes suivantes : Identification et prise de décision sur la localisation (4e trimestre 2026) ; Identification des besoins avec les clubs sportifs nivellois (4e trimestre 2026) ;",
+          "page": null
+        },
+        {
+          "excerpt": "Identification et prise de décision sur la localisation (4e trimestre 2026) ; Identification des besoins avec les clubs sportifs nivellois (4e trimestre 2026) ; Passation d'un marché public visant à désigner un auteur de projet (1er trimestre 2027) ; Désignation d'un auteur de projet (1er trimestre 2027) ; Prise de contact avec Infrasports en vue d'un dépôt de dossier pour l'obtention d'un subside régional (2e trimestre 2027) ; Dépôt d'un avant-projet auprès du Gouvernement wallon (3e trimestre 2027) ; Obtention d'un accord de principe du Gouvernement wallon (2027) ;",
+          "page": null
+        },
+        {
+          "excerpt": "Identification des besoins avec les clubs sportifs nivellois (4e trimestre 2026) ; Passation d'un marché public visant à désigner un auteur de projet (1er trimestre 2027) ; Désignation d'un auteur de projet (1er trimestre 2027) ; Prise de contact avec Infrasports en vue d'un dépôt de dossier pour l'obtention d'un subside régional (2e trimestre 2027) ; Dépôt d'un avant-projet auprès du Gouvernement wallon (3e trimestre 2027) ; Obtention d'un accord de principe du Gouvernement wallon (2027) ; Montage d'un dossier de demande de crédit auprès d'organismes bancaires (1er semestre 2028) ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:d727b76399f7077a7692",
+      "title": "Mission complète d'auteur de projet relative à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR) – choix du mode de passation et fixation des conditions",
+      "sourceDocumentTitle": "Mission complète d'auteur de projet relative à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR) – choix du mode de passation et fixation des conditions",
+      "missionEvidence": {
+        "excerpt": "if avec remarques du Directeur Financier remis en date du 29/09/2026, DECIDE : Article 1 : D'approuver le cahier des charges N° 2026-026 et le montant estimé du marché “Mission complète d'auteur de projet relatif à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR) ”, établis par le Service Marchés Publics. Les conditions sont fixées ",
+        "sourceUrl": "https://www.deliberations.be/ellezelles/decisions/29-septembre-2026-20-00/mission-complete-dauteur-de-projet-relative-a-letude-la-conception-et-le-suivi-des-travaux-damenagement-du-centre-de-wodecq-fiche-16-pcdr-choix-du-mode-de-passation-et-fixation-des-conditions",
+        "page": null,
+        "sha256": "a994ebff0776a3f3d0ede160ee03cc46a4faf5b4d79fb14288ea0623cbfdb824"
+      },
+      "buyer": "Commune de Ellezelles",
+      "municipalityINS": "51017",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "if avec remarques du Directeur Financier remis en date du 29/09/2026, DECIDE : Article 1 : D'approuver le cahier des charges N° 2026-026 et le montant estimé du marché “Mission complète d'auteur de projet relatif à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR) ”, établis par le Service Marchés Publics. Les conditions sont fixées ",
+        "mission": "DECIDE : Article 1 : D'approuver le cahier des charges N° 2026-026 et le montant estimé du marché “Mission complète d'auteur de projet relatif à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR) ”, établis par l",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/ellezelles/decisions/29-septembre-2026-20-00/mission-complete-dauteur-de-projet-relative-a-letude-la-conception-et-le-suivi-des-travaux-damenagement-du-centre-de-wodecq-fiche-16-pcdr-choix-du-mode-de-passation-et-fixation-des-conditions",
+      "sourceDocument": "https://www.deliberations.be/ellezelles/decisions/29-septembre-2026-20-00/mission-complete-dauteur-de-projet-relative-a-letude-la-conception-et-le-suivi-des-travaux-damenagement-du-centre-de-wodecq-fiche-16-pcdr-choix-du-mode-de-passation-et-fixation-des-conditions",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/ellezelles/decisions/29-septembre-2026-20-00/mission-complete-dauteur-de-projet-relative-a-letude-la-conception-et-le-suivi-des-travaux-damenagement-du-centre-de-wodecq-fiche-16-pcdr-choix-du-mode-de-passation-et-fixation-des-conditions",
+        "sha256": "a994ebff0776a3f3d0ede160ee03cc46a4faf5b4d79fb14288ea0623cbfdb824",
+        "session": {
+          "date": "2026-09-29",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 29 septembre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/ellezelles/decisions/29-septembre-2026-20-00/mission-complete-dauteur-de-projet-relative-a-letude-la-conception-et-le-suivi-des-travaux-damenagement-du-centre-de-wodecq-fiche-16-pcdr-choix-du-mode-de-passation-et-fixation-des-conditions"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:3cfbdfa98d02ae42f8",
+        "sha256": "a994ebff0776a3f3d0ede160ee03cc46a4faf5b4d79fb14288ea0623cbfdb824",
+        "format": "html",
+        "checkedAt": "2026-11-09T08:41:17.184Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "DECIDE : Article 1 : D'approuver le cahier des charges N° 2026-026 et le montant estimé du marché “Mission complète d'auteur de projet relatif à l'étude, la conception et le suivi des travaux d'aménagement du centre de W",
+        "sourceUrl": "https://www.deliberations.be/ellezelles/decisions/29-septembre-2026-20-00/mission-complete-dauteur-de-projet-relative-a-letude-la-conception-et-le-suivi-des-travaux-damenagement-du-centre-de-wodecq-fiche-16-pcdr-choix-du-mode-de-passation-et-fixation-des-conditions",
+        "page": null,
+        "sha256": "a994ebff0776a3f3d0ede160ee03cc46a4faf5b4d79fb14288ea0623cbfdb824"
+      },
+      "description": "DECIDE : Article 1 : D'approuver le cahier des charges N° 2026-026 et le montant estimé du marché “Mission complète d'auteur de projet relatif à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR) ”, établis par le Service Marchés Publics. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 50.000,00 € hors TVA ou 60.500,00 €, 21% TVA comprise. Article 2 : De passer le marché par la procédure ouverte. Article 3 : De compléter, d'approuver et d'envoyer l'avis de marché au niveau national. Article 4 : De financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, article 620/733-51 (n° de projet 20260018). Article 5 : Ce crédit fera l'objet d'une augmentation lors de la modification budgétaire n°2.",
+      "evidence": "DECIDE : Article 1 : D'approuver le cahier des charges N° 2026-026 et le montant estimé du marché “Mission complète d'auteur de projet relatif à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR) ”, établis par le Service Marchés Publics. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 50.000,00 € hors TVA ou 60.500,00 €, 21% TVA comprise. Article 2 : De passer le marché par la procédure ouverte. Article 3 : De compléter, d'approuver et d'envoyer l'avis de marché au niveau national. Article 4 : De financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, article 620/733-51 (n° de projet 20260018). Article 5 : Ce crédit fera l'objet d'une augmentation lors de la modification budgétaire n°2.",
+      "municipalEvidence": [
+        {
+          "excerpt": "DECIDE : Article 1 : D'approuver le cahier des charges N° 2026-026 et le montant estimé du marché “Mission complète d'auteur de projet relatif à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR) ”, établis par le Service Marchés Publics. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 50.000,00 € hors TVA ou 60.500,00 €, 21% TVA comprise. Article 2 : De passer le marché par la procédure ouverte. Article 3 : De compléter, d'approuver et d'envoyer l'avis de marché au niveau national. Article 4 : De financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, article 620/733-51 (n° de projet 20260018). Article 5 : Ce crédit fera l'objet d'une augmentation lors de la modification budgétaire n°2.",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-026",
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
       "id": "communal:c3599ff87890bfb78368",
       "title": "Prospection · Beyne-Heusay · 17) Règlement complémentaire de roulage - Création d’un emplacement de stationnement pour personnes handicapées - Plac…",
       "buyer": "Commune de Beyne-Heusay",
@@ -25513,6 +26375,107 @@
       "screeningReason": null
     },
     {
+      "id": "local-html:610729c4d7e5e309e8d5",
+      "title": "approuver le cahier des charges N° GK/PH/ (2026-674) et le montant estimé du marché “Entretien des voiries”, établis par le Service Travaux (Bureau d'Etudes).",
+      "sourceDocumentTitle": "Entretiens des voiries - Place Verte, rue de l'abbaye, rue de l'Egalité, rue Canteleu, Placette rue L. Laurent - Approbation des conditions et du mode de passation (dossier 1096 3P)",
+      "missionEvidence": {
+        "excerpt": " financier a rendu un avis favorable le 28 aout 2026 ; Article 1er: D'approuver le cahier des charges N° GK/PH/ (2026-674) et le montant estimé du marché “Entretien des voiries”, établis par le Service Travaux (Bureau d'Etudes). Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 84.639,50 € (incl. 21% TVA)",
+        "sourceUrl": "https://www.deliberations.be/beloeil/decisions/30-septembre-2026-18-30/entretiens-des-voiries-place-verte-rue-de-labbaye-rue-de-legalite-rue-canteleu-placette-rue-l-laurent-approbation-des-conditions-et-du-mode-de-passation-dossier-1096-3p",
+        "page": null,
+        "sha256": "1b9eab1fbf4b144f6cdef42aaaa80972b7e4e9d1b615a4759e73f25d2d753dfd"
+      },
+      "buyer": "Commune de Beloeil",
+      "municipalityINS": "51008",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/beloeil/decisions/30-septembre-2026-18-30/entretiens-des-voiries-place-verte-rue-de-labbaye-rue-de-legalite-rue-canteleu-placette-rue-l-laurent-approbation-des-conditions-et-du-mode-de-passation-dossier-1096-3p",
+        "sha256": "1b9eab1fbf4b144f6cdef42aaaa80972b7e4e9d1b615a4759e73f25d2d753dfd",
+        "stage": "decision_to_verify"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": " financier a rendu un avis favorable le 28 aout 2026 ; Article 1er: D'approuver le cahier des charges N° GK/PH/ (2026-674) et le montant estimé du marché “Entretien des voiries”, établis par le Service Travaux (Bureau d'Etudes). Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 84.639,50 € (incl. 21% TVA)",
+        "mission": "approuver le cahier des charges N° GK/PH/ (2026-674) et le montant estimé du marché “Entretien des voiries”, établis par le Service Travaux (Bureau d'Etudes).",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "screening": "review",
+      "score": 49,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/beloeil/decisions/30-septembre-2026-18-30/entretiens-des-voiries-place-verte-rue-de-labbaye-rue-de-legalite-rue-canteleu-placette-rue-l-laurent-approbation-des-conditions-et-du-mode-de-passation-dossier-1096-3p",
+      "sourceDocument": "https://www.deliberations.be/beloeil/decisions/30-septembre-2026-18-30/entretiens-des-voiries-place-verte-rue-de-labbaye-rue-de-legalite-rue-canteleu-placette-rue-l-laurent-approbation-des-conditions-et-du-mode-de-passation-dossier-1096-3p",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/beloeil/decisions/30-septembre-2026-18-30/entretiens-des-voiries-place-verte-rue-de-labbaye-rue-de-legalite-rue-canteleu-placette-rue-l-laurent-approbation-des-conditions-et-du-mode-de-passation-dossier-1096-3p",
+        "sha256": "1b9eab1fbf4b144f6cdef42aaaa80972b7e4e9d1b615a4759e73f25d2d753dfd",
+        "session": {
+          "date": "2026-09-30",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 30 septembre 2026 (18:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/beloeil/decisions/30-septembre-2026-18-30/entretiens-des-voiries-place-verte-rue-de-labbaye-rue-de-legalite-rue-canteleu-placette-rue-l-laurent-approbation-des-conditions-et-du-mode-de-passation-dossier-1096-3p"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:41b073115464513c3c",
+        "sha256": "1b9eab1fbf4b144f6cdef42aaaa80972b7e4e9d1b615a4759e73f25d2d753dfd",
+        "format": "html",
+        "checkedAt": "2026-11-08T21:22:36.404Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Considérant qu'une demande afin d’obtenir l'avis de légalité obligatoire a été soumise le 21 aout 2026, le directeur financier a rendu un avis favorable le 28 aout 2026 ; Article 1er: D'approuver le cahier des charges N°",
+        "sourceUrl": "https://www.deliberations.be/beloeil/decisions/30-septembre-2026-18-30/entretiens-des-voiries-place-verte-rue-de-labbaye-rue-de-legalite-rue-canteleu-placette-rue-l-laurent-approbation-des-conditions-et-du-mode-de-passation-dossier-1096-3p",
+        "page": null,
+        "sha256": "1b9eab1fbf4b144f6cdef42aaaa80972b7e4e9d1b615a4759e73f25d2d753dfd"
+      },
+      "description": "Considérant qu'une demande afin d’obtenir l'avis de légalité obligatoire a été soumise le 21 aout 2026, le directeur financier a rendu un avis favorable le 28 aout 2026 ; Article 1er: D'approuver le cahier des charges N° GK/PH/ (2026-674) et le montant estimé du marché “Entretien des voiries”, établis par le Service Travaux (Bureau d'Etudes). Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 84.639,50 € (incl. 21% TVA). Art. 2: De passer le marché par la procédure négociée sans publication préalable. Art. 3: De financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, article 421/735-60 (n° de projet 20260059).",
+      "evidence": "Considérant qu'une demande afin d’obtenir l'avis de légalité obligatoire a été soumise le 21 aout 2026, le directeur financier a rendu un avis favorable le 28 aout 2026 ; Article 1er: D'approuver le cahier des charges N° GK/PH/ (2026-674) et le montant estimé du marché “Entretien des voiries”, établis par le Service Travaux (Bureau d'Etudes). Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 84.639,50 € (incl. 21% TVA). Art. 2: De passer le marché par la procédure négociée sans publication préalable. Art. 3: De financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, article 421/735-60 (n° de projet 20260059).",
+      "municipalEvidence": [
+        {
+          "excerpt": "Considérant qu'une demande afin d’obtenir l'avis de légalité obligatoire a été soumise le 21 aout 2026, le directeur financier a rendu un avis favorable le 28 aout 2026 ; Article 1er: D'approuver le cahier des charges N° GK/PH/ (2026-674) et le montant estimé du marché “Entretien des voiries”, établis par le Service Travaux (Bureau d'Etudes). Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 84.639,50 € (incl. 21% TVA). Art. 2: De passer le marché par la procédure négociée sans publication préalable. Art. 3: De financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, article 421/735-60 (n° de projet 20260059).",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° GK/PH/ (2026-674) relatif au marché “Entretien des voiries” établi par le Service Travaux (Bureau d'Etudes) ; Considérant que ce marché est divisé en lots : * Lot 1 (Entretien de voiries - Place Verte, rue de l'Abbaye, rue de l'Egalité et rue Canteleu), estimé à 30.552,50 € (incl. 21% TVA) ; * Lot 2 (Entretien de voiries - Placette rue L.Laurent), estimé à 54.087,00 € (incl. 21% TVA) ; Considérant que le montant global estimé de ce marché s'élève à 84.639,50 € (incl. 21% TVA) ;",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant le cahier des charges N° GK/PH/ (2026-674) relatif au marché “Entretien des voiries” établi par le Service Travaux (Bureau d'Etudes) ; Considérant que ce marché est divisé en lots : * Lot 1 (Entretien de voiries - Place Verte, rue de l'Abbaye, rue de l'Egalité et rue Canteleu), estimé à 30.552,50 € (incl. 21% TVA) ; * Lot 2 (Entretien de voiries - Placette rue L.Laurent), estimé à 54.087,00 € (incl. 21% TVA) ; Considérant que le montant global estimé de ce marché s'élève à 84.639,50 € (incl. 21% TVA) ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 421/735-60 (n° de projet 20260059);",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "mission_technique_generique",
+      "screeningReason": null
+    },
+    {
       "id": "local-html:4fa57242e02ff0c4c4b3",
       "title": "PST 2025-2030 (Action 11) - Rénovation du cimetière des Tapeines - Étude - Marché public de services - Fixation des conditions et choix du mode de passation.",
       "buyer": "Commune de Flémalle",
@@ -26371,828 +27334,122 @@
       "screeningReason": null
     },
     {
-      "id": "local-html:69d002b347d7041cf9c4",
-      "title": "TRAVAUX - Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation.",
-      "sourceDocumentTitle": "TRAVAUX - Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation.",
-      "missionEvidence": {
-        "excerpt": "A l'unanimité, Décide : 1er.D’approuver le cahier des charges n°2026-026 et le montant estimé du marché ayant pour objet “Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet ”. Les conditions sont fixées comme prévu au cahier spécial des charges et par les règles générales d'exécution des marchés publics. Le montant est estimé à 35.000,00 € hors TVA o",
-        "sourceUrl": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-etude-en-vue-de-la-realisation-dune-zone-dimmersion-temporaire-zit-sur-le-dirgaert-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
-        "page": null,
-        "sha256": "514047a236c746cf838f746f7c62d2b8de0e3e6d1ed6c8358eb8bd5414832b96"
-      },
-      "buyer": "Commune de Baelen",
-      "municipalityINS": "63004",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": {
-        "label": "Procédure négociée sans publication préalable",
-        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
-        "sourceUrl": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-etude-en-vue-de-la-realisation-dune-zone-dimmersion-temporaire-zit-sur-le-dirgaert-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
-        "sha256": "514047a236c746cf838f746f7c62d2b8de0e3e6d1ed6c8358eb8bd5414832b96",
-        "stage": "project"
-      },
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "A l'unanimité, Décide : 1er.D’approuver le cahier des charges n°2026-026 et le montant estimé du marché ayant pour objet “Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet ”. Les conditions sont fixées comme prévu au cahier spécial des charges et par les règles générales d'exécution des marchés publics. Le montant est estimé à 35.000,00 € hors TVA o",
-        "mission": "Décide : 1er.D’approuver le cahier des charges n°2026-026 et le montant estimé du marché ayant pour objet “Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet ”.",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
+      "id": "bosa:37f86dd9-7621-41be-9adb-fe8ee5951d2f",
+      "publicationWorkspaceId": "37f86dd9-7621-41be-9adb-fe8ee5951d2f",
+      "noticeId": "95c31937-0ce0-4f51-853c-f333110e5888",
+      "procedureIdentifier": "708f935e-93b0-47cd-b44d-1262661a74a1",
+      "internalReference": "DITP-DIOV BM CSC-BB i3453_pub01",
+      "title": "Mission d’étude et d’assistance à la régularisation urbanistique et environnementale d’un site provisoire de remisage des bus du site Delta",
+      "buyer": "Direction Infrastructure Transports Publics",
+      "region": "Bruxelles",
+      "languages": [
+        "NL",
+        "FR"
+      ],
+      "sector": "Foncier",
       "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-etude-en-vue-de-la-realisation-dune-zone-dimmersion-temporaire-zit-sur-le-dirgaert-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
-      "sourceDocument": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-etude-en-vue-de-la-realisation-dune-zone-dimmersion-temporaire-zit-sur-le-dirgaert-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-etude-en-vue-de-la-realisation-dune-zone-dimmersion-temporaire-zit-sur-le-dirgaert-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
-        "sha256": "514047a236c746cf838f746f7c62d2b8de0e3e6d1ed6c8358eb8bd5414832b96",
-        "session": {
-          "date": "2026-09-14",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 14 septembre 2026 (20:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-etude-en-vue-de-la-realisation-dune-zone-dimmersion-temporaire-zit-sur-le-dirgaert-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:336d060bff66ad99b6",
-        "sha256": "514047a236c746cf838f746f7c62d2b8de0e3e6d1ed6c8358eb8bd5414832b96",
-        "format": "html",
-        "checkedAt": "2026-11-08T21:22:36.404Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "TRAVAUX - Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approba",
-        "sourceUrl": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-etude-en-vue-de-la-realisation-dune-zone-dimmersion-temporaire-zit-sur-le-dirgaert-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
-        "page": null,
-        "sha256": "514047a236c746cf838f746f7c62d2b8de0e3e6d1ed6c8358eb8bd5414832b96"
-      },
-      "description": "TRAVAUX - Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. 14 Séance publique du Conseil 14 septembre 2026 (20:00) Point N°",
-      "evidence": "TRAVAUX - Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. 14 Séance publique du Conseil 14 septembre 2026 (20:00) Point N°",
-      "municipalEvidence": [
-        {
-          "excerpt": "TRAVAUX - Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. 14 Séance publique du Conseil 14 septembre 2026 (20:00) Point N°",
-          "page": null
-        },
-        {
-          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. TRAVAUX - Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. Le Conseil, Vu le Code de la Démocratie Locale et de la Décentralisation, et ses modifications ultérieures, notamment l’article L1222-3 relatif aux compétences du Conseil communal ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) et l'article 57 ;",
-          "page": null
-        },
-        {
-          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges n°2026-026 pour le marché ayant pour objet “Etude en vue de la réalisation d'une zone d'immersion temporaire (ZIT) sur le Dirgaert - Désignation d'un auteur de projet” ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Tranche de marché 1 « Etude de faisabilité », estimée à 17.000,00 € hors TVA ou 20.570,00 €, 21 % TVA comprise ; * Tranche conditionnelle : Tranche de marché 2 « Etude de projet », estimée à 12.000,00 € hors TVA ou 14.520,00 €, 21 % TVA comprise ; * Tranche conditionnelle : Tranche de marché 3 « Exécution des travaux », estimée à 6.000,00 € hors TVA ou 7.260,00 €, 21 % TVA comprise ;",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": "2026-026"
-    },
-    {
-      "id": "local-html:b06be98ab018ab9ee4a0",
-      "title": "TRAVAUX - Rénovation de la façade et des corniches de l'Eglise Saint-Paul de Baelen - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation.",
-      "sourceDocumentTitle": "TRAVAUX - Rénovation de la façade et des corniches de l'Eglise Saint-Paul de Baelen - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation.",
-      "missionEvidence": null,
-      "buyer": "Commune de Baelen",
-      "municipalityINS": "63004",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 60,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-renovation-de-la-facade-et-des-corniches-de-leglise-saint-paul-de-baelen-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
-      "sourceDocument": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-renovation-de-la-facade-et-des-corniches-de-leglise-saint-paul-de-baelen-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-renovation-de-la-facade-et-des-corniches-de-leglise-saint-paul-de-baelen-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
-        "sha256": "ec7a3d70a94e49a8303d9ca4ba31a7f291e366c82d4cac3943b151ea7abacf3a",
-        "session": {
-          "date": "2026-09-14",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 14 septembre 2026 (20:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-renovation-de-la-facade-et-des-corniches-de-leglise-saint-paul-de-baelen-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:35e12918616fa09343",
-        "sha256": "ec7a3d70a94e49a8303d9ca4ba31a7f291e366c82d4cac3943b151ea7abacf3a",
-        "format": "html",
-        "checkedAt": "2026-11-08T21:22:36.404Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "TRAVAUX - Rénovation de la façade et des corniches de l'Eglise Saint-Paul de Baelen - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. 14 Séan",
-        "sourceUrl": "https://www.deliberations.be/baelen/decisions/14-septembre-2026-20-00/travaux-renovation-de-la-facade-et-des-corniches-de-leglise-saint-paul-de-baelen-designation-dun-auteur-de-projet-cahier-des-charges-choix-du-mode-de-passation-du-marche-et-du-financement-approbation",
-        "page": null,
-        "sha256": "ec7a3d70a94e49a8303d9ca4ba31a7f291e366c82d4cac3943b151ea7abacf3a"
-      },
-      "description": "TRAVAUX - Rénovation de la façade et des corniches de l'Eglise Saint-Paul de Baelen - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. 14 Séance publique du Conseil 14 septembre 2026 (20:00) Point N°",
-      "evidence": "TRAVAUX - Rénovation de la façade et des corniches de l'Eglise Saint-Paul de Baelen - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. 14 Séance publique du Conseil 14 septembre 2026 (20:00) Point N°",
-      "municipalEvidence": [
-        {
-          "excerpt": "TRAVAUX - Rénovation de la façade et des corniches de l'Eglise Saint-Paul de Baelen - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. 14 Séance publique du Conseil 14 septembre 2026 (20:00) Point N°",
-          "page": null
-        },
-        {
-          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. TRAVAUX - Rénovation de la façade et des corniches de l'Eglise Saint-Paul de Baelen - Désignation d'un auteur de projet - Cahier des charges - Choix du mode de passation du marché et du financement - Approbation. Le Conseil, Vu le Code de la Démocratie Locale et de la Décentralisation, et ses modifications ultérieures, notamment l’article L1222-3 relatif aux compétences du Conseil communal ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 92 (le montant estimé HTVA n'atteint pas le seuil de 30.000,00 €) ;",
-          "page": null
-        },
-        {
-          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Considérant le cahier des charges n°2026-006 pour le marché ayant pour objet “Rénovation de la façade et des corniches de l'Eglise Saint-Paul de Baelen - Désignation d'un auteur de projet” établi par le Service Travaux ; Considérant que le montant estimé de ce marché s’élève à 10.000,00 € hors TVA ou 12.100,00 €, 21 % TVA comprise ; Considérant qu’il est donc proposé de passer le marché par facture acceptée (marchés publics de faible montant) ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 790/733-51 projet 20260022, et sera financé par fonds propres ; Considérant que l'avis de légalité du directeur financier n’est pas obligatoire, qu’il n’y a pas eu de demande spontanée et qu’aucun avis n’a été donné d’initiative par le directeur financier ;",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": "2026-006"
-    },
-    {
-      "id": "local-html:610729c4d7e5e309e8d5",
-      "title": "approuver le cahier des charges N° GK/PH/ (2026-674) et le montant estimé du marché “Entretien des voiries”, établis par le Service Travaux (Bureau d'Etudes).",
-      "sourceDocumentTitle": "Entretiens des voiries - Place Verte, rue de l'abbaye, rue de l'Egalité, rue Canteleu, Placette rue L. Laurent - Approbation des conditions et du mode de passation (dossier 1096 3P)",
-      "missionEvidence": {
-        "excerpt": " financier a rendu un avis favorable le 28 aout 2026 ; Article 1er: D'approuver le cahier des charges N° GK/PH/ (2026-674) et le montant estimé du marché “Entretien des voiries”, établis par le Service Travaux (Bureau d'Etudes). Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 84.639,50 € (incl. 21% TVA)",
-        "sourceUrl": "https://www.deliberations.be/beloeil/decisions/30-septembre-2026-18-30/entretiens-des-voiries-place-verte-rue-de-labbaye-rue-de-legalite-rue-canteleu-placette-rue-l-laurent-approbation-des-conditions-et-du-mode-de-passation-dossier-1096-3p",
-        "page": null,
-        "sha256": "1b9eab1fbf4b144f6cdef42aaaa80972b7e4e9d1b615a4759e73f25d2d753dfd"
-      },
-      "buyer": "Commune de Beloeil",
-      "municipalityINS": "51008",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": {
-        "label": "Procédure négociée sans publication préalable",
-        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
-        "sourceUrl": "https://www.deliberations.be/beloeil/decisions/30-septembre-2026-18-30/entretiens-des-voiries-place-verte-rue-de-labbaye-rue-de-legalite-rue-canteleu-placette-rue-l-laurent-approbation-des-conditions-et-du-mode-de-passation-dossier-1096-3p",
-        "sha256": "1b9eab1fbf4b144f6cdef42aaaa80972b7e4e9d1b615a4759e73f25d2d753dfd",
-        "stage": "decision_to_verify"
-      },
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": " financier a rendu un avis favorable le 28 aout 2026 ; Article 1er: D'approuver le cahier des charges N° GK/PH/ (2026-674) et le montant estimé du marché “Entretien des voiries”, établis par le Service Travaux (Bureau d'Etudes). Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 84.639,50 € (incl. 21% TVA)",
-        "mission": "approuver le cahier des charges N° GK/PH/ (2026-674) et le montant estimé du marché “Entretien des voiries”, établis par le Service Travaux (Bureau d'Etudes).",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "screening": "review",
-      "score": 49,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/beloeil/decisions/30-septembre-2026-18-30/entretiens-des-voiries-place-verte-rue-de-labbaye-rue-de-legalite-rue-canteleu-placette-rue-l-laurent-approbation-des-conditions-et-du-mode-de-passation-dossier-1096-3p",
-      "sourceDocument": "https://www.deliberations.be/beloeil/decisions/30-septembre-2026-18-30/entretiens-des-voiries-place-verte-rue-de-labbaye-rue-de-legalite-rue-canteleu-placette-rue-l-laurent-approbation-des-conditions-et-du-mode-de-passation-dossier-1096-3p",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/beloeil/decisions/30-septembre-2026-18-30/entretiens-des-voiries-place-verte-rue-de-labbaye-rue-de-legalite-rue-canteleu-placette-rue-l-laurent-approbation-des-conditions-et-du-mode-de-passation-dossier-1096-3p",
-        "sha256": "1b9eab1fbf4b144f6cdef42aaaa80972b7e4e9d1b615a4759e73f25d2d753dfd",
-        "session": {
-          "date": "2026-09-30",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 30 septembre 2026 (18:30)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/beloeil/decisions/30-septembre-2026-18-30/entretiens-des-voiries-place-verte-rue-de-labbaye-rue-de-legalite-rue-canteleu-placette-rue-l-laurent-approbation-des-conditions-et-du-mode-de-passation-dossier-1096-3p"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:41b073115464513c3c",
-        "sha256": "1b9eab1fbf4b144f6cdef42aaaa80972b7e4e9d1b615a4759e73f25d2d753dfd",
-        "format": "html",
-        "checkedAt": "2026-11-08T21:22:36.404Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "Considérant qu'une demande afin d’obtenir l'avis de légalité obligatoire a été soumise le 21 aout 2026, le directeur financier a rendu un avis favorable le 28 aout 2026 ; Article 1er: D'approuver le cahier des charges N°",
-        "sourceUrl": "https://www.deliberations.be/beloeil/decisions/30-septembre-2026-18-30/entretiens-des-voiries-place-verte-rue-de-labbaye-rue-de-legalite-rue-canteleu-placette-rue-l-laurent-approbation-des-conditions-et-du-mode-de-passation-dossier-1096-3p",
-        "page": null,
-        "sha256": "1b9eab1fbf4b144f6cdef42aaaa80972b7e4e9d1b615a4759e73f25d2d753dfd"
-      },
-      "description": "Considérant qu'une demande afin d’obtenir l'avis de légalité obligatoire a été soumise le 21 aout 2026, le directeur financier a rendu un avis favorable le 28 aout 2026 ; Article 1er: D'approuver le cahier des charges N° GK/PH/ (2026-674) et le montant estimé du marché “Entretien des voiries”, établis par le Service Travaux (Bureau d'Etudes). Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 84.639,50 € (incl. 21% TVA). Art. 2: De passer le marché par la procédure négociée sans publication préalable. Art. 3: De financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, article 421/735-60 (n° de projet 20260059).",
-      "evidence": "Considérant qu'une demande afin d’obtenir l'avis de légalité obligatoire a été soumise le 21 aout 2026, le directeur financier a rendu un avis favorable le 28 aout 2026 ; Article 1er: D'approuver le cahier des charges N° GK/PH/ (2026-674) et le montant estimé du marché “Entretien des voiries”, établis par le Service Travaux (Bureau d'Etudes). Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 84.639,50 € (incl. 21% TVA). Art. 2: De passer le marché par la procédure négociée sans publication préalable. Art. 3: De financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, article 421/735-60 (n° de projet 20260059).",
-      "municipalEvidence": [
-        {
-          "excerpt": "Considérant qu'une demande afin d’obtenir l'avis de légalité obligatoire a été soumise le 21 aout 2026, le directeur financier a rendu un avis favorable le 28 aout 2026 ; Article 1er: D'approuver le cahier des charges N° GK/PH/ (2026-674) et le montant estimé du marché “Entretien des voiries”, établis par le Service Travaux (Bureau d'Etudes). Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 84.639,50 € (incl. 21% TVA). Art. 2: De passer le marché par la procédure négociée sans publication préalable. Art. 3: De financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, article 421/735-60 (n° de projet 20260059).",
-          "page": null
-        },
-        {
-          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° GK/PH/ (2026-674) relatif au marché “Entretien des voiries” établi par le Service Travaux (Bureau d'Etudes) ; Considérant que ce marché est divisé en lots : * Lot 1 (Entretien de voiries - Place Verte, rue de l'Abbaye, rue de l'Egalité et rue Canteleu), estimé à 30.552,50 € (incl. 21% TVA) ; * Lot 2 (Entretien de voiries - Placette rue L.Laurent), estimé à 54.087,00 € (incl. 21% TVA) ; Considérant que le montant global estimé de ce marché s'élève à 84.639,50 € (incl. 21% TVA) ;",
-          "page": null
-        },
-        {
-          "excerpt": "Considérant le cahier des charges N° GK/PH/ (2026-674) relatif au marché “Entretien des voiries” établi par le Service Travaux (Bureau d'Etudes) ; Considérant que ce marché est divisé en lots : * Lot 1 (Entretien de voiries - Place Verte, rue de l'Abbaye, rue de l'Egalité et rue Canteleu), estimé à 30.552,50 € (incl. 21% TVA) ; * Lot 2 (Entretien de voiries - Placette rue L.Laurent), estimé à 54.087,00 € (incl. 21% TVA) ; Considérant que le montant global estimé de ce marché s'élève à 84.639,50 € (incl. 21% TVA) ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget extraordinaire de l’exercice 2026, article 421/735-60 (n° de projet 20260059);",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local:7558131ef5a4a0b0940e",
-      "title": "14. Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision.",
-      "sourceDocumentTitle": "Convocation",
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "missionEvidence": null,
-      "buyer": "Commune de Beloeil",
-      "municipalityINS": "51008",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "14. Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. MOBILITÉ 15: BELOEIL — section de Basècles - Place de la Vic",
-        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.08.26-ordre-du-jour.pdf",
-        "page": 2,
-        "sha256": "8004cdfe61cf1c32d7f30beebea9b9c3153be0d062396022d2c5357782e57c1b"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.08.26-ordre-du-jour.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.08.26-ordre-du-jour.pdf",
-        "sha256": "8004cdfe61cf1c32d7f30beebea9b9c3153be0d062396022d2c5357782e57c1b",
-        "session": null,
-        "document": {
-          "date": "2026-08-18",
-          "kind": "document",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "COMMUNE DE Beloeil, le 18 août 2026",
-          "confidence": "ocr"
-        },
-        "status": "identified"
-      },
-      "sourceExtraction": {
-        "method": "ocr",
-        "language": "fra+eng",
-        "pagesRead": 2,
-        "totalPages": 2,
-        "partial": false
-      },
-      "url": "https://www.beloeil.be/images/pdf/pv-convocation-conseil-communal/CC-2026.08.26-ordre-du-jour.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : 14. Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. MOBILITÉ 15: BELOEIL — section de Basècles - Place de la Victoire - Mise en place d'un emplacement pour personnes handicapées, du côté pair, le long des n° 14 et 16. Examen. Décision.",
-      "evidence": "14. Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. MOBILITÉ 15: BELOEIL — section de Basècles - Place de la Victoire - Mise en place d'un emplacement pour personnes handicapées, du côté pair, le long des n° 14 et 16. Examen. Décision.",
-      "municipalReference": null,
-      "municipalSection": "14. Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision.",
-      "municipalEvidence": [
-        {
-          "page": 2,
-          "excerpt": "14. Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. MOBILITÉ 15: BELOEIL — section de Basècles - Place de la Victoire - Mise en place d'un emplacement pour personnes handicapées, du côté pair, le long des n° 14 et 16. Examen. Décision."
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 2,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:4c69293f54b6efe8df",
-        "sha256": "8004cdfe61cf1c32d7f30beebea9b9c3153be0d062396022d2c5357782e57c1b",
-        "checkedAt": "2026-11-08T21:22:36.404Z",
-        "changedAt": null
-      }
-    },
-    {
-      "id": "local:5ae652d8611fbd90d6c3",
-      "title": "propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges.",
-      "sourceDocumentTitle": "Proc&egrave;s-verbal",
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "dame Alicia VANDENABEELE, 1ère Échevine, présente ce point : \"On vous propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges.",
-        "mission": "propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges.",
-        "basis": "document_body"
-      },
-      "missionEvidence": {
-        "excerpt": "dame Alicia VANDENABEELE, 1ère Échevine, présente ce point : \"On vous propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges.",
-        "sourceUrl": "https://www.beloeil.be/images/pdf/arrete-bourgmestre-festivites/PV-du-26-aout_compressed-1.pdf",
-        "page": 17,
-        "sha256": "f30c2ef40647c36bef15339f7bbda4a2430b8379542506eaa28432857651cfd4"
-      },
-      "buyer": "Commune de Beloeil",
-      "municipalityINS": "51008",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "article 124/724-60. ********** Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. Madame Alicia VANDENABEELE, 1ère",
-        "sourceUrl": "https://www.beloeil.be/images/pdf/arrete-bourgmestre-festivites/PV-du-26-aout_compressed-1.pdf",
-        "page": 17,
-        "sha256": "f30c2ef40647c36bef15339f7bbda4a2430b8379542506eaa28432857651cfd4"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.beloeil.be/images/pdf/arrete-bourgmestre-festivites/PV-du-26-aout_compressed-1.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.beloeil.be/images/pdf/arrete-bourgmestre-festivites/PV-du-26-aout_compressed-1.pdf",
-        "sha256": "f30c2ef40647c36bef15339f7bbda4a2430b8379542506eaa28432857651cfd4",
-        "session": {
-          "date": "2026-08-26",
-          "kind": "session",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "SEANCE DU 26 AOÛT 2026",
-          "confidence": "explicit"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceExtraction": {
-        "method": "pdf_text",
-        "partial": false
-      },
-      "url": "https://www.beloeil.be/images/pdf/arrete-bourgmestre-festivites/PV-du-26-aout_compressed-1.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : article 124/724-60. ********** Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. Madame Alicia VANDENABEELE, 1ère Échevine, présente ce point : \"On vous propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges.",
-      "evidence": "article 124/724-60. ********** Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. Madame Alicia VANDENABEELE, 1ère Échevine, présente ce point : \"On vous propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges.",
-      "municipalReference": null,
-      "municipalSection": "R17 : Supplément communal : 5.009,34 € (au lieu de 4.973,34 €).\" Cette approbation date donc du 1er juillet 2026.",
-      "municipalEvidence": [
-        {
-          "page": 17,
-          "excerpt": "article 124/724-60. ********** Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. Madame Alicia VANDENABEELE, 1ère Échevine, présente ce point : \"On vous propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges."
-        },
-        {
-          "page": 17,
-          "excerpt": "Approbation des conditions et mode de passation. Examen. Décision. Madame Alicia VANDENABEELE, 1ère Échevine, présente ce point : \"On vous propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges. Plus clairement, c'est une modification de la fiche du PCDR puisque la carrière ne nous appartient pas et que nous n'avons pas su entrer en contact avec les propriétaires."
-        },
-        {
-          "page": 17,
-          "excerpt": "Madame Alicia VANDENABEELE, 1ère Échevine, présente ce point : \"On vous propose une procédure négociée directe avec publication préalable pour la mission d'auteur de projet relative à la valorisation de la Carrière des Roches rouges. Plus clairement, c'est une modification de la fiche du PCDR puisque la carrière ne nous appartient pas et que nous n'avons pas su entrer en contact avec les propriétaires."
-        },
-        {
-          "page": 18,
-          "excerpt": "plus-value et donc, on préfère le prévoir dès le départ.\" Après cette présentation, le Conseil communal, unanime, approuve les conditions et mode de passation de ce marché de services. Délibération : Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. Le Conseil Communal, siégeant en séance publique,"
-        },
-        {
-          "page": 18,
-          "excerpt": "passation de ce marché de services. Délibération : Mission d'auteur de projet relative à la valorisation de la carrière des Roches Rouges - Approbation des conditions et mode de passation. Examen. Décision. Le Conseil Communal, siégeant en séance publique, Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et"
-        },
-        {
-          "page": 21,
-          "excerpt": "pictogramme des personnes handicapées et d’une flèche de réglementation sur courte distance avec la mention « 6m ». ; Considérant que la mesure s’applique à la voirie communale ; Après en avoir délibéré ; DECIDE à l'unanimité des membres présents Article 1er : A Beloeil, section de Basècles, Place de la Victoire, le stationnement est réservé aux personnes"
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 17,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:2478b8a712e05c8bd0",
-        "sha256": "f30c2ef40647c36bef15339f7bbda4a2430b8379542506eaa28432857651cfd4",
-        "checkedAt": "2026-11-08T21:22:36.404Z",
-        "changedAt": null
-      }
-    },
-    {
-      "id": "local-html:99adad8a87746aaace39",
-      "title": "désigner un auteur de projet (1er trimestre 2027) ;",
-      "sourceDocumentTitle": "Projet nouveau hall sportif - Germain DALNE",
-      "missionEvidence": {
-        "excerpt": "nivellois (4e trimestre 2026) ; Passation d'un marché public visant à désigner un auteur de projet (1er trimestre 2027) ;",
-        "sourceUrl": "https://www.deliberations.be/nivelles/decisions/28-septembre-2026-20-00/projet-nouveau-hall-sportif-germain-dalne",
-        "page": null,
-        "sha256": "3ae952638f478a92b550027bb090c1131362a8841d55b84a228872bd23faeee1"
-      },
-      "buyer": "Commune de Nivelles",
-      "municipalityINS": "25072",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "nivellois (4e trimestre 2026) ; Passation d'un marché public visant à désigner un auteur de projet (1er trimestre 2027) ;",
-        "mission": "désigner un auteur de projet (1er trimestre 2027) ;",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/nivelles/decisions/28-septembre-2026-20-00/projet-nouveau-hall-sportif-germain-dalne",
-      "sourceDocument": "https://www.deliberations.be/nivelles/decisions/28-septembre-2026-20-00/projet-nouveau-hall-sportif-germain-dalne",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/nivelles/decisions/28-septembre-2026-20-00/projet-nouveau-hall-sportif-germain-dalne",
-        "sha256": "3ae952638f478a92b550027bb090c1131362a8841d55b84a228872bd23faeee1",
-        "session": {
-          "date": "2026-09-28",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 28 septembre 2026 (20:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/nivelles/decisions/28-septembre-2026-20-00/projet-nouveau-hall-sportif-germain-dalne"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:0ed0aa5f12a8d555fc",
-        "sha256": "3ae952638f478a92b550027bb090c1131362a8841d55b84a228872bd23faeee1",
-        "format": "html",
-        "checkedAt": "2026-11-09T08:41:17.184Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "A la page 4 (au point 2.3. Capital) : La Ville pourra également décider de procéder à des augmentations et des diminutions de capital en fonction des besoins spécifiques de la RCA. Celles-ci pourront se faire par apport",
-        "sourceUrl": "https://www.deliberations.be/nivelles/decisions/28-septembre-2026-20-00/projet-nouveau-hall-sportif-germain-dalne",
-        "page": null,
-        "sha256": "3ae952638f478a92b550027bb090c1131362a8841d55b84a228872bd23faeee1"
-      },
-      "description": "A la page 4 (au point 2.3. Capital) : La Ville pourra également décider de procéder à des augmentations et des diminutions de capital en fonction des besoins spécifiques de la RCA. Celles-ci pourront se faire par apport en numéraire ou par apport en nature, dans le respect des dispositions légales et de la doctrine en vigueur. Dans le cadre de la réalisation d'un nouveau hall sportif polyvalent, et conformément aux missions de la RCA (point 1), une intervention en capital de la Ville sera réalisée dans une mesure à définir par le Collège communal pour soutenir la RCA dans ce projet. A la page 7 : Etat d’avancement de la création d’un pôle sportif sur base des étapes suivantes : Identification et prise de décision sur la localisation (4e trimestre 2026) ; Identification des besoins avec les clubs sportifs nivellois (4e trimestre 2026) ;",
-      "evidence": "A la page 4 (au point 2.3. Capital) : La Ville pourra également décider de procéder à des augmentations et des diminutions de capital en fonction des besoins spécifiques de la RCA. Celles-ci pourront se faire par apport en numéraire ou par apport en nature, dans le respect des dispositions légales et de la doctrine en vigueur. Dans le cadre de la réalisation d'un nouveau hall sportif polyvalent, et conformément aux missions de la RCA (point 1), une intervention en capital de la Ville sera réalisée dans une mesure à définir par le Collège communal pour soutenir la RCA dans ce projet. A la page 7 : Etat d’avancement de la création d’un pôle sportif sur base des étapes suivantes : Identification et prise de décision sur la localisation (4e trimestre 2026) ; Identification des besoins avec les clubs sportifs nivellois (4e trimestre 2026) ;",
-      "municipalEvidence": [
-        {
-          "excerpt": "A la page 4 (au point 2.3. Capital) : La Ville pourra également décider de procéder à des augmentations et des diminutions de capital en fonction des besoins spécifiques de la RCA. Celles-ci pourront se faire par apport en numéraire ou par apport en nature, dans le respect des dispositions légales et de la doctrine en vigueur. Dans le cadre de la réalisation d'un nouveau hall sportif polyvalent, et conformément aux missions de la RCA (point 1), une intervention en capital de la Ville sera réalisée dans une mesure à définir par le Collège communal pour soutenir la RCA dans ce projet. A la page 7 : Etat d’avancement de la création d’un pôle sportif sur base des étapes suivantes : Identification et prise de décision sur la localisation (4e trimestre 2026) ; Identification des besoins avec les clubs sportifs nivellois (4e trimestre 2026) ;",
-          "page": null
-        },
-        {
-          "excerpt": "Identification et prise de décision sur la localisation (4e trimestre 2026) ; Identification des besoins avec les clubs sportifs nivellois (4e trimestre 2026) ; Passation d'un marché public visant à désigner un auteur de projet (1er trimestre 2027) ; Désignation d'un auteur de projet (1er trimestre 2027) ; Prise de contact avec Infrasports en vue d'un dépôt de dossier pour l'obtention d'un subside régional (2e trimestre 2027) ; Dépôt d'un avant-projet auprès du Gouvernement wallon (3e trimestre 2027) ; Obtention d'un accord de principe du Gouvernement wallon (2027) ;",
-          "page": null
-        },
-        {
-          "excerpt": "Identification des besoins avec les clubs sportifs nivellois (4e trimestre 2026) ; Passation d'un marché public visant à désigner un auteur de projet (1er trimestre 2027) ; Désignation d'un auteur de projet (1er trimestre 2027) ; Prise de contact avec Infrasports en vue d'un dépôt de dossier pour l'obtention d'un subside régional (2e trimestre 2027) ; Dépôt d'un avant-projet auprès du Gouvernement wallon (3e trimestre 2027) ; Obtention d'un accord de principe du Gouvernement wallon (2027) ; Montage d'un dossier de demande de crédit auprès d'organismes bancaires (1er semestre 2028) ;",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local-html:53a758a60c3d959c8e62",
-      "title": "PATRIMOINE COMMUNAL - Vente d’une parcelle communale destinée à l’installation d’une cabine électrique - Dossier ORES - Place des Martyrs - Projet d’acte",
-      "sourceDocumentTitle": "PATRIMOINE COMMUNAL - Vente d’une parcelle communale destinée à l’installation d’une cabine électrique - Dossier ORES - Place des Martyrs - Projet d’acte",
-      "missionEvidence": null,
-      "buyer": "Commune de Ecaussinnes",
-      "municipalityINS": "55050",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Topo",
-      "sectors": [
-        "Topo",
         "Foncier"
       ],
-      "screening": "review",
-      "score": 60,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/ecaussinnes/decisions/17-novembre-2026-19-15/patrimoine-communal-vente-dune-parcelle-communale-destinee-a-linstallation-dune-cabine-electrique-dossier-ores-place-des-martyrs-projet-dacte",
-      "sourceDocument": "https://www.deliberations.be/ecaussinnes/decisions/17-novembre-2026-19-15/patrimoine-communal-vente-dune-parcelle-communale-destinee-a-linstallation-dune-cabine-electrique-dossier-ores-place-des-martyrs-projet-dacte",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/ecaussinnes/decisions/17-novembre-2026-19-15/patrimoine-communal-vente-dune-parcelle-communale-destinee-a-linstallation-dune-cabine-electrique-dossier-ores-place-des-martyrs-projet-dacte",
-        "sha256": "41c0a1a182b3a2cf0fbe31425cdc406b0ff274e1a951b918f4e3d51e1ecaca6c",
-        "session": {
-          "date": "2026-11-17",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 17 novembre 2026 (19:15)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/ecaussinnes/decisions/17-novembre-2026-19-15/patrimoine-communal-vente-dune-parcelle-communale-destinee-a-linstallation-dune-cabine-electrique-dossier-ores-place-des-martyrs-projet-dacte"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:6ae46bbc950c96dac8",
-        "sha256": "41c0a1a182b3a2cf0fbe31425cdc406b0ff274e1a951b918f4e3d51e1ecaca6c",
-        "format": "html",
-        "checkedAt": "2026-11-09T08:41:17.184Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Considérant qu’il convient d’approuver le projet d’acte du notaire Marie-Julie DELFORGE, notaire à la résidence de Lasne ; DECIDE, à l’unanimité des membres présents : Article 1 : de désaffecter la partie du domaine publ",
-        "sourceUrl": "https://www.deliberations.be/ecaussinnes/decisions/17-novembre-2026-19-15/patrimoine-communal-vente-dune-parcelle-communale-destinee-a-linstallation-dune-cabine-electrique-dossier-ores-place-des-martyrs-projet-dacte",
-        "page": null,
-        "sha256": "41c0a1a182b3a2cf0fbe31425cdc406b0ff274e1a951b918f4e3d51e1ecaca6c"
-      },
-      "description": "Considérant qu’il convient d’approuver le projet d’acte du notaire Marie-Julie DELFORGE, notaire à la résidence de Lasne ; DECIDE, à l’unanimité des membres présents : Article 1 : de désaffecter la partie du domaine public (voirie publique) correspondante à la parcelle reprise sous teinte jaune au procès-verbal de mesurage dressé par le Géomètre-Expert Jean-Nicolas SIMON en date du 1 er juillet 2025 ci-annexé. Article 2 : d’approuver le projet d’acte du notaire Marie-Julie DELFORGE ci-annexé en vue de la vente d’une parcelle de terrain d’une contenance de 25 m² sise sur le territoire de Ecaussinnes à la Place des Martyrs, faisant partie d’une propriété cadastrée Division 2, section B, portion désaffectée du Domaine public. Article 3 : de donner mandat à l’étude du notaire Marie-Julie DELFORGE (rue de la Gendarmerie 10 à 1380 Lasne) de procéder aux opérations de vente ( passation de l’acte authentique), de recevoir l’acte et d’y représenter la Commune. Article 4 : de transmettre la présente décision au Directeur financier ainsi qu’à l’étude du notaire Marie-Julie DELFORGE.",
-      "evidence": "Considérant qu’il convient d’approuver le projet d’acte du notaire Marie-Julie DELFORGE, notaire à la résidence de Lasne ; DECIDE, à l’unanimité des membres présents : Article 1 : de désaffecter la partie du domaine public (voirie publique) correspondante à la parcelle reprise sous teinte jaune au procès-verbal de mesurage dressé par le Géomètre-Expert Jean-Nicolas SIMON en date du 1 er juillet 2025 ci-annexé. Article 2 : d’approuver le projet d’acte du notaire Marie-Julie DELFORGE ci-annexé en vue de la vente d’une parcelle de terrain d’une contenance de 25 m² sise sur le territoire de Ecaussinnes à la Place des Martyrs, faisant partie d’une propriété cadastrée Division 2, section B, portion désaffectée du Domaine public. Article 3 : de donner mandat à l’étude du notaire Marie-Julie DELFORGE (rue de la Gendarmerie 10 à 1380 Lasne) de procéder aux opérations de vente ( passation de l’acte authentique), de recevoir l’acte et d’y représenter la Commune. Article 4 : de transmettre la présente décision au Directeur financier ainsi qu’à l’étude du notaire Marie-Julie DELFORGE.",
-      "municipalEvidence": [
-        {
-          "excerpt": "Considérant qu’il convient d’approuver le projet d’acte du notaire Marie-Julie DELFORGE, notaire à la résidence de Lasne ; DECIDE, à l’unanimité des membres présents : Article 1 : de désaffecter la partie du domaine public (voirie publique) correspondante à la parcelle reprise sous teinte jaune au procès-verbal de mesurage dressé par le Géomètre-Expert Jean-Nicolas SIMON en date du 1 er juillet 2025 ci-annexé. Article 2 : d’approuver le projet d’acte du notaire Marie-Julie DELFORGE ci-annexé en vue de la vente d’une parcelle de terrain d’une contenance de 25 m² sise sur le territoire de Ecaussinnes à la Place des Martyrs, faisant partie d’une propriété cadastrée Division 2, section B, portion désaffectée du Domaine public. Article 3 : de donner mandat à l’étude du notaire Marie-Julie DELFORGE (rue de la Gendarmerie 10 à 1380 Lasne) de procéder aux opérations de vente ( passation de l’acte authentique), de recevoir l’acte et d’y représenter la Commune. Article 4 : de transmettre la présente décision au Directeur financier ainsi qu’à l’étude du notaire Marie-Julie DELFORGE.",
-          "page": null
-        },
-        {
-          "excerpt": "Article 1 : de désaffecter la partie du domaine public (voirie publique) correspondante à la parcelle reprise sous teinte jaune au procès-verbal de mesurage dressé par le Géomètre-Expert Jean-Nicolas SIMON en date du 1 er juillet 2025 ci-annexé. Article 2 : d’approuver le projet d’acte du notaire Marie-Julie DELFORGE ci-annexé en vue de la vente d’une parcelle de terrain d’une contenance de 25 m² sise sur le territoire de Ecaussinnes à la Place des Martyrs, faisant partie d’une propriété cadastrée Division 2, section B, portion désaffectée du Domaine public. Article 3 : de donner mandat à l’étude du notaire Marie-Julie DELFORGE (rue de la Gendarmerie 10 à 1380 Lasne) de procéder aux opérations de vente ( passation de l’acte authentique), de recevoir l’acte et d’y représenter la Commune. Article 4 : de transmettre la présente décision au Directeur financier ainsi qu’à l’étude du notaire Marie-Julie DELFORGE.",
-          "page": null
-        },
-        {
-          "excerpt": "Article 2 : d’approuver le projet d’acte du notaire Marie-Julie DELFORGE ci-annexé en vue de la vente d’une parcelle de terrain d’une contenance de 25 m² sise sur le territoire de Ecaussinnes à la Place des Martyrs, faisant partie d’une propriété cadastrée Division 2, section B, portion désaffectée du Domaine public. Article 3 : de donner mandat à l’étude du notaire Marie-Julie DELFORGE (rue de la Gendarmerie 10 à 1380 Lasne) de procéder aux opérations de vente ( passation de l’acte authentique), de recevoir l’acte et d’y représenter la Commune. Article 4 : de transmettre la présente décision au Directeur financier ainsi qu’à l’étude du notaire Marie-Julie DELFORGE.",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local-html:d727b76399f7077a7692",
-      "title": "Mission complète d'auteur de projet relative à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR) – choix du mode de passation et fixation des conditions",
-      "sourceDocumentTitle": "Mission complète d'auteur de projet relative à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR) – choix du mode de passation et fixation des conditions",
-      "missionEvidence": {
-        "excerpt": "if avec remarques du Directeur Financier remis en date du 29/09/2026, DECIDE : Article 1 : D'approuver le cahier des charges N° 2026-026 et le montant estimé du marché “Mission complète d'auteur de projet relatif à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR) ”, établis par le Service Marchés Publics. Les conditions sont fixées ",
-        "sourceUrl": "https://www.deliberations.be/ellezelles/decisions/29-septembre-2026-20-00/mission-complete-dauteur-de-projet-relative-a-letude-la-conception-et-le-suivi-des-travaux-damenagement-du-centre-de-wodecq-fiche-16-pcdr-choix-du-mode-de-passation-et-fixation-des-conditions",
-        "page": null,
-        "sha256": "a994ebff0776a3f3d0ede160ee03cc46a4faf5b4d79fb14288ea0623cbfdb824"
-      },
-      "buyer": "Commune de Ellezelles",
-      "municipalityINS": "51017",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "if avec remarques du Directeur Financier remis en date du 29/09/2026, DECIDE : Article 1 : D'approuver le cahier des charges N° 2026-026 et le montant estimé du marché “Mission complète d'auteur de projet relatif à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR) ”, établis par le Service Marchés Publics. Les conditions sont fixées ",
-        "mission": "DECIDE : Article 1 : D'approuver le cahier des charges N° 2026-026 et le montant estimé du marché “Mission complète d'auteur de projet relatif à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR) ”, établis par l",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/ellezelles/decisions/29-septembre-2026-20-00/mission-complete-dauteur-de-projet-relative-a-letude-la-conception-et-le-suivi-des-travaux-damenagement-du-centre-de-wodecq-fiche-16-pcdr-choix-du-mode-de-passation-et-fixation-des-conditions",
-      "sourceDocument": "https://www.deliberations.be/ellezelles/decisions/29-septembre-2026-20-00/mission-complete-dauteur-de-projet-relative-a-letude-la-conception-et-le-suivi-des-travaux-damenagement-du-centre-de-wodecq-fiche-16-pcdr-choix-du-mode-de-passation-et-fixation-des-conditions",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/ellezelles/decisions/29-septembre-2026-20-00/mission-complete-dauteur-de-projet-relative-a-letude-la-conception-et-le-suivi-des-travaux-damenagement-du-centre-de-wodecq-fiche-16-pcdr-choix-du-mode-de-passation-et-fixation-des-conditions",
-        "sha256": "a994ebff0776a3f3d0ede160ee03cc46a4faf5b4d79fb14288ea0623cbfdb824",
-        "session": {
-          "date": "2026-09-29",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 29 septembre 2026 (20:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/ellezelles/decisions/29-septembre-2026-20-00/mission-complete-dauteur-de-projet-relative-a-letude-la-conception-et-le-suivi-des-travaux-damenagement-du-centre-de-wodecq-fiche-16-pcdr-choix-du-mode-de-passation-et-fixation-des-conditions"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:3cfbdfa98d02ae42f8",
-        "sha256": "a994ebff0776a3f3d0ede160ee03cc46a4faf5b4d79fb14288ea0623cbfdb824",
-        "format": "html",
-        "checkedAt": "2026-11-09T08:41:17.184Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "DECIDE : Article 1 : D'approuver le cahier des charges N° 2026-026 et le montant estimé du marché “Mission complète d'auteur de projet relatif à l'étude, la conception et le suivi des travaux d'aménagement du centre de W",
-        "sourceUrl": "https://www.deliberations.be/ellezelles/decisions/29-septembre-2026-20-00/mission-complete-dauteur-de-projet-relative-a-letude-la-conception-et-le-suivi-des-travaux-damenagement-du-centre-de-wodecq-fiche-16-pcdr-choix-du-mode-de-passation-et-fixation-des-conditions",
-        "page": null,
-        "sha256": "a994ebff0776a3f3d0ede160ee03cc46a4faf5b4d79fb14288ea0623cbfdb824"
-      },
-      "description": "DECIDE : Article 1 : D'approuver le cahier des charges N° 2026-026 et le montant estimé du marché “Mission complète d'auteur de projet relatif à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR) ”, établis par le Service Marchés Publics. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 50.000,00 € hors TVA ou 60.500,00 €, 21% TVA comprise. Article 2 : De passer le marché par la procédure ouverte. Article 3 : De compléter, d'approuver et d'envoyer l'avis de marché au niveau national. Article 4 : De financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, article 620/733-51 (n° de projet 20260018). Article 5 : Ce crédit fera l'objet d'une augmentation lors de la modification budgétaire n°2.",
-      "evidence": "DECIDE : Article 1 : D'approuver le cahier des charges N° 2026-026 et le montant estimé du marché “Mission complète d'auteur de projet relatif à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR) ”, établis par le Service Marchés Publics. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 50.000,00 € hors TVA ou 60.500,00 €, 21% TVA comprise. Article 2 : De passer le marché par la procédure ouverte. Article 3 : De compléter, d'approuver et d'envoyer l'avis de marché au niveau national. Article 4 : De financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, article 620/733-51 (n° de projet 20260018). Article 5 : Ce crédit fera l'objet d'une augmentation lors de la modification budgétaire n°2.",
-      "municipalEvidence": [
-        {
-          "excerpt": "DECIDE : Article 1 : D'approuver le cahier des charges N° 2026-026 et le montant estimé du marché “Mission complète d'auteur de projet relatif à l'étude, la conception et le suivi des travaux d'aménagement du centre de Wodecq (fiche 16 - PCDR) ”, établis par le Service Marchés Publics. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 50.000,00 € hors TVA ou 60.500,00 €, 21% TVA comprise. Article 2 : De passer le marché par la procédure ouverte. Article 3 : De compléter, d'approuver et d'envoyer l'avis de marché au niveau national. Article 4 : De financer cette dépense par le crédit inscrit au budget extraordinaire de l’exercice 2026, article 620/733-51 (n° de projet 20260018). Article 5 : Ce crédit fera l'objet d'une augmentation lors de la modification budgétaire n°2.",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": "2026-026"
-    },
-    {
-      "id": "local:c3efbcd9838dd631a118",
-      "title": "7. Marche de Services - 202600XX - Designation d'un auteur de projet pour des travaux subsidies d'amelioration de voiries agricoles - Approbation du projet, des conditions et du mode de passation.",
-      "sourceDocumentTitle": "Ordre du jour conseil communal 30-09-26.pdf",
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "missionEvidence": null,
-      "buyer": "Commune de Erquelinnes",
-      "municipalityINS": "56022",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "7. Marche de Services - 202600XX - Designation d'un auteur de projet pour des travaux subsidies d'amelioration de voiries agricoles - Approbation du projet, des conditions et du mode de passation.",
-        "sourceUrl": "https://www.erquelinnes.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/ordre-du-jour-conseil-communal-30-09-26.pdf/@@download/file/Ordre%20du%20jour%20conseil%20communal%2030-09-26.pdf",
-        "page": 1,
-        "sha256": "30109516de94d031848ddf577bac12919968ef1c89b46e0f261ac90aceab106b"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 60,
+      "score": 52,
       "screening": "review",
       "qualification": {
         "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
         "capacityStatus": "not_assessed"
       },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.erquelinnes.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/ordre-du-jour-conseil-communal-30-09-26.pdf/@@download/file/Ordre%20du%20jour%20conseil%20communal%2030-09-26.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.erquelinnes.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/ordre-du-jour-conseil-communal-30-09-26.pdf/@@download/file/Ordre%20du%20jour%20conseil%20communal%2030-09-26.pdf",
-        "sha256": "30109516de94d031848ddf577bac12919968ef1c89b46e0f261ac90aceab106b",
-        "session": null,
-        "document": {
-          "date": "2026-09-22",
-          "kind": "document",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "Fait a Erquelinnes, le 22 septembre 2026",
-          "confidence": "explicit"
-        },
-        "status": "identified"
-      },
-      "sourceExtraction": {
-        "method": "pdf_text",
-        "partial": false
-      },
-      "url": "https://www.erquelinnes.be/ma-commune/vie-politique/conseil-communal/ordre-du-jour/ordre-du-jour-conseil-communal-30-09-26.pdf/@@download/file/Ordre%20du%20jour%20conseil%20communal%2030-09-26.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : 7. Marche de Services - 202600XX - Designation d'un auteur de projet pour des travaux subsidies d'amelioration de voiries agricoles - Approbation du projet, des conditions et du mode de passation.",
-      "evidence": "7. Marche de Services - 202600XX - Designation d'un auteur de projet pour des travaux subsidies d'amelioration de voiries agricoles - Approbation du projet, des conditions et du mode de passation.",
-      "municipalReference": null,
-      "municipalSection": "7. Marche de Services - 202600XX - Designation d'un auteur de projet pour des travaux subsidies d'amelioration de voiries agricoles - Approbation du projet, des conditions et du mode de passation.",
-      "municipalEvidence": [
+      "matchReason": "description_ou_contexte",
+      "publication": "2026-11-09",
+      "deadline": "2026-12-10T10:00:00+01:00",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "La mission d’étude concerne les études suivantes : 1. Etude des solutions pour répondre aux besoins relatifs à l’aménagement du remisage provisoire des bus ; 2. Etablissement d’une demande de permis d’urbanisme (PU) intégrant les réponses aux besoins complémentaires identifiés ; 3. Etablissement de la demande de permis d’environnement (PE) relatif au remisage extérieur provisoire et aux aménagements qui y sont liés ; 4. Etablir un Rapport d’Incidence Environnementale (RIE) nécessaire pour le PU et le PE; 5. Suivi et adaptation du dossier en vue de l’obtention des permis (PU et PE).",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "17",
+      "noticeKind": "competition",
+      "bdaReference": "DITP-DIOV BM CSC-BB i3453_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
         {
-          "page": 1,
-          "excerpt": "7. Marche de Services - 202600XX - Designation d'un auteur de projet pour des travaux subsidies d'amelioration de voiries agricoles - Approbation du projet, des conditions et du mode de passation."
+          "id": "56b0d83b-153e-46aa-b5d3-d348e6e9b196",
+          "title": "Formulier Offerte - Inventaris NL.pdf",
+          "kind": "bill_of_quantities",
+          "fileType": "pdf",
+          "versionId": "c0491452-5938-4010-aa37-c997e989294a",
+          "documentId": "682cdb4b-34bc-4cfe-a2ce-6f54d550344f",
+          "activatedAt": "2026-11-09T13:16:45.014614",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "7efe5d3b-f45f-4699-b8d7-c933f9c8e7f7",
+          "title": "CSC-BB I3453.pdf",
+          "kind": "csc",
+          "fileType": "pdf",
+          "versionId": "60ffc689-4c18-4349-b97b-fdd929e97b5a",
+          "documentId": "ee01fb42-78f7-433a-b2fc-e984846b83c8",
+          "activatedAt": "2026-11-09T13:16:45.014614",
+          "language": "FR,NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "92c7828a-a030-4fa1-afea-ff28bc15d40d",
+          "title": "Formulaire Offre - Inventaire FR.pdf",
+          "kind": "bill_of_quantities",
+          "fileType": "pdf",
+          "versionId": "2e909bce-d3e2-4ac6-9465-be99c6122de0",
+          "documentId": "554ea992-62ae-48a5-8649-924ceaefeaf8",
+          "activatedAt": "2026-11-09T13:16:45.014614",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "9dbcff45-ef91-4992-8b1c-04fbb6574d4a",
+          "title": "URS.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "6b83837a-d3eb-4665-9ba4-130215fe228a",
+          "documentId": "661b5f17-9360-452c-8e0c-bee16b7d54cf",
+          "activatedAt": "2026-11-09T13:16:45.014614",
+          "language": "FR,NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "ad0a7943-1245-4589-90e8-f93d1b80da76",
+          "title": "Matrice PU_RIE_PE - Matrix SV_MER_MV.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "fd519641-59d3-4574-9fd5-2a894941a49f",
+          "documentId": "58ac62d1-c7a5-4b1f-ada2-232021805e83",
+          "activatedAt": "2026-11-09T13:16:45.014614",
+          "language": "FR,NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 1,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:31ef487e729ca5d2a6",
-        "sha256": "30109516de94d031848ddf577bac12919968ef1c89b46e0f261ac90aceab106b",
-        "checkedAt": "2026-11-09T08:41:17.184Z",
-        "changedAt": null
-      }
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-09T14:07:19.356Z",
+      "deadlineTime": "10:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n10/12/2026 10:00 CET",
+      "deadlineVerifiedAt": "2026-11-09T14:07:19.710Z"
     }
   ]
 }
