@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-08T21:22:36.404Z",
+      "last_attempt": "2026-11-09T01:14:12.451Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -74,27 +74,27 @@
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 1074,
+      "documentsRead": 1116,
       "opportunities": 190,
       "sitesChecked": 261,
       "candidatePages": 228,
-      "sourceErrors": 97,
-      "htmlDocumentsRead": 4843
+      "sourceErrors": 98,
+      "htmlDocumentsRead": 5082
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-08T21:22:36.404Z",
-      "last_success": "2026-11-08T21:22:36.404Z",
+      "last_attempt": "2026-11-09T01:14:12.451Z",
+      "last_success": "2026-11-09T01:14:12.451Z",
       "last_batch": 24,
-      "documents_checked": 57,
+      "documents_checked": 82,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 26,
+      "errors_count": 4,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 301,
+      "html_documents_read": 299,
       "ocr_documents_read": 8,
       "recent_municipal_signals": 93,
       "communes_with_errors": 51,
@@ -16301,11 +16301,25 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:f105abe350c35a09c0",
         "sha256": "9638e79e80e43a2d818828ba4ddb3c316224b7e95df6406db251346ffc1da56c",
-        "checkedAt": "2026-10-31T15:31:30.638Z",
+        "checkedAt": "2026-11-09T01:14:12.451Z",
         "changedAt": null
       },
       "matchReason": "mission_globale_a_qualifier",
-      "screeningReason": null
+      "screeningReason": null,
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "sourceDocumentReview": {
+        "sha256": "9638e79e80e43a2d818828ba4ddb3c316224b7e95df6406db251346ffc1da56c",
+        "checkedAt": "2026-11-09T01:14:12.451Z",
+        "candidates": [
+          {
+            "excerpt": "préalable ; Article 3: d’approuver les clauses et conditions du cahier spécial des charges et ses annexes établis par l’auteur de projet, I.G.R.E.T.E.C., Bd. Mayence 1 à 6000 Charleroi ; Article 4: de financer cette dépense par les crédits inscrits au budget 2025 article 722/723- 60/20250004, service extraordinaire ; Article 5: de charger le Collège Communal de l’exécution de la présente délibération ; Article 6: de transmettre copie de la présente décision et ses annexes à l’auteur de projet,",
+            "page": 8
+          }
+        ]
+      }
     },
     {
       "id": "local:cee59e5f9fcc8c4d339c",
@@ -16368,7 +16382,7 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:3f17f055a8dcf413d4",
         "sha256": "fd4727978aee8806ddb2214510f338ac518d9035da43181ba62fa37edc590e95",
-        "checkedAt": "2026-11-05T22:54:26.035Z",
+        "checkedAt": "2026-11-09T01:14:12.451Z",
         "changedAt": null
       },
       "matchReason": "mission_globale_a_qualifier",
@@ -19308,7 +19322,7 @@
         "documentId": "municipal-doc:c096e45fe8525ed0ac",
         "sha256": "d47d7bf3e3ae32da23e77c104449ef8106dc7a06ec716d3d26e65928eab5bf90",
         "format": "html",
-        "checkedAt": "2026-11-05T22:54:26.035Z"
+        "checkedAt": "2026-11-09T01:14:12.451Z"
       },
       "webTypeEvidence": {
         "kind": "prospection",
@@ -22904,11 +22918,20 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:cc5883812015dcf413",
         "sha256": "425ec90b058ec84bd703f77ade368338cdeb22a508dc92f9ce217616aeb3e55d",
-        "checkedAt": "2026-10-31T01:06:54.821Z",
+        "checkedAt": "2026-11-09T01:14:12.451Z",
         "changedAt": null
       },
       "matchReason": "description_ou_contexte",
-      "screeningReason": null
+      "screeningReason": null,
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "sourceDocumentReview": {
+        "sha256": "425ec90b058ec84bd703f77ade368338cdeb22a508dc92f9ce217616aeb3e55d",
+        "checkedAt": "2026-11-09T01:14:12.451Z",
+        "candidates": []
+      }
     },
     {
       "id": "local:a66e3aa48988636661b9",
