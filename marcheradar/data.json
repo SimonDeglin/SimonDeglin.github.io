@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-09T08:41:17.184Z",
+      "last_attempt": "2026-11-09T20:09:08.805Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -74,29 +74,29 @@
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 1152,
-      "opportunities": 194,
+      "documentsRead": 1185,
+      "opportunities": 196,
       "sitesChecked": 261,
       "candidatePages": 228,
-      "sourceErrors": 101,
-      "htmlDocumentsRead": 5341
+      "sourceErrors": 102,
+      "htmlDocumentsRead": 5503
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-09T08:41:17.184Z",
-      "last_success": "2026-11-09T08:41:17.184Z",
+      "last_attempt": "2026-11-09T20:09:08.805Z",
+      "last_success": "2026-11-09T20:09:08.805Z",
       "last_batch": 24,
-      "documents_checked": 59,
+      "documents_checked": 52,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 11,
+      "errors_count": 21,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 276,
+      "html_documents_read": 196,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 97,
+      "recent_municipal_signals": 99,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1244,
     "matched_current_run": 5,
-    "records": 338,
+    "records": 340,
     "review_count": 243,
     "award_notice_count": 341,
     "awarded_market_matches": 3,
@@ -20823,7 +20823,7 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:a6b5af989fc0b79d2e",
         "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f",
-        "checkedAt": "2026-11-06T16:56:33.929Z",
+        "checkedAt": "2026-11-09T20:09:08.805Z",
         "changedAt": null
       },
       "municipalProcedure": null,
@@ -21000,7 +21000,7 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:a6b5af989fc0b79d2e",
         "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f",
-        "checkedAt": "2026-11-06T16:56:33.929Z",
+        "checkedAt": "2026-11-09T20:09:08.805Z",
         "changedAt": null
       },
       "municipalProcedure": null,
@@ -21189,7 +21189,7 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:a6b5af989fc0b79d2e",
         "sha256": "73db416f6489d69d143df72ed211b5d2df87732ca0f057f9eeed50d79f98926f",
-        "checkedAt": "2026-11-06T16:56:33.929Z",
+        "checkedAt": "2026-11-09T20:09:08.805Z",
         "changedAt": null
       },
       "matchReason": "mission_globale_a_qualifier",
@@ -27450,6 +27450,194 @@
       "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/general",
       "deadlineSourceEvidence": "Date limite de soumission\n10/12/2026 10:00 CET",
       "deadlineVerifiedAt": "2026-11-09T14:07:19.710Z"
+    },
+    {
+      "id": "local-html:3a63264f3f8c6c35220b",
+      "title": "faire appel à un auteur de projet.",
+      "sourceDocumentTitle": "CRÈCHE COMMUNALE - RÉNOVATION - APPEL A PROJETS",
+      "missionEvidence": {
+        "excerpt": "rdination entre la ventilation et la climatisation, il y aura lieu de faire appel à un auteur de projet. Les honoraires de celui-ci sont également partiellement pris en charge par le subside.",
+        "sourceUrl": "https://www.deliberations.be/welkenraedt/decisions/27-aout-2026-20-00/creche-communale-renovation-appel-a-projets",
+        "page": null,
+        "sha256": "169c38a23b6a50f44a747b08a744494987cd93618df4f750a7cf78a2e42e50d0"
+      },
+      "buyer": "Commune de Welkenraedt",
+      "municipalityINS": "63084",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "rdination entre la ventilation et la climatisation, il y aura lieu de faire appel à un auteur de projet. Les honoraires de celui-ci sont également partiellement pris en charge par le subside.",
+        "mission": "faire appel à un auteur de projet.",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/welkenraedt/decisions/27-aout-2026-20-00/creche-communale-renovation-appel-a-projets",
+      "sourceDocument": "https://www.deliberations.be/welkenraedt/decisions/27-aout-2026-20-00/creche-communale-renovation-appel-a-projets",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/welkenraedt/decisions/27-aout-2026-20-00/creche-communale-renovation-appel-a-projets",
+        "sha256": "169c38a23b6a50f44a747b08a744494987cd93618df4f750a7cf78a2e42e50d0",
+        "session": {
+          "date": "2026-08-27",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 27 août 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/welkenraedt/decisions/27-aout-2026-20-00/creche-communale-renovation-appel-a-projets"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6d786fdeaa8f35da9f",
+        "sha256": "169c38a23b6a50f44a747b08a744494987cd93618df4f750a7cf78a2e42e50d0",
+        "format": "html",
+        "checkedAt": "2026-11-09T20:09:08.805Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Considérant que l'appel à projets dont question plus haut a été lancé à la veille des congés du bâtiment ; Considérant l'impossibilité d'obtenir des devis détaillés d'entreprises spécialisées ; Considérant que certains t",
+        "sourceUrl": "https://www.deliberations.be/welkenraedt/decisions/27-aout-2026-20-00/creche-communale-renovation-appel-a-projets",
+        "page": null,
+        "sha256": "169c38a23b6a50f44a747b08a744494987cd93618df4f750a7cf78a2e42e50d0"
+      },
+      "description": "Considérant que l'appel à projets dont question plus haut a été lancé à la veille des congés du bâtiment ; Considérant l'impossibilité d'obtenir des devis détaillés d'entreprises spécialisées ; Considérant que certains travaux ont déjà fait l'objet d'estimations dans le cadre d'études de rénovation ; Considérant que ces chiffres ont été actualisés au regard de l'indexation des prix constante en Belgique ; Considérant que pour les autres travaux, ce sont les services communaux qui ont établi un estimatif ; Considérant que la complexité du dossier ne permettra pas aux services communaux d'établir l'ensemble des documents nécessaires à la mise en concurrence ; Considérant la nécessité de désigner un auteur de projet ;",
+      "evidence": "Considérant que l'appel à projets dont question plus haut a été lancé à la veille des congés du bâtiment ; Considérant l'impossibilité d'obtenir des devis détaillés d'entreprises spécialisées ; Considérant que certains travaux ont déjà fait l'objet d'estimations dans le cadre d'études de rénovation ; Considérant que ces chiffres ont été actualisés au regard de l'indexation des prix constante en Belgique ; Considérant que pour les autres travaux, ce sont les services communaux qui ont établi un estimatif ; Considérant que la complexité du dossier ne permettra pas aux services communaux d'établir l'ensemble des documents nécessaires à la mise en concurrence ; Considérant la nécessité de désigner un auteur de projet ;",
+      "municipalEvidence": [
+        {
+          "excerpt": "Considérant que l'appel à projets dont question plus haut a été lancé à la veille des congés du bâtiment ; Considérant l'impossibilité d'obtenir des devis détaillés d'entreprises spécialisées ; Considérant que certains travaux ont déjà fait l'objet d'estimations dans le cadre d'études de rénovation ; Considérant que ces chiffres ont été actualisés au regard de l'indexation des prix constante en Belgique ; Considérant que pour les autres travaux, ce sont les services communaux qui ont établi un estimatif ; Considérant que la complexité du dossier ne permettra pas aux services communaux d'établir l'ensemble des documents nécessaires à la mise en concurrence ; Considérant la nécessité de désigner un auteur de projet ;",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant que pour les autres travaux, ce sont les services communaux qui ont établi un estimatif ; Considérant que la complexité du dossier ne permettra pas aux services communaux d'établir l'ensemble des documents nécessaires à la mise en concurrence ; Considérant la nécessité de désigner un auteur de projet ; Considérant que les services communaux ont établi un estimatif pour l'ensemble des travaux ; Considérant le métré esimatif établi par les services communaux ; Considérant que le montant total des travaux est de 451.887,21 euros TVA comprise ; Considérant que le taux d'intervention peut aller jusqu'à 80 % ;",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant que les candidatures doivent être introduites pour le 31 août 2026 au plus tard ; Considérant que le dossier doit faire l'objet d'une validation par le Conseil communal ; Considérant que l'aile ancienne de la crèche communale a déjà fait l'objet de différentes études en matière de rénovation énergétique ou autres ; Considérant que ce bâtiment a fait l'objet d'un Quickscan établi par un bureau d'études spécialisé ; Considérant que lors des journées de canicule des mois de juin et juillet 2026, la température dans les locaux ne descendait pas en dessous des 30 degrés ; Considérant que les enfants de moins de 5 ans font partie des personnes vulnérables lors de canicules ; Considérant dès lors qu'il y a lieu de prendre des mesures afin d'offrir un confort à l'ensemble des enfants accueillis dans l'aile ancienne du couvent ;",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant que le dossier doit faire l'objet d'une validation par le Conseil communal ; Considérant que l'aile ancienne de la crèche communale a déjà fait l'objet de différentes études en matière de rénovation énergétique ou autres ; Considérant que ce bâtiment a fait l'objet d'un Quickscan établi par un bureau d'études spécialisé ; Considérant que lors des journées de canicule des mois de juin et juillet 2026, la température dans les locaux ne descendait pas en dessous des 30 degrés ; Considérant que les enfants de moins de 5 ans font partie des personnes vulnérables lors de canicules ; Considérant dès lors qu'il y a lieu de prendre des mesures afin d'offrir un confort à l'ensemble des enfants accueillis dans l'aile ancienne du couvent ; Considérant que l'amélioration de l'isolation du bâtiment contribuera à l'amélioration du confort ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local-html:f29ccf7231962834fa62",
+      "title": "SOL - Désignation d'un auteur de projet pour l'élaboration d'un schéma d'orientation local (SOL) - Approbation des conditions et du mode de passation - Décision",
+      "sourceDocumentTitle": "SOL - Désignation d'un auteur de projet pour l'élaboration d'un schéma d'orientation local (SOL) - Approbation des conditions et du mode de passation - Décision",
+      "missionEvidence": {
+        "excerpt": "Après en avoir délibéré, DECIDE Article 1er. - D'approuver le cahier des charges N° 2026-433 et le montant estimé du marché “Désignation d'un auteur de projet pour l'élaboration d'un schéma d'orientation local (SOL)”, établis par l’auteur de projet. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 50.000,00 € HTVA.",
+        "sourceUrl": "https://www.deliberations.be/lincent/decisions/10-novembre-2026-19-00/sol-designation-dun-auteur-de-projet-pour-lelaboration-dun-schema-dorientation-local-sol-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "page": null,
+        "sha256": "3ea789314196022906a74fd3ce3388c22e63457c89eba7dbf14bd55eb647bf96"
+      },
+      "buyer": "Commune de Lincent",
+      "municipalityINS": "64047",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/lincent/decisions/10-novembre-2026-19-00/sol-designation-dun-auteur-de-projet-pour-lelaboration-dun-schema-dorientation-local-sol-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "sha256": "3ea789314196022906a74fd3ce3388c22e63457c89eba7dbf14bd55eb647bf96",
+        "stage": "project"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "Après en avoir délibéré, DECIDE Article 1er. - D'approuver le cahier des charges N° 2026-433 et le montant estimé du marché “Désignation d'un auteur de projet pour l'élaboration d'un schéma d'orientation local (SOL)”, établis par l’auteur de projet. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s'élève à 50.000,00 € HTVA.",
+        "mission": "DECIDE Article 1er. - D'approuver le cahier des charges N° 2026-433 et le montant estimé du marché “Désignation d'un auteur de projet pour l'élaboration d'un schéma d'orientation local (SOL)”, établis par l’auteur de projet.",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/lincent/decisions/10-novembre-2026-19-00/sol-designation-dun-auteur-de-projet-pour-lelaboration-dun-schema-dorientation-local-sol-approbation-des-conditions-et-du-mode-de-passation-decision",
+      "sourceDocument": "https://www.deliberations.be/lincent/decisions/10-novembre-2026-19-00/sol-designation-dun-auteur-de-projet-pour-lelaboration-dun-schema-dorientation-local-sol-approbation-des-conditions-et-du-mode-de-passation-decision",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/lincent/decisions/10-novembre-2026-19-00/sol-designation-dun-auteur-de-projet-pour-lelaboration-dun-schema-dorientation-local-sol-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "sha256": "3ea789314196022906a74fd3ce3388c22e63457c89eba7dbf14bd55eb647bf96",
+        "session": {
+          "date": "2026-11-10",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 10 novembre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/lincent/decisions/10-novembre-2026-19-00/sol-designation-dun-auteur-de-projet-pour-lelaboration-dun-schema-dorientation-local-sol-approbation-des-conditions-et-du-mode-de-passation-decision"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:62372f91dcebc84b64",
+        "sha256": "3ea789314196022906a74fd3ce3388c22e63457c89eba7dbf14bd55eb647bf96",
+        "format": "html",
+        "checkedAt": "2026-11-09T20:09:08.805Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "SOL - Désignation d'un auteur de projet pour l'élaboration d'un schéma d'orientation local (SOL) - Approbation des conditions et du mode de passation - Décision 10 Séance publique du Conseil 10 novembre 2026 (19:00) Poin",
+        "sourceUrl": "https://www.deliberations.be/lincent/decisions/10-novembre-2026-19-00/sol-designation-dun-auteur-de-projet-pour-lelaboration-dun-schema-dorientation-local-sol-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "page": null,
+        "sha256": "3ea789314196022906a74fd3ce3388c22e63457c89eba7dbf14bd55eb647bf96"
+      },
+      "description": "SOL - Désignation d'un auteur de projet pour l'élaboration d'un schéma d'orientation local (SOL) - Approbation des conditions et du mode de passation - Décision 10 Séance publique du Conseil 10 novembre 2026 (19:00) Point N°",
+      "evidence": "SOL - Désignation d'un auteur de projet pour l'élaboration d'un schéma d'orientation local (SOL) - Approbation des conditions et du mode de passation - Décision 10 Séance publique du Conseil 10 novembre 2026 (19:00) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "SOL - Désignation d'un auteur de projet pour l'élaboration d'un schéma d'orientation local (SOL) - Approbation des conditions et du mode de passation - Décision 10 Séance publique du Conseil 10 novembre 2026 (19:00) Point N°",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-433"
     }
   ]
 }
