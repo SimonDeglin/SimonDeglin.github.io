@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-10T13:47:56.560Z",
+      "last_attempt": "2026-11-10T22:32:33.766Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -74,29 +74,29 @@
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 1223,
-      "opportunities": 202,
+      "documentsRead": 1241,
+      "opportunities": 204,
       "sitesChecked": 261,
       "candidatePages": 228,
-      "sourceErrors": 104,
-      "htmlDocumentsRead": 5815
+      "sourceErrors": 106,
+      "htmlDocumentsRead": 6009
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-10T13:47:56.560Z",
-      "last_success": "2026-11-10T13:47:56.560Z",
+      "last_attempt": "2026-11-10T22:32:33.766Z",
+      "last_success": "2026-11-10T22:32:33.766Z",
       "last_batch": 24,
-      "documents_checked": 46,
+      "documents_checked": 58,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 25,
+      "errors_count": 18,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 281,
+      "html_documents_read": 250,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 105,
+      "recent_municipal_signals": 106,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1229,
     "matched_current_run": 4,
-    "records": 347,
+    "records": 349,
     "review_count": 252,
     "award_notice_count": 348,
     "awarded_market_matches": 3,
@@ -19507,7 +19507,7 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:5a2911c83259ce93d9",
         "sha256": "09c11bb1aed21c96245f094661937acd5fdd7ee040c8e705e74928ccf3b6bc6a",
-        "checkedAt": "2026-11-07T21:05:54.943Z",
+        "checkedAt": "2026-11-10T22:32:33.766Z",
         "changedAt": null
       },
       "matchReason": "mission_globale_a_qualifier",
@@ -22611,11 +22611,96 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:017bb98a96b046bd9d",
         "sha256": "7046e33cf93f8b706591854d2bc59e3c6f8a2481658ce3e47a1f02bdee430678",
-        "checkedAt": "2026-11-07T15:56:03.513Z",
+        "checkedAt": "2026-11-10T22:32:33.766Z",
         "changedAt": null
       },
       "matchReason": "mission_globale_a_qualifier",
-      "screeningReason": null
+      "screeningReason": null,
+      "municipalProcedure": null,
+      "municipalNotices": [
+        {
+          "id": "local:ebbbfb91991c2f50e12b",
+          "title": "51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre-Dame des Grâces à 6230 Pont-à-Celles - Approbation du choix de mode de passation, du cahier spécial des charges et des conditions - Décision",
+          "sourceDocumentTitle": "12/10/2026",
+          "municipalAssessment": {
+            "eligible": true,
+            "reason": "mission_de_services_explicitement_annoncee"
+          },
+          "missionEvidence": null,
+          "buyer": "Commune de Pont-à-Celles",
+          "municipalityINS": "52055",
+          "region": "Wallonie",
+          "source": "LOCALE",
+          "webSourceType": "municipal",
+          "opportunityType": "prospection",
+          "noticeKind": "prospection",
+          "webTypeEvidence": {
+            "kind": "prospection",
+            "reason": "besoin_ou_decision_a_verifier",
+            "excerpt": "51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre-Dame des Grâces à 62",
+            "sourceUrl": "https://www.pontacelles.be/wp-content/uploads/2026/11/261012-PV-CC-pour-site.pdf",
+            "page": 4,
+            "sha256": "2c85e0ef42f7ab9ebb4e570294ad4997fd39d7b4be49b9363d8891db88ce57d8"
+          },
+          "opportunityStage": "décision ou besoin à vérifier",
+          "sector": "Qualif",
+          "sectors": [
+            "Qualif"
+          ],
+          "score": 55,
+          "screening": "review",
+          "qualification": {
+            "version": "2026-10-29",
+            "kind": "prospect",
+            "route": "local_signal",
+            "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+            "capacityStatus": "not_assessed"
+          },
+          "publication": "",
+          "deadline": "",
+          "sourceDocument": "https://www.pontacelles.be/wp-content/uploads/2026/11/261012-PV-CC-pour-site.pdf",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.pontacelles.be/wp-content/uploads/2026/11/261012-PV-CC-pour-site.pdf",
+            "sha256": "2c85e0ef42f7ab9ebb4e570294ad4997fd39d7b4be49b9363d8891db88ce57d8",
+            "session": {
+              "date": "2026-10-12",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "CONSEIL COMMUNAL DU 12 OCTOBRE 2026",
+              "confidence": "explicit"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "sourceExtraction": {
+            "method": "pdf_text",
+            "partial": false
+          },
+          "url": "https://www.pontacelles.be/wp-content/uploads/2026/11/261012-PV-CC-pour-site.pdf",
+          "cpv": [],
+          "description": "Document communal public. Extrait nécessitant une lecture de validation : 51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre-Dame des Grâces à 6230 Pont-à-Celles - Approbation du choix de mode de passation, du cahier spécial des charges et des conditions - Décision 4",
+          "evidence": "51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre-Dame des Grâces à 6230 Pont-à-Celles - Approbation du choix de mode de passation, du cahier spécial des charges et des conditions - Décision 4",
+          "municipalReference": null,
+          "municipalSection": "51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre-Dame des Grâces à 6230 Pont-à-Celles - Approbation du choix de mode de passation, du cahier spécial des charges et des conditions - Décision",
+          "municipalEvidence": [
+            {
+              "page": 4,
+              "excerpt": "51. INFRASTRUCTURES SPORTIVES : Marché public de services - Désignation d'un auteur de projet pour la mission d'étude et le suivi des travaux de renouvellement d'un terrain synthétique à la rue Notre-Dame des Grâces à 6230 Pont-à-Celles - Approbation du choix de mode de passation, du cahier spécial des charges et des conditions - Décision 4"
+            }
+          ],
+          "source_status": "extrait_pdf_a_verifier",
+          "sourceEvidencePage": 4,
+          "sourceEvidenceStatus": "found",
+          "sourceDocumentVersion": {
+            "documentId": "municipal-doc:3bff90a5d20d85c002",
+            "sha256": "2c85e0ef42f7ab9ebb4e570294ad4997fd39d7b4be49b9363d8891db88ce57d8",
+            "checkedAt": "2026-11-10T22:32:33.766Z",
+            "changedAt": null
+          }
+        }
+      ]
     },
     {
       "id": "local:186a2d389b4a60da558e",
@@ -22698,7 +22783,7 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:8bbe33650a8cdfc2a5",
         "sha256": "dd6339af25a56565e33e37ddf0ec0e7ac403b43d8634ff419f900b4ae6e29c76",
-        "checkedAt": "2026-11-07T15:56:03.513Z",
+        "checkedAt": "2026-11-10T22:32:33.766Z",
         "changedAt": null
       },
       "matchReason": "mission_globale_a_qualifier",
@@ -27889,7 +27974,7 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:340972f0a5ef9eadec",
         "sha256": "96cee1c0cd0c4d891360378f875d7e87b170051324bacdfda5c761a995ae95d0",
-        "checkedAt": "2026-11-07T15:56:03.513Z",
+        "checkedAt": "2026-11-10T22:32:33.766Z",
         "changedAt": null
       },
       "matchReason": "mission_globale_a_qualifier",
@@ -28405,6 +28490,198 @@
       "municipalReference": null,
       "matchReason": "etude_urbanistique_a_qualifier",
       "screeningReason": null
+    },
+    {
+      "id": "local-html:57606736bb48ca2ba24f",
+      "title": "SERVICE PATRIMOINE - Vente des parcelles suite à la demande de modification de voirie tendant à la suppression des parties de chemins communaux - anciennement vicinaux - n°9 et n°11 sis rue de France, à Philippeville et acquisition des nouvelles voiries - Décision définitive.",
+      "sourceDocumentTitle": "SERVICE PATRIMOINE - Vente des parcelles suite à la demande de modification de voirie tendant à la suppression des parties de chemins communaux - anciennement vicinaux - n°9 et n°11 sis rue de France, à Philippeville et acquisition des nouvelles voiries - Décision définitive.",
+      "missionEvidence": null,
+      "buyer": "Commune de Philippeville",
+      "municipalityINS": "93056",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "screening": "review",
+      "score": 52,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-patrimoine-vente-des-parcelles-suite-a-la-demande-de-modification-de-voirie-tendant-a-la-suppression-des-parties-de-chemins-communaux-anciennement-vicinaux-ndeg9-et-ndeg11-sis-rue-de-france-a-philippeville-et-acquisition-des-nouvelles-voiries",
+      "sourceDocument": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-patrimoine-vente-des-parcelles-suite-a-la-demande-de-modification-de-voirie-tendant-a-la-suppression-des-parties-de-chemins-communaux-anciennement-vicinaux-ndeg9-et-ndeg11-sis-rue-de-france-a-philippeville-et-acquisition-des-nouvelles-voiries",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-patrimoine-vente-des-parcelles-suite-a-la-demande-de-modification-de-voirie-tendant-a-la-suppression-des-parties-de-chemins-communaux-anciennement-vicinaux-ndeg9-et-ndeg11-sis-rue-de-france-a-philippeville-et-acquisition-des-nouvelles-voiries",
+        "sha256": "da387c4765494c7c88807d81df4dd540df111778cea8aab1b62f879e487ca703",
+        "session": {
+          "date": "2026-08-27",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 27 août 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-patrimoine-vente-des-parcelles-suite-a-la-demande-de-modification-de-voirie-tendant-a-la-suppression-des-parties-de-chemins-communaux-anciennement-vicinaux-ndeg9-et-ndeg11-sis-rue-de-france-a-philippeville-et-acquisition-des-nouvelles-voiries"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:684f443e24c5410825",
+        "sha256": "da387c4765494c7c88807d81df4dd540df111778cea8aab1b62f879e487ca703",
+        "format": "html",
+        "checkedAt": "2026-11-10T22:32:33.766Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Vu sa décision, prise en séance du 27 juin 2019, décidant d'adopter définitivement le plan communal d'aménagement dit \"Les Quatre Vents\" en vue de réviser le plan de secteur de Philippeville - Couvin, accompagnée de la d",
+        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-patrimoine-vente-des-parcelles-suite-a-la-demande-de-modification-de-voirie-tendant-a-la-suppression-des-parties-de-chemins-communaux-anciennement-vicinaux-ndeg9-et-ndeg11-sis-rue-de-france-a-philippeville-et-acquisition-des-nouvelles-voiries",
+        "page": null,
+        "sha256": "da387c4765494c7c88807d81df4dd540df111778cea8aab1b62f879e487ca703"
+      },
+      "description": "Vu sa décision, prise en séance du 27 juin 2019, décidant d'adopter définitivement le plan communal d'aménagement dit \"Les Quatre Vents\" en vue de réviser le plan de secteur de Philippeville - Couvin, accompagnée de la déclaration environnementale ; Vu l'arrêté ministériel du 6 novembre 2019 approuvant le plan communal d'aménagement dit \"Les Quatre Vents\" à Philippeville (Philippeville, Roly et Sautour) dont l'élaboration en vue de réviser le plan de secteur de Philippeville - Couvin a été décidé par arrêté ministériel du 27 avril 2017 ; Vu la demande de permis intégré reçue le 28 octobre 2022, introduite par TEXTE MASQUÉ | RGPD 161D bt 19 à 1410 Waterloo, concernant un établissement sis à Philippeville, Zoning des Quatre Vents et dont l'objet est l'extension d'un ensemble commercial et de services, création de voiries et désaffectation partielle des chemins vicinaux n° 9 et n° 11 ; Vu le plan de modification de voiries, réalisé par TEXTE MASQUÉ | RGPD tendant à la désaffectation (partielle) des chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville ; Vu sa décision, prise en séance du 23 février 2023, décidant notamment d’approuver le plan de modification de voirie, réalisé par TEXTE MASQUÉ | RGPD tendant à la suppression des parties de chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philipp",
+      "evidence": "Vu sa décision, prise en séance du 27 juin 2019, décidant d'adopter définitivement le plan communal d'aménagement dit \"Les Quatre Vents\" en vue de réviser le plan de secteur de Philippeville - Couvin, accompagnée de la déclaration environnementale ; Vu l'arrêté ministériel du 6 novembre 2019 approuvant le plan communal d'aménagement dit \"Les Quatre Vents\" à Philippeville (Philippeville, Roly et Sautour) dont l'élaboration en vue de réviser le plan de secteur de Philippeville - Couvin a été décidé par arrêté ministériel du 27 avril 2017 ; Vu la demande de permis intégré reçue le 28 octobre 2022, introduite par TEXTE MASQUÉ | RGPD 161D bt 19 à 1410 Waterloo, concernant un établissement sis à Philippeville, Zoning des Quatre Vents et dont l'objet est l'extension d'un ensemble commercial et de services, création de voiries et désaffectation partielle des chemins vicinaux n° 9 et n° 11 ; Vu le plan de modification de voiries, réalisé par TEXTE MASQUÉ | RGPD tendant à la désaffectation (partielle) des chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville ; Vu sa décision, prise en séance du 23 février 2023, décidant notamment d’approuver le plan de modification de voirie, réalisé par TEXTE MASQUÉ | RGPD tendant à la suppression des parties de chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philipp",
+      "municipalEvidence": [
+        {
+          "excerpt": "Matière Patrimoine SERVICE PATRIMOINE - Vente des parcelles suite à la demande de modification de voirie tendant à la suppression des parties de chemins communaux - anciennement vicinaux - n°9 et n°11 sis rue de France, à Philippeville et acquisition des nouvelles voiries - Décision définitive. Le conseil communal est invité à approuver : Le projet d'acte rédigé par TEXTE MASQUÉ | RGPD La vente des parcelles précadastrées Philippeville - Parcelle précadastrée section E numéro 134 A / Contenance : 3 ares 62 ca",
+          "page": null
+        },
+        {
+          "excerpt": "Vu sa décision, prise en séance du 27 juin 2019, décidant d'adopter définitivement le plan communal d'aménagement dit \"Les Quatre Vents\" en vue de réviser le plan de secteur de Philippeville - Couvin, accompagnée de la déclaration environnementale ; Vu l'arrêté ministériel du 6 novembre 2019 approuvant le plan communal d'aménagement dit \"Les Quatre Vents\" à Philippeville (Philippeville, Roly et Sautour) dont l'élaboration en vue de réviser le plan de secteur de Philippeville - Couvin a été décidé par arrêté ministériel du 27 avril 2017 ; Vu la demande de permis intégré reçue le 28 octobre 2022, introduite par TEXTE MASQUÉ | RGPD 161D bt 19 à 1410 Waterloo, concernant un établissement sis à Philippeville, Zoning des Quatre Vents et dont l'objet est l'extension d'un ensemble commercial et de services, création de voiries et désaffectation partielle des chemins vicinaux n° 9 et n° 11 ; Vu le plan de modification de voiries, réalisé par TEXTE MASQUÉ | RGPD tendant à la désaffectation (partielle) des chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville ; Vu sa décision, prise en séance du 23 février 2023, décidant notamment d’approuver le plan de modification de voirie, réalisé par TEXTE MASQUÉ | RGPD tendant à la suppression des parties de chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philipp",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l'arrêté ministériel du 6 novembre 2019 approuvant le plan communal d'aménagement dit \"Les Quatre Vents\" à Philippeville (Philippeville, Roly et Sautour) dont l'élaboration en vue de réviser le plan de secteur de Philippeville - Couvin a été décidé par arrêté ministériel du 27 avril 2017 ; Vu la demande de permis intégré reçue le 28 octobre 2022, introduite par TEXTE MASQUÉ | RGPD 161D bt 19 à 1410 Waterloo, concernant un établissement sis à Philippeville, Zoning des Quatre Vents et dont l'objet est l'extension d'un ensemble commercial et de services, création de voiries et désaffectation partielle des chemins vicinaux n° 9 et n° 11 ; Vu le plan de modification de voiries, réalisé par TEXTE MASQUÉ | RGPD tendant à la désaffectation (partielle) des chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville ; Vu sa décision, prise en séance du 23 février 2023, décidant notamment d’approuver le plan de modification de voirie, réalisé par TEXTE MASQUÉ | RGPD tendant à la suppression des parties de chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville - tel que repris au plan annexé ; Vu sa décision, prise en séance du 26 juin 2026 décidant notamment de marquer son accord de principe sur : La vente des parcelles précadastrées Philippeville - Parcelle précadastrée section E numéro 134 A / Co",
+          "page": null
+        },
+        {
+          "excerpt": "Vu la demande de permis intégré reçue le 28 octobre 2022, introduite par TEXTE MASQUÉ | RGPD 161D bt 19 à 1410 Waterloo, concernant un établissement sis à Philippeville, Zoning des Quatre Vents et dont l'objet est l'extension d'un ensemble commercial et de services, création de voiries et désaffectation partielle des chemins vicinaux n° 9 et n° 11 ; Vu le plan de modification de voiries, réalisé par TEXTE MASQUÉ | RGPD tendant à la désaffectation (partielle) des chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville ; Vu sa décision, prise en séance du 23 février 2023, décidant notamment d’approuver le plan de modification de voirie, réalisé par TEXTE MASQUÉ | RGPD tendant à la suppression des parties de chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville - tel que repris au plan annexé ; Vu sa décision, prise en séance du 26 juin 2026 décidant notamment de marquer son accord de principe sur : La vente des parcelles précadastrées Philippeville - Parcelle précadastrée section E numéro 134 A / Contenance : 3 ares 62 ca Philippeville - Parcelle précadastrée section E numéro 134 B / Contenance : 2 ares 24 ca",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local-html:33100cc0efc6bf936f20",
+      "title": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision.",
+      "sourceDocumentTitle": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision.",
+      "missionEvidence": {
+        "excerpt": "r remis en date du 11/08/2026, DECIDE à l'unanimité : Article 1er : D'approuver le cahier des charges N° 2026-634 et le montant estimé du marché “Végétalisation de la place d'Armes - Désignation d'un bureau d'études”, établis par le Service des Travaux. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s",
+        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
+        "page": null,
+        "sha256": "651d73032cfe5dc48098e35f2e714ab3c3b4659106adcbd18b017ce2a96765ad"
+      },
+      "buyer": "Commune de Philippeville",
+      "municipalityINS": "93056",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
+        "sha256": "651d73032cfe5dc48098e35f2e714ab3c3b4659106adcbd18b017ce2a96765ad",
+        "stage": "decision_to_verify"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "r remis en date du 11/08/2026, DECIDE à l'unanimité : Article 1er : D'approuver le cahier des charges N° 2026-634 et le montant estimé du marché “Végétalisation de la place d'Armes - Désignation d'un bureau d'études”, établis par le Service des Travaux. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s",
+        "mission": "approuver le cahier des charges N° 2026-634 et le montant estimé du marché “Végétalisation de la place d'Armes - Désignation d'un bureau d'études”, établis par le Service des Travaux.",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 49,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
+      "sourceDocument": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
+        "sha256": "651d73032cfe5dc48098e35f2e714ab3c3b4659106adcbd18b017ce2a96765ad",
+        "session": {
+          "date": "2026-08-27",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 27 août 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:1e91b35ad3691645a5",
+        "sha256": "651d73032cfe5dc48098e35f2e714ab3c3b4659106adcbd18b017ce2a96765ad",
+        "format": "html",
+        "checkedAt": "2026-11-10T22:32:33.766Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - A",
+        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
+        "page": null,
+        "sha256": "651d73032cfe5dc48098e35f2e714ab3c3b4659106adcbd18b017ce2a96765ad"
+      },
+      "description": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision. 27 Séance publique du Conseil 27 août 2026 (19:30) Point N°",
+      "evidence": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision. 27 Séance publique du Conseil 27 août 2026 (19:30) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision. 27 Séance publique du Conseil 27 août 2026 (19:30) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Matière Propreté & Environnement SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision. Suite à l'appel à projets, visant à la végétalisation à l'échelle d'un quartier, il y a lieu de passer un marché pour la désignation d'un bureau d'études approbation du CSC Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ;",
+          "page": null
+        },
+        {
+          "excerpt": "Propreté & Environnement SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision. Suite à l'appel à projets, visant à la végétalisation à l'échelle d'un quartier, il y a lieu de passer un marché pour la désignation d'un bureau d'études approbation du CSC Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) ;",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 2026-634 relatif au marché “Végétalisation de la place d'Armes - Désignation d'un bureau d'études” établi par le Service des Travaux ; Considérant que le montant estimé de ce marché s'élève à 30.000,00 € hors TVA ou 36.300,00 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget 2026 – service extraordinaire, article 766/733-51 (projet 20260073) ; Considérant l'avis de légalité de la Directrice Financière ***",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-634"
     }
   ]
 }
