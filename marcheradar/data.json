@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-10T03:49:30.894Z",
+      "last_attempt": "2026-11-10T13:47:56.560Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -74,29 +74,29 @@
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 1199,
-      "opportunities": 198,
+      "documentsRead": 1223,
+      "opportunities": 202,
       "sitesChecked": 261,
       "candidatePages": 228,
-      "sourceErrors": 103,
-      "htmlDocumentsRead": 5615
+      "sourceErrors": 104,
+      "htmlDocumentsRead": 5815
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-10T03:49:30.894Z",
-      "last_success": "2026-11-10T03:49:30.894Z",
+      "last_attempt": "2026-11-10T13:47:56.560Z",
+      "last_success": "2026-11-10T13:47:56.560Z",
       "last_batch": 24,
-      "documents_checked": 45,
+      "documents_checked": 46,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 16,
+      "errors_count": 25,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 156,
+      "html_documents_read": 281,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 101,
+      "recent_municipal_signals": 105,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1229,
     "matched_current_run": 4,
-    "records": 343,
+    "records": 347,
     "review_count": 248,
     "award_notice_count": 349,
     "awarded_market_matches": 3,
@@ -18598,7 +18598,7 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:6aacf9fc5a7ef34704",
         "sha256": "d8be053e7b03fbe122c814fda9ce4f5e2351291cfb7188b87f1b3a95501878d6",
-        "checkedAt": "2026-11-07T07:48:28.687Z",
+        "checkedAt": "2026-11-10T13:47:56.560Z",
         "changedAt": null
       },
       "matchReason": "mission_architecturale_a_qualifier",
@@ -18703,7 +18703,94 @@
       "sourceEvidenceStatus": "found",
       "municipalReference": null,
       "matchReason": "mission_architecturale_a_qualifier",
-      "screeningReason": null
+      "screeningReason": null,
+      "municipalNotices": [
+        {
+          "id": "local:3154155653f0943dff9a",
+          "title": "3. 624.13 - MARCHE PUBLIC DE SERVICES D'AUTEUR DE PROJET POUR L'AMENAGEMENT D'UNE PARTIE DE L'ETAGE DU BATIMENT POLYVALENT EN SERVICE DE MINI-ACCUEIL - Approbation des conditions et du mode de passation.",
+          "sourceDocumentTitle": "OJ-CC du 15092026 réorganisé.pdf",
+          "municipalAssessment": {
+            "eligible": true,
+            "reason": "mission_de_services_explicitement_annoncee"
+          },
+          "missionEvidence": null,
+          "buyer": "Commune de Tellin",
+          "municipalityINS": "84068",
+          "region": "Wallonie",
+          "source": "LOCALE",
+          "webSourceType": "municipal",
+          "opportunityType": "prospection",
+          "noticeKind": "prospection",
+          "webTypeEvidence": {
+            "kind": "prospection",
+            "reason": "besoin_ou_decision_a_verifier",
+            "excerpt": "3. 624.13 - MARCHE PUBLIC DE SERVICES D'AUTEUR DE PROJET POUR L'AMENAGEMENT D'UNE PARTIE DE L'ETAGE DU BATIMENT POLYVALENT EN SERVICE DE MINI-ACCUEIL - Approbation des conditions et du mode de passation. 4, LC - 640 — Ré",
+            "sourceUrl": "https://www.deliberations.be/tellin/ordres-du-jour/oj-2026-1509.pdf/@@download/file/OJ-CC%20du%2015092026%20r%C3%A9organis%C3%A9.pdf",
+            "page": 1,
+            "sha256": "5dd855c0ef56502b0af17bdc26b915d01a0ea9c3d4791fb0f0a4b684d855ae48"
+          },
+          "opportunityStage": "décision ou besoin à vérifier",
+          "sector": "Qualif",
+          "sectors": [
+            "Qualif"
+          ],
+          "score": 55,
+          "screening": "review",
+          "qualification": {
+            "version": "2026-10-29",
+            "kind": "prospect",
+            "route": "local_signal",
+            "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+            "capacityStatus": "not_assessed"
+          },
+          "publication": "",
+          "deadline": "",
+          "sourceDocument": "https://www.deliberations.be/tellin/ordres-du-jour/oj-2026-1509.pdf/@@download/file/OJ-CC%20du%2015092026%20r%C3%A9organis%C3%A9.pdf",
+          "sourceDocumentDates": {
+            "version": 1,
+            "sourceUrl": "https://www.deliberations.be/tellin/ordres-du-jour/oj-2026-1509.pdf/@@download/file/OJ-CC%20du%2015092026%20r%C3%A9organis%C3%A9.pdf",
+            "sha256": "5dd855c0ef56502b0af17bdc26b915d01a0ea9c3d4791fb0f0a4b684d855ae48",
+            "session": {
+              "date": "2026-09-15",
+              "kind": "session",
+              "page": 1,
+              "source": "pdf_text",
+              "excerpt": "Séance du 15 septembre 2026",
+              "confidence": "ocr"
+            },
+            "document": null,
+            "status": "identified"
+          },
+          "sourceExtraction": {
+            "method": "ocr",
+            "language": "fra+eng",
+            "pagesRead": 4,
+            "totalPages": 4,
+            "partial": false
+          },
+          "url": "https://www.deliberations.be/tellin/ordres-du-jour/oj-2026-1509.pdf/@@download/file/OJ-CC%20du%2015092026%20r%C3%A9organis%C3%A9.pdf",
+          "cpv": [],
+          "description": "Document communal public. Extrait nécessitant une lecture de validation : 3. 624.13 - MARCHE PUBLIC DE SERVICES D'AUTEUR DE PROJET POUR L'AMENAGEMENT D'UNE PARTIE DE L'ETAGE DU BATIMENT POLYVALENT EN SERVICE DE MINI-ACCUEIL - Approbation des conditions et du mode de passation. 4, LC - 640 — Réparation d'ouvrages d'arts et de voiries - Approbation des conditions et du mode de passation.",
+          "evidence": "3. 624.13 - MARCHE PUBLIC DE SERVICES D'AUTEUR DE PROJET POUR L'AMENAGEMENT D'UNE PARTIE DE L'ETAGE DU BATIMENT POLYVALENT EN SERVICE DE MINI-ACCUEIL - Approbation des conditions et du mode de passation. 4, LC - 640 — Réparation d'ouvrages d'arts et de voiries - Approbation des conditions et du mode de passation.",
+          "municipalReference": null,
+          "municipalSection": "3. 624.13 - MARCHE PUBLIC DE SERVICES D'AUTEUR DE PROJET POUR L'AMENAGEMENT D'UNE PARTIE DE L'ETAGE DU BATIMENT POLYVALENT EN SERVICE DE MINI-ACCUEIL - Approbation des conditions et du mode de passation.",
+          "municipalEvidence": [
+            {
+              "page": 1,
+              "excerpt": "3. 624.13 - MARCHE PUBLIC DE SERVICES D'AUTEUR DE PROJET POUR L'AMENAGEMENT D'UNE PARTIE DE L'ETAGE DU BATIMENT POLYVALENT EN SERVICE DE MINI-ACCUEIL - Approbation des conditions et du mode de passation. 4, LC - 640 — Réparation d'ouvrages d'arts et de voiries - Approbation des conditions et du mode de passation."
+            }
+          ],
+          "source_status": "extrait_pdf_a_verifier",
+          "sourceEvidencePage": 1,
+          "sourceEvidenceStatus": "found",
+          "sourceDocumentVersion": {
+            "documentId": "municipal-doc:f138e3be08d8493872",
+            "sha256": "5dd855c0ef56502b0af17bdc26b915d01a0ea9c3d4791fb0f0a4b684d855ae48",
+            "checkedAt": "2026-11-10T13:47:56.560Z",
+            "changedAt": null
+          }
+        }
+      ]
     },
     {
       "id": "local-html:0ef5f9bde80a50d4e943",
@@ -27927,6 +28014,383 @@
       "documentInventory": [],
       "consultationUrls": [],
       "documentsCheckedAt": "2026-11-10T13:40:21.948Z"
+    },
+    {
+      "id": "local-html:1d61f5547a237f4b6f71",
+      "title": "lance à charge de la Ville); Attendu que la mission d’auteur de projet est confiée au bureau d’études d’INASEP qui assurera les missions suivantes : Etude de projet de voirie complexe et/ou avec égouttage et/ou avec distribution d'eau ;",
+      "sourceDocumentTitle": "Modernisation de l'Avenue de Forest à Rochefort - Convention réglant les modalités de collaboration en matière d'étude, de coordination sécurité, de gestion de traçabilité des terres polluées et demande d'un permis d'urbanisme pour les travaux.",
+      "missionEvidence": {
+        "excerpt": "’eau doivent également être entrepris dans cette rue (étude et surveillance à charge de la Ville); Attendu que la mission d’auteur de projet est confiée au bureau d’études d’INASEP qui assurera les missions suivantes : Etude de projet de voirie complexe et/ou avec égouttage et/ou avec distribution d'eau ;",
+        "sourceUrl": "https://www.deliberations.be/rochefort/decisions/14-septembre-2026-20-00/modernisation-de-lavenue-de-forest-a-rochefort-convention-reglant-les-modalites-de-collaboration-en-matiere-detude-de-coordination-securite-de-gestion-de-tracabilite-des-terres-polluees-et-demande-dun-permis-durbanisme-pour-les-travaux",
+        "page": null,
+        "sha256": "4de267748cbda86e7addca8f41a14446fa73ea97718d1f9b434afb0038e9f752"
+      },
+      "buyer": "Commune de Rochefort",
+      "municipalityINS": "91114",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "’eau doivent également être entrepris dans cette rue (étude et surveillance à charge de la Ville); Attendu que la mission d’auteur de projet est confiée au bureau d’études d’INASEP qui assurera les missions suivantes : Etude de projet de voirie complexe et/ou avec égouttage et/ou avec distribution d'eau ;",
+        "mission": "lance à charge de la Ville); Attendu que la mission d’auteur de projet est confiée au bureau d’études d’INASEP qui assurera les missions suivantes : Etude de projet de voirie complexe et/ou avec égouttage et/ou avec distribution d'eau ;",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD",
+        "Reseaux"
+      ],
+      "screening": "review",
+      "score": 60,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/rochefort/decisions/14-septembre-2026-20-00/modernisation-de-lavenue-de-forest-a-rochefort-convention-reglant-les-modalites-de-collaboration-en-matiere-detude-de-coordination-securite-de-gestion-de-tracabilite-des-terres-polluees-et-demande-dun-permis-durbanisme-pour-les-travaux",
+      "sourceDocument": "https://www.deliberations.be/rochefort/decisions/14-septembre-2026-20-00/modernisation-de-lavenue-de-forest-a-rochefort-convention-reglant-les-modalites-de-collaboration-en-matiere-detude-de-coordination-securite-de-gestion-de-tracabilite-des-terres-polluees-et-demande-dun-permis-durbanisme-pour-les-travaux",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/rochefort/decisions/14-septembre-2026-20-00/modernisation-de-lavenue-de-forest-a-rochefort-convention-reglant-les-modalites-de-collaboration-en-matiere-detude-de-coordination-securite-de-gestion-de-tracabilite-des-terres-polluees-et-demande-dun-permis-durbanisme-pour-les-travaux",
+        "sha256": "4de267748cbda86e7addca8f41a14446fa73ea97718d1f9b434afb0038e9f752",
+        "session": {
+          "date": "2026-09-14",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 14 septembre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/rochefort/decisions/14-septembre-2026-20-00/modernisation-de-lavenue-de-forest-a-rochefort-convention-reglant-les-modalites-de-collaboration-en-matiere-detude-de-coordination-securite-de-gestion-de-tracabilite-des-terres-polluees-et-demande-dun-permis-durbanisme-pour-les-travaux"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:69c06a42ed8d62cbac",
+        "sha256": "4de267748cbda86e7addca8f41a14446fa73ea97718d1f9b434afb0038e9f752",
+        "format": "html",
+        "checkedAt": "2026-11-10T13:47:56.560Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Note de synthèse Depuis le 01.01.2026, un nouveau programme remplace le PIC - PIMACI, il s'agit du FERI (Fonds Régional d’Investissements). Chaque commune bénéficie désormais d'une dotation annuelle librement mobilisable",
+        "sourceUrl": "https://www.deliberations.be/rochefort/decisions/14-septembre-2026-20-00/modernisation-de-lavenue-de-forest-a-rochefort-convention-reglant-les-modalites-de-collaboration-en-matiere-detude-de-coordination-securite-de-gestion-de-tracabilite-des-terres-polluees-et-demande-dun-permis-durbanisme-pour-les-travaux",
+        "page": null,
+        "sha256": "4de267748cbda86e7addca8f41a14446fa73ea97718d1f9b434afb0038e9f752"
+      },
+      "description": "Note de synthèse Depuis le 01.01.2026, un nouveau programme remplace le PIC - PIMACI, il s'agit du FERI (Fonds Régional d’Investissements). Chaque commune bénéficie désormais d'une dotation annuelle librement mobilisable pour tout projet d'investissement : voirie, infrastructures scolaires, équipements collectifs, rénovation de bâtiment, etc. Pour les années 2026 à 2030, la Commune de Rochefort a droit à une dotation de 1.176.014,15 € (soit une dotation annuelle de 235.202,83 €). Un des premiers projets à étudier dans le cadre de ce FERI est la modernisation de l'Avenue de Forest (voirie fortement dégradée, source de plusieurs dossiers d'assurance, nécessitant de fréquentes interventions) avec réorganisation et optimisation des places de parking Place de la Gare (rue Sous-le-Château). La Commune souhaite pouvoir recourir à l’exception du contrôle « in house » prévue par l’article 30 § 3 de la loi du 17.06.2016 relative aux marchés publics et solliciter, dans ce cadre, l’expertise de l’Intercommunale « INASEP » avec laquelle elle entretient une relation « in house ». Le Conseil communal est invité à approuver la convention pour mission particulière confiée à INASEP par la Commune de Rochefort, Maître d’ouvrage, pour des travaux de voirie complexes transmis par l’INASEP en date du 06.07.2026 (dossier n° VEG-26-5771).",
+      "evidence": "Note de synthèse Depuis le 01.01.2026, un nouveau programme remplace le PIC - PIMACI, il s'agit du FERI (Fonds Régional d’Investissements). Chaque commune bénéficie désormais d'une dotation annuelle librement mobilisable pour tout projet d'investissement : voirie, infrastructures scolaires, équipements collectifs, rénovation de bâtiment, etc. Pour les années 2026 à 2030, la Commune de Rochefort a droit à une dotation de 1.176.014,15 € (soit une dotation annuelle de 235.202,83 €). Un des premiers projets à étudier dans le cadre de ce FERI est la modernisation de l'Avenue de Forest (voirie fortement dégradée, source de plusieurs dossiers d'assurance, nécessitant de fréquentes interventions) avec réorganisation et optimisation des places de parking Place de la Gare (rue Sous-le-Château). La Commune souhaite pouvoir recourir à l’exception du contrôle « in house » prévue par l’article 30 § 3 de la loi du 17.06.2016 relative aux marchés publics et solliciter, dans ce cadre, l’expertise de l’Intercommunale « INASEP » avec laquelle elle entretient une relation « in house ». Le Conseil communal est invité à approuver la convention pour mission particulière confiée à INASEP par la Commune de Rochefort, Maître d’ouvrage, pour des travaux de voirie complexes transmis par l’INASEP en date du 06.07.2026 (dossier n° VEG-26-5771).",
+      "municipalEvidence": [
+        {
+          "excerpt": "Note de synthèse Depuis le 01.01.2026, un nouveau programme remplace le PIC - PIMACI, il s'agit du FERI (Fonds Régional d’Investissements). Chaque commune bénéficie désormais d'une dotation annuelle librement mobilisable pour tout projet d'investissement : voirie, infrastructures scolaires, équipements collectifs, rénovation de bâtiment, etc. Pour les années 2026 à 2030, la Commune de Rochefort a droit à une dotation de 1.176.014,15 € (soit une dotation annuelle de 235.202,83 €). Un des premiers projets à étudier dans le cadre de ce FERI est la modernisation de l'Avenue de Forest (voirie fortement dégradée, source de plusieurs dossiers d'assurance, nécessitant de fréquentes interventions) avec réorganisation et optimisation des places de parking Place de la Gare (rue Sous-le-Château). La Commune souhaite pouvoir recourir à l’exception du contrôle « in house » prévue par l’article 30 § 3 de la loi du 17.06.2016 relative aux marchés publics et solliciter, dans ce cadre, l’expertise de l’Intercommunale « INASEP » avec laquelle elle entretient une relation « in house ». Le Conseil communal est invité à approuver la convention pour mission particulière confiée à INASEP par la Commune de Rochefort, Maître d’ouvrage, pour des travaux de voirie complexes transmis par l’INASEP en date du 06.07.2026 (dossier n° VEG-26-5771).",
+          "page": null
+        },
+        {
+          "excerpt": "Chaque commune bénéficie désormais d'une dotation annuelle librement mobilisable pour tout projet d'investissement : voirie, infrastructures scolaires, équipements collectifs, rénovation de bâtiment, etc. Pour les années 2026 à 2030, la Commune de Rochefort a droit à une dotation de 1.176.014,15 € (soit une dotation annuelle de 235.202,83 €). Un des premiers projets à étudier dans le cadre de ce FERI est la modernisation de l'Avenue de Forest (voirie fortement dégradée, source de plusieurs dossiers d'assurance, nécessitant de fréquentes interventions) avec réorganisation et optimisation des places de parking Place de la Gare (rue Sous-le-Château). La Commune souhaite pouvoir recourir à l’exception du contrôle « in house » prévue par l’article 30 § 3 de la loi du 17.06.2016 relative aux marchés publics et solliciter, dans ce cadre, l’expertise de l’Intercommunale « INASEP » avec laquelle elle entretient une relation « in house ». Le Conseil communal est invité à approuver la convention pour mission particulière confiée à INASEP par la Commune de Rochefort, Maître d’ouvrage, pour des travaux de voirie complexes transmis par l’INASEP en date du 06.07.2026 (dossier n° VEG-26-5771). L’estimation des honoraires à charge de la Ville établie par l’INASEP, au montant de 144.496,87 € HTVA (frais de surveillance compris). Les dépenses relatives à l’étude des travaux de voirie seront payée",
+          "page": null
+        },
+        {
+          "excerpt": "Un des premiers projets à étudier dans le cadre de ce FERI est la modernisation de l'Avenue de Forest (voirie fortement dégradée, source de plusieurs dossiers d'assurance, nécessitant de fréquentes interventions) avec réorganisation et optimisation des places de parking Place de la Gare (rue Sous-le-Château). La Commune souhaite pouvoir recourir à l’exception du contrôle « in house » prévue par l’article 30 § 3 de la loi du 17.06.2016 relative aux marchés publics et solliciter, dans ce cadre, l’expertise de l’Intercommunale « INASEP » avec laquelle elle entretient une relation « in house ». Le Conseil communal est invité à approuver la convention pour mission particulière confiée à INASEP par la Commune de Rochefort, Maître d’ouvrage, pour des travaux de voirie complexes transmis par l’INASEP en date du 06.07.2026 (dossier n° VEG-26-5771). L’estimation des honoraires à charge de la Ville établie par l’INASEP, au montant de 144.496,87 € HTVA (frais de surveillance compris). Les dépenses relatives à l’étude des travaux de voirie seront payées sur l’article 42120/732-60 du budget extraordinaire 2026 (financement de la quote-part communale par un prélèvement sur le Fonds de réserve FERI - article 06025/995-51) lequel sera augmenté par voie de modification budgétaire n° 2. Décision Le Conseil communal,",
+          "page": null
+        },
+        {
+          "excerpt": "Le Conseil communal est invité à approuver la convention pour mission particulière confiée à INASEP par la Commune de Rochefort, Maître d’ouvrage, pour des travaux de voirie complexes transmis par l’INASEP en date du 06.07.2026 (dossier n° VEG-26-5771). L’estimation des honoraires à charge de la Ville établie par l’INASEP, au montant de 144.496,87 € HTVA (frais de surveillance compris). Les dépenses relatives à l’étude des travaux de voirie seront payées sur l’article 42120/732-60 du budget extraordinaire 2026 (financement de la quote-part communale par un prélèvement sur le Fonds de réserve FERI - article 06025/995-51) lequel sera augmenté par voie de modification budgétaire n° 2. Décision Le Conseil communal, Vu le Code de la démocratie locale et de la décentralisation et plus particulièrement ses articles L1122-30, L1222-3, 1222-4, L1512-3 et suivants, L1523-1 et suivants et L-L3122-2,4°,g ; Attendu que, depuis le 01.01.2026, un nouveau programme remplace le PIC - PIMACI, il s'agit du FERI (Fonds Régional d’Investissements) ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local-html:08361d61d73cb160df8d",
+      "title": "Rénovation de la salle des variétés de Jemelle – Étude du projet et conduite des travaux",
+      "sourceDocumentTitle": "Rénovation de la salle des Variétés de Jemelle - Relance de la procédure de marché.",
+      "missionEvidence": {
+        "excerpt": "Rénovation de la salle des Variétés de Jemelle - Relance de la procédure de marché. Note de synthèse En séance du 26.05.2025, le Collège communal a approuvé le projet relatif au marché de services “ Rénovation de la salle des Variétés de Jemelle - Etude du projet ”.",
+        "sourceUrl": "https://www.deliberations.be/rochefort/decisions/14-septembre-2026-20-00/renovation-de-la-salle-des-varietes-de-jemelle-relance-de-la-procedure-de-marche",
+        "page": null,
+        "sha256": "56f85900e264b856e3d626b7c88c7caab6659c1cbd82ae7187d8f449239aece4"
+      },
+      "buyer": "Commune de Rochefort",
+      "municipalityINS": "91114",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "Rénovation de la salle des Variétés de Jemelle - Relance de la procédure de marché. Note de synthèse En séance du 26.05.2025, le Collège communal a approuvé le projet relatif au marché de services “ Rénovation de la salle des Variétés de Jemelle - Etude du projet ”.",
+        "mission": "lance de la procédure de marché. Note de synthèse En séance du 26.05.2025, le Collège communal a approuvé le projet relatif au marché de services “ Rénovation de la salle des Variétés de Jemelle - Etude du projet ”.",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/rochefort/decisions/14-septembre-2026-20-00/renovation-de-la-salle-des-varietes-de-jemelle-relance-de-la-procedure-de-marche",
+      "sourceDocument": "https://www.deliberations.be/rochefort/decisions/14-septembre-2026-20-00/renovation-de-la-salle-des-varietes-de-jemelle-relance-de-la-procedure-de-marche",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/rochefort/decisions/14-septembre-2026-20-00/renovation-de-la-salle-des-varietes-de-jemelle-relance-de-la-procedure-de-marche",
+        "sha256": "56f85900e264b856e3d626b7c88c7caab6659c1cbd82ae7187d8f449239aece4",
+        "session": {
+          "date": "2026-09-14",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 14 septembre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/rochefort/decisions/14-septembre-2026-20-00/renovation-de-la-salle-des-varietes-de-jemelle-relance-de-la-procedure-de-marche"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:8774f25848b4a3c668",
+        "sha256": "56f85900e264b856e3d626b7c88c7caab6659c1cbd82ae7187d8f449239aece4",
+        "format": "html",
+        "checkedAt": "2026-11-10T13:47:56.560Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Rénovation de la salle des Variétés de Jemelle - Relance de la procédure de marché. Note de synthèse En séance du 26.05.2025, le Collège communal a approuvé le projet relatif au marché de services “ Rénovation de la sall",
+        "sourceUrl": "https://www.deliberations.be/rochefort/decisions/14-septembre-2026-20-00/renovation-de-la-salle-des-varietes-de-jemelle-relance-de-la-procedure-de-marche",
+        "page": null,
+        "sha256": "56f85900e264b856e3d626b7c88c7caab6659c1cbd82ae7187d8f449239aece4"
+      },
+      "description": "Rénovation de la salle des Variétés de Jemelle - Relance de la procédure de marché. Note de synthèse En séance du 26.05.2025, le Collège communal a approuvé le projet relatif au marché de services “ Rénovation de la salle des Variétés de Jemelle - Etude du projet ”. En séance du 07.07.2025, le Collège communal a désigné le bureau TEXTE MASQUÉ | RGPD comme auteur de projet pour le marché de services \"Rénovation de la salle des Variétés de Jemelle - Etude du projet \". En séance du 07.07.2025, le Collège communal a désigné le bureau TEXTE MASQUÉ | RGPD comme auteur de projet pour le marché de services \"Rénovation de la salle des Variétés de Jemelle - Etude du projet \". En séance du 30.03.2026, le Conseil communal a approuvé le projet “ Rénovation de la salle des variétés de Jemelle \" établi par l'auteur de projet, TEXTE MASQUÉ | RGPD au montant estimé de 309.900,36 € TVAC (256.116,00 € HTVAC) et a décidé de passer le marché par procédure négociée directe avec publication préalable. Dans le cadre du marché de rénovation de la salle des Variétés de Jemelle l'ouverture des offres a eu lieu le 04.06.2026.",
+      "evidence": "Rénovation de la salle des Variétés de Jemelle - Relance de la procédure de marché. Note de synthèse En séance du 26.05.2025, le Collège communal a approuvé le projet relatif au marché de services “ Rénovation de la salle des Variétés de Jemelle - Etude du projet ”. En séance du 07.07.2025, le Collège communal a désigné le bureau TEXTE MASQUÉ | RGPD comme auteur de projet pour le marché de services \"Rénovation de la salle des Variétés de Jemelle - Etude du projet \". En séance du 07.07.2025, le Collège communal a désigné le bureau TEXTE MASQUÉ | RGPD comme auteur de projet pour le marché de services \"Rénovation de la salle des Variétés de Jemelle - Etude du projet \". En séance du 30.03.2026, le Conseil communal a approuvé le projet “ Rénovation de la salle des variétés de Jemelle \" établi par l'auteur de projet, TEXTE MASQUÉ | RGPD au montant estimé de 309.900,36 € TVAC (256.116,00 € HTVAC) et a décidé de passer le marché par procédure négociée directe avec publication préalable. Dans le cadre du marché de rénovation de la salle des Variétés de Jemelle l'ouverture des offres a eu lieu le 04.06.2026.",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu l'arrêté royal du 14.01.2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18.04.2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu la décision du Collège communal du 26.05.2025, n° COL/20250526-24, approuvant les conditions, le montant estimé, la procédure de passation (procédure négociée sans publication préalable avec consultation de plusieurs prestataires de services) et la liste des opérateurs économiques choisis afin de prendre part au marché; Vu la décision du Collège communal du 07.07.2025, n° COL/20250707-25, attribuant le marché “Rénovation de la salle des variétés de Jemelle – Étude du projet et conduite des travaux \" au soumissionnaire ayant remis l'offre régulière économiquement la plus avantageuse (sur base du prix), soit TEXTE MASQUÉ | RGPD , pour le montant d’offre contrôlé de 13.369,90 € TVAC et de 2,10% de pourcentage forfaitaire d’honoraires pour la conduite des travaux ; Vu la décision du Collège Communal du 13.07.2026, n° COL/20260713-14, décidant d'arrêter la procédure de passation du marché, de ne pas attribuer et de relancer le marché au motif principal suivant : une seule offre a été déposée sur la plateforme E-procurement et elle est de plus de 62% supérieure à l'estimation; Considérant le cahier spécial des char",
+          "page": null
+        },
+        {
+          "excerpt": "Rénovation de la salle des Variétés de Jemelle - Relance de la procédure de marché. Note de synthèse En séance du 26.05.2025, le Collège communal a approuvé le projet relatif au marché de services “ Rénovation de la salle des Variétés de Jemelle - Etude du projet ”. En séance du 07.07.2025, le Collège communal a désigné le bureau TEXTE MASQUÉ | RGPD comme auteur de projet pour le marché de services \"Rénovation de la salle des Variétés de Jemelle - Etude du projet \". En séance du 07.07.2025, le Collège communal a désigné le bureau TEXTE MASQUÉ | RGPD comme auteur de projet pour le marché de services \"Rénovation de la salle des Variétés de Jemelle - Etude du projet \". En séance du 30.03.2026, le Conseil communal a approuvé le projet “ Rénovation de la salle des variétés de Jemelle \" établi par l'auteur de projet, TEXTE MASQUÉ | RGPD au montant estimé de 309.900,36 € TVAC (256.116,00 € HTVAC) et a décidé de passer le marché par procédure négociée directe avec publication préalable. Dans le cadre du marché de rénovation de la salle des Variétés de Jemelle l'ouverture des offres a eu lieu le 04.06.2026.",
+          "page": null
+        },
+        {
+          "excerpt": "Note de synthèse En séance du 26.05.2025, le Collège communal a approuvé le projet relatif au marché de services “ Rénovation de la salle des Variétés de Jemelle - Etude du projet ”. En séance du 07.07.2025, le Collège communal a désigné le bureau TEXTE MASQUÉ | RGPD comme auteur de projet pour le marché de services \"Rénovation de la salle des Variétés de Jemelle - Etude du projet \". En séance du 07.07.2025, le Collège communal a désigné le bureau TEXTE MASQUÉ | RGPD comme auteur de projet pour le marché de services \"Rénovation de la salle des Variétés de Jemelle - Etude du projet \". En séance du 30.03.2026, le Conseil communal a approuvé le projet “ Rénovation de la salle des variétés de Jemelle \" établi par l'auteur de projet, TEXTE MASQUÉ | RGPD au montant estimé de 309.900,36 € TVAC (256.116,00 € HTVAC) et a décidé de passer le marché par procédure négociée directe avec publication préalable. Dans le cadre du marché de rénovation de la salle des Variétés de Jemelle l'ouverture des offres a eu lieu le 04.06.2026. Une seule offre a été déposée sur la plateforme E-procurement et elle est de plus de 62% supérieure à l'estimation.",
+          "page": null
+        },
+        {
+          "excerpt": "En séance du 26.05.2025, le Collège communal a approuvé le projet relatif au marché de services “ Rénovation de la salle des Variétés de Jemelle - Etude du projet ”. En séance du 07.07.2025, le Collège communal a désigné le bureau TEXTE MASQUÉ | RGPD comme auteur de projet pour le marché de services \"Rénovation de la salle des Variétés de Jemelle - Etude du projet \". En séance du 07.07.2025, le Collège communal a désigné le bureau TEXTE MASQUÉ | RGPD comme auteur de projet pour le marché de services \"Rénovation de la salle des Variétés de Jemelle - Etude du projet \". En séance du 30.03.2026, le Conseil communal a approuvé le projet “ Rénovation de la salle des variétés de Jemelle \" établi par l'auteur de projet, TEXTE MASQUÉ | RGPD au montant estimé de 309.900,36 € TVAC (256.116,00 € HTVAC) et a décidé de passer le marché par procédure négociée directe avec publication préalable. Dans le cadre du marché de rénovation de la salle des Variétés de Jemelle l'ouverture des offres a eu lieu le 04.06.2026. Une seule offre a été déposée sur la plateforme E-procurement et elle est de plus de 62% supérieure à l'estimation. Le Collège Communal en date du 13.07.2026 a décidé d'arrêter la procédure de passation du marché, de ne pas attribuer et de relancer le marché.",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local-html:377e1e6525715aaa8308",
+      "title": "Environnement - Energie : Approbation de la convention de coopération relative à l'organisation d'une centrale d'achats dans le cadre d’un marché de certification PEB, audits énergétiques, certification CertIBeau, mission responsabilité PEB - Approbation / NDu",
+      "sourceDocumentTitle": "Environnement - Energie : Approbation de la convention de coopération relative à l'organisation d'une centrale d'achats dans le cadre d’un marché de certification PEB, audits énergétiques, certification CertIBeau, mission responsabilité PEB - Approbation / NDu",
+      "missionEvidence": null,
+      "buyer": "Commune de Mont-Saint-Guibert",
+      "municipalityINS": "25068",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "PEB",
+      "sectors": [
+        "PEB"
+      ],
+      "screening": "review",
+      "score": 60,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/mont-saint-guibert/decisions/26-aout-2026-20-00/environnement-energie-approbation-de-la-convention-de-cooperation-relative-a-lorganisation-dune-centrale-dachats-dans-le-cadre-dun-marche-de-certification-peb-audits-energetiques-certification-certibeau-mission-responsabilite-peb-approbation-ndu",
+      "sourceDocument": "https://www.deliberations.be/mont-saint-guibert/decisions/26-aout-2026-20-00/environnement-energie-approbation-de-la-convention-de-cooperation-relative-a-lorganisation-dune-centrale-dachats-dans-le-cadre-dun-marche-de-certification-peb-audits-energetiques-certification-certibeau-mission-responsabilite-peb-approbation-ndu",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/mont-saint-guibert/decisions/26-aout-2026-20-00/environnement-energie-approbation-de-la-convention-de-cooperation-relative-a-lorganisation-dune-centrale-dachats-dans-le-cadre-dun-marche-de-certification-peb-audits-energetiques-certification-certibeau-mission-responsabilite-peb-approbation-ndu",
+        "sha256": "8f1829f7454cf51f87d7da212be9841a628fd47247f758deec68b773e5f1b553",
+        "session": {
+          "date": "2026-08-26",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 26 août 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/mont-saint-guibert/decisions/26-aout-2026-20-00/environnement-energie-approbation-de-la-convention-de-cooperation-relative-a-lorganisation-dune-centrale-dachats-dans-le-cadre-dun-marche-de-certification-peb-audits-energetiques-certification-certibeau-mission-responsabilite-peb-approbation-ndu"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:da8d64700c2e6eb2cf",
+        "sha256": "8f1829f7454cf51f87d7da212be9841a628fd47247f758deec68b773e5f1b553",
+        "format": "html",
+        "checkedAt": "2026-11-10T13:47:56.560Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Considérant que l'IPFBW (Intercommunale pure de financement du Brabant wallon) a po",
+        "sourceUrl": "https://www.deliberations.be/mont-saint-guibert/decisions/26-aout-2026-20-00/environnement-energie-approbation-de-la-convention-de-cooperation-relative-a-lorganisation-dune-centrale-dachats-dans-le-cadre-dun-marche-de-certification-peb-audits-energetiques-certification-certibeau-mission-responsabilite-peb-approbation-ndu",
+        "page": null,
+        "sha256": "8f1829f7454cf51f87d7da212be9841a628fd47247f758deec68b773e5f1b553"
+      },
+      "description": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Considérant que l'IPFBW (Intercommunale pure de financement du Brabant wallon) a pour objet, dans ses statuts, d’organiser des centrales d’achat pour compte des communes associées ainsi que pour des tiers «publics» installés sur le territoire des communes associées ou sur le territoire du Brabant wallon ou dont les activités sont exercées en tout ou en partie sur le territoire de l’une des communes associées ou en Brabant wallon ; Considérant que l'IPFBW a décidé d’organiser et d’accomplir les formalités relatives à l'organisation d'une centrale d'achats dans le cadre d'un marché de certification PEB, audits énergétiques, certification CertIBeau, mission responsabilité PEB; Considérant que l'adoption de cette convention sera utile à la commune de Mont-Saint-Guibert principalement pour l'actualisation annuelle des certificats PEB des bâtiments publics; Après en avoir débattu et en toute connaissance de cause ; Le Conseil communal DÉCIDE à l'unanimité Art. 1 : De marquer son accord sur les termes de la convention ci-dessous :",
+      "evidence": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Considérant que l'IPFBW (Intercommunale pure de financement du Brabant wallon) a pour objet, dans ses statuts, d’organiser des centrales d’achat pour compte des communes associées ainsi que pour des tiers «publics» installés sur le territoire des communes associées ou sur le territoire du Brabant wallon ou dont les activités sont exercées en tout ou en partie sur le territoire de l’une des communes associées ou en Brabant wallon ; Considérant que l'IPFBW a décidé d’organiser et d’accomplir les formalités relatives à l'organisation d'une centrale d'achats dans le cadre d'un marché de certification PEB, audits énergétiques, certification CertIBeau, mission responsabilité PEB; Considérant que l'adoption de cette convention sera utile à la commune de Mont-Saint-Guibert principalement pour l'actualisation annuelle des certificats PEB des bâtiments publics; Après en avoir débattu et en toute connaissance de cause ; Le Conseil communal DÉCIDE à l'unanimité Art. 1 : De marquer son accord sur les termes de la convention ci-dessous :",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Considérant que l'IPFBW (Intercommunale pure de financement du Brabant wallon) a pour objet, dans ses statuts, d’organiser des centrales d’achat pour compte des communes associées ainsi que pour des tiers «publics» installés sur le territoire des communes associées ou sur le territoire du Brabant wallon ou dont les activités sont exercées en tout ou en partie sur le territoire de l’une des communes associées ou en Brabant wallon ; Considérant que l'IPFBW a décidé d’organiser et d’accomplir les formalités relatives à l'organisation d'une centrale d'achats dans le cadre d'un marché de certification PEB, audits énergétiques, certification CertIBeau, mission responsabilité PEB; Considérant que l'adoption de cette convention sera utile à la commune de Mont-Saint-Guibert principalement pour l'actualisation annuelle des certificats PEB des bâtiments publics; Après en avoir débattu et en toute connaissance de cause ; Le Conseil communal DÉCIDE à l'unanimité Art. 1 : De marquer son accord sur les termes de la convention ci-dessous :",
+          "page": null
+        },
+        {
+          "excerpt": "Le Conseil communal DÉCIDE à l'unanimité Art. 1 : De marquer son accord sur les termes de la convention ci-dessous : CONVENTION DE COOPERATION RELATIVE A L’ORGANISATION D’UN ACHAT GROUPE DANS LE CADRE D’UN MARCHE de certification PEB, audits énergétiques, certification CertIBeau, mission responsabilité PEB",
+          "page": null
+        },
+        {
+          "excerpt": "En vue d’obtenir des conditions tarifaires préférentielles pour les entités publiques du Brabant wallon auprès d’un (et/ou des) fournisseur(s) à désigner, IPFBW a décidé d’organiser et d’accomplir les formalités relatives à la passation d’un marché public de fourniture d’énergie en leurs noms et pour leurs comptes, sur la base d’un cahier spécial des charges à approuver par leur organe de gestion compétent. Ce marché sera attribué sur base d’un rapport de synthèse des offres qui sera établi par IPFBW. La présente convention a pour objet de définir la mission confiée par l’adhérent à IPFBW, ainsi que les modalités de la coopération entre l’adhérent et l’IPFBW dans le cadre de cette mission. ENSUITE DE QUOI, IL A ETE CONVENU QUE : Article 1er – Mission de L’IPFBW L’adhérent donne pour mission à IPFBW, qui accepte : d’organiser et d’accomplir les formalités relatives à la passation d’un marché public de certifications diverses pour son compte, sur la base d’un cahier spécial des charges à approuver par son organe de gestion compétent;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
+    },
+    {
+      "id": "local-html:4580f5237e363455d395",
+      "title": "Travaux d'entretien de la rue des Bachères à Sambreville",
+      "sourceDocumentTitle": "Bail d’entretien des voiries 2025 - Travaux d’entretien de la rue des Bachères à Sambreville - Approbation des conditions et du mode de passation",
+      "missionEvidence": {
+        "excerpt": "t : Sur base de la décision du Conseil Communal du 3 novembre 2025 de recourir aux services de l'Intercommunale IGRETEC en application de l'exception dite \"In House\" pour la mission d'auteur de projet relative à la réalisation du bail d'entretien de voiries 2025 (raclage/pose).",
+        "sourceUrl": "https://www.deliberations.be/sambreville/decisions/28-septembre-2026-19-00/bail-dentretien-des-voiries-2025-travaux-dentretien-de-la-rue-des-bacheres-a-sambreville-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "a64702aa07a68583ed93cbdb07e98f76415b347a6a79ea0badc943129a19b270"
+      },
+      "buyer": "Commune de Sambreville",
+      "municipalityINS": "92137",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "t : Sur base de la décision du Conseil Communal du 3 novembre 2025 de recourir aux services de l'Intercommunale IGRETEC en application de l'exception dite \"In House\" pour la mission d'auteur de projet relative à la réalisation du bail d'entretien de voiries 2025 (raclage/pose).",
+        "mission": "recourir aux services de l'Intercommunale IGRETEC en application de l'exception dite \"In House\" pour la mission d'auteur de projet relative à la réalisation du bail d'entretien de voiries 2025 (raclage/pose).",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "screening": "review",
+      "score": 60,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/sambreville/decisions/28-septembre-2026-19-00/bail-dentretien-des-voiries-2025-travaux-dentretien-de-la-rue-des-bacheres-a-sambreville-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/sambreville/decisions/28-septembre-2026-19-00/bail-dentretien-des-voiries-2025-travaux-dentretien-de-la-rue-des-bacheres-a-sambreville-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/sambreville/decisions/28-septembre-2026-19-00/bail-dentretien-des-voiries-2025-travaux-dentretien-de-la-rue-des-bacheres-a-sambreville-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "a64702aa07a68583ed93cbdb07e98f76415b347a6a79ea0badc943129a19b270",
+        "session": {
+          "date": "2026-09-28",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 28 septembre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/sambreville/decisions/28-septembre-2026-19-00/bail-dentretien-des-voiries-2025-travaux-dentretien-de-la-rue-des-bacheres-a-sambreville-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:db06a93365f612ebf4",
+        "sha256": "a64702aa07a68583ed93cbdb07e98f76415b347a6a79ea0badc943129a19b270",
+        "format": "html",
+        "checkedAt": "2026-11-10T13:47:56.560Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Mandataire Flavio CIOFFI, Echevin Bail d’entretien des voiries 2025 - Travaux d’entretien de la rue des Bachères à Sambreville - Approbation des conditions et du mode de passation Rapport Il est proposé d'approuver les c",
+        "sourceUrl": "https://www.deliberations.be/sambreville/decisions/28-septembre-2026-19-00/bail-dentretien-des-voiries-2025-travaux-dentretien-de-la-rue-des-bacheres-a-sambreville-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "a64702aa07a68583ed93cbdb07e98f76415b347a6a79ea0badc943129a19b270"
+      },
+      "description": "Mandataire Flavio CIOFFI, Echevin Bail d’entretien des voiries 2025 - Travaux d’entretien de la rue des Bachères à Sambreville - Approbation des conditions et du mode de passation Rapport Il est proposé d'approuver les conditions et le mode de passation du marché \"Travaux d'entretien de la rue des Bachères à Sambreville\". En séance du 20 novembre 2025, le Collège Communal a désigné l'Intercommunale IGRETEC pour réaliser la mission d’études relative à la pose et le raclage de voiries rue des Bachères à Tamines. Le marché des travaux de raclage pose de la rue des Bachères à Tamines s'élève au montant estimé à 268.943,63 € HTVA, soit 325.421,79€ TVAC.",
+      "evidence": "Mandataire Flavio CIOFFI, Echevin Bail d’entretien des voiries 2025 - Travaux d’entretien de la rue des Bachères à Sambreville - Approbation des conditions et du mode de passation Rapport Il est proposé d'approuver les conditions et le mode de passation du marché \"Travaux d'entretien de la rue des Bachères à Sambreville\". En séance du 20 novembre 2025, le Collège Communal a désigné l'Intercommunale IGRETEC pour réaliser la mission d’études relative à la pose et le raclage de voiries rue des Bachères à Tamines. Le marché des travaux de raclage pose de la rue des Bachères à Tamines s'élève au montant estimé à 268.943,63 € HTVA, soit 325.421,79€ TVAC.",
+      "municipalEvidence": [
+        {
+          "excerpt": "Mandataire Flavio CIOFFI, Echevin Bail d’entretien des voiries 2025 - Travaux d’entretien de la rue des Bachères à Sambreville - Approbation des conditions et du mode de passation Rapport Il est proposé d'approuver les conditions et le mode de passation du marché \"Travaux d'entretien de la rue des Bachères à Sambreville\". En séance du 20 novembre 2025, le Collège Communal a désigné l'Intercommunale IGRETEC pour réaliser la mission d’études relative à la pose et le raclage de voiries rue des Bachères à Tamines. Le marché des travaux de raclage pose de la rue des Bachères à Tamines s'élève au montant estimé à 268.943,63 € HTVA, soit 325.421,79€ TVAC.",
+          "page": null
+        },
+        {
+          "excerpt": "Le marché des travaux de raclage pose de la rue des Bachères à Tamines s'élève au montant estimé à 268.943,63 € HTVA, soit 325.421,79€ TVAC. Ces travaux consistent en : le fraisage et le remplacement des revêtements des voiries et les purges localisées de la fondation ; l'exécution des tranchées, déblais, démolition des revêtements existants et de leurs fondations, l'évacuation des matériaux excédentaires en dehors du chantier en un lieu constitué par une décharge agréée ou un centre de recyclage ; l'exécution des coffres et des revêtements des routes, l'aménagement des accotements suivant les indications des plans annexés au cahier spécial des charges ; tous les transports nécessaires et l'évacuation, en dehors des dépendances de la route, des terres excédantes, boues, tous déchets, matériaux et objets quelconques à provenir des démontages, des démolitions et non réutilisables ainsi que leur mise en décharge suivant les prescriptions de la circulaire de la R.W. du 23 février 1995 et/ou l’AGW Terres du 05/07/2018 ; l'enlèvement de quelques avaloirs existants et la démolition des raccordements ;",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l’arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Vu la délibération du Conseil Communal du 26 mai 2015 décidant notamment de conclure avec IGRETEC un contrat cadre visant des missions ponctuelles de coordination sécurité santé phases Projet et Réalisation sur divers projets à venir en fonction des besoins de la Commune, d’approuver le contrat cadre de coordination sécurité santé phase projet/réalisation, de charger le Collège communal des ordres de mission en fonction des projets à venir ainsi que de l’exécution et du suivi de ladite convention ; Vu la décision du Conseil Communal du 3 novembre 2025 décidant notamment : En vue de la réalisation du bail d'entretien de voiries 2025 (raclage/pose) : De fixer le montant estimé des honoraires de l’assistance à maîtrise d’ouvrage à 58.977,86€ HTVA ou 71.363,20€ TVAC reprenant l'étude, la coordination sécurité et santé et la surveillance du chantier. De recourir à l’article 30 de loi du 17 juin 2016 relative aux marchés publics.",
+          "page": null
+        },
+        {
+          "excerpt": "Vu la délibération du Conseil Communal du 26 mai 2015 décidant notamment de conclure avec IGRETEC un contrat cadre visant des missions ponctuelles de coordination sécurité santé phases Projet et Réalisation sur divers projets à venir en fonction des besoins de la Commune, d’approuver le contrat cadre de coordination sécurité santé phase projet/réalisation, de charger le Collège communal des ordres de mission en fonction des projets à venir ainsi que de l’exécution et du suivi de ladite convention ; Vu la décision du Conseil Communal du 3 novembre 2025 décidant notamment : En vue de la réalisation du bail d'entretien de voiries 2025 (raclage/pose) : De fixer le montant estimé des honoraires de l’assistance à maîtrise d’ouvrage à 58.977,86€ HTVA ou 71.363,20€ TVAC reprenant l'étude, la coordination sécurité et santé et la surveillance du chantier. De recourir à l’article 30 de loi du 17 juin 2016 relative aux marchés publics. Dans ce cadre, de recourir aux services de l’Intercommunale IGRETEC en application de l’exception dite « In House ». De solliciter une offre à conclure entre la Commune de Sambreville et l’Intercommunale IGRETEC ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
     }
   ]
 }
