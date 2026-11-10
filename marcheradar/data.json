@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-09T20:09:08.805Z",
+      "last_attempt": "2026-11-10T03:49:30.894Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -74,29 +74,29 @@
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 1185,
-      "opportunities": 196,
+      "documentsRead": 1199,
+      "opportunities": 198,
       "sitesChecked": 261,
       "candidatePages": 228,
-      "sourceErrors": 102,
-      "htmlDocumentsRead": 5503
+      "sourceErrors": 103,
+      "htmlDocumentsRead": 5615
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-09T20:09:08.805Z",
-      "last_success": "2026-11-09T20:09:08.805Z",
+      "last_attempt": "2026-11-10T03:49:30.894Z",
+      "last_success": "2026-11-10T03:49:30.894Z",
       "last_batch": 24,
-      "documents_checked": 52,
+      "documents_checked": 45,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 21,
+      "errors_count": 16,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 196,
+      "html_documents_read": 156,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 99,
+      "recent_municipal_signals": 101,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1229,
     "matched_current_run": 4,
-    "records": 340,
+    "records": 342,
     "review_count": 246,
     "award_notice_count": 346,
     "awarded_market_matches": 3,
@@ -27657,6 +27657,196 @@
       "municipalReference": null,
       "matchReason": "etude_urbanistique_a_qualifier",
       "screeningReason": null
+    },
+    {
+      "id": "local-html:50404d67203b349f0381",
+      "title": "Rénovation du hall omnisports de Lierneux - Désignation d'un auteur de projet - Approbation des conditions et du mode de passation - Décision.",
+      "sourceDocumentTitle": "Rénovation du hall omnisports de Lierneux - Désignation d'un auteur de projet - Approbation des conditions et du mode de passation - Décision.",
+      "missionEvidence": {
+        "excerpt": "de Mme Céline Remy, Mr Philippe Mathieu, Mme Marie Hubert; DECIDE : D'approuver le cahier des charges N° 2026-18 et le montant estimé du marché “Rénovation du hall omnisports de Lierneux - Désignation d'un auteur de projet”, établis par le Service Marchés Publics. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant esti",
+        "sourceUrl": "https://www.deliberations.be/lierneux/decisions/15-octobre-2026-19-00/renovation-du-hall-omnisports-de-lierneux-designation-dun-auteur-de-projet-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "page": null,
+        "sha256": "43c9a75926016680a6c933d197f424da65452a79000e913599063df259f5b9f9"
+      },
+      "buyer": "Commune de Lierneux",
+      "municipalityINS": "63045",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/lierneux/decisions/15-octobre-2026-19-00/renovation-du-hall-omnisports-de-lierneux-designation-dun-auteur-de-projet-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "sha256": "43c9a75926016680a6c933d197f424da65452a79000e913599063df259f5b9f9",
+        "stage": "decision_to_verify"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "de Mme Céline Remy, Mr Philippe Mathieu, Mme Marie Hubert; DECIDE : D'approuver le cahier des charges N° 2026-18 et le montant estimé du marché “Rénovation du hall omnisports de Lierneux - Désignation d'un auteur de projet”, établis par le Service Marchés Publics. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant esti",
+        "mission": "approuver le cahier des charges N° 2026-18 et le montant estimé du marché “Rénovation du hall omnisports de Lierneux - Désignation d'un auteur de projet”, établis par le Service Marchés Publics.",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/lierneux/decisions/15-octobre-2026-19-00/renovation-du-hall-omnisports-de-lierneux-designation-dun-auteur-de-projet-approbation-des-conditions-et-du-mode-de-passation-decision",
+      "sourceDocument": "https://www.deliberations.be/lierneux/decisions/15-octobre-2026-19-00/renovation-du-hall-omnisports-de-lierneux-designation-dun-auteur-de-projet-approbation-des-conditions-et-du-mode-de-passation-decision",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/lierneux/decisions/15-octobre-2026-19-00/renovation-du-hall-omnisports-de-lierneux-designation-dun-auteur-de-projet-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "sha256": "43c9a75926016680a6c933d197f424da65452a79000e913599063df259f5b9f9",
+        "session": {
+          "date": "2026-10-15",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 15 octobre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/lierneux/decisions/15-octobre-2026-19-00/renovation-du-hall-omnisports-de-lierneux-designation-dun-auteur-de-projet-approbation-des-conditions-et-du-mode-de-passation-decision"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:db6a1bff14cdc22405",
+        "sha256": "43c9a75926016680a6c933d197f424da65452a79000e913599063df259f5b9f9",
+        "format": "html",
+        "checkedAt": "2026-11-10T03:49:30.894Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Rénovation du hall omnisports de Lierneux - Désignation d'un auteur de projet - Approbation des conditions et du mode de passation - Décision. 15 Séance publique du Conseil 15 octobre 2026 (19:00) Point N°",
+        "sourceUrl": "https://www.deliberations.be/lierneux/decisions/15-octobre-2026-19-00/renovation-du-hall-omnisports-de-lierneux-designation-dun-auteur-de-projet-approbation-des-conditions-et-du-mode-de-passation-decision",
+        "page": null,
+        "sha256": "43c9a75926016680a6c933d197f424da65452a79000e913599063df259f5b9f9"
+      },
+      "description": "Rénovation du hall omnisports de Lierneux - Désignation d'un auteur de projet - Approbation des conditions et du mode de passation - Décision. 15 Séance publique du Conseil 15 octobre 2026 (19:00) Point N°",
+      "evidence": "Rénovation du hall omnisports de Lierneux - Désignation d'un auteur de projet - Approbation des conditions et du mode de passation - Décision. 15 Séance publique du Conseil 15 octobre 2026 (19:00) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "Rénovation du hall omnisports de Lierneux - Désignation d'un auteur de projet - Approbation des conditions et du mode de passation - Décision. 15 Séance publique du Conseil 15 octobre 2026 (19:00) Point N°",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-18"
+    },
+    {
+      "id": "local-html:b54859b46578a64a5a40",
+      "title": "Désignation d'un auteur de projet pour la réalisation de l'étude, le contrôle et la direction de travaux de voirie dans le cadre du subside FERI 2025-2030 - Approbation des conditions et du mode de passation",
+      "sourceDocumentTitle": "Désignation d'un auteur de projet pour la réalisation de l'étude, le contrôle et la direction de travaux de voirie dans le cadre du subside FERI 2025-2030 - Approbation des conditions et du mode de passation",
+      "missionEvidence": {
+        "excerpt": "DECIDE Article 1 : D'approuver le cahier des charges et le montant estimé du marché “Désignation d'un auteur de projet pour la réalisation de l'étude, le contrôle et la direction de travaux de voirie dans le cadre du subside FERI 2025-2030”, établis par le Service Travaux. Les conditions sont fixé",
+        "sourceUrl": "https://www.deliberations.be/la-roche-en-ardenne/decisions/08-septembre-2026-19-30/designation-dun-auteur-de-projet-pour-la-realisation-de-letude-le-controle-et-la-direction-de-travaux-de-voirie-dans-le-cadre-du-subside-feri-2025-2030-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "0b3c2dc3c04b7ebf97623dc2b21975d2354a280dc4619bfacbf91835baa154ac"
+      },
+      "buyer": "Commune de La Roche-en-Ardenne",
+      "municipalityINS": "83031",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/la-roche-en-ardenne/decisions/08-septembre-2026-19-30/designation-dun-auteur-de-projet-pour-la-realisation-de-letude-le-controle-et-la-direction-de-travaux-de-voirie-dans-le-cadre-du-subside-feri-2025-2030-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "0b3c2dc3c04b7ebf97623dc2b21975d2354a280dc4619bfacbf91835baa154ac",
+        "stage": "decision_to_verify"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "DECIDE Article 1 : D'approuver le cahier des charges et le montant estimé du marché “Désignation d'un auteur de projet pour la réalisation de l'étude, le contrôle et la direction de travaux de voirie dans le cadre du subside FERI 2025-2030”, établis par le Service Travaux. Les conditions sont fixé",
+        "mission": "DECIDE Article 1 : D'approuver le cahier des charges et le montant estimé du marché “Désignation d'un auteur de projet pour la réalisation de l'étude, le contrôle et la direction de travaux de voirie dans le cadre du subside FERI 2025-2030”, établis par le Ser",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "screening": "review",
+      "score": 60,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/la-roche-en-ardenne/decisions/08-septembre-2026-19-30/designation-dun-auteur-de-projet-pour-la-realisation-de-letude-le-controle-et-la-direction-de-travaux-de-voirie-dans-le-cadre-du-subside-feri-2025-2030-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/la-roche-en-ardenne/decisions/08-septembre-2026-19-30/designation-dun-auteur-de-projet-pour-la-realisation-de-letude-le-controle-et-la-direction-de-travaux-de-voirie-dans-le-cadre-du-subside-feri-2025-2030-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/la-roche-en-ardenne/decisions/08-septembre-2026-19-30/designation-dun-auteur-de-projet-pour-la-realisation-de-letude-le-controle-et-la-direction-de-travaux-de-voirie-dans-le-cadre-du-subside-feri-2025-2030-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "0b3c2dc3c04b7ebf97623dc2b21975d2354a280dc4619bfacbf91835baa154ac",
+        "session": {
+          "date": "2026-09-08",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 08 septembre 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/la-roche-en-ardenne/decisions/08-septembre-2026-19-30/designation-dun-auteur-de-projet-pour-la-realisation-de-letude-le-controle-et-la-direction-de-travaux-de-voirie-dans-le-cadre-du-subside-feri-2025-2030-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:8ff8d1d44d2fa5bda3",
+        "sha256": "0b3c2dc3c04b7ebf97623dc2b21975d2354a280dc4619bfacbf91835baa154ac",
+        "format": "html",
+        "checkedAt": "2026-11-10T03:49:30.894Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Désignation d'un auteur de projet pour la réalisation de l'étude, le contrôle et la direction de travaux de voirie dans le cadre du subside FERI 2025-2030 - Approbation des conditions et du mode de passation 8 Séance pub",
+        "sourceUrl": "https://www.deliberations.be/la-roche-en-ardenne/decisions/08-septembre-2026-19-30/designation-dun-auteur-de-projet-pour-la-realisation-de-letude-le-controle-et-la-direction-de-travaux-de-voirie-dans-le-cadre-du-subside-feri-2025-2030-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "0b3c2dc3c04b7ebf97623dc2b21975d2354a280dc4619bfacbf91835baa154ac"
+      },
+      "description": "Désignation d'un auteur de projet pour la réalisation de l'étude, le contrôle et la direction de travaux de voirie dans le cadre du subside FERI 2025-2030 - Approbation des conditions et du mode de passation 8 Séance publique du Conseil 08 septembre 2026 (19:30) Point N°",
+      "evidence": "Désignation d'un auteur de projet pour la réalisation de l'étude, le contrôle et la direction de travaux de voirie dans le cadre du subside FERI 2025-2030 - Approbation des conditions et du mode de passation 8 Séance publique du Conseil 08 septembre 2026 (19:30) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "Désignation d'un auteur de projet pour la réalisation de l'étude, le contrôle et la direction de travaux de voirie dans le cadre du subside FERI 2025-2030 - Approbation des conditions et du mode de passation 8 Séance publique du Conseil 08 septembre 2026 (19:30) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Matière Aménagement des espaces publics Désignation d'un auteur de projet pour la réalisation de l'étude, le contrôle et la direction de travaux de voirie dans le cadre du subside FERI 2025-2030 - Approbation des conditions et du mode de passation Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) et l'article 57 ; Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ;",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures ; Considérant le cahier des charges relatif au marché “Désignation d'un auteur de projet pour la réalisation de l'étude, le contrôle et la direction de travaux de voirie dans le cadre du subside FERI 2025-2030” établi par le Service Travaux ; Considérant que ce marché est divisé en tranches : * Tranche ferme : Voiries Val du Bronze-Petite Strument à La Roche * Tranche ferme : Rue de la Gare à La Roche * Tranche ferme : Rue de Thimont à Buisson",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
     }
   ]
 }
