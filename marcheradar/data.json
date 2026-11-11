@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-10T21:49:36.582Z",
+  "generated_at": "2026-11-11T12:45:09.109Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-11-10 : 1229 avis lus, 3 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-11-11 : 1213 avis lus, 3 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-11-10T21:51:13.455Z",
-      "scanned": 2300,
-      "retained": 35,
-      "period_from": "2026-10-27",
-      "period_to": "2026-11-10",
-      "pages": 92,
+      "last_success": "2026-11-11T12:46:50.193Z",
+      "scanned": 2125,
+      "retained": 34,
+      "period_from": "2026-10-28",
+      "period_to": "2026-11-11",
+      "pages": 85,
       "complete": true,
-      "raw_candidates": 2292,
-      "oldest_seen": "2026-10-26",
-      "last_attempt": "2026-11-10T21:51:13.455Z",
+      "raw_candidates": 2113,
+      "oldest_seen": "2026-10-27",
+      "last_attempt": "2026-11-11T12:46:50.193Z",
       "last_error": null,
-      "last_complete_success": "2026-11-10T21:51:13.455Z"
+      "last_complete_success": "2026-11-11T12:46:50.193Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-11-10T21:53:39.891Z",
+      "last_success": "2026-11-11T12:49:04.011Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -104,15 +104,15 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 92 page(s) parcourue(s) depuis 2026-10-27.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 85 page(s) parcourue(s) depuis 2026-10-28.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
-    "scanned": 1229,
+    "scanned": 1213,
     "matched_current_run": 4,
-    "records": 351,
-    "review_count": 252,
-    "award_notice_count": 348,
+    "records": 352,
+    "review_count": 256,
+    "award_notice_count": 361,
     "awarded_market_matches": 3,
     "award_fields_requested": false,
     "retained_as_excluded": 37,
@@ -125,37 +125,37 @@
     "queries": [
       {
         "source": "Acheteurs belges",
-        "from": "20261030",
-        "to": "20261105",
-        "found": 398,
-        "reported": 398
+        "from": "20261031",
+        "to": "20261106",
+        "found": 378,
+        "reported": 378
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261030",
-        "to": "20261105",
-        "found": 389,
-        "reported": 389
+        "from": "20261031",
+        "to": "20261106",
+        "found": 360,
+        "reported": 360
       },
       {
         "source": "Acheteurs belges",
-        "from": "20261106",
-        "to": "20261110",
-        "found": 231,
-        "reported": 231
+        "from": "20261107",
+        "to": "20261111",
+        "found": 245,
+        "reported": 245
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261106",
-        "to": "20261110",
-        "found": 211,
-        "reported": 211
+        "from": "20261107",
+        "to": "20261111",
+        "found": 230,
+        "reported": 230
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2300,
-    "bosa_imported": 35,
-    "bosa_pages": 92,
+    "bosa_scanned": 2125,
+    "bosa_imported": 34,
+    "bosa_pages": 85,
     "local_documents": 34,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -171,19 +171,75 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "avis_attribution_analyse_separement": 348,
-      "aucun_signal_metier": 350,
-      "travaux_execution": 87,
-      "avis_neerlandais": 162,
-      "assurance_ou_nettoyage": 14,
-      "fournitures_et_location": 43,
-      "objet_hors_domaine": 67,
-      "acheteur_flamand": 141,
-      "qualifie_review": 8,
-      "formule_administrative_sans_signal_metier": 9
+      "aucun_signal_metier": 340,
+      "fournitures_et_location": 46,
+      "travaux_execution": 82,
+      "avis_attribution_analyse_separement": 361,
+      "avis_neerlandais": 146,
+      "acheteur_flamand": 131,
+      "formule_administrative_sans_signal_metier": 12,
+      "objet_hors_domaine": 75,
+      "assurance_ou_nettoyage": 12,
+      "qualifie_review": 8
     }
   },
   "items": [
+    {
+      "id": "ted:741500-2026",
+      "publicationNumber": "785447-2026",
+      "procedureIdentifier": "44457595-75fb-4a94-ac9d-53c48da30407",
+      "title": "Belgique – Services d'architecture, services de construction, services d'ingénierie et services d'inspection – 6.25.1.9 Mission d’auteur de projet pour la restauration des façades du Musée Art et Histoire dans le Parc du Cinquantenaire à Bruxelles – Marché de services - Procédure ouverte",
+      "buyer": "SPF Mobilité et Transports",
+      "region": "Belgique",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-11-11",
+      "deadline": "2026-12-08",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Le présent marché porte sur l’étude de la restauration des façades du Musée Art et Histoire sur le site du Cinquantenaire à Bruxelles. La Régie des Bâtiments a déjà rénové les autres façades du site. Dès lors, l’étude en vue de la restauration des façades extérieures et des façades des cours intérieures du Musée Art et Histoire du Cinquantenaire est opportune pour la cohérence de l’ensemble. Ces façades sont classées, voir Arrêté de classement du 22.04.2004 en annexe 04. Le marché vise les études complètes en vue de - la restauration des façades du Musée Art et d’Histoire (voir périmètre en annexe), y compris les statues, les lettrages, etc. - la faisabilité de la mise aux normes incendie en façade des bâtiments et d’un chemin d’évacuation supplémentaire au rez-de-chaussée pour l’Horeca actuel - la restauration de l’hémicycle du Musée Art et Histoire - étudier et proposer des possibilités d’intégration et/ou de reconversion de l’ancienne entrée de l’esplanade du Musée Art & Histoire, en vue de renforcer sa visibilité et d’en faire un véritable espace de mise en valeur des activités et collections du Musée. Pour plus d'information voir le cahier spécial des charges en annexe à cet avis de marché.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/785447-2026",
+      "publicationWorkspaceId": "3ffc8455-2c7d-4e80-92ea-5b533ba9188f",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/741500-2026",
+          "publicationNumber": "741500-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/3ffc8455-2c7d-4e80-92ea-5b533ba9188f/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        },
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/785447-2026",
+          "publicationNumber": "785447-2026"
+        }
+      ],
+      "matchReason": "mission_architecturale_a_qualifier",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "741500-2026",
+        "785447-2026"
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "partner",
+        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
+        "capacityStatus": "not_assessed"
+      }
+    },
     {
       "id": "bosa:f1a52462-a841-49cb-8bfc-06db0c5e5f4a",
       "publicationWorkspaceId": "f1a52462-a841-49cb-8bfc-06db0c5e5f4a",
@@ -4009,56 +4065,6 @@
       "noticeNumbers": [
         "691823-2026",
         "742617-2026"
-      ],
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "partner",
-        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
-      "id": "ted:741500-2026",
-      "publicationNumber": "741500-2026",
-      "procedureIdentifier": "44457595-75fb-4a94-ac9d-53c48da30407",
-      "title": "Belgique – Services d'architecture, services de construction, services d'ingénierie et services d'inspection – 6.25.1.9 Mission d’auteur de projet pour la restauration des façades du Musée Art et Histoire dans le Parc du Cinquantenaire à Bruxelles – Marché de services - Procédure ouverte",
-      "buyer": "SPF Mobilité et Transports",
-      "region": "Belgique",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "publication": "2026-10-27",
-      "deadline": "2026-12-01",
-      "cpv": [
-        "71000000"
-      ],
-      "description": "Le présent marché porte sur l’étude de la restauration des façades du Musée Art et Histoire sur le site du Cinquantenaire à Bruxelles. La Régie des Bâtiments a déjà rénové les autres façades du site. Dès lors, l’étude en vue de la restauration des façades extérieures et des façades des cours intérieures du Musée Art et Histoire du Cinquantenaire est opportune pour la cohérence de l’ensemble. Ces façades sont classées, voir Arrêté de classement du 22.04.2004 en annexe 04. Le marché vise les études complètes en vue de - la restauration des façades du Musée Art et d’Histoire (voir périmètre en annexe), y compris les statues, les lettrages, etc. - la faisabilité de la mise aux normes incendie en façade des bâtiments et d’un chemin d’évacuation supplémentaire au rez-de-chaussée pour l’Horeca actuel - la restauration de l’hémicycle du Musée Art et Histoire - étudier et proposer des possibilités d’intégration et/ou de reconversion de l’ancienne entrée de l’esplanade du Musée Art & Histoire, en vue de renforcer sa visibilité et d’en faire un véritable espace de mise en valeur des activités et collections du Musée. Pour plus d'information voir le cahier spécial des charges en annexe à cet avis de marché.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/741500-2026",
-      "publicationWorkspaceId": "3ffc8455-2c7d-4e80-92ea-5b533ba9188f",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/741500-2026",
-          "publicationNumber": "741500-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/3ffc8455-2c7d-4e80-92ea-5b533ba9188f/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        }
-      ],
-      "matchReason": "mission_architecturale_a_qualifier",
-      "screeningReason": null,
-      "noticeNumbers": [
-        "741500-2026"
       ],
       "qualification": {
         "version": "2026-10-29",
@@ -7997,7 +8003,7 @@
           "versionId": "36488d00-f30c-407b-abf7-ea1924b6b999",
           "documentId": "917f42c5-0419-4611-8398-5561fefe4efc",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8023,7 +8029,7 @@
           "versionId": "26b15544-17fc-43c0-826c-1322f33b9850",
           "documentId": "20364704-82a0-4eb0-a213-7965e3328061",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8075,7 +8081,7 @@
           "versionId": "f5ff3774-83d7-49c0-abe1-28e026816900",
           "documentId": "ff53ea2a-b24f-4586-b315-523295f56f5c",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8088,7 +8094,7 @@
           "versionId": "8228202b-2303-4eba-8e13-0fe820c5023d",
           "documentId": "ac74d28e-0bfa-4c78-af2b-da7f05b117dd",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8121,7 +8127,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-09T14:05:11.081Z",
+      "documentsCheckedAt": "2026-11-11T12:52:54.979Z",
       "documentAnalyses": [
         {
           "documentId": "7259aed6-32b5-4e0b-88c0-ffa7fa606658",
@@ -10927,14 +10933,14 @@
           "versionId": "354fbb7b-5f90-4703-9d8e-dae76f7aa72f",
           "documentId": "3b9e3ed1-8163-4041-a26c-eb15668ce044",
           "activatedAt": "2026-10-05T15:31:45.185664",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-10T21:59:14.927Z",
+      "documentsCheckedAt": "2026-11-11T12:54:38.320Z",
       "matchReason": "prestation_dans_marche_de_travaux",
       "screeningReason": null,
       "officialSources": [
@@ -23644,6 +23650,200 @@
       "screeningReason": null
     },
     {
+      "id": "local-html:ac22042c44d05336a874",
+      "title": "Marché public – Désignation d’un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal - Procédure de passation et Cahier spécial des charges",
+      "sourceDocumentTitle": "Marché public – Désignation d’un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal - Procédure de passation et Cahier spécial des charges",
+      "missionEvidence": {
+        "excerpt": "cquis le bien en date du 16 octobre 2025. 4/ ANALYSE : Il y a lieu de lancer une procédure de demande d’offre en vue de désigner un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal.",
+        "sourceUrl": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/marche-public-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-dun-centre-technique-communal-procedure-de-passation-et-cahier-special-des-charges",
+        "page": null,
+        "sha256": "4ecd10d9b7a6c6ce44884fe1f484afc2e72da19af93fc279f9c37a0e1f023efb"
+      },
+      "buyer": "Commune de Tubize",
+      "municipalityINS": "25105",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "cquis le bien en date du 16 octobre 2025. 4/ ANALYSE : Il y a lieu de lancer une procédure de demande d’offre en vue de désigner un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal.",
+        "mission": "lancer une procédure de demande d’offre en vue de désigner un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal.",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/marche-public-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-dun-centre-technique-communal-procedure-de-passation-et-cahier-special-des-charges",
+      "sourceDocument": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/marche-public-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-dun-centre-technique-communal-procedure-de-passation-et-cahier-special-des-charges",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/marche-public-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-dun-centre-technique-communal-procedure-de-passation-et-cahier-special-des-charges",
+        "sha256": "4ecd10d9b7a6c6ce44884fe1f484afc2e72da19af93fc279f9c37a0e1f023efb",
+        "session": {
+          "date": "2026-11-05",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 05 novembre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/marche-public-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-dun-centre-technique-communal-procedure-de-passation-et-cahier-special-des-charges"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:a518599e95e5c6282f",
+        "sha256": "4ecd10d9b7a6c6ce44884fe1f484afc2e72da19af93fc279f9c37a0e1f023efb",
+        "format": "html",
+        "checkedAt": "2026-11-11T08:25:07.017Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Marché public – Désignation d’un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal - Procédure de passation et Cahier spécial des charges 5 Séance publique du Consei",
+        "sourceUrl": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/marche-public-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-dun-centre-technique-communal-procedure-de-passation-et-cahier-special-des-charges",
+        "page": null,
+        "sha256": "4ecd10d9b7a6c6ce44884fe1f484afc2e72da19af93fc279f9c37a0e1f023efb"
+      },
+      "description": "Marché public – Désignation d’un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal - Procédure de passation et Cahier spécial des charges 5 Séance publique du Conseil 05 novembre 2026 (19:00) Point N°",
+      "evidence": "Marché public – Désignation d’un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal - Procédure de passation et Cahier spécial des charges 5 Séance publique du Conseil 05 novembre 2026 (19:00) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "Marché public – Désignation d’un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal - Procédure de passation et Cahier spécial des charges 5 Séance publique du Conseil 05 novembre 2026 (19:00) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. Marché public – Désignation d’un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal - Procédure de passation et Cahier spécial des charges Note de synthèse explicative : 1/ PST :",
+          "page": null
+        },
+        {
+          "excerpt": "Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics et de certains marchés de travaux, de fournitures et de services et de concessions ; Considérant que l'autorité adjudicatrice est l'Administration communale de Tubize, Grand Place, 1 à 1480 Tubize ; Considérant que le marché a pour objet la désignation d’un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal ; Considérant que le marché sera réalisé par procédure négociée sans publication préalable sur base de l’article 42, § 1, 1°, a) de la loi du 17 juin 2016 relative aux marchés publics ; Considérant que le montant du marché estimé à 85.000,00 euros HTVA, soit 102.850,00 euros TVAC est inférieur au seuil de 140.000,00 euros HTVA, seuil en dessous duquel il est permis de recourir à la procédure négociée sans publication préalable ; Considérant le cahier spécial des charges n°S2026-31 ; Considérant le rapport du Département des Travaux et du Patrimoine ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:f22a8809e5e12ca44294",
+      "title": "Marchés publics/Gestion de projets - Schéma de développement communal - IDELUX Projets publics relation « in house »",
+      "sourceDocumentTitle": "Marchés publics/Gestion de projets - Schéma de développement communal - IDELUX Projets publics relation « in house »",
+      "missionEvidence": {
+        "excerpt": "évision totale de son Schéma de Développement Communal Article 2 – de recourir à la procédure « in house » selon l’article 30 de la loi du 17 juin 2016 en vue de la désignation d’un auteur de projet pour accompagner la Commune dans la révision de son Schéma de Développement Communal",
+        "sourceUrl": "https://www.deliberations.be/habay/decisions/26-aout-2026-20-00/marches-publics-gestion-de-projets-schema-de-developpement-communal-idelux-projets-publics-relation-in-house",
+        "page": null,
+        "sha256": "85f3d3461b7d12e650283bf96b6698c8ab0c102ce46ad5b7a39bd7f8e3db2f6c"
+      },
+      "buyer": "Commune de Habay",
+      "municipalityINS": "85046",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "évision totale de son Schéma de Développement Communal Article 2 – de recourir à la procédure « in house » selon l’article 30 de la loi du 17 juin 2016 en vue de la désignation d’un auteur de projet pour accompagner la Commune dans la révision de son Schéma de Développement Communal",
+        "mission": "recourir à la procédure « in house » selon l’article 30 de la loi du 17 juin 2016 en vue de la désignation d’un auteur de projet pour accompagner la Commune dans la révision de son Schéma de Développement Communal",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/habay/decisions/26-aout-2026-20-00/marches-publics-gestion-de-projets-schema-de-developpement-communal-idelux-projets-publics-relation-in-house",
+      "sourceDocument": "https://www.deliberations.be/habay/decisions/26-aout-2026-20-00/marches-publics-gestion-de-projets-schema-de-developpement-communal-idelux-projets-publics-relation-in-house",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/habay/decisions/26-aout-2026-20-00/marches-publics-gestion-de-projets-schema-de-developpement-communal-idelux-projets-publics-relation-in-house",
+        "sha256": "85f3d3461b7d12e650283bf96b6698c8ab0c102ce46ad5b7a39bd7f8e3db2f6c",
+        "session": {
+          "date": "2026-08-26",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 26 août 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/habay/decisions/26-aout-2026-20-00/marches-publics-gestion-de-projets-schema-de-developpement-communal-idelux-projets-publics-relation-in-house"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:7f1378821c0dffbeee",
+        "sha256": "85f3d3461b7d12e650283bf96b6698c8ab0c102ce46ad5b7a39bd7f8e3db2f6c",
+        "format": "html",
+        "checkedAt": "2026-11-11T08:25:07.017Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Établissement du schéma de développement communal définitif et à la déclaration environnementale Considérant que le forfait établi par IDELUX Projets publics comprend l’assistance à la commune sur la composition du dossi",
+        "sourceUrl": "https://www.deliberations.be/habay/decisions/26-aout-2026-20-00/marches-publics-gestion-de-projets-schema-de-developpement-communal-idelux-projets-publics-relation-in-house",
+        "page": null,
+        "sha256": "85f3d3461b7d12e650283bf96b6698c8ab0c102ce46ad5b7a39bd7f8e3db2f6c"
+      },
+      "description": "Établissement du schéma de développement communal définitif et à la déclaration environnementale Considérant que le forfait établi par IDELUX Projets publics comprend l’assistance à la commune sur la composition du dossier pour l’octroi des subsides émanant de la Région wallonne ; Considérant la nécessité de procéder à la désignation d’un auteur de projet agrée pour accompagner la Commune afin d’élaborer la révision du Schéma de Développement Communal, qu’IDELUX est agréé pour l’élaboration et la révision de Schéma de Développement Communaux ; Considérant qu’outre son agrément en tant qu’auteur de projet, l’intercommunale IDELUX dispose d’un panel de métiers et a une véritable expertise en matière d’aménagement du territoire, que l’Intercommunale développe un nouveau service composé de plusieurs spécialistes de l’aménagement du territoire, dont trois sont expressément agréés par le Service Public de Wallonie pour la réalisation de Schéma de Développement Communaux ; Considérant que ce service qui a pour but d’accompagner les communes dans l’élaboration ou la révision des Schémas de Développement Communaux et de proposer des services d’Assistance à Maîtrise d’Ouvrage visant à l’élaboration de projets concrets après l’identification desdits projets dans le cadre du Schéma de Développement Communal, que cette mission a été approuvée lors de l’Assemblée Générale d’IDELUX du 18/06/2",
+      "evidence": "Établissement du schéma de développement communal définitif et à la déclaration environnementale Considérant que le forfait établi par IDELUX Projets publics comprend l’assistance à la commune sur la composition du dossier pour l’octroi des subsides émanant de la Région wallonne ; Considérant la nécessité de procéder à la désignation d’un auteur de projet agrée pour accompagner la Commune afin d’élaborer la révision du Schéma de Développement Communal, qu’IDELUX est agréé pour l’élaboration et la révision de Schéma de Développement Communaux ; Considérant qu’outre son agrément en tant qu’auteur de projet, l’intercommunale IDELUX dispose d’un panel de métiers et a une véritable expertise en matière d’aménagement du territoire, que l’Intercommunale développe un nouveau service composé de plusieurs spécialistes de l’aménagement du territoire, dont trois sont expressément agréés par le Service Public de Wallonie pour la réalisation de Schéma de Développement Communaux ; Considérant que ce service qui a pour but d’accompagner les communes dans l’élaboration ou la révision des Schémas de Développement Communaux et de proposer des services d’Assistance à Maîtrise d’Ouvrage visant à l’élaboration de projets concrets après l’identification desdits projets dans le cadre du Schéma de Développement Communal, que cette mission a été approuvée lors de l’Assemblée Générale d’IDELUX du 18/06/2",
+      "municipalEvidence": [
+        {
+          "excerpt": "Établissement du schéma de développement communal définitif et à la déclaration environnementale Considérant que le forfait établi par IDELUX Projets publics comprend l’assistance à la commune sur la composition du dossier pour l’octroi des subsides émanant de la Région wallonne ; Considérant la nécessité de procéder à la désignation d’un auteur de projet agrée pour accompagner la Commune afin d’élaborer la révision du Schéma de Développement Communal, qu’IDELUX est agréé pour l’élaboration et la révision de Schéma de Développement Communaux ; Considérant qu’outre son agrément en tant qu’auteur de projet, l’intercommunale IDELUX dispose d’un panel de métiers et a une véritable expertise en matière d’aménagement du territoire, que l’Intercommunale développe un nouveau service composé de plusieurs spécialistes de l’aménagement du territoire, dont trois sont expressément agréés par le Service Public de Wallonie pour la réalisation de Schéma de Développement Communaux ; Considérant que ce service qui a pour but d’accompagner les communes dans l’élaboration ou la révision des Schémas de Développement Communaux et de proposer des services d’Assistance à Maîtrise d’Ouvrage visant à l’élaboration de projets concrets après l’identification desdits projets dans le cadre du Schéma de Développement Communal, que cette mission a été approuvée lors de l’Assemblée Générale d’IDELUX du 18/06/2",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant que le forfait établi par IDELUX Projets publics comprend l’assistance à la commune sur la composition du dossier pour l’octroi des subsides émanant de la Région wallonne ; Considérant la nécessité de procéder à la désignation d’un auteur de projet agrée pour accompagner la Commune afin d’élaborer la révision du Schéma de Développement Communal, qu’IDELUX est agréé pour l’élaboration et la révision de Schéma de Développement Communaux ; Considérant qu’outre son agrément en tant qu’auteur de projet, l’intercommunale IDELUX dispose d’un panel de métiers et a une véritable expertise en matière d’aménagement du territoire, que l’Intercommunale développe un nouveau service composé de plusieurs spécialistes de l’aménagement du territoire, dont trois sont expressément agréés par le Service Public de Wallonie pour la réalisation de Schéma de Développement Communaux ; Considérant que ce service qui a pour but d’accompagner les communes dans l’élaboration ou la révision des Schémas de Développement Communaux et de proposer des services d’Assistance à Maîtrise d’Ouvrage visant à l’élaboration de projets concrets après l’identification desdits projets dans le cadre du Schéma de Développement Communal, que cette mission a été approuvée lors de l’Assemblée Générale d’IDELUX du 18/06/2025 ; Considérant que la Commune est associée à l'intercommunale IDELUX Projets publics SC ; Cons",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant la nécessité de procéder à la désignation d’un auteur de projet agrée pour accompagner la Commune afin d’élaborer la révision du Schéma de Développement Communal, qu’IDELUX est agréé pour l’élaboration et la révision de Schéma de Développement Communaux ; Considérant qu’outre son agrément en tant qu’auteur de projet, l’intercommunale IDELUX dispose d’un panel de métiers et a une véritable expertise en matière d’aménagement du territoire, que l’Intercommunale développe un nouveau service composé de plusieurs spécialistes de l’aménagement du territoire, dont trois sont expressément agréés par le Service Public de Wallonie pour la réalisation de Schéma de Développement Communaux ; Considérant que ce service qui a pour but d’accompagner les communes dans l’élaboration ou la révision des Schémas de Développement Communaux et de proposer des services d’Assistance à Maîtrise d’Ouvrage visant à l’élaboration de projets concrets après l’identification desdits projets dans le cadre du Schéma de Développement Communal, que cette mission a été approuvée lors de l’Assemblée Générale d’IDELUX du 18/06/2025 ; Considérant que la Commune est associée à l'intercommunale IDELUX Projets publics SC ; Considérant que IDELUX Projets publics SC est une intercommunale ayant pris la forme d’une société coopérative qui ne comporte pas de participation directe de capitaux privés ; Que ses orga",
+          "page": null
+        },
+        {
+          "excerpt": "Considérant le souhait de la Commune de Habay d’engager une révision totale du Schéma de Développement Communal conformément aux objectifs poursuivis dans le Schéma de Développement Territorial ; Considérant que le Service Public de Wallonie alloue des subsides aux communes souhaitant réviser leur Schéma de Développement Communal, que ces subsides s’élèvent à 75 % des montants des honoraires, plafonnés à 75.000 euros ; Considérant que la révision d’un Schéma de Développement Communal est élaborée par un auteur de projet agréé ; que le Collège communal a la possibilité de lancer une procédure de marché public pour un marché de service, ou d’opter par l’exemption spécifiée à l’article 30 de la loi du 17 juin 2016 permettant à la Commune de Habay de passer par un conventionnement (in house) avec une personne morale qui serait agréée pour l’élaboration d’un Schéma de Développement Communal ; Considérant qu' IDELUX Projets publics est agréé pour l’élaboration des Schémas de Développement Communaux, que l’Assemblée Générale d’IDELUX a défini en date du 18/06/2025 un forfait de 100.000 € HTVA + 1€ HTVA par habitant pour l’élaboration d’un Schéma de Développement Communal ; Considérant dès lors que le forfait que proposerait IDELUX à la Commune de Habay serait de 108.721 € HTVA, que jusqu’à 75.000 des honoraires de l’intercommunale seraient subsidiables ; Considérant qu’IDELUX a eu la ",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
       "id": "communal:c3599ff87890bfb78368",
       "title": "Prospection · Beyne-Heusay · 17) Règlement complémentaire de roulage - Création d’un emplacement de stationnement pour personnes handicapées - Plac…",
       "buyer": "Commune de Beyne-Heusay",
@@ -25544,6 +25744,97 @@
       ],
       "sourceEvidenceStatus": "found",
       "municipalReference": "2026-019",
+      "matchReason": "projet_communal_indirect",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:57606736bb48ca2ba24f",
+      "title": "SERVICE PATRIMOINE - Vente des parcelles suite à la demande de modification de voirie tendant à la suppression des parties de chemins communaux - anciennement vicinaux - n°9 et n°11 sis rue de France, à Philippeville et acquisition des nouvelles voiries - Décision définitive.",
+      "sourceDocumentTitle": "SERVICE PATRIMOINE - Vente des parcelles suite à la demande de modification de voirie tendant à la suppression des parties de chemins communaux - anciennement vicinaux - n°9 et n°11 sis rue de France, à Philippeville et acquisition des nouvelles voiries - Décision définitive.",
+      "missionEvidence": null,
+      "buyer": "Commune de Philippeville",
+      "municipalityINS": "93056",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "screening": "review",
+      "score": 52,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-patrimoine-vente-des-parcelles-suite-a-la-demande-de-modification-de-voirie-tendant-a-la-suppression-des-parties-de-chemins-communaux-anciennement-vicinaux-ndeg9-et-ndeg11-sis-rue-de-france-a-philippeville-et-acquisition-des-nouvelles-voiries",
+      "sourceDocument": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-patrimoine-vente-des-parcelles-suite-a-la-demande-de-modification-de-voirie-tendant-a-la-suppression-des-parties-de-chemins-communaux-anciennement-vicinaux-ndeg9-et-ndeg11-sis-rue-de-france-a-philippeville-et-acquisition-des-nouvelles-voiries",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-patrimoine-vente-des-parcelles-suite-a-la-demande-de-modification-de-voirie-tendant-a-la-suppression-des-parties-de-chemins-communaux-anciennement-vicinaux-ndeg9-et-ndeg11-sis-rue-de-france-a-philippeville-et-acquisition-des-nouvelles-voiries",
+        "sha256": "da387c4765494c7c88807d81df4dd540df111778cea8aab1b62f879e487ca703",
+        "session": {
+          "date": "2026-08-27",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 27 août 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-patrimoine-vente-des-parcelles-suite-a-la-demande-de-modification-de-voirie-tendant-a-la-suppression-des-parties-de-chemins-communaux-anciennement-vicinaux-ndeg9-et-ndeg11-sis-rue-de-france-a-philippeville-et-acquisition-des-nouvelles-voiries"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:684f443e24c5410825",
+        "sha256": "da387c4765494c7c88807d81df4dd540df111778cea8aab1b62f879e487ca703",
+        "format": "html",
+        "checkedAt": "2026-11-10T22:32:33.766Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Vu sa décision, prise en séance du 27 juin 2019, décidant d'adopter définitivement le plan communal d'aménagement dit \"Les Quatre Vents\" en vue de réviser le plan de secteur de Philippeville - Couvin, accompagnée de la d",
+        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-patrimoine-vente-des-parcelles-suite-a-la-demande-de-modification-de-voirie-tendant-a-la-suppression-des-parties-de-chemins-communaux-anciennement-vicinaux-ndeg9-et-ndeg11-sis-rue-de-france-a-philippeville-et-acquisition-des-nouvelles-voiries",
+        "page": null,
+        "sha256": "da387c4765494c7c88807d81df4dd540df111778cea8aab1b62f879e487ca703"
+      },
+      "description": "Vu sa décision, prise en séance du 27 juin 2019, décidant d'adopter définitivement le plan communal d'aménagement dit \"Les Quatre Vents\" en vue de réviser le plan de secteur de Philippeville - Couvin, accompagnée de la déclaration environnementale ; Vu l'arrêté ministériel du 6 novembre 2019 approuvant le plan communal d'aménagement dit \"Les Quatre Vents\" à Philippeville (Philippeville, Roly et Sautour) dont l'élaboration en vue de réviser le plan de secteur de Philippeville - Couvin a été décidé par arrêté ministériel du 27 avril 2017 ; Vu la demande de permis intégré reçue le 28 octobre 2022, introduite par TEXTE MASQUÉ | RGPD 161D bt 19 à 1410 Waterloo, concernant un établissement sis à Philippeville, Zoning des Quatre Vents et dont l'objet est l'extension d'un ensemble commercial et de services, création de voiries et désaffectation partielle des chemins vicinaux n° 9 et n° 11 ; Vu le plan de modification de voiries, réalisé par TEXTE MASQUÉ | RGPD tendant à la désaffectation (partielle) des chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville ; Vu sa décision, prise en séance du 23 février 2023, décidant notamment d’approuver le plan de modification de voirie, réalisé par TEXTE MASQUÉ | RGPD tendant à la suppression des parties de chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philipp",
+      "evidence": "Vu sa décision, prise en séance du 27 juin 2019, décidant d'adopter définitivement le plan communal d'aménagement dit \"Les Quatre Vents\" en vue de réviser le plan de secteur de Philippeville - Couvin, accompagnée de la déclaration environnementale ; Vu l'arrêté ministériel du 6 novembre 2019 approuvant le plan communal d'aménagement dit \"Les Quatre Vents\" à Philippeville (Philippeville, Roly et Sautour) dont l'élaboration en vue de réviser le plan de secteur de Philippeville - Couvin a été décidé par arrêté ministériel du 27 avril 2017 ; Vu la demande de permis intégré reçue le 28 octobre 2022, introduite par TEXTE MASQUÉ | RGPD 161D bt 19 à 1410 Waterloo, concernant un établissement sis à Philippeville, Zoning des Quatre Vents et dont l'objet est l'extension d'un ensemble commercial et de services, création de voiries et désaffectation partielle des chemins vicinaux n° 9 et n° 11 ; Vu le plan de modification de voiries, réalisé par TEXTE MASQUÉ | RGPD tendant à la désaffectation (partielle) des chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville ; Vu sa décision, prise en séance du 23 février 2023, décidant notamment d’approuver le plan de modification de voirie, réalisé par TEXTE MASQUÉ | RGPD tendant à la suppression des parties de chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philipp",
+      "municipalEvidence": [
+        {
+          "excerpt": "Matière Patrimoine SERVICE PATRIMOINE - Vente des parcelles suite à la demande de modification de voirie tendant à la suppression des parties de chemins communaux - anciennement vicinaux - n°9 et n°11 sis rue de France, à Philippeville et acquisition des nouvelles voiries - Décision définitive. Le conseil communal est invité à approuver : Le projet d'acte rédigé par TEXTE MASQUÉ | RGPD La vente des parcelles précadastrées Philippeville - Parcelle précadastrée section E numéro 134 A / Contenance : 3 ares 62 ca",
+          "page": null
+        },
+        {
+          "excerpt": "Vu sa décision, prise en séance du 27 juin 2019, décidant d'adopter définitivement le plan communal d'aménagement dit \"Les Quatre Vents\" en vue de réviser le plan de secteur de Philippeville - Couvin, accompagnée de la déclaration environnementale ; Vu l'arrêté ministériel du 6 novembre 2019 approuvant le plan communal d'aménagement dit \"Les Quatre Vents\" à Philippeville (Philippeville, Roly et Sautour) dont l'élaboration en vue de réviser le plan de secteur de Philippeville - Couvin a été décidé par arrêté ministériel du 27 avril 2017 ; Vu la demande de permis intégré reçue le 28 octobre 2022, introduite par TEXTE MASQUÉ | RGPD 161D bt 19 à 1410 Waterloo, concernant un établissement sis à Philippeville, Zoning des Quatre Vents et dont l'objet est l'extension d'un ensemble commercial et de services, création de voiries et désaffectation partielle des chemins vicinaux n° 9 et n° 11 ; Vu le plan de modification de voiries, réalisé par TEXTE MASQUÉ | RGPD tendant à la désaffectation (partielle) des chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville ; Vu sa décision, prise en séance du 23 février 2023, décidant notamment d’approuver le plan de modification de voirie, réalisé par TEXTE MASQUÉ | RGPD tendant à la suppression des parties de chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philipp",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l'arrêté ministériel du 6 novembre 2019 approuvant le plan communal d'aménagement dit \"Les Quatre Vents\" à Philippeville (Philippeville, Roly et Sautour) dont l'élaboration en vue de réviser le plan de secteur de Philippeville - Couvin a été décidé par arrêté ministériel du 27 avril 2017 ; Vu la demande de permis intégré reçue le 28 octobre 2022, introduite par TEXTE MASQUÉ | RGPD 161D bt 19 à 1410 Waterloo, concernant un établissement sis à Philippeville, Zoning des Quatre Vents et dont l'objet est l'extension d'un ensemble commercial et de services, création de voiries et désaffectation partielle des chemins vicinaux n° 9 et n° 11 ; Vu le plan de modification de voiries, réalisé par TEXTE MASQUÉ | RGPD tendant à la désaffectation (partielle) des chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville ; Vu sa décision, prise en séance du 23 février 2023, décidant notamment d’approuver le plan de modification de voirie, réalisé par TEXTE MASQUÉ | RGPD tendant à la suppression des parties de chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville - tel que repris au plan annexé ; Vu sa décision, prise en séance du 26 juin 2026 décidant notamment de marquer son accord de principe sur : La vente des parcelles précadastrées Philippeville - Parcelle précadastrée section E numéro 134 A / Co",
+          "page": null
+        },
+        {
+          "excerpt": "Vu la demande de permis intégré reçue le 28 octobre 2022, introduite par TEXTE MASQUÉ | RGPD 161D bt 19 à 1410 Waterloo, concernant un établissement sis à Philippeville, Zoning des Quatre Vents et dont l'objet est l'extension d'un ensemble commercial et de services, création de voiries et désaffectation partielle des chemins vicinaux n° 9 et n° 11 ; Vu le plan de modification de voiries, réalisé par TEXTE MASQUÉ | RGPD tendant à la désaffectation (partielle) des chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville ; Vu sa décision, prise en séance du 23 février 2023, décidant notamment d’approuver le plan de modification de voirie, réalisé par TEXTE MASQUÉ | RGPD tendant à la suppression des parties de chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville - tel que repris au plan annexé ; Vu sa décision, prise en séance du 26 juin 2026 décidant notamment de marquer son accord de principe sur : La vente des parcelles précadastrées Philippeville - Parcelle précadastrée section E numéro 134 A / Contenance : 3 ares 62 ca Philippeville - Parcelle précadastrée section E numéro 134 B / Contenance : 2 ares 24 ca",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
       "matchReason": "projet_communal_indirect",
       "screeningReason": null
     },
@@ -27634,6 +27925,111 @@
       "screeningReason": null
     },
     {
+      "id": "local-html:33100cc0efc6bf936f20",
+      "title": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision.",
+      "sourceDocumentTitle": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision.",
+      "missionEvidence": {
+        "excerpt": "r remis en date du 11/08/2026, DECIDE à l'unanimité : Article 1er : D'approuver le cahier des charges N° 2026-634 et le montant estimé du marché “Végétalisation de la place d'Armes - Désignation d'un bureau d'études”, établis par le Service des Travaux. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s",
+        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
+        "page": null,
+        "sha256": "651d73032cfe5dc48098e35f2e714ab3c3b4659106adcbd18b017ce2a96765ad"
+      },
+      "buyer": "Commune de Philippeville",
+      "municipalityINS": "93056",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
+        "sha256": "651d73032cfe5dc48098e35f2e714ab3c3b4659106adcbd18b017ce2a96765ad",
+        "stage": "decision_to_verify"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "r remis en date du 11/08/2026, DECIDE à l'unanimité : Article 1er : D'approuver le cahier des charges N° 2026-634 et le montant estimé du marché “Végétalisation de la place d'Armes - Désignation d'un bureau d'études”, établis par le Service des Travaux. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s",
+        "mission": "approuver le cahier des charges N° 2026-634 et le montant estimé du marché “Végétalisation de la place d'Armes - Désignation d'un bureau d'études”, établis par le Service des Travaux.",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 49,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
+      "sourceDocument": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
+        "sha256": "651d73032cfe5dc48098e35f2e714ab3c3b4659106adcbd18b017ce2a96765ad",
+        "session": {
+          "date": "2026-08-27",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 27 août 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:1e91b35ad3691645a5",
+        "sha256": "651d73032cfe5dc48098e35f2e714ab3c3b4659106adcbd18b017ce2a96765ad",
+        "format": "html",
+        "checkedAt": "2026-11-10T22:32:33.766Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - A",
+        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
+        "page": null,
+        "sha256": "651d73032cfe5dc48098e35f2e714ab3c3b4659106adcbd18b017ce2a96765ad"
+      },
+      "description": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision. 27 Séance publique du Conseil 27 août 2026 (19:30) Point N°",
+      "evidence": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision. 27 Séance publique du Conseil 27 août 2026 (19:30) Point N°",
+      "municipalEvidence": [
+        {
+          "excerpt": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision. 27 Séance publique du Conseil 27 août 2026 (19:30) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Matière Propreté & Environnement SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision. Suite à l'appel à projets, visant à la végétalisation à l'échelle d'un quartier, il y a lieu de passer un marché pour la désignation d'un bureau d'études approbation du CSC Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ;",
+          "page": null
+        },
+        {
+          "excerpt": "Propreté & Environnement SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision. Suite à l'appel à projets, visant à la végétalisation à l'échelle d'un quartier, il y a lieu de passer un marché pour la désignation d'un bureau d'études approbation du CSC Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) ;",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 2026-634 relatif au marché “Végétalisation de la place d'Armes - Désignation d'un bureau d'études” établi par le Service des Travaux ; Considérant que le montant estimé de ce marché s'élève à 30.000,00 € hors TVA ou 36.300,00 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget 2026 – service extraordinaire, article 766/733-51 (projet 20260073) ; Considérant l'avis de légalité de la Directrice Financière ***",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-634",
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
       "id": "local-html:4fa57242e02ff0c4c4b3",
       "title": "PST 2025-2030 (Action 11) - Rénovation du cimetière des Tapeines - Étude - Marché public de services - Fixation des conditions et choix du mode de passation.",
       "buyer": "Commune de Flémalle",
@@ -28492,386 +28888,71 @@
       "screeningReason": null
     },
     {
-      "id": "local-html:57606736bb48ca2ba24f",
-      "title": "SERVICE PATRIMOINE - Vente des parcelles suite à la demande de modification de voirie tendant à la suppression des parties de chemins communaux - anciennement vicinaux - n°9 et n°11 sis rue de France, à Philippeville et acquisition des nouvelles voiries - Décision définitive.",
-      "sourceDocumentTitle": "SERVICE PATRIMOINE - Vente des parcelles suite à la demande de modification de voirie tendant à la suppression des parties de chemins communaux - anciennement vicinaux - n°9 et n°11 sis rue de France, à Philippeville et acquisition des nouvelles voiries - Décision définitive.",
-      "missionEvidence": null,
-      "buyer": "Commune de Philippeville",
-      "municipalityINS": "93056",
+      "id": "bosa:58874668-9957-420d-96e6-8b0d022fdcc4",
+      "publicationWorkspaceId": "58874668-9957-420d-96e6-8b0d022fdcc4",
+      "noticeId": "ad98d286-06e9-4428-92c3-30464b2d497f",
+      "procedureIdentifier": "0d1484af-a16b-4e4b-87a2-1417ac5ccdfd",
+      "internalReference": "2024/01_pub02",
+      "title": "Construction d’un centre sportif de haut niveau - DÉSIGNATION D'UN AUTEUR DE PROJET ET COORDINATEUR SÉCURITÉ SANTÉ",
+      "buyer": "Régie Sportive Communale Andennaise",
       "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
+      "languages": [
+        "FR"
       ],
-      "screening": "review",
-      "score": 52,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-patrimoine-vente-des-parcelles-suite-a-la-demande-de-modification-de-voirie-tendant-a-la-suppression-des-parties-de-chemins-communaux-anciennement-vicinaux-ndeg9-et-ndeg11-sis-rue-de-france-a-philippeville-et-acquisition-des-nouvelles-voiries",
-      "sourceDocument": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-patrimoine-vente-des-parcelles-suite-a-la-demande-de-modification-de-voirie-tendant-a-la-suppression-des-parties-de-chemins-communaux-anciennement-vicinaux-ndeg9-et-ndeg11-sis-rue-de-france-a-philippeville-et-acquisition-des-nouvelles-voiries",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-patrimoine-vente-des-parcelles-suite-a-la-demande-de-modification-de-voirie-tendant-a-la-suppression-des-parties-de-chemins-communaux-anciennement-vicinaux-ndeg9-et-ndeg11-sis-rue-de-france-a-philippeville-et-acquisition-des-nouvelles-voiries",
-        "sha256": "da387c4765494c7c88807d81df4dd540df111778cea8aab1b62f879e487ca703",
-        "session": {
-          "date": "2026-08-27",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 27 août 2026 (19:30)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-patrimoine-vente-des-parcelles-suite-a-la-demande-de-modification-de-voirie-tendant-a-la-suppression-des-parties-de-chemins-communaux-anciennement-vicinaux-ndeg9-et-ndeg11-sis-rue-de-france-a-philippeville-et-acquisition-des-nouvelles-voiries"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:684f443e24c5410825",
-        "sha256": "da387c4765494c7c88807d81df4dd540df111778cea8aab1b62f879e487ca703",
-        "format": "html",
-        "checkedAt": "2026-11-10T22:32:33.766Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "Vu sa décision, prise en séance du 27 juin 2019, décidant d'adopter définitivement le plan communal d'aménagement dit \"Les Quatre Vents\" en vue de réviser le plan de secteur de Philippeville - Couvin, accompagnée de la d",
-        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-patrimoine-vente-des-parcelles-suite-a-la-demande-de-modification-de-voirie-tendant-a-la-suppression-des-parties-de-chemins-communaux-anciennement-vicinaux-ndeg9-et-ndeg11-sis-rue-de-france-a-philippeville-et-acquisition-des-nouvelles-voiries",
-        "page": null,
-        "sha256": "da387c4765494c7c88807d81df4dd540df111778cea8aab1b62f879e487ca703"
-      },
-      "description": "Vu sa décision, prise en séance du 27 juin 2019, décidant d'adopter définitivement le plan communal d'aménagement dit \"Les Quatre Vents\" en vue de réviser le plan de secteur de Philippeville - Couvin, accompagnée de la déclaration environnementale ; Vu l'arrêté ministériel du 6 novembre 2019 approuvant le plan communal d'aménagement dit \"Les Quatre Vents\" à Philippeville (Philippeville, Roly et Sautour) dont l'élaboration en vue de réviser le plan de secteur de Philippeville - Couvin a été décidé par arrêté ministériel du 27 avril 2017 ; Vu la demande de permis intégré reçue le 28 octobre 2022, introduite par TEXTE MASQUÉ | RGPD 161D bt 19 à 1410 Waterloo, concernant un établissement sis à Philippeville, Zoning des Quatre Vents et dont l'objet est l'extension d'un ensemble commercial et de services, création de voiries et désaffectation partielle des chemins vicinaux n° 9 et n° 11 ; Vu le plan de modification de voiries, réalisé par TEXTE MASQUÉ | RGPD tendant à la désaffectation (partielle) des chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville ; Vu sa décision, prise en séance du 23 février 2023, décidant notamment d’approuver le plan de modification de voirie, réalisé par TEXTE MASQUÉ | RGPD tendant à la suppression des parties de chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philipp",
-      "evidence": "Vu sa décision, prise en séance du 27 juin 2019, décidant d'adopter définitivement le plan communal d'aménagement dit \"Les Quatre Vents\" en vue de réviser le plan de secteur de Philippeville - Couvin, accompagnée de la déclaration environnementale ; Vu l'arrêté ministériel du 6 novembre 2019 approuvant le plan communal d'aménagement dit \"Les Quatre Vents\" à Philippeville (Philippeville, Roly et Sautour) dont l'élaboration en vue de réviser le plan de secteur de Philippeville - Couvin a été décidé par arrêté ministériel du 27 avril 2017 ; Vu la demande de permis intégré reçue le 28 octobre 2022, introduite par TEXTE MASQUÉ | RGPD 161D bt 19 à 1410 Waterloo, concernant un établissement sis à Philippeville, Zoning des Quatre Vents et dont l'objet est l'extension d'un ensemble commercial et de services, création de voiries et désaffectation partielle des chemins vicinaux n° 9 et n° 11 ; Vu le plan de modification de voiries, réalisé par TEXTE MASQUÉ | RGPD tendant à la désaffectation (partielle) des chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville ; Vu sa décision, prise en séance du 23 février 2023, décidant notamment d’approuver le plan de modification de voirie, réalisé par TEXTE MASQUÉ | RGPD tendant à la suppression des parties de chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philipp",
-      "municipalEvidence": [
-        {
-          "excerpt": "Matière Patrimoine SERVICE PATRIMOINE - Vente des parcelles suite à la demande de modification de voirie tendant à la suppression des parties de chemins communaux - anciennement vicinaux - n°9 et n°11 sis rue de France, à Philippeville et acquisition des nouvelles voiries - Décision définitive. Le conseil communal est invité à approuver : Le projet d'acte rédigé par TEXTE MASQUÉ | RGPD La vente des parcelles précadastrées Philippeville - Parcelle précadastrée section E numéro 134 A / Contenance : 3 ares 62 ca",
-          "page": null
-        },
-        {
-          "excerpt": "Vu sa décision, prise en séance du 27 juin 2019, décidant d'adopter définitivement le plan communal d'aménagement dit \"Les Quatre Vents\" en vue de réviser le plan de secteur de Philippeville - Couvin, accompagnée de la déclaration environnementale ; Vu l'arrêté ministériel du 6 novembre 2019 approuvant le plan communal d'aménagement dit \"Les Quatre Vents\" à Philippeville (Philippeville, Roly et Sautour) dont l'élaboration en vue de réviser le plan de secteur de Philippeville - Couvin a été décidé par arrêté ministériel du 27 avril 2017 ; Vu la demande de permis intégré reçue le 28 octobre 2022, introduite par TEXTE MASQUÉ | RGPD 161D bt 19 à 1410 Waterloo, concernant un établissement sis à Philippeville, Zoning des Quatre Vents et dont l'objet est l'extension d'un ensemble commercial et de services, création de voiries et désaffectation partielle des chemins vicinaux n° 9 et n° 11 ; Vu le plan de modification de voiries, réalisé par TEXTE MASQUÉ | RGPD tendant à la désaffectation (partielle) des chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville ; Vu sa décision, prise en séance du 23 février 2023, décidant notamment d’approuver le plan de modification de voirie, réalisé par TEXTE MASQUÉ | RGPD tendant à la suppression des parties de chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philipp",
-          "page": null
-        },
-        {
-          "excerpt": "Vu l'arrêté ministériel du 6 novembre 2019 approuvant le plan communal d'aménagement dit \"Les Quatre Vents\" à Philippeville (Philippeville, Roly et Sautour) dont l'élaboration en vue de réviser le plan de secteur de Philippeville - Couvin a été décidé par arrêté ministériel du 27 avril 2017 ; Vu la demande de permis intégré reçue le 28 octobre 2022, introduite par TEXTE MASQUÉ | RGPD 161D bt 19 à 1410 Waterloo, concernant un établissement sis à Philippeville, Zoning des Quatre Vents et dont l'objet est l'extension d'un ensemble commercial et de services, création de voiries et désaffectation partielle des chemins vicinaux n° 9 et n° 11 ; Vu le plan de modification de voiries, réalisé par TEXTE MASQUÉ | RGPD tendant à la désaffectation (partielle) des chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville ; Vu sa décision, prise en séance du 23 février 2023, décidant notamment d’approuver le plan de modification de voirie, réalisé par TEXTE MASQUÉ | RGPD tendant à la suppression des parties de chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville - tel que repris au plan annexé ; Vu sa décision, prise en séance du 26 juin 2026 décidant notamment de marquer son accord de principe sur : La vente des parcelles précadastrées Philippeville - Parcelle précadastrée section E numéro 134 A / Co",
-          "page": null
-        },
-        {
-          "excerpt": "Vu la demande de permis intégré reçue le 28 octobre 2022, introduite par TEXTE MASQUÉ | RGPD 161D bt 19 à 1410 Waterloo, concernant un établissement sis à Philippeville, Zoning des Quatre Vents et dont l'objet est l'extension d'un ensemble commercial et de services, création de voiries et désaffectation partielle des chemins vicinaux n° 9 et n° 11 ; Vu le plan de modification de voiries, réalisé par TEXTE MASQUÉ | RGPD tendant à la désaffectation (partielle) des chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville ; Vu sa décision, prise en séance du 23 février 2023, décidant notamment d’approuver le plan de modification de voirie, réalisé par TEXTE MASQUÉ | RGPD tendant à la suppression des parties de chemins communaux – anciennement vicinaux - n° 9 et n° 11 et à la création de voiries à Philippeville - tel que repris au plan annexé ; Vu sa décision, prise en séance du 26 juin 2026 décidant notamment de marquer son accord de principe sur : La vente des parcelles précadastrées Philippeville - Parcelle précadastrée section E numéro 134 A / Contenance : 3 ares 62 ca Philippeville - Parcelle précadastrée section E numéro 134 B / Contenance : 2 ares 24 ca",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local-html:33100cc0efc6bf936f20",
-      "title": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision.",
-      "sourceDocumentTitle": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision.",
-      "missionEvidence": {
-        "excerpt": "r remis en date du 11/08/2026, DECIDE à l'unanimité : Article 1er : D'approuver le cahier des charges N° 2026-634 et le montant estimé du marché “Végétalisation de la place d'Armes - Désignation d'un bureau d'études”, établis par le Service des Travaux. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s",
-        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
-        "page": null,
-        "sha256": "651d73032cfe5dc48098e35f2e714ab3c3b4659106adcbd18b017ce2a96765ad"
-      },
-      "buyer": "Commune de Philippeville",
-      "municipalityINS": "93056",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": {
-        "label": "Procédure négociée sans publication préalable",
-        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
-        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
-        "sha256": "651d73032cfe5dc48098e35f2e714ab3c3b4659106adcbd18b017ce2a96765ad",
-        "stage": "decision_to_verify"
-      },
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "r remis en date du 11/08/2026, DECIDE à l'unanimité : Article 1er : D'approuver le cahier des charges N° 2026-634 et le montant estimé du marché “Végétalisation de la place d'Armes - Désignation d'un bureau d'études”, établis par le Service des Travaux. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Le montant estimé s",
-        "mission": "approuver le cahier des charges N° 2026-634 et le montant estimé du marché “Végétalisation de la place d'Armes - Désignation d'un bureau d'études”, établis par le Service des Travaux.",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
       "sector": "Qualif",
       "sectors": [
         "Qualif"
       ],
+      "score": 60,
       "screening": "review",
-      "score": 49,
       "qualification": {
         "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "kind": "works",
+        "route": "ancillary",
+        "explanation": "Marché de travaux ou contrat mixte : la prestation KDRIX peut être accessoire. Vérifier un lot distinct ou une intervention en sous-traitance.",
         "capacityStatus": "not_assessed"
       },
-      "publication": "",
+      "matchReason": "prestation_dans_marche_de_travaux",
+      "publication": "2026-11-11",
       "deadline": "",
-      "url": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
-      "sourceDocument": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
-        "sha256": "651d73032cfe5dc48098e35f2e714ab3c3b4659106adcbd18b017ce2a96765ad",
-        "session": {
-          "date": "2026-08-27",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 27 août 2026 (19:30)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:1e91b35ad3691645a5",
-        "sha256": "651d73032cfe5dc48098e35f2e714ab3c3b4659106adcbd18b017ce2a96765ad",
-        "format": "html",
-        "checkedAt": "2026-11-10T22:32:33.766Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - A",
-        "sourceUrl": "https://www.deliberations.be/philippeville/decisions/27-aout-2026-19-30/service-marches-publics-vegetalisation-de-la-place-darmes-dans-le-cadre-de-lappel-a-projet-visant-a-la-vegetalisation-dun-quartier-pour-ladaptation-aux-changements-climatiques-designation-dun-bureau-detudes-approbation-du-csc-et-du-mode-de-passation-du",
-        "page": null,
-        "sha256": "651d73032cfe5dc48098e35f2e714ab3c3b4659106adcbd18b017ce2a96765ad"
-      },
-      "description": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision. 27 Séance publique du Conseil 27 août 2026 (19:30) Point N°",
-      "evidence": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision. 27 Séance publique du Conseil 27 août 2026 (19:30) Point N°",
-      "municipalEvidence": [
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Marché de services d'architecture",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "29",
+      "noticeKind": "award",
+      "bdaReference": "",
+      "tedReference": "2024/01_pub02",
+      "url": "https://www.publicprocurement.be/publication-workspaces/58874668-9957-420d-96e6-8b0d022fdcc4/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/58874668-9957-420d-96e6-8b0d022fdcc4/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
         {
-          "excerpt": "SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision. 27 Séance publique du Conseil 27 août 2026 (19:30) Point N°",
-          "page": null
-        },
-        {
-          "excerpt": "Matière Propreté & Environnement SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision. Suite à l'appel à projets, visant à la végétalisation à l'échelle d'un quartier, il y a lieu de passer un marché pour la désignation d'un bureau d'études approbation du CSC Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ;",
-          "page": null
-        },
-        {
-          "excerpt": "Propreté & Environnement SERVICE MARCHES PUBLICS - Végétalisation de la place d'Armes dans le cadre de l’appel à projet visant à la végétalisation d’un quartier pour l’adaptation aux changements climatiques - Désignation d'un bureau d'études - Approbation du CSC et du mode de passation du marché - Décision. Suite à l'appel à projets, visant à la végétalisation à l'échelle d'un quartier, il y a lieu de passer un marché pour la désignation d'un bureau d'études approbation du CSC Vu le Code de la démocratie locale et de la décentralisation et ses modifications ultérieures, notamment l'article L1222-3 §1 relatif aux compétences du Conseil communal et les articles L3111-1 et suivants relatifs à la tutelle ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions et ses modifications ultérieures ; Vu la loi du 17 juin 2016 relative aux marchés publics et ses modifications ultérieures, notamment l’article 42, § 1, 1° a) (la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) ;",
-          "page": null
-        },
-        {
-          "excerpt": "Vu l'arrêté royal du 14 janvier 2013 établissant les règles générales d'exécution des marchés publics et ses modifications ultérieures ; Vu l'arrêté royal du 18 avril 2017 relatif à la passation des marchés publics dans les secteurs classiques et ses modifications ultérieures, notamment l'article 90, 1° ; Considérant le cahier des charges N° 2026-634 relatif au marché “Végétalisation de la place d'Armes - Désignation d'un bureau d'études” établi par le Service des Travaux ; Considérant que le montant estimé de ce marché s'élève à 30.000,00 € hors TVA ou 36.300,00 €, 21% TVA comprise ; Considérant qu'il est proposé de passer le marché par procédure négociée sans publication préalable ; Considérant que le crédit permettant cette dépense est inscrit au budget 2026 – service extraordinaire, article 766/733-51 (projet 20260073) ; Considérant l'avis de légalité de la Directrice Financière ***",
-          "page": null
+          "reference": "2024/01_pub02",
+          "url": "https://www.publicprocurement.be/publication-workspaces/58874668-9957-420d-96e6-8b0d022fdcc4/general",
+          "publicationDate": "2026-11-11",
+          "kind": "award"
         }
       ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": "2026-634"
-    },
-    {
-      "id": "local-html:ac22042c44d05336a874",
-      "title": "Marché public – Désignation d’un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal - Procédure de passation et Cahier spécial des charges",
-      "sourceDocumentTitle": "Marché public – Désignation d’un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal - Procédure de passation et Cahier spécial des charges",
-      "missionEvidence": {
-        "excerpt": "cquis le bien en date du 16 octobre 2025. 4/ ANALYSE : Il y a lieu de lancer une procédure de demande d’offre en vue de désigner un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal.",
-        "sourceUrl": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/marche-public-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-dun-centre-technique-communal-procedure-de-passation-et-cahier-special-des-charges",
-        "page": null,
-        "sha256": "4ecd10d9b7a6c6ce44884fe1f484afc2e72da19af93fc279f9c37a0e1f023efb"
-      },
-      "buyer": "Commune de Tubize",
-      "municipalityINS": "25105",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "cquis le bien en date du 16 octobre 2025. 4/ ANALYSE : Il y a lieu de lancer une procédure de demande d’offre en vue de désigner un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal.",
-        "mission": "lancer une procédure de demande d’offre en vue de désigner un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal.",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/marche-public-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-dun-centre-technique-communal-procedure-de-passation-et-cahier-special-des-charges",
-      "sourceDocument": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/marche-public-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-dun-centre-technique-communal-procedure-de-passation-et-cahier-special-des-charges",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/marche-public-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-dun-centre-technique-communal-procedure-de-passation-et-cahier-special-des-charges",
-        "sha256": "4ecd10d9b7a6c6ce44884fe1f484afc2e72da19af93fc279f9c37a0e1f023efb",
-        "session": {
-          "date": "2026-11-05",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 05 novembre 2026 (19:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/marche-public-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-dun-centre-technique-communal-procedure-de-passation-et-cahier-special-des-charges"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:a518599e95e5c6282f",
-        "sha256": "4ecd10d9b7a6c6ce44884fe1f484afc2e72da19af93fc279f9c37a0e1f023efb",
-        "format": "html",
-        "checkedAt": "2026-11-11T08:25:07.017Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Marché public – Désignation d’un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal - Procédure de passation et Cahier spécial des charges 5 Séance publique du Consei",
-        "sourceUrl": "https://www.deliberations.be/tubize/decisions/05-novembre-2026-19-00/marche-public-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-dun-centre-technique-communal-procedure-de-passation-et-cahier-special-des-charges",
-        "page": null,
-        "sha256": "4ecd10d9b7a6c6ce44884fe1f484afc2e72da19af93fc279f9c37a0e1f023efb"
-      },
-      "description": "Marché public – Désignation d’un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal - Procédure de passation et Cahier spécial des charges 5 Séance publique du Conseil 05 novembre 2026 (19:00) Point N°",
-      "evidence": "Marché public – Désignation d’un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal - Procédure de passation et Cahier spécial des charges 5 Séance publique du Conseil 05 novembre 2026 (19:00) Point N°",
-      "municipalEvidence": [
+      "documentInventory": [
         {
-          "excerpt": "Marché public – Désignation d’un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal - Procédure de passation et Cahier spécial des charges 5 Séance publique du Conseil 05 novembre 2026 (19:00) Point N°",
-          "page": null
-        },
-        {
-          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. Marché public – Désignation d’un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal - Procédure de passation et Cahier spécial des charges Note de synthèse explicative : 1/ PST :",
-          "page": null
-        },
-        {
-          "excerpt": "Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics et de certains marchés de travaux, de fournitures et de services et de concessions ; Considérant que l'autorité adjudicatrice est l'Administration communale de Tubize, Grand Place, 1 à 1480 Tubize ; Considérant que le marché a pour objet la désignation d’un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux d’un Centre technique communal ; Considérant que le marché sera réalisé par procédure négociée sans publication préalable sur base de l’article 42, § 1, 1°, a) de la loi du 17 juin 2016 relative aux marchés publics ; Considérant que le montant du marché estimé à 85.000,00 euros HTVA, soit 102.850,00 euros TVAC est inférieur au seuil de 140.000,00 euros HTVA, seuil en dessous duquel il est permis de recourir à la procédure négociée sans publication préalable ; Considérant le cahier spécial des charges n°S2026-31 ; Considérant le rapport du Département des Travaux et du Patrimoine ;",
-          "page": null
+          "id": "1e065fa6-5a56-4d59-b69e-4af9261ee811",
+          "title": "Délibération.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "475f63ef-ce78-4f01-a55d-8e2b00513b19",
+          "documentId": "e76fca0b-8f4c-4861-a0e3-75b1a2e78954",
+          "activatedAt": "2026-11-11T04:23:01.830233",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/58874668-9957-420d-96e6-8b0d022fdcc4/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local-html:f22a8809e5e12ca44294",
-      "title": "Marchés publics/Gestion de projets - Schéma de développement communal - IDELUX Projets publics relation « in house »",
-      "sourceDocumentTitle": "Marchés publics/Gestion de projets - Schéma de développement communal - IDELUX Projets publics relation « in house »",
-      "missionEvidence": {
-        "excerpt": "évision totale de son Schéma de Développement Communal Article 2 – de recourir à la procédure « in house » selon l’article 30 de la loi du 17 juin 2016 en vue de la désignation d’un auteur de projet pour accompagner la Commune dans la révision de son Schéma de Développement Communal",
-        "sourceUrl": "https://www.deliberations.be/habay/decisions/26-aout-2026-20-00/marches-publics-gestion-de-projets-schema-de-developpement-communal-idelux-projets-publics-relation-in-house",
-        "page": null,
-        "sha256": "85f3d3461b7d12e650283bf96b6698c8ab0c102ce46ad5b7a39bd7f8e3db2f6c"
-      },
-      "buyer": "Commune de Habay",
-      "municipalityINS": "85046",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_explicitement_demandee_dans_le_document",
-        "excerpt": "évision totale de son Schéma de Développement Communal Article 2 – de recourir à la procédure « in house » selon l’article 30 de la loi du 17 juin 2016 en vue de la désignation d’un auteur de projet pour accompagner la Commune dans la révision de son Schéma de Développement Communal",
-        "mission": "recourir à la procédure « in house » selon l’article 30 de la loi du 17 juin 2016 en vue de la désignation d’un auteur de projet pour accompagner la Commune dans la révision de son Schéma de Développement Communal",
-        "basis": "document_body"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/habay/decisions/26-aout-2026-20-00/marches-publics-gestion-de-projets-schema-de-developpement-communal-idelux-projets-publics-relation-in-house",
-      "sourceDocument": "https://www.deliberations.be/habay/decisions/26-aout-2026-20-00/marches-publics-gestion-de-projets-schema-de-developpement-communal-idelux-projets-publics-relation-in-house",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/habay/decisions/26-aout-2026-20-00/marches-publics-gestion-de-projets-schema-de-developpement-communal-idelux-projets-publics-relation-in-house",
-        "sha256": "85f3d3461b7d12e650283bf96b6698c8ab0c102ce46ad5b7a39bd7f8e3db2f6c",
-        "session": {
-          "date": "2026-08-26",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 26 août 2026 (20:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/habay/decisions/26-aout-2026-20-00/marches-publics-gestion-de-projets-schema-de-developpement-communal-idelux-projets-publics-relation-in-house"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:7f1378821c0dffbeee",
-        "sha256": "85f3d3461b7d12e650283bf96b6698c8ab0c102ce46ad5b7a39bd7f8e3db2f6c",
-        "format": "html",
-        "checkedAt": "2026-11-11T08:25:07.017Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "Établissement du schéma de développement communal définitif et à la déclaration environnementale Considérant que le forfait établi par IDELUX Projets publics comprend l’assistance à la commune sur la composition du dossi",
-        "sourceUrl": "https://www.deliberations.be/habay/decisions/26-aout-2026-20-00/marches-publics-gestion-de-projets-schema-de-developpement-communal-idelux-projets-publics-relation-in-house",
-        "page": null,
-        "sha256": "85f3d3461b7d12e650283bf96b6698c8ab0c102ce46ad5b7a39bd7f8e3db2f6c"
-      },
-      "description": "Établissement du schéma de développement communal définitif et à la déclaration environnementale Considérant que le forfait établi par IDELUX Projets publics comprend l’assistance à la commune sur la composition du dossier pour l’octroi des subsides émanant de la Région wallonne ; Considérant la nécessité de procéder à la désignation d’un auteur de projet agrée pour accompagner la Commune afin d’élaborer la révision du Schéma de Développement Communal, qu’IDELUX est agréé pour l’élaboration et la révision de Schéma de Développement Communaux ; Considérant qu’outre son agrément en tant qu’auteur de projet, l’intercommunale IDELUX dispose d’un panel de métiers et a une véritable expertise en matière d’aménagement du territoire, que l’Intercommunale développe un nouveau service composé de plusieurs spécialistes de l’aménagement du territoire, dont trois sont expressément agréés par le Service Public de Wallonie pour la réalisation de Schéma de Développement Communaux ; Considérant que ce service qui a pour but d’accompagner les communes dans l’élaboration ou la révision des Schémas de Développement Communaux et de proposer des services d’Assistance à Maîtrise d’Ouvrage visant à l’élaboration de projets concrets après l’identification desdits projets dans le cadre du Schéma de Développement Communal, que cette mission a été approuvée lors de l’Assemblée Générale d’IDELUX du 18/06/2",
-      "evidence": "Établissement du schéma de développement communal définitif et à la déclaration environnementale Considérant que le forfait établi par IDELUX Projets publics comprend l’assistance à la commune sur la composition du dossier pour l’octroi des subsides émanant de la Région wallonne ; Considérant la nécessité de procéder à la désignation d’un auteur de projet agrée pour accompagner la Commune afin d’élaborer la révision du Schéma de Développement Communal, qu’IDELUX est agréé pour l’élaboration et la révision de Schéma de Développement Communaux ; Considérant qu’outre son agrément en tant qu’auteur de projet, l’intercommunale IDELUX dispose d’un panel de métiers et a une véritable expertise en matière d’aménagement du territoire, que l’Intercommunale développe un nouveau service composé de plusieurs spécialistes de l’aménagement du territoire, dont trois sont expressément agréés par le Service Public de Wallonie pour la réalisation de Schéma de Développement Communaux ; Considérant que ce service qui a pour but d’accompagner les communes dans l’élaboration ou la révision des Schémas de Développement Communaux et de proposer des services d’Assistance à Maîtrise d’Ouvrage visant à l’élaboration de projets concrets après l’identification desdits projets dans le cadre du Schéma de Développement Communal, que cette mission a été approuvée lors de l’Assemblée Générale d’IDELUX du 18/06/2",
-      "municipalEvidence": [
-        {
-          "excerpt": "Établissement du schéma de développement communal définitif et à la déclaration environnementale Considérant que le forfait établi par IDELUX Projets publics comprend l’assistance à la commune sur la composition du dossier pour l’octroi des subsides émanant de la Région wallonne ; Considérant la nécessité de procéder à la désignation d’un auteur de projet agrée pour accompagner la Commune afin d’élaborer la révision du Schéma de Développement Communal, qu’IDELUX est agréé pour l’élaboration et la révision de Schéma de Développement Communaux ; Considérant qu’outre son agrément en tant qu’auteur de projet, l’intercommunale IDELUX dispose d’un panel de métiers et a une véritable expertise en matière d’aménagement du territoire, que l’Intercommunale développe un nouveau service composé de plusieurs spécialistes de l’aménagement du territoire, dont trois sont expressément agréés par le Service Public de Wallonie pour la réalisation de Schéma de Développement Communaux ; Considérant que ce service qui a pour but d’accompagner les communes dans l’élaboration ou la révision des Schémas de Développement Communaux et de proposer des services d’Assistance à Maîtrise d’Ouvrage visant à l’élaboration de projets concrets après l’identification desdits projets dans le cadre du Schéma de Développement Communal, que cette mission a été approuvée lors de l’Assemblée Générale d’IDELUX du 18/06/2",
-          "page": null
-        },
-        {
-          "excerpt": "Considérant que le forfait établi par IDELUX Projets publics comprend l’assistance à la commune sur la composition du dossier pour l’octroi des subsides émanant de la Région wallonne ; Considérant la nécessité de procéder à la désignation d’un auteur de projet agrée pour accompagner la Commune afin d’élaborer la révision du Schéma de Développement Communal, qu’IDELUX est agréé pour l’élaboration et la révision de Schéma de Développement Communaux ; Considérant qu’outre son agrément en tant qu’auteur de projet, l’intercommunale IDELUX dispose d’un panel de métiers et a une véritable expertise en matière d’aménagement du territoire, que l’Intercommunale développe un nouveau service composé de plusieurs spécialistes de l’aménagement du territoire, dont trois sont expressément agréés par le Service Public de Wallonie pour la réalisation de Schéma de Développement Communaux ; Considérant que ce service qui a pour but d’accompagner les communes dans l’élaboration ou la révision des Schémas de Développement Communaux et de proposer des services d’Assistance à Maîtrise d’Ouvrage visant à l’élaboration de projets concrets après l’identification desdits projets dans le cadre du Schéma de Développement Communal, que cette mission a été approuvée lors de l’Assemblée Générale d’IDELUX du 18/06/2025 ; Considérant que la Commune est associée à l'intercommunale IDELUX Projets publics SC ; Cons",
-          "page": null
-        },
-        {
-          "excerpt": "Considérant la nécessité de procéder à la désignation d’un auteur de projet agrée pour accompagner la Commune afin d’élaborer la révision du Schéma de Développement Communal, qu’IDELUX est agréé pour l’élaboration et la révision de Schéma de Développement Communaux ; Considérant qu’outre son agrément en tant qu’auteur de projet, l’intercommunale IDELUX dispose d’un panel de métiers et a une véritable expertise en matière d’aménagement du territoire, que l’Intercommunale développe un nouveau service composé de plusieurs spécialistes de l’aménagement du territoire, dont trois sont expressément agréés par le Service Public de Wallonie pour la réalisation de Schéma de Développement Communaux ; Considérant que ce service qui a pour but d’accompagner les communes dans l’élaboration ou la révision des Schémas de Développement Communaux et de proposer des services d’Assistance à Maîtrise d’Ouvrage visant à l’élaboration de projets concrets après l’identification desdits projets dans le cadre du Schéma de Développement Communal, que cette mission a été approuvée lors de l’Assemblée Générale d’IDELUX du 18/06/2025 ; Considérant que la Commune est associée à l'intercommunale IDELUX Projets publics SC ; Considérant que IDELUX Projets publics SC est une intercommunale ayant pris la forme d’une société coopérative qui ne comporte pas de participation directe de capitaux privés ; Que ses orga",
-          "page": null
-        },
-        {
-          "excerpt": "Considérant le souhait de la Commune de Habay d’engager une révision totale du Schéma de Développement Communal conformément aux objectifs poursuivis dans le Schéma de Développement Territorial ; Considérant que le Service Public de Wallonie alloue des subsides aux communes souhaitant réviser leur Schéma de Développement Communal, que ces subsides s’élèvent à 75 % des montants des honoraires, plafonnés à 75.000 euros ; Considérant que la révision d’un Schéma de Développement Communal est élaborée par un auteur de projet agréé ; que le Collège communal a la possibilité de lancer une procédure de marché public pour un marché de service, ou d’opter par l’exemption spécifiée à l’article 30 de la loi du 17 juin 2016 permettant à la Commune de Habay de passer par un conventionnement (in house) avec une personne morale qui serait agréée pour l’élaboration d’un Schéma de Développement Communal ; Considérant qu' IDELUX Projets publics est agréé pour l’élaboration des Schémas de Développement Communaux, que l’Assemblée Générale d’IDELUX a défini en date du 18/06/2025 un forfait de 100.000 € HTVA + 1€ HTVA par habitant pour l’élaboration d’un Schéma de Développement Communal ; Considérant dès lors que le forfait que proposerait IDELUX à la Commune de Habay serait de 108.721 € HTVA, que jusqu’à 75.000 des honoraires de l’intercommunale seraient subsidiables ; Considérant qu’IDELUX a eu la ",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-11T12:55:04.026Z"
     }
   ]
 }
