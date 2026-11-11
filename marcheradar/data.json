@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-11T08:25:07.017Z",
+      "last_attempt": "2026-11-11T17:28:45.387Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -74,19 +74,19 @@
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 1286,
-      "opportunities": 206,
+      "documentsRead": 1320,
+      "opportunities": 208,
       "sitesChecked": 261,
       "candidatePages": 228,
-      "sourceErrors": 107,
-      "htmlDocumentsRead": 6249
+      "sourceErrors": 110,
+      "htmlDocumentsRead": 6451
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-11T08:25:07.017Z",
-      "last_success": "2026-11-11T08:25:07.017Z",
+      "last_attempt": "2026-11-11T17:28:45.387Z",
+      "last_success": "2026-11-11T17:28:45.387Z",
       "last_batch": 24,
-      "documents_checked": 79,
+      "documents_checked": 63,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
@@ -94,9 +94,9 @@
       "review_candidates": 0,
       "errors_count": 7,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 302,
+      "html_documents_read": 285,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 108,
+      "recent_municipal_signals": 110,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1213,
     "matched_current_run": 4,
-    "records": 352,
+    "records": 354,
     "review_count": 256,
     "award_notice_count": 361,
     "awarded_market_matches": 3,
@@ -13826,7 +13826,7 @@
       "sourceDocumentVersion": {
         "documentId": "municipal-doc:7e257e4ef572a6908b",
         "sha256": "dd72a4aea80d6762314a26aaea1a9195f183bd4e6b36cc3c71586506a8b3cafc",
-        "checkedAt": "2026-11-08T00:55:07.880Z",
+        "checkedAt": "2026-11-11T17:28:45.387Z",
         "changedAt": null
       },
       "matchReason": "prestation_decrite",
@@ -28953,6 +28953,194 @@
       ],
       "consultationUrls": [],
       "documentsCheckedAt": "2026-11-11T12:55:04.026Z"
+    },
+    {
+      "id": "local-html:50c35172edc06050e435",
+      "title": "RGPD - Convention de sous-traitance relative aux opérations de traitement réalisées dans le cadre du marché public relatif au Schéma de Développement Communal global (SDC).",
+      "sourceDocumentTitle": "RGPD - Convention de sous-traitance relative aux opérations de traitement réalisées dans le cadre du marché public relatif au Schéma de Développement Communal global (SDC).",
+      "missionEvidence": null,
+      "buyer": "Commune de Virton",
+      "municipalityINS": "85045",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/virton/decisions/12-novembre-2026-19-00/rgpd-convention-de-sous-traitance-relative-aux-operations-de-traitement-realisees-dans-le-cadre-du-marche-public-relatif-au-schema-de-developpement-communal-global-sdc",
+      "sourceDocument": "https://www.deliberations.be/virton/decisions/12-novembre-2026-19-00/rgpd-convention-de-sous-traitance-relative-aux-operations-de-traitement-realisees-dans-le-cadre-du-marche-public-relatif-au-schema-de-developpement-communal-global-sdc",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/virton/decisions/12-novembre-2026-19-00/rgpd-convention-de-sous-traitance-relative-aux-operations-de-traitement-realisees-dans-le-cadre-du-marche-public-relatif-au-schema-de-developpement-communal-global-sdc",
+        "sha256": "ec43d85f9f479db55b5edd095e01cbba6de8195c861cd4ae31367d65a9a07ee5",
+        "session": {
+          "date": "2026-11-12",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 12 novembre 2026 (19:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/virton/decisions/12-novembre-2026-19-00/rgpd-convention-de-sous-traitance-relative-aux-operations-de-traitement-realisees-dans-le-cadre-du-marche-public-relatif-au-schema-de-developpement-communal-global-sdc"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:6dccc53b8e24efa24a",
+        "sha256": "ec43d85f9f479db55b5edd095e01cbba6de8195c861cd4ae31367d65a9a07ee5",
+        "format": "html",
+        "checkedAt": "2026-11-11T17:28:45.387Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Vu le Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l'égard du traitement des données à caractère personnel et à la libre circulation de ce",
+        "sourceUrl": "https://www.deliberations.be/virton/decisions/12-novembre-2026-19-00/rgpd-convention-de-sous-traitance-relative-aux-operations-de-traitement-realisees-dans-le-cadre-du-marche-public-relatif-au-schema-de-developpement-communal-global-sdc",
+        "page": null,
+        "sha256": "ec43d85f9f479db55b5edd095e01cbba6de8195c861cd4ae31367d65a9a07ee5"
+      },
+      "description": "Vu le Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l'égard du traitement des données à caractère personnel et à la libre circulation de ces données (ci-après le \"RGPD\"), notamment son article 28 ; Vu le Code de la Démocratie Locale et de la Décentralisation, notamment son article L1122-30 ; Vu la décision d'exécution (UE) 2021/915 de la Commission du 4 juin 2021 relative aux clauses contractuelles types entre les responsables du traitement et les sous-traitants au titre de l'article 28, paragraphe 7, du Règlement (UE) 2016/679 du Parlement européen et du Conseil et de l'article 29, paragraphe 7, du Règlement (UE) 2018/1725 du Parlement européen et du Conseil ; Considérant l'avis de la Commission des marchés publics du 5 décembre 2018 relative à la notion de \"sous-traitant\" au sens du Règlement (UE) 2016/679 ; Vu sa délibération prise en date du 26 mars 2026 approuvant le cahier des charges n°2026-850 \"Marché de services relatifs à l'élaboration d'un schéma de développement communal global conformément à la législation relative à l'aménagement du territoire\" ; Vu le cahier spécial des charges n°2026-850 ; Vu la délibération prise par le Collège communal en date du 24 juin 2026 attribuant le marché public \"Désignation d'un auteur de projet - Élaboration d'un Schéma de Développement Communal global (",
+      "evidence": "Vu le Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l'égard du traitement des données à caractère personnel et à la libre circulation de ces données (ci-après le \"RGPD\"), notamment son article 28 ; Vu le Code de la Démocratie Locale et de la Décentralisation, notamment son article L1122-30 ; Vu la décision d'exécution (UE) 2021/915 de la Commission du 4 juin 2021 relative aux clauses contractuelles types entre les responsables du traitement et les sous-traitants au titre de l'article 28, paragraphe 7, du Règlement (UE) 2016/679 du Parlement européen et du Conseil et de l'article 29, paragraphe 7, du Règlement (UE) 2018/1725 du Parlement européen et du Conseil ; Considérant l'avis de la Commission des marchés publics du 5 décembre 2018 relative à la notion de \"sous-traitant\" au sens du Règlement (UE) 2016/679 ; Vu sa délibération prise en date du 26 mars 2026 approuvant le cahier des charges n°2026-850 \"Marché de services relatifs à l'élaboration d'un schéma de développement communal global conformément à la législation relative à l'aménagement du territoire\" ; Vu le cahier spécial des charges n°2026-850 ; Vu la délibération prise par le Collège communal en date du 24 juin 2026 attribuant le marché public \"Désignation d'un auteur de projet - Élaboration d'un Schéma de Développement Communal global (",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu le Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l'égard du traitement des données à caractère personnel et à la libre circulation de ces données (ci-après le \"RGPD\"), notamment son article 28 ; Vu le Code de la Démocratie Locale et de la Décentralisation, notamment son article L1122-30 ; Vu la décision d'exécution (UE) 2021/915 de la Commission du 4 juin 2021 relative aux clauses contractuelles types entre les responsables du traitement et les sous-traitants au titre de l'article 28, paragraphe 7, du Règlement (UE) 2016/679 du Parlement européen et du Conseil et de l'article 29, paragraphe 7, du Règlement (UE) 2018/1725 du Parlement européen et du Conseil ; Considérant l'avis de la Commission des marchés publics du 5 décembre 2018 relative à la notion de \"sous-traitant\" au sens du Règlement (UE) 2016/679 ; Vu sa délibération prise en date du 26 mars 2026 approuvant le cahier des charges n°2026-850 \"Marché de services relatifs à l'élaboration d'un schéma de développement communal global conformément à la législation relative à l'aménagement du territoire\" ; Vu le cahier spécial des charges n°2026-850 ; Vu la délibération prise par le Collège communal en date du 24 juin 2026 attribuant le marché public \"Désignation d'un auteur de projet - Élaboration d'un Schéma de Développement Communal global (",
+          "page": null
+        },
+        {
+          "excerpt": "Ci-après dénommée, « le sous-traitant » ; Vu le Règlement (UE) 2016/679 relatif à la protection des personnes physiques à l’égard du traitement des données à caractère personnel et à la libre circulation de ces données (ci-après « le RGPD »), notamment son article 28 ; Vu l’avis de la commission des marchés publics du 5 décembre 2018 concernant la notion de « sous-traitant » au sens du Règlement général sur la protection des données ; Vu le marché public de services relatifs à l’élaboration d’un schéma de développement communal global conformément à la législation relative à l’aménagement du territoire (n°2026-850) conclu entre les parties ; Considérant que, dans le cadre de l’exécution de ce marché public, des opérations de traitement de données à caractère personnel doivent être réalisées ; Considérant qu’il convient dès lors que les parties concluent un contrat de sous-traitance pour encadrer les opérations de traitement ; CECI AYANT ÉTÉ EXPOSÉ, LES PARTIES CONVIENNENT ET ACCEPTENT CE QUI SUIT :",
+          "page": null
+        },
+        {
+          "excerpt": "Vu le Règlement (UE) 2016/679 relatif à la protection des personnes physiques à l’égard du traitement des données à caractère personnel et à la libre circulation de ces données (ci-après « le RGPD »), notamment son article 28 ; Vu l’avis de la commission des marchés publics du 5 décembre 2018 concernant la notion de « sous-traitant » au sens du Règlement général sur la protection des données ; Vu le marché public de services relatifs à l’élaboration d’un schéma de développement communal global conformément à la législation relative à l’aménagement du territoire (n°2026-850) conclu entre les parties ; Considérant que, dans le cadre de l’exécution de ce marché public, des opérations de traitement de données à caractère personnel doivent être réalisées ; Considérant qu’il convient dès lors que les parties concluent un contrat de sous-traitance pour encadrer les opérations de traitement ; CECI AYANT ÉTÉ EXPOSÉ, LES PARTIES CONVIENNENT ET ACCEPTENT CE QUI SUIT : Article 1 er . Objet et champ d’application",
+          "page": null
+        },
+        {
+          "excerpt": "Sera effacé Finalité(s) pour laquelle/lesquelles les données à caractère personnel sont traitées pour le compte du responsable du traitement : Etablissement du Schéma de Développement Communal (SDC), conformément au marché public de services n°2026-850. Durée du traitement : 4 ans __________________________________________ ANNEXE II",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2026-850"
+    },
+    {
+      "id": "local-html:47ebfbed1da4aef7d551",
+      "title": "Auteur de projet pour la reconstruction de l'école maternelle Henri Alexandre dans le cadre du PIE 3",
+      "sourceDocumentTitle": "Travaux/ Marché public/ Auteur de projet pour la reconstruction de l'école maternelle Henri Alexandre dans le cadre du PIE 3/ Approbation des conditions et du mode de passation.",
+      "missionEvidence": {
+        "excerpt": "xandre dont les travaux sont estimés à 917.411,44 € TVAC. Il s'agit d'approuver les conditions et le mode de passation (procédure négociée sans publication préalable) du marché public relatif à la désignation d'un auteur de projet qui concevra et suivra les travaux en question. Le montant est estimé du marché s'élève à 103.857,90 € HTVA ou 125.668,06 € TVAC.",
+        "sourceUrl": "https://www.deliberations.be/ans/decisions/28-octobre-2026-19-30/travaux-marche-public-auteur-de-projet-pour-la-reconstruction-de-lecole-maternelle-henri-alexandre-dans-le-cadre-du-pie-3-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "be4b798690a6c707bc26eff7e348bbc2f96e6f09d8f9fbf584dd86e7a240a858"
+      },
+      "buyer": "Commune de Ans",
+      "municipalityINS": "62003",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": {
+        "label": "Procédure négociée sans publication préalable",
+        "excerpt": "de passer le marché par procédure négociée sans publication préalable",
+        "sourceUrl": "https://www.deliberations.be/ans/decisions/28-octobre-2026-19-30/travaux-marche-public-auteur-de-projet-pour-la-reconstruction-de-lecole-maternelle-henri-alexandre-dans-le-cadre-du-pie-3-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "be4b798690a6c707bc26eff7e348bbc2f96e6f09d8f9fbf584dd86e7a240a858",
+        "stage": "project"
+      },
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_explicitement_demandee_dans_le_document",
+        "excerpt": "xandre dont les travaux sont estimés à 917.411,44 € TVAC. Il s'agit d'approuver les conditions et le mode de passation (procédure négociée sans publication préalable) du marché public relatif à la désignation d'un auteur de projet qui concevra et suivra les travaux en question. Le montant est estimé du marché s'élève à 103.857,90 € HTVA ou 125.668,06 € TVAC.",
+        "mission": "approuver les conditions et le mode de passation (procédure négociée sans publication préalable) du marché public relatif à la désignation d'un auteur de projet qui concevra et suivra les travaux en question.",
+        "basis": "document_body"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/ans/decisions/28-octobre-2026-19-30/travaux-marche-public-auteur-de-projet-pour-la-reconstruction-de-lecole-maternelle-henri-alexandre-dans-le-cadre-du-pie-3-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocument": "https://www.deliberations.be/ans/decisions/28-octobre-2026-19-30/travaux-marche-public-auteur-de-projet-pour-la-reconstruction-de-lecole-maternelle-henri-alexandre-dans-le-cadre-du-pie-3-approbation-des-conditions-et-du-mode-de-passation",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/ans/decisions/28-octobre-2026-19-30/travaux-marche-public-auteur-de-projet-pour-la-reconstruction-de-lecole-maternelle-henri-alexandre-dans-le-cadre-du-pie-3-approbation-des-conditions-et-du-mode-de-passation",
+        "sha256": "be4b798690a6c707bc26eff7e348bbc2f96e6f09d8f9fbf584dd86e7a240a858",
+        "session": {
+          "date": "2026-10-28",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 28 octobre 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/ans/decisions/28-octobre-2026-19-30/travaux-marche-public-auteur-de-projet-pour-la-reconstruction-de-lecole-maternelle-henri-alexandre-dans-le-cadre-du-pie-3-approbation-des-conditions-et-du-mode-de-passation"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:74e4f9ea33f4c66482",
+        "sha256": "be4b798690a6c707bc26eff7e348bbc2f96e6f09d8f9fbf584dd86e7a240a858",
+        "format": "html",
+        "checkedAt": "2026-11-11T17:28:45.387Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Considérant qu'il en a été débattu au cours de la réunion ad hoc instituée en application de l'article L1122-34 du code de la démocratie locale et de la décentralisation et de l'article 57 du règlement d'ordre intérieur",
+        "sourceUrl": "https://www.deliberations.be/ans/decisions/28-octobre-2026-19-30/travaux-marche-public-auteur-de-projet-pour-la-reconstruction-de-lecole-maternelle-henri-alexandre-dans-le-cadre-du-pie-3-approbation-des-conditions-et-du-mode-de-passation",
+        "page": null,
+        "sha256": "be4b798690a6c707bc26eff7e348bbc2f96e6f09d8f9fbf584dd86e7a240a858"
+      },
+      "description": "Considérant qu'il en a été débattu au cours de la réunion ad hoc instituée en application de l'article L1122-34 du code de la démocratie locale et de la décentralisation et de l'article 57 du règlement d'ordre intérieur du conseil communal ; Sur proposition du Collège ; Considérant la transmission du dossier au Directeur financier pour avis préalable en date du 12/10/2026, Considérant l'avis non rendu par le Directeur financier, DÉCIDE : Article 1er : D'approuver le cahier des charges et le montant estimé (103.857,90 € HTVA ou 125.668,06 € TVAC) du marché “Auteur de projet pour la reconstruction de l'école maternelle Henri Alexandre dans le cadre du PIE 3”. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Article 2 : De passer le marché par la procédure négociée sans publication préalable.",
+      "evidence": "Considérant qu'il en a été débattu au cours de la réunion ad hoc instituée en application de l'article L1122-34 du code de la démocratie locale et de la décentralisation et de l'article 57 du règlement d'ordre intérieur du conseil communal ; Sur proposition du Collège ; Considérant la transmission du dossier au Directeur financier pour avis préalable en date du 12/10/2026, Considérant l'avis non rendu par le Directeur financier, DÉCIDE : Article 1er : D'approuver le cahier des charges et le montant estimé (103.857,90 € HTVA ou 125.668,06 € TVAC) du marché “Auteur de projet pour la reconstruction de l'école maternelle Henri Alexandre dans le cadre du PIE 3”. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Article 2 : De passer le marché par la procédure négociée sans publication préalable.",
+      "municipalEvidence": [
+        {
+          "excerpt": "Considérant qu'il en a été débattu au cours de la réunion ad hoc instituée en application de l'article L1122-34 du code de la démocratie locale et de la décentralisation et de l'article 57 du règlement d'ordre intérieur du conseil communal ; Sur proposition du Collège ; Considérant la transmission du dossier au Directeur financier pour avis préalable en date du 12/10/2026, Considérant l'avis non rendu par le Directeur financier, DÉCIDE : Article 1er : D'approuver le cahier des charges et le montant estimé (103.857,90 € HTVA ou 125.668,06 € TVAC) du marché “Auteur de projet pour la reconstruction de l'école maternelle Henri Alexandre dans le cadre du PIE 3”. Les conditions sont fixées comme prévu au cahier des charges et par les règles générales d'exécution des marchés publics. Article 2 : De passer le marché par la procédure négociée sans publication préalable.",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. Travaux/ Marché public/ Auteur de projet pour la reconstruction de l'école maternelle Henri Alexandre dans le cadre du PIE 3/ Approbation des conditions et du mode de passation. Note de synthèse explicative : Le 3 septembre 2026, la Fédération Wallonie-Bruxelles a informé la ville d'Ans de l'octroi d'une subvention, dans la cadre du plan d'investissement exceptionnel dans les bâtiments scolaires (PIE), d'un montant de 596.317,43 € pour la reconstruction de l'école maternelle Henri Alexandre dont les travaux sont estimés à 917.411,44 € TVAC. Il s'agit d'approuver les conditions et le mode de passation (procédure négociée sans publication préalable) du marché public relatif à la désignation d'un auteur de projet qui concevra et suivra les travaux en question. Le montant est estimé du marché s'élève à 103.857,90 € HTVA ou 125.668,06 € TVAC. Décision :",
+          "page": null
+        },
+        {
+          "excerpt": "Note de synthèse explicative : Le 3 septembre 2026, la Fédération Wallonie-Bruxelles a informé la ville d'Ans de l'octroi d'une subvention, dans la cadre du plan d'investissement exceptionnel dans les bâtiments scolaires (PIE), d'un montant de 596.317,43 € pour la reconstruction de l'école maternelle Henri Alexandre dont les travaux sont estimés à 917.411,44 € TVAC. Il s'agit d'approuver les conditions et le mode de passation (procédure négociée sans publication préalable) du marché public relatif à la désignation d'un auteur de projet qui concevra et suivra les travaux en question. Le montant est estimé du marché s'élève à 103.857,90 € HTVA ou 125.668,06 € TVAC. Décision : Vu le Code de la démocratie locale et de la décentralisation ; Vu la loi du 17 juin 2013 relative à la motivation, à l'information et aux voies de recours en matière de marchés publics, de certains marchés de travaux, de fournitures et de services et de concessions ; Vu la loi du 17 juin 2016 relative aux marchés publics, notamment l’article 42, § 1, 1°, a) (procédure négociée sans publication préalable - la dépense à approuver HTVA n'atteint pas le seuil de 140.000,00 €) ;",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
     }
   ]
 }
