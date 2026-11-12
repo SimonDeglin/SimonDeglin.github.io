@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-11T22:43:37.254Z",
+  "generated_at": "2026-11-12T13:48:00.931Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-11-11 : 1213 avis lus, 4 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-11-12 : 1278 avis lus, 4 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-11-11T22:45:05.374Z",
-      "scanned": 2125,
-      "retained": 34,
-      "period_from": "2026-10-28",
-      "period_to": "2026-11-11",
-      "pages": 85,
+      "last_success": "2026-11-12T13:49:43.133Z",
+      "scanned": 2000,
+      "retained": 33,
+      "period_from": "2026-10-29",
+      "period_to": "2026-11-12",
+      "pages": 80,
       "complete": true,
-      "raw_candidates": 2114,
-      "oldest_seen": "2026-10-27",
-      "last_attempt": "2026-11-11T22:45:05.374Z",
+      "raw_candidates": 1979,
+      "oldest_seen": "2026-10-28",
+      "last_attempt": "2026-11-12T13:49:43.133Z",
       "last_error": null,
-      "last_complete_success": "2026-11-11T22:45:05.374Z"
+      "last_complete_success": "2026-11-12T13:49:43.133Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-11-11T22:46:56.333Z",
+      "last_success": "2026-11-12T13:52:25.161Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -104,15 +104,15 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 85 page(s) parcourue(s) depuis 2026-10-28.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 80 page(s) parcourue(s) depuis 2026-10-29.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
-    "scanned": 1213,
+    "scanned": 1278,
     "matched_current_run": 4,
-    "records": 354,
+    "records": 357,
     "review_count": 259,
-    "award_notice_count": 361,
+    "award_notice_count": 373,
     "awarded_market_matches": 4,
     "award_fields_requested": false,
     "retained_as_excluded": 37,
@@ -125,37 +125,37 @@
     "queries": [
       {
         "source": "Acheteurs belges",
-        "from": "20261031",
-        "to": "20261106",
+        "from": "20261101",
+        "to": "20261107",
         "found": 378,
         "reported": 378
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261031",
-        "to": "20261106",
+        "from": "20261101",
+        "to": "20261107",
         "found": 360,
         "reported": 360
       },
       {
         "source": "Acheteurs belges",
-        "from": "20261107",
-        "to": "20261111",
-        "found": 245,
-        "reported": 245
+        "from": "20261108",
+        "to": "20261112",
+        "found": 280,
+        "reported": 280
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261107",
-        "to": "20261111",
-        "found": 230,
-        "reported": 230
+        "from": "20261108",
+        "to": "20261112",
+        "found": 260,
+        "reported": 260
       }
     ],
     "warnings": [],
-    "bosa_scanned": 2125,
-    "bosa_imported": 34,
-    "bosa_pages": 85,
+    "bosa_scanned": 2000,
+    "bosa_imported": 33,
+    "bosa_pages": 80,
     "local_documents": 34,
     "local_opportunities": 0,
     "local_communes_checked": 24,
@@ -171,16 +171,16 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "aucun_signal_metier": 339,
-      "avis_attribution_analyse_separement": 361,
+      "aucun_signal_metier": 364,
       "fournitures_et_location": 48,
-      "travaux_execution": 82,
-      "acheteur_flamand": 131,
-      "avis_neerlandais": 144,
-      "formule_administrative_sans_signal_metier": 12,
-      "objet_hors_domaine": 77,
-      "assurance_ou_nettoyage": 12,
-      "qualifie_review": 7
+      "travaux_execution": 90,
+      "avis_attribution_analyse_separement": 373,
+      "acheteur_flamand": 138,
+      "avis_neerlandais": 154,
+      "formule_administrative_sans_signal_metier": 13,
+      "objet_hors_domaine": 79,
+      "assurance_ou_nettoyage": 11,
+      "qualifie_review": 8
     }
   },
   "items": [
@@ -29180,6 +29180,166 @@
       "municipalReference": null,
       "matchReason": "etude_urbanistique_a_qualifier",
       "screeningReason": null
+    },
+    {
+      "id": "bosa:472b6160-d3d5-4041-9740-0c40aeb5e590",
+      "publicationWorkspaceId": "472b6160-d3d5-4041-9740-0c40aeb5e590",
+      "noticeId": "5713f237-0dd3-476b-9ca6-551a53923a88",
+      "procedureIdentifier": "c2a7d486-c175-4a92-8c94-8f4582bcd3e2",
+      "internalReference": "AFA/014277/DDR_pub01",
+      "title": "Marché public de services ayant pour but la modélisation et l’analyse des risques climatiques extrêmes (vagues de chaleur/inondations) sur le territoire de la Ville de Bruxelles, la définition d’une stratégie d’adaptation et l’élaboration d’un plan de financement pour la mise en œuvre de cette stratégie d’adaptation",
+      "buyer": "Ville de Bruxelles - Achats & Facilities",
+      "region": "Bruxelles",
+      "languages": [
+        "NL",
+        "FR"
+      ],
+      "sector": "Hydraulique",
+      "sectors": [
+        "Hydraulique"
+      ],
+      "score": 62,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "projet_indirect",
+      "publication": "2026-11-12",
+      "deadline": "",
+      "cpv": [
+        "71354000"
+      ],
+      "description": "Marché public de services ayant pour but la modélisation et l’analyse des risques climatiques extrêmes (vagues de chaleur/inondations) sur le territoire de la Ville de Bruxelles, la définition d’une stratégie d’adaptation et l’élaboration d’un plan de financement pour la mise en œuvre de cette stratégie d’adaptation",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "AFA/014277/DDR_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/472b6160-d3d5-4041-9740-0c40aeb5e590/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/472b6160-d3d5-4041-9740-0c40aeb5e590/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "AFA/014277/DDR_pub01",
+          "url": "https://www.publicprocurement.be/publication-workspaces/472b6160-d3d5-4041-9740-0c40aeb5e590/general",
+          "publicationDate": "2026-11-12",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-12T13:58:30.972Z"
+    },
+    {
+      "id": "bosa:a3455d0b-58ab-4c19-8683-3207888737d4",
+      "publicationWorkspaceId": "a3455d0b-58ab-4c19-8683-3207888737d4",
+      "noticeId": "334700a6-d6a0-4d0f-bd37-584ab23a273f",
+      "procedureIdentifier": "61cbfb6e-d23a-4b73-ba9c-68eba8e6b62f",
+      "internalReference": "PPP06N-2026/6252/2026_002",
+      "title": "Étude et surveillance des travaux de remplacement de la conduite d'eau à Lamouline Beuvlimont",
+      "buyer": "Libramont-Chevigny",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Reseaux",
+      "sectors": [
+        "Reseaux"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "description_ou_contexte",
+      "publication": "2026-11-12",
+      "deadline": "",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Marché d'étude pour :  Remplacement d’une canalisation de distribution d’eau à Lamouline, Beuvlimont sur une distance de +- 900m, du carrefour entre la rue Haute-Mouline et le Beuvlimont jusqu’au ralentisseur situé au Beuvlimont, face au n°8. Pose d’une conduite en PVC Ø110.  Remplacement des raccordements particuliers si nécessaire. Pose de raccordements en PE Ø32.",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP06N-2026/6252/2026_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/a3455d0b-58ab-4c19-8683-3207888737d4/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/a3455d0b-58ab-4c19-8683-3207888737d4/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP06N-2026/6252/2026_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/a3455d0b-58ab-4c19-8683-3207888737d4/general",
+          "publicationDate": "2026-11-12",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-12T13:58:34.667Z"
+    },
+    {
+      "id": "bosa:f43db678-d155-44ec-b5fe-1764c13ac8eb",
+      "publicationWorkspaceId": "f43db678-d155-44ec-b5fe-1764c13ac8eb",
+      "noticeId": "e69bc6ed-66e9-4602-a06c-c7f6b5b9cac6",
+      "procedureIdentifier": "c3cb8861-bfb5-49e4-9211-301bd61edae0",
+      "internalReference": "PPP09H-991/6044/1.778.31_002",
+      "title": "Accord-cadre fourniture de pièces pour la distribution d'eau pour la Ville de Chiny",
+      "buyer": "Chiny",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Reseaux",
+      "sectors": [
+        "Reseaux"
+      ],
+      "score": 62,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "unknown",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "projet_indirect",
+      "publication": "2026-11-12",
+      "deadline": "",
+      "cpv": [
+        "39370000"
+      ],
+      "description": "Accord-cadre fourniture de pièces pour la distribution d'eau pour la Ville de Chiny",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP09H-991/6044/1.778.31_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/f43db678-d155-44ec-b5fe-1764c13ac8eb/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/f43db678-d155-44ec-b5fe-1764c13ac8eb/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP09H-991/6044/1.778.31_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/f43db678-d155-44ec-b5fe-1764c13ac8eb/general",
+          "publicationDate": "2026-11-12",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-12T13:58:38.359Z"
     }
   ]
 }
