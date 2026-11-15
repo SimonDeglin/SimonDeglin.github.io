@@ -59,7 +59,7 @@
     "COMMUNES": {
       "status": "progressive_document_collection",
       "updatedAt": "2026-11-02T08:19:51.939Z",
-      "last_attempt": "2026-11-11T17:28:45.387Z",
+      "last_attempt": "2026-11-15T16:37:14.548Z",
       "scope": {
         "province": "all",
         "ins": ""
@@ -74,29 +74,29 @@
         "peripherique": 39
       },
       "checkedWithErrors": 3,
-      "documentsRead": 1320,
-      "opportunities": 208,
+      "documentsRead": 1327,
+      "opportunities": 209,
       "sitesChecked": 261,
       "candidatePages": 228,
       "sourceErrors": 110,
-      "htmlDocumentsRead": 6451
+      "htmlDocumentsRead": 6485
     },
     "COMMUNES_DOCUMENTS": {
       "status": "partial",
-      "last_attempt": "2026-11-11T17:28:45.387Z",
-      "last_success": "2026-11-11T17:28:45.387Z",
-      "last_batch": 24,
-      "documents_checked": 63,
+      "last_attempt": "2026-11-15T16:37:14.548Z",
+      "last_success": "2026-11-15T16:37:14.548Z",
+      "last_batch": 4,
+      "documents_checked": 7,
       "documents_read": 1,
       "documents_unchanged": 0,
       "documents_modified": 0,
       "opportunities_found": 0,
       "review_candidates": 0,
-      "errors_count": 7,
+      "errors_count": 1,
       "warning": "Extraits non validés humainement ; une modification du fichier ne prouve pas un rectificatif officiel.",
-      "html_documents_read": 285,
+      "html_documents_read": 42,
       "ocr_documents_read": 8,
-      "recent_municipal_signals": 110,
+      "recent_municipal_signals": 111,
       "communes_with_errors": 51,
       "notices_linked": 1,
       "content_analysis_version": "2026-11-02-content-v11"
@@ -110,7 +110,7 @@
   "metrics": {
     "scanned": 1072,
     "matched_current_run": 4,
-    "records": 357,
+    "records": 358,
     "review_count": 262,
     "award_notice_count": 321,
     "awarded_market_matches": 3,
@@ -29374,6 +29374,91 @@
       "municipalReference": null,
       "matchReason": "etude_urbanistique_a_qualifier",
       "screeningReason": null
+    },
+    {
+      "id": "local-html:ec1b565803112e519119",
+      "title": "Vente de gré à gré d’une parcelle privée communale (cadastrée 4ème Division, section A, n° 1295C²) enclavée dans une propriété privée sise rue du Long Mur, en l'entité – Décision",
+      "sourceDocumentTitle": "Vente de gré à gré d’une parcelle privée communale (cadastrée 4ème Division, section A, n° 1295C²) enclavée dans une propriété privée sise rue du Long Mur, en l'entité – Décision",
+      "missionEvidence": null,
+      "buyer": "Commune de Grâce-Hollogne",
+      "municipalityINS": "62118",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Expert",
+      "sectors": [
+        "Expert"
+      ],
+      "screening": "review",
+      "score": 60,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/grace-hollogne/decisions/17-septembre-2026-19-30/vente-de-gre-a-gre-dune-parcelle-privee-communale-cadastree-4eme-division-section-a-ndeg-1295c2-enclavee-dans-une-propriete-privee-sise-rue-du-long-mur-en-lentite-decision",
+      "sourceDocument": "https://www.deliberations.be/grace-hollogne/decisions/17-septembre-2026-19-30/vente-de-gre-a-gre-dune-parcelle-privee-communale-cadastree-4eme-division-section-a-ndeg-1295c2-enclavee-dans-une-propriete-privee-sise-rue-du-long-mur-en-lentite-decision",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/grace-hollogne/decisions/17-septembre-2026-19-30/vente-de-gre-a-gre-dune-parcelle-privee-communale-cadastree-4eme-division-section-a-ndeg-1295c2-enclavee-dans-une-propriete-privee-sise-rue-du-long-mur-en-lentite-decision",
+        "sha256": "c8424b7e3af21d7275653b09934ae389cbba6088a401f7aea69b0f3e76b12bfb",
+        "session": {
+          "date": "2026-09-17",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 17 septembre 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/grace-hollogne/decisions/17-septembre-2026-19-30/vente-de-gre-a-gre-dune-parcelle-privee-communale-cadastree-4eme-division-section-a-ndeg-1295c2-enclavee-dans-une-propriete-privee-sise-rue-du-long-mur-en-lentite-decision"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:fe66841a6686519772",
+        "sha256": "c8424b7e3af21d7275653b09934ae389cbba6088a401f7aea69b0f3e76b12bfb",
+        "format": "html",
+        "checkedAt": "2026-11-15T16:37:14.548Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "M. l’Échevin S. BLAVIER Par courrier du 18 novembre 2025, la société immobilière en charge de la gestion du patrimoine du domaine du Château de Lexhy a manifesté son souhait d’acquérir la parcelle communale cadastrée 4èm",
+        "sourceUrl": "https://www.deliberations.be/grace-hollogne/decisions/17-septembre-2026-19-30/vente-de-gre-a-gre-dune-parcelle-privee-communale-cadastree-4eme-division-section-a-ndeg-1295c2-enclavee-dans-une-propriete-privee-sise-rue-du-long-mur-en-lentite-decision",
+        "page": null,
+        "sha256": "c8424b7e3af21d7275653b09934ae389cbba6088a401f7aea69b0f3e76b12bfb"
+      },
+      "description": "M. l’Échevin S. BLAVIER Par courrier du 18 novembre 2025, la société immobilière en charge de la gestion du patrimoine du domaine du Château de Lexhy a manifesté son souhait d’acquérir la parcelle communale cadastrée 4ème Division, Section A, n° 1295C², d’une superficie approximative de 237 m², celle-ci étant entièrement enclavée dans sa propriété. Il ressort de l’analyse des données cadastrales et géographiques que cette parcelle ne dispose d’aucun accès à la voirie publique et ne présente aucune utilité autonome pour la commune, ni d’intérêt pour un tiers, en raison de sa configuration et de sa localisation. Dès lors, seule son intégration dans la propriété contiguë permet sa valorisation. Le recours à une vente de gré à gré, sans mesure préalable de publicité, se justifie pleinement, une mise en concurrence ne présentant pas de caractère pertinent en l’espèce. Par sa délibération du 15 janvier 2026, le Collège communal a marqué son accord de principe sur cette opération et a sollicité une estimation du bien auprès du Comité d'Acquisition d'Immeubles de Liège. En date du 08 avril 2026, le Comité d’acquisition a estimé la valeur vénale du bien à 5.000,00 €. Il vous est dès lors proposé de décider la vente de cette parcelle à la société intéressée, au prix de 5.000,00 €, et d’affecter le produit de cette vente au financement d’investissements sur fonds propres.",
+      "evidence": "M. l’Échevin S. BLAVIER Par courrier du 18 novembre 2025, la société immobilière en charge de la gestion du patrimoine du domaine du Château de Lexhy a manifesté son souhait d’acquérir la parcelle communale cadastrée 4ème Division, Section A, n° 1295C², d’une superficie approximative de 237 m², celle-ci étant entièrement enclavée dans sa propriété. Il ressort de l’analyse des données cadastrales et géographiques que cette parcelle ne dispose d’aucun accès à la voirie publique et ne présente aucune utilité autonome pour la commune, ni d’intérêt pour un tiers, en raison de sa configuration et de sa localisation. Dès lors, seule son intégration dans la propriété contiguë permet sa valorisation. Le recours à une vente de gré à gré, sans mesure préalable de publicité, se justifie pleinement, une mise en concurrence ne présentant pas de caractère pertinent en l’espèce. Par sa délibération du 15 janvier 2026, le Collège communal a marqué son accord de principe sur cette opération et a sollicité une estimation du bien auprès du Comité d'Acquisition d'Immeubles de Liège. En date du 08 avril 2026, le Comité d’acquisition a estimé la valeur vénale du bien à 5.000,00 €. Il vous est dès lors proposé de décider la vente de cette parcelle à la société intéressée, au prix de 5.000,00 €, et d’affecter le produit de cette vente au financement d’investissements sur fonds propres.",
+      "municipalEvidence": [
+        {
+          "excerpt": "M. l’Échevin S. BLAVIER Par courrier du 18 novembre 2025, la société immobilière en charge de la gestion du patrimoine du domaine du Château de Lexhy a manifesté son souhait d’acquérir la parcelle communale cadastrée 4ème Division, Section A, n° 1295C², d’une superficie approximative de 237 m², celle-ci étant entièrement enclavée dans sa propriété. Il ressort de l’analyse des données cadastrales et géographiques que cette parcelle ne dispose d’aucun accès à la voirie publique et ne présente aucune utilité autonome pour la commune, ni d’intérêt pour un tiers, en raison de sa configuration et de sa localisation. Dès lors, seule son intégration dans la propriété contiguë permet sa valorisation. Le recours à une vente de gré à gré, sans mesure préalable de publicité, se justifie pleinement, une mise en concurrence ne présentant pas de caractère pertinent en l’espèce. Par sa délibération du 15 janvier 2026, le Collège communal a marqué son accord de principe sur cette opération et a sollicité une estimation du bien auprès du Comité d'Acquisition d'Immeubles de Liège. En date du 08 avril 2026, le Comité d’acquisition a estimé la valeur vénale du bien à 5.000,00 €. Il vous est dès lors proposé de décider la vente de cette parcelle à la société intéressée, au prix de 5.000,00 €, et d’affecter le produit de cette vente au financement d’investissements sur fonds propres.",
+          "page": null
+        },
+        {
+          "excerpt": "Vu le Code du Développement Territorial (CoDT) ; Vu la circulaire régionale du 20 juin 2024 relative aux opérations patrimoniales des pouvoirs locaux ; Vu le courrier du 18 novembre 2025 par lequel M. Charles de WOOT, Régisseur de la S.A. Ferme de Lexhy, rue du Long Mur, 24 à 4460 Grâce-Hollogne, sollicite l'acquisition d'une parcelle privée communale enclavée dans sa propriété, d'une superficie approximative de 237 m² (cadastrée 4ème Division, Section A, n° 1295C²) ; Vu la délibération du Collège communal du 15 janvier 2026 relative au principe de vente de ladite parcelle, sur base d'une estimation du bien, préalablement sollicitée auprès du Comité d'Acquisition de Liège ; Vu le courrier du 08 avril 2026 par lequel le Service Public de Wallonie Finances, Direction du Comité d'acquisition de Liège, expose que la valeur vénale du bien a été estimée à 5.000,00 € et qu'elle constitue son prix de mise en vente ; Considérant qu'il ressort de l’analyse des données du dossier que cette parcelle ne dispose d’aucun accès à la voirie publique et ne présente aucune utilité publique, ni d’intérêt pour un tiers, en raison de sa configuration et de sa localisation ; que seule son intégration dans la propriété contiguë permet sa valorisation ; Considérant que le recours à une vente de gré à gré, sans mesure préalable de publicité, se justifie pleinement, une mise en concurrence ne présentant ",
+          "page": null
+        },
+        {
+          "excerpt": "Vu la délibération du Collège communal du 15 janvier 2026 relative au principe de vente de ladite parcelle, sur base d'une estimation du bien, préalablement sollicitée auprès du Comité d'Acquisition de Liège ; Vu le courrier du 08 avril 2026 par lequel le Service Public de Wallonie Finances, Direction du Comité d'acquisition de Liège, expose que la valeur vénale du bien a été estimée à 5.000,00 € et qu'elle constitue son prix de mise en vente ; Considérant qu'il ressort de l’analyse des données du dossier que cette parcelle ne dispose d’aucun accès à la voirie publique et ne présente aucune utilité publique, ni d’intérêt pour un tiers, en raison de sa configuration et de sa localisation ; que seule son intégration dans la propriété contiguë permet sa valorisation ; Considérant que le recours à une vente de gré à gré, sans mesure préalable de publicité, se justifie pleinement, une mise en concurrence ne présentant pas de caractère pertinent en l’espèce ; que tous les frais inhérents à cette opération immobilière sont à charge du futur acquéreur ; Sur proposition du Collège communal ; À l'unanimité, DÉCIDE :",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null
     }
   ]
 }
