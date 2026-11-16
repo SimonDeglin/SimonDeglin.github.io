@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-15T21:03:56.796Z",
+  "generated_at": "2026-11-16T13:41:55.194Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-11-15 : 1072 avis lus, 3 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-11-16 : 1050 avis lus, 3 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-11-15T21:04:16.362Z",
+      "last_success": "2026-11-16T13:42:05.496Z",
       "scanned": 25,
       "retained": 1,
-      "period_from": "2026-11-01",
-      "period_to": "2026-11-15",
+      "period_from": "2026-11-02",
+      "period_to": "2026-11-16",
       "pages": 1,
       "complete": true,
       "raw_candidates": 25,
-      "oldest_seen": "2026-11-13",
-      "last_attempt": "2026-11-15T21:04:16.362Z",
+      "oldest_seen": "2026-11-16",
+      "last_attempt": "2026-11-16T13:42:05.496Z",
       "last_error": null,
-      "last_complete_success": "2026-11-15T21:04:16.362Z"
+      "last_complete_success": "2026-11-16T13:42:05.496Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-11-15T21:06:34.060Z",
+      "last_success": "2026-11-16T13:44:04.867Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -104,15 +104,15 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 1 page(s) parcourue(s) depuis 2026-11-01.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 1 page(s) parcourue(s) depuis 2026-11-02.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
-    "scanned": 1072,
+    "scanned": 1050,
     "matched_current_run": 4,
     "records": 362,
-    "review_count": 263,
-    "award_notice_count": 321,
+    "review_count": 267,
+    "award_notice_count": 313,
     "awarded_market_matches": 3,
     "award_fields_requested": false,
     "retained_as_excluded": 37,
@@ -125,31 +125,31 @@
     "queries": [
       {
         "source": "Acheteurs belges",
-        "from": "20261104",
-        "to": "20261110",
-        "found": 372,
-        "reported": 372
+        "from": "20261105",
+        "to": "20261111",
+        "found": 388,
+        "reported": 388
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261104",
-        "to": "20261110",
-        "found": 347,
-        "reported": 347
+        "from": "20261105",
+        "to": "20261111",
+        "found": 361,
+        "reported": 361
       },
       {
         "source": "Acheteurs belges",
-        "from": "20261111",
-        "to": "20261115",
-        "found": 183,
-        "reported": 183
+        "from": "20261112",
+        "to": "20261116",
+        "found": 156,
+        "reported": 156
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261111",
-        "to": "20261115",
-        "found": 170,
-        "reported": 170
+        "from": "20261112",
+        "to": "20261116",
+        "found": 145,
+        "reported": 145
       }
     ],
     "warnings": [],
@@ -171,15 +171,15 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "avis_attribution_analyse_separement": 321,
       "aucun_signal_metier": 331,
-      "acheteur_flamand": 98,
-      "objet_hors_domaine": 73,
-      "avis_neerlandais": 116,
-      "fournitures_et_location": 41,
-      "formule_administrative_sans_signal_metier": 11,
-      "travaux_execution": 63,
+      "acheteur_flamand": 100,
+      "avis_attribution_analyse_separement": 313,
+      "objet_hors_domaine": 71,
+      "avis_neerlandais": 98,
       "assurance_ou_nettoyage": 10,
+      "fournitures_et_location": 40,
+      "formule_administrative_sans_signal_metier": 12,
+      "travaux_execution": 67,
       "qualifie_review": 8
     }
   },
@@ -1095,7 +1095,7 @@
           "versionId": "60ffc689-4c18-4349-b97b-fdd929e97b5a",
           "documentId": "ee01fb42-78f7-433a-b2fc-e984846b83c8",
           "activatedAt": "2026-11-09T13:16:45.014614",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1121,7 +1121,7 @@
           "versionId": "6b83837a-d3eb-4665-9ba4-130215fe228a",
           "documentId": "661b5f17-9360-452c-8e0c-bee16b7d54cf",
           "activatedAt": "2026-11-09T13:16:45.014614",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1134,14 +1134,14 @@
           "versionId": "fd519641-59d3-4574-9fd5-2a894941a49f",
           "documentId": "58ac62d1-c7a5-4b1f-ada2-232021805e83",
           "activatedAt": "2026-11-09T13:16:45.014614",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-09T14:07:19.356Z",
+      "documentsCheckedAt": "2026-11-16T13:44:38.445Z",
       "deadlineTime": "10:00",
       "deadlineTimeZone": "Europe/Brussels",
       "deadlineSourceKind": "bosa_verified_public",
@@ -1743,7 +1743,7 @@
       "score": 98,
       "screening": "main",
       "publication": "2026-11-04",
-      "deadline": "2026-11-16T11:00:00+01:00",
+      "deadline": "2026-11-18T11:00:00+01:00",
       "cpv": [
         "71353000"
       ],
@@ -1780,8 +1780,8 @@
       "deadlineTimeZone": "Europe/Brussels",
       "deadlineSourceKind": "bosa_verified_public",
       "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/834b6f23-3906-4589-a0e7-afae9c91d26a/general",
-      "deadlineSourceEvidence": "Date limite de soumission\n16/11/2026 11:00 CET",
-      "deadlineVerifiedAt": "2026-11-04T22:04:21.071Z",
+      "deadlineSourceEvidence": "Date limite de soumission\n18/11/2026 11:00 CET",
+      "deadlineVerifiedAt": "2026-11-16T13:49:58.835Z",
       "qualification": {
         "version": "2026-10-29",
         "kind": "services",
@@ -1794,6 +1794,11 @@
           "value": "2026-11-10T11:00:00+01:00",
           "sourceUrl": "https://www.publicprocurement.be/publication-workspaces/834b6f23-3906-4589-a0e7-afae9c91d26a/general",
           "notedAt": "2026-10-28T11:31:20.383Z"
+        },
+        {
+          "value": "2026-11-16T11:00:00+01:00",
+          "sourceUrl": "https://www.publicprocurement.be/publication-workspaces/834b6f23-3906-4589-a0e7-afae9c91d26a/general",
+          "notedAt": "2026-11-04T22:04:21.071Z"
         }
       ]
     },
@@ -2967,7 +2972,7 @@
         "capacityStatus": "not_assessed"
       },
       "matchReason": "mission_globale_a_qualifier",
-      "publication": "2026-11-03",
+      "publication": "2026-11-16",
       "deadline": "2026-11-26T11:00:00+01:00",
       "cpv": [
         "71200000"
@@ -2992,6 +2997,19 @@
           "documentId": "e860e75c-b841-4db2-ade8-2abe61b721a4",
           "activatedAt": "2026-11-03T10:12:45.019251",
           "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "11204c10-0c21-44b2-b572-9f207899c833",
+          "title": "Erratum 3454_FR_NL.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "eb1f73f0-1b58-4236-929b-109db9e74357",
+          "documentId": "419fc6e7-a935-4e40-8577-a5e20d6f8d93",
+          "activatedAt": "2026-11-16T08:49:45.014886",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -3115,7 +3133,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-03T12:59:56.867Z",
+      "documentsCheckedAt": "2026-11-16T13:45:20.742Z",
       "deadlineTime": "11:00",
       "deadlineTimeZone": "Europe/Brussels",
       "deadlineSourceKind": "bosa_verified_public",
@@ -4779,7 +4797,7 @@
       "score": 55,
       "screening": "review",
       "publication": "2026-10-23",
-      "deadline": "2026-11-16T10:00:00+01:00",
+      "deadline": "2026-11-17T10:00:00+01:00",
       "cpv": [
         "71200000"
       ],
@@ -4816,15 +4834,22 @@
       "deadlineTimeZone": "Europe/Brussels",
       "deadlineSourceKind": "bosa_verified_public",
       "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/7f4255eb-6857-4d85-85e5-4aac8b0fe4e8/general",
-      "deadlineSourceEvidence": "Date limite de soumission 16/11/2026 10:00 CET",
-      "deadlineVerifiedAt": "2026-10-28T08:35:44.807Z",
+      "deadlineSourceEvidence": "Date limite de soumission\n17/11/2026 10:00 CET",
+      "deadlineVerifiedAt": "2026-11-16T13:49:58.835Z",
       "qualification": {
         "version": "2026-10-29",
         "kind": "services",
         "route": "partner",
         "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
         "capacityStatus": "not_assessed"
-      }
+      },
+      "deadlineHistory": [
+        {
+          "value": "2026-11-16T10:00:00+01:00",
+          "sourceUrl": "https://www.publicprocurement.be/publication-workspaces/7f4255eb-6857-4d85-85e5-4aac8b0fe4e8/general",
+          "notedAt": "2026-10-28T08:35:44.807Z"
+        }
+      ]
     },
     {
       "id": "bosa:13f54116-eb7b-45cb-b58c-24247e4bee51",
@@ -4845,7 +4870,7 @@
       "score": 71,
       "screening": "review",
       "publication": "2026-10-22",
-      "deadline": "2026-11-16T14:00:00+01:00",
+      "deadline": "2026-11-17T14:00:00+01:00",
       "cpv": [
         "70000000",
         "79419000",
@@ -4903,15 +4928,22 @@
       "deadlineTimeZone": "Europe/Brussels",
       "deadlineSourceKind": "bosa_verified_public",
       "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/13f54116-eb7b-45cb-b58c-24247e4bee51/general",
-      "deadlineSourceEvidence": "Date limite de soumission 16/11/2026 14:00 CET",
-      "deadlineVerifiedAt": "2026-10-28T08:35:44.807Z",
+      "deadlineSourceEvidence": "Date limite de soumission\n17/11/2026 14:00 CET",
+      "deadlineVerifiedAt": "2026-11-16T13:49:58.835Z",
       "qualification": {
         "version": "2026-10-29",
         "kind": "unknown",
         "route": "scope",
         "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
         "capacityStatus": "not_assessed"
-      }
+      },
+      "deadlineHistory": [
+        {
+          "value": "2026-11-16T14:00:00+01:00",
+          "sourceUrl": "https://www.publicprocurement.be/publication-workspaces/13f54116-eb7b-45cb-b58c-24247e4bee51/general",
+          "notedAt": "2026-10-28T08:35:44.807Z"
+        }
+      ]
     },
     {
       "id": "ted:714793-2026",
@@ -5026,7 +5058,7 @@
       "score": 55,
       "screening": "review",
       "publication": "2026-10-22",
-      "deadline": "2026-11-16T10:00:00+01:00",
+      "deadline": "2026-11-17T10:00:00+01:00",
       "cpv": [
         "71240000"
       ],
@@ -5063,15 +5095,22 @@
       "deadlineTimeZone": "Europe/Brussels",
       "deadlineSourceKind": "bosa_verified_public",
       "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/3d464fb7-ccf9-43c6-97dd-54e641b17836/general",
-      "deadlineSourceEvidence": "Date limite de soumission 16/11/2026 10:00 CET",
-      "deadlineVerifiedAt": "2026-10-28T08:35:44.807Z",
+      "deadlineSourceEvidence": "Date limite de soumission\n17/11/2026 10:00 CET",
+      "deadlineVerifiedAt": "2026-11-16T13:49:58.835Z",
       "qualification": {
         "version": "2026-10-29",
         "kind": "services",
         "route": "scope",
         "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
         "capacityStatus": "not_assessed"
-      }
+      },
+      "deadlineHistory": [
+        {
+          "value": "2026-11-16T10:00:00+01:00",
+          "sourceUrl": "https://www.publicprocurement.be/publication-workspaces/3d464fb7-ccf9-43c6-97dd-54e641b17836/general",
+          "notedAt": "2026-10-28T08:35:44.807Z"
+        }
+      ]
     },
     {
       "id": "ted:731266-2026",
@@ -5312,7 +5351,7 @@
       "score": 52,
       "screening": "excluded",
       "publication": "2026-10-22",
-      "deadline": "2026-11-16T10:00:00+01:00",
+      "deadline": "2026-11-17T12:00:00+01:00",
       "cpv": [
         "72316000"
       ],
@@ -5351,12 +5390,19 @@
           "url": "https://www.publicprocurement.be/publication-workspaces/c02b39f7-a9c2-4c4a-9df7-1c282473aacd/general"
         }
       ],
-      "deadlineTime": "10:00",
+      "deadlineTime": "12:00",
       "deadlineTimeZone": "Europe/Brussels",
       "deadlineSourceKind": "bosa_verified_public",
       "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/c02b39f7-a9c2-4c4a-9df7-1c282473aacd/general",
-      "deadlineSourceEvidence": "Date limite de soumission\n16/11/2026 10:00 CET",
-      "deadlineVerifiedAt": "2026-10-28T11:31:20.383Z"
+      "deadlineSourceEvidence": "Date limite de soumission\n17/11/2026 12:00 CET",
+      "deadlineVerifiedAt": "2026-11-16T13:49:58.835Z",
+      "deadlineHistory": [
+        {
+          "value": "2026-11-16T10:00:00+01:00",
+          "sourceUrl": "https://www.publicprocurement.be/publication-workspaces/c02b39f7-a9c2-4c4a-9df7-1c282473aacd/general",
+          "notedAt": "2026-10-28T11:31:20.383Z"
+        }
+      ]
     },
     {
       "id": "bosa:32f67a37-5891-4648-a96a-af40e9033011",
@@ -8299,7 +8345,7 @@
           "versionId": "36488d00-f30c-407b-abf7-ea1924b6b999",
           "documentId": "917f42c5-0419-4611-8398-5561fefe4efc",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8325,7 +8371,7 @@
           "versionId": "26b15544-17fc-43c0-826c-1322f33b9850",
           "documentId": "20364704-82a0-4eb0-a213-7965e3328061",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8377,7 +8423,7 @@
           "versionId": "f5ff3774-83d7-49c0-abe1-28e026816900",
           "documentId": "ff53ea2a-b24f-4586-b315-523295f56f5c",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8390,7 +8436,7 @@
           "versionId": "8228202b-2303-4eba-8e13-0fe820c5023d",
           "documentId": "ac74d28e-0bfa-4c78-af2b-da7f05b117dd",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8423,7 +8469,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-13T22:05:36.666Z",
+      "documentsCheckedAt": "2026-11-16T13:47:58.955Z",
       "documentAnalyses": [
         {
           "documentId": "7259aed6-32b5-4e0b-88c0-ffa7fa606658",
@@ -11216,7 +11262,7 @@
           "versionId": "22cc83b1-d599-4416-96d9-c1a354861889",
           "documentId": "425d5ba1-de86-4335-b68e-3b58107c5b6d",
           "activatedAt": "2026-09-29T15:00:45.021111",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -11229,14 +11275,14 @@
           "versionId": "354fbb7b-5f90-4703-9d8e-dae76f7aa72f",
           "documentId": "3b9e3ed1-8163-4041-a26c-eb15668ce044",
           "activatedAt": "2026-10-05T15:31:45.185664",
-          "language": "FR,NL",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-14T20:52:43.741Z",
+      "documentsCheckedAt": "2026-11-16T13:49:37.413Z",
       "matchReason": "prestation_dans_marche_de_travaux",
       "screeningReason": null,
       "officialSources": [
@@ -14626,6 +14672,93 @@
         },
         {
           "excerpt": "Vu la délibération du Collège communal du 15 janvier 2026 relative au principe de vente de ladite parcelle, sur base d'une estimation du bien, préalablement sollicitée auprès du Comité d'Acquisition de Liège ; Vu le courrier du 08 avril 2026 par lequel le Service Public de Wallonie Finances, Direction du Comité d'acquisition de Liège, expose que la valeur vénale du bien a été estimée à 5.000,00 € et qu'elle constitue son prix de mise en vente ; Considérant qu'il ressort de l’analyse des données du dossier que cette parcelle ne dispose d’aucun accès à la voirie publique et ne présente aucune utilité publique, ni d’intérêt pour un tiers, en raison de sa configuration et de sa localisation ; que seule son intégration dans la propriété contiguë permet sa valorisation ; Considérant que le recours à une vente de gré à gré, sans mesure préalable de publicité, se justifie pleinement, une mise en concurrence ne présentant pas de caractère pertinent en l’espèce ; que tous les frais inhérents à cette opération immobilière sont à charge du futur acquéreur ; Sur proposition du Collège communal ; À l'unanimité, DÉCIDE :",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "prestation_decrite",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:94edb48faec1f5b827c4",
+      "title": "Vente d'un terrain communal - Rue Elie Bélenger à 7350 Thulin : modification des conditions de vente",
+      "sourceDocumentTitle": "Vente d'un terrain communal - Rue Elie Bélenger à 7350 Thulin : modification des conditions de vente",
+      "missionEvidence": null,
+      "buyer": "Commune de Hensies",
+      "municipalityINS": "53039",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Expert",
+      "sectors": [
+        "Expert"
+      ],
+      "screening": "review",
+      "score": 71,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/hensies/decisions/12-octobre-2026-18-30/vente-dun-terrain-communal-rue-elie-belenger-a-7350-thulin-modification-des-conditions-de-vente",
+      "sourceDocument": "https://www.deliberations.be/hensies/decisions/12-octobre-2026-18-30/vente-dun-terrain-communal-rue-elie-belenger-a-7350-thulin-modification-des-conditions-de-vente",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/hensies/decisions/12-octobre-2026-18-30/vente-dun-terrain-communal-rue-elie-belenger-a-7350-thulin-modification-des-conditions-de-vente",
+        "sha256": "b29569e00def941b68ebb5a7063d056ca83cd5e3e521f6107efeb84863299a8a",
+        "session": {
+          "date": "2026-10-12",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 12 octobre 2026 (18:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/hensies/decisions/12-octobre-2026-18-30/vente-dun-terrain-communal-rue-elie-belenger-a-7350-thulin-modification-des-conditions-de-vente"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:ba1c0d0f9a9ed5ef6b",
+        "sha256": "b29569e00def941b68ebb5a7063d056ca83cd5e3e521f6107efeb84863299a8a",
+        "format": "html",
+        "checkedAt": "2026-11-15T22:06:20.982Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "DECIDE , à l'unanimité : Article 1er : De prendre acte que les services du Fonctionnaire Délégué du SPW territoire logement patrimoine énergie n'adhèrent pas à la division du terrain en cinq lots dont quatre lots destiné",
+        "sourceUrl": "https://www.deliberations.be/hensies/decisions/12-octobre-2026-18-30/vente-dun-terrain-communal-rue-elie-belenger-a-7350-thulin-modification-des-conditions-de-vente",
+        "page": null,
+        "sha256": "b29569e00def941b68ebb5a7063d056ca83cd5e3e521f6107efeb84863299a8a"
+      },
+      "description": "DECIDE , à l'unanimité : Article 1er : De prendre acte que les services du Fonctionnaire Délégué du SPW territoire logement patrimoine énergie n'adhèrent pas à la division du terrain en cinq lots dont quatre lots destinés à des ventes séparées ; qu'ils estiment que la division projetée ne constitue pas une réponse urbanistique adéquate pour ce terrain qui bénéficie d’atouts particulièrement favorables à l’accueil d’un développement résidentiel structuré : proximité des services et équipements collectifs (école, commerces, etc.), accessibilité aux modes actifs et présence au sein du tissu bâti existant ; qu'il constitue à ce titre une réserve foncière stratégique pour le village de Thulin ; Article 2 : De prendre acte que le lot n°2, bordé de bleu au plan ci-annexé, faisant partie intégrante de la présente décision et précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, ne peut être vendu que d'un seul tenant ; que la valeur vénale du bien peut être estimée à trois cent mille euros (300.000 euros). Article 3 : D'approuver la modification des conditions de vente de la parcelle sise rue Elie Bélenger, à savoir de vendre le lot n°2 d'un seul tenant, lot précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, avec reprise du bail à ferme dont la gestion et la continuation incomberont i",
+      "evidence": "DECIDE , à l'unanimité : Article 1er : De prendre acte que les services du Fonctionnaire Délégué du SPW territoire logement patrimoine énergie n'adhèrent pas à la division du terrain en cinq lots dont quatre lots destinés à des ventes séparées ; qu'ils estiment que la division projetée ne constitue pas une réponse urbanistique adéquate pour ce terrain qui bénéficie d’atouts particulièrement favorables à l’accueil d’un développement résidentiel structuré : proximité des services et équipements collectifs (école, commerces, etc.), accessibilité aux modes actifs et présence au sein du tissu bâti existant ; qu'il constitue à ce titre une réserve foncière stratégique pour le village de Thulin ; Article 2 : De prendre acte que le lot n°2, bordé de bleu au plan ci-annexé, faisant partie intégrante de la présente décision et précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, ne peut être vendu que d'un seul tenant ; que la valeur vénale du bien peut être estimée à trois cent mille euros (300.000 euros). Article 3 : D'approuver la modification des conditions de vente de la parcelle sise rue Elie Bélenger, à savoir de vendre le lot n°2 d'un seul tenant, lot précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, avec reprise du bail à ferme dont la gestion et la continuation incomberont i",
+      "municipalEvidence": [
+        {
+          "excerpt": "DECIDE , à l'unanimité : Article 1er : De prendre acte que les services du Fonctionnaire Délégué du SPW territoire logement patrimoine énergie n'adhèrent pas à la division du terrain en cinq lots dont quatre lots destinés à des ventes séparées ; qu'ils estiment que la division projetée ne constitue pas une réponse urbanistique adéquate pour ce terrain qui bénéficie d’atouts particulièrement favorables à l’accueil d’un développement résidentiel structuré : proximité des services et équipements collectifs (école, commerces, etc.), accessibilité aux modes actifs et présence au sein du tissu bâti existant ; qu'il constitue à ce titre une réserve foncière stratégique pour le village de Thulin ; Article 2 : De prendre acte que le lot n°2, bordé de bleu au plan ci-annexé, faisant partie intégrante de la présente décision et précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, ne peut être vendu que d'un seul tenant ; que la valeur vénale du bien peut être estimée à trois cent mille euros (300.000 euros). Article 3 : D'approuver la modification des conditions de vente de la parcelle sise rue Elie Bélenger, à savoir de vendre le lot n°2 d'un seul tenant, lot précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, avec reprise du bail à ferme dont la gestion et la continuation incomberont i",
+          "page": null
+        },
+        {
+          "excerpt": "Article 1er : De prendre acte que les services du Fonctionnaire Délégué du SPW territoire logement patrimoine énergie n'adhèrent pas à la division du terrain en cinq lots dont quatre lots destinés à des ventes séparées ; qu'ils estiment que la division projetée ne constitue pas une réponse urbanistique adéquate pour ce terrain qui bénéficie d’atouts particulièrement favorables à l’accueil d’un développement résidentiel structuré : proximité des services et équipements collectifs (école, commerces, etc.), accessibilité aux modes actifs et présence au sein du tissu bâti existant ; qu'il constitue à ce titre une réserve foncière stratégique pour le village de Thulin ; Article 2 : De prendre acte que le lot n°2, bordé de bleu au plan ci-annexé, faisant partie intégrante de la présente décision et précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, ne peut être vendu que d'un seul tenant ; que la valeur vénale du bien peut être estimée à trois cent mille euros (300.000 euros). Article 3 : D'approuver la modification des conditions de vente de la parcelle sise rue Elie Bélenger, à savoir de vendre le lot n°2 d'un seul tenant, lot précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, avec reprise du bail à ferme dont la gestion et la continuation incomberont intégralement à l’acquéreu",
+          "page": null
+        },
+        {
+          "excerpt": "Article 2 : De prendre acte que le lot n°2, bordé de bleu au plan ci-annexé, faisant partie intégrante de la présente décision et précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, ne peut être vendu que d'un seul tenant ; que la valeur vénale du bien peut être estimée à trois cent mille euros (300.000 euros). Article 3 : D'approuver la modification des conditions de vente de la parcelle sise rue Elie Bélenger, à savoir de vendre le lot n°2 d'un seul tenant, lot précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, avec reprise du bail à ferme dont la gestion et la continuation incomberont intégralement à l’acquéreur. Article 4 : De confier la procédure de vente à l’Étude des Notaires Fabrice DE VISCH & Thomas MAURO, sise à l'Avenue du Saint-Homme, n°11 à 7350 Thulin. Article 5 : De confier à Messieurs Eric THIEBAUT, Bourgmestre et Michaël FLASSE, Directeur général, les formalités administratives dont la signature du compromis de vente et la signature de l'acte authentique, en présentiel ou par le biais d'une procuration numérique (RNS) le cas échéant conformément au décret wallon du 27 mars 2024. Article 6 : D'informer la Direction Financière de la présente décision et d'inscrire le produit de la vente en recette au budget extraordinaire.",
           "page": null
         }
       ],
@@ -24619,6 +24752,188 @@
       "screeningReason": null
     },
     {
+      "id": "local-html:ffc4e5f8ed8604f9ac20",
+      "title": "3P-1634 - Construction d'un nouveau complexe pour le Service des travaux - Désignation d'un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux de construction - Voies et moyens 2026 - Décision",
+      "sourceDocumentTitle": "3P-1634 - Construction d'un nouveau complexe pour le Service des travaux - Désignation d'un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux de construction - Voies et moyens 2026 - Décision",
+      "missionEvidence": null,
+      "buyer": "Commune de Lessines",
+      "municipalityINS": "51069",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/lessines/decisions/29-octobre-2026-19-30/3p-1634-construction-dun-nouveau-complexe-pour-le-service-des-travaux-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-de-construction-voies-et-moyens-2026-decision",
+      "sourceDocument": "https://www.deliberations.be/lessines/decisions/29-octobre-2026-19-30/3p-1634-construction-dun-nouveau-complexe-pour-le-service-des-travaux-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-de-construction-voies-et-moyens-2026-decision",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/lessines/decisions/29-octobre-2026-19-30/3p-1634-construction-dun-nouveau-complexe-pour-le-service-des-travaux-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-de-construction-voies-et-moyens-2026-decision",
+        "sha256": "513332a6f3c8286219d1085cf081ab079176dc900dbcd7e053b21266554ee053",
+        "session": {
+          "date": "2026-10-29",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 29 octobre 2026 (19:30)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/lessines/decisions/29-octobre-2026-19-30/3p-1634-construction-dun-nouveau-complexe-pour-le-service-des-travaux-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-de-construction-voies-et-moyens-2026-decision"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:83770b9b4ec4d79b4f",
+        "sha256": "513332a6f3c8286219d1085cf081ab079176dc900dbcd7e053b21266554ee053",
+        "format": "html",
+        "checkedAt": "2026-11-15T22:06:20.982Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "ordre_du_jour_ou_projet_non_adopte",
+        "excerpt": "Vu la décision du Collège communal du 15 septembre 2025 relative à l’engagement des dépenses relatives à l’écart entre le montant attribué et le montant réceptionné des travaux d'aménagement des abords (3P-2291) dans la",
+        "sourceUrl": "https://www.deliberations.be/lessines/decisions/29-octobre-2026-19-30/3p-1634-construction-dun-nouveau-complexe-pour-le-service-des-travaux-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-de-construction-voies-et-moyens-2026-decision",
+        "page": null,
+        "sha256": "513332a6f3c8286219d1085cf081ab079176dc900dbcd7e053b21266554ee053"
+      },
+      "description": "Vu la décision du Collège communal du 15 septembre 2025 relative à l’engagement des dépenses relatives à l’écart entre le montant attribué et le montant réceptionné des travaux d'aménagement des abords (3P-2291) dans la limite des crédits budgétaires, soit 150.000,00 euros, 21% T.V.A.C, à charge de l’article 421/722-60/2020/2020 0018 du budget extraordinaire de l’exercice en cours et de les financer par un prélèvement sur le fonds de réserve extraordinaire ; Vu l’avis de légalité sur la présente décision n°69/2026, sollicité en date du 28 septembre 2026 et remis en date du 8 octobre 2026 par Madame la Directrice financière, joint en annexe ; Considérant que le cahier spécial des charges relatif à la mission d’auteur de projet prévoit que ses honoraires seront réajustés une première fois au moment de l’attribution du marché de travaux sur base du montant de la soumission retenue et une seconde fois à la réception provisoire des travaux d’après le décompte final des travaux ; Considérant qu’un crédit de 85.000,00 euros a été inscrit par le biais de la première modification budgétaire 2026, aux exercices antérieurs, afin de solder les honoraires qui seront dus à l’auteur de projet dans le cadre du marché relatif à l'aménagement des abords dans le cadre de la construction d'un nouveau complexe pour le Service des Travaux (3P-2291) ; Considérant qu’il est dès lors nécessaire de prév",
+      "evidence": "Vu la décision du Collège communal du 15 septembre 2025 relative à l’engagement des dépenses relatives à l’écart entre le montant attribué et le montant réceptionné des travaux d'aménagement des abords (3P-2291) dans la limite des crédits budgétaires, soit 150.000,00 euros, 21% T.V.A.C, à charge de l’article 421/722-60/2020/2020 0018 du budget extraordinaire de l’exercice en cours et de les financer par un prélèvement sur le fonds de réserve extraordinaire ; Vu l’avis de légalité sur la présente décision n°69/2026, sollicité en date du 28 septembre 2026 et remis en date du 8 octobre 2026 par Madame la Directrice financière, joint en annexe ; Considérant que le cahier spécial des charges relatif à la mission d’auteur de projet prévoit que ses honoraires seront réajustés une première fois au moment de l’attribution du marché de travaux sur base du montant de la soumission retenue et une seconde fois à la réception provisoire des travaux d’après le décompte final des travaux ; Considérant qu’un crédit de 85.000,00 euros a été inscrit par le biais de la première modification budgétaire 2026, aux exercices antérieurs, afin de solder les honoraires qui seront dus à l’auteur de projet dans le cadre du marché relatif à l'aménagement des abords dans le cadre de la construction d'un nouveau complexe pour le Service des Travaux (3P-2291) ; Considérant qu’il est dès lors nécessaire de prév",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu la décision du Collège communal du 15 septembre 2025 relative à l’engagement des dépenses relatives à l’écart entre le montant attribué et le montant réceptionné des travaux d'aménagement des abords (3P-2291) dans la limite des crédits budgétaires, soit 150.000,00 euros, 21% T.V.A.C, à charge de l’article 421/722-60/2020/2020 0018 du budget extraordinaire de l’exercice en cours et de les financer par un prélèvement sur le fonds de réserve extraordinaire ; Vu l’avis de légalité sur la présente décision n°69/2026, sollicité en date du 28 septembre 2026 et remis en date du 8 octobre 2026 par Madame la Directrice financière, joint en annexe ; Considérant que le cahier spécial des charges relatif à la mission d’auteur de projet prévoit que ses honoraires seront réajustés une première fois au moment de l’attribution du marché de travaux sur base du montant de la soumission retenue et une seconde fois à la réception provisoire des travaux d’après le décompte final des travaux ; Considérant qu’un crédit de 85.000,00 euros a été inscrit par le biais de la première modification budgétaire 2026, aux exercices antérieurs, afin de solder les honoraires qui seront dus à l’auteur de projet dans le cadre du marché relatif à l'aménagement des abords dans le cadre de la construction d'un nouveau complexe pour le Service des Travaux (3P-2291) ; Considérant qu’il est dès lors nécessaire de prév",
+          "page": null
+        },
+        {
+          "excerpt": "Vu l’avis de légalité sur la présente décision n°69/2026, sollicité en date du 28 septembre 2026 et remis en date du 8 octobre 2026 par Madame la Directrice financière, joint en annexe ; Considérant que le cahier spécial des charges relatif à la mission d’auteur de projet prévoit que ses honoraires seront réajustés une première fois au moment de l’attribution du marché de travaux sur base du montant de la soumission retenue et une seconde fois à la réception provisoire des travaux d’après le décompte final des travaux ; Considérant qu’un crédit de 85.000,00 euros a été inscrit par le biais de la première modification budgétaire 2026, aux exercices antérieurs, afin de solder les honoraires qui seront dus à l’auteur de projet dans le cadre du marché relatif à l'aménagement des abords dans le cadre de la construction d'un nouveau complexe pour le Service des Travaux (3P-2291) ; Considérant qu’il est dès lors nécessaire de prévoir les voies et moyens à cet effet ; Considérant que le crédit permettant ces dépenses est inscrit à l’article 421/722-60/2020/2020 0018 du budget extraordinaire de l’exercice en cours et sera financé par un prélèvement sur le fonds de réserve extraordinaire ; LE CONSEIL COMMUNAL DÉCIDE Article 1 er",
+          "page": null
+        },
+        {
+          "excerpt": "3P-1634 - Construction d'un nouveau complexe pour le Service des travaux - Désignation d'un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux de construction - Voies et moyens 2026 - Décision 29 Séance publique du Conseil 29 octobre 2026 (19:30) Point N°",
+          "page": null
+        },
+        {
+          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. 3P-1634 - Construction d'un nouveau complexe pour le Service des travaux - Désignation d'un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux de construction - Voies et moyens 2026 - Décision Note de synthèse Si le décompte final du marché de travaux de construction du nouveau Service des Travaux a été approuvé par le Collège communal, en date du 14 juillet 2025, le décompte final du marché relatif à l'aménagement de ses abords est, quant à lui, en cours de finalisation et devrait ainsi permettre à l'auteur de projet de solder les honoraires qui lui sont dus. Un crédit complémentaire de 85.000,00 euros a été prévu par voie de modification budgétaire 2026. Ainsi, il convient de lever les voies et moyens nécessaires en vue du paiement du solde d'honoraires pour les abords dans la limite des crédits inscrits.",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": null,
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
+      "id": "local-html:b24a02ad815308a3cd5d",
+      "title": "RÉVISION D'UN SCHÉMA DE DÉVELOPPEMENT COMMUNAL GLOBAL : PRISE DE CONNAISSANCE DE L'AVANT-PROJET.",
+      "sourceDocumentTitle": "RÉVISION D'UN SCHÉMA DE DÉVELOPPEMENT COMMUNAL GLOBAL : PRISE DE CONNAISSANCE DE L'AVANT-PROJET.",
+      "missionEvidence": null,
+      "buyer": "Commune de Fléron",
+      "municipalityINS": "62038",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "sourceDocumentFormat": "html",
+      "municipalProcedure": null,
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "mission_de_services_explicitement_annoncee"
+      },
+      "noticeKind": "prospection",
+      "opportunityType": "prospection",
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "screening": "review",
+      "score": 55,
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "url": "https://www.deliberations.be/fleron/decisions/15-septembre-2026-20-00/revision-dun-schema-de-developpement-communal-global-prise-de-connaissance-de-lavant-projet",
+      "sourceDocument": "https://www.deliberations.be/fleron/decisions/15-septembre-2026-20-00/revision-dun-schema-de-developpement-communal-global-prise-de-connaissance-de-lavant-projet",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.deliberations.be/fleron/decisions/15-septembre-2026-20-00/revision-dun-schema-de-developpement-communal-global-prise-de-connaissance-de-lavant-projet",
+        "sha256": "d689cda70d18447454a4a75bf30635cbce1d7d0935e114880710a6c44eefe9f9",
+        "session": {
+          "date": "2026-09-15",
+          "kind": "session",
+          "page": null,
+          "source": "html_text",
+          "excerpt": "Séance publique du Conseil : 15 septembre 2026 (20:00)",
+          "confidence": "explicit",
+          "sourceUrl": "https://www.deliberations.be/fleron/decisions/15-septembre-2026-20-00/revision-dun-schema-de-developpement-communal-global-prise-de-connaissance-de-lavant-projet"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:ed16866546b9954239",
+        "sha256": "d689cda70d18447454a4a75bf30635cbce1d7d0935e114880710a6c44eefe9f9",
+        "format": "html",
+        "checkedAt": "2026-11-15T22:06:20.982Z"
+      },
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Vu le Schéma de Développement du Territoire (SDT) adopté le 16 mai 2019 par le Gouvernement wallon et publié au Moniteur belge le 12 décembre 2019 et dont la date d’entrée en vigueur n’a jamais été déterminée par le Gouv",
+        "sourceUrl": "https://www.deliberations.be/fleron/decisions/15-septembre-2026-20-00/revision-dun-schema-de-developpement-communal-global-prise-de-connaissance-de-lavant-projet",
+        "page": null,
+        "sha256": "d689cda70d18447454a4a75bf30635cbce1d7d0935e114880710a6c44eefe9f9"
+      },
+      "description": "Vu le Schéma de Développement du Territoire (SDT) adopté le 16 mai 2019 par le Gouvernement wallon et publié au Moniteur belge le 12 décembre 2019 et dont la date d’entrée en vigueur n’a jamais été déterminée par le Gouvernement wallon ; Vu la délibération du Conseil communal du 18 février 2020 approuvant le Schéma de Développement de l'Arrondissement de Liège (SDALg) ; Vu la délibération du Conseil communal du 28 mai 2020 relative à l'approbation du cahier des charges, du devis estimatif et du choix du mode de passation du marché en vue de la désignation d'un auteur de projet pour la réalisation d'un Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Collège communal du 13 août 2020 relative à l'attribution d'un auteur de projet en vue de la réalisation d'un Schéma Communal de Développement Commercial, soit le bureau SEGEFA ; Vu la délibération du Conseil communal du 22 février 2022 approuvant l'avant-projet d'un Schéma Communal de Développement Commercial, accordant la poursuite de la procédure dudit Schéma et déterminant le contenu du Rapport sur les Incidences Environnementales (R.I.E.) ; Vu la délibération du Conseil communal du 18 avril 2023 relative à l’approbation de l'avant-projet du Rapport sur les Incidences Environnementales et sur la poursuite de la procédure du Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Conse",
+      "evidence": "Vu le Schéma de Développement du Territoire (SDT) adopté le 16 mai 2019 par le Gouvernement wallon et publié au Moniteur belge le 12 décembre 2019 et dont la date d’entrée en vigueur n’a jamais été déterminée par le Gouvernement wallon ; Vu la délibération du Conseil communal du 18 février 2020 approuvant le Schéma de Développement de l'Arrondissement de Liège (SDALg) ; Vu la délibération du Conseil communal du 28 mai 2020 relative à l'approbation du cahier des charges, du devis estimatif et du choix du mode de passation du marché en vue de la désignation d'un auteur de projet pour la réalisation d'un Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Collège communal du 13 août 2020 relative à l'attribution d'un auteur de projet en vue de la réalisation d'un Schéma Communal de Développement Commercial, soit le bureau SEGEFA ; Vu la délibération du Conseil communal du 22 février 2022 approuvant l'avant-projet d'un Schéma Communal de Développement Commercial, accordant la poursuite de la procédure dudit Schéma et déterminant le contenu du Rapport sur les Incidences Environnementales (R.I.E.) ; Vu la délibération du Conseil communal du 18 avril 2023 relative à l’approbation de l'avant-projet du Rapport sur les Incidences Environnementales et sur la poursuite de la procédure du Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Conse",
+      "municipalEvidence": [
+        {
+          "excerpt": "Vu le Schéma de Développement du Territoire (SDT) adopté le 16 mai 2019 par le Gouvernement wallon et publié au Moniteur belge le 12 décembre 2019 et dont la date d’entrée en vigueur n’a jamais été déterminée par le Gouvernement wallon ; Vu la délibération du Conseil communal du 18 février 2020 approuvant le Schéma de Développement de l'Arrondissement de Liège (SDALg) ; Vu la délibération du Conseil communal du 28 mai 2020 relative à l'approbation du cahier des charges, du devis estimatif et du choix du mode de passation du marché en vue de la désignation d'un auteur de projet pour la réalisation d'un Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Collège communal du 13 août 2020 relative à l'attribution d'un auteur de projet en vue de la réalisation d'un Schéma Communal de Développement Commercial, soit le bureau SEGEFA ; Vu la délibération du Conseil communal du 22 février 2022 approuvant l'avant-projet d'un Schéma Communal de Développement Commercial, accordant la poursuite de la procédure dudit Schéma et déterminant le contenu du Rapport sur les Incidences Environnementales (R.I.E.) ; Vu la délibération du Conseil communal du 18 avril 2023 relative à l’approbation de l'avant-projet du Rapport sur les Incidences Environnementales et sur la poursuite de la procédure du Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Conse",
+          "page": null
+        },
+        {
+          "excerpt": "Vu la délibération du Conseil communal du 18 février 2020 approuvant le Schéma de Développement de l'Arrondissement de Liège (SDALg) ; Vu la délibération du Conseil communal du 28 mai 2020 relative à l'approbation du cahier des charges, du devis estimatif et du choix du mode de passation du marché en vue de la désignation d'un auteur de projet pour la réalisation d'un Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Collège communal du 13 août 2020 relative à l'attribution d'un auteur de projet en vue de la réalisation d'un Schéma Communal de Développement Commercial, soit le bureau SEGEFA ; Vu la délibération du Conseil communal du 22 février 2022 approuvant l'avant-projet d'un Schéma Communal de Développement Commercial, accordant la poursuite de la procédure dudit Schéma et déterminant le contenu du Rapport sur les Incidences Environnementales (R.I.E.) ; Vu la délibération du Conseil communal du 18 avril 2023 relative à l’approbation de l'avant-projet du Rapport sur les Incidences Environnementales et sur la poursuite de la procédure du Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Conseil communal du 19 décembre 2023 approuvant définitivement le Schéma Communal de Développement Commercial accompagné de sa déclaration environnementale ; Vu l’Arrêté du Gouvernement wallon du 30 mars 2023 adoptant le projet de Schéma de Dé",
+          "page": null
+        },
+        {
+          "excerpt": "Vu la réforme du Code du Développement Territorial (CoDT) approuvée par le Parlement wallon le 13 décembre 2023 et entrée en vigueur le 1er avril 2024 ; Vu le Schéma de Développement Territorial a été adopté par le Gouvernement wallon le 23 avril 2024 et entré en vigueur le 1er août 2024 ; Vu la décision du Conseil communal du 17 décembre 2024 approuvant les conditions et le mode de passation du \"Marché de services relatifs à la révision d'un Schéma de Développement Communal thématique \"optimisation spatiale\" conformément à la législation relative à l'aménagement du territoire” ; Vu la décision du Collège communal du 19 décembre 2024 approuvant la liste des firmes à consulter dans le cadre de la procédure négociée sans publication préalable ; Vu la délibération du Collège communal du 19 décembre 2024 décidant, malgré d’innombrables sollicitations de promoteurs immobiliers, de ne plus se prononcer favorablement sur tout permis d’urbanisme, d’urbanisation, intégré ou unique pour les projets de plus de 6 logements situés hors du centre urbain de Fléron conformément au périmètre défini dans le SDALg. De plus, tout projet de création de logements devra respecter les densités du Schéma de Développement Communal. Aucun écart ne sera accordé par le Collège communal sur ce point ; Vu la décision du Collège communal du 13 février 2025 de constater, conformément au procès-verbal d'ouvertu",
+          "page": null
+        },
+        {
+          "excerpt": "Vu la délibération du Collège communal du 19 décembre 2024 décidant, malgré d’innombrables sollicitations de promoteurs immobiliers, de ne plus se prononcer favorablement sur tout permis d’urbanisme, d’urbanisation, intégré ou unique pour les projets de plus de 6 logements situés hors du centre urbain de Fléron conformément au périmètre défini dans le SDALg. De plus, tout projet de création de logements devra respecter les densités du Schéma de Développement Communal. Aucun écart ne sera accordé par le Collège communal sur ce point ; Vu la décision du Collège communal du 13 février 2025 de constater, conformément au procès-verbal d'ouverture d'offre, qu'une offre est parvenue ; Vu la décision du Collège communal du 8 mai 2025 relative à l'attribution du marché “Marché de services relatif à la révision d’un Schéma de Développement Communal global intégrant la thématique “optimisation spatiale” conformément à la législation relative à l’aménagement du territoire” à PLURIS SCRL, Rue De Fetinne 85 à 4020 Liege 2 pour le montant d’offre contrôlé de 108.380,40 € hors TVA ou 131.140,28 €, 21% TVA comprise ; Considérant que l'exécution du marché doit répondre aux conditions fixées par le cahier des charges N° 2024-199 ; Vu la délibération du Collège communal du 28 août 2025 approuvant l'avenant 1 du marché “Marché de services relatif à la révision d’un Schéma de Développement Communal ",
+          "page": null
+        }
+      ],
+      "sourceEvidenceStatus": "found",
+      "municipalReference": "2024-199",
+      "matchReason": "mission_globale_a_qualifier",
+      "screeningReason": null
+    },
+    {
       "id": "communal:c3599ff87890bfb78368",
       "title": "Prospection · Beyne-Heusay · 17) Règlement complémentaire de roulage - Création d’un emplacement de stationnement pour personnes handicapées - Plac…",
       "buyer": "Commune de Beyne-Heusay",
@@ -26611,6 +26926,90 @@
       "sourceEvidenceStatus": "found",
       "municipalReference": null,
       "matchReason": "projet_communal_indirect",
+      "screeningReason": null
+    },
+    {
+      "id": "local:57523ca6578bb81134a6",
+      "title": "5.   Acquisition d'une parcelle cadastrée Crisnée 4ème division FIZE-LE-MARSAL section A 69 H et A 69 F",
+      "sourceDocumentTitle": "→ PV séance du 05 octobre 2026",
+      "municipalAssessment": {
+        "eligible": true,
+        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
+      },
+      "missionEvidence": null,
+      "buyer": "Commune de Crisnée",
+      "municipalityINS": "64021",
+      "region": "Wallonie",
+      "source": "LOCALE",
+      "webSourceType": "municipal",
+      "opportunityType": "prospection",
+      "noticeKind": "prospection",
+      "webTypeEvidence": {
+        "kind": "prospection",
+        "reason": "besoin_ou_decision_a_verifier",
+        "excerpt": "Après en avoir délibéré en séance publique ; DECIDE à l'unanimité Article 1er : DE MARQUER son accord sur le principe de l'acquisition amiable des parcelles précitées moyennant le prix global 8.400,00 €uros en vue de réa",
+        "sourceUrl": "https://www.crisnee.be/images/conseil/pv/1.Pv%20de%20la%20seance%20du%2005%2010%202026.pdf",
+        "page": 4,
+        "sha256": "8da15595f0bc2048caa35f9e148a1b4f9a5bf613ec6e70d75fbf667cb2b400ba"
+      },
+      "opportunityStage": "décision ou besoin à vérifier",
+      "sector": "VRD",
+      "sectors": [
+        "VRD"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "prospect",
+        "route": "local_signal",
+        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
+        "capacityStatus": "not_assessed"
+      },
+      "publication": "",
+      "deadline": "",
+      "sourceDocument": "https://www.crisnee.be/images/conseil/pv/1.Pv%20de%20la%20seance%20du%2005%2010%202026.pdf",
+      "sourceDocumentDates": {
+        "version": 1,
+        "sourceUrl": "https://www.crisnee.be/images/conseil/pv/1.Pv%20de%20la%20seance%20du%2005%2010%202026.pdf",
+        "sha256": "8da15595f0bc2048caa35f9e148a1b4f9a5bf613ec6e70d75fbf667cb2b400ba",
+        "session": {
+          "date": "2026-10-05",
+          "kind": "session",
+          "page": 1,
+          "source": "pdf_text",
+          "excerpt": "Séance publique du lundi 5 octobre 2026",
+          "confidence": "explicit"
+        },
+        "document": null,
+        "status": "identified"
+      },
+      "sourceExtraction": {
+        "method": "pdf_text",
+        "partial": false
+      },
+      "url": "https://www.crisnee.be/images/conseil/pv/1.Pv%20de%20la%20seance%20du%2005%2010%202026.pdf",
+      "cpv": [],
+      "description": "Document communal public. Extrait nécessitant une lecture de validation : Après en avoir délibéré en séance publique ; DECIDE à l'unanimité Article 1er : DE MARQUER son accord sur le principe de l'acquisition amiable des parcelles précitées moyennant le prix global 8.400,00 €uros en vue de réaliser les aménagements relatifs à la création d'un chemin de mobilité douce et de déclarer son utilité publique. Article 2 : D'APPROUVER le projet d'acte d'acquisition dûment rédigé.",
+      "evidence": "Après en avoir délibéré en séance publique ; DECIDE à l'unanimité Article 1er : DE MARQUER son accord sur le principe de l'acquisition amiable des parcelles précitées moyennant le prix global 8.400,00 €uros en vue de réaliser les aménagements relatifs à la création d'un chemin de mobilité douce et de déclarer son utilité publique. Article 2 : D'APPROUVER le projet d'acte d'acquisition dûment rédigé.",
+      "municipalReference": null,
+      "municipalSection": "5.   Acquisition d'une parcelle cadastrée Crisnée 4ème division FIZE-LE-MARSAL section A 69 H et A 69 F",
+      "municipalEvidence": [
+        {
+          "page": 4,
+          "excerpt": "Après en avoir délibéré en séance publique ; DECIDE à l'unanimité Article 1er : DE MARQUER son accord sur le principe de l'acquisition amiable des parcelles précitées moyennant le prix global 8.400,00 €uros en vue de réaliser les aménagements relatifs à la création d'un chemin de mobilité douce et de déclarer son utilité publique. Article 2 : D'APPROUVER le projet d'acte d'acquisition dûment rédigé."
+        }
+      ],
+      "source_status": "extrait_pdf_a_verifier",
+      "sourceEvidencePage": 4,
+      "sourceEvidenceStatus": "found",
+      "sourceDocumentVersion": {
+        "documentId": "municipal-doc:2eea42200336a9c5c7",
+        "sha256": "8da15595f0bc2048caa35f9e148a1b4f9a5bf613ec6e70d75fbf667cb2b400ba",
+        "checkedAt": "2026-11-15T22:06:20.982Z",
+        "changedAt": null
+      },
+      "matchReason": "description_ou_contexte",
       "screeningReason": null
     },
     {
@@ -29661,351 +30060,6 @@
       "municipalReference": null,
       "matchReason": "etude_urbanistique_a_qualifier",
       "screeningReason": null
-    },
-    {
-      "id": "local-html:ffc4e5f8ed8604f9ac20",
-      "title": "3P-1634 - Construction d'un nouveau complexe pour le Service des travaux - Désignation d'un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux de construction - Voies et moyens 2026 - Décision",
-      "sourceDocumentTitle": "3P-1634 - Construction d'un nouveau complexe pour le Service des travaux - Désignation d'un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux de construction - Voies et moyens 2026 - Décision",
-      "missionEvidence": null,
-      "buyer": "Commune de Lessines",
-      "municipalityINS": "51069",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/lessines/decisions/29-octobre-2026-19-30/3p-1634-construction-dun-nouveau-complexe-pour-le-service-des-travaux-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-de-construction-voies-et-moyens-2026-decision",
-      "sourceDocument": "https://www.deliberations.be/lessines/decisions/29-octobre-2026-19-30/3p-1634-construction-dun-nouveau-complexe-pour-le-service-des-travaux-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-de-construction-voies-et-moyens-2026-decision",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/lessines/decisions/29-octobre-2026-19-30/3p-1634-construction-dun-nouveau-complexe-pour-le-service-des-travaux-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-de-construction-voies-et-moyens-2026-decision",
-        "sha256": "513332a6f3c8286219d1085cf081ab079176dc900dbcd7e053b21266554ee053",
-        "session": {
-          "date": "2026-10-29",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 29 octobre 2026 (19:30)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/lessines/decisions/29-octobre-2026-19-30/3p-1634-construction-dun-nouveau-complexe-pour-le-service-des-travaux-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-de-construction-voies-et-moyens-2026-decision"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:83770b9b4ec4d79b4f",
-        "sha256": "513332a6f3c8286219d1085cf081ab079176dc900dbcd7e053b21266554ee053",
-        "format": "html",
-        "checkedAt": "2026-11-15T22:06:20.982Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "ordre_du_jour_ou_projet_non_adopte",
-        "excerpt": "Vu la décision du Collège communal du 15 septembre 2025 relative à l’engagement des dépenses relatives à l’écart entre le montant attribué et le montant réceptionné des travaux d'aménagement des abords (3P-2291) dans la",
-        "sourceUrl": "https://www.deliberations.be/lessines/decisions/29-octobre-2026-19-30/3p-1634-construction-dun-nouveau-complexe-pour-le-service-des-travaux-designation-dun-auteur-de-projet-en-vue-de-letude-et-du-suivi-de-lexecution-des-travaux-de-construction-voies-et-moyens-2026-decision",
-        "page": null,
-        "sha256": "513332a6f3c8286219d1085cf081ab079176dc900dbcd7e053b21266554ee053"
-      },
-      "description": "Vu la décision du Collège communal du 15 septembre 2025 relative à l’engagement des dépenses relatives à l’écart entre le montant attribué et le montant réceptionné des travaux d'aménagement des abords (3P-2291) dans la limite des crédits budgétaires, soit 150.000,00 euros, 21% T.V.A.C, à charge de l’article 421/722-60/2020/2020 0018 du budget extraordinaire de l’exercice en cours et de les financer par un prélèvement sur le fonds de réserve extraordinaire ; Vu l’avis de légalité sur la présente décision n°69/2026, sollicité en date du 28 septembre 2026 et remis en date du 8 octobre 2026 par Madame la Directrice financière, joint en annexe ; Considérant que le cahier spécial des charges relatif à la mission d’auteur de projet prévoit que ses honoraires seront réajustés une première fois au moment de l’attribution du marché de travaux sur base du montant de la soumission retenue et une seconde fois à la réception provisoire des travaux d’après le décompte final des travaux ; Considérant qu’un crédit de 85.000,00 euros a été inscrit par le biais de la première modification budgétaire 2026, aux exercices antérieurs, afin de solder les honoraires qui seront dus à l’auteur de projet dans le cadre du marché relatif à l'aménagement des abords dans le cadre de la construction d'un nouveau complexe pour le Service des Travaux (3P-2291) ; Considérant qu’il est dès lors nécessaire de prév",
-      "evidence": "Vu la décision du Collège communal du 15 septembre 2025 relative à l’engagement des dépenses relatives à l’écart entre le montant attribué et le montant réceptionné des travaux d'aménagement des abords (3P-2291) dans la limite des crédits budgétaires, soit 150.000,00 euros, 21% T.V.A.C, à charge de l’article 421/722-60/2020/2020 0018 du budget extraordinaire de l’exercice en cours et de les financer par un prélèvement sur le fonds de réserve extraordinaire ; Vu l’avis de légalité sur la présente décision n°69/2026, sollicité en date du 28 septembre 2026 et remis en date du 8 octobre 2026 par Madame la Directrice financière, joint en annexe ; Considérant que le cahier spécial des charges relatif à la mission d’auteur de projet prévoit que ses honoraires seront réajustés une première fois au moment de l’attribution du marché de travaux sur base du montant de la soumission retenue et une seconde fois à la réception provisoire des travaux d’après le décompte final des travaux ; Considérant qu’un crédit de 85.000,00 euros a été inscrit par le biais de la première modification budgétaire 2026, aux exercices antérieurs, afin de solder les honoraires qui seront dus à l’auteur de projet dans le cadre du marché relatif à l'aménagement des abords dans le cadre de la construction d'un nouveau complexe pour le Service des Travaux (3P-2291) ; Considérant qu’il est dès lors nécessaire de prév",
-      "municipalEvidence": [
-        {
-          "excerpt": "Vu la décision du Collège communal du 15 septembre 2025 relative à l’engagement des dépenses relatives à l’écart entre le montant attribué et le montant réceptionné des travaux d'aménagement des abords (3P-2291) dans la limite des crédits budgétaires, soit 150.000,00 euros, 21% T.V.A.C, à charge de l’article 421/722-60/2020/2020 0018 du budget extraordinaire de l’exercice en cours et de les financer par un prélèvement sur le fonds de réserve extraordinaire ; Vu l’avis de légalité sur la présente décision n°69/2026, sollicité en date du 28 septembre 2026 et remis en date du 8 octobre 2026 par Madame la Directrice financière, joint en annexe ; Considérant que le cahier spécial des charges relatif à la mission d’auteur de projet prévoit que ses honoraires seront réajustés une première fois au moment de l’attribution du marché de travaux sur base du montant de la soumission retenue et une seconde fois à la réception provisoire des travaux d’après le décompte final des travaux ; Considérant qu’un crédit de 85.000,00 euros a été inscrit par le biais de la première modification budgétaire 2026, aux exercices antérieurs, afin de solder les honoraires qui seront dus à l’auteur de projet dans le cadre du marché relatif à l'aménagement des abords dans le cadre de la construction d'un nouveau complexe pour le Service des Travaux (3P-2291) ; Considérant qu’il est dès lors nécessaire de prév",
-          "page": null
-        },
-        {
-          "excerpt": "Vu l’avis de légalité sur la présente décision n°69/2026, sollicité en date du 28 septembre 2026 et remis en date du 8 octobre 2026 par Madame la Directrice financière, joint en annexe ; Considérant que le cahier spécial des charges relatif à la mission d’auteur de projet prévoit que ses honoraires seront réajustés une première fois au moment de l’attribution du marché de travaux sur base du montant de la soumission retenue et une seconde fois à la réception provisoire des travaux d’après le décompte final des travaux ; Considérant qu’un crédit de 85.000,00 euros a été inscrit par le biais de la première modification budgétaire 2026, aux exercices antérieurs, afin de solder les honoraires qui seront dus à l’auteur de projet dans le cadre du marché relatif à l'aménagement des abords dans le cadre de la construction d'un nouveau complexe pour le Service des Travaux (3P-2291) ; Considérant qu’il est dès lors nécessaire de prévoir les voies et moyens à cet effet ; Considérant que le crédit permettant ces dépenses est inscrit à l’article 421/722-60/2020/2020 0018 du budget extraordinaire de l’exercice en cours et sera financé par un prélèvement sur le fonds de réserve extraordinaire ; LE CONSEIL COMMUNAL DÉCIDE Article 1 er",
-          "page": null
-        },
-        {
-          "excerpt": "3P-1634 - Construction d'un nouveau complexe pour le Service des travaux - Désignation d'un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux de construction - Voies et moyens 2026 - Décision 29 Séance publique du Conseil 29 octobre 2026 (19:30) Point N°",
-          "page": null
-        },
-        {
-          "excerpt": "Ce projet de délibération est un document préparatoire ayant vocation de permettre aux membres du Conseil communal d'examiner la décision soumise à son approbation. Ce document est par nature évolutif et susceptible d'être modifié. Ce texte n'a pas encore été adopté par l'autorité communale. 3P-1634 - Construction d'un nouveau complexe pour le Service des travaux - Désignation d'un auteur de projet en vue de l'étude et du suivi de l'exécution des travaux de construction - Voies et moyens 2026 - Décision Note de synthèse Si le décompte final du marché de travaux de construction du nouveau Service des Travaux a été approuvé par le Collège communal, en date du 14 juillet 2025, le décompte final du marché relatif à l'aménagement de ses abords est, quant à lui, en cours de finalisation et devrait ainsi permettre à l'auteur de projet de solder les honoraires qui lui sont dus. Un crédit complémentaire de 85.000,00 euros a été prévu par voie de modification budgétaire 2026. Ainsi, il convient de lever les voies et moyens nécessaires en vue du paiement du solde d'honoraires pour les abords dans la limite des crédits inscrits.",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local-html:94edb48faec1f5b827c4",
-      "title": "Vente d'un terrain communal - Rue Elie Bélenger à 7350 Thulin : modification des conditions de vente",
-      "sourceDocumentTitle": "Vente d'un terrain communal - Rue Elie Bélenger à 7350 Thulin : modification des conditions de vente",
-      "missionEvidence": null,
-      "buyer": "Commune de Hensies",
-      "municipalityINS": "53039",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Expert",
-      "sectors": [
-        "Expert"
-      ],
-      "screening": "review",
-      "score": 60,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/hensies/decisions/12-octobre-2026-18-30/vente-dun-terrain-communal-rue-elie-belenger-a-7350-thulin-modification-des-conditions-de-vente",
-      "sourceDocument": "https://www.deliberations.be/hensies/decisions/12-octobre-2026-18-30/vente-dun-terrain-communal-rue-elie-belenger-a-7350-thulin-modification-des-conditions-de-vente",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/hensies/decisions/12-octobre-2026-18-30/vente-dun-terrain-communal-rue-elie-belenger-a-7350-thulin-modification-des-conditions-de-vente",
-        "sha256": "b29569e00def941b68ebb5a7063d056ca83cd5e3e521f6107efeb84863299a8a",
-        "session": {
-          "date": "2026-10-12",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 12 octobre 2026 (18:30)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/hensies/decisions/12-octobre-2026-18-30/vente-dun-terrain-communal-rue-elie-belenger-a-7350-thulin-modification-des-conditions-de-vente"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:ba1c0d0f9a9ed5ef6b",
-        "sha256": "b29569e00def941b68ebb5a7063d056ca83cd5e3e521f6107efeb84863299a8a",
-        "format": "html",
-        "checkedAt": "2026-11-15T22:06:20.982Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "DECIDE , à l'unanimité : Article 1er : De prendre acte que les services du Fonctionnaire Délégué du SPW territoire logement patrimoine énergie n'adhèrent pas à la division du terrain en cinq lots dont quatre lots destiné",
-        "sourceUrl": "https://www.deliberations.be/hensies/decisions/12-octobre-2026-18-30/vente-dun-terrain-communal-rue-elie-belenger-a-7350-thulin-modification-des-conditions-de-vente",
-        "page": null,
-        "sha256": "b29569e00def941b68ebb5a7063d056ca83cd5e3e521f6107efeb84863299a8a"
-      },
-      "description": "DECIDE , à l'unanimité : Article 1er : De prendre acte que les services du Fonctionnaire Délégué du SPW territoire logement patrimoine énergie n'adhèrent pas à la division du terrain en cinq lots dont quatre lots destinés à des ventes séparées ; qu'ils estiment que la division projetée ne constitue pas une réponse urbanistique adéquate pour ce terrain qui bénéficie d’atouts particulièrement favorables à l’accueil d’un développement résidentiel structuré : proximité des services et équipements collectifs (école, commerces, etc.), accessibilité aux modes actifs et présence au sein du tissu bâti existant ; qu'il constitue à ce titre une réserve foncière stratégique pour le village de Thulin ; Article 2 : De prendre acte que le lot n°2, bordé de bleu au plan ci-annexé, faisant partie intégrante de la présente décision et précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, ne peut être vendu que d'un seul tenant ; que la valeur vénale du bien peut être estimée à trois cent mille euros (300.000 euros). Article 3 : D'approuver la modification des conditions de vente de la parcelle sise rue Elie Bélenger, à savoir de vendre le lot n°2 d'un seul tenant, lot précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, avec reprise du bail à ferme dont la gestion et la continuation incomberont i",
-      "evidence": "DECIDE , à l'unanimité : Article 1er : De prendre acte que les services du Fonctionnaire Délégué du SPW territoire logement patrimoine énergie n'adhèrent pas à la division du terrain en cinq lots dont quatre lots destinés à des ventes séparées ; qu'ils estiment que la division projetée ne constitue pas une réponse urbanistique adéquate pour ce terrain qui bénéficie d’atouts particulièrement favorables à l’accueil d’un développement résidentiel structuré : proximité des services et équipements collectifs (école, commerces, etc.), accessibilité aux modes actifs et présence au sein du tissu bâti existant ; qu'il constitue à ce titre une réserve foncière stratégique pour le village de Thulin ; Article 2 : De prendre acte que le lot n°2, bordé de bleu au plan ci-annexé, faisant partie intégrante de la présente décision et précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, ne peut être vendu que d'un seul tenant ; que la valeur vénale du bien peut être estimée à trois cent mille euros (300.000 euros). Article 3 : D'approuver la modification des conditions de vente de la parcelle sise rue Elie Bélenger, à savoir de vendre le lot n°2 d'un seul tenant, lot précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, avec reprise du bail à ferme dont la gestion et la continuation incomberont i",
-      "municipalEvidence": [
-        {
-          "excerpt": "DECIDE , à l'unanimité : Article 1er : De prendre acte que les services du Fonctionnaire Délégué du SPW territoire logement patrimoine énergie n'adhèrent pas à la division du terrain en cinq lots dont quatre lots destinés à des ventes séparées ; qu'ils estiment que la division projetée ne constitue pas une réponse urbanistique adéquate pour ce terrain qui bénéficie d’atouts particulièrement favorables à l’accueil d’un développement résidentiel structuré : proximité des services et équipements collectifs (école, commerces, etc.), accessibilité aux modes actifs et présence au sein du tissu bâti existant ; qu'il constitue à ce titre une réserve foncière stratégique pour le village de Thulin ; Article 2 : De prendre acte que le lot n°2, bordé de bleu au plan ci-annexé, faisant partie intégrante de la présente décision et précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, ne peut être vendu que d'un seul tenant ; que la valeur vénale du bien peut être estimée à trois cent mille euros (300.000 euros). Article 3 : D'approuver la modification des conditions de vente de la parcelle sise rue Elie Bélenger, à savoir de vendre le lot n°2 d'un seul tenant, lot précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, avec reprise du bail à ferme dont la gestion et la continuation incomberont i",
-          "page": null
-        },
-        {
-          "excerpt": "Article 1er : De prendre acte que les services du Fonctionnaire Délégué du SPW territoire logement patrimoine énergie n'adhèrent pas à la division du terrain en cinq lots dont quatre lots destinés à des ventes séparées ; qu'ils estiment que la division projetée ne constitue pas une réponse urbanistique adéquate pour ce terrain qui bénéficie d’atouts particulièrement favorables à l’accueil d’un développement résidentiel structuré : proximité des services et équipements collectifs (école, commerces, etc.), accessibilité aux modes actifs et présence au sein du tissu bâti existant ; qu'il constitue à ce titre une réserve foncière stratégique pour le village de Thulin ; Article 2 : De prendre acte que le lot n°2, bordé de bleu au plan ci-annexé, faisant partie intégrante de la présente décision et précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, ne peut être vendu que d'un seul tenant ; que la valeur vénale du bien peut être estimée à trois cent mille euros (300.000 euros). Article 3 : D'approuver la modification des conditions de vente de la parcelle sise rue Elie Bélenger, à savoir de vendre le lot n°2 d'un seul tenant, lot précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, avec reprise du bail à ferme dont la gestion et la continuation incomberont intégralement à l’acquéreu",
-          "page": null
-        },
-        {
-          "excerpt": "Article 2 : De prendre acte que le lot n°2, bordé de bleu au plan ci-annexé, faisant partie intégrante de la présente décision et précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, ne peut être vendu que d'un seul tenant ; que la valeur vénale du bien peut être estimée à trois cent mille euros (300.000 euros). Article 3 : D'approuver la modification des conditions de vente de la parcelle sise rue Elie Bélenger, à savoir de vendre le lot n°2 d'un seul tenant, lot précadastré HENSIES 3 DIV/THULIN/D 0114 H, d'une superficie, suivant mesurage, de 62 ares 34 centiares, avec reprise du bail à ferme dont la gestion et la continuation incomberont intégralement à l’acquéreur. Article 4 : De confier la procédure de vente à l’Étude des Notaires Fabrice DE VISCH & Thomas MAURO, sise à l'Avenue du Saint-Homme, n°11 à 7350 Thulin. Article 5 : De confier à Messieurs Eric THIEBAUT, Bourgmestre et Michaël FLASSE, Directeur général, les formalités administratives dont la signature du compromis de vente et la signature de l'acte authentique, en présentiel ou par le biais d'une procuration numérique (RNS) le cas échéant conformément au décret wallon du 27 mars 2024. Article 6 : D'informer la Direction Financière de la présente décision et d'inscrire le produit de la vente en recette au budget extraordinaire.",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": null
-    },
-    {
-      "id": "local-html:b24a02ad815308a3cd5d",
-      "title": "RÉVISION D'UN SCHÉMA DE DÉVELOPPEMENT COMMUNAL GLOBAL : PRISE DE CONNAISSANCE DE L'AVANT-PROJET.",
-      "sourceDocumentTitle": "RÉVISION D'UN SCHÉMA DE DÉVELOPPEMENT COMMUNAL GLOBAL : PRISE DE CONNAISSANCE DE L'AVANT-PROJET.",
-      "missionEvidence": null,
-      "buyer": "Commune de Fléron",
-      "municipalityINS": "62038",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "sourceDocumentFormat": "html",
-      "municipalProcedure": null,
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "mission_de_services_explicitement_annoncee"
-      },
-      "noticeKind": "prospection",
-      "opportunityType": "prospection",
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "screening": "review",
-      "score": 55,
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "url": "https://www.deliberations.be/fleron/decisions/15-septembre-2026-20-00/revision-dun-schema-de-developpement-communal-global-prise-de-connaissance-de-lavant-projet",
-      "sourceDocument": "https://www.deliberations.be/fleron/decisions/15-septembre-2026-20-00/revision-dun-schema-de-developpement-communal-global-prise-de-connaissance-de-lavant-projet",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.deliberations.be/fleron/decisions/15-septembre-2026-20-00/revision-dun-schema-de-developpement-communal-global-prise-de-connaissance-de-lavant-projet",
-        "sha256": "d689cda70d18447454a4a75bf30635cbce1d7d0935e114880710a6c44eefe9f9",
-        "session": {
-          "date": "2026-09-15",
-          "kind": "session",
-          "page": null,
-          "source": "html_text",
-          "excerpt": "Séance publique du Conseil : 15 septembre 2026 (20:00)",
-          "confidence": "explicit",
-          "sourceUrl": "https://www.deliberations.be/fleron/decisions/15-septembre-2026-20-00/revision-dun-schema-de-developpement-communal-global-prise-de-connaissance-de-lavant-projet"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:ed16866546b9954239",
-        "sha256": "d689cda70d18447454a4a75bf30635cbce1d7d0935e114880710a6c44eefe9f9",
-        "format": "html",
-        "checkedAt": "2026-11-15T22:06:20.982Z"
-      },
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "Vu le Schéma de Développement du Territoire (SDT) adopté le 16 mai 2019 par le Gouvernement wallon et publié au Moniteur belge le 12 décembre 2019 et dont la date d’entrée en vigueur n’a jamais été déterminée par le Gouv",
-        "sourceUrl": "https://www.deliberations.be/fleron/decisions/15-septembre-2026-20-00/revision-dun-schema-de-developpement-communal-global-prise-de-connaissance-de-lavant-projet",
-        "page": null,
-        "sha256": "d689cda70d18447454a4a75bf30635cbce1d7d0935e114880710a6c44eefe9f9"
-      },
-      "description": "Vu le Schéma de Développement du Territoire (SDT) adopté le 16 mai 2019 par le Gouvernement wallon et publié au Moniteur belge le 12 décembre 2019 et dont la date d’entrée en vigueur n’a jamais été déterminée par le Gouvernement wallon ; Vu la délibération du Conseil communal du 18 février 2020 approuvant le Schéma de Développement de l'Arrondissement de Liège (SDALg) ; Vu la délibération du Conseil communal du 28 mai 2020 relative à l'approbation du cahier des charges, du devis estimatif et du choix du mode de passation du marché en vue de la désignation d'un auteur de projet pour la réalisation d'un Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Collège communal du 13 août 2020 relative à l'attribution d'un auteur de projet en vue de la réalisation d'un Schéma Communal de Développement Commercial, soit le bureau SEGEFA ; Vu la délibération du Conseil communal du 22 février 2022 approuvant l'avant-projet d'un Schéma Communal de Développement Commercial, accordant la poursuite de la procédure dudit Schéma et déterminant le contenu du Rapport sur les Incidences Environnementales (R.I.E.) ; Vu la délibération du Conseil communal du 18 avril 2023 relative à l’approbation de l'avant-projet du Rapport sur les Incidences Environnementales et sur la poursuite de la procédure du Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Conse",
-      "evidence": "Vu le Schéma de Développement du Territoire (SDT) adopté le 16 mai 2019 par le Gouvernement wallon et publié au Moniteur belge le 12 décembre 2019 et dont la date d’entrée en vigueur n’a jamais été déterminée par le Gouvernement wallon ; Vu la délibération du Conseil communal du 18 février 2020 approuvant le Schéma de Développement de l'Arrondissement de Liège (SDALg) ; Vu la délibération du Conseil communal du 28 mai 2020 relative à l'approbation du cahier des charges, du devis estimatif et du choix du mode de passation du marché en vue de la désignation d'un auteur de projet pour la réalisation d'un Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Collège communal du 13 août 2020 relative à l'attribution d'un auteur de projet en vue de la réalisation d'un Schéma Communal de Développement Commercial, soit le bureau SEGEFA ; Vu la délibération du Conseil communal du 22 février 2022 approuvant l'avant-projet d'un Schéma Communal de Développement Commercial, accordant la poursuite de la procédure dudit Schéma et déterminant le contenu du Rapport sur les Incidences Environnementales (R.I.E.) ; Vu la délibération du Conseil communal du 18 avril 2023 relative à l’approbation de l'avant-projet du Rapport sur les Incidences Environnementales et sur la poursuite de la procédure du Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Conse",
-      "municipalEvidence": [
-        {
-          "excerpt": "Vu le Schéma de Développement du Territoire (SDT) adopté le 16 mai 2019 par le Gouvernement wallon et publié au Moniteur belge le 12 décembre 2019 et dont la date d’entrée en vigueur n’a jamais été déterminée par le Gouvernement wallon ; Vu la délibération du Conseil communal du 18 février 2020 approuvant le Schéma de Développement de l'Arrondissement de Liège (SDALg) ; Vu la délibération du Conseil communal du 28 mai 2020 relative à l'approbation du cahier des charges, du devis estimatif et du choix du mode de passation du marché en vue de la désignation d'un auteur de projet pour la réalisation d'un Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Collège communal du 13 août 2020 relative à l'attribution d'un auteur de projet en vue de la réalisation d'un Schéma Communal de Développement Commercial, soit le bureau SEGEFA ; Vu la délibération du Conseil communal du 22 février 2022 approuvant l'avant-projet d'un Schéma Communal de Développement Commercial, accordant la poursuite de la procédure dudit Schéma et déterminant le contenu du Rapport sur les Incidences Environnementales (R.I.E.) ; Vu la délibération du Conseil communal du 18 avril 2023 relative à l’approbation de l'avant-projet du Rapport sur les Incidences Environnementales et sur la poursuite de la procédure du Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Conse",
-          "page": null
-        },
-        {
-          "excerpt": "Vu la délibération du Conseil communal du 18 février 2020 approuvant le Schéma de Développement de l'Arrondissement de Liège (SDALg) ; Vu la délibération du Conseil communal du 28 mai 2020 relative à l'approbation du cahier des charges, du devis estimatif et du choix du mode de passation du marché en vue de la désignation d'un auteur de projet pour la réalisation d'un Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Collège communal du 13 août 2020 relative à l'attribution d'un auteur de projet en vue de la réalisation d'un Schéma Communal de Développement Commercial, soit le bureau SEGEFA ; Vu la délibération du Conseil communal du 22 février 2022 approuvant l'avant-projet d'un Schéma Communal de Développement Commercial, accordant la poursuite de la procédure dudit Schéma et déterminant le contenu du Rapport sur les Incidences Environnementales (R.I.E.) ; Vu la délibération du Conseil communal du 18 avril 2023 relative à l’approbation de l'avant-projet du Rapport sur les Incidences Environnementales et sur la poursuite de la procédure du Schéma Communal de Développement Commercial (SCDC) ; Vu la délibération du Conseil communal du 19 décembre 2023 approuvant définitivement le Schéma Communal de Développement Commercial accompagné de sa déclaration environnementale ; Vu l’Arrêté du Gouvernement wallon du 30 mars 2023 adoptant le projet de Schéma de Dé",
-          "page": null
-        },
-        {
-          "excerpt": "Vu la réforme du Code du Développement Territorial (CoDT) approuvée par le Parlement wallon le 13 décembre 2023 et entrée en vigueur le 1er avril 2024 ; Vu le Schéma de Développement Territorial a été adopté par le Gouvernement wallon le 23 avril 2024 et entré en vigueur le 1er août 2024 ; Vu la décision du Conseil communal du 17 décembre 2024 approuvant les conditions et le mode de passation du \"Marché de services relatifs à la révision d'un Schéma de Développement Communal thématique \"optimisation spatiale\" conformément à la législation relative à l'aménagement du territoire” ; Vu la décision du Collège communal du 19 décembre 2024 approuvant la liste des firmes à consulter dans le cadre de la procédure négociée sans publication préalable ; Vu la délibération du Collège communal du 19 décembre 2024 décidant, malgré d’innombrables sollicitations de promoteurs immobiliers, de ne plus se prononcer favorablement sur tout permis d’urbanisme, d’urbanisation, intégré ou unique pour les projets de plus de 6 logements situés hors du centre urbain de Fléron conformément au périmètre défini dans le SDALg. De plus, tout projet de création de logements devra respecter les densités du Schéma de Développement Communal. Aucun écart ne sera accordé par le Collège communal sur ce point ; Vu la décision du Collège communal du 13 février 2025 de constater, conformément au procès-verbal d'ouvertu",
-          "page": null
-        },
-        {
-          "excerpt": "Vu la délibération du Collège communal du 19 décembre 2024 décidant, malgré d’innombrables sollicitations de promoteurs immobiliers, de ne plus se prononcer favorablement sur tout permis d’urbanisme, d’urbanisation, intégré ou unique pour les projets de plus de 6 logements situés hors du centre urbain de Fléron conformément au périmètre défini dans le SDALg. De plus, tout projet de création de logements devra respecter les densités du Schéma de Développement Communal. Aucun écart ne sera accordé par le Collège communal sur ce point ; Vu la décision du Collège communal du 13 février 2025 de constater, conformément au procès-verbal d'ouverture d'offre, qu'une offre est parvenue ; Vu la décision du Collège communal du 8 mai 2025 relative à l'attribution du marché “Marché de services relatif à la révision d’un Schéma de Développement Communal global intégrant la thématique “optimisation spatiale” conformément à la législation relative à l’aménagement du territoire” à PLURIS SCRL, Rue De Fetinne 85 à 4020 Liege 2 pour le montant d’offre contrôlé de 108.380,40 € hors TVA ou 131.140,28 €, 21% TVA comprise ; Considérant que l'exécution du marché doit répondre aux conditions fixées par le cahier des charges N° 2024-199 ; Vu la délibération du Collège communal du 28 août 2025 approuvant l'avenant 1 du marché “Marché de services relatif à la révision d’un Schéma de Développement Communal ",
-          "page": null
-        }
-      ],
-      "sourceEvidenceStatus": "found",
-      "municipalReference": "2024-199"
-    },
-    {
-      "id": "local:57523ca6578bb81134a6",
-      "title": "5.   Acquisition d'une parcelle cadastrée Crisnée 4ème division FIZE-LE-MARSAL section A 69 H et A 69 F",
-      "sourceDocumentTitle": "→ PV séance du 05 octobre 2026",
-      "municipalAssessment": {
-        "eligible": true,
-        "reason": "operation_fonciere_a_verifier_sans_mission_confirmee"
-      },
-      "missionEvidence": null,
-      "buyer": "Commune de Crisnée",
-      "municipalityINS": "64021",
-      "region": "Wallonie",
-      "source": "LOCALE",
-      "webSourceType": "municipal",
-      "opportunityType": "prospection",
-      "noticeKind": "prospection",
-      "webTypeEvidence": {
-        "kind": "prospection",
-        "reason": "besoin_ou_decision_a_verifier",
-        "excerpt": "Après en avoir délibéré en séance publique ; DECIDE à l'unanimité Article 1er : DE MARQUER son accord sur le principe de l'acquisition amiable des parcelles précitées moyennant le prix global 8.400,00 €uros en vue de réa",
-        "sourceUrl": "https://www.crisnee.be/images/conseil/pv/1.Pv%20de%20la%20seance%20du%2005%2010%202026.pdf",
-        "page": 4,
-        "sha256": "8da15595f0bc2048caa35f9e148a1b4f9a5bf613ec6e70d75fbf667cb2b400ba"
-      },
-      "opportunityStage": "décision ou besoin à vérifier",
-      "sector": "VRD",
-      "sectors": [
-        "VRD"
-      ],
-      "score": 52,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "prospect",
-        "route": "local_signal",
-        "explanation": "Signal communal à valider : ni marché ouvert ni prestation commandée confirmés.",
-        "capacityStatus": "not_assessed"
-      },
-      "publication": "",
-      "deadline": "",
-      "sourceDocument": "https://www.crisnee.be/images/conseil/pv/1.Pv%20de%20la%20seance%20du%2005%2010%202026.pdf",
-      "sourceDocumentDates": {
-        "version": 1,
-        "sourceUrl": "https://www.crisnee.be/images/conseil/pv/1.Pv%20de%20la%20seance%20du%2005%2010%202026.pdf",
-        "sha256": "8da15595f0bc2048caa35f9e148a1b4f9a5bf613ec6e70d75fbf667cb2b400ba",
-        "session": {
-          "date": "2026-10-05",
-          "kind": "session",
-          "page": 1,
-          "source": "pdf_text",
-          "excerpt": "Séance publique du lundi 5 octobre 2026",
-          "confidence": "explicit"
-        },
-        "document": null,
-        "status": "identified"
-      },
-      "sourceExtraction": {
-        "method": "pdf_text",
-        "partial": false
-      },
-      "url": "https://www.crisnee.be/images/conseil/pv/1.Pv%20de%20la%20seance%20du%2005%2010%202026.pdf",
-      "cpv": [],
-      "description": "Document communal public. Extrait nécessitant une lecture de validation : Après en avoir délibéré en séance publique ; DECIDE à l'unanimité Article 1er : DE MARQUER son accord sur le principe de l'acquisition amiable des parcelles précitées moyennant le prix global 8.400,00 €uros en vue de réaliser les aménagements relatifs à la création d'un chemin de mobilité douce et de déclarer son utilité publique. Article 2 : D'APPROUVER le projet d'acte d'acquisition dûment rédigé.",
-      "evidence": "Après en avoir délibéré en séance publique ; DECIDE à l'unanimité Article 1er : DE MARQUER son accord sur le principe de l'acquisition amiable des parcelles précitées moyennant le prix global 8.400,00 €uros en vue de réaliser les aménagements relatifs à la création d'un chemin de mobilité douce et de déclarer son utilité publique. Article 2 : D'APPROUVER le projet d'acte d'acquisition dûment rédigé.",
-      "municipalReference": null,
-      "municipalSection": "5.   Acquisition d'une parcelle cadastrée Crisnée 4ème division FIZE-LE-MARSAL section A 69 H et A 69 F",
-      "municipalEvidence": [
-        {
-          "page": 4,
-          "excerpt": "Après en avoir délibéré en séance publique ; DECIDE à l'unanimité Article 1er : DE MARQUER son accord sur le principe de l'acquisition amiable des parcelles précitées moyennant le prix global 8.400,00 €uros en vue de réaliser les aménagements relatifs à la création d'un chemin de mobilité douce et de déclarer son utilité publique. Article 2 : D'APPROUVER le projet d'acte d'acquisition dûment rédigé."
-        }
-      ],
-      "source_status": "extrait_pdf_a_verifier",
-      "sourceEvidencePage": 4,
-      "sourceEvidenceStatus": "found",
-      "sourceDocumentVersion": {
-        "documentId": "municipal-doc:2eea42200336a9c5c7",
-        "sha256": "8da15595f0bc2048caa35f9e148a1b4f9a5bf613ec6e70d75fbf667cb2b400ba",
-        "checkedAt": "2026-11-15T22:06:20.982Z",
-        "changedAt": null
-      }
     }
   ]
 }
