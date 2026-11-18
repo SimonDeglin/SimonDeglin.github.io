@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-17T23:31:49.062Z",
+  "generated_at": "2026-11-18T14:03:59.298Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-11-17 : 1122 avis lus, 2 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-11-18 : 1188 avis lus, 1 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-11-17T23:32:16.544Z",
+      "last_success": "2026-11-18T14:04:28.355Z",
       "scanned": 25,
       "retained": 0,
-      "period_from": "2026-11-03",
-      "period_to": "2026-11-17",
+      "period_from": "2026-11-04",
+      "period_to": "2026-11-18",
       "pages": 1,
       "complete": true,
       "raw_candidates": 25,
-      "oldest_seen": "2026-11-17",
-      "last_attempt": "2026-11-17T23:32:16.544Z",
+      "oldest_seen": "2026-11-18",
+      "last_attempt": "2026-11-18T14:04:28.355Z",
       "last_error": null,
-      "last_complete_success": "2026-11-17T23:32:16.544Z"
+      "last_complete_success": "2026-11-18T14:04:28.355Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-11-17T23:34:16.180Z",
+      "last_success": "2026-11-18T14:07:49.601Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -49,11 +49,11 @@
           "url": "https://www.provincedeliege.be/fr/conseil/pvcra",
           "source": "Province de Liège — PV et comptes rendus",
           "documents_seen": 12,
-          "documents_read": 9,
+          "documents_read": 8,
           "signals_detected": 0
         }
       ],
-      "errors_count": 9,
+      "errors_count": 10,
       "added": 0
     },
     "COMMUNES": {
@@ -104,16 +104,16 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 1 page(s) parcourue(s) depuis 2026-11-03.",
-    "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 1 page(s) parcourue(s) depuis 2026-11-04.",
+    "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 33 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
-    "scanned": 1122,
-    "matched_current_run": 6,
-    "records": 363,
-    "review_count": 268,
-    "award_notice_count": 295,
-    "awarded_market_matches": 2,
+    "scanned": 1188,
+    "matched_current_run": 8,
+    "records": 365,
+    "review_count": 270,
+    "award_notice_count": 338,
+    "awarded_market_matches": 1,
     "award_fields_requested": false,
     "retained_as_excluded": 37,
     "excluded_reasons": {
@@ -125,38 +125,38 @@
     "queries": [
       {
         "source": "Acheteurs belges",
-        "from": "20261106",
-        "to": "20261112",
-        "found": 352,
-        "reported": 352
+        "from": "20261107",
+        "to": "20261113",
+        "found": 342,
+        "reported": 342
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261106",
-        "to": "20261112",
-        "found": 324,
-        "reported": 324
+        "from": "20261107",
+        "to": "20261113",
+        "found": 317,
+        "reported": 317
       },
       {
         "source": "Acheteurs belges",
-        "from": "20261113",
-        "to": "20261117",
-        "found": 228,
-        "reported": 228
+        "from": "20261114",
+        "to": "20261118",
+        "found": 268,
+        "reported": 268
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261113",
-        "to": "20261117",
-        "found": 218,
-        "reported": 218
+        "from": "20261114",
+        "to": "20261118",
+        "found": 261,
+        "reported": 261
       }
     ],
     "warnings": [],
     "bosa_scanned": 25,
     "bosa_imported": 0,
     "bosa_pages": 1,
-    "local_documents": 34,
+    "local_documents": 33,
     "local_opportunities": 0,
     "local_communes_checked": 24,
     "local_new_opportunities": 34,
@@ -171,19 +171,144 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "avis_attribution_analyse_separement": 295,
-      "acheteur_flamand": 127,
-      "aucun_signal_metier": 373,
-      "avis_neerlandais": 104,
-      "travaux_execution": 73,
-      "objet_hors_domaine": 69,
+      "avis_neerlandais": 121,
+      "avis_attribution_analyse_separement": 338,
+      "aucun_signal_metier": 341,
+      "acheteur_flamand": 132,
+      "travaux_execution": 87,
+      "objet_hors_domaine": 78,
       "fournitures_et_location": 46,
-      "formule_administrative_sans_signal_metier": 12,
-      "qualifie_review": 12,
-      "assurance_ou_nettoyage": 11
+      "formule_administrative_sans_signal_metier": 13,
+      "qualifie_review": 16,
+      "assurance_ou_nettoyage": 16
     }
   },
   "items": [
+    {
+      "id": "ted:679780-2026",
+      "publicationNumber": "803549-2026",
+      "procedureIdentifier": "db8a7c65-d34b-42f7-b96b-5ea15215d704",
+      "title": "Belgique – Services d'architecture, services de construction, services d'ingénierie et services d'inspection – Préparation du renouvellement de la signalisation des lignes de métro 2 et 6 – Mission complète relative à l’étude et au suivi des travaux d’exécution du gros œuvre et des finitions pour la réalisation d’infrastructures souterraines, visant à construire de nouveaux locaux techniques permettant l’installation de nouveaux équipements.",
+      "buyer": "Société des Transports Intercommunaux de Bruxelles",
+      "region": "Belgique",
+      "sector": "Reseaux",
+      "sectors": [
+        "Reseaux",
+        "Topo"
+      ],
+      "score": 55,
+      "publication": "2026-11-18",
+      "deadline": "2026-11-24",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "Cela comprend : - La création de nouveaux locaux techniques. - Des travaux divers liés à l’adaptation des stations existantes y associés. Les interventions auront lieu dans les 26 stations . Dans ces cas, l’étude devra intégrer : - L’implantation des locaux techniques dans de nouvelles structures. - Le cas échéant, une étude de stabilité de la nouvelle infrastructure ainsi que des impacts sur les structures existantes. En moyenne, quatre locaux techniques devront être aménagés par station (par exemple : locaux pour la signalisation, le pilotage de portes, etc.). L’étude inclut: - L’élaboration des plans. - L’étude de stabilité avec les calculs nécessaires. - Les métrés correspondants. - Une étude de faisabilité tenant compte des équipements à intégrer et des techniques associées. - Les levés topographiques des locaux techniques existants et à construire sur les lignes 2-6. - Les contrôles d’implantation avant, pendant et après exécution. - Ces mesurages se feront dans les stations concernées et leurs environs immédiats, selon les consignes du bureau d'études et du fonctionnaire dirigeant. Enfin, ces mesurages ne sont pas limités à un type précis de relevé. Un scan 3D pourra être exigé si le bureau d’études ou le fonctionnaire dirigeant l’estime nécessaire.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/803549-2026",
+      "screening": "review",
+      "publicationWorkspaceId": "967f91df-89ea-47e2-8780-3f6b166de63c",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/679780-2026",
+          "publicationNumber": "679780-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/967f91df-89ea-47e2-8780-3f6b166de63c/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        },
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/717665-2026",
+          "publicationNumber": "717665-2026"
+        }
+      ],
+      "screeningReason": null,
+      "matchReason": "mission_globale_a_qualifier",
+      "noticeNumbers": [
+        "679780-2026",
+        "717665-2026",
+        "797399-2026",
+        "803549-2026"
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
+        "capacityStatus": "not_assessed"
+      }
+    },
+    {
+      "id": "ted:801855-2026",
+      "publicationNumber": "801855-2026",
+      "procedureIdentifier": "15128c9d-4031-4c74-8a92-2be409884309",
+      "title": "Belgique – Services d'architecture – Accord-cadre : Auteur de projet dans le cadre de la rénovation de toitures",
+      "buyer": "Université Libre de Bruxelles",
+      "region": "Belgique",
+      "sector": "Hydraulique",
+      "sectors": [
+        "Hydraulique"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "publication": "2026-11-18",
+      "deadline": "2026-12-18",
+      "cpv": [
+        "71200000"
+      ],
+      "description": "Le présent marché est un marché de services qui vise la conclusion d’un accord-cadre d’auteur de projet (AP) en équipe pluridisciplinaire pour des missions relatives à la rénovation, la réfection et l’amélioration énergétique des toitures de bâtiments appartenant ou exploités par l'Université Libre de Bruxelles (ULB). Nature des missions Les bâtiments concernés sont répartis sur les différents sites de l'Université et présentent des caractéristiques architecturales, techniques et patrimoniales variées. Les interventions pourront notamment concerner : • Les toitures plates ; • Les toitures inclinées ; • Les couvertures en membrane synthétique ou bitumineuse ; • Les couvertures métalliques ; • Les couvertures en ardoises ou tuiles ; • Les fenêtres de toit, verrières, lanterneaux et dispositifs d'éclairage naturel ; • Les éléments de zinguerie et d'évacuation des eaux pluviales ; • Les dispositifs de sécurité en toiture ; • Les travaux d'isolation et d'amélioration des performances énergétiques ; • Les travaux liés à l'intégration d'équipements techniques ou d'installations photovoltaïques. Les missions confiées dans le cadre du présent accord-cadre pourront comprendre tout ou partie des prestations suivantes : • Relevés techniques et états des lieux ; • Diagnostics techniques, structurels et pathologiques ; • Études de faisabilité ; • Élaboration des avant-projets ; • Établissement des estimations budgétaires ; • Rédaction des documents techniques nécessaires à la passation des marchés de travaux ; • Assistance à l'analyse des offres ; • Établissement des dossiers de demande de permis lorsque requis ; • Direction et contrôle de l'exécution des travaux ; • Assistance lors des réceptions provisoires et définitives ; • Suivi administratif et technique du chantier ; • Établissement des dossiers \"as built\" ; • Plan de gestion et manuel d’entretien à destination du service exploitation. Chaque mission fera l'objet d'un ordre de mission envoyé par e-mail.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/801855-2026"
+    },
+    {
+      "id": "ted:800999-2026",
+      "publicationNumber": "800999-2026",
+      "procedureIdentifier": "3935b360-69f9-4b5d-a5fc-91066a11416e",
+      "title": "Belgique – Travaux de construction – Conception, financement, construction, équipement, entretien et exploitation du Centre interzonal de maîtrise de la violence à VILLERS-LE-BOUILLET",
+      "buyer": "POLARIS - CENTRE INTERZONAL DE MAÎTRISE DE LA VIOLENCE",
+      "region": "Belgique",
+      "sector": "Foncier",
+      "sectors": [
+        "Foncier"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "works",
+        "route": "ancillary",
+        "explanation": "Marché de travaux ou contrat mixte : la prestation KDRIX peut être accessoire. Vérifier un lot distinct ou une intervention en sous-traitance.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "prestation_dans_marche_de_travaux",
+      "publication": "2026-11-18",
+      "deadline": "2027-01-15",
+      "cpv": [
+        "45000000",
+        "80600000",
+        "92600000"
+      ],
+      "description": "La présente concession de travaux et de services a pour objet de confier à un opérateur économique unique, à ses frais, risques et périls exclusifs, la conception, le financement, la construction, l’équipement, l’entretien, le renouvellement et l’exploitation, pendant 50 ans, du Centre interzonal de maîtrise de la violence, à édifier sur le territoire de la Commune de VILLERS-LE-BOUILLET, à proximité immédiate de la sortie d’autoroute de l’axe LIÈGE-HUY. Il s’agit d’une concession mixte dont l’objet principal est constitué par les travaux. Le pouvoir concédant est l’A.S.B.L. POLARIS, fondée par la Ville de HUY et par les zones de police HESBAYE-OUEST, MEUSE-HESBAYE, HESBAYE et CONDROZ, ci-après « les Membres », qui totalisent environ 360 fonctionnaires de police. Le Centre doit leur offrir un outil d’entraînement moderne, sécurisé et centralisé pour la maîtrise de la violence avec et sans arme, tout en étant ouvert, en dehors des plages qui leur sont réservées, à d’autres services de sécurité publics et privés. L’A.S.B.L. POLARIS met à la disposition du concessionnaire, par un droit d’emphytéose consenti gratuitement pour la durée de la concession, une emprise de 3 hectares au maximum, située en zone agricole au plan de secteur. Le concessionnaire établit à ses frais le dossier de demande de permis, introduite conjointement avec l’A.S.B.L. POLARIS. La concession est conclue sous la condition de l’obtention des permis requis dans un délai de 18 mois à compter de la notification de l’approbation de l’offre. Le Centre comporte au minimum, selon des exigences exprimées en fonctions et en performances, un stand de tir d’au moins 25 mètres, un stand d’au moins 50 mètres et un stand d’au moins 100 mètres, un espace de simulation de tir d’au moins 400 m², une zone tactique intérieure d’au moins 350 m², une zone tactique extérieure d’au moins 4.500 m², une zone d’entraînement des unités canines d’au moins 200 m², un dojo, des locaux sécurisés de dépôt d’armes et de munitions, des salles de formation et de réunion, des vestiaires, une zone de tir accessible au public par un accès distinct, ainsi qu’un parking public et un parking sécurisé réservé à la police. Le soumissionnaire conserve la liberté de la conception architecturale et du choix des solutions techniques. Une attention particulière est portée à la ventilation et à la filtration des stands de tir, à l’acoustique, à l’intégration paysagère et à la neutralité visuelle du site. Le concessionnaire assume l’intégralité des risques de conception, de financement, de construction, de disponibilité et de demande.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/800999-2026"
+    },
     {
       "id": "ted:717330-2026",
       "publicationNumber": "799038-2026",
@@ -348,64 +473,6 @@
       }
     },
     {
-      "id": "ted:679780-2026",
-      "publicationNumber": "797399-2026",
-      "procedureIdentifier": "db8a7c65-d34b-42f7-b96b-5ea15215d704",
-      "title": "Belgique – Services d'architecture, services de construction, services d'ingénierie et services d'inspection – Préparation du renouvellement de la signalisation des lignes de métro 2 et 6 – Mission complète relative à l’étude et au suivi des travaux d’exécution du gros œuvre et des finitions pour la réalisation d’infrastructures souterraines, visant à construire de nouveaux locaux techniques permettant l’installation de nouveaux équipements.",
-      "buyer": "Société des Transports Intercommunaux de Bruxelles",
-      "region": "Belgique",
-      "sector": "Reseaux",
-      "sectors": [
-        "Reseaux",
-        "Topo"
-      ],
-      "score": 55,
-      "publication": "2026-11-17",
-      "deadline": "2026-11-18",
-      "cpv": [
-        "71000000"
-      ],
-      "description": "Cela comprend : - La création de nouveaux locaux techniques. - Des travaux divers liés à l’adaptation des stations existantes y associés. Les interventions auront lieu dans les 26 stations . Dans ces cas, l’étude devra intégrer : - L’implantation des locaux techniques dans de nouvelles structures. - Le cas échéant, une étude de stabilité de la nouvelle infrastructure ainsi que des impacts sur les structures existantes. En moyenne, quatre locaux techniques devront être aménagés par station (par exemple : locaux pour la signalisation, le pilotage de portes, etc.). L’étude inclut: - L’élaboration des plans. - L’étude de stabilité avec les calculs nécessaires. - Les métrés correspondants. - Une étude de faisabilité tenant compte des équipements à intégrer et des techniques associées. - Les levés topographiques des locaux techniques existants et à construire sur les lignes 2-6. - Les contrôles d’implantation avant, pendant et après exécution. - Ces mesurages se feront dans les stations concernées et leurs environs immédiats, selon les consignes du bureau d'études et du fonctionnaire dirigeant. Enfin, ces mesurages ne sont pas limités à un type précis de relevé. Un scan 3D pourra être exigé si le bureau d’études ou le fonctionnaire dirigeant l’estime nécessaire.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/797399-2026",
-      "screening": "review",
-      "publicationWorkspaceId": "967f91df-89ea-47e2-8780-3f6b166de63c",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/679780-2026",
-          "publicationNumber": "679780-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/967f91df-89ea-47e2-8780-3f6b166de63c/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        },
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/717665-2026",
-          "publicationNumber": "717665-2026"
-        }
-      ],
-      "screeningReason": null,
-      "matchReason": "mission_globale_a_qualifier",
-      "noticeNumbers": [
-        "679780-2026",
-        "717665-2026",
-        "797399-2026"
-      ],
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
       "id": "bosa:5e50b6fb-30a8-4f08-9d0c-f42ec414aae1",
       "publicationWorkspaceId": "5e50b6fb-30a8-4f08-9d0c-f42ec414aae1",
       "noticeId": "d5587049-64f2-4e3c-8feb-8fa728602e5b",
@@ -469,7 +536,7 @@
           "versionId": "eb1f73f0-1b58-4236-929b-109db9e74357",
           "documentId": "419fc6e7-a935-4e40-8577-a5e20d6f8d93",
           "activatedAt": "2026-11-16T08:49:45.014886",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -593,7 +660,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-17T23:34:25.187Z",
+      "documentsCheckedAt": "2026-11-18T14:07:59.289Z",
       "deadlineTime": "11:00",
       "deadlineTimeZone": "Europe/Brussels",
       "deadlineSourceKind": "bosa_verified_public",
