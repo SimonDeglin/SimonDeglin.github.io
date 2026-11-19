@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-18T22:57:28.472Z",
+  "generated_at": "2026-11-19T14:28:04.049Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-11-18 : 1188 avis lus, 1 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-11-19 : 1353 avis lus, 1 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-11-18T22:57:57.796Z",
+      "last_success": "2026-11-19T14:28:13.479Z",
       "scanned": 25,
-      "retained": 0,
-      "period_from": "2026-11-04",
-      "period_to": "2026-11-18",
+      "retained": 1,
+      "period_from": "2026-11-05",
+      "period_to": "2026-11-19",
       "pages": 1,
       "complete": true,
       "raw_candidates": 25,
-      "oldest_seen": "2026-11-18",
-      "last_attempt": "2026-11-18T22:57:57.796Z",
+      "oldest_seen": "2026-11-19",
+      "last_attempt": "2026-11-19T14:28:13.479Z",
       "last_error": null,
-      "last_complete_success": "2026-11-18T22:57:57.796Z"
+      "last_complete_success": "2026-11-19T14:28:13.479Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-11-18T23:00:29.414Z",
+      "last_success": "2026-11-19T14:30:17.205Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -104,15 +104,15 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 1 page(s) parcourue(s) depuis 2026-11-04.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 1 page(s) parcourue(s) depuis 2026-11-05.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
-    "scanned": 1188,
-    "matched_current_run": 9,
-    "records": 365,
+    "scanned": 1353,
+    "matched_current_run": 10,
+    "records": 366,
     "review_count": 270,
-    "award_notice_count": 335,
+    "award_notice_count": 405,
     "awarded_market_matches": 1,
     "award_fields_requested": false,
     "retained_as_excluded": 37,
@@ -125,36 +125,36 @@
     "queries": [
       {
         "source": "Acheteurs belges",
-        "from": "20261107",
-        "to": "20261113",
+        "from": "20261108",
+        "to": "20261114",
         "found": 342,
         "reported": 342
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261107",
-        "to": "20261113",
+        "from": "20261108",
+        "to": "20261114",
         "found": 317,
         "reported": 317
       },
       {
         "source": "Acheteurs belges",
-        "from": "20261114",
-        "to": "20261118",
-        "found": 268,
-        "reported": 268
+        "from": "20261115",
+        "to": "20261119",
+        "found": 352,
+        "reported": 352
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261114",
-        "to": "20261118",
-        "found": 261,
-        "reported": 261
+        "from": "20261115",
+        "to": "20261119",
+        "found": 342,
+        "reported": 342
       }
     ],
     "warnings": [],
     "bosa_scanned": 25,
-    "bosa_imported": 0,
+    "bosa_imported": 1,
     "bosa_pages": 1,
     "local_documents": 34,
     "local_opportunities": 0,
@@ -171,19 +171,70 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "avis_neerlandais": 120,
-      "avis_attribution_analyse_separement": 335,
-      "aucun_signal_metier": 342,
-      "acheteur_flamand": 134,
-      "travaux_execution": 87,
-      "objet_hors_domaine": 78,
-      "fournitures_et_location": 45,
-      "formule_administrative_sans_signal_metier": 13,
-      "qualifie_review": 18,
-      "assurance_ou_nettoyage": 16
+      "avis_neerlandais": 142,
+      "avis_attribution_analyse_separement": 405,
+      "aucun_signal_metier": 360,
+      "acheteur_flamand": 144,
+      "travaux_execution": 108,
+      "objet_hors_domaine": 84,
+      "fournitures_et_location": 55,
+      "formule_administrative_sans_signal_metier": 12,
+      "qualifie_review": 20,
+      "assurance_ou_nettoyage": 23
     }
   },
   "items": [
+    {
+      "id": "ted:722881-2026",
+      "publicationNumber": "805264-2026",
+      "procedureIdentifier": "d985a953-8839-4b4f-b98c-74b1f444f83f",
+      "title": "Belgique – Services d'architecte pour les bâtiments – Marché de services - Intervention d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
+      "buyer": "Ville de Soignies",
+      "region": "Belgique",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-11-19",
+      "deadline": "2026-11-30",
+      "cpv": [
+        "71221000"
+      ],
+      "description": "Marché de services - Intervention d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/805264-2026",
+      "matchReason": "mission_architecturale_a_qualifier",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "722881-2026",
+        "805264-2026"
+      ],
+      "publicationWorkspaceId": "aff07e4b-f1d4-427d-bd0f-e1baf7aa4f73",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/722881-2026",
+          "publicationNumber": "722881-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/aff07e4b-f1d4-427d-bd0f-e1baf7aa4f73/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "partner",
+        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
+        "capacityStatus": "not_assessed"
+      }
+    },
     {
       "id": "ted:679780-2026",
       "publicationNumber": "803549-2026",
@@ -544,7 +595,20 @@
           "versionId": "eb1f73f0-1b58-4236-929b-109db9e74357",
           "documentId": "419fc6e7-a935-4e40-8577-a5e20d6f8d93",
           "activatedAt": "2026-11-16T08:49:45.014886",
-          "language": "FR,NL",
+          "language": "NL,FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "1ea67564-558f-4ff3-bbb0-e1946ae81b8f",
+          "title": "Erratum2 3454_FR_NL.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "f386fac7-1524-456c-86f4-d51b710b5cb3",
+          "documentId": "fc34d48c-da10-4ed2-a603-4e2385f81785",
+          "activatedAt": "2026-11-19T14:31:45.195106",
+          "language": "NL,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -668,7 +732,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-18T14:07:59.289Z",
+      "documentsCheckedAt": "2026-11-19T14:30:26.418Z",
       "deadlineTime": "11:00",
       "deadlineTimeZone": "Europe/Brussels",
       "deadlineSourceKind": "bosa_verified_public",
@@ -1594,7 +1658,7 @@
           "versionId": "60ffc689-4c18-4349-b97b-fdd929e97b5a",
           "documentId": "ee01fb42-78f7-433a-b2fc-e984846b83c8",
           "activatedAt": "2026-11-09T13:16:45.014614",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1620,7 +1684,7 @@
           "versionId": "6b83837a-d3eb-4665-9ba4-130215fe228a",
           "documentId": "661b5f17-9360-452c-8e0c-bee16b7d54cf",
           "activatedAt": "2026-11-09T13:16:45.014614",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1633,14 +1697,14 @@
           "versionId": "fd519641-59d3-4574-9fd5-2a894941a49f",
           "documentId": "58ac62d1-c7a5-4b1f-ada2-232021805e83",
           "activatedAt": "2026-11-09T13:16:45.014614",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-17T14:33:02.370Z",
+      "documentsCheckedAt": "2026-11-19T14:30:58.926Z",
       "deadlineTime": "10:00",
       "deadlineTimeZone": "Europe/Brussels",
       "deadlineSourceKind": "bosa_verified_public",
@@ -3991,7 +4055,7 @@
       },
       "matchReason": "projet_indirect",
       "publication": "2026-10-29",
-      "deadline": "2026-11-19T10:00:00+01:00",
+      "deadline": "2026-11-20T10:00:00+01:00",
       "cpv": [
         "71313000"
       ],
@@ -4020,13 +4084,20 @@
       "deadlineTimeZone": "Europe/Brussels",
       "deadlineSourceKind": "bosa_verified_public",
       "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/af5b161f-7ca2-4748-9872-35ddc4870980/general",
-      "deadlineSourceEvidence": "Date limite de soumission\n19/11/2026 10:00 CET",
-      "deadlineVerifiedAt": "2026-10-29T11:43:45.213Z",
+      "deadlineSourceEvidence": "Date limite de soumission\n20/11/2026 10:00 CET",
+      "deadlineVerifiedAt": "2026-11-19T14:36:22.507Z",
       "screeningReason": null,
       "officialSources": [
         {
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/af5b161f-7ca2-4748-9872-35ddc4870980/general"
+        }
+      ],
+      "deadlineHistory": [
+        {
+          "value": "2026-11-19T10:00:00+01:00",
+          "sourceUrl": "https://www.publicprocurement.be/publication-workspaces/af5b161f-7ca2-4748-9872-35ddc4870980/general",
+          "notedAt": "2026-10-29T11:43:45.213Z"
         }
       ]
     },
@@ -6257,56 +6328,6 @@
       }
     },
     {
-      "id": "ted:722881-2026",
-      "publicationNumber": "722881-2026",
-      "procedureIdentifier": "d985a953-8839-4b4f-b98c-74b1f444f83f",
-      "title": "Belgique – Services d'architecte pour les bâtiments – Marché de services - Intervention d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
-      "buyer": "Ville de Soignies",
-      "region": "Belgique",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "publication": "2026-10-20",
-      "deadline": "2026-11-20",
-      "cpv": [
-        "71221000"
-      ],
-      "description": "Marché de services - Intervention d'un auteur de projet pour la transformation d'un bâtiment commercial en salle de gymnastique et d'arts martiaux",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/722881-2026",
-      "matchReason": "mission_architecturale_a_qualifier",
-      "screeningReason": null,
-      "noticeNumbers": [
-        "722881-2026"
-      ],
-      "publicationWorkspaceId": "aff07e4b-f1d4-427d-bd0f-e1baf7aa4f73",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/722881-2026",
-          "publicationNumber": "722881-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/aff07e4b-f1d4-427d-bd0f-e1baf7aa4f73/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        }
-      ],
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "partner",
-        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
       "id": "ted:725331-2026",
       "publicationNumber": "725331-2026",
       "procedureIdentifier": "3668f938-340f-46ac-952f-0f5d6f82c26c",
@@ -6797,7 +6818,7 @@
           "versionId": "ddf24280-7180-4af0-9cc3-c050455a2c18",
           "documentId": "6c1fd0d8-3f25-4764-8e27-9bb907ccf665",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "DE,FR",
+          "language": "FR,DE",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -6810,14 +6831,14 @@
           "versionId": "41c1dfd3-e395-4b17-9583-72b8baeacc90",
           "documentId": "815fd779-551d-48fc-a533-f11b9a86434c",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "DE,FR",
+          "language": "FR,DE",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-15T21:09:34.783Z",
+      "documentsCheckedAt": "2026-11-19T14:33:17.533Z",
       "matchReason": "mission_architecturale_a_qualifier",
       "screeningReason": null,
       "officialSources": [
@@ -8510,7 +8531,7 @@
           "versionId": "36488d00-f30c-407b-abf7-ea1924b6b999",
           "documentId": "917f42c5-0419-4611-8398-5561fefe4efc",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8536,7 +8557,7 @@
           "versionId": "26b15544-17fc-43c0-826c-1322f33b9850",
           "documentId": "20364704-82a0-4eb0-a213-7965e3328061",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8588,7 +8609,7 @@
           "versionId": "f5ff3774-83d7-49c0-abe1-28e026816900",
           "documentId": "ff53ea2a-b24f-4586-b315-523295f56f5c",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8601,7 +8622,7 @@
           "versionId": "8228202b-2303-4eba-8e13-0fe820c5023d",
           "documentId": "ac74d28e-0bfa-4c78-af2b-da7f05b117dd",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8634,7 +8655,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-16T13:47:58.955Z",
+      "documentsCheckedAt": "2026-11-19T14:34:17.793Z",
       "documentAnalyses": [
         {
           "documentId": "7259aed6-32b5-4e0b-88c0-ffa7fa606658",
@@ -11427,7 +11448,7 @@
           "versionId": "22cc83b1-d599-4416-96d9-c1a354861889",
           "documentId": "425d5ba1-de86-4335-b68e-3b58107c5b6d",
           "activatedAt": "2026-09-29T15:00:45.021111",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -11440,14 +11461,14 @@
           "versionId": "354fbb7b-5f90-4703-9d8e-dae76f7aa72f",
           "documentId": "3b9e3ed1-8163-4041-a26c-eb15668ce044",
           "activatedAt": "2026-10-05T15:31:45.185664",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-17T23:40:09.903Z",
+      "documentsCheckedAt": "2026-11-19T14:35:57.196Z",
       "matchReason": "prestation_dans_marche_de_travaux",
       "screeningReason": null,
       "officialSources": [
@@ -30225,6 +30246,60 @@
       "municipalReference": null,
       "matchReason": "etude_urbanistique_a_qualifier",
       "screeningReason": null
+    },
+    {
+      "id": "bosa:9c2145a9-bde4-49b4-b66f-08bb5d10035b",
+      "publicationWorkspaceId": "9c2145a9-bde4-49b4-b66f-08bb5d10035b",
+      "noticeId": "393669b1-9c58-4b45-8694-beedc4ff55bc",
+      "procedureIdentifier": "855b437a-a37e-47ee-822e-7d5e4b785edd",
+      "internalReference": "PPP0DX-5130/6153/CE/1180/2026/0015_002",
+      "title": "Travaux d’abattage d’arbres dangereux sur les cours d’eau non navigables classés en 2ème catégorie des sous-bassins hydrographiques de la Haine, de la Sambre, de la Meuse amont et de l’Oise - Exercice 2026",
+      "buyer": "Hainaut Ingénierie Technique",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Hydro",
+      "sectors": [
+        "Hydro",
+        "Hydraulique"
+      ],
+      "score": 60,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "works",
+        "route": "ancillary",
+        "explanation": "Marché de travaux ou contrat mixte : la prestation KDRIX peut être accessoire. Vérifier un lot distinct ou une intervention en sous-traitance.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "prestation_dans_marche_de_travaux",
+      "publication": "2026-11-19",
+      "deadline": "",
+      "cpv": [
+        "45112700"
+      ],
+      "description": "Travaux d’abattage d’arbres dangereux sur les cours d’eau non navigables classés en 2ème catégorie des sous-bassins hydrographiques de la Haine, de la Sambre, de la Meuse amont et de l’Oise - Exercice 2026",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "E4",
+      "noticeKind": "award",
+      "bdaReference": "PPP0DX-5130/6153/CE/1180/2026/0015_002",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/9c2145a9-bde4-49b4-b66f-08bb5d10035b/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/9c2145a9-bde4-49b4-b66f-08bb5d10035b/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "PPP0DX-5130/6153/CE/1180/2026/0015_002",
+          "url": "https://www.publicprocurement.be/publication-workspaces/9c2145a9-bde4-49b4-b66f-08bb5d10035b/general",
+          "publicationDate": "2026-11-19",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-19T14:36:22.058Z"
     }
   ]
 }
