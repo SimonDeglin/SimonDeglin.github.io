@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-20T14:04:02.982Z",
+  "generated_at": "2026-11-20T22:41:55.001Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-11-20 : 1353 avis lus, 1 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-11-20 : 1545 avis lus, 2 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-11-20T14:04:14.031Z",
+      "last_success": "2026-11-20T22:42:26.405Z",
       "scanned": 25,
       "retained": 2,
       "period_from": "2026-11-06",
@@ -16,13 +16,13 @@
       "complete": true,
       "raw_candidates": 25,
       "oldest_seen": "2026-11-20",
-      "last_attempt": "2026-11-20T14:04:14.031Z",
+      "last_attempt": "2026-11-20T22:42:26.405Z",
       "last_error": null,
-      "last_complete_success": "2026-11-20T14:04:14.031Z"
+      "last_complete_success": "2026-11-20T22:42:26.405Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-11-20T14:05:48.227Z",
+      "last_success": "2026-11-20T22:44:13.300Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -108,12 +108,12 @@
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
-    "scanned": 1353,
-    "matched_current_run": 10,
+    "scanned": 1545,
+    "matched_current_run": 11,
     "records": 367,
     "review_count": 272,
-    "award_notice_count": 405,
-    "awarded_market_matches": 1,
+    "award_notice_count": 446,
+    "awarded_market_matches": 2,
     "award_fields_requested": false,
     "retained_as_excluded": 37,
     "excluded_reasons": {
@@ -141,15 +141,15 @@
         "source": "Acheteurs belges",
         "from": "20261116",
         "to": "20261120",
-        "found": 352,
-        "reported": 352
+        "found": 450,
+        "reported": 450
       },
       {
         "source": "Exécution en Belgique",
         "from": "20261116",
         "to": "20261120",
-        "found": 342,
-        "reported": 342
+        "found": 436,
+        "reported": 436
       }
     ],
     "warnings": [],
@@ -171,16 +171,16 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "avis_attribution_analyse_separement": 405,
-      "aucun_signal_metier": 363,
-      "avis_neerlandais": 142,
-      "acheteur_flamand": 144,
-      "travaux_execution": 107,
-      "objet_hors_domaine": 82,
-      "fournitures_et_location": 55,
-      "formule_administrative_sans_signal_metier": 12,
-      "qualifie_review": 20,
-      "assurance_ou_nettoyage": 23
+      "avis_neerlandais": 166,
+      "avis_attribution_analyse_separement": 446,
+      "aucun_signal_metier": 427,
+      "acheteur_flamand": 164,
+      "travaux_execution": 128,
+      "objet_hors_domaine": 86,
+      "fournitures_et_location": 60,
+      "formule_administrative_sans_signal_metier": 19,
+      "qualifie_review": 22,
+      "assurance_ou_nettoyage": 27
     }
   },
   "items": [
@@ -253,6 +253,299 @@
         {
           "source": "BOSA",
           "url": "https://www.publicprocurement.be/publication-workspaces/39a84539-4680-400a-8b15-7a5eeb08e870/general"
+        }
+      ]
+    },
+    {
+      "id": "ted:748312-2026",
+      "publicationNumber": "810249-2026",
+      "procedureIdentifier": "542dff59-2ff5-476a-8867-bec232031dba",
+      "title": "Belgique – Services d'architecture, d'ingénierie et de planification – MISSION D’AUTEUR DE PROJET POUR LA RESTAURATION DE L’EDIFICE : SUIVI DES ÉTUDES PRÉALABLES ÉLABORATION DES DOSSIERS D’EXÉCUTION ET SUIVI DES TRAVAUX",
+      "buyer": "Fabrique d'Eglise Saint Jacques à Liège",
+      "region": "Belgique",
+      "sector": "Qualif",
+      "sectors": [
+        "Qualif"
+      ],
+      "score": 55,
+      "screening": "review",
+      "publication": "2026-11-20",
+      "deadline": "",
+      "cpv": [
+        "71240000"
+      ],
+      "description": "Le présent marché public de services a pour objet la désignation d’un auteur de projet chargé d’une mission complète relative à la restauration de l’église Saint-Jacques. Cette mission comprend notamment l’analyse et le suivi des études préalables, l’élaboration des dossiers d’exécution et des dossiers relatifs aux subsides à envoyer à la Région Wallonne, l’assistance à la passation des marchés de travaux ainsi que le suivi de l’exécution des travaux jusqu’à la réception définitive. La mission porte sur l’ensemble des disciplines nécessaires à la réalisation du projet, incluant l’architecture et la stabilité. Il s’agit d’un marché relevant du code CPV 71240000-2 (Services d’architecture, d’ingénierie et de planification). Ces services sont mieux décrits dans la partie technique au point 4 du cahier des charges.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/810249-2026",
+      "publicationWorkspaceId": "0ffc770c-a8b2-40f3-96a3-0a9cff633efd",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/748312-2026",
+          "publicationNumber": "748312-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/0ffc770c-a8b2-40f3-96a3-0a9cff633efd/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ],
+      "matchReason": "mission_architecturale_a_qualifier",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "748312-2026",
+        "810249-2026"
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "partner",
+        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
+        "capacityStatus": "not_assessed"
+      }
+    },
+    {
+      "id": "bosa:37f86dd9-7621-41be-9adb-fe8ee5951d2f",
+      "publicationWorkspaceId": "37f86dd9-7621-41be-9adb-fe8ee5951d2f",
+      "noticeId": "95c31937-0ce0-4f51-853c-f333110e5888",
+      "procedureIdentifier": "708f935e-93b0-47cd-b44d-1262661a74a1",
+      "internalReference": "DITP-DIOV BM CSC-BB i3453_pub01",
+      "title": "Mission d’étude et d’assistance à la régularisation urbanistique et environnementale d’un site provisoire de remisage des bus du site Delta",
+      "buyer": "Direction Infrastructure Transports Publics",
+      "region": "Bruxelles",
+      "languages": [
+        "NL",
+        "FR"
+      ],
+      "sector": "Foncier",
+      "sectors": [
+        "Foncier"
+      ],
+      "score": 52,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "description_ou_contexte",
+      "publication": "2026-11-20",
+      "deadline": "2026-12-10T10:00:00+01:00",
+      "cpv": [
+        "71000000"
+      ],
+      "description": "La mission d’étude concerne les études suivantes : 1. Etude des solutions pour répondre aux besoins relatifs à l’aménagement du remisage provisoire des bus ; 2. Etablissement d’une demande de permis d’urbanisme (PU) intégrant les réponses aux besoins complémentaires identifiés ; 3. Etablissement de la demande de permis d’environnement (PE) relatif au remisage extérieur provisoire et aux aménagements qui y sont liés ; 4. Etablir un Rapport d’Incidence Environnementale (RIE) nécessaire pour le PU et le PE; 5. Suivi et adaptation du dossier en vue de l’obtention des permis (PU et PE).",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "17",
+      "noticeKind": "competition",
+      "bdaReference": "DITP-DIOV BM CSC-BB i3453_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "15498cba-fe54-4f4b-bad9-70e68fabf1f8",
+          "title": "Essais de sol - L001 1487912LFE V01 BE S2.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "340c603a-f939-474a-a5b1-414c71f62b08",
+          "documentId": "196a82a8-e244-4a19-8ddd-0cbdc7a6ba94",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "NL,FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "37a1caaa-9c9d-4744-b491-137fc43c1003",
+          "title": "Essais de sol - fiche BRUSOIL - Parcelle 21017_D_0007___000_05.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "cbc3695c-2d7f-4271-ab8c-fe65e94203da",
+          "documentId": "07f02edf-59ca-4939-b32a-d406c937671f",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "NL,FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "3bb82f78-49ba-4d5c-b765-1082d9f565a7",
+          "title": "Remisage triangle Delta - Esquisses de réflexion.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "355e7a21-99cf-4ac3-8d9c-bc391c342109",
+          "documentId": "1d40729f-a92d-4efc-9b68-18b193f8fa49",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "NL,FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "56b0d83b-153e-46aa-b5d3-d348e6e9b196",
+          "title": "Formulier Offerte - Inventaris NL.pdf",
+          "kind": "bill_of_quantities",
+          "fileType": "pdf",
+          "versionId": "c0491452-5938-4010-aa37-c997e989294a",
+          "documentId": "682cdb4b-34bc-4cfe-a2ce-6f54d550344f",
+          "activatedAt": "2026-11-09T13:16:45.014614",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "5b95dbaf-50da-4cfa-a757-fdfca592affa",
+          "title": "DIOV BM Erratum NL - I3453 - VB1.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "1b809e63-e8e7-419c-91f5-2e26b16d5086",
+          "documentId": "5e89e1a0-abeb-434e-9956-843eafeb3818",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "74a113f0-b0f0-4e1d-b8ee-ff12e44b234b",
+          "title": "Formulaire Offre - Inventaire FR.docx",
+          "kind": "bill_of_quantities",
+          "fileType": "docx",
+          "versionId": "c6925a16-a95c-4e01-b636-5f121909b862",
+          "documentId": "a7ec05a3-2ab1-451e-9953-aaa2cf80a1db",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "7efe5d3b-f45f-4699-b8d7-c933f9c8e7f7",
+          "title": "CSC-BB I3453.pdf",
+          "kind": "csc",
+          "fileType": "pdf",
+          "versionId": "60ffc689-4c18-4349-b97b-fdd929e97b5a",
+          "documentId": "ee01fb42-78f7-433a-b2fc-e984846b83c8",
+          "activatedAt": "2026-11-09T13:16:45.014614",
+          "language": "NL,FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "88355718-1806-4928-b2c8-8b5cf12064d2",
+          "title": "Formulier Offerte - Inventaris NL.docx",
+          "kind": "bill_of_quantities",
+          "fileType": "docx",
+          "versionId": "8c372574-df41-47b9-9d72-7a860bbdf8e8",
+          "documentId": "e2b1105f-107d-4e13-8f79-4a3b2baf37c5",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "92c7828a-a030-4fa1-afea-ff28bc15d40d",
+          "title": "Formulaire Offre - Inventaire FR.pdf",
+          "kind": "bill_of_quantities",
+          "fileType": "pdf",
+          "versionId": "2e909bce-d3e2-4ac6-9465-be99c6122de0",
+          "documentId": "554ea992-62ae-48a5-8649-924ceaefeaf8",
+          "activatedAt": "2026-11-09T13:16:45.014614",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "9dbcff45-ef91-4992-8b1c-04fbb6574d4a",
+          "title": "URS.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "6b83837a-d3eb-4665-9ba4-130215fe228a",
+          "documentId": "661b5f17-9360-452c-8e0c-bee16b7d54cf",
+          "activatedAt": "2026-11-09T13:16:45.014614",
+          "language": "NL,FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "ad0a7943-1245-4589-90e8-f93d1b80da76",
+          "title": "Matrice PU_RIE_PE - Matrix SV_MER_MV.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "fd519641-59d3-4574-9fd5-2a894941a49f",
+          "documentId": "58ac62d1-c7a5-4b1f-ada2-232021805e83",
+          "activatedAt": "2026-11-09T13:16:45.014614",
+          "language": "NL,FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "c2f15298-5273-4870-9e2d-6bcdd6eea837",
+          "title": "URS_AR1.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "814c6781-1ee7-47d5-8700-63724a98041e",
+          "documentId": "7bdec927-9606-41d8-bba9-5ace1e4037bd",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "NL,FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "d5c693cd-c2a1-4c5a-8e87-0c1333783cec",
+          "title": "DITP BM Erratum FR - I3453 - AR1.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "13ee4a3b-db95-4290-bb0b-617ba9e82c99",
+          "documentId": "7921c6ac-7546-4bb9-a066-fb26f21e26cc",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "fb47c5d6-ce6c-4fa5-84a7-32be9d0dee55",
+          "title": "Essais de sol - fiche BRUSOIL - Parcelle 21002_A_0039___000_45.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "cedd6315-6813-4000-ae63-4d5ffec24c2d",
+          "documentId": "7740bf02-1a26-4012-be49-c9cb4807e59a",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "NL,FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-20T22:44:23.456Z",
+      "deadlineTime": "10:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n10/12/2026 10:00 CET",
+      "deadlineVerifiedAt": "2026-11-09T14:07:19.710Z",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/general"
         }
       ]
     },
@@ -1725,248 +2018,6 @@
       "screeningReason": null,
       "noticeNumbers": [
         "777889-2026"
-      ]
-    },
-    {
-      "id": "bosa:37f86dd9-7621-41be-9adb-fe8ee5951d2f",
-      "publicationWorkspaceId": "37f86dd9-7621-41be-9adb-fe8ee5951d2f",
-      "noticeId": "95c31937-0ce0-4f51-853c-f333110e5888",
-      "procedureIdentifier": "708f935e-93b0-47cd-b44d-1262661a74a1",
-      "internalReference": "DITP-DIOV BM CSC-BB i3453_pub01",
-      "title": "Mission d’étude et d’assistance à la régularisation urbanistique et environnementale d’un site provisoire de remisage des bus du site Delta",
-      "buyer": "Direction Infrastructure Transports Publics",
-      "region": "Bruxelles",
-      "languages": [
-        "NL",
-        "FR"
-      ],
-      "sector": "Foncier",
-      "sectors": [
-        "Foncier"
-      ],
-      "score": 52,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
-        "capacityStatus": "not_assessed"
-      },
-      "matchReason": "description_ou_contexte",
-      "publication": "2026-11-20",
-      "deadline": "2026-12-10T10:00:00+01:00",
-      "cpv": [
-        "71000000"
-      ],
-      "description": "La mission d’étude concerne les études suivantes : 1. Etude des solutions pour répondre aux besoins relatifs à l’aménagement du remisage provisoire des bus ; 2. Etablissement d’une demande de permis d’urbanisme (PU) intégrant les réponses aux besoins complémentaires identifiés ; 3. Etablissement de la demande de permis d’environnement (PE) relatif au remisage extérieur provisoire et aux aménagements qui y sont liés ; 4. Etablir un Rapport d’Incidence Environnementale (RIE) nécessaire pour le PU et le PE; 5. Suivi et adaptation du dossier en vue de l’obtention des permis (PU et PE).",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "17",
-      "noticeKind": "competition",
-      "bdaReference": "DITP-DIOV BM CSC-BB i3453_pub01",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [
-        {
-          "id": "15498cba-fe54-4f4b-bad9-70e68fabf1f8",
-          "title": "Essais de sol - L001 1487912LFE V01 BE S2.pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "340c603a-f939-474a-a5b1-414c71f62b08",
-          "documentId": "196a82a8-e244-4a19-8ddd-0cbdc7a6ba94",
-          "activatedAt": "2026-11-20T08:13:46.013734",
-          "language": "FR,NL",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "37a1caaa-9c9d-4744-b491-137fc43c1003",
-          "title": "Essais de sol - fiche BRUSOIL - Parcelle 21017_D_0007___000_05.pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "cbc3695c-2d7f-4271-ab8c-fe65e94203da",
-          "documentId": "07f02edf-59ca-4939-b32a-d406c937671f",
-          "activatedAt": "2026-11-20T08:13:46.013734",
-          "language": "FR,NL",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "3bb82f78-49ba-4d5c-b765-1082d9f565a7",
-          "title": "Remisage triangle Delta - Esquisses de réflexion.pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "355e7a21-99cf-4ac3-8d9c-bc391c342109",
-          "documentId": "1d40729f-a92d-4efc-9b68-18b193f8fa49",
-          "activatedAt": "2026-11-20T08:13:46.013734",
-          "language": "FR,NL",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "56b0d83b-153e-46aa-b5d3-d348e6e9b196",
-          "title": "Formulier Offerte - Inventaris NL.pdf",
-          "kind": "bill_of_quantities",
-          "fileType": "pdf",
-          "versionId": "c0491452-5938-4010-aa37-c997e989294a",
-          "documentId": "682cdb4b-34bc-4cfe-a2ce-6f54d550344f",
-          "activatedAt": "2026-11-09T13:16:45.014614",
-          "language": "NL",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "5b95dbaf-50da-4cfa-a757-fdfca592affa",
-          "title": "DIOV BM Erratum NL - I3453 - VB1.docx",
-          "kind": "other",
-          "fileType": "docx",
-          "versionId": "1b809e63-e8e7-419c-91f5-2e26b16d5086",
-          "documentId": "5e89e1a0-abeb-434e-9956-843eafeb3818",
-          "activatedAt": "2026-11-20T08:13:46.013734",
-          "language": "NL",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "74a113f0-b0f0-4e1d-b8ee-ff12e44b234b",
-          "title": "Formulaire Offre - Inventaire FR.docx",
-          "kind": "bill_of_quantities",
-          "fileType": "docx",
-          "versionId": "c6925a16-a95c-4e01-b636-5f121909b862",
-          "documentId": "a7ec05a3-2ab1-451e-9953-aaa2cf80a1db",
-          "activatedAt": "2026-11-20T08:13:46.013734",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "7efe5d3b-f45f-4699-b8d7-c933f9c8e7f7",
-          "title": "CSC-BB I3453.pdf",
-          "kind": "csc",
-          "fileType": "pdf",
-          "versionId": "60ffc689-4c18-4349-b97b-fdd929e97b5a",
-          "documentId": "ee01fb42-78f7-433a-b2fc-e984846b83c8",
-          "activatedAt": "2026-11-09T13:16:45.014614",
-          "language": "FR,NL",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "88355718-1806-4928-b2c8-8b5cf12064d2",
-          "title": "Formulier Offerte - Inventaris NL.docx",
-          "kind": "bill_of_quantities",
-          "fileType": "docx",
-          "versionId": "8c372574-df41-47b9-9d72-7a860bbdf8e8",
-          "documentId": "e2b1105f-107d-4e13-8f79-4a3b2baf37c5",
-          "activatedAt": "2026-11-20T08:13:46.013734",
-          "language": "NL",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "92c7828a-a030-4fa1-afea-ff28bc15d40d",
-          "title": "Formulaire Offre - Inventaire FR.pdf",
-          "kind": "bill_of_quantities",
-          "fileType": "pdf",
-          "versionId": "2e909bce-d3e2-4ac6-9465-be99c6122de0",
-          "documentId": "554ea992-62ae-48a5-8649-924ceaefeaf8",
-          "activatedAt": "2026-11-09T13:16:45.014614",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "9dbcff45-ef91-4992-8b1c-04fbb6574d4a",
-          "title": "URS.pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "6b83837a-d3eb-4665-9ba4-130215fe228a",
-          "documentId": "661b5f17-9360-452c-8e0c-bee16b7d54cf",
-          "activatedAt": "2026-11-09T13:16:45.014614",
-          "language": "FR,NL",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "ad0a7943-1245-4589-90e8-f93d1b80da76",
-          "title": "Matrice PU_RIE_PE - Matrix SV_MER_MV.pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "fd519641-59d3-4574-9fd5-2a894941a49f",
-          "documentId": "58ac62d1-c7a5-4b1f-ada2-232021805e83",
-          "activatedAt": "2026-11-09T13:16:45.014614",
-          "language": "FR,NL",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "c2f15298-5273-4870-9e2d-6bcdd6eea837",
-          "title": "URS_AR1.pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "814c6781-1ee7-47d5-8700-63724a98041e",
-          "documentId": "7bdec927-9606-41d8-bba9-5ace1e4037bd",
-          "activatedAt": "2026-11-20T08:13:46.013734",
-          "language": "FR,NL",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "d5c693cd-c2a1-4c5a-8e87-0c1333783cec",
-          "title": "DITP BM Erratum FR - I3453 - AR1.docx",
-          "kind": "other",
-          "fileType": "docx",
-          "versionId": "13ee4a3b-db95-4290-bb0b-617ba9e82c99",
-          "documentId": "7921c6ac-7546-4bb9-a066-fb26f21e26cc",
-          "activatedAt": "2026-11-20T08:13:46.013734",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        },
-        {
-          "id": "fb47c5d6-ce6c-4fa5-84a7-32be9d0dee55",
-          "title": "Essais de sol - fiche BRUSOIL - Parcelle 21002_A_0039___000_45.pdf",
-          "kind": "other",
-          "fileType": "pdf",
-          "versionId": "cedd6315-6813-4000-ae63-4d5ffec24c2d",
-          "documentId": "7740bf02-1a26-4012-be49-c9cb4807e59a",
-          "activatedAt": "2026-11-20T08:13:46.013734",
-          "language": "FR,NL",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        }
-      ],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-20T14:06:34.605Z",
-      "deadlineTime": "10:00",
-      "deadlineTimeZone": "Europe/Brussels",
-      "deadlineSourceKind": "bosa_verified_public",
-      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/general",
-      "deadlineSourceEvidence": "Date limite de soumission\n10/12/2026 10:00 CET",
-      "deadlineVerifiedAt": "2026-11-09T14:07:19.710Z",
-      "screeningReason": null,
-      "officialSources": [
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/general"
-        }
       ]
     },
     {
@@ -4576,56 +4627,6 @@
       }
     },
     {
-      "id": "ted:748312-2026",
-      "publicationNumber": "748312-2026",
-      "procedureIdentifier": "542dff59-2ff5-476a-8867-bec232031dba",
-      "title": "Belgique – Services d'architecture, d'ingénierie et de planification – MISSION D’AUTEUR DE PROJET POUR LA RESTAURATION DE L’EDIFICE : SUIVI DES ÉTUDES PRÉALABLES ÉLABORATION DES DOSSIERS D’EXÉCUTION ET SUIVI DES TRAVAUX",
-      "buyer": "Fabrique d'Eglise Saint Jacques à Liège",
-      "region": "Belgique",
-      "sector": "Qualif",
-      "sectors": [
-        "Qualif"
-      ],
-      "score": 55,
-      "screening": "review",
-      "publication": "2026-10-28",
-      "deadline": "",
-      "cpv": [
-        "71240000"
-      ],
-      "description": "Le présent marché public de services a pour objet la désignation d’un auteur de projet chargé d’une mission complète relative à la restauration de l’église Saint-Jacques. Cette mission comprend notamment l’analyse et le suivi des études préalables, l’élaboration des dossiers d’exécution et des dossiers relatifs aux subsides à envoyer à la Région Wallonne, l’assistance à la passation des marchés de travaux ainsi que le suivi de l’exécution des travaux jusqu’à la réception définitive. La mission porte sur l’ensemble des disciplines nécessaires à la réalisation du projet, incluant l’architecture et la stabilité. Il s’agit d’un marché relevant du code CPV 71240000-2 (Services d’architecture, d’ingénierie et de planification). Ces services sont mieux décrits dans la partie technique au point 4 du cahier des charges.",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "cn-standard",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/748312-2026",
-      "publicationWorkspaceId": "0ffc770c-a8b2-40f3-96a3-0a9cff633efd",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/748312-2026",
-          "publicationNumber": "748312-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/0ffc770c-a8b2-40f3-96a3-0a9cff633efd/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        }
-      ],
-      "matchReason": "mission_architecturale_a_qualifier",
-      "screeningReason": null,
-      "noticeNumbers": [
-        "748312-2026"
-      ],
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "partner",
-        "explanation": "Mission architecturale globale : vérifier la place exacte des prestations KDRIX et le besoin d’un partenaire. Ce titre ne prouve pas une mission de voirie.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
       "id": "ted:745821-2026",
       "publicationNumber": "745821-2026",
       "procedureIdentifier": "d9079f4d-112a-4e15-b01f-1df821762cfc",
@@ -7068,7 +7069,7 @@
           "versionId": "ddf24280-7180-4af0-9cc3-c050455a2c18",
           "documentId": "6c1fd0d8-3f25-4764-8e27-9bb907ccf665",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "FR,DE",
+          "language": "DE,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -7081,14 +7082,14 @@
           "versionId": "41c1dfd3-e395-4b17-9583-72b8baeacc90",
           "documentId": "815fd779-551d-48fc-a533-f11b9a86434c",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "FR,DE",
+          "language": "DE,FR",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-19T14:33:17.533Z",
+      "documentsCheckedAt": "2026-11-20T22:47:20.182Z",
       "matchReason": "mission_architecturale_a_qualifier",
       "screeningReason": null,
       "officialSources": [
@@ -9687,7 +9688,35 @@
           "noticeKind": "competition"
         }
       ],
-      "screeningReason": "formule_administrative_sans_signal_metier"
+      "screeningReason": "formule_administrative_sans_signal_metier",
+      "awards": [
+        {
+          "publicationNumber": "810336-2026",
+          "procedureIdentifier": "3106b027-833a-439a-bfe6-f83f4920b800",
+          "publicationDate": "2026-11-20",
+          "decisionDate": "",
+          "conclusionDate": "",
+          "noticeType": "can-standard",
+          "source": "TED",
+          "sourceUrl": "https://ted.europa.eu/fr/notice/-/detail/810336-2026",
+          "selectedWinner": false,
+          "winners": [],
+          "winnerIdentifiers": [],
+          "mentionedTenderers": [],
+          "lotIdentifiers": [],
+          "offerCount": null,
+          "offerCountsByLotUnassigned": [],
+          "submissionTypes": [],
+          "winnerSelectionStatuses": [],
+          "notAwardedReasons": [],
+          "tenderValues": [],
+          "lowestTenderValues": [],
+          "highestTenderValues": [],
+          "totalAwardValues": [],
+          "caveat": "Valeurs et soumissionnaires peuvent concerner plusieurs lots. Ne pas apparier les tableaux sans preuve dans l’avis officiel."
+        }
+      ],
+      "lastPublicResultAt": "2026-11-20"
     },
     {
       "id": "ted:701482-2026",
