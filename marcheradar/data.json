@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-19T23:04:44.152Z",
+  "generated_at": "2026-11-20T14:04:02.982Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-11-19 : 1353 avis lus, 1 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-11-20 : 1353 avis lus, 1 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-11-19T23:05:15.424Z",
+      "last_success": "2026-11-20T14:04:14.031Z",
       "scanned": 25,
       "retained": 2,
-      "period_from": "2026-11-05",
-      "period_to": "2026-11-19",
+      "period_from": "2026-11-06",
+      "period_to": "2026-11-20",
       "pages": 1,
       "complete": true,
       "raw_candidates": 25,
-      "oldest_seen": "2026-11-19",
-      "last_attempt": "2026-11-19T23:05:15.424Z",
+      "oldest_seen": "2026-11-20",
+      "last_attempt": "2026-11-20T14:04:14.031Z",
       "last_error": null,
-      "last_complete_success": "2026-11-19T23:05:15.424Z"
+      "last_complete_success": "2026-11-20T14:04:14.031Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-11-19T23:09:23.050Z",
+      "last_success": "2026-11-20T14:05:48.227Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -104,15 +104,15 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 1 page(s) parcourue(s) depuis 2026-11-05.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 1 page(s) parcourue(s) depuis 2026-11-06.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 34 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
     "scanned": 1353,
     "matched_current_run": 10,
     "records": 367,
-    "review_count": 271,
-    "award_notice_count": 403,
+    "review_count": 272,
+    "award_notice_count": 405,
     "awarded_market_matches": 1,
     "award_fields_requested": false,
     "retained_as_excluded": 37,
@@ -125,29 +125,29 @@
     "queries": [
       {
         "source": "Acheteurs belges",
-        "from": "20261108",
-        "to": "20261114",
+        "from": "20261109",
+        "to": "20261115",
         "found": 342,
         "reported": 342
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261108",
-        "to": "20261114",
+        "from": "20261109",
+        "to": "20261115",
         "found": 317,
         "reported": 317
       },
       {
         "source": "Acheteurs belges",
-        "from": "20261115",
-        "to": "20261119",
+        "from": "20261116",
+        "to": "20261120",
         "found": 352,
         "reported": 352
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261115",
-        "to": "20261119",
+        "from": "20261116",
+        "to": "20261120",
         "found": 342,
         "reported": 342
       }
@@ -171,19 +171,91 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "avis_attribution_analyse_separement": 403,
-      "aucun_signal_metier": 360,
+      "avis_attribution_analyse_separement": 405,
+      "aucun_signal_metier": 363,
       "avis_neerlandais": 142,
-      "acheteur_flamand": 148,
-      "objet_hors_domaine": 83,
-      "fournitures_et_location": 55,
+      "acheteur_flamand": 144,
       "travaux_execution": 107,
+      "objet_hors_domaine": 82,
+      "fournitures_et_location": 55,
       "formule_administrative_sans_signal_metier": 12,
       "qualifie_review": 20,
       "assurance_ou_nettoyage": 23
     }
   },
   "items": [
+    {
+      "id": "bosa:39a84539-4680-400a-8b15-7a5eeb08e870",
+      "publicationWorkspaceId": "39a84539-4680-400a-8b15-7a5eeb08e870",
+      "noticeId": "15e13442-d9bd-4ded-8084-9cba7577b4a6",
+      "procedureIdentifier": "cb2ba9ee-6992-48a4-bb91-cdde77217faa",
+      "internalReference": "2026-Auteur de projet Annexes Halles_pub01",
+      "title": "SCHAERBEEK- Les Halles de Schaerbeek - Projet de rénovation et réaménagement des annexes - Marché conjoint de service pour la désignation d’un auteur de projet chargé des études et du suivi d’exécution des travaux",
+      "buyer": "Halles de Schaerbeek",
+      "region": "Bruxelles",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Foncier",
+      "sectors": [
+        "Foncier"
+      ],
+      "score": 55,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "mission_globale_a_qualifier",
+      "publication": "2026-11-20",
+      "deadline": "2026-12-21T12:00:00+01:00",
+      "cpv": [
+        "71200000"
+      ],
+      "description": "Les services visés par le présent marché concernent le projet de de rénovation et réaménagement des annexes au bâtiment principal des Halles de Schaerbeek sises rue de la Constitution 20 et Chaussée de Haecht 159 à 1030 Bruxelles.     Il s’agit d’une maison unifamiliale occupée depuis des années par l’administration des Halles (appelée « maison de l’administration ») ainsi que d’annexes en intérieur d’îlot précédemment occupées par l’administration de Greenpeace. La première est, tout comme le bâtiment principal des Halles (salle de spectacle) propriété de la Cocof (Communauté française emphytéote) tandis que les secondes ont été acquises en 2024 par l’asbl Les Halles en raison de l’expansion de son activité. L’ensemble nécessite une rénovation, voire un réaménagement en vue de rafraîchir les lieux, les adapter aux besoins de leurs utilisateurs et créer les connexions utiles avec les zones existantes. Une optimisation fonctionnelle pourrait être menée (redistribution des fonctions entre les différents bâtiments). Au niveau de la maison unifamiliale, le focus devra cependant être porté sur la rénovation énergétique du bâtiment, dans le cadre du plan d’investissement énergétique de la Communauté française.  La surface brute totale bâtiments est d’environ 1120 m² caves incluses (maison de l’administration : 620 m² ; annexes « Greenpeace » 500 m²). Le programme inclut des fonctions de type bureaux, salle de répétition, stockage, conciergerie et logements pour artistes en résidence. L’approche envisagera également une requalification de l’unique espace ouvert exploitable : la toiture terrasse de la maison unifamiliale (60 m²). L’usage de la cour intérieure est en effet strictement limité au passage, conformément à son statut de servitude.  Les objectifs spécifiques de la mission, identifiés à ce stade par le maître d’ouvrage, sont les suivants :  réponse au type de fonctions visées par le programme et consolidation de cette programmation avec le maître d’ouvrage et les utilisateurs.  L’attention de l’auteur.e de projet est attirée sur le fait qu’au niveau du 159 chaussée de Haecht, le bâtiment à front de rue est classé, tandis que le reste de la parcelle (cour et annexes « Greenpeace ») sont repris dans la zone de protection patrimoniale attenante à ce monument. Bien que le projet ne concerne que les annexes, la conception et la mission devront être effectuées dans le cadre de cette contrainte.  Avant que la conception architecturale du projet à proprement parler soit entamée, le maître d’ouvrage estime nécessaire de préciser le cadre du projet et de l’inscrire dans une stratégie d’intervention. Cette stratégie sera éventuellement déclinée à court, moyen et long termes au cas où l’état des besoins nécessiterait un phasage des interventions au regard des moyens actuellement disponibles. Les travaux seraient alors programmés en tenant compte des priorités, des disponibilités sur fonds propres et des opportunités de subventions qui se présenteraient. Dan",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "16",
+      "noticeKind": "competition",
+      "bdaReference": "2026-Auteur de projet Annexes Halles_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/39a84539-4680-400a-8b15-7a5eeb08e870/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/39a84539-4680-400a-8b15-7a5eeb08e870/documents",
+      "documentsPageSource": "public_api_200",
+      "documentInventory": [
+        {
+          "id": "ff7bcb20-bd8d-4f93-adac-cc8ea0d1cfdc",
+          "title": "annexes avis de marché HDS x FWB Final.zip",
+          "kind": "annex",
+          "fileType": "zip",
+          "versionId": "a2f3be20-d811-4374-931d-5c54443e8745",
+          "documentId": "f086a40b-a398-45e7-93ac-947736ec14ad",
+          "activatedAt": "2026-11-20T00:00:49.792929",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39a84539-4680-400a-8b15-7a5eeb08e870/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        }
+      ],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-19T23:15:31.962Z",
+      "deadlineTime": "12:00",
+      "deadlineTimeZone": "Europe/Brussels",
+      "deadlineSourceKind": "bosa_verified_public",
+      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/39a84539-4680-400a-8b15-7a5eeb08e870/general",
+      "deadlineSourceEvidence": "Date limite de soumission\n21/12/2026 12:00 CET",
+      "deadlineVerifiedAt": "2026-11-19T23:15:32.262Z",
+      "screeningReason": null,
+      "officialSources": [
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/39a84539-4680-400a-8b15-7a5eeb08e870/general"
+        }
+      ]
+    },
     {
       "id": "bosa:9c2145a9-bde4-49b4-b66f-08bb5d10035b",
       "publicationWorkspaceId": "9c2145a9-bde4-49b4-b66f-08bb5d10035b",
@@ -1682,7 +1754,7 @@
         "capacityStatus": "not_assessed"
       },
       "matchReason": "description_ou_contexte",
-      "publication": "2026-11-09",
+      "publication": "2026-11-20",
       "deadline": "2026-12-10T10:00:00+01:00",
       "cpv": [
         "71000000"
@@ -1699,6 +1771,45 @@
       "documentsPageSource": "public_api_200",
       "documentInventory": [
         {
+          "id": "15498cba-fe54-4f4b-bad9-70e68fabf1f8",
+          "title": "Essais de sol - L001 1487912LFE V01 BE S2.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "340c603a-f939-474a-a5b1-414c71f62b08",
+          "documentId": "196a82a8-e244-4a19-8ddd-0cbdc7a6ba94",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "FR,NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "37a1caaa-9c9d-4744-b491-137fc43c1003",
+          "title": "Essais de sol - fiche BRUSOIL - Parcelle 21017_D_0007___000_05.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "cbc3695c-2d7f-4271-ab8c-fe65e94203da",
+          "documentId": "07f02edf-59ca-4939-b32a-d406c937671f",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "FR,NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "3bb82f78-49ba-4d5c-b765-1082d9f565a7",
+          "title": "Remisage triangle Delta - Esquisses de réflexion.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "355e7a21-99cf-4ac3-8d9c-bc391c342109",
+          "documentId": "1d40729f-a92d-4efc-9b68-18b193f8fa49",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "FR,NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
           "id": "56b0d83b-153e-46aa-b5d3-d348e6e9b196",
           "title": "Formulier Offerte - Inventaris NL.pdf",
           "kind": "bill_of_quantities",
@@ -1712,6 +1823,32 @@
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         },
         {
+          "id": "5b95dbaf-50da-4cfa-a757-fdfca592affa",
+          "title": "DIOV BM Erratum NL - I3453 - VB1.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "1b809e63-e8e7-419c-91f5-2e26b16d5086",
+          "documentId": "5e89e1a0-abeb-434e-9956-843eafeb3818",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "74a113f0-b0f0-4e1d-b8ee-ff12e44b234b",
+          "title": "Formulaire Offre - Inventaire FR.docx",
+          "kind": "bill_of_quantities",
+          "fileType": "docx",
+          "versionId": "c6925a16-a95c-4e01-b636-5f121909b862",
+          "documentId": "a7ec05a3-2ab1-451e-9953-aaa2cf80a1db",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
           "id": "7efe5d3b-f45f-4699-b8d7-c933f9c8e7f7",
           "title": "CSC-BB I3453.pdf",
           "kind": "csc",
@@ -1720,6 +1857,19 @@
           "documentId": "ee01fb42-78f7-433a-b2fc-e984846b83c8",
           "activatedAt": "2026-11-09T13:16:45.014614",
           "language": "FR,NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "88355718-1806-4928-b2c8-8b5cf12064d2",
+          "title": "Formulier Offerte - Inventaris NL.docx",
+          "kind": "bill_of_quantities",
+          "fileType": "docx",
+          "versionId": "8c372574-df41-47b9-9d72-7a860bbdf8e8",
+          "documentId": "e2b1105f-107d-4e13-8f79-4a3b2baf37c5",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1762,10 +1912,49 @@
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "c2f15298-5273-4870-9e2d-6bcdd6eea837",
+          "title": "URS_AR1.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "814c6781-1ee7-47d5-8700-63724a98041e",
+          "documentId": "7bdec927-9606-41d8-bba9-5ace1e4037bd",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "FR,NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "d5c693cd-c2a1-4c5a-8e87-0c1333783cec",
+          "title": "DITP BM Erratum FR - I3453 - AR1.docx",
+          "kind": "other",
+          "fileType": "docx",
+          "versionId": "13ee4a3b-db95-4290-bb0b-617ba9e82c99",
+          "documentId": "7921c6ac-7546-4bb9-a066-fb26f21e26cc",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "FR",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
+        },
+        {
+          "id": "fb47c5d6-ce6c-4fa5-84a7-32be9d0dee55",
+          "title": "Essais de sol - fiche BRUSOIL - Parcelle 21002_A_0039___000_45.pdf",
+          "kind": "other",
+          "fileType": "pdf",
+          "versionId": "cedd6315-6813-4000-ae63-4d5ffec24c2d",
+          "documentId": "7740bf02-1a26-4012-be49-c9cb4807e59a",
+          "activatedAt": "2026-11-20T08:13:46.013734",
+          "language": "FR,NL",
+          "access": "public_metadata_only",
+          "downloadVerified": false,
+          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/37f86dd9-7621-41be-9adb-fe8ee5951d2f/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-19T14:30:58.926Z",
+      "documentsCheckedAt": "2026-11-20T14:06:34.605Z",
       "deadlineTime": "10:00",
       "deadlineTimeZone": "Europe/Brussels",
       "deadlineSourceKind": "bosa_verified_public",
@@ -11509,7 +11698,7 @@
           "versionId": "22cc83b1-d599-4416-96d9-c1a354861889",
           "documentId": "425d5ba1-de86-4335-b68e-3b58107c5b6d",
           "activatedAt": "2026-09-29T15:00:45.021111",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -11522,14 +11711,14 @@
           "versionId": "354fbb7b-5f90-4703-9d8e-dae76f7aa72f",
           "documentId": "3b9e3ed1-8163-4041-a26c-eb15668ce044",
           "activatedAt": "2026-10-05T15:31:45.185664",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/059cbd8b-a562-4cb2-9140-02728823f2a7/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-19T23:15:06.737Z",
+      "documentsCheckedAt": "2026-11-20T14:11:23.292Z",
       "matchReason": "prestation_dans_marche_de_travaux",
       "screeningReason": null,
       "officialSources": [
@@ -30307,71 +30496,6 @@
       "municipalReference": null,
       "matchReason": "etude_urbanistique_a_qualifier",
       "screeningReason": null
-    },
-    {
-      "id": "bosa:39a84539-4680-400a-8b15-7a5eeb08e870",
-      "publicationWorkspaceId": "39a84539-4680-400a-8b15-7a5eeb08e870",
-      "noticeId": "15e13442-d9bd-4ded-8084-9cba7577b4a6",
-      "procedureIdentifier": "cb2ba9ee-6992-48a4-bb91-cdde77217faa",
-      "internalReference": "2026-Auteur de projet Annexes Halles_pub01",
-      "title": "SCHAERBEEK- Les Halles de Schaerbeek - Projet de rénovation et réaménagement des annexes - Marché conjoint de service pour la désignation d’un auteur de projet chargé des études et du suivi d’exécution des travaux",
-      "buyer": "Halles de Schaerbeek",
-      "region": "Bruxelles",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Foncier",
-      "sectors": [
-        "Foncier"
-      ],
-      "score": 55,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "services",
-        "route": "scope",
-        "explanation": "Mission globale insuffisamment décrite : aucun objet de voirie ou hydraulique identifié pour justifier un classement VRD.",
-        "capacityStatus": "not_assessed"
-      },
-      "matchReason": "mission_globale_a_qualifier",
-      "publication": "2026-11-20",
-      "deadline": "2026-12-21T12:00:00+01:00",
-      "cpv": [
-        "71200000"
-      ],
-      "description": "Les services visés par le présent marché concernent le projet de de rénovation et réaménagement des annexes au bâtiment principal des Halles de Schaerbeek sises rue de la Constitution 20 et Chaussée de Haecht 159 à 1030 Bruxelles.     Il s’agit d’une maison unifamiliale occupée depuis des années par l’administration des Halles (appelée « maison de l’administration ») ainsi que d’annexes en intérieur d’îlot précédemment occupées par l’administration de Greenpeace. La première est, tout comme le bâtiment principal des Halles (salle de spectacle) propriété de la Cocof (Communauté française emphytéote) tandis que les secondes ont été acquises en 2024 par l’asbl Les Halles en raison de l’expansion de son activité. L’ensemble nécessite une rénovation, voire un réaménagement en vue de rafraîchir les lieux, les adapter aux besoins de leurs utilisateurs et créer les connexions utiles avec les zones existantes. Une optimisation fonctionnelle pourrait être menée (redistribution des fonctions entre les différents bâtiments). Au niveau de la maison unifamiliale, le focus devra cependant être porté sur la rénovation énergétique du bâtiment, dans le cadre du plan d’investissement énergétique de la Communauté française.  La surface brute totale bâtiments est d’environ 1120 m² caves incluses (maison de l’administration : 620 m² ; annexes « Greenpeace » 500 m²). Le programme inclut des fonctions de type bureaux, salle de répétition, stockage, conciergerie et logements pour artistes en résidence. L’approche envisagera également une requalification de l’unique espace ouvert exploitable : la toiture terrasse de la maison unifamiliale (60 m²). L’usage de la cour intérieure est en effet strictement limité au passage, conformément à son statut de servitude.  Les objectifs spécifiques de la mission, identifiés à ce stade par le maître d’ouvrage, sont les suivants :  réponse au type de fonctions visées par le programme et consolidation de cette programmation avec le maître d’ouvrage et les utilisateurs.  L’attention de l’auteur.e de projet est attirée sur le fait qu’au niveau du 159 chaussée de Haecht, le bâtiment à front de rue est classé, tandis que le reste de la parcelle (cour et annexes « Greenpeace ») sont repris dans la zone de protection patrimoniale attenante à ce monument. Bien que le projet ne concerne que les annexes, la conception et la mission devront être effectuées dans le cadre de cette contrainte.  Avant que la conception architecturale du projet à proprement parler soit entamée, le maître d’ouvrage estime nécessaire de préciser le cadre du projet et de l’inscrire dans une stratégie d’intervention. Cette stratégie sera éventuellement déclinée à court, moyen et long termes au cas où l’état des besoins nécessiterait un phasage des interventions au regard des moyens actuellement disponibles. Les travaux seraient alors programmés en tenant compte des priorités, des disponibilités sur fonds propres et des opportunités de subventions qui se présenteraient. Dan",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "16",
-      "noticeKind": "competition",
-      "bdaReference": "2026-Auteur de projet Annexes Halles_pub01",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/39a84539-4680-400a-8b15-7a5eeb08e870/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/39a84539-4680-400a-8b15-7a5eeb08e870/documents",
-      "documentsPageSource": "public_api_200",
-      "documentInventory": [
-        {
-          "id": "ff7bcb20-bd8d-4f93-adac-cc8ea0d1cfdc",
-          "title": "annexes avis de marché HDS x FWB Final.zip",
-          "kind": "annex",
-          "fileType": "zip",
-          "versionId": "a2f3be20-d811-4374-931d-5c54443e8745",
-          "documentId": "f086a40b-a398-45e7-93ac-947736ec14ad",
-          "activatedAt": "2026-11-20T00:00:49.792929",
-          "language": "FR",
-          "access": "public_metadata_only",
-          "downloadVerified": false,
-          "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39a84539-4680-400a-8b15-7a5eeb08e870/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
-        }
-      ],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-19T23:15:31.962Z",
-      "deadlineTime": "12:00",
-      "deadlineTimeZone": "Europe/Brussels",
-      "deadlineSourceKind": "bosa_verified_public",
-      "deadlineSourceUrl": "https://www.publicprocurement.be/publication-workspaces/39a84539-4680-400a-8b15-7a5eeb08e870/general",
-      "deadlineSourceEvidence": "Date limite de soumission\n21/12/2026 12:00 CET",
-      "deadlineVerifiedAt": "2026-11-19T23:15:32.262Z"
     }
   ]
 }
