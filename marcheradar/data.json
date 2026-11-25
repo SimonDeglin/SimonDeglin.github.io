@@ -1,28 +1,28 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-24T15:55:55.832Z",
+  "generated_at": "2026-11-25T00:47:54.669Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-11-24 : 1363 avis lus, 1 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-11-25 : 1429 avis lus, 1 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-11-24T15:56:17.755Z",
+      "last_success": "2026-11-25T00:48:04.352Z",
       "scanned": 25,
-      "retained": 1,
-      "period_from": "2026-11-10",
-      "period_to": "2026-11-24",
+      "retained": 0,
+      "period_from": "2026-11-11",
+      "period_to": "2026-11-25",
       "pages": 1,
       "complete": true,
       "raw_candidates": 25,
       "oldest_seen": "2026-11-24",
-      "last_attempt": "2026-11-24T15:56:17.755Z",
+      "last_attempt": "2026-11-25T00:48:04.352Z",
       "last_error": null,
-      "last_complete_success": "2026-11-24T15:56:17.755Z"
+      "last_complete_success": "2026-11-25T00:48:04.352Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-11-24T15:58:20.272Z",
+      "last_success": "2026-11-25T00:49:36.750Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -104,15 +104,15 @@
   },
   "coverage": {
     "TED": "collecte automatique active",
-    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 1 page(s) parcourue(s) depuis 2026-11-10.",
+    "BOSA": "Collecte du Bulletin officiel active. Historique partiel : 1 page(s) parcourue(s) depuis 2026-11-11.",
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 35 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
-    "scanned": 1363,
-    "matched_current_run": 8,
-    "records": 368,
-    "review_count": 272,
-    "award_notice_count": 410,
+    "scanned": 1429,
+    "matched_current_run": 9,
+    "records": 369,
+    "review_count": 274,
+    "award_notice_count": 426,
     "awarded_market_matches": 1,
     "award_fields_requested": false,
     "retained_as_excluded": 37,
@@ -125,36 +125,36 @@
     "queries": [
       {
         "source": "Acheteurs belges",
-        "from": "20261113",
-        "to": "20261119",
-        "found": 414,
-        "reported": 414
+        "from": "20261114",
+        "to": "20261120",
+        "found": 450,
+        "reported": 450
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261113",
-        "to": "20261119",
-        "found": 399,
-        "reported": 399
+        "from": "20261114",
+        "to": "20261120",
+        "found": 436,
+        "reported": 436
       },
       {
         "source": "Acheteurs belges",
-        "from": "20261120",
-        "to": "20261124",
-        "found": 279,
-        "reported": 279
+        "from": "20261121",
+        "to": "20261125",
+        "found": 276,
+        "reported": 276
       },
       {
         "source": "Exécution en Belgique",
-        "from": "20261120",
-        "to": "20261124",
-        "found": 271,
-        "reported": 271
+        "from": "20261121",
+        "to": "20261125",
+        "found": 267,
+        "reported": 267
       }
     ],
     "warnings": [],
     "bosa_scanned": 25,
-    "bosa_imported": 1,
+    "bosa_imported": 0,
     "bosa_pages": 1,
     "local_documents": 35,
     "local_opportunities": 0,
@@ -171,19 +171,106 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "fournitures_et_location": 49,
-      "avis_neerlandais": 144,
-      "aucun_signal_metier": 372,
-      "travaux_execution": 127,
-      "avis_attribution_analyse_separement": 410,
-      "objet_hors_domaine": 55,
-      "assurance_ou_nettoyage": 28,
-      "acheteur_flamand": 150,
-      "qualifie_review": 16,
-      "formule_administrative_sans_signal_metier": 12
+      "aucun_signal_metier": 393,
+      "fournitures_et_location": 55,
+      "avis_attribution_analyse_separement": 426,
+      "acheteur_flamand": 155,
+      "travaux_execution": 135,
+      "assurance_ou_nettoyage": 33,
+      "objet_hors_domaine": 56,
+      "avis_neerlandais": 146,
+      "formule_administrative_sans_signal_metier": 12,
+      "qualifie_review": 18
     }
   },
   "items": [
+    {
+      "id": "ted:817831-2026",
+      "publicationNumber": "817831-2026",
+      "procedureIdentifier": "39c0dd6f-e8e3-417b-b517-097eb13a162e",
+      "title": "Belgique – Services de technologies de l'information, conseil, développement de logiciels, internet et appui – Marché public de services relatif à la fourniture de données de Mobile Mapping et à la production de données géographiques issues de l'analyse d'images géoréférencées",
+      "buyer": "Agence du stationnement",
+      "region": "Belgique",
+      "sector": "Scan",
+      "sectors": [
+        "Scan"
+      ],
+      "score": 71,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "services",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "prestation_decrite",
+      "publication": "2026-11-25",
+      "deadline": "2027-01-05",
+      "cpv": [
+        "72000000",
+        "71354100"
+      ],
+      "description": "L’Agence du Stationnement de la Région de Bruxelles-Capitale, créée par l’ordonnance du 22 janvier 2009, abrogée par l’ordonnance portant organisation de la politique du stationnement et redéfinissant les missions et modalités de gestion de l'Agence du Stationnement de la Région de Bruxelles-Capitale du 6 juillet 2022 (M.B. 08.09.2022) est une société anonyme de droit public (article 34§1er de l’ordonnance du 6 juillet 2022) qui doit réaliser les objectifs de cette ordonnance et dont les bureaux sont établis Rue de l'Hôpital 31 à 1000 Bruxelles. A ce titre, elle souhaite, par l’intermédiaire du présent marché, disposer d'une plateforme de Mobile Mapping réalisée au LIDAR permettant l'exploitation d'images panoramiques géoréférencées et de données de type nuage de points, ainsi que la réalisation de prestations d'extraction, de qualification, de géolocalisation et de production de données géographiques issues de l'analyse de ces données.",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "cn-standard",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/817831-2026"
+    },
+    {
+      "id": "bosa:c1265c74-4a87-4b25-804c-6768e94627c8",
+      "publicationWorkspaceId": "c1265c74-4a87-4b25-804c-6768e94627c8",
+      "noticeId": "5152158c-d669-41f3-83c9-718f10e56eb8",
+      "procedureIdentifier": "05318260-6f14-4244-891e-f441c93b82db",
+      "internalReference": "FHS/AL/GC/SK/2026/05/VIDANGE_pub01",
+      "title": "Marché stock de service - vidanges et interventions diverses sur équipements d'égouttage",
+      "buyer": "Le Foyer de la Haute Sambre SRL",
+      "region": "Wallonie",
+      "languages": [
+        "FR"
+      ],
+      "sector": "Reseaux",
+      "sectors": [
+        "Reseaux"
+      ],
+      "score": 62,
+      "screening": "review",
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "unknown",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      },
+      "matchReason": "projet_indirect",
+      "publication": "2026-11-24",
+      "deadline": "",
+      "cpv": [
+        "90460000"
+      ],
+      "description": "Vidanges et interventions diverses sur équipements d'égouttage",
+      "source": "BOSA",
+      "source_status": "bosa_public_browser",
+      "noticeSubType": "29",
+      "noticeKind": "award",
+      "bdaReference": "FHS/AL/GC/SK/2026/05/VIDANGE_pub01",
+      "tedReference": "",
+      "url": "https://www.publicprocurement.be/publication-workspaces/c1265c74-4a87-4b25-804c-6768e94627c8/general",
+      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/c1265c74-4a87-4b25-804c-6768e94627c8/documents",
+      "documentsPageSource": "public_api_200",
+      "bosaResults": [
+        {
+          "reference": "FHS/AL/GC/SK/2026/05/VIDANGE_pub01",
+          "url": "https://www.publicprocurement.be/publication-workspaces/c1265c74-4a87-4b25-804c-6768e94627c8/general",
+          "publicationDate": "2026-11-24",
+          "kind": "award"
+        }
+      ],
+      "documentInventory": [],
+      "consultationUrls": [],
+      "documentsCheckedAt": "2026-11-24T16:04:40.383Z",
+      "screeningReason": null
+    },
     {
       "id": "bosa:39a84539-4680-400a-8b15-7a5eeb08e870",
       "publicationWorkspaceId": "39a84539-4680-400a-8b15-7a5eeb08e870",
@@ -1021,7 +1108,7 @@
           "versionId": "eb1f73f0-1b58-4236-929b-109db9e74357",
           "documentId": "419fc6e7-a935-4e40-8577-a5e20d6f8d93",
           "activatedAt": "2026-11-16T08:49:45.014886",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1034,7 +1121,7 @@
           "versionId": "f386fac7-1524-456c-86f4-d51b710b5cb3",
           "documentId": "fc34d48c-da10-4ed2-a603-4e2385f81785",
           "activatedAt": "2026-11-19T14:31:45.195106",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/5e50b6fb-30a8-4f08-9d0c-f42ec414aae1/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -1158,7 +1245,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-24T02:57:43.212Z",
+      "documentsCheckedAt": "2026-11-25T00:49:59.803Z",
       "deadlineTime": "11:00",
       "deadlineTimeZone": "Europe/Brussels",
       "deadlineSourceKind": "bosa_verified_public",
@@ -8782,7 +8869,7 @@
           "versionId": "36488d00-f30c-407b-abf7-ea1924b6b999",
           "documentId": "917f42c5-0419-4611-8398-5561fefe4efc",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8808,7 +8895,7 @@
           "versionId": "26b15544-17fc-43c0-826c-1322f33b9850",
           "documentId": "20364704-82a0-4eb0-a213-7965e3328061",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8860,7 +8947,7 @@
           "versionId": "f5ff3774-83d7-49c0-abe1-28e026816900",
           "documentId": "ff53ea2a-b24f-4586-b315-523295f56f5c",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8873,7 +8960,7 @@
           "versionId": "8228202b-2303-4eba-8e13-0fe820c5023d",
           "documentId": "ac74d28e-0bfa-4c78-af2b-da7f05b117dd",
           "activatedAt": "2026-10-13T15:31:45.014311",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/0765b50e-85f5-4aae-b2ca-2ed66c14e354/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -8906,7 +8993,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-23T16:07:56.765Z",
+      "documentsCheckedAt": "2026-11-25T00:53:44.545Z",
       "documentAnalyses": [
         {
           "documentId": "7259aed6-32b5-4e0b-88c0-ffa7fa606658",
@@ -30525,59 +30612,6 @@
       "municipalReference": null,
       "matchReason": "etude_urbanistique_a_qualifier",
       "screeningReason": null
-    },
-    {
-      "id": "bosa:c1265c74-4a87-4b25-804c-6768e94627c8",
-      "publicationWorkspaceId": "c1265c74-4a87-4b25-804c-6768e94627c8",
-      "noticeId": "5152158c-d669-41f3-83c9-718f10e56eb8",
-      "procedureIdentifier": "05318260-6f14-4244-891e-f441c93b82db",
-      "internalReference": "FHS/AL/GC/SK/2026/05/VIDANGE_pub01",
-      "title": "Marché stock de service - vidanges et interventions diverses sur équipements d'égouttage",
-      "buyer": "Le Foyer de la Haute Sambre SRL",
-      "region": "Wallonie",
-      "languages": [
-        "FR"
-      ],
-      "sector": "Reseaux",
-      "sectors": [
-        "Reseaux"
-      ],
-      "score": 62,
-      "screening": "review",
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "unknown",
-        "route": "scope",
-        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
-        "capacityStatus": "not_assessed"
-      },
-      "matchReason": "projet_indirect",
-      "publication": "2026-11-24",
-      "deadline": "",
-      "cpv": [
-        "90460000"
-      ],
-      "description": "Vidanges et interventions diverses sur équipements d'égouttage",
-      "source": "BOSA",
-      "source_status": "bosa_public_browser",
-      "noticeSubType": "29",
-      "noticeKind": "award",
-      "bdaReference": "FHS/AL/GC/SK/2026/05/VIDANGE_pub01",
-      "tedReference": "",
-      "url": "https://www.publicprocurement.be/publication-workspaces/c1265c74-4a87-4b25-804c-6768e94627c8/general",
-      "documentsPageUrl": "https://www.publicprocurement.be/publication-workspaces/c1265c74-4a87-4b25-804c-6768e94627c8/documents",
-      "documentsPageSource": "public_api_200",
-      "bosaResults": [
-        {
-          "reference": "FHS/AL/GC/SK/2026/05/VIDANGE_pub01",
-          "url": "https://www.publicprocurement.be/publication-workspaces/c1265c74-4a87-4b25-804c-6768e94627c8/general",
-          "publicationDate": "2026-11-24",
-          "kind": "award"
-        }
-      ],
-      "documentInventory": [],
-      "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-24T16:04:40.383Z"
     }
   ]
 }
