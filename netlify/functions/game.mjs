@@ -76,10 +76,14 @@ async function play(pool, trial, action, name, body) {
   }
 }
 
-export default async function (request) {
+export default async function (request, context) {
   const url = new URL(request.url);
   const trial = url.searchParams.get('essai') === '1';
-  if (!trial && Netlify.env.get('GAME_MODE') !== 'live') {
+  const familySite = context?.site?.id === 'd14eb2db-27d1-4ea3-8359-b240ddb349f3'
+    && context.deploy?.context === 'production'
+    && context.deploy?.published === true
+    && url.hostname === 'cacahuete-noel-criscenzo.netlify.app';
+  if (!trial && !familySite) {
     return respond({ error: 'Le tirage familial n’est pas encore ouvert.' }, 423);
   }
 
