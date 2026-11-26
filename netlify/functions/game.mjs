@@ -108,7 +108,12 @@ export default async function (request) {
   }
 
   try {
-    database ??= getDatabase();
+    if (!database) {
+      database = getDatabase();
+      database.pool.on('error', (error) => {
+        console.error('Connexion PostgreSQL inactive', error.code ?? error.name);
+      });
+    }
     return respond(await play(database.pool, trial, action, name, body));
   } catch (error) {
     console.error('Service de tirage de Noël', error.code ?? error.name);
