@@ -1,6 +1,8 @@
 import { getDatabase } from '@netlify/database';
 import { names, makeDraw } from '../../lib/draw.mjs';
 
+let database;
+
 function respond(data, status = 200) {
   return Response.json(data, {
     status,
@@ -106,7 +108,8 @@ export default async function (request) {
   }
 
   try {
-    return respond(await play(getDatabase().pool, trial, action, name, body));
+    database ??= getDatabase();
+    return respond(await play(database.pool, trial, action, name, body));
   } catch (error) {
     console.error('Service de tirage de Noël', error.code ?? error.name);
     return respond({ error: 'Le serveur ne répond pas. Réessaie dans un instant.' }, 503);
