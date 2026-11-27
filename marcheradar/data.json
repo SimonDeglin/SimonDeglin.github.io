@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-27T00:37:23.981Z",
+  "generated_at": "2026-11-27T15:09:20.806Z",
   "data_origin": "ted_api",
   "collector_status": "ok",
-  "note": "TED interrogé le 2026-11-27 : 1616 avis lus, 1 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
+  "note": "TED interrogé le 2026-11-27 : 1782 avis lus, 1 procédure(s) enrichie(s) par des résultats publics. BOSA national et conseils communaux encore à raccorder.",
   "sources": {
     "BOSA": {
       "status": "accessible",
-      "last_success": "2026-11-27T00:37:31.843Z",
+      "last_success": "2026-11-27T15:09:37.811Z",
       "scanned": 25,
       "retained": 0,
       "period_from": "2026-11-13",
@@ -15,14 +15,14 @@
       "pages": 1,
       "complete": true,
       "raw_candidates": 25,
-      "oldest_seen": "2026-11-26",
-      "last_attempt": "2026-11-27T00:37:31.843Z",
+      "oldest_seen": "2026-11-27",
+      "last_attempt": "2026-11-27T15:09:37.811Z",
       "last_error": null,
-      "last_complete_success": "2026-11-27T00:37:31.843Z"
+      "last_complete_success": "2026-11-27T15:09:37.811Z"
     },
     "LOCALE": {
       "status": "partial",
-      "last_success": "2026-11-27T00:38:47.314Z",
+      "last_success": "2026-11-27T15:10:52.745Z",
       "sources": [
         {
           "url": "https://www.province.namur.be/conseil-provincial/projets-de-deliberations/",
@@ -108,11 +108,11 @@
     "communal": "Pilote de sources provinciales Liège/Namur : 4 page(s) officielle(s), 35 PDF analysé(s). Publications communales NON raccordées et couverture non exhaustive."
   },
   "metrics": {
-    "scanned": 1616,
-    "matched_current_run": 9,
+    "scanned": 1782,
+    "matched_current_run": 10,
     "records": 369,
     "review_count": 274,
-    "award_notice_count": 489,
+    "award_notice_count": 534,
     "awarded_market_matches": 1,
     "award_fields_requested": false,
     "retained_as_excluded": 37,
@@ -141,15 +141,15 @@
         "source": "Acheteurs belges",
         "from": "20261123",
         "to": "20261127",
-        "found": 372,
-        "reported": 372
+        "found": 456,
+        "reported": 456
       },
       {
         "source": "Exécution en Belgique",
         "from": "20261123",
         "to": "20261127",
-        "found": 358,
-        "reported": 358
+        "found": 440,
+        "reported": 440
       }
     ],
     "warnings": [],
@@ -171,19 +171,71 @@
       "document_historique_2024": 3
     },
     "raw_screening": {
-      "assurance_ou_nettoyage": 32,
-      "acheteur_flamand": 179,
-      "fournitures_et_location": 63,
-      "avis_attribution_analyse_separement": 489,
-      "aucun_signal_metier": 451,
-      "objet_hors_domaine": 56,
-      "travaux_execution": 141,
-      "avis_neerlandais": 172,
+      "aucun_signal_metier": 503,
+      "fournitures_et_location": 62,
+      "avis_attribution_analyse_separement": 534,
+      "acheteur_flamand": 198,
+      "travaux_execution": 161,
+      "assurance_ou_nettoyage": 35,
+      "objet_hors_domaine": 62,
+      "avis_neerlandais": 193,
       "formule_administrative_sans_signal_metier": 14,
-      "qualifie_review": 19
+      "qualifie_review": 20
     }
   },
   "items": [
+    {
+      "id": "ted:747579-2026",
+      "publicationNumber": "826802-2026",
+      "procedureIdentifier": "febaa264-75f7-4048-8155-9c37fa7920ea",
+      "title": "Belgique – Autres sources d'approvisionnement en énergie et leur distribution – Valorisation de capacités de production électrique pilotables au gaz naturel",
+      "buyer": "Agence Intercommunale de Développement de Tournai, d'Ath et des communes avoisinantes IDETA scrl",
+      "region": "Belgique",
+      "sector": "Reseaux",
+      "sectors": [
+        "Reseaux"
+      ],
+      "score": 52,
+      "screening": "review",
+      "publication": "2026-11-27",
+      "deadline": "",
+      "cpv": [
+        "65400000",
+        "65000000"
+      ],
+      "description": "II.1. Objet général de l'avis Le présent avis vise à informer le marché, à titre purement prévisionnel et non contraignant, de la réflexion menée par le pouvoir adjudicateur concernant la mise en place d'un mécanisme de valorisation économique de capacités de production électrique pilotables fonctionnant au gaz et destinées à répondre à des besoins d'intérêt général liés à l'accès à la puissance électrique. Le pouvoir adjudicateur étudie actuellement la possibilité de confier à un opérateur économique, dans le cadre d'un montage susceptible de relever du régime de la concession de services, l'exploitation commerciale et la valorisation économique de capacités de production électrique appartenant ou destinées à appartenir à une autorité publique. II.2. Description indicative du projet Le pouvoir adjudicateur étudie actuellement le développement de plusieurs unités de production électrique pilotables au gaz naturel destinées à soutenir l'alimentation électrique de zones d'activité économique confrontées à des contraintes de capacité du réseau. Le modèle envisagé repose sur une dissociation entre : - la propriété des installations détenue par l'autorité publique porteuse du projet, laquelle pourrait être le SPW ou toute autre entité publique participant à la procédure de marché définitive ; - la valorisation économique de la capacité, confiée à un opérateur économique sélectionné dans le cadre d'une procédure concurrentielle, qui est l’objet de cet appel à manifestation. À titre indicatif, la capacité concernée pourrait représenter jusqu'à quatre sites distincts pour une puissance totale comprise entre 80 et 100 MW. Le principe étudié repose sur la priorité donnée à l'intérêt général. L'installation devra être mobilisée lorsque cela est nécessaire pour répondre aux besoins locaux du réseau électrique. La capacité non requise pour cette mission pourra être valorisée librement par l'opérateur économique titulaire des droits d'usage sur les marchés de l'électricité. Lorsque l'installation est mobilisée à la demande de l'autorité publique afin de répondre à une contrainte locale du réseau ou à un besoin d'intérêt général, un mécanisme contractuel spécifique pourrait prévoir une compensation des coûts ou conséquences économiques directement imputables à cette mobilisation imposée. Les modalités précises de ce mécanisme restent à définir. En dehors de ces situations particulières, l'opérateur supporterait les risques liés à l'exploitation commerciale et à la valorisation économique de la capacité disponible sur les marchés de l'électricité. II.3. RISQUE D’EXPLOIT",
+      "source": "TED",
+      "source_status": "api",
+      "noticeType": "pin-cfc-social",
+      "url": "https://ted.europa.eu/fr/notice/-/detail/826802-2026",
+      "publicationWorkspaceId": "bff624cd-cd8d-4456-b659-46fa9c8aea12",
+      "officialSources": [
+        {
+          "source": "TED",
+          "url": "https://ted.europa.eu/fr/notice/-/detail/747579-2026",
+          "publicationNumber": "747579-2026"
+        },
+        {
+          "source": "BOSA",
+          "url": "https://www.publicprocurement.be/publication-workspaces/bff624cd-cd8d-4456-b659-46fa9c8aea12/general",
+          "bdaReference": "",
+          "noticeKind": "competition"
+        }
+      ],
+      "matchReason": "description_ou_contexte",
+      "screeningReason": null,
+      "noticeNumbers": [
+        "747579-2026",
+        "826802-2026"
+      ],
+      "qualification": {
+        "version": "2026-10-29",
+        "kind": "unknown",
+        "route": "scope",
+        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
+        "capacityStatus": "not_assessed"
+      }
+    },
     {
       "id": "ted:817831-2026",
       "publicationNumber": "817831-2026",
@@ -4757,57 +4809,6 @@
       "screeningReason": "formule_administrative_sans_signal_metier"
     },
     {
-      "id": "ted:747579-2026",
-      "publicationNumber": "747579-2026",
-      "procedureIdentifier": "febaa264-75f7-4048-8155-9c37fa7920ea",
-      "title": "Belgique – Autres sources d'approvisionnement en énergie et leur distribution – Valorisation de capacités de production électrique pilotables au gaz naturel",
-      "buyer": "Agence Intercommunale de Développement de Tournai, d'Ath et des communes avoisinantes IDETA scrl",
-      "region": "Belgique",
-      "sector": "Reseaux",
-      "sectors": [
-        "Reseaux"
-      ],
-      "score": 52,
-      "screening": "review",
-      "publication": "2026-10-28",
-      "deadline": "",
-      "cpv": [
-        "65400000",
-        "65000000"
-      ],
-      "description": "II.1. Objet général de l'avis Le présent avis vise à informer le marché, à titre purement prévisionnel et non contraignant, de la réflexion menée par le pouvoir adjudicateur concernant la mise en place d'un mécanisme de valorisation économique de capacités de production électrique pilotables fonctionnant au gaz et destinées à répondre à des besoins d'intérêt général liés à l'accès à la puissance électrique. Le pouvoir adjudicateur étudie actuellement la possibilité de confier à un opérateur économique, dans le cadre d'un montage susceptible de relever du régime de la concession de services, l'exploitation commerciale et la valorisation économique de capacités de production électrique appartenant ou destinées à appartenir à une autorité publique. II.2. Description indicative du projet Le pouvoir adjudicateur étudie actuellement le développement de plusieurs unités de production électrique pilotables au gaz naturel destinées à soutenir l'alimentation électrique de zones d'activité économique confrontées à des contraintes de capacité du réseau. Le modèle envisagé repose sur une dissociation entre : - la propriété des installations détenue par l'autorité publique porteuse du projet, laquelle pourrait être le SPW ou toute autre entité publique participant à la procédure de marché définitive ; - la valorisation économique de la capacité, confiée à un opérateur économique sélectionné dans le cadre d'une procédure concurrentielle, qui est l’objet de cet appel à manifestation. À titre indicatif, la capacité concernée pourrait représenter jusqu'à quatre sites distincts pour une puissance totale comprise entre 80 et 100 MW. Le principe étudié repose sur la priorité donnée à l'intérêt général. L'installation devra être mobilisée lorsque cela est nécessaire pour répondre aux besoins locaux du réseau électrique. La capacité non requise pour cette mission pourra être valorisée librement par l'opérateur économique titulaire des droits d'usage sur les marchés de l'électricité. Lorsque l'installation est mobilisée à la demande de l'autorité publique afin de répondre à une contrainte locale du réseau ou à un besoin d'intérêt général, un mécanisme contractuel spécifique pourrait prévoir une compensation des coûts ou conséquences économiques directement imputables à cette mobilisation imposée. Les modalités précises de ce mécanisme restent à définir. En dehors de ces situations particulières, l'opérateur supporterait les risques liés à l'exploitation commerciale et à la valorisation économique de la capacité disponible sur les marchés de l'électricité. II.3. RISQUE D’EXPLOIT",
-      "source": "TED",
-      "source_status": "api",
-      "noticeType": "pin-cfc-social",
-      "url": "https://ted.europa.eu/fr/notice/-/detail/747579-2026",
-      "publicationWorkspaceId": "bff624cd-cd8d-4456-b659-46fa9c8aea12",
-      "officialSources": [
-        {
-          "source": "TED",
-          "url": "https://ted.europa.eu/fr/notice/-/detail/747579-2026",
-          "publicationNumber": "747579-2026"
-        },
-        {
-          "source": "BOSA",
-          "url": "https://www.publicprocurement.be/publication-workspaces/bff624cd-cd8d-4456-b659-46fa9c8aea12/general",
-          "bdaReference": "",
-          "noticeKind": "competition"
-        }
-      ],
-      "matchReason": "description_ou_contexte",
-      "screeningReason": null,
-      "noticeNumbers": [
-        "747579-2026"
-      ],
-      "qualification": {
-        "version": "2026-10-29",
-        "kind": "unknown",
-        "route": "scope",
-        "explanation": "Indices métier à confronter aux prestations exactes du dossier.",
-        "capacityStatus": "not_assessed"
-      }
-    },
-    {
       "id": "ted:746859-2026",
       "publicationNumber": "746859-2026",
       "procedureIdentifier": "a20386ce-431f-404f-8c7a-a60f8ed53ef9",
@@ -5972,7 +5973,7 @@
           "versionId": "3d46e999-b274-4751-b79c-f99dcda226c2",
           "documentId": "08e8ec6d-f48b-4d1c-96da-c1bdc6ebc276",
           "activatedAt": "2026-10-22T11:14:46.014445",
-          "language": "NL,FR",
+          "language": "FR,NL",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/3ab3ec25-78b5-4c2f-af13-1cb572590b1c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -6031,7 +6032,7 @@
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-26T00:28:53.587Z",
+      "documentsCheckedAt": "2026-11-27T15:13:26.336Z",
       "matchReason": "description_ou_contexte",
       "screeningReason": null,
       "officialSources": [
@@ -7160,7 +7161,7 @@
           "versionId": "ddf24280-7180-4af0-9cc3-c050455a2c18",
           "documentId": "6c1fd0d8-3f25-4764-8e27-9bb907ccf665",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "DE,FR",
+          "language": "FR,DE",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -7173,14 +7174,14 @@
           "versionId": "41c1dfd3-e395-4b17-9583-72b8baeacc90",
           "documentId": "815fd779-551d-48fc-a533-f11b9a86434c",
           "activatedAt": "2026-10-20T10:28:45.134859",
-          "language": "DE,FR",
+          "language": "FR,DE",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/39d44437-5cbe-4fa2-886e-3e5a3af6ea5c/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-27T00:41:55.076Z",
+      "documentsCheckedAt": "2026-11-27T15:14:01.591Z",
       "matchReason": "mission_architecturale_a_qualifier",
       "screeningReason": null,
       "officialSources": [
@@ -7677,7 +7678,7 @@
           "versionId": "bcdca6d0-d13f-4138-99c5-6e122da4dde8",
           "documentId": "17848170-0136-4662-8b9a-69f321d687c5",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -7690,7 +7691,7 @@
           "versionId": "7a672143-498d-40bf-85d2-1a0ccd6c89b8",
           "documentId": "338ce9a3-7ba9-4ed9-99b8-3bd5f1ce416e",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -7703,7 +7704,7 @@
           "versionId": "5a3371af-caf1-41b9-89e6-e6eade671b0a",
           "documentId": "23b3699b-6288-4049-922c-146ae89c1eb4",
           "activatedAt": "2026-10-12T11:33:45.047117",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -7716,7 +7717,7 @@
           "versionId": "6dabd106-495c-4884-b407-a9d35ae4800b",
           "documentId": "d182b6fc-7127-4669-95f9-5b81310dc8c6",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -7729,7 +7730,7 @@
           "versionId": "62dd41f2-e318-42b1-b772-46e8d5633836",
           "documentId": "5ebc8928-f728-45bd-8c0d-992a55d8ce01",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
@@ -7742,14 +7743,14 @@
           "versionId": "1b6ff5ed-8135-422d-81f1-ab428d851133",
           "documentId": "f7b3b39c-0bec-4f55-8e29-844c0e81c6b6",
           "activatedAt": "2026-10-19T14:35:45.019469",
-          "language": "EN,FR",
+          "language": "FR,EN",
           "access": "public_metadata_only",
           "downloadVerified": false,
           "sourceUrl": "https://www.publicprocurement.be/api/dos/publication-workspaces/be6bb1c0-8542-44d9-a9c0-56938e517c69/documents?full=false&type=WORKSPACE&type=ESPD_REQUEST&type=SDI"
         }
       ],
       "consultationUrls": [],
-      "documentsCheckedAt": "2026-11-22T21:54:41.254Z",
+      "documentsCheckedAt": "2026-11-27T15:14:15.617Z",
       "matchReason": "description_ou_contexte",
       "screeningReason": null,
       "officialSources": [
